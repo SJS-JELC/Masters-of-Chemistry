@@ -133,13 +133,21 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         [part.id]: copy(command.response),
       };
       const { currentGiveUp: _currentGiveUp, ...base } = state;
-      return yes({ ...base, currentResponses, ...(state.phase === 'assessed' ? { currentResponseChanged: true as const } : {}) });
+      return yes({
+        ...base,
+        currentResponses,
+        ...(state.phase === 'assessed' ? { currentResponseChanged: true as const } : {}),
+      });
     }
     case 'clear': {
       if (state.phase === 'rubric-review' || state.phase === 'drawing-review')
         return no(state, 'Complete the required review before clearing the editable response.');
       const { currentGiveUp: _currentGiveUp, ...base } = state;
-      return yes({ ...base, currentResponses: {}, ...(state.phase === 'assessed' ? { currentResponseChanged: true as const } : {}) });
+      return yes({
+        ...base,
+        currentResponses: {},
+        ...(state.phase === 'assessed' ? { currentResponseChanged: true as const } : {}),
+      });
     }
     case 'pause':
       return yes(state);
@@ -167,13 +175,26 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
           independent: false,
         };
         const { timing: _timing, ...base } = state;
-        return yes({ ...base, phase: 'assessed', firstResponse, firstAssessment, assistance, currentGiveUp: true });
+        return yes({
+          ...base,
+          phase: 'assessed',
+          firstResponse,
+          firstAssessment,
+          assistance,
+          currentGiveUp: true,
+        });
       }
-      return yes({ ...state, assistance, ...(command.assistance.kind !== 'hint' ? { currentGiveUp: true as const } : {}) });
+      return yes({
+        ...state,
+        assistance,
+        ...(command.assistance.kind !== 'hint' ? { currentGiveUp: true as const } : {}),
+      });
     }
     case 'check-correction': {
       if (state.phase !== 'assessed')
         return no(state, 'Submit the first response before checking corrections.');
+      // Reuse the saved presentation marker; immutable first evidence stays fixed.
+      const { currentResponseChanged: _changed, ...checkedState } = state;
       const autoQuestion: Question = {
         ...question,
         parts: question.parts.filter(
@@ -189,10 +210,14 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
       }
       const issues = checkQuestionInput(autoQuestion, automaticResponses);
       if (issues.length)
-        return feedback(state, { kind: 'correction-learning', status: 'incomplete', issues });
+        return feedback(copy(checkedState), {
+          kind: 'correction-learning',
+          status: 'incomplete',
+          issues,
+        });
       const marked = policy.mark(autoQuestion, automaticResponses);
       if (!marked.accepted)
-        return feedback(state, {
+        return feedback(copy(checkedState), {
           kind: 'correction-learning',
           status: marked.issues.some((issue) => issue.textClassification === 'unrecognized')
             ? 'unrecognized'
@@ -206,7 +231,7 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         )
       )
         return no(state, 'The marking policy returned inconsistent automatic correction marks.');
-      return feedback(state, {
+      return feedback(copy(checkedState), {
         kind: 'correction-learning',
         status: marked.marks.earned === marked.marks.available ? 'correct' : 'wrong',
         marks: marked.marks,

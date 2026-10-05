@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "run": "feedback-1791194943899",
+  "startedAt": "2026-10-05T10:09:03.899Z",
+  "method": "Pinned workspace Playwright 1.62.1, headless Microsoft Edge, real shared host/controller/storage and browser inputs; no synthetic timing. Independent additional reviewer assertions; start helpers copied from author fixture only.",
+  "checks": [
+    {
+      "id": "all32-checked-accessibility-restoration",
+      "status": "PASS"
+    },
+    {
+      "id": "check-edit-burst-restores-neutral-not-stale",
+      "status": "PASS"
+    },
+    {
+      "id": "incomplete-retry-clear-and-restoration",
+      "status": "PASS"
+    },
+    {
+      "id": "checked-save-failure-retry-without-extra-evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "give-up-edit-clear-current-ui-observation",
+      "status": "PASS"
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "giveUpObservation": {
+    "afterEdit": {
+      "idealCount": 1,
+      "state": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "e966cce8-ea8d-458c-b8e0-fb971e1b939f",
+        "ref": {
+          "activityId": "alevel/explaining-properties",
+          "questionId": "EBP-I5B9S3",
+          "seed": 0,
+          "level": 2
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/explaining-properties",
+          "gemId": "l6-t2-1-properties",
+          "level": 2
+        },
+        "currentResponses": {
+          "correction": {
+            "kind": "correction",
+            "selections": [],
+            "replacement": "wrong"
+          }
+        },
+        "assistance": [
+          {
+            "kind": "reveal",
+            "supportId": "worked-answer",
+            "at": 1791195004549
+          }
+        ],
+        "phase": "assessed",
+        "firstResponse": {
+          "responses": {},
+          "submittedAt": 1791195004549,
+          "timing": {
+            "activeMs": 65,
+            "idleLimitMs": 180000
+          },
+          "assistance": [
+            {
+              "kind": "reveal",
+              "supportId": "worked-answer",
+              "at": 1791195004549
+            }
+          ]
+        },
+        "firstAssessment": {
+          "kind": "revealed",
+          "assessedAt": 1791195004549,
+          "independent": false
+        },
+        "currentResponseChanged": true
+      }
+    },
+    "afterClear": {
+      "idealCount": 1,
+      "state": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "e966cce8-ea8d-458c-b8e0-fb971e1b939f",
+        "ref": {
+          "activityId": "alevel/explaining-properties",
+          "questionId": "EBP-I5B9S3",
+          "seed": 0,
+          "level": 2
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/explaining-properties",
+          "gemId": "l6-t2-1-properties",
+          "level": 2
+        },
+        "currentResponses": {},
+        "assistance": [
+          {
+            "kind": "reveal",
+            "supportId": "worked-answer",
+            "at": 1791195004549
+          }
+        ],
+        "phase": "assessed",
+        "firstResponse": {
+          "responses": {},
+          "submittedAt": 1791195004549,
+          "timing": {
+            "activeMs": 65,
+            "idleLimitMs": 180000
+          },
+          "assistance": [
+            {
+              "kind": "reveal",
+              "supportId": "worked-answer",
+              "at": 1791195004549
+            }
+          ]
+        },
+        "firstAssessment": {
+          "kind": "revealed",
+          "assessedAt": 1791195004549,
+          "independent": false
+        },
+        "currentResponseChanged": true
+      }
+    }
+  },
+  "finishedAt": "2026-10-05T10:10:05.287Z"
+}

@@ -1,0 +1,8 @@
+--- src/ui/ResponseControl.tsx (reviewed implementation)
++++ src/ui/ResponseControl.tsx (fix-cycle-01)
+@@
+-            <p className="field-result" role="status">
++            <p className="field-result sr-only" role="status">
+@@
+-              <span id={`${id}-replacement-status`} className="field-result">
++              <span id={`${id}-replacement-status`} className="field-result sr-only">

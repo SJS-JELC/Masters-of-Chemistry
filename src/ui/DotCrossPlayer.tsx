@@ -186,38 +186,6 @@ export function DotCrossPlayer({
           )}
         </section>
       )}
-      <details className="dot-help">
-        <summary>Help and drawing conventions</summary>
-        {question.scaffolds
-          .filter((scaffold) => scaffold.level === question.ref.level)
-          .map((scaffold) => (
-            <section key={scaffold.id}>
-              <p>{scaffold.purpose}</p>
-              <Content blocks={scaffold.content} />
-            </section>
-          ))}
-        {student &&
-          question.hints.map((hint) =>
-            support.some((item) => item.supportId === hint.id) ? (
-              <section key={hint.id} className="hint">
-                <Content blocks={hint.content} />
-              </section>
-            ) : (
-              <button
-                type="button"
-                key={hint.id}
-                onClick={() =>
-                  onCommand({
-                    kind: 'assist',
-                    assistance: { kind: 'hint', supportId: hint.id, at: Date.now() },
-                  })
-                }
-              >
-                Request hint
-              </button>
-            ),
-          )}
-      </details>
       {student && saveStatus.kind === 'error' && (
         <div className="save-status save-error" role="alert">
           <strong>Work has not been saved.</strong> {saveStatus.error.message}
@@ -248,6 +216,11 @@ export function DotCrossPlayer({
         )}
         <Content blocks={question.context} />
       </section>
+      {student && (
+        <div className="dot-question-actions">
+          <QuestionActions actions={actions} />
+        </div>
+      )}
       <ResponseControl
         key={`${part.id}:${actions.clearRevision}`}
         part={part}
@@ -256,9 +229,9 @@ export function DotCrossPlayer({
         onResponse={(response) => {
           if (student) onCommand({ kind: 'respond', partId: part.id, response });
         }}
-        workspaceAside={pane}
         {...(renderEditor ? { renderEditor } : {})}
       />
+      <div className="dot-feedback">{pane}</div>
       {!student && (
         <section className="teacher-answer worked-answer">
           <h3>Checked answer and diagrams</h3>
@@ -298,11 +271,6 @@ export function DotCrossPlayer({
             ))}
           </ul>
         </details>
-      )}
-      {student && (
-        <footer className="player-footer">
-          <QuestionActions actions={actions} />
-        </footer>
       )}
     </article>
   );

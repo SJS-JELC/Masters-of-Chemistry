@@ -112,23 +112,14 @@ export const propertiesProvider: QuestionProvider = {
         : undefined;
     return {
       ref,
-      title: record.format === 'gaps' ? 'Complete the explanation' : 'Select and correct one error',
-      context: [
-        ...record.context,
-        {
-          kind: 'text',
-          text:
-            record.format === 'gaps'
-              ? 'Complete each gap. Each gap is worth one mark.'
-              : 'Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement.',
-        },
-      ],
+      title: record.format === 'gaps' ? 'Complete the gaps.' : 'Find and correct the mistake.',
+      context: record.context,
       layout: 'compact',
       submission: 'all-required-parts',
       parts,
       ...(sentenceTokens ? { sentenceTokens } : {}),
       scaffolds: [],
-      hints: [{ id: 'properties-hint', content: [{ kind: 'text', text: record.hint }] }],
+      hints: [],
       workedAnswer: [{ kind: 'text', text: correctedSentence(record) }],
       sources: [
         ...(record.provenance.startsWith('Adapted')

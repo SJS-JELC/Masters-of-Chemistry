@@ -1,3 +1,4 @@
+import { restoreCheckedFeedback } from '../ui/current-feedback.ts';
 import { activityDatabaseName } from '../persistence/alpha-namespace.ts';
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type {
@@ -113,7 +114,13 @@ export function FoundationApp({
     (import.meta.env.DEV ? query.get('run') || 'local' : 'local')
       .replace(/[^a-zA-Z0-9_-]/g, '')
       .slice(0, 60) || 'manual';
-  const databaseName = activityDatabaseName(course, run, import.meta.env.DEV, !!registryOverride, location.pathname);
+  const databaseName = activityDatabaseName(
+    course,
+    run,
+    import.meta.env.DEV,
+    !!registryOverride,
+    location.pathname,
+  );
   const namespace = useMemo(() => ({ course, profileId: 'local' }), [course]);
   const [readVersion, setReadVersion] = useState(0);
   const repository = useMemo(
@@ -675,10 +682,13 @@ export function FoundationApp({
         setFeedback({ message: result.message });
         return;
       }
-      // A correction check is transient learning feedback: no repository or scheduler action.
+      // Persist checked presentation only; first evidence and scheduler stay fixed.
       if (value.kind === 'check-correction') {
         setFeedback(undefined);
         setCorrectionFeedback(result.correctionFeedback);
+        const checked = controller.checkpoint();
+        applyAttempt(checked);
+        await save(checked);
         return;
       }
       if (value.kind === 'respond' || value.kind === 'clear') setCorrectionFeedback(undefined);
@@ -1056,7 +1066,10 @@ export function FoundationApp({
           : {})}
       onSelectActivity={(activityId) => {
         if (productionRegistry.get(activityId)?.strand === 'olympiad') {
-          void leaveAttempt().then(saved => { if (saved) onSelectOlympiad?.(activityId as import('../contracts/index.ts').OlympiadActivityId); });
+          void leaveAttempt().then((saved) => {
+            if (saved)
+              onSelectOlympiad?.(activityId as import('../contracts/index.ts').OlympiadActivityId);
+          });
           return;
         }
         if (preview) {
@@ -1251,6 +1264,11 @@ export function FoundationApp({
         <QuestionPlayer
           question={shownQuestion}
           attempt={shownAttempt}
+          restoredFeedback={restoreCheckedFeedback(
+            shownQuestion,
+            shownAttempt,
+            activeRuntime.current?.policy,
+          )}
           onCommand={(value) => void command(value)}
           onNext={() => void nextQuestion()}
           saveStatus={saveStatus}

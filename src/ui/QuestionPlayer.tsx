@@ -14,7 +14,8 @@ import type { EditorSurfaceProps } from './EditorFrame.tsx';
 import { Content } from './Content.tsx';
 import { ResponseControl } from './ResponseControl.tsx';
 import { TextRangePicker } from './TextRangePicker.tsx';
-import { assessmentPointLabel } from './assessment-label.ts';
+import { responseFingerprint } from './action-state.ts';
+import type { ResponseStatus } from './current-feedback.ts';
 import {
   questionDisplayTitle,
   repeatsQuestionSubtopic,
@@ -46,6 +47,7 @@ export interface QuestionPlayerProps {
   readonly feedback?: PlayerFeedback;
   readonly canNext?: boolean;
   readonly correctionFeedback?: CorrectionFeedback;
+  readonly restoredFeedback?: CorrectionFeedback | undefined;
   readonly learningReviewEnabled?: boolean;
   readonly renderEditor?: (props: EditorSurfaceProps) => ReactNode;
 }
@@ -67,10 +69,7 @@ function RubricPanel({
   return (
     <section className="rubric-panel" aria-label="Self-review rubric">
       <h3>Review your frozen explanation</h3>
-      <p>
-        Your submitted sections are locked. Work through each marking point and identify evidence in
-        your own answer.
-      </p>
+      <p>Select evidence for each point in your submitted answer.</p>
       <ol className="rubric-progress">
         {part.rubric.map((point) => {
           const decision = review.judgements.find((item) => item.pointId === point.id);
@@ -160,6 +159,7 @@ export function QuestionPlayer({
   onRetrySave,
   feedback,
   correctionFeedback,
+  restoredFeedback,
   canNext = true,
   learningReviewEnabled = false,
   renderEditor,
@@ -170,7 +170,7 @@ export function QuestionPlayer({
   const repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
   const actions = useQuestionActions({
     attempt,
-    correctionFeedback,
+    correctionFeedback: correctionFeedback ?? restoredFeedback,
     onCommand,
     onNext,
     canNext,
@@ -226,13 +226,39 @@ export function QuestionPlayer({
   const assessed = student && attempt.phase === 'assessed';
   const readOnly = !student || reviewing;
   const assessment = assessed ? attempt.firstAssessment : undefined;
-  const canCheckCorrection =
+  const properties = question.ref.activityId === 'alevel/explaining-properties';
+  const checkedFeedback = correctionFeedback ?? restoredFeedback;
+  const sameFirst =
     assessed &&
-    question.parts.some(
-      (part) => part.kind !== 'explanation' && part.kind !== 'drawing-self-check',
+    !attempt.currentResponseChanged &&
+    responseFingerprint(attempt.currentResponses) ===
+      responseFingerprint(attempt.firstResponse.responses);
+  const currentMarks =
+    checkedFeedback && 'marks' in checkedFeedback
+      ? checkedFeedback.marks
+      : sameFirst && assessment?.kind !== 'revealed'
+        ? assessment?.marks
+        : undefined;
+  const pointStatus = (partId: string, pointId?: string): ResponseStatus | undefined => {
+    const points = currentMarks?.points.filter(
+      (point) => point.partId === partId && (!pointId || point.pointId === pointId),
     );
-  const assisted = student && attempt.assistance.length > 0;
+    return points?.length
+      ? points.every((point) => point.earned === point.available)
+        ? 'correct'
+        : 'incorrect'
+      : undefined;
+  };
   const shownSupport = student ? attempt.assistance : [];
+  const selfReviewComplete =
+    !assessment ||
+    assessment.kind === 'revealed' ||
+    assessment.marks.points
+      .filter((point) => {
+        const part = question.parts.find((part) => part.id === point.partId);
+        return part?.kind === 'explanation' || part?.kind === 'drawing-self-check';
+      })
+      .every((point) => point.earned === point.available);
   const showedAnswer =
     !student ||
     shownSupport.some((item) => item.kind === 'reveal' || item.kind === 'worked-answer');
@@ -242,7 +268,7 @@ export function QuestionPlayer({
   return (
     <article
       {...keyboard}
-      className={`question-player layout-${question.layout}`}
+      className={`question-player layout-${question.layout}${properties ? ' properties-player' : ''}`}
       {...(repeatedTitle
         ? { 'aria-label': displayTitle }
         : { 'aria-labelledby': `${instanceId}-title` })}
@@ -269,12 +295,6 @@ export function QuestionPlayer({
             <Content blocks={scaffold.content} />
           </aside>
         ))}
-      {!student && (
-        <section className="worked-answer teacher-answer">
-          <h3>Checked answer and diagrams</h3>
-          <Content blocks={question.workedAnswer} />
-        </section>
-      )}
       <div className="question-parts">
         {question.sentenceTokens && (
           <section
@@ -294,6 +314,7 @@ export function QuestionPlayer({
                     response={attempt.currentResponses[part.id]}
                     readOnly={readOnly}
                     appearance="inline-gap"
+                    status={pointStatus(part.id)}
                     fieldLabel={part.prompt
                       .map((block) => (block.kind === 'text' ? block.text : ''))
                       .join(' ')}
@@ -303,9 +324,6 @@ export function QuestionPlayer({
                   <strong key={part.id}>{part.accepted[0]}</strong>
                 );
               })}
-            </p>
-            <p className="marks">
-              {question.parts.length} gaps · {question.parts.length} marks
             </p>
             {feedback?.issues?.map((issue, index) => (
               <p className="validation-issue" key={index}>
@@ -320,16 +338,20 @@ export function QuestionPlayer({
               <section
                 className="question-part"
                 key={part.id}
-                aria-labelledby={`${instanceId}-part-${part.id}`}
+                {...(properties
+                  ? { 'aria-label': 'Select and correct one error' }
+                  : { 'aria-labelledby': `${instanceId}-part-${part.id}` })}
               >
-                <div className="part-heading">
-                  <h3 id={`${instanceId}-part-${part.id}`}>
-                    {question.parts.length > 1 ? `Part ${index + 1}` : 'Your response'}
-                  </h3>
-                  <span className="marks">
-                    [{part.marks} {part.marks === 1 ? 'mark' : 'marks'}]
-                  </span>
-                </div>
+                {!properties && (
+                  <div className="part-heading">
+                    <h3 id={`${instanceId}-part-${part.id}`}>
+                      {question.parts.length > 1 ? `Part ${index + 1}` : 'Your response'}
+                    </h3>
+                    <span className="marks">
+                      [{part.marks} {part.marks === 1 ? 'mark' : 'marks'}]
+                    </span>
+                  </div>
+                )}
                 <Content blocks={part.prompt} />
                 {!student && part.kind === 'correction' && <p>{part.sourceText}</p>}
                 {student && (
@@ -338,6 +360,9 @@ export function QuestionPlayer({
                     part={part}
                     response={attempt.currentResponses[part.id]}
                     readOnly={readOnly}
+                    status={pointStatus(part.id)}
+                    selectionStatus={pointStatus(part.id, 'selection')}
+                    replacementStatus={pointStatus(part.id, 'replacement')}
                     onResponse={(response) => sendResponse(part.id, response)}
                     {...(renderEditor ? { renderEditor } : {})}
                     {...(part.kind === 'numeric' && part.workingFramework
@@ -399,16 +424,43 @@ export function QuestionPlayer({
             );
           })}
       </div>
-      {feedback && (
-        <div className="validation-issue" role="alert">
-          <strong>Response has not been assessed</strong>
-          <p>{feedback.message}</p>
+      {(!student || showedAnswer || (actions.state.currentCorrect && selfReviewComplete)) && (
+        <section
+          className={`worked-answer${!student ? ' teacher-answer' : ''}`}
+          aria-label="Ideal answer"
+        >
+          <h3>Ideal answer</h3>
+          <Content blocks={question.workedAnswer} />
+        </section>
+      )}
+      {student &&
+        currentMarks &&
+        !question.sentenceTokens &&
+        !question.parts.every((part) => part.kind === 'correction') && (
+          <p className="response-result" role="status">
+            {currentMarks.earned === currentMarks.available && selfReviewComplete
+              ? 'Correct.'
+              : 'Check your response.'}
+          </p>
+        )}
+      {student && question.sentenceTokens && currentMarks && (
+        <p className="sr-only" role="status">
+          {currentMarks.earned === currentMarks.available
+            ? 'All gaps correct.'
+            : 'Some gaps need correction. Each gap has its checked status.'}
+        </p>
+      )}
+      {checkedFeedback && 'issues' in checkedFeedback && (
+        <div className="validation-issue" role="status">
+          {[...new Set(checkedFeedback.issues.map((issue) => issue.message))].map((message) => (
+            <p key={message}>{message}</p>
+          ))}
         </div>
       )}
-      {assessed && (
-        <p className="support-note">
-          You can edit your response for learning. Your first submission and marks remain fixed.
-        </p>
+      {feedback && (
+        <div className="validation-issue" role="alert">
+          <p>{feedback.message}</p>
+        </div>
       )}
       {student && attempt.phase === 'rubric-review' && (
         <>
@@ -435,17 +487,7 @@ export function QuestionPlayer({
       {student && attempt.phase === 'drawing-review' && (
         <section className="rubric-panel" aria-label="Drawing and equation self-check">
           <h3>Review your drawing or equation</h3>
-          <p>
-            Your submitted calculation is frozen. Compare the drawing or equation you made before
-            calculating with the model below.
-          </p>
-          <p>
-            Calculation: {attempt.automaticMarks.earned} / {attempt.automaticMarks.available} marks.
-            The final aggregate result follows your self-check.
-          </p>
-          {attempt.automaticMarks.points.map((point) => (
-            <p key={`${point.partId}-${point.pointId}`}>{point.message}</p>
-          ))}
+          <p>Compare your submitted drawing or equation with the model.</p>
           {attempt.checks.map((check) => {
             const part = question.parts.find((item) => item.id === check.partId);
             if (part?.kind !== 'drawing-self-check')
@@ -502,161 +544,56 @@ export function QuestionPlayer({
           })}
         </section>
       )}
-      {assessment && (
-        <section className="assessment-feedback" aria-label="First assessment" role="status">
-          <h3>{assessment.kind === 'revealed' ? 'Answer revealed' : 'First assessment'}</h3>
-          {assessment.kind !== 'revealed' ? (
-            <>
-              <p className="score">
-                {assessment.marks.earned} / {assessment.marks.available} marks
-                {assessment.selfAssessed ? ' · self-assessed' : ''}
-              </p>
-              {assessment.marks.points.map((point) => (
-                <div className="mark-feedback" key={`${point.partId}-${point.pointId}`}>
-                  <p>
-                    {point.available > 0 && (
-                      <>
-                        <strong>
-                          {assessmentPointLabel(
-                            question.parts.find((part) => part.id === point.partId),
-                            point.earned,
-                            point.available,
-                          )}
-                        </strong>
-                        {' \u00b7 '}
-                      </>
-                    )}
-                    {point.message}
-                  </p>
-                  {learningReviewEnabled &&
-                    assessment.kind === 'marked' &&
-                    point.earned < point.available &&
-                    point.learningReview?.eligible && (
-                      <details className="learning-review">
-                        <summary>Review equivalent wording for learning</summary>
-                        <p>
-                          Compare your answer with the model and rubric. This review preserves your
-                          first marks.
-                        </p>
-                        <p>
-                          <strong>Model answer:</strong> {point.learningReview.modelAnswer}
-                        </p>
-                        <Content blocks={point.learningReview.rubric} />
-                        <div className="action-row">
-                          <button
-                            type="button"
-                            onClick={() =>
-                              onCommand({
-                                kind: 'review-valid-alternative',
-                                decision: {
-                                  partId: point.partId,
-                                  pointId: point.pointId,
-                                  judgement: 'equivalent',
-                                  reviewer: 'student',
-                                },
-                              })
-                            }
-                          >
-                            My wording is equivalent
-                          </button>
-                          <button
-                            type="button"
-                            onClick={() =>
-                              onCommand({
-                                kind: 'review-valid-alternative',
-                                decision: {
-                                  partId: point.partId,
-                                  pointId: point.pointId,
-                                  judgement: 'not-equivalent',
-                                  reviewer: 'student',
-                                },
-                              })
-                            }
-                          >
-                            My wording is not equivalent
-                          </button>
-                        </div>
-                      </details>
-                    )}
+      {assessment?.kind !== 'revealed' && assessment && learningReviewEnabled && (
+        <div className="equivalent-reviews">
+          {assessment.marks.points
+            .filter((point) => point.earned < point.available && point.learningReview?.eligible)
+            .map((point) => (
+              <details className="learning-review" key={`${point.partId}-${point.pointId}`}>
+                <summary>Review equivalent wording</summary>
+                <p>
+                  <strong>Model answer:</strong> {point.learningReview!.modelAnswer}
+                </p>
+                <Content blocks={point.learningReview!.rubric} />
+                <div className="action-row">
+                  {(['equivalent', 'not-equivalent'] as const).map((judgement) => (
+                    <button
+                      type="button"
+                      key={judgement}
+                      onClick={() =>
+                        onCommand({
+                          kind: 'review-valid-alternative',
+                          decision: {
+                            partId: point.partId,
+                            pointId: point.pointId,
+                            judgement,
+                            reviewer: 'student',
+                          },
+                        })
+                      }
+                    >
+                      {judgement === 'equivalent'
+                        ? 'My wording is equivalent'
+                        : 'My wording is not equivalent'}
+                    </button>
+                  ))}
                 </div>
-              ))}
-            </>
-          ) : (
-            <p>This attempt is assisted; the reveal is not an independent assessed response.</p>
-          )}
-          {assisted && <p className="support-note">Support was requested during this attempt.</p>}
-          {assessed && attempt.learningReview && (
-            <p>
-              Learning review: {attempt.learningReview.reviewedMarks.earned} /{' '}
-              {attempt.learningReview.reviewedMarks.available} marks. First marks remain unchanged.
-            </p>
-          )}
-        </section>
+              </details>
+            ))}
+        </div>
       )}
-      {shownSupport
-        .filter((item) => item.kind === 'hint')
-        .map((item) => {
-          const hint = question.hints.find((value) => value.id === item.supportId);
-          return hint ? (
-            <aside className="hint-panel" key={item.supportId}>
-              <strong>Requested hint</strong>
-              <Content blocks={hint.content} />
-            </aside>
-          ) : null;
-        })}
-      {canCheckCorrection && correctionFeedback && (
-        <section
-          className="correction-feedback"
-          aria-label="Learning correction check"
-          role="status"
-        >
-          <h3>Learning correction check</h3>
-          <p className="support-note">
-            This feedback checks your current automatic responses for learning. Your first result
-            and revision progress stay fixed.
-          </p>
-          {'marks' in correctionFeedback ? (
-            <>
-              <p className="score">
-                {correctionFeedback.marks.earned} / {correctionFeedback.marks.available} learning
-                marks
-              </p>
-              <p>
-                <strong>
-                  {correctionFeedback.status === 'correct'
-                    ? 'Correction is correct'
-                    : 'Correction needs more work'}
-                </strong>
-              </p>
-              {correctionFeedback.marks.points.map((point) => (
-                <p key={`${point.partId}-${point.pointId}`}>{point.message}</p>
-              ))}
-            </>
-          ) : (
-            <>
-              <p>
-                <strong>
-                  {correctionFeedback.status === 'unrecognized'
-                    ? 'Correction not recognised'
-                    : 'Correction incomplete'}
-                </strong>
-              </p>
-              {correctionFeedback.issues.map((issue, index) => (
-                <div key={index}>
-                  <p>{issue.message}</p>
-                  {issue.rubricSupport && <Content blocks={issue.rubricSupport} />}
-                </div>
-              ))}
-            </>
-          )}
-        </section>
-      )}
-      {student && showedAnswer && (
-        <section className="worked-answer">
-          <h3>Worked answer</h3>
-          <Content blocks={question.workedAnswer} />
-        </section>
-      )}
+      {!properties &&
+        shownSupport
+          .filter((item) => item.kind === 'hint')
+          .map((item) => {
+            const hint = question.hints.find((value) => value.id === item.supportId);
+            return hint ? (
+              <aside className="hint-panel" key={item.supportId}>
+                <strong>Requested hint</strong>
+                <Content blocks={hint.content} />
+              </aside>
+            ) : null;
+          })}
       {!student && (
         <details className="source-provenance">
           <summary>Question source and provenance</summary>
@@ -675,7 +612,8 @@ export function QuestionPlayer({
       )}
       {student && (
         <footer className="player-footer">
-          {!reviewing &&
+          {!properties &&
+            !reviewing &&
             question.hints
               .filter((hint) => !shownSupport.some((item) => item.supportId === hint.id))
               .map((hint) => (

@@ -1,5 +1,6 @@
 import { useId } from 'react';
 import type { QuestionPart, ResponseFor } from '../contracts/question.ts';
+import type { ResponseStatus } from './current-feedback.ts';
 export function CorrectionSegments({
   part,
   response,
@@ -7,6 +8,7 @@ export function CorrectionSegments({
   onResponse,
   appearance,
   onPicked,
+  selectionStatus,
 }: {
   readonly part: Extract<QuestionPart, { kind: 'correction' }>;
   readonly response: ResponseFor<'correction'>;
@@ -14,14 +16,18 @@ export function CorrectionSegments({
   readonly onResponse: (response: ResponseFor<'correction'>) => void;
   readonly appearance?: 'energetics-practical';
   readonly onPicked?: () => void;
+  readonly selectionStatus?: ResponseStatus | undefined;
 }) {
   const name = useId(),
     multiple = part.segmentSelection === 'multiple';
   if (part.markingPolicyId === 'properties-curated') {
     let offset = 0;
     return (
-      <fieldset className="properties-correction" disabled={readOnly}>
-        <legend>Select the one incorrect phrase</legend>
+      <fieldset
+        className="properties-correction"
+        disabled={readOnly}
+        aria-label="Select the one incorrect phrase"
+      >
         <p className="correction-sentence">
           {part.segments?.map((segment) => {
             const prefix = part.sourceText.slice(offset, segment.start);
@@ -35,6 +41,8 @@ export function CorrectionSegments({
                 <button
                   type="button"
                   aria-pressed={selected}
+                  data-response-status={selected ? selectionStatus : undefined}
+                  aria-label={`${segment.text}${selected && selectionStatus ? (selectionStatus === 'correct' ? ': correct selection' : ': needs correction') : ''}`}
                   data-error-id={segment.id}
                   onClick={() =>
                     onResponse({
@@ -102,7 +110,11 @@ export function CorrectionSegments({
         );
         const range = { start: segment.start, end: segment.end, text: segment.text };
         return (
-          <label className="choice-option" key={segment.id}>
+          <label
+            className="choice-option"
+            key={segment.id}
+            data-response-status={selected ? selectionStatus : undefined}
+          >
             <input
               type={multiple ? 'checkbox' : 'radio'}
               name={name}

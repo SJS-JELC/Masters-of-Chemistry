@@ -1,0 +1,20 @@
+﻿{
+  "agent_id": "A02",
+  "job_id": "EBP-FEEDBACK-REVIEW",
+  "status": "FAIL",
+  "output_path": "validation/ebp-feedback/review/HANDOVER.md",
+  "confidence": 0.97,
+  "reason": "Only the root-requested visible correction-status prose refinement remains; all other independently reviewed behavior passes.",
+  "validation": {
+    "tests": "32 PASS",
+    "typecheck": "PASS",
+    "browserSuites": "26 PASS, including 5 independently designed adversarial suites and all 32 checked restoration/accessibility",
+    "sourceBuildReleaseClosure": "568 matching files",
+    "timingContinuity": "6 source/allowance hashes and 7 retained native-evidence hashes unchanged",
+    "protectedLocal": "1324 matching entries; actual snapshot postdates initial edits",
+    "release": "Both 134-file prefixed runtime closures PASS",
+    "finding": "ResponseControl correction selection paragraph and replacement span: use sr-only while preserving accessible status and borders",
+    "historicalLimits": "Missing old wrapper test leaves/current-inputs freeze and pre-existing 529-path sibling drift retained"
+  }
+}
+

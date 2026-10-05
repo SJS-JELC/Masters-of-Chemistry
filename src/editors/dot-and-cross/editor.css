@@ -74,8 +74,8 @@
   overflow: hidden;
 }
 .dot-cross-editor .toolbar {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
@@ -90,10 +90,22 @@
   gap: 4px;
 }
 .dot-cross-editor .element-palette {
-  flex: 1 1 320px;
   max-width: none;
   min-width: 0;
-  flex-wrap: wrap;
+}
+.dot-cross-editor .element-palette,
+.dot-cross-editor .control-palette {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: safe center;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 4px;
+  overscroll-behavior-x: contain;
+}
+.dot-cross-editor .control-palette {
+  gap: 8px;
 }
 .dot-cross-editor .symbol-tools,
 .dot-cross-editor .charge-tools,
@@ -551,7 +563,7 @@
   overflow: auto;
 }
 @media (min-width: 1100px) {
-  .dot-cross-editor .workspace {
+  .dot-cross-editor .workspace:has(> .marking) {
     grid-template-columns: minmax(0, 1fr) 330px;
   }
   .dot-cross-editor .workspace .canvas-wrap {
@@ -571,8 +583,7 @@
     height: 340px;
   }
   .dot-cross-editor .toolbar .element-palette {
-    flex-basis: 100%;
-    justify-content: center;
+    justify-content: safe center;
   }
   .dot-cross-editor .symbol-tools {
     justify-content: center;

@@ -1,0 +1,62 @@
+diff --git a/src/ui/current-feedback.ts b/src/ui/current-feedback.ts
+new file mode 100644
+index 0000000..ea7dcd9
+--- /dev/null
++++ b/src/ui/current-feedback.ts
+@@ -0,0 +1,56 @@
++import type { CorrectionFeedback, PlayerAttempt } from '../contracts/attempt.ts';
++import type { MarkingPolicy, Question } from '../contracts/question.ts';
++import { checkQuestionInput } from '../domain/attempt/input-checks.ts';
++import { responseFingerprint } from './action-state.ts';
++import { sourceFamilies } from './source-family.ts';
++
++/** Restore checked presentation only; never dispatch, assess, or create evidence. */
++export function restoreCheckedFeedback(
++  question: Question,
++  attempt: PlayerAttempt,
++  policy: MarkingPolicy | undefined,
++): CorrectionFeedback | undefined {
++  if (
++    sourceFamilies[question.ref.activityId] ||
++    (question.parts.length === 1 && question.parts[0]?.kind === 'dot-and-cross')
++  )
++    return undefined;
++  if (
++    attempt.mode !== 'student' ||
++    attempt.phase !== 'assessed' ||
++    attempt.currentResponseChanged ||
++    !policy
++  )
++    return undefined;
++  // First submission uses its complete saved assessment, including self-review.
++  if (
++    responseFingerprint(attempt.currentResponses) ===
++    responseFingerprint(attempt.firstResponse.responses)
++  )
++    return undefined;
++  const automatic = {
++    ...question,
++    parts: question.parts.filter(
++      (part) => part.kind !== 'explanation' && part.kind !== 'drawing-self-check',
++    ),
++  };
++  if (!automatic.parts.length) return undefined;
++  const issues = checkQuestionInput(automatic, attempt.currentResponses);
++  if (issues.length) return { kind: 'correction-learning', status: 'incomplete', issues };
++  const result = policy.mark(automatic, attempt.currentResponses);
++  if (!result.accepted)
++    return {
++      kind: 'correction-learning',
++      status: result.issues.some((issue) => issue.textClassification === 'unrecognized')
++        ? 'unrecognized'
++        : 'incomplete',
++      issues: result.issues,
++    };
++  return {
++    kind: 'correction-learning',
++    status: result.marks.earned === result.marks.available ? 'correct' : 'wrong',
++    marks: result.marks,
++  };
++}
++
++export type ResponseStatus = 'correct' | 'incorrect';

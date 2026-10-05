@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "method": "Rendered generic QuestionPlayer fixture, actual shared attempt engine and browser controls; fixture-only synthetic marking values.",
+  "checks": [
+    {
+      "id": "text",
+      "status": "PASS"
+    },
+    {
+      "id": "numeric",
+      "status": "PASS"
+    },
+    {
+      "id": "choice",
+      "status": "PASS"
+    },
+    {
+      "id": "dropdown",
+      "status": "PASS"
+    },
+    {
+      "id": "multiple",
+      "status": "PASS"
+    },
+    {
+      "id": "diagram",
+      "status": "PASS"
+    },
+    {
+      "id": "correction",
+      "status": "PASS"
+    },
+    {
+      "id": "self-rubric",
+      "status": "PASS"
+    },
+    {
+      "id": "mixed-self-review-remains-required",
+      "status": "PASS"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

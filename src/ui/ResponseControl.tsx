@@ -8,6 +8,7 @@ import { TextRangePicker } from './TextRangePicker.tsx';
 import { NumericWorkingControl } from './NumericWorkingControl.tsx';
 import { CorrectionSegments } from './CorrectionSegments.tsx';
 import { EnergeticsResponseControl } from './EnergeticsResponseControl.tsx';
+import type { ResponseStatus } from './current-feedback.ts';
 
 export interface ResponseControlProps {
   readonly part: QuestionPart;
@@ -21,6 +22,9 @@ export interface ResponseControlProps {
   readonly appearance?: 'energetics-practical' | 'source' | 'inline-gap';
   readonly fieldLabel?: string;
   readonly multiline?: boolean;
+  readonly status?: ResponseStatus | undefined;
+  readonly selectionStatus?: ResponseStatus | undefined;
+  readonly replacementStatus?: ResponseStatus | undefined;
 }
 
 export function ResponseControl({
@@ -35,6 +39,9 @@ export function ResponseControl({
   appearance,
   fieldLabel,
   multiline,
+  status,
+  selectionStatus,
+  replacementStatus,
 }: ResponseControlProps) {
   const id = useId();
   if (appearance === 'energetics-practical' && ['text', 'correction', 'choice'].includes(part.kind))
@@ -122,11 +129,19 @@ export function ResponseControl({
               data-answer-input="true"
               id={id}
               aria-label={fieldLabel ?? 'Gap answer'}
+              data-response-status={status}
+              aria-invalid={status === 'incorrect' ? true : undefined}
+              aria-describedby={status ? `${id}-status` : undefined}
               readOnly={readOnly}
               value={value}
               autoComplete="off"
               onChange={(event) => onResponse({ kind: 'text', value: event.target.value })}
             />
+            {status && (
+              <span id={`${id}-status`} className="sr-only">
+                {status === 'correct' ? 'Correct' : 'Needs correction'}
+              </span>
+            )}
           </label>
         );
       return (
@@ -236,6 +251,7 @@ export function ResponseControl({
               response={current}
               readOnly={readOnly}
               onResponse={onResponse}
+              selectionStatus={selectionStatus}
             />
           ) : (
             <TextRangePicker
@@ -247,40 +263,59 @@ export function ResponseControl({
               }
             />
           )}
-          <ul className="selected-ranges">
-            {current.selections.map((range, index) => (
-              <li key={`${index}-${range.start}-${range.end}`}>
-                “{range.text}”{' '}
-                {part.markingPolicyId === 'properties-curated'
-                  ? null
-                  : `(${range.start}–${range.end})`}{' '}
-                <button
-                  type="button"
-                  disabled={readOnly}
-                  aria-label={`Remove selection ${index + 1}`}
-                  onClick={() =>
-                    onResponse({
-                      ...current,
-                      selections: current.selections.filter((_, item) => item !== index),
-                    })
-                  }
-                >
-                  Remove
-                </button>
-              </li>
-            ))}
-          </ul>
+          {part.markingPolicyId !== 'properties-curated' && (
+            <ul className="selected-ranges">
+              {current.selections.map((range, index) => (
+                <li key={`${index}-${range.start}-${range.end}`}>
+                  “{range.text}”{' '}
+                  {part.markingPolicyId === 'properties-curated'
+                    ? null
+                    : `(${range.start}–${range.end})`}{' '}
+                  <button
+                    type="button"
+                    disabled={readOnly}
+                    aria-label={`Remove selection ${index + 1}`}
+                    onClick={() =>
+                      onResponse({
+                        ...current,
+                        selections: current.selections.filter((_, item) => item !== index),
+                      })
+                    }
+                  >
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          {selectionStatus && (
+            <p className="field-result sr-only" role="status">
+              {selectionStatus === 'correct'
+                ? 'Correct phrase selected.'
+                : 'Choose a different phrase.'}
+            </p>
+          )}
           <label className="response-label" htmlFor={id}>
             Replacement / correction
             <textarea
               data-answer-input="true"
               id={id}
               aria-label="Replacement / correction"
+              data-response-status={replacementStatus}
+              aria-invalid={replacementStatus === 'incorrect' ? true : undefined}
+              aria-describedby={replacementStatus ? `${id}-replacement-status` : undefined}
               rows={4}
               readOnly={readOnly}
               value={current.replacement}
               onChange={(event) => onResponse({ ...current, replacement: event.target.value })}
             />
+            {replacementStatus && (
+              <span id={`${id}-replacement-status`} className="field-result sr-only">
+                {replacementStatus === 'correct'
+                  ? 'Correct replacement.'
+                  : 'Replacement needs correction.'}
+              </span>
+            )}
           </label>
         </div>
       );

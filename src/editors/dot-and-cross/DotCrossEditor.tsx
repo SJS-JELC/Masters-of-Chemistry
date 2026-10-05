@@ -749,121 +749,123 @@ export function DotCrossEditor({
               </button>
             ))}
           </div>
-          <div
-            className="palette-group symbol-tools"
-            role="group"
-            aria-label="Electron and edit tools"
-          >
-            {symbols.map((value) => (
-              <button
-                type="button"
-                key={value}
-                className="tool symbol-tool"
-                data-tool={value}
-                aria-label={`${value[0]!.toUpperCase() + value.slice(1)} electron`}
-                title={`Place a ${value} electron`}
-                aria-pressed={tool === value}
-                disabled={readOnly}
-                onPointerDown={(event) => {
-                  event.currentTarget.dataset.dragged = 'false';
-                  setTool(value);
-                  startDrag(event, { kind: 'paletteSymbol', symbol: value }, event.currentTarget);
-                }}
-                onClick={(event) => paletteClick(event, () => setTool(value))}
-              >
-                {(value === 'dot' ? '●' : value === 'cross' ? '×' : '▲') + ' '}
-                <span>{value[0]!.toUpperCase() + value.slice(1)}</span>
-              </button>
-            ))}
-            <button
-              type="button"
-              className="tool erase-tool"
-              data-tool="erase"
-              aria-label="Erase"
-              title="Erase an atom, electron or charge"
-              aria-pressed={tool === 'erase'}
-              disabled={readOnly}
-              onClick={() => setTool('erase')}
+          <div className="control-palette" role="group" aria-label="Drawing controls">
+            <div
+              className="palette-group symbol-tools"
+              role="group"
+              aria-label="Electron and edit tools"
             >
-              ⌫ <span>Erase</span>
-            </button>
-          </div>
-          <div className="palette-group charge-tools" role="group" aria-label="Charge tools">
-            {[3, 2, 1, -1, -2, -3].map((charge) => (
+              {symbols.map((value) => (
+                <button
+                  type="button"
+                  key={value}
+                  className="tool symbol-tool"
+                  data-tool={value}
+                  aria-label={`${value[0]!.toUpperCase() + value.slice(1)} electron`}
+                  title={`Place a ${value} electron`}
+                  aria-pressed={tool === value}
+                  disabled={readOnly}
+                  onPointerDown={(event) => {
+                    event.currentTarget.dataset.dragged = 'false';
+                    setTool(value);
+                    startDrag(event, { kind: 'paletteSymbol', symbol: value }, event.currentTarget);
+                  }}
+                  onClick={(event) => paletteClick(event, () => setTool(value))}
+                >
+                  {(value === 'dot' ? '●' : value === 'cross' ? '×' : '▲') + ' '}
+                  <span>{value[0]!.toUpperCase() + value.slice(1)}</span>
+                </button>
+              ))}
               <button
                 type="button"
-                className="tool charge-tool"
-                key={charge}
-                data-charge={charge}
-                aria-label={`${Math.abs(charge)} ${charge > 0 ? 'plus' : 'minus'} charge`}
-                title={`Apply a ${Math.abs(charge)}${charge > 0 ? '+' : '−'} charge`}
-                aria-pressed={tool === 'charge' && pendingCharge === charge}
+                className="tool erase-tool"
+                data-tool="erase"
+                aria-label="Erase"
+                title="Erase an atom, electron or charge"
+                aria-pressed={tool === 'erase'}
                 disabled={readOnly}
-                onPointerDown={(event) => {
-                  event.currentTarget.dataset.dragged = 'false';
-                  setPendingCharge(charge);
-                  setTool('charge', element, charge);
-                  startDrag(event, { kind: 'paletteCharge', charge }, event.currentTarget);
-                }}
-                onClick={(event) =>
-                  paletteClick(event, () => {
+                onClick={() => setTool('erase')}
+              >
+                ⌫ <span>Erase</span>
+              </button>
+            </div>
+            <div className="palette-group charge-tools" role="group" aria-label="Charge tools">
+              {[3, 2, 1, -1, -2, -3].map((charge) => (
+                <button
+                  type="button"
+                  className="tool charge-tool"
+                  key={charge}
+                  data-charge={charge}
+                  aria-label={`${Math.abs(charge)} ${charge > 0 ? 'plus' : 'minus'} charge`}
+                  title={`Apply a ${Math.abs(charge)}${charge > 0 ? '+' : '−'} charge`}
+                  aria-pressed={tool === 'charge' && pendingCharge === charge}
+                  disabled={readOnly}
+                  onPointerDown={(event) => {
+                    event.currentTarget.dataset.dragged = 'false';
                     setPendingCharge(charge);
                     setTool('charge', element, charge);
-                  })
-                }
+                    startDrag(event, { kind: 'paletteCharge', charge }, event.currentTarget);
+                  }}
+                  onClick={(event) =>
+                    paletteClick(event, () => {
+                      setPendingCharge(charge);
+                      setTool('charge', element, charge);
+                    })
+                  }
+                >
+                  {Math.abs(charge)}
+                  {charge > 0 ? '+' : '−'}
+                </button>
+              ))}
+            </div>
+            <div className="palette-group history-tools" role="group" aria-label="Diagram history">
+              <button
+                type="button"
+                className="tool history-tool"
+                disabled={readOnly || !state.history?.length}
+                onClick={() => apply({ type: 'undo' }, 'Last edit undone.')}
+                title="Undo the last edit"
               >
-                {Math.abs(charge)}
-                {charge > 0 ? '+' : '−'}
+                Undo
               </button>
-            ))}
+              <button
+                type="button"
+                className="tool history-tool"
+                disabled={readOnly || !state.future?.length}
+                onClick={() => apply({ type: 'redo' }, 'Edit restored.')}
+                title="Redo the last undone edit"
+              >
+                Redo
+              </button>
+              <button
+                type="button"
+                className="tool history-tool"
+                disabled={readOnly || !state.atoms.length}
+                onClick={() => {
+                  apply({ type: 'clear' }, 'Canvas cleared. Undo restores your diagram.');
+                  setSelected([]);
+                }}
+                title="Clear the diagram"
+              >
+                Clear
+              </button>
+            </div>
+            <button
+              type="button"
+              className="tool circles-tool"
+              aria-pressed={circles}
+              disabled={readOnly}
+              title={circles ? 'Hide circles' : 'Show circles'}
+              onClick={() =>
+                apply(
+                  { type: 'circles', visible: !circles },
+                  circles ? 'Outer-shell circles hidden.' : 'Outer-shell circles shown.',
+                )
+              }
+            >
+              {circles ? 'Hide circles' : 'Show circles'}
+            </button>
           </div>
-          <div className="palette-group history-tools" role="group" aria-label="Diagram history">
-            <button
-              type="button"
-              className="tool history-tool"
-              disabled={readOnly || !state.history?.length}
-              onClick={() => apply({ type: 'undo' }, 'Last edit undone.')}
-              title="Undo the last edit"
-            >
-              Undo
-            </button>
-            <button
-              type="button"
-              className="tool history-tool"
-              disabled={readOnly || !state.future?.length}
-              onClick={() => apply({ type: 'redo' }, 'Edit restored.')}
-              title="Redo the last undone edit"
-            >
-              Redo
-            </button>
-            <button
-              type="button"
-              className="tool history-tool"
-              disabled={readOnly || !state.atoms.length}
-              onClick={() => {
-                apply({ type: 'clear' }, 'Canvas cleared. Undo restores your diagram.');
-                setSelected([]);
-              }}
-              title="Clear the diagram"
-            >
-              Clear
-            </button>
-          </div>
-          <button
-            type="button"
-            className="tool circles-tool"
-            aria-pressed={circles}
-            disabled={readOnly}
-            title={circles ? 'Hide circles' : 'Show circles'}
-            onClick={() =>
-              apply(
-                { type: 'circles', visible: !circles },
-                circles ? 'Outer-shell circles hidden.' : 'Outer-shell circles shown.',
-              )
-            }
-          >
-            {circles ? 'Hide circles' : 'Show circles'}
-          </button>
         </div>
         <div className="workspace">
           <div className="drawing-area">
@@ -912,9 +914,11 @@ export function DotCrossEditor({
               {message}
             </p>
           </div>
-          <aside className="marking" aria-label="Check your answer">
-            {workspaceAside}
-          </aside>
+          {workspaceAside && (
+            <aside className="marking" aria-label="Check your answer">
+              {workspaceAside}
+            </aside>
+          )}
         </div>
       </section>
       <details className="dc-alternatives editor-alternatives">

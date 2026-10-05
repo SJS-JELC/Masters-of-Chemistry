@@ -1,0 +1,70 @@
+name: Build and publish Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.13.1'
+          cache: npm
+
+      - uses: actions/configure-pages@v5
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+
+      - name: Generate and validate release inventories
+        run: |
+          npm run release:alevel
+          npm run release:igcse
+          npm run check:release
+
+      - name: Package approved runtime files
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const manifest = JSON.parse(
+            fs.readFileSync('release/alevel.runtime.json', 'utf8')
+          );
+          for (const { path: file } of manifest.files) {
+            const target = path.join('_site', file);
+            fs.mkdirSync(path.dirname(target), { recursive: true });
+            fs.copyFileSync(path.join('dist/alevel', file), target);
+          }
+          NODE
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4

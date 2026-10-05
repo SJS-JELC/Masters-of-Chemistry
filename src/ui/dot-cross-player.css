@@ -5,7 +5,9 @@
 .dot-question-panel h2{font-size:clamp(1.25rem,2vw,1.5rem);margin:0}
 .dot-question-panel .content p{margin-top:8px;margin-bottom:0}
 .dot-question-panel .content p:first-child{font-size:1.12rem}
-.dot-cross-player .dot-question-actions .question-actions{margin-block:6px}
+.dot-cross-player .dot-question-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0 8px;min-height:48px}
+.dot-cross-player .dot-question-actions .question-actions{width:auto;margin-block:6px;margin-left:auto}
+.dot-check-status{font-size:.8rem;white-space:nowrap;text-align:left}.dot-check-status:empty{display:none}.dot-check-status.correct{color:#8be3a5}.dot-check-status.incorrect{color:#ff9b9b}
 .dot-cross-player .dot-question-actions .question-actions button[data-question-action][type='button']{height:36px;min-height:36px;padding:4px 12px}
 .dot-level{color:#55f6ff;font-size:.75rem}.dot-question-panel .review-id{font-size:.7rem;border:1px solid #7d4279;border-radius:9px;padding:5px;color:#ff84de;white-space:nowrap}
 .dot-cross-player .dot-feedback .assessment-feedback,.dot-cross-player .dot-feedback .correction-feedback{padding:0;margin:14px 0;border:0;background:transparent}

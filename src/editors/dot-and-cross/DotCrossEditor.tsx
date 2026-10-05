@@ -10,6 +10,7 @@ import type {
 import type { EditorSurfaceProps } from '../../ui/EditorFrame.tsx';
 import { dotCrossEngine, type DotCrossCommand } from '../../chemistry/dot-and-cross/engine.ts';
 import { createLayout, type ElectronRegion } from '../../chemistry/dot-and-cross/layout.js';
+import { editorLayoutQuestionId } from '../../chemistry/dot-and-cross/layout-identity.ts';
 import {
   adaptiveView,
   clampPoint,
@@ -105,7 +106,7 @@ export function DotCrossEditor({
   const [, paint] = useState(0),
     state = stateRef.current;
   const igcse = part.markingPolicyId.startsWith('igcse-dot-cross:'),
-    questionId = part.markingPolicyId.replace(/^(?:igcse-)?dot-cross:/, '');
+    questionId = editorLayoutQuestionId(part.markingPolicyId);
   const elements = igcse ? palette.filter((e) => e !== 'B' && e !== 'P') : palette;
   const symbols: readonly ElectronSymbol[] = igcse
     ? ['dot', 'cross']

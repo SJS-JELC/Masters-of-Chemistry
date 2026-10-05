@@ -17,6 +17,12 @@
 .source-player .marking-pane {
   min-width: 0;
 }
+.source-player.source-bonding .question-workspace {
+  grid-template-columns: minmax(0, 1fr);
+}
+.source-player.source-bonding .marking-pane:empty {
+  display: none;
+}
 .source-player.source-embedded .source-fields {
   display: block;
 }

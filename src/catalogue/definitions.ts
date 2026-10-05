@@ -588,7 +588,7 @@ export const activityDefinitions = [
     "id": "alevel/c3l6-organic-reactions",
     "course": "alevel",
     "strand": "olympiad",
-    "title": "C3L6 organic reactions",
+    "title": "A Class of their Own",
     "source": [
       {
         "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.css",
@@ -1384,7 +1384,7 @@ export const activityDefinitions = [
     "source": [
       {
         "path": "apps/Masters-of-Chemistry/src/activities/alevel/explaining-properties/bank.ts",
-        "sha256": "13d621c8cff346226215a01345ef1253671f3092cbd853a9e1a46e0e76d31b88",
+        "sha256": "3f1ba771bca1c1ee4a1e6f965d77db827ee6c7a134c6ab0e7364809a21da4abe",
         "symbolOrSection": "32 approved specification-authored/adapted questions; see activity README and retained source review."
       }
     ],

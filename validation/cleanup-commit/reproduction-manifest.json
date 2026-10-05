@@ -1,0 +1,38 @@
+[
+    {
+        "target":  "validation\\cleanup-commit\\repro-title-check.mjs",
+        "retainedSha256":  "F384731FAF9DD0C2B923E3C9BEA7E035A2340646076F35B5A65612414B2D7810",
+        "source":  ".browser\\title-check.mjs",
+        "sourceSha256":  "3B4FFD6D32FA7BE47AC33C5799BA3224C7A82B4EF81933601EB67296DA532F26"
+    },
+    {
+        "target":  "validation\\cleanup-commit\\repro-dot-fullwidth-check.mjs",
+        "retainedSha256":  "F1624BA6FBEDCEE1B61BA9A7F969E4FB243655C1F04A7B5ED552E6DB15CD68DC",
+        "source":  ".browser\\dot-fullwidth-check.mjs",
+        "sourceSha256":  "3320715836412EBAD31C843DD6022ACECB2A238B6B8756C02E4E8CF815F82BDD"
+    },
+    {
+        "target":  "validation\\cleanup-commit\\repro-palette-check.mjs",
+        "retainedSha256":  "A32ED45EB05F7806654D4049C1DF85A5D018D6871A31157B520C1533881B159E",
+        "source":  ".browser\\palette-check.mjs",
+        "sourceSha256":  "1C3D5AA2FD977DD8A7AE8520F385758632AA5247655A8857959A3921417328A5"
+    },
+    {
+        "target":  "validation\\cleanup-commit\\repro-actions-check.mjs",
+        "retainedSha256":  "6E9CC18E84D42DA4C8002E06EB17785AC993F62AC63E3D12181556A69988F344",
+        "source":  ".browser\\actions-check.mjs",
+        "sourceSha256":  "9C9204CFFAD4F5905C235FA4240B4166611D25845D3789EB5E236B5EE62C989C"
+    },
+    {
+        "target":  "validation\\cleanup-commit\\repro-actions-outside-check.mjs",
+        "retainedSha256":  "AB841C860DAA7553598FBD3D197441535C6BDFE5CF4851BDD9C253F4C08EBA2B",
+        "source":  ".browser\\actions-outside-check.mjs",
+        "sourceSha256":  "E7DE0EA7E484ABAD739460D0C964B272A93B6FA79BFFD669DC90B8250701FDC9"
+    },
+    {
+        "target":  "validation\\cleanup-commit\\repro-bonding-width-check.mjs",
+        "retainedSha256":  "2419F754177064CBD020DBE5F731B92D9B845D5A2A63C36A47A91B93DF9E94EE",
+        "source":  ".browser\\bonding-width-check.mjs",
+        "sourceSha256":  "922F29C2E6D44E0C6EA8B801228DC514B93A174BDC1F51F874C54174A4C40790"
+    }
+]

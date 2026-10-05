@@ -13,6 +13,7 @@ import {
   useQuestionChrome,
 } from '../shell/QuestionChrome.tsx';
 import { QuestionLevelPill } from './QuestionLevelPill.tsx';
+import { responseFingerprint } from './action-state.ts';
 import './dot-cross-player.css';
 
 /** Source workspace presentation; the shared attempt/clock/repository still own every command. */
@@ -29,7 +30,8 @@ export function DotCrossPlayer({
   renderEditor,
 }: QuestionPlayerProps) {
   const id = useId(),
-    dialog = useRef<HTMLDialogElement>(null);
+    dialog = useRef<HTMLDialogElement>(null),
+    revealedFeedback = useRef<typeof correctionFeedback>(undefined);
   const chrome = useQuestionChrome(),
     displayTitle = questionDisplayTitle(question),
     repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
@@ -43,6 +45,27 @@ export function DotCrossPlayer({
   const part = question.parts[0];
   const current = part ? attempt.currentResponses[part.id] : undefined;
   const circles = current?.kind === 'dot-and-cross' ? current.circles !== false : true;
+  // Present only a checked current drawing; first evidence and timing stay immutable.
+  const sameFirst =
+    assessed &&
+    !attempt.currentResponseChanged &&
+    responseFingerprint(attempt.currentResponses) ===
+      responseFingerprint(attempt.firstResponse.responses);
+  const checkedMarks =
+    assessed && !attempt.currentResponseChanged
+      ? correctionFeedback
+        ? 'marks' in correctionFeedback && correctionFeedback !== revealedFeedback.current
+          ? correctionFeedback.marks
+          : undefined
+        : !attempt.currentGiveUp && sameFirst && assessment?.kind !== 'revealed'
+          ? assessment?.marks
+          : undefined
+      : undefined;
+  const checkedStatus = checkedMarks
+    ? checkedMarks.earned === checkedMarks.available
+      ? 'correct'
+      : 'incorrect'
+    : undefined;
   useEffect(() => {
     let cancelled = false;
     setRecord(null);
@@ -85,7 +108,10 @@ export function DotCrossPlayer({
     onCommand,
     onNext,
     canNext,
-    onShowAnswer: () => setAnswerOpen(true),
+    onShowAnswer: () => {
+      revealedFeedback.current = correctionFeedback;
+      setAnswerOpen(true);
+    },
   });
   const keyboard = useQuestionKeyboard(
     `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
@@ -218,6 +244,14 @@ export function DotCrossPlayer({
       </section>
       {student && (
         <div className="dot-question-actions">
+          <span
+            className={`dot-check-status${checkedStatus ? ` ${checkedStatus}` : ''}`}
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {checkedStatus === 'correct' ? 'Correct' : checkedStatus ? 'Incorrect' : ''}
+          </span>
           <QuestionActions actions={actions} />
         </div>
       )}

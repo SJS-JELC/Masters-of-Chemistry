@@ -409,6 +409,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
       })}
       {student &&
         !reviewing &&
+        family !== 'bonding' &&
         question.hints
           .filter(
             (hint) =>

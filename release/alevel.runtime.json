@@ -1,53 +1,53 @@
 {
   "schemaVersion": 1,
   "course": "alevel",
-  "generatedAt": "2026-10-05T11:08:31.252Z",
+  "generatedAt": "2026-10-05T14:01:32.193Z",
   "status": "local-runtime-inventory-no-publication",
   "buildRoot": "dist/alevel",
   "entry": "index.html",
   "shellGzipBudgetBytes": 204800,
   "gzipMethod": "node:zlib gzipSync default compression; individual files summed",
   "initialScope": "course entry plus actual ProductionFoundation, default original landing and their eager imports; excludes deferred providers/editors/statistics/import",
-  "entryOnlyJavascriptGzipBytes": 70483,
+  "entryOnlyJavascriptGzipBytes": 70485,
   "initialJavascript": [
-    "assets/alevel-BX2x4Aqg.js",
+    "assets/alevel-DkGWGpQD.js",
     "assets/jsx-runtime-Dk72oS4N.js",
     "assets/react-dom-X1VypBGM.js",
     "assets/preload-helper-BaNbYf_w.js",
-    "assets/ProductionFoundation-DdUsXuow.js",
+    "assets/ProductionFoundation-BZUqtONS.js",
     "assets/Content-BvpHyxrO.js",
-    "assets/repository-Cj6bF4_n.js",
+    "assets/repository-t2k4MqMq.js",
     "assets/canonical-identity-DIAK0BhK.js",
     "assets/policy-C8A-n6Tk.js",
     "assets/engine-BOiqT4al.js",
-    "assets/definitions-DVrXIjP9.js",
+    "assets/definitions-CK8fULtk.js",
     "assets/alpha-namespace-xEhFAEHR.js",
-    "assets/persistence-CfKBjLUQ.js",
-    "assets/registry-BEpJd73d.js",
+    "assets/persistence-DGLXOWGm.js",
+    "assets/registry-j9sJXWEW.js",
     "assets/identity-DG87IKCR.js",
     "assets/dependencies-IbyFZa8N.js",
     "assets/QuestionChrome-lCTvniY-.js",
     "assets/QuestionLevelPill-Dmtju4ni.js",
     "assets/source-family-9gcp-uI-.js",
-    "assets/mastery-7zysytse.js",
-    "assets/course-mastery-Bqax-sx3.js",
-    "assets/landing-DsWanPj-.js",
+    "assets/mastery-BD-Iyfuo.js",
+    "assets/course-mastery-CiMJnc9w.js",
+    "assets/landing-fp8-fh7N.js",
     "assets/SJS-Eagle-Y-g8FGE-.js",
     "assets/catalogue-CA3-kB_F.js",
     "assets/RecallIcon-D6P3QWpl.js"
   ],
-  "initialJavascriptGzipBytes": 182304,
+  "initialJavascriptGzipBytes": 182319,
   "lazyJavascript": [
-    "assets/DotCrossPlayer-Bu_NhPV8.js",
+    "assets/DotCrossPlayer-CVjKlAmr.js",
     "assets/DrawingDialog-DSNOo0fm.js",
-    "assets/OlympiadHost-CwdwUm2W.js",
+    "assets/OlympiadHost-BYveDxUo.js",
     "assets/RecallView-ChrCyREI.js",
-    "assets/SourceQuestionPlayer-B0SLBRAC.js",
+    "assets/SourceQuestionPlayer-yMZx5j8o.js",
     "assets/bond-enthalpy-core-B3NxXqut.js",
     "assets/bond-enthalpy-core-M9vstt1Q.js",
     "assets/c3l6-BOO4LScT.js",
-    "assets/c3l6-Cf7M83aZ.js",
-    "assets/compatibility-Dxdj1BHc.js",
+    "assets/c3l6-Cn2WJRhh.js",
+    "assets/compatibility-DJsI7-01.js",
     "assets/core-BFWXsLAB.js",
     "assets/core-BSXqJyKP.js",
     "assets/core-COc-HSB_.js",
@@ -55,7 +55,7 @@
     "assets/data-DRsOgynP.js",
     "assets/data-PGygMTpc.js",
     "assets/display-DEyThlzt.js",
-    "assets/dot-and-cross-BY-wUxoQ.js",
+    "assets/dot-and-cross-BxoDF4CA.js",
     "assets/electron-configuration-B7ReRB2w.js",
     "assets/energy-profile-19UY0FG4.js",
     "assets/energy-profile-DCLHUIEw.js",
@@ -109,7 +109,7 @@
     "assets/provider-clQqhYgI.js",
     "assets/provider-ejE32NnQ.js",
     "assets/provider-yZRfcDYd.js",
-    "assets/statistics-DfYbEKrt.js",
+    "assets/statistics-DlEi5pkX.js",
     "assets/titration-curve-B7-yLPDL.js",
     "assets/types-BQzY_9Qt.js",
     "assets/types-CGzZHUAK.js"
@@ -1014,7 +1014,7 @@
   "provenance": {
     "inventoryPath": "validation/s0/inventory/coverage-manifest.json",
     "inventorySha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
-    "viteManifestSha256": "051af63b15d7498e18c5e6a4f8ae42161973b66075c7df786100322eefa0fa74"
+    "viteManifestSha256": "35835d1deeb2dc220ea3ddb087fe6253d08656dae8ecf26445a7d0a1ddec39c0"
   },
   "files": [
     {
@@ -1067,16 +1067,16 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/DotCrossPlayer-Bu_NhPV8.js",
-      "bytes": 6482,
-      "sha256": "588eca1d0159ee3117a0df440e0f149b17f5a825e2532049bd5080ad057f1ba9",
-      "gzipBytes": 2478,
+      "path": "assets/DotCrossPlayer-B_7OvE6F.css",
+      "bytes": 2961,
+      "sha256": "d0655e9768e14e87b059a04c12b65ddeddd163db01488af4b4044ddb580a1c15",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/DotCrossPlayer-CGyh1WtJ.css",
-      "bytes": 2602,
-      "sha256": "5d98c59aeb8df84330c50935aae8ac999a8eecfa9ff432c52d9e64d9bfdba369",
+      "path": "assets/DotCrossPlayer-CVjKlAmr.js",
+      "bytes": 6980,
+      "sha256": "c229389fca90e89fa6b5331a8146a7320987b597612c97494b799f146ee81766",
+      "gzipBytes": 2664,
       "role": "lazy-runtime"
     },
     {
@@ -1093,9 +1093,9 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/OlympiadHost-CwdwUm2W.js",
+      "path": "assets/OlympiadHost-BYveDxUo.js",
       "bytes": 9698,
-      "sha256": "66a24d4c291f6c12b1b53b0d09e6fced5b1a245fa13fae9e263a19af986caa1f",
+      "sha256": "335d24de32118da32d35ef94bf1283b8f4526adc215d1d7142642a6be2675f6b",
       "gzipBytes": 3674,
       "role": "lazy-runtime"
     },
@@ -1106,10 +1106,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/ProductionFoundation-DdUsXuow.js",
-      "bytes": 80698,
-      "sha256": "580e9ae1e20908566f9e610734d847dd7f0ee72ac43b1a8ec9db45caab0b4389",
-      "gzipBytes": 23582,
+      "path": "assets/ProductionFoundation-BZUqtONS.js",
+      "bytes": 80701,
+      "sha256": "8601e6e9e04eb667a6969489a44fc57d2d6374abcd9e249ac66ab09e5b1aedf1",
+      "gzipBytes": 23588,
       "role": "initial-javascript"
     },
     {
@@ -1172,16 +1172,88 @@
       "role": "licensed-brand-asset"
     },
     {
-      "path": "assets/SourceQuestionPlayer-B0SLBRAC.js",
-      "bytes": 27620,
-      "sha256": "9e90b8a696e60dff07397f62344a17b757ae8f8de3d1b52366a3777ce7d62ee3",
-      "gzipBytes": 8813,
+      "path": "assets/SourceQuestionPlayer-B7atD5Of.css",
+      "bytes": 61274,
+      "sha256": "e6e9c5e63b850d999f0b30907ae00ee84aa4f5e49cd5c3816fc5bda990439ba1",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/SourceQuestionPlayer-dC0UFpUm.css",
-      "bytes": 61125,
-      "sha256": "9c7249a56cc8d62661aaee9f13f229acb2311ee86c2ae54e4bc18931ac129308",
+      "path": "assets/SourceQuestionPlayer-yMZx5j8o.js",
+      "bytes": 27635,
+      "sha256": "11763fabdc51d4cbd4398fd3ec4bc6233697936c68caaee8e24fd274e9a53998",
+      "gzipBytes": 8818,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-01-p1-B7lbrCeA.svg",
+      "bytes": 6887,
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-01-r1-CLyJsO-i.svg",
+      "bytes": 7484,
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-02-p1-OjiOrFSK.svg",
+      "bytes": 8948,
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-02-r1-ByyLCGPs.svg",
+      "bytes": 6974,
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-03-p1-eU7CGgOm.svg",
+      "bytes": 4975,
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-03-r1-aA9mPxyz.svg",
+      "bytes": 4160,
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-04-p2-dAwh-l9N.svg",
+      "bytes": 4717,
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-04-r1-Bf5uXb9E.svg",
+      "bytes": 5447,
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-05-p1-D8ELiJut.svg",
+      "bytes": 9009,
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-05-r1-DaggzjaF.svg",
+      "bytes": 5292,
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-06-p1-BllJ0dFl.svg",
+      "bytes": 9918,
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-06-r1-BC-SVKaW.svg",
+      "bytes": 9689,
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd",
       "role": "lazy-runtime"
     },
     {
@@ -1203,11 +1275,59 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/alevel-BX2x4Aqg.js",
+      "path": "assets/a-08-p2-D-S-CH0O.svg",
+      "bytes": 5283,
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-08-r1-BxrhkRWY.svg",
+      "bytes": 7655,
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-09-p1-CVYceU8g.svg",
+      "bytes": 6459,
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-09-r1-yd1fQLMm.svg",
+      "bytes": 4857,
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-10-p1-DWARGVV7.svg",
+      "bytes": 9730,
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-10-r1-C1H1Uq8w.svg",
+      "bytes": 7683,
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
+      "bytes": 4106,
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/alevel-DkGWGpQD.js",
       "bytes": 208597,
-      "sha256": "79a95b3bd72d5e9894f9bebd7ebd3b6efeafad2e5bf55a7c2d4d0cf1966922d9",
-      "gzipBytes": 65014,
+      "sha256": "6734ea56ea2d17bed3ae41068e83e32475d932dcc306d4adb99ba481f6f78746",
+      "gzipBytes": 65016,
       "role": "initial-javascript"
+    },
+    {
+      "path": "assets/allantoin-skeletal-notes-C8SZ2IFM.svg",
+      "bytes": 12141,
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005",
+      "role": "lazy-runtime"
     },
     {
       "path": "assets/alpha-namespace-xEhFAEHR.js",
@@ -1238,10 +1358,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/c3l6-Cf7M83aZ.js",
-      "bytes": 28565,
-      "sha256": "2a87f2e34d530659068fcfd0dd1e228055bc7a7d392c027c3e94fb26bc5cc4bd",
-      "gzipBytes": 9290,
+      "path": "assets/c3l6-Cn2WJRhh.js",
+      "bytes": 36467,
+      "sha256": "1685a0826ce33707e0669e0791c065e85cf4eeebedc79a6665e22dd28d34784a",
+      "gzipBytes": 11154,
       "role": "lazy-runtime"
     },
     {
@@ -1265,16 +1385,16 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/compatibility-DNtqPy_4.css",
-      "bytes": 852,
-      "sha256": "4a619e5c2d6ff6d4d004602240abe4dafd2b583843598346e852bdf6e3ca1946",
+      "path": "assets/compatibility-DJsI7-01.js",
+      "bytes": 13029,
+      "sha256": "b37406aa40ad775b5c7c4b66f7d0ddbdc33d55dd71ad30c5549e66f1968188c9",
+      "gzipBytes": 4748,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/compatibility-Dxdj1BHc.js",
-      "bytes": 13029,
-      "sha256": "072274dac6569e9b5ffb94cf787239d0959289d2e43df20bbc0184ebf6214041",
-      "gzipBytes": 4748,
+      "path": "assets/compatibility-DNtqPy_4.css",
+      "bytes": 852,
+      "sha256": "4a619e5c2d6ff6d4d004602240abe4dafd2b583843598346e852bdf6e3ca1946",
       "role": "lazy-runtime"
     },
     {
@@ -1312,10 +1432,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/course-mastery-Bqax-sx3.js",
+      "path": "assets/course-mastery-CiMJnc9w.js",
       "bytes": 2422,
-      "sha256": "7da0837b8ddce03eb7f656cea5de5ddee40ea34b9d5b531d1ef99150e071fdd2",
-      "gzipBytes": 1075,
+      "sha256": "db3f792adca5be930091979394792107ce0a91a43d53c2f2c5ddc41511ca484b",
+      "gzipBytes": 1074,
       "role": "initial-javascript"
     },
     {
@@ -1333,10 +1453,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/definitions-DVrXIjP9.js",
-      "bytes": 49689,
-      "sha256": "3b4f6f6035ebeb70548d8eb0a98c6b22f53d3ecb263af8ac8a224ad164602e2b",
-      "gzipBytes": 8216,
+      "path": "assets/definitions-CK8fULtk.js",
+      "bytes": 49687,
+      "sha256": "4f229ffc6f8b6ba9b5fce6fc98a4ed0f6859ea91bcce07eb46a700689aa4927e",
+      "gzipBytes": 8225,
       "role": "initial-javascript"
     },
     {
@@ -1354,16 +1474,16 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/dot-and-cross-BY-wUxoQ.js",
-      "bytes": 29491,
-      "sha256": "26a903050e3dcb0ceab18d16abaf6525c7132ff05e1dba3f3d6d846111122d77",
-      "gzipBytes": 9521,
-      "role": "lazy-runtime"
-    },
-    {
       "path": "assets/dot-and-cross-BooDJPMS.css",
       "bytes": 12580,
       "sha256": "aa683032c25618a7ab36d9a0d0ff710d40f093be34525c723257bde04b4b0f1a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/dot-and-cross-BxoDF4CA.js",
+      "bytes": 29666,
+      "sha256": "81dff48e0fb3acf06823678e14b7d70cff9e2a047936fee0bb759730a8d9ad05",
+      "gzipBytes": 9597,
       "role": "lazy-runtime"
     },
     {
@@ -1456,6 +1576,96 @@
       "role": "lazy-runtime"
     },
     {
+      "path": "assets/example-01-z-ule6NF.svg",
+      "bytes": 188583,
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-02-CO0o4LKf.svg",
+      "bytes": 188485,
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-03-D6k44Rmm.svg",
+      "bytes": 188485,
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-04-Bo4K13nz.svg",
+      "bytes": 188488,
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-05-CRYEGIjy.svg",
+      "bytes": 189181,
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-06-BXoatn3p.svg",
+      "bytes": 188133,
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-07-BjSkFWb4.svg",
+      "bytes": 188125,
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-08-BkHFGDdE.svg",
+      "bytes": 188260,
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-09-eObnlTTe.svg",
+      "bytes": 188769,
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-10-Cdj6GgSb.svg",
+      "bytes": 188583,
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-11-C_sEZP6L.svg",
+      "bytes": 188126,
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-12-BJkQG18m.svg",
+      "bytes": 188130,
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-13-C1QLu3Mg.svg",
+      "bytes": 188129,
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-14-FxDx7nll.svg",
+      "bytes": 188040,
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-15-BWGDoFx9.svg",
+      "bytes": 188681,
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee",
+      "role": "lazy-runtime"
+    },
+    {
       "path": "assets/fonts/Comfortaa-Bold.ttf",
       "bytes": 140172,
       "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
@@ -1472,6 +1682,12 @@
       "bytes": 3795,
       "sha256": "b825f0b0a23f0850551fd8879ec22c0574b02b1b7567464a07c418dacb7d26a7",
       "gzipBytes": 1874,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
+      "bytes": 4572,
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01",
       "role": "lazy-runtime"
     },
     {
@@ -1522,10 +1738,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/landing-DsWanPj-.js",
+      "path": "assets/landing-fp8-fh7N.js",
       "bytes": 24137,
-      "sha256": "f2c23a850844b1357d610be6234d50cf30ba4618f7f2d9ec9e99a26b704c79fd",
-      "gzipBytes": 7888,
+      "sha256": "eec86624585e51cf6cc7fd97090c3a9cbd784b0bd606b3c9fcd8f6b955574f83",
+      "gzipBytes": 7889,
       "role": "initial-javascript"
     },
     {
@@ -1646,9 +1862,9 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/mastery-7zysytse.js",
+      "path": "assets/mastery-BD-Iyfuo.js",
       "bytes": 1470,
-      "sha256": "3299bd8217fae25edc7918cd9efb42db8b6a63f06276fa8fe8b79802d2fefdc8",
+      "sha256": "1e60acf036a40f59638476f77ec488999974f109ebfc600787cc8452b45fe75d",
       "gzipBytes": 710,
       "role": "initial-javascript"
     },
@@ -1660,9 +1876,21 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/persistence-CfKBjLUQ.js",
+      "path": "assets/network-DNyUZot2.svg",
+      "bytes": 5580,
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/olive-fly-pheromone-skeletal-notes-c4RfbPuX.svg",
+      "bytes": 6174,
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/persistence-DGLXOWGm.js",
       "bytes": 33,
-      "sha256": "0f89ce1e4602453762f2ad4a21023386fbae7fb7cd6265cedd2c5d7a0a5d4f2b",
+      "sha256": "4198a3664683199a02dc894f21750e1e909a90b3564448a673e3f95d1f539727",
       "gzipBytes": 53,
       "role": "initial-javascript"
     },
@@ -1849,23 +2077,23 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/registry-BEpJd73d.js",
-      "bytes": 18321,
-      "sha256": "501a6152ec7144c7388c4c8b7c4eb103b7fff2621c49a432ace2e3ca94f8dbd3",
-      "gzipBytes": 5864,
-      "role": "initial-javascript"
-    },
-    {
       "path": "assets/registry-C7qNYFRr.css",
       "bytes": 22430,
       "sha256": "fd170b101865ba1399026deaea901e9a2eaf15cd5ec0e5c194ee4739834d7f38",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/repository-Cj6bF4_n.js",
+      "path": "assets/registry-j9sJXWEW.js",
+      "bytes": 18321,
+      "sha256": "724449a63f382fc1d3dbd86a09526dbc9517f814ceca5ab77f5f550631520544",
+      "gzipBytes": 5864,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/repository-t2k4MqMq.js",
       "bytes": 130029,
-      "sha256": "96b0418e63ec142727fb4aca1fe118aea984a8cbbe25f40e683c45684a1feae1",
-      "gzipBytes": 41460,
+      "sha256": "28b6d69ee6cd09be6aacab2b20a5975a24c6600f55e069ce1d39a54a2cec1e6d",
+      "gzipBytes": 41458,
       "role": "initial-javascript"
     },
     {
@@ -1882,10 +2110,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/statistics-DfYbEKrt.js",
+      "path": "assets/statistics-DlEi5pkX.js",
       "bytes": 18636,
-      "sha256": "208a720aec9d752582cf04fbee18838dc047a775ab6b194377e5fbb5e94b418f",
-      "gzipBytes": 6347,
+      "sha256": "88975c9a1197133173f4798d0a03baf307c5f285d5ee7bd027afee9bbb723069",
+      "gzipBytes": 6348,
       "role": "lazy-runtime"
     },
     {
@@ -1918,7 +2146,7 @@
     {
       "path": "index.html",
       "bytes": 617,
-      "sha256": "a8440e4eecd9994bd8801df53aebe0ecfaf00dfdb9e8cb674aac4c708cd176c0",
+      "sha256": "8368d4a573150430abfaa5d6f3d4dd20ea8fdaead07478963fdad844fa6f540b",
       "role": "entry"
     }
   ],

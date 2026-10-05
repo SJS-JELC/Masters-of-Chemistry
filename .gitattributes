@@ -7,3 +7,6 @@
 
 # Retained validation evidence must keep its original bytes and fingerprints.
 /validation/** -text
+
+# Approved source SVG fingerprints include their original line endings.
+/src/activities/olympiad/c3l6/assets/digitised/**/*.svg -text

@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-05T08:43:14.074Z",
+  "mirror": "https://registry.npmmirror.com",
+  "packages": [
+    {
+      "name": "node_modules/@oxc-project/types",
+      "version": "0.152.0",
+      "bytes": 7677,
+      "integrity": "sha512-oM/5rLBm2tPkg0iBgkH/FOeR3PCDpY19GTgAZjMFM8h9WI9VW7cLgzp6nwtarYKmovavIQZ+Fe/RKX/8C8O/Rw==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.12",
+      "bytes": 8136612,
+      "integrity": "sha512-WIw2haVKwjuYdXkHaoC0mF8Le71TuCBxjrdKqLbJGctbBABj+ClfmNvtbOnzpq3RokNo5+V1qhtSzJyXorsklQ==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/@rolldown/pluginutils",
+      "version": "1.0.1",
+      "bytes": 6681,
+      "integrity": "sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/@types/node",
+      "version": "24.10.1",
+      "bytes": 457830,
+      "integrity": "sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/@types/react",
+      "version": "19.3.0",
+      "bytes": 77822,
+      "integrity": "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/@types/react-dom",
+      "version": "19.3.0",
+      "bytes": 8185,
+      "integrity": "sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/csstype",
+      "version": "3.2.3",
+      "bytes": 138324,
+      "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/detect-libc",
+      "version": "2.1.2",
+      "bytes": 7776,
+      "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/dexie",
+      "version": "4.4.6",
+      "bytes": 787060,
+      "integrity": "sha512-hJP/BO6mjB+tX6hToIO1kmxYLNmun90wYbfcoAoLpKEyDYal/k33dg0TAfoUe2TDsbbLoVIzljJ3BN2UbR5EOg==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/fdir",
+      "version": "6.5.0",
+      "bytes": 9742,
+      "integrity": "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/lightningcss",
+      "version": "1.33.0",
+      "bytes": 87655,
+      "integrity": "sha512-WkUDrojuJs0xkgGf2udWxa3yGBRxPtxUkB79i6aCZLRgc7PM8fZe9TosfPDcvEpQZbuFASnHYmRLBLUbmLOIIA==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "bytes": 3706526,
+      "integrity": "sha512-OlEICDx/Xl0FqSp4bry8zFnCvGpig3Gl4gCquvYwHuqJKEC1+n9NgDniFvqHGmMv1ZkqDJrDqKKSykTDX+ehuA==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/nanoid",
+      "version": "3.3.19",
+      "bytes": 5694,
+      "integrity": "sha512-Y2tUNy4ouw6tq5oDSKeQYGOyhkUBhNOcGV/02KC+6kd9eDGqdZd++mjMiIDilrBYvjEnCYvVtsuHCuP+okSfug==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/picocolors",
+      "version": "1.1.1",
+      "bytes": 2625,
+      "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/picomatch",
+      "version": "4.0.7",
+      "bytes": 24326,
+      "integrity": "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/postcss",
+      "version": "8.5.28",
+      "bytes": 52195,
+      "integrity": "sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/prettier",
+      "version": "3.6.2",
+      "bytes": 2152632,
+      "integrity": "sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/react",
+      "version": "19.3.0",
+      "bytes": 26394,
+      "integrity": "sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/react-dom",
+      "version": "19.3.0",
+      "bytes": 1409226,
+      "integrity": "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/rolldown",
+      "version": "1.2.12",
+      "bytes": 203366,
+      "integrity": "sha512-8wafseiaG80xmXSfqidUNqZcylTlhmPZZt+za2m+js2sFZ8dTNlhIOV2WcbIPx2hgwPBJpEUGFAMZ9bgBBLTSQ==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/scheduler",
+      "version": "0.28.0",
+      "bytes": 10011,
+      "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/source-map-js",
+      "version": "1.2.2",
+      "bytes": 36349,
+      "integrity": "sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/tinyglobby",
+      "version": "0.2.17",
+      "bytes": 7873,
+      "integrity": "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/typescript",
+      "version": "5.9.3",
+      "bytes": 4377468,
+      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/undici-types",
+      "version": "7.16.0",
+      "bytes": 27127,
+      "integrity": "sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/vite",
+      "version": "8.3.2",
+      "bytes": 586285,
+      "integrity": "sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==",
+      "status": "VERIFIED-AND-CACHED"
+    },
+    {
+      "name": "node_modules/zustand",
+      "version": "5.0.15",
+      "bytes": 22841,
+      "integrity": "sha512-MpSEjRiBkA9crSYeOUH32rJC7SVqAbm0Fqcqge/bUi2PPoLcBWKOsG+C8mevmpr8TwXHBVkChbbJiyvkE+i/3A==",
+      "status": "VERIFIED-AND-CACHED"
+    }
+  ],
+  "finishedAt": "2026-10-05T08:43:56.162Z"
+}

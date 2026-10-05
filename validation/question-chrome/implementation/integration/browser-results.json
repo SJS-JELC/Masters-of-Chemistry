@@ -1,0 +1,140 @@
+{
+  "startedAt": "2026-10-03T12:59:04.829Z",
+  "method": "Pinned root Playwright1.62.1, current source Vite, headless Edge with fresh isolated contexts/current-app run databases. Actual UI navigation, inputs, checks and picker; reference drawing fixtures use retained DEV response harness. Persistence inspection supplies invisible timing evidence.",
+  "checks": [
+    {
+      "id": "AB2-P-1-5DVF2D",
+      "status": "PASS",
+      "run": "q-alevel-1791032345012-lm311",
+      "title": "A Level Chemistry - Making Buffers",
+      "pill": "LEVEL 1 QUESTION"
+    },
+    {
+      "id": "AB2-Q-2-13886I2",
+      "status": "PASS",
+      "run": "q-alevel-1791032347127-ccolh",
+      "title": "A Level Chemistry - Making Buffers",
+      "pill": "LEVEL 2 QUESTION"
+    },
+    {
+      "id": "AB2-U-3-RF9SNI",
+      "status": "PASS",
+      "run": "q-alevel-1791032348884-0qjsy",
+      "title": "A Level Chemistry - Making Buffers",
+      "pill": "LEVEL 3 QUESTION"
+    },
+    {
+      "id": "CAL-BJXPU1",
+      "status": "PASS",
+      "run": "q-igcse-1791032350521-4teny",
+      "title": "IGCSE Chemistry - Calorimetry",
+      "pill": "GRADE 5–6 QUESTION"
+    },
+    {
+      "id": "CAL-BQSY7I",
+      "status": "PASS",
+      "run": "q-igcse-1791032352161-3uwa2",
+      "title": "IGCSE Chemistry - Calorimetry",
+      "pill": "GRADE 7–8 QUESTION"
+    },
+    {
+      "id": "CAL-RBZJKC",
+      "status": "PASS",
+      "run": "q-igcse-1791032353803-evc0z",
+      "title": "IGCSE Chemistry - Calorimetry",
+      "pill": "GRADE 9 QUESTION"
+    },
+    {
+      "id": "numeric-first-freeze-current-reload-next-statistics",
+      "status": "PASS",
+      "run": "q-alevel-1791032355489-ct8ft",
+      "firstAttemptId": "d1851267-0640-43bb-a029-939f686a4fd0",
+      "firstActiveMs": 1323,
+      "immutableAfterReloadCorrection": true,
+      "nextAttemptId": "f0d36e67-58cc-4fd7-add4-ba7bcc9c497c",
+      "statisticsTiming": {
+        "activeMs": 1323,
+        "idleLimitMs": 180000
+      }
+    },
+    {
+      "id": "alevel-historical-paused-drawing-auto-restore",
+      "status": "PASS",
+      "run": "q-alevel-1791032361738-3rzb7",
+      "attemptId": "9c8ce7aa-35be-4d1d-86a6-6257e8060369",
+      "storedPaused": true,
+      "resumedDurably": true,
+      "drawingsAndRefExact": true,
+      "awayMs": 2300,
+      "timingCheckpoint": 1545
+    },
+    {
+      "id": "igcse-historical-paused-drawing-auto-restore",
+      "status": "PASS",
+      "run": "q-igcse-1791032368786-qr018",
+      "attemptId": "54c49c87-1938-45bf-beda-9bb58f0ef55f",
+      "storedPaused": true,
+      "resumedDurably": true,
+      "drawingsAndRefExact": true,
+      "awayMs": 2300,
+      "timingCheckpoint": 1584
+    },
+    {
+      "id": "paused-restoration-session-save-failure-retry",
+      "status": "PASS",
+      "run": "q-alevel-1791032376258-ibeki",
+      "attemptId": "842b5024-31c3-4ba1-adbc-8446de206324",
+      "failureBlocksAnswering": true,
+      "failedAwayMsExcluded": 2100,
+      "retryDurable": true
+    },
+    {
+      "id": "fresh-request-does-not-save-or-resume-old-attempt",
+      "status": "PASS",
+      "run": "q-alevel-1791032382303-3yssk",
+      "oldAttemptId": "1103e1cc-eee5-45e1-ba91-5a56a60be69a",
+      "newAttemptId": "f63a8134-d855-499f-83ef-341f5a7d87ab",
+      "oldAttemptWrites": 0,
+      "strictModeAttemptRows": 2
+    },
+    {
+      "id": "back-save-failure-keeps-identity-and-retry-leaves",
+      "status": "PASS",
+      "run": "q-alevel-1791032385187-b8dnu",
+      "attemptId": "0cb5d868-bb92-4e07-a85e-87f8adff5b1f",
+      "faultBlocksBack": true,
+      "retryLeaves": true
+    },
+    {
+      "id": "teacher-provider-title-and-no-student-evidence",
+      "status": "PASS",
+      "run": "q-teacher-1791032387494",
+      "teacherActualProviderHeading": true,
+      "teacherNoEvidence": true
+    },
+    {
+      "id": "revision-identical-continuation-changed-selection-isolated",
+      "status": "PASS",
+      "run": "q-revision-1791032419265",
+      "exactContinuedAttempt": "31e70e61-5c9c-469d-9fa2-6e5c212f1f3d",
+      "schedulerNext": "99306b86-40df-4745-99f1-dcdbc6f63514",
+      "changedAttempt": "08051fdf-87c4-45a1-8f33-8da5a0223a66",
+      "oldAttemptWritesDuringChangedLaunch": 0,
+      "oneEvidence": true
+    },
+    {
+      "id": "olympiad-header-stage-drawing-save-fault-readonly",
+      "status": "PASS",
+      "run": "q-c3-1791032427762",
+      "existingIdentity": true,
+      "drawingRestored": true,
+      "faultGuardAndRetry": true,
+      "teacherReadonly": true,
+      "noCurriculumEvidence": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T13:00:30.847Z",
+  "status": "PASS"
+}

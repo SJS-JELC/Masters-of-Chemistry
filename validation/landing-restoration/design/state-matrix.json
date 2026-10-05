@@ -1,0 +1,3066 @@
+{
+  "status": "PASS",
+  "count": 75,
+  "ownedSourceFingerprint": "998edb2c5ace2e3d8f160adc08028e0229a439487d529e62c53d69c84cfa569a",
+  "finishedOwnedSourceFingerprint": "998edb2c5ace2e3d8f160adc08028e0229a439487d529e62c53d69c84cfa569a",
+  "method": "Infinite CSS sparkle/shine animations paused at phase zero in both screenshot pages; real interaction tests use unfrozen animations. Comparison HMR socket blocked.",
+  "pairs": [
+    {
+      "name": "alevel-desktop-unassessed",
+      "original": "screens/alevel-desktop-unassessed-original.png",
+      "restored": "screens/alevel-desktop-unassessed-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-revision-hover",
+      "original": "screens/alevel-desktop-unassessed-revision-hover-original.png",
+      "restored": "screens/alevel-desktop-unassessed-revision-hover-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-revision-focus",
+      "original": "screens/alevel-desktop-unassessed-revision-focus-original.png",
+      "restored": "screens/alevel-desktop-unassessed-revision-focus-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-upper",
+      "original": "screens/alevel-desktop-unassessed-upper-original.png",
+      "restored": "screens/alevel-desktop-unassessed-upper-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-expanded",
+      "original": "screens/alevel-desktop-unassessed-expanded-original.png",
+      "restored": "screens/alevel-desktop-unassessed-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-details",
+      "original": "screens/alevel-desktop-unassessed-details-original.png",
+      "restored": "screens/alevel-desktop-unassessed-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-revision",
+      "original": "screens/alevel-desktop-unassessed-revision-original.png",
+      "restored": "screens/alevel-desktop-unassessed-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-unassessed-unavailable-details",
+      "original": "screens/alevel-desktop-unassessed-unavailable-details-original.png",
+      "restored": "screens/alevel-desktop-unassessed-unavailable-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh",
+      "original": "screens/alevel-desktop-yellow-fresh-original.png",
+      "restored": "screens/alevel-desktop-yellow-fresh-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-upper",
+      "original": "screens/alevel-desktop-yellow-fresh-upper-original.png",
+      "restored": "screens/alevel-desktop-yellow-fresh-upper-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-expanded",
+      "original": "screens/alevel-desktop-yellow-fresh-expanded-original.png",
+      "restored": "screens/alevel-desktop-yellow-fresh-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-details",
+      "original": "screens/alevel-desktop-yellow-fresh-details-original.png",
+      "restored": "screens/alevel-desktop-yellow-fresh-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-revision",
+      "original": "screens/alevel-desktop-yellow-fresh-revision-original.png",
+      "restored": "screens/alevel-desktop-yellow-fresh-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-green-steady",
+      "original": "screens/alevel-desktop-green-steady-original.png",
+      "restored": "screens/alevel-desktop-green-steady-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-green-steady-upper",
+      "original": "screens/alevel-desktop-green-steady-upper-original.png",
+      "restored": "screens/alevel-desktop-green-steady-upper-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-green-steady-expanded",
+      "original": "screens/alevel-desktop-green-steady-expanded-original.png",
+      "restored": "screens/alevel-desktop-green-steady-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-green-steady-details",
+      "original": "screens/alevel-desktop-green-steady-details-original.png",
+      "restored": "screens/alevel-desktop-green-steady-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-green-steady-revision",
+      "original": "screens/alevel-desktop-green-steady-revision-original.png",
+      "restored": "screens/alevel-desktop-green-steady-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-purple-due",
+      "original": "screens/alevel-desktop-purple-due-original.png",
+      "restored": "screens/alevel-desktop-purple-due-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 783.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 735.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-purple-due-upper",
+      "original": "screens/alevel-desktop-purple-due-upper-original.png",
+      "restored": "screens/alevel-desktop-purple-due-upper-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 621.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-purple-due-expanded",
+      "original": "screens/alevel-desktop-purple-due-expanded-original.png",
+      "restored": "screens/alevel-desktop-purple-due-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-purple-due-details",
+      "original": "screens/alevel-desktop-purple-due-details-original.png",
+      "restored": "screens/alevel-desktop-purple-due-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 264.546875
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 264.546875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-desktop-purple-due-revision",
+      "original": "screens/alevel-desktop-purple-due-revision-original.png",
+      "restored": "screens/alevel-desktop-purple-due-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ],
+        "restored": [
+          {
+            "width": 684,
+            "height": 975.15625,
+            "x": 24,
+            "y": 306.65625
+          },
+          {
+            "width": 684,
+            "height": 606.15625,
+            "x": 732,
+            "y": 306.65625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-unassessed",
+      "original": "screens/alevel-tablet-unassessed-original.png",
+      "restored": "screens/alevel-tablet-unassessed-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-unassessed-upper",
+      "original": "screens/alevel-tablet-unassessed-upper-original.png",
+      "restored": "screens/alevel-tablet-unassessed-upper-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 879.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 879.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-unassessed-expanded",
+      "original": "screens/alevel-tablet-unassessed-expanded-original.png",
+      "restored": "screens/alevel-tablet-unassessed-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1233.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1233.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-unassessed-details",
+      "original": "screens/alevel-tablet-unassessed-details-original.png",
+      "restored": "screens/alevel-tablet-unassessed-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1233.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1233.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-unassessed-revision",
+      "original": "screens/alevel-tablet-unassessed-revision-original.png",
+      "restored": "screens/alevel-tablet-unassessed-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1233.15625,
+            "x": 24,
+            "y": 296.921875
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 296.921875
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1233.15625,
+            "x": 24,
+            "y": 356.90625
+          },
+          {
+            "width": 374,
+            "height": 1041.15625,
+            "x": 422,
+            "y": 356.90625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-yellow-fresh",
+      "original": "screens/alevel-tablet-yellow-fresh-original.png",
+      "restored": "screens/alevel-tablet-yellow-fresh-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-green-steady",
+      "original": "screens/alevel-tablet-green-steady-original.png",
+      "restored": "screens/alevel-tablet-green-steady-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-tablet-purple-due",
+      "original": "screens/alevel-tablet-purple-due-original.png",
+      "restored": "screens/alevel-tablet-purple-due-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 254.8125
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 254.8125
+          }
+        ],
+        "restored": [
+          {
+            "width": 374,
+            "height": 1476.15625,
+            "x": 24,
+            "y": 314.796875
+          },
+          {
+            "width": 374,
+            "height": 1299.15625,
+            "x": 422,
+            "y": 314.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-unassessed",
+      "original": "screens/alevel-mobile-unassessed-original.png",
+      "restored": "screens/alevel-mobile-unassessed-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1774.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1832.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-unassessed-upper",
+      "original": "screens/alevel-mobile-unassessed-upper-original.png",
+      "restored": "screens/alevel-mobile-unassessed-upper-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 879.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1177.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 879.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1235.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-unassessed-expanded",
+      "original": "screens/alevel-mobile-unassessed-expanded-original.png",
+      "restored": "screens/alevel-mobile-unassessed-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1233.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1531.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1233.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1589.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-unassessed-details",
+      "original": "screens/alevel-mobile-unassessed-details-original.png",
+      "restored": "screens/alevel-mobile-unassessed-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1233.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1531.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1233.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1589.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-unassessed-revision",
+      "original": "screens/alevel-mobile-unassessed-revision-original.png",
+      "restored": "screens/alevel-mobile-unassessed-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1233.15625,
+            "x": 16,
+            "y": 391.75
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1646.90625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1233.15625,
+            "x": 16,
+            "y": 449.75
+          },
+          {
+            "width": 358,
+            "height": 1041.15625,
+            "x": 16,
+            "y": 1704.90625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-yellow-fresh",
+      "original": "screens/alevel-mobile-yellow-fresh-original.png",
+      "restored": "screens/alevel-mobile-yellow-fresh-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1774.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1832.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-green-steady",
+      "original": "screens/alevel-mobile-green-steady-original.png",
+      "restored": "screens/alevel-mobile-green-steady-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1774.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1832.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "alevel-mobile-purple-due",
+      "original": "screens/alevel-mobile-purple-due-original.png",
+      "restored": "screens/alevel-mobile-purple-due-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 276.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1774.265625
+          }
+        ],
+        "restored": [
+          {
+            "width": 358,
+            "height": 1476.15625,
+            "x": 16,
+            "y": 334.109375
+          },
+          {
+            "width": 358,
+            "height": 1299.15625,
+            "x": 16,
+            "y": 1832.265625
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed",
+      "original": "screens/igcse-desktop-unassessed-original.png",
+      "restored": "screens/igcse-desktop-unassessed-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-revision-hover",
+      "original": "screens/igcse-desktop-unassessed-revision-hover-original.png",
+      "restored": "screens/igcse-desktop-unassessed-revision-hover-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-revision-focus",
+      "original": "screens/igcse-desktop-unassessed-revision-focus-original.png",
+      "restored": "screens/igcse-desktop-unassessed-revision-focus-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-expanded",
+      "original": "screens/igcse-desktop-unassessed-expanded-original.png",
+      "restored": "screens/igcse-desktop-unassessed-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-details",
+      "original": "screens/igcse-desktop-unassessed-details-original.png",
+      "restored": "screens/igcse-desktop-unassessed-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-revision",
+      "original": "screens/igcse-desktop-unassessed-revision-original.png",
+      "restored": "screens/igcse-desktop-unassessed-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-unavailable-details",
+      "original": "screens/igcse-desktop-unassessed-unavailable-details-original.png",
+      "restored": "screens/igcse-desktop-unassessed-unavailable-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-teacher-details",
+      "original": "screens/igcse-desktop-unassessed-teacher-details-original.png",
+      "restored": "screens/igcse-desktop-unassessed-teacher-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 121
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 121
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 121
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 121
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 121
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 121
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-fourth-3-1-choices",
+      "original": "screens/igcse-desktop-unassessed-fourth-3-1-choices-original.png",
+      "restored": "screens/igcse-desktop-unassessed-fourth-3-1-choices-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-unassessed-lower-10-1-choices",
+      "original": "screens/igcse-desktop-unassessed-lower-10-1-choices-original.png",
+      "restored": "screens/igcse-desktop-unassessed-lower-10-1-choices-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-yellow-fresh",
+      "original": "screens/igcse-desktop-yellow-fresh-original.png",
+      "restored": "screens/igcse-desktop-yellow-fresh-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-yellow-fresh-expanded",
+      "original": "screens/igcse-desktop-yellow-fresh-expanded-original.png",
+      "restored": "screens/igcse-desktop-yellow-fresh-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-yellow-fresh-details",
+      "original": "screens/igcse-desktop-yellow-fresh-details-original.png",
+      "restored": "screens/igcse-desktop-yellow-fresh-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-yellow-fresh-revision",
+      "original": "screens/igcse-desktop-yellow-fresh-revision-original.png",
+      "restored": "screens/igcse-desktop-yellow-fresh-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-green-steady",
+      "original": "screens/igcse-desktop-green-steady-original.png",
+      "restored": "screens/igcse-desktop-green-steady-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-green-steady-expanded",
+      "original": "screens/igcse-desktop-green-steady-expanded-original.png",
+      "restored": "screens/igcse-desktop-green-steady-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-green-steady-details",
+      "original": "screens/igcse-desktop-green-steady-details-original.png",
+      "restored": "screens/igcse-desktop-green-steady-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-green-steady-revision",
+      "original": "screens/igcse-desktop-green-steady-revision-original.png",
+      "restored": "screens/igcse-desktop-green-steady-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-purple-due",
+      "original": "screens/igcse-desktop-purple-due-original.png",
+      "restored": "screens/igcse-desktop-purple-due-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 721.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-purple-due-expanded",
+      "original": "screens/igcse-desktop-purple-due-expanded-original.png",
+      "restored": "screens/igcse-desktop-purple-due-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-purple-due-details",
+      "original": "screens/igcse-desktop-purple-due-details-original.png",
+      "restored": "screens/igcse-desktop-purple-due-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 261.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 261.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-desktop-purple-due-revision",
+      "original": "screens/igcse-desktop-purple-due-revision-original.png",
+      "restored": "screens/igcse-desktop-purple-due-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ],
+        "restored": [
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 497,
+            "y": 263.796875
+          },
+          {
+            "width": 446,
+            "height": 865.765625,
+            "x": 959,
+            "y": 263.796875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-unassessed",
+      "original": "screens/igcse-tablet-unassessed-original.png",
+      "restored": "screens/igcse-tablet-unassessed-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-unassessed-expanded",
+      "original": "screens/igcse-tablet-unassessed-expanded-original.png",
+      "restored": "screens/igcse-tablet-unassessed-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 539.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 1120.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 539.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 1120.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-unassessed-details",
+      "original": "screens/igcse-tablet-unassessed-details-original.png",
+      "restored": "screens/igcse-tablet-unassessed-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 539.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 1120.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 539.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 1120.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-unassessed-revision",
+      "original": "screens/igcse-tablet-unassessed-revision-original.png",
+      "restored": "screens/igcse-tablet-unassessed-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 750,
+            "height": 539.765625,
+            "x": 35,
+            "y": 566.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 1122.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 263.796875
+          },
+          {
+            "width": 750,
+            "height": 539.765625,
+            "x": 35,
+            "y": 566.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 1122.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-yellow-fresh",
+      "original": "screens/igcse-tablet-yellow-fresh-original.png",
+      "restored": "screens/igcse-tablet-yellow-fresh-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-green-steady",
+      "original": "screens/igcse-tablet-green-steady-original.png",
+      "restored": "screens/igcse-tablet-green-steady-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-tablet-purple-due",
+      "original": "screens/igcse-tablet-purple-due-original.png",
+      "restored": "screens/igcse-tablet-purple-due-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ],
+        "restored": [
+          {
+            "width": 750,
+            "height": 286.765625,
+            "x": 35,
+            "y": 261.796875
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 564.5625
+          },
+          {
+            "width": 750,
+            "height": 395.765625,
+            "x": 35,
+            "y": 976.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-unassessed",
+      "original": "screens/igcse-mobile-unassessed-original.png",
+      "restored": "screens/igcse-mobile-unassessed-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 249.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 771.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1487.421875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 307.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 829.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1545.421875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-unassessed-expanded",
+      "original": "screens/igcse-mobile-unassessed-expanded-original.png",
+      "restored": "screens/igcse-mobile-unassessed-expanded-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 249.796875
+          },
+          {
+            "width": 344,
+            "height": 845.765625,
+            "x": 23,
+            "y": 771.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1631.421875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 307.796875
+          },
+          {
+            "width": 344,
+            "height": 845.765625,
+            "x": 23,
+            "y": 829.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1689.421875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-unassessed-details",
+      "original": "screens/igcse-mobile-unassessed-details-original.png",
+      "restored": "screens/igcse-mobile-unassessed-details-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 249.796875
+          },
+          {
+            "width": 344,
+            "height": 845.765625,
+            "x": 23,
+            "y": 771.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1631.421875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 307.796875
+          },
+          {
+            "width": 344,
+            "height": 845.765625,
+            "x": 23,
+            "y": 829.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1689.421875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-unassessed-revision",
+      "original": "screens/igcse-mobile-unassessed-revision-original.png",
+      "restored": "screens/igcse-mobile-unassessed-revision-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 293.59375
+          },
+          {
+            "width": 344,
+            "height": 845.765625,
+            "x": 23,
+            "y": 815.453125
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1675.21875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 351.59375
+          },
+          {
+            "width": 344,
+            "height": 845.765625,
+            "x": 23,
+            "y": 873.453125
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1733.21875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-yellow-fresh",
+      "original": "screens/igcse-mobile-yellow-fresh-original.png",
+      "restored": "screens/igcse-mobile-yellow-fresh-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 249.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 771.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1487.421875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 307.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 829.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1545.421875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-green-steady",
+      "original": "screens/igcse-mobile-green-steady-original.png",
+      "restored": "screens/igcse-mobile-green-steady-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 249.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 771.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1487.421875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 307.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 829.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1545.421875
+          }
+        ]
+      }
+    },
+    {
+      "name": "igcse-mobile-purple-due",
+      "original": "screens/igcse-mobile-purple-due-original.png",
+      "restored": "screens/igcse-mobile-purple-due-restored.png",
+      "geometry": {
+        "original": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 249.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 771.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1487.421875
+          }
+        ],
+        "restored": [
+          {
+            "width": 344,
+            "height": 507.859375,
+            "x": 23,
+            "y": 307.796875
+          },
+          {
+            "width": 344,
+            "height": 701.765625,
+            "x": 23,
+            "y": 829.65625
+          },
+          {
+            "width": 344,
+            "height": 594.765625,
+            "x": 23,
+            "y": 1545.421875
+          }
+        ]
+      }
+    }
+  ]
+}

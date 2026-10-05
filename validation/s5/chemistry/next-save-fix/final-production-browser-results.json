@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-03T05:32:25.485Z",
+  "status": "PASS",
+  "browser": "154.0.4258.48",
+  "playwright": "1.62.1",
+  "checks": [
+    {
+      "kind": "acid-current-dp2-sf3-instruction",
+      "id": "AB-0000SN",
+      "noEvidence": true
+    },
+    {
+      "kind": "qualified-bonding-solid-phase",
+      "id": "EB09",
+      "noEvidence": true
+    },
+    {
+      "kind": "actual-pupil-marking-persistence",
+      "id": "AB2-3-1-1",
+      "earned": 3,
+      "available": 3
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "continuity-teacher-acid.png",
+      "sha256": "f7feeadc2dd7e26c1a9fb70649fb5693fc89d81f0a9fb51bb6c12916042b4aab"
+    },
+    {
+      "file": "continuity-teacher-bonding.png",
+      "sha256": "c31f6abf4b966cd64770edaf520828a835b29ebb6fc98edd8280a8fc4985d6b0"
+    },
+    {
+      "file": "continuity-pupil-acid.png",
+      "sha256": "54ed9268df9d77095a062be766e863ef121cd4b86089053a1e9ad00222979658"
+    }
+  ],
+  "method": "Actual frozen production build, UI and native IndexedDB in fresh synthetic browser contexts; no DEV harness API or source/build mutation.",
+  "finishedAt": "2026-10-03T05:32:29.787Z"
+}

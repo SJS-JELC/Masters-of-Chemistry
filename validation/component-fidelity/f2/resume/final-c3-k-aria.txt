@@ -1,0 +1,42 @@
+- heading "Structure K · Mr 92" [level=2]
+- region "Draw structure K":
+  - toolbar "Drawing tools":
+    - group "Element":
+      - button "Carbon" [disabled] [pressed]: C
+      - button "Oxygen" [disabled]: O
+      - button "Nitrogen" [disabled]: "N"
+      - button "Chlorine" [disabled]: Cl
+      - button "Fluorine" [disabled]: F
+      - button "Hydrogen" [disabled]: H
+    - button "Carbon chain" [disabled]
+    - button "Erase" [disabled]
+    - button "Undo" [disabled]
+  - button "Clean up" [disabled]
+  - button "Clear structure" [disabled]
+  - group "Formula representation":
+    - button "Skeletal" [pressed]
+    - button "Structural"
+  - group "Draw structure K. Molecule drawing area. Drag to grow bonds. Arrow keys on an atom preview a bond; Enter commits.":
+    - button "Double bond between atom 1 and atom 2"
+    - button "Single bond between atom 2 and atom 3"
+    - button "Single bond between atom 2 and atom 4"
+    - button "Single bond between atom 4 and atom 5"
+    - button "Single bond between atom 4 and atom 6"
+    - button "Oxygen atom 1, 0 implicit hydrogens": O
+    - button "Carbon atom 2, 0 implicit hydrogens"
+    - button "Oxygen atom 3, 1 implicit hydrogen": HO
+    - button "Carbon atom 4, 1 implicit hydrogen"
+    - button "Oxygen atom 5, 1 implicit hydrogen": OH
+    - button "Oxygen atom 6, 1 implicit hydrogen": OH
+  - group: Drawing help
+  - group: Alternative controls and view
+  - paragraph: Review only. This structure cannot be changed.
+- group:
+  - text: Reference structures and accepted alternatives
+  - figure "C2H4O4":
+    - img "Accepted alternative 1": O HO OH OH
+    - text: C2H4O4
+- group "K source erratum":
+  - text: Source erratum · excluded K alternative
+  - paragraph: "Source erratum for K: the accepted product is the aldehyde hydrate, 2,2-dihydroxyacetic acid. The inherited alternative retains the aldehyde and forms a hypothetical orthoacid at the carboxyl group; it is not accepted for this reaction. Both have formula C₂H₄O₄ and Mr 92, so formula and mass alone do not distinguish them."
+  - 'img "Rejected source alternative: aldehyde retained, orthoacid formed"': O OH OH HO

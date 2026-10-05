@@ -1,0 +1,3 @@
+﻿import fs from 'node:fs';
+const file='src/statistics/StatisticsView.tsx';let text=fs.readFileSync(file,'utf8');text=text.replaceAll('record.progressionVersion ?? 1',"(record.provenance === 'legacy-import' ? record.progressionVersion : undefined) ?? 1").replaceAll('first.progressionVersion ?? 1',"(first.provenance === 'legacy-import' ? first.progressionVersion : undefined) ?? 1");fs.writeFileSync(file,text);
+const script='validation/statistics-restore/scope-css.mjs';text=fs.readFileSync(script,'utf8');text=text.replace("/(^|[{}])([^{}]+)\\{/g,(all,before,selectors)=>selectors.trim().startsWith('@')?all:before+selectors.split(',')", "/([^{}]+)\\{/g,(all,selectors)=>selectors.trim().startsWith('@')?all:selectors.split(',')");fs.writeFileSync(script,text);

@@ -1,0 +1,9 @@
+{
+  "method": "Filesystem destination binding only; retained assertions/imports unchanged",
+  "writes": [
+    {
+      "original": "validation/s3/titration/reference-review.json",
+      "redirected": "validation/question-chrome/implementation/integration/retained-ports/validation/s3/titration/reference-review.json"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\igcse-dot-cross\\DotCrossEditor.s2-accepted.tsx.txt" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\dot-and-cross\\DotCrossEditor.tsx"
+index 1ed39a9..3d749dd 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\igcse-dot-cross\\DotCrossEditor.s2-accepted.tsx.txt"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\dot-and-cross\\DotCrossEditor.tsx"	
+@@ -5,15 +5,19 @@ import type {EditorSurfaceProps} from '../../ui/EditorFrame.tsx';
+ import {dotCrossEngine,type DotCrossCommand} from '../../chemistry/dot-and-cross/engine.ts';
+ import {createLayout} from '../../chemistry/dot-and-cross/layout.js';
+ import './editor.css';
+-const elements:readonly DotCrossElement[]=['H','B','C','Si','N','O','P','S','F','Cl','Br','I','Li','Na','K','Mg','Ca','Al'];
+-const symbols:readonly ElectronSymbol[]=['dot','cross','triangle'];
++const allElements:readonly DotCrossElement[]=['H','B','C','Si','N','O','P','S','F','Cl','Br','I','Li','Na','K','Mg','Ca','Al'];
++const allSymbols:readonly ElectronSymbol[]=['dot','cross','triangle'];
+ type Tool='select'|'atom'|'dot'|'cross'|'triangle'|'erase';
+ const pointIn=(event:PointerEvent<SVGSVGElement>,svg:SVGSVGElement):Point=>{const matrix=svg.getScreenCTM();if(!matrix)return {x:500,y:325};const p=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());return {x:p.x,y:p.y};};
+ /** Meaningful semantic edits only are returned to the shared attempt controller. */
+ export function DotCrossEditor({part,response,readOnly,onResponse}:EditorSurfaceProps){
+  if(part.kind!=='dot-and-cross')throw Error('DotCrossEditor needs a dot-and-cross part.');
+  const state:DotCrossState=response?.kind==='dot-and-cross'?response:part.initial;
+- const questionId=part.markingPolicyId.replace(/^dot-cross:/,'');
++ const igcse=part.markingPolicyId.startsWith('igcse-dot-cross:');
++ const elements=igcse?allElements.filter(value=>value!=='B'&&value!=='P'):allElements;
++ const symbols=igcse?allSymbols.filter(value=>value!=='triangle'):allSymbols;
++ const tools:readonly Tool[]=igcse?['select','atom','dot','cross','erase']:['select','atom','dot','cross','triangle','erase'];
++ const questionId=part.markingPolicyId.replace(/^(?:igcse-)?dot-cross:/,'');
+  const layout=useMemo(()=>createLayout(questionId),[questionId]);
+  const [tool,setTool]=useState<Tool>('atom'),[element,setElement]=useState<DotCrossElement>('H');
+  const [selected,setSelected]=useState<readonly string[]>([]),[symbol,setSymbol]=useState<ElectronSymbol>('dot');
+@@ -49,7 +53,7 @@ export function DotCrossEditor({part,response,readOnly,onResponse}:EditorSurface
+  const manualElectron=()=>{if(!first){setMessage('Choose the first atom.');return;}if(second&&first===second){setMessage('Shared electrons need two different atoms.');return;}
+   addElectron(second?{kind:'bond',a:first,b:second,slot:Math.min(5,slot) as 0|1|2|3|4|5}:{kind:'atom',atomId:first,slot:slot as 0|1|2|3|4|5|6|7});};
+  const atomOptions=state.atoms.map(atom=><option key={atom.id} value={atom.id}>{atom.element} {atom.id}</option>);
+- const controls=<div className="dc-controls"><fieldset disabled={readOnly}><legend>Drawing tools</legend><div className="dc-tools">{(['select','atom','dot','cross','triangle','erase'] as const).map(value=><button key={value} type="button" aria-pressed={tool===value} onClick={()=>setTool(value)}>{value.charAt(0).toUpperCase()+value.slice(1)}</button>)}<label>Element <select aria-label="Element" value={element} onChange={event=>setElement(event.target.value as DotCrossElement)}>{elements.map(value=><option key={value}>{value}</option>)}</select></label></div></fieldset>
++ const controls=<div className="dc-controls"><fieldset disabled={readOnly}><legend>Drawing tools</legend><div className="dc-tools">{tools.map(value=><button key={value} type="button" aria-pressed={tool===value} onClick={()=>setTool(value)}>{value.charAt(0).toUpperCase()+value.slice(1)}</button>)}<label>Element <select aria-label="Element" value={element} onChange={event=>setElement(event.target.value as DotCrossElement)}>{elements.map(value=><option key={value}>{value}</option>)}</select></label></div></fieldset>
+   <div className="dc-tools"><button type="button" disabled={readOnly||!state.history?.length} onClick={()=>apply({type:'undo'})}>Undo</button><button type="button" disabled={readOnly||!state.future?.length} onClick={()=>apply({type:'redo'})}>Redo</button><button type="button" disabled={readOnly||!state.atoms.length} onClick={()=>apply({type:'clear'})}>Clear diagram</button></div></div>;
+  const alternatives=<div className="dc-alternatives"><fieldset disabled={readOnly}><legend>Place atoms without dragging</legend><label>X position <input type="number" aria-label="X position" min="75" max="925" value={x} onChange={event=>setX(Number(event.target.value))}/></label><label>Y position <input type="number" aria-label="Y position" min="75" max="575" value={y} onChange={event=>setY(Number(event.target.value))}/></label><button type="button" onClick={()=>apply({type:'atom',element,point:{x,y}})}>Add atom</button>
+   <div className="dc-atom-list" aria-label="Select atoms">{state.atoms.map(atom=><button type="button" key={atom.id} aria-pressed={liveSelected.includes(atom.id)} onClick={()=>{setSelected(current=>current.includes(atom.id)?current.filter(id=>id!==atom.id):[...current,atom.id]);setFirst(atom.id);}}>{atom.element} {atom.id}</button>)}</div>
+@@ -59,7 +63,7 @@ export function DotCrossEditor({part,response,readOnly,onResponse}:EditorSurface
+   <details><summary>Electron inventory and deletion</summary><ul>{state.electrons.map(electron=><li key={electron.id}>{electron.symbol} · {electron.anchor.kind==='atom'?electron.anchor.atomId:`${electron.anchor.a}–${electron.anchor.b}`} · slot {electron.anchor.slot+1} <button type="button" disabled={readOnly} aria-label={`Delete electron ${electron.id}`} onClick={()=>apply({type:'delete',ids:[electron.id]})}>Delete</button></li>)}</ul><ul>{state.groups.map(group=><li key={group.id}>{group.atomIds.join(', ')} {layout.chargeText(group.charge)} <button type="button" disabled={readOnly} aria-label={`Delete group ${group.id}`} onClick={()=>apply({type:'delete',ids:[group.id]})}>Remove bracket and charge</button></li>)}</ul></details>
+   <p>Select an atom with Enter or the atom buttons. Arrow keys move the selection; Shift moves farther. Delete removes selected atoms; Ctrl+Z undoes. Touch users can tap slots or use these controls.</p></div>;
+  return <div className="dot-cross-editor" data-question-id={questionId}>
+-  <p className="editor-instructions">Place atoms and electrons. Select atoms to move them or bracket an ion. Dots, crosses and triangles represent electron origins.</p>{controls}
++  <p className="editor-instructions">Place atoms and electrons. Select atoms to move them or bracket an ion. {igcse?'Dots and crosses':'Dots, crosses and triangles'} represent electron origins.</p>{controls}
+   <div className="dc-view-controls"><button type="button" aria-pressed={!magnified} onClick={()=>setMagnified(false)}>Fit diagram</button><button type="button" aria-pressed={magnified} onClick={()=>setMagnified(true)}>Magnify diagram</button><span>Magnify for larger labels and electrons; scroll or swipe to inspect the drawing.</span></div>
+   <div className="dc-viewport" ref={viewport} tabIndex={0} aria-label="Scrollable diagram viewport">
+   <svg viewBox="0 0 1000 650" className="dc-canvas" style={{width:magnified?'1000px':'100%',minWidth:magnified?'1000px':'0',touchAction:magnified?'pan-x pan-y':'none'}} aria-label="Dot-and-cross drawing canvas" role="group" tabIndex={0} onKeyDown={keyboard} onPointerDown={onCanvasDown}>

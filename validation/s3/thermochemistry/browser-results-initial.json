@@ -1,0 +1,41 @@
+{
+  "status": "FAIL",
+  "mode": "isolated headless installed Edge real production host",
+  "results": [
+    {
+      "id": "six-practice-targets-and-first-correction",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at submit (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:17:135)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:20:489\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:20:2"
+    },
+    {
+      "id": "framework-local-check-final-binding-assistance-restore",
+      "status": "PASS",
+      "evidence": {
+        "transientIntermediates": true,
+        "persistedFinal": true,
+        "firstScore": 1,
+        "independentRecords": 0
+      }
+    },
+    {
+      "id": "level3-drawing-fail-aggregate-time-freeze",
+      "status": "FAIL",
+      "error": "page.waitForFunction: TypeError: Cannot read properties of undefined (reading 'snapshot')\n    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:69)\n    at predicate (eval at evaluate (:311:30), <anonymous>:7:27)\n    at next (eval at evaluate (:311:30), <anonymous>:29:33)\n    at eval (eval at evaluate (:311:30), <anonymous>:42:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at submit (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:17:135)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:23:156\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:23:2"
+    },
+    {
+      "id": "revision-topic-add-all-pause-reload-next",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at submit (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:17:135)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:24:758\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:24:2"
+    },
+    {
+      "id": "all16-displayed-diagrams-and-thermometers-teacher-render",
+      "status": "FAIL",
+      "error": "Error: Reaction butadiene-bromination is not available at Grade 9\n    at Object.generate (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/src/chemistry/thermochemistry/bond-enthalpy-core.js:117:30)\n    at bondCode (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/src/activities/igcse/bond-enthalpy/provider.ts:10:92)\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:25:157\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:25:2"
+    }
+  ],
+  "errors": [
+    "Bond response parts disagree with source",
+    "Bond response parts disagree with source",
+    "Cannot read properties of undefined (reading 'snapshot')"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-04T19:35:18.143Z",
+  "sources": [
+    {
+      "course": "alevel",
+      "path": "apps/Masters-of-A-Level-Chemistry/src/stats.html",
+      "sha256": "51a7c6045b3b05722594f6d4dfdbe525731456b5e86905e069b2bea06c75c962"
+    },
+    {
+      "course": "alevel",
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.css",
+      "sha256": "2ea93d87af095b1007cae7aadf30361809f1b8b142438a9e05e3ba2de2345c5e"
+    },
+    {
+      "course": "alevel",
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "sha256": "74b4ccbb9a36f75e4616993a5ab4b657d0897272ed3b88f50f55a06a0a7c2c0c"
+    },
+    {
+      "course": "alevel",
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "sha256": "9db808b8f652b49bac15ff24138a4964294d6a3f1264d870e3fbf9cef9a02a74"
+    },
+    {
+      "course": "igcse",
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/stats.html",
+      "sha256": "c2c984c1337abf95e3ed7d69b6200d48a43544c9a1a28ff9887a7270e08a3d6f"
+    },
+    {
+      "course": "igcse",
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-stats.css",
+      "sha256": "24e39efb4f14d59dff92de3c91dbb26cc8a4c12f09a6b4a025b37a86154eaee0"
+    },
+    {
+      "course": "igcse",
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-stats.js",
+      "sha256": "82e27c33758d95f25a3cd5eb2c1a593e48b478633bedf1824fc7266d0013965c"
+    },
+    {
+      "course": "igcse",
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-stats-core.js",
+      "sha256": "b0c008aec1db4040355169e022a1d8efd2caa2404d3af74968b1ea8e020c35b6"
+    }
+  ],
+  "reuse": "Original stats markup, shared A Level/IGCSE CSS geometry/palette, timeline aggregation and interaction conventions adapted to React. All selectors scoped. Current landing catalogue defines visible order/aliases; existing course domain supplies unchanged mastery. Original live apps remain read-only.",
+  "generator": "node validation/statistics-restore/scope-css.mjs, then node node_modules/prettier/bin/prettier.cjs --write src/statistics/statistics.css"
+}

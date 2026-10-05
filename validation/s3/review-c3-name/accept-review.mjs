@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const here=import.meta.dirname;
+const json=name=>JSON.parse(readFileSync(resolve(here,name),'utf8'));
+const fingerprints=json('fingerprints.json');
+for(const f of fingerprints)assert.equal(createHash('sha256').update(readFileSync(f.path)).digest('hex'),f.sha256,f.path);
+assert.equal(json('invariant-results.json').status,'PASS');
+assert.equal(json('render-results.json').status,'PASS');
+assert.equal(json('primary-evidence.json').facts.smiles,'C/C=N/N(C)C=O');
+assert.equal(json('wording-disposition.json').disposition,'APPROVE_BOUNDED_MODEL_QUALIFICATION');
+for(const p of ['HANDOVER.md','source-biii-desktop.png','source-structure.png','proposed-model-mobile.png'])assert(existsSync(resolve(here,p)));
+const output={status:'PASS',inputHashesUnchanged:fingerprints.length,reviewArtifactsPresent:true,jsonValid:true,scope:'Review only; A16 integration and parent/root acceptance remain separate.'};
+writeFileSync(resolve(here,'verification.json'),JSON.stringify(output,null,2)+'\n');console.log(JSON.stringify(output));

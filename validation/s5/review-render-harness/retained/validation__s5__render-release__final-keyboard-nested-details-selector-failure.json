@@ -1,0 +1,49 @@
+{
+  "status": "FAIL",
+  "method": "Real focus, Ctrl+A, Backspace, pressSequentially 40ms/character; semantic Enter/blur or Apply; actual IndexedDB state; fresh contexts; headless Edge",
+  "settings": {
+    "CPU": 4,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": {
+      "latency": 150,
+      "downloadThroughput": 200000,
+      "uploadThroughput": 93750
+    }
+  },
+  "checks": [
+    {
+      "editor": "titration",
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 0,
+        "level": 2
+      },
+      "typed": "3.1",
+      "enterCommit": true,
+      "restore": true,
+      "blurCommitAndUndo": true,
+      "invalidRetainedPrior": true,
+      "rawDraftNoCheckpoint": true
+    },
+    {
+      "editor": "energy",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D01",
+        "seed": 0,
+        "level": 2
+      },
+      "typed": "200",
+      "enterCommit": true,
+      "restore": true,
+      "blurCommitAndUndo": true,
+      "invalidRetainedPrior": true,
+      "rawDraftNoCheckpoint": true
+    }
+  ],
+  "failure": "locator.ariaSnapshot: Error: strict mode violation: locator('details').filter({ has: getByText('Electron inventory and deletion', { exact: true }) }) resolved to 2 elements:\n    1) <details open=\"\" class=\"editor-alternatives\">…</details> aka getByText('Keyboard and non-drag controlsPlace atoms without draggingX position Y position')\n    2) <details open=\"\">…</details> aka getByText('Electron inventory and deletiona1 − Remove bracket and charge')\n\nCall log:\n\u001b[2m  - waiting for locator('details').filter({ has: getByText('Electron inventory and deletion', { exact: true }) })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\render-release\\final-keyboard.mjs:10:1125"
+}

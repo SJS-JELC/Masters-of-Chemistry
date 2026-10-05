@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "method": "Current production entry in DEV on port5188; real headless Edge and isolated alpha-v2 run namespace; IndexedDB readback, reload and Next; no sibling storage",
+  "checks": [
+    {
+      "id": "app-first-evidence-reload-next",
+      "status": "PASS",
+      "questionId": "AB-0001OU",
+      "firstAttemptId": "U1-APP-ACID",
+      "freshAttemptId": "8a2746ea-426f-4acb-810a-dd8eb4fc1297",
+      "checks": [
+        "wrong first result unlock",
+        "current correction Next",
+        "Clear removes correction display",
+        "first response score time preserved",
+        "Clear persistence and reload",
+        "GiveUp reload primary",
+        "post-assess GiveUp preserves first",
+        "Next fresh attempt and autofocus",
+        "blank GiveUp Clear reload Check"
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,21 @@
+/** Reproduce the source-owned pure chemistry and complete checked bank. Originals are read only. */
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+const require=createRequire(import.meta.url), workspace=path.resolve(import.meta.dirname,'../../../../..');
+const project=path.join(workspace,'apps/Masters-of-Chemistry');
+const original=path.join(workspace,'apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross');
+const read=name=>fs.readFileSync(path.join(original,name),'utf8');
+const core=read('core.js');
+const body=core.slice(core.indexOf("  'use strict';")+15,core.lastIndexOf('  return { check:'));
+fs.writeFileSync(path.join(project,'src/chemistry/dot-and-cross/core.js'),`/* Pure chemical engine extracted unchanged from checked source. See validation/s2/dot-cross/source-fingerprints.json. */\n${body}\nexport {check,validateReference,clone,reference,validateState,formulaCounts};\n`);
+const Data=require(path.join(original,'data.js'));
+fs.writeFileSync(path.join(project,'src/activities/alevel/dot-and-cross/bank.js'),`/* Complete source bank, deterministic extraction; no page runtime. */\nexport const bank=${JSON.stringify(Data.questions,null,2)};\n`);
+const renderer=read('renderer.js');
+const funcs=renderer.slice(renderer.indexOf('  function atomById'),renderer.indexOf('  function viewBox'));
+const bounds=renderer.slice(renderer.indexOf('  function groupBounds'),renderer.indexOf('  function sameRegion'));
+fs.writeFileSync(path.join(project,'src/chemistry/dot-and-cross/layout.js'),`/* Checked pure pair layout extracted from source renderer; no DOM drawing or global question state. */\nexport function createLayout(questionId=''){\n const angles=[-100,-80,-10,10,80,100,170,190], EPSILON=1e-7, PAIR_HALF_ANGLE=9*Math.PI/180;\n function shellRadius(atom){const element=typeof atom==='string'?atom:atom.element;return ((questionId==='phosphorus-pentachloride'&&element==='P')||(questionId==='sulfur-hexafluoride'&&element==='S'))?100:element==='H'?40:64;}\n function bondDistance(a,b){return shellRadius(a)+shellRadius(b)-24;}\n${funcs}\n${bounds}\n return {point,targets,key,bondPairs,nearbyPairs,chargeText,angles,regionAt,freeAnchor,overlapCenter,shellRadius,bondDistance,groupBounds};\n}\n`);
+const hash=value=>createHash('sha256').update(value).digest('hex');
+fs.writeFileSync(path.join(project,'validation/s2/dot-cross/source-fingerprints.json'),JSON.stringify({extractedAt:new Date().toISOString(),sources:['app.js','core.js','data.js','renderer.js','index.html','styles.css'].map(name=>({path:path.relative(workspace,path.join(original,name)).replaceAll('\\','/'),sha256:hash(read(name))})),teacherRecords:Data.questions.length,bankSHA256:hash(JSON.stringify(Data.questions))},null,2));
+console.log(`Extracted ${Data.questions.length} exact teacher records and pure chemistry/layout.`);

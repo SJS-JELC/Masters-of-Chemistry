@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "run": "ebp-1791149068317",
+  "startedAt": "2026-10-04T21:24:28.317Z",
+  "method": "Pinned workspace Playwright 1.62.1, actual headless Microsoft Edge; no synthetic clock for browser checks.",
+  "checks": [
+    {
+      "id": "render-EBP-K7M2Q9",
+      "status": "PASS"
+    },
+    {
+      "id": "render-EBP-C6R2Y8",
+      "status": "PASS"
+    },
+    {
+      "id": "render-EBP-S8L4J2",
+      "status": "PASS"
+    },
+    {
+      "id": "render-EBP-I5B9S3",
+      "status": "PASS"
+    },
+    {
+      "id": "practice-first-retry-EBP-H9C4F7",
+      "status": "PASS"
+    },
+    {
+      "id": "practice-first-retry-EBP-Y7H3M8",
+      "status": "PASS"
+    },
+    {
+      "id": "practice-first-retry-EBP-V6P3H9",
+      "status": "PASS"
+    },
+    {
+      "id": "practice-first-retry-EBP-X2G7V4",
+      "status": "PASS"
+    },
+    {
+      "id": "revision-first-retry-EBP-H9C4F7",
+      "status": "PASS"
+    },
+    {
+      "id": "revision-first-retry-EBP-Y7H3M8",
+      "status": "PASS"
+    },
+    {
+      "id": "revision-first-retry-EBP-V6P3H9",
+      "status": "PASS"
+    },
+    {
+      "id": "revision-first-retry-EBP-X2G7V4",
+      "status": "PASS"
+    },
+    {
+      "id": "assistance-hint",
+      "status": "PASS"
+    },
+    {
+      "id": "assistance-reveal",
+      "status": "PASS"
+    },
+    {
+      "id": "teacher-all-32",
+      "status": "PASS"
+    },
+    {
+      "id": "landing-identity-add-all",
+      "status": "PASS"
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-04T21:24:58.851Z"
+}

@@ -1,0 +1,83 @@
+{
+  "startedAt": "2026-10-03T10:47:52.390Z",
+  "base": "http://127.0.0.1:63571",
+  "method": "Both final independent static builds; pinned root Playwright/headless Edge/fresh contexts. Real UI draw/check/dialog/Next; durable IndexedDB rows read directly, no DEV harness. Final scoring/modal/reload/Next production smoke; idle/suspension gates are separate.",
+  "checks": [
+    {
+      "id": "igcse-mobile-answer-fit",
+      "status": "PASS",
+      "fit": {
+        "width": 352,
+        "svgWidth": 310,
+        "svgHeight": 223.875,
+        "font": "Comfortaa, system-ui, sans-serif",
+        "viewBox": "332 195 360 260",
+        "labels": [
+          {
+            "text": "H",
+            "inside": true
+          },
+          {
+            "text": "Cl",
+            "inside": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "alevel-mobile-answer-fit",
+      "status": "PASS",
+      "fit": {
+        "width": 352,
+        "svgWidth": 310,
+        "svgHeight": 93.71875,
+        "font": "Comfortaa, system-ui, sans-serif",
+        "viewBox": "70 90 860 260",
+        "labels": [
+          {
+            "text": "Mg",
+            "inside": true
+          },
+          {
+            "text": "Br",
+            "inside": true
+          },
+          {
+            "text": "Br",
+            "inside": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "igcse-built-mobile-launch-assessment-dialog-restore-next",
+      "status": "PASS",
+      "firstFrozen": true,
+      "firstScore": 0,
+      "evidenceExactlyOne": true,
+      "noDevHarness": true,
+      "attemptId": "2f1100e9-ec80-484d-ac66-8b5bf7a2d6b2",
+      "documentState": {
+        "visible": true,
+        "focused": true
+      }
+    },
+    {
+      "id": "alevel-built-mobile-launch-assessment-dialog-restore-next",
+      "status": "PASS",
+      "firstFrozen": true,
+      "firstScore": 0,
+      "evidenceExactlyOne": true,
+      "noDevHarness": true,
+      "attemptId": "7a23c3b9-9536-4c48-978a-f6b4d89966ba",
+      "documentState": {
+        "visible": true,
+        "focused": true
+      }
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T10:47:58.484Z",
+  "status": "PASS"
+}

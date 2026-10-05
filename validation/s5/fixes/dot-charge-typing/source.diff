@@ -1,0 +1,62 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\before.tsx.txt" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\dot-and-cross\\DotCrossEditor.tsx"
+index 7e18188..adef42e 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\before.tsx.txt"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\dot-and-cross\\DotCrossEditor.tsx"	
+@@ -57,7 +57,7 @@ export function DotCrossEditor({ part, response, readOnly, onResponse }: EditorS
+     [element, setElement] = useState<DotCrossElement>('H');
+   const [selected, setSelected] = useState<readonly string[]>([]),
+     [symbol, setSymbol] = useState<ElectronSymbol>('dot');
+-  const [charge, setCharge] = useState(1),
++  const [chargeText, setChargeText] = useState('1'),
+     [bracket, setBracket] = useState(true),
+     [message, setMessage] = useState('Choose an atom, then tap the canvas or use Add atom.');
+   const [x, setX] = useState(400),
+@@ -91,6 +91,16 @@ export function DotCrossEditor({ part, response, readOnly, onResponse }: EditorS
+       symbol: tool === 'cross' || tool === 'triangle' ? tool : tool === 'dot' ? 'dot' : symbol,
+       anchor,
+     });
++  const applyGroup = () => {
++    if (readOnly) return;
++    const raw = chargeText.trim(),
++      charge = Number(raw);
++    if (!/^[+-]?\d+$/.test(raw) || !Number.isSafeInteger(charge) || charge < -9 || charge > 9) {
++      setMessage('Enter a complete integer charge from −9 to +9 before applying the bracket.');
++      return;
++    }
++    apply({ type: 'group', atomIds: liveSelected, charge, bracket });
++  };
+   const select = (id: string, multiple: boolean) => {
+     setTool('select');
+     setSelected((current) =>
+@@ -396,13 +406,12 @@ export function DotCrossEditor({ part, response, readOnly, onResponse }: EditorS
+         <label>
+           Ion charge{' '}
+           <input
+-            type="number"
++            type="text"
+             aria-label="Ion charge"
+-            min="-9"
+-            max="9"
+-            step="1"
+-            value={charge}
+-            onChange={(event) => setCharge(Number(event.target.value))}
++            inputMode="text"
++            style={{ width: '6rem' }}
++            value={chargeText}
++            onChange={(event) => setChargeText(event.target.value)}
+           />
+         </label>
+         <label>
+@@ -413,11 +422,7 @@ export function DotCrossEditor({ part, response, readOnly, onResponse }: EditorS
+           />{' '}
+           Show brackets
+         </label>
+-        <button
+-          type="button"
+-          disabled={!liveSelected.length}
+-          onClick={() => apply({ type: 'group', atomIds: liveSelected, charge, bracket })}
+-        >
++        <button type="button" disabled={!liveSelected.length} onClick={applyGroup}>
+           Apply bracket and charge
+         </button>
+       </fieldset>

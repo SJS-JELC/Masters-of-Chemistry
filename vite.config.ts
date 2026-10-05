@@ -1,0 +1,18 @@
+import {defineConfig} from 'vite';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const project = path.dirname(fileURLToPath(import.meta.url));
+export default defineConfig(({mode}) => {
+  const course = mode === 'igcse' ? 'igcse' : 'alevel';
+  return {
+    base: process.env.MASTERS_BASE_PATH || './',
+    publicDir: path.join(project, 'public'),
+    server: {host:'127.0.0.1', port:5181, strictPort:true},
+    build: {
+      outDir:path.join(project, 'dist',course), emptyOutDir:true,
+      manifest:true,
+      rollupOptions:{input:path.join(project,`${course}.html`)}
+    }
+  };
+});

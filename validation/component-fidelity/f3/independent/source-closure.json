@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T20:30:15.248Z",
+  "sourceInputsChecked": 308,
+  "unchanged": 305,
+  "changes": [
+    {
+      "path": "src/ui/SourceQuestionPlayer.tsx",
+      "before": "b290c0377e36c091913703fa0df71688e04c0146efa482de6e91ccec557b0e71",
+      "current": "cb3df1f69f892b6b45ad78f0f57023b717cbe33aaff5bd078d3555391d933634"
+    },
+    {
+      "path": "src/ui/SourceRubricReview.tsx",
+      "before": "23f3b89a46d1a82cda86946bb7e08ad7c68a78bba33fb67ef1b60a66131d92b2",
+      "current": "8a405915bc4d3c6be34422db690ab76ff8177f0a56109cbeca50aacbb08ff87c"
+    },
+    {
+      "path": "src/ui/source-adapters.css",
+      "before": "8cab0376c489fc4536214b3325f075bdba21988d6a1055703edeb5b90204b760",
+      "current": "2dd8e66655cc949c6e47230b445a05c42dcabc51f19039f6169648bbc41835ab"
+    }
+  ],
+  "preservedEditorAssetInputs": 90,
+  "specialistInputsExact": 8,
+  "corpusRowsExact": 11,
+  "recordCount": 929,
+  "applicability": [
+    "F3 completion props and compact details operate only on self-rubric/numeric assessment metadata. They preserve primitive commands and shared first-evidence ownership.",
+    "F3 EE sizing affects both written EE and embedded energy-profile shared action panes: both independently current-browser checked across3 sizes; retained detailed specialist matrices remain historical.",
+    "EC/TC/editor/SVG files remain exact accepted specialist hashes; current representative models across3 sizes supplement retained matrices.",
+    "Dot-cross/molecule/C3 inputs remain exact F2 preserved-editor fingerprints. Current source rendering integration of both dot-cross courses separately checked in teacher mode. Existing C3 regression belongs to foreman final integration gates."
+  ],
+  "limitations": [
+    "Concurrent foreign OLY source is retained in exact overall input closure only; no OLY chemistry acceptance.",
+    "This script uses accepted corpus as continuity evidence; it does not replace source-image/chemistry review. Actual source controllers were independently exercised in written/numeric/rubric source suites."
+  ]
+}

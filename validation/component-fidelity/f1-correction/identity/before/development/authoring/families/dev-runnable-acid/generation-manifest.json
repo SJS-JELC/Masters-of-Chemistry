@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "dev-runnable-acid",
+  "prefix": "DEV-RUNNABLE-ACID-v1",
+  "generatedAt": "2026-10-03T03:21:59.678Z",
+  "generator": "development/authoring/scaffold.mjs",
+  "templateFingerprints": {
+    "development/authoring/data.ts": "9e4e7e6ffbe3be6107df36f54e6e5ff5859973a4de9c60c8b786c3723f696601",
+    "development/authoring/family.ts": "ed9c181ba25a9cbbf346d2930ee5cc230a94794b5b1b6cc08e6763c5d20494e5",
+    "development/authoring/registry.ts": "a15c012453dc9b8ca8e392658b8d355e46e52e10617a7ad2553dd1cc81725aae",
+    "src/development/catalogue/index.tsx": "a70880fd6a504abb95968f3733a8ccc9a5d97ed796ae97e3cc2a11dbebc7f359",
+    "development/authoring/templates/family.test.mjs": "185b3c6f1c9e807bc8db4b52fa8972a1539fb0137e565895050823a858c6bf71",
+    "development/authoring/templates/browser.mjs": "41b7e4d5a8ef928c2962ec5279722a465ac13a7f97fc153f81f067cde943df8a"
+  },
+  "generatedFingerprints": {
+    "Catalogue.tsx": "5e25de181553b59dbe1f808df6ade8f6d23ba7f64b6927dd5b54409a88c3d92d",
+    "README.md": "0fb13d938f75ac291499683ebcc892b0f60a01af5a4c2e674dbaa1b0a3ace90b",
+    "authoring-plan.json": "2b03359a2bcd8314c3345716ab929e95bcbd85db6aafb0d211fd70b242fbea5c",
+    "browser.mjs": "84198b582624cb0fafb5992149fff217cf1e7bb1d140ddb0fc43bf8a38aea779",
+    "data.ts": "a662641e71f67f289ff3c76accd541ade716a8194e38f26c0c6f63caa0c5de32",
+    "family.test.mjs": "a2521ae1b1d4b8d87e089dad1edb6c46d2046ea4ebc2533c4ee148706272dde5",
+    "family.ts": "fd19b3ff0436b221569f98635a0462c9ee4fe2e6fc6269d118e041bd0855bb64",
+    "mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "preview.html": "40762055bfaa4625fdc3eb83e71fb1fdfc28dadc9ebbb900173d298acab5cc9a",
+    "provenance.ts": "8da171155d0063a604f5bd6beb38589c68a281099b8e7752ddacb8950395e264",
+    "registry.ts": "0c1032540a61d354de286a367cbcf38e964affece4a338e07b34dc6ca56f5818",
+    "tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c"
+  },
+  "preview": "http://127.0.0.1:5195/development/authoring/families/dev-runnable-acid/preview.html",
+  "evidence": "validation/s4/authoring-release/refinement/dev-runnable-acid"
+}

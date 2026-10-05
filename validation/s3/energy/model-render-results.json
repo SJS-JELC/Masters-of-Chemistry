@@ -1,0 +1,297 @@
+{
+  "status": "PASS",
+  "browser": "154.0.4258.48",
+  "actualTeacherHost": true,
+  "results": [
+    {
+      "id": "D01",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CH₄ + 2O₂",
+        "CO₂ + 2H₂O",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "exo",
+      "screenshot": "models/D01.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D02",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CaCO₃",
+        "CaO + CO₂",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "endo",
+      "screenshot": "models/D02.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D03",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CH₄ + 2O₂",
+        "CO₂ + 2H₂O",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "exo",
+      "screenshot": "models/D03.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D04",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CaCO₃",
+        "CaO + CO₂",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "endo",
+      "screenshot": "models/D04.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D05",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CH₄ + 2O₂",
+        "CO₂ + 2H₂O"
+      ],
+      "type": "labels",
+      "screenshot": "models/D05.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D06",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CH₄ + 2O₂",
+        "CO₂ + 2H₂O",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "exo",
+      "screenshot": "models/D06.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D07",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CaCO₃",
+        "CaO + CO₂",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "repair",
+      "screenshot": "models/D07.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D08",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CH₄ + 2O₂",
+        "CO₂ + 2H₂O",
+        "– – Original",
+        "— Catalysed"
+      ],
+      "type": "catalyst",
+      "screenshot": "models/D08.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D09",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "H₂(g) + Cl₂(g)",
+        "2HCl(g)",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "exo",
+      "screenshot": "models/D09.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D10",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "2H₂(g) + O₂(g)",
+        "2H₂O(l)",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "exo",
+      "screenshot": "models/D10.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D11",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "2CO(g) + O₂(g)",
+        "2CO₂(g)",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "exo",
+      "screenshot": "models/D11.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D12",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "C(s) + O₂(g)",
+        "CO₂(g)",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "exo",
+      "screenshot": "models/D12.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D13",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "S(s) + O₂(g)",
+        "SO₂(g)",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "exo",
+      "screenshot": "models/D13.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D14",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "2Mg(s) + O₂(g)",
+        "2MgO(s)",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "exo",
+      "screenshot": "models/D14.png",
+      "retainedFrom": "model-render-results-initial.json"
+    },
+    {
+      "id": "D15",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "N₂(g) + O₂(g)",
+        "2NO(g)",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "endo",
+      "screenshot": "models/D15.png"
+    },
+    {
+      "id": "D16",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "C(s) + H₂O(g)",
+        "CO(g) + H₂(g)",
+        "ΔH"
+      ],
+      "type": "levels",
+      "polarity": "endo",
+      "screenshot": "models/D16.png"
+    },
+    {
+      "id": "D17",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "CH₄(g) + H₂O(g)",
+        "CO(g) + 3H₂(g)",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "endo",
+      "screenshot": "models/D17.png"
+    },
+    {
+      "id": "D18",
+      "status": "PASS",
+      "xml": true,
+      "labels": [
+        "Energy",
+        "Progress of reaction",
+        "C(s) + CO₂(g)",
+        "2CO(g)",
+        "Eₐ",
+        "ΔH"
+      ],
+      "type": "profile",
+      "polarity": "endo",
+      "screenshot": "models/D18.png"
+    }
+  ]
+}

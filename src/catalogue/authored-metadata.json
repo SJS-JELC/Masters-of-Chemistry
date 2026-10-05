@@ -1,0 +1,49 @@
+{
+  "activities": [
+    {
+      "id": "alevel/explaining-properties",
+      "course": "alevel",
+      "strand": "curriculum",
+      "title": "Explaining Properties",
+      "source": [
+        {
+          "path": "apps/Masters-of-Chemistry/src/activities/alevel/explaining-properties/bank.ts",
+          "sha256": "3f1ba771bca1c1ee4a1e6f965d77db827ee6c7a134c6ab0e7364809a21da4abe",
+          "symbolOrSection": "32 approved specification-authored/adapted questions; see activity README and retained source review."
+        }
+      ],
+      "gems": [
+        {
+          "id": "l6-t2-1-properties",
+          "topicId": "l6-t2-1",
+          "label": "Explaining Properties",
+          "supportedLevels": [
+            1,
+            2
+          ],
+          "mastery": {
+            "gemId": "l6-t2-1-properties",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 3,
+                "label": "Level 1"
+              },
+              {
+                "level": 2,
+                "halfLife": 3,
+                "label": "Level 2"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": [],
+            "activeProgressionVersion": 1
+          }
+        }
+      ]
+    }
+  ],
+  "gems": []
+}

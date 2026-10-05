@@ -1,0 +1,21 @@
+/* Shared shell remains unchanged; only this source workspace uses the original page width. */
+.course-shell:has(.dot-cross-player){padding-inline:24px}
+.course-focused:has(.dot-cross-player) .course-layout{max-width:none}
+.question-player.dot-cross-player{padding:0;border:0;background:transparent;border-radius:0;font-family:Comfortaa,system-ui,sans-serif;font-weight:700;line-height:1.5}
+.dot-question-panel{padding:20px 0;margin-bottom:0;border-bottom:1px solid #343459;background:transparent}
+.dot-question-panel .heading-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.dot-question-panel h2{font-size:clamp(1.25rem,2vw,1.5rem);margin:0}
+.dot-question-panel .content p{margin-top:8px;margin-bottom:0}
+.dot-question-panel .content p:first-child{font-size:1.12rem}
+.dot-level{color:#55f6ff;font-size:.75rem}.dot-question-panel .review-id{font-size:.7rem;border:1px solid #7d4279;border-radius:9px;padding:5px;color:#ff84de;white-space:nowrap}
+.dot-cross-player .marking .assessment-feedback,.dot-cross-player .marking .correction-feedback{padding:0;margin:14px 0;border:0;background:transparent}
+.dot-cross-player .marking .assessment-feedback h3,.dot-cross-player .marking .correction-feedback h3{font-size:1rem}.dot-cross-player .marking .mark-feedback{font-size:.86rem;line-height:1.5}
+.dot-cross-player .marking .score{font-size:1rem}.dot-cross-player .marking .save-status{padding:8px 0;font-size:.75rem}
+.dot-cross-player .dot-help{font-size:.8rem;margin-top:12px}.dot-cross-player .dot-help summary{padding:8px 0}.dot-cross-player .dot-help button{font-size:.8rem;margin:4px 0}
+.dot-session-controls{margin-top:12px}.dot-session-controls>button{font-size:.8rem;padding:7px 12px}
+.dot-answer-dialog{position:fixed;inset:0;margin:auto;width:min(1000px,calc(100% - 24px));max-height:90vh;overflow:auto;border:1px solid rgba(172,182,255,.19);border-radius:20px;padding:20px;background:#10152f;color:#eef0ff;box-shadow:0 24px 90px #0008;font-family:Comfortaa,system-ui,sans-serif;font-weight:700}
+.dot-answer-dialog::backdrop{background:#040719cc}.dot-answer-dialog h3{font-size:1.15rem;margin:22px 0}.dot-close-answer{float:right;margin:0 0 12px 12px}
+.dot-answer-graphic>svg{display:block;min-width:0!important;width:100%;height:auto;max-height:60vh;max-width:100%;border-radius:10px;background:white;margin:0 0 16px}
+.dot-answer-dialog .content p{font-size:.9rem;line-height:1.5}
+.dot-cross-player .teacher-answer{border:1px solid #343459;background:#101431;margin-top:20px;padding:20px;border-radius:22px}
+@media(max-width:600px){.course-shell:has(.dot-cross-player){padding-inline:12px}.dot-question-panel{padding:16px 0}.dot-question-panel .heading-row{flex-wrap:wrap}.dot-answer-dialog{width:calc(100% - 24px);padding:20px}.dot-question-panel .content p:first-child{font-size:1.1rem}}

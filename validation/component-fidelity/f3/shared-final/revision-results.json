@@ -1,0 +1,26 @@
+{
+  "agentId": "F08",
+  "jobId": "F2-SHARED",
+  "status": "PASS",
+  "startedAt": "2026-10-03T20:20:31.297Z",
+  "checks": [
+    {
+      "family": "comparison",
+      "revisionLaunch": true,
+      "awaitingEvidenceReload": true,
+      "lockedRangePersisted": true,
+      "firstScoreFrozen": true,
+      "historyDedup": true,
+      "schedulerNext": true
+    }
+  ],
+  "shots": [
+    "rubric-revision-finished.png"
+  ],
+  "errors": [],
+  "limits": [
+    "Fresh synthetic app IndexedDB namespaces and nonpersistent contexts only.",
+    "Native OS suspend/minimize coverage retained by foreman; this browser suite checks reload and first timing."
+  ],
+  "finishedAt": "2026-10-03T20:20:41.673Z"
+}

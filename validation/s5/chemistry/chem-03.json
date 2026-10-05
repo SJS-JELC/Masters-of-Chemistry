@@ -1,0 +1,74 @@
+{
+  "issueId": "CHEM-03-C3-K-ORTHOACID",
+  "status": "ESCALATE",
+  "identifiedAt": "2026-10-03",
+  "currentSource": "src/activities/olympiad/c3l6/bank.json stages.b.answers K alternatives[1]",
+  "originalSource": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/content.js",
+  "currentPrompt": "Continue from your saved H: H (74) + H₂O ⇌ K (92). Suggest the product.",
+  "H": {
+    "smiles": "O=CC(=O)O",
+    "name": "glyoxylic acid",
+    "formula": "C2H2O3",
+    "nominalMr": 74
+  },
+  "KCorrectConventionalHydrate": {
+    "smiles": "O=C(O)C(O)O",
+    "name": "2,2-dihydroxyacetic acid",
+    "formula": "C2H4O4",
+    "nominalMr": 92
+  },
+  "KQuestionableSourceAlternative": {
+    "smiles": "O=CC(O)(O)O",
+    "class": "orthoacid: aldehyde retained, carboxyl carbon converted to C(OH)3",
+    "formula": "C2H4O4",
+    "nominalMr": 92
+  },
+  "technicalChecks": "Both exact original alternatives pass graph valence, formula, nominal mass and source-equality tests; both are freshly rendered and actually inspected. These tests do not establish aqueous-product chemistry.",
+  "primaryEvidence": [
+    {
+      "url": "https://goldbook.iupac.org/terms/view/O04331",
+      "authority": "IUPAC Gold Book, online version5 (2025)",
+      "accessDate": "2026-10-03",
+      "summary": "Defines orthoacids RC(OH)3 as hypothetical hydrated carboxylic-acid structures."
+    },
+    {
+      "url": "https://pubs.acs.org/jpcafh/article/120/21/3817/1332886/Aqueous-Photochemistry-of-Glyoxylic-Acid",
+      "authority": "Primary Journal of Physical Chemistry A research,2016,120,3817",
+      "accessDate": "2026-10-03",
+      "summary": "Identifies the aqueous hydrate as dihydroxyacetic acid, (OH)2CH-COOH, with reported hydration equilibrium constant300 at298K."
+    },
+    {
+      "url": "https://doi.org/10.1107/S0108270183007465",
+      "authority": "Primary glyoxylic-acid monohydrate crystal structure, Lis1983",
+      "accessDate": "2026-10-03",
+      "summary": "Record identifies the characterised monohydrate as dihydroxyacetic acid,C2H4O4; full text unavailable in this session."
+    }
+  ],
+  "inference": "The second accepted graph depicts a hypothetical orthoacid rather than the conventional aqueous hydrate expected from the stated reaction. Giving this unqualified full credit is a substantive inherited marking/chemistry issue. No claim that the original exam itself contained this alternative is made; original paper/historical draft report not recovered.",
+  "authorityBoundary": "Parent notified. No answer, graph, source, marking or asset changed. A source-preserving bounded author disposition and independent acceptance are required; technical source-equality PASS cannot close this issue.",
+  "currentDisposition": {
+    "sourceGate": "PASS",
+    "browserGate": "PASS",
+    "authority": "A01 root approved bounded CHEM-03 current marking erratum; A16 authored seven frozen source/shared files. A22 independently reviewed all seven diffs and executed 12 groups.",
+    "rawSourceAlternatives": 23,
+    "currentAcceptedAlternatives": 22,
+    "acceptedK": "O=C(O)C(O)O",
+    "excludedK": "O=CC(O)(O)O",
+    "retainedOriginalFinding": "ESCALATE",
+    "sourceEvidence": [
+      "c3-independent-final12.log",
+      "c3-history-boundaries.json",
+      "c3-full-port.diff",
+      "c3-regression-port-provenance.json",
+      "c3-transformation-review.json",
+      "rendered-inspection.json"
+    ],
+    "history": "Exact original native outcome retained separately; current K false and downstream b/c incomplete; correction/restart/reload preserve prior raw. Actual original v1/v2/v3 executable restored wrong-K records complete, current import rejects completion and preserves raw.",
+    "finalEvidence": [
+      "final-build-guard.json",
+      "final-production-browser-results.json",
+      "final-fingerprints.json"
+    ],
+    "finalPolicyStatus": "PASS: original failed alternative retained as source evidence and explicit erratum; current accepted product and historical/current completion separation independently validated."
+  }
+}

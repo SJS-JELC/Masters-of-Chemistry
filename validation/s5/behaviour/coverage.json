@@ -1,0 +1,192 @@
+{
+  "agentId": "A21",
+  "jobId": "S5-BEHAVIOUR",
+  "scopeStatus": "PASS",
+  "currentInputHashes": {
+    "tree": "e934c0232af2e8a15b0748de8096d3ea5effbb17b65144fc27fea320afff3b5e",
+    "files": "fingerprints-final-before.json",
+    "freezeTree": "75a6c5c275efc120705e199e9527f8241721d41ab24d7a85284ec9f00aa07b88"
+  },
+  "requirements": [
+    {
+      "requirementId": "SCOPE-01",
+      "status": "PASS",
+      "coverage": "Protected originals: 794 byte fingerprints plus 523 metadata-only placeholders unchanged; no hydration.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/originals-guard.json"
+      ]
+    },
+    {
+      "requirementId": "SCOPE-02",
+      "status": "PASS",
+      "coverage": "All 41 genuine curriculum targets exercised; excluded Rocket routes rejected.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/browser-results.json"
+      ]
+    },
+    {
+      "requirementId": "SCOPE-03",
+      "status": "PASS",
+      "coverage": "C3 current/historical graphs, ABC completion, restart and import stay outside curriculum attempts/sessions/evidence/statistics/time.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/c3-erratum-browser-results.json",
+        "validation/s5/behaviour/olympiad-browser-results.json"
+      ]
+    },
+    {
+      "requirementId": "ASSESS-01",
+      "status": "PASS",
+      "coverage": "Practice and revision wrong/correct/1-of-3 partial responses; automatic learning correction, reveal, immutable first responses/score/time/single evidence; self-rubric locks written response and excludes judgement time.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/deep-browser-results.json",
+        "validation/s5/behaviour/revision-browser-results.json"
+      ]
+    },
+    {
+      "requirementId": "ASSESS-02",
+      "status": "PASS",
+      "coverage": "273 retained original-source mastery equivalence cases; actual legacy VM count/time semantics; strict threshold, archived progression and untimed history.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/statistics-source-equivalence-final.txt",
+        "validation/s5/behaviour/import-browser-results.json"
+      ]
+    },
+    {
+      "requirementId": "TIME-01",
+      "status": "PASS",
+      "coverage": "Current production pause/reload/resume/Next/assessment freeze/statistics; current clock/binding semantic equality carries actual native idle/trusted/background/hidden/suspension evidence for 60/180/300/600s. Preserved ambiguities below.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/timing-continuity.json",
+        "validation/s5/behaviour/deep-browser-results.json",
+        "validation/s5/behaviour/revision-browser-results.json",
+        "validation/s5/behaviour/browser-results.json",
+        "validation/s5/behaviour/registration-timing-final.txt"
+      ]
+    },
+    {
+      "requirementId": "STATE-01",
+      "status": "PASS",
+      "coverage": "Actual Dexie transaction quota rollback at three stages, conflicts/dedup/version migration/isolation; ten startup failure/recovery cases; repeated Retry closes old connections; exact imports/archives/exports; no old Storage writes.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/deep-browser-results.json",
+        "validation/s5/behaviour/recovery-browser-results.json",
+        "validation/s5/behaviour/import-browser-results.json",
+        "validation/s5/behaviour/c3-erratum-browser-results.json"
+      ]
+    },
+    {
+      "requirementId": "RELEASE-01",
+      "status": "PASS",
+      "coverage": "Both final static builds under nested prefix: 12 codeless and 11 coded historical aliases, direct refresh; correct question identity.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/browser-results.json",
+        "validation/s5/behaviour/verification-final.json"
+      ]
+    },
+    {
+      "requirementId": "ARCH-01",
+      "status": "PASS",
+      "coverage": "Actual shared production player plus actual source controller/repository/session browser modules exercised; no private runtime test global present.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/browser-results.json",
+        "validation/s5/behaviour/deep-browser-results.json"
+      ]
+    },
+    {
+      "requirementId": "DELIVERY-01",
+      "status": "PASS",
+      "coverage": "Commands, current input/evidence hashes, initial comparison and retained failure dispositions documented.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": [
+        "validation/s5/behaviour/verification-final.json",
+        "validation/s5/behaviour/HANDOVER.md"
+      ]
+    },
+    {
+      "requirementId": "CONTENT-01",
+      "status": "UNTESTED",
+      "coverage": "Substantive chemistry and OCR/source audit belong to A22; target identity/restore is covered here.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": []
+    },
+    {
+      "requirementId": "UX-01",
+      "status": "UNTESTED",
+      "coverage": "Full keyboard/touch/gesture/render acceptance belongs to A23; recovery/statistics/self-rubric screenshots inspected here.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": []
+    },
+    {
+      "requirementId": "PERF-01",
+      "status": "UNTESTED",
+      "coverage": "Bundle and interaction profiling belong to A23.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": []
+    },
+    {
+      "requirementId": "AUTHOR-01",
+      "status": "UNTESTED",
+      "coverage": "Independent catalogue/authoring proof belongs to A23.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": []
+    },
+    {
+      "requirementId": "ARCH-02",
+      "status": "UNTESTED",
+      "coverage": "Global type/schema/interface acceptance belongs to A01; actual runtime boundaries covered here.",
+      "inputHashRef": "validation/s5/behaviour/verification-final.json#finalInput",
+      "evidence": []
+    }
+  ],
+  "nativeEvidence": [
+    {
+      "path": "validation/s2/review-native/partial-verification.json",
+      "sha256": "f4c4afdf11098b91399c5c06954d64a91b6a330990f8b72d7edc5911c6678d2e"
+    },
+    {
+      "path": "validation/s2/review-suspension/disposition.json",
+      "sha256": "767afec67b7bebae2d3d73b4ef791a12e0956f09a742ef62a54e41e2fe4d038e"
+    },
+    {
+      "path": "validation/s2/review-suspension/results.json",
+      "sha256": "89e972ecd45c48cbbeb2f7dc385ca1d6b01cc98779565ff0e94ebfb855dde16a"
+    },
+    {
+      "path": "validation/s3/review-timing/disposition.json",
+      "sha256": "7e49d9e2cbee918d0ee75e8b84babf36d69add17814802b206f31b0823ad72fc"
+    },
+    {
+      "path": "validation/s3/review-timing/results.json",
+      "sha256": "b40ab6f6502d0ab8fa0c391b089696f1db16f6c1f01053e3c0a285e728c73d8b"
+    },
+    {
+      "path": "validation/s3/review-timing/energy-disposition.json",
+      "sha256": "74948233f3d83516b6a93ace032695e6f0cdb28cd218360d95db6805b3fd93a0"
+    },
+    {
+      "path": "validation/s3/electrons/timing-browser-results.json",
+      "sha256": "2bc0965661fcf086ed9fe9e02f1d08dfe43648bb5bfbc0012f446d4ba4794dec"
+    }
+  ],
+  "retainedTimingLimits": [
+    "A07 replaced-document996ms remains unclassified",
+    "A12 headless9005vs1001 remains unclassified",
+    "Retained Vite post-thaw replacement and conservative whole-tree failures remain ESCALATE raw; accepted boundary dispositions are separate",
+    "A11-specific60/180 idle evidence is headless; shared native-binding evidence carried, no A11-specific native run invented",
+    "Titration adapter raw bytes differ from S3; current constant600000 allowance independently inspected and all current production target timings match native observed600000; clock/binding unchanged. No claim of full S3 host/adapter raw equality",
+    "Final static build timing restore/stats evidence does not relabel prior development-host screenshots as final rendered acceptance"
+  ],
+  "blocked": [],
+  "externalLimits": [
+    "Exact current OCR PDF/Python/cloud reproduction acceptance is outside this behavioural package; no new evidence invented."
+  ]
+}

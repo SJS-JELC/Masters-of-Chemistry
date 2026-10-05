@@ -1,0 +1,40 @@
+- link "Skip to question":
+  - /url: "#main-content"
+- banner:
+  - img "St John's School eagle"
+  - paragraph: Masters of Chemistry
+  - heading "A Level Chemistry" [level=1]
+  - text: OCR A
+- navigation "Course views":
+  - button "Practice"
+  - button "Revision"
+  - button "Teacher"
+  - button "Statistics"
+  - button "Import progress"
+  - button "Olympiad"
+- navigation "A Level Chemistry activities":
+  - group:
+    - text: Curriculum activities
+    - list:
+      - listitem:
+        - button "Acid–base calculations"
+      - listitem:
+        - button "Dot-and-cross diagrams"
+      - listitem:
+        - button "pH titration curves"
+      - listitem:
+        - button "Electrons and bonding"
+      - listitem:
+        - button "Electron configurations"
+  - group: Olympiad challenges
+- main:
+  - region "Current session":
+    - text: Practice · Dot-and-Cross Diagrams · Level 1
+    - button "Change activity or view"
+  - status: Attempt paused. Resume preserves its question, answer and timing.
+  - button "Resume saved attempt"
+  - paragraph: Resume your saved attempt to continue.
+  - region "Practice progress":
+    - paragraph: 0 saved practice results
+    - paragraph: "Active answering time: 0:01"
+- contentinfo: St John's School · Chemistry

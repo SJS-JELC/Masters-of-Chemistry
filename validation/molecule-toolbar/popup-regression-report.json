@@ -1,0 +1,140 @@
+{
+  "at": "2026-10-04T12:44:02.914Z",
+  "checks": [
+    "No redundant controls or permanent drawing panel",
+    "Isomer popup drawing, undo, keyboard Escape, focus and autosave",
+    "Dialog tab focus, backdrop and responsive layouts",
+    "Save failure is visible inside dialog and retry recovers",
+    "Question back returns to Olympiad then A Level",
+    "C3 toolbar, introduction and restart confirmation",
+    "C3 part b popup drawing and slot isolation",
+    "C3 network editable popup, keyboard bonds, undo after reopen and restart",
+    "Completed C3 network opens read-only and completion survives navigation",
+    "Completed isomer popup read-only and gem remains complete"
+  ],
+  "layouts": [
+    {
+      "name": "isomer-popup",
+      "width": 1440,
+      "page": 1440,
+      "dialog": {
+        "x": 170,
+        "right": 1270,
+        "height": 779.984375
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "isomer-popup",
+      "width": 820,
+      "page": 820,
+      "dialog": {
+        "x": 16,
+        "right": 804,
+        "height": 829.984375
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "isomer-popup",
+      "width": 390,
+      "page": 390,
+      "dialog": {
+        "x": 6,
+        "right": 384,
+        "height": 743.78125
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "isomer-popup",
+      "width": 350,
+      "page": 350,
+      "dialog": {
+        "x": 6,
+        "right": 344,
+        "height": 813.578125
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "isomer-question",
+      "width": 350,
+      "page": 350,
+      "dialog": null,
+      "overflow": false,
+      "doneVisible": false
+    },
+    {
+      "name": "olympiad-landing",
+      "width": 1440,
+      "page": 1440,
+      "dialog": null,
+      "overflow": false,
+      "doneVisible": false
+    },
+    {
+      "name": "c3-b-popup",
+      "width": 1440,
+      "page": 1440,
+      "dialog": {
+        "x": 170,
+        "right": 1270,
+        "height": 804.671875
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "c3-b-popup",
+      "width": 390,
+      "page": 390,
+      "dialog": {
+        "x": 6,
+        "right": 384,
+        "height": 768.46875
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "c3-b-popup",
+      "width": 350,
+      "page": 350,
+      "dialog": {
+        "x": 6,
+        "right": 344,
+        "height": 838.265625
+      },
+      "overflow": false,
+      "doneVisible": true
+    },
+    {
+      "name": "c3-b-question",
+      "width": 350,
+      "page": 350,
+      "dialog": null,
+      "overflow": false,
+      "doneVisible": false
+    },
+    {
+      "name": "c3-c-popup",
+      "width": 350,
+      "page": 350,
+      "dialog": {
+        "x": 6,
+        "right": 344,
+        "height": 856.765625
+      },
+      "overflow": false,
+      "doneVisible": true
+    }
+  ],
+  "errors": [],
+  "status": "PASS",
+  "finishedAt": "2026-10-04T12:44:12.445Z"
+}

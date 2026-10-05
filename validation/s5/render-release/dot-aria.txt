@@ -1,0 +1,123 @@
+- link "Skip to question":
+  - /url: "#main-content"
+- banner:
+  - img "St John's School eagle"
+  - paragraph: Masters of Chemistry
+  - heading "A Level Chemistry" [level=1]
+  - text: OCR A
+- main:
+  - region "Current session":
+    - text: Practice · Dot-and-Cross Diagrams · Level 1
+    - button "Change activity or view"
+    - button "Pause and save"
+  - article "H₂ · DAC-3QP3I7":
+    - paragraph: Question
+    - heading "H₂ · DAC-3QP3I7" [level=2]
+    - code: h2
+    - text: Level 1
+    - paragraph: Draw a dot-and-cross diagram for H₂.
+    - paragraph: Draw any valid neutral isomer with this molecular formula, as one connected molecule. Show outer-shell electrons only. Each shared pair needs one dot and one cross; use one symbol for the non-bonding electrons on each atom. Inner shells and molecular shape are not assessed.
+    - complementary "Built-in support":
+      - strong: Built-in support
+      - paragraph: Built-in original drawing conventions; no per-question atom-count hints.
+      - paragraph: Show outer electrons. Keep origin symbols consistent. A coordinate pair uses two matching symbols. Bracket ions and show their charges; a positive metal ion may show its empty former outer shell or retained complete shell.
+    - region "Your response":
+      - heading "Your response" [level=3]
+      - text: "[1 mark]"
+      - paragraph: Build the diagram using atoms, shared electron pairs, lone electrons and any required brackets and charges.
+      - region "Diagram workspace":
+        - strong: Diagram workspace
+        - paragraph: Place atoms and electrons. Select atoms to move them or bracket an ion. Dots, crosses and triangles represent electron origins.
+        - group "Drawing tools":
+          - text: Drawing tools
+          - button "Select" [pressed]
+          - button "Atom"
+          - button "Dot"
+          - button "Cross"
+          - button "Triangle"
+          - button "Erase"
+          - text: Element
+          - combobox "Element":
+            - option "H" [selected]
+            - option "B"
+            - option "C"
+            - option "Si"
+            - option "N"
+            - option "O"
+            - option "P"
+            - option "S"
+            - option "F"
+            - option "Cl"
+            - option "Br"
+            - option "I"
+            - option "Li"
+            - option "Na"
+            - option "K"
+            - option "Mg"
+            - option "Ca"
+            - option "Al"
+        - button "Undo"
+        - button "Redo" [disabled]
+        - button "Clear diagram"
+        - button "Fit diagram" [pressed]
+        - button "Magnify diagram"
+        - text: Magnify for larger labels and electrons; scroll or swipe to inspect the drawing.
+        - group "Dot-and-cross drawing canvas":
+          - button "H atom a1" [pressed]: H
+        - status: Diagram updated.
+        - group:
+          - text: Keyboard and non-drag controls
+          - group "Place atoms without dragging":
+            - text: Place atoms without dragging X position
+            - spinbutton "X position": "400"
+            - text: Y position
+            - spinbutton "Y position": "325"
+            - button "Add atom"
+            - button "H a1" [pressed]
+            - button "Move left"
+            - button "Move right"
+            - button "Move up"
+            - button "Move down"
+            - button "Delete selected atoms"
+          - group "Place an electron in a shell or bond":
+            - text: Place an electron in a shell or bond Electron symbol
+            - combobox "Electron symbol":
+              - option "dot" [selected]
+              - option "cross"
+              - option "triangle"
+            - text: First atom
+            - combobox "First atom":
+              - option "Choose atom"
+              - option "H a1" [selected]
+            - text: Second atom (shared bond)
+            - combobox "Second atom":
+              - option "Lone electron" [selected]
+              - option "H a1"
+            - text: Electron slot
+            - combobox "Electron slot":
+              - option "1" [selected]
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+              - option "6"
+              - option "7"
+              - option "8"
+            - button "Add electron"
+          - group "Bracket and charge selected atoms":
+            - text: Bracket and charge selected atoms Ion charge
+            - textbox "Ion charge": "1"
+            - checkbox "Show brackets" [checked]
+            - text: Show brackets
+            - button "Apply bracket and charge"
+          - group: Electron inventory and deletion
+          - paragraph: Select an atom with Enter or the atom buttons. Arrow keys move the selection; Shift moves farther. Delete removes selected atoms; Ctrl+Z undoes. Touch users can tap slots or use these controls.
+    - button "Check answer"
+    - button "Request hint"
+    - button "Reveal answer (assisted)"
+    - button "Pause"
+    - text: Saved on this device
+  - region "Practice progress":
+    - paragraph: 0 saved practice results
+    - paragraph: "Active answering time: 0:00"
+- contentinfo: St John's School · Chemistry

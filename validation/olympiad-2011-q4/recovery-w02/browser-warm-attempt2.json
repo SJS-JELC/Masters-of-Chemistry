@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-10-03T18:34:48.316Z",
+  "browser": "Pinned workspace Playwright + installed Edge, headless actual React UI",
+  "checks": [
+    {
+      "id": "selector-and-url-selection",
+      "status": "PASS",
+      "at": "2026-10-03T18:34:51.216Z"
+    },
+    {
+      "id": "desktop-keyboard-editor-partial-check-uniform-feedback",
+      "status": "PASS",
+      "at": "2026-10-03T18:34:51.623Z"
+    },
+    {
+      "id": "duplicate-exact-priority-independent-undo-restore",
+      "status": "PASS",
+      "at": "2026-10-03T18:34:52.381Z"
+    },
+    {
+      "id": "spectrum-keyboard-zoom-neutral-metadata",
+      "status": "PASS",
+      "at": "2026-10-03T18:34:52.475Z"
+    }
+  ],
+  "errors": [],
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'saving' !== 'saved'\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-2011-q4/recovery-w02/browser.mjs:60:165\n    at async check (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-2011-q4/recovery-w02/browser.mjs:15:29)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-2011-q4/recovery-w02/browser.mjs:55:1",
+  "finishedAt": "2026-10-03T18:34:52.767Z"
+}

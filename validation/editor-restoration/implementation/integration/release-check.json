@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T10:54:25.951Z",
+  "releases": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 142,
+      "initialJavascriptGzipBytes": 166780,
+      "lazyJavascriptChunks": 62,
+      "manifestSha256": "f563c338250e16bd0a7f78836c4851986bb7356449999698e6738a257d7813a7",
+      "checkedAt": "2026-10-03T10:54:25.810Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 142,
+      "initialJavascriptGzipBytes": 166780,
+      "lazyJavascriptChunks": 62,
+      "manifestSha256": "1cc8c61732272289a5f9c7e38efa57007fb8189de5b7d2ee498c7207e1bd2c02",
+      "checkedAt": "2026-10-03T10:54:25.951Z"
+    }
+  ]
+}

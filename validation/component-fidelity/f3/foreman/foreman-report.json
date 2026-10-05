@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "stage": "F3",
+  "status": "VALIDATED_AWAITING_ROOT_FINAL_ACCEPTANCE",
+  "foreman": "F07",
+  "checkedAt": "2026-10-03T20:41:23.787Z",
+  "unresolved": [],
+  "rootGate": "Root final source/render acceptance remains. F2 implementation acceptance is recorded; independent F3 verification and all authorized bounded fixes complete. No publication.",
+  "jobs": [
+    {
+      "jobId": "F3-SHARED-FINAL-FIX",
+      "agentId": "F08",
+      "status": "FOREMAN_VALIDATED",
+      "manifest": "validation/component-fidelity/f3/shared-final/completion.json",
+      "validation": "validation/component-fidelity/f3/foreman/author-validation.json"
+    },
+    {
+      "jobId": "F3-INDEPENDENT",
+      "agentId": "F12",
+      "status": "INDEPENDENT_PASS_FOREMAN_VALIDATED",
+      "manifest": "validation/component-fidelity/f3/independent/completion.json",
+      "report": "validation/component-fidelity/f3/independent/report.json",
+      "handover": "validation/component-fidelity/f3/independent/HANDOVER.md",
+      "validation": "validation/component-fidelity/f3/foreman/independent-validation.json"
+    }
+  ],
+  "changes": [
+    "EE action buttons retain natural content widths/source sizing and wrap with one-line labels at mobile widths; embedded EE profile actions independently verified.",
+    "Completed self-rubrics derive completion from immutable first assessment, remove Finish marking and further evidence selection, retain disabled judgements/saved evidence and show completed text.",
+    "Numeric and completed rubric views keep compact labelled immutable first score, collapse duplicate original marking into keyboard-accessible native details, retain visible models/per-field feedback and distinct correction score. Eligible learning-alternative feedback remains expanded."
+  ],
+  "currentSourceFiles": [
+    {
+      "file": "src/ui/SourceQuestionPlayer.tsx",
+      "beforeSha256": "b290c0377e36c091913703fa0df71688e04c0146efa482de6e91ccec557b0e71",
+      "sha256": "cb3df1f69f892b6b45ad78f0f57023b717cbe33aaff5bd078d3555391d933634"
+    },
+    {
+      "file": "src/ui/SourceRubricReview.tsx",
+      "beforeSha256": "23f3b89a46d1a82cda86946bb7e08ad7c68a78bba33fb67ef1b60a66131d92b2",
+      "sha256": "8a405915bc4d3c6be34422db690ab76ff8177f0a56109cbeca50aacbb08ff87c"
+    },
+    {
+      "file": "src/ui/source-adapters.css",
+      "beforeSha256": "8cab0376c489fc4536214b3325f075bdba21988d6a1055703edeb5b90204b760",
+      "sha256": "2dd8e66655cc949c6e47230b445a05c42dcabc51f19039f6169648bbc41835ab"
+    }
+  ],
+  "patch": "validation/component-fidelity/f3/shared-final/f3-only.patch",
+  "sourceClosure": {
+    "report": "validation/component-fidelity/f3/foreman/source-scope.json",
+    "independent": "validation/component-fidelity/f3/independent/source-closure.json",
+    "inputs": 308,
+    "unchanged": 305,
+    "authorizedChanges": 3,
+    "removed": 0,
+    "statement": "No engine, provider, chemistry, identity, clock, persistence, original source or foreign OLY changes since accepted F2."
+  },
+  "validation": {
+    "author": {
+      "cases": 22,
+      "rawPngs": 148,
+      "contacts": 21,
+      "artifactHashes": 169
+    },
+    "independent": {
+      "domainTests": 14,
+      "currentBrowserChecks": 24,
+      "currentFullPageCaptures": 69,
+      "affectedSpecialistAndRenderChecks": 15,
+      "currentSpecialistAndNaturalCaptures": 21,
+      "productionEntries": 2,
+      "statsWidths": 3,
+      "originalSourceCases": 42,
+      "sourceCorpusRecords": 929,
+      "curriculumActivities": 11,
+      "sourceInputs": 308,
+      "sourceUnchanged": 305,
+      "sourceChanged": 3,
+      "preservedEditorAssetInputs": 90,
+      "originalReadableHashes": 794,
+      "metadataOnlyPlaceholders": 523,
+      "placeholderContentReads": 0,
+      "protectedFinal": true,
+      "firstTimingStatsTransferMs": 3576
+    },
+    "independentEvidenceHashGate": "validation/component-fidelity/f3/foreman/independent-validation.json",
+    "foremanTypeBuild": "validation/component-fidelity/f3/foreman/build-validation.json",
+    "buildLogs": [
+      "validation/component-fidelity/f3/foreman/typecheck-final.log",
+      "validation/component-fidelity/f3/foreman/build-final.log"
+    ],
+    "exactBuildSourceFreeze": "validation/component-fidelity/f3/foreman/build-source-inputs.json",
+    "release": "validation/component-fidelity/f3/foreman/release-check-final.json",
+    "originals": "validation/component-fidelity/f3/foreman/audit-after.json",
+    "independentFinalOriginals": "validation/component-fidelity/f3/independent/audit-final.json",
+    "currentC3Browser": "validation/component-fidelity/f3/foreman/final-c3-k.json",
+    "priorApplicableC3Tests": "validation/component-fidelity/f2/resume/c3-regression-final.log",
+    "priorApplicable68Tests": "validation/component-fidelity/f2/resume/foreman-report.json",
+    "priorF2CorpusMatrices": "validation/component-fidelity/f2/resume/foreman-report.json"
+  },
+  "releaseBudgets": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 7,
+      "runtimeFileCount": 161,
+      "initialJavascriptGzipBytes": 178719,
+      "lazyJavascriptChunks": 69,
+      "manifestSha256": "b399773aea4ff39a3d36d414daba444ebb9967df4d76ef2e9c6d579929b38cdf",
+      "checkedAt": "2026-10-03T20:24:00.234Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 161,
+      "initialJavascriptGzipBytes": 178718,
+      "lazyJavascriptChunks": 69,
+      "manifestSha256": "9e21b210ad171ed0a16490b057df81e020c13ac190b8694e18b5dcd32d374260",
+      "checkedAt": "2026-10-03T20:24:00.400Z"
+    }
+  ],
+  "preservation": {
+    "originals": {
+      "readable": 794,
+      "metadataOnly": 523,
+      "placeholderContentReads": 0
+    },
+    "priorF1": {
+      "checked": 324,
+      "changes": []
+    },
+    "historical": {
+      "checked": 23972,
+      "unchanged": 23971,
+      "changes": [
+        {
+          "path": "validation/original-app-check.json",
+          "expected": "4a8e23274f4985bcafbf4f11d8282cff45bc8cadc9c42863b79bc2298a26799a",
+          "actual": "771d06a3ca778a7da0a6da483b97841207a973dd4215d2154663839049026c26"
+        }
+      ],
+      "disposition": "Original-app-check summary regenerated externally during authorized concurrent OLY work. Its PASS/fileCount/changed/metadataOnly semantics independently match protected baseline; checkedAt is mutable. Preserve current summary bytes, do not fabricate unchanged history."
+    },
+    "existingEditors": "90 exact unchanged dot-cross/molecule/C3 source files;8 specialist editor/SVG inputs unchanged independently."
+  },
+  "scope": "All11 existing curriculum and preserved C3/dot-cross/molecule experience. Concurrent OLY2011 content excluded from review; its current registration/assets remain build dependencies only. Registry13 is correct for combined current source.",
+  "staffing": {
+    "foremen": 1,
+    "authors": 1,
+    "independentReviewers": 1,
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveModel": null,
+    "usage": null,
+    "nestedDelegation": false
+  },
+  "retainedDispositions": [
+    "Copied-import-depth fixture corrected; rawfailure retained.",
+    "Production database run selector corrected to discover isolated actualv2 store; rawfailure retained.",
+    "Sourceclosure excludes generatedrelease manifests under separate releasegate; rawfailure retained.",
+    "Freshmap practice launch distinguished from genuine savedview continuation; strict savedidentity equality passed; rawfailure retained."
+  ],
+  "limits": [
+    "No new native OS suspension/minimisation/hidden exposure claim; headless focusprobe did not exposeinactive state. Exact retained native evidence independently verifies applicableunchanged clock/binding.",
+    "Historical specialist matrices remain historical; scoped source applicability plus current representative renders/affectedEEactions checked.",
+    "External original-app-check summary regeneration exception retained with actualfingerprints.",
+    "Concurrent foreignOLY content ignored; totalregistry13 participates only in shared build/source closure.",
+    "Root owns finalacceptance; foreman type/build/release/C3integration evidence separate; no publication."
+  ],
+  "livePreview": {
+    "url": "http://127.0.0.1:5192/alevel/",
+    "igcse": "http://127.0.0.1:5192/igcse/",
+    "vite": 5188,
+    "originalReadOnly": 5197,
+    "execSessions": [
+      50930,
+      79911,
+      54640
+    ],
+    "old5182": "Not restarted or touched"
+  },
+  "rootFullSizeSamples": [
+    "validation/component-fidelity/f3/independent/mobile-EE-incorrect.png",
+    "validation/component-fidelity/f3/independent/mobile-EE-model.png",
+    "validation/component-fidelity/f3/independent/mobile-numeric-correction.png",
+    "validation/component-fidelity/f3/independent/current-desktop-SBC-UFFEIZ-natural-completed.png",
+    "validation/component-fidelity/f3/independent/current-mobile-SBC-U5FSU0-natural-completed.png",
+    "validation/component-fidelity/f3/independent/current-mobile-energy-correct.png",
+    "validation/component-fidelity/f3/independent/current-desktop-titration-model.png",
+    "validation/component-fidelity/f3/independent/current-tablet-electron-model.png",
+    "validation/component-fidelity/f3/independent/production-pause-resume-stats.png"
+  ]
+}

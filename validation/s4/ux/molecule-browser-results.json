@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "headless": true,
+  "playwright": "1.62.1",
+  "checks": [
+    "Actual source Part(a) prerequisite/Check/continue, molecular non-drag Add atom, desktop/mobile no overflow and saved graph restore; zero curriculum evidence"
+  ],
+  "errors": [],
+  "snapshot": {
+    "first": {
+      "progress": {
+        "kind": "olympiad-completion",
+        "course": "alevel",
+        "profileId": "local",
+        "activityId": "alevel/c3l6-organic-reactions",
+        "stage": "b",
+        "classifications": {
+          "(1)": "oxidation",
+          "(2)": "hydrolysis",
+          "(3)": "reduction",
+          "(4)": "hydrolysis",
+          "(5)": "hydrolysis",
+          "(6)": "reduction",
+          "(7)": "hydrolysis",
+          "(8)": "reduction",
+          "(9)": "oxidation",
+          "(10)": "hydrolysis"
+        },
+        "drawingsB": {
+          "A": {
+            "kind": "molecule",
+            "graph": {
+              "atoms": [
+                {
+                  "id": 1,
+                  "element": "C",
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "bonds": []
+            },
+            "history": [
+              {
+                "atoms": [],
+                "bonds": []
+              }
+            ]
+          }
+        },
+        "drawingsC": {},
+        "selected": {
+          "b": "A",
+          "c": "R"
+        },
+        "aCheck": {
+          "correct": 10,
+          "total": 10,
+          "passed": true,
+          "drawingFingerprint": "83471a88"
+        },
+        "unitChecks": {},
+        "slotChecks": {},
+        "completed": {
+          "a": true,
+          "b": false,
+          "c": false
+        }
+      },
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-molecule-1790994838929"
+    },
+    "restored": {
+      "progress": {
+        "kind": "olympiad-completion",
+        "course": "alevel",
+        "profileId": "local",
+        "activityId": "alevel/c3l6-organic-reactions",
+        "stage": "b",
+        "classifications": {
+          "(1)": "oxidation",
+          "(2)": "hydrolysis",
+          "(3)": "reduction",
+          "(4)": "hydrolysis",
+          "(5)": "hydrolysis",
+          "(6)": "reduction",
+          "(7)": "hydrolysis",
+          "(8)": "reduction",
+          "(9)": "oxidation",
+          "(10)": "hydrolysis"
+        },
+        "drawingsB": {
+          "A": {
+            "kind": "molecule",
+            "graph": {
+              "atoms": [
+                {
+                  "id": 1,
+                  "element": "C",
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "bonds": []
+            },
+            "history": [
+              {
+                "atoms": [],
+                "bonds": []
+              }
+            ]
+          }
+        },
+        "drawingsC": {},
+        "selected": {
+          "b": "A",
+          "c": "R"
+        },
+        "aCheck": {
+          "correct": 10,
+          "total": 10,
+          "passed": true,
+          "drawingFingerprint": "83471a88"
+        },
+        "unitChecks": {},
+        "slotChecks": {},
+        "completed": {
+          "a": true,
+          "b": false,
+          "c": false
+        }
+      },
+      "saveStatus": {
+        "kind": "idle"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-molecule-1790994838929"
+    },
+    "evidence": {
+      "ok": true,
+      "value": []
+    }
+  }
+}

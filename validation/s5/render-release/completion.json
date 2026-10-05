@@ -1,0 +1,67 @@
+{
+  "agentId": "A23",
+  "jobId": "S5-RENDER-ACCESSIBILITY-RELEASE",
+  "status": "PASS",
+  "outputPaths": [
+    "validation/s5/render-release/HANDOVER.md",
+    "validation/s5/render-release/final-input-fingerprints.json",
+    "validation/s5/render-release/performance.json",
+    "validation/s5/render-release/render-browser.json",
+    "validation/s5/render-release/final-keyboard.json",
+    "validation/s5/render-release/final-energy-tail.json",
+    "validation/s5/render-release/final-titration-next.json",
+    "validation/s5/render-release/metadata-proof.json",
+    "validation/s5/render-release/generated-browser/browser-results.json",
+    "validation/s5/render-release/cleanup.json",
+    "development/authoring/families/dev-s5-independent/"
+  ],
+  "confidence": 0.97,
+  "reason": null,
+  "validation": {
+    "freezeTree": "35e6c969f6b9f5fefff7577922dd6703b6a645dc2308a460d44d19d3ce790eb1",
+    "frozenInputs": 517,
+    "render": 29,
+    "accessibility": 4,
+    "oldLinks": 23,
+    "startupAndWording": 8,
+    "C3K": 2,
+    "sharedGeneratedHost": 7,
+    "editorKeyboard": 3,
+    "dotInvalidUndoRestore": 4,
+    "energyNextTail": 4,
+    "titrationTrustedNext": 1,
+    "CLI": "Generated once; fixed+72 finite seeded trueL1/L2/inverseL3 fixtures and typecheck PASS; output/template/generator integrity PASS",
+    "metadata": "Actual generator→derived definitions/scope/revision/persistence and historical-parser distinction PASS",
+    "release": {
+      "activitiesPerCourse": 6,
+      "aliasesPerCourse": 6,
+      "runtimeFilesPerCourse": 129,
+      "lazyChunksPerCourse": 59,
+      "fullInitialGzipPerCourse": 151587,
+      "budget": 204800
+    },
+    "performance": {
+      "coldSamples": 6,
+      "editorSamples": 6,
+      "settings": "Headless Edge154/rootPlaywright1.62.1; CDP4×CPU/150ms/200000down/93750up;390pxDPR1;cache disabled",
+      "UTC": [
+        "2026-10-03T05:35:10.299Z",
+        "2026-10-03T05:35:58.392Z"
+      ]
+    },
+    "cleanup": "Both owned servers and every browser closed",
+    "protectedOriginals": "1317 items unchanged;523 metadata-only; no hydration",
+    "limitations": [
+      "Headless Edge, no CUA/native browser available; not a screen-reader/WCAG certification.",
+      "Shared universal physical deferred graph contains both-course banks; no course-exclusive packaging claim.",
+      "Small CDP descriptive sample; hardware/background activity uninstrumented.",
+      "Native timing and full chemistry/source limitations belong to separate reviews/root acceptance."
+    ]
+  },
+  "requestedSettings": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high"
+  },
+  "effectiveSettings": "unknown",
+  "usage": null
+}

@@ -1,0 +1,28 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-AX-DOT-HARNESS",
+  "status": "PASS",
+  "confidence": "high",
+  "reason": "Actual nested DOM confirms .last() fixes locator ambiguity while preserving all substantive assertions and meaningful HTML/AX minus readback.",
+  "outputPath": "validation/s5/review-render-harness/verification.json",
+  "approvedProposal": {
+    "path": "validation/s5/render-release/final-keyboard-proposal.mjs",
+    "sha256": "ace700d1596729c5967a67ae416673abb13b2288766411a0b7035e88cd21a67c"
+  },
+  "validation": [
+    "Exact proposal SHA256 verified",
+    "Only two inventory locators add .last(); all baseline assertions preserved",
+    "Both raw failures retained separately, prior two editor PASS records preserved",
+    "Actual source confirms nested inventory beneath alternatives",
+    "Actual browser reproduces two broad matches and one inner inventory",
+    "Retained DOM document order confirms .last() selects the inner inventory",
+    "Actual HTML and AX inventory expose minus; generic SVG group DOM label is not treated as AX name",
+    "All six captured files unchanged at verification; independent timestamps show no performance overlap"
+  ],
+  "behaviourAcceptance": "pending one bounded A23 continuation",
+  "sourceEdits": false,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveSettings": null,
+  "actualUsage": null
+}

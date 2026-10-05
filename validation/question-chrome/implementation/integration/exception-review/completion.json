@@ -1,0 +1,11 @@
+{
+  "stableId": "H1-TIMING-EXCEPTION",
+  "agentId": "H03",
+  "status": "PASS",
+  "outputPath": "validation/question-chrome/implementation/integration/exception-review/disposition.json",
+  "confidence": 0.94,
+  "reason": null,
+  "validation": {"status": "PASS", "evidence": "validation/question-chrome/implementation/integration/exception-review/verification.json", "currentFocusedBrowserCases": 3, "finalCurrentHostIdleRawEqual": true, "nativeBoundaryStatus": "UNESTABLISHED"},
+  "effectiveModelEffort": null,
+  "usage": null
+}

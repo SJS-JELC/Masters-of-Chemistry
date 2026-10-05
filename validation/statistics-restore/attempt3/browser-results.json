@@ -1,0 +1,102 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-04T19:08:54.547Z",
+  "browser": "headless Microsoft Edge",
+  "playwright": "1.62.1",
+  "timezone": "Europe/London",
+  "run": "stats-restore-1791140916114",
+  "results": [
+    {
+      "id": "alevel-populated-responsive-interactions",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: {\"first\":{\"ok\":false,\"error\":{\"code\":\"invalid-data\",\"message\":\"Import namespace/source mismatch\",\"retryable\":false}},\"duplicate\":{\"ok\":false,\"error\":{\"code\":\"invalid-data\",\"message\":\"Import namespace/source mismatch\",\"retryable\":false}}}\n\nfalse !== true\n\n    at seed (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:40:9)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:46:18\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:44:3"
+    },
+    {
+      "id": "alevel-empty-responsive",
+      "status": "PASS",
+      "evidence": {
+        "noInventedTime": "0"
+      }
+    },
+    {
+      "id": "alevel-original-layout-comparison",
+      "status": "PASS",
+      "evidence": {
+        "original": [
+          {
+            "title": "Recorded attempts",
+            "value": "27"
+          },
+          {
+            "title": "Fully correct",
+            "value": "37%"
+          },
+          {
+            "title": "Gems practised",
+            "value": "3"
+          },
+          {
+            "title": "Levels mastered",
+            "value": "1 / 24"
+          },
+          {
+            "title": "Estimated active time",
+            "value": "2 h 17 min"
+          }
+        ],
+        "screenshot": "alevel-original-desktop.png",
+        "scope": "Original sources served read-only, synthetic browser storage on separate task origin. Current header uses shared eagle/arrow/background."
+      }
+    },
+    {
+      "id": "igcse-populated-responsive-interactions",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: {\"first\":{\"ok\":false,\"error\":{\"code\":\"invalid-data\",\"message\":\"Import namespace/source mismatch\",\"retryable\":false}},\"duplicate\":{\"ok\":false,\"error\":{\"code\":\"invalid-data\",\"message\":\"Import namespace/source mismatch\",\"retryable\":false}}}\n\nfalse !== true\n\n    at seed (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:40:9)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:46:18\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:44:3"
+    },
+    {
+      "id": "igcse-empty-responsive",
+      "status": "PASS",
+      "evidence": {
+        "noInventedTime": "0"
+      }
+    },
+    {
+      "id": "igcse-original-layout-comparison",
+      "status": "PASS",
+      "evidence": {
+        "original": [
+          {
+            "title": "Recorded attempts",
+            "value": "27"
+          },
+          {
+            "title": "Fully correct",
+            "value": "37%"
+          },
+          {
+            "title": "Gems practised",
+            "value": "3"
+          },
+          {
+            "title": "Levels mastered",
+            "value": "1 / 17"
+          },
+          {
+            "title": "Estimated active time",
+            "value": "2 h 15 min"
+          }
+        ],
+        "screenshot": "igcse-original-desktop.png",
+        "scope": "Original sources served read-only, synthetic browser storage on separate task origin. Current header uses shared eagle/arrow/background."
+      }
+    },
+    {
+      "id": "storage-failure-and-retry",
+      "status": "PASS",
+      "evidence": {
+        "retryRecovered": true
+      }
+    }
+  ],
+  "errors": []
+}

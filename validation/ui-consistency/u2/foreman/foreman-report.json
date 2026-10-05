@@ -1,0 +1,125 @@
+{
+  "runId": "UI-CONSISTENCY-20261003",
+  "jobId": "UI-FOREMAN-U2",
+  "owner": "U01",
+  "at": "2026-10-03T23:15:00.701Z",
+  "status": "VALIDATED_AWAITING_ROOT_FINAL_ACCEPTANCE",
+  "delegation": {
+    "reviewer": "U05",
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveSettings": "unknown",
+    "usage": "not exposed",
+    "children": 0,
+    "additionalWorkers": 0
+  },
+  "rootU1Gate": "validation/ui-consistency/u1-footer-fix/root-gate.json",
+  "independentReview": {
+    "status": "PASS",
+    "manifest": "validation/ui-consistency/u2/independent/completion.json",
+    "report": "validation/ui-consistency/u2/independent/report.json",
+    "gates": 17,
+    "pureCases": 29,
+    "responsiveScreens": 68,
+    "staticCompactFooterCases": 33,
+    "geometry": {
+      "desktopLargestButton": 92.59375,
+      "desktopLargestOccupied": 347.015625,
+      "desktopLargestFraction": 0.3292368358633776
+    }
+  },
+  "currentClosure": {
+    "count": 645,
+    "sourcePublicConfigCount": 315,
+    "treeSha256": "3a24f663f5a723272f58ec02e323ae11db8a6ce9eb21b7e268ca1fa75b201b8f",
+    "file": "current-inputs.json",
+    "unchangedSinceRootU1Gate": true,
+    "unchangedAcrossReview": true
+  },
+  "builds": {
+    "status": "PASS",
+    "existingExactSourceBeforeAfter": true,
+    "noU2Rebuild": true,
+    "freshIndependentTypecheck": {
+      "status": "PASS",
+      "exitCode": 0,
+      "path": "typecheck.txt"
+    },
+    "freshIndependentReleaseValidation": {
+      "status": "PASS",
+      "checkedAt": "2026-10-03T22:53:00.074Z",
+      "releases": [
+        {
+          "course": "alevel",
+          "status": "PASS",
+          "activityCount": 7,
+          "runtimeFileCount": 163,
+          "initialJavascriptGzipBytes": 180441,
+          "lazyJavascriptChunks": 70,
+          "manifestSha256": "1f37d391446bf5b637b6763dc0db8ad729a62058854cc2b278b7435f30b65f67",
+          "checkedAt": "2026-10-03T22:53:00.229Z"
+        },
+        {
+          "course": "igcse",
+          "status": "PASS",
+          "activityCount": 6,
+          "runtimeFileCount": 163,
+          "initialJavascriptGzipBytes": 180440,
+          "lazyJavascriptChunks": 70,
+          "manifestSha256": "d9113dddc12150771e6f9a1d8dad5b73f27858505d32af716e7b41f93d38f314",
+          "checkedAt": "2026-10-03T22:53:00.386Z"
+        }
+      ],
+      "scope": "Fresh read-only validation of existing exact build closure. No rebuild or manifest writes."
+    }
+  },
+  "preservation": {
+    "frozenU1AndRootContractArtifactsVerified": 627,
+    "originals": {
+      "status": "PASS",
+      "checkedAt": "2026-10-03T23:11:24.198Z",
+      "records": 1317,
+      "readable": 794,
+      "metadataOnly": 523,
+      "changed": [],
+      "offlinePolicy": "All523 baseline offline placeholders stat-only; never opened/hydrated. Historical original-app-check.json left untouched."
+    },
+    "protectedSourceAudit": "validation/ui-consistency/u2/independent/source-gate.json",
+    "approvedAssets": "validation/ui-consistency/u2/independent/assets-config-preservation.json",
+    "exactCarriedTiming": "validation/ui-consistency/u2/independent/timing-continuity.json",
+    "historicalU03ProcessException": "validation/ui-consistency/u1/theme/legacy-original-check-incident.json"
+  },
+  "renders": {
+    "reviewer": "validation/ui-consistency/u2/independent/render-review.md",
+    "references": "validation/ui-consistency/u2/independent/representative-renders.json",
+    "foremanInspected": [
+      "desktop-contact-sheet.png",
+      "mobile-contact-sheet.png",
+      "completion-and-evidence-contact-sheet.png",
+      "igcse-calorimetry-1440.png",
+      "final-alevel-acid-base-calculations-350.png",
+      "ordinary-ec-current-correct-390.png"
+    ]
+  },
+  "fixesDuringU2": [],
+  "rootDispositionsRequired": [
+    {
+      "id": "UNCOMMITTED-CLEAR-RELOAD",
+      "evidence": "validation/ui-consistency/u2/independent/revision-and-prefix-immediate-reload-probe.json",
+      "observed": "Immediate forced production hard reload before IndexedDB Clear commit restored prior Next primary state.",
+      "verified": "Both production prefixes restore blank draft/Check primary and retain earned Next access after current Clear marker is committed; first evidence remains unchanged.",
+      "reviewerDisposition": "Retained persistence boundary; independent PASS. No source fix requested.",
+      "finalDispositionOwner": "ROOT"
+    }
+  ],
+  "limitations": [
+    "Headless installed Edge via pinned workspace Playwright1.62.1; no new native OS suspension proof. Exact2 clock/binding files and7 retained native evidence files rehashed unchanged.",
+    "Immediate forced production reload before Clear IndexedDB commit showed an uncommitted-save boundary. That failed probe is retained; post-commit reload tests pass. Root owns its disposition.",
+    "Corrected-answer feedback remains transient across reload as explicitly accepted; immutable first assessment persists.",
+    "Energy profile checked-model response in one actual-app scenario supplied via DEV response API; real editor draft/Enter/Clear and other EC/dot/titration interactions separately exercised.",
+    "523 protected offline placeholders remain stat-only; no hydration.",
+    "Requested effective model/effort and token usage not exposed."
+  ],
+  "unresolvedProductDefects": [],
+  "nextAction": "Root final code/render acceptance and explicit retained persistence-boundary disposition. No publication."
+}

@@ -1,0 +1,44 @@
+{
+  "name": "masters-of-chemistry",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check:originals": "node scripts/protect-originals.mjs check",
+    "check:s0": "node scripts/validate-s0.mjs",
+    "dev": "vite --host 127.0.0.1 --port 5181 --strictPort",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test:s1": "node scripts/test-s1.mjs",
+    "test:s2": "node scripts/test-s2.mjs",
+    "test:s3": "node scripts/test-s3.mjs",
+    "test:s4": "node scripts/test-s4.mjs",
+    "test:s5": "node scripts/test-s5.mjs",
+    "check:s4": "node scripts/verify-s4.mjs",
+    "check:s5": "node scripts/verify-s5.mjs",
+    "check:landing": "node scripts/verify-landing.mjs",
+    "release:alevel": "node scripts/release-s4.mjs alevel",
+    "release:igcse": "node scripts/release-s4.mjs igcse",
+    "check:release": "node scripts/check-release.mjs",
+    "format": "node scripts/format-authored.mjs --write",
+    "format:check": "node scripts/format-authored.mjs --check"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.2"
+  },
+  "dependencies": {
+    "dexie": "4.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zustand": "5.0.15"
+  }
+}

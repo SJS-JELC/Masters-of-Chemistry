@@ -1,0 +1,27 @@
+{
+  "startedAt": "2026-10-03T10:53:16.616Z",
+  "method": "Actual controlled editor circle toggle, chemical tap, persistent reload and UI undo/redo in fresh current-app contexts; shared DEV harness reads/flushes only.",
+  "checks": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "viewCreatesNoChemicalHistory": true,
+      "chemicalEditOneHistory": true,
+      "sameAttemptExactReload": true,
+      "undoRedoPreserveFalse": true,
+      "noAssessmentEvidence": true
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "viewCreatesNoChemicalHistory": true,
+      "chemicalEditOneHistory": true,
+      "sameAttemptExactReload": true,
+      "undoRedoPreserveFalse": true,
+      "noAssessmentEvidence": true
+    }
+  ],
+  "failures": [],
+  "finishedAt": "2026-10-03T10:53:25.994Z",
+  "status": "PASS"
+}

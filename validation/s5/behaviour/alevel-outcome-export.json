@@ -1,0 +1,28 @@
+{
+  "namespace": {
+    "course": "alevel",
+    "profileId": "local"
+  },
+  "source": {
+    "key": "masters-of-chemistry-import-report-v1",
+    "fingerprint": "1284-26d52653-4c15bdbf"
+  },
+  "rawText": "{\"errors\":[],\"namespace\":{\"course\":\"alevel\",\"profileId\":\"local\"},\"notes\":[\"Duplicate s5-legacy-alevel within masters-alevel-results-v1 retains the same first evidence.\",\"Historical stores contain scores and dates, not first responses or raw marks. Missing responses and durations remain absent. Acid V1 evidence is retained under its original progression and does not become V2 mastery.\",\"Raw archives retain the exact source fingerprint. Import receipts combine that fingerprint with the accepted-record projection; equal cross-store rows keep their own stable source batches and are deduplicated by original attempt ID.\"],\"receipts\":[{\"duplicates\":0,\"inserted\":3,\"skipped\":[],\"source\":{\"fingerprint\":\"847-2e8ddbf4-8dcf46d0-accepted-864-edd2e910-148b480c\",\"key\":\"masters-alevel-results-v1\"}}],\"skipped\":[{\"reason\":\"Conflicting duplicate attempt ID; first valid source record retained.\",\"sourceId\":\"s5-legacy-alevel\",\"sourceKey\":\"masters-alevel-results-v1\"},{\"reason\":\"Unsupported A Level result fields\",\"sourceId\":\"rocket\",\"sourceKey\":\"masters-alevel-results-v1\"},{\"reason\":\"legacy record must be an object\",\"sourceId\":\"row-6\",\"sourceKey\":\"masters-alevel-results-v1\"}],\"sources\":[{\"archived\":true,\"fingerprint\":\"847-2e8ddbf4-8dcf46d0\",\"key\":\"masters-alevel-results-v1\"}],\"version\":1}",
+  "notes": [
+    "Outcome report: 3 inserted, 0 already present; 3 exclusions."
+  ],
+  "skipped": [
+    {
+      "sourceId": "s5-legacy-alevel",
+      "reason": "masters-alevel-results-v1: Conflicting duplicate attempt ID; first valid source record retained."
+    },
+    {
+      "sourceId": "rocket",
+      "reason": "masters-alevel-results-v1: Unsupported A Level result fields"
+    },
+    {
+      "sourceId": "row-6",
+      "reason": "masters-alevel-results-v1: legacy record must be an object"
+    }
+  ]
+}

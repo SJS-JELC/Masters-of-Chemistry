@@ -1,0 +1,101 @@
+{
+  "criticalUnchanged": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "c6bf43df9a035de75fce5c84bd2d265df014c6989a3d6966f3e8e7e0a571d4b6"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "0634bdae26982f908504025411ed9fce442ea68851808f759d4785685584d60e"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "sha256": "b4e8da4fe12e74b2f5fc5f75740f16a39891d54f34c5a7f4fab23acf8b26f9bc"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/index.ts",
+      "sha256": "084eae51d5ed2b7c00b813d97342ab29c469d887bfe05a4d3594b45fac1bb563"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/provider.ts",
+      "sha256": "fdaace21084a554fccfa7f765778cd6b3eb4274ce2231ae3756cea34adb763b8"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/marking.ts",
+      "sha256": "5e78880c76a2404690a27c676d152a33cd5a8b15a9f0e836e7e771113584ae1a"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/index.ts",
+      "sha256": "545f5d27ed1b8fb4f5cb1ec2bf61a1b8a9562a3db01b8fa3f6a2ed5b009d665e"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/provider.ts",
+      "sha256": "801391e3c1d091c4ab0fede2d4d14274cf9f9f3a9bcdc2902d6c83c2bb9fec29"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/marking.ts",
+      "sha256": "8846d2b08dd7d40979c799b9af399ad3e3807d6ac3df16d4d60943afd655c717"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.js",
+      "sha256": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.js",
+      "sha256": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/identity.ts",
+      "sha256": "92527b2e1b0df2f3d03f7b7808ee43816044fc48cf4a43d9b26dfae2b5c61d7c"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/presentation.ts",
+      "sha256": "6819b16e3b281369cbfb7b11a938402b4eee48217b0e8ebe7b1e9678fe656aad"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/framework.ts",
+      "sha256": "ba39dbcc79a84eafca6b7d3636eec89da9ab44f17ab4fe9ae6e6acd36942699b"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/index.ts",
+      "sha256": "414e72067fda940b7f4dd8e57779c42a2d01b19d6358352ffcbf709e7b6ebe40"
+    }
+  ],
+  "conservativeGuardMatches": [
+    {
+      "path": "src/activities/igcse/bond-enthalpy/provider.ts",
+      "disposition": "Unselected lazy provider; native runs select calorimetry and titration only; unchanged bond index loads provider only when its registration is requested",
+      "indexSource": "import type {CurriculumAdapter} from '../../../catalogue/registry.ts';\nexport const bondEnthalpyAdapter:CurriculumAdapter={id:'igcse/bond-enthalpy',provider:()=>import('./provider.ts').then(m=>m.bondProvider),marking:()=>import('./marking.ts').then(m=>m.bondMarking),idleAllowance:()=>180000,idleRationale:'Original IGCSEQuestionTime: three minutes idle for bond inventories and calculations. Level 3 time stops at first numerical submission, before displayed-equation self-review.'};\n"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "disposition": "Olympiad-only type definitions; erased at runtime; separate C3 Restart command refinement",
+      "emittedJavascript": "export {};"
+    }
+  ],
+  "unrelatedChangedPaths": [
+    "src/activities/alevel/electron-configurations/provider.ts",
+    "src/activities/igcse/bond-enthalpy/provider.ts",
+    "src/activities/olympiad/c3l6/C3L6View.tsx",
+    "src/activities/olympiad/c3l6/legacy.ts",
+    "src/activities/olympiad/c3l6/policy.ts",
+    "src/chemistry/electron-configuration/engine.ts",
+    "src/contracts/olympiad.ts",
+    "src/editors/electron-configuration/index.tsx",
+    "src/editors/electron-configuration/styles.css",
+    "src/chemistry/electron-configuration/periodic-data.ts",
+    "src/editors/electron-configuration/PeriodicReference.tsx"
+  ]
+}

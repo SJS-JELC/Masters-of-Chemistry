@@ -1,0 +1,61 @@
+{
+  "jobId": "F2-EC",
+  "agentId": "F09",
+  "startedAt": "2026-10-03T18:49:40.525Z",
+  "checks": [
+    {
+      "stage": "background",
+      "state": {
+        "hidden": false,
+        "focused": false,
+        "ticks": 2
+      },
+      "before": {
+        "attemptId": "f09-f09-practice-EC-GYMGZS-musqxt4v-v5mt",
+        "activeMs": 2008,
+        "idleLimitMs": 180000,
+        "finished": false
+      },
+      "start": {
+        "attemptId": "f09-f09-practice-EC-GYMGZS-musqxt4v-v5mt",
+        "activeMs": 2008,
+        "idleLimitMs": 180000,
+        "finished": false
+      },
+      "end": {
+        "attemptId": "f09-f09-practice-EC-GYMGZS-musqxt4v-v5mt",
+        "activeMs": 2008,
+        "idleLimitMs": 180000,
+        "finished": false
+      },
+      "actualBackground": true,
+      "stopped": true
+    },
+    {
+      "stage": "cdp-freeze-capability",
+      "ticksBefore": 19,
+      "ticksAfter": 55,
+      "expectedWithoutFreeze": 36,
+      "actuallyFrozen": false,
+      "countedGapMs": 0
+    },
+    {
+      "stage": "trusted-resume",
+      "stateAfter": {
+        "hidden": false,
+        "focused": true
+      },
+      "sameAttempt": true,
+      "activeTimeResumed": true
+    }
+  ],
+  "screenshots": [],
+  "metrics": [],
+  "errors": [],
+  "limitations": [
+    "Native hidden/minimized/OS suspend not newly tested.",
+    "Original correction drawing is compared by reopening the same isolated source review question with the corrected response: the original EC source freezes assessed answers and has no correction action. Shared React first evidence remains immutable."
+  ],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T18:50:01.569Z"
+}

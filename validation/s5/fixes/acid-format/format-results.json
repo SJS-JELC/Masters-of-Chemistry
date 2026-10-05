@@ -1,0 +1,72 @@
+{
+  "agentId": "A08",
+  "jobId": "S5-FIX-ACID-FORMAT",
+  "status": "PASS",
+  "checkedAt": "2026-10-03T04:13:32.623Z",
+  "currentRoutes": 63,
+  "currentQuestions": 378,
+  "historicalFixtures": 33,
+  "additionalHistoricalRegression": "AB-0000SN",
+  "questions": 412,
+  "responses": 715,
+  "counts": {
+    "current": {
+      "dp2": 222,
+      "sf3": 438
+    },
+    "historical": {
+      "dp2": 21,
+      "sf3": 34
+    }
+  },
+  "examples": {
+    "current": {
+      "dp2": {
+        "code": "AB2-0-1-0",
+        "key": "ph",
+        "instruction": "Give pH to 2 decimal places."
+      },
+      "sf3": {
+        "code": "AB2-1-1-0",
+        "key": "h",
+        "instruction": "Give [H⁺] (mol dm⁻³) to 3 significant figures."
+      }
+    },
+    "historical": {
+      "dp2": {
+        "code": "AB-0021HC",
+        "key": "ph",
+        "instruction": "Give pH to 2 decimal places."
+      },
+      "sf3": {
+        "code": "AB-0021HD",
+        "key": "h",
+        "instruction": "Give [H⁺] (mol dm⁻³) to 3 significant figures."
+      }
+    }
+  },
+  "contractOnlyFormats": [
+    "dp3",
+    "sf4",
+    "integer"
+  ],
+  "regression": {
+    "code": "AB-0000SN",
+    "expected": 46.875,
+    "format": "dp2",
+    "tolerance": 0.0051,
+    "accepted": "46.88",
+    "rejected": "46.9"
+  },
+  "checks": [
+    "Original live source question equality",
+    "Exact identity/seed restoration",
+    "Every real response format and unit instruction",
+    "Rounded instructed answers accepted by both original and port",
+    "Source numerical bounds unchanged",
+    "All question fields except precision text unchanged against retained before-provider",
+    "Real adapter marking and incomplete-response rejection",
+    "Five typed formats helper branches (dormant formats separately identified)"
+  ],
+  "acceptance": "Worker verification only; A22 owns independent recheck and A01 final build/integration."
+}

@@ -1,0 +1,37 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\validation.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"
+index 7fbef85..ea07fd3 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\validation.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"	
+@@ -1023,6 +1023,7 @@ export function validateOlympiad(value: unknown): void {
+     'unitChecks',
+     'slotChecks',
+     'completed',
++    'historicalOutcome',
+   ]);
+   requireData(
+     p.kind === 'olympiad-completion' &&
+@@ -1098,6 +1099,24 @@ export function validateOlympiad(value: unknown): void {
+     'Invalid challenge dependency',
+   );
+   validateChallengeChecks(p);
++  if (p.historicalOutcome !== undefined) {
++    const historical = record(p.historicalOutcome, 'historical outcome');
++    keys(historical, ['policyVersion', 'reason', 'raw']);
++    requireData(
++      historical.policyVersion === 'c3l6-source-bank-23' &&
++        historical.reason === 'K-orthoacid-erratum',
++      'Unknown historical outcome policy or reason',
++    );
++    const raw = record(historical.raw, 'historical raw progress');
++    requireData(
++      !Object.hasOwn(raw, 'historicalOutcome') &&
++        raw.profileId === p.profileId &&
++        raw.course === p.course &&
++        raw.activityId === p.activityId,
++      'Nested or cross-namespace historical outcome',
++    );
++    validateOlympiad(raw);
++  }
+ }
+ export function validateImport(batch: ImportBatch): void {
+   safeJson(batch);

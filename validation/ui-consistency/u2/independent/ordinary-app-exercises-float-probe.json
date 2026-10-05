@@ -1,0 +1,125 @@
+{
+  "status": "FAIL",
+  "startedAt": "2026-10-03T22:57:12.058Z",
+  "method": "Ordinary current app, isolated Edge context. Valid deterministic question/session setup only; actual controls, central controller, IndexedDB, reload and statistics. Energy correct response supplied from checked model through DEV response API, explicitly identified.",
+  "checks": [
+    {
+      "name": "EC practice keyboard wrong/correct/Clear/GiveUp/reload and first score/time stats transfer",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/electron-configurations",
+        "questionId": "EC-CMICC5",
+        "seed": 1,
+        "level": 1
+      },
+      "axis": {
+        "scroll": {
+          "left": 27,
+          "right": 363,
+          "top": 499.78125,
+          "bottom": 808.28125
+        },
+        "label": {
+          "left": 34,
+          "right": 51.390625,
+          "top": 596.453125,
+          "bottom": 698.609375
+        }
+      },
+      "first": {
+        "kind": "marked",
+        "assessedAt": 1791068234982,
+        "marks": {
+          "earned": 0,
+          "available": 1,
+          "points": [
+            {
+              "partId": "configuration",
+              "pointId": "configuration-result",
+              "earned": 0,
+              "available": 1,
+              "message": "You have 2 electrons; this species needs 1. Check the occupancy of 1s."
+            }
+          ]
+        },
+        "score": 0,
+        "selfAssessed": false
+      },
+      "timing": {
+        "activeMs": 716,
+        "idleLimitMs": 180000
+      },
+      "storeCounts": {
+        "archives": 0,
+        "attempts": 2,
+        "evidence": 1,
+        "olympiad": 0,
+        "receipts": 0,
+        "sessions": 1
+      }
+    },
+    {
+      "name": "Dot real non-drag input Clear/reload and reveal no evidence",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/dot-and-cross",
+        "questionId": "DAC-4JLX3Z",
+        "seed": 11,
+        "level": 1
+      }
+    },
+    {
+      "name": "Energy editor Enter/local draft Undo/Clear and checked-model first correct persistence",
+      "status": "PASS",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "EE-YCPUU4",
+        "level": 2,
+        "seed": 11
+      },
+      "first": {
+        "kind": "marked",
+        "assessedAt": 1791068244532,
+        "marks": {
+          "earned": 4,
+          "available": 4,
+          "points": [
+            {
+              "partId": "profile",
+              "pointId": "left",
+              "earned": 1,
+              "available": 1,
+              "message": "Correct formula or label on the left line."
+            },
+            {
+              "partId": "profile",
+              "pointId": "right",
+              "earned": 1,
+              "available": 1,
+              "message": "Correct formula or label on the right line."
+            },
+            {
+              "partId": "profile",
+              "pointId": "order",
+              "earned": 1,
+              "available": 1,
+              "message": "Product energy level matches the stated reaction type."
+            },
+            {
+              "partId": "profile",
+              "pointId": "delta",
+              "earned": 1,
+              "available": 1,
+              "message": "ΔH arrow starts at reactant level and ends at product level."
+            }
+          ]
+        },
+        "score": 1,
+        "selfAssessed": false
+      }
+    }
+  ],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 2.3000000000000003\n- 2.3\n     ^\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/ui-consistency/u2/independent/app-exercises.mjs:43:328",
+  "finishedAt": "2026-10-03T22:57:27.777Z"
+}

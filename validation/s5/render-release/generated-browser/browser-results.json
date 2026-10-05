@@ -1,0 +1,17 @@
+{
+  "jobId": "S4-AUTHORING-RUNNABLE-REFINEMENT",
+  "startedAt": "2026-10-03T05:32:46.183Z",
+  "checks": [
+    "Fixed question real host pause/reload restores ID,seed,response and cumulative clock",
+    "First1/2 marks and timing transfer to repository; corrected2/2 feedback leaves first response/evidence fixed",
+    "Completed reload preserves timing; Next creates fresh attempt through same player",
+    "Seeded real host content reproduces exactly from ID+seed across resume; correct2/2 first assessment",
+    "Revision ADDALL true three levels; saved attempt resumes; scheduler Next creates fresh attempt and preserves evidence",
+    "Original weighted mastery progression advances through level2 to inverse-dilution level3; genuine application assessed2/2",
+    "DEV teacher code restores seed24 checked model and creates no timing/mastery evidence"
+  ],
+  "errors": [],
+  "browserTempRoot": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\render-release\\generated-browser\\browser-temp",
+  "status": "PASS",
+  "finishedAt": "2026-10-03T05:32:59.144Z"
+}

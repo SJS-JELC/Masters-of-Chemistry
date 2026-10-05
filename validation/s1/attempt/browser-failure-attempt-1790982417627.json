@@ -1,0 +1,139 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-02T23:07:02.522Z",
+  "run": "attempt-1790982417627",
+  "checks": [],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Browser must genuinely background/focus-switch the app",
+  "snapshot": {
+    "attempt": {
+      "mode": "student",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "development-fixture-profile"
+      },
+      "attemptId": "b7c4c18a-253a-4a8b-9fc0-c0d8029258ac",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "development-numeric-1mzxvt5",
+        "seed": 3567405641,
+        "level": 1
+      },
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "gemId": "u6-t1-1-2",
+        "level": 1
+      },
+      "currentResponses": {
+        "answer": {
+          "kind": "numeric",
+          "raw": "42",
+          "unit": "kJ"
+        }
+      },
+      "assistance": [],
+      "phase": "answering",
+      "timing": {
+        "attemptId": "b7c4c18a-253a-4a8b-9fc0-c0d8029258ac",
+        "activeMs": 2003,
+        "idleLimitMs": 60000,
+        "finished": false
+      }
+    },
+    "session": {
+      "kind": "practice",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "development-fixture-profile"
+      },
+      "id": "development-session",
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "gemId": "u6-t1-1-2",
+        "level": 1
+      },
+      "selection": "fixed-level",
+      "currentAttemptId": "b7c4c18a-253a-4a8b-9fc0-c0d8029258ac",
+      "previousQuestionIds": [
+        "development-numeric-1mzxvt5"
+      ]
+    },
+    "question": {
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "development-numeric-1mzxvt5",
+        "seed": 3567405641,
+        "level": 1
+      },
+      "title": "numeric foundation fixture",
+      "context": [
+        {
+          "kind": "text",
+          "text": "Development only: this tests shared platform behaviour. It is not a migrated chemistry activity or question bank."
+        }
+      ],
+      "layout": "compact",
+      "submission": "all-required-parts",
+      "parts": [
+        {
+          "id": "answer",
+          "prompt": [
+            {
+              "kind": "text",
+              "text": "Complete this development control fixture."
+            }
+          ],
+          "marks": 1,
+          "required": true,
+          "dependsOn": [],
+          "kind": "numeric",
+          "unit": "kJ",
+          "acceptance": {
+            "kind": "absolute",
+            "expected": 42,
+            "tolerance": 0.001
+          }
+        }
+      ],
+      "scaffolds": [
+        {
+          "id": "built-in",
+          "level": 1,
+          "purpose": "Exercises built-in support without marking the attempt assisted.",
+          "content": [
+            {
+              "kind": "text",
+              "text": "Use the displayed response control."
+            }
+          ]
+        }
+      ],
+      "hints": [
+        {
+          "id": "fixture-hint",
+          "content": [
+            {
+              "kind": "text",
+              "text": "This is an explicitly requested fixture hint."
+            }
+          ]
+        }
+      ],
+      "workedAnswer": [
+        {
+          "kind": "text",
+          "text": "42 kJ"
+        }
+      ],
+      "sources": []
+    },
+    "history": [],
+    "saveStatus": {
+      "kind": "saved"
+    },
+    "databaseName": "masters-of-chemistry-s1-alevel-attempt-1790982417627-clock",
+    "selectedCount": 0
+  }
+}

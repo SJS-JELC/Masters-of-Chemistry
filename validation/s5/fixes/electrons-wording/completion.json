@@ -1,0 +1,21 @@
+{
+  "stableId": "S5-FIX-ELECTRONS-WORDING",
+  "agentId": "A12",
+  "status": "PASS",
+  "outputPath": "validation/s5/fixes/electrons-wording/HANDOVER.md",
+  "confidence": 0.99,
+  "reason": null,
+  "validation": {
+    "evidence": "validation/s5/fixes/electrons-wording/verification.json",
+    "diff": "validation/s5/fixes/electrons-wording/provider.diff",
+    "result": "14 prompts checked; exactly3 clarified;142 marking cases and256 seeded selections unchanged; original bank exact; typecheck and pinned Prettier3.6.2 PASS",
+    "providerBeforeSha256": "47b828c37bd01b0e23aa4463b52019355c4146ad24595643fd0a8dd0041ac40b",
+    "providerAfterSha256": "bdbded6171c7a86ee03931807d6824449f4ad36f30c7bfd1b4b612b59d22aaf9",
+    "independentReview": "A22 final review and A01 build/manifests remain separate"
+  },
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveEffort": "unknown",
+  "usage": "unknown"
+}

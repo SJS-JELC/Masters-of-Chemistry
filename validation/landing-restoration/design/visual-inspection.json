@@ -1,0 +1,23 @@
+{
+  "agentId": "L02",
+  "jobId": "LANDING-DESIGN",
+  "status": "PASS",
+  "method": "Manual inspection of original/restored contact sheets and representative full-resolution screenshots after the final 75-pair comparison.",
+  "reviewed": [
+    "alevel-contact-sheet.png",
+    "igcse-contact-sheet.png",
+    "Desktop base and yellow/green/purple awards",
+    "Revision selected, hover and keyboard focus",
+    "A Level U6 and tablet available gem details",
+    "Mobile base, details and revision",
+    "Available and unavailable gem details in both courses",
+    "IGCSE teacher details and supported-grade choice variants"
+  ],
+  "findings": [
+    "Original pane geometry, topic rows, gem shapes, colours, tiles and details appearance are retained.",
+    "Teacher full-width anchor and default paragraph spacing match source after bounded cascade restoration.",
+    "The authorised course toggle may add a header row on narrow screens; the original map width and height remain equal.",
+    "The original A Level pH levels 2/3 award display lookup quirk is preserved; engine summaries are unchanged."
+  ],
+  "workerAcceptanceOnly": true
+}

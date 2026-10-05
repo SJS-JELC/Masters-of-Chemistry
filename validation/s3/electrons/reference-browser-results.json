@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "id": "student-native-dialog-keyboard-exact114-reference",
+      "status": "PASS",
+      "namedElements": 114,
+      "blankCells": [
+        113,
+        115,
+        117,
+        118
+      ],
+      "keyboardOpenEscapeFocusRestore": true,
+      "noResponseAssistanceOrEvidence": true
+    },
+    {
+      "id": "teacher-reference-remains-accessible-without-evidence",
+      "status": "PASS",
+      "code": "EC-EJFJP0"
+    },
+    {
+      "id": "mobile-touch-full-reference-scroll-and-close",
+      "status": "PASS",
+      "viewport": "390×844",
+      "namedElements": 114,
+      "internalHorizontalScroll": true,
+      "noDocumentOverflow": true,
+      "noTeacherEvidence": true
+    }
+  ],
+  "errors": []
+}

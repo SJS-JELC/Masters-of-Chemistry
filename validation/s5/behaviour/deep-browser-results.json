@@ -1,0 +1,144 @@
+{
+  "startedAt": "2026-10-03T05:02:10.505Z",
+  "browser": "154.0.4258.48",
+  "checks": [
+    {
+      "id": "actual-source-repository-faults-version-isolation",
+      "status": "PASS",
+      "transactionRollbackBoundaries": [
+        "after-attempt",
+        "after-evidence",
+        "session"
+      ],
+      "conflictRejected": true,
+      "singleEvidence": true,
+      "version1Preserved": true,
+      "corruptRejected": true,
+      "courseProfileIsolation": true,
+      "oldWrites": []
+    },
+    {
+      "id": "alevel-first-scores-corrections-pause-stats-ui",
+      "status": "PASS",
+      "results": [
+        {
+          "mode": "wrong",
+          "attemptId": "887c5536-c671-479d-b534-c4a0d9d7dc8f",
+          "earned": 0,
+          "available": 1,
+          "score": 0,
+          "activeMs": 1384
+        },
+        {
+          "mode": "correct",
+          "attemptId": "04a67f39-3880-46c7-a07e-892f03a1f387",
+          "earned": 2,
+          "available": 2,
+          "score": 1,
+          "activeMs": 1366
+        },
+        {
+          "mode": "partial",
+          "attemptId": "s5-fixed-partial-alevel",
+          "earned": 1,
+          "available": 3,
+          "score": 0.5,
+          "activeMs": 1384
+        }
+      ],
+      "statsActualMs": 4134,
+      "pausedAttemptId": "1f2258d1-41a2-43ec-9ed6-bbd1f2c9d00a",
+      "navigationFlushed": true,
+      "quotaRollbackRetry": true,
+      "teacherNoEvidence": true
+    },
+    {
+      "id": "igcse-first-scores-corrections-pause-stats-ui",
+      "status": "PASS",
+      "results": [
+        {
+          "mode": "wrong",
+          "attemptId": "03cf157c-2118-4519-9f2f-d0d6f91dc62f",
+          "earned": 0,
+          "available": 2,
+          "score": 0,
+          "activeMs": 1392
+        },
+        {
+          "mode": "correct",
+          "attemptId": "72f1fbca-4b87-422a-af29-be00467d62b9",
+          "earned": 3,
+          "available": 3,
+          "score": 1,
+          "activeMs": 1383
+        },
+        {
+          "mode": "partial",
+          "attemptId": "s5-fixed-partial-igcse",
+          "earned": 1,
+          "available": 3,
+          "score": 0.5,
+          "activeMs": 1398
+        }
+      ],
+      "statsActualMs": 4173,
+      "pausedAttemptId": "ce2de1b4-8f0b-4e8e-ae4f-1bd444428409",
+      "navigationFlushed": true,
+      "quotaRollbackRetry": true,
+      "teacherNoEvidence": true
+    },
+    {
+      "id": "igcse-self-rubric-freeze-evidence-immutable",
+      "status": "PASS",
+      "attemptId": "eee7c568-02c6-48bb-8abf-2e22493f6971",
+      "kind": "self-rubric",
+      "marks": {
+        "points": [
+          {
+            "partId": "explanation",
+            "pointId": "point-1",
+            "earned": 1,
+            "available": 1,
+            "message": "Sodium chloride is ionic and contains charged ions."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-2",
+            "earned": 0,
+            "available": 1,
+            "message": "In solid sodium chloride, the ions are held in fixed positions in a giant lattice."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-3",
+            "earned": 0,
+            "available": 1,
+            "message": "The charged ions are fixed and cannot move, so solid sodium chloride does not conduct electricity."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-4",
+            "earned": 0,
+            "available": 1,
+            "message": "When sodium chloride melts, the ions become free to move."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-5",
+            "earned": 0,
+            "available": 1,
+            "message": "The charged ions are free to move, so molten sodium chloride conducts electricity."
+          }
+        ],
+        "earned": 1,
+        "available": 5
+      },
+      "activeMs": 1258,
+      "judgementTimeExcluded": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T05:02:29.118Z",
+  "status": "PASS"
+}

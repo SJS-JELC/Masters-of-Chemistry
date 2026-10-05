@@ -1,0 +1,95 @@
+--- src/activities/olympiad/isomers2011/isomers.css before
++++ src/activities/olympiad/isomers2011/isomers.css
+@@ -1,22 +1,23 @@
+ .isomers2011 { color: #f7f7ff; }
+-.isomers2011 h1 { margin-bottom: .5rem; }
++.course-question-screen:has(.isomers2011) .question-header-actions { flex-shrink: 0; }
++.isomer-question-heading { margin: 0 0 20px; font-size: 1.15rem; line-height: 1.5; }
+ .isomer-clues { padding: clamp(14px, 3vw, 28px); margin: 20px 0; background: #0a0d26; border: 1px solid var(--line); border-radius: 20px; line-height: 1.7; }
+-.isomer-clues h2 { font-size: 1.15rem; }
+ .isomer-clues li { margin: .45rem 0; }
+ .isomer-spectrum { margin: 1rem 0 !important; }
+ .isomer-spectrum button { width: 100%; padding: 0; background: white; border-radius: 12px; overflow: hidden; }
+ .isomer-spectrum img { display: block; width: 100%; height: auto; background: white; }
+ .isomer-guide summary { cursor: pointer; min-height: 44px; padding: .5rem; }
+ .isomer-work { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+-.isomer-boxes { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+-.isomer-boxes .answer-slot { position: relative; width: 100%; min-width: 0; height: 160px; }
++.isomer-boxes { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: clamp(6px,1vw,12px); }
++.isomer-boxes .answer-slot { position: relative; width: 100%; min-width: 0; height: clamp(110px,12vw,150px); }
+ .isomer-boxes .slot-label { display: block; padding: 8px; }
+-.isomer-boxes .slot-preview { display: flex; height: 115px; align-items: center; justify-content: center; }
++.isomer-boxes .slot-preview { display: flex; height: 100%; padding: 24px 4px 6px; align-items: center; justify-content: center; }
+ .isomer-boxes .molecule-preview { width: 100%; height: 100%; }
+ .isomer-boxes .answer-slot[aria-pressed=true] { outline: 2px solid var(--cyan); outline-offset: 3px; }
+ .isomer-boxes .slot-preview { min-width: 0; }
+-.isomer-assessment { margin-top: 20px; line-height: 1.7; }
++.isomer-assessment { margin-top: 12px; line-height: 1.7; }
+ .isomer-assessment p { min-height: 2em; }
++.isomer-assessment p:empty { display: none; }
+ .isomer-editor { position: sticky; top: 16px; min-width: 0; scroll-margin-top: 16px; }
+ .isomer-editor h2 { font-size: 1rem; }
+ .isomer-zoom { width: min(96vw, 1400px); max-width: 96vw; padding: 12px; }
+@@ -24,4 +25,5 @@
+ .isomer-zoom img { display: block; width: max(100%, 1152px); max-width: none; background: white; }
+ .isomers2011 dialog::backdrop { background: #000b; }
+ @media(max-width: 900px) { .isomer-work { grid-template-columns: 1fr; } .isomer-editor { position: static; } }
++@media(max-width: 767px) { .isomer-boxes { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+ @media(max-width: 480px) { .isomers2011 { padding: .6rem; } .isomer-boxes { grid-template-columns: repeat(2,minmax(0,1fr)); } .isomer-boxes .answer-slot { height: 140px; } .isomer-clues ul { padding-left: 1.25rem; } }
+--- src/activities/olympiad/isomers2011/IsomerView.tsx before
++++ src/activities/olympiad/isomers2011/IsomerView.tsx
+@@ -23,27 +23,7 @@
+     setEditorOpen(true);
+   };
+   return <article className="c3l6 isomers2011" aria-label="UK Chemistry Olympiad 2011 question 4">
+-    <header><h1>Seven isomers</h1><p>UK Chemistry Olympiad · 2011 · Question 4</p></header>
+-    <section className="isomer-clues" aria-labelledby="isomer-clues-title">
+-      <h2 id="isomer-clues-title">Use the evidence to identify compounds 1–7</h2>
+-      <p>Each compound has molecular formula C<sub>4</sub>H<sub>10</sub>O. Draw its structure in its numbered box. All seven boxes are available immediately.</p>
+-      <ul>
+-        <li>Compounds 5–7 boil at lower temperatures than compounds 1–4.</li>
+-        <li>Compounds 1–4 have a broad infrared absorption around 3300 cm<sup>−1</sup>.</li>
+-        <li>Compound 2 can exist as optical isomers. You do not need to draw stereochemistry.</li>
+-        <li>The proton NMR spectrum and relative integrals of compound 3 are shown below.</li>
+-        <li>Compounds 4 and 5 each have two proton environments.</li>
+-        <li>Compound 5 gives a triplet at δ 1.21 ppm with relative integral 3 and a quartet at δ 3.47 ppm with relative integral 2.</li>
+-        <li>The carbon-13 NMR spectra of compounds 6 and 7 have four and three signals respectively.</li>
+-      </ul>
+-      <figure className="isomer-spectrum"><button type="button" aria-label="Enlarge compound 3 NMR spectrum" onClick={() => zoom.current?.showModal()}><img src={spectrum} alt="Compound 3 proton NMR spectrum with relative integrals" /></button></figure>
+-      <details className="isomer-guide"><summary>General NMR guide</summary>
+-        <p>Protons in the same chemical environment produce one signal. Symmetry can make atoms equivalent. The chemical shift, δ in ppm, depends on the environment.</p>
+-        <p>The area under each proton signal is proportional to the number of protons it represents. Relative integrals give a ratio, which may need scaling to the molecular formula.</p>
+-        <p>For simple first-order splitting by n equivalent neighbouring protons, a signal has n + 1 lines: a singlet, doublet, triplet or quartet for 0, 1, 2 or 3 neighbours. Couplings and overlapping signals can give more complex patterns. Exchangeable O–H protons may show variable shifts and splitting.</p>
+-        <p>In a proton-decoupled carbon-13 spectrum, each distinct carbon environment gives one signal. Equivalent carbons share a signal.</p>
+-      </details>
+-    </section>
++    <h2 id="isomer-clues-title" className="isomer-question-heading">Use the evidence to identify compounds 1–7</h2>
+     <div className="isomer-work">
+       <section aria-label="Seven compound boxes">
+         <div className="isomer-boxes">{isomerBoxes.map(box => {
+@@ -66,6 +46,25 @@
+         {readOnly && <p className="isomer-teacher-answer">Teacher reference: {answer.name}</p>}
+       </DrawingDialog>}
+     </div>
++    <section className="isomer-clues" aria-label="Evidence and spectrum">
++      <p>Each compound has molecular formula C<sub>4</sub>H<sub>10</sub>O. Draw its structure in its numbered box. All seven boxes are available immediately.</p>
++      <ul>
++        <li>Compounds 5–7 boil at lower temperatures than compounds 1–4.</li>
++        <li>Compounds 1–4 have a broad infrared absorption around 3300 cm<sup>−1</sup>.</li>
++        <li>Compound 2 can exist as optical isomers. You do not need to draw stereochemistry.</li>
++        <li>The proton NMR spectrum and relative integrals of compound 3 are shown below.</li>
++        <li>Compounds 4 and 5 each have two proton environments.</li>
++        <li>Compound 5 gives a triplet at δ 1.21 ppm with relative integral 3 and a quartet at δ 3.47 ppm with relative integral 2.</li>
++        <li>The carbon-13 NMR spectra of compounds 6 and 7 have four and three signals respectively.</li>
++      </ul>
++      <figure className="isomer-spectrum"><button type="button" aria-label="Enlarge compound 3 NMR spectrum" onClick={() => zoom.current?.showModal()}><img src={spectrum} alt="Compound 3 proton NMR spectrum with relative integrals" /></button></figure>
++      <details className="isomer-guide"><summary>General NMR guide</summary>
++        <p>Protons in the same chemical environment produce one signal. Symmetry can make atoms equivalent. The chemical shift, δ in ppm, depends on the environment.</p>
++        <p>The area under each proton signal is proportional to the number of protons it represents. Relative integrals give a ratio, which may need scaling to the molecular formula.</p>
++        <p>For simple first-order splitting by n equivalent neighbouring protons, a signal has n + 1 lines: a singlet, doublet, triplet or quartet for 0, 1, 2 or 3 neighbours. Couplings and overlapping signals can give more complex patterns. Exchangeable O–H protons may show variable shifts and splitting.</p>
++        <p>In a proton-decoupled carbon-13 spectrum, each distinct carbon environment gives one signal. Equivalent carbons share a signal.</p>
++      </details>
++    </section>
+     <dialog ref={zoom} className="isomer-zoom" aria-label="Enlarged compound 3 NMR spectrum"><button type="button" autoFocus onClick={() => zoom.current?.close()}>Close spectrum</button><div tabIndex={0} aria-label="Scroll enlarged spectrum"><img src={spectrum} alt="Enlarged compound 3 proton NMR spectrum with relative integrals" /></div></dialog>
+     <dialog ref={restart} aria-label="Restart this challenge"><p>Clear the seven drawings and this challenge's completion?</p><button type="button" onClick={() => restart.current?.close()}>Keep drawings</button><button type="button" onClick={() => { onCommand({ kind: 'restart' }); restart.current?.close(); }}>Restart</button></dialog>
+   </article>;

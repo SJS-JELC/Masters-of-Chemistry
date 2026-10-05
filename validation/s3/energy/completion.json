@@ -1,0 +1,12 @@
+﻿{
+  "id":"S3-ENERGY",
+  "agentId":"A13",
+  "status":"ESCALATE",
+  "outputPath":"validation/s3/energy/HANDOVER.md",
+  "confidence":0.98,
+  "reason":"Local complete-source, chemistry, editor, ordinary browser and touch gates pass; genuine native foreground/background/suspension/source180000ms timing proof awaits A01's serialised shared acceptance tail.",
+  "validation":{"status":"LOCAL_PASS_NATIVE_PENDING","sourceEquality":{"energy":54,"energyLevels":{"1":28,"2":26},"profiles":18,"practical":14,"practicalLevels":{"2":8,"3":6}},"tests":"5/5 PASS","browser":"6/6 PASS","touch":"PASS","models":"18/18 rendered and manually inspected PASS","typecheck":"PASS","originals":"1317 unchanged PASS","references":["validation/s3/energy/test-results.txt","validation/s3/energy/browser-results.json","validation/s3/energy/touch-results.json","validation/s3/energy/model-render-results.json","validation/s3/energy/chemistry-render-review.md","validation/s3/energy/source-fingerprints.json","validation/s3/energy/output-fingerprints.json","validation/s3/energy/typecheck-results.txt","validation/s3/energy/protected-originals.json"]},
+  "requestedRuntime":{"model":"gpt-6.1-sol","effort":"high"},
+  "effectiveRuntime":{"model":"unknown","effort":"unknown","usage":"unknown"},
+  "workerPassIsAcceptance":false
+}

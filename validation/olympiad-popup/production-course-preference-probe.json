@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-04T12:33:26.240Z",
+  "status": "FAIL",
+  "checks": [
+    "alevel prefix: draw/save/guarded navigation/reload/two back destinations",
+    "alevel prefix: direct read-only C3 preserved, no preview toggle",
+    "alevel curriculum back default unchanged",
+    "igcse prefix: draw/save/guarded navigation/reload/two back destinations",
+    "igcse prefix: direct read-only C3 preserved, no preview toggle",
+    "igcse curriculum back default unchanged"
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.olympiad-landing') to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-popup\\production.mjs:33:106"
+}

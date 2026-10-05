@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "owner": "A01",
+  "jobId": "S5-FIX-SESSION-ONLY-SAVE",
+  "checkedAt": "2026-10-03T06:45:42.463Z",
+  "changedFiles": [
+    "src/foundation/ActivityHost.tsx"
+  ],
+  "beforeSha256": "b1e80facaec249c8cb435aae3925cdb7933e100976dacca49c445760e54e3340",
+  "afterSha256": "bd69aee5a89e1bcdf61ed8f22b134654b18096910b92de7e37040c7a07391d9e",
+  "scope": "Terminal revision completion and no-attempt Resume use shared queued checked session writes. Only committed session writes change displayed completion/paused state. Exact failed-operation Retry owns session and curriculum errors separately. Corrections resolve associated session at execution and omit unlinked/pending terminal transitions.",
+  "preserved": "Strong validators, repository/contracts, first response/result/time/evidence, scheduler mathematics and all banks/editors/chemistry unchanged.",
+  "validation": [
+    "typecheck PASS",
+    "156 tests PASS",
+    "both builds/releases PASS",
+    "source237/control6/original1317 guards PASS",
+    "Exact Host code independently approved by A06"
+  ],
+  "rejectedPrototype": {
+    "treeSha256": "c1c56180ba0bedb54cfa88eb666b22cb951869371488ef332c7a23e0c00e6812",
+    "issue": "Concurrent post-completion correction paired unlinked session with old attempt; strong validator rejected it. Raw failure and independent disposition retained; current fix does not weaken validator.",
+    "evidence": "validation/s5/review-session-only-save/completion.json"
+  },
+  "evidenceScope": "A06 code approval occurred before rebuild. Its c1 asset verification command is phase-specific and cannot be rerun after those assets are replaced. Exact approved Host hash above and current complete input guard separately verify final source/build.",
+  "currentTreeSha256": "fa9b70c77954462612fb26a8d125d255f0af3456efff569d53a8ae3fa3dd3c52",
+  "independentEvidence": [
+    "validation/s5/review-session-only-save/fix-review/completion.json",
+    "validation/s5/behaviour/session-only-save-fix/latest/completion.json",
+    "validation/s5/chemistry/session-only-save-fix/final/completion.json",
+    "validation/s5/render-release/session-only-save-fix/completion.json"
+  ]
+}

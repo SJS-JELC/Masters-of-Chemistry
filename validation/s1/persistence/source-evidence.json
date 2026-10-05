@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-02T23:05:07.731Z",
+  "readOnly": true,
+  "sources": [
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "sha256": "06c29355d24490fe5eebd4add8dc657f215cdfad832d5bab77bc878a1c88d9ff",
+      "bytes": 16291,
+      "reason": "keys masters-alevel-results-v1 and masters-alevel-results-acid-v2; clean/cleanTiming/canonicalLeaf/evidenceFor preserves progression and alias"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/landing/progress.js",
+      "sha256": "09a205d37691f50ec53787c02563d0ab0cf18357ba745f816fe290db8cac75ab",
+      "bytes": 7007,
+      "reason": "masters-igcse-results-v2, cleanTiming, grade validity, immutable append"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-mastery-config.js",
+      "sha256": "c30c5ac268befe55670352471328c1ff27acf6e38e47c29597a956acb76e2c31",
+      "bytes": 1334,
+      "reason": "known leaf IDs and supported grades"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/numeric-practice.js",
+      "sha256": "426e40fc43b7d9c3ef63ab755ba9578b265c096d7779630d99694fa1b2ff8c56",
+      "bytes": 20231,
+      "reason": "result records retain family/assisted"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/app.js",
+      "sha256": "a3c004b779ca72ac262c7742edb45a4f91b6845307718434807b10c95978eb97",
+      "bytes": 35456,
+      "reason": "result question ID and selfAssessed"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energetics-practical/app.js",
+      "sha256": "cc1979aab40437fed57b5445d795797a6ebde2faa8ecace1d8785346f0618b69",
+      "bytes": 30430,
+      "reason": "result question ID"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energy-enthalpy/app.js",
+      "sha256": "e8bf5a1b0a5117a3be871e7707030c04fe5bffcd6456d053e9b559ef6b779174",
+      "bytes": 11852,
+      "reason": "result strand"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/dot-and-cross/app.js",
+      "sha256": "981b7cc2516b7a7407133e6483f8e12004eaef2015ccdebc8c4d063dd3f5c36e",
+      "bytes": 34695,
+      "reason": "result question ID and assisted false"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assessment.js",
+      "sha256": "08279db1bf684e6d2a71514423c433c7a028ef184da928e8785e4e68e6bcbfb5",
+      "bytes": 9237,
+      "reason": "drawing fingerprints, structural vs chemical completion revalidation; importer deferred S3/S4"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/content.js",
+      "sha256": "85fdff203c58aca7ed51e2773570bfc2bc7ffa0bb78a8ebae346c21a10b9b68c",
+      "bytes": 49248,
+      "reason": "classification source IDs (1) through (10), B units, C slots"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "agentId": "U03",
+  "jobId": "UI-THEME-U1",
+  "status": "PASS",
+  "outputPath": "validation/ui-consistency/u1/theme/HANDOVER.md",
+  "confidence": 0.98,
+  "validation": {
+    "typecheck": "PASS",
+    "responsiveMeasurements": 66,
+    "distinctMainFrames": 61,
+    "settledStaticFrames": 23,
+    "finalEcFrames": 3,
+    "courseTransition": "PASS",
+    "cancellationAndYearFlip": "PASS",
+    "comfortaaBackgroundWidthOverflow": "PASS",
+    "originalGuard": "Foreman stat-only current report PASS; root-approved legacy summary overwrite exception documented"
+  },
+  "evidencePaths": [
+    "validation/ui-consistency/u1/theme/HANDOVER.md",
+    "validation/ui-consistency/u1/theme/changed-files.json",
+    "validation/ui-consistency/u1/theme/font-migration.json",
+    "validation/ui-consistency/u1/theme/browser-results.json",
+    "validation/ui-consistency/u1/theme/static-results.json",
+    "validation/ui-consistency/u1/theme/transition-cancellation-results.json",
+    "validation/ui-consistency/u1/theme/ec-axis-source-results.json",
+    "validation/ui-consistency/u1/theme/ec-axis-static-results.json",
+    "validation/ui-consistency/u1/theme/contact-final-1440.png",
+    "validation/ui-consistency/u1/theme/contact-final-390.png",
+    "validation/ui-consistency/u1/theme/legacy-original-check-incident.json"
+  ],
+  "limits": [
+    "Teacher-preview canonical energy representation used for final EC axis containment; source UI geometry shared with practice",
+    "Historical generated original-app-check summary overwrite accepted by root and retained; no restoration invented",
+    "Non-gating diagnostic harness/HMR failures retained separately; final PASS suites authoritative"
+  ]
+}

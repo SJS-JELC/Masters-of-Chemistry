@@ -1,0 +1,166 @@
+{
+  "runId": "QUESTION-CHROME-20261003",
+  "stage": "H0",
+  "status": "PASS",
+  "acceptance": "awaiting_root_H0_acceptance_before_runtime_edits",
+  "checkedAt": "2026-10-03T12:25:34.643Z",
+  "scope": "Audit/source fidelity, host continuation and metadata interfaces; no runtime/build/dependency/publication actions.",
+  "jobs": [
+    {
+      "jobId": "H0-PRESENTATION",
+      "agentId": "H02",
+      "workerStatus": "PASS",
+      "status": "accepted_by_foreman",
+      "manifest": "validation/question-chrome/audit/presentation/completion.json",
+      "output": "validation/question-chrome/audit/presentation/proposal.json"
+    },
+    {
+      "jobId": "H0-INTEGRATION",
+      "agentId": "H01",
+      "status": "validated",
+      "output": "validation/question-chrome/audit/integration/HANDOVER.md"
+    }
+  ],
+  "verification": {
+    "status": "PASS",
+    "checkedAt": "2026-10-03T12:25:34.559Z",
+    "workerManifestValid": true,
+    "workerSourceHashesChecked": 90,
+    "workerSourceFidelityReviewed": true,
+    "currentInputsUnchanged": 564,
+    "historicalEvidenceFilesUnchanged": 23709,
+    "protectedOriginals": {
+      "readable": 794,
+      "metadataOnly": 523,
+      "symlinks": 0
+    },
+    "knownOfflineFilesOpened": false,
+    "runtimeEdits": false
+  },
+  "interfaces": {
+    "CourseShell": "Optional questionHeader: Readonly<{subtopic:string;questionId?:string}>. Its presence opts into question chrome, removes course-view nav and activity sidebar from DOM, and supplies metadata to a QuestionChrome React context. Existing onSelectView(home) is the only eagle/back callback; host owns safe checkpoint/navigation.",
+    "context": "QuestionChrome exports useQuestionChrome() returning current metadata or undefined, scoped to the shell. QuestionPlayer/DotCrossPlayer consume context solely to suppress equal repeated activity titles. No host-owned player props change required.",
+    "pill": "QuestionLevelPill props course: Course, level?: Level, olympiad?: boolean. Noninteractive element; curriculum labels derive from the actual rendered QuestionRef. Olympiad ignores level, uses cyan OLYMPIAD QUESTION.",
+    "identity": "Student metadata must use attempt.target.gemId plus registry gem label; teacher metadata must resolve actual previewQuestion.ref through explicit provider identity/group mappings, not selected teacher activity/dropdown or DOM text. Display questionId directly from shownQuestion.ref.",
+    "olympiad": "OlympiadHost derives subtopic from the existing registered challenge title C3L6 organic reactions and uses exact existing display identity C3L6 2012 Q2; there is no curriculum QuestionRef or artificial level. Keep completion and drawings in existing separate repository."
+  },
+  "ownership": {
+    "H02": [
+      "src/shell/CourseShell.tsx",
+      "src/shell/QuestionChrome.tsx (new)",
+      "src/ui/QuestionLevelPill.tsx (new)",
+      "src/styles/platform.css",
+      "src/ui/QuestionPlayer.tsx",
+      "src/ui/DotCrossPlayer.tsx",
+      "src/foundation/OlympiadHost.tsx (chrome JSX only)",
+      "src/activities/olympiad/c3l6/C3L6View.tsx (header only)",
+      "src/activities/olympiad/c3l6/c3l6.css (header only)",
+      "validation/question-chrome/presentation/**"
+    ],
+    "H01": [
+      "src/foundation/ActivityHost.tsx",
+      "src/foundation/question-heading.ts (new)",
+      "src/foundation/session-continuation.ts (new, if needed)",
+      "validation/question-chrome/implementation/integration/**",
+      "new validation test/build/release gates"
+    ],
+    "immutable": [
+      "src/editors/**",
+      "src/chemistry/**",
+      "src/landing/**",
+      "provider/bank/marking files",
+      "C3L6 policy/qualification/content/source assets",
+      "legacy sibling runtime and browser stores",
+      "root contracts and accepted evidence"
+    ]
+  },
+  "lifecycleProposal": "validation/question-chrome/audit/integration/HANDOVER.md",
+  "criticalDispositions": {
+    "automaticResume": "Only matching continuation after successful durable resumed-session save; historical paused attempts retained exactly. Ready/request/view/identity guards exclude teacher/fresh/changed selection; idempotent effect never creates identity.",
+    "timing": "Remove host display state/interval. Real clock/binding/assessment maths and persistence evidence unchanged; validate changed Host separately.",
+    "metadata": "Student exact target gem; teacher current provider identity using single-gem registration, acid engine template scope or IGCSE source category. Historical/ambiguous acid uses restored meaningful question title. Header ID is shownQuestion.ref.questionId verbatim.",
+    "c3": "Registered C3L6 organic reactions title and existing displayed C3L6 2012 Q2 identity; no invented QuestionRef; only repeated top chrome suppressed.",
+    "navigation": "Eagle/left arrow use existing guarded Home checkpoint/save. Explicit failure/Retry blocks departure."
+  },
+  "H1Verification": "validation/question-chrome/audit/integration/HANDOVER.md",
+  "limits": [
+    "H0 is audit-only; current UI/lifecycle is not changed or browser-accepted.",
+    "523 protected original offline placeholders checked only by metadata; no hydration.",
+    "Headless native timing capability limitations and E04 raw failures/dispositions remain immutable; changed Host needs new honest lifecycle evidence and exception/root disposition if a required native boundary cannot be established.",
+    "Port5183 source Vite verified; tested5182 paths404, not treated as production evidence.",
+    "Model/effort effectiveness and actual usage not exposed."
+  ],
+  "requestedRoles": {
+    "foreman": "gpt-6.1-sol/high",
+    "presentationWorker": "gpt-6.1-sol/high",
+    "activeMaximumIncludingRoot": 4,
+    "implementationWorkers": 1,
+    "genuineExceptionReviewersMaximum": 1,
+    "workerMayDelegate": false,
+    "effectiveSettingsAndUsage": null
+  },
+  "unresolvedProductDecisions": [],
+  "evidenceHashes": [
+    {
+      "path": "validation/question-chrome/audit/presentation/proposal.json",
+      "sha256": "f4a996b69c9d001d58b40ed8756e552213593824965223c16cbdcfa5e7b4895e"
+    },
+    {
+      "path": "validation/question-chrome/audit/presentation/source-inventory.json",
+      "sha256": "f1b460c8eb9a3746366382f5bc492106de200926755d2061c939c50edd873b15"
+    },
+    {
+      "path": "validation/question-chrome/audit/presentation/original-source-snippets.json",
+      "sha256": "2d0be759d0452d051a5063548c8e416fc0ccb29dfbb17d9c87e31090d4abc6f0"
+    },
+    {
+      "path": "validation/question-chrome/audit/presentation/audit-verification.json",
+      "sha256": "28f8a1616fa0e684e0195951233e481b9c2e2bb82bb66c13079b76dce458792d"
+    },
+    {
+      "path": "validation/question-chrome/audit/presentation/completion.json",
+      "sha256": "7e51c6c4eac5f3e4ffd055ec2a46823c387aa83b94b762b9effb4b87ff37ff15"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/capture.mjs",
+      "sha256": "a86847e967b4136f663e25e9a18ff2de8e8b2f045a40f320bb0d8b451ffde9db"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/validate.mjs",
+      "sha256": "74e166349f52e80089b096a1093ffabf3e163c9a658ed28c17b93b8ff106f01d"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/write-report.mjs",
+      "sha256": "c54bb5acbbbd90254f609857029eb68d2242272f8007a37c1e21f6cbf8503c00"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/HANDOVER.md",
+      "sha256": "51fc351b84f25dba43adb59414d0bd649a169e2edb7345c26158d5005e0fb47b"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/protected-originals.json",
+      "sha256": "2c06170ddaf829f4b040fa2dbec027279ee0820d58c7086f82130317965af8c8"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/accepted-current-inputs.json",
+      "sha256": "ff1dc5726708d354b80d16ad837e4a3d3a4f217dded5343b62b631be56b88d3a"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/historical-evidence-fingerprints.json",
+      "sha256": "5f75869de1f42439a1784dad5886a5d344d53a9ab4d16b8ab0b12de24ee7f9c3"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/source-inventory.json",
+      "sha256": "5622fd6679b97e39775260f686a304543b3d1d3cd7c42aacb8235de4e8534592"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/ports.json",
+      "sha256": "38f68e1bc9926713a3a89d338d865cc81f688fc5068e6e94550fc88282169f40"
+    },
+    {
+      "path": "validation/question-chrome/audit/integration/foreman-validation.json",
+      "sha256": "a4fa772db510c1c7bcfaa7c3d01605214d85bc6efa66a54c6ba5022ec567180f"
+    }
+  ],
+  "nextAction": "Root review H0 and gate H1; reuse H02 for cohesive presentation, H01 host lifecycle/build/browser/current closure. No runtime edit until explicit root gate."
+}

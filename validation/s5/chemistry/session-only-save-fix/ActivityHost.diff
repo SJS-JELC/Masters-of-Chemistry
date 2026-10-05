@@ -1,0 +1,152 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\chemistry\\session-only-save-fix\\ActivityHost-before.retained.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"
+index 9ba192f..466bbf1 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\chemistry\\session-only-save-fix\\ActivityHost-before.retained.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"	
+@@ -17,6 +17,7 @@ import type {
+   LearningReviewPolicy,
+   CurriculumHostIntegration,
+   StorageFailure,
++  RepositoryResult,
+ } from '../contracts/index.ts';
+ import { productionRegistry } from './registry.ts';
+ import { createAttemptController, assessmentToEvidence } from '../domain/attempt/index.ts';
+@@ -149,6 +150,11 @@ export function FoundationApp({
+     sessionRef = useRef<CurriculumSession | null>(null),
+     controllerRef = useRef<AttemptController | null>(null);
+   const queue = useRef<Promise<void>>(Promise.resolve());
++  const pendingSessionSave = useRef<CurriculumSession | null>(null);
++  const failedSave = useRef<{
++    write: () => Promise<RepositoryResult<unknown>>;
++    onSaved?: () => void | Promise<void>;
++  } | null>(null);
+   const nextPending = useRef(false);
+   const pendingCommands = useRef(new Set<Promise<void>>());
+   const mounted = useRef(true),
+@@ -246,24 +252,59 @@ export function FoundationApp({
+     setSaveStatus({ kind: 'error', error: result.error });
+     return [];
+   }, [repository, namespace]);
+-  const save = useCallback(
+-    (value: StudentAttempt, currentSession: CurriculumSession | null = sessionRef.current) => {
++  const queueSave = useCallback(
++    (write: () => Promise<RepositoryResult<unknown>>, onSaved?: () => void | Promise<void>) => {
+       setSaveStatus({ kind: 'saving' });
+       queue.current = queue.current.then(async () => {
+-        const evidence = assessmentToEvidence(value);
+-        const result = await repository.saveCurriculum({
+-          attempt: value,
+-          ...(evidence ? { evidence } : {}),
+-          ...(currentSession ? { session: currentSession } : {}),
+-        });
++        const result = await write();
++        failedSave.current = result.ok ? null : { write, ...(onSaved ? { onSaved } : {}) };
+         saveFailed.current = !result.ok;
+         if (!mounted.current) return;
+         setSaveStatus(result.ok ? { kind: 'saved' } : { kind: 'error', error: result.error });
+-        if (result.ok && evidence) await loadHistory();
++        if (result.ok) await onSaved?.();
+       });
+       return queue.current;
+     },
+-    [repository, loadHistory],
++    [],
++  );
++  const commitSession = useCallback(
++    (next: CurriculumSession) => {
++      if (pendingSessionSave.current === next) pendingSessionSave.current = null;
++      applySession(next);
++      setPaused(next.kind === 'revision' ? next.status === 'paused' : next.paused === true);
++    },
++    [applySession],
++  );
++  const save = useCallback(
++    (value: StudentAttempt, currentSession: CurriculumSession | null = sessionRef.current) => {
++      // A correction while completion is saving must not restore the old session.
++      const pendingSession = pendingSessionSave.current;
++      const sessionToSave = pendingSession ?? currentSession;
++      const evidence = assessmentToEvidence(value);
++      return queueSave(
++        () =>
++          repository.saveCurriculum({
++            attempt: value,
++            ...(evidence ? { evidence } : {}),
++            ...(sessionToSave ? { session: sessionToSave } : {}),
++          }),
++        async () => {
++          if (pendingSession) commitSession(pendingSession);
++          if (evidence) await loadHistory();
++        },
++      );
++    },
++    [repository, loadHistory, queueSave, commitSession],
++  );
++  const saveSession = useCallback(
++    (next: CurriculumSession) => {
++      pendingSessionSave.current = next;
++      return queueSave(
++        () => repository.saveSession(next),
++        () => commitSession(next),
++      );
++    },
++    [repository, commitSession, queueSave],
+   );
+   const readSavedData = useCallback(
+     async (cancelled: () => boolean = () => false) => {
+@@ -307,14 +348,14 @@ export function FoundationApp({
+               applyAttempt(result.value);
+               setTargetKey(`${result.value.target.gemId}:${result.value.target.level}`);
+               setSaveStatus({ kind: 'saved' });
+-              setPaused(
+-                loaded.value.kind === 'revision'
+-                  ? loaded.value.status === 'paused'
+-                  : loaded.value.paused === true,
+-              );
+             }
+           }
+           applySession(loaded.value);
++          setPaused(
++            loaded.value.kind === 'revision'
++              ? loaded.value.status === 'paused'
++              : loaded.value.paused === true,
++          );
+           if (view && view !== 'teacher' && view !== loaded.value.kind) setSetupOpen(true);
+           setSessionMode(
+             view && view !== 'teacher'
+@@ -593,8 +634,7 @@ export function FoundationApp({
+       if (current.kind === 'revision') {
+         const next = revisionScheduler.next(current, states, Date.now(), id);
+         if (!next.current) {
+-          applySession(next);
+-          await repository.saveSession(next);
++          await saveSession(next);
+           return;
+         }
+         const loaded = await runtime(next.current.target.activityId);
+@@ -643,15 +683,24 @@ export function FoundationApp({
+         current.kind === 'revision'
+           ? resumeRevisionSession(current)
+           : { ...current, paused: false };
+-      applySession(next);
+       const value = stateRef.current;
+-      if (value) await save(value, next);
+-      else await repository.saveSession(next);
++      if (value) {
++        applySession(next);
++        await save(value, next);
++      } else {
++        await saveSession(next);
++        if (saveFailed.current) return;
++      }
+     }
+     setSetupOpen(false);
+     setPaused(false);
+   };
+   const retry = async () => {
++    const pending = failedSave.current;
++    if (pending) {
++      await queueSave(pending.write, pending.onSaved);
++      return;
++    }
+     const value = stateRef.current;
+     if (value) await save(value);
+   };

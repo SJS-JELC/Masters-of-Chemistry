@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T19:48:28.948Z",
+  "scope": "Whole-current-app build/runtime closure including externally authorized OLY registration/assets; no OLY content, interaction or chemistry acceptance by component F2.",
+  "courses": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 7,
+      "runtimeFileCount": 161,
+      "initialJavascriptGzipBytes": 178716,
+      "lazyJavascriptChunks": 69,
+      "manifestSha256": "160681fa5ca3c572abcd6fb7410de65cda24e6e5afc906099fd239c1f95256ad",
+      "checkedAt": "2026-10-03T19:48:29.118Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 161,
+      "initialJavascriptGzipBytes": 178715,
+      "lazyJavascriptChunks": 69,
+      "manifestSha256": "deaf63fafa556dcc43bd3fab3edd1dfbf262aa84d779b8a65ad451e44a9a7f9e",
+      "checkedAt": "2026-10-03T19:48:29.272Z"
+    }
+  ]
+}

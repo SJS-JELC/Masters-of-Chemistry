@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "scope": "The eleven completed full teacher catalogue assertions only",
+  "observedProbe": "retry-browser-results.json",
+  "observedFullProbeStatus": "FAIL",
+  "laterStop": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'flush')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:30)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at flush (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\ux\\browser.mjs:7:115)\n    at fixture (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\ux\\browser.mjs:10:1287)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s4/ux/browser.mjs:15:105",
+  "laterStopResolution": "Exact reload readiness corrected; complete corrected tail PASS in accepted-tail-browser-results.json",
+  "checks": [
+    {
+      "teacher": "alevel/acid-base-calculations",
+      "completeRows": 139,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "alevel/electrons-bonding",
+      "completeRows": 14,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "alevel/electron-configurations",
+      "completeRows": 1144,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "alevel/dot-and-cross",
+      "completeRows": 123,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "alevel/ph-titration-curves",
+      "completeRows": 36,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "igcse/calorimetry",
+      "completeRows": 4512,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "igcse/bond-enthalpy",
+      "completeRows": 69,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "igcse/structure-and-bonding",
+      "completeRows": 18,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "igcse/dot-and-cross",
+      "completeRows": 104,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "igcse/energy-enthalpy",
+      "completeRows": 54,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    },
+    {
+      "teacher": "igcse/energetics-practical",
+      "completeRows": 14,
+      "blankWorkspace": false,
+      "independentEvidence": 0
+    }
+  ],
+  "note": "This scoped result does not relabel the retained full probe as PASS."
+}

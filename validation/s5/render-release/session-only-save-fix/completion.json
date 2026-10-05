@@ -1,0 +1,32 @@
+{
+  "agentId": "A23",
+  "jobId": "S5-RENDER-ACCESSIBILITY-RELEASE",
+  "status": "PASS",
+  "outputPaths": [
+    "validation/s5/render-release/session-only-save-fix/HANDOVER.md",
+    "validation/s5/render-release/session-only-save-fix/verification.json",
+    "validation/s5/render-release/session-only-save-fix/mobile-results.json",
+    "validation/s5/render-release/session-only-save-fix/performance.json",
+    "validation/s5/render-release/session-only-save-fix/fingerprints-after.json",
+    "validation/s5/render-release/completion.json"
+  ],
+  "confidence": 0.96,
+  "reason": null,
+  "validation": {
+    "freeze": "fa9b70c77954462612fb26a8d125d255f0af3456efff569d53a8ae3fa3dd3c52",
+    "inputs": 517,
+    "prePostStable": true,
+    "freshMobileCases": 6,
+    "currentColdSamples": 2,
+    "currentSemanticCheckpointSamples": 2,
+    "currentRelease": "PASS6activities6aliases129runtime59lazy",
+    "priorFullReview": "Carried explicitly from35e6 for unchanged source only",
+    "evidence": "validation/s5/render-release/session-only-save-fix/verification.json"
+  },
+  "requestedSettings": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high"
+  },
+  "effectiveSettings": "unknown",
+  "usage": null
+}

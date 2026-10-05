@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T03:45:36.158Z",
+  "results": [
+    {
+      "id": "build",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 1597,
+      "command": [
+        "node",
+        "scripts/build.mjs"
+      ],
+      "evidence": "validation/s4/refinement/integration/build.txt"
+    },
+    {
+      "id": "alevel-release",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 188,
+      "command": [
+        "node",
+        "scripts/release-s4.mjs",
+        "alevel"
+      ],
+      "evidence": "validation/s4/refinement/integration/alevel-release.txt"
+    },
+    {
+      "id": "igcse-release",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 181,
+      "command": [
+        "node",
+        "scripts/release-s4.mjs",
+        "igcse"
+      ],
+      "evidence": "validation/s4/refinement/integration/igcse-release.txt"
+    },
+    {
+      "id": "alevel-release-check",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 229,
+      "command": [
+        "node",
+        "scripts/validate-s4-release.mjs",
+        "alevel"
+      ],
+      "evidence": "validation/s4/refinement/integration/alevel-release-check.txt"
+    },
+    {
+      "id": "igcse-release-check",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 254,
+      "command": [
+        "node",
+        "scripts/validate-s4-release.mjs",
+        "igcse"
+      ],
+      "evidence": "validation/s4/refinement/integration/igcse-release-check.txt"
+    }
+  ]
+}

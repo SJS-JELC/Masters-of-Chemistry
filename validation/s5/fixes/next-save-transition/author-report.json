@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "owner": "A01",
+  "jobId": "S5-FIX-NEXT-SAVE",
+  "changedFiles": [
+    "src/foundation/ActivityHost.tsx"
+  ],
+  "beforeSha256": "d68fd5ad3a78960a03dd1ac2ea6b16566570f3f9c9283ec762cc5e2842d845c9",
+  "afterSha256": "b1e80facaec249c8cb435aae3925cdb7933e100976dacca49c445760e54e3340",
+  "scope": "Keep Next clickable while blur saves; lock actual click, await queue and authoritative save failure; preserve paused guard and report failed history reads before progression.",
+  "firstAssessment": "No response, assessment, time, evidence or scheduler mathematics changed",
+  "validation": [
+    "typecheck PASS",
+    "build both courses PASS",
+    "156 tests PASS",
+    "source237/control6/original1317 guards PASS"
+  ],
+  "checkedAt": "2026-10-03T05:50:39.776Z",
+  "independentEvidence": [
+    "validation/s5/review-render-harness/energy-next-fix/completion.json",
+    "validation/s5/behaviour/next-save-fix/completion.json",
+    "validation/s5/chemistry/next-save-fix/completion.json",
+    "validation/s5/render-release/completion.json"
+  ],
+  "currentTreeSha256": "35e6c969f6b9f5fefff7577922dd6703b6a645dc2308a460d44d19d3ce790eb1"
+}

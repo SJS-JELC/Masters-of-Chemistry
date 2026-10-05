@@ -1,0 +1,76 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-03T00:18:43.985Z",
+  "playwright": "1.62.1",
+  "browser": "154.0.4258.48",
+  "profile": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s2\\acid\\p\\6715256",
+  "host": "Actual production ActivityHost with real acid provider/marking/controller/clock/Dexie/revision scheduler; DEV harness only reads/checkpoints the actual runtime",
+  "results": [
+    {
+      "id": "all15-active-acid-targets-real-launch",
+      "status": "FAIL",
+      "elapsedMs": 3454,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:49:167\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:43:81)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:45:2"
+    },
+    {
+      "id": "structured-partial-incomplete-correction-fixed-evidence",
+      "status": "FAIL",
+      "elapsedMs": 1644,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:56:157\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:43:81)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:53:2"
+    },
+    {
+      "id": "revision-add-all-pause-reload-next",
+      "status": "FAIL",
+      "elapsedMs": 741,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:66:151\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:43:81)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/acid/browser-tests.mjs:63:2"
+    },
+    {
+      "id": "teacher-readonly-no-evidence-mobile",
+      "status": "PASS",
+      "elapsedMs": 756,
+      "evidence": {
+        "attempts": 0,
+        "evidence": 0,
+        "readOnly": true,
+        "mobileOverflow": false
+      }
+    },
+    {
+      "id": "current-and-historical-review-links-readonly",
+      "status": "PASS",
+      "elapsedMs": 870,
+      "evidence": {
+        "codes": [
+          "AB2-0-1-0",
+          "AB-0021HC",
+          "ABL-0001QE"
+        ],
+        "attempts": 0,
+        "evidence": 0
+      }
+    },
+    {
+      "id": "no-old-browser-store-writes",
+      "status": "PASS",
+      "elapsedMs": 4,
+      "evidence": {
+        "databases": [
+          "masters-of-chemistry-alevel-a08-partial-1790986719765-3",
+          "masters-of-chemistry-alevel-a08-review-1790986723112-6",
+          "masters-of-chemistry-alevel-a08-review-1790986723533-7",
+          "masters-of-chemistry-alevel-a08-review-1790986723733-8",
+          "masters-of-chemistry-alevel-a08-revision-1790986721513-4",
+          "masters-of-chemistry-alevel-a08-route-u6-t1-1-2-1-1790986716168-0",
+          "masters-of-chemistry-alevel-a08-route-u6-t1-1-2-2-1790986718515-1",
+          "masters-of-chemistry-alevel-a08-route-u6-t1-1-2-3-1790986719170-2",
+          "masters-of-chemistry-alevel-a08-teacher-1790986722352-5"
+        ],
+        "localStorageKeys": []
+      }
+    }
+  ],
+  "pageErrors": [],
+  "nativeForeground": false,
+  "connection": "Pinned Playwright headless Edge; genuine native idle/background reviewed separately by A07",
+  "pendingNativeReview": "validation/s2/review-native (A07; foreman-owned acceptance)"
+}

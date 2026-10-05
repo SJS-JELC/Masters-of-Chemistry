@@ -1,0 +1,355 @@
+{
+  "status": "PASS",
+  "headless": true,
+  "playwright": "1.62.1",
+  "scope": "Actual production host/controller/repository, teacher sidebar and paused practice restoration",
+  "checks": [
+    "Teacher orbital EC-CMICC5 highlights its own activity; sidebar selects complete bonding catalogue and immediately displays checked source question",
+    "Teacher visits create zero evidence and leave the entire real paused attempt/session unchanged; Practice restores exact ID, response and active time"
+  ],
+  "errors": [],
+  "paused": {
+    "attempt": {
+      "mode": "student",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "local"
+      },
+      "attemptId": "83130645-857f-4b52-9e97-797fbcc129e6",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB2-1-1-HX7R1V",
+        "seed": 1083713971,
+        "level": 1
+      },
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "gemId": "u6-t1-1-2",
+        "level": 1
+      },
+      "currentResponses": {
+        "h": {
+          "kind": "numeric",
+          "raw": "1.23",
+          "unit": "mol dm⁻³"
+        }
+      },
+      "assistance": [],
+      "phase": "answering",
+      "timing": {
+        "attemptId": "83130645-857f-4b52-9e97-797fbcc129e6",
+        "activeMs": 2263,
+        "idleLimitMs": 60000,
+        "finished": false
+      }
+    },
+    "session": {
+      "kind": "practice",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "local"
+      },
+      "id": "current-session",
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "gemId": "u6-t1-1-2",
+        "level": 1
+      },
+      "selection": "fixed-level",
+      "currentAttemptId": "83130645-857f-4b52-9e97-797fbcc129e6",
+      "previousQuestionIds": [
+        "AB2-1-1-HX7R1V"
+      ],
+      "paused": true
+    },
+    "question": {
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB2-1-1-HX7R1V",
+        "seed": 1083713971,
+        "level": 1
+      },
+      "title": "pH to [H⁺]",
+      "context": [
+        {
+          "kind": "text",
+          "text": "Calculate the hydrogen-ion concentration of the solution."
+        },
+        {
+          "kind": "table",
+          "headers": [
+            "Quantity",
+            "Value"
+          ],
+          "rows": [
+            [
+              "pH",
+              "1.25"
+            ]
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+        }
+      ],
+      "layout": "compact",
+      "submission": "all-required-parts",
+      "parts": [
+        {
+          "id": "h",
+          "kind": "numeric",
+          "inputMode": "text",
+          "prompt": [
+            {
+              "kind": "text",
+              "text": "Calculate [H⁺]."
+            },
+            {
+              "kind": "formula",
+              "text": "[H⁺] ="
+            }
+          ],
+          "marks": 1,
+          "required": true,
+          "dependsOn": [],
+          "unit": "mol dm⁻³",
+          "acceptance": {
+            "kind": "absolute",
+            "expected": 0.05623413251903491,
+            "tolerance": 0.000051000000000000006
+          }
+        }
+      ],
+      "scaffolds": [
+        {
+          "id": "structured-steps",
+          "level": 1,
+          "purpose": "Guided calculation stages",
+          "content": [
+            {
+              "kind": "text",
+              "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+            }
+          ]
+        }
+      ],
+      "hints": [],
+      "workedAnswer": [
+        {
+          "kind": "formula",
+          "text": "[H⁺] = 10^(−pH) = 10^(−1.25) = 0.0562 mol dm⁻³"
+        }
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+          "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+          "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+          "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+          "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+          "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+          "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+          "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+          "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+        }
+      ]
+    },
+    "history": [],
+    "saveStatus": {
+      "kind": "saved"
+    },
+    "databaseName": "masters-of-chemistry-alevel-a17-teacher-nav-after-1790996902560",
+    "selectedCount": 0
+  },
+  "orbital": {
+    "question": "EC-CMICC5",
+    "highlighted": [
+      "Electron configurations"
+    ],
+    "activity": "alevel/electron-configurations"
+  },
+  "sidebarClick": {
+    "question": "EB01",
+    "highlighted": [
+      "Electrons and bonding"
+    ],
+    "activity": "alevel/electrons-bonding"
+  },
+  "restored": {
+    "attempt": {
+      "mode": "student",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "local"
+      },
+      "attemptId": "83130645-857f-4b52-9e97-797fbcc129e6",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB2-1-1-HX7R1V",
+        "seed": 1083713971,
+        "level": 1
+      },
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "gemId": "u6-t1-1-2",
+        "level": 1
+      },
+      "currentResponses": {
+        "h": {
+          "kind": "numeric",
+          "raw": "1.23",
+          "unit": "mol dm⁻³"
+        }
+      },
+      "assistance": [],
+      "phase": "answering",
+      "timing": {
+        "attemptId": "83130645-857f-4b52-9e97-797fbcc129e6",
+        "activeMs": 2263,
+        "idleLimitMs": 60000,
+        "finished": false
+      }
+    },
+    "session": {
+      "kind": "practice",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "local"
+      },
+      "id": "current-session",
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "gemId": "u6-t1-1-2",
+        "level": 1
+      },
+      "selection": "fixed-level",
+      "currentAttemptId": "83130645-857f-4b52-9e97-797fbcc129e6",
+      "previousQuestionIds": [
+        "AB2-1-1-HX7R1V"
+      ],
+      "paused": true
+    },
+    "question": {
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB2-1-1-HX7R1V",
+        "seed": 1083713971,
+        "level": 1
+      },
+      "title": "pH to [H⁺]",
+      "context": [
+        {
+          "kind": "text",
+          "text": "Calculate the hydrogen-ion concentration of the solution."
+        },
+        {
+          "kind": "table",
+          "headers": [
+            "Quantity",
+            "Value"
+          ],
+          "rows": [
+            [
+              "pH",
+              "1.25"
+            ]
+          ]
+        },
+        {
+          "kind": "text",
+          "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+        }
+      ],
+      "layout": "compact",
+      "submission": "all-required-parts",
+      "parts": [
+        {
+          "id": "h",
+          "kind": "numeric",
+          "inputMode": "text",
+          "prompt": [
+            {
+              "kind": "text",
+              "text": "Calculate [H⁺]."
+            },
+            {
+              "kind": "formula",
+              "text": "[H⁺] ="
+            }
+          ],
+          "marks": 1,
+          "required": true,
+          "dependsOn": [],
+          "unit": "mol dm⁻³",
+          "acceptance": {
+            "kind": "absolute",
+            "expected": 0.05623413251903491,
+            "tolerance": 0.000051000000000000006
+          }
+        }
+      ],
+      "scaffolds": [
+        {
+          "id": "structured-steps",
+          "level": 1,
+          "purpose": "Guided calculation stages",
+          "content": [
+            {
+              "kind": "text",
+              "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+            }
+          ]
+        }
+      ],
+      "hints": [],
+      "workedAnswer": [
+        {
+          "kind": "formula",
+          "text": "[H⁺] = 10^(−pH) = 10^(−1.25) = 0.0562 mol dm⁻³"
+        }
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+          "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+          "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+          "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+          "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+          "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+          "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+          "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+          "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+        }
+      ]
+    },
+    "history": [],
+    "saveStatus": {
+      "kind": "saved"
+    },
+    "databaseName": "masters-of-chemistry-alevel-a17-teacher-nav-after-1790996902560",
+    "selectedCount": 0
+  }
+}

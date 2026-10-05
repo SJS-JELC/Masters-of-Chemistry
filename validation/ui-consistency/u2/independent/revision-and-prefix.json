@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-03T23:07:11.504Z",
+  "checks": [
+    {
+      "name": "Revision actual selection/firstwrong/correction/Clear/map-pause/reload/resume/scheduler Next",
+      "status": "PASS",
+      "firstRef": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-M2I0WJ",
+        "seed": 6950292,
+        "level": 1
+      },
+      "firstAttempt": "5a51a523-2c5d-442d-a4d9-70682762ab55",
+      "nextAttempt": "cd262e45-7a96-4c8f-afdc-1f40d84e3a46",
+      "firstTiming": {
+        "activeMs": 791,
+        "idleLimitMs": 180000
+      },
+      "results": [
+        "5a51a523-2c5d-442d-a4d9-70682762ab55"
+      ]
+    },
+    {
+      "name": "Current production prefix alevel give-up/Clear/reload/Next without DEV harness",
+      "status": "PASS"
+    },
+    {
+      "name": "Current production prefix igcse give-up/Clear/reload/Next without DEV harness",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-10-03T23:07:22.697Z"
+}

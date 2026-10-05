@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "headless": true,
+  "playwright": "1.62.1",
+  "touchscreen": true,
+  "checks": [
+    "Trusted touchscreen swipe scrolls checked orbital detail inside labelled viewport",
+    "C3 source SVG720×1030 and node R exact accepted coordinates; existing outer network touch scroll remains effective"
+  ],
+  "errors": []
+}

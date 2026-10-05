@@ -1,0 +1,30 @@
+node_modules/
+.npm-cache/
+dist/
+.vite/
+*.tsbuildinfo
+.browser/
+
+# Local credentials and machine-specific files
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Temporary browser profiles and dependency caches (retain validation evidence)
+/.npm-cache-*/
+/.*-tmp/
+/.*-temp/
+/.u03tmp/
+/.u05tmp/
+/btmp-*/
+.browser-temp/
+browser-temp/
+.bt/
+playwright_*_profile-*/
+vite-cache/
+/validation/s4/review-browser-startup/cache-fixed/
+/validation/explaining-properties/independent-review/ebp-review-*/

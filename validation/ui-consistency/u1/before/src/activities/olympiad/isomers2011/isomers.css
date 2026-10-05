@@ -1,0 +1,27 @@
+.isomers2011 { color: #f7f7ff; }
+.isomers2011 h1 { margin-bottom: .5rem; }
+.isomer-clues { padding: clamp(14px, 3vw, 28px); margin: 20px 0; background: #0a0d26; border: 1px solid var(--line); border-radius: 20px; line-height: 1.7; }
+.isomer-clues h2 { font-size: 1.15rem; }
+.isomer-clues li { margin: .45rem 0; }
+.isomer-spectrum { margin: 1rem 0 !important; }
+.isomer-spectrum button { width: 100%; padding: 0; background: white; border-radius: 12px; overflow: hidden; }
+.isomer-spectrum img { display: block; width: 100%; height: auto; background: white; }
+.isomer-guide summary { cursor: pointer; min-height: 44px; padding: .5rem; }
+.isomer-work { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr); gap: 24px; align-items: start; }
+.isomer-boxes { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.isomer-boxes .answer-slot { position: relative; width: 100%; min-width: 0; height: 160px; }
+.isomer-boxes .slot-label { display: block; padding: 8px; }
+.isomer-boxes .slot-preview { display: flex; height: 115px; align-items: center; justify-content: center; }
+.isomer-boxes .molecule-preview { width: 100%; height: 100%; }
+.isomer-boxes .answer-slot[aria-pressed=true] { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.isomer-boxes .slot-preview { min-width: 0; }
+.isomer-assessment { margin-top: 20px; line-height: 1.7; }
+.isomer-assessment p { min-height: 2em; }
+.isomer-editor { position: sticky; top: 16px; min-width: 0; scroll-margin-top: 16px; }
+.isomer-editor h2 { font-size: 1rem; }
+.isomer-zoom { width: min(96vw, 1400px); max-width: 96vw; padding: 12px; }
+.isomer-zoom > div { overflow: auto; margin-top: 12px; max-height: 80vh; background: white; }
+.isomer-zoom img { display: block; width: max(100%, 1152px); max-width: none; background: white; }
+.isomers2011 dialog::backdrop { background: #000b; }
+@media(max-width: 900px) { .isomer-work { grid-template-columns: 1fr; } .isomer-editor { position: static; } }
+@media(max-width: 480px) { .isomers2011 { padding: .6rem; } .isomer-boxes { grid-template-columns: repeat(2,minmax(0,1fr)); } .isomer-boxes .answer-slot { height: 140px; } .isomer-clues ul { padding-left: 1.25rem; } }

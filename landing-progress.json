@@ -1,0 +1,30 @@
+{
+    "runId":  "LANDING-RESTORE-20261003",
+    "status":  "complete",
+    "stage":  "Part 1 original landing restoration",
+    "jobs":  [
+                 {
+                     "agentId":  "L02",
+                     "jobId":  "LANDING-DESIGN",
+                     "status":  "ACCEPTED",
+                     "outputPath":  "validation/landing-restoration/design/HANDOVER.md"
+                 },
+                 {
+                     "agentId":  "L03",
+                     "jobId":  "LANDING-INTEGRATION",
+                     "status":  "ACCEPTED",
+                     "outputPath":  "validation/landing-restoration/integration/HANDOVER.md"
+                 },
+                 {
+                     "agentId":  "L03",
+                     "jobId":  "LANDING-TEACHER-CATEGORY",
+                     "status":  "ACCEPTED",
+                     "outputPath":  "validation/landing-restoration/integration/teacher-category/HANDOVER.md"
+                 }
+             ],
+    "evidence":  [
+                     "validation/landing-restoration/foreman-report.json",
+                     "LANDING-HANDOFF.md"
+                 ],
+    "rootAcceptance":  "validation/landing-restoration/root-acceptance.json"
+}

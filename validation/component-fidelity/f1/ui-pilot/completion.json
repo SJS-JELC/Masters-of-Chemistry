@@ -1,0 +1,152 @@
+{
+  "jobId": "F1-UI-PILOT",
+  "agentId": "F03",
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "status": "PASS",
+  "completedAt": "2026-10-03T16:27:40.510Z",
+  "outputPath": "validation/component-fidelity/f1/ui-pilot/HANDOVER.md",
+  "evidencePaths": [
+    "validation/component-fidelity/f1/ui-pilot/browser-results-before-equivalence-toggle.json",
+    "validation/component-fidelity/f1/ui-pilot/browser-results-before-learning-review-display.json",
+    "validation/component-fidelity/f1/ui-pilot/browser-results-first.json",
+    "validation/component-fidelity/f1/ui-pilot/browser-results-next-race.json",
+    "validation/component-fidelity/f1/ui-pilot/browser-results-pre-revision-selector.json",
+    "validation/component-fidelity/f1/ui-pilot/browser-results-timing-fixture.json",
+    "validation/component-fidelity/f1/ui-pilot/browser-results.json",
+    "validation/component-fidelity/f1/ui-pilot/browser.mjs",
+    "validation/component-fidelity/f1/ui-pilot/contact-desktop.png",
+    "validation/component-fidelity/f1/ui-pilot/contact-mobile.png",
+    "validation/component-fidelity/f1/ui-pilot/contact-sheets.mjs",
+    "validation/component-fidelity/f1/ui-pilot/contact-tablet.png",
+    "validation/component-fidelity/f1/ui-pilot/HANDOVER.md",
+    "validation/component-fidelity/f1/ui-pilot/inspect.mjs",
+    "validation/component-fidelity/f1/ui-pilot/inspect.png",
+    "validation/component-fidelity/f1/ui-pilot/original-desktop-correct.png",
+    "validation/component-fidelity/f1/ui-pilot/original-desktop-correction.png",
+    "validation/component-fidelity/f1/ui-pilot/original-desktop-incorrect.png",
+    "validation/component-fidelity/f1/ui-pilot/original-desktop-model.png",
+    "validation/component-fidelity/f1/ui-pilot/original-desktop-partial.png",
+    "validation/component-fidelity/f1/ui-pilot/original-desktop-unanswered.png",
+    "validation/component-fidelity/f1/ui-pilot/original-mobile-correct.png",
+    "validation/component-fidelity/f1/ui-pilot/original-mobile-correction.png",
+    "validation/component-fidelity/f1/ui-pilot/original-mobile-incorrect.png",
+    "validation/component-fidelity/f1/ui-pilot/original-mobile-model.png",
+    "validation/component-fidelity/f1/ui-pilot/original-mobile-partial.png",
+    "validation/component-fidelity/f1/ui-pilot/original-mobile-unanswered.png",
+    "validation/component-fidelity/f1/ui-pilot/original-tablet-correct.png",
+    "validation/component-fidelity/f1/ui-pilot/original-tablet-correction.png",
+    "validation/component-fidelity/f1/ui-pilot/original-tablet-incorrect.png",
+    "validation/component-fidelity/f1/ui-pilot/original-tablet-model.png",
+    "validation/component-fidelity/f1/ui-pilot/original-tablet-partial.png",
+    "validation/component-fidelity/f1/ui-pilot/original-tablet-unanswered.png",
+    "validation/component-fidelity/f1/ui-pilot/practical-marking-regression.log",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-correct.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-correction.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-full-chrome.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-incorrect.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-model.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-partial.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-teacher-model.png",
+    "validation/component-fidelity/f1/ui-pilot/react-desktop-unanswered.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-correct.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-correction.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-full-chrome.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-incorrect.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-model.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-partial.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-teacher-model.png",
+    "validation/component-fidelity/f1/ui-pilot/react-mobile-unanswered.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-correct.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-correction.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-full-chrome.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-incorrect.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-model.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-partial.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-teacher-model.png",
+    "validation/component-fidelity/f1/ui-pilot/react-tablet-unanswered.png",
+    "validation/component-fidelity/f1/ui-pilot/reference-matrix.json",
+    "validation/component-fidelity/f1/ui-pilot/REFERENCE-MATRIX.md",
+    "validation/component-fidelity/f1/ui-pilot/reference-matrix.mjs",
+    "validation/component-fidelity/f1/ui-pilot/reference-server.mjs",
+    "validation/component-fidelity/f1/ui-pilot/typecheck.log",
+    "validation/component-fidelity/f1/ui-pilot/verification.json",
+    "validation/component-fidelity/f1/ui-pilot/verify.mjs"
+  ],
+  "changedPaths": [
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "sha256": "ba4898dae9d6be3457a63df8d3a0bf8132901f154cc42b822520610bd9a7ce50",
+      "baselineSha256": "def569129fd95ce9818fd4a20e600501340e51043f1e8e96d03c563fd2b16539"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "sha256": "580f428eb3ab0f73074e79e87677e5ebfaa1249414303b98b0bed2f505b24391",
+      "baselineSha256": "ea31d12e087a21d834d5d1a5c64d892c33db0450f1b4642d903145947f6e5277"
+    },
+    {
+      "path": "src/ui/CorrectionSegments.tsx",
+      "sha256": "520e5c4a281971036f1dab4b6d11dae14e25ea4d89087f3149820ae35a24cc32",
+      "baselineSha256": "a7bdd9d955f034e72b598ecae03015085068c7ddb67e8a76fcf2a223b07383f4"
+    },
+    {
+      "path": "src/ui/EnergeticsResponseControl.tsx",
+      "sha256": "4a0f461860b691bd3074f9d2b001a2dd6ab23d70f4b896d4403b94d0a4daff58",
+      "baselineSha256": null
+    },
+    {
+      "path": "src/ui/EnergeticsPracticalPilot.tsx",
+      "sha256": "cdc7b2555bc65960192ef1b4ed1b31b407b2b34816ec8a5ca9c71f3e4ab7bbdb",
+      "baselineSha256": null
+    },
+    {
+      "path": "src/ui/energetics-practical-pilot.css",
+      "sha256": "634668ca39474efd87a5be659e9b5fe1577da11749e11bae5c6e18dec92fe7f1",
+      "baselineSha256": null
+    },
+    {
+      "path": "src/ui/fonts/PlaywriteEnglandJoined.ttf",
+      "sha256": "75263adf472a717edc4d7d10ea28016591928c98f2cd5da93b0269ef4a919fc9",
+      "baselineSha256": null
+    },
+    {
+      "path": "src/ui/fonts/OFL-PlaywriteEnglandJoined.txt",
+      "sha256": "0370f5946020846b0ca65e44950d11411ea3bd3c4c0d755916470f9f96cd8cb8",
+      "baselineSha256": null
+    }
+  ],
+  "validation": {
+    "typecheck": "PASS",
+    "chemistryMarking": "PASS - unchanged practical/source/controller focused regression",
+    "browser": "PASS",
+    "screenshotCount": 42,
+    "sourceMatrix": "12 activities; exact source-linked DOM/CSS/font/SVG/interaction and state locators",
+    "contactSheets": [
+      "validation/component-fidelity/f1/ui-pilot/contact-desktop.png",
+      "validation/component-fidelity/f1/ui-pilot/contact-tablet.png",
+      "validation/component-fidelity/f1/ui-pilot/contact-mobile.png"
+    ],
+    "protectedApps": "F01 stage validation owner; no protected writes",
+    "productionBuilds": "F01 integration owner; code frozen"
+  },
+  "confidence": 0.98,
+  "unresolved": [],
+  "limitations": [
+    "Only five diagram-free EP written-correction/typed-answer questions activate the F1 pilot; other controls/states are matrix-only preparation for F2.",
+    "Native OS hidden/minimised/suspend not tested or claimed.",
+    "Full historical S3 energy identity assertions still use obsolete C01 codes; F02 owns canonical coverage; focused practical/source/controller chemistry tests PASS.",
+    "No complete textual before/after diff was captured; baseline hashes and function-level change map supplied."
+  ],
+  "usage": null,
+  "servers": {
+    "original": {
+      "url": "http://127.0.0.1:5197",
+      "session": 27739,
+      "readOnly": true
+    },
+    "react": {
+      "url": "http://127.0.0.1:5188",
+      "session": 99905
+    },
+    "shutdownOwner": "F01/root after acceptance review"
+  }
+}

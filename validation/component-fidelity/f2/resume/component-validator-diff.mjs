@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {spawnSync}from'node:child_process';import crypto from'node:crypto';
+const project=path.resolve(import.meta.dirname,'../../../..'),before=path.join(project,'validation/component-fidelity/f2/before/src/persistence/validation.ts'),current=path.join(project,'src/persistence/validation.ts');
+const a=fs.readFileSync(before,'utf8'),b=fs.readFileSync(current,'utf8');
+const numeric=text=>{const begin=text.indexOf("    case 'numeric':",text.indexOf('export function validateResponse')),end=text.indexOf("    case 'choice':",begin);assert(begin>=0&&end>begin);return{begin,end,text:text.slice(begin,end)};};
+const old=numeric(a),now=numeric(b),isolated=a.slice(0,old.begin)+now.text+a.slice(old.end),file=path.join(import.meta.dirname,'validation-component-only.ts');
+fs.writeFileSync(file,isolated);const diff=spawnSync('git',['diff','--no-index','--',before,file],{encoding:'utf8'});assert([0,1].includes(diff.status));fs.writeFileSync(new URL('./validation-component-only.patch',import.meta.url),diff.stdout);
+const sha=value=>crypto.createHash('sha256').update(value).digest('hex');
+fs.writeFileSync(new URL('./validation-component-only.json',import.meta.url),JSON.stringify({status:'PASS',scope:'Only the pre-existing F01 optional numeric-working validation hunk is part of component F2. Foreign OLY imports/validator are excluded from this review patch and preserved in the actual current file, which F07 did not edit.',currentFileSha256:sha(b),componentNumericCaseSha256:sha(now.text),beforeFileSha256:sha(a),comparisonArtifact:'validation-component-only.ts',notRuntimeSource:true},null,2)+'\n');

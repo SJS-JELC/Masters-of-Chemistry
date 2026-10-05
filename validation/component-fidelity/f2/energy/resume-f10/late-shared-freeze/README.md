@@ -1,0 +1,7 @@
+# Late shared-freeze continuity
+
+PASS. No F10 code changes. Desktop D03/mobile D05 bounded proof at 19:07 UTC preserves exactly one prompt and marking/actions pane, correctly mounted read-only model, prior SVG metrics and no horizontal overflow. D05 fields remain system-ui 400 17.6px at opacity 1. Complete D03 invalid coordinate Enter preserves the profile and creates no assessment; valid Enter commits only the coordinate. D05 axis Enter also does not assess. Explicit Check gives score 1 and one evidence row; positive 180000ms-allowance first timing, score and evidence remain unchanged after model reveal and reload. Actual exported unanswered/model screenshots were inspected.
+
+Proof-time fingerprints are retained separately in observed-inputs.json. Final current shared hashes are from F08 renewed freeze 2026-10-03T19:22:19.469Z and appear in disposition.json. These later shared changes are carried forward on F07's explicit disposition: comparison-only pane visibility and numeric-only review font/SVG currentColor/table split/scaffold notes/actions change no energy selector/rendering branch. Earlier EC duplicate context suppression is family-specific. All three energy-owned files still exactly match prior final hashes. No late browser rerun is claimed.
+
+The prior 162 state pairs and 27 native-width contact sheets carry forward under that unchanged-owned/scoped-shared disposition and bounded energy continuity proof. Root acceptance remains required. Native OS visibility/suspend limitations remain unchanged.

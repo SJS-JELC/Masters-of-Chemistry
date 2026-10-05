@@ -1,0 +1,30 @@
+{
+ "agentId":"A12","jobId":"S3-THERMOCHEMISTRY","runId":"MASTERS-REACT-20261002",
+ "status":"ESCALATE","confidence":0.98,
+ "outputPath":"validation/s3/thermochemistry/HANDOVER.md",
+ "reason":"Owned implementation, complete source/chemistry and production browser checks pass; independent A06 native timing acceptance remains pending with A01.",
+ "requestedModel":"gpt-6.1-sol","requestedEffort":"high","effectiveModel":null,"effectiveEffort":null,"usage":null,
+ "exports":["calorimetryAdapter","bondEnthalpyAdapter"],
+ "validation":{
+  "strictTypecheck":"PASS npm.cmd run typecheck",
+  "completeRoutes":"PASS4512 finite calorimetry configs;18048 canonical seeded outputs;10416 reconstructed reacting amounts;39000 framework checks;5248 bond outputs;exact16-reaction level exclusions and both families",
+  "coverageEvidence":"validation/s3/thermochemistry/coverage-results.json",
+  "sourceGate":"Exact original core outputs unchanged; original and independently reviewed CO SVG/runtime/source hashes bound to A07 provenance; only methanol image uses reviewed override",
+  "chemistry":"validation/s3/thermochemistry/CHEMISTRY-REVIEW.md",
+  "productionBrowser":"validation/s3/thermochemistry/browser-results.json",
+  "reviewedCOHost":"validation/s3/thermochemistry/co-browser-results.json",
+  "independentCO":"validation/s3/review-co/completion.json",
+  "render":"validation/s3/thermochemistry/RENDER-REVIEW.md",
+  "sourceFingerprints":"validation/s3/thermochemistry/source-fingerprints.json",
+  "outputFingerprints":"validation/s3/thermochemistry/output-fingerprints.json",
+  "failedTimingProbe":"validation/s3/thermochemistry/timing-browser-results-ordinary-freeze.json",
+  "failedRawLaunch":"validation/s3/thermochemistry/timing-browser-launch-failure.json"
+ },
+ "remaining":[
+  {"owner":"A06/A01","stage":"S3","item":"Independent native same-document suspension/idle timing disposition; A12 did not change shared timer"},
+  {"owner":"A01","stage":"S4","item":"Original detailed teacher route-picker UX; all4512 routes are exposed/reproducible/renderable now"},
+  {"owner":"A01","stage":"S4","item":"Final stats chart and disabled teacher-editor polish"}
+ ],
+ "sourceQuiescent":true,"stableReviewServer":"validation/s3/thermochemistry/serve.mjs port5187 left running for A06; foreman owns shutdown",
+ "limits":["No full managed RDKit regeneration claimed for the reviewed deterministic CO vector correction","Worker completion is not acceptance; A01/root own aggregate stage gates"]
+}

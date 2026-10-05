@@ -1,0 +1,162 @@
+{
+  "jobId": "DEV-AUTHORING-CANONICAL",
+  "startedAt": "2026-10-03T17:05:43.764Z",
+  "browser": "154.0.4258.48",
+  "checks": [
+    {
+      "name": "numeric: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-WRFJ52",
+        "seed": 10317666,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-numeric"
+    },
+    {
+      "name": "automatic-text: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-UVLMP3",
+        "seed": 9724284,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-automatic-text"
+    },
+    {
+      "name": "self-rubric: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-L3R4MG",
+        "seed": 6646324,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-self-rubric"
+    },
+    {
+      "name": "self-drawing: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-08GGX5",
+        "seed": 73986,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-self-drawing"
+    },
+    {
+      "name": "choice: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-POS8MI",
+        "seed": 8090014,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-choice"
+    },
+    {
+      "name": "choice-dropdown: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-5BI0X7",
+        "seed": 1675248,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-choice-dropdown"
+    },
+    {
+      "name": "choice-multiple: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-5JA46K",
+        "seed": 1743310,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-choice-multiple"
+    },
+    {
+      "name": "correction: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-QOAFQL",
+        "seed": 8400616,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-correction"
+    },
+    {
+      "name": "diagram: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-BXQL7Y",
+        "seed": 3759353,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-diagram"
+    },
+    {
+      "name": "editor: canonical ref/content/response/attempt/timing reproduced from saved actual shared runtime",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-4DOL7Z",
+        "seed": 1379411,
+        "level": 1
+      },
+      "database": "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-editor"
+    },
+    {
+      "name": "Synthetic revision save/reload, first score/timing and scheduler Next",
+      "status": "PASS"
+    },
+    {
+      "name": "Synthetic teacher preview creates no attempt/timing/evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Two DEV-family routes with identical run use distinct guarded databases and reproduce exact own code/ref/content on reload",
+      "status": "PASS",
+      "databases": [
+        "masters-of-chemistry-alpha-v2-alevel-dev-authoring-dev-s5-independent-correction-1791047143765-scope",
+        "masters-of-chemistry-alpha-v2-alevel-dev-authoring-dev-canonical-correction-correction-1791047143765-scope"
+      ],
+      "refs": [
+        {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB-B9BOJA",
+          "seed": 3545778,
+          "level": 2
+        },
+        {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB-X7H6LZ",
+          "seed": 10458035,
+          "level": 2
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "storageCalls": [
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-numeric",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-automatic-text",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-self-rubric",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-self-drawing",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-choice",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-choice-dropdown",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-choice-multiple",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-correction",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-diagram",
+    "masters-of-chemistry-alpha-v2-alevel-dev-controls-correction-1791047143765-editor"
+  ],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T17:06:15.053Z"
+}

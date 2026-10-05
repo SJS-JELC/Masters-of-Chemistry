@@ -1,0 +1,77 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-02T23:16:27.479Z",
+  "boundedRetry": "Only failed Alevel revision scenario rerun after correcting expected supported target count from15 to17 (five acid gems + titration). Other PASS results retained unchanged from browser-results-initial.json.",
+  "priorEvidence": "validation/s1/integration/browser-results-initial.json",
+  "playwright": "1.62.1",
+  "browser": "154.0.4258.48",
+  "profile": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.browser\\a01-s1-murl0zl1",
+  "scope": "Actual shared controller, active clock, Dexie and session in DEV-only fixture host; no complete migrated bank or hidden/background idle proof claimed here.",
+  "results": [
+    {
+      "id": "practice-first-evidence-next",
+      "status": "PASS",
+      "elapsedMs": 3480,
+      "evidence": {
+        "firstAttempt": "5b32dda8-49c8-4619-b092-916adef3889a",
+        "nextAttempt": "ef62fb56-a59d-4c19-bd8f-1ace2f97b10f",
+        "firstActiveMs": 1302,
+        "records": 1,
+        "firstResponseAndResultUnchanged": true
+      }
+    },
+    {
+      "id": "igcse-revision-grade-and-scope",
+      "status": "PASS",
+      "elapsedMs": 530,
+      "evidence": {
+        "selectedLevels": 10,
+        "grade": 1,
+        "timingTransferred": true
+      }
+    },
+    {
+      "id": "excessive-valence-assessed-and-persisted",
+      "status": "PASS",
+      "elapsedMs": 353,
+      "evidence": {
+        "chemicallyWrong": true,
+        "structurallyValid": true,
+        "assessedScore": 0,
+        "persisted": true
+      }
+    },
+    {
+      "id": "teacher-preview-no-evidence",
+      "status": "PASS",
+      "elapsedMs": 173,
+      "evidence": {
+        "attempts": 0,
+        "evidence": 0,
+        "readonly": true
+      }
+    },
+    {
+      "id": "no-legacy-browser-writes",
+      "status": "PASS",
+      "elapsedMs": 13,
+      "evidence": {
+        "localStorageKeys": [],
+        "databases": [
+          "masters-of-chemistry-s1-alevel-a01-editor-murkmmjk",
+          "masters-of-chemistry-s1-alevel-a01-numeric-murkmj7z",
+          "masters-of-chemistry-s1-alevel-a01-numeric-murkmlwm",
+          "masters-of-chemistry-s1-igcse-a01-automatic-text-murkmmtc",
+          "masters-of-chemistry-s1-igcse-a01-numeric-murkmm4t"
+        ]
+      }
+    },
+    {
+      "id": "alevel-revision-pause-restore-rotation-assistance",
+      "status": "FAIL",
+      "elapsedMs": 1975,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s1/integration/browser-tests.mjs:46:134\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s1/integration/browser-tests.mjs:28:154)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s1/integration/browser-tests.mjs:42:2"
+    }
+  ],
+  "pageErrors": []
+}

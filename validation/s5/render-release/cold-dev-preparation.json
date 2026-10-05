@@ -1,0 +1,279 @@
+{
+  "status": "READY",
+  "preparationMs": 1496,
+  "events": [
+    {
+      "at": 890,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/preview.html"
+    },
+    {
+      "at": 981,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/mount.tsx"
+    },
+    {
+      "at": 998,
+      "url": "http://127.0.0.1:5195/@vite/client"
+    },
+    {
+      "at": 1061,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/react_jsx-dev-runtime.js?v=4f71bcf1"
+    },
+    {
+      "at": 1073,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/react.js?v=4f71bcf1"
+    },
+    {
+      "at": 1074,
+      "url": "http://127.0.0.1:5195/src/styles/platform.css"
+    },
+    {
+      "at": 1076,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/Catalogue.tsx"
+    },
+    {
+      "at": 1079,
+      "url": "http://127.0.0.1:5195/node_modules/vite/dist/client/env.mjs"
+    },
+    {
+      "at": 1101,
+      "url": "http://127.0.0.1:5195/src/ui/ResponseControl.tsx"
+    },
+    {
+      "at": 1102,
+      "url": "http://127.0.0.1:5195/src/ui/Content.tsx"
+    },
+    {
+      "at": 1105,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/family.ts"
+    },
+    {
+      "at": 1106,
+      "url": "http://127.0.0.1:5195/src/foundation/ActivityHost.tsx"
+    },
+    {
+      "at": 1107,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/registry.ts"
+    },
+    {
+      "at": 1110,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/rolldown-runtime-BPOCksWG.js?v=4f71bcf1"
+    },
+    {
+      "at": 1127,
+      "url": "http://127.0.0.1:5195/src/ui/CorrectionSegments.tsx"
+    },
+    {
+      "at": 1127,
+      "url": "http://127.0.0.1:5195/src/ui/EditorFrame.tsx"
+    },
+    {
+      "at": 1128,
+      "url": "http://127.0.0.1:5195/src/ui/NumericWorkingControl.tsx"
+    },
+    {
+      "at": 1128,
+      "url": "http://127.0.0.1:5195/src/ui/TextRangePicker.tsx"
+    },
+    {
+      "at": 1133,
+      "url": "http://127.0.0.1:5195/src/ui/DiagramViewport.tsx"
+    },
+    {
+      "at": 1137,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/provenance.ts"
+    },
+    {
+      "at": 1137,
+      "url": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/data.ts"
+    },
+    {
+      "at": 1140,
+      "url": "http://127.0.0.1:5195/src/domain/attempt/index.ts"
+    },
+    {
+      "at": 1141,
+      "url": "http://127.0.0.1:5195/src/domain/timing/index.ts"
+    },
+    {
+      "at": 1144,
+      "url": "http://127.0.0.1:5195/src/foundation/registry.ts"
+    },
+    {
+      "at": 1146,
+      "url": "http://127.0.0.1:5195/src/domain/session/index.ts"
+    },
+    {
+      "at": 1149,
+      "url": "http://127.0.0.1:5195/src/domain/mastery/index.ts"
+    },
+    {
+      "at": 1149,
+      "url": "http://127.0.0.1:5195/src/persistence/index.ts"
+    },
+    {
+      "at": 1151,
+      "url": "http://127.0.0.1:5195/src/shell/CourseShell.tsx"
+    },
+    {
+      "at": 1158,
+      "url": "http://127.0.0.1:5195/src/ui/TeacherPicker.tsx"
+    },
+    {
+      "at": 1158,
+      "url": "http://127.0.0.1:5195/src/ui/QuestionPlayer.tsx"
+    },
+    {
+      "at": 1164,
+      "url": "http://127.0.0.1:5195/src/catalogue/definitions.ts"
+    },
+    {
+      "at": 1225,
+      "url": "http://127.0.0.1:5195/src/domain/attempt/input-checks.ts"
+    },
+    {
+      "at": 1225,
+      "url": "http://127.0.0.1:5195/src/domain/timing/active-clock.ts"
+    },
+    {
+      "at": 1233,
+      "url": "http://127.0.0.1:5195/src/activities/olympiad/c3l6/dependencies.ts"
+    },
+    {
+      "at": 1242,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/react-dom_client.js?v=4f71bcf1"
+    },
+    {
+      "at": 1249,
+      "url": "http://127.0.0.1:5195/src/domain/timing/browser-binding.ts"
+    },
+    {
+      "at": 1250,
+      "url": "http://127.0.0.1:5195/src/catalogue/registry.ts"
+    },
+    {
+      "at": 1254,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/dot-and-cross/index.ts"
+    },
+    {
+      "at": 1255,
+      "url": "http://127.0.0.1:5195/src/domain/attempt/attempt.ts"
+    },
+    {
+      "at": 1259,
+      "url": "http://127.0.0.1:5195/src/activities/igcse/structure-and-bonding/index.ts"
+    },
+    {
+      "at": 1261,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/index.ts"
+    },
+    {
+      "at": 1277,
+      "url": "http://127.0.0.1:5195/src/activities/igcse/dot-and-cross/index.ts"
+    },
+    {
+      "at": 1277,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/ph-titration-curves/index.ts"
+    },
+    {
+      "at": 1277,
+      "url": "http://127.0.0.1:5195/src/activities/igcse/calorimetry/index.ts"
+    },
+    {
+      "at": 1278,
+      "url": "http://127.0.0.1:5195/src/activities/igcse/bond-enthalpy/index.ts"
+    },
+    {
+      "at": 1278,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/electrons-bonding/index.ts"
+    },
+    {
+      "at": 1280,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/electron-configurations/index.ts"
+    },
+    {
+      "at": 1281,
+      "url": "http://127.0.0.1:5195/src/activities/igcse/energy-enthalpy/index.ts"
+    },
+    {
+      "at": 1282,
+      "url": "http://127.0.0.1:5195/src/domain/session/selection.ts"
+    },
+    {
+      "at": 1283,
+      "url": "http://127.0.0.1:5195/src/activities/igcse/energetics-practical/index.ts"
+    },
+    {
+      "at": 1286,
+      "url": "http://127.0.0.1:5195/src/domain/session/revision.ts"
+    },
+    {
+      "at": 1287,
+      "url": "http://127.0.0.1:5195/src/domain/session/practice.ts"
+    },
+    {
+      "at": 1288,
+      "url": "http://127.0.0.1:5195/src/domain/mastery/course-mastery.ts"
+    },
+    {
+      "at": 1290,
+      "url": "http://127.0.0.1:5195/src/persistence/repository.ts"
+    },
+    {
+      "at": 1291,
+      "url": "http://127.0.0.1:5195/src/persistence/legacy.ts"
+    },
+    {
+      "at": 1294,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/zustand.js?v=4f71bcf1"
+    },
+    {
+      "at": 1294,
+      "url": "http://127.0.0.1:5195/src/shell/navigation-view.ts"
+    },
+    {
+      "at": 1295,
+      "url": "http://127.0.0.1:5195/src/persistence/validation.ts"
+    },
+    {
+      "at": 1298,
+      "url": "http://127.0.0.1:5195/src/ui/assessment-label.ts"
+    },
+    {
+      "at": 1298,
+      "url": "http://127.0.0.1:5195/src/ui/teacher-catalogue.ts"
+    },
+    {
+      "at": 1300,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/zustand_vanilla.js?v=4f71bcf1"
+    },
+    {
+      "at": 1304,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/idle-allowances.ts"
+    },
+    {
+      "at": 1305,
+      "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/persisted-codes.ts"
+    },
+    {
+      "at": 1308,
+      "url": "http://127.0.0.1:5195/src/catalogue/scope.ts"
+    },
+    {
+      "at": 1308,
+      "url": "http://127.0.0.1:5195/src/persistence/catalogue-boundary.ts"
+    },
+    {
+      "at": 1310,
+      "url": "http://127.0.0.1:5195/src/catalogue/historical-leaves.ts"
+    },
+    {
+      "at": 1345,
+      "url": "http://127.0.0.1:5195/validation/s5/render-release/vite-cache/deps/dexie.js?v=4f71bcf1"
+    },
+    {
+      "at": 1450,
+      "url": "http://127.0.0.1:5195/assets/SJS-Eagle.svg"
+    }
+  ],
+  "limitation": "Preparation only,90s deadline. The unmodified assertion fixture keeps30s navigation deadline; no student load benchmark inferred."
+}

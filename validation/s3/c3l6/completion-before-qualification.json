@@ -1,0 +1,23 @@
+{
+  "agentId": "A16",
+  "stableId": "S3-OLYMPIAD-C3L6",
+  "status": "ESCALATE",
+  "outputPath": "src/activities/olympiad/c3l6/index.ts",
+  "confidence": 0.96,
+  "reason": "Implementation and all deterministic/browser gates pass; source B(iii) calls a Mr114 propanone hydrazone gyromitrin while PubChem identifies gyromitrin as the Mr100 acetaldehyde derivative, and independent disposition is pending.",
+  "validation": {
+    "tests": "validation/s3/c3l6/tests-final.txt — six substantive fixture groups PASS",
+    "typecheck": "validation/s3/c3l6/typecheck-final.txt — PASS",
+    "browser": "validation/s3/c3l6/browser-results.json — PASS, actual production host/repository/headless Edge, desktop/mobile/touch/teacher/reload/Undo/ring closure/Restart/completion dedup/isolation",
+    "chemistry": "validation/s3/c3l6/chemistry-review.md — all targets/23 alternatives substantively reviewed; one naming exception retained",
+    "supplementaryRDKit": "validation/s3/c3l6/rdkit-results.json — PASS all23 graph/SMILES/formula/mass/C-network invariants and42 SVG XML checks; existing Python3.13.5/RDKit2025.09.1, no regeneration",
+    "fingerprints": "validation/s3/c3l6/output-fingerprints.json — 51 consulted original source files unchanged,44 copied assets byte-identical,60 owned runtime files fingerprinted",
+    "sourceException": "validation/s3/c3l6/source-issue.json — C3-BIII-NAME-STRUCTURE queued by A01 for independent A07 review",
+    "handover": "validation/s3/c3l6/HANDOVER.md"
+  },
+  "effectiveModel": null,
+  "effectiveReasoningEffort": null,
+  "actualUsage": null,
+  "runtimeEvidence": "Model/effort/usage not exposed; no invented measurements.",
+  "stageAcceptance": "Worker completion is not S3 acceptance. Independent source exception disposition and A01/root aggregate acceptance remain required."
+}

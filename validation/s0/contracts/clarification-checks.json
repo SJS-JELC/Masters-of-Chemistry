@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-02T22:35:24.766Z",
+  "checks": [
+    "Five read-only source hashes retained",
+    "Source EP-BJLHC1 valid-alternative review changes displayed correctness but not automaticCorrect or prior result",
+    "Energy text source classifications distinguish correct/incorrect/empty/unknown"
+  ],
+  "limitations": [
+    "No migrated runtime/chemistry/browser acceptance claimed",
+    "Immutable first score/timing and post-review evidence isolation require S1 runtime tests"
+  ]
+}

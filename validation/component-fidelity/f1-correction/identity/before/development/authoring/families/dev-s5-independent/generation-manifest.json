@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "dev-s5-independent",
+  "prefix": "DEV-S5-INDEPENDENT-v1",
+  "generatedAt": "2026-10-03T04:04:11.572Z",
+  "generator": "development/authoring/scaffold.mjs",
+  "templateFingerprints": {
+    "development/authoring/data.ts": "9e4e7e6ffbe3be6107df36f54e6e5ff5859973a4de9c60c8b786c3723f696601",
+    "development/authoring/family.ts": "9c351a45b6aee48fdeba385285e53e46dae76eb658c99e74076192a9a6985c58",
+    "development/authoring/registry.ts": "2a981d6f577c092b0125a094adf6ea81d2679a9a99efb98a34c908561f52edfd",
+    "src/development/catalogue/index.tsx": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e",
+    "development/authoring/templates/family.test.mjs": "185b3c6f1c9e807bc8db4b52fa8972a1539fb0137e565895050823a858c6bf71",
+    "development/authoring/templates/browser.mjs": "1e130ab764e9ab9a3e84a91e32709dcdcb6cef25b0208872bdaa0179e202ce3e"
+  },
+  "generatedFingerprints": {
+    "Catalogue.tsx": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+    "README.md": "9398addc1e23c5c9de55728ef5abe729291c6615f109a7ca5e43531c168d392e",
+    "authoring-plan.json": "394808de8f77da4053097f1e71c282392963b34bba613386a0b891323f53c62f",
+    "browser.mjs": "ee1a2af32e8a543699e4ec453a9ebf6710ed51314b2d376768bb578e1115106d",
+    "data.ts": "a662641e71f67f289ff3c76accd541ade716a8194e38f26c0c6f63caa0c5de32",
+    "family.test.mjs": "f85e1e5917f4a0a1c33ed690900af558223081bf67823a9f78b8c186ab14468a",
+    "family.ts": "6b376d0c8b0fa3e0419342652a5660e747de60dd065a2c79dbae0ae394921ce6",
+    "mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "preview.html": "40762055bfaa4625fdc3eb83e71fb1fdfc28dadc9ebbb900173d298acab5cc9a",
+    "provenance.ts": "240c1540b822e376f29641bcadbba306d8e73162b536a3c7d4ee0e6a496b334d",
+    "registry.ts": "59d69e09dc665eab65daca0e95ecb9266a22f62a98aa90a266532f7c05e80538",
+    "tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c"
+  },
+  "preview": "http://127.0.0.1:5195/development/authoring/families/dev-s5-independent/preview.html",
+  "evidence": "validation/s4/authoring-release/refinement/dev-s5-independent"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T20:25:25.153Z",
+  "baseline": "validation/component-fidelity/f2/resume/audit-after.json",
+  "checked": 308,
+  "unchanged": 305,
+  "changed": [
+    {
+      "path": "src/ui/SourceQuestionPlayer.tsx",
+      "bytes": 29026,
+      "sha256": "cb3df1f69f892b6b45ad78f0f57023b717cbe33aaff5bd078d3555391d933634"
+    },
+    {
+      "path": "src/ui/SourceRubricReview.tsx",
+      "bytes": 7059,
+      "sha256": "8a405915bc4d3c6be34422db690ab76ff8177f0a56109cbeca50aacbb08ff87c"
+    },
+    {
+      "path": "src/ui/source-adapters.css",
+      "bytes": 12690,
+      "sha256": "2dd8e66655cc949c6e47230b445a05c42dcabc51f19039f6169648bbc41835ab"
+    }
+  ],
+  "removed": [],
+  "scope": "Only three authorized shared UI source files changed since accepted F2. Exact before snapshots match accepted F2 hashes. Engines/providers/identities/persistence/clock/foreign OLY inputs unchanged."
+}

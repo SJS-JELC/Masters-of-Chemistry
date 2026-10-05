@@ -1,0 +1,109 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-MOBILE-LIVE-REGION-HARNESS",
+  "status": "PASS",
+  "confidence": "high",
+  "verifiedAt": "2026-10-03T06:42:19.645Z",
+  "approval": "ONE exact source-backed mobile continuation using d019 proposal; behavior gates remain with A23/A21",
+  "approvedProposal": {
+    "path": "validation/s5/render-release/session-only-save-fix/mobile-live-region-proposal.mjs",
+    "sha256": "d0190eb5b0c044eebd8bc45ae0d22e31e771dd74a0a016233e3bd2bc320f9581"
+  },
+  "baseline": {
+    "path": "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/mobile-awaited-proposal.mjs",
+    "sha256": "1e46d79fc827cd238f52b0fe9192caa0ccd6c9886c5865c7a1c4fb601b4aca1a"
+  },
+  "checks": [
+    "Raw failures preserved; four empty cases PASS and two terminal alert-role timeouts retained",
+    "Both screenshots inspected: visible work-unsaved/full-storage error and Retry; no false completed UI",
+    "Exact two textual patch operations explain entire diff; all later durable/Next-disabled/focus-visible/Enter/immutable/reload assertions unchanged",
+    "Terminal selector targets actual QuestionPlayer error region and asserts aria-live=polite plus strong failed/quota wording",
+    "Paused branch retains getByRole(alert); wording accepts both source variants",
+    "Original awaited durable polling and 30000ms deadline byte-preserved",
+    "Current approved Host and QuestionPlayer plus served production files match fa9 freeze"
+  ],
+  "facts": [
+    {
+      "course": "alevel",
+      "error": "getByRole(alert) timeout",
+      "actualBodyText": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+      "priorDurableStatus": "active",
+      "rawLimit": "Failure capture contains before rows and body text only; it does not independently prove post-error durable equality or live announcement."
+    },
+    {
+      "course": "igcse",
+      "error": "getByRole(alert) timeout",
+      "actualBodyText": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+      "priorDurableStatus": "active",
+      "rawLimit": "Failure capture contains before rows and body text only; it does not independently prove post-error durable equality or live announcement."
+    }
+  ],
+  "controlsChecked": 262,
+  "freezeTree": "fa9b70c77954462612fb26a8d125d255f0af3456efff569d53a8ae3fa3dd3c52",
+  "hashes": {
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/mobile-awaited-proposal.mjs": {
+      "sha256": "1e46d79fc827cd238f52b0fe9192caa0ccd6c9886c5865c7a1c4fb601b4aca1a",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/mobile-awaited-proposal.mjs"
+    },
+    "validation/s5/render-release/session-only-save-fix/mobile-live-region-proposal.mjs": {
+      "sha256": "d0190eb5b0c044eebd8bc45ae0d22e31e771dd74a0a016233e3bd2bc320f9581",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/mobile-live-region-proposal.mjs"
+    },
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/mobile-results.json": {
+      "sha256": "02b1a697a1536751c694d06f7fcc075381ccedc919eb496474c1a9755ec91e16",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/mobile-results.json"
+    },
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/alevel-terminal-failure.json": {
+      "sha256": "f27a1f1aba6b9bfac325ba96c2c297dde9936c88a59b6741824e5ad2adce6438",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/alevel-terminal-failure.json"
+    },
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/igcse-terminal-failure.json": {
+      "sha256": "8ccc52b800fbc80c4f8f8069865666dd8015844b0fc161fbd54b57c557148711",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/igcse-terminal-failure.json"
+    },
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/alevel-terminal-failure.png": {
+      "sha256": "8f03cb4116d13a260cbfdb90b02e00c696de8afd51acb51c5b092e26f184f541",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/alevel-terminal-failure.png"
+    },
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/igcse-terminal-failure.png": {
+      "sha256": "191817fc9c1653dbc9223d8178cff3ff6b156626e0f7db28d3a09e52e6fdb140",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/igcse-terminal-failure.png"
+    },
+    "validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/disposition.json": {
+      "sha256": "939eadeccbb738aead7b5fb9c4627544c5de32d6c312304b09853396f1905195",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fa9-live-region-assumption/disposition.json"
+    },
+    "validation/s5/render-release/session-only-save-fix/fixtures.mjs": {
+      "sha256": "598bc7383f6f1e9b2730ec2779a6a471b281bffdd0163080fc43c68b30d63da1",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/fixtures.mjs"
+    },
+    "validation/s5/render-release/session-only-save-fix/server.mjs": {
+      "sha256": "bf187d5705117191f2940fd81559697352ab918311a8110f567686ac3bbe04b3",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/render-release/session-only-save-fix/server.mjs"
+    },
+    "src/ui/QuestionPlayer.tsx": {
+      "sha256": "6f05f9af0d883e294c8ce3dd712a324532705476a9a4e33b00f6998a76c1f31c",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/src/ui/QuestionPlayer.tsx"
+    },
+    "src/foundation/ActivityHost.tsx": {
+      "sha256": "bd69aee5a89e1bcdf61ed8f22b134654b18096910b92de7e37040c7a07391d9e",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/src/foundation/ActivityHost.tsx"
+    },
+    "validation/s5/integration/freeze-current.json": {
+      "sha256": "48b7db0e6c81b325d725d885dcd65ecf1cdbd1ccf74f93a907a6a7bc4f58fecf",
+      "retained": "validation/s5/review-session-only-save/mobile-fixture-review/retained/validation/s5/integration/freeze-current.json"
+    }
+  },
+  "limits": [
+    "No browser executed by reviewer; screenshot/body text plus source provide fixture-cause evidence",
+    "aria-live polite describes intended live-region semantics; no actual native screen-reader speech or AX live-announcement claim",
+    "Post-error durable equality, keyboard Retry, recovered completion and reload assertions in terminal continuation remain unexecuted",
+    "No product correctness acceptance inferred from harness approval"
+  ],
+  "requestedSettings": {
+    "model": "gpt-6.1-sol",
+    "effort": "high"
+  },
+  "effectiveSettings": null,
+  "actualUsage": null
+}

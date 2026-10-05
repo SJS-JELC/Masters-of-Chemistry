@@ -1,0 +1,2032 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\StatisticsView.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\statistics\\StatisticsView.tsx"
+index 3711e53..7163405 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\StatisticsView.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\statistics\\StatisticsView.tsx"	
+@@ -1,151 +1,257 @@
+-import { useCallback, useEffect, useMemo, useState } from 'react';
+-import type { CSSProperties } from 'react';
++import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+ import type { CourseDataViewProps } from '../contracts/integration.ts';
++import type { Course, Level } from '../contracts/identity.ts';
+ import type { CurriculumEvidence } from '../contracts/session.ts';
+ import { createChemistryRepository } from '../persistence/repository.ts';
++import { displayGems } from '../landing/catalogue.ts';
++import { validTiming } from '../domain/timing/active-clock.ts';
+ import {
+   buildStatistics,
++  countEvidence,
+   levelOf,
+   outcomeOf,
+-  type StatisticsModel,
++  type Counts,
++  type StatisticsDisplayGem,
+   type StatisticsOptions,
+ } from './model.ts';
+ import './statistics.css';
+ 
+-const outcomeLabels = { correct: 'Correct', partial: 'Partly correct', incorrect: 'Incorrect' };
++const outcomes = ['correct', 'partial', 'incorrect'] as const;
++const labels = { correct: 'Correct', partial: 'Partly correct', incorrect: 'Incorrect' };
++const symbols = { correct: '✓', partial: '◐', incorrect: '×' };
++const attemptWord = (count: number) => (count === 1 ? 'attempt' : 'attempts');
+ const date = (value: number) =>
+   new Date(value).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+-export function duration(value: number | null): string {
+-  if (value === null) return 'Not recorded';
+-  if (value < 1000) return `${Math.round(value)} ms`;
+-  const seconds = Math.floor(value / 1000),
+-    minutes = Math.floor(seconds / 60),
+-    hours = Math.floor(minutes / 60);
+-  return hours
+-    ? `${hours}h ${minutes % 60}m ${seconds % 60}s`
+-    : minutes
+-      ? `${minutes}m ${seconds % 60}s`
+-      : `${seconds}s`;
++const style = (values: Record<string, string | number>) => values as CSSProperties;
++export function duration(ms: number | null): string {
++  if (ms === null) return 'Time not recorded';
++  const seconds = Math.floor(ms / 1000),
++    minutes = Math.floor(seconds / 60);
++  if (seconds < 1) return '<1 s';
++  if (minutes >= 60) return `${Math.floor(minutes / 60)} h ${minutes % 60} min`;
++  return minutes ? `${minutes} min ${seconds % 60} s` : `${seconds} s`;
+ }
+-function HistoryRecord({
+-  record,
+-  model,
++const time = (ms: number) => (ms === 0 ? '0 s' : duration(ms));
++const levelLabel = (course: Course, level: Level) =>
++  course === 'alevel' ? `Level ${level}` : { 1: 'Grade 5–6', 2: 'Grade 7–8', 3: 'Grade 9' }[level];
++function OutcomeSummary({ counts }: { readonly counts: Counts }) {
++  return (
++    <div className="stats-topic-results">
++      <div className="stats-stack" aria-hidden="true">
++        {outcomes.map((outcome) => (
++          <span
++            key={outcome}
++            className={outcome}
++            style={{ width: `${counts.total ? (counts[outcome] / counts.total) * 100 : 0}%` }}
++          />
++        ))}
++      </div>
++      <p className="stats-outcome-text">
++        {counts.total
++          ? `${counts.correct} correct · ${counts.partial} partly correct · ${counts.incorrect} incorrect`
++          : 'No recorded responses in this period'}
++      </p>
++    </div>
++  );
++}
++function Legend() {
++  return (
++    <div className="stats-legend" aria-label="Answer outcomes">
++      {outcomes.map((outcome) => (
++        <span className={outcome} key={outcome}>
++          {symbols[outcome]} {labels[outcome]}
++        </span>
++      ))}
++    </div>
++  );
++}
++function Metric({
++  title,
++  value,
++  note,
++  testId,
++  activeMs,
+ }: {
+-  readonly record: CurriculumEvidence;
+-  readonly model: StatisticsModel;
++  readonly title: string;
++  readonly value: string | number;
++  readonly note: string;
++  readonly testId?: string;
++  readonly activeMs?: number;
+ }) {
+-  const row = model.rows.find(
+-    (item) =>
+-      item.gem.id === record.gemId || item.gem.mastery.historicalAliases.includes(record.gemId),
++  return (
++    <article className="stats-metric">
++      <h2>{title}</h2>
++      <p className="stats-number" data-testid={testId} data-active-ms={activeMs}>
++        {value}
++      </p>
++      <p>{note}</p>
++    </article>
+   );
+-  const assessment = record.firstAssessment;
++}
++function GemRow({
++  gem,
++  course,
++  limited,
++}: {
++  readonly gem: StatisticsDisplayGem;
++  readonly course: Course;
++  readonly limited: boolean;
++}) {
++  const [selected, setSelected] = useState<CurriculumEvidence | null>(null);
++  const row = gem.row,
++    recent = row?.records.slice(-20) ?? [];
++  const description = (record: CurriculumEvidence) => {
++    const code =
++      record.ref?.questionId ??
++      (record.provenance === 'legacy-import' ? record.sourceQuestionId : undefined) ??
++      'Not recorded';
++    const label =
++      row?.gem.mastery.supportedLevels.find((item) => item.level === levelOf(record))?.label ??
++      levelLabel(course, levelOf(record));
++    return `Question ${code} · ${label} · ${new Date(record.completedAt).toLocaleString('en-GB')} · ${labels[outcomeOf(record)]} · ${record.timing && validTiming(record.timing) ? duration(record.timing.activeMs) : 'Time not recorded'}`;
++  };
+   return (
+-    <details className="statistics-history-record" data-evidence-id={record.id}>
+-      <summary>
+-        <span className={`statistics-outcome ${outcomeOf(record)}`}>
+-          {outcomeLabels[outcomeOf(record)]}
+-        </span>
+-        <strong>{row?.gem.label ?? record.gemId}</strong>
+-        <span>
+-          Level {levelOf(record)} · {date(record.completedAt)}
+-        </span>
+-        <span>{record.timing ? duration(record.timing.activeMs) : 'Time not recorded'}</span>
+-      </summary>
+-      <dl>
+-        <dt>Question code</dt>
+-        <dd>
+-          <code>
+-            {record.ref?.questionId ??
+-              (record.provenance === 'legacy-import' ? record.sourceQuestionId : undefined) ??
+-              'Not recorded'}
+-          </code>
+-        </dd>
+-        <dt>Assessment</dt>
+-        <dd>
+-          {assessment?.kind === 'self-rubric'
+-            ? 'Student rubric review'
+-            : assessment?.kind === 'self-drawing'
+-              ? 'Student drawing review'
+-              : record.selfAssessed
+-                ? 'Student self-review'
+-                : assessment
+-                  ? 'Marked answer'
+-                  : 'Historical saved score'}
+-        </dd>
+-        <dt>Assistance</dt>
+-        <dd>
+-          {record.assisted === true
+-            ? 'Assisted historical assessment (saved score retained)'
+-            : record.assisted === false
+-              ? 'Unassisted first assessment'
+-              : 'Not recorded in historical data'}
+-        </dd>
+-        <dt>Raw marks</dt>
+-        <dd>
+-          {assessment
+-            ? `${assessment.marks.earned} / ${assessment.marks.available}`
+-            : 'Not recorded; the saved mastery score is not a raw mark'}
+-        </dd>
+-        <dt>Saved mastery score</dt>
+-        <dd>{record.score}</dd>
+-        <dt>Recorded active time</dt>
+-        <dd>
+-          {record.timing
+-            ? `${duration(record.timing.activeMs)} (${record.timing.activeMs} ms); idle allowance ${record.timing.idleLimitMs / 60000} min`
+-            : 'Not recorded; excluded from time totals and median'}
+-        </dd>
+-        <dt>Attempt ID</dt>
+-        <dd>
+-          <code>{record.id}</code>
+-        </dd>
+-      </dl>
+-      {assessment && (
+-        <table>
+-          <caption>First assessment mark points</caption>
+-          <thead>
+-            <tr>
+-              <th>Part / point</th>
+-              <th>Marks</th>
+-            </tr>
+-          </thead>
+-          <tbody>
+-            {assessment.marks.points.map((point) => (
+-              <tr key={`${point.partId}:${point.pointId}`}>
+-                <td>
+-                  {point.partId} / {point.pointId}
+-                </td>
+-                <td>
+-                  {point.earned} / {point.available}
+-                </td>
+-              </tr>
+-            ))}
+-          </tbody>
+-        </table>
+-      )}
+-      {record.firstResponse ? (
+-        <details>
+-          <summary>Saved first response</summary>
+-          <p>Frozen at first submission. Later corrections do not replace this response.</p>
+-          <pre>{JSON.stringify(record.firstResponse.responses, null, 2)}</pre>
+-        </details>
++    <section className="stats-gem" data-gem={gem.id}>
++      <h3>{gem.name}</h3>
++      {!row ? (
++        <p className="stats-outcome-text">Not available · no tracked assessment</p>
+       ) : (
+-        <p>First response details were not saved in this historical record.</p>
++        <>
++          <p className="stats-outcome-text">
++            {row.counts.total} recorded {attemptWord(row.counts.total)}
++            {row.records.length
++              ? ` · Last in period: ${date(row.records.at(-1)!.completedAt)}`
++              : ''}
++          </p>
++          <p className="stats-outcome-text">
++            {row.counts.timed
++              ? `Active practice time: ${duration(row.counts.activeMs)} · ${row.counts.timed} of ${row.counts.total} ${attemptWord(row.counts.total)} timed`
++              : 'Time not recorded'}
++          </p>
++          <div className="stats-levels">
++            {([1, 2, 3] as const).map((level) => {
++              const summary = row.levels.find((item) => item.level === level),
++                setting = row.gem.mastery.supportedLevels.find((item) => item.level === level);
++              const counts = countEvidence(
++                row.records.filter((record) => levelOf(record) === level),
++              );
++              return (
++                <div
++                  key={level}
++                  data-level={level}
++                  className={`stats-level${summary ? '' : ' unavailable'}`}
++                >
++                  <h4>{setting?.label ?? levelLabel(course, level)}</h4>
++                  {!summary ? (
++                    <p>Not available</p>
++                  ) : (
++                    <>
++                      <div
++                        role="meter"
++                        data-level={level}
++                        aria-label={`${gem.name}, ${setting!.label}, current mastery`}
++                        aria-valuemin={0}
++                        aria-valuemax={100}
++                        aria-valuenow={(summary.score ?? 0) * 100}
++                        aria-valuetext={
++                          summary.score === null
++                            ? 'Not assessed'
++                            : `${(summary.score * 100).toFixed(1)} percent; ${summary.mastered ? 'mastered' : 'in progress'}`
++                        }
++                        className={`stats-meter${summary.mastered ? ' mastered' : ''}`}
++                        style={style({
++                          '--score': `${(summary.score ?? 0) * 100}%`,
++                          '--threshold': `${row.gem.mastery.threshold * 100}%`,
++                        })}
++                      >
++                        <span />
++                        <i />
++                      </div>
++                      <p>
++                        {summary.score === null
++                          ? 'Not assessed'
++                          : `${(summary.score * 100).toFixed(1)}% · ${summary.mastered ? 'Mastered' : 'In progress'}`}
++                      </p>
++                      <div
++                        className="stats-level-counts"
++                        role="group"
++                        aria-label="Question outcomes in the selected period"
++                      >
++                        {outcomes.map((outcome) => (
++                          <span
++                            key={outcome}
++                            className={`stats-count-square ${outcome}`}
++                            role="img"
++                            aria-label={`${labels[outcome]}: ${counts[outcome]} questions in the selected period`}
++                          >
++                            <span className="stats-count-icon" aria-hidden="true">
++                              {symbols[outcome]}
++                            </span>
++                            <span className="stats-count-number" aria-hidden="true">
++                              {counts[outcome]}
++                            </span>
++                          </span>
++                        ))}
++                      </div>
++                    </>
++                  )}
++                </div>
++              );
++            })}
++          </div>
++          {recent.length > 0 && (
++            <>
++              <p className="stats-recent-note">
++                Latest {recent.length} results{limited ? ' in this period' : ''} · oldest → newest
++              </p>
++              <ol className="stats-recent" aria-label="Recent recorded results, oldest first">
++                {recent.map((record) => (
++                  <li key={record.id}>
++                    <button
++                      type="button"
++                      className={outcomeOf(record)}
++                      aria-label={description(record)}
++                      title={description(record)}
++                      onFocus={() => setSelected(record)}
++                      onClick={() => setSelected(record)}
++                    >
++                      {symbols[outcomeOf(record)]}
++                    </button>
++                  </li>
++                ))}
++              </ol>
++              <p className="stats-result-detail" role="status">
++                {selected && recent.some((record) => record.id === selected.id)
++                  ? description(selected)
++                  : 'Select a result for its question code, level and date.'}
++              </p>
++            </>
++          )}
++        </>
+       )}
+-    </details>
++    </section>
+   );
+ }
+-/** Content panel: its parent provides course navigation and the shared shell. */
+-export function StatisticsView({ course, namespace, databaseName, registry }: CourseDataViewProps) {
+-  const repository = useMemo(() => createChemistryRepository(databaseName), [databaseName]);
++
++/** Original statistics presentation; persistence and mastery remain in shared domains. */
++export function StatisticsView({
++  course,
++  namespace,
++  databaseName,
++  registry,
++  onBack,
++}: CourseDataViewProps & { readonly onBack?: () => void }) {
+   const [history, setHistory] = useState<readonly CurriculumEvidence[]>([]),
+     [error, setError] = useState<string | null>(null),
+     [loading, setLoading] = useState(true);
+-  const [days, setDays] = useState<StatisticsOptions['days']>(30),
+-    [gemId, setGemId] = useState(''),
+-    [limit, setLimit] = useState(20),
+-    [selectedDay, setSelectedDay] = useState<number | null>(null);
+-  const [snapshotAt, setSnapshotAt] = useState(Date.now());
++  const [days, setDays] = useState<StatisticsOptions['days']>(0),
++    [year, setYear] = useState<NonNullable<StatisticsOptions['year']>>('all'),
++    [selectedDay, setSelectedDay] = useState<number | null>(null),
++    [snapshotAt, setSnapshotAt] = useState(Date.now());
++  const [openTopics, setOpenTopics] = useState<ReadonlySet<string>>(new Set());
++  const readGeneration = useRef(0);
+   const refresh = useCallback(async () => {
++    const generation = ++readGeneration.current;
+     setLoading(true);
+     setError(null);
+     if (namespace.course !== course) {
+@@ -154,323 +260,417 @@ export function StatisticsView({ course, namespace, databaseName, registry }: Co
+       setLoading(false);
+       return;
+     }
++    const repository = createChemistryRepository(databaseName);
+     const result = await repository.curriculumHistory(namespace);
++    repository.close?.();
++    if (generation !== readGeneration.current) return;
+     if (result.ok) {
+       setHistory(result.value);
+       setSnapshotAt(Date.now());
+     } else {
+       setHistory([]);
+-      setError(result.error.message);
++      setError('Saved statistics could not be read.');
+     }
+     setLoading(false);
+-  }, [repository, course, namespace.course, namespace.profileId]);
++  }, [databaseName, course, namespace.course, namespace.profileId]);
+   useEffect(() => {
+-    let cancelled = false;
+-    setHistory([]);
+-    setLoading(true);
+-    setError(null);
+-    setGemId('');
+-    setSelectedDay(null);
+-    setLimit(20);
+-    void (async () => {
+-      if (namespace.course !== course) {
+-        if (!cancelled) {
+-          setError('Statistics course and profile do not match.');
+-          setLoading(false);
+-        }
+-        return;
+-      }
+-      const result = await repository.curriculumHistory(namespace);
+-      if (cancelled) return;
+-      if (result.ok) {
+-        setHistory(result.value);
+-        setSnapshotAt(Date.now());
+-      } else setError(result.error.message);
+-      setLoading(false);
+-    })();
++    void refresh();
++    const reread = () => void refresh();
++    window.addEventListener('focus', reread);
++    window.addEventListener('pageshow', reread);
+     return () => {
+-      cancelled = true;
++      readGeneration.current++;
++      window.removeEventListener('focus', reread);
++      window.removeEventListener('pageshow', reread);
+     };
+-  }, [repository, course, namespace.course, namespace.profileId]);
++  }, [refresh]);
++  useEffect(() => {
++    setDays(0);
++    setYear('all');
++    setSelectedDay(null);
++    setOpenTopics(new Set());
++  }, [course, namespace.profileId]);
+   const model = useMemo(
+     () =>
+       buildStatistics(namespace, registry, history, {
+         days,
+-        ...(gemId ? { gemId } : {}),
++        year,
++        catalogue: displayGems(course),
+         now: snapshotAt,
+       }),
+-    [namespace.course, namespace.profileId, registry, history, days, gemId, snapshotAt],
++    [namespace.course, namespace.profileId, registry, history, days, year, course, snapshotAt],
+   );
+-  const maximum = Math.max(60000, ...model.bins.map((bin) => bin.counts.activeMs));
++  const tick = Math.max(
++      60000,
++      Math.ceil(Math.max(0, ...model.bins.map((bin) => bin.counts.activeMs)) / 4 / 60000) * 60000,
++    ),
++    maximum = tick * 4;
++  const dayDetail = (bin: (typeof model.bins)[number]) =>
++    `${date(bin.start)}: ${time(bin.counts.activeMs)} recorded active time — ${time(bin.counts.timeByOutcome.correct)} correct, ${time(bin.counts.timeByOutcome.partial)} partly correct, ${time(bin.counts.timeByOutcome.incorrect)} incorrect. ${bin.counts.total - bin.counts.timed} ${attemptWord(bin.counts.total - bin.counts.timed)} without recorded time.`;
+   const selected = model.bins.find((bin) => bin.start === selectedDay);
+-  const records = [...model.current].reverse(),
+-    archive = [...model.historical].reverse();
++  const period =
++    days === 1
++      ? 'In the last 24 hours'
++      : days
++        ? `In the last ${days} days`
++        : 'Across all current practice';
++  const earlier = new Map<string, CurriculumEvidence[]>();
++  for (const record of model.historical) {
++    const key = `${record.gemId}:${levelOf(record)}:${(record.provenance === 'legacy-import' ? record.progressionVersion : undefined) ?? 1}`;
++    const group = earlier.get(key) ?? [];
++    group.push(record);
++    earlier.set(key, group);
++  }
+   return (
+-    <section className="statistics" aria-labelledby="statistics-heading">
+-      <header className="statistics-header">
+-        <div>
+-          <p className="eyebrow">
+-            {course === 'alevel' ? 'A Level' : 'IGCSE'} · {namespace.profileId}
+-          </p>
+-          <h2 id="statistics-heading">Your chemistry progress</h2>
+-          <p>First assessments and recorded active answering time.</p>
+-        </div>
+-        <button type="button" onClick={() => void refresh()} disabled={loading}>
+-          Refresh statistics
+-        </button>
+-      </header>
+-      {loading && <p role="status">Loading saved progress…</p>}
+-      {error && <p role="alert">{error} Try Refresh statistics when storage is available.</p>}
+-      {!loading && !error && (
+-        <>
+-          <div className="statistics-filters">
+-            <label>
+-              Period{' '}
+-              <select
+-                aria-label="Period"
+-                value={days}
+-                onChange={(event) => {
+-                  setDays(Number(event.target.value) as StatisticsOptions['days']);
+-                  setSelectedDay(null);
+-                  setLimit(20);
+-                }}
+-              >
+-                <option value="7">Last 7 days</option>
+-                <option value="30">Last 30 days</option>
+-                <option value="90">Last 90 days</option>
+-                <option value="0">All time</option>
+-              </select>
+-            </label>
+-            <label>
+-              Subtopic{' '}
+-              <select
+-                aria-label="Subtopic"
+-                value={gemId}
+-                onChange={(event) => {
+-                  setGemId(event.target.value);
+-                  setSelectedDay(null);
+-                  setLimit(20);
+-                }}
+-              >
+-                <option value="">All curriculum subtopics</option>
+-                {registry.curriculumFor(course).flatMap((activity) =>
+-                  activity.gems.map((gem) => (
+-                    <option key={gem.id} value={gem.id}>
+-                      {gem.label}
+-                    </option>
+-                  )),
+-                )}
+-              </select>
+-            </label>
++    <div className="statistics-screen">
++      <a className="skip-link" href="#statsTopics">
++        Skip to topic breakdown
++      </a>
++      <main className="statistics stats-shell">
++        <header className="stats-brand">
++          <button
++            type="button"
++            className="question-brand-mark"
++            aria-label="Back to course map"
++            onClick={onBack}
++            disabled={!onBack}
++          >
++            <img
++              src={`${import.meta.env.BASE_URL}assets/SJS-Eagle.svg`}
++              alt="St John's School eagle"
++            />
++          </button>
++          <div className="stats-brand-title">
++            <p className="eyebrow">
++              MASTERS OF {course === 'alevel' ? 'A LEVEL' : 'IGCSE'} CHEMISTRY
++            </p>
++            <h1>
++              Your <span>Stats</span>
++            </h1>
+           </div>
+-          <div className="statistics-metrics">
+-            <div>
+-              <strong data-testid="statistics-total">{model.counts.total}</strong>
+-              <span>First assessments in this period</span>
+-            </div>
+-            <div>
+-              <strong>
+-                {model.mastered} / {model.availableLevels}
+-              </strong>
+-              <span>Levels mastered · all time</span>
+-            </div>
+-            <div>
+-              <strong data-testid="statistics-time" data-active-ms={model.counts.activeMs}>
+-                {model.counts.timed ? duration(model.counts.activeMs) : 'Not recorded'}
+-              </strong>
+-              <span>
+-                {model.counts.timed} of {model.counts.total} assessments timed
+-              </span>
+-            </div>
+-            <div>
+-              <strong>{duration(model.counts.medianActiveMs)}</strong>
+-              <span>Median time · timed assessments only</span>
+-            </div>
++          <button
++            type="button"
++            className="question-back"
++            aria-label="Back to course map"
++            title="Back to course map"
++            onClick={onBack}
++            disabled={!onBack}
++          >
++            <span aria-hidden="true">←</span>
++          </button>
++        </header>
++        <div className="stats-intro">
++          <div>
++            <h2>See your progress.</h2>
++            <p>Explore your recorded results, one topic and gem at a time.</p>
+           </div>
+-          <div className="statistics-legend" aria-label="Assessment outcomes">
+-            {(['correct', 'partial', 'incorrect'] as const).map((outcome) => (
+-              <span key={outcome} className={`statistics-outcome ${outcome}`}>
+-                {outcomeLabels[outcome]}: {model.counts[outcome]}
+-              </span>
+-            ))}
++          <p className="stats-local">Stored in this browser</p>
++        </div>
++        {loading && (
++          <p className="stats-notice" role="status">
++            Loading saved statistics…
++          </p>
++        )}
++        {error && (
++          <div className="stats-notice" role="alert">
++            {error}{' '}
++            <button type="button" onClick={() => void refresh()}>
++              Retry
++            </button>
+           </div>
+-          {model.counts.total === 0 && (
+-            <p className="statistics-empty">
+-              No current-progression assessments in this period. Complete an unassisted question or
+-              choose a longer period.
+-            </p>
+-          )}
+-          <section aria-labelledby="statistics-time-heading">
+-            <h3 id="statistics-time-heading">Active answering time by day</h3>
+-            <p>
+-              Time stops at first submission. Untimed assessments are counted above but add no
+-              estimated duration. {model.counts.total - model.counts.timed} assessment
+-              {model.counts.total - model.counts.timed === 1 ? ' has' : 's have'} no recorded time.
+-            </p>
+-            <p className="statistics-chart-scale">
+-              Bar height: 0 to {duration(maximum)} · calendar days · scroll for the whole period
+-            </p>
+-            <div
+-              className="statistics-chart-scroll"
+-              tabIndex={0}
+-              aria-label="Daily recorded time chart; horizontally scrollable"
++        )}
++        {!loading && !error && (
++          <>
++            <form
++              className="stats-filters"
++              aria-label="Filter response statistics"
++              onSubmit={(event) => event.preventDefault()}
+             >
+-              <div
+-                className="statistics-chart"
+-                role="list"
+-                style={{ minWidth: `${Math.max(620, model.bins.length * 45)}px` }}
+-              >
+-                {model.bins.map((bin) => (
+-                  <div role="listitem" key={bin.start} className="statistics-day">
++              <label>
++                Course
++                <select
++                  aria-label="Course year"
++                  value={year}
++                  onChange={(event) => {
++                    setYear(event.target.value as typeof year);
++                    setSelectedDay(null);
++                  }}
++                >
++                  <option value="all">
++                    {course === 'alevel' ? 'All years' : 'All year groups'}
++                  </option>
++                  {(course === 'alevel'
++                    ? [
++                        ['l6', 'Lower Sixth'],
++                        ['u6', 'Upper Sixth'],
++                      ]
++                    : [
++                        ['fourth', 'Fourth Form'],
++                        ['lower', 'Lower Fifth'],
++                        ['upper', 'Upper Fifth'],
++                      ]
++                  ).map(([value, label]) => (
++                    <option key={value} value={value}>
++                      {label}
++                    </option>
++                  ))}
++                </select>
++              </label>
++              <fieldset className="stats-period">
++                <legend>Responses from</legend>
++                <div>
++                  {(
++                    [
++                      [0, 'All time'],
++                      [1, 'Day'],
++                      [7, 'Week'],
++                      [30, 'Month'],
++                    ] as const
++                  ).map(([value, label]) => (
+                     <button
+                       type="button"
+-                      aria-pressed={selectedDay === bin.start}
+-                      aria-label={`${date(bin.start)}: ${duration(bin.counts.activeMs)} recorded active time; ${bin.counts.total} assessments, ${bin.counts.total - bin.counts.timed} untimed. Correct ${duration(bin.counts.timeByOutcome.correct)}, partly correct ${duration(bin.counts.timeByOutcome.partial)}, incorrect ${duration(bin.counts.timeByOutcome.incorrect)}`}
+-                      onClick={() => setSelectedDay(bin.start)}
+-                      data-active-ms={bin.counts.activeMs}
++                      key={value}
++                      aria-pressed={days === value}
++                      onClick={() => {
++                        setDays(value);
++                        setSelectedDay(null);
++                      }}
+                     >
+-                      <span
+-                        className="statistics-bar"
+-                        style={{ height: `${(bin.counts.activeMs / maximum) * 160}px` }}
+-                      >
+-                        {(['incorrect', 'partial', 'correct'] as const).map((outcome) => (
+-                          <span
+-                            key={outcome}
+-                            className={outcome}
+-                            style={{
+-                              height: bin.counts.activeMs
+-                                ? `${(bin.counts.timeByOutcome[outcome] / bin.counts.activeMs) * 100}%`
+-                                : '0',
+-                            }}
+-                          />
+-                        ))}
+-                      </span>
+-                      <span className="statistics-day-label">
+-                        {new Date(bin.start).getDate()}{' '}
+-                        {new Date(bin.start).toLocaleDateString('en-GB', { month: 'short' })}
+-                      </span>
++                      {label}
+                     </button>
+-                  </div>
+-                ))}
+-              </div>
+-            </div>
+-            <p role="status" className="statistics-day-detail">
+-              {selected
+-                ? `${date(selected.start)}: ${selected.counts.total} assessments; ${duration(selected.counts.activeMs)} recorded time; ${selected.counts.total - selected.counts.timed} untimed.`
+-                : 'Select a day to see its totals. Each bar also has a full text description.'}
++                  ))}
++                </div>
++              </fieldset>
++            </form>
++            <section className="stats-overview" aria-label="Your overview">
++              <Metric
++                title="Recorded attempts"
++                value={model.counts.total}
++                note={period}
++                testId="statistics-total"
++              />
++              <Metric
++                title="Fully correct"
++                value={
++                  model.counts.total
++                    ? `${Math.round((model.counts.correct / model.counts.total) * 100)}%`
++                    : '—'
++                }
++                note={`${model.counts.correct} of ${model.counts.total} recorded ${attemptWord(model.counts.total)}`}
++              />
++              <Metric
++                title="Gems practised"
++                value={model.practised}
++                note={`Of ${model.availableGems} supported gems · selected period`}
++              />
++              <Metric
++                title="Levels mastered"
++                value={`${model.mastered} / ${model.availableLevels}`}
++                note="Current mastery · all current-progression attempts"
++              />
++              <Metric
++                title="Active practice time"
++                value={model.counts.timed ? duration(model.counts.activeMs) : '—'}
++                note={`${model.counts.timed} of ${model.counts.total} ${attemptWord(model.counts.total)} timed · selected period`}
++                testId="statistics-time"
++                activeMs={model.counts.activeMs}
++              />
++            </section>
++            <p className="stats-explanation">
++              Response accuracy counts fully correct recorded attempts. Current mastery uses all
++              current-progression attempts, weighted towards recent results; the white marker shows
++              the mastery threshold.
+             </p>
+-          </section>
+-          <section aria-labelledby="statistics-mastery-heading">
+-            <h3 id="statistics-mastery-heading">Mastery by subtopic</h3>
+-            <p>
+-              Mastery uses all saved current-progression evidence, regardless of the period above.
+-              Scores start from zero and weight recent questions more strongly; each level uses its
+-              original half-life. The score must be strictly above the shown threshold.
+-            </p>
+-            <div className="statistics-subtopics">
+-              {model.rows.map((row) => (
+-                <article className="statistics-gem" key={row.gem.id}>
+-                  <h4>{row.gem.label}</h4>
+-                  <p>
+-                    {row.activity.title} · {row.counts.total} assessments in this period ·{' '}
+-                    {row.counts.timed ? duration(row.counts.activeMs) : 'Time not recorded'}
+-                  </p>
+-                  <div className="statistics-levels">
+-                    {row.levels.map((summary) => {
+-                      const setting = row.gem.mastery.supportedLevels.find(
+-                        (band) => band.level === summary.level,
+-                      )!;
+-                      return (
+-                        <div key={summary.level} className="statistics-level">
+-                          <strong>{setting.label}</strong>
+-                          <div
+-                            role="meter"
+-                            aria-label={`${row.gem.label}, ${setting.label}, mastery`}
+-                            aria-valuemin={0}
+-                            aria-valuemax={100}
+-                            aria-valuenow={(summary.score ?? 0) * 100}
+-                            aria-valuetext={
+-                              summary.score === null
+-                                ? 'Not assessed'
+-                                : `${(summary.score * 100).toFixed(1)} percent; ${summary.mastered ? 'mastered' : 'threshold not exceeded'}`
+-                            }
+-                            className={`statistics-meter${summary.mastered ? ' mastered' : ''}`}
+-                            style={
+-                              {
+-                                '--statistics-score': `${(summary.score ?? 0) * 100}%`,
+-                                '--statistics-threshold': `${row.gem.mastery.threshold * 100}%`,
+-                              } as CSSProperties
+-                            }
++            <section className="stats-chart-card" aria-labelledby="statsChartHeading">
++              <div className="stats-section-heading">
++                <div>
++                  <p className="eyebrow">YOUR PRACTICE OVER TIME</p>
++                  <h2 id="statsChartHeading">Daily practice time</h2>
++                </div>
++                <p>
++                  {model.counts.timed ? duration(model.counts.activeMs) : 'No time recorded'} ·{' '}
++                  {model.counts.timed} of {model.counts.total} {attemptWord(model.counts.total)}{' '}
++                  timed
++                </p>
++              </div>
++              <p className="stats-outcome-text">
++                {days
++                  ? `${days === 1 ? 'Last 24 hours' : `Last ${days} days`} · daily totals (edge days may be partial)`
++                  : 'All time · daily totals'}
++              </p>
++              <Legend />
++              {!model.counts.timed && (
++                <p className="stats-outcome-text">
++                  No recorded timing data in this period. Attempts without timing data are not
++                  included in the bars.
++                </p>
++              )}
++              <div className="stats-chart-layout">
++                <div className="stats-chart-axis" aria-hidden="true">
++                  {[4, 3, 2, 1, 0].map((value) => (
++                    <span key={value} style={{ bottom: `${value * 45 + 30}px` }}>
++                      {value ? duration(value * tick) : '0 min'}
++                    </span>
++                  ))}
++                </div>
++                <div
++                  className="stats-chart-scroll"
++                  tabIndex={0}
++                  role="region"
++                  aria-label="Daily active practice time by answer outcome; scroll horizontally to explore all days"
++                >
++                  <div
++                    className={`stats-chart-bars${days === 30 ? ' stats-chart-month' : ''}`}
++                    style={style({ '--chart-columns': model.bins.length })}
++                  >
++                    {model.bins.map((bin) => (
++                      <div className="stats-chart-column" key={bin.start}>
++                        <button
++                          type="button"
++                          className="stats-chart-bar"
++                          data-active-ms={bin.counts.activeMs}
++                          aria-label={dayDetail(bin)}
++                          title={dayDetail(bin)}
++                          aria-pressed={selectedDay === bin.start}
++                          onClick={() => setSelectedDay(bin.start)}
++                          onFocus={() => setSelectedDay(bin.start)}
++                          onPointerEnter={() => setSelectedDay(bin.start)}
++                        >
++                          {days !== 30 && (
++                            <span
++                              className="stats-chart-value"
++                              aria-hidden="true"
++                              style={{ bottom: `${(bin.counts.activeMs / maximum) * 180 + 4}px` }}
++                            >
++                              {bin.counts.activeMs ? duration(bin.counts.activeMs) : ''}
++                            </span>
++                          )}
++                          <span
++                            className="stats-chart-stack"
++                            aria-hidden="true"
++                            style={{ height: `${(bin.counts.activeMs / maximum) * 180}px` }}
+                           >
+-                            <span />
+-                            <i />
+-                          </div>
+-                          <span>
+-                            {summary.score === null
+-                              ? 'Not assessed'
+-                              : `${(summary.score * 100).toFixed(1)}% · ${summary.mastered ? 'Mastered' : 'In progress'}`}
++                            {outcomes.map((outcome) => (
++                              <span
++                                key={outcome}
++                                className={outcome}
++                                style={{
++                                  height: `${bin.counts.activeMs ? (bin.counts.timeByOutcome[outcome] / bin.counts.activeMs) * 100 : 0}%`,
++                                }}
++                              />
++                            ))}
+                           </span>
+-                          <small>
+-                            {summary.count} all-time assessments · threshold &gt;
+-                            {row.gem.mastery.threshold * 100}% · half-life {setting.halfLife}{' '}
+-                            questions
+-                          </small>
+-                        </div>
+-                      );
+-                    })}
++                        </button>
++                        <span className="stats-chart-label">
++                          {days === 30
++                            ? `${new Date(bin.start).getDate()}/${new Date(bin.start).getMonth() + 1}`
++                            : new Date(bin.start).toLocaleDateString('en-GB', {
++                                day: 'numeric',
++                                month: 'short',
++                              })}
++                        </span>
++                      </div>
++                    ))}
+                   </div>
+-                </article>
+-              ))}
+-            </div>
+-          </section>
+-          <section aria-labelledby="statistics-history-heading">
+-            <h3 id="statistics-history-heading">Question history</h3>
+-            <p>
+-              Most recent first assessments. Open a row for the saved raw marks and first response
+-              when available.
+-            </p>
+-            {records.slice(0, limit).map((record) => (
+-              <HistoryRecord key={record.id} record={record} model={model} />
+-            ))}
+-            {records.length > limit && (
+-              <button type="button" onClick={() => setLimit((value) => value + 20)}>
+-                Show 20 more assessments
+-              </button>
+-            )}
+-            {model.counts.assisted > 0 && (
+-              <p>
+-                {model.counts.assisted} imported assessment
+-                {model.counts.assisted === 1 ? ' was' : 's were'} marked assisted in the original
+-                app. Their saved scores remain unchanged.
++                </div>
++              </div>
++              <p className="stats-chart-detail" role="status">
++                {selected ? dayDetail(selected) : 'Select a bar for the full breakdown.'}
+               </p>
+-            )}
+-          </section>
+-          {archive.length > 0 && (
+-            <details className="statistics-archive">
+-              <summary>Historical progression · {archive.length} assessments</summary>
+-              <p>
+-                Retained for inspection. These records belong to an old progression or unsupported
+-                level and do not seed current mastery or the chart above.
++              <p className="stats-outcome-text">
++                Each bar shows recorded active time, coloured by answer outcome. Untimed attempts
++                add no time. Time follows the answer’s completion date in this device’s local time.
+               </p>
+-              {archive.slice(0, limit).map((record) => (
+-                <HistoryRecord key={record.id} record={record} model={model} />
+-              ))}
+-              {archive.length > limit && (
+-                <button type="button" onClick={() => setLimit((value) => value + 20)}>
+-                  Show more historical assessments
+-                </button>
++            </section>
++            <section id="statsTopics" tabIndex={-1} aria-labelledby="statsTopicsHeading">
++              <div className="stats-section-heading">
++                <div>
++                  <p className="eyebrow">FROM TOPIC TO GEM</p>
++                  <h2 id="statsTopicsHeading">Your topic breakdown</h2>
++                </div>
++                <p>Open a topic to explore its gems ↓</p>
++              </div>
++              <Legend />
++              {!model.counts.total && (
++                <p className="stats-empty">
++                  {days
++                    ? 'No recorded responses in this period. Try All time or practise a supported gem.'
++                    : 'Your stats start with your first recorded attempt. Practise a supported gem, then return here to see your progress.'}
++                </p>
+               )}
++              {model.topics.map((topic) => (
++                <details
++                  key={topic.id}
++                  className="stats-topic"
++                  data-topic={topic.id}
++                  open={openTopics.has(topic.id)}
++                  onToggle={(event) => {
++                    const open = event.currentTarget.open;
++                    setOpenTopics((previous) => {
++                      if (previous.has(topic.id) === open) return previous;
++                      const next = new Set(previous);
++                      if (open) next.add(topic.id);
++                      else next.delete(topic.id);
++                      return next;
++                    });
++                  }}
++                >
++                  <summary>
++                    <div>
++                      <span className="stats-topic-meta">{topic.group}</span>
++                      <strong className="stats-topic-name">{topic.name}</strong>
++                      <span className="stats-topic-meta">
++                        {topic.counts.total} {attemptWord(topic.counts.total)}
++                      </span>
++                    </div>
++                    <OutcomeSummary counts={topic.counts} />
++                  </summary>
++                  <div className="stats-gems">
++                    {topic.gems.map((gem) => (
++                      <GemRow key={gem.id} gem={gem} course={course} limited={!!days} />
++                    ))}
++                  </div>
++                </details>
++              ))}
++            </section>
++            <details className="stats-history">
++              <summary>
++                Earlier practice history ({model.historical.length}{' '}
++                {attemptWord(model.historical.length)})
++              </summary>
++              <p>
++                Previous progression versions and retired levels. These results are excluded from
++                the overview and current mastery. Course and date filters also apply here.
++              </p>
++              {[...earlier.values()].map((records) => {
++                const first = records[0]!;
++                const gem =
++                  displayGems(course).find((item) => item.id === first.gemId) ??
++                  model.rows.find((row) => row.gem.mastery.historicalAliases.includes(first.gemId));
++                const name = gem && ('name' in gem ? gem.name : gem.gem.label);
++                return (
++                  <div
++                    className="stats-history-row"
++                    key={`${first.gemId}:${levelOf(first)}:${(first.provenance === 'legacy-import' ? first.progressionVersion : undefined) ?? 1}`}
++                  >
++                    <strong>
++                      {name ?? 'Earlier gem'} · {levelLabel(course, levelOf(first))} · earlier
++                      progression
++                    </strong>
++                    <OutcomeSummary counts={countEvidence(records)} />
++                  </div>
++                );
++              })}
++              {!earlier.size && <p>No earlier practice history in this selection.</p>}
+             </details>
+-          )}
+-          <p className="statistics-note">
+-            Extra hints and reveals before assessment create no new independent curriculum record.
+-            Corrections and worked answers after assessment keep the first score and time. Built-in
+-            level scaffolds remain valid independent practice. Olympiad challenges are outside
+-            curriculum statistics.
+-          </p>
+-        </>
+-      )}
+-    </section>
++            <footer className="stats-footer">
++              Includes recorded standalone practice and revision. Olympiad challenges are excluded.
++              Full written answers are not shown in this history.
++            </footer>
++          </>
++        )}
++      </main>
++    </div>
+   );
+ }
+ export default StatisticsView;
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\model.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\statistics\\model.ts"
+index faaad7e..eb0298d 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\model.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\statistics\\model.ts"	
+@@ -7,6 +7,7 @@ import type {
+ import type { CurriculumEvidence, MasterySummary } from '../contracts/session.ts';
+ import { createCourseMastery } from '../domain/mastery/index.ts';
+ import { validTiming } from '../domain/timing/active-clock.ts';
++import type { DisplayGem } from '../landing/catalogue.ts';
+ 
+ export type Outcome = 'correct' | 'partial' | 'incorrect';
+ export const outcomeOf = (record: CurriculumEvidence): Outcome =>
+@@ -69,10 +70,22 @@ export interface DayBin {
+   readonly counts: Counts;
+ }
+ export interface StatisticsOptions {
+-  readonly days: 0 | 7 | 30 | 90;
++  readonly days: 0 | 1 | 7 | 30 | 90;
++  readonly year?: 'all' | 'l6' | 'u6' | 'fourth' | 'lower' | 'upper';
++  readonly catalogue?: readonly DisplayGem[];
+   readonly gemId?: string;
+   readonly now?: number;
+ }
++export interface StatisticsDisplayGem extends DisplayGem {
++  readonly row?: StatisticsRow;
++}
++export interface StatisticsTopic {
++  readonly id: string;
++  readonly name: string;
++  readonly group: string;
++  readonly gems: readonly StatisticsDisplayGem[];
++  readonly counts: Counts;
++}
+ export interface StatisticsModel {
+   readonly records: readonly CurriculumEvidence[];
+   readonly current: readonly CurriculumEvidence[];
+@@ -83,6 +96,9 @@ export interface StatisticsModel {
+   readonly excluded: number;
+   readonly mastered: number;
+   readonly availableLevels: number;
++  readonly availableGems: number;
++  readonly practised: number;
++  readonly topics: readonly StatisticsTopic[];
+ }
+ /** Presentation aggregation only. The shared course domain alone calculates mastery. */
+ export function buildStatistics(
+@@ -110,7 +126,8 @@ export function buildStatistics(
+         ![1, 2, 3].includes(levelOf(record)) ||
+         (record.activityId as string | undefined) === 'alevel/c3l6-organic-reactions' ||
+         !record.gemId ||
+-        /c3l6|rocket/i.test(record.gemId)
++        /c3l6|rocket|olympiad/i.test(record.gemId) ||
++        /^alevel\/(?:c3l6|olympiad)/i.test(record.activityId ?? '')
+       )
+         return false;
+       if (
+@@ -137,16 +154,30 @@ export function buildStatistics(
+     return record.provenance === 'new-attempt' || (record.progressionVersion ?? 1) === version;
+   };
+   const cutoff = options.days ? now - options.days * 86400000 : 0;
++  const inYear = (gemId: string) =>
++    !options.year || options.year === 'all' || gemId.startsWith(options.year + '-');
++  const displayed = options.catalogue ? new Set(options.catalogue.map((gem) => gem.id)) : null;
+   const visible = (record: CurriculumEvidence) =>
+     record.completedAt >= cutoff &&
++    inYear(definitionFor(record)?.gem.id ?? record.gemId) &&
+     (!options.gemId ||
+       definitionFor(record)?.gem.id === options.gemId ||
+       record.gemId === options.gemId);
+-  const current = records.filter((record) => isCurrent(record) && visible(record));
++  const current = records.filter(
++    (record) =>
++      isCurrent(record) &&
++      visible(record) &&
++      (!displayed || displayed.has(definitionFor(record)!.gem.id)),
++  );
+   const historical = records.filter((record) => !isCurrent(record) && visible(record));
+   const mastery = createCourseMastery(namespace.course, () => now);
+   const rows = definitions
+-    .filter(({ gem }) => !options.gemId || gem.id === options.gemId)
++    .filter(
++      ({ gem }) =>
++        inYear(gem.id) &&
++        (!displayed || displayed.has(gem.id)) &&
++        (!options.gemId || gem.id === options.gemId),
++    )
+     .map(({ activity, gem }): StatisticsRow => {
+       const matching = current.filter((record) => definitionFor(record)?.gem.id === gem.id);
+       return {
+@@ -157,6 +188,36 @@ export function buildStatistics(
+         levels: gem.supportedLevels.map((level) => mastery.summarize(records, gem.mastery, level)),
+       };
+     });
++  const topics: StatisticsTopic[] = [];
++  for (const gem of options.catalogue ?? []) {
++    if (!inYear(gem.id)) continue;
++    const id = `${gem.group.key}-${gem.topicNumber}`;
++    let topic = topics.find((item) => item.id === id);
++    if (!topic) {
++      topic = {
++        id,
++        name: gem.topicName,
++        group: gem.group.name,
++        gems: [],
++        counts: countEvidence([]),
++      };
++      topics.push(topic);
++    }
++    const row = rows.find((item) => item.gem.id === gem.id);
++    (topic.gems as StatisticsDisplayGem[]).push({ ...gem, ...(row ? { row } : {}) });
++  }
++  for (let index = topics.length - 1; index >= 0; index--) {
++    const topic = topics[index]!;
++    // Match the original: display unavailable peers inside supported topics.
++    if (!topic.gems.some((gem) => gem.row)) {
++      topics.splice(index, 1);
++      continue;
++    }
++    topics[index] = {
++      ...topic,
++      counts: countEvidence(topic.gems.flatMap((gem) => gem.row?.records ?? [])),
++    };
++  }
+   const midnight = (value: number) => {
+     const date = new Date(value);
+     date.setHours(0, 0, 0, 0);
+@@ -193,5 +254,8 @@ export function buildStatistics(
+       0,
+     ),
+     availableLevels: rows.reduce((count, row) => count + row.levels.length, 0),
++    availableGems: rows.length,
++    practised: rows.filter((row) => row.counts.total > 0).length,
++    topics,
+   };
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\statistics.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\statistics\\statistics.css"
+index 6a46bf4..a38fb6f 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\statistics.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\statistics\\statistics.css"	
+@@ -1,12 +1,741 @@
+-.statistics{max-width:1180px;margin:auto;padding:clamp(1rem,3vw,2rem);color:#eef0ff}
+-.statistics *{box-sizing:border-box}.statistics h2,.statistics h3,.statistics h4{line-height:1.35}.statistics h3{margin-top:2rem}.statistics p{line-height:1.6}.statistics-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}.statistics-header h2{margin:.3rem 0}.statistics-header p{margin:.3rem 0}.statistics button,.statistics select{font:inherit;min-height:44px;border:1px solid #9db2b1;border-radius:.6rem;background:white;color:#163433;padding:.6rem .8rem}.statistics button{cursor:pointer}.statistics button:focus-visible,.statistics select:focus-visible,.statistics summary:focus-visible,.statistics-chart-scroll:focus-visible{outline:3px solid #296ca3;outline-offset:3px}.statistics-filters{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}.statistics-filters label{display:grid;gap:.35rem;max-width:100%}.statistics-filters select{max-width:100%}.statistics-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}.statistics-metrics>div{display:grid;gap:.5rem;border:1px solid #d2dedc;background:#f5faf8;padding:1rem;border-radius:.8rem}.statistics-metrics strong{font-size:1.6rem}.statistics-metrics span{font-size:.85rem;line-height:1.45}.statistics-legend{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}.statistics-outcome{display:inline-block;border-radius:.35rem;padding:.25rem .45rem;font-size:.85rem;font-weight:bold}.statistics-outcome.correct{background:#e1f2e9;color:#175d3d}.statistics-outcome.partial{background:#fff0cd;color:#725007}.statistics-outcome.incorrect{background:#fde6e6;color:#863134}.statistics-empty,.statistics-note{padding:1rem;background:#eef4f4;border-radius:.6rem}.statistics-chart-scale{font-size:.85rem}.statistics-chart-scroll{overflow-x:auto;border:1px solid #d2dedc;border-radius:.8rem;padding:.5rem .7rem}.statistics-chart{display:flex;gap:4px;height:205px;align-items:flex-end;background:repeating-linear-gradient(to top,transparent 0,transparent 39px,#e6ecea 40px)}.statistics-day{flex:1;min-width:38px}.statistics-day button{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;width:100%;height:198px;padding:0 3px;border:0;background:transparent;border-radius:.15rem}.statistics-day button:hover,.statistics-day button[aria-pressed=true]{background:#e4eef2}.statistics-bar{display:flex;flex-direction:column-reverse;min-width:16px;min-height:0;border-radius:.2rem .2rem 0 0;overflow:hidden}.statistics-bar .correct{background:#27774d}.statistics-bar .partial{background:#d5a234}.statistics-bar .incorrect{background:#bb4c51}.statistics-day-label{font-size:.67rem;line-height:1.3;height:30px;padding-top:5px;white-space:nowrap}.statistics-day-detail{min-height:2.2rem;font-size:.85rem}.statistics-subtopics{display:grid;gap:1rem}.statistics-gem{border:1px solid #d2dedc;border-radius:.8rem;padding:1rem}.statistics-gem h4{margin:0}.statistics-gem>p{font-size:.85rem}.statistics-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.statistics-level{display:grid;align-content:start;gap:.45rem}.statistics-level strong,.statistics-level>span{font-size:.9rem}.statistics-level small{line-height:1.5}.statistics-meter{position:relative;height:18px;border-radius:4px;background:#e2e9e7;overflow:hidden}.statistics-meter>span{display:block;height:100%;width:var(--statistics-score);background:#608f91}.statistics-meter.mastered>span{background:#27774d}.statistics-meter>i{position:absolute;top:0;bottom:0;left:var(--statistics-threshold);border-left:2px solid #243938}.statistics-history-record{border-bottom:1px solid #d2dedc;padding:.8rem 0}.statistics summary{cursor:pointer;min-height:44px;line-height:1.7;overflow-wrap:anywhere}.statistics-history-record>summary>span,.statistics-history-record>summary>strong{margin-right:.8rem}.statistics-history-record dl{display:grid;grid-template-columns:180px minmax(0,1fr);gap:.55rem;margin:1rem 0}.statistics-history-record dt{font-weight:bold}.statistics-history-record dd{margin:0;overflow-wrap:anywhere}.statistics code{white-space:normal;overflow-wrap:anywhere}.statistics pre{max-width:100%;overflow:auto;background:#f5f7f6;padding:.7rem;font-size:.8rem}.statistics table{width:100%;border-collapse:collapse}.statistics th,.statistics td{text-align:left;padding:.5rem;border-bottom:1px solid #d2dedc;overflow-wrap:anywhere}.statistics caption{text-align:left;font-weight:bold;padding:.5rem}.statistics-archive{margin-top:1.5rem;padding:1rem;border:1px solid #d2dedc;border-radius:.8rem}.statistics-note{font-size:.85rem;margin-top:1.5rem}
+-@media(max-width:700px){.statistics-header{align-items:flex-start;flex-direction:column}.statistics-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.statistics-levels{grid-template-columns:1fr}.statistics-history-record>summary{display:grid;gap:.2rem}.statistics-history-record>summary>span,.statistics-history-record>summary>strong{margin:0}.statistics-history-record dl{grid-template-columns:1fr;gap:.3rem}.statistics-history-record dd{margin-bottom:.5rem}.statistics-filters{display:grid;grid-template-columns:1fr}.statistics-filters select{width:100%}.statistics-metrics strong{font-size:1.35rem}}
+-.statistics button,.statistics select{background:var(--surface-raised,#1a233d);color:#eef0ff;border-color:var(--border,#46516f)}
+-.statistics-metrics>div,.statistics-gem,.statistics-archive{background:var(--surface,#11172d);border-color:var(--border,#46516f)}
+-.statistics-empty,.statistics-note,.statistics pre{background:var(--surface-raised,#1a233d)}
+-.statistics-outcome.correct{background:#143a33;color:#a2f8d0}.statistics-outcome.partial{background:#3b321a;color:#ffe196}.statistics-outcome.incorrect{background:#43242d;color:#ffbac2}
+-.statistics-chart-scroll,.statistics-history-record,.statistics th,.statistics td{border-color:var(--border,#46516f)}
+-.statistics-chart{background:repeating-linear-gradient(to top,transparent 0,transparent 39px,#323c56 40px)}
+-.statistics-day button{background:transparent}.statistics-day button:hover,.statistics-day button[aria-pressed=true]{background:#253454}
+-.statistics-bar .correct,.statistics-meter.mastered>span{background:#54c994}.statistics-bar .partial{background:#e3bb51}.statistics-bar .incorrect{background:#df7481}
+-.statistics-meter{background:#303e5d}.statistics-meter>span{background:#58b7c3}.statistics-meter>i{border-color:#eef0ff}
++/* Adapted from original alevel-stats.css; all selectors scoped to this view. */
++.statistics .stats-shell {
++  max-width: 1180px;
++  padding-bottom: 48px;
++}
++.statistics .stats-brand {
++  margin-bottom: 38px;
++}
++.statistics .stats-brand .site-back-link {
++  flex-shrink: 0;
++}
++.statistics .stats-intro {
++  display: flex;
++  justify-content: space-between;
++  gap: 20px;
++  align-items: center;
++  margin-bottom: 24px;
++}
++.statistics .stats-intro h2 {
++  font-size: clamp(1.65rem, 4vw, 2.4rem);
++  margin: 0 0 8px;
++}
++.statistics .stats-intro p {
++  margin: 0;
++  color: var(--muted);
++}
++.statistics .stats-local {
++  font-size: 0.7rem;
++  border: 1px solid #3e5261;
++  border-radius: 30px;
++  padding: 8px 14px;
++  white-space: nowrap;
++}
++.statistics .stats-filters {
++  display: flex;
++  gap: 16px;
++  padding: 18px 0 24px;
++}
++.statistics .stats-filters label {
++  display: grid;
++  gap: 7px;
++  color: var(--muted);
++  font-size: 0.72rem;
++  min-width: 190px;
++}
++.statistics .stats-filters select {
++  font:
++    700 0.85rem Comfortaa,
++    sans-serif;
++  color: var(--ink);
++  background: #151c35;
++  border: 1px solid #495776;
++  border-radius: 10px;
++  padding: 12px;
++  min-height: 46px;
++}
++.statistics .stats-filters select:focus-visible {
++  outline: 3px solid #ffde59;
++  outline-offset: 3px;
++}
++.statistics .stats-period {
++  border: 0;
++  padding: 0;
++  margin: 0;
++  min-width: 0;
++}
++.statistics .stats-period legend {
++  font-size: 0.72rem;
++  color: var(--muted);
++  padding: 0;
++  margin-bottom: 7px;
++}
++.statistics .stats-period > div {
++  display: flex;
++  gap: 5px;
++  border: 1px solid #495776;
++  border-radius: 11px;
++  padding: 4px;
++  background: #11182d;
++}
++.statistics .stats-period button {
++  border: 0;
++  border-radius: 7px;
++  background: transparent;
++  color: var(--muted);
++  padding: 8px 16px;
++  min-height: 36px;
++  font-size: 0.8rem;
++}
++.statistics .stats-period button[aria-pressed='true'] {
++  background: #81e6df;
++  color: #10172a;
++}
++.statistics .stats-period button:hover {
++  box-shadow: inset 0 0 0 1px #81e6df;
++}
++.statistics .stats-chart-card {
++  border: 1px solid #40516e;
++  border-radius: 18px;
++  background: #10172aeb;
++  padding: 24px;
++  margin: 0 0 32px;
++}
++.statistics .stats-chart-card .stats-section-heading {
++  margin-bottom: 8px;
++}
++.statistics .stats-chart-card .stats-legend {
++  margin: 16px 0 4px;
++}
++.statistics .stats-chart-layout {
++  display: flex;
++  min-width: 0;
++}
++.statistics .stats-chart-axis {
++  position: relative;
++  flex: 0 0 36px;
++  height: 240px;
++  margin-top: 4px;
++  font-size: 0.65rem;
++  color: var(--muted);
++}
++.statistics .stats-chart-axis span {
++  position: absolute;
++  right: 10px;
++  transform: translateY(50%);
++}
++.statistics .stats-chart-scroll {
++  flex: 1;
++  min-width: 0;
++  overflow-x: auto;
++  padding: 4px 3px 8px;
++}
++.statistics .stats-chart-scroll:focus-visible {
++  outline: 2px solid #ffde59;
++  outline-offset: 3px;
++}
++.statistics .stats-chart-layout .stats-chart-axis {
++  flex-basis: 76px;
++  white-space: nowrap;
++}
++.statistics .stats-chart-scroll .stats-chart-bars {
++  grid-template-columns: repeat(var(--chart-columns), minmax(76px, 1fr));
++  min-width: calc(var(--chart-columns) * 76px);
++}
++.statistics .stats-chart-scroll .stats-chart-month {
++  grid-template-columns: repeat(var(--chart-columns), minmax(0, 1fr));
++  min-width: 0;
++  width: 100%;
++}
++.statistics .stats-chart-month .stats-chart-bar {
++  width: calc(100% - 3px);
++  max-width: none;
++  border-radius: 2px 2px 0 0;
++}
++.statistics .stats-chart-month .stats-chart-stack {
++  border-radius: 2px 2px 0 0;
++}
++@media (max-width: 900px) {
++  .statistics .stats-chart-month .stats-chart-label {
++    writing-mode: vertical-rl;
++    transform: rotate(180deg);
++    width: 100%;
++    height: 38px;
++    font-size: 8px;
++  }
++  .statistics .stats-chart-month .stats-chart-bar {
++    width: calc(100% - 1px);
++  }
++}
++.statistics .stats-chart-bars {
++  display: grid;
++  grid-template-columns: repeat(var(--chart-columns), minmax(42px, 1fr));
++  min-width: calc(var(--chart-columns) * 42px);
++  background: repeating-linear-gradient(
++    to top,
++    transparent 0,
++    transparent 44px,
++    #33405a 44px,
++    #33405a 45px
++  );
++  background-size: 100% 180px;
++  background-position: 0 30px;
++  background-repeat: no-repeat;
++}
++.statistics .stats-chart-column {
++  min-width: 0;
++  text-align: center;
++}
++.statistics .stats-chart-bar {
++  display: block;
++  position: relative;
++  width: calc(100% - 10px);
++  max-width: 60px;
++  height: 210px;
++  margin: auto;
++  border: 0;
++  padding: 0;
++  background: transparent;
++  border-bottom: 1px solid #61708e;
++  border-radius: 5px 5px 0 0;
++}
++.statistics .stats-chart-bar:hover {
++  background: #ffffff0a;
++}
++.statistics .stats-chart-stack {
++  position: absolute;
++  bottom: 0;
++  left: 0;
++  right: 0;
++  display: flex;
++  flex-direction: column-reverse;
++  border-radius: 5px 5px 0 0;
++  overflow: hidden;
++}
++.statistics .stats-chart-stack > span {
++  background: var(--outcome);
++  width: 100%;
++  flex-shrink: 0;
++}
++.statistics .stats-chart-value {
++  position: absolute;
++  left: 0;
++  right: 0;
++  font-size: 0.65rem;
++  color: var(--ink);
++}
++.statistics .stats-chart-label {
++  height: 30px;
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  font-size: 0.56rem;
++  color: var(--muted);
++  white-space: nowrap;
++}
++.statistics .stats-chart-detail {
++  font-size: 0.75rem;
++  min-height: 2.8em;
++  color: #cef7ee;
++  margin: 14px 0 6px;
++}
++@media (max-width: 600px) {
++  .statistics .stats-filters {
++    flex-wrap: wrap;
++  }
++  .statistics .stats-period {
++    flex-basis: 100%;
++  }
++  .statistics .stats-period > div {
++    width: 100%;
++  }
++  .statistics .stats-period button {
++    flex: 1;
++    padding: 8px 10px;
++  }
++  .statistics .stats-chart-card {
++    padding: 18px 12px;
++  }
++  .statistics .stats-chart-axis {
++    flex-basis: 28px;
++  }
++  .statistics .stats-chart-detail {
++    min-height: 4.5em;
++  }
++}
++.statistics .stats-overview {
++  display: grid;
++  grid-template-columns: repeat(5, minmax(0, 1fr));
++  gap: 14px;
++}
++.statistics .stats-metric:last-child .stats-number {
++  font-size: 1.65rem;
++  line-height: 1.8;
++}
++.statistics .stats-metric {
++  padding: 22px;
++  border: 1px solid #3c4b6b;
++  border-radius: 18px;
++  background: linear-gradient(145deg, #1b2942e8, #13182de8);
++  min-width: 0;
++}
++.statistics .stats-metric:nth-child(2) {
++  border-color: #397a76;
++}
++.statistics .stats-metric:nth-child(4) {
++  border-color: #74619a;
++}
++.statistics .stats-metric h2 {
++  font-size: 0.75rem;
++  color: var(--muted);
++  margin: 0;
++}
++.statistics .stats-number {
++  font-size: 2.35rem;
++  line-height: 1.5;
++  color: #b1fff0;
++  margin: 8px 0 4px;
++}
++.statistics .stats-metric:nth-child(4) .stats-number {
++  color: #d7bcff;
++}
++.statistics .stats-metric p:last-child {
++  font-size: 0.65rem;
++  color: var(--muted);
++  margin: 0;
++}
++.statistics .stats-explanation,
++.statistics .stats-footer {
++  color: var(--muted);
++  font-size: 0.73rem;
++  line-height: 1.8;
++}
++.statistics .stats-explanation {
++  margin: 18px 0 32px;
++}
++.statistics .stats-section-heading {
++  display: flex;
++  justify-content: space-between;
++  align-items: end;
++  gap: 20px;
++}
++.statistics .stats-section-heading h2 {
++  margin: 0;
++  font-size: 1.3rem;
++}
++.statistics .stats-section-heading > p {
++  font-size: 0.7rem;
++  color: var(--muted);
++}
++.statistics .stats-legend {
++  display: flex;
++  gap: 20px;
++  flex-wrap: wrap;
++  font-size: 0.7rem;
++  margin: 18px 0;
++}
++.statistics .correct {
++  --outcome: #67e8be;
++}
++.statistics .partial {
++  --outcome: #f4cc74;
++}
++.statistics .incorrect {
++  --outcome: #f698ae;
++}
++.statistics .stats-legend span {
++  color: var(--outcome);
++}
++.statistics .stats-topic {
++  border: 1px solid #40516e;
++  border-radius: 16px;
++  background: #10172aeb;
++  margin-bottom: 16px;
++  overflow: hidden;
++}
++.statistics .stats-topic > summary {
++  display: grid;
++  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr) 22px;
++  align-items: center;
++  gap: 24px;
++  padding: 23px;
++  cursor: pointer;
++  list-style: none;
++}
++.statistics .stats-topic > summary::-webkit-details-marker {
++  display: none;
++}
++.statistics .stats-topic > summary::after {
++  content: '+';
++  font-size: 1.5rem;
++  color: #81e6df;
++}
++.statistics .stats-topic[open] > summary::after {
++  content: '−';
++}
++.statistics .stats-topic-name {
++  display: block;
++  font-size: 1rem;
++}
++.statistics .stats-topic-meta {
++  display: block;
++  font-size: 0.65rem;
++  color: var(--muted);
++  margin: 5px 0;
++}
++.statistics .stats-stack {
++  display: flex;
++  height: 10px;
++  border-radius: 6px;
++  overflow: hidden;
++  background: #293349;
++  margin: 8px 0;
++}
++.statistics .stats-stack > span {
++  background: var(--outcome);
++  height: 100%;
++}
++.statistics .stats-outcome-text {
++  font-size: 0.66rem;
++  color: var(--muted);
++  line-height: 1.8;
++  margin: 0;
++}
++.statistics .stats-gems {
++  padding: 0 23px 12px;
++  border-top: 1px solid #33405a;
++}
++.statistics .stats-gem {
++  padding: 22px 0;
++}
++.statistics .stats-gem + .stats-gem {
++  border-top: 1px solid #2d3850;
++}
++.statistics .stats-gem h3 {
++  font-size: 0.94rem;
++  margin: 0 0 6px;
++}
++.statistics .stats-gem h3::before {
++  content: '◇';
++  color: #81e6df;
++  margin-right: 9px;
++}
++.statistics .stats-levels {
++  display: grid;
++  grid-template-columns: repeat(3, minmax(0, 1fr));
++  gap: 12px;
++  margin-top: 15px;
++}
++.statistics .stats-level {
++  border: 1px solid #36435e;
++  border-radius: 10px;
++  background: #172039;
++  padding: 10px 12px;
++  min-width: 0;
++}
++.statistics .stats-level h4 {
++  font-size: 0.73rem;
++  margin: 0 0 9px;
++}
++.statistics .stats-level p {
++  font-size: 0.65rem;
++  color: var(--muted);
++  margin: 6px 0;
++}
++.statistics .stats-level.unavailable {
++  background: transparent;
++  border-style: dashed;
++}
++.statistics .stats-level-counts {
++  display: flex;
++  gap: 7px;
++  margin-top: 9px;
++  flex-wrap: wrap;
++}
++.statistics .stats-count-square {
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  justify-content: center;
++  gap: 2px;
++  min-width: 44px;
++  aspect-ratio: 1;
++  padding: 3px;
++  border: 1px solid var(--outcome);
++  border-radius: 6px;
++  background: #10162a;
++  color: var(--outcome);
++}
++.statistics .stats-count-icon {
++  font-size: 0.68rem;
++  line-height: 1;
++}
++.statistics .stats-count-number {
++  font-size: 0.85rem;
++  line-height: 1.2;
++  font-variant-numeric: tabular-nums;
++}
++.statistics .stats-recent {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 6px;
++  list-style: none;
++  padding: 0;
++  margin: 8px 0 0;
++}
++.statistics .stats-recent button {
++  display: grid;
++  place-items: center;
++  width: 34px;
++  height: 34px;
++  padding: 0;
++  border: 1px solid var(--outcome);
++  border-radius: 7px;
++  color: var(--outcome);
++  background: #10162a;
++  font-size: 0.9rem;
++}
++.statistics .stats-recent button:focus-visible {
++  outline: 3px solid #ffde59;
++  outline-offset: 3px;
++}
++.statistics .stats-recent-note {
++  font-size: 0.65rem;
++  color: var(--muted);
++  margin: 14px 0 0;
++}
++.statistics .stats-result-detail {
++  font-size: 0.72rem;
++  color: var(--ink);
++  margin: 8px 0 0;
++  min-height: 1.8em;
++}
++.statistics .stats-history {
++  border: 1px solid #39445f;
++  border-radius: 14px;
++  padding: 18px 22px;
++  margin-top: 28px;
++  font-size: 0.78rem;
++}
++.statistics .stats-history summary {
++  cursor: pointer;
++}
++.statistics .stats-history p {
++  font-size: 0.7rem;
++  color: var(--muted);
++}
++.statistics .stats-history-row {
++  padding: 14px 0;
++  border-top: 1px solid #293249;
++}
++.statistics .stats-history-row strong {
++  font-size: 0.76rem;
++}
++.statistics .stats-footer {
++  margin-top: 28px;
++}
++.statistics .stats-notice,
++.statistics .stats-empty {
++  padding: 16px;
++  border: 1px solid #65593c;
++  background: #262235;
++  border-radius: 10px;
++  font-size: 0.8rem;
++}
++.statistics .stats-sr {
++  position: absolute;
++  width: 1px;
++  height: 1px;
++  padding: 0;
++  margin: -1px;
++  overflow: hidden;
++  clip-path: inset(50%);
++  white-space: nowrap;
++  border: 0;
++}
++@media (max-width: 760px) {
++  .statistics .stats-brand .site-back-link {
++    grid-column: 2;
++    justify-self: start;
++    white-space: nowrap;
++  }
++  .statistics .stats-overview {
++    grid-template-columns: repeat(2, minmax(0, 1fr));
++  }
++  .statistics .stats-intro {
++    display: block;
++  }
++  .statistics .stats-intro .stats-local {
++    display: inline-block;
++    margin-top: 16px;
++  }
++  .statistics .stats-topic > summary {
++    grid-template-columns: minmax(0, 1fr) 22px;
++    gap: 10px;
++    padding: 18px;
++  }
++  .statistics .stats-topic > summary::after {
++    grid-column: 2;
++    grid-row: 1;
++  }
++  .statistics .stats-topic > summary > .stats-topic-results {
++    grid-column: 1/-1;
++  }
++  .statistics .stats-levels {
++    grid-template-columns: 1fr;
++  }
++  .statistics .stats-section-heading {
++    display: block;
++  }
++  .statistics .stats-gems {
++    padding: 0 18px 8px;
++  }
++}
++@media (max-width: 450px) {
++  .statistics .stats-shell {
++    width: calc(100% - 28px);
++    padding-top: 18px;
++  }
++  .statistics .stats-brand {
++    gap: 12px;
++  }
++  .statistics .stats-filters {
++    gap: 10px;
++  }
++  .statistics .stats-filters label {
++    min-width: 0;
++    flex: 1;
++  }
++  .statistics .stats-filters select {
++    width: 100%;
++    padding: 10px 7px;
++    font-size: 0.75rem;
++  }
++  .statistics .stats-metric {
++    padding: 15px;
++  }
++  .statistics .stats-number {
++    font-size: 1.9rem;
++  }
++  .statistics .stats-legend {
++    gap: 12px;
++    font-size: 0.65rem;
++  }
++}
++
++.statistics {
++  max-width: 1180px;
++  width: calc(100% - 64px);
++  margin: auto;
++  padding: 32px 0 48px;
++  --ink: #eef0ff;
++  --muted: #b7c1dc;
++  color: var(--ink);
++}
++.statistics-screen {
++  min-height: 100vh;
++  background: transparent;
++}
++.statistics .stats-brand {
++  display: flex;
++  align-items: center;
++  gap: 20px;
++}
++.statistics .stats-brand-title {
++  flex: 1;
++  min-width: 0;
++}
++.statistics .stats-brand h1 {
++  font-size: clamp(1.8rem, 4vw, 2.6rem);
++}
++.statistics .stats-brand h1 span {
++  color: #81e6df;
++}
++.statistics .stats-brand .question-brand-mark {
++  flex-shrink: 0;
++}
++.statistics .stats-brand .question-back {
++  flex-shrink: 0;
++}
++.statistics .stats-period button {
++  font-family: inherit;
++}
++.statistics .stats-chart-bar {
++  min-height: 0;
++}
++.statistics .stats-recent button {
++  min-height: 34px;
++}
++.statistics .stats-chart-bar[aria-pressed='true'] {
++  background: #ffffff12;
++  outline: 1px solid #81e6df;
++}
++.statistics .stats-meter {
++  position: relative;
++  height: 12px;
++  min-height: 12px;
++  margin: 9px 0;
++  border: 1px solid #65708b;
++  border-radius: 4px;
++  background: #11182d;
++  overflow: visible;
++}
++.statistics .stats-meter[data-level='1'] {
++  --mastery-colour: #ffde59;
++}
++.statistics .stats-meter[data-level='2'] {
++  --mastery-colour: #54f5b5;
++}
++.statistics .stats-meter[data-level='3'] {
++  --mastery-colour: #c59aff;
++}
++.statistics .stats-meter > span {
++  display: block;
++  height: 100%;
++  width: var(--score);
++  border-radius: 3px;
++  background: var(--mastery-colour);
++}
++.statistics .stats-meter > i {
++  position: absolute;
++  left: var(--threshold);
++  top: -4px;
++  bottom: -4px;
++  width: 2px;
++  border: 0;
++  transform: translateX(-50%);
++  background: #fff;
++  box-shadow: 0 0 0 1px #11182d;
++}
++.statistics .stats-result-detail {
++  overflow-wrap: anywhere;
++}
++.statistics .stats-history summary {
++  padding: 0;
++}
++.statistics .stats-chart-stack {
++  pointer-events: none;
++}
++@media (max-width: 760px) {
++  .statistics {
++    width: calc(100% - 40px);
++  }
++  .statistics .stats-brand {
++    gap: 12px;
++  }
++  .statistics .stats-brand .eyebrow {
++    font-size: 0.6rem;
++  }
++}
++@media (max-width: 450px) {
++  .statistics {
++    width: calc(100% - 28px);
++    padding-top: 18px;
++  }
++  .statistics .stats-brand {
++    gap: 10px;
++  }
++  .statistics .stats-brand h1 {
++    font-size: 1.8rem;
++  }
++}
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\ProductionFoundation.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ProductionFoundation.tsx"
+index 53b78dc..ec595b7 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\source-before\\ProductionFoundation.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ProductionFoundation.tsx"	
+@@ -460,7 +460,19 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+         />
+       </Suspense>
+     );
+-  if (view === 'statistics' || view === 'import')
++  if (view === 'statistics')
++    return (
++      <Suspense fallback={<p role="status">Loading saved statistics...</p>}>
++        <StatisticsView
++          course={course}
++          namespace={namespace}
++          databaseName={databaseName}
++          registry={productionRegistry}
++          onBack={() => selectView('home')}
++        />
++      </Suspense>
++    );
++  if (view === 'import')
+     return (
+       <CourseShell
+         course={course}
+@@ -470,21 +482,12 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+         onSelectActivity={selectActivity}
+       >
+         <Suspense fallback={<p role="status">Loading saved progress...</p>}>
+-          {view === 'statistics' ? (
+-            <StatisticsView
+-              course={course}
+-              namespace={namespace}
+-              databaseName={databaseName}
+-              registry={productionRegistry}
+-            />
+-          ) : (
+-            <LegacyImportView
+-              course={course}
+-              namespace={namespace}
+-              databaseName={databaseName}
+-              registry={productionRegistry}
+-            />
+-          )}
++          <LegacyImportView
++            course={course}
++            namespace={namespace}
++            databaseName={databaseName}
++            registry={productionRegistry}
++          />
+         </Suspense>
+       </CourseShell>
+     );

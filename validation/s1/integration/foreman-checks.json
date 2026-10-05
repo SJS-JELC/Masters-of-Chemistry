@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-02T23:52:58.032Z",
+  "results": [
+    {
+      "id": "typecheck",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 2124,
+      "evidence": "validation/s1/integration/foreman-typecheck.txt"
+    },
+    {
+      "id": "unit",
+      "command": [
+        "node",
+        "scripts/test-s1.mjs"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 292,
+      "evidence": "validation/s1/integration/foreman-unit.txt"
+    },
+    {
+      "id": "catalogue",
+      "command": [
+        "node",
+        "scripts/write-catalogue-definitions.mjs",
+        "--check"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 60,
+      "evidence": "validation/s1/integration/foreman-catalogue.txt"
+    },
+    {
+      "id": "source-and-controls",
+      "command": [
+        "node",
+        "scripts/validate-s0.mjs"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 210,
+      "evidence": "validation/s1/integration/foreman-source-and-controls.txt"
+    },
+    {
+      "id": "protected-originals",
+      "command": [
+        "node",
+        "scripts/protect-originals.mjs",
+        "check"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 850,
+      "evidence": "validation/s1/integration/foreman-protected-originals.txt"
+    },
+    {
+      "id": "build",
+      "command": [
+        "node",
+        "scripts/build.mjs"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 859,
+      "evidence": "validation/s1/integration/foreman-build.txt"
+    },
+    {
+      "id": "build-check",
+      "command": [
+        "node",
+        "scripts/validate-s1-builds.mjs"
+      ],
+      "cwd": "project",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 93,
+      "evidence": "validation/s1/integration/foreman-build-check.txt"
+    },
+    {
+      "id": "runtime-ownership",
+      "status": "PASS",
+      "files": 41,
+      "checks": [
+        "no direct original-app module imports",
+        "no localStorage mutations",
+        "no iframe or Rocket runtime",
+        "S0 control/source hash validation included"
+      ]
+    }
+  ]
+}

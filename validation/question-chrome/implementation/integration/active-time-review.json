@@ -1,0 +1,73 @@
+{
+  "status": "PASS_WITH_NATIVE_CAPABILITY_LIMIT",
+  "checkedAt": "2026-10-03T13:17:05.965Z",
+  "meaning": "Fresh final Host idle/restore/first-assessment/statistics proof plus unchanged authoritative timing; historical native limits preserved without whole-Host equivalence.",
+  "sourceHashes": [
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "a36caf803f96c48ca200253d871875fff2042695213c6174e67d4523279a96eb"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+    }
+  ],
+  "realCurrentIdle": [
+    {
+      "id": "short-60s",
+      "idleLimitMs": 60000,
+      "activeMs": 60267,
+      "plateauDeltaMs": 0,
+      "trustedInputRestart": true
+    },
+    {
+      "id": "editor-180s",
+      "idleLimitMs": 180000,
+      "activeMs": 180985,
+      "plateauDeltaMs": 0,
+      "trustedInputRestart": true
+    }
+  ],
+  "currentSourceBrowserChecks": 15,
+  "currentProductionBrowserChecks": 9,
+  "currentIndependentPopstateChecks": [
+    {
+      "scenario": "normal",
+      "status": "PASS_DEPARTURE_REMAINS_PAUSED",
+      "storedStatus": "paused"
+    },
+    {
+      "scenario": "delayed",
+      "status": "PASS_DEPARTURE_REMAINS_PAUSED",
+      "storedStatus": "paused"
+    },
+    {
+      "scenario": "failed-departure-retry",
+      "status": "PASS_FAILED_DEPARTURE_RETRY_DURABLE_RESUME_RESTORE",
+      "storedStatus": "active"
+    }
+  ],
+  "nativeBoundaries": {
+    "freeze": "UNESTABLISHED",
+    "hidden": "UNESTABLISHED",
+    "physicalBackground": "UNESTABLISHED",
+    "physicalMinimization": "UNESTABLISHED",
+    "OSRendererSuspension": "UNESTABLISHED"
+  },
+  "wholeHostNativeEquivalenceClaimed": false,
+  "evidence": [
+    "timing-browser-results.json",
+    "browser-results.json",
+    "production-browser-results.json",
+    "exception-review/verification.json"
+  ],
+  "historicalEvidence": "validation/editor-restoration/implementation/integration/exception-review/disposition.json"
+}

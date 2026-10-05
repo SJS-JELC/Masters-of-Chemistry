@@ -1,0 +1,2 @@
+﻿import fs from 'node:fs';import crypto from 'node:crypto';
+const dirs=['src/activities/igcse/energy-enthalpy','src/activities/igcse/energetics-practical','src/chemistry/energy-profile','src/editors/energy-profile'];const output={};for(const dir of dirs)for(const file of fs.readdirSync(dir)){const path=dir+'/'+file;output[path]=crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');}fs.writeFileSync('validation/s3/energy/output-fingerprints.json',JSON.stringify(output,null,2));

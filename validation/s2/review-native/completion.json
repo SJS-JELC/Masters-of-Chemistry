@@ -1,0 +1,26 @@
+{
+  "id": "S2-REVIEW-NATIVE",
+  "agentId": "A07",
+  "runId": "MASTERS-REACT-20261002",
+  "status": "ESCALATE",
+  "outputPath": "validation/s2/review-native/review.md",
+  "confidence": 0.98,
+  "reason": "Native launcher, acid/structure real idle and first-timing persistence pass, but the dot-cross lifecycle boundary observation is unresolved and its three/five-minute real idle gates were not reached; parent forbade further self-retry.",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": null,
+  "effectiveEffort": null,
+  "usage": null,
+  "validation": {
+    "retainedCheckVerification": "validation/s2/review-native/partial-verification.json",
+    "acidAndStructureNativeIdle": "validation/s2/review-native/a07s2-murneguj-results.json",
+    "structureContinuationAndDotNative": "validation/s2/review-native/a07s2-tail-murnsp64-results.json",
+    "passed": ["Approved GPU-safe native Chrome/noDefaults launch", "acid real60000ms idle", "structure real180000ms idle", "native tab/minimize exclusion and trusted-input resume for acid/structure/dotLevel1", "acid/structure first freeze, one timing evidence, reload and fresh Next", "source unchanged within each native segment", "carried timing/acid/structure source fingerprints unchanged across authorised UI window", "retained screenshot inspection"],
+    "unresolved": [{"check":"dot native CDP lifecycle freeze/thaw","beforeActiveMs":3267,"afterActiveMs":4263,"deltaMs":996,"diagnosticGlobalResetObserved":true,"runtimeDefectEstablished":false}],
+    "notRun": ["dot-cross180000ms actual idle", "dot-cross300000ms actual idle"],
+    "noSyntheticVisibilityOrClock": true,
+    "nativeBrowserClosed": true,
+    "runtimeChanges": [],
+    "originalAppsAndStores": "UNTOUCHED"
+  }
+}

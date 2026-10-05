@@ -1,0 +1,23 @@
+file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/development/authoring/scaffold.mjs:3
+const slug=process.argv[2];if(!slug||!/^dev-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))throw Error('Usage: node development/authoring/scaffold.mjs dev-example');
+                                                                                        ^
+
+Error: Usage: node development/authoring/scaffold.mjs dev-example
+    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/development/authoring/scaffold.mjs:3:89
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.13.1
+
+file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/development/authoring/scaffold.mjs:6
+if(!output.startsWith(root+path.sep)||fs.existsSync(output))throw Error('Scaffold output must be a new owned DEV folder');
+                                                                  ^
+
+Error: Scaffold output must be a new owned DEV folder
+    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/development/authoring/scaffold.mjs:6:67
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.13.1

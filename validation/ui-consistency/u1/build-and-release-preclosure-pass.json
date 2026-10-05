@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-03T22:23:46.519Z",
+  "checks": [
+    {
+      "name": "typecheck",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "alevel-release",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "igcse-release",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "releases": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 7,
+      "runtimeFileCount": 163,
+      "initialJavascriptGzipBytes": 180440,
+      "lazyJavascriptChunks": 70,
+      "manifestSha256": "84314aa9240b857e3dc8db3e64e3ca5f41a06f2c3900e70c4d23626252c266a1",
+      "checkedAt": "2026-10-03T22:23:58.151Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 163,
+      "initialJavascriptGzipBytes": 180440,
+      "lazyJavascriptChunks": 70,
+      "manifestSha256": "9d756616d47606f96be74852a5c75d1aac54b49202cd0fe50565e39cc60d5c5c",
+      "checkedAt": "2026-10-03T22:23:58.351Z"
+    }
+  ],
+  "finishedAt": "2026-10-03T22:23:58.351Z"
+}

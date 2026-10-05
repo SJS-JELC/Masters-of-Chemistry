@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const here=import.meta.dirname,root=path.resolve(here,'../../../..'),read=name=>JSON.parse(fs.readFileSync(path.join(here,name),'utf8'));
+const after=read('after.json');assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,after.source))).digest('hex'),after.sha256);
+for(const file of ['checks.json','browser-results.json','readonly-browser.json'])assert.equal(read(file).status,'PASS',file);
+let portClosed=false;try{await fetch('http://127.0.0.1:5211/');}catch(e){assert.equal(e.cause?.code,'ECONNREFUSED');portClosed=true;}assert(portClosed);
+fs.writeFileSync(path.join(here,'server.json'),JSON.stringify({...read('server.json'),status:'closed',closedAt:new Date().toISOString(),method:'Stop-Process of known owned PID after pipe Ctrl-C was not handled',portProbe:'ECONNREFUSED'},null,2));
+const evidenceFiles=fs.readdirSync(here).filter(file=>fs.statSync(path.join(here,file)).isFile()&&!['fingerprints.json','completion.json'].includes(file));
+fs.writeFileSync(path.join(here,'fingerprints.json'),JSON.stringify({checkedAt:new Date().toISOString(),source:after,evidence:evidenceFiles.map(file=>({file,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(here,file))).digest('hex')}))},null,2));
+const manifest={jobId:'S5-FIX-DOT-CHARGE-TYPING',agentId:'A15',status:'PASS',outputPath:'validation/s5/fixes/dot-charge-typing/HANDOVER.md',confidence:'high',reason:null,changedRuntimeFiles:[after.source],frozenSourceSha256:after.sha256,validation:{staticAndChemistry:'checks.json: all10 PASS; IGCSE72/A Level91 and incorrect fixtures',actualHost:'browser-results.json: both courses, trusted input, signed/invalid Apply, undo/redo, restore, mobile, no evidence',readonly:'readonly-browser.json: PASS',protectedSources:'PASS',diff:'source.diff',fingerprints:'fingerprints.json',ownedServer:'closed; port5211 ECONNREFUSED'},retainedFailedRuns:2,requestedModel:'gpt-6.1-sol',requestedReasoningEffort:'high',effectiveModel:'unknown',effectiveReasoningEffort:'unknown',usage:'unknown',children:0,completedAt:new Date().toISOString()};
+fs.writeFileSync(path.join(here,'completion.json'),JSON.stringify(manifest,null,2));console.log(JSON.stringify(manifest));

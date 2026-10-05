@@ -1,0 +1,106 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-SCAFFOLD-STARTUP",
+  "status": "PASS",
+  "confidence": 0.96,
+  "checkedAt": "2026-10-03T03:34:11.771Z",
+  "approvedScope": "One reviewed initial-navigation lifecycle condition change; every substantive fixture assertion remains required",
+  "exactModification": {
+    "from": "await page.goto(url('fixed'));await ready();",
+    "to": "await page.goto(url('fixed'),{waitUntil:'domcontentloaded'});await ready();"
+  },
+  "originalLauncherSha256": "fc57f8fdce97718968147e8c7283cd8ad9b85d05b7e2bd01accecd4a490d1d18",
+  "proposedLauncherSha256": "9d8d1d1329630541d34be632ee0674a940169bc09707e8e930a89f4f92e2cfb5",
+  "assertionsTailSha256": "8e4fbc4d3610a2e7227bef6f0f4c5051e598a86b884d6d642a336932f1b911b7",
+  "assertionsTailUnchanged": true,
+  "originalFailuresRetained": {
+    "original-browser.mjs.txt": {
+      "source": "development/authoring/families/dev-refinement-starter/browser.mjs",
+      "sha256": "fc57f8fdce97718968147e8c7283cd8ad9b85d05b7e2bd01accecd4a490d1d18"
+    },
+    "original-server.mjs.txt": {
+      "source": "development/authoring/serve.mjs",
+      "sha256": "62ec734f7709e70bf7354025bccf8f01f748d99a9c5e125ef4686a8d3c2c5c62"
+    },
+    "generation-manifest.json": {
+      "source": "development/authoring/families/dev-refinement-starter/generation-manifest.json",
+      "sha256": "2a8ef8b07ae347823b6ebda663c7ddfa31c210950367b1085373cd3c47da7610"
+    },
+    "generated-tsconfig.json": {
+      "source": "development/authoring/families/dev-refinement-starter/tsconfig.json",
+      "sha256": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c"
+    },
+    "original-startup-cache-reload-probe.json": {
+      "source": "validation/s4/authoring-release/refinement/dev-refinement-starter/startup-cache-reload-probe.json",
+      "sha256": "9f8da7efbc627dc03e9eb0185645d1ab7c91dac2477c22ca6e3a84fee93ba687"
+    },
+    "original-restarted-navigation-probe.json": {
+      "source": "validation/s4/authoring-release/refinement/dev-refinement-starter/restarted-navigation-probe.json",
+      "sha256": "cfa11adb4d079cfc25e8aa7933e974e70d820c5d272387037d021520b8465435"
+    },
+    "original-browser-results.json": {
+      "source": "validation/s4/authoring-release/refinement/dev-refinement-starter/browser-results.json",
+      "sha256": "cfa11adb4d079cfc25e8aa7933e974e70d820c5d272387037d021520b8465435"
+    },
+    "original-failure.png": {
+      "source": "validation/s4/authoring-release/refinement/dev-refinement-starter/failure.png",
+      "sha256": "cb9c3b8047859412e8abcaed51ad9ecefb4bd820c8849af4992e593d500d1836"
+    },
+    "worker-short-diagnostic.json": {
+      "source": "validation/s4/authoring-release/refinement/diagnostic-short-temp.json",
+      "sha256": "8a5438292fdb7154de1b84375aa300b468d77329a1064e936b2591a1b7236d28"
+    },
+    "worker-short-diagnostic.mjs.txt": {
+      "source": "validation/s4/authoring-release/refinement/diagnose-preview.mjs",
+      "sha256": "214f04900ad020d51fd42796ff2aa373b395d9f2e811eb7f3b38b2af9b8744cc"
+    }
+  },
+  "independentDiagnosticSha256": "2b07c969f0f5cef26c814d461d5aeaa81d54c2292be589cc8875cff9cf154460",
+  "controlledCases": [
+    {
+      "id": "long",
+      "tempLength": 200,
+      "domReadyMs": 1134,
+      "hostReadyMs": 1172,
+      "loadReadyMs": 1173,
+      "navigations": 1,
+      "errors": []
+    },
+    {
+      "id": "short",
+      "tempLength": 172,
+      "domReadyMs": 1041,
+      "hostReadyMs": 1110,
+      "loadReadyMs": 1110,
+      "navigations": 1,
+      "errors": []
+    }
+  ],
+  "sourceHashesStableDuringDiagnostic": {
+    "development/authoring/serve.mjs": "62ec734f7709e70bf7354025bccf8f01f748d99a9c5e125ef4686a8d3c2c5c62",
+    "development/authoring/families/dev-refinement-starter/browser.mjs": "fc57f8fdce97718968147e8c7283cd8ad9b85d05b7e2bd01accecd4a490d1d18",
+    "development/authoring/families/dev-refinement-starter/generation-manifest.json": "2a8ef8b07ae347823b6ebda663c7ddfa31c210950367b1085373cd3c47da7610",
+    "development/authoring/families/dev-refinement-starter/mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "development/authoring/families/dev-refinement-starter/Catalogue.tsx": "5e25de181553b59dbe1f808df6ade8f6d23ba7f64b6927dd5b54409a88c3d92d",
+    "development/authoring/families/dev-refinement-starter/tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c",
+    "src/foundation/ActivityHost.tsx": "a49f1e65ffaa9808588bb8abc93b3fcb6de20ffec8517746ac317ad0a0e72265"
+  },
+  "longTempHypothesis": "Not reproduced as sufficient cause in controlled stable-server comparison; original path length200 succeeds",
+  "priorFailureAttribution": "Unclassified initial navigation stalls. Original records lack request/event chronology to assign exact cause. Initial generated-tsconfig/cache HMR interference is worker-reported, not independently proven by these records.",
+  "workerDiagnosticLimit": "Short temp diagnostic also changed navigation from load to domcontentloaded and therefore does not isolate path length",
+  "proposalReason": "Wait for DOM lifecycle, then retain actual host readiness; global load completion is not the substantive host acceptance condition. No timeout increase or temp shortening needed by current proof.",
+  "environmentLimit": "Current server cache is warm; diagnostics do not reconstruct original cold optimizer state. No application/source defect established.",
+  "behavior": "Fixed/seeded first marks/time/revision/reload/Next/teacher assertions pending A20 full suite; no behavior PASS claimed",
+  "newBrowserScope": "Startup only, no practice started or timing/mastery evidence created; both own browsers closed; A20 server not modified or stopped",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "correctedDiagnostic": "validation/s4/refinement/review-scaffold-startup/diagnostic-corrected.json",
+  "parentNodeTempRootVerified": true,
+  "reviewerSetupClarification": {
+    "retained": "setup-clarification.json",
+    "original": "diagnostic-browser-env-only.json",
+    "reason": "Initial browser-env-only probe did not set parent Node os.tmpdir; corrected startup-only comparison sets and verifies parent TEMP/TMP/TMPDIR"
+  }
+}

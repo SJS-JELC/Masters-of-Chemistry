@@ -1,0 +1,86 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\policy.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\policy.ts"
+index 7022c77..bc9db7b 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\policy.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\policy.ts"	
+@@ -12,6 +12,7 @@ import type {
+ import type { ProfileId } from '../../../contracts/identity.ts';
+ import type { MoleculeState } from '../../../contracts/editors.ts';
+ import { assertMoleculeState, core, moleculeEngine } from '../../../chemistry/molecule/engine.ts';
++import { sourceBank, c3KErratum } from './source-bank.ts';
+ export function c3Fingerprint(value: unknown) {
+   let h = 2166136261;
+   for (const ch of JSON.stringify(value)) {
+@@ -52,7 +53,11 @@ export function moleculeMatches(
+   if (!drawing) return false;
+   try {
+     assertMoleculeState(drawing);
+-    return slot.alternatives.some((a) => core.check(drawing.graph, a.graph).kind === 'correct');
++    return slot.alternatives.some(
++      (a) =>
++        (slot.id !== 'K' || a.smiles === c3KErratum.acceptedSmiles) &&
++        core.check(drawing.graph, a.graph).kind === 'correct',
++    );
+   } catch {
+     return false;
+   }
+@@ -92,6 +97,7 @@ const current = (
+     return null;
+   return {
+     ...old,
++    correct,
+     passed:
+       old.passed &&
+       old.correct === total &&
+@@ -100,6 +106,7 @@ const current = (
+   };
+ };
+ function validateCompletion(challenge: C3L6Challenge, p: C3L6Progress): C3L6Progress {
++  const { historicalOutcome: retainedHistoricalOutcome, ...rawProgress } = p;
+   Object.values(p.drawingsB).forEach(assertMoleculeState);
+   Object.values(p.drawingsC).forEach(assertMoleculeState);
+   const aCorrect = challenge.classifications.filter(
+@@ -135,7 +142,31 @@ function validateCompletion(challenge: C3L6Challenge, p: C3L6Progress): C3L6Prog
+     b = a && challenge.dependencies.bUnits.every((u) => unitChecks[u.id]?.passed === true),
+     c = b && challenge.network.slots.every((s) => slotChecks[s.id]?.passed === true);
+   const stage = p.stage === 'c' && !b ? 'a' : p.stage === 'b' && !a ? 'a' : p.stage;
+-  return { ...p, stage, aCheck, unitChecks, slotChecks, completed: { a, b, c } };
++  const sourceWrongK = sourceBank.stages.b.answers
++    .find((s) => s.id === 'K')!
++    .alternatives.find((alternative) => alternative.smiles === c3KErratum.rejectedSourceSmiles)!;
++  const historicalOutcome =
++    retainedHistoricalOutcome ??
++    (p.unitChecks['b-iv-3']?.passed === true &&
++    p.unitChecks['b-iv-3']?.drawingFingerprint === bFingerprint(challenge, p, 'b-iv-3') &&
++    unitChecks['b-iv-3']?.passed === false &&
++    p.drawingsB.K !== undefined &&
++    core.check(p.drawingsB.K.graph, sourceWrongK.graph).kind === 'correct'
++      ? {
++          policyVersion: 'c3l6-source-bank-23' as const,
++          reason: 'K-orthoacid-erratum' as const,
++          raw: structuredClone(rawProgress),
++        }
++      : undefined);
++  return {
++    ...p,
++    stage,
++    aCheck,
++    unitChecks,
++    slotChecks,
++    completed: { a, b, c },
++    ...(historicalOutcome ? { historicalOutcome } : {}),
++  };
+ }
+ export const stageUnlocked = (p: C3L6Progress, stage: C3L6Progress['stage']) =>
+   stage === 'intro' ||
+@@ -159,7 +190,10 @@ function transition(challenge: C3L6Challenge, original: C3L6Progress, command: C
+     case 'restart':
+       return {
+         accepted: true,
+-        progress: blankC3Progress(original.profileId),
++        progress: {
++          ...blankC3Progress(original.profileId),
++          ...(p.historicalOutcome ? { historicalOutcome: p.historicalOutcome } : {}),
++        },
+         message: 'Challenge restarted. Drawings and completion have been cleared.',
+       };
+     case 'navigate':

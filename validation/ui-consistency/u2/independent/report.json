@@ -1,0 +1,154 @@
+{
+  "agentId": "U05",
+  "jobId": "UI-INDEPENDENT-U2",
+  "status": "PASS",
+  "checkedAt": "2026-10-03T23:11:59.580Z",
+  "requested": {
+    "model": "gpt-6.1-sol",
+    "effort": "high"
+  },
+  "effectiveSettings": null,
+  "usage": null,
+  "delegation": "Local independent reviewer, no children; final acceptance remains root.",
+  "treeSha256": "3a24f663f5a723272f58ec02e323ae11db8a6ce9eb21b7e268ca1fa75b201b8f",
+  "inputCount": 645,
+  "sourcePublicConfigCount": 315,
+  "gates": [
+    {
+      "path": "original-preservation.json",
+      "sha256": "2d6f5794f5d0c45000185e579c19dab761ce8d123ce449cf7a0cbc4e2b5cc9aa",
+      "status": "PASS",
+      "checks": null
+    },
+    {
+      "path": "original-preservation-final.json",
+      "sha256": "95d41402365535a05e3fefb7fdc2782fb5eaeeb518fccedc93bdb56259a289f8",
+      "status": "PASS",
+      "checks": null
+    },
+    {
+      "path": "source-gate.json",
+      "sha256": "34b0d425f0809b5c54604dbce91d0f7fc31016f0f75c369d1773733bfd93b67a",
+      "status": "PASS",
+      "checks": null
+    },
+    {
+      "path": "assets-config-preservation.json",
+      "sha256": "abfe787cc30689f89d41d32af4c01d14a4897a9446347807b1b284e6a5e0eb08",
+      "status": "PASS",
+      "checks": null
+    },
+    {
+      "path": "timing-continuity.json",
+      "sha256": "6d5f6f7aea568a2035d0bc76de41483d2843dc8b89823f31a47faf2ee598859d",
+      "status": "PASS",
+      "checks": null
+    },
+    {
+      "path": "release-validation.json",
+      "sha256": "e43a4077ee47a836c06592de6e219a81934503b273779338cd5850659c5e8ad0",
+      "status": "PASS",
+      "checks": null
+    },
+    {
+      "path": "footer-browser-results.json",
+      "sha256": "b366e3a784ed594527faa9e0e3dd2d38260c788f2350bd97eda77332bfdfda5c",
+      "status": "PASS",
+      "checks": 33
+    },
+    {
+      "path": "final-browser-results.json",
+      "sha256": "e528bad5e043b8fe01cb5ba899d3ec7573718d76a160a047e0eb3610bab70b6e",
+      "status": "PASS",
+      "checks": 68
+    },
+    {
+      "path": "app-browser-results.json",
+      "sha256": "32457022614b87cd34c55cfc1465da64b55171ca6bad791279a61d9629646c08",
+      "status": "PASS",
+      "checks": 1
+    },
+    {
+      "path": "browser-results.json",
+      "sha256": "ac4474baea9b6e95cbf1734d577da59ce6831b65b8ba28f83858d28fdd21f7cc",
+      "status": "PASS",
+      "checks": 16
+    },
+    {
+      "path": "browser-report.json",
+      "sha256": "8169b1e04c220ef05f25c63f601351be62ee04a7ebda32531b44360032453ee0",
+      "status": "PASS",
+      "checks": 12
+    },
+    {
+      "path": "transition-cancellation-results.json",
+      "sha256": "74611840ec2126c6948a838cd30a9f378508479ecd18336269be1ae7c1109e42",
+      "status": "PASS",
+      "checks": 3
+    },
+    {
+      "path": "ec-axis-source-results.json",
+      "sha256": "000c15f4f1b7e60d0f67752067f2b7cd40d575e4fecc5cc85645eb8a4757c9fb",
+      "status": "PASS",
+      "checks": 3
+    },
+    {
+      "path": "browser-extra-results.json",
+      "sha256": "53676519d98f24afc68bdf60063a23116561aa47ce44a60872e6146a5c6eaaa1",
+      "status": "PASS",
+      "checks": 13
+    },
+    {
+      "path": "ordinary-app-exercises.json",
+      "sha256": "70ae13685a5f1cb5a40a8cb50703729cf87ad1fee0af5c6ecac6ac63f1f387c0",
+      "status": "PASS",
+      "checks": 5
+    },
+    {
+      "path": "numeric-keyboard.json",
+      "sha256": "6f2a2c648b415ab4a7d0ee13c0cbad008bf56b01b5953c16c90d35b2d10fde86",
+      "status": "PASS",
+      "checks": 1
+    },
+    {
+      "path": "revision-and-prefix.json",
+      "sha256": "052133758085c36695076563eb6b6774f623dbbe5eef50662e82073dc19f3181",
+      "status": "PASS",
+      "checks": 3
+    }
+  ],
+  "pureTests": {
+    "passed": 29,
+    "failed": 0,
+    "path": "pure-tests.txt"
+  },
+  "geometry": {
+    "desktopLargestButton": 92.59375,
+    "desktopLargestOccupied": 347.015625,
+    "desktopLargestFraction": 0.3292368358633776
+  },
+  "background": "Exact computed landing gradient and stars match all68 source/course/view samples.",
+  "typecheck": {
+    "status": "PASS",
+    "exitCode": 0,
+    "path": "typecheck.txt"
+  },
+  "build": "Existing exact frozen build source closure reused; both manifests freshly revalidated; no redundant rebuild.",
+  "sourceReview": "source-review.md",
+  "renderReview": "render-review.md",
+  "representativeRenders": "representative-renders.json",
+  "contactSheets": [
+    "desktop-contact-sheet.png",
+    "mobile-contact-sheet.png",
+    "completion-and-evidence-contact-sheet.png"
+  ],
+  "productFixes": [],
+  "limits": [
+    "Headless installed Edge via pinned workspace Playwright1.62.1; no new native OS suspension proof. Exact2 clock/binding files and7 retained native evidence files rehashed unchanged.",
+    "Immediate forced production reload before Clear IndexedDB commit showed an uncommitted-save boundary. That failed probe is retained; post-commit reload tests pass. Root owns its disposition.",
+    "Corrected-answer feedback remains transient across reload as explicitly accepted; immutable first assessment persists.",
+    "Energy profile checked-model response in one actual-app scenario supplied via DEV response API; real editor draft/Enter/Clear and other EC/dot/titration interactions separately exercised.",
+    "523 protected offline placeholders remain stat-only; no hydration.",
+    "Requested effective model/effort and token usage not exposed."
+  ]
+}

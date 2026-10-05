@@ -1,0 +1,193 @@
+{
+  "jobId": "F2-EC",
+  "agentId": "F04",
+  "startedAt": "2026-10-03T17:45:36.262Z",
+  "checks": [
+    {
+      "size": "desktop",
+      "family": "full",
+      "id": "EC-TH921N",
+      "states": [
+        "unanswered",
+        "partial",
+        "incorrect",
+        "correct",
+        "correction",
+        "model"
+      ],
+      "restoredDraft": true,
+      "firstEvidenceImmutable": true,
+      "records": 1,
+      "fontAndBorderMatch": true
+    }
+  ],
+  "screenshots": [
+    "react-desktop-full-unanswered.png",
+    "original-desktop-full-unanswered.png",
+    "react-desktop-full-partial.png",
+    "original-desktop-full-partial.png",
+    "react-desktop-full-incorrect.png",
+    "original-desktop-full-incorrect.png",
+    "react-desktop-full-correction.png",
+    "original-desktop-full-correction.png",
+    "react-desktop-full-correct.png",
+    "original-desktop-full-correct.png",
+    "react-desktop-full-model.png",
+    "original-desktop-full-model.png",
+    "react-desktop-short-unanswered.png",
+    "original-desktop-short-unanswered.png",
+    "react-desktop-short-partial.png",
+    "original-desktop-short-partial.png"
+  ],
+  "metrics": [
+    {
+      "app": "react",
+      "size": "desktop",
+      "family": "full",
+      "orbital": null,
+      "notationInput": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "14.88px",
+        "lineHeight": "23.808px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgb(8, 12, 36)",
+        "padding": "7px 4px",
+        "border": "1px solid rgb(119, 129, 183)",
+        "borderRadius": "9px",
+        "width": 49,
+        "height": 44
+      },
+      "card": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "15px",
+        "lineHeight": "24px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgba(85, 246, 255, 0.035)",
+        "padding": "21px",
+        "border": "1px solid rgba(85, 246, 255, 0.26)",
+        "borderRadius": "16px",
+        "width": 986,
+        "height": 92.28125
+      },
+      "energy": null,
+      "match": null,
+      "overflow": false
+    },
+    {
+      "app": "original",
+      "size": "desktop",
+      "family": "full",
+      "orbital": null,
+      "notationInput": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "14.88px",
+        "lineHeight": "23.808px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgb(8, 12, 36)",
+        "padding": "7px 4px",
+        "border": "1px solid rgb(119, 129, 183)",
+        "borderRadius": "9px",
+        "width": 49,
+        "height": 44
+      },
+      "card": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "15px",
+        "lineHeight": "24px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgba(85, 246, 255, 0.035)",
+        "padding": "21px",
+        "border": "1px solid rgba(85, 246, 255, 0.26)",
+        "borderRadius": "16px",
+        "width": 1026,
+        "height": 92.28125
+      },
+      "energy": null,
+      "match": null,
+      "overflow": false
+    },
+    {
+      "app": "react",
+      "size": "desktop",
+      "family": "short",
+      "orbital": null,
+      "notationInput": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "14.88px",
+        "lineHeight": "23.808px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgb(8, 12, 36)",
+        "padding": "7px 4px",
+        "border": "1px solid rgb(119, 129, 183)",
+        "borderRadius": "9px",
+        "width": 49,
+        "height": 44
+      },
+      "card": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "15px",
+        "lineHeight": "24px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgba(85, 246, 255, 0.035)",
+        "padding": "21px",
+        "border": "1px solid rgba(85, 246, 255, 0.26)",
+        "borderRadius": "16px",
+        "width": 986,
+        "height": 92.28125
+      },
+      "energy": null,
+      "match": null,
+      "overflow": false
+    },
+    {
+      "app": "original",
+      "size": "desktop",
+      "family": "short",
+      "orbital": null,
+      "notationInput": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "14.88px",
+        "lineHeight": "23.808px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgb(8, 12, 36)",
+        "padding": "7px 4px",
+        "border": "1px solid rgb(119, 129, 183)",
+        "borderRadius": "9px",
+        "width": 49,
+        "height": 44
+      },
+      "card": {
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontSize": "15px",
+        "lineHeight": "24px",
+        "fontWeight": "700",
+        "color": "rgb(247, 247, 255)",
+        "background": "rgba(85, 246, 255, 0.035)",
+        "padding": "21px",
+        "border": "1px solid rgba(85, 246, 255, 0.26)",
+        "borderRadius": "16px",
+        "width": 1026,
+        "height": 92.28125
+      },
+      "energy": null,
+      "match": null,
+      "overflow": false
+    }
+  ],
+  "errors": [
+    "locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Noble-gas core', { exact: true })\u001b[22m\n\n    at fill (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\browser.mjs:24:82)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\browser.mjs:37:290"
+  ],
+  "limitations": [
+    "Native hidden/minimized/OS suspend not newly tested.",
+    "Original correction drawing is compared by reopening the same isolated source review question with the corrected response: the original EC source freezes assessed answers and has no correction action. Shared React first evidence remains immutable."
+  ],
+  "status": "FAIL",
+  "finishedAt": "2026-10-03T17:46:25.517Z"
+}

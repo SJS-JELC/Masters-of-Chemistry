@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-03T03:46:27.467Z",
+  "checks": [
+    {
+      "id": "actual-static-first-correction-statistics-transfer",
+      "status": "PASS",
+      "attemptId": "1bcd01b3-55f3-440b-aa66-9f646c7a532a",
+      "score": 0,
+      "activeMs": 1151,
+      "evidenceCount": 1,
+      "corrections": 3,
+      "chartSum": 1151
+    },
+    {
+      "id": "actual-static-pause-next-reload-teacher-isolation",
+      "status": "PASS",
+      "attemptId": "2e36d162-34db-4178-b070-98e77b2590a5",
+      "activeMs": 13
+    },
+    {
+      "id": "teacher-sidebar-current-preview-and-selection",
+      "status": "PASS",
+      "pausedAttemptUnchanged": true
+    },
+    {
+      "id": "production-whole-reference-mobile-fonts",
+      "status": "PASS",
+      "fonts": {
+        "body": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "brand": "Comfortaa, system-ui, sans-serif"
+      }
+    },
+    {
+      "id": "actual-olympiad-save-failure-blocks-departure-retry",
+      "status": "PASS",
+      "curriculumEvidenceUnchanged": true
+    }
+  ],
+  "pageErrors": [],
+  "builds": {
+    "alevel": "a58326235697bf9ef884adb9459d2a6de0e9f71a04499dd151a75e06a452946e",
+    "igcse": "8f38db2f89b7638d17302490f2442a2796af08dd5fba1fc5a25d5f17b2af206f"
+  },
+  "finishedAt": "2026-10-03T03:46:33.571Z"
+}

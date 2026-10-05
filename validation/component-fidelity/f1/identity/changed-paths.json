@@ -1,0 +1,261 @@
+[
+  {
+    "path": "src/content/canonical-identity.ts",
+    "beforeSha256": null,
+    "afterSha256": "ca543dadd0e00276f98e905fffa0f7468b74323a6b11673f3c7301c7a65ceb02",
+    "sourceDiffAvailable": false,
+    "change": "new"
+  },
+  {
+    "path": "src/content/canonical-fixed-ids.json",
+    "beforeSha256": null,
+    "afterSha256": "120833b3bc3cb4cfcd597010e2374aa98e5b85db88fee3d5dfb27309c70350a0",
+    "sourceDiffAvailable": false,
+    "change": "new"
+  },
+  {
+    "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+    "beforeSha256": "e64880eb10b89e72a0bbd404b77b383fa0238b94d70ae00f2673079837de4cce",
+    "afterSha256": "5c814cd246f46e8a9fc52b5ed2fabf6f79dd096a16d5140e4dc8d3674a65a67f",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/electrons-bonding/provider.ts",
+    "beforeSha256": "bdbded6171c7a86ee03931807d6824449f4ad36f30c7bfd1b4b612b59d22aaf9",
+    "afterSha256": "268a1b73b0935b03dbe93530cc929ecd2049e9a5667fb40d36c6645a9baf03bb",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/electron-configurations/provider.ts",
+    "beforeSha256": "bf712d9aacd6b46e5208d646bc293c925aa81326a1d8faf65021fcd8d881ae98",
+    "afterSha256": "da7ce1889761e884ec8e1f9137c5d1aea618909d044ef465a7ef567165a96e9a",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/ph-titration-curves/provider.ts",
+    "beforeSha256": "08730e1465d8d4d085385ae5b892a762cd8029b1d9e8fd34f7dec4ae3730be45",
+    "afterSha256": "6856c5643ee7c620ffc2e5903208dbd8fea0a44e33d43e437463553bc47f8ffd",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/dot-and-cross/provider.ts",
+    "beforeSha256": "a8f6c41353c1c9c7a30305b533f79ed74365bb5c9c7c6abae7d140dfc5b848f0",
+    "afterSha256": "8fa92593ac99dc063b0b28463d30f008b97af4e1c965442bbc2964efaa1289ab",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/dot-and-cross/provider.ts",
+    "beforeSha256": "c04bd87d5d935d17594496c652ed1241ade7d76270fb55fc87806b401def2fe4",
+    "afterSha256": "684573a3e9611fde165db75057d3f6b374969e899fa9e2277c37120b685e8f0a",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/energy-enthalpy/provider.ts",
+    "beforeSha256": "0f3eccfa0afd862621e60e67cc06070cc8fe3470f0b22ffff0d804db323ea0f2",
+    "afterSha256": "04e01896b166b39fe4860e69c3759fb075da295d312aab90c2e42e2de56c7e29",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/energetics-practical/provider.ts",
+    "beforeSha256": "10cd919bfb8fbd0ca32c696f0fcbdc87312e6e118bb624ffcfa61b555eef083e",
+    "afterSha256": "53e3ed55a1811de02ec4163c3544c3a1f7058520b2523f6cf73af828ae528ea4",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+    "beforeSha256": "5cfe6b164d08a1078c6d3e64f27dab63e1b159e63c746b4b12226947320030dd",
+    "afterSha256": "a55b7b8e0e8ac1ecca569f02824cd1fca5b4fe79a1a848b1e6134bf9c22028f1",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/calorimetry/provider.ts",
+    "beforeSha256": "ae753b6300c9e5ef6a99d9fbb08e9bfe0b3370133895d8e2a43a681ac56933ee",
+    "afterSha256": "f90392c1f29cd9d2dbfd64e0efa4eec1981ad7292ee8e8939283dc389df410fa",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/bond-enthalpy/provider.ts",
+    "beforeSha256": "d755836c872e14be9cf731289f4351092f1874f3bcbd551b2fe585a667138dba",
+    "afterSha256": "49c56a5ee2e9fe759b68f92346c0a8876620a66ba55418b955f67f36f5b81f94",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/acid-base-calculations/identity.ts",
+    "beforeSha256": null,
+    "afterSha256": "81ec353ff89913f18c7e232ae8b32d5baf30a92e7105fc7de73b15f8b1afab4c",
+    "sourceDiffAvailable": false,
+    "change": "new"
+  },
+  {
+    "path": "src/activities/alevel/acid-base-calculations/engine.js",
+    "beforeSha256": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9",
+    "afterSha256": "e3545bb2800cd62e5ca5a06ca66e3cda0355c6a9c7917d5b051d8bb103260d5c",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+    "beforeSha256": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d",
+    "afterSha256": "262ff4eee99b5a6d29afbc6e957d72f5d40708d1ea2ddbed8aec1f972f06f229",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/acid-base-calculations/index.ts",
+    "beforeSha256": "87249b638532e2d41540ea197f3597c84258dd64d19a034f26ee02df6cfb5fbb",
+    "afterSha256": "86c7fb3250a2c7e5edc2a47fc6ebb1b151b146aa655d08c4e7eeb055b1fda992",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/alevel/dot-and-cross/marking.ts",
+    "beforeSha256": "3e1a1373649de678bc7887a0162bd0cc4e21cd584f4c73c4e484d4c006b0fff0",
+    "afterSha256": "021fab13ff63986453f52114a885ea0a130154b6b463a72d2ae6b6f483646109",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/activities/igcse/dot-and-cross/marking.ts",
+    "beforeSha256": "c890df9715cce9c5d003f20c3d8149a7f326eade9d8d9adcf5fa7ec5da464661",
+    "afterSha256": "776514fddcfcd37c7e5af051d76099631c899514167d86644452bb9cf83e6cd6",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/foundation/ProductionFoundation.tsx",
+    "beforeSha256": "ed039f4469830a60ce1b54af0937bcb867b9894798489ae0bbb3965bd874fdbb",
+    "afterSha256": "16a93ecb3490537f75d87669bc68e0b9a082449bd9ca2c1addae7a496da3b7d5",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/foundation/ActivityHost.tsx",
+    "beforeSha256": "a36caf803f96c48ca200253d871875fff2042695213c6174e67d4523279a96eb",
+    "afterSha256": "c9fdb7d2e773d087f02ca39e1689fa31354f4c904a4b3cf9187da53eddf8b353",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/foundation/OlympiadHost.tsx",
+    "beforeSha256": "cd2b12e6bff118f2df25812bd21debacb268970afe9019d0443dc282b76e7d71",
+    "afterSha256": "8bdede5ae5db8962efc0ae008418f9f10d6a7a9edbb1af923a48e0a8e54bb7fc",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/development/FoundationApp.tsx",
+    "beforeSha256": "0da7347fbf767a80c24cb1870768308e374993120de0fa941903f0b2d3d18800",
+    "afterSha256": "d416b99b4572616ffa7b80bd9950b68ac6486b940a74fe2ad96f13685f8867d9",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/persistence/alpha-namespace.ts",
+    "beforeSha256": null,
+    "afterSha256": "409b031f3af501259281d4f3b8563f63630c46d7cedcf79ee7216f069e2be24b",
+    "sourceDiffAvailable": false,
+    "change": "new"
+  },
+  {
+    "path": "src/persistence/repository.ts",
+    "beforeSha256": "a30c77ff7b7e471f99df7422b526b8667d59b162e528d5bb7b39e711c7a060ad",
+    "afterSha256": "6c2438c39302d9541ca2529632375ae95006a2da9167f3eb22f0b350a6b033d3",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/persistence/validation.ts",
+    "beforeSha256": "2053af7cb1d9751c23815ac3fd6e699a9cfb140f3e4058c4bc6d62af54b67d03",
+    "afterSha256": "0f3338e5e82262dc19b9ebc4669e56175f3028415e362ad6e153192ecf33e57a",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/persistence/index.ts",
+    "beforeSha256": "12ec30802e99373ddc425d0bc60ead6a3659f72a5122484e86a4dfbf3c1453ee",
+    "afterSha256": "a79fbc9d642913652dccafaa7407ac650be35c68f9d86ec787a5ed6faf855b8e",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/persistence/legacy/plan.ts",
+    "beforeSha256": "595f0c7a2a521c07960b034fc2db9f458f9f3effbad360c41921ca138a7468f3",
+    "afterSha256": "a2344e7d8ac75f80c51193246fc5395a5e3b38f9dd92a616ae3f9827100b328d",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/compatibility/import.ts",
+    "beforeSha256": "602117d97fa490c25c6ad9fe7ca49462fc0fc57c8d3f2f8c5410e2ce60ef2da1",
+    "afterSha256": "53d81ce6fe9ca0ecede6648d6226699edc1847f15b90bd251418e711976a6bd6",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/compatibility/links.ts",
+    "beforeSha256": "980e7ed141bbad500aa7339b584ad47f0ac616b970483078a1b8e4d21c21293b",
+    "afterSha256": "4d94fc9f58d0bfc9d2f12ddda16aa92d02c00830a38349788ff482453db2f4e2",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/compatibility/LegacyImportView.tsx",
+    "beforeSha256": "df58a51e92e8446c1b6e2fd587337abf3487898aeeb5f42cff86036d3ec96f55",
+    "afterSha256": "852532bbe18dcbca738f9b61299e2d4e9030068d8f25a4b2661a1f17a2b45826",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/compatibility/routes.ts",
+    "beforeSha256": "f87ca3854f57e4bc175626dc85c65cd681056065631c3b629ca1dc2c2e507344",
+    "afterSha256": "06882d52f2a1524e8f5eb5d016a3e088b091608530606756d0796b39317d1afd",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/shell/navigation-view.ts",
+    "beforeSha256": "fd09a4a0ef3e4af7af0ca242f799cca1bea1c1decf2c86c9aaafc041c93968ea",
+    "afterSha256": "5f8fd6fbd8f67d837d351cfcaf1f4c8fc1431b9a06bbb30a49883a31c5d95bcb",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/landing/progress.ts",
+    "beforeSha256": "09de16165f942fe4b68e5b3467fc657ffc9bd393c6bd3cab0184e2849566eabf",
+    "afterSha256": "b13059532c5295e8003bafe67010d65321ce0dab5006dbad7b1cc8d307c36ea7",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "src/ui/teacher-catalogue.ts",
+    "beforeSha256": "0294d3a9f6568835ec99019d11623efc4a8fc73fcefd937675acb19b9d53caf1",
+    "afterSha256": "fd4e6461668079360425466a8e645024366c29cd99650f50875bf7ab12499328",
+    "sourceDiffAvailable": false,
+    "change": "modified"
+  },
+  {
+    "path": "scripts/runtime-aliases.mjs",
+    "beforeSha256": null,
+    "afterSha256": "9647099f534634e23d8866a4b6e82250fd9a5b8970e654721d13d08cd460d062",
+    "sourceDiffAvailable": false,
+    "change": "new"
+  },
+  {
+    "path": "scripts/test-component-identity.mjs",
+    "beforeSha256": null,
+    "afterSha256": "afb6fe5f6241489cdee622a97972d5eabbc4cb30ec22df87aee2778dae7aa2f8",
+    "sourceDiffAvailable": false,
+    "change": "new"
+  }
+]

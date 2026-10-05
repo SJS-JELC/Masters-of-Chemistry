@@ -1,0 +1,73 @@
+{
+  "jobId": "EBP-FIX-01",
+  "capturedAt": "2026-10-04T22:23:26.067Z",
+  "changes": [
+    {
+      "path": "release/alevel.runtime.json",
+      "beforeSha256": "a8b3872c55a0eac0bc7f1f37e2ec79864a82aa3161397c4d60c2f2dac95c23d4",
+      "afterSha256": "6b9cfa6d16ad0447c963cc338696d3dbed25d2c1fd4868e8bfbd66aefecb3662",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/release/alevel.runtime.json"
+    },
+    {
+      "path": "release/igcse.runtime.json",
+      "beforeSha256": "5afc7c448a396b815c8e466394b6c8130979a5d28ef6218ab246482ba047a2f5",
+      "afterSha256": "112decff127a61b31213507f832a17b47dbea4943b33f5ed1ec414a73592c173",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/release/igcse.runtime.json"
+    },
+    {
+      "path": "scripts/review_active_question_time.mjs",
+      "beforeSha256": "c74cc557552546aca9249b714e9df0abf93d6c2763b53bc9a448d8535674971c",
+      "afterSha256": "4a813539292606e81b78788d3c525fed2b4a7692511a43c21acbbc536dcbf77c",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/scripts/review_active_question_time.mjs"
+    },
+    {
+      "path": "scripts/tests/explaining-properties.test.ts",
+      "beforeSha256": "1070bd9c04568740260b502a8e5e8a915c6073cb08fbb4480cd401dc17bf8bf1",
+      "afterSha256": "6ecbc952a8428cb545643eb1ab905aea0d7a02d160972c1931d6db4e801b9535",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/scripts/tests/explaining-properties.test.ts"
+    },
+    {
+      "path": "scripts/verify-explaining-properties.mjs",
+      "beforeSha256": "8c86ad8d0ef3083226a055521d730e8c40809424e9a383d2758062a9c0e7b070",
+      "afterSha256": "80c7ed0e316b43ccfdce3a958ca455a075a9344ae2287370885ecf0f06808b99",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/scripts/verify-explaining-properties.mjs"
+    },
+    {
+      "path": "scripts/write-catalogue-definitions.mjs",
+      "beforeSha256": "1b6f4ef2fe612733aa1fbfb1aa55c979cc4c1595262fa59269c035b4782a9d06",
+      "afterSha256": "6ee20888725784a587e46669589bb53f8132ac41f1f0ca533e187692dcd3c621",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/scripts/write-catalogue-definitions.mjs"
+    },
+    {
+      "path": "src/activities/alevel/explaining-properties/bank.ts",
+      "beforeSha256": "13d621c8cff346226215a01345ef1253671f3092cbd853a9e1a46e0e76d31b88",
+      "afterSha256": "3f1ba771bca1c1ee4a1e6f965d77db827ee6c7a134c6ab0e7364809a21da4abe",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/src/activities/alevel/explaining-properties/bank.ts"
+    },
+    {
+      "path": "src/catalogue/authored-metadata.json",
+      "beforeSha256": "ff70c7ac55a9275c9c2a95ead69b41372ef054f21c85e89d9e8e1343bcd47e93",
+      "afterSha256": "019910a9a09ac4916e186820a76c6da117d11070374ad22af45b9d435cd6cad0",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/src/catalogue/authored-metadata.json"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "beforeSha256": "3f4c53e7ee3f632f9c2e6e1a7838098f0c9c78a8ae98df613d637276fb8af7fe",
+      "afterSha256": "e5b9bba5038c9adf908d4577385ca3a87fd131a3f5d4c10ec252c528d08e67ba",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/src/catalogue/definitions.ts"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "beforeSha256": "360638481042b7c094de5f1da3d668eb2b7505ee436f28b49f2e79a089ac6234",
+      "afterSha256": "64fd76c9eb52e33ec03b4e0f9e1ec911bb52bf1edcd5d823ea32f766b9900c78",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/src/styles/platform.css"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "beforeSha256": "adb227a79889e9949b007d96cf1f2fdbc79bd1025de4596388bbbd79a6243d7c",
+      "afterSha256": "99bc096c5a294e5019eb47b671a2a781bb3dadf38d3820487b0b09d93366a0dd",
+      "beforeSnapshot": "validation/explaining-properties/fix-cycle-01/before/src/ui/QuestionPlayer.tsx"
+    }
+  ],
+  "note": "Exact before snapshots of bounded fixes. Verifier pre-fix bytes restored from preserved review-deltas after checking its recorded hash."
+}

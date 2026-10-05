@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-04T21:41:12.271Z",
+  "method": "Actual production builds served under /review/ prefix; fresh Edge context; canonical routes/refresh and shared course switch.",
+  "checks": [
+    {
+      "id": "alevel-prefix-practice-switch-refresh",
+      "status": "PASS"
+    },
+    {
+      "id": "igcse-prefix-practice-switch-refresh",
+      "status": "PASS"
+    },
+    {
+      "id": "canonical-EBP-source-link-prefix-refresh",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-complete-runtime-prefix-closure",
+      "status": "PASS",
+      "files": 172
+    },
+    {
+      "id": "igcse-complete-runtime-prefix-closure",
+      "status": "PASS",
+      "files": 172
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "httpFailures": [],
+  "finishedAt": "2026-10-04T21:41:16.502Z"
+}

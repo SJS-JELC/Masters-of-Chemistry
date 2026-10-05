@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "method": "Fresh final static build; real sequential keyboard, 4× CPU, 150ms network latency 200000B/s down 93750B/s up; mobile 390×844",
+  "checks": [
+    {
+      "kind": "peakSequentialCommit",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D03",
+        "seed": 0,
+        "level": 2
+      }
+    },
+    {
+      "kind": "arrowTailHeadXSequentialCommitReload",
+      "values": {
+        "tail": 240,
+        "head": 160,
+        "x": 300
+      }
+    }
+  ],
+  "failure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Next question', exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\render-release\\final-energy-tail.mjs:4:2291"
+}

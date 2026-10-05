@@ -1,0 +1,124 @@
+{
+  "agentId": "F12",
+  "jobId": "F3-INDEPENDENT",
+  "status": "PASS",
+  "startedAt": "2026-10-03T20:22:02.271Z",
+  "checks": [
+    {
+      "tag": "desktop-AB-0000GJ",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "desktop-CAL-00I9HC",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "desktop-BE-0002DC",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "tablet-AB-0000GJ",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "tablet-CAL-00I9HC",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "tablet-BE-0002DC",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "mobile-AB-0000GJ",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "mobile-CAL-00I9HC",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    },
+    {
+      "tag": "mobile-BE-0002DC",
+      "nativeFinalController": true,
+      "matchedRef": true,
+      "sixStates": true
+    }
+  ],
+  "shots": [
+    "native-desktop-AB-0000GJ-unanswered.png",
+    "native-desktop-AB-0000GJ-partial.png",
+    "native-desktop-AB-0000GJ-incorrect.png",
+    "native-desktop-AB-0000GJ-correction.png",
+    "native-desktop-AB-0000GJ-model.png",
+    "native-desktop-AB-0000GJ-correct.png",
+    "native-desktop-CAL-00I9HC-unanswered.png",
+    "native-desktop-CAL-00I9HC-partial.png",
+    "native-desktop-CAL-00I9HC-incorrect.png",
+    "native-desktop-CAL-00I9HC-correction.png",
+    "native-desktop-CAL-00I9HC-model.png",
+    "native-desktop-CAL-00I9HC-correct.png",
+    "native-desktop-BE-0002DC-unanswered.png",
+    "native-desktop-BE-0002DC-partial.png",
+    "native-desktop-BE-0002DC-incorrect.png",
+    "native-desktop-BE-0002DC-correction.png",
+    "native-desktop-BE-0002DC-model.png",
+    "native-desktop-BE-0002DC-correct.png",
+    "native-tablet-AB-0000GJ-unanswered.png",
+    "native-tablet-AB-0000GJ-partial.png",
+    "native-tablet-AB-0000GJ-incorrect.png",
+    "native-tablet-AB-0000GJ-correction.png",
+    "native-tablet-AB-0000GJ-model.png",
+    "native-tablet-AB-0000GJ-correct.png",
+    "native-tablet-CAL-00I9HC-unanswered.png",
+    "native-tablet-CAL-00I9HC-partial.png",
+    "native-tablet-CAL-00I9HC-incorrect.png",
+    "native-tablet-CAL-00I9HC-correction.png",
+    "native-tablet-CAL-00I9HC-model.png",
+    "native-tablet-CAL-00I9HC-correct.png",
+    "native-tablet-BE-0002DC-unanswered.png",
+    "native-tablet-BE-0002DC-partial.png",
+    "native-tablet-BE-0002DC-incorrect.png",
+    "native-tablet-BE-0002DC-correction.png",
+    "native-tablet-BE-0002DC-model.png",
+    "native-tablet-BE-0002DC-correct.png",
+    "native-mobile-AB-0000GJ-unanswered.png",
+    "native-mobile-AB-0000GJ-partial.png",
+    "native-mobile-AB-0000GJ-incorrect.png",
+    "native-mobile-AB-0000GJ-correction.png",
+    "native-mobile-AB-0000GJ-model.png",
+    "native-mobile-AB-0000GJ-correct.png",
+    "native-mobile-CAL-00I9HC-unanswered.png",
+    "native-mobile-CAL-00I9HC-partial.png",
+    "native-mobile-CAL-00I9HC-incorrect.png",
+    "native-mobile-CAL-00I9HC-correction.png",
+    "native-mobile-CAL-00I9HC-model.png",
+    "native-mobile-CAL-00I9HC-correct.png",
+    "native-mobile-BE-0002DC-unanswered.png",
+    "native-mobile-BE-0002DC-partial.png",
+    "native-mobile-BE-0002DC-incorrect.png",
+    "native-mobile-BE-0002DC-correction.png",
+    "native-mobile-BE-0002DC-model.png",
+    "native-mobile-BE-0002DC-correct.png"
+  ],
+  "errors": [],
+  "limits": [
+    "Fresh synthetic app IndexedDB namespaces and nonpersistent contexts only.",
+    "Native OS suspend/minimize coverage retained by foreman; this browser suite checks reload and first timing."
+  ],
+  "finishedAt": "2026-10-03T20:22:37.229Z"
+}

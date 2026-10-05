@@ -1,0 +1,20 @@
+{
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "status": "accepted",
+  "owner": "ROOT",
+  "stages": ["F1", "F2", "F3"],
+  "aggregate": "validation/component-fidelity/f3/foreman/foreman-report.json",
+  "independentReview": "validation/component-fidelity/f3/independent/report.json",
+  "rootVerification": {
+    "currentBuildInputHashes": 308,
+    "independentEvidenceHashes": 23,
+    "previewBothCoursePrefixes": "HTTP 200 on port 5192",
+    "sharedPatch": "Reviewed final three-file diff including completed rubric guards, compact immutable score and natural action widths",
+    "renderedReview": ["mobile-EE-incorrect.png", "mobile-numeric-correction.png", "current-desktop-SBC-UFFEIZ-natural-completed.png", "current-desktop-titration-model.png", "current-tablet-electron-model.png"],
+    "priorRootReviews": ["validation/component-fidelity/f1-correction/root-acceptance.json", "validation/component-fidelity/f2/resume/root-acceptance.json"]
+  },
+  "outcome": "Canonical internal/display question IDs, fresh alpha namespace, original-source component presentation and feedback restored across curriculum, one shared Stats SVG. Interrupted F2 resumed without repeating valid completed work. All required review findings fixed and independently verified.",
+  "unresolved": [],
+  "limits": ["No new native OS suspension or hidden-window proof claimed; unchanged timing algorithm and retained evidence apply alongside fresh browser flow checks", "523 offline original placeholders verified by metadata; 794 readable originals verified by content hashes", "Concurrent regenerated original-app-check summary is explicitly recorded; no claim it remained byte-identical", "Concurrent Olympiad work is preserved and excluded from this acceptance"],
+  "publication": false
+}

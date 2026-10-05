@@ -1,0 +1,22 @@
+{
+  "jobId": "F2-EC",
+  "agentId": "F04",
+  "startedAt": "2026-10-03T17:47:49.811Z",
+  "checks": [],
+  "screenshots": [],
+  "metrics": [],
+  "errors": [
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049668500",
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049676409",
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049678121",
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049681348",
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049682946",
+    "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.original-landing') to be visible\u001b[22m\n\u001b[2m    - waiting for \"http://127.0.0.1:5188/alevel.html?view=home&run=f04-practice-EC-TH921N-musoq9xu-pkrf\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://127.0.0.1:5188/alevel.html?view=home&run=f04-practice-EC-TH921N-musoq9xu-pkrf\"\u001b[22m\n\n    at startReact (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\browser.mjs:9:267)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/component-fidelity/f2/electron/browser.mjs:32:172"
+  ],
+  "limitations": [
+    "Native hidden/minimized/OS suspend not newly tested.",
+    "Original correction drawing is compared by reopening the same isolated source review question with the corrected response: the original EC source freezes assessed answers and has no correction action. Shared React first evidence remains immutable."
+  ],
+  "status": "FAIL",
+  "finishedAt": "2026-10-03T17:48:21.055Z"
+}

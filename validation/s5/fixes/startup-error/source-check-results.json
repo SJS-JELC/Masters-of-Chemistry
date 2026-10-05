@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "sourceHash": "324e4b890abbc81f633a7f4e763b65a3dedeccaf799106cfd93cc25c49f1aec4",
+  "unchangedHostFunctions": [
+    "runtime",
+    "resolve",
+    "applySession",
+    "applyAttempt",
+    "loadHistory",
+    "save",
+    "adopt",
+    "fresh",
+    "executeCommand",
+    "command",
+    "nextQuestion",
+    "resume",
+    "retry",
+    "leaveAttempt",
+    "selectView",
+    "openTeacherQuestion"
+  ],
+  "restoreReadOnly": true,
+  "scope": "Read/restore error state, same-name repository retry, visible notice and startup guards only; owned ActivityHost"
+}

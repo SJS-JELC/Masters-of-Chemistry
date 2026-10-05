@@ -1,0 +1,261 @@
+{
+  "jobId": "S5-FIX-DOT-CHARGE-TYPING",
+  "agentId": "A15",
+  "startedAt": "2026-10-03T04:43:25.062Z",
+  "status": "FAIL",
+  "browser": "pinned workspace Playwright with installed Edge, headless, unthrottled; real trusted keyboard typing",
+  "checks": [
+    "alevel: trusted clear/sign/digit typing preserves raw text and Apply commits −1,+2,0,−9,+9 exactly"
+  ],
+  "typing": [
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "-1",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type -",
+          "value": "-"
+        },
+        {
+          "stage": "type 1",
+          "value": "-1"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "+2",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type +",
+          "value": "+"
+        },
+        {
+          "stage": "type 2",
+          "value": "+2"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "0",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type 0",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "-9",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type -",
+          "value": "-"
+        },
+        {
+          "stage": "type 9",
+          "value": "-9"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "9",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type 9",
+          "value": "9"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "-",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type -",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "+",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type +",
+          "value": "+"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "1.5",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type 1",
+          "value": "1"
+        },
+        {
+          "stage": "type .",
+          "value": "1."
+        },
+        {
+          "stage": "type 5",
+          "value": "1.5"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "1e2",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type 1",
+          "value": "1"
+        },
+        {
+          "stage": "type e",
+          "value": "1e"
+        },
+        {
+          "stage": "type 2",
+          "value": "1e2"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "NaN",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type N",
+          "value": "N"
+        },
+        {
+          "stage": "type a",
+          "value": "Na"
+        },
+        {
+          "stage": "type N",
+          "value": "NaN"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "Infinity",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type I",
+          "value": "I"
+        },
+        {
+          "stage": "type n",
+          "value": "In"
+        },
+        {
+          "stage": "type f",
+          "value": "Inf"
+        },
+        {
+          "stage": "type i",
+          "value": "Infi"
+        },
+        {
+          "stage": "type n",
+          "value": "Infin"
+        },
+        {
+          "stage": "type i",
+          "value": "Infini"
+        },
+        {
+          "stage": "type t",
+          "value": "Infinit"
+        },
+        {
+          "stage": "type y",
+          "value": "Infinity"
+        }
+      ]
+    },
+    {
+      "course": "alevel/dot-and-cross",
+      "value": "10",
+      "steps": [
+        {
+          "stage": "clear",
+          "value": ""
+        },
+        {
+          "stage": "type 1",
+          "value": "1"
+        },
+        {
+          "stage": "type 0",
+          "value": "10"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Apply bracket and charge', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\">Apply bracket and charge</button>\u001b[22m\n\n    at applyCharge (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\browser.mjs:15:106)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\browser.mjs:21:167",
+  "finishedAt": "2026-10-03T04:43:59.990Z"
+}

@@ -1,0 +1,44 @@
+﻿{
+    "runId":  "MASTERS-REACT-20261002",
+    "jobId":  "S1-ATTEMPT",
+    "sources":  [
+                    {
+                        "path":  "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+                        "sha256":  "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb"
+                    },
+                    {
+                        "path":  "apps/Masters-of-IGCSE-Chemistry/src/assets/active-question-time.js",
+                        "sha256":  "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb"
+                    },
+                    {
+                        "path":  "apps/Masters-of-IGCSE-Chemistry/src/activities/bond-enthalpy/data.js",
+                        "sha256":  "7d12bd91a5565e6bb42ef9c3b297e4b64e76889c6a86315ea686051202b49c59"
+                    },
+                    {
+                        "path":  "apps/Masters-of-IGCSE-Chemistry/src/activities/bond-enthalpy/core.js",
+                        "sha256":  "79c80489dd0c04553d455e5a87d8cb8f6b0401d44347c85d0269f08476741334"
+                    },
+                    {
+                        "path":  "apps/Masters-of-IGCSE-Chemistry/src/assets/numeric-mastery.js",
+                        "sha256":  "f4a0e1f2fd216af8bca2e1f847b07175b43155771e4c9fbbcbeda388dd61bbc1"
+                    },
+                    {
+                        "path":  "apps/Masters-of-IGCSE-Chemistry/src/activities/bond-enthalpy/mastery-core.js",
+                        "sha256":  "13a92ab67b4a2964e479b1310887959c2338c264b29d39faf5767bd5b789640b"
+                    },
+                    {
+                        "path":  "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+                        "sha256":  "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903"
+                    },
+                    {
+                        "path":  "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+                        "sha256":  "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f"
+                    },
+                    {
+                        "path":  "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+                        "sha256":  "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2"
+                    }
+                ],
+    "baseline":  "validation/s0/contracts/source-evidence.json",
+    "clarificationBaseline":  "validation/s0/contracts/clarification-source-evidence.json"
+}

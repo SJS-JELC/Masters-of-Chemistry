@@ -1,0 +1,411 @@
+--- src/editors/molecule/molecule.css before
++++ src/editors/molecule/molecule.css
+@@ -37,12 +37,14 @@
+   border-bottom: 1px solid var(--line);
+ }
+ .molecule-editor .tools,
+-.molecule-editor .tool-group {
++.molecule-editor .tool-group,
++.molecule-editor .canvas-tools {
+   display: flex;
+   align-items: center;
+   gap: 3px;
+   flex-wrap: wrap;
+ }
++.molecule-editor .canvas-tools { flex-wrap: nowrap; margin-left: auto; }
+ .molecule-editor button {
+   font: inherit;
+   letter-spacing: normal;
+@@ -306,6 +308,12 @@
+ .molecule-workspace.erasing .bond-node {
+   cursor: cell;
+ }
++.molecule-workspace.panning,
++.molecule-workspace.panning .atom-node,
++.molecule-workspace.panning .bond-node { cursor: grab; }
++.molecule-workspace.panning.dragging,
++.molecule-workspace.panning.dragging .atom-node,
++.molecule-workspace.panning.dragging .bond-node { cursor: grabbing; }
+ .molecule-gesture-preview {
+   pointer-events: none;
+ }
+@@ -320,6 +328,7 @@
+   .molecule-editor .divider {
+     display: none;
+   }
++  .molecule-editor .canvas-tools { margin-left: 0; }
+ }
+ @media (max-width: 600px) {
+   .molecule-editor .tool {
+--- src/editors/molecule/MoleculeEditor.tsx before
++++ src/editors/molecule/MoleculeEditor.tsx
+@@ -16,10 +16,11 @@
+   STEP,
+ } from '../../chemistry/molecule/interaction.ts';
+ import type { MoleculeTarget } from '../../chemistry/molecule/interaction.ts';
+-import { bondLines, drawingViewBox, thumbnailViewBox } from '../../chemistry/molecule/depiction.ts';
++import { bondLines, thumbnailViewBox } from '../../chemistry/molecule/depiction.ts';
+ import type { Representation } from '../../chemistry/molecule/depiction.ts';
+ import { Structure } from './Structure.tsx';
+-import { MoleculeInspector } from './MoleculeInspector.tsx';
++import { cameraViewBox, fitMoleculeCamera, panMoleculeCamera, zoomMoleculeCamera } from './camera.ts';
++import type { MoleculeCamera } from './camera.ts';
+ import './molecule.css';
+ const elements: MoleculeElement[] = ['C', 'O', 'N', 'Cl', 'F', 'H'];
+ function targetOf(node: EventTarget | null): MoleculeTarget | null {
+@@ -73,27 +74,33 @@
+   label = 'Molecular drawing',
+ }: MoleculeEditorProps) {
+   const [element, setElement] = useState<MoleculeElement>('C'),
+-    [order, setOrder] = useState<1 | 2 | 3>(1),
+     [chain, setChain] = useState(false),
+     [erasing, setErasing] = useState(false),
+     [view, setView] = useState<Representation>('skeletal'),
+-    [selected, setSelected] = useState<number | null>(null),
++    [panning, setPanning] = useState(false),
++    [panDragging, setPanDragging] = useState(false),
+     [message, setMessage] = useState(''),
+     [drag, setDrag] = useState<Drag | null>(null),
+     [keyboard, setKeyboard] = useState<{ id: number; angle: number } | null>(null);
+   const [size, setSize] = useState({ w: 600, h: 400 }),
+-    [manual, setManual] = useState<ReturnType<typeof drawingViewBox> | null>(null),
++    [camera, setCamera] = useState<MoleculeCamera | null>(null),
++    openingGraph = useRef(value.graph),
++    pan = useRef<{pointerId: number; screenX: number; screenY: number; camera: MoleculeCamera} | null>(null),
+     canvas = useRef<SVGSVGElement>(null),
+     gesture = useRef<Drag | null>(null),
+     state = useRef(value),
+     locked = useRef(readOnly);
+   state.current = value;
+   locked.current = readOnly;
++  const order = 1;
+   const graph = value.graph,
+     valid = core.validate(graph),
+-    viewport = manual ?? drawingViewBox(graph, size.w, size.h);
++    currentCamera = camera ?? fitMoleculeCamera(openingGraph.current, size.w, size.h),
++    viewport = cameraViewBox(currentCamera, size.w, size.h);
+   const cancel = () => {
+-    const g = gesture.current;
++    const g = pan.current ?? gesture.current;
++    pan.current = null;
++    setPanDragging(false);
+     gesture.current = null;
+     if (g && canvas.current?.hasPointerCapture(g.pointerId))
+       canvas.current.releasePointerCapture(g.pointerId);
+@@ -106,14 +113,13 @@
+     const observer = new ResizeObserver(() => {
+       const r = node.getBoundingClientRect();
+       setSize({ w: r.width || 600, h: r.height || 400 });
+-      gesture.current = null;
+-      setDrag(null);
+-      setKeyboard(null);
++      cancel();
+     });
+     observer.observe(node.parentElement!);
+     return () => {
+       observer.disconnect();
+       gesture.current = null;
++      pan.current = null;
+     };
+   }, []);
+   useEffect(() => {
+@@ -121,11 +127,10 @@
+   }, [readOnly]);
+   useEffect(() => {
+     cancel();
+-    setSelected(null);
++    setPanning(false);
++    openingGraph.current = value.graph;
++    setCamera(null);
+   }, [label]);
+-  useEffect(() => {
+-    setManual(null);
+-  }, [graph]);
+   const focus = (t: MoleculeTarget | null) =>
+     requestAnimationFrame(() => {
+       const node = t
+@@ -163,15 +168,16 @@
+   };
+   const choose = (e: MoleculeElement) => {
+       cancel();
++      setPanning(false);
+       setElement(e);
+       setChain(false);
+       setErasing(false);
+     },
+     toggleChain = () => {
+       cancel();
++      setPanning(false);
+       setChain(!chain || erasing);
+       setElement('C');
+-      setOrder(1);
+       setErasing(false);
+     };
+   const grow = (id: number, end: Point) => {
+@@ -212,6 +218,13 @@
+       setMessage('This canvas holds up to twenty heavy atoms. Erase an atom to make room.');
+   };
+   const keyDown = (e: KeyboardEvent<SVGSVGElement>) => {
++    if (panning && (e.key.startsWith('Arrow') || e.key === 'Enter' || e.key === ' ')) {
++      e.preventDefault();
++      const dx = e.key === 'ArrowLeft' ? -40 : e.key === 'ArrowRight' ? 40 : 0;
++      const dy = e.key === 'ArrowUp' ? -40 : e.key === 'ArrowDown' ? 40 : 0;
++      setCamera(panMoleculeCamera(currentCamera, dx, dy));
++      return;
++    }
+     if (readOnly) return;
+     const t = targetOf(e.target);
+     if (e.key === 'Escape') {
+@@ -271,12 +284,20 @@
+     return start && end ? { start, end } : null;
+   })();
+   const down = (e: PointerEvent<SVGSVGElement>) => {
+-    if (readOnly || !e.isPrimary || e.button !== 0 || gesture.current) return;
++    if (!e.isPrimary || e.button !== 0 || gesture.current || pan.current) return;
++    if (panning) {
++      e.preventDefault();
++      pan.current = { pointerId: e.pointerId, screenX: e.clientX, screenY: e.clientY, camera: currentCamera };
++      setPanDragging(true);
++      focus(null);
++      e.currentTarget.setPointerCapture(e.pointerId);
++      return;
++    }
++    if (readOnly) return;
+     e.preventDefault();
+     setKeyboard(null);
+     const t = targetOf(e.target),
+       p = point(e);
+-    if (t?.kind === 'atom') setSelected(t.id);
+     focus(t);
+     const g = {
+       pointerId: e.pointerId,
+@@ -292,6 +313,11 @@
+     e.currentTarget.setPointerCapture(e.pointerId);
+   };
+   const move = (e: PointerEvent<SVGSVGElement>) => {
++    const p = pan.current;
++    if (p?.pointerId === e.pointerId) {
++      setCamera(panMoleculeCamera(p.camera, e.clientX - p.screenX, e.clientY - p.screenY));
++      return;
++    }
+     const g = gesture.current;
+     if (!g || g.pointerId !== e.pointerId) return;
+     const next = {
+@@ -303,6 +329,7 @@
+     setDrag(next);
+   };
+   const up = (e: PointerEvent<SVGSVGElement>) => {
++    if (pan.current?.pointerId === e.pointerId) { move(e); cancel(); return; }
+     const g = gesture.current;
+     if (!g || g.pointerId !== e.pointerId) return;
+     const end = point(e),
+@@ -330,12 +357,13 @@
+   };
+   const zoom = (factor: number) => {
+     cancel();
+-    setManual({
+-      x: viewport.x + (viewport.w * (1 - factor)) / 2,
+-      y: viewport.y + (viewport.h * (1 - factor)) / 2,
+-      w: Math.max(160, Math.min(2560, viewport.w * factor)),
+-      h: Math.max(110, Math.min(2000, viewport.h * factor)),
+-    });
++    setCamera(zoomMoleculeCamera(currentCamera, factor));
++  };
++  const togglePan = () => {
++    cancel();
++    setPanning(!panning);
++    setErasing(false);
++    setChain(false);
+   };
+   return (
+     <section
+@@ -365,12 +393,13 @@
+         if (k === '3') toggleChain();
+         if (k === 'e') {
+           cancel();
++          setPanning(false);
+           setErasing(!erasing);
+         }
+       }}
+     >
+       <p className="drawing-instruction">
+-        Tap to place an atom, or drag to draw a bond. Choose Chain to draw several carbons.
++        Tap to place an atom, or drag to draw a bond. Choose Chain to draw several carbons, or the hand to move the canvas.
+       </p>
+       <div className="drawing-card">
+         <div className="editor-bar">
+@@ -385,7 +414,7 @@
+                   disabled={readOnly}
+                   aria-label={core.names[e]}
+                   title={`${core.names[e]} (${e === 'Cl' ? 'L' : e})`}
+-                  aria-pressed={element === e && !erasing && !chain}
++                  aria-pressed={element === e && !erasing && !chain && !panning}
+                   onClick={() => choose(e)}
+                 >
+                   {e}
+@@ -399,7 +428,7 @@
+               aria-label="Carbon chain"
+               title="Toggle carbon chain (3)"
+               disabled={readOnly}
+-              aria-pressed={chain && !erasing}
++              aria-pressed={chain && !erasing && !panning}
+               onClick={toggleChain}
+             >
+               <svg viewBox="0 0 24 24" aria-hidden="true">
+@@ -415,6 +444,7 @@
+               aria-pressed={erasing}
+               onClick={() => {
+                 cancel();
++                setPanning(false);
+                 setErasing(!erasing);
+               }}
+             >
+@@ -459,7 +489,6 @@
+             onClick={() => {
+               cancel();
+               send({ kind: 'clear' }, 'Canvas cleared. Undo will restore it.');
+-              setSelected(null);
+             }}
+           >
+             Clear structure
+@@ -480,11 +509,25 @@
+               </button>
+             ))}
+           </div>
++          <div className="canvas-tools" role="group" aria-label="Canvas view">
++            <button type="button" className="tool" aria-label="Zoom in" title="Zoom in" onClick={() => zoom(1.25)} disabled={currentCamera.scale >= 4}>
++              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="7" /><path d="m15 15 6 6M6 10h8M10 6v8" /></svg>
++            </button>
++            <button type="button" className="tool" aria-label="Zoom out" title="Zoom out" onClick={() => zoom(.8)} disabled={currentCamera.scale <= .15}>
++              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="7" /><path d="m15 15 6 6M6 10h8" /></svg>
++            </button>
++            <button type="button" className="tool" aria-label="Pan canvas" title="Hand: drag to pan" aria-pressed={panning} onClick={togglePan}>
++              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12V5a1.5 1.5 0 0 1 3 0v6-8a1.5 1.5 0 0 1 3 0v8-6a1.5 1.5 0 0 1 3 0v7-4a1.5 1.5 0 0 1 3 0v7c0 4-2 7-6 7h-1c-2 0-3-1-4-2l-5-6a1.5 1.5 0 0 1 2-2l2 2" /></svg>
++            </button>
++            <button type="button" className="tool" aria-label="Fit molecule" title="Fit molecule" onClick={() => { cancel(); setCamera(fitMoleculeCamera(graph, size.w, size.h)); }}>
++              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M3 15v6h6M21 15v6h-6" /><circle cx="12" cy="12" r="3" /></svg>
++            </button>
++          </div>
+         </div>
+         <div className="canvas-wrap">
+           <svg
+             ref={canvas}
+-            className={`molecule-workspace${erasing ? ' erasing' : ''}`}
++            className={`molecule-workspace${erasing ? ' erasing' : ''}${panning ? ' panning' : ''}${panDragging ? ' dragging' : ''}`}
+             tabIndex={0}
+             viewBox={`${viewport.x} ${viewport.y} ${viewport.w} ${viewport.h}`}
+             role="group"
+@@ -494,7 +537,7 @@
+             onPointerUp={up}
+             onPointerCancel={cancel}
+             onLostPointerCapture={() => {
+-              if (gesture.current) cancel();
++              if (gesture.current || pan.current) cancel();
+             }}
+             onKeyDown={keyDown}
+             onBlur={() => setKeyboard(null)}
+@@ -505,7 +548,6 @@
+               view={view}
+               interactive
+               invalid={valid.atoms ?? []}
+-              onSelect={setSelected}
+             />
+             <g className="mechanism-annotations" />
+             <g className="molecule-gesture-preview" aria-hidden="true">
+@@ -554,67 +596,8 @@
+           Keyboard: C/O/N/F/H choose an element; L selects chlorine; 3 toggles Chain; E selects
+           Erase. Tab reaches the canvas, atoms and bonds. Enter places or changes an atom; arrow
+           keys on an atom preview a bond and Enter commits it. Delete erases, Ctrl+Z undoes, and
+-          Escape cancels.
++          Escape cancels. With the hand selected, drag or use the arrow keys to pan. Zoom and Fit molecule change only the view.
+         </p>
+-      </details>
+-      <details className="molecule-alternatives">
+-        <summary>Alternative controls and view</summary>
+-        <div className="molecule-tools molecule-view-tools">
+-          <button
+-            type="button"
+-            onClick={() => {
+-              cancel();
+-              setManual(null);
+-            }}
+-          >
+-            Fit molecule
+-          </button>
+-          <button type="button" onClick={() => zoom(0.8)}>
+-            Zoom in
+-          </button>
+-          <button type="button" onClick={() => zoom(1.25)}>
+-            Zoom out
+-          </button>
+-          {(['left', 'right', 'up', 'down'] as const).map((d) => (
+-            <button
+-              type="button"
+-              key={d}
+-              aria-label={`Pan ${d}`}
+-              onClick={() => {
+-                cancel();
+-                setManual({
+-                  ...viewport,
+-                  x:
+-                    viewport.x +
+-                    (d === 'left' ? -viewport.w / 4 : d === 'right' ? viewport.w / 4 : 0),
+-                  y:
+-                    viewport.y + (d === 'up' ? -viewport.h / 4 : d === 'down' ? viewport.h / 4 : 0),
+-                });
+-              }}
+-            >
+-              {d === 'left' ? '←' : d === 'right' ? '→' : d === 'up' ? '↑' : '↓'}
+-            </button>
+-          ))}
+-        </div>
+-        <MoleculeInspector
+-          graph={graph}
+-          selected={selected}
+-          element={element}
+-          order={order}
+-          readOnly={readOnly}
+-          choose={choose}
+-          setOrder={(n) => {
+-            cancel();
+-            setOrder(n);
+-          }}
+-          setSelected={(n) => {
+-            cancel();
+-            setSelected(n);
+-          }}
+-          send={send}
+-          grow={grow}
+-        />
+-        <p>{valid.kind === 'valid' ? `Formula: ${core.formula(graph)}` : valid.message}</p>
+       </details>
+       <p className="molecule-announcement" role="status" aria-live="polite">
+         {message}
+--- /dev/null
++++ src/editors/molecule/camera.ts
+@@ -0,0 +1,25 @@
++import type { MoleculeGraph } from '../../contracts/editors.ts';
++
++/** Camera coordinates are separate from the saved molecular graph. */
++export interface MoleculeCamera { readonly x: number; readonly y: number; readonly scale: number; }
++export const DEFAULT_DRAWING_SCALE = 1.4;
++export function fitMoleculeCamera(graph: MoleculeGraph, width: number, height: number): MoleculeCamera {
++  if (!graph.atoms.length) return { x: 0, y: 0, scale: DEFAULT_DRAWING_SCALE };
++  const xs = graph.atoms.map(a => a.x), ys = graph.atoms.map(a => a.y);
++  const left = Math.min(...xs), right = Math.max(...xs), top = Math.min(...ys), bottom = Math.max(...ys);
++  return {
++    x: (left + right) / 2,
++    y: (top + bottom) / 2,
++    scale: Math.min(DEFAULT_DRAWING_SCALE, width / (right - left + 140), height / (bottom - top + 100)),
++  };
++}
++export function cameraViewBox(camera: MoleculeCamera, width: number, height: number) {
++  const w = width / camera.scale, h = height / camera.scale;
++  return { x: camera.x - w / 2, y: camera.y - h / 2, w, h };
++}
++export function zoomMoleculeCamera(camera: MoleculeCamera, factor: number): MoleculeCamera {
++  return { ...camera, scale: Math.max(.15, Math.min(4, camera.scale * factor)) };
++}
++export function panMoleculeCamera(camera: MoleculeCamera, dx: number, dy: number): MoleculeCamera {
++  return { ...camera, x: camera.x - dx / camera.scale, y: camera.y - dy / camera.scale };
++}

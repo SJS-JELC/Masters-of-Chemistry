@@ -1,0 +1,39 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-SCAFFOLD-STARTUP",
+  "status": "PASS",
+  "confidence": 0.96,
+  "reason": "Approve one initial DOM-ready navigation plus existing actual-host readiness, preserving all assertions; controlled corrected long/short temp startup succeeds, while original stalls remain unclassified.",
+  "outputPaths": [
+    "validation/s4/refinement/review-scaffold-startup/HANDOVER.md",
+    "validation/s4/refinement/review-scaffold-startup/disposition.json",
+    "validation/s4/refinement/review-scaffold-startup/proposed-browser.mjs.txt",
+    "validation/s4/refinement/review-scaffold-startup/diagnostic-corrected.json",
+    "validation/s4/refinement/review-scaffold-startup/setup-clarification.json",
+    "validation/s4/refinement/review-scaffold-startup/original-startup-cache-reload-probe.json",
+    "validation/s4/refinement/review-scaffold-startup/original-restarted-navigation-probe.json",
+    "validation/s4/refinement/review-scaffold-startup/retain-and-verify.mjs"
+  ],
+  "validation": {
+    "status": "PASS",
+    "exactInitialNavigationChange": "Add waitUntil:domcontentloaded; existing ready() unchanged",
+    "substantiveAssertionTailUnchanged": true,
+    "correctedLongTempRootLength": 200,
+    "correctedShortTempRootLength": 172,
+    "parentNodeTempRootsVerified": true,
+    "controlledStartupCases": 2,
+    "actualHostReady": true,
+    "nativeForegroundUsed": false,
+    "sourceHashesStableDuringDiagnostic": 7,
+    "originalFailureCause": "Unclassified",
+    "pathLengthCause": "Not reproduced as sufficient cause under stable warm-server conditions",
+    "fullScaffoldBehavior": "Pending A20 unchanged full suite"
+  },
+  "originalAndReviewerProbeEvidenceRetained": true,
+  "sourceWritesByReviewer": false,
+  "ownBrowsersClosed": true,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null
+}

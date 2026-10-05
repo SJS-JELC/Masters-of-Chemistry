@@ -1,0 +1,55 @@
+import { chromium } from '../../../../../node_modules/playwright/index.mjs';
+import { mkdir,writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import assert from 'node:assert/strict';
+const origin=process.argv[2]??'http://127.0.0.1:5181';
+const run=`persistence-${Date.now()}`;
+const profilePath=fileURLToPath(new URL(`./.i-${Date.now()}/`,import.meta.url));
+await mkdir(profilePath,{recursive:true});
+const context=await chromium.launchPersistentContext(profilePath,{channel:'msedge',headless:true,args:['--no-first-run','--no-default-browser-check']});
+try{
+  const page=await context.newPage(),errors=[];
+  page.on('pageerror',error=>errors.push(error.message));
+  await page.goto(`${origin}/alevel.html?run=${run}&fixture=self-drawing`);
+  await page.waitForFunction(()=>window.__mastersFoundation);
+  const suite=await page.evaluate(()=>window.__mastersFoundation.persistenceScenarios());
+  assert.equal(suite.passed,14);
+  await page.getByRole('button',{name:'Start fixture',exact:true}).click();
+  await page.waitForFunction(()=>window.__mastersFoundation.snapshot().attempt?.phase==='answering');
+  await page.evaluate(async()=>{await window.__mastersFoundation.respond('answer',{kind:'numeric',raw:'42',unit:'kJ'});await window.__mastersFoundation.flush();});
+  await page.getByRole('button',{name:'Submit and freeze response'}).click();
+  await page.waitForFunction(()=>window.__mastersFoundation.snapshot().attempt?.phase==='drawing-review'&&window.__mastersFoundation.snapshot().saveStatus.kind==='saved');
+  const pending=await page.evaluate(()=>window.__mastersFoundation.snapshot());
+  assert.equal(pending.history.length,0);assert.equal(pending.attempt.firstResponse.responses.answer.raw,'42');assert.equal(pending.attempt.checks[0].judgement,'pending');
+  await page.reload();
+  await page.waitForFunction(()=>window.__mastersFoundation?.snapshot().attempt?.phase==='drawing-review');
+  const restored=await page.evaluate(()=>window.__mastersFoundation.snapshot());
+  assert.equal(restored.attempt.attemptId,pending.attempt.attemptId);assert.deepEqual(restored.attempt.firstResponse,pending.attempt.firstResponse);assert.equal(restored.history.length,0);assert.equal(restored.session.currentAttemptId,pending.attempt.attemptId);
+  await page.getByRole('button',{name:'Simulate save failure',exact:true}).click();
+  await page.getByRole('button',{name:'Yes, my drawing meets every criterion'}).click();
+  await page.waitForFunction(()=>window.__mastersFoundation.snapshot().attempt.phase==='assessed'&&window.__mastersFoundation.snapshot().saveStatus.kind==='error');
+  const failed=await page.evaluate(()=>window.__mastersFoundation.snapshot());
+  assert.equal(failed.saveStatus.error.code,'quota');assert.equal(failed.attempt.firstAssessment.kind,'self-drawing');assert.deepEqual(failed.attempt.firstResponse,pending.attempt.firstResponse);assert.equal(failed.history.length,0);
+  await page.getByRole('button',{name:'Retry save',exact:true}).first().click();
+  await page.waitForFunction(()=>window.__mastersFoundation.snapshot().saveStatus.kind==='saved'&&window.__mastersFoundation.snapshot().history.length===1);
+  const saved=await page.evaluate(()=>window.__mastersFoundation.snapshot());
+  assert.equal(saved.history[0].id,pending.attempt.attemptId);assert.equal(saved.history[0].selfAssessed,true);assert.deepEqual(saved.history[0].timing,pending.attempt.firstResponse.timing);assert.equal(saved.history[0].firstAssessment.marks.available,2);assert.equal(saved.history[0].score,1);
+  await page.reload();
+  await page.waitForFunction(()=>window.__mastersFoundation?.snapshot().attempt?.phase==='assessed'&&window.__mastersFoundation.snapshot().history.length===1);
+  const final=await page.evaluate(()=>window.__mastersFoundation.snapshot());
+  assert.deepEqual(final.attempt.firstResponse,saved.attempt.firstResponse);assert.deepEqual(final.attempt.firstAssessment,saved.attempt.firstAssessment);assert.equal(final.history.length,1);
+  // Same attempt, different immutable answer is rejected by a second connection.
+  const conflict=await page.evaluate(async()=>{
+    const state=window.__mastersFoundation.snapshot();
+    const {createChemistryRepository}=await import('/src/persistence/index.ts');
+    const altered=structuredClone(state.attempt);
+    altered.firstResponse.responses.answer.raw='43';
+    return createChemistryRepository(state.databaseName).saveCurriculum({attempt:altered});
+  });
+  assert.equal(conflict.ok,false);assert.equal(conflict.error.code,'conflict');
+  const report={checkedAt:new Date().toISOString(),origin,run,profilePath,engine:'Pinned workspace Playwright 1.62.1 / msedge Chromium, isolated context',suite,integratedChecks:['pending-drawing-stage-restores-identical-first-response-and-timing','quota-rolls-back-assessment-preserving-in-memory-first-result','retry-commits-one-aggregate-self-assessed-evidence','reload-preserves-attempt-session-first-result-timing','second-connection-immutable-conflict'],firstAttemptId:pending.attempt.attemptId,frozenTiming:pending.attempt.firstResponse.timing,finalEvidenceCount:final.history.length,errors};
+  assert.deepEqual(errors,[]);
+  await writeFile(new URL('./integrated-browser-results.json',import.meta.url),JSON.stringify(report,null,2));
+  await page.screenshot({path:fileURLToPath(new URL('./integrated-browser.png',import.meta.url)),fullPage:true});
+  console.log(JSON.stringify(report,null,2));
+}finally{await context.close();}

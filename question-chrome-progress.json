@@ -1,0 +1,14 @@
+{
+    "status":  "complete",
+    "stages":  {
+                   "H0":  {
+                              "status":  "accepted"
+                          },
+                   "H1":  {
+                              "status":  "accepted"
+                          }
+               },
+    "rootAcceptance":  "validation/question-chrome/implementation/root-acceptance.json",
+    "runId":  "QUESTION-CHROME-20261003",
+    "currentStage":  "H1"
+}

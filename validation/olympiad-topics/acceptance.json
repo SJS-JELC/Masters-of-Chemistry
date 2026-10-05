@@ -1,0 +1,11 @@
+﻿{
+  "status": "PASS",
+  "task": "A Level topic pills on both Olympiad landing cards",
+  "execution": "local bounded UI edit",
+  "curriculumReference": "resources/curriculum/ocr-a-level/a-level-specification-map.md",
+  "topicReview": "C3L6 classifies functional groups and oxidation/reduction, then uses hydrolysis and linked organic synthesis. UK2011Q4 uses structural/optical isomerism, boiling-point comparisons, IR and proton/carbon-13 NMR evidence.",
+  "checks": ["TypeScript typecheck", "Both course builds", "Both release manifests validated", "Browser navigation to both questions and back", "No overflow at 1440, 768, 390 and 350 pixels", "Desktop and mobile screenshots visually inspected", "Protected original apps checked without hydrating offline placeholders"],
+  "evidence": ["browser-report.json", "releases.json", "original-preservation.json"],
+  "scope": "Informational topic labels only; no chemistry, marking or saved-progress changes"
+}
+

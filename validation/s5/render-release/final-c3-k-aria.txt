@@ -1,0 +1,63 @@
+- heading "Structure K · Mr 92" [level=2]
+- region "Draw structure K":
+  - paragraph: Carbon has four bonds, oxygen two and nitrogen three in neutral structures. Unshown hydrogens complete valence. Choose an atom, then extend or connect it. Rings require closing a bond.
+  - text: New element
+  - combobox "New element" [disabled]:
+    - option "C" [selected]
+    - option "H"
+    - option "O"
+    - option "N"
+    - option "Cl"
+    - option "F"
+  - text: Bond order
+  - combobox "Bond order" [disabled]:
+    - option "Single" [selected]
+    - option "Double"
+    - option "Triple"
+  - text: Direction
+  - combobox "Extension direction" [disabled]:
+    - option "0°" [selected]
+    - option "60°"
+    - option "120°"
+    - option "180°"
+    - option "240°"
+    - option "300°"
+  - button "Add atom" [disabled]
+  - button "Undo" [disabled]
+  - button "Clear" [disabled]
+  - checkbox "Skeletal view"
+  - text: Skeletal view
+  - button "Fit molecule"
+  - button "Zoom in"
+  - button "Zoom out"
+  - button "Pan left": ←
+  - button "Pan right": →
+  - button "Pan up": ↑
+  - button "Pan down": ↓
+  - group "Draw structure K. Click empty space to place an atom; select atoms with Tab. Arrow keys move the selected atom.":
+    - button "Atom 1, O, select or move": O
+    - button "Atom 2, C, select or move": C
+    - button "Atom 3, OH, select or move": OH
+    - button "Atom 4, CH, select or move": CH
+    - button "Atom 5, OH, select or move": OH
+    - button "Atom 6, OH, select or move": OH
+  - text: Selected atom
+  - combobox "Selected atom":
+    - option "None / detached new atom" [selected]
+    - 'option "1: O"'
+    - 'option "2: C"'
+    - 'option "3: OH"'
+    - 'option "4: CH"'
+    - 'option "5: OH"'
+    - 'option "6: OH"'
+  - status: "Formula: C2H4O4"
+  - paragraph: Review only. This structure cannot be changed.
+- group:
+  - text: Reference structures and accepted alternatives
+  - figure "C2H4O4":
+    - img "Accepted alternative 1": O C OH CH OH OH
+    - text: C2H4O4
+- group "K source erratum":
+  - text: Source erratum · excluded K alternative
+  - paragraph: "Source erratum for K: the accepted product is the aldehyde hydrate, 2,2-dihydroxyacetic acid. The inherited alternative retains the aldehyde and forms a hypothetical orthoacid at the carboxyl group; it is not accepted for this reaction. Both have formula C₂H₄O₄ and Mr 92, so formula and mass alone do not distinguish them."
+  - 'img "Rejected source alternative: aldehyde retained, orthoacid formed"': O CH C OH OH OH

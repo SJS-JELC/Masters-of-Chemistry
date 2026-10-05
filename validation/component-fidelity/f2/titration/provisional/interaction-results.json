@@ -1,0 +1,20 @@
+{
+  "jobId": "F2-TITRATION",
+  "agentId": "F06",
+  "startedAt": "2026-10-03T17:48:34.352Z",
+  "status": "FAIL",
+  "checks": [],
+  "screenshots": [],
+  "metrics": [],
+  "errors": [
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049716975",
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049721635",
+    "Failed to fetch dynamically imported module: http://127.0.0.1:5188/src/foundation/ProductionFoundation.tsx?t=1791049724317"
+  ],
+  "limits": [
+    "Headless Edge/pinned root Playwright 1.62.1; no native OS hidden/suspension claim.",
+    "Source interactions occur in fresh nonpersistent synthetic browser contexts."
+  ],
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-topic=\"u6-t1-topic-1\"] .topic-trigger')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"topic-trigger\" aria-expanded=\"false\" aria-controls=\"u6-t1-topic-1-gems\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" class=\"topic-trigger\" aria-expanded=\"false\" aria-controls=\"l6-t1-topic-6-gems\">…</button> from <section id=\"l6-t1\" aria-hidden=\"false\" class=\"year-card front\" aria-labelledby=\"heading-l6-t1\">…</section> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" class=\"topic-trigger\" aria-expanded=\"false\" aria-controls=\"l6-t1-topic-6-gems\">…</button> from <section id=\"l6-t1\" aria-hidden=\"false\" class=\"year-card front\" aria-labelledby=\"heading-l6-t1\">…</section> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <button type=\"button\" class=\"topic-trigger\" aria-expanded=\"false\" aria-controls=\"l6-t1-topic-6-gems\">…</button> from <section id=\"l6-t1\" aria-hidden=\"false\" class=\"year-card front\" aria-labelledby=\"heading-l6-t1\">…</section> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at start (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\titration\\revision.mjs:12:152)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/component-fidelity/f2/titration/revision.mjs:23:70",
+  "finishedAt": "2026-10-03T17:49:25.794Z"
+}

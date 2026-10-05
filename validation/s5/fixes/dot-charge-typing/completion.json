@@ -1,0 +1,29 @@
+{
+  "jobId": "S5-FIX-DOT-CHARGE-TYPING",
+  "agentId": "A15",
+  "status": "PASS",
+  "outputPath": "validation/s5/fixes/dot-charge-typing/HANDOVER.md",
+  "confidence": "high",
+  "reason": null,
+  "changedRuntimeFiles": [
+    "src/editors/dot-and-cross/DotCrossEditor.tsx"
+  ],
+  "frozenSourceSha256": "ba5a3100b01ae8379f4a912ae81b526070572bc75e3c61bb89c3f63f876c6cb3",
+  "validation": {
+    "staticAndChemistry": "checks.json: all10 PASS; IGCSE72/A Level91 and incorrect fixtures",
+    "actualHost": "browser-results.json: both courses, trusted input, signed/invalid Apply, undo/redo, restore, mobile, no evidence",
+    "readonly": "readonly-browser.json: PASS",
+    "protectedSources": "PASS",
+    "diff": "source.diff",
+    "fingerprints": "fingerprints.json",
+    "ownedServer": "closed; port5211 ECONNREFUSED"
+  },
+  "retainedFailedRuns": 2,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedReasoningEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveReasoningEffort": "unknown",
+  "usage": "unknown",
+  "children": 0,
+  "completedAt": "2026-10-03T04:51:31.326Z"
+}

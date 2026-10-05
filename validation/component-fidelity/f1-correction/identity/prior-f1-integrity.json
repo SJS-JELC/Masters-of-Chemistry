@@ -1,0 +1,458 @@
+{
+  "status": "PASS",
+  "baseline": "../baseline.json",
+  "files": [
+    {
+      "path": "validation/component-fidelity/f1/baseline.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/build.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/foreman-report.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/freeze-evidence.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/acid-source-fixtures.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/browser-results.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/browser.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/canonical-identity.test.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/changed-paths.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/completion.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/coverage-results.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/current-export.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/current-import-browser.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/current-persistence.test.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/finish-source.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/HANDOVER.md",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/prepared.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/source-preservation.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/tests.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/typecheck.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity/write-completion.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/identity-integration.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/integrity.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/integrity.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/prior-evidence-freeze.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/production-alevel-pilot-mobile.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/production-browser.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/production-browser.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/production-igcse-pilot-mobile.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/registration-timing.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/releases.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/source-render-review.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-alevel-1440.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-alevel-390.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-alevel-820.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-browser.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-browser.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-igcse-1440.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-igcse-390.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-igcse-820.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-original-alevel.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/stats-source-render.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/typecheck.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results-before-equivalence-toggle.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results-before-learning-review-display.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results-first.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results-next-race.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results-pre-revision-selector.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results-timing-fixture.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser-results.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/browser.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/completion.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/contact-desktop.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/contact-mobile.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/contact-sheets.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/contact-tablet.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/HANDOVER.md",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/inspect.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/inspect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/manifest.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-desktop-correct.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-desktop-correction.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-desktop-incorrect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-desktop-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-desktop-partial.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-desktop-unanswered.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-mobile-correct.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-mobile-correction.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-mobile-incorrect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-mobile-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-mobile-partial.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-mobile-unanswered.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-tablet-correct.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-tablet-correction.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-tablet-incorrect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-tablet-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-tablet-partial.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/original-tablet-unanswered.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/practical-marking-regression.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-correct.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-correction.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-full-chrome.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-incorrect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-partial.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-teacher-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-desktop-unanswered.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-correct.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-correction.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-full-chrome.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-incorrect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-partial.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-teacher-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-mobile-unanswered.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-correct.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-correction.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-full-chrome.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-incorrect.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-partial.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-teacher-model.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/react-tablet-unanswered.png",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/reference-matrix.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/REFERENCE-MATRIX.md",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/reference-matrix.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/reference-server.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/typecheck.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/verification.json",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-pilot/verify.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/ui-verification.log",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/verify-integrity.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "validation/component-fidelity/f1/write-aggregate.mjs",
+      "unchanged": true
+    }
+  ]
+}

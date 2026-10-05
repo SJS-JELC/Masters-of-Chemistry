@@ -1,0 +1,129 @@
+{
+  "jobId": "S3-REVIEW-CO",
+  "agentId": "A07",
+  "runId": "MASTERS-REACT-20261002",
+  "createdAt": "2026-10-03T01:32:27.452Z",
+  "status": "PASS",
+  "source": {
+    "file": "apps/Masters-of-IGCSE-Chemistry/src/activities/bond-enthalpy/data.js",
+    "fileSha256": "7d12bd91a5565e6bb42ef9c3b297e4b64e76889c6a86315ea686051202b49c59",
+    "originalSvgSha256": "8290640db0821f819075df57ea3d85f2828fdb9139aa8721ef3e85a0802d4da7",
+    "copiedSvgIdentical": true,
+    "historicalRenderingRdkit": "2026.03.5",
+    "intendedSmiles": "[C-]#[O+]",
+    "equation": "CO + 2H₂ → CH₄O",
+    "copiedDataFileSha256": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d"
+  },
+  "correction": {
+    "kind": "missing-formal-charge-vector",
+    "newSvgSha256": "02de76dd4029588cd04a591c7bb514fb2b6103f5ce96239e24543ec5babae2eb",
+    "output": "src/chemistry/thermochemistry/reviewed-co-svg.ts",
+    "outputSha256": "27f7dd2df015598baf3d56ba7cab7866eb6aba29129c2c940bfd7aafefaef72d",
+    "existingSvgBytePreservation": true,
+    "insertedElement": "\n<path class='atom-0' data-reviewed-charge='carbon-minus' transform='translate(127.2 0)' d='M 65.3 75.5 Q 64.8 75.5, 64.4 75.2 Q 64.1 74.8, 64.1 74.3 Q 64.1 73.8, 64.4 73.5 Q 64.8 73.2, 65.3 73.2 L 73.6 73.2 Q 74.0 73.2, 74.4 73.5 Q 74.7 73.9, 74.7 74.4 Q 74.7 74.8, 74.4 75.2 Q 74.0 75.5, 73.6 75.5 Z' fill='currentColor'/>",
+    "horizontalChargeBounds": {
+      "xMin": 191.3,
+      "xMax": 201.9,
+      "yMin": 73.2,
+      "yMax": 75.5
+    },
+    "localMoleculeBox": {
+      "width": 220,
+      "height": 165
+    },
+    "fontChanged": false,
+    "fullRegeneration": false
+  },
+  "bondCalculation": {
+    "broken": [
+      {
+        "bond": "C≡O",
+        "count": 1,
+        "energy": 1072,
+        "subtotal": 1072
+      },
+      {
+        "bond": "H–H",
+        "count": 2,
+        "energy": 436,
+        "subtotal": 872
+      }
+    ],
+    "made": [
+      {
+        "bond": "C–O",
+        "count": 1,
+        "energy": 358,
+        "subtotal": 358
+      },
+      {
+        "bond": "C–H",
+        "count": 3,
+        "energy": 414,
+        "subtotal": 1242
+      },
+      {
+        "bond": "O–H",
+        "count": 1,
+        "energy": 463,
+        "subtotal": 463
+      }
+    ],
+    "brokenTotal": 1944,
+    "madeTotal": 2063,
+    "deltaH": -119
+  },
+  "notes": [
+    "This is an independently reviewed deterministic vector correction, not regeneration with the unavailable managed exact chemistry profile.",
+    "Copied original data and protected sibling remain unchanged.",
+    "Question ID/species/mark scheme/equation/bond energy data are unchanged."
+  ],
+  "reviewedAt": "2026-10-03T01:36:05.765Z",
+  "reviewedBy": "A07 independent chemistry/charge/render review",
+  "validation": {
+    "chemistry": "chemistry-check.json",
+    "xml": "render-results.json",
+    "byteRecovery": "Removal of exactly the inserted carbon-minus vector recovers the entire inherited SVG byte-for-byte",
+    "supplementaryRdkit": "2025.09.1; Python3.13.5; read-only invariants, no rendering or managed regeneration claimed",
+    "manualVisualInspection": {
+      "status": "PASS",
+      "observation": "Inspected the full reaction before/after, corrected883px reaction and390px/mobile358px image: superscriptC-minus andO-plus are distinct, triple bond retained, no label collision or clipping; methanol/hydrogen/coefficient/arrow geometry unchanged.",
+      "images": [
+        {
+          "path": "desktop-before-after.png",
+          "sha256": "0bda6cd34e91c4d2404880e604fb699f900c2845cfd93715bd7aa1f979694a4d"
+        },
+        {
+          "path": "reviewed-full-reaction.png",
+          "sha256": "328048b32d7641dadb8ef83cd116a58b86d8ea5aa3e8ddf89e820958543f0bd6"
+        },
+        {
+          "path": "mobile-full-reaction.png",
+          "sha256": "365176f052143afcf280e7c571bc6c246ab9553c098e67e4030dbdbc9476c0e1"
+        },
+        {
+          "path": "mobile-co-charge-detail.png",
+          "sha256": "d5fd0c471303d07805288036377c05f56af90b90c727bf17398dea8c6daf0ce0"
+        }
+      ]
+    },
+    "scripts": [
+      {
+        "path": "create-reviewed-svg.mjs",
+        "sha256": "8ed04e1665f7548c6d5264e8de0f55a7b4efaf6c956879d37166b3961cf390a7"
+      },
+      {
+        "path": "check_chemistry.py",
+        "sha256": "f6fbc5ead1bfd2bc578940e7d1540eb673b10359424f7fb50bf028e0f3a1e985"
+      },
+      {
+        "path": "render-review.mjs",
+        "sha256": "d0ba46e9d884b8c39a9d44a5f85bc972e12dd7837ba538e8a64aaac3e63f387a"
+      },
+      {
+        "path": "accept-review.mjs",
+        "sha256": "09650361415537c5e6d9527984db2f35c9c81b07fc7f9ca4346834123864ffdc"
+      }
+    ]
+  }
+}

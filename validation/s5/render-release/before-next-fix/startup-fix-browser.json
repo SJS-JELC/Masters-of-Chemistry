@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "course": "alevel",
+      "fault": "open-unavailable",
+      "result": "PASS",
+      "keyboardRetry": true,
+      "normalRecovery": true,
+      "visiblePreservationNotice": true
+    },
+    {
+      "course": "alevel",
+      "fault": "corrupt-session",
+      "result": "PASS",
+      "keyboardRetry": true,
+      "stillCorrupt": true,
+      "originalRowPreserved": true
+    },
+    {
+      "course": "igcse",
+      "fault": "open-unavailable",
+      "result": "PASS",
+      "keyboardRetry": true,
+      "normalRecovery": true,
+      "visiblePreservationNotice": true
+    },
+    {
+      "course": "igcse",
+      "fault": "corrupt-session",
+      "result": "PASS",
+      "keyboardRetry": true,
+      "stillCorrupt": true,
+      "originalRowPreserved": true
+    },
+    {
+      "code": "EB07",
+      "qualifiedQuestionVisible": true
+    },
+    {
+      "code": "EB08",
+      "qualifiedQuestionVisible": true
+    },
+    {
+      "code": "EB09",
+      "qualifiedQuestionVisible": true
+    },
+    {
+      "historicalRef": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-0000SN",
+        "seed": 1031,
+        "level": 1
+      },
+      "volumeDP2InstructionVisible": true
+    }
+  ],
+  "errors": [],
+  "method": "Fresh final static build,actualheadlessEdge UI,error injection restrictedtobrand-new testcontexts"
+}

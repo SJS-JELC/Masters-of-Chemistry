@@ -1,0 +1,56 @@
+import {useRef,useState} from 'react';
+import type {C3BSlot,C3CSlot,C3L6Challenge,C3L6Progress,ChallengeCommand} from '../../../contracts/olympiad.ts';
+import {Content} from '../../../ui/Content.tsx';
+import {MoleculeEditor,MoleculePreview} from '../../../editors/molecule/index.ts';
+import {blankMolecule} from '../../../chemistry/molecule/engine.ts';
+import {stageUnlocked,c3Fingerprint,bFingerprint,cFingerprint} from './policy.ts';
+import './c3l6.css';
+import {c3HydrazoneQualification as qualification} from './qualification.ts';
+export interface C3L6ViewProps {readonly challenge:C3L6Challenge;readonly progress:C3L6Progress;readonly readOnly:boolean;readonly onCommand:(command:ChallengeCommand)=>void;readonly status?:string;readonly error?:string}
+const stages=['intro','a','b','c'] as const;
+const locations:Record<C3CSlot,readonly [number,number]>={R:[16,260],S:[318,50],T:[318,260],U:[318,470],V:[610,470],W:[16,680],X:[318,680],Y:[610,680],Z:[470,910]};
+export function C3L6View({challenge,progress,readOnly,onCommand,status,error}:C3L6ViewProps){
+ const [reviewStage,setReviewStage]=useState<C3L6Progress['stage']>('intro'),[reviewB,setReviewB]=useState<C3BSlot>('A'),[reviewC,setReviewC]=useState<C3CSlot>('R');
+ const editorPanel=useRef<HTMLElement>(null);
+ const restartDialog=useRef<HTMLDialogElement>(null);
+ const showEditor=()=>{if(!readOnly||matchMedia('(max-width:900px)').matches)requestAnimationFrame(()=>editorPanel.current?.scrollIntoView({block:'start'}));};
+ const stage=readOnly?reviewStage:progress.stage,b=readOnly?reviewB:progress.selected.b,c=readOnly?reviewC:progress.selected.c;
+ const navigate=(s:C3L6Progress['stage'])=>readOnly?setReviewStage(s):onCommand({kind:'navigate',stage:s});
+ const selectB=(slotId:C3BSlot)=>{if(readOnly)setReviewB(slotId);else onCommand({kind:'select-slot',stage:'b',slotId});showEditor();};
+ const selectC=(slotId:C3CSlot)=>{if(readOnly)setReviewC(slotId);else onCommand({kind:'select-slot',stage:'c',slotId});showEditor();};
+ const bUnit=challenge.hydrolysis.find(u=>u.slots.some(s=>s.id===b))!,bSlot=bUnit.slots.find(s=>s.id===b)!,cSlot=challenge.network.slots.find(s=>s.id===c)!;
+ const bCheck=progress.unitChecks[bUnit.unitId],cCheck=progress.slotChecks[c];
+ const bLocked=bCheck?.passed&&bCheck.drawingFingerprint===bFingerprint(challenge,progress,bUnit.unitId),cLocked=cCheck?.passed&&cCheck.drawingFingerprint===cFingerprint(progress,c);
+ const drawing=stage==='b'?readOnly?{kind:'molecule' as const,graph:bSlot.alternatives[0]!.graph,history:[]}:progress.drawingsB[b]??blankMolecule():readOnly?{kind:'molecule' as const,graph:cSlot.alternatives[0]!.graph,history:[]}:progress.drawingsC[c]??blankMolecule();
+ return <article className="c3l6">
+  <header><p className="c3-kicker">Olympiad extension · C3L6 2012 Q2</p><h1>Organic reactions: classify and draw products</h1><p>Use functional-group levels, molecular masses and reaction relationships to identify structures.</p>{readOnly&&<p>Teacher review · reference answers · progress is not saved</p>}</header>
+  <nav className="c3-nav" aria-label="Challenge stages">{stages.map(s=><button key={s} disabled={!readOnly&&!stageUnlocked(progress,s)} aria-pressed={s===stage} onClick={()=>navigate(s)}>{s==='intro'?'Introduction':`Part (${s})${progress.completed[s]?' · Complete':''}`}</button>)}</nav>
+  {!readOnly&&<><button onClick={()=>restartDialog.current?.showModal()}>Restart challenge</button><dialog ref={restartDialog} aria-labelledby="c3-restart-title"><h2 id="c3-restart-title">Restart this challenge?</h2><p>This clears the saved drawings and completion for this challenge.</p><div className="c3-nav"><button autoFocus onClick={()=>restartDialog.current?.close()}>Cancel restart</button><button onClick={()=>{restartDialog.current?.close();onCommand({kind:'restart'});}}>Confirm restart</button></div></dialog></>}
+  <p className="c3-status" role="status">{error||status||(!readOnly&&progress.completed.c?'All three parts complete. Your saved structures remain available for review.':'')}</p>
+  {stage==='intro'&&<section className="c3-intro">
+   <Content blocks={challenge.introduction.filter(b=>b.kind==='text')}/>
+   {[1,2,3].map(level=><section key={level}><h2>Level {level} functional groups</h2><p>The circled carbon has {level} bond{level>1?'s':''} to electronegative atoms; a double bond counts twice.</p><div className="c3-examples">{challenge.introduction.filter(b=>b.kind==='image').slice((level-1)*5,level*5).map((block,i)=><Content key={i} blocks={[block]}/>)}</div></section>)}
+   <button onClick={()=>navigate('a')}>Start part (a)</button>
+  </section>}
+  {stage==='a'&&<section><h2>Part (a): classify the reactions</h2><p>Each reaction uses a single reagent. No carbon–carbon bonds are broken or formed. Choose oxidation, reduction or hydrolysis.</p>
+   {challenge.classifications.map(item=><fieldset className="c3-reaction" key={item.id} disabled={readOnly||progress.completed.a}><legend>Reaction {item.label}</legend><div className="c3-reaction-scheme"><Content blocks={item.reaction}/></div><div className="c3-classification">{(['oxidation','reduction','hydrolysis'] as const).map(value=><label key={value}><input type="radio" name={`c3-${item.id}`} checked={(readOnly?item.answer:progress.classifications[item.id])===value} onChange={()=>onCommand({kind:'classify',id:item.id,value})}/>{value}</label>)}</div></fieldset>)}
+   {!readOnly&&<><button disabled={progress.completed.a||!challenge.classifications.every(a=>progress.classifications[a.id])} onClick={()=>onCommand({kind:'check-a'})}>Check part (a)</button><p>{progress.aCheck?`${progress.aCheck.correct} of ${progress.aCheck.total} correct${progress.aCheck.drawingFingerprint!==c3Fingerprint(progress.classifications)?' · answers changed; check again.':'.'}`:'Complete all ten answers before checking.'}</p>{progress.completed.a&&<button onClick={()=>navigate('b')}>Continue to part (b)</button>}</>}
+  </section>}
+  {(stage==='b'||stage==='c')&&<div className="c3-drawing-layout"><section className="c3-source">
+   {stage==='b'?<><h2>Part (b): hydrolysis products</h2><p>{qualification.student.optionalPartBIntroduction}</p>{readOnly&&<aside aria-labelledby="c3-source-note"><h3 id="c3-source-note">Teacher source note</h3><p>{qualification.teacher.note}</p><p><a href={qualification.teacher.citation}>PubChem CID 9548611</a></p><p>{qualification.teacher.provenanceNote}</p></aside>}{challenge.hydrolysis.map((unit,i)=>{
+    const check=progress.unitChecks[unit.unitId],current=check?.drawingFingerprint===bFingerprint(challenge,progress,unit.unitId);const from=unit.unitId==='b-iv-2'?'G':unit.unitId==='b-iv-3'?'H':unit.unitId==='b-iv-4'?'J':null;
+    return <article className="c3-unit" key={unit.unitId}><h3>Reaction {i<3?['(i)','(ii)','(iii)'][i]:`(iv), step ${i-2}`}</h3>{unit.unitId==='b-iii'&&<h4>{qualification.student.label}</h4>}<Content blocks={unit.context}/>{from&&<div className="c3-repeat"><strong>Your structure {from}</strong>{progress.drawingsB[from]?.graph&&<MoleculePreview graph={progress.drawingsB[from]!.graph} label={`Saved reagent ${from}`}/>}</div>}
+     <div className="c3-slots">{unit.slots.map(slot=><button key={slot.id} onClick={()=>selectB(slot.id)} aria-pressed={b===slot.id} aria-label={`${check?.passed?'View completed':'Edit'} structure ${slot.id}`}><strong>{slot.id}{slot.id==='J'||slot.id==='M'?' · 2 ×':''}</strong><span>Mr {slot.mass}</span>{(readOnly||progress.drawingsB[slot.id]?.graph.atoms.length)?<MoleculePreview graph={readOnly?slot.alternatives[0]!.graph:progress.drawingsB[slot.id]!.graph} label={`Structure ${slot.id}`}/>:<span>Choose to draw</span>}{!readOnly&&current&&<span>{check?.passed?'Correct':'Check reaction again'}</span>}</button>)}</div>
+     {!readOnly&&<><button aria-label={`Check reaction ${unit.unitId}`} disabled={!!check?.passed||unit.slots.some(s=>!progress.drawingsB[s.id]?.graph.atoms.length)} onClick={()=>onCommand({kind:'check-b-unit',unitId:unit.unitId})}>Check reaction</button>{current&&<p>{check?.correct} of {check?.total} products correct</p>}</>}
+    </article>;
+   })}{!readOnly&&progress.completed.b&&<button onClick={()=>navigate('c')}>Continue to part (c)</button>}</>:<><h2>Part (c): reaction network</h2><Content blocks={challenge.network.context.filter(b=>b.kind!=='image')}/>
+    <div className="c3-network-scroll" tabIndex={0} role="region" aria-label="Reaction network; scroll horizontally on small screens"><div className="c3-network"><Content blocks={challenge.network.context.filter(b=>b.kind==='image')}/>{challenge.network.slots.map(slot=>{const [x,y]=locations[slot.id];return <button className="c3-network-node" key={slot.id} style={{left:x,top:y}} aria-label={`Select structure ${slot.id}`} aria-pressed={c===slot.id} onClick={()=>selectC(slot.id)}><strong>{slot.id}{progress.slotChecks[slot.id]?.passed?' ✓':''}</strong>{(readOnly||progress.drawingsC[slot.id]?.graph.atoms.length)&&<MoleculePreview graph={readOnly?slot.alternatives[0]!.graph:progress.drawingsC[slot.id]!.graph} label={`Structure ${slot.id}`}/>}</button>;})}</div></div>
+    <div className="c3-network-controls">{challenge.network.slots.map(slot=><button key={slot.id} aria-pressed={c===slot.id} onClick={()=>selectC(slot.id)}>{slot.id}{progress.slotChecks[slot.id]?.passed?' ✓':''}</button>)}</div>
+   </>}
+  </section><section ref={editorPanel} className="c3-editor-panel"><h2>Structure {stage==='b'?b:c}{stage==='b'?` · Mr ${bSlot.mass}`:''}</h2>
+   <MoleculeEditor key={`${stage}-${stage==='b'?b:c}-${readOnly}`} value={drawing} readOnly={readOnly||!!(stage==='b'?bLocked:cLocked)} label={`Draw structure ${stage==='b'?b:c}`} onChange={d=>stage==='b'?onCommand({kind:'draw-b',slotId:b,drawing:d}):onCommand({kind:'draw-c',slotId:c,drawing:d})}/>
+   {stage==='c'&&!readOnly&&<><button disabled={!!cLocked||!drawing.graph.atoms.length} onClick={()=>onCommand({kind:'check-c-slot',slotId:c})}>Check structure {c}</button>{cCheck?.drawingFingerprint===cFingerprint(progress,c)&&<p>{cCheck.passed?'Structure correct.':'Check the atoms and bonds again.'}</p>}</>}
+   {readOnly&&<details open><summary>Reference structures and accepted alternatives</summary>{(stage==='b'?bSlot:cSlot).alternatives.map((a,i)=><figure key={i}><MoleculePreview graph={a.graph} label={`Accepted alternative ${i+1}`}/><figcaption>{a.formula}{i?' · Alternative '+(i+1):''}</figcaption></figure>)}</details>}
+  </section></div>}
+ </article>;
+}

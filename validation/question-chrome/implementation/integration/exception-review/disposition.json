@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "runId": "QUESTION-CHROME-20261003",
+  "jobId": "H1-TIMING-EXCEPTION",
+  "agentId": "H03",
+  "status": "PASS",
+  "meaning": "Independent bounded exception review; reproduced Host departure race fixed by H01 and independently closed. Native capability boundaries remain unestablished; no whole-Host native equivalence or stage acceptance claimed.",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "confidence": 0.94,
+  "productDefects": [
+    {
+      "id": "popstate-automatic-continuation-during-departure",
+      "status": "CLOSED",
+      "reproduced": "Actual same-document browser Back, normal and 800 ms native transaction acknowledgment delay; auto-resume wrote active revision session during departure.",
+      "fixOwner": "H01",
+      "fix": "Synchronous departing intent gates automatic continuation until committed route/launch or safe failure recovery.",
+      "rawEvidence": "popstate-results.json",
+      "closureEvidence": "popstate-followup-results.json"
+    },
+    {
+      "id": "navigation-checkpoint-retry-readiness",
+      "status": "CLOSED_SOURCE_CONCERN_AND_CURRENT_BROWSER_PROOF",
+      "fixOwner": "H01",
+      "fix": "Retry retains actual committed session pause state and allows durable automatic resume before enabling player.",
+      "closureEvidence": "popstate-followup-results.json"
+    }
+  ],
+  "nativeBoundaries": {
+    "freeze": "UNESTABLISHED",
+    "hidden": "UNESTABLISHED",
+    "physicalBackground": "UNESTABLISHED",
+    "physicalMinimization": "UNESTABLISHED",
+    "OSRendererSuspension": "UNESTABLISHED"
+  },
+  "nativeReason": "Acknowledged freeze produced no actual freeze/resume; correctly targeted minimize reports minimized bounds but actual documents stay visible and focused in both courses, without trusted hidden/blur boundaries.",
+  "wholeHostNativeEquivalenceClaimed": false,
+  "currentHostSha256": "a36caf803f96c48ca200253d871875fff2042695213c6174e67d4523279a96eb",
+  "authoritativeTimingRawH0Identity": true,
+  "currentIdle": {
+    "status": "PASS",
+    "shortAllowanceMs": 60000,
+    "shortActiveMs": 60267,
+    "editorAllowanceMs": 180000,
+    "editorActiveMs": 180985,
+    "plateauDeltaMsBoth": 0,
+    "hostLineage": "Final immutable static idle run uses the exact final current Host a36caf803f96c48ca200253d871875fff2042695213c6174e67d4523279a96eb before and after, with authoritative timing bytes current. Final changed-host continuation/departure is independently verified in focused source browser follow-up.",
+    "finalHostRawEqual": true,
+    "finishedAt": "2026-10-03T13:03:42.459Z"
+  },
+  "boundedAcceptanceRecommendation": "Supported after H01/root final aggregate regression and closure; retain all native limits explicitly. No new native PASS, invariant waiver or publication authority.",
+  "sourceOrAppFixStillRequiredFromThisReview": false,
+  "evidence": ["source-review.md", "verification.json", "native-target-results.json", "popstate-results.json", "popstate-followup-results.json"],
+  "preservedPreviousReview": ["verification-before-final-idle.json", "disposition-before-final-idle.json", "source-review-before-final-idle.md"],
+  "validation": {"status": "PASS", "command": "node validation/question-chrome/implementation/integration/exception-review/verify-evidence.mjs", "currentFocusedBrowserCases": 3}
+}

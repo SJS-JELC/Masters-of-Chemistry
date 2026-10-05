@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T20:05:57.216Z",
+  "owner": "F07",
+  "currentSharedFiles": [
+    {
+      "path": "src/ui/SourceQuestionPlayer.tsx",
+      "captureSha256": "8579c983d656082163cdac5ff371d4b6325adc64480391a356ad3c937df72e02",
+      "currentSha256": "b290c0377e36c091913703fa0df71688e04c0146efa482de6e91ccec557b0e71"
+    },
+    {
+      "path": "src/ui/source-adapters.css",
+      "captureSha256": "e5322a7d2f5ae06eb33ad9e72a89258622a86ad0c8361e250de8b9911c074792",
+      "currentSha256": "8cab0376c489fc4536214b3325f075bdba21988d6a1055703edeb5b90204b760"
+    },
+    {
+      "path": "src/ui/source-presentation.ts",
+      "captureSha256": "779da9b289898f9a4cf3bf83e3b018a0d534460efb16311b574faa82de745a61",
+      "currentSha256": "1f432bb1c3c11d492053934cacb796eeb23dc597c37c7810abd3ad08a842cd06"
+    },
+    {
+      "path": "src/ui/SourceResponseControl.tsx",
+      "captureSha256": "df98574be8a2d6c98f2d5e24857884d55fa5cca417b60073faf20e4dc1846ab6",
+      "currentSha256": "75af90129b9d7f6904ed285ef523e486e1f7a01498ba0ece2ced360d40d40386"
+    },
+    {
+      "path": "src/ui/NumericWorkingControl.tsx",
+      "captureSha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224",
+      "currentSha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224"
+    }
+  ],
+  "reviewedPatch": {
+    "path": "validation/component-fidelity/f2/resume/late-shared-specialist.patch",
+    "sha256": "c094bb3f7d6c6de929ad521f2479283ff3e7c90282840102490687753310e1f8"
+  },
+  "scopeReview": [
+    "SourceContent family changes split only bond tables and use white currentColor only for bond/calorimetry SVGs; default SVG and table paths remain equivalent for specialist context.",
+    "Context scaffolds/rounding/filtering apply only acid/calorimetry/bond. Electron own canonical context remains sole prompt owner.",
+    "Comparison pre-review actions display and open-response class, EB concept message indexing, EB/EE source instructions and EE borderless choice labels apply only their standard shared paths.",
+    "Energy source instruction is added only when modelResponses is absent; embedded profile variants provide modelResponses and retain the specialist workspace.",
+    "Practical graph CSS is scoped source-practical; all other appended CSS is scoped source-bond/source-calorimetry/source-comparison or instructional elements absent from specialists.",
+    "No changes to shared event/assessment/timer logic, specialist mounting/workspaceAside, specialist source-owned files or chemistry engines in this late delta."
+  ],
+  "carryForward": {
+    "electron": "27 final context cases and 27 teacher models. Their captured shared fingerprints stay historical; own final hashes validated independently. Late changes above do not affect nativeReference EC path.",
+    "energy": "162 source/current state pairs plus control-font refresh and late desktop D03/mobile D05 actual continuity. The final shared declaration is supplemented by this later scope disposition, without relabelling earlier captures as final-hash captures.",
+    "titration": "36 family-level/viewport cases with216 exact SVG styles and864 artifact hashes. Existing touch-action-only pan reuse disposition retained. Late shared changes do not affect native TC workspace."
+  },
+  "verification": "specialist-validation.json",
+  "nativeLimit": "Headless CDP frozen did not suspend timers; retained exact source/binding/native evidence continuity covers prior native intervals. No new OS suspension or minimisation claim.",
+  "acceptance": "Foreman F2 implementation validation only; root F2 source/render gate and later independent F3 remain."
+}

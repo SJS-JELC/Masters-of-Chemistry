@@ -1,0 +1,232 @@
+{
+  "sources": {
+    "alevel": {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+      "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e"
+    },
+    "igcse": {
+      "path": "development/igcse/activities/recall/reviews/Rocket Recall - questions and allowed answers.csv",
+      "sha256": "a1ea63939b799c93f9710f46ccc59ca4fca328ba3a68d79004d987d01727018a"
+    }
+  },
+  "authority": "Six approved A-level records and six unflagged single-answer records from the teacher-reviewed IGCSE CSV. Starter scope only.",
+  "alevel": [
+    {
+      "id": "electron-shell-capacities",
+      "sourceId": "electron-shell-capacities",
+      "spec": "2.2.1(a)"
+    },
+    {
+      "id": "subshell-capacities",
+      "sourceId": "subshell-capacities",
+      "spec": "2.2.1(b)"
+    },
+    {
+      "id": "orbital-filling-rules",
+      "sourceId": "orbital-filling-rules",
+      "spec": "2.2.1(c)"
+    },
+    {
+      "id": "ionic-lattice-solid",
+      "sourceId": "ionic-lattice",
+      "spec": "2.2.2(b)"
+    },
+    {
+      "id": "coordinate-bond",
+      "sourceId": "coordinate-bond",
+      "spec": "2.2.2(e)"
+    },
+    {
+      "id": "bond-enthalpy-strength",
+      "sourceId": "bond-enthalpy-strength",
+      "spec": "3.2.1(f)"
+    }
+  ],
+  "igcse": [
+    "igcse-recall-012",
+    "igcse-recall-007",
+    "igcse-recall-009",
+    "igcse-recall-010",
+    "igcse-recall-011",
+    "igcse-recall-013"
+  ],
+  "adaptations": [
+    {
+      "sourceId": "orbital-filling-rules",
+      "reason": "Correct grammatical omission and final punctuation; chemistry and answer unchanged."
+    },
+    {
+      "sourceId": "ionic-lattice",
+      "id": "ionic-lattice-solid",
+      "reason": "Explicitly qualify solid state. Separate runtime ID preserves the original question."
+    }
+  ],
+  "originals": {
+    "alevel": [
+      {
+        "id": "electron-shell-capacities",
+        "prompt": "State the maximum number of electrons in the first four principal electron shells.",
+        "answer": "2, 8, 18, 32",
+        "spec": "2.2.1(a)"
+      },
+      {
+        "id": "subshell-capacities",
+        "prompt": "State the maximum number of electrons in an s, p and d subshell.",
+        "answer": "s = 2; p = 6; d = 10",
+        "spec": "2.2.1(b)"
+      },
+      {
+        "id": "orbital-filling-rules",
+        "prompt": "What rules used to fill orbitals in the ground-state electron configuration of an atom.",
+        "answer": "Fill lower-energy orbitals first.\nEach orbital holds a maximum of two electrons with opposite spins.\nOrbitals of equal energy are occupied singly with parallel spins before pairing.",
+        "spec": "2.2.1(c)"
+      },
+      {
+        "id": "ionic-lattice",
+        "prompt": "What structure do ionic compounds have?",
+        "answer": "Giant ionic lattice",
+        "spec": "2.2.2(b)"
+      },
+      {
+        "id": "coordinate-bond",
+        "prompt": "Define the term dative bond",
+        "answer": "A covalent bond in which both electrons in the shared pair are supplied by one atom.",
+        "spec": "2.2.2(e)"
+      },
+      {
+        "id": "bond-enthalpy-strength",
+        "prompt": "Define the term average bond enthalpy",
+        "answer": "The enthalpy change required to break one mole of a specified type of covalent bond in gaseous molecules, averaged over different compounds.",
+        "spec": "3.2.1(f)"
+      }
+    ],
+    "igcse": [
+      {
+        "Question": "What is the state symbol for something dissolved in water?",
+        "Question type": "single typed",
+        "Answer part": "",
+        "Answer matching": "exact",
+        "Allowed answer 1": "(aq)",
+        "Allowed answer 2": "aq",
+        "Allowed answer 3": "",
+        "Allowed answer 4": "",
+        "Incorrect MCQ Answer 1": "",
+        "Incorrect MCQ Answer 2": "",
+        "Incorrect MCQ Answer 3": "",
+        "Question ID": "igcse-recall-012",
+        "Numeric minimum": "",
+        "Numeric maximum": "",
+        "Unit": "",
+        "Required parts": "1",
+        "Answer order": "single",
+        "Review notes": "",
+        "Needs further work": ""
+      },
+      {
+        "Question": "What is the name for the change of state from a solid to a liquid?",
+        "Question type": "single typed",
+        "Answer part": "",
+        "Answer matching": "exact",
+        "Allowed answer 1": "melting",
+        "Allowed answer 2": "",
+        "Allowed answer 3": "",
+        "Allowed answer 4": "",
+        "Incorrect MCQ Answer 1": "",
+        "Incorrect MCQ Answer 2": "",
+        "Incorrect MCQ Answer 3": "",
+        "Question ID": "igcse-recall-007",
+        "Numeric minimum": "",
+        "Numeric maximum": "",
+        "Unit": "",
+        "Required parts": "1",
+        "Answer order": "single",
+        "Review notes": "",
+        "Needs further work": ""
+      },
+      {
+        "Question": "What is the name for the change of state from a gas to a liquid?",
+        "Question type": "single typed",
+        "Answer part": "",
+        "Answer matching": "exact",
+        "Allowed answer 1": "condensation",
+        "Allowed answer 2": "condensing",
+        "Allowed answer 3": "",
+        "Allowed answer 4": "",
+        "Incorrect MCQ Answer 1": "",
+        "Incorrect MCQ Answer 2": "",
+        "Incorrect MCQ Answer 3": "",
+        "Question ID": "igcse-recall-009",
+        "Numeric minimum": "",
+        "Numeric maximum": "",
+        "Unit": "",
+        "Required parts": "1",
+        "Answer order": "single",
+        "Review notes": "",
+        "Needs further work": ""
+      },
+      {
+        "Question": "What is the name for the change of state from a liquid to a solid?",
+        "Question type": "single typed",
+        "Answer part": "",
+        "Answer matching": "exact",
+        "Allowed answer 1": "freezing",
+        "Allowed answer 2": "",
+        "Allowed answer 3": "",
+        "Allowed answer 4": "",
+        "Incorrect MCQ Answer 1": "",
+        "Incorrect MCQ Answer 2": "",
+        "Incorrect MCQ Answer 3": "",
+        "Question ID": "igcse-recall-010",
+        "Numeric minimum": "",
+        "Numeric maximum": "",
+        "Unit": "",
+        "Required parts": "1",
+        "Answer order": "single",
+        "Review notes": "",
+        "Needs further work": ""
+      },
+      {
+        "Question": "What is the name for the change of state from a solid to a gas?",
+        "Question type": "single typed",
+        "Answer part": "",
+        "Answer matching": "exact",
+        "Allowed answer 1": "Sublimation",
+        "Allowed answer 2": "",
+        "Allowed answer 3": "",
+        "Allowed answer 4": "",
+        "Incorrect MCQ Answer 1": "",
+        "Incorrect MCQ Answer 2": "",
+        "Incorrect MCQ Answer 3": "",
+        "Question ID": "igcse-recall-011",
+        "Numeric minimum": "",
+        "Numeric maximum": "",
+        "Unit": "",
+        "Required parts": "1",
+        "Answer order": "single",
+        "Review notes": "",
+        "Needs further work": ""
+      },
+      {
+        "Question": "What is the name for the liquid in which a solute dissolves?",
+        "Question type": "single typed",
+        "Answer part": "",
+        "Answer matching": "exact",
+        "Allowed answer 1": "solvent",
+        "Allowed answer 2": "",
+        "Allowed answer 3": "",
+        "Allowed answer 4": "",
+        "Incorrect MCQ Answer 1": "",
+        "Incorrect MCQ Answer 2": "",
+        "Incorrect MCQ Answer 3": "",
+        "Question ID": "igcse-recall-013",
+        "Numeric minimum": "",
+        "Numeric maximum": "",
+        "Unit": "",
+        "Required parts": "1",
+        "Answer order": "single",
+        "Review notes": "",
+        "Needs further work": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "dev-refinement-starter",
+  "prefix": "DEV-REFINEMENT-STARTER-v1",
+  "generatedAt": "2026-10-03T03:23:14.565Z",
+  "generator": "development/authoring/scaffold.mjs",
+  "templateFingerprints": {
+    "development/authoring/data.ts": "9e4e7e6ffbe3be6107df36f54e6e5ff5859973a4de9c60c8b786c3723f696601",
+    "development/authoring/family.ts": "ed9c181ba25a9cbbf346d2930ee5cc230a94794b5b1b6cc08e6763c5d20494e5",
+    "development/authoring/registry.ts": "a15c012453dc9b8ca8e392658b8d355e46e52e10617a7ad2553dd1cc81725aae",
+    "src/development/catalogue/index.tsx": "a70880fd6a504abb95968f3733a8ccc9a5d97ed796ae97e3cc2a11dbebc7f359",
+    "development/authoring/templates/family.test.mjs": "185b3c6f1c9e807bc8db4b52fa8972a1539fb0137e565895050823a858c6bf71",
+    "development/authoring/templates/browser.mjs": "41b7e4d5a8ef928c2962ec5279722a465ac13a7f97fc153f81f067cde943df8a"
+  },
+  "generatedFingerprints": {
+    "Catalogue.tsx": "5e25de181553b59dbe1f808df6ade8f6d23ba7f64b6927dd5b54409a88c3d92d",
+    "README.md": "761f062ccccfa973803fe76da19458aed01f7a213103283a50339211b669ed63",
+    "authoring-plan.json": "688293ca180c6f2f15af8a56e965e9fe760fe930fd5f0cf90a6a2b0b7d3851b3",
+    "browser.mjs": "fc57f8fdce97718968147e8c7283cd8ad9b85d05b7e2bd01accecd4a490d1d18",
+    "data.ts": "a662641e71f67f289ff3c76accd541ade716a8194e38f26c0c6f63caa0c5de32",
+    "family.test.mjs": "7ef772ddbfbb1303138acf109459a722574ea1a765eeb4400c32cd3a431b9f5e",
+    "family.ts": "31bcb6be3d82cfc5df9d7bc08007e34c8f17ad5035c3588e8283d0be50f3e578",
+    "mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "preview.html": "40762055bfaa4625fdc3eb83e71fb1fdfc28dadc9ebbb900173d298acab5cc9a",
+    "provenance.ts": "f5a84fdc743aca5e648fb244017a59fdaa16405d2fffcc44dc024dcf13e7765f",
+    "registry.ts": "9ea3eec0e665c48b62823a7fd9d107cf24db5feef3fca544d7e8b861ba99352f",
+    "tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c"
+  },
+  "preview": "http://127.0.0.1:5195/development/authoring/families/dev-refinement-starter/preview.html",
+  "evidence": "validation/s4/authoring-release/refinement/dev-refinement-starter"
+}

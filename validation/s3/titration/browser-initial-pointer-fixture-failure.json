@@ -1,0 +1,14 @@
+{
+  "jobId": "S3-TITRATION",
+  "run": "a14-titration-1790990017716",
+  "startedAt": "2026-10-03T01:13:37.716Z",
+  "checks": [
+    "incomplete curve blocks assessment and creates no evidence",
+    "keyboard anchor steps and real numeric/piece/indicator controls construct source curve",
+    "reload restores same question seed/attempt and full curve response"
+  ],
+  "errors": [],
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to: 23\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/titration/browser.mjs:22:323",
+  "finishedAt": "2026-10-03T01:13:41.636Z"
+}

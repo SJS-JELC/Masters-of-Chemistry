@@ -1,0 +1,485 @@
+{
+  "startedAt": "2026-10-03T06:32:24.231Z",
+  "browser": "154.0.4258.48",
+  "playwright": "1.62.1",
+  "surface": "Headless Edge, 390x844 DPR1; keyboard interaction; no physical mobile/native screen-reader claim",
+  "checks": [
+    {
+      "id": "alevel-empty-revision",
+      "status": "PASS",
+      "fault": "real IndexedDB sessions.put QuotaExceededError",
+      "keyboardRetry": true,
+      "roleAlert": true,
+      "pausedStatus": true,
+      "noFalseCompletion": true,
+      "durableBefore": {
+        "kind": "revision",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "createdAt": 1791009176007,
+        "status": "paused",
+        "selectedGemIds": [
+          "u6-t1-1-2"
+        ],
+        "levels": [
+          {
+            "target": {
+              "course": "alevel",
+              "activityId": "alevel/acid-base-calculations",
+              "gemId": "u6-t1-1-2",
+              "level": 1
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "alevel",
+              "activityId": "alevel/acid-base-calculations",
+              "gemId": "u6-t1-1-2",
+              "level": 2
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "alevel",
+              "activityId": "alevel/acid-base-calculations",
+              "gemId": "u6-t1-1-2",
+              "level": 3
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          }
+        ],
+        "round": [],
+        "lastGemId": null,
+        "current": null,
+        "previous": [],
+        "submittedAttemptIds": []
+      },
+      "durableAfter": {
+        "kind": "revision",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "createdAt": 1791009176007,
+        "status": "active",
+        "selectedGemIds": [
+          "u6-t1-1-2"
+        ],
+        "levels": [
+          {
+            "target": {
+              "course": "alevel",
+              "activityId": "alevel/acid-base-calculations",
+              "gemId": "u6-t1-1-2",
+              "level": 1
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "alevel",
+              "activityId": "alevel/acid-base-calculations",
+              "gemId": "u6-t1-1-2",
+              "level": 2
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "alevel",
+              "activityId": "alevel/acid-base-calculations",
+              "gemId": "u6-t1-1-2",
+              "level": 3
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          }
+        ],
+        "round": [],
+        "lastGemId": null,
+        "current": null,
+        "previous": [],
+        "submittedAttemptIds": []
+      },
+      "attemptEvidenceImmutable": true,
+      "captures": [
+        {
+          "name": "alevel-empty-revision-paused",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1602
+          }
+        },
+        {
+          "name": "alevel-empty-revision-quota-keyboard-focus",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1766
+          }
+        },
+        {
+          "name": "alevel-empty-revision-recovered",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1439
+          }
+        }
+      ]
+    },
+    {
+      "id": "alevel-empty-practice",
+      "status": "PASS",
+      "fault": "real IndexedDB sessions.put QuotaExceededError",
+      "keyboardRetry": true,
+      "roleAlert": true,
+      "pausedStatus": true,
+      "noFalseCompletion": true,
+      "durableBefore": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": null,
+        "previousQuestionIds": [],
+        "paused": true
+      },
+      "durableAfter": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": null,
+        "previousQuestionIds": [],
+        "paused": false
+      },
+      "attemptEvidenceImmutable": true,
+      "captures": [
+        {
+          "name": "alevel-empty-practice-paused",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1370
+          }
+        },
+        {
+          "name": "alevel-empty-practice-quota-keyboard-focus",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1534
+          }
+        },
+        {
+          "name": "alevel-empty-practice-recovered",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1207
+          }
+        }
+      ]
+    },
+    {
+      "id": "igcse-empty-revision",
+      "status": "PASS",
+      "fault": "real IndexedDB sessions.put QuotaExceededError",
+      "keyboardRetry": true,
+      "roleAlert": true,
+      "pausedStatus": true,
+      "noFalseCompletion": true,
+      "durableBefore": {
+        "kind": "revision",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "createdAt": 1791009211455,
+        "status": "paused",
+        "selectedGemIds": [
+          "lower-10-3"
+        ],
+        "levels": [
+          {
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 2
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 3
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          }
+        ],
+        "round": [],
+        "lastGemId": null,
+        "current": null,
+        "previous": [],
+        "submittedAttemptIds": []
+      },
+      "durableAfter": {
+        "kind": "revision",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "createdAt": 1791009211455,
+        "status": "active",
+        "selectedGemIds": [
+          "lower-10-3"
+        ],
+        "levels": [
+          {
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 2
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          },
+          {
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 3
+            },
+            "mode": "practice",
+            "required": 1,
+            "streak": 0,
+            "confirmedAt": null,
+            "initialScore": null
+          }
+        ],
+        "round": [],
+        "lastGemId": null,
+        "current": null,
+        "previous": [],
+        "submittedAttemptIds": []
+      },
+      "attemptEvidenceImmutable": true,
+      "captures": [
+        {
+          "name": "igcse-empty-revision-paused",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1642
+          }
+        },
+        {
+          "name": "igcse-empty-revision-quota-keyboard-focus",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1806
+          }
+        },
+        {
+          "name": "igcse-empty-revision-recovered",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1479
+          }
+        }
+      ]
+    },
+    {
+      "id": "igcse-empty-practice",
+      "status": "PASS",
+      "fault": "real IndexedDB sessions.put QuotaExceededError",
+      "keyboardRetry": true,
+      "roleAlert": true,
+      "pausedStatus": true,
+      "noFalseCompletion": true,
+      "durableBefore": {
+        "kind": "practice",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": null,
+        "previousQuestionIds": [],
+        "paused": true
+      },
+      "durableAfter": {
+        "kind": "practice",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": null,
+        "previousQuestionIds": [],
+        "paused": false
+      },
+      "attemptEvidenceImmutable": true,
+      "captures": [
+        {
+          "name": "igcse-empty-practice-paused",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1356
+          }
+        },
+        {
+          "name": "igcse-empty-practice-quota-keyboard-focus",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1521
+          }
+        },
+        {
+          "name": "igcse-empty-practice-recovered",
+          "overflow": {
+            "width": 390,
+            "scroll": 390,
+            "height": 844,
+            "scrollHeight": 1194
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "id": "alevel-terminal",
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('alert') to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\render-release\\session-only-save-fix\\mobile-awaited-proposal.mjs:11:50"
+    },
+    {
+      "id": "igcse-terminal",
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('alert') to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\render-release\\session-only-save-fix\\mobile-awaited-proposal.mjs:11:50"
+    }
+  ],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T06:33:34.725Z",
+  "status": "FAIL"
+}

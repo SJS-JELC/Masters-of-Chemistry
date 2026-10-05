@@ -1,0 +1,12 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\resume-f09\\context-final\\inputs\\src\\ui\\source-adapters.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\source-adapters.css"
+index 9727e37..181afd3 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\resume-f09\\context-final\\inputs\\src\\ui\\source-adapters.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\source-adapters.css"	
+@@ -128,6 +128,7 @@
+   grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+ }
+ .source-player.source-comparison .question-workspace:not(.review-workspace) > .marking-pane {
++  display: block;
+   border: 0;
+   background: none;
+   padding: 0;

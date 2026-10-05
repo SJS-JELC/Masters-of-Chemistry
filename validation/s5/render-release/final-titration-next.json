@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "method": "Real trusted single Next click while unfinished numeric draft focused; 390px touchscreen context, CDP4× CPU+150ms/200000Bps down/93750Bps up, actual repository assertions",
+  "checks": [
+    {
+      "kind": "singleTrustedNextAfterBlurSave",
+      "oldRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 0,
+        "level": 2
+      },
+      "newRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 3267501133,
+        "level": 2
+      },
+      "oldAttemptId": "A23-titration-next-TC01",
+      "newAttemptId": "93390c54-90e9-496a-af14-d07be85376fd",
+      "firstEvidenceUnchanged": true,
+      "freshResponsesEmpty": true,
+      "draftReset": true,
+      "events": [
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "nextDisabled": false,
+          "saveText": "Saved on this device"
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "nextDisabled": false,
+          "saveText": "Saved on this device"
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "nextDisabled": false,
+          "saveText": "Saving…"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "nextDisabled": false,
+          "saveText": "Saving…"
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "nextDisabled": true,
+          "saveText": "Saving…"
+        }
+      ]
+    }
+  ]
+}

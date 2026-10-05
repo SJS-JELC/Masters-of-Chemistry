@@ -1,0 +1,14 @@
+import type {CurriculumAdapter} from '../../../catalogue/registry.ts';
+import {acidMinutes} from './idle-allowances.ts';
+import {acidPersistedTemplateCodes} from './persisted-codes.ts';
+/** Engine/banks load only when the shared host opens this activity. */
+export const acidAdapter:CurriculumAdapter={id:'alevel/acid-base-calculations',
+ provider:async()=> (await import('./provider.ts')).acidProvider,
+ marking:async()=> (await import('./marking.ts')).acidMarking,
+ idleAllowance(question){
+  // AB2 persists a source-owned template code; this explicit map is copied from that codec.
+  const code=question.ref.questionId.match(/^AB2-([0-9A-Z]{1,2})-/);
+  const template=code?acidPersistedTemplateCodes[code[1] as keyof typeof acidPersistedTemplateCodes]:undefined;
+  if(!template||!(template in acidMinutes))throw Error('No current acid question timing allowance. Historical review is read only.');
+  return acidMinutes[template as keyof typeof acidMinutes]*60000 as 60000|180000|300000|600000;
+ },idleRationale:'Exact original 38-template acidMinutes: 1 minute for logarithm conversions, 3 for routine direct calculations, 5 for linked calculations and 10 for demanding applications; based on operations, not visible field count.'};

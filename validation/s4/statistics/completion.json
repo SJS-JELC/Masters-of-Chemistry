@@ -1,0 +1,41 @@
+{
+  "agentId": "A18",
+  "jobId": "S4-STATISTICS",
+  "stableId": "A18/S4-STATISTICS",
+  "status": "PASS",
+  "confidence": 0.98,
+  "outputPath": "validation/s4/statistics/HANDOVER.md",
+  "entry": "src/statistics/index.ts: StatisticsView(CourseDataViewProps), content only, default and named exports",
+  "ownership": ["src/statistics/", "validation/s4/statistics/"],
+  "validation": {
+    "status": "PASS",
+    "reference": "validation/s4/statistics/verification.json",
+    "modelTests": 6,
+    "unchangedMasteryEquivalenceCases": 273,
+    "browserScenarios": 5,
+    "browserEvidence": "validation/s4/statistics/browser-results.json",
+    "renderEvidence": "validation/s4/statistics/render-inspection.json",
+    "typecheck": "PASS",
+    "originalGuard": "PASS: 1317 unchanged fingerprints; 523 metadata-only placeholders",
+    "summary": "Actual host/controller/repository first correct, partial and wrong assessment transfer; exact timing/chart conservation; immutable repeated correction/pause/reload; untimed/archive imports, duplicate saves/imports, assistance/reveal exclusion, historical IGCSE assistance, same-database course/profile isolation and read-only refresh all pass. Desktop/mobile charts inspected."
+  },
+  "retainedFailures": [
+    "browser-initial-load-failure.json",
+    "browser-jsxdev-startup-failure.json",
+    "browser-paused-readiness-failure.json",
+    "browser-history-commit-failure.json",
+    "browser-period-label-failure.json",
+    "browser-caption-selector-failure.json"
+  ],
+  "scopeLimits": [
+    "A01 owns final production lazy/static shell integration and fresh builds; root alone accepts S4",
+    "Synthetic source responses use actual short headless clock intervals; no real pupil data",
+    "Accepted S2/S3 native idle/background evidence is retained separately; no new A18 native boundary test claimed",
+    "No source chemistry, marking, shared mastery/timing/repository/host/config, original app or old store edits"
+  ],
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "stageAcceptance": "Pending foreman integration and root acceptance"
+}

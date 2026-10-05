@@ -1,0 +1,263 @@
+{
+  "startedAt": "2026-10-03T10:19:53.178Z",
+  "method": "Pinned root Playwright1.62.1/headless Edge/fresh isolated contexts; original reference static server readonly on ephemeral port. Matching reference snapshots via isolated bridge stub; new harness mounts real React editor and source-style pane, no attempt engine. Shared host gates foreman-owned.",
+  "origins": {
+    "old": "http://127.0.0.1:62728",
+    "new": "http://127.0.0.1:5183"
+  },
+  "comparisons": [
+    {
+      "label": "alevel-desktop-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-desktop-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-tablet-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-tablet-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-mobile-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-mobile-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-below-breakpoint-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-below-breakpoint-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-above-breakpoint-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-above-breakpoint-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-desktop-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-desktop-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-tablet-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-tablet-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-mobile-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-mobile-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-below-breakpoint-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-below-breakpoint-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-above-breakpoint-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "igcse-above-breakpoint-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-desktop-ammonium-ion",
+      "course": "alevel",
+      "question": "ammonium-ion",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-desktop-phosphorus-pentachloride",
+      "course": "alevel",
+      "question": "phosphorus-pentachloride",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-desktop-sulfur-hexafluoride",
+      "course": "alevel",
+      "question": "sulfur-hexafluoride",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-desktop-nitrate-ion",
+      "course": "alevel",
+      "question": "nitrate-ion",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    }
+  ],
+  "operations": [
+    {
+      "name": "matching-state source SVG/CSS geometry across both courses desktop/tablet/mobile/breakpoint",
+      "status": "PASS",
+      "pairs": 24,
+      "matchingReferenceRecords": true
+    }
+  ],
+  "pageErrors": [],
+  "failures": [],
+  "browserVersion": "154.0.4258.48",
+  "status": "PASS",
+  "finishedAt": "2026-10-03T10:20:56.037Z"
+}

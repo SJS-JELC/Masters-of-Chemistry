@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "stage": "strict all-fingerprint guard",
+  "changed": [
+    "tsconfig.json"
+  ],
+  "before": "e641953e6b6a312c00df78191709af8629c1280d244989527c7c8a1cdbb9edd4",
+  "after": "2471ee36e84df123ed23a0d357688b2bde5e7d4ac4ed5c9f249f0ee885a99aa6",
+  "independentDisposition": "Exact reconstruction proves only validation/s4/**/*.ts added to tsconfig include; compiler options, JSX transform configuration and every watched runtime/assertion/dependency/retained failure unchanged."
+}

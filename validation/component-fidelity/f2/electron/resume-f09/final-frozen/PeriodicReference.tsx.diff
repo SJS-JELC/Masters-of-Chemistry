@@ -1,0 +1,120 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\editors\\electron-configuration\\PeriodicReference.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\electron-configuration\\PeriodicReference.tsx"
+index 7f7fd50..25b9b08 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\editors\\electron-configuration\\PeriodicReference.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\electron-configuration\\PeriodicReference.tsx"	
+@@ -1,5 +1,45 @@
+ import { useId, useRef } from 'react';
+ import { periodicData } from '../../chemistry/electron-configuration/periodic-data.ts';
++function PeriodicIcon() {
++  const cells = [];
++  for (let row = 0; row < 7; row++)
++    for (let col = 0; col < 18; col++) {
++      if (row === 0 ? col === 0 || col === 17 : row < 3 ? col < 2 || col > 11 : true)
++        cells.push(
++          <rect
++            key={`${row}:${col}`}
++            x={col * 3.2 + 1}
++            y={row * 3.8 + 1}
++            width="2.3"
++            height="2.8"
++            rx=".4"
++          />,
++        );
++    }
++  for (let row = 0; row < 2; row++)
++    for (let col = 2; col < 17; col++)
++      cells.push(
++        <rect
++          key={`series:${row}:${col}`}
++          x={col * 3.2 + 1}
++          y={row * 3.8 + 29}
++          width="2.3"
++          height="2.8"
++          rx=".4"
++        />,
++      );
++  return (
++    <svg
++      className="ec-periodic-icon"
++      viewBox="0 0 59 37"
++      aria-hidden="true"
++      focusable="false"
++      fill="currentColor"
++    >
++      {cells}
++    </svg>
++  );
++}
+ /** Original built-in reference remains available in student and teacher mode; no response/assistance command. */
+ export function PeriodicReference() {
+   const dialog = useRef<HTMLDialogElement>(null),
+@@ -8,26 +48,39 @@ export function PeriodicReference() {
+   return (
+     <div className="ec-reference">
+       <button
++        className="ec-periodic-trigger"
++        aria-label="Periodic table"
++        title="Open periodic table"
+         type="button"
+         aria-haspopup="dialog"
+         aria-controls={id}
+         onClick={() => dialog.current?.showModal()}
+       >
+-        Periodic table
++        <PeriodicIcon />
++        <span className="ec-periodic-trigger-label">Periodic table</span>
+       </button>
+       <dialog ref={dialog} id={id} className="ec-periodic-dialog" aria-labelledby={`${id}-title`}>
+-        <header>
++        <header className="ec-periodic-heading">
+           <div>
+-            <p>Chemistry reference · built-in support</p>
++            <p>CHEMISTRY REFERENCE</p>
+             <h2 id={`${id}-title`}>Periodic table of the elements</h2>
+           </div>
+           <button
++            className="ec-periodic-close"
+             type="button"
+             autoFocus
+             aria-label="Close periodic table"
+             onClick={() => dialog.current?.close()}
+           >
+-            Close
++            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
++              <path
++                d="m6 6 12 12M6 18 18 6"
++                fill="none"
++                stroke="currentColor"
++                strokeWidth="2"
++                strokeLinecap="round"
++              />
++            </svg>
+           </button>
+         </header>
+         <div className="ec-periodic-paper">
+@@ -79,9 +132,9 @@ export function PeriodicReference() {
+                         {element.column}
+                       </span>
+                     )}
+-                    <span>{element.z}</span>
+-                    <strong>{element.symbol}</strong>
+-                    <small>{element.name}</small>
++                    <span className="ec-periodic-number">{element.z}</span>
++                    <strong className="ec-periodic-symbol">{element.symbol}</strong>
++                    <span className="ec-periodic-name">{element.name}</span>
+                     <span className="ec-periodic-mass">{element.mass ?? ''}</span>
+                   </div>
+                 );
+@@ -124,11 +177,10 @@ export function PeriodicReference() {
+             </div>
+           </div>
+         </div>
+-        <footer>
++        <footer className="ec-periodic-footer">
+           <span>OCR Chemistry A · 2020 data sheet</span>
+           <span>
+             Values and blank entries follow the supplied edition. Scroll across on smaller screens.
+-            This is an original rendering of the retained reference facts.
+           </span>
+         </footer>
+       </dialog>

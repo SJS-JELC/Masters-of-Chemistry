@@ -1,0 +1,72 @@
+{
+  "namespace": {
+    "course": "alevel",
+    "profileId": "local"
+  },
+  "source": {
+    "key": "masters-of-chemistry-alpha-v2-export",
+    "fingerprint": "889-4650a478-541a35d4"
+  },
+  "curriculum": [
+    {
+      "kind": "curriculum",
+      "id": "F1-identity-first",
+      "profileId": "local",
+      "gemId": "u6-t1-1-2",
+      "score": 1,
+      "completedAt": 102500,
+      "selfAssessed": false,
+      "assisted": false,
+      "provenance": "new-attempt",
+      "independent": true,
+      "timing": {
+        "activeMs": 2500,
+        "idleLimitMs": 60000
+      },
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB-00011Q",
+        "seed": 7,
+        "level": 1
+      },
+      "firstResponse": {
+        "responses": {
+          "ph": {
+            "kind": "numeric",
+            "raw": "1.6020599913279623",
+            "unit": ""
+          }
+        },
+        "submittedAt": 102500,
+        "timing": {
+          "activeMs": 2500,
+          "idleLimitMs": 60000
+        },
+        "assistance": []
+      },
+      "firstAssessment": {
+        "kind": "marked",
+        "assessedAt": 102500,
+        "marks": {
+          "points": [
+            {
+              "partId": "ph",
+              "pointId": "numerical-value",
+              "earned": 1,
+              "available": 1,
+              "message": "Correct within the required numerical precision."
+            }
+          ],
+          "earned": 1,
+          "available": 1
+        },
+        "score": 1,
+        "selfAssessed": false
+      },
+      "course": "alevel",
+      "activityId": "alevel/acid-base-calculations",
+      "level": 1
+    }
+  ],
+  "olympiad": []
+}

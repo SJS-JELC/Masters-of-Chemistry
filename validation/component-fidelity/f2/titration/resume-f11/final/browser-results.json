@@ -1,0 +1,665 @@
+{
+  "jobId": "F2-TITRATION",
+  "agentId": "F11",
+  "startedAt": "2026-10-03T18:48:32.287Z",
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "all36 source-equilibrium/model/grade/submission/canonical-ID fixtures",
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [
+    "react-desktop-TC-GMPGTV-unanswered.png",
+    "original-desktop-TC-GMPGTV-unanswered.png",
+    "react-desktop-TC-GMPGTV-partial.png",
+    "original-desktop-TC-GMPGTV-partial.png",
+    "react-desktop-TC-GMPGTV-incorrect.png",
+    "original-desktop-TC-GMPGTV-incorrect.png",
+    "react-desktop-TC-GMPGTV-correction.png",
+    "original-desktop-TC-GMPGTV-correction.png",
+    "react-desktop-TC-GMPGTV-model.png"
+  ],
+  "metrics": [
+    {
+      "label": "react-desktop-TC-GMPGTV-unanswered",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "absent": true
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "label": "original-desktop-TC-GMPGTV-unanswered",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "absent": true
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "tag": "desktop-TC-GMPGTV",
+      "react": {
+        "fontFamily": "Comfortaa, system-ui, sans-serif",
+        "fontSize": "15px",
+        "lineHeight": "23.25px",
+        "color": "rgb(244, 246, 255)",
+        "border": "1px solid rgb(43, 54, 83)",
+        "background": "rgb(14, 20, 40)"
+      },
+      "original": {
+        "fontFamily": "Comfortaa, system-ui, sans-serif",
+        "fontSize": "15px",
+        "lineHeight": "23.25px",
+        "color": "rgb(244, 246, 255)",
+        "border": "1px solid rgb(43, 54, 83)",
+        "background": "rgb(14, 20, 40)"
+      }
+    },
+    {
+      "label": "react-desktop-TC-GMPGTV-partial",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "label": "original-desktop-TC-GMPGTV-partial",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "label": "react-desktop-TC-GMPGTV-incorrect",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "label": "original-desktop-TC-GMPGTV-incorrect",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "label": "react-desktop-TC-GMPGTV-correction",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    },
+    {
+      "label": "original-desktop-TC-GMPGTV-correction",
+      "viewBox": "0 0 820 460",
+      "styles": [
+        {
+          "selector": ".curve-before",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-after",
+          "stroke": "rgb(185, 160, 255)",
+          "strokeWidth": "4px",
+          "fill": "none",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".curve-join",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".guide-eq",
+          "stroke": "rgb(129, 230, 207)",
+          "strokeWidth": "1.5px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "5px, 5px"
+        },
+        {
+          "selector": ".grid-line",
+          "stroke": "rgb(41, 53, 83)",
+          "strokeWidth": "1px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".axis-line",
+          "stroke": "rgb(143, 154, 181)",
+          "strokeWidth": "1.2px",
+          "fill": "rgb(0, 0, 0)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".chart-handle",
+          "stroke": "rgb(22, 26, 50)",
+          "strokeWidth": "3px",
+          "fill": "rgb(255, 222, 89)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "15px",
+          "dash": "none"
+        },
+        {
+          "selector": ".tick-label",
+          "stroke": "none",
+          "strokeWidth": "1px",
+          "fill": "rgb(170, 180, 208)",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontSize": "10px",
+          "dash": "none"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Headless Edge/pinned root Playwright 1.62.1; no native OS hidden/suspension claim.",
+    "Source interactions occur in fresh nonpersistent synthetic browser contexts."
+  ],
+  "failure": "locator.evaluate: Error: strict mode violation: locator('.tc-chart') resolved to 2 elements:\n    1) <svg role=\"group\" class=\"tc-chart\" viewBox=\"0 0 820 460\" aria-label=\"pH curve; volume of sodium hydroxide added\">…</svg> aka getByRole('group', { name: 'pH curve; volume of sodium' }).first()\n    2) <svg role=\"group\" class=\"tc-chart\" viewBox=\"0 0 820 460\" aria-label=\"pH curve; volume of sodium hydroxide added\">…</svg> aka getByRole('complementary', { name: 'Marking and feedback' }).getByLabel('pH curve; volume of sodium')\n\nCall log:\n\u001b[2m  - waiting for locator('.tc-chart')\u001b[22m\n\n    at shot (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\titration\\resume-f11\\browser.mjs:15:67)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/component-fidelity/f2/titration/resume-f11/browser.mjs:44:204",
+  "finishedAt": "2026-10-03T18:48:40.911Z"
+}

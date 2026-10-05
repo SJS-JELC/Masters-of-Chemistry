@@ -1,0 +1,367 @@
+{
+  "jobId": "EBP-REVIEW",
+  "agentId": "A02-EBP",
+  "at": "2026-10-04T22:12:10.530Z",
+  "checks": [
+    {
+      "id": "before-after-implementation-and-unchanged-domain-hashes",
+      "count": 32,
+      "unchanged": 5,
+      "status": "PASS"
+    },
+    {
+      "id": "frozen-source-inputs-preserved",
+      "count": 236,
+      "status": "PASS",
+      "exception": "Root-authorised current project-contract.json amendment"
+    },
+    {
+      "id": "existing-correction-branches-byte-preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "independent-protected-current-supplement",
+      "status": "PASS",
+      "paths": 1317,
+      "knownHashes": 794,
+      "newlyReadable": 36,
+      "metadataOnly": 487
+    },
+    {
+      "id": "all32-content-scope-identities-and-conductivity",
+      "status": "PASS",
+      "questions": 32
+    },
+    {
+      "id": "gap-mark-separator-utf8",
+      "status": "PASS",
+      "codePoint": "U+00B7"
+    }
+  ],
+  "chemistry": [
+    {
+      "code": "EBP-K7M2Q9",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Solid sodium chloride has a giant ionic lattice containing positive and negative ions.",
+      "spec": "2.2.2(b)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-P4N8V2",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Ionic bonding is the electrostatic attraction between oppositely charged ions.",
+      "spec": "2.2.2(a)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-R6T3W8",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Sodium chloride has a high melting point because the electrostatic attractions between its ions are strong. A large amount of energy is needed to overcome these attractions.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-H9C4F7",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Solid potassium chloride does not conduct electricity. Its ions are held in fixed positions and cannot move through the lattice.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted conductivity demand: OCR_2017_JUN_H032-02_Q01_P_B_I",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-D2J8S5",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Molten sodium chloride conducts electricity because its ions are free to move.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted conductivity demand: OCR_2020_OCT_H032-01_Q22_P_B",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-W3B6L9",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Sodium chloride solution conducts electricity because its ions are free to move.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-F8Q2D6",
+      "level": 1,
+      "format": "gaps",
+      "answer": "When sodium chloride dissolves, its ions separate from the lattice and become surrounded by water molecules.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-M5V9A3",
+      "level": 1,
+      "format": "gaps",
+      "answer": "Average bond enthalpy is a measure of covalent bond strength. The larger its value, the stronger the bond.",
+      "spec": "2.2.2(f)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-C6R2Y8",
+      "level": 1,
+      "format": "correction",
+      "answer": "Solid sodium chloride contains Na+ and Cl- ions arranged in a giant ionic lattice.",
+      "spec": "2.2.2(b)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-A8S4K6",
+      "level": 1,
+      "format": "correction",
+      "answer": "Positive and negative ions are held together by electrostatic attraction in an ionic lattice.",
+      "spec": "2.2.2(a)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-T2F7N4",
+      "level": 1,
+      "format": "correction",
+      "answer": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-L4D9P2",
+      "level": 1,
+      "format": "correction",
+      "answer": "Solid potassium chloride does not conduct electricity because its ions are fixed in position and cannot move in the solid lattice.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted conductivity demand: OCR_2017_JUN_H032-02_Q01_P_B_I",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-Y7H3M8",
+      "level": 1,
+      "format": "correction",
+      "answer": "Molten sodium chloride conducts electricity because ions are free to move.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-N9W5C2",
+      "level": 1,
+      "format": "correction",
+      "answer": "When sodium chloride dissolves in water, it forms mobile sodium and chloride ions which are free to move through the solution.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-B3K8R6",
+      "level": 1,
+      "format": "correction",
+      "answer": "Some ionic compounds dissolve readily in water, producing aqueous solutions containing mobile ions.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-Q5A2T9",
+      "level": 1,
+      "format": "correction",
+      "answer": "A larger average bond enthalpy indicates a stronger covalent bond which requires more energy to break.",
+      "spec": "2.2.2(f)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-S8L4J2",
+      "level": 2,
+      "format": "gaps",
+      "answer": "Complete the missing labels, including charges: A = O2-, B = Ca2+.",
+      "spec": "2.2.2(b)",
+      "provenance": "Adapted lattice demand: OCR_2019_JUN_H032-01_Q21_P_D_III; corroborating OCR_2022_JUN_H032-01_Q23_P_A_II",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-V6P3H9",
+      "level": 2,
+      "format": "gaps",
+      "answer": "A compound conducts poorly as a solid but conducts well when molten. These observations suggest a giant ionic lattice. Its ions are fixed in position in the solid but free to move in the liquid.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted evidence demand: OCR_2020_OCT_H032-01_Q22_P_B",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-J2Y7B4",
+      "level": 2,
+      "format": "gaps",
+      "answer": "Solid barium chloride does not conduct electricity because its ions are fixed in position. An aqueous solution conducts because its ions are free to move.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted conductivity demand: OCR_2017_JUN_H032-02_Q01_P_B_I",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-G9M5W3",
+      "level": 2,
+      "format": "gaps",
+      "answer": "Sodium chloride has a high boiling point. A large amount of energy is needed to overcome the strong electrostatic attractions between oppositely charged ions.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-U4C8Q6",
+      "level": 2,
+      "format": "gaps",
+      "answer": "When potassium chloride dissolves, the oxygen end of water molecules is attracted to K+ ions. The hydrogen ends are attracted to Cl- ions.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored, supplied water partial charges",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-E7N2L5",
+      "level": 2,
+      "format": "gaps",
+      "answer": "When sodium chloride dissolves, attractions form between water molecules and the ions. These help overcome attractions holding the ions in the lattice. The separated ions become surrounded by water molecules.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored, supplied water partial charges",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-Z3R6F8",
+      "level": 2,
+      "format": "gaps",
+      "answer": "The stronger bond is X-Z. On average, more energy is needed to break one mole of these bonds than one mole of the other bond.",
+      "spec": "2.2.2(f)",
+      "provenance": "Specification-authored; hypothetical data",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-O8T4D2",
+      "level": 2,
+      "format": "gaps",
+      "answer": "A sodium chloride solution conducts electricity. Water is evaporated and the resulting crystals are dried. In solution, ions are free to move. In the dry crystals, the ions are fixed in position, so the crystals do not conduct electricity.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-I5B9S3",
+      "level": 2,
+      "format": "correction",
+      "answer": "The diagram represents part of a giant ionic lattice containing oppositely charged ions.",
+      "spec": "2.2.2(b)",
+      "provenance": "Adapted lattice demand: OCR_2019_JUN_H032-01_Q21_P_D_III",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-X2G7V4",
+      "level": 2,
+      "format": "correction",
+      "answer": "These observations support a giant ionic structure: when the compound melts, its ions become mobile which can move through the liquid.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted evidence demand: OCR_2020_OCT_H032-01_Q22_P_B",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-K9U3A6",
+      "level": 2,
+      "format": "correction",
+      "answer": "Both samples contain charged ions, but only the solution contains mobile ions, so only the solution conducts electricity.",
+      "spec": "2.2.2(c)",
+      "provenance": "Adapted conductivity demand: OCR_2017_JUN_H032-02_Q01_P_B_I",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-P6E2M8",
+      "level": 2,
+      "format": "correction",
+      "answer": "The high boiling point of sodium chloride is explained by the large amount of energy needed to overcome strong electrostatic attractions between oppositely charged ions.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-R3I8C5",
+      "level": 2,
+      "format": "correction",
+      "answer": "Its low solubility does not rule out a giant ionic structure because ionic compounds have a range of solubilities in water.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-H6Z4N9",
+      "level": 2,
+      "format": "correction",
+      "answer": "When water surrounds a chloride ion, its partially positive hydrogen ends are attracted towards the negatively charged ion.",
+      "spec": "2.2.2(c)",
+      "provenance": "Specification-authored, supplied water partial charges",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-D8O2Y7",
+      "level": 2,
+      "format": "correction",
+      "answer": "The X–Z bond is stronger because, on average, more energy is needed to break one mole of X–Z bonds than one mole of X–Y bonds.",
+      "spec": "2.2.2(f)",
+      "provenance": "Specification-authored; hypothetical data",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    },
+    {
+      "code": "EBP-W5X9G2",
+      "level": 2,
+      "format": "correction",
+      "answer": "In a giant ionic lattice, electrostatic attractions between oppositely charged ions act in all directions throughout the lattice, helping to hold together the extended structure.",
+      "spec": "2.2.2(b)",
+      "provenance": "Specification-authored",
+      "status": "INDEPENDENTLY_REVIEWED",
+      "note": "Checked ionic species/charges, solid/molten/aqueous mobility, attractions/energy, water orientation/solubility or qualitative covalent bond strength as applicable."
+    }
+  ],
+  "limitations": [
+    "The frozen baseline has no historic byte hashes for523 originally unreadable files;36 now-readable hashes cannot prove historic byte equality. Exact size/mtime/path preservation is independently confirmed."
+  ],
+  "status": "PASS"
+}

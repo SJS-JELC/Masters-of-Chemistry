@@ -1,0 +1,101 @@
+{
+    "schemaVersion":  1,
+    "runId":  "QUESTION-CHROME-20261003",
+    "authority":  "User-approved shared question layout plan and explicit implementation request",
+    "header":  {
+                   "left":  [
+                                "Eagle icon",
+                                "MASTERS OF CHEMISTRY",
+                                "Course - current subtopic/activity, e.g. A Level Chemistry - Making Buffers"
+                            ],
+                   "right":  [
+                                 "Existing question ID once, in original pink badge",
+                                 "Left-pointing back arrow"
+                             ],
+                   "source":  "Original IGCSE src/assets/shared-theme.css .header-question-code; original molecule/C3L6 masthead and quiet navy styling",
+                   "after":  "Thin horizontal divider then question pane"
+               },
+    "pills":  {
+                  "placement":  "Top of question pane above question title/instructions; compact noninteractive rounded outline with subtle translucent background and Comfortaa",
+                  "igcse":  [
+                                "GRADE 5–6 QUESTION",
+                                "GRADE 7–8 QUESTION",
+                                "GRADE 9 QUESTION"
+                            ],
+                  "colours":  [
+                                  "#ffde59",
+                                  "#54f5b5",
+                                  "#c59aff"
+                              ],
+                  "olympiad":  "OLYMPIAD QUESTION, cyan",
+                  "alevel":  [
+                                 "LEVEL 1 QUESTION",
+                                 "LEVEL 2 QUESTION",
+                                 "LEVEL 3 QUESTION"
+                             ]
+              },
+    "remove":  [
+                   "Course navigation row and activity sidebar on question screens",
+                   "Practice/activity/level subtitle strip",
+                   "Change activity or view",
+                   "All visible Pause/Resume controls and pause notices",
+                   "All question-screen timing displays or announcements",
+                   "Duplicate question IDs and level labels",
+                   "Post-question session summary including saved-result counts and routine revision status",
+                   "Repeated activity headings; preserve actual question/subpart instructions"
+               ],
+    "preserve":  [
+                     "Landing runtime and originals read-only",
+                     "Existing specialist editor palettes, geometry, gestures and chemistry errata",
+                     "Question IDs, banks, marking, mastery and timing mathematics",
+                     "Read-only notices, C3L6 stage controls, assessment feedback, Check/Next",
+                     "Save-failure alerts and Retry",
+                     "C3L6 Olympiad-only with no mastery/curriculum evidence",
+                     "Existing statistics timing data; no statistics/import redesign",
+                     "No publication"
+                 ],
+    "behaviour":  [
+                      "Header metadata follows actual current question/course/subtopic, including revision and teacher selection",
+                      "Back/eagle save and checkpoint through existing navigation guard; failed save blocks departure",
+                      "Resume existing saved attempts automatically after safe load/save, including historical paused sessions; same identity, response and drawing; no away time",
+                      "No accidental resume of prior selection on fresh launch or changed revision selection",
+                      "Remove display-only clock state/interval; preserve real timing binding/checkpoints, idle/background/suspension rules and first-assessment cutoff",
+                      "No timer/pause announcement in accessible UI; tracking verified through persisted evidence",
+                      "Responsive long titles and controls, no page overflow"
+                  ],
+    "stages":  [
+                   {
+                       "outcome":  "Bounded audit/source and interface proposal with exact ownership",
+                       "gate":  "Root acceptance before runtime edits",
+                       "id":  "H0"
+                   },
+                   {
+                       "outcome":  "Implement, integrate, browser/render review and regression closure",
+                       "gate":  "Root final acceptance",
+                       "id":  "H1"
+                   }
+               ],
+    "delegation":  {
+                       "usage":  null,
+                       "maximumActiveIncludingRoot":  4,
+                       "retry":  "One clarified bounded retry; independent exception/root disposition for substantive failure",
+                       "foremen":  1,
+                       "effectiveSettings":  "unknown",
+                       "implementationWorkers":  1,
+                       "rationale":  "Single worker owns cohesive presentation; foreman owns host lifecycle integration and aggregate verification",
+                       "maximumExceptionReviewers":  1,
+                       "model":  "gpt-6.1-sol",
+                       "effort":  "high",
+                       "workerMayDelegate":  false
+                   },
+    "validation":  [
+                       "Original badge/header source fidelity; root desktop/mobile visual review",
+                       "Both courses all three pill labels and Olympiad; one header ID only; no visible pause/timer/summary",
+                       "Numeric, multipart/rubric, dot, other editor, teacher and C3L6 smoke",
+                       "Revision title/level transitions and exact question ID/seed/answers on restoration",
+                       "Historical paused sessions and current saved sessions automatically resume; fresh launch and changed selection isolated; StrictMode no duplicate evidence",
+                       "Back/failed saves/Retry, active timing idle/background/first-score freeze and stats transfer",
+                       "Appropriate regression/type/build/prefix/budget checks",
+                       "Protected-original, unchanged landing/editor engines and historical evidence checks; new evidence separate"
+                   ]
+}

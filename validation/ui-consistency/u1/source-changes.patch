@@ -1,0 +1,2122 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\activities\\olympiad\\c3l6\\c3l6.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\c3l6.css"
+index f3556c5..9f605ce 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\activities\\olympiad\\c3l6\\c3l6.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\c3l6.css"	
+@@ -4,9 +4,9 @@
+   --muted: #a9afce;
+   --line: rgba(172, 182, 255, 0.19);
+   --cyan: #55f6ff;
+-  max-width: 1600px;
++  max-width: var(--question-pane-max-width, 1120px);
+   margin: auto;
+-  padding: 1rem;
++  padding: 0;
+   min-width: 0;
+   container-type: inline-size;
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\compatibility\\legacy-import.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\compatibility\\legacy-import.css"
+index 6bc5d32..dfcb009 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\compatibility\\legacy-import.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\compatibility\\legacy-import.css"	
+@@ -1,5 +1,5 @@
+ .legacy-import{max-width:65rem;margin:auto;padding:1rem;color:inherit}
+ .legacy-import p,.legacy-import li{line-height:1.6}.legacy-import label{display:block;margin:1rem 0;font-weight:700}
+ .legacy-import select,.legacy-import textarea,.legacy-import input{display:block;max-width:100%;width:100%;margin-top:.4rem;padding:.6rem;box-sizing:border-box;font:inherit}
+-.legacy-import textarea{font-family:monospace;font-size:.9rem}.legacy-import button{font:inherit;padding:.6rem .8rem;margin:.3rem 0;cursor:pointer;border:1px solid #607089;border-radius:.5rem;background:#fff;color:#142844}
++.legacy-import textarea{font-family:Comfortaa, sans-serif;font-size:.9rem}.legacy-import button{font:inherit;padding:.6rem .8rem;margin:.3rem 0;cursor:pointer;border:1px solid #607089;border-radius:.5rem;background:#fff;color:#142844}
+ .legacy-import button:disabled{opacity:.6;cursor:default}.legacy-import details{padding:.7rem;background:var(--surface,#f3f7fb);border:1px solid var(--border,#d1dbe5);border-radius:.5rem}.legacy-import li{overflow-wrap:anywhere}.import-limits{font-size:.9rem}
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\contracts\\attempt.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\attempt.ts"
+index 4a66a07..f5c0895 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\contracts\\attempt.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\attempt.ts"	
+@@ -126,6 +126,9 @@ interface StudentAttemptBase {
+   readonly target: CurriculumTarget;
+   readonly currentResponses: Responses;
+   readonly assistance: readonly Assistance[];
++  /** Current action presentation only; immutable first evidence never includes these flags. */
++  readonly currentResponseChanged?: true;
++  readonly currentGiveUp?: true;
+ }
+ export type StudentAttempt = StudentAttemptBase &
+   (
+@@ -171,6 +174,7 @@ export interface PreviewAttempt {
+ export type PlayerAttempt = StudentAttempt | PreviewAttempt;
+ export type AttemptCommand =
+   | Readonly<{ kind: 'respond'; partId: string; response: Response }>
++  | Readonly<{ kind: 'clear' }>
+   | Readonly<{ kind: 'assist'; assistance: Assistance }>
+   | Readonly<{ kind: 'submit'; at: number }>
+   | Readonly<{ kind: 'check-correction' }>
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\domain\\attempt\\attempt.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\domain\\attempt\\attempt.ts"
+index cdf021d..0ce6de0 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\domain\\attempt\\attempt.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\domain\\attempt\\attempt.ts"	
+@@ -132,7 +132,14 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
+         ...state.currentResponses,
+         [part.id]: copy(command.response),
+       };
+-      return yes({ ...state, currentResponses });
++      const { currentGiveUp: _currentGiveUp, ...base } = state;
++      return yes({ ...base, currentResponses, ...(state.phase === 'assessed' ? { currentResponseChanged: true as const } : {}) });
++    }
++    case 'clear': {
++      if (state.phase === 'rubric-review' || state.phase === 'drawing-review')
++        return no(state, 'Complete the required review before clearing the editable response.');
++      const { currentGiveUp: _currentGiveUp, ...base } = state;
++      return yes({ ...base, currentResponses: {}, ...(state.phase === 'assessed' ? { currentResponseChanged: true as const } : {}) });
+     }
+     case 'pause':
+       return yes(state);
+@@ -146,7 +153,7 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
+             item.supportId === command.assistance.supportId,
+         )
+       )
+-        return yes(state);
++        return yes(command.assistance.kind === 'hint' ? state : { ...state, currentGiveUp: true });
+       const assistance = [...state.assistance, copy(command.assistance)];
+       if (state.phase === 'answering' && command.assistance.kind !== 'hint') {
+         const firstResponse = frozen(
+@@ -160,9 +167,9 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
+           independent: false,
+         };
+         const { timing: _timing, ...base } = state;
+-        return yes({ ...base, phase: 'assessed', firstResponse, firstAssessment, assistance });
++        return yes({ ...base, phase: 'assessed', firstResponse, firstAssessment, assistance, currentGiveUp: true });
+       }
+-      return yes({ ...state, assistance });
++      return yes({ ...state, assistance, ...(command.assistance.kind !== 'hint' ? { currentGiveUp: true as const } : {}) });
+     }
+     case 'check-correction': {
+       if (state.phase !== 'assessed')
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\dot-and-cross\\editor.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\dot-and-cross\\editor.css"
+index 2b929f2..3f1f351 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\dot-and-cross\\editor.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\dot-and-cross\\editor.css"	
+@@ -12,7 +12,7 @@
+   --dc-metal: #c9b6ff;
+   min-width: 0;
+   color: var(--dc-ink);
+-  font-family: Comfortaa, system-ui, sans-serif;
++  font-family: Comfortaa, sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.55;
+@@ -117,9 +117,7 @@
+   height: 44px;
+   padding: 0;
+   font:
+-    700 17px Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 17px Comfortaa, sans-serif;
+ }
+ .dot-cross-editor .element-tool:hover:not(:disabled) {
+   background: #55f6ff0e;
+@@ -246,7 +244,7 @@
+   border-radius: 8px;
+ }
+ .dot-cross-editor .dc-canvas text {
+-  font-family: Comfortaa, system-ui, sans-serif;
++  font-family: Comfortaa, sans-serif;
+   font-weight: 700;
+   fill: var(--dc-ink);
+ }
+@@ -402,9 +400,7 @@
+ }
+ .dot-cross-editor .dc-canvas .empty-hint {
+   font:
+-    700 14px Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 14px Comfortaa, sans-serif;
+   fill: var(--dc-muted);
+ }
+ .dot-cross-editor .status {
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\electron-configuration\\index.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\electron-configuration\\index.tsx"
+index 9294b8a..3a92714 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\electron-configuration\\index.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\electron-configuration\\index.tsx"	
+@@ -313,6 +313,7 @@ export function ElectronConfigurationEditor({
+           <label className="identity-entry">
+             <span>Element name or symbol</span>
+             <input
++              data-answer-input="true"
+               type="text"
+               maxLength={80}
+               autoComplete="off"
+@@ -355,37 +356,6 @@ export function ElectronConfigurationEditor({
+                 disabled={readOnly}
+                 onSpin={(index, orbital, value) => send({ kind: 'spin', index, orbital, value })}
+               />
+-              <details className="ec-alternatives">
+-                <summary>Set spins without cycling</summary>
+-                <div className="ec-spin-alternatives">
+-                  {data.subshells.flatMap((label, index) =>
+-                    state.boxes[index]!.map((spin, orbital) => (
+-                      <label key={`${index}-${orbital}`}>
+-                        {label} orbital {orbital + 1}
+-                        <select
+-                          aria-label={`${label} orbital ${orbital + 1}`}
+-                          disabled={readOnly}
+-                          value={spin}
+-                          onChange={(event) =>
+-                            send({
+-                              kind: 'spin',
+-                              index,
+-                              orbital,
+-                              value: Number(event.target.value) as OrbitalSpin,
+-                            })
+-                          }
+-                        >
+-                          {spinText.map((text, value) => (
+-                            <option key={value} value={value}>
+-                              {text}
+-                            </option>
+-                          ))}
+-                        </select>
+-                      </label>
+-                    )),
+-                  )}
+-                </div>
+-              </details>
+             </>
+           ) : (
+             <>
+@@ -418,6 +388,7 @@ export function ElectronConfigurationEditor({
+                     <label className="subshell-entry" key={label}>
+                       {label}
+                       <input
++                        data-answer-input="true"
+                         aria-label={`Electrons in ${label}`}
+                         type="text"
+                         inputMode="numeric"
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\electron-configuration\\styles.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\electron-configuration\\styles.css"
+index db8013f..808f4b2 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\electron-configuration\\styles.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\electron-configuration\\styles.css"	
+@@ -3,8 +3,7 @@
+   min-width: 0;
+   color: #f7f7ff;
+   font:
+-    700 15px/1.6 Comfortaa,
+-    sans-serif;
++    700 15px/1.6 Comfortaa, sans-serif;
+   --ink: #f7f7ff;
+   --muted: #a9afce;
+   --line: rgba(172, 182, 255, 0.19);
+@@ -210,9 +209,7 @@
+   border: 1.5px solid #8694cd;
+   border-radius: 3px;
+   font:
+-    26px/1 'Segoe UI Symbol',
+-    'Arial',
+-    sans-serif;
++    26px/1 Comfortaa, sans-serif;
+   letter-spacing: -4px;
+   text-indent: -4px;
+   background: #080c24;
+@@ -240,14 +237,15 @@
+   align-content: end;
+   width: max-content;
+   min-height: 145px;
+-  padding: 0 8px 0 45px;
++  /* Reserve the vertical axis label inside the scrollable content origin. */
++  padding: 0 8px 0 62px;
+   margin: 15px auto;
+ }
+ .ec-source .energy-axis {
+   position: absolute;
+   top: 6px;
+   bottom: 13px;
+-  left: 13px;
++  left: 30px;
+   border-left: 2px solid #8b96bd;
+ }
+ .ec-source .energy-axis::before {
+@@ -444,9 +442,7 @@
+   color: #79f5ed;
+   background: linear-gradient(135deg, #163844, #152542);
+   font:
+-    700 12px/1.3 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 12px/1.3 Comfortaa, sans-serif;
+   cursor: pointer;
+   box-shadow: inset 0 1px #ffffff12;
+ }
+@@ -479,9 +475,7 @@
+   background: #10152e;
+   box-shadow: 0 25px 90px #0009;
+   font:
+-    700 14px/1.4 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 14px/1.4 Comfortaa, sans-serif;
+ }
+ .ec-periodic-dialog *,
+ .ec-periodic-dialog *::before {
+@@ -541,7 +535,7 @@
+   grid-template-rows: 40px repeat(7, 70px) 22px repeat(2, 70px);
+   min-width: 1098px;
+   padding-right: 1px;
+-  font-family: Arial, Helvetica, sans-serif;
++  font-family: Comfortaa, sans-serif;
+   font-weight: 400;
+   line-height: 1.1;
+ }
+@@ -629,9 +623,7 @@
+   padding: 13px 24px;
+   color: #b7c2dd;
+   font:
+-    700 10px/1.6 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 10px/1.6 Comfortaa, sans-serif;
+   text-align: left;
+ }
+ @media (max-width: 600px) {
+@@ -687,7 +679,5 @@
+ }
+ .ec-source .ec-periodic-trigger {
+   font:
+-    700 12px/1.3 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 12px/1.3 Comfortaa, sans-serif;
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\energy-profile\\styles.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\styles.css"
+index 9ac24b3..8270a1f 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\energy-profile\\styles.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\styles.css"	
+@@ -2,9 +2,7 @@
+ .source-energy-profile {
+   color: #f4f6ff;
+   font:
+-    700 16px/1.65 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 16px/1.65 Comfortaa, sans-serif;
+   min-width: 0;
+ }
+ .source-energy-profile .diagram-card {
+@@ -68,9 +66,7 @@
+   min-height: 46px;
+   cursor: grab;
+   font:
+-    700 1rem/1.65 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 1rem/1.65 Comfortaa, sans-serif;
+   touch-action: none;
+ }
+ .source-energy-profile .piece:focus-visible {
+@@ -114,8 +110,7 @@
+   border-radius: 10px;
+   padding: 10px 13px;
+   font:
+-    400 1.1rem system-ui,
+-    sans-serif;
++    400 1.1rem Comfortaa, sans-serif;
+ }
+ .source-energy-profile .energy-actions {
+   display: flex;
+@@ -125,7 +120,7 @@
+   margin-top: 16px;
+ }
+ .energy-profile-editor.source-energy-profile .editor-fields input {
+-  font: 400 1.1rem system-ui, sans-serif;
++  font: 400 1.1rem Comfortaa, sans-serif;
+ }
+ .source-energy-profile .diagram-tools {
+   display: contents;
+@@ -136,9 +131,7 @@
+   padding: 10px 14px;
+   border: 1px solid #303c62;
+   font:
+-    700 0.9rem/1.65 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 0.9rem/1.65 Comfortaa, sans-serif;
+   background: transparent;
+   color: #f4f6ff;
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\molecule\\molecule.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\molecule\\molecule.css"
+index 559ab19..072eb2a 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\molecule\\molecule.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\molecule\\molecule.css"	
+@@ -8,7 +8,7 @@
+   --error: #ff8290;
+   min-width: 0;
+   max-width: 100%;
+-  font-family: Comfortaa, system-ui, sans-serif;
++  font-family: Comfortaa, sans-serif;
+   font-weight: 700;
+   color: var(--ink);
+ }
+@@ -220,8 +220,7 @@
+ .molecule-workspace .atom-label,
+ .molecule-preview .atom-label {
+   font:
+-    700 23px Comfortaa,
+-    sans-serif;
++    700 23px Comfortaa, sans-serif;
+   fill: var(--ink, #f7f7ff);
+   pointer-events: none;
+   dominant-baseline: central;
+@@ -287,8 +286,7 @@
+ .molecule-workspace .invalid-mark {
+   fill: var(--error);
+   font:
+-    700 14px Comfortaa,
+-    sans-serif;
++    700 14px Comfortaa, sans-serif;
+   pointer-events: none;
+ }
+ .molecule-workspace .ghost {
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\titration-curve\\titration.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\titration-curve\\titration.css"
+index 1c6da4d..ef617d2 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\editors\\titration-curve\\titration.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\titration-curve\\titration.css"	
+@@ -12,9 +12,7 @@
+   width: 100%;
+   min-width: 0;
+   font:
+-    700 15px/1.55 Comfortaa,
+-    system-ui,
+-    sans-serif;
++    700 15px/1.55 Comfortaa, sans-serif;
+   color: var(--ink);
+ }
+ .titration-workspace * {
+@@ -152,7 +150,7 @@
+ .titration-workspace .axis-label,
+ .titration-workspace .tick-label,
+ .titration-workspace .guide-label {
+-  font-family: Comfortaa, system-ui, sans-serif;
++  font-family: Comfortaa, sans-serif;
+   font-weight: 700;
+   fill: #aab4d0;
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\foundation\\ActivityHost.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"
+index e03d139..ad09f49 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\foundation\\ActivityHost.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"	
+@@ -681,7 +681,7 @@ export function FoundationApp({
+         setCorrectionFeedback(result.correctionFeedback);
+         return;
+       }
+-      if (value.kind === 'respond') setCorrectionFeedback(undefined);
++      if (value.kind === 'respond' || value.kind === 'clear') setCorrectionFeedback(undefined);
+       setFeedback(undefined);
+       setSaveStatus({ kind: 'saving' });
+       const next = controller.checkpoint();
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\foundation\\olympiad.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\olympiad.css"
+index 2ff8c33..1b1dece 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\foundation\\olympiad.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\olympiad.css"	
+@@ -1,3 +1,25 @@
+-.olympiad-selector { max-width: 960px; margin: 3rem auto; padding: clamp(16px,4vw,40px); border: 1px solid #aebaff33; border-radius: 20px; background: #0a0d26; }
+-.olympiad-selector p { line-height: 1.7; }
+-.olympiad-selector button { display: block; min-height: 52px; width: 100%; text-align: left; margin: 1rem 0; }
++.olympiad-landing { color: var(--ink); font-family: var(--ui-font-family, Comfortaa, sans-serif); }
++.olympiad-landing-shell { position: relative; width: min(1880px, calc(100% - 48px)); margin: auto; padding: 28px 0 24px; }
++.olympiad-landing-header { display: grid; grid-template-columns: 52px minmax(0,1fr) auto; align-items: center; gap: 16px; margin-bottom: 32px; }
++.olympiad-landing-header .eyebrow { margin: 0 0 5px; color: #a9b3ca; font-size: .8rem; line-height: 1.45; letter-spacing: .065em; }
++.olympiad-landing-header h1 { margin: 0; font-size: clamp(1.2rem,2.4vw,1.65rem); line-height: 1.45; }
++.olympiad-landing-header h1 span { color: #81e6df; }
++.olympiad-eagle { display: grid; width: 52px; height: 52px; place-items: center; border: 1px solid #54f5b573; border-radius: 15px; background: #54f5b512; box-shadow: inset 0 0 24px #54f5b514,0 0 20px #54f5b514; }
++.olympiad-eagle img { width: 31px; height: 40px; object-fit: contain; }
++.olympiad-map-introduction { color: var(--muted); line-height: 1.7; max-width: 64rem; }
++.olympiad-gem-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin: 28px 0; }
++.olympiad-gem-card { display: flex; flex-direction: column; align-items: center; gap: 14px; min-width: 0; padding: 28px 20px; border: 1px solid var(--gem-colour); border-radius: 18px; background: linear-gradient(160deg,color-mix(in srgb,var(--gem-colour) 7%,#11152e),#0d1128); text-align: center; line-height: 1.6; }
++.olympiad-gem-card:hover:not(:disabled) { background: linear-gradient(160deg,color-mix(in srgb,var(--gem-colour) 12%,#11152e),#0d1128); border-color: var(--gem-colour); }
++.olympiad-gem-card strong { font-size: 1.1rem; color: var(--ink); }
++.olympiad-completion-gem { width: 72px; height: 90px; overflow: visible; }
++.olympiad-gem-dim { color: #64718a; opacity: .5; }
++.olympiad-gem-lit { color: var(--gem-colour); }
++.olympiad-gem-card[data-completion=complete] .olympiad-completion-gem { filter: drop-shadow(0 0 10px color-mix(in srgb,var(--gem-colour) 50%,transparent)); }
++.olympiad-completion-label { color: var(--muted); font-size: .85rem; }
++.olympiad-launch-label { color: var(--gem-colour); font-size: .85rem; }
++.olympiad-closing-line { margin: 26px 0 0; text-align: center; color: var(--muted); font-size: .75rem; opacity: .8; }
++.olympiad-question-frame { max-width: var(--question-pane-max-width,1120px); margin: auto; padding: clamp(14px,3vw,28px); border: 1px solid var(--border); border-radius: var(--radius,18px); background: var(--surface); }
++.challenge-mode-controls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-bottom: 20px; }
++.olympiad-question-frame > [role=status] { line-height: 1.6; }
++@media(max-width:760px) { .olympiad-landing-shell { width: calc(100% - 32px); } .olympiad-landing-header { grid-template-columns: 52px minmax(0,1fr); gap: 12px; margin-bottom: 24px; } .olympiad-landing-header > button { grid-column: 1/-1; justify-self: end; } .olympiad-gem-grid { grid-template-columns: 1fr; gap: 22px; } }
++@media(max-width:560px) { .olympiad-landing-header .eyebrow { font-size: .65rem; } }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\foundation\\OlympiadHost.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\OlympiadHost.tsx"
+index 9ad17f5..2dd82db 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\foundation\\OlympiadHost.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\OlympiadHost.tsx"	
+@@ -5,6 +5,8 @@ import { createChemistryRepository } from '../persistence/index.ts';
+ import { CourseShell } from '../shell/CourseShell.tsx';
+ import { productionRegistry } from './registry.ts';
+ import type { SaveStatus } from '../ui/QuestionPlayer.tsx';
++import { OlympiadLanding } from '../landing/OlympiadLanding.tsx';
++import { olympiadCompletion, type ChallengeCompletion } from '../landing/olympiad-completion.ts';
+ import './olympiad.css';
+ type Runtime =
+   | { id: 'alevel/c3l6-organic-reactions'; module: typeof import('../activities/olympiad/c3l6/index.ts') }
+@@ -30,6 +32,8 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
+   const [runtime,setRuntime] = useState<Runtime | null>(null), [progress,setProgress] = useState<OlympiadProgress | null>(null);
+   const [readOnly,setReadOnly] = useState(query.get('mode') === 'teacher' || query.get('mode') === 'review');
+   const [saveStatus,setSaveStatus] = useState<SaveStatus>({kind:'idle'}), [message,setMessage] = useState('');
++  const [completion,setCompletion] = useState<Partial<Record<OlympiadActivityId,ChallengeCompletion>>>({});
++  const [landingLoading,setLandingLoading] = useState(true);
+   const stateRef = useRef<OlympiadProgress | null>(null), queue = useRef<Promise<void>>(Promise.resolve()), saveFailed = useRef(false);
+   const generation = useRef(0), readOnlyRef = useRef(readOnly), activityRef = useRef(activityId);
+   readOnlyRef.current = readOnly; activityRef.current = activityId;
+@@ -37,7 +41,23 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
+   useEffect(() => {
+     const version = ++generation.current;
+     stateRef.current = null; setProgress(null); setRuntime(null); setMessage(''); setSaveStatus({kind:'idle'}); saveFailed.current = false;
+-    if (!activityId) return;
++    setLandingLoading(true);
++    if (!activityId) {
++      setCompletion({});
++      void (async () => {
++        await queue.current;
++        const challenges = productionRegistry.activities.filter(a => a.strand === 'olympiad');
++        const loaded = await Promise.all(challenges.map(async a => {
++          const value = a.id === 'alevel/olympiad-2011-q4' ? await repository.loadOlympiad(profileId,a.id) : await repository.loadOlympiad(profileId);
++          return {id:a.id as OlympiadActivityId,value};
++        }));
++        if (version !== generation.current) return;
++        setCompletion(Object.fromEntries(loaded.map(({id,value}) => [id,olympiadCompletion(value.ok ? value.value : null,id)])));
++        setMessage(loaded.flatMap(({value}) => value.ok ? [] : [value.error.message]).join(' '));
++        setLandingLoading(false);
++      })().catch(error => { if (version === generation.current) {setMessage(error instanceof Error ? error.message : 'Saved completion could not be loaded.');setLandingLoading(false);} });
++      return () => {generation.current++;};
++    }
+     void (async () => {
+       await queue.current;
+       if (version !== generation.current) return;
+@@ -95,12 +115,14 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
+     return () => onNavigationGuard?.(null);
+   },[onNavigationGuard]);
+   const registration = activityId ? productionRegistry.get(activityId) : undefined;
++  if (!activityId) return <OlympiadLanding challenges={productionRegistry.activities.filter(a => a.strand === 'olympiad')} completion={completion} loading={landingLoading}
++    {...(message ? {message} : {})} onLaunch={onSelectChallenge} onBack={() => {void leave(() => onSelectView?.('home'));}} />;
+   return <CourseShell course="alevel" registry={productionRegistry} currentView="olympiad"
+     {...(activityId ? {currentActivityId:activityId} : {})}
+     {...(registration ? {questionHeader:{subtopic:registration.title,questionId: activityId === 'alevel/olympiad-2011-q4' ? 'UK Olympiad 2011 Q4' : 'C3L6 2012 Q2'}} : {})}
+     onSelectView={view => {void leave(() => onSelectView?.(view));}}
+     onSelectActivity={id => {void leave(() => { if (productionRegistry.get(id)?.strand === 'olympiad') onSelectChallenge(id as OlympiadActivityId); else onSelectCurriculum(id); });}}>
+-    {!activityId ? <section className="olympiad-selector" aria-label="Olympiad challenges"><h1>Olympiad challenges</h1><p>Explore chemistry beyond the course. Your drawings and challenge completion save on this device.</p>{productionRegistry.activities.filter(a => a.strand === 'olympiad').map(a => <button type="button" key={a.id} onClick={() => onSelectChallenge(a.id as OlympiadActivityId)}>{a.title}</button>)}</section> : <>
++    <div className="olympiad-question-frame">
+       <section className="challenge-mode-controls" aria-label="Challenge mode">
+         <button type="button" onClick={() => {void leave(() => onSelectChallenge(undefined));}}>All Olympiad challenges</button>
+         <button type="button" onClick={() => setReadOnly(v => !v)}>{readOnly ? 'Return to challenge' : 'Teacher preview'}</button>
+@@ -109,6 +131,6 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
+       {runtime?.id === 'alevel/c3l6-organic-reactions' && progress?.activityId === runtime.id ? <runtime.module.C3L6View challenge={runtime.module.c3Challenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} {...(message ? {status:message} : {})} /> :
+        runtime?.id === 'alevel/olympiad-2011-q4' && progress?.activityId === runtime.id ? <runtime.module.IsomerView challenge={runtime.module.isomerChallenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} /> : <p role="status">{message || 'Loading challenge content...'}</p>}
+       {!readOnly && saveStatus.kind === 'error' && <section aria-label="Challenge saving failure" className="save-status save-error" role="alert"><p>{saveStatus.error.message}</p>{saveStatus.error.retryable && <button type="button" onClick={() => {const value = stateRef.current; if (value) void save(value);}}>Retry save</button>}</section>}
+-    </>}
++    </div>
+   </CourseShell>;
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\adaptation.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\adaptation.css"
+index 586ebe6..a561ae3 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\adaptation.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\adaptation.css"	
+@@ -8,6 +8,6 @@
+ .original-landing h1,.original-landing h2,.original-landing h3{margin-bottom:revert}
+ .original-landing .landing-switches{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end;margin-left:auto}
+ .original-landing .landing-support{display:flex;gap:14px;justify-content:flex-end;margin-top:12px}
+-.original-landing.alevel .landing-support button,.original-landing.igcse .landing-support button{font:700 .65rem Comfortaa,sans-serif;color:var(--muted);border:0;background:transparent;padding:5px;cursor:pointer}
+-.original-landing .landing-message{color:#ffde59;font:700 .8rem Comfortaa,sans-serif}
++.original-landing.alevel .landing-support button,.original-landing.igcse .landing-support button{font:700 .65rem Comfortaa, sans-serif;color:var(--muted);border:0;background:transparent;padding:5px;cursor:pointer}
++.original-landing .landing-message{color:#ffde59;font:700 .8rem Comfortaa, sans-serif}
+ @media(max-width:760px){.original-landing .landing-switches{grid-column:1/-1;justify-content:center;width:100%;gap:10px}.original-landing.igcse .brand{flex-wrap:wrap}}
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\alevel.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\alevel.css"
+index f59765e..25e59f4 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\alevel.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\alevel.css"	
+@@ -43,7 +43,7 @@
+ 
+ .original-landing.alevel .site-version {
+   color: #7f88b0;
+-  font: 800 .58rem/1.3 ui-sans-serif, system-ui, sans-serif;
++  font: 800 .58rem/1.3 Comfortaa, sans-serif;
+   letter-spacing: .08em;
+   text-transform: uppercase;
+ }
+@@ -107,7 +107,7 @@
+ .original-landing.alevel * { box-sizing: border-box; }
+ .original-landing.alevel [hidden] { display: none !important; }
+ .original-landing.alevel { min-height: 100%; }
+-.original-landing.alevel { min-height: 100vh; margin: 0; background: radial-gradient(circle at 78% 12%, rgba(105, 75, 255, .22), transparent 32rem), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, .12), transparent 28rem), var(--bg); color: var(--ink); font: 700 16px/1.6 Comfortaa, sans-serif; }
++.original-landing.alevel { min-height: 100vh; margin: 0; background: transparent; color: var(--ink); font: 700 16px/1.6 Comfortaa, sans-serif; }
+ .original-landing.alevel .stars { position: fixed; inset: 0; pointer-events: none; opacity: .45; background-image: radial-gradient(circle, #fff 1px, transparent 1.5px), radial-gradient(circle, #55f6ff 1px, transparent 1.5px); background-position: 0 0, 31px 37px; background-size: 74px 74px, 101px 101px; mask-image: linear-gradient(to bottom, black, transparent 92%); }
+ .original-landing.alevel a { color: inherit; }
+ .original-landing.alevel button { font: inherit; color: inherit; cursor: pointer; }
+@@ -253,9 +253,9 @@
+ /* Reused alevel/assets/test-mode.css; selector boundary only. */
+ .original-landing.alevel .test-tile-row{display:flex;justify-content:flex-start;align-items:center;gap:22px;margin:1.2rem 0 1.8rem}
+ .original-landing.alevel.test-revising .test-tile-row,.original-landing.alevel.test-revising #flipYear{display:none!important}
+-.original-landing.alevel .test-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:0 0 auto;width:112px;aspect-ratio:1;border:1px solid #72e4e9;border-radius:18px;background:linear-gradient(145deg,#192f48,#15132f);color:#e7fbff;font:700 1rem Comfortaa,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 24px #0004}
++.original-landing.alevel .test-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:0 0 auto;width:112px;aspect-ratio:1;border:1px solid #72e4e9;border-radius:18px;background:linear-gradient(145deg,#192f48,#15132f);color:#e7fbff;font:700 1rem Comfortaa, sans-serif;cursor:pointer;box-shadow:0 8px 24px #0004}
+ .original-landing.alevel .test-tile:hover{border-color:#fff;transform:translateY(-2px)}
+-.original-landing.alevel .test-mode{color:#eef3ff;font-family:Comfortaa,system-ui,sans-serif;text-align:left}
++.original-landing.alevel .test-mode{color:#eef3ff;font-family:Comfortaa, sans-serif;text-align:left}
+ .original-landing.alevel .test-mode [hidden]{display:none!important}.original-landing.alevel .test-mode h2{font-size:clamp(1.2rem,3vw,1.7rem);margin:.3rem 0}.original-landing.alevel .test-mode h3{font-size:1rem}
+ .original-landing.alevel .test-card{background:#11172b;border:1px solid #38435f;border-radius:18px;padding:clamp(16px,3vw,28px);margin-bottom:20px}
+ .original-landing.alevel .test-mode p,.original-landing.alevel .test-mode small{line-height:1.6;color:#c7d2e8}.original-landing.alevel .test-eyebrow{letter-spacing:.15em;font-size:.75rem}
+@@ -278,7 +278,7 @@
+ /* The tile expands into one shared surface during gem selection. */
+ .original-landing.alevel .test-tile svg{width:34px;height:34px;color:#62e3c0}
+ .original-landing.alevel .test-tile-row [hidden]{display:none!important}
+-.original-landing.alevel .test-selection{display:flex;align-items:center;gap:20px;flex:1;min-width:0;color:#eef3ff;font-family:Comfortaa,system-ui,sans-serif;text-align:left}
++.original-landing.alevel .test-selection{display:flex;align-items:center;gap:20px;flex:1;min-width:0;color:#eef3ff;font-family:Comfortaa, sans-serif;text-align:left}
+ .original-landing.alevel .test-selection-content{flex:1;min-width:0}
+ .original-landing.alevel #testSelectionTitle{color:#c7d2e8;margin:0 0 12px;font-size:.9rem}
+ .original-landing.alevel .test-selection .test-chosen{margin:0 0 12px}
+@@ -288,7 +288,7 @@
+ .original-landing.alevel .test-selection-tools button{border:0;border-radius:999px;padding:6px 10px;font-size:.7rem;background:#44381d;color:#ffe096}
+ .original-landing.alevel .test-selection-tools #testCancel{background:#462b3b;color:#ffafca}
+ .original-landing.alevel .test-year-bulk{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+-.original-landing.alevel .test-year-bulk button{border:1px solid #62e3c066;border-radius:999px;padding:7px 11px;background:#142637;color:#62e3c0;font:700 .65rem Comfortaa,system-ui,sans-serif}
++.original-landing.alevel .test-year-bulk button{border:1px solid #62e3c066;border-radius:999px;padding:7px 11px;background:#142637;color:#62e3c0;font:700 .65rem Comfortaa, sans-serif}
+ .original-landing.alevel .test-year-bulk button[aria-pressed="true"]{background:#21483f}
+ .original-landing.alevel .test-year-bulk button:disabled{opacity:.45}
+ .original-landing.alevel .test-selection #testStart{display:flex;align-items:center;justify-content:center;gap:10px;flex:0 0 108px;min-height:82px;border:1px solid #83ffba;border-radius:18px;background:#54f5a3;color:#08291d;font-size:1.65rem;font-weight:700;box-shadow:0 0 24px #54f5a32a}
+@@ -329,7 +329,7 @@
+ .original-landing.alevel .test-topic-all{display:none}
+ .original-landing.alevel.test-selecting .topic-section h3{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+ .original-landing.alevel.test-selecting .topic-section .topic-trigger{width:auto;flex:1}
+-.original-landing.alevel.test-selecting .test-topic-all{display:inline-block;flex:0 0 auto;border:1px solid #62e3c066;border-radius:999px;padding:5px 9px;background:#142637;color:#62e3c0;font:700 .6rem Comfortaa,system-ui,sans-serif;cursor:pointer}
++.original-landing.alevel.test-selecting .test-topic-all{display:inline-block;flex:0 0 auto;border:1px solid #62e3c066;border-radius:999px;padding:5px 9px;background:#142637;color:#62e3c0;font:700 .6rem Comfortaa, sans-serif;cursor:pointer}
+ .original-landing.alevel .test-topic-all:focus-visible{outline:2px solid #ffee8a;outline-offset:3px}
+ .original-landing.alevel .test-topic-all[aria-pressed="true"]{background:#21483f}
+ .original-landing.alevel #testQuestionId{font-size:.7rem;color:#c7d2e8;overflow-wrap:anywhere}
+
+--- /dev/null
++++ src/landing/GemPaths.tsx
++/** Shared, source-owned brand gem facets. */
++export function GemPaths({ igcse = false }: { igcse?: boolean }) {
++  return (
++    <>
++      <path className="gem-body" d="M0 -13 L10.5 -4 L8 7.5 L0 14 L-8 7.5 L-10.5 -4 Z" />
++      <path className="gem-facet" d="M0 -13 L0 6 L-8 7.5 L-10.5 -4 Z" />
++      <path
++        className={igcse ? 'gem-facet' : 'gem-facet second'}
++        d="M0 6 L8 7.5 L0 14 Z"
++        opacity={igcse ? '.45' : undefined}
++      />
++      {igcse && (
++        <>
++          <path
++            className="spark spark-a"
++            d="M-7 -12 L-5.7 -8.7 L-2.5 -7.4 L-5.7 -6.1 L-7 -2.8 L-8.3 -6.1 L-11.5 -7.4 L-8.3 -8.7 Z"
++          />
++          <path
++            className="spark spark-b"
++            d="M8 -5 L9 -2.7 L11.3 -1.7 L9 .7 L8 3 L7 .7 L4.7 -1.7 L7 -2.7 Z"
++          />
++        </>
++      )}
++    </>
++  );
++}
++
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\igcse.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\igcse.css"
+index c2193aa..19d414d 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\igcse.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\igcse.css"	
+@@ -43,7 +43,7 @@
+ 
+ .original-landing.igcse .site-version {
+   color: #7f88b0;
+-  font: 800 .58rem/1.3 ui-sans-serif, system-ui, sans-serif;
++  font: 800 .58rem/1.3 Comfortaa, sans-serif;
+   letter-spacing: .08em;
+   text-transform: uppercase;
+ }
+@@ -105,9 +105,9 @@
+ /* One grade mastery display across IGCSE practice and revision. */
+ .original-landing.igcse .has-mastery.has-mastery{flex-wrap:wrap}
+ .original-landing.igcse .mastery-navigation.mastery-navigation{display:flex;flex-direction:row;align-items:center;justify-content:flex-end;gap:24px;flex-wrap:wrap;margin-left:auto;max-width:100%}
+-.original-landing.igcse .mastery-navigation .site-back-link{margin-left:0;width:auto;flex:0 0 auto;white-space:nowrap;font:700 .72rem Comfortaa,sans-serif}
++.original-landing.igcse .mastery-navigation .site-back-link{margin-left:0;width:auto;flex:0 0 auto;white-space:nowrap;font:700 .72rem Comfortaa, sans-serif}
+ .original-landing.igcse .mastery-display.mastery-display{display:flex;align-items:center;gap:20px;max-width:100%;flex-wrap:wrap}
+-.original-landing.igcse .mastery-meter.mastery-meter{display:block;flex:0 1 120px;width:120px;min-width:90px;font:700 11px/1.4 Comfortaa,sans-serif}
++.original-landing.igcse .mastery-meter.mastery-meter{display:block;flex:0 1 120px;width:120px;min-width:90px;font:700 11px/1.4 Comfortaa, sans-serif}
+ .original-landing.igcse .mastery-meter[data-grade="1"]{color:#ffde59}.original-landing.igcse .mastery-meter[data-grade="2"]{color:#54f5b5}.original-landing.igcse .mastery-meter[data-grade="3"]{color:#c59aff}
+ .original-landing.igcse .mastery-meter>.mastery-label{display:block;color:inherit;white-space:nowrap}
+ .original-landing.igcse .mastery-bar.is-mastered>.mastery-bar-fill{box-shadow:0 0 9px var(--mastery-colour)}
+@@ -123,11 +123,11 @@
+ 
+ /* Current question code: one pink pill on the activity's top line. */
+ .original-landing.igcse .question-code-line.question-code-line,.original-landing.igcse .revision-code-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+-.original-landing.igcse .header-question-code.header-question-code{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border:1px solid rgba(255,94,203,.46);border-radius:999px;background:rgba(255,94,203,.1);color:#ff5ecb;font:700 11px/1.3 Comfortaa,sans-serif;letter-spacing:.08em;white-space:nowrap}
++.original-landing.igcse .header-question-code.header-question-code{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border:1px solid rgba(255,94,203,.46);border-radius:999px;background:rgba(255,94,203,.1);color:#ff5ecb;font:700 11px/1.3 Comfortaa, sans-serif;letter-spacing:.08em;white-space:nowrap}
+ .original-landing.igcse .header-question-code[hidden]{display:none!important}
+ .original-landing.igcse.question-code-header .original-landing.igcse .review-id.review-id,.original-landing.igcse.question-code-header .original-landing.igcse .question-review-id.question-review-id,.original-landing.igcse.question-code-header .original-landing.igcse #printedReviewId{display:none!important}
+ .original-landing.igcse.question-code-header .original-landing.igcse .question-review:has(form[hidden]){display:none!important}
+-.original-landing.igcse .revision-code-line{display:none;font:700 11px Comfortaa,sans-serif;color:#54f5b5;letter-spacing:.08em;margin-bottom:6px}
++.original-landing.igcse .revision-code-line{display:none;font:700 11px Comfortaa, sans-serif;color:#54f5b5;letter-spacing:.08em;margin-bottom:6px}
+ .original-landing.igcse.test-revising .revision-code-line{display:flex}
+ .original-landing.igcse [data-site-version]{display:none!important}
+ 
+@@ -154,11 +154,8 @@
+   margin: 0;
+   overflow-x: hidden;
+   color: var(--ink);
+-  background:
+-    radial-gradient(circle at 78% 12%, rgba(105, 75, 255, .22), transparent 32rem),
+-    radial-gradient(circle at 10% 80%, rgba(19, 205, 184, .12), transparent 28rem),
+-    var(--night);
+-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
++  background: transparent;
++  font-family: Comfortaa, sans-serif;
+ }
+ .original-landing.igcse button { color: inherit; font: inherit; }
+ .original-landing.igcse .visually-hidden {
+@@ -311,7 +308,7 @@
+ .original-landing.igcse .core-halo { fill: rgba(85, 246, 255, .055); stroke: rgba(85, 246, 255, .16); stroke-width: 2; }
+ .original-landing.igcse .core-shape { fill: #10143a; stroke: url(#coreStroke); stroke-width: 4; filter: url(#softGlow); }
+ .original-landing.igcse .core-title { fill: var(--ink); font: 700 13px Comfortaa, sans-serif; text-anchor: middle; }
+-.original-landing.igcse .core-subtitle { fill: var(--muted); font: 800 8px Inter, sans-serif; letter-spacing: .18em; text-anchor: middle; }
++.original-landing.igcse .core-subtitle { fill: var(--muted); font: 800 8px Comfortaa, sans-serif; letter-spacing: .18em; text-anchor: middle; }
+ .original-landing.igcse .year-link-shadow, .original-landing.igcse .year-link, .original-landing.igcse .topic-link, .original-landing.igcse .leaf-link { fill: none; stroke-linecap: round; }
+ .original-landing.igcse .year-link-shadow { stroke: rgba(0, 0, 0, .3); stroke-width: 15; }
+ .original-landing.igcse .year-link { stroke-width: 4; opacity: .24; }
+@@ -320,7 +317,7 @@
+ .original-landing.igcse .year-link, .original-landing.igcse .topic-link, .original-landing.igcse .leaf-link { transition: opacity .18s ease, stroke-width .18s ease, filter .18s ease; }
+ .original-landing.igcse .year-node rect { fill: rgba(10, 13, 38, .94); stroke-width: 1.5; }
+ .original-landing.igcse .year-node .year-name { fill: var(--ink); font: 700 13px Comfortaa, sans-serif; text-anchor: middle; }
+-.original-landing.igcse .year-node .year-count { font: 900 8px Inter, sans-serif; letter-spacing: .12em; text-anchor: middle; }
++.original-landing.igcse .year-node .year-count { font: 900 8px Comfortaa, sans-serif; letter-spacing: .12em; text-anchor: middle; }
+ .original-landing.igcse .topic-node rect { fill: #10143a; stroke-width: 2; }
+ .original-landing.igcse .topic-node .topic-name { fill: var(--ink); font: 750 10.5px Comfortaa, sans-serif; text-anchor: middle; pointer-events: none; }
+ .original-landing.igcse .gem { cursor: pointer; overflow: visible; transition: opacity .2s ease; }
+@@ -688,9 +685,9 @@
+ /* Reused igcse/assets/test-mode.css; selector boundary only. */
+ .original-landing.igcse .test-tile-row{display:flex;justify-content:flex-start;align-items:center;gap:22px;margin:1.2rem 0 1.8rem}
+ .original-landing.igcse.test-revising .test-tile-row,.original-landing.igcse.test-revising #flipYear{display:none!important}
+-.original-landing.igcse .test-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:0 0 auto;width:112px;aspect-ratio:1;border:1px solid #72e4e9;border-radius:18px;background:linear-gradient(145deg,#192f48,#15132f);color:#e7fbff;font:700 1rem Comfortaa,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 24px #0004}
++.original-landing.igcse .test-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;flex:0 0 auto;width:112px;aspect-ratio:1;border:1px solid #72e4e9;border-radius:18px;background:linear-gradient(145deg,#192f48,#15132f);color:#e7fbff;font:700 1rem Comfortaa, sans-serif;cursor:pointer;box-shadow:0 8px 24px #0004}
+ .original-landing.igcse .test-tile:hover{border-color:#fff;transform:translateY(-2px)}
+-.original-landing.igcse .test-mode{color:#eef3ff;font-family:Comfortaa,system-ui,sans-serif;text-align:left}
++.original-landing.igcse .test-mode{color:#eef3ff;font-family:Comfortaa, sans-serif;text-align:left}
+ .original-landing.igcse .test-mode [hidden]{display:none!important}.original-landing.igcse .test-mode h2{font-size:clamp(1.2rem,3vw,1.7rem);margin:.3rem 0}.original-landing.igcse .test-mode h3{font-size:1rem}
+ .original-landing.igcse .test-card{background:#11172b;border:1px solid #38435f;border-radius:18px;padding:clamp(16px,3vw,28px);margin-bottom:20px}
+ .original-landing.igcse .test-mode p,.original-landing.igcse .test-mode small{line-height:1.6;color:#c7d2e8}.original-landing.igcse .test-eyebrow{letter-spacing:.15em;font-size:.75rem}
+@@ -713,7 +710,7 @@
+ /* The tile expands into one shared surface during gem selection. */
+ .original-landing.igcse .test-tile svg{width:34px;height:34px;color:#62e3c0}
+ .original-landing.igcse .test-tile-row [hidden]{display:none!important}
+-.original-landing.igcse .test-selection{display:flex;align-items:center;gap:20px;flex:1;min-width:0;color:#eef3ff;font-family:Comfortaa,system-ui,sans-serif;text-align:left}
++.original-landing.igcse .test-selection{display:flex;align-items:center;gap:20px;flex:1;min-width:0;color:#eef3ff;font-family:Comfortaa, sans-serif;text-align:left}
+ .original-landing.igcse .test-selection-content{flex:1;min-width:0}
+ .original-landing.igcse #testSelectionTitle{color:#c7d2e8;margin:0 0 12px;font-size:.9rem}
+ .original-landing.igcse .test-selection .test-chosen{margin:0 0 12px}
+@@ -756,7 +753,7 @@
+ .original-landing.igcse .test-topic-all,.original-landing.igcse .test-year-all{display:none}
+ .original-landing.igcse.test-selecting .topic-section h3{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+ .original-landing.igcse.test-selecting .topic-section .topic-trigger{width:auto;flex:1}
+-.original-landing.igcse.test-selecting .test-topic-all,.original-landing.igcse.test-selecting .test-year-all{display:inline-block;flex:0 0 auto;border:1px solid #62e3c066;border-radius:999px;padding:5px 9px;background:#142637;color:#62e3c0;font:700 .6rem Comfortaa,system-ui,sans-serif;cursor:pointer}
++.original-landing.igcse.test-selecting .test-topic-all,.original-landing.igcse.test-selecting .test-year-all{display:inline-block;flex:0 0 auto;border:1px solid #62e3c066;border-radius:999px;padding:5px 9px;background:#142637;color:#62e3c0;font:700 .6rem Comfortaa, sans-serif;cursor:pointer}
+ .original-landing.igcse .test-topic-all:focus-visible,.original-landing.igcse .test-year-all:focus-visible{outline:2px solid #ffee8a;outline-offset:3px}
+ .original-landing.igcse .test-topic-all[aria-pressed="true"],.original-landing.igcse .test-year-all[aria-pressed="true"]{background:#21483f}
+ .original-landing.igcse.test-selecting .year-card-heading{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+
+--- /dev/null
++++ src/landing/olympiad-completion.ts
++import type { C3L6Progress, OlympiadProgress } from '../contracts/index.ts';
++import { chemicalChallenge as c3Challenge } from '../activities/olympiad/c3l6/source-bank.ts';
++import { bFingerprint, c3Fingerprint, cFingerprint, c3Policy } from '../activities/olympiad/c3l6/policy.ts';
++import { isomerChallenge } from '../activities/olympiad/isomers2011/content.ts';
++import { isomerPolicy } from '../activities/olympiad/isomers2011/policy.ts';
++
++export interface ChallengeCompletion {
++  readonly state: 'unstarted' | 'partial' | 'complete';
++  readonly correct: number;
++  readonly total: number;
++}
++const result = (correct: number, total: number, complete = false): ChallengeCompletion => ({
++  state: complete ? 'complete' : correct > 0 ? 'partial' : 'unstarted', correct, total,
++});
++
++/** Counts current checked answers only. Wrong-place isomers, stale checks, unchecked
++ * drawings and contributions in locked C3 stages never illuminate the gem. Policy
++ * validation supplies chemical correctness; this selector does not award evidence. */
++export function olympiadCompletion(progress: OlympiadProgress | null | undefined, activityId: string): ChallengeCompletion {
++  const total = activityId === c3Challenge.activityId ? c3Challenge.classifications.length + c3Challenge.dependencies.bUnits.reduce((n, u) => n + u.slots.length, 0) + c3Challenge.network.slots.length : 7;
++  if (!progress || progress.activityId !== activityId) return result(0, total);
++  try {
++    if (progress.activityId === c3Challenge.activityId) {
++      const p = c3Policy.validateCompletion(c3Challenge, progress as C3L6Progress);
++      let correct = p.aCheck?.drawingFingerprint === c3Fingerprint(p.classifications) ? p.aCheck.correct : 0;
++      if (p.completed.a) for (const u of c3Challenge.dependencies.bUnits) {
++        const check = p.unitChecks[u.id];
++        if (check?.drawingFingerprint === bFingerprint(c3Challenge, p, u.id)) correct += check.correct;
++      }
++      if (p.completed.b) for (const s of c3Challenge.network.slots) {
++        const check = p.slotChecks[s.id];
++        if (check?.drawingFingerprint === cFingerprint(p, s.id)) correct += check.correct;
++      }
++      return result(correct, total, p.completed.a && p.completed.b && p.completed.c);
++    }
++    if (progress.activityId === isomerChallenge.activityId) {
++      const p = isomerPolicy.validateCompletion(isomerChallenge, progress);
++      return result(p.check?.fullyCorrect ?? 0, total, p.completed);
++    }
++  } catch { /* Invalid saved drawings are unvalidated, never completion. */ }
++  return result(0, total);
++}
++
+--- /dev/null
++++ src/landing/OlympiadLanding.tsx
++import { useId, type CSSProperties } from 'react';
++import type { OlympiadActivityId } from '../contracts/index.ts';
++import type { ChallengeCompletion } from './olympiad-completion.ts';
++import { GemPaths } from './GemPaths.tsx';
++import eagle from '../../public/assets/landing/SJS-Eagle.svg?url';
++
++export function OlympiadLanding({ challenges, completion, loading, message, onLaunch, onBack }: {
++  readonly challenges: readonly { id: string; title: string }[];
++  readonly completion: Partial<Record<OlympiadActivityId, ChallengeCompletion>>;
++  readonly loading: boolean;
++  readonly message?: string;
++  readonly onLaunch: (id: OlympiadActivityId) => void;
++  readonly onBack: () => void;
++}) {
++  const prefix = useId();
++  return <div className="olympiad-landing">
++    <a className="skip-link" href="#olympiad-challenges">Skip to Olympiad challenges</a>
++    <main className="olympiad-landing-shell">
++      <header className="olympiad-landing-header">
++        <span className="olympiad-eagle"><img src={eagle} alt="St John's School eagle" /></span>
++        <div><p className="eyebrow">SJS - OCR CHEMISTRY A - H432</p><h1>Masters of <span>A Level Chemistry</span></h1></div>
++        <button type="button" onClick={onBack}>Back to A Level</button>
++      </header>
++      <section id="olympiad-challenges" aria-labelledby="olympiad-heading" aria-busy={loading}>
++        <h2 id="olympiad-heading">Olympiad challenges</h2>
++        <p className="olympiad-map-introduction">Explore chemistry beyond the course. Your drawings and challenge completion save on this device.</p>
++        {message && <p role="status">{message}</p>}
++        <div className="olympiad-gem-grid">{challenges.map((challenge, index) => {
++          const status = completion[challenge.id as OlympiadActivityId];
++          const state = status?.state ?? 'unstarted', label = loading ? 'Loading saved completion' : state === 'complete' ? 'Challenge complete' : state === 'partial' ? 'Partially complete' : 'No validated completion';
++          const clip = `${prefix}-gem-${index}`;
++          const fraction = state === 'complete' ? 1 : state === 'partial' ? Math.max(.15, Math.min(.85, (status?.correct ?? 0) / (status?.total || 1))) : 0;
++          return <button key={challenge.id} type="button" className="olympiad-gem-card" data-challenge-id={challenge.id} data-completion={state}
++            style={{'--gem-colour': index % 2 ? '#c59aff' : '#54f5b5'} as CSSProperties} onClick={() => onLaunch(challenge.id as OlympiadActivityId)} aria-label={`${challenge.title}: ${label}`}>
++            <svg className="olympiad-completion-gem" viewBox="-14 -16 28 34" aria-hidden="true">
++              <defs><clipPath id={clip}><rect x="-14" y={16 - 32 * fraction} width="28" height={32 * fraction} /></clipPath></defs>
++              <g className="olympiad-gem-dim"><GemPaths /></g>
++              <g className="olympiad-gem-lit" clipPath={`url(#${clip})`}><GemPaths /></g>
++            </svg>
++            <strong>{challenge.title}</strong><span className="olympiad-completion-label">{label}</span>
++            <span className="olympiad-launch-label">Open challenge <span aria-hidden="true">→</span></span>
++          </button>;
++        })}</div>
++      </section>
++      <p className="olympiad-closing-line">Legends aren't born, they're forged</p>
++    </main>
++  </div>;
++}
++
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\OriginalLanding.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\OriginalLanding.tsx"
+index e35fb03..7b755b4 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\OriginalLanding.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\OriginalLanding.tsx"	
+@@ -6,6 +6,7 @@ import { catalogues, displayGems, type DisplayGem, type LandingGroup } from './c
+ import { landingProgress, readPreference, savePreference } from './progress';
+ import { captureTopicLayout, animateTopicLayout } from './animation';
+ import { StatsIcon } from './StatsIcon';
++import { GemPaths } from './GemPaths';
+ import eagle from '../../public/assets/landing/SJS-Eagle.svg?url';
+ import './adaptation.css';
+ import './alevel.css';
+@@ -34,31 +35,6 @@ function rememberedSelection(course: Course, available: Set<string>) {
+       : [],
+   );
+ }
+-function GemPaths({ igcse = false }: { igcse?: boolean }) {
+-  return (
+-    <>
+-      <path className="gem-body" d="M0 -13 L10.5 -4 L8 7.5 L0 14 L-8 7.5 L-10.5 -4 Z" />
+-      <path className="gem-facet" d="M0 -13 L0 6 L-8 7.5 L-10.5 -4 Z" />
+-      <path
+-        className={igcse ? 'gem-facet' : 'gem-facet second'}
+-        d="M0 6 L8 7.5 L0 14 Z"
+-        opacity={igcse ? '.45' : undefined}
+-      />
+-      {igcse && (
+-        <>
+-          <path
+-            className="spark spark-a"
+-            d="M-7 -12 L-5.7 -8.7 L-2.5 -7.4 L-5.7 -6.1 L-7 -2.8 L-8.3 -6.1 L-11.5 -7.4 L-8.3 -8.7 Z"
+-          />
+-          <path
+-            className="spark spark-b"
+-            d="M8 -5 L9 -2.7 L11.3 -1.7 L9 .7 L8 3 L7 .7 L4.7 -1.7 L7 -2.7 Z"
+-          />
+-        </>
+-      )}
+-    </>
+-  );
+-}
+ function Toggle({
+   checked,
+   label,
+@@ -165,8 +141,11 @@ export function OriginalLanding(props: OriginalLandingProps) {
+     }
+     pending.animation.cancel();
+     pending.animation = surface.current!.animate(
+-      [{ transform: 'perspective(1600px) rotateY(-90deg)' }, { transform: 'perspective(1600px) rotateY(0deg)' }],
+-      { duration: 325, easing: 'cubic-bezier(.4,0,.2,1)' },
++      [
++        { opacity: 0, transform: `translateX(${pending.target === 'alevel' ? 16 : -16}px)` },
++        { opacity: 1, transform: 'translateX(0)' },
++      ],
++      { duration: 110, easing: 'cubic-bezier(.4,0,.2,1)' },
+     );
+     void pending.animation.finished.then(() => {
+       if (transition.current !== pending) return;
+@@ -186,8 +165,11 @@ export function OriginalLanding(props: OriginalLandingProps) {
+       target: course,
+       phase: 'out' as 'out' | 'in',
+       animation: surface.current.animate(
+-        [{ transform: 'perspective(1600px) rotateY(0deg)' }, { transform: 'perspective(1600px) rotateY(90deg)' }],
+-        { duration: 325, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' },
++        [
++          { opacity: 1, transform: 'translateX(0)' },
++          { opacity: 0, transform: `translateX(${course === 'alevel' ? -16 : 16}px)` },
++        ],
++        { duration: 110, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' },
+       ),
+     };
+     transition.current = pending;
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\standardisation.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\standardisation.css"
+index bb98ac6..d2c7bf4 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\landing\\standardisation.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\landing\\standardisation.css"	
+@@ -1,17 +1,17 @@
+ /* Shared landing chrome: A Level width/toggle geometry, original IGCSE eagle. */
+ .landing-course-stage{overflow-x:clip;min-height:100vh}
+-.landing-course-surface{transform-origin:50% min(50vh,500px);backface-visibility:hidden}
++.landing-course-surface{min-width:0}
+ .original-landing .landing-shell.landing-shell{width:min(1880px,calc(100% - 48px));margin:auto;padding:28px 0 24px}
+ .original-landing .landing-header.landing-header{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:16px;margin-bottom:32px}
+ .original-landing .landing-header .landing-title{min-width:0}
+-.original-landing .landing-header .eyebrow{margin:0 0 5px;color:#a9b3ca;font:700 .8rem/1.45 Comfortaa,sans-serif;letter-spacing:.065em}
++.original-landing .landing-header .eyebrow{margin:0 0 5px;color:#a9b3ca;font:700 .8rem/1.45 Comfortaa, sans-serif;letter-spacing:.065em}
+ .original-landing .landing-header.landing-header h1{margin:0;font:700 clamp(1.2rem,2.4vw,1.65rem)/1.45 Comfortaa,sans-serif;color:#f2f4ff}
+ .original-landing .landing-header h1 span{color:#81e6df}
+ .original-landing .landing-header .landing-eagle{display:grid;width:52px;height:52px;min-height:52px;aspect-ratio:1;place-items:center;border:1px solid rgba(84,245,181,.45);border-radius:15px;background:rgba(84,245,181,.07);box-shadow:inset 0 0 24px rgba(84,245,181,.08),0 0 20px rgba(84,245,181,.08);padding:0}
+ .original-landing .landing-header .landing-eagle img{width:31px;height:40px;object-fit:contain}
+ .original-landing.igcse[data-learning-mode="teacher"] .landing-eagle{background:#fff;border-color:#fff}
+ .original-landing .landing-header .landing-switches{display:grid;grid-template-columns:210px 270px;align-items:center;gap:18px;margin-left:0;width:auto}
+-.original-landing .landing-header .subject-toggle{display:flex;align-items:center;justify-content:center;gap:10px;margin:0;min-height:48px;padding:4px;border:0;border-radius:30px;background:transparent;font:700 .875rem Comfortaa,sans-serif;color:#f2f4ff;white-space:nowrap}
++.original-landing .landing-header .subject-toggle{display:flex;align-items:center;justify-content:center;gap:10px;margin:0;min-height:48px;padding:4px;border:0;border-radius:30px;background:transparent;font:700 .875rem Comfortaa, sans-serif;color:#f2f4ff;white-space:nowrap}
+ .original-landing .landing-header .toggle-track{flex:0 0 76px}
+ .original-landing .landing-header .physical-label{color:#ffe29a}
+ .original-landing .landing-header .organic-label{color:#a9b3ca}
+@@ -19,7 +19,7 @@
+ .original-landing .landing-header .subject-toggle[aria-checked="true"] .organic-label{color:#d8d1ff}
+ .original-landing .landing-header .site-tools{width:auto;margin:0;align-items:center;justify-content:center}
+ .original-landing .landing-header .prototype-tag{margin:0}
+-.original-landing .closing-line{margin:26px 0 0;text-align:center;color:#a9b3ca;font:700 .75rem/1.6 Comfortaa,sans-serif;opacity:.8}
++.original-landing .closing-line{margin:26px 0 0;text-align:center;color:#a9b3ca;font:700 .75rem/1.6 Comfortaa, sans-serif;opacity:.8}
+ @media(max-width:1100px){
+   .original-landing .landing-header.landing-header{grid-template-columns:52px minmax(0,1fr);gap:12px;margin-bottom:24px}
+   .original-landing .landing-header .landing-switches{grid-column:1/-1;justify-content:center}
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\persistence\\validation.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"
+index 4400062..9bc17a1 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\persistence\\validation.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"	
+@@ -679,6 +679,8 @@ export function validateAttempt(value: unknown): void {
+     'ref',
+     'target',
+     'currentResponses',
++    'currentResponseChanged',
++    'currentGiveUp',
+     'assistance',
+     'phase',
+     'timing',
+@@ -696,6 +698,14 @@ export function validateAttempt(value: unknown): void {
+   requireData(t.activityId === r.activityId && t.level === r.level, 'Target and ref disagree');
+   responses(a.currentResponses);
+   assistance(a.assistance);
++  if ('currentResponseChanged' in a)
++    requireData(a.currentResponseChanged === true && a.phase === 'assessed', 'Invalid current-response action marker');
++  if ('currentGiveUp' in a)
++    requireData(
++      a.currentGiveUp === true && a.phase !== 'answering' &&
++        array(a.assistance, 'assistance').some(v => ['reveal', 'worked-answer'].includes(String(record(v, 'assistance').kind))),
++      'Invalid current Give Up action marker',
++    );
+   if (a.phase === 'answering') {
+     requireData(
+       !('firstResponse' in a) &&
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\styles\\platform.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\styles\\platform.css"
+index 5fad7d4..2647aa9 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\styles\\platform.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\styles\\platform.css"	
+@@ -1,7 +1,7 @@
+ @font-face{font-family:Comfortaa;src:url('../../public/assets/fonts/Comfortaa-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+-:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#eef0ff;background:#080a1d;font-synthesis:none;--surface:#11172d;--surface-raised:#1a233d;--border:#46516f;--muted:#b7c1dc;--accent:#55f6ff;--yellow:#ffde59;--positive:#54f5b5;--error:#ffb3b3;--radius:16px;line-height:1.6;color-scheme:dark}
+-*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button,a,input,textarea,select,summary{touch-action:manipulation}button{min-height:44px;border:1px solid var(--border);border-radius:9px;padding:9px 15px;background:var(--surface-raised);color:inherit;cursor:pointer}button:hover:not(:disabled){border-color:var(--accent);background:#253454}button:disabled{opacity:.55;cursor:default}button.primary{background:var(--accent);border-color:var(--accent);color:#081426;font-weight:750}button.primary:hover:not(:disabled){background:#b2fbff}a{color:var(--accent)}:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}h1,h2,h3,h4,p{margin-top:0}h1,h2{font-family:Comfortaa,system-ui,sans-serif;font-weight:700;line-height:1.35}h1{font-size:clamp(1.2rem,2.5vw,1.8rem);margin-bottom:0}h2{font-size:clamp(1.3rem,2.5vw,1.9rem);margin-bottom:8px}h3{font-size:1.1rem}h4{font-size:1rem}p:last-child{margin-bottom:0}code{font-family:ui-monospace,monospace;overflow-wrap:anywhere}.eyebrow{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:750;margin-bottom:5px}.course-shell{max-width:1600px;margin:0 auto;padding:0 32px}.site-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;border-bottom:1px solid var(--border)}.brand{display:flex;align-items:center;gap:18px}.brand-eagle{width:64px;height:64px;object-fit:contain}.course-badge,.badge{display:inline-block;border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-size:.78rem;white-space:nowrap}.course-layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:28px;padding-top:28px}.course-navigation{font-size:.85rem}.course-navigation details{border:1px solid var(--border);border-radius:12px;margin-bottom:14px;background:var(--surface)}summary{cursor:pointer;padding:13px;min-height:44px;font-weight:700}ul{padding-left:22px}.course-navigation ul{list-style:none;margin:0;padding:0 6px 10px}.course-navigation button,.nav-label{display:flex;align-items:center;gap:9px;min-height:48px;width:100%;text-align:left;font-size:.83rem;line-height:1.45;border:0;background:transparent;padding:9px;border-radius:8px}.course-navigation [aria-current=page]{background:#243550;color:var(--accent)}.brand-gem{width:20px;min-width:20px;height:28px;color:var(--accent)}.gem-body{fill:currentColor;stroke:#c5cee0;stroke-width:.5}.gem-facet{fill:#fff;opacity:.22}.gem-facet.second{opacity:.1}main{min-width:0}.site-footer{font-size:.78rem;text-align:center;color:var(--muted);padding:28px}.skip-link{position:absolute;top:-100px;padding:12px;background:var(--accent);color:#080a1d;z-index:100}.skip-link:focus{top:12px}
+-.question-player{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:clamp(18px,3vw,32px)}.question-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:22px}.question-meta{display:flex;flex-direction:column;align-items:flex-end;gap:3px;font-size:.8rem;color:var(--muted);text-align:right}.question-parts{display:grid;gap:22px}.question-part{min-width:0;border:1px solid var(--border);border-radius:12px;padding:20px;background:#0e1428}.part-heading{display:flex;justify-content:space-between;gap:16px;align-items:baseline}.marks{font-size:.8rem;color:var(--muted);white-space:nowrap}.content{overflow-wrap:anywhere}.content p{white-space:pre-wrap}.content-image{display:block;max-width:100%;height:auto;margin:16px auto;background:#fff;border-radius:6px}.formula{font-family:Cambria,Georgia,serif;font-size:1.16rem;white-space:pre-wrap}.table-scroll{overflow-x:auto;margin:16px 0}table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{border:1px solid var(--border);text-align:left;padding:10px}th{background:var(--surface-raised)}.response-label{display:flex;flex-direction:column;gap:8px;font-weight:650;margin-top:14px}.response-label .support-note{font-weight:400}.unit{font-weight:400}input:not([type=radio],[type=checkbox]),textarea,select{width:100%;max-width:100%;min-height:46px;border:1px solid #7483aa;border-radius:8px;background:#090e20;color:#f4f6ff;padding:10px 12px}textarea{resize:vertical;line-height:1.6;min-height:100px}input[readonly],textarea[readonly]{border-style:dashed;background:#172037;color:#e4e9f7}.choice-options,.diagram-options{border:0;padding:0;margin:16px 0 0}legend{font-size:.9rem;color:var(--muted);padding-bottom:8px}.choice-option{display:flex;align-items:flex-start;gap:12px;padding:12px;border:1px solid var(--border);border-radius:9px;margin-bottom:8px;cursor:pointer;min-height:46px}.choice-option:has(input:checked){border-color:var(--accent);background:#193348}.choice-option input{width:20px;height:20px;flex-shrink:0;margin-top:3px;accent-color:var(--accent)}.choice-option .content p{margin:0}.explanation-sections{display:grid;gap:18px}.scaffold,.hint-panel,.mode-notice{padding:16px 20px;border-left:3px solid var(--accent);border-radius:8px;background:#142d3b;margin-bottom:20px}.hint-panel{border-color:var(--yellow);background:#302d20;margin-top:20px}.support-note{font-size:.88rem;color:var(--muted);line-height:1.55}.validation-issue{padding:14px 18px;border-left:3px solid var(--yellow);background:#332e1c;border-radius:8px;margin-top:16px}.action-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.player-footer{border-top:1px solid var(--border);padding-top:22px;margin-top:24px}.save-status{font-size:.83rem;color:var(--muted);margin-top:14px}.save-error{color:var(--error);padding:12px;border:1px solid var(--error);border-radius:8px}.save-error button{margin-left:12px}.save-saved{color:var(--positive)}.assessment-feedback{margin-top:24px;padding:20px;border:1px solid #5e759c;border-radius:12px;background:#18243d}.score{font-size:1.4rem;font-weight:750}.mark-feedback{border-top:1px solid var(--border);padding-top:12px;margin-top:12px}.learning-review{border:1px solid var(--border);border-radius:8px;margin-top:12px}.learning-review>p,.learning-review>.content,.learning-review>.action-row{margin:12px 16px}.worked-answer{margin-top:20px;padding:20px;border:1px solid var(--positive);border-radius:12px}.rubric-panel{margin-top:24px;border:1px solid var(--accent);border-radius:12px;padding:20px}.rubric-progress{padding-left:26px}.rubric-progress li{padding:8px 0}.rubric-progress li[aria-current=step]{color:var(--accent)}.rubric-progress .badge{margin-left:8px;color:var(--muted)}blockquote{margin:10px 0;padding-left:14px;border-left:2px solid var(--positive);color:#e9f9ee}.rubric-active{border-top:1px solid var(--border);padding-top:18px}.feedback-positive{color:var(--positive)}.range-picker{margin-top:20px}.range-picker>label{display:block;font-weight:650;margin-bottom:8px}.range-offsets{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}.range-offsets label{display:flex;flex-direction:column;gap:6px;flex:1;min-width:100px;max-width:180px}.range-preview{min-height:1.6em;margin-top:12px;color:var(--accent);overflow-wrap:anywhere}.locked-text{user-select:text}.selected-ranges li{margin-bottom:10px}.selected-ranges button{margin-left:8px}.editor-frame{border:1px solid #677aa4;border-radius:12px;overflow:hidden;margin-top:16px}.editor-header{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;background:var(--surface-raised)}.editor-instructions,.editor-tools{padding:12px 16px;border-bottom:1px solid var(--border)}.editor-tools{display:flex;flex-wrap:wrap;gap:8px}.editor-surface{min-height:220px;padding:16px;overflow:auto}.editor-alternatives{border-top:1px solid var(--border)}.editor-alternatives>*:not(summary){padding:0 16px 16px}.layout-compact .question-parts{max-width:750px}.layout-workspace .question-part{padding:16px}.layout-workspace .editor-surface{min-height:320px}.layout-multipart .question-parts{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
++:root{--ui-font-family:Comfortaa,sans-serif;--question-pane-max-width:1120px;--app-background:radial-gradient(circle at 78% 12%,rgba(105,75,255,.22),transparent 32rem),radial-gradient(circle at 10% 80%,rgba(19,205,184,.12),transparent 28rem),#080a1d;font-family:var(--ui-font-family);color:#eef0ff;background:#080a1d;font-synthesis:none;--surface:#11172d;--surface-raised:#1a233d;--border:#46516f;--muted:#b7c1dc;--accent:#55f6ff;--yellow:#ffde59;--positive:#54f5b5;--error:#ffb3b3;--radius:16px;line-height:1.6;color-scheme:dark}
++*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button,a,input,textarea,select,summary{touch-action:manipulation}button{min-height:44px;border:1px solid var(--border);border-radius:9px;padding:9px 15px;background:var(--surface-raised);color:inherit;cursor:pointer}button:hover:not(:disabled){border-color:var(--accent);background:#253454}button:disabled{opacity:.55;cursor:default}button.primary{background:var(--accent);border-color:var(--accent);color:#081426;font-weight:750}button.primary:hover:not(:disabled){background:#b2fbff}a{color:var(--accent)}:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}h1,h2,h3,h4,p{margin-top:0}h1,h2{font-family:Comfortaa, sans-serif;font-weight:700;line-height:1.35}h1{font-size:clamp(1.2rem,2.5vw,1.8rem);margin-bottom:0}h2{font-size:clamp(1.3rem,2.5vw,1.9rem);margin-bottom:8px}h3{font-size:1.1rem}h4{font-size:1rem}p:last-child{margin-bottom:0}code{font-family:Comfortaa, sans-serif;overflow-wrap:anywhere}.eyebrow{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:750;margin-bottom:5px}.course-shell{max-width:1600px;margin:0 auto;padding:0 32px}.site-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;border-bottom:1px solid var(--border)}.brand{display:flex;align-items:center;gap:18px}.brand-eagle{width:64px;height:64px;object-fit:contain}.course-badge,.badge{display:inline-block;border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-size:.78rem;white-space:nowrap}.course-layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:28px;padding-top:28px}.course-navigation{font-size:.85rem}.course-navigation details{border:1px solid var(--border);border-radius:12px;margin-bottom:14px;background:var(--surface)}summary{cursor:pointer;padding:13px;min-height:44px;font-weight:700}ul{padding-left:22px}.course-navigation ul{list-style:none;margin:0;padding:0 6px 10px}.course-navigation button,.nav-label{display:flex;align-items:center;gap:9px;min-height:48px;width:100%;text-align:left;font-size:.83rem;line-height:1.45;border:0;background:transparent;padding:9px;border-radius:8px}.course-navigation [aria-current=page]{background:#243550;color:var(--accent)}.brand-gem{width:20px;min-width:20px;height:28px;color:var(--accent)}.gem-body{fill:currentColor;stroke:#c5cee0;stroke-width:.5}.gem-facet{fill:#fff;opacity:.22}.gem-facet.second{opacity:.1}main{min-width:0}.site-footer{font-size:.78rem;text-align:center;color:var(--muted);padding:28px}.skip-link{position:absolute;top:-100px;padding:12px;background:var(--accent);color:#080a1d;z-index:100}.skip-link:focus{top:12px}
++.question-player{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:clamp(18px,3vw,32px)}.question-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:22px}.question-meta{display:flex;flex-direction:column;align-items:flex-end;gap:3px;font-size:.8rem;color:var(--muted);text-align:right}.question-parts{display:grid;gap:22px}.question-part{min-width:0;border:1px solid var(--border);border-radius:12px;padding:20px;background:#0e1428}.part-heading{display:flex;justify-content:space-between;gap:16px;align-items:baseline}.marks{font-size:.8rem;color:var(--muted);white-space:nowrap}.content{overflow-wrap:anywhere}.content p{white-space:pre-wrap}.content-image{display:block;max-width:100%;height:auto;margin:16px auto;background:#fff;border-radius:6px}.formula{font-family:Comfortaa, sans-serif;font-size:1.16rem;white-space:pre-wrap}.table-scroll{overflow-x:auto;margin:16px 0}table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{border:1px solid var(--border);text-align:left;padding:10px}th{background:var(--surface-raised)}.response-label{display:flex;flex-direction:column;gap:8px;font-weight:650;margin-top:14px}.response-label .support-note{font-weight:400}.unit{font-weight:400}input:not([type=radio],[type=checkbox]),textarea,select{width:100%;max-width:100%;min-height:46px;border:1px solid #7483aa;border-radius:8px;background:#090e20;color:#f4f6ff;padding:10px 12px}textarea{resize:vertical;line-height:1.6;min-height:100px}input[readonly],textarea[readonly]{border-style:dashed;background:#172037;color:#e4e9f7}.choice-options,.diagram-options{border:0;padding:0;margin:16px 0 0}legend{font-size:.9rem;color:var(--muted);padding-bottom:8px}.choice-option{display:flex;align-items:flex-start;gap:12px;padding:12px;border:1px solid var(--border);border-radius:9px;margin-bottom:8px;cursor:pointer;min-height:46px}.choice-option:has(input:checked){border-color:var(--accent);background:#193348}.choice-option input{width:20px;height:20px;flex-shrink:0;margin-top:3px;accent-color:var(--accent)}.choice-option .content p{margin:0}.explanation-sections{display:grid;gap:18px}.scaffold,.hint-panel,.mode-notice{padding:16px 20px;border-left:3px solid var(--accent);border-radius:8px;background:#142d3b;margin-bottom:20px}.hint-panel{border-color:var(--yellow);background:#302d20;margin-top:20px}.support-note{font-size:.88rem;color:var(--muted);line-height:1.55}.validation-issue{padding:14px 18px;border-left:3px solid var(--yellow);background:#332e1c;border-radius:8px;margin-top:16px}.action-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.player-footer{border-top:1px solid var(--border);padding-top:22px;margin-top:24px}.save-status{font-size:.83rem;color:var(--muted);margin-top:14px}.save-error{color:var(--error);padding:12px;border:1px solid var(--error);border-radius:8px}.save-error button{margin-left:12px}.save-saved{color:var(--positive)}.assessment-feedback{margin-top:24px;padding:20px;border:1px solid #5e759c;border-radius:12px;background:#18243d}.score{font-size:1.4rem;font-weight:750}.mark-feedback{border-top:1px solid var(--border);padding-top:12px;margin-top:12px}.learning-review{border:1px solid var(--border);border-radius:8px;margin-top:12px}.learning-review>p,.learning-review>.content,.learning-review>.action-row{margin:12px 16px}.worked-answer{margin-top:20px;padding:20px;border:1px solid var(--positive);border-radius:12px}.rubric-panel{margin-top:24px;border:1px solid var(--accent);border-radius:12px;padding:20px}.rubric-progress{padding-left:26px}.rubric-progress li{padding:8px 0}.rubric-progress li[aria-current=step]{color:var(--accent)}.rubric-progress .badge{margin-left:8px;color:var(--muted)}blockquote{margin:10px 0;padding-left:14px;border-left:2px solid var(--positive);color:#e9f9ee}.rubric-active{border-top:1px solid var(--border);padding-top:18px}.feedback-positive{color:var(--positive)}.range-picker{margin-top:20px}.range-picker>label{display:block;font-weight:650;margin-bottom:8px}.range-offsets{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}.range-offsets label{display:flex;flex-direction:column;gap:6px;flex:1;min-width:100px;max-width:180px}.range-preview{min-height:1.6em;margin-top:12px;color:var(--accent);overflow-wrap:anywhere}.locked-text{user-select:text}.selected-ranges li{margin-bottom:10px}.selected-ranges button{margin-left:8px}.editor-frame{border:1px solid #677aa4;border-radius:12px;overflow:hidden;margin-top:16px}.editor-header{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;background:var(--surface-raised)}.editor-instructions,.editor-tools{padding:12px 16px;border-bottom:1px solid var(--border)}.editor-tools{display:flex;flex-wrap:wrap;gap:8px}.editor-surface{min-height:220px;padding:16px;overflow:auto}.editor-alternatives{border-top:1px solid var(--border)}.editor-alternatives>*:not(summary){padding:0 16px 16px}.layout-compact .question-parts{max-width:750px}.layout-workspace .question-part{padding:16px}.layout-workspace .editor-surface{min-height:320px}.layout-multipart .question-parts{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+ @media(max-width:1000px){.course-shell{padding:0 20px}.course-layout{grid-template-columns:1fr;gap:16px}.course-navigation{display:flex;gap:12px;align-items:flex-start}.course-navigation details{flex:1}.course-navigation details:not([open]){margin-bottom:0}.course-navigation ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
+ @media(max-width:600px){.course-shell{padding:0 12px}.site-header{padding:18px 0;gap:12px}.brand{gap:10px}.brand-eagle{width:44px;height:44px}.course-badge{font-size:.7rem}.course-layout{padding-top:18px}.course-navigation{flex-direction:column}.course-navigation details{width:100%}.question-header{flex-direction:column;gap:8px}.question-meta{align-items:flex-start;flex-direction:row;gap:12px;text-align:left}.question-part{padding:15px}.action-row>button{flex:1 1 150px}.range-offsets button{width:100%}.rubric-panel{padding:16px}.layout-workspace .editor-surface{min-height:240px}}
+ @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@@ -22,7 +22,7 @@
+ /* Focus and diagram views are shared across activities; chemistry stays source-owned. */
+ .platform-navigation{display:flex;gap:.5rem;flex-wrap:wrap;padding:1rem 0;border-bottom:1px solid var(--border)}
+ .platform-navigation button[aria-current=page]{border-color:var(--accent);color:var(--accent)}
+-.course-focused .course-layout{grid-template-columns:minmax(0,1fr);max-width:1120px;margin:auto}
++.course-focused .course-layout{grid-template-columns:minmax(0,1fr);max-width:var(--question-pane-max-width);margin:auto}
+ .course-focused .course-navigation,.course-focused .platform-navigation{display:none}
+ .course-focused .site-header{padding-block:12px}.course-focused .brand-eagle{width:40px;height:40px}
+ .focus-controls{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;font-size:.85rem;color:var(--muted)}
+@@ -61,20 +61,32 @@
+ .c3-network .diagram-scroll .content-image{margin:0;width:720px;height:1030px;max-width:none}
+ 
+ /* Question chrome uses the original quiet molecule/C3 masthead; editor rules stay source-owned. */
+-.course-question-screen{--question-ink:#f7f7ff;--question-muted:#a9afce;--question-line:rgba(172,182,255,.19);background:#080a1d}
++.course-question-screen{--question-ink:#f7f7ff;--question-muted:#a9afce;--question-line:rgba(172,182,255,.19);background:transparent}
+ .course-question-screen .course-layout{grid-template-columns:minmax(0,1fr)}
+-.question-masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--question-line);font-family:Comfortaa,system-ui,sans-serif;font-weight:700;color:var(--question-ink)}
++.question-masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--question-line);font-family:Comfortaa, sans-serif;font-weight:700;color:var(--question-ink)}
+ .question-brand{display:flex;align-items:center;gap:14px;min-width:0}
+ .question-brand-mark{display:grid;width:52px;height:56px;flex:0 0 52px;place-items:center;padding:0;border:1px solid #54f5b56b;border-radius:15px;background:#54f5b512;box-shadow:inset 0 0 24px #54f5b514}
+ .question-brand-mark img{width:31px;height:40px;object-fit:contain}
+-.question-brand-title{min-width:0}.question-wordmark{font:700 11px/1.4 Comfortaa,sans-serif;letter-spacing:.1em;color:#54f5b5;margin:0;overflow-wrap:anywhere}
+-.question-subject{margin:5px 0 0;font:700 24px/1.35 Comfortaa,sans-serif;color:var(--question-ink);overflow-wrap:anywhere}
++.question-brand-title{min-width:0}.question-wordmark{font:700 11px/1.4 Comfortaa, sans-serif;letter-spacing:.1em;color:#54f5b5;margin:0;overflow-wrap:anywhere}
++.question-subject{margin:5px 0 0;font:700 24px/1.35 Comfortaa, sans-serif;color:var(--question-ink);overflow-wrap:anywhere}
+ .question-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;min-width:0}
+-.course-question-screen .header-question-code.header-question-code{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border:1px solid rgba(255,94,203,.46);border-radius:999px;background:rgba(255,94,203,.1);color:#ff5ecb;font:700 11px/1.3 Comfortaa,sans-serif;letter-spacing:.08em;white-space:nowrap}
++.course-question-screen .header-question-code.header-question-code{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border:1px solid rgba(255,94,203,.46);border-radius:999px;background:rgba(255,94,203,.1);color:#ff5ecb;font:700 11px/1.3 Comfortaa, sans-serif;letter-spacing:.08em;white-space:nowrap}
+ .question-back{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:0;border:0;background:transparent;color:#55f6ff;font-size:23px;line-height:1}
+-.question-level-pill{display:inline-flex;align-items:center;align-self:flex-start;min-height:28px;max-width:100%;padding:5px 11px;border:1px solid var(--question-level-colour);border-radius:999px;background:var(--question-level-background);color:var(--question-level-colour);font:700 10px/1.4 Comfortaa,sans-serif;letter-spacing:.08em;white-space:nowrap}
++.question-level-pill{display:inline-flex;align-items:center;align-self:flex-start;min-height:28px;max-width:100%;padding:5px 11px;border:1px solid var(--question-level-colour);border-radius:999px;background:var(--question-level-background);color:var(--question-level-colour);font:700 10px/1.4 Comfortaa, sans-serif;letter-spacing:.08em;white-space:nowrap}
+ .question-level-1{--question-level-colour:#ffde59;--question-level-background:rgba(255,222,89,.06)}.question-level-2{--question-level-colour:#54f5b5;--question-level-background:rgba(84,245,181,.06)}.question-level-3{--question-level-colour:#c59aff;--question-level-background:rgba(197,154,255,.06)}.question-level-olympiad{--question-level-colour:#55f6ff;--question-level-background:rgba(85,246,255,.06)}
+ .course-question-screen .question-player .question-header{flex-direction:column;align-items:flex-start;gap:14px}.course-question-screen .dot-question-panel > .question-level-pill{margin-bottom:14px}
+ .challenge-mode-controls{display:flex;justify-content:flex-end;margin-bottom:1rem}
+ @media(max-width:600px){.question-masthead{flex-wrap:wrap;padding:14px 0;gap:12px}.question-brand{flex:1 1 100%;gap:11px}.question-wordmark{font-size:10px}.question-subject{font-size:21px}.question-header-actions{margin-left:auto;max-width:100%;flex-wrap:wrap}.question-header-actions .header-question-code{max-width:calc(100vw - 100px);overflow-x:auto}.question-level-pill{font-size:9px}}
+ @media print{.question-back,.question-brand-mark,.challenge-mode-controls{display:none}.question-masthead{color:#000}.question-subject{color:#333}}
++
++/* One viewport theme. Card/editor surfaces remain local; immutable image assets stay untouched. */
++body{min-height:100vh;isolation:isolate;background:var(--app-background);background-attachment:fixed}
++body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.45;background-image:radial-gradient(circle,#fff 1px,transparent 1.5px),radial-gradient(circle,#55f6ff 1px,transparent 1.5px);background-position:0 0,31px 37px;background-size:74px 74px,101px 101px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
++/* !important also covers SVG presentation attributes, lazy source CSS and native form defaults. */
++:root *,:root *::before,:root *::after{font-family:var(--ui-font-family)!important}
++/* Only spin-arrow glyphs need a symbol fallback if Comfortaa lacks that code point. */
++:root .ec-box,:root .ec-source .orbital{font-family:Comfortaa,'Segoe UI Symbol',sans-serif!important}
++.original-landing.alevel .stars,.original-landing.igcse .stars{display:none}
++.course-shell,.course-question-screen,.original-landing.alevel,.original-landing.igcse,.landing-course-stage{background:transparent}
++.course-question-screen .course-layout{max-width:var(--question-pane-max-width);margin-inline:auto}
++@media print{body{background:#fff}body::before{display:none}}
+
+--- /dev/null
++++ src/ui/action-state.ts
++import type { CorrectionFeedback, PlayerAttempt } from '../contracts/attempt.ts';
++
++/** Stable response comparison also supports attempts saved before the UI markers existed. */
++export function responseFingerprint(value: unknown): string {
++  if (Array.isArray(value)) return `[${value.map(responseFingerprint).join(',')}]`;
++  if (value !== null && typeof value === 'object')
++    return `{${Object.entries(value)
++      .sort(([a], [b]) => a.localeCompare(b))
++      .map(([key, item]) => `${JSON.stringify(key)}:${responseFingerprint(item)}`)
++      .join(',')}}`;
++  return JSON.stringify(value) ?? 'undefined';
++}
++
++export interface QuestionActionState {
++  readonly primary: 'check' | 'next';
++  readonly checkEnabled: boolean;
++  readonly clearEnabled: boolean;
++  readonly giveUpEnabled: boolean;
++  readonly nextEnabled: boolean;
++  readonly currentCorrect: boolean;
++}
++
++/** UI availability never creates an assessment or skips a staged review. */
++export function questionActionState(
++  attempt: PlayerAttempt,
++  correctionFeedback: CorrectionFeedback | undefined,
++  { ready = true, canNext = true, canCorrect = true } = {},
++): QuestionActionState {
++  const student = attempt.mode === 'student';
++  const reviewing =
++    student && (attempt.phase === 'rubric-review' || attempt.phase === 'drawing-review');
++  const assessed = student && attempt.phase === 'assessed';
++  const sameFirst =
++    assessed &&
++    !attempt.currentResponseChanged &&
++    responseFingerprint(attempt.currentResponses) ===
++      responseFingerprint(attempt.firstResponse.responses);
++  const currentCorrect =
++    assessed &&
++    (correctionFeedback?.status === 'correct' ||
++      (!correctionFeedback &&
++        sameFirst &&
++        attempt.firstAssessment.kind !== 'revealed' &&
++        attempt.firstAssessment.marks.earned === attempt.firstAssessment.marks.available));
++  const gaveUp =
++    student &&
++    (attempt.currentGiveUp === true ||
++      (attempt.currentGiveUp === undefined &&
++        !attempt.currentResponseChanged &&
++        assessed &&
++        attempt.firstAssessment.kind === 'revealed' &&
++        sameFirst));
++  return {
++    primary: currentCorrect || gaveUp ? 'next' : 'check',
++    checkEnabled: student && !reviewing && ready && (!assessed || canCorrect),
++    clearEnabled: student && !reviewing,
++    giveUpEnabled: student && !reviewing,
++    nextEnabled: assessed && canNext,
++    currentCorrect,
++  };
++}
++
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\dot-cross-player.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\dot-cross-player.css"
+index 747f06f..f35c36e 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\dot-cross-player.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\dot-cross-player.css"	
+@@ -1,7 +1,5 @@
+-/* Shared shell remains unchanged; only this source workspace uses the original page width. */
+-.course-shell:has(.dot-cross-player){padding-inline:24px}
+-.course-focused:has(.dot-cross-player) .course-layout{max-width:none}
+-.question-player.dot-cross-player{padding:0;border:0;background:transparent;border-radius:0;font-family:Comfortaa,system-ui,sans-serif;font-weight:700;line-height:1.5}
++/* This workspace uses the same question width and shell gutters as every player. */
++.question-player.dot-cross-player{padding:0;border:0;background:transparent;border-radius:0;font-family:Comfortaa, sans-serif;font-weight:700;line-height:1.5}
+ .dot-question-panel{padding:20px 0;margin-bottom:0;border-bottom:1px solid #343459;background:transparent}
+ .dot-question-panel .heading-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+ .dot-question-panel h2{font-size:clamp(1.25rem,2vw,1.5rem);margin:0}
+@@ -13,7 +11,7 @@
+ .dot-cross-player .marking .score{font-size:1rem}.dot-cross-player .marking .save-status{padding:8px 0;font-size:.75rem}
+ .dot-cross-player .dot-help{font-size:.8rem;margin-top:12px}.dot-cross-player .dot-help summary{padding:8px 0}.dot-cross-player .dot-help button{font-size:.8rem;margin:4px 0}
+ .dot-session-controls{margin-top:12px}.dot-session-controls>button{font-size:.8rem;padding:7px 12px}
+-.dot-answer-dialog{position:fixed;inset:0;margin:auto;width:min(1000px,calc(100% - 24px));max-height:90vh;overflow:auto;border:1px solid rgba(172,182,255,.19);border-radius:20px;padding:20px;background:#10152f;color:#eef0ff;box-shadow:0 24px 90px #0008;font-family:Comfortaa,system-ui,sans-serif;font-weight:700}
++.dot-answer-dialog{position:fixed;inset:0;margin:auto;width:min(1000px,calc(100% - 24px));max-height:90vh;overflow:auto;border:1px solid rgba(172,182,255,.19);border-radius:20px;padding:20px;background:#10152f;color:#eef0ff;box-shadow:0 24px 90px #0008;font-family:Comfortaa, sans-serif;font-weight:700}
+ .dot-answer-dialog::backdrop{background:#040719cc}.dot-answer-dialog h3{font-size:1.15rem;margin:22px 0}.dot-close-answer{float:right;margin:0 0 12px 12px}
+ .dot-answer-graphic>svg{display:block;min-width:0!important;width:100%;height:auto;max-height:60vh;max-width:100%;border-radius:10px;background:white;margin:0 0 16px}
+ .dot-answer-dialog .content p{font-size:.9rem;line-height:1.5}
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\DotCrossPlayer.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\DotCrossPlayer.tsx"
+index 9e3c4b3..6f1be55 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\DotCrossPlayer.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\DotCrossPlayer.tsx"	
+@@ -1,3 +1,5 @@
++import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
++import { useQuestionKeyboard } from './use-question-keyboard.ts';
+ import { useEffect, useId, useRef, useState } from 'react';
+ import type { QuestionPlayerProps } from './QuestionPlayer.tsx';
+ import type { BankRecord } from '../chemistry/dot-and-cross/types.ts';
+@@ -38,23 +40,8 @@ export function DotCrossPlayer({
+   const assessed = student && attempt.phase === 'assessed';
+   const assessment = assessed ? attempt.firstAssessment : undefined;
+   const support = student ? attempt.assistance : [];
+-  const showedAnswer =
+-    !student || support.some((s) => s.kind === 'reveal' || s.kind === 'worked-answer');
+   const part = question.parts[0];
+   const current = part ? attempt.currentResponses[part.id] : undefined;
+-  const first = assessed && part ? attempt.firstResponse.responses[part.id] : undefined;
+-  const sameDiagram =
+-    current?.kind === 'dot-and-cross' &&
+-    first?.kind === 'dot-and-cross' &&
+-    JSON.stringify([current.atoms, current.electrons, current.groups]) ===
+-      JSON.stringify([first.atoms, first.electrons, first.groups]);
+-  const currentCorrect =
+-    correctionFeedback?.status === 'correct' ||
+-    (!correctionFeedback &&
+-      sameDiagram &&
+-      assessment &&
+-      assessment.kind !== 'revealed' &&
+-      assessment.marks.earned === assessment.marks.available);
+   const circles = current?.kind === 'dot-and-cross' ? current.circles !== false : true;
+   useEffect(() => {
+     let cancelled = false;
+@@ -92,18 +79,19 @@ export function DotCrossPlayer({
+   const reference: DotCrossState | undefined = record
+     ? { kind: 'dot-and-cross', ...record.reference }
+     : undefined;
+-  const openAnswer = () => {
+-    if (student && !showedAnswer)
+-      onCommand({
+-        kind: 'assist',
+-        assistance: {
+-          kind: assessed ? 'worked-answer' : 'reveal',
+-          supportId: 'worked-answer',
+-          at: Date.now(),
+-        },
+-      });
+-    setAnswerOpen(true);
+-  };
++  const actions = useQuestionActions({
++    attempt,
++    correctionFeedback,
++    onCommand,
++    onNext,
++    canNext,
++    onShowAnswer: () => setAnswerOpen(true),
++  });
++  const keyboard = useQuestionKeyboard(
++    `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
++    student,
++    actions,
++  );
+   const answer = (
+     <>
+       {record ? (
+@@ -129,34 +117,7 @@ export function DotCrossPlayer({
+   );
+   const pane = (
+     <>
+-      {student ? (
+-        <div className="actions">
+-          <button
+-            type="button"
+-            className={currentCorrect ? '' : 'primary'}
+-            data-dot-action="check"
+-            onClick={() =>
+-              onCommand(
+-                assessed ? { kind: 'check-correction' } : { kind: 'submit', at: Date.now() },
+-              )
+-            }
+-          >
+-            {assessed ? 'Check correction' : 'Check diagram'}
+-          </button>
+-          <button type="button" disabled={!assessed} onClick={openAnswer}>
+-            Show answer
+-          </button>
+-          <button
+-            type="button"
+-            className={currentCorrect ? 'primary' : ''}
+-            data-dot-action="next"
+-            disabled={!assessed || !canNext}
+-            onClick={onNext}
+-          >
+-            Next question →
+-          </button>
+-        </div>
+-      ) : (
++      {!student && (
+         <p className="mode-notice" role="status">
+           Read only. This view creates no assessment or progress evidence.
+         </p>
+@@ -256,11 +217,6 @@ export function DotCrossPlayer({
+               </button>
+             ),
+           )}
+-        {student && !showedAnswer && (
+-          <button type="button" onClick={openAnswer}>
+-            Reveal answer (assisted)
+-          </button>
+-        )}
+       </details>
+       {student && saveStatus.kind === 'error' && (
+         <div className="save-status save-error" role="alert">
+@@ -276,6 +232,7 @@ export function DotCrossPlayer({
+   );
+   return (
+     <article
++      {...keyboard}
+       className="question-player dot-cross-player layout-workspace"
+       {...(repeatedTitle ? { 'aria-label': displayTitle } : { 'aria-labelledby': id + '-title' })}
+     >
+@@ -292,6 +249,7 @@ export function DotCrossPlayer({
+         <Content blocks={question.context} />
+       </section>
+       <ResponseControl
++        key={`${part.id}:${actions.clearRevision}`}
+         part={part}
+         response={student ? current : reference}
+         readOnly={!student}
+@@ -341,6 +299,11 @@ export function DotCrossPlayer({
+           </ul>
+         </details>
+       )}
++      {student && (
++        <footer className="player-footer">
++          <QuestionActions actions={actions} />
++        </footer>
++      )}
+     </article>
+   );
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\energetics-practical-pilot.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\energetics-practical-pilot.css"
+index 6612f03..fab527f 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\energetics-practical-pilot.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\energetics-practical-pilot.css"	
+@@ -1,12 +1,5 @@
+ /* Source: original energetics-practical/styles.css, including its final overrides.
+    All selectors scoped to the component; no original page shell or globals. */
+-@font-face {
+-  font-family: 'Playwrite England Joined';
+-  src: url('./fonts/PlaywriteEnglandJoined.ttf') format('truetype');
+-  font-style: normal;
+-  font-weight: 400;
+-  font-display: swap;
+-}
+ .ep-pilot {
+   --ink: #f4f6ff;
+   --muted: #b2bfd9;
+@@ -22,10 +15,7 @@
+   border: 1px solid var(--line);
+   border-radius: 18px;
+   font:
+-    700 14px/1.6 Comfortaa,
+-    ui-rounded,
+-    system-ui,
+-    sans-serif;
++    700 14px/1.6 Comfortaa, sans-serif;
+ }
+ .ep-pilot .question-header {
+   padding: 20px 29px 0;
+@@ -87,10 +77,7 @@
+   outline: none;
+   resize: vertical;
+   font:
+-    700 1.05rem/1.5 Comfortaa,
+-    ui-rounded,
+-    system-ui,
+-    sans-serif;
++    700 1.05rem/1.5 Comfortaa, sans-serif;
+ }
+ .ep-pilot .answer-input:focus,
+ .ep-pilot .answer-area:focus {
+@@ -113,7 +100,7 @@
+ .ep-pilot .correction-segments {
+   display: block;
+   margin: 7px 0 10px;
+-  font-family: 'Playwrite England Joined', cursive;
++  font-family: Comfortaa, sans-serif;
+   font-size: 1.08rem;
+   font-weight: 400;
+   line-height: 2.5;
+@@ -371,7 +358,7 @@
+ .ep-pilot .mcq-option span {
+   display: block;
+   width: 100%;
+-  font-family: Comfortaa, ui-rounded, system-ui, sans-serif;
++  font-family: Comfortaa, sans-serif;
+   color: var(--muted);
+ }
+ .ep-pilot .mcq-option p {
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\EnergeticsResponseControl.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\EnergeticsResponseControl.tsx"
+index da87664..135a6fe 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\EnergeticsResponseControl.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\EnergeticsResponseControl.tsx"	
+@@ -73,6 +73,7 @@ export function EnergeticsResponseControl({
+         <div className="field-set">
+           <label htmlFor={id}>{fieldLabel ?? 'Replacement / correction'}</label>
+           <input
++            data-answer-input="true"
+             ref={replacement}
+             id={id}
+             className="answer-input"
+@@ -90,6 +91,7 @@ export function EnergeticsResponseControl({
+     const label = fieldLabel ?? 'Your answer';
+     const props = {
+       id,
++      'data-answer-input': 'true',
+       readOnly,
+       value,
+       'aria-label': label,
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\NumericWorkingControl.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\NumericWorkingControl.tsx"
+index 3aef76a..01848ec 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\NumericWorkingControl.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\NumericWorkingControl.tsx"	
+@@ -77,6 +77,7 @@ export function NumericWorkingControl({
+             {token.finalResponse ? 'Final answer' : `Working number ${token.id}`}
+           </span>
+           <input
++            data-answer-input="true"
+             className={
+               source
+                 ? `${token.finalResponse ? 'response-input' : 'working-input'}${checked ? (!(token.finalResponse ? raw : (values[token.id] ?? '')).trim() ? ' unanswered' : Math.abs(workingNumber(token.finalResponse ? raw : (values[token.id] ?? '')) - token.expected) <= token.tolerance ? ' correct' : ' incorrect') : ''}`
+@@ -130,6 +131,7 @@ export function NumericWorkingControl({
+   if (source) {
+     const input = (
+       <input
++        data-answer-input="true"
+         id={id}
+         className={`response-input${source.result ? ` pupil-${source.result}` : ''}`}
+         aria-invalid={source.result === 'incorrect' ? true : undefined}
+@@ -233,6 +235,7 @@ export function NumericWorkingControl({
+         <label className="response-label" htmlFor={id}>
+           Your answer {part.unit && <span className="unit">({part.unit})</span>}
+           <input
++            data-answer-input="true"
+             id={id}
+             inputMode={part.inputMode ?? 'decimal'}
+             readOnly={readOnly}
+
+--- /dev/null
++++ src/ui/QuestionActions.tsx
++import { useState } from 'react';
++import type { AttemptCommand, CorrectionFeedback, PlayerAttempt } from '../contracts/attempt.ts';
++import { questionActionState } from './action-state.ts';
++import './shared-actions.css';
++
++export function useQuestionActions({
++  attempt,
++  correctionFeedback,
++  onCommand,
++  onNext,
++  ready = true,
++  canNext = true,
++  canCorrect = true,
++  onShowAnswer,
++}: {
++  attempt: PlayerAttempt;
++  correctionFeedback?: CorrectionFeedback | undefined;
++  onCommand: (command: AttemptCommand) => void;
++  onNext: () => void;
++  ready?: boolean;
++  canNext?: boolean;
++  canCorrect?: boolean;
++  onShowAnswer?: () => void;
++}) {
++  const [clearRevision, setClearRevision] = useState(0);
++  const state = questionActionState(attempt, correctionFeedback, { ready, canNext, canCorrect });
++  const check = () => {
++    if (state.checkEnabled)
++      onCommand(
++        attempt.mode === 'student' && attempt.phase === 'assessed'
++          ? { kind: 'check-correction' }
++          : { kind: 'submit', at: Date.now() },
++      );
++  };
++  const clear = () => {
++    if (!state.clearEnabled) return;
++    onCommand({ kind: 'clear' });
++    // Reset transient editor drafts/undo/working feedback as well as the owned response.
++    setClearRevision((value) => value + 1);
++  };
++  const giveUp = () => {
++    if (!state.giveUpEnabled) return;
++    onCommand({
++      kind: 'assist',
++      assistance: {
++        kind:
++          attempt.mode === 'student' && attempt.phase === 'assessed' ? 'worked-answer' : 'reveal',
++        supportId: 'worked-answer',
++        at: Date.now(),
++      },
++    });
++    onShowAnswer?.();
++  };
++  const next = () => {
++    if (state.nextEnabled) onNext();
++  };
++  return {
++    state,
++    check,
++    clear,
++    giveUp,
++    next,
++    clearRevision,
++    defaultAction: () => (state.primary === 'next' ? next() : check()),
++  };
++}
++
++export type QuestionActionsController = ReturnType<typeof useQuestionActions>;
++
++/** The one curriculum question-end row. Specialist review controls remain in their own panels. */
++export function QuestionActions({ actions }: { actions: QuestionActionsController }) {
++  return (
++    <div className="question-actions" role="group" aria-label="Question actions">
++      <button
++        type="button"
++        data-question-action="check"
++        className={actions.state.primary === 'check' ? 'primary' : ''}
++        disabled={!actions.state.checkEnabled}
++        onClick={actions.check}
++      >
++        Check
++      </button>
++      <button
++        type="button"
++        data-question-action="clear"
++        disabled={!actions.state.clearEnabled}
++        onClick={actions.clear}
++      >
++        Clear
++      </button>
++      <button
++        type="button"
++        data-question-action="give-up"
++        disabled={!actions.state.giveUpEnabled}
++        onClick={actions.giveUp}
++      >
++        Give Up
++      </button>
++      <button
++        type="button"
++        data-question-action="next"
++        className={actions.state.primary === 'next' ? 'primary' : ''}
++        disabled={!actions.state.nextEnabled}
++        onClick={actions.next}
++      >
++        Next
++      </button>
++    </div>
++  );
++}
++
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\QuestionPlayer.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\QuestionPlayer.tsx"
+index a2c26e3..9a67942 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\QuestionPlayer.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\QuestionPlayer.tsx"	
+@@ -1,3 +1,5 @@
++import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
++import { useQuestionKeyboard } from './use-question-keyboard.ts';
+ import { useId, Suspense, lazy } from 'react';
+ import type { ReactNode } from 'react';
+ import type {
+@@ -166,6 +168,21 @@ export function QuestionPlayer({
+   const chrome = useQuestionChrome();
+   const displayTitle = questionDisplayTitle(question);
+   const repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
++  const actions = useQuestionActions({
++    attempt,
++    correctionFeedback,
++    onCommand,
++    onNext,
++    canNext,
++    canCorrect: question.parts.some(
++      (part) => part.kind !== 'explanation' && part.kind !== 'drawing-self-check',
++    ),
++  });
++  const keyboard = useQuestionKeyboard(
++    `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
++    attempt.mode === 'student',
++    actions,
++  );
+   if (sourceFamilies[question.ref.activityId])
+     return (
+       <Suspense fallback={<p role="status">Loading written correction…</p>}>
+@@ -224,6 +241,7 @@ export function QuestionPlayer({
+   };
+   return (
+     <article
++      {...keyboard}
+       className={`question-player layout-${question.layout}`}
+       {...(repeatedTitle
+         ? { 'aria-label': displayTitle }
+@@ -276,6 +294,7 @@ export function QuestionPlayer({
+               <Content blocks={part.prompt} />
+               {student && (
+                 <ResponseControl
++                  key={`${part.id}:${actions.clearRevision}`}
+                   part={part}
+                   response={attempt.currentResponses[part.id]}
+                   readOnly={readOnly}
+@@ -616,65 +635,24 @@ export function QuestionPlayer({
+       )}
+       {student && (
+         <footer className="player-footer">
+-          <div className="action-row">
+-            {!reviewing && !assessed && (
+-              <button
+-                type="button"
+-                className="primary"
+-                onClick={() => onCommand({ kind: 'submit', at: Date.now() })}
+-              >
+-                {question.parts.some(
+-                  (part) => part.kind === 'explanation' || part.kind === 'drawing-self-check',
+-                )
+-                  ? 'Submit and freeze response'
+-                  : 'Check answer'}
+-              </button>
+-            )}
+-            {canCheckCorrection && (
+-              <button type="button" onClick={() => onCommand({ kind: 'check-correction' })}>
+-                Check correction
+-              </button>
+-            )}
+-            {!reviewing &&
+-              question.hints
+-                .filter((hint) => !shownSupport.some((item) => item.supportId === hint.id))
+-                .map((hint) => (
+-                  <button
+-                    type="button"
+-                    key={hint.id}
+-                    onClick={() =>
+-                      onCommand({
+-                        kind: 'assist',
+-                        assistance: { kind: 'hint', supportId: hint.id, at: Date.now() },
+-                      })
+-                    }
+-                  >
+-                    Request hint
+-                  </button>
+-                ))}
+-            {!reviewing && !showedAnswer && (
+-              <button
+-                type="button"
+-                onClick={() =>
+-                  onCommand({
+-                    kind: 'assist',
+-                    assistance: {
+-                      kind: assessed ? 'worked-answer' : 'reveal',
+-                      supportId: 'worked-answer',
+-                      at: Date.now(),
+-                    },
+-                  })
+-                }
+-              >
+-                {assessed ? 'Show worked answer' : 'Reveal answer (assisted)'}
+-              </button>
+-            )}
+-            {assessed && (
+-              <button type="button" className="primary" disabled={!canNext} onClick={onNext}>
+-                Next question
+-              </button>
+-            )}
+-          </div>
++          {!reviewing &&
++            question.hints
++              .filter((hint) => !shownSupport.some((item) => item.supportId === hint.id))
++              .map((hint) => (
++                <button
++                  type="button"
++                  key={hint.id}
++                  onClick={() =>
++                    onCommand({
++                      kind: 'assist',
++                      assistance: { kind: 'hint', supportId: hint.id, at: Date.now() },
++                    })
++                  }
++                >
++                  Request hint
++                </button>
++              ))}
++          <QuestionActions actions={actions} />
+           {saveStatus.kind === 'error' && (
+             <div className="save-status save-error" role="alert">
+               <>
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\ResponseControl.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\ResponseControl.tsx"
+index ce3de7a..b7aafc8 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\ResponseControl.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\ResponseControl.tsx"	
+@@ -119,6 +119,7 @@ export function ResponseControl({
+           Your answer
+           {part.presentation === 'multiline' ? (
+             <textarea
++              data-answer-input="true"
+               id={id}
+               aria-label="Your answer"
+               rows={7}
+@@ -128,6 +129,7 @@ export function ResponseControl({
+             />
+           ) : (
+             <input
++              data-answer-input="true"
+               id={id}
+               readOnly={readOnly}
+               value={value}
+@@ -181,6 +183,7 @@ export function ResponseControl({
+                       {section.help && <span className="support-note">{section.help}</span>}
+                       {section.presentation === 'single-line' ? (
+                         <input
++                          data-answer-input="true"
+                           id={`${id}-${section.id}`}
+                           readOnly={readOnly}
+                           value={value}
+@@ -188,6 +191,7 @@ export function ResponseControl({
+                         />
+                       ) : (
+                         <textarea
++                          data-answer-input="true"
+                           id={`${id}-${section.id}`}
+                           aria-label={section.label}
+                           rows={5}
+@@ -251,6 +255,7 @@ export function ResponseControl({
+           <label className="response-label" htmlFor={id}>
+             Replacement / correction
+             <textarea
++              data-answer-input="true"
+               id={id}
+               aria-label="Replacement / correction"
+               rows={4}
+
+--- /dev/null
++++ src/ui/shared-actions.css
++.question-player .question-actions {
++  display: flex;
++  flex-wrap: nowrap;
++  justify-content: flex-end;
++  align-items: center;
++  gap: clamp(0.25rem, 1vw, 0.65rem);
++  width: 100%;
++  min-width: 0;
++  margin-block: 0.8rem;
++}
++.question-player .question-actions button[data-question-action][type='button'] {
++  flex: 0 1 auto;
++  min-width: 0;
++  min-height: 44px;
++  height: 44px;
++  margin: 0;
++  padding: 0.65rem clamp(0.5rem, 1.2vw, 1rem);
++  font-family: Comfortaa, sans-serif;
++  font-size: clamp(0.72rem, 1.3vw, 0.9rem);
++  font-weight: 700;
++  line-height: 1.2;
++  white-space: nowrap;
++  border: 1px solid var(--border, #46516f);
++  border-radius: 9px;
++  color: var(--ink, #eef0ff);
++  background: var(--surface-raised, #1a233d);
++  transform: none;
++}
++.question-player .question-actions button[data-question-action][type='button'].primary {
++  color: #081426;
++  background: var(--accent, #55f6ff);
++  border-color: var(--accent, #55f6ff);
++}
++.question-player .question-actions button:disabled {
++  opacity: 0.45;
++}
++
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\source-adapters.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\source-adapters.css"
+index 169a1b4..8294d98 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\source-adapters.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\source-adapters.css"	
+@@ -274,8 +274,7 @@
+   background: #1a2441;
+   color: #f4f6ff;
+   font:
+-    700 11px/1.55 Comfortaa,
+-    sans-serif;
++    700 11px/1.55 Comfortaa, sans-serif;
+ }
+ .source-player.source-titration .button.primary {
+   background: var(--mint);
+@@ -321,8 +320,7 @@
+ .source-player.source-titration .source-prompt {
+   margin: 0;
+   font:
+-    700 14px/1.7 Comfortaa,
+-    sans-serif;
++    700 14px/1.7 Comfortaa, sans-serif;
+   color: #f4f6ff;
+ }
+ .source-player.source-energy .source-content > .question-text {
+@@ -395,8 +393,7 @@
+ .source-player.source-calorimetry,
+ .source-player.source-bond {
+   font:
+-    16px/1.5 Comfortaa,
+-    sans-serif;
++    16px/1.5 Comfortaa, sans-serif;
+   padding: 22px;
+   border-radius: 24px;
+   background: linear-gradient(145deg, rgba(22, 26, 68, 0.94), rgba(10, 13, 38, 0.94));
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\source-components.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\source-components.css"
+index 5ae21ad..2e9ff90 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\source-components.css"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\source-components.css"	
+@@ -10,7 +10,7 @@
+ 
+ /* apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.css */
+ .source-player.source-acid{color-scheme:dark;--ink:#f7f7ff;--muted:#a9afce;--line:rgba(172,182,255,.22);--mint:#54f5b5;--cyan:#55f6ff;--red:#ff7080;--panel:rgba(15,20,51,.94)}
+-.source-player.source-acid *{box-sizing:border-box}.source-player.source-acid [hidden]{display:none!important}.source-player.source-acid{color:var(--ink);font:16px/1.55 Comfortaa,system-ui,sans-serif}.source-player.source-acid h2,
++.source-player.source-acid *{box-sizing:border-box}.source-player.source-acid [hidden]{display:none!important}.source-player.source-acid{color:var(--ink);font:16px/1.55 Comfortaa, sans-serif}.source-player.source-acid h2,
+ .source-player.source-acid h3,
+ .source-player.source-acid p{margin-top:0}.source-player.source-acid .rounding-note{color:var(--muted)}.source-player.source-acid .action-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.source-player.source-acid .data-table{width:100%;margin:16px 0;border-collapse:collapse}.source-player.source-acid .data-table th,
+ .source-player.source-acid .data-table td{border:1px solid var(--line);padding:10px;text-align:left}.source-player.source-acid .data-table th{width:58%;color:var(--muted)}.source-player.source-acid .working-label{display:block;margin-top:16px;font-weight:900}.source-player.source-acid textarea,
+@@ -56,7 +56,7 @@
+ .source-player.source-bonding [hidden] { display: none !important; }
+ .source-player.source-bonding {
+   color: var(--ink);
+-  font: 700 16px/1.65 Comfortaa, system-ui, sans-serif;
++  font: 700 16px/1.65 Comfortaa, sans-serif;
+ }
+ .source-player.source-bonding button,
+ .source-player.source-bonding input,
+@@ -83,10 +83,10 @@
+   width: 100%; min-height: 50px; padding: 10px 13px;
+   border: 1px solid #697c9d; border-radius: 10px;
+   background: #0a1024; color: var(--ink);
+-  font: 400 1.08rem system-ui, sans-serif;
++  font: 400 1.08rem Comfortaa, sans-serif;
+ }
+ .source-player.source-bonding .answer-input[aria-invalid="true"] { border-color: var(--red); }
+-.source-player.source-bonding .field-note { min-height: 0; margin: 4px 0 0; color: var(--muted); font: 400 .84rem/1.5 system-ui, sans-serif; }
++.source-player.source-bonding .field-note { min-height: 0; margin: 4px 0 0; color: var(--muted); font: 400 .84rem/1.5 Comfortaa, sans-serif; }
+ .source-player.source-bonding .field-note:empty { display: none; }
+ .source-player.source-bonding .field-note.error { color: var(--red); }
+ .source-player.source-bonding .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+@@ -128,7 +128,7 @@
+ 
+     .source-player.source-calorimetry {
+       color: var(--ink);
+-      font: 16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
++      font: 16px/1.5 Comfortaa, sans-serif;
+     }
+ 
+     .source-player.source-calorimetry button,
+@@ -457,7 +457,7 @@
+ 
+     .source-player.source-bond {
+       color: var(--ink);
+-      font: 16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
++      font: 16px/1.5 Comfortaa, sans-serif;
+     }
+ 
+     .source-player.source-bond button,
+@@ -615,7 +615,7 @@
+ 
+     .source-player.source-comparison {
+       color: var(--ink);
+-      font: 16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
++      font: 16px/1.5 Comfortaa, sans-serif;
+     }
+ 
+     .source-player.source-comparison button,
+@@ -791,7 +791,7 @@
+ .source-player.source-energy .answer-option[aria-pressed=true]{border-color:var(--cyan);background:#173345;box-shadow:inset 0 0 0 1px var(--cyan)}
+ .source-player.source-energy .answer-option:disabled{opacity:1}
+ .source-player.source-energy .choice-field[aria-invalid=true] .answer-option[aria-pressed=true]{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
+-.source-player.source-energy *{box-sizing:border-box}.source-player.source-energy [hidden]{display:none!important}.source-player.source-energy{color:var(--ink);font:700 16px/1.65 Comfortaa,system-ui,sans-serif}.source-player.source-energy button,
++.source-player.source-energy *{box-sizing:border-box}.source-player.source-energy [hidden]{display:none!important}.source-player.source-energy{color:var(--ink);font:700 16px/1.65 Comfortaa, sans-serif}.source-player.source-energy button,
+ .source-player.source-energy select,
+ .source-player.source-energy textarea,
+ .source-player.source-energy input{font:inherit}.source-player.source-energy button,
+@@ -803,13 +803,13 @@
+ .source-player.source-energy select:focus-visible,
+ .source-player.source-energy input:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.source-player.source-energy h2,
+ .source-player.source-energy h3,
+-.source-player.source-energy p{margin-top:0}.source-player.source-energy h2{font-size:1.2rem;line-height:1.6}.source-player.source-energy h3{font-size:1rem}.source-player.source-energy .source-prompt{font-size:1.25rem;line-height:1.65;margin-bottom:12px}.source-player.source-energy label{display:block;font-size:.9rem;margin-bottom:6px}.source-player.source-energy textarea{display:block;resize:vertical;width:100%;min-height:112px;padding:14px;border:1px solid #697c9d;border-radius:12px;background:#0a1024;color:var(--ink);font-family:system-ui,sans-serif;font-weight:400;font-size:1.05rem}.source-player.source-energy textarea::placeholder{color:#9caac2}.source-player.source-energy .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.source-player.source-energy button.primary,
+-.source-player.source-energy button.quiet{border-radius:10px;min-height:46px;padding:10px 16px;border:1px solid var(--line);font-size:.9rem}.source-player.source-energy .feedback{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}.source-player.source-energy .feedback h3{color:var(--cyan);margin-bottom:10px}.source-player.source-energy .mark-list{padding-left:23px}.source-player.source-energy .mark-list li{padding:5px 0}.source-player.source-energy .pass{color:var(--mint)}.source-player.source-energy .fail{color:var(--red)}.source-player.source-energy .diagram-card{margin:16px 0;background:#090f23;border:1px solid var(--line);border-radius:14px;padding:8px;overflow:hidden}.source-player.source-energy .diagram-card svg{width:100%;display:block;height:auto;max-height:390px}.source-player.source-energy .diagram-card svg text{font-family:Comfortaa,sans-serif;font-weight:700;font-size:15px;fill:var(--ink)}.source-player.source-energy .diagram-caption{padding:0 10px 8px;font-size:.82rem;color:var(--muted)}.source-player.source-energy .key-item .diagram-card{max-width:560px}
++.source-player.source-energy p{margin-top:0}.source-player.source-energy h2{font-size:1.2rem;line-height:1.6}.source-player.source-energy h3{font-size:1rem}.source-player.source-energy .source-prompt{font-size:1.25rem;line-height:1.65;margin-bottom:12px}.source-player.source-energy label{display:block;font-size:.9rem;margin-bottom:6px}.source-player.source-energy textarea{display:block;resize:vertical;width:100%;min-height:112px;padding:14px;border:1px solid #697c9d;border-radius:12px;background:#0a1024;color:var(--ink);font-family:Comfortaa, sans-serif;font-weight:400;font-size:1.05rem}.source-player.source-energy textarea::placeholder{color:#9caac2}.source-player.source-energy .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.source-player.source-energy button.primary,
++.source-player.source-energy button.quiet{border-radius:10px;min-height:46px;padding:10px 16px;border:1px solid var(--line);font-size:.9rem}.source-player.source-energy .feedback{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}.source-player.source-energy .feedback h3{color:var(--cyan);margin-bottom:10px}.source-player.source-energy .mark-list{padding-left:23px}.source-player.source-energy .mark-list li{padding:5px 0}.source-player.source-energy .pass{color:var(--mint)}.source-player.source-energy .fail{color:var(--red)}.source-player.source-energy .diagram-card{margin:16px 0;background:#090f23;border:1px solid var(--line);border-radius:14px;padding:8px;overflow:hidden}.source-player.source-energy .diagram-card svg{width:100%;display:block;height:auto;max-height:390px}.source-player.source-energy .diagram-card svg text{font-family:Comfortaa, sans-serif;font-weight:700;font-size:15px;fill:var(--ink)}.source-player.source-energy .diagram-caption{padding:0 10px 8px;font-size:.82rem;color:var(--muted)}.source-player.source-energy .key-item .diagram-card{max-width:560px}
+ @media(max-width:450px){.source-player.source-energy .source-prompt{font-size:1.08rem}.source-player.source-energy .diagram-card{padding:0}.source-player.source-energy .diagram-card svg text{font-size:17px}.source-player.source-energy .actions>*{flex:1}}
+ @media print{.source-player.source-energy{color:black}.source-player.source-energy .diagram-card{background:white}.source-player.source-energy .diagram-card svg text{fill:black}.source-player.source-energy .diagram-card svg path,
+ .source-player.source-energy .diagram-card svg line{stroke:black}}
+ @media(max-width:450px){.source-player.source-energy .diagram-card svg text{font-size:26px}}
+-.source-player.source-energy .answer-field{margin:17px 0}.source-player.source-energy .answer-input{width:100%;min-height:48px;background:#0a1024;color:var(--ink);border:1px solid #697c9d;border-radius:10px;padding:10px 13px;font:400 1.1rem system-ui,sans-serif}.source-player.source-energy .answer-input[aria-invalid=true]{border-color:var(--red)}.source-player.source-energy .field-note{margin:4px 0;min-height:0}.source-player.source-energy .field-note:empty{display:none}.source-player.source-energy .diagram-card .energy-svg{width:100%;height:auto;max-height:none;display:block;overflow:visible}
++.source-player.source-energy .answer-field{margin:17px 0}.source-player.source-energy .answer-input{width:100%;min-height:48px;background:#0a1024;color:var(--ink);border:1px solid #697c9d;border-radius:10px;padding:10px 13px;font:400 1.1rem Comfortaa, sans-serif}.source-player.source-energy .answer-input[aria-invalid=true]{border-color:var(--red)}.source-player.source-energy .field-note{margin:4px 0;min-height:0}.source-player.source-energy .field-note:empty{display:none}.source-player.source-energy .diagram-card .energy-svg{width:100%;height:auto;max-height:none;display:block;overflow:visible}
+ @media(max-width:450px){.source-player.source-energy .diagram-card .energy-svg text{font-size:24px}.source-player.source-energy .answer-field label{font-size:.95rem}}
+ .source-player.source-energy .question-equation{font-size:1.25rem;font-weight:700;color:var(--ink);margin:4px 0 20px}
+ 
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\SourceQuestionPlayer.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\SourceQuestionPlayer.tsx"
+index 2680ef3..05e3d2a 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\SourceQuestionPlayer.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\SourceQuestionPlayer.tsx"	
+@@ -1,3 +1,6 @@
++import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
++import { useQuestionKeyboard } from './use-question-keyboard.ts';
++import { responseFingerprint } from './action-state.ts';
+ import { lazy, Suspense, use } from 'react';
+ import type { ContentBlock, QuestionPart, Response } from '../contracts/question.ts';
+ import type { QuestionPlayerProps } from './QuestionPlayer.tsx';
+@@ -209,6 +212,22 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+   const ready = question.parts.every((part) =>
+     responseReady(part, responses[part.id], source.fields[part.id]?.count),
+   );
++  const actions = useQuestionActions({
++    attempt,
++    correctionFeedback,
++    onCommand,
++    onNext,
++    canNext,
++    ready,
++    canCorrect: question.parts.some(
++      (part) => part.kind !== 'explanation' && part.kind !== 'drawing-self-check',
++    ),
++  });
++  const keyboard = useQuestionKeyboard(
++    `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
++    student,
++    actions,
++  );
+   const send = (partId: string, response: Response) => {
+     if (student && !reviewing) onCommand({ kind: 'respond', partId, response });
+   };
+@@ -388,49 +407,6 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           />
+         ) : null;
+       })}
+-      {student && !reviewing && (
+-        <div className="actions pupil-answer-actions">
+-          {!assessed && (
+-            <button
+-              type="button"
+-              className="button primary check-answer"
+-              disabled={!ready}
+-              onClick={() => onCommand({ kind: 'submit', at: Date.now() })}
+-            >
+-              {family === 'acid' ? 'Check answers' : 'Check answer'}
+-            </button>
+-          )}
+-          {assessed && assessment?.kind !== 'self-rubric' && assessment?.kind !== 'revealed' && (
+-            <button
+-              type="button"
+-              className="button primary"
+-              disabled={!ready}
+-              onClick={() => onCommand({ kind: 'check-correction' })}
+-            >
+-              Check correction
+-            </button>
+-          )}
+-          {!shownAnswer && (
+-            <button
+-              type="button"
+-              className="button secondary"
+-              onClick={() => assist('worked-answer', assessed ? 'worked-answer' : 'reveal')}
+-            >
+-              {assessed ? 'Show worked answer' : 'Reveal answer (assisted)'}
+-            </button>
+-          )}
+-          {assessed && (
+-            <button
+-              type="button"
+-              className="button secondary next-button"
+-              disabled={!canNext}
+-              onClick={onNext}
+-            >
+-              Next question
+-            </button>
+-          )}
+-        </div>
+-      )}
+       {student &&
+         !reviewing &&
+         question.hints
+@@ -592,37 +568,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+     </aside>
+   );
+   const content = (
+-    <div
+-      className="question-content source-content"
+-      onKeyDown={(event) => {
+-        if (
+-          event.key !== 'Enter' ||
+-          event.defaultPrevented ||
+-          embedded ||
+-          event.shiftKey ||
+-          event.nativeEvent.isComposing ||
+-          event.repeat ||
+-          !student ||
+-          reviewing ||
+-          family === 'comparison'
+-        )
+-          return;
+-        if (
+-          !(event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement)
+-        )
+-          return;
+-        event.preventDefault();
+-        const inputs = Array.from(
+-          event.currentTarget.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+-            'input:not([type=radio]):not([type=checkbox]),textarea',
+-          ),
+-        );
+-        const next = inputs[inputs.indexOf(event.target) + 1];
+-        if (next) next.focus();
+-        else if (ready)
+-          onCommand(assessed ? { kind: 'check-correction' } : { kind: 'submit', at: Date.now() });
+-      }}
+-    >
++    <div className="question-content source-content">
+       {source.practical ? (
+         <div className="question-text">
+           <p className="context">{source.practical.context}</p>
+@@ -701,7 +647,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           {question.parts.map((part, index) =>
+             embedded ? (
+               <ResponseControl
+-                key={`${question.ref.questionId}:${part.id}`}
++                key={`${question.ref.questionId}:${part.id}:${actions.clearRevision}`}
+                 part={part}
+                 response={
+                   !student
+@@ -716,7 +662,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+               />
+             ) : (
+               <SourceResponseControl
+-                key={`${question.ref.questionId}:${part.id}`}
++                key={`${question.ref.questionId}:${part.id}:${actions.clearRevision}`}
+                 part={part}
+                 response={responses[part.id]}
+                 readOnly={!student || reviewing}
+@@ -728,7 +674,13 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+                   const marks =
+                     correctionFeedback && 'marks' in correctionFeedback
+                       ? correctionFeedback.marks
+-                      : assessment && 'marks' in assessment
++                      : assessment &&
++                          attempt.mode === 'student' &&
++                          attempt.phase === 'assessed' &&
++                          !attempt.currentResponseChanged &&
++                          responseFingerprint(responses) ===
++                            responseFingerprint(attempt.firstResponse.responses) &&
++                          'marks' in assessment
+                         ? assessment.marks
+                         : undefined;
+                   const points = marks?.points.filter((point) => point.partId === part.id);
+@@ -757,6 +709,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+   );
+   return (
+     <article
++      {...keyboard}
+       className={`question-player source-player source-${family}${family === 'practical' ? ' ep-pilot' : ''}${family === 'comparison' ? ' comparison-pupil' : ''}${embedded ? ' source-embedded' : ''}`}
+       aria-label={question.title}
+     >
+@@ -781,6 +734,11 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           {pane}
+         </div>
+       )}
++      {student && (
++        <footer className="player-footer">
++          <QuestionActions actions={actions} />
++        </footer>
++      )}
+     </article>
+   );
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\SourceResponseControl.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\SourceResponseControl.tsx"
+index 0353a27..6f5f99b 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\before\\src\\ui\\SourceResponseControl.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\SourceResponseControl.tsx"	
+@@ -70,6 +70,7 @@ export function SourceResponseControl({
+         <label htmlFor={id}>{label}</label>
+         {family === 'bonding' || field?.multiline || part.presentation === 'multiline' ? (
+           <textarea
++            data-answer-input="true"
+             id={id}
+             className="answer-input"
+             rows={4}
+@@ -82,6 +83,7 @@ export function SourceResponseControl({
+           />
+         ) : (
+           <input
++            data-answer-input="true"
+             id={id}
+             className="answer-input"
+             autoComplete="off"
+@@ -154,6 +156,7 @@ export function SourceResponseControl({
+           {section.help && <p className="scaffold-help">{section.help}</p>}
+           {short ? (
+             <input
++              data-answer-input="true"
+               id={`${id}-${section.id}`}
+               className="student-response short-response"
+               readOnly={readOnly}
+@@ -162,6 +165,7 @@ export function SourceResponseControl({
+             />
+           ) : (
+             <textarea
++              data-answer-input="true"
+               id={`${id}-${section.id}`}
+               className="student-response"
+               readOnly={readOnly}
+
+--- /dev/null
++++ src/ui/use-question-keyboard.ts
++import { useEffect, useRef } from 'react';
++import type { KeyboardEvent } from 'react';
++import type { QuestionActionsController } from './QuestionActions.tsx';
++
++const selector = 'input[data-answer-input],textarea[data-answer-input]';
++function enabledFields(node: HTMLElement) {
++  return Array.from(node.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(selector)).filter(
++    (field) =>
++      !field.disabled &&
++      !field.readOnly &&
++      !field.closest('fieldset:disabled,dialog,[data-question-keyboard="ignore"]') &&
++      field.getClientRects().length > 0,
++  );
++}
++
++/** Answer inputs opt in; native buttons, selects, editors and dialogs retain their own shortcuts. */
++export function useQuestionKeyboard(
++  identity: string,
++  enabled: boolean,
++  actions: QuestionActionsController,
++) {
++  const ref = useRef<HTMLElement>(null);
++  const focusedIdentity = useRef<string | null>(null);
++  useEffect(() => {
++    if (!enabled || focusedIdentity.current === identity || !ref.current) return;
++    const node = ref.current;
++    const focusFirst = (deferred = false) => {
++      const first = enabledFields(node)[0];
++      if (!first) return false;
++      focusedIdentity.current = identity;
++      // Do not steal focus if the pupil already chose an editor control while it loaded.
++      if (!deferred || !node.contains(document.activeElement)) first.focus({ preventScroll: true });
++      return true;
++    };
++    if (focusFirst()) return;
++    if (!node.querySelector('[role="status"]')) {
++      focusedIdentity.current = identity;
++      return;
++    }
++    // Lazy editor inputs may appear after this player has committed.
++    const observer = new MutationObserver(() => {
++      if (focusFirst(true)) observer.disconnect();
++    });
++    observer.observe(node, { childList: true, subtree: true });
++    return () => observer.disconnect();
++  }, [identity, enabled]);
++  const onKeyDown = (event: KeyboardEvent<HTMLElement>) => {
++    if (
++      !enabled ||
++      event.key !== 'Enter' ||
++      event.defaultPrevented ||
++      event.shiftKey ||
++      event.altKey ||
++      event.ctrlKey ||
++      event.metaKey ||
++      event.repeat ||
++      event.nativeEvent.isComposing ||
++      event.nativeEvent.keyCode === 229
++    )
++      return;
++    const target = event.target;
++    if (
++      !(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) ||
++      !target.matches(selector) ||
++      target.closest('dialog,[data-question-keyboard="ignore"]')
++    )
++      return;
++    const fields = enabledFields(event.currentTarget);
++    const index = fields.indexOf(target);
++    if (index < 0) return;
++    event.preventDefault();
++    if (actions.state.primary === 'next') actions.defaultAction();
++    else if (fields[index + 1]) fields[index + 1]!.focus();
++    else actions.defaultAction();
++  };
++  return { ref, onKeyDown };
++}
++

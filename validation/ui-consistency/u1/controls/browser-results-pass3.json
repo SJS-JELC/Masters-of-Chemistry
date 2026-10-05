@@ -1,0 +1,121 @@
+{
+  "status": "FAIL",
+  "method": "Pinned workspace Playwright, actual headless Edge, fresh context; owned harness mounts current players and real attempt controller, no app storage or sibling stores",
+  "checks": [
+    {
+      "id": "generic-state-keyboard",
+      "status": "PASS",
+      "checks": [
+        "initial autofocus",
+        "rerender keeps focus",
+        "Enter multipart",
+        "single submit",
+        "ShiftEnter newline",
+        "IME/repeat guards",
+        "wrong unlock",
+        "correct correction",
+        "Next Enter",
+        "edit invalidation",
+        "Clear one dispatch and blank",
+        "first answer score time unchanged",
+        "post-assess GiveUp",
+        "canNext gate",
+        "native button single activation",
+        "select guard"
+      ]
+    },
+    {
+      "id": "alevel/acid-base-calculations",
+      "status": "PASS",
+      "questionId": "AB-0001OU",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    },
+    {
+      "id": "alevel/electrons-bonding",
+      "status": "PASS",
+      "questionId": "EB-000003",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    },
+    {
+      "id": "alevel/electron-configurations",
+      "status": "PASS",
+      "questionId": "EC-9P1UOQ",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    },
+    {
+      "id": "alevel/ph-titration-curves",
+      "status": "PASS",
+      "questionId": "TC-GMPGTV",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    },
+    {
+      "id": "igcse/calorimetry",
+      "status": "PASS",
+      "questionId": "CAL-01R7NQ",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    },
+    {
+      "id": "igcse/bond-enthalpy",
+      "status": "PASS",
+      "questionId": "BE-0008P4",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    },
+    {
+      "id": "igcse/energy-enthalpy",
+      "status": "PASS",
+      "questionId": "EE-YCPUU4",
+      "views": [
+        1280,
+        768,
+        390
+      ],
+      "exactSharedRow": true,
+      "giveUp": true,
+      "clear": true
+    }
+  ],
+  "errors": [],
+  "failure": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'id')\n    at Harness.window.loadFixture (http://127.0.0.1:5188/validation/ui-consistency/u1/controls/harness.tsx?t=1791065720028:157:67)\n    at async <anonymous>:337:30\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\controls\\browser.mjs:66:14"
+}

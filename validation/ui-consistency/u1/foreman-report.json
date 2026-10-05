@@ -1,0 +1,421 @@
+{
+  "runId": "UI-CONSISTENCY-20261003",
+  "stage": "U1",
+  "status": "VALIDATED_AWAITING_ROOT_CODE_RENDER_GATE",
+  "owner": "U01",
+  "at": "2026-10-03T22:36:33.586Z",
+  "contractSha256": "f760067f4907048057389e11803e512364bc2fe35f725efa63370110d755936f",
+  "jobs": [
+    {
+      "agentId": "U02",
+      "jobId": "UI-CONTROLS-U1",
+      "status": "FOREMAN_VALIDATED",
+      "manifest": "validation/ui-consistency/u1/controls/completion.json",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedEffort": "high",
+      "effectiveSettings": "unknown",
+      "usage": "not exposed"
+    },
+    {
+      "agentId": "U03",
+      "jobId": "UI-THEME-U1",
+      "status": "FOREMAN_VALIDATED",
+      "manifest": "validation/ui-consistency/u1/theme/completion.json",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedEffort": "high",
+      "effectiveSettings": "unknown",
+      "usage": "not exposed"
+    },
+    {
+      "agentId": "U04",
+      "jobId": "UI-OLYMPIAD-U1",
+      "status": "FOREMAN_VALIDATED",
+      "manifest": "validation/ui-consistency/u1/olympiad/completion.json",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedEffort": "high",
+      "effectiveSettings": "unknown",
+      "usage": "not exposed"
+    }
+  ],
+  "source": {
+    "files": 295,
+    "unchanged": 257,
+    "modifiedExisting": 31,
+    "new": 7,
+    "changed": [
+      {
+        "path": "src/activities/olympiad/c3l6/c3l6.css",
+        "bytes": 12260,
+        "sha256": "cdfbb8aca81d874248a419b9e0022c06cbb7a281c9515a48256ba33369d910bd",
+        "beforeSha256": "abf3bfadbe54bfd2390ea03b7109904ca9af30deb310e43995f0f0a0cced9221"
+      },
+      {
+        "path": "src/compatibility/legacy-import.css",
+        "bytes": 857,
+        "sha256": "69ef2027203ddd580bf192553103c2645bc7b62c31e35cbbd8d45bd1260d6168",
+        "beforeSha256": "c813901b791792841eabf365e78998e49d84d81f4f32f1c98cdf81b8735a3b0a"
+      },
+      {
+        "path": "src/contracts/attempt.ts",
+        "bytes": 6929,
+        "sha256": "5d72d263998362433361598e3dad846c1da19809a8f11c97462b57a13a1f7ea5",
+        "beforeSha256": "ded808a30f79a0ec2a59caead722402e909a1eda0615a144e55dd652f7924802"
+      },
+      {
+        "path": "src/domain/attempt/attempt.ts",
+        "bytes": 23724,
+        "sha256": "3108dabf95732b733777749ba4259c120550fb06b66cf15ecc6e6f9eb553d6d2",
+        "beforeSha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+      },
+      {
+        "path": "src/editors/dot-and-cross/editor.css",
+        "bytes": 14557,
+        "sha256": "f554627fefa36eb59c365c9de9ae592a8700c7831e5264c1c2f61781f8ed53cf",
+        "beforeSha256": "3e6955bba6e14f95757a5f75fe3b29c80b9e3d881171d2f4a79922c40f1c25b9"
+      },
+      {
+        "path": "src/editors/electron-configuration/index.tsx",
+        "bytes": 14784,
+        "sha256": "e03696e0f6722a58acc006d4de203ec76d73a03cedab00745cfd3a484c4160a1",
+        "beforeSha256": "a6122925da26c26ab101c23875194904724df5bfd2cc4fd48bdc6d913e096f99"
+      },
+      {
+        "path": "src/editors/electron-configuration/styles.css",
+        "bytes": 13519,
+        "sha256": "afcc1ba13c953b8c0fdc218a86128239266b25d0cd89aa7ead41c4e184ebfee6",
+        "beforeSha256": "26541a86eb3c9c8e19e6a6efc6c6df37c5f5af997c65a6a1b8a70e5ff1c7235f"
+      },
+      {
+        "path": "src/editors/energy-profile/styles.css",
+        "bytes": 4303,
+        "sha256": "622bfbe4285ce2499a6fdb77ce20485a0906552438693abebe12ca0b2f0337a3",
+        "beforeSha256": "1727009ae9c8bb5582326542c7838af981233914071124444dcae202723cbdc3"
+      },
+      {
+        "path": "src/editors/molecule/molecule.css",
+        "bytes": 7285,
+        "sha256": "b2c8a77c5868368def68c08a02ccb3b1a4cf1243e60e1b5fc53754a2d4f28f3f",
+        "beforeSha256": "259a36bee88dae4972af4f22e9c73e6c43674a9f7fe35a8084ecc885849fae39"
+      },
+      {
+        "path": "src/editors/titration-curve/titration.css",
+        "bytes": 15563,
+        "sha256": "3042cab4447e6bb1fdfed80862126a9f1baaf507ad15019a895609e21ac2671c",
+        "beforeSha256": "074b3a3fcc9524cb29c752caefe5f70318c3773102f2d9bad0ad16c0628f8b20"
+      },
+      {
+        "path": "src/foundation/ActivityHost.tsx",
+        "bytes": 47004,
+        "sha256": "553ba8418078069602215062965f7ffe3760ab019221c458e1a3320279f520a6",
+        "beforeSha256": "9c2752dd7d1522c90c1d1fe07e3bd82f75a406db8b478b2915c5f6ba54151f72"
+      },
+      {
+        "path": "src/foundation/olympiad.css",
+        "bytes": 3107,
+        "sha256": "e0c95412d88521d82d89fbec4342aa4cdc17dec9573fb664d2e12945d594f42a",
+        "beforeSha256": "11bab3da28a32401eb20f9c125b52e0dfbce399b869e554acaa22af0a73a28af"
+      },
+      {
+        "path": "src/foundation/OlympiadHost.tsx",
+        "bytes": 10401,
+        "sha256": "ecaa5b1f7736b4a3581ac9501f825f36a717fe9a26781ac158ee1e0f01640591",
+        "beforeSha256": "65422242af7736506ec45f05a123feb81abaf86918402e11123f4e8e1d12571b"
+      },
+      {
+        "path": "src/landing/adaptation.css",
+        "bytes": 1410,
+        "sha256": "96918d0a13a8581837eb291060591b98cb78eab45967c15e0a8a0dd48c91b4ef",
+        "beforeSha256": "1fdbabb8d5e8b10020fed79715ee9e1cfe7c1f455a96c16fe817cbbc35f764d1"
+      },
+      {
+        "path": "src/landing/alevel.css",
+        "bytes": 37906,
+        "sha256": "712226bbe1c396fa6c6776ba94ef2f9549689448f11be3b1d36a04e65ed35af5",
+        "beforeSha256": "67a7dae3db8721a0bdae49a0c5dea7a5af9b058fe69ac4b69b37dc72ca86bad8"
+      },
+      {
+        "path": "src/landing/GemPaths.tsx",
+        "bytes": 830,
+        "sha256": "7227f8bc67cd3e2328a7257a524c38ce63fc44f358f6eec4f1f389e32136b6a5",
+        "beforeSha256": null
+      },
+      {
+        "path": "src/landing/igcse.css",
+        "bytes": 64210,
+        "sha256": "c3f92228152a088772aed870fd53ec216fff48bb9062953787e0ee587ca7cde6",
+        "beforeSha256": "1e45cdebdc6c3251cc58f896691a8ba868ac80f92c4ab4565b7dc6bcd5340d70"
+      },
+      {
+        "path": "src/landing/olympiad-completion.ts",
+        "bytes": 2556,
+        "sha256": "49d051795f0b8fd25758fc5180f287221b94e89c4c6a0371d63496a907fab6f3",
+        "beforeSha256": null
+      },
+      {
+        "path": "src/landing/OlympiadLanding.tsx",
+        "bytes": 3312,
+        "sha256": "023a1c0368bae6e1f6f0e15bcc896b3ba24cda56f1f17b45e58e9f64b448cf50",
+        "beforeSha256": null
+      },
+      {
+        "path": "src/landing/OriginalLanding.tsx",
+        "bytes": 42239,
+        "sha256": "bf4833cdbc4a5034b1df0c9c494b179fc988adc87245b7cd4d36dd4040028a48",
+        "beforeSha256": "4471a625c38c92a5ebf67882d19ddb93eb5a14bb5b09d609819cf7d9323b74fa"
+      },
+      {
+        "path": "src/landing/standardisation.css",
+        "bytes": 3250,
+        "sha256": "4f58a8c6b8fbd968d76a5a54c6fa1a33f49f9bff0492042f1a2caac6097df42b",
+        "beforeSha256": "27033f776033ab6458a4970aba955b480a357131b798870820adf01afc47df74"
+      },
+      {
+        "path": "src/persistence/validation.ts",
+        "bytes": 44535,
+        "sha256": "7e239de2b7eea5cf624bed2518e909f3929cc6b077361fcdf59cb9961601bda9",
+        "beforeSha256": "b50edca56ea56f1a93089b4fa37dda6dbefc48b1236efdc20d9018d9a753a36c"
+      },
+      {
+        "path": "src/styles/platform.css",
+        "bytes": 21561,
+        "sha256": "ca75037f198eb77ddee87e13bc063bdf4122b2e5f9e34fb0ca1a0bf89c38c6c7",
+        "beforeSha256": "853f44d813cce4c48c8d2be351c116391f3c430bfc7918b77549d554ada0480e"
+      },
+      {
+        "path": "src/ui/action-state.ts",
+        "bytes": 2387,
+        "sha256": "55b406b6c2a67d68b72efc5138fe1468d327a5b18cd022f4e95db06e9952a76d",
+        "beforeSha256": null
+      },
+      {
+        "path": "src/ui/dot-cross-player.css",
+        "bytes": 2670,
+        "sha256": "cc7c5c0380f406c0d6e37418801db3f64e984381f7f9582e1a071dee6b349668",
+        "beforeSha256": "597244a2b67809593af99f590484036bfa0be91722aea329151e4f7cde7a9029"
+      },
+      {
+        "path": "src/ui/DotCrossPlayer.tsx",
+        "bytes": 10800,
+        "sha256": "ee6dac5dd4536ac80aeaa4b9fb3ba82e3abc42ea8d8dc441a7b806421057850a",
+        "beforeSha256": "03ee06bbe4599a6d357043a92c26165d838a25b1ae0209016ad8fdc2dd44d2e0"
+      },
+      {
+        "path": "src/ui/energetics-practical-pilot.css",
+        "bytes": 8562,
+        "sha256": "9aa506063ede076e79591b1d4be118e8d5dc8ef7c364bb2487f93eafa0538d91",
+        "beforeSha256": "634668ca39474efd87a5be659e9b5fe1577da11749e11bae5c6e18dec92fe7f1"
+      },
+      {
+        "path": "src/ui/EnergeticsResponseControl.tsx",
+        "bytes": 3859,
+        "sha256": "acf23608be862d1f07d7fea152295118f23d8786a8ae9f398b3862cb3aa35677",
+        "beforeSha256": "4a0f461860b691bd3074f9d2b001a2dd6ab23d70f4b896d4403b94d0a4daff58"
+      },
+      {
+        "path": "src/ui/NumericWorkingControl.tsx",
+        "bytes": 10167,
+        "sha256": "2cc934592f16dfb59defc333c9cd2ca6b5b42cc69b47700e5acbb40644776f8d",
+        "beforeSha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224"
+      },
+      {
+        "path": "src/ui/QuestionActions.tsx",
+        "bytes": 3115,
+        "sha256": "8497b4403e69c90a5fa841cb8a5b104cc0b4ea5b6e1588e2e104d12a202edaba",
+        "beforeSha256": null
+      },
+      {
+        "path": "src/ui/QuestionPlayer.tsx",
+        "bytes": 25646,
+        "sha256": "d677c39f3af3f876caeec2b4d6c771eb20c9add6f205bf579e70620a91de97c7",
+        "beforeSha256": "78f0d8a53cc846196c0ebf21bc0660093b9f5a40a10adfc56f86d35c5a535f92"
+      },
+      {
+        "path": "src/ui/ResponseControl.tsx",
+        "bytes": 11636,
+        "sha256": "a942f299980ff8c882de9c9028a12edcff0673c85d4784ec26d5930941f1c7be",
+        "beforeSha256": "a742ebaedda6e91a43575d9df3f934b2972c9eea69d1149ba9a890eb6560b13f"
+      },
+      {
+        "path": "src/ui/shared-actions.css",
+        "bytes": 999,
+        "sha256": "94da05d406560d2533250587436d905883a0d75a075148226badab1291d6c490",
+        "beforeSha256": null
+      },
+      {
+        "path": "src/ui/source-adapters.css",
+        "bytes": 12678,
+        "sha256": "8fbeb2b451c6031d10ae4f6ca22c38b5104c593c5e92ece6306f46be3f041e07",
+        "beforeSha256": "2dd8e66655cc949c6e47230b445a05c42dcabc51f19039f6169648bbc41835ab"
+      },
+      {
+        "path": "src/ui/source-components.css",
+        "bytes": 53315,
+        "sha256": "f48192679c2bc84a4b396539a9fd7ec9a9f3ffe4cb33695d6b955e47783f1067",
+        "beforeSha256": "35a93051de3356a1c1e15f0640ef99bb35a53c7db2d239aa6e47c092d78c08fd"
+      },
+      {
+        "path": "src/ui/SourceQuestionPlayer.tsx",
+        "bytes": 27824,
+        "sha256": "23dbc8515bb3561c33a93610d6c2a5b904d4fa3f6af254db5308731f37f0ed7e",
+        "beforeSha256": "cb3df1f69f892b6b45ad78f0f57023b717cbe33aaff5bd078d3555391d933634"
+      },
+      {
+        "path": "src/ui/SourceResponseControl.tsx",
+        "bytes": 6712,
+        "sha256": "f85f56b2f49290433916a188f19c4431bd3e1de33ad6e1ed20efad6d3a93fd5f",
+        "beforeSha256": "75af90129b9d7f6904ed285ef523e486e1f7a01498ba0ece2ced360d40d40386"
+      },
+      {
+        "path": "src/ui/use-question-keyboard.ts",
+        "bytes": 2824,
+        "sha256": "acfb6a4cc360307ede9edbddea7e4f3763fbf1cbc6847f7d105e503fac386152",
+        "beforeSha256": null
+      }
+    ],
+    "patch": "validation/ui-consistency/u1/source-changes.patch",
+    "baseline": "validation/ui-consistency/u1/before/src",
+    "chemicalContent": "Providers/marking/policies/content/identity/timing byte-identical; UI/editor presentation only, plus four centralized clear/current-action/persistence files."
+  },
+  "implementation": {
+    "controls": "One shared question-end footer and pure action state across source/generic/dot players. Clear is one central command; persisted currentResponseChanged/currentGiveUp markers invalidate stale highlight through reload without changing immutable first evidence. Required self-rubric/drawing stages stay gated. Editor-local tools remain supporting UI.",
+    "theme": "Exact landing background applied once, all UI/live text Comfortaa,1120px default pane; dot full-width exceptions removed.110+110ms opacity/16px directional course change, reduced-motion immediate; existing650ms L6/U6 flip unchanged. EC energy-axis clipping corrected with scoped CSS.",
+    "olympiad": "One genuine faceted completion gem per existing challenge; current validated fingerprints/contributions determine dim/partial/full, independent of curriculum evidence. Both stores reload on map return. Existing staged controls retained/restyled."
+  },
+  "validation": {
+    "distinctRetainedUnitTests": 53,
+    "suites": {
+      "centralAndTiming": 12,
+      "canonicalContentPersistenceWorking": 14,
+      "controlState": 5,
+      "olympiadSelectorChemistry": 22
+    },
+    "browserReports": [
+      "controls/browser-results.json",
+      "controls/app-browser-results.json",
+      "theme/browser-results.json",
+      "theme/static-results.json",
+      "theme/transition-cancellation-results.json",
+      "theme/ec-axis-source-results.json",
+      "theme/ec-axis-static-results.json",
+      "olympiad/browser-report.json"
+    ],
+    "mainThemeMeasurements": 66,
+    "settledStaticFrames": 23,
+    "postFixEcFrames": 3,
+    "olympiadResponsiveChecks": 24,
+    "olympiadFullpageScreenshots": 26,
+    "controlFamilies": 11,
+    "controlViewportWidths": [
+      1280,
+      768,
+      390
+    ],
+    "themeViewportWidths": [
+      1440,
+      820,
+      390,
+      350
+    ],
+    "typeAndBuild": [
+      {
+        "name": "typecheck",
+        "status": "PASS",
+        "exitCode": 0
+      },
+      {
+        "name": "build",
+        "status": "PASS",
+        "exitCode": 0
+      },
+      {
+        "name": "alevel-release",
+        "status": "PASS",
+        "exitCode": 0
+      },
+      {
+        "name": "igcse-release",
+        "status": "PASS",
+        "exitCode": 0
+      }
+    ],
+    "releases": [
+      {
+        "course": "alevel",
+        "status": "PASS",
+        "activityCount": 7,
+        "runtimeFileCount": 163,
+        "initialJavascriptGzipBytes": 180442,
+        "lazyJavascriptChunks": 70,
+        "manifestSha256": "e2d7f963e0c5f8c6ce74486ea3cff2388809434c96f43c0ab030269f9cc33f7e",
+        "checkedAt": "2026-10-03T22:30:36.797Z"
+      },
+      {
+        "course": "igcse",
+        "status": "PASS",
+        "activityCount": 6,
+        "runtimeFileCount": 163,
+        "initialJavascriptGzipBytes": 180441,
+        "lazyJavascriptChunks": 70,
+        "manifestSha256": "41e5650a5894156f00f2957123dd457c2b2a23a395b3c089237fb364162f0602",
+        "checkedAt": "2026-10-03T22:30:36.980Z"
+      }
+    ],
+    "originals": {
+      "status": "PASS",
+      "checkedAt": "2026-10-03T22:35:04.862Z",
+      "records": 1317,
+      "readable": 794,
+      "metadataOnly": 523,
+      "changed": [],
+      "offlinePolicy": "All523 baseline offline placeholders stat-only; never opened/hydrated. Historical original-app-check.json left untouched."
+    },
+    "immutableAssetsAndConfig": "validation/ui-consistency/u1/assets-config-preservation.json",
+    "timingContinuity": "validation/ui-consistency/u1/timing-continuity.json"
+  },
+  "renderedReview": {
+    "foremanInspected": [
+      "theme/static-alevel-dot-and-cross-390.png",
+      "theme/static-alevel-electrons-bonding-1440.png",
+      "theme/contact-final-390.png",
+      "theme/ec-axis-detail-static-390.png",
+      "olympiad/map-partial-1440.png",
+      "olympiad/contact-sheet.png",
+      "controls-contact.png"
+    ],
+    "rootStartHere": [
+      "theme/contact-final-1440.png",
+      "theme/contact-final-390.png",
+      "theme/ec-axis-detail-static-390.png",
+      "controls/screens/actual-app-reload.png",
+      "olympiad/map-unstarted-1440.png",
+      "olympiad/map-partial-1440.png",
+      "olympiad/map-complete-1440.png",
+      "olympiad/isomers-390.png",
+      "olympiad/c3-a-1440.png"
+    ],
+    "scope": "Fullsize exports and contact sheets retained. Final EC frames supersede pre-fix EC static images; all other scoped family images remain applicable."
+  },
+  "closure": {
+    "currentInputs": "validation/ui-consistency/u1/current-inputs.json",
+    "treeSha256": "46a60b549b07e48ac21eb8779239f8b8424c4f0a1f32e0bafb7c0c405e7ad525",
+    "currentInputCount": 645,
+    "sourceInputCount": 315,
+    "evidenceFingerprints": "validation/ui-consistency/u1/evidence-fingerprints.json",
+    "evidenceCount": 283
+  },
+  "evidenceProcessException": {
+    "owner": "U03",
+    "action": "Legacy protect-originals guard once at22:11:22UTC overwrote mutable validation/original-app-check.json and attempted523 placeholder reads; all failed, no hydration or original changes.",
+    "disposition": "Root explicitly accepted bounded generated-summary exception. No exact raw backup exists; no reconstruction/restoration. New stat-only794hash+523metadata guard authoritative. Other history immutable.",
+    "evidence": "validation/ui-consistency/u1/theme/legacy-original-check-incident.json"
+  },
+  "unresolved": [],
+  "limits": [
+    "Root U1 code/render acceptance and independent U2 review still required; U2 not dispatched.",
+    "Real headless Edge/emulated widths; no new native OS foreground/suspension, physical-device or screen-reader certification. Unchanged clock/binding plus retained native evidence applies.",
+    "EC final containment fixture is canonical teacher-preview energy representation; shared UI geometry also covered in practice family/browser checks.",
+    "Current correction checks remain transient learning feedback; first result/timing immutable and Next access persisted. No new independent evidence for corrections.",
+    "Usage/model effectiveness not exposed; requested settings recorded, no invented accounting."
+  ],
+  "published": false
+}

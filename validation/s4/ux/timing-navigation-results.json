@@ -1,0 +1,1820 @@
+{
+  "status": "PASS",
+  "headless": true,
+  "playwright": "1.62.1",
+  "clock": "Playwright accelerated clock; actual production browser binding/controller/repository",
+  "checks": [
+    "Registered source idle allowance clips production answering time and stays stopped until trusted input",
+    "Trusted interaction resumes after idle; suspended15000ms interval is excluded by actual browser binding",
+    "Headless browser did not expose native background state; accepted S3 native timing evidence retained without new native claim",
+    "Frozen first time transfers exactly to saved evidence and statistics; corrections/time/navigation never extend it",
+    "Scheduler/practice Next starts fresh attempt/time; pause/reload restores exact ID and active duration"
+  ],
+  "errors": [],
+  "backgroundState": {
+    "hidden": false,
+    "focused": true,
+    "visibility": "visible"
+  },
+  "snapshots": {
+    "start": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "activeMs": 0,
+          "idleLimitMs": 60000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "title": "[H⁺] to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[H⁺] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "compact",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀[H⁺] = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "idle": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "activeMs": 60054,
+          "idleLimitMs": 60000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "title": "[H⁺] to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[H⁺] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "compact",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀[H⁺] = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "interacted": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "activeMs": 61424,
+          "idleLimitMs": 60000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "title": "[H⁺] to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[H⁺] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "compact",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀[H⁺] = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saving"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "beforeBackground": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "activeMs": 61424,
+          "idleLimitMs": 60000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "title": "[H⁺] to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[H⁺] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "compact",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀[H⁺] = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "afterBackground": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "activeMs": 61424,
+          "idleLimitMs": 60000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "title": "[H⁺] to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[H⁺] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "compact",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀[H⁺] = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saving"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "marked": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {
+          "ph": {
+            "kind": "numeric",
+            "raw": "1.1249387366083",
+            "unit": ""
+          }
+        },
+        "assistance": [],
+        "phase": "assessed",
+        "firstResponse": {
+          "responses": {
+            "ph": {
+              "kind": "numeric",
+              "raw": "1.1249387366083",
+              "unit": ""
+            }
+          },
+          "submittedAt": 1790995509890,
+          "timing": {
+            "activeMs": 63483,
+            "idleLimitMs": 60000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1790995509890,
+          "marks": {
+            "points": [
+              {
+                "partId": "ph",
+                "pointId": "numerical-value",
+                "earned": 1,
+                "available": 1,
+                "message": "Correct within the required numerical precision."
+              }
+            ],
+            "earned": 1,
+            "available": 1
+          },
+          "score": 1,
+          "selfAssessed": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "title": "[H⁺] to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[H⁺] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "compact",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀[H⁺] = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "history": [
+      {
+        "kind": "curriculum",
+        "id": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+        "profileId": "local",
+        "gemId": "u6-t1-1-2",
+        "score": 1,
+        "completedAt": 1790995509890,
+        "selfAssessed": false,
+        "assisted": false,
+        "provenance": "new-attempt",
+        "independent": true,
+        "timing": {
+          "activeMs": 63483,
+          "idleLimitMs": 60000
+        },
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-0-1-1RFTU29",
+          "seed": 3835955313,
+          "level": 1
+        },
+        "firstResponse": {
+          "responses": {
+            "ph": {
+              "kind": "numeric",
+              "raw": "1.1249387366083",
+              "unit": ""
+            }
+          },
+          "submittedAt": 1790995509890,
+          "timing": {
+            "activeMs": 63483,
+            "idleLimitMs": 60000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1790995509890,
+          "marks": {
+            "points": [
+              {
+                "partId": "ph",
+                "pointId": "numerical-value",
+                "earned": 1,
+                "available": 1,
+                "message": "Correct within the required numerical precision."
+              }
+            ],
+            "earned": 1,
+            "available": 1
+          },
+          "score": 1,
+          "selfAssessed": false
+        },
+        "course": "alevel",
+        "activityId": "alevel/acid-base-calculations",
+        "level": 1
+      }
+    ],
+    "next": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-2-1-GDCM5Q",
+          "seed": 989882414,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+          "activeMs": 0,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29",
+          "AB2-2-1-GDCM5Q"
+        ],
+        "paused": false
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-2-1-GDCM5Q",
+          "seed": 989882414,
+          "level": 1
+        },
+        "title": "Strong-acid concentration to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "nitric acid is a monobasic strong acid. Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[HNO₃] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "multipart",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "h",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate [H⁺]."
+              },
+              {
+                "kind": "formula",
+                "text": "[H⁺] ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "mol dm⁻³",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 0.075,
+              "tolerance": 0.000051000000000000006
+            }
+          },
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "HNO₃ → H⁺ + NO₃⁻"
+          },
+          {
+            "kind": "formula",
+            "text": "[H⁺] = [HNO₃] = 0.0750 mol dm⁻³"
+          },
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [
+        {
+          "kind": "curriculum",
+          "id": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "profileId": "local",
+          "gemId": "u6-t1-1-2",
+          "score": 1,
+          "completedAt": 1790995509890,
+          "selfAssessed": false,
+          "assisted": false,
+          "provenance": "new-attempt",
+          "independent": true,
+          "timing": {
+            "activeMs": 63483,
+            "idleLimitMs": 60000
+          },
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-0-1-1RFTU29",
+            "seed": 3835955313,
+            "level": 1
+          },
+          "firstResponse": {
+            "responses": {
+              "ph": {
+                "kind": "numeric",
+                "raw": "1.1249387366083",
+                "unit": ""
+              }
+            },
+            "submittedAt": 1790995509890,
+            "timing": {
+              "activeMs": 63483,
+              "idleLimitMs": 60000
+            },
+            "assistance": []
+          },
+          "firstAssessment": {
+            "kind": "marked",
+            "assessedAt": 1790995509890,
+            "marks": {
+              "points": [
+                {
+                  "partId": "ph",
+                  "pointId": "numerical-value",
+                  "earned": 1,
+                  "available": 1,
+                  "message": "Correct within the required numerical precision."
+                }
+              ],
+              "earned": 1,
+              "available": 1
+            },
+            "score": 1,
+            "selfAssessed": false
+          },
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "level": 1
+        }
+      ],
+      "saveStatus": {
+        "kind": "saving"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "paused": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-2-1-GDCM5Q",
+          "seed": 989882414,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+          "activeMs": 51,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29",
+          "AB2-2-1-GDCM5Q"
+        ],
+        "paused": true
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-2-1-GDCM5Q",
+          "seed": 989882414,
+          "level": 1
+        },
+        "title": "Strong-acid concentration to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "nitric acid is a monobasic strong acid. Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[HNO₃] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "multipart",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "h",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate [H⁺]."
+              },
+              {
+                "kind": "formula",
+                "text": "[H⁺] ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "mol dm⁻³",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 0.075,
+              "tolerance": 0.000051000000000000006
+            }
+          },
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "HNO₃ → H⁺ + NO₃⁻"
+          },
+          {
+            "kind": "formula",
+            "text": "[H⁺] = [HNO₃] = 0.0750 mol dm⁻³"
+          },
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [
+        {
+          "kind": "curriculum",
+          "id": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "profileId": "local",
+          "gemId": "u6-t1-1-2",
+          "score": 1,
+          "completedAt": 1790995509890,
+          "selfAssessed": false,
+          "assisted": false,
+          "provenance": "new-attempt",
+          "independent": true,
+          "timing": {
+            "activeMs": 63483,
+            "idleLimitMs": 60000
+          },
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-0-1-1RFTU29",
+            "seed": 3835955313,
+            "level": 1
+          },
+          "firstResponse": {
+            "responses": {
+              "ph": {
+                "kind": "numeric",
+                "raw": "1.1249387366083",
+                "unit": ""
+              }
+            },
+            "submittedAt": 1790995509890,
+            "timing": {
+              "activeMs": 63483,
+              "idleLimitMs": 60000
+            },
+            "assistance": []
+          },
+          "firstAssessment": {
+            "kind": "marked",
+            "assessedAt": 1790995509890,
+            "marks": {
+              "points": [
+                {
+                  "partId": "ph",
+                  "pointId": "numerical-value",
+                  "earned": 1,
+                  "available": 1,
+                  "message": "Correct within the required numerical precision."
+                }
+              ],
+              "earned": 1,
+              "available": 1
+            },
+            "score": 1,
+            "selfAssessed": false
+          },
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "level": 1
+        }
+      ],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    },
+    "restored": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-2-1-GDCM5Q",
+          "seed": 989882414,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+          "activeMs": 51,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "gemId": "u6-t1-1-2",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "f48f1a36-39cc-4db0-b24b-17a0d39c04d8",
+        "previousQuestionIds": [
+          "AB2-0-1-1RFTU29",
+          "AB2-2-1-GDCM5Q"
+        ],
+        "paused": true
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/acid-base-calculations",
+          "questionId": "AB2-2-1-GDCM5Q",
+          "seed": 989882414,
+          "level": 1
+        },
+        "title": "Strong-acid concentration to pH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "nitric acid is a monobasic strong acid. Calculate the pH of the solution."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "[HNO₃] / mol dm⁻³",
+                "0.0750"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4."
+          }
+        ],
+        "layout": "multipart",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "h",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate [H⁺]."
+              },
+              {
+                "kind": "formula",
+                "text": "[H⁺] ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "mol dm⁻³",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 0.075,
+              "tolerance": 0.000051000000000000006
+            }
+          },
+          {
+            "id": "ph",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate pH."
+              },
+              {
+                "kind": "formula",
+                "text": "pH ="
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 1.1249387366083,
+              "tolerance": 0.0051
+            }
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "structured-steps",
+            "level": 1,
+            "purpose": "Guided calculation stages",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Work through the numerical stages in order. Each stage asks for a quantity needed in the calculation."
+              }
+            ]
+          }
+        ],
+        "hints": [],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "HNO₃ → H⁺ + NO₃⁻"
+          },
+          {
+            "kind": "formula",
+            "text": "[H⁺] = [HNO₃] = 0.0750 mol dm⁻³"
+          },
+          {
+            "kind": "formula",
+            "text": "pH = −log₁₀(0.0750) = 1.12"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+            "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+            "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+            "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+            "symbolOrSection": "Pure numerical generator extraction; page controller/persistence/DOM excluded"
+          },
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+            "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb",
+            "symbolOrSection": "acidMinutes: exact 38 template-specific allowances"
+          }
+        ]
+      },
+      "history": [
+        {
+          "kind": "curriculum",
+          "id": "4f35ffd8-8a52-47ff-83c0-202029f6c020",
+          "profileId": "local",
+          "gemId": "u6-t1-1-2",
+          "score": 1,
+          "completedAt": 1790995509890,
+          "selfAssessed": false,
+          "assisted": false,
+          "provenance": "new-attempt",
+          "independent": true,
+          "timing": {
+            "activeMs": 63483,
+            "idleLimitMs": 60000
+          },
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-0-1-1RFTU29",
+            "seed": 3835955313,
+            "level": 1
+          },
+          "firstResponse": {
+            "responses": {
+              "ph": {
+                "kind": "numeric",
+                "raw": "1.1249387366083",
+                "unit": ""
+              }
+            },
+            "submittedAt": 1790995509890,
+            "timing": {
+              "activeMs": 63483,
+              "idleLimitMs": 60000
+            },
+            "assistance": []
+          },
+          "firstAssessment": {
+            "kind": "marked",
+            "assessedAt": 1790995509890,
+            "marks": {
+              "points": [
+                {
+                  "partId": "ph",
+                  "pointId": "numerical-value",
+                  "earned": 1,
+                  "available": 1,
+                  "message": "Correct within the required numerical precision."
+                }
+              ],
+              "earned": 1,
+              "available": 1
+            },
+            "score": 1,
+            "selfAssessed": false
+          },
+          "course": "alevel",
+          "activityId": "alevel/acid-base-calculations",
+          "level": 1
+        }
+      ],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a17-time-1790995417263",
+      "selectedCount": 0
+    }
+  }
+}

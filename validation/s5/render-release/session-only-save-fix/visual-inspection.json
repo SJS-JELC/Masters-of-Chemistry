@@ -1,0 +1,210 @@
+{
+  "status": "PASS",
+  "agentId": "A23",
+  "inspectedAt": "2026-10-03T06:47:13.025Z",
+  "surface": "Headless Edge, 390x844 DPR1; keyboard interaction; no physical mobile/native screen-reader claim",
+  "screens": [
+    {
+      "path": "screens/alevel-terminal-quota-keyboard-focus.png",
+      "ariaPath": "alevel-terminal-quota-keyboard-focus-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1811
+      },
+      "sha256": "c5d66d57c07b9a7e6acfdd0185574739fdf832e17ce8bd5447eeefe7aed04285",
+      "ariaSha256": "d85e41b81a2fe69d18caf43cd423a4cc0f959ef196404734e1c0a4e2c18d83ba"
+    },
+    {
+      "path": "screens/alevel-terminal-recovered.png",
+      "ariaPath": "alevel-terminal-recovered-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1720
+      },
+      "sha256": "c01da272d499f0746df4c5f68c1e3ba5eeacd757a571a91dd9dc45aa826f6fbc",
+      "ariaSha256": "1af5b693565c1ed824ea9acb483c15e8100ea139b5708b184df16aee6bf24f15"
+    },
+    {
+      "path": "screens/alevel-empty-revision-paused.png",
+      "ariaPath": "alevel-empty-revision-paused-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1602
+      },
+      "sha256": "dc400450d62ced70c8f27da364987c0facac6e85ef01aeb867ae34ff11861c3c",
+      "ariaSha256": "5ccdd50a6debe3c1364144387485e7ece323de3df53f7624e2927ec9eb8bc093"
+    },
+    {
+      "path": "screens/alevel-empty-revision-quota-keyboard-focus.png",
+      "ariaPath": "alevel-empty-revision-quota-keyboard-focus-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1766
+      },
+      "sha256": "bdadced40c37883dc97abe0ff4d1e02d083ff1d715dd7260e038c4cbe51ba669",
+      "ariaSha256": "c9ea4d002497f458f2f2f6c21e872c7001e3d6491003b5816a82cfabb71001c4"
+    },
+    {
+      "path": "screens/alevel-empty-revision-recovered.png",
+      "ariaPath": "alevel-empty-revision-recovered-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1439
+      },
+      "sha256": "d62d4ab647d433ac11e7c57440b2a6f71baa10d76813529a7daa7e3a69e8bc16",
+      "ariaSha256": "29c55db2e73a5a93cd6a20a7a283d89cf87ceb78c2d4067d36e7f00a83a3654b"
+    },
+    {
+      "path": "screens/alevel-empty-practice-paused.png",
+      "ariaPath": "alevel-empty-practice-paused-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1370
+      },
+      "sha256": "e8f9bdf0c2574c38b5695a4be2b1dec9ddb9cfb54984412bfee216c7e50813e3",
+      "ariaSha256": "49f93b8c5d096f67e551bded4b9b1afd7b1978241b8434135941d6fdbca8af9b"
+    },
+    {
+      "path": "screens/alevel-empty-practice-quota-keyboard-focus.png",
+      "ariaPath": "alevel-empty-practice-quota-keyboard-focus-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1534
+      },
+      "sha256": "4582fd195c4b39afe7d99f542ecd1e66b07852b8ce9584956947519ac236bf32",
+      "ariaSha256": "680954c42bc64a569bf06b082f71b290333a383313c0c6fafdaf5d806c33a9b1"
+    },
+    {
+      "path": "screens/alevel-empty-practice-recovered.png",
+      "ariaPath": "alevel-empty-practice-recovered-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1207
+      },
+      "sha256": "34be489dc35a7054772155e83817c9d48a5c321623759bb3a9159b706ea1cf1e",
+      "ariaSha256": "7b3ab3f5ee71210d9744a07b793777de0b97a2bfa4e37db148dea58d4b581ac2"
+    },
+    {
+      "path": "screens/igcse-terminal-quota-keyboard-focus.png",
+      "ariaPath": "igcse-terminal-quota-keyboard-focus-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1977
+      },
+      "sha256": "7d88fa96b12fb63aeb408c6c5b29ea10b662f43c8f6ceca5f8284ba5ce574732",
+      "ariaSha256": "21e70bae7963e010572b19a137f4a6019b4feda6a9d2dea12b86ec79d90b5680"
+    },
+    {
+      "path": "screens/igcse-terminal-recovered.png",
+      "ariaPath": "igcse-terminal-recovered-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1885
+      },
+      "sha256": "e168cf2d975da0a7fe3e9113fde2c3f1a79d207fb72e1ccf90479f15e1f7ed42",
+      "ariaSha256": "a9da643dfea1c75db2c915ad2ca99341c6d1606b694a2849ef0256187849cbaf"
+    },
+    {
+      "path": "screens/igcse-empty-revision-paused.png",
+      "ariaPath": "igcse-empty-revision-paused-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1642
+      },
+      "sha256": "e74246246c963ab53ae8e8f2ed6f399b431e3adf38fe20c9b8632ec590ee091c",
+      "ariaSha256": "90cc6dad71994088add392553542a18d8df067d72b3932ca8076f95f30567278"
+    },
+    {
+      "path": "screens/igcse-empty-revision-quota-keyboard-focus.png",
+      "ariaPath": "igcse-empty-revision-quota-keyboard-focus-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1806
+      },
+      "sha256": "221af5873028943ef493a32f7d328f788b3407e401f75cf1d58fd81ddb9a0383",
+      "ariaSha256": "a99c4e2c7e774fbb2d445b6c03e34db62713d96fb8907b430fd4d56c64810c89"
+    },
+    {
+      "path": "screens/igcse-empty-revision-recovered.png",
+      "ariaPath": "igcse-empty-revision-recovered-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1479
+      },
+      "sha256": "fda62d3dd7af4004bdc8cc3d0bcd0acce6f8c1b0bbdc86c63caf4c8a997ae667",
+      "ariaSha256": "d4164901f52606c8dde45a3efc4c73afb5613b8e165387578dfaa826e6ca8422"
+    },
+    {
+      "path": "screens/igcse-empty-practice-paused.png",
+      "ariaPath": "igcse-empty-practice-paused-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1356
+      },
+      "sha256": "1152c4f9e1ce814ca90a4d1e56af594c2fc88d0b649eb0097b1e0485fc4bc627",
+      "ariaSha256": "795dd8b31938ddebae5d5ff6e3bdf1010307d242364428054b83a1d35ac7a8a0"
+    },
+    {
+      "path": "screens/igcse-empty-practice-quota-keyboard-focus.png",
+      "ariaPath": "igcse-empty-practice-quota-keyboard-focus-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1521
+      },
+      "sha256": "d694c701b6a0ac1d03f3af69c2cc811fa9df2cac575b314b5ea6c7c4bd0b0ea3",
+      "ariaSha256": "247d44519b3dda71103e467310d147aa845c5597a36c94f2e1e5b1f5fde31bc4"
+    },
+    {
+      "path": "screens/igcse-empty-practice-recovered.png",
+      "ariaPath": "igcse-empty-practice-recovered-aria.txt",
+      "overflow": {
+        "width": 390,
+        "scroll": 390,
+        "height": 844,
+        "scrollHeight": 1194
+      },
+      "sha256": "d420412ba3b9375494f40721abb3ed53fa0ac6e966deb4b89e884d58cb119f81",
+      "ariaSha256": "65a4454c7782c3a6b0c3b46af2b8b99e04c2527dc1c4966183aa4343cc5f0958"
+    }
+  ],
+  "manualFindings": [
+    "Visually inspected all16 current full-page mobile captures: terminal failure/recovered and both empty-session kinds paused/failure/recovered in both courses.",
+    "Natural vertical scrolling exposes full setup and footer; all pages390px wide without horizontal overflow, clipped messages or overlapping controls.",
+    "Quota message wraps within bounded panel; Retry remains labelled and real Tab produces visible yellow focus outline.",
+    "Failure keeps Revision in progress or Revision paused; successful terminal Retry displays Saved on this device and Revision complete.",
+    "Successful no-attempt Resume removes paused/error panels, returns setup, retains honest0 saved results/time0, and creates no question/results.",
+    "Terminal question preserves first assessment; focusing answering keeps navigation/sidebar/setup hidden until Change activity or view.",
+    "Accessible semantics verified through fresh aria snapshots plus actual aria-live polite terminal region / role alert paused region and role status paused notice. Native screen-reader speech not measured."
+  ],
+  "priorStyleCarry": "Comfortaa brand, systemUI body, glyph/contrast/detail checks carried from source-identical CSS/font/editor files; current licensed assets validated against source."
+}

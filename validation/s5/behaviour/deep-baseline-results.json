@@ -1,0 +1,144 @@
+{
+  "startedAt": "2026-10-03T04:33:15.792Z",
+  "browser": "154.0.4258.48",
+  "checks": [
+    {
+      "id": "actual-source-repository-faults-version-isolation",
+      "status": "PASS",
+      "transactionRollbackBoundaries": [
+        "after-attempt",
+        "after-evidence",
+        "session"
+      ],
+      "conflictRejected": true,
+      "singleEvidence": true,
+      "version1Preserved": true,
+      "corruptRejected": true,
+      "courseProfileIsolation": true,
+      "oldWrites": []
+    },
+    {
+      "id": "alevel-first-scores-corrections-pause-stats-ui",
+      "status": "PASS",
+      "results": [
+        {
+          "mode": "wrong",
+          "attemptId": "9910d257-8737-4c92-8fa3-7f75301c9149",
+          "earned": 0,
+          "available": 1,
+          "score": 0,
+          "activeMs": 1413
+        },
+        {
+          "mode": "correct",
+          "attemptId": "91bad06f-486f-4a92-8233-e57f3d65e9ff",
+          "earned": 3,
+          "available": 3,
+          "score": 1,
+          "activeMs": 1836
+        },
+        {
+          "mode": "partial",
+          "attemptId": "s5-fixed-partial-alevel",
+          "earned": 1,
+          "available": 3,
+          "score": 0.5,
+          "activeMs": 1409
+        }
+      ],
+      "statsActualMs": 4658,
+      "pausedAttemptId": "22d8dd86-ee82-4480-abbd-23369a7bf7ee",
+      "navigationFlushed": true,
+      "quotaRollbackRetry": true,
+      "teacherNoEvidence": true
+    },
+    {
+      "id": "igcse-first-scores-corrections-pause-stats-ui",
+      "status": "PASS",
+      "results": [
+        {
+          "mode": "wrong",
+          "attemptId": "c72e4235-36ab-41a7-aa85-10608826d8b4",
+          "earned": 0,
+          "available": 3,
+          "score": 0,
+          "activeMs": 1451
+        },
+        {
+          "mode": "correct",
+          "attemptId": "1bb4ff89-73f0-44a7-95e6-5f6ce281bce0",
+          "earned": 3,
+          "available": 3,
+          "score": 1,
+          "activeMs": 1435
+        },
+        {
+          "mode": "partial",
+          "attemptId": "s5-fixed-partial-igcse",
+          "earned": 1,
+          "available": 3,
+          "score": 0.5,
+          "activeMs": 1401
+        }
+      ],
+      "statsActualMs": 4287,
+      "pausedAttemptId": "120cd126-503f-486f-ae8e-b90bc41c2cfe",
+      "navigationFlushed": true,
+      "quotaRollbackRetry": true,
+      "teacherNoEvidence": true
+    },
+    {
+      "id": "igcse-self-rubric-freeze-evidence-immutable",
+      "status": "PASS",
+      "attemptId": "5da32192-db5c-4eca-90c5-310a7c53722c",
+      "kind": "self-rubric",
+      "marks": {
+        "points": [
+          {
+            "partId": "explanation",
+            "pointId": "point-1",
+            "earned": 1,
+            "available": 1,
+            "message": "Methane has covalent bonding and a simple molecular structure."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-2",
+            "earned": 0,
+            "available": 1,
+            "message": "Magnesium oxide has ionic bonding and a giant lattice structure."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-3",
+            "earned": 0,
+            "available": 1,
+            "message": "The intermolecular forces between methane molecules are weak."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-4",
+            "earned": 0,
+            "available": 1,
+            "message": "Strong electrostatic attractions act between oppositely charged ions; accept between magnesium ions, Mg²⁺, and oxide ions, O²⁻."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-5",
+            "earned": 0,
+            "available": 1,
+            "message": "Much more energy is needed to overcome the ionic attractions, so magnesium oxide has the higher boiling point."
+          }
+        ],
+        "earned": 1,
+        "available": 5
+      },
+      "activeMs": 1284,
+      "judgementTimeExcluded": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T04:33:36.776Z",
+  "status": "PASS"
+}

@@ -1,0 +1,1435 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T03:47:39.548Z",
+  "reviewedPriorSourceFiles": 235,
+  "semanticOnly": 127,
+  "bytePreserved": 105,
+  "functionalMetadataProjections": [
+    "src/catalogue/scope.ts",
+    "src/persistence/catalogue-boundary.ts",
+    "src/persistence/validation.ts"
+  ],
+  "newMetadata": [
+    "src/catalogue/authored-metadata.json",
+    "src/catalogue/historical-leaves.ts"
+  ],
+  "runtimeFilesChecked": 179,
+  "checks": [
+    "all prior source preserved byte-exact or proven semantic formatting except three authorised metadata projection modules",
+    "historical source provenance exact",
+    "retained and post-format CLI output hashes valid",
+    "no original runtime imports, old store mutation, iframe or Rocket activation"
+  ],
+  "files": [
+    {
+      "path": "src/activities/alevel/acid-base-calculations/data.js",
+      "disposition": "byte-preserved",
+      "prior": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51",
+      "current": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d",
+      "current": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.js",
+      "disposition": "byte-preserved",
+      "prior": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9",
+      "current": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "disposition": "byte-preserved",
+      "prior": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b",
+      "current": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "6ec3ab2cb92fb3e5ca0e6614220bd834dab460eba163e5d472a6ccaa38872ed9",
+      "current": "0e0f5db4c83a0d216bbaf623c3c15419f06c87275785bcbb3b7143c47a691422"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "81ba8c263bbcc308002ed6b04c9fe60907a71c37042affad91b2a86de0319b9d",
+      "current": "87249b638532e2d41540ea197f3597c84258dd64d19a034f26ee02df6cfb5fbb"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "disposition": "byte-preserved",
+      "prior": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5",
+      "current": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "0acec21a97538f90bdc819e6267d5026be1bb79cc6379c337d9de66caf2edd5d",
+      "current": "81e671a12f18d2df65d4284c0466e6acc22a871ed9b61c022d8ca7bf5255dea5"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "77ef641c88b31fee2c71d90ea62fb3e4d034f54d6cdbfb2e886c5a61f4dce72a",
+      "current": "938b3f33803a0e2320307b5878ebc4cc1cc6634b6a8aa0384a8bb753d76a2d77"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee",
+      "current": "3f27c75261b22bd2f481559181a44679d7d00faf4b959c9e84ac30ab2eee738c"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/sources.ts",
+      "disposition": "byte-preserved",
+      "prior": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa",
+      "current": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7",
+      "current": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.js",
+      "disposition": "byte-preserved",
+      "prior": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd",
+      "current": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "458be246d3f74b3e6ab37c6986161db3165684c7617830d1dd229b051c3821d4",
+      "current": "ed038029e187baef7d106890401f7725ec40e57b71bdf3355940f00917e1bf2a"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "839f9db6d354f936d529ce96f089edfa8f683eccff4f8afef54574f6f32523b2",
+      "current": "3e1a1373649de678bc7887a0162bd0cc4e21cd584f4c73c4e484d4c006b0fff0"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4",
+      "current": "a8f6c41353c1c9c7a30305b533f79ed74365bb5c9c7c6abae7d140dfc5b848f0"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "f2fef50ba1d887e4155394642d0efabeb74fc57832a47e7744b98acd81b81816",
+      "current": "3fae4dec25808927e37477960975662a67d64bd256fa6ecc9e13efcdd8ed5064"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "52d686c8e5d9cb4fa6489f3f7d66f3fe62a53179de275e877959c8f92398dd6e",
+      "current": "2ac0cfadfe42287df16309971364ea96dcda8629061ee05c656fe4e841ea44be"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "2889233e713a975c947a7e37d1110d01c307622ebefa83835874c07208b57a8e",
+      "current": "bf712d9aacd6b46e5208d646bc293c925aa81326a1d8faf65021fcd8d881ae98"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0",
+      "current": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/core.js",
+      "disposition": "byte-preserved",
+      "prior": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575",
+      "current": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/data.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45",
+      "current": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/data.js",
+      "disposition": "byte-preserved",
+      "prior": "08192144a9e9673473df1c60f69c9dc64397646518882fbc95adffea49831c4c",
+      "current": "08192144a9e9673473df1c60f69c9dc64397646518882fbc95adffea49831c4c"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "12f05a0c485a2b4a394d4b17f5c6afe9f8b9518a7650246c5bac38b22b4ea901",
+      "current": "6c7e8fbb41e1e8b4979886612741b0ee222c2924b23eb1261667e92b8bf6eb10"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "00ba907b77c9a33c0e2901d399bf4434959591b81eed2ab23011f69c1862615f",
+      "current": "572ee663798299faf48a945df922cffeb8ddf752f3bac55cb01f5059d6b4a41f"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "728790d4c7ff918bca56271a12ed446fa2dfb1b9306336d0b7fd445589cc1fb9",
+      "current": "47b828c37bd01b0e23aa4463b52019355c4146ad24595643fd0a8dd0041ac40b"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/bank.json",
+      "disposition": "byte-preserved",
+      "prior": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e",
+      "current": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/bank.ts",
+      "disposition": "byte-preserved",
+      "prior": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b",
+      "current": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "545f5d27ed1b8fb4f5cb1ec2bf61a1b8a9562a3db01b8fa3f6a2ed5b009d665e",
+      "current": "45f3f14c670f8797009b86dbe5702223146e8dae3a8d16b910f05c6a6857e112"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "8846d2b08dd7d40979c799b9af399ad3e3807d6ac3df16d4d60943afd655c717",
+      "current": "6ef89fc569bf7ffac1fb2d530089b4dd631f96c2b00148ab3740044c173ff21b"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "801391e3c1d091c4ab0fede2d4d14274cf9f9f3a9bcdc2902d6c83c2bb9fec29",
+      "current": "08730e1465d8d4d085385ae5b892a762cd8029b1d9e8fd34f7dec4ae3730be45"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "414e72067fda940b7f4dd8e57779c42a2d01b19d6358352ffcbf709e7b6ebe40",
+      "current": "dd5d11df657fb8c6a339ec34dbbd3b577a67ab0ef413f490b3533fb9727ee855"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "df10d76911960806baa32a8c2969f7beda5e5c528099af50f0604244ac710384",
+      "current": "5b1b7566b3bf213aeac5fa189e3bc530c0add2594bcfb36a2a1e289e457dda93"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "a318ec1bb0d81285ef2cbe180d0000a143003d63fedec313711f54ae0b608a20",
+      "current": "d755836c872e14be9cf731289f4351092f1874f3bcbd551b2fe585a667138dba"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "084eae51d5ed2b7c00b813d97342ab29c469d887bfe05a4d3594b45fac1bb563",
+      "current": "b15ef5ced2df574263dd3c778490ec8e20767065fc2e47b4681407bf23677c20"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "5e78880c76a2404690a27c676d152a33cd5a8b15a9f0e836e7e771113584ae1a",
+      "current": "c513197ddcc4ccc04c99095e67a395d1074df8d4f2e8e754b480810c66b616cd"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "fdaace21084a554fccfa7f765778cd6b3eb4274ce2231ae3756cea34adb763b8",
+      "current": "ae753b6300c9e5ef6a99d9fbb08e9bfe0b3370133895d8e2a43a681ac56933ee"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2",
+      "current": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.js",
+      "disposition": "byte-preserved",
+      "prior": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857",
+      "current": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "d72a2c12a5719a846c59b2ae0d4af1826aab9e25ea31017acf6482f12f380f73",
+      "current": "62bbaf024fd83db37c482a277e90ad851b09cc8de98657ed407ea7d78954755b"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "24758cff024c48f3fdf8366c04a2b05bd5b8ce7baec35f81ddc3a5543d9ccc50",
+      "current": "c890df9715cce9c5d003f20c3d8149a7f326eade9d8d9adcf5fa7ec5da464661"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "2e3b51c0d94a89c9a4b6c471930b500ac88116bf050ae8bdd2b40d0436334ac8",
+      "current": "c04bd87d5d935d17594496c652ed1241ade7d76270fb55fc87806b401def2fe4"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/types.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "f53d861984ce4b49b710e1ac5f8a8d009f6e846f59e60356059070cf10f25e37",
+      "current": "05a04affa1003ff0cd0168a964c6a2e88b2d35c20c23c810e1835947c55dbdc0"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/data.ts",
+      "disposition": "byte-preserved",
+      "prior": "3ddd28a3c096a32649af17cc4d72bc8aea88a8d7e2a4fa176415a12edf5e1185",
+      "current": "3ddd28a3c096a32649af17cc4d72bc8aea88a8d7e2a4fa176415a12edf5e1185"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "9e7aef3ea37b8eb42f078f5f37f52128b6cab26597bcb1d347ffb06e14a9b02c",
+      "current": "5b09be3c84f7886f0b4ef580ef7c0d4ae7bc9b91c6389b9ddf92ea616bc589ec"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "dba3cb3647323bcfe6fed025b5253870ca226c59746065a2991a7c85507c1b19",
+      "current": "2c6fee731e92c2deaca535db860c225fc50e07e315b70d0557119bd186b0ad77"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "4f743c61d765e5ba541fd47856f08f056b6fa91df00e7ce4fab9f844fb451a79",
+      "current": "10cd919bfb8fbd0ca32c696f0fcbdc87312e6e118bb624ffcfa61b555eef083e"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/source-core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1",
+      "current": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/source-core.js",
+      "disposition": "byte-preserved",
+      "prior": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952",
+      "current": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/types.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "a04bce1d245669e29cb0ab6d7d25c4c8fdaeb35dc1872a25baa27b0e920956d7",
+      "current": "40b417daab18963cbf47b4cec1ed41dc71cd3081124f8d7acc3143e0ba75fc20"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/data.ts",
+      "disposition": "byte-preserved",
+      "prior": "29f00cb4f48625b01770f5cff0776541eb180777d12f0361b4bfe481be546abe",
+      "current": "29f00cb4f48625b01770f5cff0776541eb180777d12f0361b4bfe481be546abe"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "43f372bbb8e7c761bb55f28a61ab73395b05f1eefa05a66f174d00fdebba1b63",
+      "current": "f0348c2324fcadc7824ce4b8948b79a9cf0ba1c3a197208942490b221a81a9d3"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "c60690a9c159ea8c0a384dabc3df459dc674f7e5b88612143316f0e65679b672",
+      "current": "55d995e7511ed4582be7acc52e9732db0cba2f5cc1dc88d35096fc749bd23566"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "7f7e57ba567906137936275bd328ee03ee1ced06aad83b712dbb2767df58682a",
+      "current": "0f3eccfa0afd862621e60e67cc06070cc8fe3470f0b22ffff0d804db323ea0f2"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/source-core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6",
+      "current": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/source-core.js",
+      "disposition": "byte-preserved",
+      "prior": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb",
+      "current": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/types.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "95f9534e4669e67aee3590c5675e6c46bbd52a18be815e01a2dfb6af63d24a4c",
+      "current": "3303aee6e4137c08756da11bf45ba0f0946bb4d592b17ee0845d685ae81f1628"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/data.ts",
+      "disposition": "byte-preserved",
+      "prior": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159",
+      "current": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "disposition": "byte-preserved",
+      "prior": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559",
+      "current": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "fc933e9dcf046d8a6dfab9ac84112cda39bcb66f64e5ec012ddd1daf2c7f9a5d",
+      "current": "85f67a839a8353ce6c47ed58e6ea0526f8835170586b79d2d77a1c4617460eca"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "10377dc90ba710e6b2728c589ef96704e6736f098521f48885e27f191dcd31fa",
+      "current": "d2c42e181ac5892d1388d8b6d60a1db0d1a0027bdef36521e36650f73600559b"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751",
+      "current": "5cfe6b164d08a1078c6d3e64f27dab63e1b159e63c746b4b12226947320030dd"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69",
+      "current": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a",
+      "current": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57",
+      "current": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9",
+      "current": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b",
+      "current": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8",
+      "current": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0",
+      "current": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p2.svg",
+      "disposition": "byte-preserved",
+      "prior": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d",
+      "current": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590",
+      "current": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e",
+      "current": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0",
+      "current": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a",
+      "current": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd",
+      "current": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead",
+      "current": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795",
+      "current": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035",
+      "current": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p2.svg",
+      "disposition": "byte-preserved",
+      "prior": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c",
+      "current": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f",
+      "current": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1",
+      "current": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9",
+      "current": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-p1.svg",
+      "disposition": "byte-preserved",
+      "prior": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084",
+      "current": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-r1.svg",
+      "disposition": "byte-preserved",
+      "prior": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6",
+      "current": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/alarm-pheromone-skeletal-notes.svg",
+      "disposition": "byte-preserved",
+      "prior": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b",
+      "current": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/allantoin-skeletal-notes.svg",
+      "disposition": "byte-preserved",
+      "prior": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005",
+      "current": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitra-esculenta.png",
+      "disposition": "byte-preserved",
+      "prior": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11",
+      "current": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+      "disposition": "byte-preserved",
+      "prior": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01",
+      "current": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/honey-bee.png",
+      "disposition": "byte-preserved",
+      "prior": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7",
+      "current": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg",
+      "disposition": "byte-preserved",
+      "prior": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac",
+      "current": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/c/network.svg",
+      "disposition": "byte-preserved",
+      "prior": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273",
+      "current": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-01.svg",
+      "disposition": "byte-preserved",
+      "prior": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394",
+      "current": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-02.svg",
+      "disposition": "byte-preserved",
+      "prior": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5",
+      "current": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-03.svg",
+      "disposition": "byte-preserved",
+      "prior": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d",
+      "current": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-04.svg",
+      "disposition": "byte-preserved",
+      "prior": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d",
+      "current": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-05.svg",
+      "disposition": "byte-preserved",
+      "prior": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56",
+      "current": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-06.svg",
+      "disposition": "byte-preserved",
+      "prior": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46",
+      "current": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-07.svg",
+      "disposition": "byte-preserved",
+      "prior": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021",
+      "current": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-08.svg",
+      "disposition": "byte-preserved",
+      "prior": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb",
+      "current": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-09.svg",
+      "disposition": "byte-preserved",
+      "prior": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63",
+      "current": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-10.svg",
+      "disposition": "byte-preserved",
+      "prior": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b",
+      "current": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-11.svg",
+      "disposition": "byte-preserved",
+      "prior": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325",
+      "current": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-12.svg",
+      "disposition": "byte-preserved",
+      "prior": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df",
+      "current": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-13.svg",
+      "disposition": "byte-preserved",
+      "prior": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a",
+      "current": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-14.svg",
+      "disposition": "byte-preserved",
+      "prior": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab",
+      "current": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-15.svg",
+      "disposition": "byte-preserved",
+      "prior": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee",
+      "current": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/bank.json",
+      "disposition": "byte-preserved",
+      "prior": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d",
+      "current": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/c3l6.css",
+      "disposition": "byte-preserved",
+      "prior": "9ff7b59ac39c440add56c0e19336352353a014ecbaf1f49bb40eaa87f1f2371a",
+      "current": "9ff7b59ac39c440add56c0e19336352353a014ecbaf1f49bb40eaa87f1f2371a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/C3L6View.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "157708dd501def9732e61505952f238afdb52f431b008ed5055743149041c28a",
+      "current": "c15242c6c91f7679c58b13a2d8b3100105e5fd28e477e7d3b6b5fc7983ada346"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/content.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "0f7a5784f3a1d00df6b274272b95e03a6ac2c651bb20808577e4716618a306c4",
+      "current": "068a5ad57c34490a3bbf00f9fc71d2f8d7dd5654e01345c93bc2f96bcb701b95"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/dependencies.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "eac69b39439f5f4da627f7b21d8617dd8fc15afa1d12f5b645f3ff853a3058b1",
+      "current": "b71c1388f88af0e58714c732aa6681f6a9dede6ebb8c684277019b2fd6e4fdcf"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "7bb6517ff8c791da0a2af55c969a8fbf8bea871decda4909d9614099c64eb253",
+      "current": "9b9d16e7cedbc8587fba5be28559f6c67a362521c9b6a77584bf50ed082449f0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/legacy.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "d821e0d3e852e68a6b5184b385aad7accf18b43ab599dc5daaee8ddff81d0269",
+      "current": "b9d5cf6408168a45d8157ccf89c8d29ef0b8e3d4b4be741c815d849cfe50fb40"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/panels.json",
+      "disposition": "byte-preserved",
+      "prior": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8",
+      "current": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/policy.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "4224aad6deea33039b40bc65949ad6b0f975adcdf7f567ceffd87e37fdcb54ab",
+      "current": "b7f7d13e477eb4e12a50f1f772037eaec190ff1c728e5558985e4984aff579a7"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/qualification.json",
+      "disposition": "byte-preserved",
+      "prior": "f0f6bab12b5312b81cfa54edf48ab5b2c449d3263282ea134927414ab1b6b1f1",
+      "current": "f0f6bab12b5312b81cfa54edf48ab5b2c449d3263282ea134927414ab1b6b1f1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/qualification.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "e68c91810906c047c46074cd22e7642c10d60791dae356b4994f4d5d54acc7cb",
+      "current": "40c30c1ec04b3d6bc057509c7e9c114f44a667354df46e37c6d3376fa9c96121"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/source-bank.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "8e6c196313d4f4bb336307cf837b01b4ffc4836b05bcf63f9f2b76c8fff61c4a",
+      "current": "28f1d847a8eac2a7c9f80c3b42f3e26b15504cfae34e0fe53f0717af4bf449bb"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "disposition": "byte-preserved",
+      "prior": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b",
+      "current": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61",
+      "current": "1160e03814098ddf7ccb5659691f464ef9c207131ed4251f830e8f6bdbd20674"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "disposition": "authorised canonical metadata projection",
+      "prior": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306",
+      "current": "60e29eac3bbf05c3207fedcbb8da2fd31c1749f48b945c592d5b33e5c3dba66e"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712",
+      "current": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "disposition": "byte-preserved",
+      "prior": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5",
+      "current": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb",
+      "current": "7081b46b28ec2351e5a54a7627979ea6709ae2c833443a71b713b29342af4fbf"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1",
+      "current": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "disposition": "byte-preserved",
+      "prior": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03",
+      "current": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db",
+      "current": "8117a67a97c54aa75af0aae4d1a287c9ec023b91ea4fe7e80a785daa4aa3d83f"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6",
+      "current": "ecea1adad1903d29e33b0d564243c38a61d99ae269d342fb689f5bb272b1f5ee"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a",
+      "current": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/core.js",
+      "disposition": "byte-preserved",
+      "prior": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660",
+      "current": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/data.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9",
+      "current": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/data.js",
+      "disposition": "byte-preserved",
+      "prior": "d6234b008a941af0580339fc469d6426f17aefd6633a54a318dc53a1ae39ee24",
+      "current": "d6234b008a941af0580339fc469d6426f17aefd6633a54a318dc53a1ae39ee24"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/display.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "5be323f235f5d793906b1aee223ff55485f068b08c59e65a5e1a04b538db9977",
+      "current": "9c1e12c04341271a94df81d315c951130127e91709ea23d95661a9863d204b8e"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/engine.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "94d5091c32485dbdaad67037fb3ec68bf07280e73b4ac688d3aa7e26edcff5f7",
+      "current": "dac8a146d436eb75fdc3c7674271d4eba561d5cfcfcc2604ea140b77abf262f8"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/identity.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "0bbfb6e56cd9031f98ff41b018411f72af820074657d8d04d83a6a620f9abdb3",
+      "current": "380ac5a462c4d9bc81385afba8ce1f5e592e26cfaaf8822534622e9a6d6a36a0"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/periodic-data.ts",
+      "disposition": "byte-preserved",
+      "prior": "8c416a0ebde7b2ac86183062609eb63ae3c201c404230719e588ed4a86137c81",
+      "current": "8c416a0ebde7b2ac86183062609eb63ae3c201c404230719e588ed4a86137c81"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/provenance.ts",
+      "disposition": "byte-preserved",
+      "prior": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822",
+      "current": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822"
+    },
+    {
+      "path": "src/chemistry/energy-profile/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "e86eb0caf877ac52500c336237da5de57a98ed859600c5843ca13d0312a5e8f4",
+      "current": "8f409196c67112f382c1ffc55302771f749195a74e10a91d160b439d18bfe3c7"
+    },
+    {
+      "path": "src/chemistry/energy-profile/svg.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "a55093bcf2aa747323cc982aa923294c40b68d9fac5b8ba56bc99621603d4d99",
+      "current": "18afa113aec4d4233f78623335e2d76c66960f973f743af69f5d22ea930a48cd"
+    },
+    {
+      "path": "src/chemistry/molecule/core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7",
+      "current": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7"
+    },
+    {
+      "path": "src/chemistry/molecule/core.js",
+      "disposition": "byte-preserved",
+      "prior": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642",
+      "current": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642"
+    },
+    {
+      "path": "src/chemistry/molecule/engine.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "079e9ffd41952bb9d9bde0bc0e4fd81b4662b0d0556d02a8161a8341465d4cfb",
+      "current": "80ff19368d8b69ba32a97f40d1a164b8a033310bd40b646ece1f29171c081f73"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425",
+      "current": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-core.js",
+      "disposition": "byte-preserved",
+      "prior": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca",
+      "current": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-data.js",
+      "disposition": "byte-preserved",
+      "prior": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d",
+      "current": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a",
+      "current": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.js",
+      "disposition": "byte-preserved",
+      "prior": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529",
+      "current": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-data.js",
+      "disposition": "byte-preserved",
+      "prior": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8",
+      "current": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/framework.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "ba39dbcc79a84eafca6b7d3636eec89da9ab44f17ab4fe9ae6e6acd36942699b",
+      "current": "05b11390e8e915a403debd00a325119298c52bb8eb7410a95ac2927bb7e79b5e"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/identity.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "92527b2e1b0df2f3d03f7b7808ee43816044fc48cf4a43d9b26dfae2b5c61d7c",
+      "current": "ddfcb258af17be43812ff2b45157eb8b2acc4141299a8d371d83f70b18452601"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/marking.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "580a9bf169730095e3c37f88ec48326f80fc3eeacc9b4450bc7ac32903359858",
+      "current": "a1ddf0029f493c6aaf3bec8131d49f492e0fed6a4f02e3aa419d73e8eaa4aef3"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/presentation.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "6819b16e3b281369cbfb7b11a938402b4eee48217b0e8ebe7b1e9678fe656aad",
+      "current": "d999a5e1c9095048d189f391c33b31b0000ff22446e0f9f2518f65fae5be7c0d"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/reviewed-co-svg.ts",
+      "disposition": "byte-preserved",
+      "prior": "27f7dd2df015598baf3d56ba7cab7866eb6aba29129c2c940bfd7aafefaef72d",
+      "current": "27f7dd2df015598baf3d56ba7cab7866eb6aba29129c2c940bfd7aafefaef72d"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/types.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "854ff608ec7e581bbe7af9699fe92dcba2ed8454da86fbefa48c4cac7db2a6c5",
+      "current": "7ea1bcfed51e6d6e5d6d006b2ae175d711b989af5a4dadf7503789686eb29d05"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33",
+      "current": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.js",
+      "disposition": "byte-preserved",
+      "prior": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960",
+      "current": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960"
+    },
+    {
+      "path": "src/chemistry/titration-curve/engine.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "51a1c16b3497139fa94eadcb40659a3d7a652d087acccc640b7ce1fbf4e65c9a",
+      "current": "7b81856f141012fcb5b5c7738d6ebe011e0b7a4c52fd692ffacbfccb375dbe19"
+    },
+    {
+      "path": "src/chemistry/titration-curve/model.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "e7cbb83db0c198f6312ccbb5ee437d98eaef0b8f129ef9f2e5b7c8e76e669698",
+      "current": "5f8e28295afe2fe779dd6a5d99b29fa14ce0ca086a8d091691540b32783c1ce6"
+    },
+    {
+      "path": "src/chemistry/titration-curve/types.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "f2dcc78961284f6121583ee91ce72685cad43455cc70e7c2cbf5705b51e5d819",
+      "current": "e07842cdde7b31f132dd50f97fbed05afd0db1505986116b0ed5e401c476ca4f"
+    },
+    {
+      "path": "src/compatibility/import.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "155fbf37bb829fec5f9fd15b9baa415456f71abba9c1e1ba888af349beb25ee0",
+      "current": "602117d97fa490c25c6ad9fe7ca49462fc0fc57c8d3f2f8c5410e2ce60ef2da1"
+    },
+    {
+      "path": "src/compatibility/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "7e4c110e8d6c0941f0cfa71c41aa90a56f970e0af96adb18260c412538031d04",
+      "current": "eedf856554a839df9029e1b79f00b4ccf78e933b03214c998ae0b44a3959d5a6"
+    },
+    {
+      "path": "src/compatibility/legacy-import.css",
+      "disposition": "byte-preserved",
+      "prior": "c813901b791792841eabf365e78998e49d84d81f4f32f1c98cdf81b8735a3b0a",
+      "current": "c813901b791792841eabf365e78998e49d84d81f4f32f1c98cdf81b8735a3b0a"
+    },
+    {
+      "path": "src/compatibility/LegacyImportView.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "ae066ca171d269188fe8ff06ef94c3604701fb1887d0c15f7a17fe2e1854afae",
+      "current": "df58a51e92e8446c1b6e2fd587337abf3487898aeeb5f42cff86036d3ec96f55"
+    },
+    {
+      "path": "src/compatibility/links.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "b55c191f2cebfb42269be0351a20d320868cb79b311db109c4b8306134ce6739",
+      "current": "980e7ed141bbad500aa7339b584ad47f0ac616b970483078a1b8e4d21c21293b"
+    },
+    {
+      "path": "src/compatibility/routes.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "1c7a9ac98f59c5ffa17a82bdb68270a47e334519ad6f005f8210b6724e62d989",
+      "current": "f87ca3854f57e4bc175626dc85c65cd681056065631c3b629ca1dc2c2e507344"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b",
+      "current": "ded808a30f79a0ec2a59caead722402e909a1eda0615a144e55dd652f7924802"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "c3da2f65ead8b5da046f134fb603fd27d50b5e7fe99ae8a2978de385769498ae",
+      "current": "c74aeeb3a224c758f90d2783aef58851ef4ebb7dc1280944f88b4ee57a079b55"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0",
+      "current": "fb06e70214ae4fda223493c03cbf46e2fb7f2e878f6f0830b567e6996c9d04c6"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "disposition": "byte-preserved",
+      "prior": "5432fedf98453077a170ace6d0a59871ad1971d12da641cf927dce6eccc6c9aa",
+      "current": "5432fedf98453077a170ace6d0a59871ad1971d12da641cf927dce6eccc6c9aa"
+    },
+    {
+      "path": "src/contracts/integration.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "26a0c2352039603df97fd9ef78124c3bf5cd7f824fdaa8762cbcfeafdbd4b708",
+      "current": "fc91f34db884c3def2d82849f5fb6f993dca7f87ed60164b41eafb81cdf8da79"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "466172e7907d64dd3e364b5a8f4e7a976f8060bc2c629269735d613e6789286f",
+      "current": "4d1d7a5cca95e8ed74f0cd3da4ac9602ac38d8de69d3215b429109c64ea5001b"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "df4c32f3696f6659ffcd5134c6e6ad30b73851e6eea5acc24853f2abb7ce24c7",
+      "current": "e8f48c83892bbff243cc6370af8ed864436e6fc1c35dbc0b966a6a1010b3810c"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0",
+      "current": "5d67fe98e282a884ea50a8226e5b2575c1243b1604134376cbdea3b490eb7781"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "a12d23c3eaf01d94407310003e8a84f48ab5498ac1f2bd394a0788a7d56d0cbe",
+      "current": "f561f35cc3b28d84a21cf03cc464efb4c2cf6fb13b99c836594e143fcde8e506"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24",
+      "current": "3a808ff17de4c5b8b9cc09cad0d979101112254145792f927a81e722c2fd3f72"
+    },
+    {
+      "path": "src/development/catalogue/index.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "a70880fd6a504abb95968f3733a8ccc9a5d97ed796ae97e3cc2a11dbebc7f359",
+      "current": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d",
+      "current": "6bb779c17714c8f7194a07f44ed53addf7a895f1df1592022a231abca5c1c63d"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8",
+      "current": "0da7347fbf767a80c24cb1870768308e374993120de0fa941903f0b2d3d18800"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81",
+      "current": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087",
+      "current": "02b77eadea3c5aadcd1ef6cb79696f188f479540f61210e1c04e050f15433cca"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "d7af00a1ea7daeeb7297502df9d17b9636866322d9da8d775536de5bbeda3cad",
+      "current": "eaaf1641dfc9c85d43776851b5c946734f4070d7f3deb4d9e6b2841c8948ebe9"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789",
+      "current": "87fcf68cd06f71247e3f888fdadddae5960008ee68681750021ef7b48e99496c"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb",
+      "current": "19c43574f8a910961ed9f9dff719b9d1c348135e0d4ac1e7460149f90bec0735"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a",
+      "current": "def1022f61256e880418a4b4f3d7c6da5159f15fb442720191fb6f3ee9325b00"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc",
+      "current": "5c5dd1a1133ecb99052e5f81210c5d50ec25392dcd202505b76393e6da0e8a15"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316",
+      "current": "f3501fa5421bdf8e2d56f82471451fcb8faea3e3a3caf45c122851aad2411678"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904",
+      "current": "7d112d36fbd04570a69806211014b538e511de2d099a82788e5be766cd636ace"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+      "current": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+      "current": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "disposition": "byte-preserved",
+      "prior": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d",
+      "current": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "e0685e77fc9b819274714876feb32b9ea27effbbbf98c8d7c2dc4964e79f543d",
+      "current": "10bc8bb8b2fde87389519806078963fba062f43e8234e13e10381cca474038f6"
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "disposition": "byte-preserved",
+      "prior": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204",
+      "current": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204"
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a",
+      "current": "809bb349829075547b23ebb6db59724f0a6fa74751347cae6ea9a0f5896c57ac"
+    },
+    {
+      "path": "src/editors/electron-configuration/index.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "9b57a12f29211f8c304b03f5cd4f6ce8725440697febe5e7bc45b736fe47ddca",
+      "current": "e2278f1f687f9e7f01d8ca45851a96224b7599e24946384254f6c6be46c37e7a"
+    },
+    {
+      "path": "src/editors/electron-configuration/PeriodicReference.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "7c0bb4b17b871f8f807eaaf2a7afcb1ce0fcd11fcdf275cbeb9645fc0c172f61",
+      "current": "b904f0269432e56fc9161f23816f3facb7751329d0e1f046f472f2f3eff28f46"
+    },
+    {
+      "path": "src/editors/electron-configuration/styles.css",
+      "disposition": "byte-preserved",
+      "prior": "866bc7d7cc7c22b7f2fbc4bbf24586e899f388330c125fe8d4ef6974a5eb4fca",
+      "current": "866bc7d7cc7c22b7f2fbc4bbf24586e899f388330c125fe8d4ef6974a5eb4fca"
+    },
+    {
+      "path": "src/editors/energy-profile/index.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "eac20c6d892b687c9903944cb74c833efdf84aed40ea69b7555e9bb2bc6a9349",
+      "current": "d444f4193cda413fd925de632264bcef79dcb7e7d1e99ca0ec719f99b16d4bc8"
+    },
+    {
+      "path": "src/editors/molecule/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "ef50321d6c11325ea9882438caab885b8887b09e8452dc53afddfa9ae31215f5",
+      "current": "3f56b97c9734825ce3e59a39a8b52dd2bb58348f738a1925dae55ff62f8ae711"
+    },
+    {
+      "path": "src/editors/molecule/molecule.css",
+      "disposition": "byte-preserved",
+      "prior": "af4cc66fcd8eab8004139fa38e9e7c89e1d38907577fc056e301ec0d020d1406",
+      "current": "af4cc66fcd8eab8004139fa38e9e7c89e1d38907577fc056e301ec0d020d1406"
+    },
+    {
+      "path": "src/editors/molecule/MoleculeEditor.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "6d770e36c3e90356f515b9f2a63e1c49d2b30086b758936d7d034b2af7497b64",
+      "current": "a6c839041ad5979d9ef58b3e60d11650f5cd9742bdff8d76af796cf7d50dfb4e"
+    },
+    {
+      "path": "src/editors/titration-curve/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "2e228f5a1ed935793c1803793ed589b1b11624319d0ba4bbcfa6bb26bd2eedc8",
+      "current": "818b5b8c287897a5a8ecc5e14be783a59dd8cce2253f149a284d266fde879ea6"
+    },
+    {
+      "path": "src/editors/titration-curve/titration.css",
+      "disposition": "byte-preserved",
+      "prior": "ae349b113200397e18183e46e06684913a2c7b7b8f8072071dcd04d37cef172f",
+      "current": "ae349b113200397e18183e46e06684913a2c7b7b8f8072071dcd04d37cef172f"
+    },
+    {
+      "path": "src/editors/titration-curve/TitrationCurveEditor.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "4b65f9b88998897750b20b892b7edc54b77772c5d0da80ee1840ca1459294767",
+      "current": "321be61457b3344d2e53fc4a9d9d7e18c2bd42638f1b50d8d6d1d43cab437293"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "a49f1e65ffaa9808588bb8abc93b3fcb6de20ffec8517746ac317ad0a0e72265",
+      "current": "cf4e42ef3a16268258117c0744f1271662e46bb565519cfff58f2788716d0fb5"
+    },
+    {
+      "path": "src/foundation/OlympiadHost.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "32097564c83976bf45e504103e762eb2499c9495f297883e16eac24475e50fda",
+      "current": "4ff14b7269e75f12b5b617751a24cb6e61cb67b4a31f824f6e6e1094764664c9"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "92d13784a446527cac526a0210049129c7d5a2c687ffe7741ae1c2c9da094487",
+      "current": "b076fa50349e280829e35b2ef11995e28783faeb19acc1900985196628194cd4"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "b4e8da4fe12e74b2f5fc5f75740f16a39891d54f34c5a7f4fab23acf8b26f9bc",
+      "current": "a0e4c16aab324c59a3bf10ecf11c91de8ac9dddf07a783a081c204eeff439286"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "ea5c4c89aee8ff4fe291cbf7316b9827f0f6967d5c86b84f756ed84c2090cc56",
+      "current": "b09295f136cb12449529944698319d31d124ad7eed7340c860c00fbbcb39423e"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "f419b485821f2c4c3d20dc68bda9dc4b33c5889d6ff1f9cc2bcb6b5fac29a36b",
+      "current": "3368a8ea3d6b0794cc13005a278441111f2d7d983cde4594387a72ef64e1b07f"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "disposition": "authorised canonical metadata projection",
+      "prior": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63",
+      "current": "e17d30c759aadddbb7b0b6917c82c3a4fb4a48134f6d5b38b9370f245c87cab8"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8",
+      "current": "12ec30802e99373ddc425d0bc60ead6a3659f72a5122484e86a4dfbf3c1453ee"
+    },
+    {
+      "path": "src/persistence/legacy/plan.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "37116675c468430828c4fccfd682eb783b6246bcfa491ee8a8baa80ac4e762c6",
+      "current": "595f0c7a2a521c07960b034fc2db9f458f9f3effbad360c41921ca138a7468f3"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41",
+      "current": "07e284f2c384fe7bd4452a5207e3324d70eadcba0f89234af1394594598eaa67"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "1ed4048246084a5d47d5235fa2e402e85517f278c5c63b9ea976d1797bde9ac0",
+      "current": "91b1cec1af7393994689215d1cbacf340b63e051cb33986efd14570ed47ceb22"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "disposition": "authorised canonical metadata projection",
+      "prior": "e88f83dfe2e31b5487fa2521f4df25c0875941b0f84d50ceeb5bfdb3b2b242a6",
+      "current": "e560aca8f6c7978eab15a516a7b5c96aa6a82103f685346b4537c7bef7583a93"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "232fa29ae5d69e186c08131e0cf009282377523ec950d81f2cfeede63059177a",
+      "current": "0322a058e7acdc266e8a873e7c4279a523b5a4cf04cec6598b74c1f296d19511"
+    },
+    {
+      "path": "src/shell/navigation-view.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917",
+      "current": "3c22dab4e4218067a77bbca00fe19c8e87d3880bc25dcd611b8809f504f46fc3"
+    },
+    {
+      "path": "src/statistics/index.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "5cfbd978aa678f788e517e2d470c4e29dd6714290670d4bcfda59cc036b4adfd",
+      "current": "e2a26330c9457b5e18bcba66780b68f93760ccc2d6099129b45685cb7bddecf3"
+    },
+    {
+      "path": "src/statistics/model.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "794a636bc28fa014ad404a0137893fb7076da2ecf8935755e0e31a9738bd0ee9",
+      "current": "f2d6f888a8b48a29959ac82d9ee3aaf515f27d2135d7b853efb1d449e67e0670"
+    },
+    {
+      "path": "src/statistics/statistics.css",
+      "disposition": "byte-preserved",
+      "prior": "49c19930ac5a16d4968d5392a67ce4ae96bed9b08c997dc956cee73d1b1280ba",
+      "current": "49c19930ac5a16d4968d5392a67ce4ae96bed9b08c997dc956cee73d1b1280ba"
+    },
+    {
+      "path": "src/statistics/StatisticsView.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "7e4fcccd39833b2864cfbe96a7d52c0a65fb4d56c03c3e2f9b41621cb9a4af8f",
+      "current": "516376e75c8db38621a7c688641ba863d2559c033cb82b3da3059d6e7e0a23df"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "disposition": "byte-preserved",
+      "prior": "26fe1cef407084561e973ade32ae68e26980c5adc191f3d3ac1e5b295794fca6",
+      "current": "26fe1cef407084561e973ade32ae68e26980c5adc191f3d3ac1e5b295794fca6"
+    },
+    {
+      "path": "src/ui/assessment-label.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "92ff545e5153c51f0381a4a5e3b152614b7d3cfe34c1761b2ce4699f8a791479",
+      "current": "b00e7b626235bf8d6017c7603b982d4e341fbd5791e8fdf85e4f15353b5b1b7d"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "4c61959d5ef06232a98012b7b70611e0abf8573d8287c5188055d2d612ee37be",
+      "current": "75828484d282511321b1898eed711506c23cbab60a380134365ec3cccf6e7674"
+    },
+    {
+      "path": "src/ui/CorrectionSegments.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "971effa69aa02ac9064665b635d65cf380ae1041f7e52807f3ea27613a5bcc64",
+      "current": "a7bdd9d955f034e72b598ecae03015085068c7ddb67e8a76fcf2a223b07383f4"
+    },
+    {
+      "path": "src/ui/DiagramViewport.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "a19f1ec8488c3132e18aae00749b34e988d3be23708670cd110480ac492eca5f",
+      "current": "d875ab48fe59066cc4d411f07b7d98f1044c7b8c875c39600d3c4ecdbca81609"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b",
+      "current": "aacdfa94dc1092e427263ce81bbe20b64bc026e4088ed7eef8fab0f1ea919d07"
+    },
+    {
+      "path": "src/ui/historical-acid-catalogue.d.ts",
+      "disposition": "byte-preserved",
+      "prior": "fb8801ada21ebd4d9fcc42564fa6399fa6fc7d1fede34e474017607ac31a531c",
+      "current": "fb8801ada21ebd4d9fcc42564fa6399fa6fc7d1fede34e474017607ac31a531c"
+    },
+    {
+      "path": "src/ui/historical-acid-catalogue.js",
+      "disposition": "byte-preserved",
+      "prior": "c24eb411f1f691b733433fbad285acc970cde87a64d650515d2edb0ac9f80d66",
+      "current": "c24eb411f1f691b733433fbad285acc970cde87a64d650515d2edb0ac9f80d66"
+    },
+    {
+      "path": "src/ui/NumericWorkingControl.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "c155c987144091a80c039e6266fe955ccc2f91a3a075a717cefd07bd21cbe360",
+      "current": "027d16266a4ee838aee6582d1e520b36c690e399516dba87a0b25b44b8e001fc"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "62b09807a1caef84799ef591bdc2b01e4384b1a869bf7f3414b1b0f2f8f02a0f",
+      "current": "6f05f9af0d883e294c8ce3dd712a324532705476a9a4e33b00f6998a76c1f31c"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "090f02bf6de66ad4cb3e136bf85e81789cf9c8562375073aed57ca3f3caa0cec",
+      "current": "b193704fe8d093bfc73da3a0af97ca6a25ddf116034183e3e895ca61acb53a52"
+    },
+    {
+      "path": "src/ui/teacher-catalogue.ts",
+      "disposition": "semantic-only formatting",
+      "prior": "0bdb4042793527e0633c6c0e08d75f58025ffcfb345bf373e020f6fecdbec69c",
+      "current": "0294d3a9f6568835ec99019d11623efc4a8fc73fcefd937675acb19b9d53caf1"
+    },
+    {
+      "path": "src/ui/TeacherPicker.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "efb6918cdd54e59e47842ada4e47537b8f18d3e6e7e10739d156951254d7fe66",
+      "current": "394cb212e7af207c9501c5a5f37f1beae7f01b46b731ee7e67c5344d48770662"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "disposition": "semantic-only formatting",
+      "prior": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6",
+      "current": "02203023fab51c80488e0bc567e3c43e324c063661ecb0e691c6b01fc6ddf68f"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "agentId": "F08",
+  "jobId": "F2-SHARED",
+  "status": "PASS",
+  "startedAt": "2026-10-03T20:20:28.270Z",
+  "checks": [
+    {
+      "size": "desktop",
+      "metrics": [
+        {
+          "label": "Check correction",
+          "width": 163.515625,
+          "height": 46,
+          "x": 907,
+          "y": 233,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        },
+        {
+          "label": "Show worked answer",
+          "width": 188.625,
+          "height": 46,
+          "x": 907,
+          "y": 287,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        },
+        {
+          "label": "Next question",
+          "width": 138.859375,
+          "height": 46,
+          "x": 1103.625,
+          "y": 287,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        }
+      ],
+      "substantiveFeedbackVisible": true,
+      "firstScoreTimeFrozen": true,
+      "correction": true,
+      "model": true,
+      "restore": true,
+      "historyDedup": true
+    },
+    {
+      "size": "tablet",
+      "metrics": [
+        {
+          "label": "Check correction",
+          "width": 163.515625,
+          "height": 46,
+          "x": 45.59375,
+          "y": 476.96875,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        },
+        {
+          "label": "Show worked answer",
+          "width": 188.625,
+          "height": 46,
+          "x": 217.109375,
+          "y": 476.96875,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        },
+        {
+          "label": "Next question",
+          "width": 138.859375,
+          "height": 46,
+          "x": 413.734375,
+          "y": 476.96875,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        }
+      ],
+      "substantiveFeedbackVisible": true,
+      "firstScoreTimeFrozen": true,
+      "correction": true,
+      "model": true,
+      "restore": true,
+      "historyDedup": true
+    },
+    {
+      "size": "mobile",
+      "metrics": [
+        {
+          "label": "Check correction",
+          "width": 163.515625,
+          "height": 46,
+          "x": 27,
+          "y": 533.5625,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        },
+        {
+          "label": "Show worked answer",
+          "width": 188.625,
+          "height": 46,
+          "x": 27,
+          "y": 587.5625,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        },
+        {
+          "label": "Next question",
+          "width": 138.859375,
+          "height": 46,
+          "x": 223.625,
+          "y": 587.5625,
+          "fontSize": "14.4px",
+          "padding": "10px 16px",
+          "lines": 1,
+          "clipped": false
+        }
+      ],
+      "substantiveFeedbackVisible": true,
+      "firstScoreTimeFrozen": true,
+      "correction": true,
+      "model": true,
+      "restore": true,
+      "historyDedup": true
+    }
+  ],
+  "shots": [
+    "energy-actions-desktop-unanswered.png",
+    "energy-actions-desktop-incorrect.png",
+    "energy-actions-desktop-correction.png",
+    "energy-actions-desktop-model.png",
+    "energy-actions-tablet-unanswered.png",
+    "energy-actions-tablet-incorrect.png",
+    "energy-actions-tablet-correction.png",
+    "energy-actions-tablet-model.png",
+    "energy-actions-mobile-unanswered.png",
+    "energy-actions-mobile-incorrect.png",
+    "energy-actions-mobile-correction.png",
+    "energy-actions-mobile-model.png"
+  ],
+  "errors": [],
+  "limits": [
+    "Fresh synthetic app IndexedDB namespaces and nonpersistent contexts only.",
+    "Native OS suspend/minimize coverage retained by foreman; this browser suite checks reload and first timing."
+  ],
+  "finishedAt": "2026-10-03T20:20:56.284Z"
+}

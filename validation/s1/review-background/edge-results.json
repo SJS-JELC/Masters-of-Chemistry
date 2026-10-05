@@ -1,0 +1,253 @@
+{
+  "jobId": "S1-REVIEW-BACKGROUND",
+  "agentId": "A07",
+  "runId": "MASTERS-REACT-20261002",
+  "run": "A07-background-edge-1790983403408",
+  "checkedAt": "2026-10-02T23:23:23.416Z",
+  "status": "ESCALATE",
+  "channel": "edge",
+  "exe": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "args": [
+    "--user-data-dir=C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.browser\\A07\\e3403408",
+    "--remote-debugging-port=9328",
+    "--remote-debugging-address=127.0.0.1",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--disable-extensions",
+    "--disable-background-networking",
+    "--disable-background-timer-throttling",
+    "--disable-renderer-backgrounding",
+    "--window-size=1440,1000",
+    "about:blank"
+  ],
+  "playwright": "1.62.1",
+  "connection": {
+    "noDefaults": true,
+    "defaultContextOnly": true
+  },
+  "observations": [],
+  "checks": [],
+  "errors": [],
+  "sourceFingerprints": [
+    {
+      "path": "src/catalogue/definitions.ts",
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "sha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "sha256": "6882787bd17e15f132b9f2fb92d0783c3026a2621875154e3ace0259c61a6aac"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "sha256": "fbaa324e5cb4aee5140f01565cb8ebb8b8ae56ed14765daac2643ea617927003"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "sha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "sha256": "805c85711f9c2345624eea7798bcdf07b7d947cb488a1280224088e356114903"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "sha256": "d27e22ce5fc50f6df9e5e1630deec38ace25da4ed07e27483d8c62c14a69ce74"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "sha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "sha256": "14283f4b4b066f9e1e5c07dc3311734e2fb6301e5a5fd7513bbab399f2197bfa"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "ea96a4ebfc613aab55dd47b81d10c4a48f1c8da3823467c5b5919b122cf323e6"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "sha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "sha256": "b47a3a1c2c4c8832b4738b366b057896a8795a2a6378a5290aded0e9a4301f56"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "sha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "sha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "sha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "sha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "sha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "d1ea6d0ed377438eaa540eeb6b786ccc8ec78895d001f69276219c5f9754d17f"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "sha256": "82be457ae837795938d74605e637da78718216e2f80e470866d19362779fd54e"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "sha256": "bb08c0f0f4f61da093e62364c3a936894342e85eb18bd8306ef2192074adc255"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "sha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "sha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "sha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sha256": "83744261aa1330fcc863036a6a8fe1db6cf4883cbe7f53f111bfda3025e42576"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "sha256": "8df95fac186eebe3de9b769b3c6f455e32233471a8167fe483f9851ec73e0133"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "sha256": "4f979ffa5cffe28f410d214f5046e684cf1af44277a4ed1d9e1f9502d0586d15"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "sha256": "6b706db34750408129bbdb9389bf57d6bb1991ca9f0dd29f62a6b25dfe9dd021"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "sha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "sha256": "462a9941760e64ec3f99a22a6fbc2335e2e5fa305f7b0abc7bc8ebd20016c8f5"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "sha256": "8804fecd04b81193a0d9cadc4f80366809bd0d2a073a7bfcc62be70640f8c2b8"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "sha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6"
+    }
+  ],
+  "endpoint": {
+    "Browser": "Edg/154.0.4258.48",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+    "V8-Version": "15.4.11.6",
+    "WebKit-Version": "537.36 (@80bb122d4912059dc0cf309273bbe3191ae80a62)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9328/devtools/browser/863bd43e-7e86-422c-970e-5f782282cf33"
+  },
+  "browserVersion": "154.0.4258.48",
+  "initialWindow": {
+    "windowId": 478350264,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1440,
+      "height": 1000,
+      "windowState": "normal"
+    }
+  },
+  "initialDocument": {
+    "hidden": true,
+    "focused": true
+  },
+  "failure": {
+    "message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Start fixture', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\">Start fixture</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+    "stack": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Start fixture', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\">Start fixture</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s1\\review-background\\background-check.mjs:54:74"
+  },
+  "failureWindow": {
+    "windowId": 478350264,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1440,
+      "height": 1000,
+      "windowState": "normal"
+    }
+  },
+  "failurePage": {
+    "hidden": true,
+    "focused": false,
+    "body": "Skip to question\n\nMASTERS OF CHEMISTRY\n\nA Level Chemistry\nOCR A\nCurriculum activities\nAcid–base calculations\nElectrons and bonding\nElectron configurations\nDot-and-cross diagrams\npH titration curves\nS1 foundation development harness\n\nThese synthetic controls test the real shared runtime. Source activity labels and levels are metadata; complete chemistry banks are migrated in later stages. This harness is absent from production builds.\n\nFixture \nnumeric\nautomatic-text\nself-rubric\nself-drawing\nchoice\nchoice-dropdown\nchoice-multiple\ncorrection\ndiagram\neditor\n Target \nu6-t1-1-2 · Level 1\nu6-t1-1-2 · Level 2\nu6-t1-1-2 · Level 3\nu6-t1-1-3 · Level 1\nu6-t1-1-3 · Level 2\nu6-t1-1-3 · Level 3\nu6-t1-1-5 · Level 1\nu6-t1-1-5 · Level 2\nu6-t1-1-5 · Level 3\nu6-t1-1-7 · Level 1\nu6-t1-1-7 · Level 2\nu6-t1-1-7 · Level 3\nu6-t1-1-8 · Level 1\nu6-t1-1-8 · Level 2\nu6-t1-1-8 · Level 3\nl6-t2-1-1 · Level 1\nl6-t2-1-2 · Level 1\nl6-t2-1-2 · Level 2\nl6-t2-1-2 · Level 3\nl6-t2-1-3 · Level 1\nl6-t2-1-3 · Level 2\nl6-t2-1-3 · Level 3\nu6-t1-1-9 · Level 2\nu6-t1-1-9 · Level 3\n Session \nPractice\nRevision\n Teacher preview Start fixture\nSimulate save failure\nRetry save\n\nChoose a fixture and start; no attempt is created merely by rendering the page.\n\n0 independent curriculum evidence records\n\nPhase: none\n\nActive time: 0 ms\n\nAttempt: none\n\nSession: none\n\nSt John's School · Chemistry",
+    "snapshot": {
+      "attempt": null,
+      "session": null,
+      "question": null,
+      "history": [],
+      "saveStatus": {
+        "kind": "idle"
+      },
+      "databaseName": "masters-of-chemistry-s1-alevel-A07-background-edge-1790983403408",
+      "selectedCount": 0
+    }
+  },
+  "sourceUnchanged": true,
+  "finishedAt": "2026-10-02T23:23:55.329Z",
+  "browserStderr": "\r\nDevTools listening on ws://127.0.0.1:9328/devtools/browser/863bd43e-7e86-422c-970e-5f782282cf33\r\n[9156:22780:1003/002325.779:ERROR:chrome\\browser\\task_manager\\providers\\fallback_task_provider.cc:126] Every renderer should have at least one task provided by a primary task provider. If a \"Renderer\" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/40528867.\r\n"
+}

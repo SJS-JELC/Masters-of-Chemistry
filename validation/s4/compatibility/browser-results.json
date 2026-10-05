@@ -1,0 +1,138 @@
+{
+  "jobId": "S4-COMPATIBILITY",
+  "agentId": "A19",
+  "startedAt": "2026-10-03T02:46:50.191Z",
+  "playwright": "1.62.1",
+  "checks": [
+    "Mount does not read legacy localStorage before explicit choice.",
+    "Actual UI import preserves alias, acid V1/V2, valid duration and honest absent first responses/times; excludes Rocket with raw retention.",
+    "Repeated UI import creates no duplicate evidence or archives.",
+    "Instrumented actual Storage methods record zero setItem/removeItem/clear calls; old key values byte equal.",
+    "Fresh document restores archived reports without implicitly reading old keys.",
+    "Mobile source report fits viewport with accessible controls and explicit reasons.",
+    "Chemically revalidated complete C3 drawings save separately; repeat deduplicates; corrupt graph is rejected and exact raw remains archived.",
+    "New repository separates profile/course evidence and raw archives.",
+    "Actual IndexedDB V1→V2 migration retains evidence; archive repeats deduplicate and source fingerprint conflicts reject.",
+    "First evidence conflicts remain unchanged; exact rejected source and one deduplicated failure outcome survive independently.",
+    "Together → alone → together imports keep stable equal-source receipts; conflicting accepted projections get distinct fingerprints, explicit first-evidence conflict and unchanged first score.",
+    "Actual transactional quota fault rolls back evidence; raw source and failed outcome remain retained for retry/export.",
+    "UI archive-save failure shows retry/export and does not claim complete or durable source retention.",
+    "Current production composition mounts working import UI with course brand, readable dark-theme text, mobile fit and restored durable outcomes; no old writes."
+  ],
+  "errors": [],
+  "databaseName": "masters-of-chemistry-s4-compat-1790995610191",
+  "oldKeyAudit": {
+    "before": {
+      "masters-alevel-results-v1": "[{\"id\":\"alias\",\"leafId\":\"l6-t2-1-4\",\"level\":1,\"score\":1,\"completedAt\":100},{\"id\":\"acid-old\",\"leafId\":\"u6-t1-1-4\",\"level\":1,\"score\":0.5,\"completedAt\":200,\"progressionVersion\":1},{\"id\":\"rocket-excluded\",\"leafId\":\"rocket-recall\",\"level\":1,\"score\":1,\"completedAt\":250}]",
+      "masters-alevel-results-acid-v2": "[{\"id\":\"acid-v2\",\"leafId\":\"u6-t1-1-2\",\"level\":2,\"score\":1,\"completedAt\":300,\"progressionVersion\":2,\"timing\":{\"version\":1,\"activeMs\":5432,\"idleLimitMs\":180000}}]",
+      "alevel-acid-levels-session-v2": "{\"current\":{\"reviewId\":\"AB2-0-1-0\"},\"unavailableFirstResponse\":true}"
+    },
+    "after": {
+      "masters-alevel-results-v1": "[{\"id\":\"alias\",\"leafId\":\"l6-t2-1-4\",\"level\":1,\"score\":1,\"completedAt\":100},{\"id\":\"acid-old\",\"leafId\":\"u6-t1-1-4\",\"level\":1,\"score\":0.5,\"completedAt\":200,\"progressionVersion\":1},{\"id\":\"rocket-excluded\",\"leafId\":\"rocket-recall\",\"level\":1,\"score\":1,\"completedAt\":250}]",
+      "masters-alevel-results-acid-v2": "[{\"id\":\"acid-v2\",\"leafId\":\"u6-t1-1-2\",\"level\":2,\"score\":1,\"completedAt\":300,\"progressionVersion\":2,\"timing\":{\"version\":1,\"activeMs\":5432,\"idleLimitMs\":180000}}]",
+      "alevel-acid-levels-session-v2": "{\"current\":{\"reviewId\":\"AB2-0-1-0\"},\"unavailableFirstResponse\":true}"
+    },
+    "writes": [],
+    "reads": [
+      "masters-alevel-results-v1",
+      "masters-alevel-results-acid-v2",
+      "sjs:c3l6:2012-q2:draft:v1",
+      "masters-alevel-test-mode-v1",
+      "masters-alevel-test-mode-v1-before-dot-cross-merge",
+      "alevel-acid-levels-session-v2",
+      "sjs-electrons-bonding-level-1-v1",
+      "sjs-electron-configurations-levels-v1",
+      "sjs-electron-configurations-v1",
+      "acid-base-mastery-v2",
+      "sjs-alevel-ph-titration-curves-v2-level-2",
+      "sjs-alevel-ph-titration-curves-v2-level-3",
+      "dot-and-cross-l6-t2-1-3-mastery-v2",
+      "dot-and-cross-l6-t2-1-3-mastery-v2-ionic",
+      "dot-and-cross-l6-t2-1-3-mastery-v2-covalent",
+      "dot-and-cross-l6-t2-1-3-level-v2",
+      "dot-and-cross-l6-t2-1-3-level-v2-ionic",
+      "dot-and-cross-l6-t2-1-3-level-v2-covalent",
+      "dot-and-cross-l6-t2-1-3-mastery-v1",
+      "dot-and-cross-l6-t2-1-3-level-v1",
+      "dot-and-cross-l6-t2-1-4-mastery-v1",
+      "dot-and-cross-l6-t2-1-4-level-v1",
+      "masters-alevel-results-v1",
+      "masters-alevel-results-acid-v2",
+      "alevel-acid-levels-session-v2"
+    ]
+  },
+  "c3": {
+    "complete": {
+      "a": true,
+      "b": true,
+      "c": true
+    },
+    "rejected": [
+      "Rejected responses.c.Z: Error: Unsupported bond. Rejected stale or chemically inconsistent slotChecks.Z Historical part (c) completion lacks valid current chemical checks."
+    ],
+    "archiveCount": 5
+  },
+  "migration": {
+    "save": {
+      "ok": true,
+      "value": "saved"
+    },
+    "repeat": {
+      "ok": true,
+      "value": "already-present"
+    },
+    "conflict": {
+      "ok": false,
+      "error": {
+        "code": "conflict",
+        "message": "Archived source or decisions differ for the same fingerprint",
+        "retryable": false
+      }
+    },
+    "history": {
+      "ok": true,
+      "value": [
+        {
+          "kind": "curriculum",
+          "id": "prior-v1",
+          "profileId": "migrate",
+          "course": "alevel",
+          "activityId": "alevel/electrons-bonding",
+          "gemId": "l6-t2-1-1",
+          "level": 1,
+          "score": 1,
+          "completedAt": 1,
+          "provenance": "legacy-import",
+          "sourceKey": "masters-alevel-results-v1"
+        }
+      ]
+    },
+    "archives": {
+      "ok": true,
+      "value": [
+        {
+          "namespace": {
+            "course": "alevel",
+            "profileId": "migrate"
+          },
+          "source": {
+            "key": "unsupported",
+            "fingerprint": "migration-1"
+          },
+          "rawText": "exact invalid source",
+          "notes": [
+            "source issue retained"
+          ],
+          "skipped": [
+            {
+              "sourceId": "payload",
+              "reason": "invalid JSON"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "status": "PASS",
+  "finishedAt": "2026-10-03T02:46:56.220Z"
+}

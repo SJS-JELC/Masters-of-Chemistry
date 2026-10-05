@@ -1,0 +1,32 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-BROWSER-STARTUP-FOLLOWUP",
+  "status": "PASS",
+  "confidence": 0.99,
+  "reason": "Immutable retained launcher and generated JSX artifacts confirm the exact harness-only continuation; authorized later host UX change is explicit and full behavior remains pending.",
+  "outputPaths": [
+    "validation/s4/review-browser-startup/HANDOVER.md",
+    "validation/s4/review-browser-startup/followup-disposition.json",
+    "validation/s4/review-browser-startup/foreman-guard-failure.json",
+    "validation/s4/review-browser-startup/post-review-current-host.tsx.txt",
+    "validation/s4/review-browser-startup/verify-retained-artifacts.mjs"
+  ],
+  "validation": {
+    "status": "PASS",
+    "command": "node apps/Masters-of-Chemistry/validation/s4/review-browser-startup/verify-retained-artifacts.mjs",
+    "approvedChange": "Add react/jsx-dev-runtime to original optimizeDeps.include only",
+    "assertionsUnchanged": true,
+    "retainedRuntimeESMImport": "PASS; default.jsxDEV function",
+    "currentHostUnchanged": false,
+    "currentChangedPaths": ["tsconfig.json", "src/foundation/ActivityHost.tsx"],
+    "priorHostContentAvailable": false,
+    "exactHostDiffVerified": false,
+    "sourceOwnership": "A17 directly confirmed, A01 authorized",
+    "statisticsBehavior": "Pending A18 unchanged full suite",
+    "newBrowserActionsPerformed": false
+  },
+  "foremanGuardFailureRetained": true,
+  "sourceWritesByReviewer": false,
+  "effectiveModelEffort": null,
+  "usage": null
+}

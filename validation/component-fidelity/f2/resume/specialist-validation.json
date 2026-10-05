@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T20:05:58.887Z",
+  "jobs": [
+    {
+      "agentId": "F09",
+      "jobId": "F2-EC",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/electron/resume-f09/completion.json",
+      "output": "validation/component-fidelity/f2/electron/resume-f09/HANDOVER.md"
+    },
+    {
+      "agentId": "F10",
+      "jobId": "F2-ENERGY",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/energy/resume-f10/completion.json",
+      "output": "validation/component-fidelity/f2/energy/resume-f10/HANDOVER.md"
+    },
+    {
+      "agentId": "F11",
+      "jobId": "F2-TITRATION",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/titration/resume-f11/completion.json",
+      "output": "validation/component-fidelity/f2/titration/resume-f11/HANDOVER.md"
+    }
+  ],
+  "checks": {
+    "ec": {
+      "cases": 27,
+      "teachers": 27,
+      "productionTimingCases": 2,
+      "ownedHashes": true
+    },
+    "energy": {
+      "mainChecks": 30,
+      "fontRefresh": true,
+      "lateContinuity": true,
+      "ownedHashes": true
+    },
+    "titration": {
+      "combinations": 36,
+      "svgPairs": 216,
+      "artifactHashes": 864,
+      "ownedHashes": true
+    }
+  },
+  "scope": "Specialist worker acceptance plus retained substantive/rendered evidence, pending full shared F2 integration and ROOT stage acceptance. Later shared numeric/comparison/practical-only changes are explicitly reviewed in specialist-applicability.json; no false identical-input claim."
+}

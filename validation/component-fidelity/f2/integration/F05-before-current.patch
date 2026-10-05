@@ -1,0 +1,530 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\chemistry\\energy-profile\\svg.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\chemistry\\energy-profile\\svg.ts"
+index d0fb0ea..97b1443 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\chemistry\\energy-profile\\svg.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\chemistry\\energy-profile\\svg.ts"	
+@@ -1,25 +1,21 @@
+-import type { EnergyProfileState } from '../../contracts/editors.ts';
++﻿import type { EnergyProfileState } from '../../contracts/editors.ts';
+ import type { ProfileOptions } from '../../activities/igcse/energy-enthalpy/types.ts';
+ import { endY } from './index.ts';
+-const esc = (s: string) =>
+-  s.replace(
+-    /[&<>"']/g,
+-    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] ?? c,
+-  );
+-export function profileSVG(m: EnergyProfileState, e: Partial<ProfileOptions> = {}): string {
+-  const curve = (r: number, p: number, peak: number, dash = '') =>
+-    `<path d="M100 ${r} H210 C250 ${r} 255 ${peak} 320 ${peak} S380 ${p} 410 ${p} H525" fill="none" stroke="#067b9c" stroke-width="3" ${dash}/>`;
+-  return `<svg xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto" viewBox="0 0 640 415" role="img" aria-label="Reaction energy profile"><style>text{font:15px sans-serif;fill:#15243b}</style><defs><marker id="ea" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#856000"/></marker><marker id="delta" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#006944"/></marker></defs><rect width="640" height="415" fill="white"/><path d="M65 32V365H605" stroke="#15243b" fill="none" stroke-width="2"/><text transform="translate(24 255) rotate(-90)">${esc(m.vertical || 'Axis?')}</text><text x="205" y="404">${esc(m.horizontal || 'Axis?')}</text>${e.type === 'catalyst' || e.overlay ? curve(220, 300, 85, 'stroke-dasharray="9 7"') : ''}${e.type === 'levels' ? '' : curve(m.r, m.p, m.peak)}<path d="M100 ${m.r}H210 M410 ${m.p}H525" fill="none" stroke="#067b9c" stroke-width="3"/><text x="100" y="${m.r - 13}">${esc(m.left || 'Unlabelled')}</text><text x="410" y="${m.p - 13}">${esc(m.right || 'Unlabelled')}</text>${e.letters ? `<text x="330" y="${m.peak - 16}">B</text>` : ''}${Object.entries(
+-    m.arrows,
+-  )
+-    .map(([name, a]) =>
+-      a
+-        ? `<line x1="${a.x}" x2="${a.x}" y1="${endY(m, a.tail)}" y2="${endY(m, a.head)}" stroke="${name === 'ea' ? '#856000' : '#006944'}" stroke-width="3" marker-end="url(#${name})"/><text x="${a.x + 10}" y="${(endY(m, a.tail) + endY(m, a.head)) / 2 - 5}">${e.numberArrows ? (name === 'ea' ? '1' : '2') : name === 'ea' ? 'Eₐ' : 'ΔH'}</text>`
+-        : '',
+-    )
+-    .join(
+-      '',
+-    )}${e.type === 'catalyst' ? `<text x="385" y="35">– – Original</text><text x="385" y="62">— ${esc(m.pathLabel || 'New pathway')}</text>` : ''}${e.overlay ? '<text x="385" y="35">Original pathway P</text><text x="385" y="62">Lower pathway Q</text>' : ''}</svg>`;
++const esc = (s: string) => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c] ?? c);
++const markerKey = (m: EnergyProfileState, e: Partial<ProfileOptions>) => { let n = 2166136261; for (const c of JSON.stringify([m,e])) { n ^= c.charCodeAt(0); n = Math.imul(n,16777619); } return (n >>> 0).toString(36); };
++/** Presentation port of the final source EnergyEditor.svg; no chemistry or marking here. */
++export function profileSVG(m: EnergyProfileState, e: Partial<ProfileOptions> = {}, interactive = false, guides = false, ghost?: {x: number; y: number; text: string}, namespace = ''): string {
++ const colours = {ea:'#ffde59',delta:'#54f5b5'}, marker = `energy-arrow-${namespace.replace(/[^a-zA-Z0-9_-]/g,'') || markerKey(m,e)}`, cat = e.type === 'catalyst' || e.overlay;
++ const act = (action: string, label: string) => interactive ? `data-act="${action}" tabindex="0" role="button" aria-label="${esc(label)}"` : '';
++ const curve = (n: Pick<EnergyProfileState,'r'|'p'|'peak'>, color: string, dashed = false) => `<path d="M100 ${n.r} H210 C250 ${n.r} 255 ${n.peak} 320 ${n.peak} S380 ${n.p} 410 ${n.p} H525" fill="none" stroke="${color}" stroke-width="3" ${dashed ? 'stroke-dasharray="9 7"' : ''}/>`;
++ const line = (key: 'r'|'p', x1: number, x2: number) => `<g ${act('level:'+key,(key === 'r' ? 'Left' : 'Right')+' energy line. Drag vertically or use up and down keys.')}><rect x="${x1}" y="${m[key]-14}" width="${x2-x1}" height="28" fill="transparent"/><line x1="${x1}" x2="${x2}" y1="${m[key]}" y2="${m[key]}" stroke="#55f6ff" stroke-width="3"/></g>`;
++ const label = (key: 'left'|'right', x: number) => { const value = m[key], index = e.formula?.indexOf(value) ?? -1; return `<text x="${x}" y="${m[key==='left'?'r':'p']-13}" ${index >= 0 ? act('label:'+index,value+'. Drag to either line.') : ''}>${esc(value || 'Drop formula')}</text>`; };
++ const arrows = Object.entries(m.arrows).map(([name,a]) => {
++  if (!a) return '';
++  const ty = endY(m,a.tail), hy = endY(m,a.head), text = e.numberArrows ? (name==='ea'?'1':'2') : name==='ea'?'Eₐ':'ΔH', colour = name==='ea' ? colours.ea : colours.delta;
++  return `<g><g ${act('shaft:'+name,text+' arrow. Drag to move; left/right keys reposition; Delete removes.')}><line x1="${a.x}" x2="${a.x}" y1="${ty}" y2="${hy}" stroke="transparent" stroke-width="24"/><line x1="${a.x}" x2="${a.x}" y1="${ty}" y2="${hy}" stroke="${colour}" stroke-width="3" marker-end="url(#${marker}-${name})"/><text x="${a.x+10}" y="${(ty+hy)/2-5}" style="fill:${colour}">${text}</text></g>${interactive ? (['tail','head'] as const).map(end => `<circle ${act(end+':'+name,text+' '+end+'. Drag or use up/down keys; Enter then select a level to attach.')} cx="${a.x}" cy="${end==='tail'?ty:hy}" r="18" fill="transparent"/>`).join('') : ''}</g>`;
++ }).join('');
++ const description = `Energy diagram. Left: ${m.left||'unlabelled'}; right: ${m.right||'unlabelled'}. Right level ${m.p<m.r?'above':m.p>m.r?'below':'equal to'} left.${e.type==='levels'?'':` Peak ${m.peak<Math.min(m.r,m.p)?'above both end levels':'not above both end levels'}.`} ${Object.entries(m.arrows).map(([n,a]) => a ? `${e.numberArrows?(n==='ea'?'Arrow 1':'Arrow 2'):n==='ea'?'Activation energy':'Delta H'}: ${'anchor' in a.tail?a.tail.anchor:'free tail'} to ${'anchor' in a.head?a.head.anchor:'free head'}.` : '').join(' ')}`;
++ return `<svg xmlns="http://www.w3.org/2000/svg" class="energy-svg" viewBox="0 0 640 415" role="${interactive?'group':'img'}" aria-label="${esc(description)}"><title>${esc(description)}</title><style>.energy-svg text{font-family:Comfortaa,sans-serif;font-weight:700;font-size:15px;fill:#f4f6ff}.energy-svg{display:block;width:100%;height:auto;overflow:visible}.energy-svg text{user-select:none}</style><defs>${Object.entries(colours).map(([name,colour]) => `<marker id="${marker}-${name}" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="${colour}"/></marker>`).join('')}</defs><path d="M65 32V365H605" stroke="#8c9dbc" fill="none" stroke-width="2"/><text transform="translate(24 255) rotate(-90)">${esc(m.vertical||'Axis?')}</text><text x="205" y="404">${esc(m.horizontal||'Axis?')}</text>${cat?curve({r:220,p:300,peak:85},'#b8c4dc',!e.overlay):''}${e.type==='levels'?'':curve(m,'#55f6ff',!!e.overlay)}${line('r',100,210)}${line('p',410,525)}${label('left',100)}${label('right',410)}${e.letters?`<text x="330" y="${m.peak-16}">B</text>`:''}${interactive&&e.type!=='levels'?`<circle ${act('level:peak','Peak. Drag vertically or use up/down keys.')} cx="320" cy="${m.peak}" r="20" fill="transparent"/>`:''}${guides?(['r','p',...(e.type==='levels'?[]:['peak'])] as ('r'|'p'|'peak')[]).map(k => `<line x1="85" x2="595" y1="${m[k]}" y2="${m[k]}" stroke="#9aa8c1" stroke-width="1" stroke-dasharray="3 7" opacity=".5" pointer-events="none"/>`).join(''):''}${arrows}${cat?`<text x="385" y="35">${e.overlay?'— P':'– – Original'}</text><text x="385" y="62">${e.overlay?'– – Q':'— '+esc(m.pathLabel||'New pathway')}</text>`:''}${ghost?`<text class="drag-ghost" x="${Math.max(80,Math.min(440,ghost.x))}" y="${Math.max(45,Math.min(350,ghost.y))}">${esc(ghost.text)}</text>`:''}</svg>`;
+ }
+-export const svgImage = (svg: string) =>
+-  `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
++export const svgImage = (svg: string) => `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\editors\\energy-profile\\index.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\index.tsx"
+index 47f9564..3708fec 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\editors\\energy-profile\\index.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\index.tsx"	
+@@ -1,4 +1,3 @@
+-import { DiagramViewport } from '../../ui/DiagramViewport.tsx';
+ import { useEffect, useId, useRef, useState } from 'react';
+ import type { PointerEvent, KeyboardEvent } from 'react';
+ import type { EditorSurfaceProps } from '../../ui/EditorFrame.tsx';
+@@ -6,13 +5,10 @@ import type { EnergyProfileState, EnergyAnchor, EnergyArrowEnd } from '../../con
+ import { record } from '../../activities/igcse/energy-enthalpy/provider.ts';
+ import { endY, initialProfile } from '../../chemistry/energy-profile/index.ts';
+ import { profileSVG } from '../../chemistry/energy-profile/svg.ts';
+-const clone = (m: EnergyProfileState): EnergyProfileState => structuredClone(m);
+-const clamp = (y: number) => Math.max(55, Math.min(340, y));
+-type Target =
+-  | { kind: 'level'; level: EnergyAnchor }
+-  | { kind: 'end'; name: 'ea' | 'delta'; end: 'head' | 'tail' }
+-  | { kind: 'shaft'; name: 'ea' | 'delta' };
+-
++import './styles.css';
++type Mutable<T> = T extends object ? { -readonly [K in keyof T]: Mutable<T[K]> } : T;
++const clone = (m: EnergyProfileState): Mutable<EnergyProfileState> => structuredClone(m);
++const clamp = (v: number, lo=55, hi=340) => Math.max(lo, Math.min(hi, v));
+ /** Editing text is local; the profile changes only after a complete coordinate is committed. */
+ function CoordinateInput({
+   label,
+@@ -97,133 +93,64 @@ function CoordinateInput({
+   );
+ }
+ 
+-export function EnergyProfileEditor({ part, response, readOnly, onResponse }: EditorSurfaceProps) {
+-  const q = record(part.markingPolicyId.split(':')[1] ?? ''),
+-    e = q.editor!;
+-  const initial = part.kind === 'energy-profile' ? part.initial : initialProfile(q);
+-  const m = response?.kind === 'energy-profile' ? response : initial;
+-  const [draft, setDraft] = useState<EnergyProfileState | null>(null),
+-    [history, setHistory] = useState<EnergyProfileState[]>([]);
+-  const [coordinateReset, setCoordinateReset] = useState(0);
+-  const coordinateResetKey = `${part.markingPolicyId}:${coordinateReset}`;
+-  const [status, setStatus] = useState(''),
+-    drag = useRef<{ target: Target; base: EnergyProfileState; x: number; y: number } | null>(null),
+-    live = useRef<EnergyProfileState | null>(null);
+-  const svg = useRef<SVGSVGElement>(null),
+-    id = useId(),
+-    shown = draft ?? m;
+-  const save = (next: EnergyProfileState) => {
+-    if (readOnly) return;
+-    setHistory((h) => [...h.slice(-79), clone(m)]);
+-    onResponse(next);
+-  };
+-  const movable = (k: EnergyAnchor) => !e.fixed && !(k === 'r' && e.fixedR);
+-  const place = (
+-    target: Target,
+-    x: number,
+-    y: number,
+-    base: EnergyProfileState,
+-  ): EnergyProfileState => {
+-    if (target.kind === 'level') {
+-      if (!movable(target.level)) return base;
+-      let level = clamp(y);
+-      if (e.type === 'catalyst' && target.level !== 'peak') {
+-        const expected = target.level === 'r' ? 220 : 300;
+-        if (Math.abs(level - expected) < 14) level = expected;
+-      }
+-      return { ...base, [target.level]: level };
+-    }
+-    const a = base.arrows[target.name];
+-    if (!a) return base;
+-    const next = { ...a, x: Math.max(85, Math.min(590, x)) };
+-    if (target.kind === 'end') {
+-      const candidates: EnergyAnchor[] = e.type === 'levels' ? ['r', 'p'] : ['r', 'p', 'peak'];
+-      const nearest = candidates.sort((a, b) => Math.abs(base[a] - y) - Math.abs(base[b] - y))[0]!;
+-      const tolerance = (18 * 640) / (svg.current?.getBoundingClientRect().width ?? 640);
+-      const end: EnergyArrowEnd =
+-        Math.abs(base[nearest] - y) <= tolerance ? { anchor: nearest } : { y: clamp(y) };
+-      return { ...base, arrows: { ...base.arrows, [target.name]: { ...next, [target.end]: end } } };
+-    }
+-    const d = drag.current;
+-    const dy = y - (d?.y ?? y);
+-    return {
+-      ...base,
+-      arrows: {
+-        ...base.arrows,
+-        [target.name]: {
+-          ...next,
+-          tail: { y: clamp(endY(base, a.tail) + dy) },
+-          head: { y: clamp(endY(base, a.head) + dy) },
+-        },
+-      },
+-    };
+-  };
+-  const point = (event: PointerEvent) => {
+-    const rect = svg.current!.getBoundingClientRect();
+-    return {
+-      x: ((event.clientX - rect.left) * 640) / rect.width,
+-      y: ((event.clientY - rect.top) * 415) / rect.height,
+-    };
+-  };
+-  const down = (event: PointerEvent<SVGElement>, target: Target) => {
+-    if (readOnly || event.button > 0) return;
+-    if (target.kind === 'level' && !movable(target.level)) {
+-      setStatus('This energy level is supplied and fixed.');
+-      return;
+-    }
+-    event.preventDefault();
+-    const p = point(event);
+-    drag.current = { target, base: clone(m), ...p };
+-    live.current = clone(m);
+-    svg.current?.setPointerCapture(event.pointerId);
+-  };
+-  const move = (event: PointerEvent<SVGSVGElement>) => {
+-    const d = drag.current;
+-    if (!d) return;
+-    const p = point(event),
+-      next = place(d.target, p.x, p.y, d.base);
+-    live.current = next;
+-    setDraft(next);
+-  };
+-  const up = (event: PointerEvent<SVGSVGElement>) => {
+-    if (!drag.current) return;
+-    drag.current = null;
+-    setDraft(null);
+-    if (live.current) save(live.current);
+-    live.current = null;
+-    if (event.currentTarget.hasPointerCapture(event.pointerId))
+-      event.currentTarget.releasePointerCapture(event.pointerId);
+-    setStatus('Profile changed.');
+-  };
+-  const key = (event: KeyboardEvent<SVGElement>, target: Target) => {
+-    if (readOnly) return;
+-    if (!event.key.startsWith('Arrow')) return;
+-    event.preventDefault();
+-    if (target.kind === 'level') {
+-      if (movable(target.level))
+-        save({
+-          ...m,
+-          [target.level]: clamp(
+-            m[target.level] + (event.key === 'ArrowUp' ? -20 : event.key === 'ArrowDown' ? 20 : 0),
+-          ),
+-        });
+-      return;
+-    }
+-    const a = m.arrows[target.name];
+-    if (!a) return;
+-    const dx = event.key === 'ArrowLeft' ? -10 : event.key === 'ArrowRight' ? 10 : 0,
+-      dy = event.key === 'ArrowUp' ? -20 : event.key === 'ArrowDown' ? 20 : 0;
+-    save({
+-      ...m,
+-      arrows: {
+-        ...m.arrows,
+-        [target.name]:
+-          target.kind === 'end'
+-            ? { ...a, x: a.x + dx, [target.end]: { y: clamp(endY(m, a[target.end]) + dy) } }
+-            : { ...a, x: a.x + dx },
+-      },
+-    });
+-  };
++
++export function EnergyProfileEditor({ part, response, readOnly, onResponse, workspaceAside }: EditorSurfaceProps) {
++ const q = record(part.markingPolicyId.split(':')[1] ?? ''), e = q.editor!;
++ const initial = part.kind === 'energy-profile' ? part.initial : initialProfile(q);
++ const m = response?.kind === 'energy-profile' ? response : initial;
++ const [draft,setDraft] = useState<EnergyProfileState|null>(null), [history,setHistory] = useState<EnergyProfileState[]>([]), [coordinateReset,setCoordinateReset] = useState(0), [status,setStatus] = useState(''), [selected,setSelected] = useState(''), [ghost,setGhost] = useState<{x:number;y:number;text:string}|undefined>();
++ const canvas = useRef<HTMLDivElement>(null), drag = useRef<{action:string;base:EnergyProfileState;x:number;y:number;moved:boolean}|null>(null), live = useRef<EnergyProfileState|null>(null), pendingFocus=useRef(''), id=useId();
++ const shown=draft??m, coordinateResetKey=part.markingPolicyId+':'+coordinateReset;
++ useEffect(()=>{setDraft(null);setHistory([]);setStatus('');setSelected('');setGhost(undefined);drag.current=null;live.current=null;},[part.markingPolicyId,readOnly]);
++ useEffect(()=>{if(pendingFocus.current){canvas.current?.querySelector<SVGElement>('[data-act="'+pendingFocus.current+'"]')?.focus({preventScroll:true});pendingFocus.current='';}});
++ const save=(next:EnergyProfileState,focus='')=>{if(readOnly)return;pendingFocus.current=focus;setHistory(h=>[...h.slice(-79),clone(m)]);onResponse(next);};
++ const movable=(k:EnergyAnchor)=>!e.fixed&&!(k==='r'&&e.fixedR);
++ const levels:EnergyAnchor[]=e.type==='levels'?['r','p']:['r','p','peak'];
++ const point=(event:{clientX:number;clientY:number})=>{const rect=canvas.current!.querySelector('svg')!.getBoundingClientRect();return{x:(event.clientX-rect.left)*640/rect.width,y:(event.clientY-rect.top)*415/rect.height};};
++ const snap=(base:EnergyProfileState,end:EnergyArrowEnd,x:number):EnergyArrowEnd=>{
++  if('anchor' in end)return end;
++  const tolerance=18*640/(canvas.current?.querySelector('svg')?.getBoundingClientRect().width??640);
++  const near=[...levels].sort((a,b)=>Math.abs(base[a]-end.y)-Math.abs(base[b]-end.y)||Math.abs((a==='r'?150:a==='p'?470:320)-x)-Math.abs((b==='r'?150:b==='p'?470:320)-x))[0]!;
++  return Math.abs(base[near]-end.y)<=tolerance?{anchor:near}:end;
++ };
++ const putLabel=(base:EnergyProfileState,index:number,target?:EnergyAnchor)=>{const next=clone(base),f=e.formula?.[index]??'';for(const side of ['left','right'] as const)if(next[side]===f)next[side]='';if(target&&target!=='peak')next[target==='r'?'left':'right']=f;return next;};
++ const attach=(level:EnergyAnchor)=>{const [kind='',name='']=selected.split(':');if(kind==='label'&&level!=='peak'){save(putLabel(m,Number(name),level));setSelected('');setStatus('Formula placed.');return true;}if((kind==='head'||kind==='tail')&&m.arrows[name as 'ea'|'delta']){const next=clone(m);next.arrows[name as 'ea'|'delta']![kind]={anchor:level};save(next);setSelected('');setStatus('Endpoint attached.');return true;}return false;};
++ const newArrow=(name:'ea'|'delta')=>{const next=clone(m);next.arrows[name]={x:name==='ea'?(e.eaX??280):560,tail:{y:255},head:{y:165}};save(next,'head:'+name);setSelected('head:'+name);setStatus('Position the arrow ends.');return next;};
++ const down=(event:PointerEvent<HTMLDivElement>)=>{
++  if(readOnly||event.button>0)return;const item=(event.target as Element).closest<SVGElement>('[data-act],[data-new]');if(!item)return;
++  const action=item.dataset.act??'new:'+item.dataset.new,[kind='',name='']=action.split(':');
++  if(kind==='level'&&selected&&attach(name as EnergyAnchor)){event.preventDefault();return;}
++  if(kind==='level'&&!movable(name as EnergyAnchor)){setStatus('This level is supplied and fixed.');return;}
++  event.preventDefault();const base=kind==='new'?newArrow(name as 'ea'|'delta'):clone(m),p=point(event);
++  setSelected(action);drag.current={action,base,...p,moved:false};live.current=base;event.currentTarget.setPointerCapture(event.pointerId);
++  setStatus(kind==='label'?'Choose a line.':kind==='head'||kind==='tail'?'Choose a level.':'');
++ };
++ const move=(event:PointerEvent<HTMLDivElement>)=>{
++  const d=drag.current;if(!d||readOnly)return;const p=point(event),dx=p.x-d.x,dy=p.y-d.y;if(Math.abs(dx)+Math.abs(dy)>2)d.moved=true;if(!d.moved)return;
++  event.preventDefault();const next=clone(d.base),[kind='',name='']=d.action.split(':'),level=name as EnergyAnchor,arrow=name as 'ea'|'delta';
++  if(kind==='level'&&movable(level)){next[level]=clamp(d.base[level]+dy,70,330);if(e.type==='catalyst'&&level!=='peak'&&Math.abs(next[level]-(level==='r'?220:300))<14)next[level]=level==='r'?220:300;}
++  if(kind==='label')setGhost({...p,text:e.formula?.[Number(name)]??''});
++  if(kind==='head'||kind==='tail'){const a=next.arrows[arrow]!;a.x=clamp(d.base.arrows[arrow]!.x+dx,85,590);a[kind]=snap(next,{y:clamp(endY(d.base,d.base.arrows[arrow]![kind])+dy)},a.x);if('anchor' in a[kind]&&a[kind].anchor==='peak'&&Math.abs(a.x-320)<24)a.x=320;}
++  if(kind==='shaft'){const a=next.arrows[arrow]!;a.x=clamp(a.x+dx,85,590);for(const end of ['tail','head'] as const)a[end]={y:clamp(endY(d.base,d.base.arrows[arrow]![end])+dy)};}
++  if(kind==='new')next.arrows[arrow]={x:clamp(p.x,85,590),tail:{y:clamp(p.y+40)},head:{y:clamp(p.y-40)}};
++  live.current=next;setDraft(next);
++ };
++ const up=(event:PointerEvent<HTMLDivElement>)=>{
++  const d=drag.current;if(!d)return;let next=clone(live.current??d.base);const [kind='',name='']=d.action.split(':'),p=point(event);
++  if(d.moved){if(kind==='label'){const target=p.x<320?'r':'p';next=putLabel(next,Number(name),Math.abs(p.y-next[target])<=50?target:undefined);}if(kind==='shaft'||kind==='new'){const a=next.arrows[name as 'ea'|'delta']!;for(const end of ['tail','head'] as const)a[end]=snap(next,a[end],a.x);}save(next);setSelected('');setStatus('');}else pendingFocus.current=kind==='new'?'head:'+name:d.action;
++  drag.current=null;live.current=null;setDraft(null);setGhost(undefined);if(event.currentTarget.hasPointerCapture(event.pointerId))event.currentTarget.releasePointerCapture(event.pointerId);
++ };
++ const key=(event:KeyboardEvent<HTMLDivElement>)=>{
++  if(readOnly)return;const item=(event.target as Element).closest<SVGElement>('[data-act],[data-new]');if(!item)return;const action=item.dataset.act??'new:'+item.dataset.new,[kind='',name='']=action.split(':'),arrow=name as 'ea'|'delta',level=name as EnergyAnchor;
++  if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();if(kind==='new'){newArrow(arrow);return;}if(kind==='level'&&selected&&attach(level))return;setSelected(action);setStatus('Selected. Focus a target line or peak and press Enter to attach, or use arrow keys to move.');return;}
++  if(event.key==='Escape'){event.preventDefault();setSelected('');setStatus('Selection cleared.');return;}
++  if(event.key==='Delete'||event.key==='Backspace'){event.preventDefault();if(kind==='label')save(putLabel(m,Number(name)));if(['head','tail','shaft'].includes(kind)){const next=clone(m);delete next.arrows[arrow];save(next);}return;}
++  if(!event.key.startsWith('Arrow'))return;event.preventDefault();event.stopPropagation();const next=clone(m),dx=event.key==='ArrowLeft'?-10:event.key==='ArrowRight'?10:0,dy=event.key==='ArrowUp'?-20:event.key==='ArrowDown'?20:0;
++  if(kind==='level'&&movable(level))next[level]=clamp(m[level]+dy,70,330);
++  if(kind==='head'||kind==='tail'){const a=next.arrows[arrow]!;a.x=clamp(a.x+dx,85,590);if(dy){const y=endY(m,a[kind]),targets=levels.filter(k=>dy<0?m[k]<y:m[k]>y).sort((a,b)=>Math.abs(m[a]-y)-Math.abs(m[b]-y));a[kind]=targets.length?{anchor:targets[0]!}:{y:clamp(y+dy)};}}
++  if(kind==='shaft'){const a=next.arrows[arrow]!;a.x=clamp(a.x+dx,85,590);if(dy)for(const end of ['tail','head'] as const)a[end]=snap(next,{y:clamp(endY(m,a[end])+dy)},a.x);}
++  save(next,action);
++ };
+   const arrowChange = (name: 'ea' | 'delta', end: 'head' | 'tail', value: string) => {
+     const a = m.arrows[name];
+     if (!a) return;
+@@ -286,170 +213,20 @@ export function EnergyProfileEditor({ part, response, readOnly, onResponse }: Ed
+       </div>
+     );
+   };
+-  return (
+-    <div className="energy-profile-editor">
+-      <p>
+-        Drag a level or an arrow endpoint, or use the controls below. Focus a graph handle and use
+-        arrow keys. An attached endpoint follows its energy level. On narrow screens, swipe across
+-        empty graph space or scroll horizontally to see the full profile.
+-      </p>
+-      <div className="action-row">
+-        <button
+-          type="button"
+-          disabled={readOnly || !history.length}
+-          onClick={() => {
+-            const previous = history.at(-1);
+-            if (previous) {
+-              setCoordinateReset((value) => value + 1);
+-              setHistory((h) => h.slice(0, -1));
+-              onResponse(previous);
+-            }
+-          }}
+-        >
+-          Undo profile edit
+-        </button>
+-        <button
+-          type="button"
+-          disabled={readOnly}
+-          onClick={() => {
+-            setCoordinateReset((value) => value + 1);
+-            save(initial);
+-          }}
+-        >
+-          Reset profile
+-        </button>
+-        {e.arrows
+-          .filter((name) => !m.arrows[name])
+-          .map((name) => (
+-            <button
+-              type="button"
+-              disabled={readOnly}
+-              key={name}
+-              onClick={() =>
+-                save({
+-                  ...m,
+-                  arrows: {
+-                    ...m.arrows,
+-                    [name]: {
+-                      x: name === 'ea' ? (e.eaX ?? 285) : 560,
+-                      tail: { y: 255 },
+-                      head: { y: 165 },
+-                    },
+-                  },
+-                })
+-              }
+-            >
+-              Add {name === 'ea' ? 'activation energy' : 'enthalpy change'} arrow
+-            </button>
+-          ))}
+-      </div>
+-      <DiagramViewport label="Energy profile">
+-        <div
+-          className="energy-graph"
+-          style={{ position: 'relative', maxWidth: 760, margin: 'auto' }}
+-        >
+-          <div aria-hidden="true" dangerouslySetInnerHTML={{ __html: profileSVG(shown, e) }} />
+-          <svg
+-            ref={svg}
+-            viewBox="0 0 640 415"
+-            aria-label="Editable energy profile"
+-            role="group"
+-            style={{
+-              position: 'absolute',
+-              inset: 0,
+-              width: '100%',
+-              height: '100%',
+-              touchAction: 'pan-x',
+-            }}
+-            onPointerMove={move}
+-            onPointerUp={up}
+-            onPointerCancel={() => {
+-              drag.current = null;
+-              live.current = null;
+-              setDraft(null);
+-            }}
+-          >
+-            {(['r', 'p', ...(e.type === 'levels' ? [] : ['peak'])] as EnergyAnchor[]).map(
+-              (level) => (
+-                <circle
+-                  style={{ touchAction: 'none' }}
+-                  key={level}
+-                  cx={level === 'r' ? 155 : level === 'p' ? 465 : 320}
+-                  cy={shown[level]}
+-                  r={17}
+-                  fill={readOnly ? 'transparent' : '#087b9b33'}
+-                  stroke={readOnly ? 'none' : '#087b9b'}
+-                  tabIndex={readOnly ? -1 : 0}
+-                  role="button"
+-                  aria-label={`${level === 'r' ? 'Left' : level === 'p' ? 'Right' : 'Peak'} energy level${movable(level) ? ', use up and down keys' : ', fixed'}`}
+-                  onPointerDown={(event) => down(event, { kind: 'level', level })}
+-                  onKeyDown={(event) => key(event, { kind: 'level', level })}
+-                />
+-              ),
+-            )}
+-            {Object.entries(shown.arrows).map(
+-              ([name, a]) =>
+-                a && (
+-                  <g key={name}>
+-                    <line
+-                      style={{ touchAction: 'none' }}
+-                      x1={a.x}
+-                      x2={a.x}
+-                      y1={endY(shown, a.tail)}
+-                      y2={endY(shown, a.head)}
+-                      stroke="transparent"
+-                      strokeWidth={24}
+-                      tabIndex={readOnly ? -1 : 0}
+-                      role="button"
+-                      aria-label={`${name === 'ea' ? 'Activation energy' : 'Enthalpy change'} arrow position`}
+-                      onPointerDown={(event) =>
+-                        down(event, { kind: 'shaft', name: name as 'ea' | 'delta' })
+-                      }
+-                      onKeyDown={(event) =>
+-                        key(event, { kind: 'shaft', name: name as 'ea' | 'delta' })
+-                      }
+-                    />
+-                    {(['head', 'tail'] as const).map((end) => (
+-                      <circle
+-                        style={{ touchAction: 'none' }}
+-                        key={end}
+-                        cx={a.x}
+-                        cy={endY(shown, a[end])}
+-                        r={13}
+-                        fill={readOnly ? 'transparent' : '#ffffff77'}
+-                        stroke={readOnly ? 'none' : end === 'head' ? '#006944' : '#856000'}
+-                        tabIndex={readOnly ? -1 : 0}
+-                        role="button"
+-                        aria-label={`${name === 'ea' ? 'Activation energy' : 'Enthalpy change'} ${end === 'head' ? 'arrowhead' : 'tail'}, use arrow keys or endpoint controls`}
+-                        onPointerDown={(event) =>
+-                          down(event, { kind: 'end', name: name as 'ea' | 'delta', end })
+-                        }
+-                        onKeyDown={(event) =>
+-                          key(event, { kind: 'end', name: name as 'ea' | 'delta', end })
+-                        }
+-                      />
+-                    ))}
+-                  </g>
+-                ),
+-            )}
+-          </svg>
+-        </div>
+-      </DiagramViewport>
+-      <p role="status">{status}</p>
+-      <p>
+-        {shown.left || 'Unlabelled'} is the left level; {shown.right || 'unlabelled'} is the right
+-        level. The right level is{' '}
+-        {shown.p < shown.r ? 'higher' : shown.p > shown.r ? 'lower' : 'equal'} in energy. Arrow
+-        endpoints:{' '}
+-        {Object.entries(shown.arrows)
+-          .map(([name, a]) =>
+-            a
+-              ? `${name}: ${'anchor' in a.tail ? a.tail.anchor : 'free'} to ${'anchor' in a.head ? a.head.anchor : 'free'}`
+-              : '',
+-          )
+-          .join('; ')}
+-        .
+-      </p>
++
++ return <div className="energy-profile-editor source-energy-profile">
++  <div className="editor-tray" aria-label="Diagram pieces" onPointerDown={down} onPointerMove={move} onPointerUp={up} onKeyDown={key}>
++   {e.arrows.filter(name=>!shown.arrows[name]).map(name=><button type="button" className="piece" key={name} data-new={name} disabled={readOnly} onClick={event=>{if(event.detail===0&&!event.defaultPrevented&&!m.arrows[name])newArrow(name);}}>{name==='ea'?'Eₐ · Activation energy':'ΔH · Enthalpy change'}</button>)}
++   {e.formula?.map((f,index)=>![shown.left,shown.right].includes(f)&&<button type="button" className="piece" key={f} data-act={'label:'+index} disabled={readOnly}>{f}</button>)}
++  </div>
++  <div ref={canvas} className="diagram-card edit-canvas" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={()=>{drag.current=null;live.current=null;setDraft(null);setGhost(undefined);}} onKeyDown={key} dangerouslySetInnerHTML={{__html:profileSVG(shown,e,!readOnly,!!draft,ghost,id)}} />
++  <p className="editor-status small" role="status">{status}</p>
++  <div className="editor-fields controls">
++   {e.axes&&(['vertical','horizontal'] as const).map(axis=><div className="control" key={axis}><label htmlFor={id+'-'+axis}>{axis==='vertical'?'Vertical':'Horizontal'} axis</label><input id={id+'-'+axis} aria-label={(axis==='vertical'?'Vertical':'Horizontal')+' axis label'} disabled={readOnly} value={m[axis]} onChange={event=>save({...m,[axis]:event.target.value})} autoComplete="off" /></div>)}
++   {e.pathLabel&&<div className="control"><label htmlFor={id+'-path'}>Label the new pathway</label><input id={id+'-path'} aria-label="New pathway label" disabled={readOnly} value={m.pathLabel} onChange={event=>save({...m,pathLabel:event.target.value})} autoComplete="off" /></div>}
++  </div>
++  <div className="energy-actions"><span className="diagram-tools"><button type="button" className="quiet" disabled={readOnly||!history.length} onClick={()=>{const previous=history.at(-1);if(previous){setCoordinateReset(v=>v+1);setHistory(h=>h.slice(0,-1));setSelected('');onResponse(previous);}}}>Undo</button><button type="button" className="quiet" disabled={readOnly} onClick={()=>{setCoordinateReset(v=>v+1);setSelected('');save(initial);}}>Reset</button></span>{workspaceAside}</div>
++  <details className="editor-help coordinate-alternatives"><summary>Keyboard and non-drag profile controls</summary>
+       <fieldset disabled={readOnly}>
+         <legend>Keyboard, touch and non-drag profile controls</legend>
+         <p>Screen y is 55 near the top and 340 near the bottom; a smaller y means higher energy.</p>
+@@ -496,27 +273,6 @@ export function EnergyProfileEditor({ part, response, readOnly, onResponse }: Ed
+               </select>
+             </label>
+           ))}
+-        {e.axes &&
+-          (['vertical', 'horizontal'] as const).map((axis) => (
+-            <label key={axis}>
+-              {axis === 'vertical' ? 'Vertical' : 'Horizontal'} axis label
+-              <input
+-                aria-label={`${axis === 'vertical' ? 'Vertical' : 'Horizontal'} axis label`}
+-                value={m[axis]}
+-                onChange={(event) => save({ ...m, [axis]: event.target.value })}
+-              />
+-            </label>
+-          ))}
+-        {e.pathLabel && (
+-          <label>
+-            New pathway label
+-            <input
+-              aria-label="New pathway label"
+-              value={m.pathLabel}
+-              onChange={(event) => save({ ...m, pathLabel: event.target.value })}
+-            />
+-          </label>
+-        )}
+         {e.arrows.map(
+           (name) =>
+             m.arrows[name] && (
+@@ -564,6 +320,7 @@ export function EnergyProfileEditor({ part, response, readOnly, onResponse }: Ed
+             ),
+         )}
+       </fieldset>
+-    </div>
+-  );
++
++  </details>
++ </div>;
+ }
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\styles.css" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\styles.css"
+new file mode 100644
+index 0000000..2aaa577
+--- /dev/null
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\editors\\energy-profile\\styles.css"	
+@@ -0,0 +1,31 @@
++﻿/* Scoped final source energy-enthalpy component styles; shared chrome stays shared. */
++.source-energy-profile{color:#f4f6ff;font:700 16px/1.65 Comfortaa,system-ui,sans-serif;min-width:0}
++.source-energy-profile .diagram-card{margin:16px 0;background:#090f23;border:1px solid #303c62;border-radius:14px;padding:8px;overflow:hidden}
++.source-energy-profile .edit-canvas{max-width:720px;margin:16px auto;touch-action:none}
++.source-energy-profile .diagram-card .energy-svg{width:100%;height:auto;max-height:none;display:block;overflow:visible}
++.source-energy-profile .energy-svg text{font-family:Comfortaa,sans-serif;font-weight:700;font-size:15px;fill:#f4f6ff;user-select:none}
++.source-energy-profile .energy-svg [data-act]{cursor:grab;touch-action:none}
++.source-energy-profile .energy-svg [data-act]:focus-visible{outline:none;filter:drop-shadow(0 0 4px #ffde59);stroke:#ffde59}
++.source-energy-profile .energy-svg circle[data-act]{stroke:none!important}
++.source-energy-profile .energy-svg circle[data-act]:focus-visible{outline:2px dashed #ffde59;outline-offset:3px}
++.source-energy-profile .energy-svg text[data-act]{pointer-events:all}
++.source-energy-profile .editor-tray{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
++.source-energy-profile .piece{border:1px solid #55f6ff;border-radius:10px;background:#123544;color:#f4f6ff;padding:10px 14px;min-height:46px;cursor:grab;font:700 1rem/1.65 Comfortaa,system-ui,sans-serif;touch-action:none}
++.source-energy-profile .piece:focus-visible{outline:3px solid #ffde59;outline-offset:3px}
++.source-energy-profile .editor-status{margin:10px 0;font-size:.88rem;color:#b2bfd9}
++.source-energy-profile .editor-status:empty,.source-energy-profile .editor-fields:empty{display:none}
++.source-energy-profile .drag-ghost{fill:#ffde59!important;pointer-events:none}
++.source-energy-profile .controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
++.source-energy-profile .control{min-width:0}
++.source-energy-profile label{display:block;font-size:.95rem;margin-bottom:6px}
++.source-energy-profile input,.source-energy-profile select{width:100%;min-height:48px;background:#0a1024;color:#f4f6ff;border:1px solid #697c9d;border-radius:10px;padding:10px 13px;font:400 1.1rem system-ui,sans-serif}
++.source-energy-profile .energy-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:start;margin-top:16px}
++.source-energy-profile .diagram-tools{display:contents}
++.source-energy-profile .quiet{border-radius:10px;min-height:46px;padding:10px 14px;border:1px solid #303c62;font:700 .9rem/1.65 Comfortaa,system-ui,sans-serif;background:transparent;color:#f4f6ff}
++.source-energy-profile .editor-help{font-size:.85rem;color:#b2bfd9;margin:10px 0}
++.source-energy-profile .editor-help summary{cursor:pointer}
++.source-energy-profile .editor-help p{margin:8px 0}
++.source-energy-profile .coordinate-alternatives fieldset{border:1px solid #303c62;border-radius:10px;margin:12px 0;padding:12px;min-width:0}
++.source-energy-profile button:disabled{opacity:.65;cursor:default}
++.source-energy-profile input:focus-visible,.source-energy-profile select:focus-visible,.source-energy-profile button:focus-visible,.source-energy-profile summary:focus-visible{outline:3px solid #ffde59;outline-offset:4px}
++@media(max-width:450px){.source-energy-profile .diagram-card{padding:0}.source-energy-profile .diagram-card .energy-svg text{font-size:24px}.source-energy-profile .editor-tray{gap:8px}.source-energy-profile .piece{padding:9px;font-size:.9rem}.source-energy-profile .editor-status{font-size:.84rem}.source-energy-profile .controls{grid-template-columns:1fr}}
+

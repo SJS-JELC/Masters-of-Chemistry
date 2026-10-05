@@ -1,0 +1,9 @@
+/** One-time template refresh from the reviewed proof fixtures; explicit UTF-8. */
+import fs from 'node:fs';import path from 'node:path';
+const project=path.resolve(import.meta.dirname,'../../..'),read=p=>fs.readFileSync(path.join(project,p),'utf8');
+let test=read('validation/s4/authoring-release/family.test.mjs');
+test=test.replaceAll('../../../development/authoring/family.ts','./family.ts').replaceAll('../../../development/authoring/registry.ts','./registry.ts').replaceAll('../../../development/authoring/provenance.ts','./provenance.ts').replaceAll('../../../src/','../../../../src/').replaceAll("'../../../../..'","'../../../../../..'").replaceAll("path.join(import.meta.dirname,'configuration-validation.json')","path.join(evidence,'configuration-validation.json')").replace('const repo=',"const evidence=path.resolve(import.meta.dirname,'../../../../validation/s4/authoring-release/refinement',path.basename(import.meta.dirname));fs.mkdirSync(evidence,{recursive:true});\nconst repo=");
+fs.writeFileSync(path.join(import.meta.dirname,'family.test.mjs'),test);
+let browser=read('validation/s4/authoring-release/browser.mjs');
+browser=browser.replaceAll('../../../../../node_modules/playwright/index.mjs','../../../../../../node_modules/playwright/index.mjs').replaceAll('../../../development/authoring/family.ts','./family.ts').replace('const here=import.meta.dirname,run=',"const here=path.resolve(import.meta.dirname,'../../../../validation/s4/authoring-release/refinement','__SCAFFOLD_SLUG__');fs.mkdirSync(here,{recursive:true});\nconst run=").replaceAll('/development/authoring/index.html','/development/authoring/families/__SCAFFOLD_SLUG__/preview.html').replaceAll("jobId:'S4-AUTHORING-RELEASE'","jobId:'S4-AUTHORING-RUNNABLE-REFINEMENT'").replace("await page.goto(url('fixed'));","await page.goto(url('fixed'),{waitUntil:'domcontentloaded'});");
+fs.writeFileSync(path.join(import.meta.dirname,'browser.mjs'),browser);

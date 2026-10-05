@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "run": "shell-1790982551366",
+  "testedAt": "2026-10-02T23:09:53.914Z",
+  "checks": [
+    {
+      "name": "rubric freeze / ordered offset evidence",
+      "status": "PASS",
+      "detail": "2 sections freeze; two marking points require exact selected evidence and ordered review via explicit offsets. Native keyboard selection has separate unresolved diagnostic; no native PASS claimed."
+    },
+    {
+      "name": "postnumeric drawing review",
+      "status": "PASS",
+      "detail": "Model hidden during independent calculation; numeric response/time freezes before explicit model/criteria yes-no confirmation; aggregate first evidence only after confirmation."
+    },
+    {
+      "name": "correction non-drag / restoration",
+      "status": "PASS",
+      "detail": "Explicit offsets select exact source range; range and correction survive reload."
+    },
+    {
+      "name": "choice keyboard selection",
+      "status": "PASS",
+      "detail": "Native labelled selection provides keyboard/non-drag alternative."
+    }
+  ],
+  "pageErrors": [],
+  "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Answer', { exact: true })\u001b[22m\n",
+  "stack": "locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Answer', { exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s1\\shell\\browser-checks.mjs:146:91"
+}

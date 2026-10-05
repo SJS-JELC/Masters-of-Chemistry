@@ -1,0 +1,181 @@
+- link "Skip to question":
+  - /url: "#main-content"
+- banner:
+  - img "St John's School eagle"
+  - paragraph: Masters of Chemistry
+  - heading "A Level Chemistry" [level=1]
+  - text: OCR A
+- main:
+  - region "Current session":
+    - text: Practice · Electron configurations · Level 1
+    - button "Change activity or view"
+    - button "Pause and save"
+  - article "Build the configuration · Boxes on energy levels · EC-CMICC5":
+    - paragraph: Question
+    - heading "Build the configuration · Boxes on energy levels · EC-CMICC5" [level=2]
+    - code: EC-CMICC5
+    - text: Level 1
+    - paragraph: "Hydrogen atom: H. Atomic number 1; neutral atom."
+    - complementary "Built-in support":
+      - strong: Built-in support
+      - paragraph: Original built-in configuration and spin conventions.
+      - paragraph: One orbital holds at most two electrons with opposite spins. Occupy orbitals in a subshell singly with parallel spins before pairing. Energy diagrams show a schematic Aufbau ladder through 4p, including empty subshells.
+    - region "Your response":
+      - heading "Your response" [level=3]
+      - text: "[1 mark]"
+      - paragraph: Set orbital occupancies and spins.
+      - region "Diagram workspace":
+        - strong: Diagram workspace
+        - button "Periodic table"
+        - paragraph: "Tap a box or press Space to cycle empty → ↑ → ↑↓ → empty. Keyboard: 0 = empty, 1 = ↑, 2 = ↑↓, D = ↓."
+        - group "Orbital energy ladder view":
+          - button "Fit whole diagram" [pressed]
+          - button "Zoom for detail"
+        - paragraph: Whole diagram shown. Choose Zoom for detail to inspect labels and use larger controls.
+        - region "Orbital energy ladder; whole diagram":
+          - region "Schematic orbital energy ladder; horizontal scrolling available":
+            - text: Increasing energy ↑ Schematic Aufbau ladder 1s
+            - 'button "1s, orbital 1: two electrons, opposite spins"': ↑↓
+            - text: 2s
+            - 'button "2s, orbital 1: two electrons, opposite spins"': ↑↓
+            - text: 2p
+            - 'button "2p, orbital 1: empty"'
+            - 'button "2p, orbital 2: empty"'
+            - 'button "2p, orbital 3: empty"'
+            - text: 3s
+            - 'button "3s, orbital 1: empty"'
+            - text: 3p
+            - 'button "3p, orbital 1: empty"'
+            - 'button "3p, orbital 2: empty"'
+            - 'button "3p, orbital 3: empty"'
+            - text: 4s
+            - 'button "4s, orbital 1: empty"'
+            - text: 3d
+            - 'button "3d, orbital 1: empty"'
+            - 'button "3d, orbital 2: empty"'
+            - 'button "3d, orbital 3: empty"'
+            - 'button "3d, orbital 4: empty"'
+            - 'button "3d, orbital 5: empty"'
+            - text: 4p
+            - 'button "4p, orbital 1: empty"'
+            - 'button "4p, orbital 2: empty"'
+            - 'button "4p, orbital 3: empty"'
+        - group:
+          - text: Set spins without cycling 1s orbital 1
+          - combobox "1s orbital 1":
+            - option "empty"
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins" [selected]
+          - text: 2s orbital 1
+          - combobox "2s orbital 1":
+            - option "empty"
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins" [selected]
+          - text: 2p orbital 1
+          - combobox "2p orbital 1":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 2p orbital 2
+          - combobox "2p orbital 2":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 2p orbital 3
+          - combobox "2p orbital 3":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3s orbital 1
+          - combobox "3s orbital 1":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3p orbital 1
+          - combobox "3p orbital 1":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3p orbital 2
+          - combobox "3p orbital 2":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3p orbital 3
+          - combobox "3p orbital 3":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3d orbital 1
+          - combobox "3d orbital 1":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3d orbital 2
+          - combobox "3d orbital 2":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3d orbital 3
+          - combobox "3d orbital 3":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3d orbital 4
+          - combobox "3d orbital 4":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 3d orbital 5
+          - combobox "3d orbital 5":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 4s orbital 1
+          - combobox "4s orbital 1":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 4p orbital 1
+          - combobox "4p orbital 1":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 4p orbital 2
+          - combobox "4p orbital 2":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+          - text: 4p orbital 3
+          - combobox "4p orbital 3":
+            - option "empty" [selected]
+            - option "one electron, spin up"
+            - option "one electron, spin down"
+            - option "two electrons, opposite spins"
+        - button "Clear configuration"
+    - button "Check answer"
+    - button "Request hint"
+    - button "Reveal answer (assisted)"
+    - button "Pause"
+    - text: Saved on this device
+  - region "Practice progress":
+    - paragraph: 0 saved practice results
+    - paragraph: "Active answering time: 0:01"
+- contentinfo: St John's School · Chemistry

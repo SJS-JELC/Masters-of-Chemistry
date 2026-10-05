@@ -1,0 +1,64 @@
+{
+  "jobId": "S3-TITRATION",
+  "agentId": "A14",
+  "status": "PASS",
+  "outputPath": "validation/s3/titration/HANDOVER.md",
+  "confidence": 0.98,
+  "reason": null,
+  "validation": {
+    "tests": {
+      "status": "PASS",
+      "count": 7,
+      "referenceQuestions": 36,
+      "wrongIncompleteMalformed": true,
+      "sourceAnswerKeyEquality": true
+    },
+    "typecheck": "PASS",
+    "protectedOriginals": {
+      "status": "PASS",
+      "fileCount": 1317
+    },
+    "productionBrowser": {
+      "status": "PASS",
+      "workflowChecks": 12,
+      "all36TeacherModels": true,
+      "desktopMobile": true,
+      "pointerKeyboardTouch": true,
+      "revisionTargets": 17
+    },
+    "finalBrowser": {
+      "status": "PASS",
+      "checks": 5,
+      "sourceIdleAllowanceMs": 600000,
+      "acceleratedTiming": true,
+      "repositoryTimingTransfer": true,
+      "stationaryMobileExplanations": true
+    },
+    "substantiveReview": [
+      "chemistry-review.md",
+      "render-review.md"
+    ],
+    "fingerprints": [
+      "source-fingerprints.json",
+      "output-fingerprints.json"
+    ],
+    "results": [
+      "tests.log",
+      "typecheck.log",
+      "protected-originals.log",
+      "browser-results.json",
+      "final-browser-results.json"
+    ],
+    "stageIntegrationGates": {
+      "nativeForegroundTiming": "A01 owns queued real600000ms idle/focus/hidden validation; accelerated evidence explicitly distinguished",
+      "statisticsChart": "S4 gate per A01; exact immutable timing in real repository passed"
+    },
+    "teacherBlankEditor": "Explicit S4 deferral from accepted dispatch"
+  },
+  "requestedModel": "gpt-6.1-sol",
+  "requestedReasoningEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveReasoningEffort": "unknown",
+  "usage": "unknown",
+  "finishedAt": "2026-10-03T01:23:35.911Z"
+}

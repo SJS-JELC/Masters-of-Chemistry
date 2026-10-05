@@ -1,0 +1,17 @@
+{
+  "jobId": "F2-EC",
+  "agentId": "F09",
+  "startedAt": "2026-10-03T18:54:09.241Z",
+  "checks": [],
+  "screenshots": [],
+  "metrics": [],
+  "errors": [
+    "page.evaluate: TypeError: Cannot read properties of undefined (reading 'snapshot')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:30)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at snap (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\resume-f09\\final-frozen\\revision-diagnostic.mjs:6:17)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\electron\\resume-f09\\final-frozen\\revision-diagnostic.mjs:29:466"
+  ],
+  "limitations": [
+    "Native hidden/minimized/OS suspend not newly tested.",
+    "Original correction drawing is compared by reopening the same isolated source review question with the corrected response: the original EC source freezes assessed answers and has no correction action. Shared React first evidence remains immutable."
+  ],
+  "status": "FAIL",
+  "finishedAt": "2026-10-03T18:54:14.934Z"
+}

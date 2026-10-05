@@ -1,0 +1,1396 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-FORMATTED-STARTUP",
+  "startedAt": "2026-10-03T03:47:48.978Z",
+  "before": {
+    "development/authoring/serve.mjs": "62ec734f7709e70bf7354025bccf8f01f748d99a9c5e125ef4686a8d3c2c5c62",
+    "development/authoring/families/dev-formatted-starter/browser.mjs": "a245fee036bd70bc07d86678eb41b11ab6abc5432172e9bdb4a8c5b3630e79d9",
+    "development/authoring/families/dev-formatted-starter/family.ts": "5626682fd860f47601411a0d2ecdf4fda661ce1391ceff42b00d538b7497d4f6",
+    "development/authoring/families/dev-formatted-starter/mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "development/authoring/families/dev-formatted-starter/Catalogue.tsx": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+    "development/authoring/families/dev-formatted-starter/tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c",
+    "development/authoring/families/dev-formatted-starter/generation-manifest.json": "0b834180141a9a07b5a5a633d81a39750a3f72d9b5711661c7cd4146a50aa8d1",
+    "src/foundation/ActivityHost.tsx": "cf4e42ef3a16268258117c0744f1271662e46bb565519cfff58f2788716d0fb5",
+    "src/development/catalogue/index.tsx": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e"
+  },
+  "cases": [
+    {
+      "id": "cold-private",
+      "port": 5200,
+      "temp": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\refinement\\review-formatted-startup\\ccccccccccccccccccccccccccc",
+      "tempLength": 199,
+      "nodeTempRoot": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\refinement\\review-formatted-startup\\ccccccccccccccccccccccccccc",
+      "events": [
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392",
+          "at": 1790999290222
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392",
+          "status": 200,
+          "at": 1790999290381
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/@vite/client",
+          "at": 1790999290382
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/mount.tsx",
+          "at": 1790999290382
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392",
+          "at": 1790999290382
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/mount.tsx",
+          "status": 200,
+          "at": 1790999302501
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/mount.tsx",
+          "at": 1790999302501
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react.js?v=5b0c25cf",
+          "at": 1790999302501
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react-dom_client.js?v=13b58e1c",
+          "at": 1790999302501
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/Catalogue.tsx",
+          "at": 1790999302501
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/src/styles/platform.css",
+          "at": 1790999302501
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react_jsx-dev-runtime.js?v=6900afbe",
+          "at": 1790999302501
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/@vite/client",
+          "status": 200,
+          "at": 1790999302594
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/@vite/client",
+          "at": 1790999302594
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/node_modules/vite/dist/client/env.mjs",
+          "at": 1790999302594
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react_jsx-dev-runtime.js?v=6900afbe",
+          "status": 200,
+          "at": 1790999305506
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react_jsx-dev-runtime.js?v=6900afbe",
+          "at": 1790999305506
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/rolldown-runtime-BPOCksWG.js?v=f1d5cea0",
+          "at": 1790999305506
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react.js?v=5b0c25cf",
+          "status": 200,
+          "at": 1790999305506
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react.js?v=5b0c25cf",
+          "at": 1790999305506
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react-dom_client.js?v=13b58e1c",
+          "status": 200,
+          "at": 1790999319875
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/react-dom_client.js?v=13b58e1c",
+          "at": 1790999319875
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/node_modules/vite/dist/client/env.mjs",
+          "status": 200,
+          "at": 1790999319966
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/node_modules/vite/dist/client/env.mjs",
+          "at": 1790999319966
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/Catalogue.tsx",
+          "status": 200,
+          "at": 1790999319969
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/Catalogue.tsx",
+          "at": 1790999319969
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/src/foundation/ActivityHost.tsx",
+          "at": 1790999319969
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/src/ui/Content.tsx",
+          "at": 1790999319969
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/src/ui/ResponseControl.tsx",
+          "at": 1790999319969
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/registry.ts",
+          "at": 1790999319969
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/family.ts",
+          "at": 1790999319969
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/rolldown-runtime-BPOCksWG.js?v=f1d5cea0",
+          "status": 200,
+          "at": 1790999320001
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5200/validation/s4/refinement/review-formatted-startup/cold-cache/deps/rolldown-runtime-BPOCksWG.js?v=f1d5cea0",
+          "at": 1790999320001
+        }
+      ],
+      "console": [
+        {
+          "kind": "debug",
+          "text": "[vite] connecting...",
+          "at": 1790999319966
+        },
+        {
+          "kind": "debug",
+          "text": "[vite] connected.",
+          "at": 1790999320001
+        }
+      ],
+      "errors": [],
+      "navigations": [
+        {
+          "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392",
+          "at": 1790999290381
+        }
+      ],
+      "startedAt": "2026-10-03T03:47:49.106Z",
+      "browser": "154.0.4258.48",
+      "failure": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\refinement\\review-formatted-startup\\diagnose.mjs:19:40",
+      "rendererSnapshot": {
+        "type": "string",
+        "value": "{\"href\":\"http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392\",\"readyState\":\"interactive\",\"timeOrigin\":1790999281453,\"hostReady\":false,\"attempt\":null}"
+      },
+      "finishedAt": "2026-10-03T03:48:49.392Z"
+    },
+    {
+      "id": "current-host",
+      "port": 5195,
+      "temp": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\refinement\\review-formatted-startup\\wwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "tempLength": 199,
+      "nodeTempRoot": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\refinement\\review-formatted-startup\\wwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "events": [
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-current-host-1790999332328",
+          "at": 1790999332357
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-current-host-1790999332328",
+          "status": 200,
+          "at": 1790999332684
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/@vite/client",
+          "at": 1790999332700
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/mount.tsx",
+          "at": 1790999332701
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-current-host-1790999332328",
+          "at": 1790999332701
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/mount.tsx",
+          "status": 200,
+          "at": 1790999332713
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/mount.tsx",
+          "at": 1790999332713
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react.js?v=4f71bcf1",
+          "at": 1790999332714
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react-dom_client.js?v=4f71bcf1",
+          "at": 1790999332714
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/Catalogue.tsx",
+          "at": 1790999332714
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/styles/platform.css",
+          "at": 1790999332715
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react_jsx-dev-runtime.js?v=4f71bcf1",
+          "at": 1790999332715
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/@vite/client",
+          "status": 200,
+          "at": 1790999332715
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/@vite/client",
+          "at": 1790999332715
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/node_modules/vite/dist/client/env.mjs",
+          "at": 1790999332715
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332715
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react.js?v=4f71bcf1",
+          "at": 1790999332715
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/rolldown-runtime-BPOCksWG.js?v=4f71bcf1",
+          "at": 1790999332716
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/Catalogue.tsx",
+          "status": 200,
+          "at": 1790999332736
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/Catalogue.tsx",
+          "at": 1790999332737
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/node_modules/vite/dist/client/env.mjs",
+          "status": 200,
+          "at": 1790999332737
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/node_modules/vite/dist/client/env.mjs",
+          "at": 1790999332737
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/styles/platform.css",
+          "status": 200,
+          "at": 1790999332737
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/styles/platform.css",
+          "at": 1790999332737
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/rolldown-runtime-BPOCksWG.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332737
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/rolldown-runtime-BPOCksWG.js?v=4f71bcf1",
+          "at": 1790999332737
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/foundation/ActivityHost.tsx",
+          "at": 1790999332738
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/Content.tsx",
+          "at": 1790999332738
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/ResponseControl.tsx",
+          "at": 1790999332738
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/registry.ts",
+          "at": 1790999332738
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/family.ts",
+          "at": 1790999332738
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react_jsx-dev-runtime.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332741
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react_jsx-dev-runtime.js?v=4f71bcf1",
+          "at": 1790999332741
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/Content.tsx",
+          "status": 200,
+          "at": 1790999332749
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/Content.tsx",
+          "at": 1790999332749
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/ResponseControl.tsx",
+          "status": 200,
+          "at": 1790999332750
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/ResponseControl.tsx",
+          "at": 1790999332750
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/registry.ts",
+          "status": 200,
+          "at": 1790999332750
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/registry.ts",
+          "at": 1790999332750
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/DiagramViewport.tsx",
+          "at": 1790999332750
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/family.ts",
+          "status": 200,
+          "at": 1790999332751
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/family.ts",
+          "at": 1790999332751
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/EditorFrame.tsx",
+          "at": 1790999332751
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/TextRangePicker.tsx",
+          "at": 1790999332751
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/NumericWorkingControl.tsx",
+          "at": 1790999332752
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/CorrectionSegments.tsx",
+          "at": 1790999332752
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/catalogue/definitions.ts",
+          "at": 1790999332752
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/provenance.ts",
+          "at": 1790999332752
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/data.ts",
+          "at": 1790999332752
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/foundation/ActivityHost.tsx",
+          "status": 200,
+          "at": 1790999332752
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/foundation/ActivityHost.tsx",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/foundation/registry.ts",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/index.ts",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/timing/index.ts",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/session/index.ts",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/mastery/index.ts",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/persistence/index.ts",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/shell/CourseShell.tsx",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/QuestionPlayer.tsx",
+          "at": 1790999332753
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/TeacherPicker.tsx",
+          "at": 1790999332753
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react-dom_client.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332765
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/react-dom_client.js?v=4f71bcf1",
+          "at": 1790999332765
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/NumericWorkingControl.tsx",
+          "status": 200,
+          "at": 1790999332766
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/NumericWorkingControl.tsx",
+          "at": 1790999332766
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/EditorFrame.tsx",
+          "status": 200,
+          "at": 1790999332766
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/EditorFrame.tsx",
+          "at": 1790999332767
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/DiagramViewport.tsx",
+          "status": 200,
+          "at": 1790999332767
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/DiagramViewport.tsx",
+          "at": 1790999332767
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/CorrectionSegments.tsx",
+          "status": 200,
+          "at": 1790999332767
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/CorrectionSegments.tsx",
+          "at": 1790999332767
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/provenance.ts",
+          "status": 200,
+          "at": 1790999332767
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/provenance.ts",
+          "at": 1790999332767
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/TextRangePicker.tsx",
+          "status": 200,
+          "at": 1790999332768
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/TextRangePicker.tsx",
+          "at": 1790999332768
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/data.ts",
+          "status": 200,
+          "at": 1790999332768
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/data.ts",
+          "at": 1790999332768
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/foundation/registry.ts",
+          "status": 200,
+          "at": 1790999332768
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/foundation/registry.ts",
+          "at": 1790999332768
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/timing/index.ts",
+          "status": 200,
+          "at": 1790999332768
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/timing/index.ts",
+          "at": 1790999332768
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/index.ts",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/index.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/session/index.ts",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/session/index.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/mastery/index.ts",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/mastery/index.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/persistence/index.ts",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/persistence/index.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/shell/CourseShell.tsx",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/shell/CourseShell.tsx",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/catalogue/definitions.ts",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/catalogue/definitions.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/TeacherPicker.tsx",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/TeacherPicker.tsx",
+          "at": 1790999332769
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/QuestionPlayer.tsx",
+          "status": 200,
+          "at": 1790999332769
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/QuestionPlayer.tsx",
+          "at": 1790999332769
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/catalogue/registry.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/olympiad/c3l6/dependencies.ts",
+          "at": 1790999332769
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/structure-and-bonding/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/dot-and-cross/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/dot-and-cross/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/ph-titration-curves/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/calorimetry/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/bond-enthalpy/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/electrons-bonding/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/electron-configurations/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/energy-enthalpy/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/energetics-practical/index.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/timing/active-clock.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/timing/browser-binding.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/attempt.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/input-checks.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/session/revision.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/session/practice.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/session/selection.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/domain/mastery/course-mastery.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/persistence/repository.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/persistence/legacy.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/persistence/validation.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/zustand.js?v=4f71bcf1",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/shell/navigation-view.ts",
+          "at": 1790999332771
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/teacher-catalogue.ts",
+          "at": 1790999332772
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/ui/assessment-label.ts",
+          "at": 1790999332772
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/catalogue/registry.ts",
+          "status": 200,
+          "at": 1790999332775
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/catalogue/registry.ts",
+          "at": 1790999332776
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/olympiad/c3l6/dependencies.ts",
+          "status": 200,
+          "at": 1790999332785
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/olympiad/c3l6/dependencies.ts",
+          "at": 1790999332786
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/ph-titration-curves/index.ts",
+          "status": 200,
+          "at": 1790999332786
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/ph-titration-curves/index.ts",
+          "at": 1790999332786
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/index.ts",
+          "status": 200,
+          "at": 1790999332786
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/index.ts",
+          "at": 1790999332786
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/dot-and-cross/index.ts",
+          "status": 200,
+          "at": 1790999332786
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/dot-and-cross/index.ts",
+          "at": 1790999332795
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/dot-and-cross/index.ts",
+          "status": 200,
+          "at": 1790999332795
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/dot-and-cross/index.ts",
+          "at": 1790999332795
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/structure-and-bonding/index.ts",
+          "status": 200,
+          "at": 1790999332795
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/structure-and-bonding/index.ts",
+          "at": 1790999332795
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/calorimetry/index.ts",
+          "status": 200,
+          "at": 1790999332795
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/calorimetry/index.ts",
+          "at": 1790999332795
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/timing/active-clock.ts",
+          "status": 200,
+          "at": 1790999332795
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/timing/active-clock.ts",
+          "at": 1790999332795
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/electrons-bonding/index.ts",
+          "status": 200,
+          "at": 1790999332796
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/electrons-bonding/index.ts",
+          "at": 1790999332796
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/bond-enthalpy/index.ts",
+          "status": 200,
+          "at": 1790999332796
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/bond-enthalpy/index.ts",
+          "at": 1790999332796
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/electron-configurations/index.ts",
+          "status": 200,
+          "at": 1790999332796
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/electron-configurations/index.ts",
+          "at": 1790999332796
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/timing/browser-binding.ts",
+          "status": 200,
+          "at": 1790999332796
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/timing/browser-binding.ts",
+          "at": 1790999332796
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/energetics-practical/index.ts",
+          "status": 200,
+          "at": 1790999332796
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/energetics-practical/index.ts",
+          "at": 1790999332796
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/energy-enthalpy/index.ts",
+          "status": 200,
+          "at": 1790999332798
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/igcse/energy-enthalpy/index.ts",
+          "at": 1790999332798
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/session/practice.ts",
+          "status": 200,
+          "at": 1790999332798
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/session/practice.ts",
+          "at": 1790999332798
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/input-checks.ts",
+          "status": 200,
+          "at": 1790999332798
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/input-checks.ts",
+          "at": 1790999332798
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/session/revision.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/session/revision.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/session/selection.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/session/selection.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/mastery/course-mastery.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/mastery/course-mastery.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/zustand.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/zustand.js?v=4f71bcf1",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/attempt.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/domain/attempt/attempt.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/shell/navigation-view.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/shell/navigation-view.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/persistence/legacy.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/persistence/legacy.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/assessment-label.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/assessment-label.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/persistence/repository.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/persistence/repository.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/ui/teacher-catalogue.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/ui/teacher-catalogue.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/persistence/validation.ts",
+          "status": 200,
+          "at": 1790999332799
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/persistence/validation.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/catalogue/scope.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/zustand_vanilla.js?v=4f71bcf1",
+          "at": 1790999332799
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/dexie.js?v=4f71bcf1",
+          "at": 1790999332799
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/persistence/catalogue-boundary.ts",
+          "at": 1790999332799
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+          "status": 200,
+          "at": 1790999332800
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+          "at": 1790999332800
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+          "status": 200,
+          "at": 1790999332800
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+          "at": 1790999332800
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/catalogue/scope.ts",
+          "status": 200,
+          "at": 1790999332800
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/catalogue/scope.ts",
+          "at": 1790999332800
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/zustand_vanilla.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332800
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/zustand_vanilla.js?v=4f71bcf1",
+          "at": 1790999332800
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/persistence/catalogue-boundary.ts",
+          "status": 200,
+          "at": 1790999332801
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/persistence/catalogue-boundary.ts",
+          "at": 1790999332801
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/src/catalogue/historical-leaves.ts",
+          "at": 1790999332801
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/src/catalogue/historical-leaves.ts",
+          "status": 200,
+          "at": 1790999332801
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/src/catalogue/historical-leaves.ts",
+          "at": 1790999332801
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/dexie.js?v=4f71bcf1",
+          "status": 200,
+          "at": 1790999332804
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/validation/s4/authoring-release/refinement/vite-cache/deps/dexie.js?v=4f71bcf1",
+          "at": 1790999332804
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/assets/SJS-Eagle.svg",
+          "at": 1790999332865
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/assets/SJS-Eagle.svg",
+          "status": 200,
+          "at": 1790999332873
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/assets/SJS-Eagle.svg",
+          "at": 1790999332873
+        },
+        {
+          "kind": "request",
+          "url": "http://127.0.0.1:5195/public/assets/fonts/Comfortaa-Bold.ttf",
+          "at": 1790999332900
+        },
+        {
+          "kind": "response",
+          "url": "http://127.0.0.1:5195/public/assets/fonts/Comfortaa-Bold.ttf",
+          "status": 200,
+          "at": 1790999332912
+        },
+        {
+          "kind": "finished",
+          "url": "http://127.0.0.1:5195/public/assets/fonts/Comfortaa-Bold.ttf",
+          "at": 1790999332913
+        }
+      ],
+      "console": [
+        {
+          "kind": "debug",
+          "text": "[vite] connecting...",
+          "at": 1790999332739
+        },
+        {
+          "kind": "debug",
+          "text": "[vite] connected.",
+          "at": 1790999332766
+        },
+        {
+          "kind": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+          "at": 1790999332836
+        },
+        {
+          "kind": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "at": 1790999332910
+        }
+      ],
+      "errors": [],
+      "navigations": [
+        {
+          "url": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-current-host-1790999332328",
+          "at": 1790999332688
+        }
+      ],
+      "startedAt": "2026-10-03T03:48:49.393Z",
+      "browser": "154.0.4258.48",
+      "domReadyMs": 514,
+      "hostReady": true,
+      "hostReadyMs": 580,
+      "rendererSnapshot": {
+        "type": "string",
+        "value": "{\"href\":\"http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-current-host-1790999332328\",\"readyState\":\"complete\",\"timeOrigin\":1790999332337.3,\"hostReady\":true,\"historyLength\":0,\"attempt\":null}"
+      },
+      "finishedAt": "2026-10-03T03:48:55.893Z"
+    }
+  ],
+  "errors": [],
+  "effectiveModelEffort": null,
+  "usage": null,
+  "after": {
+    "development/authoring/serve.mjs": "62ec734f7709e70bf7354025bccf8f01f748d99a9c5e125ef4686a8d3c2c5c62",
+    "development/authoring/families/dev-formatted-starter/browser.mjs": "a245fee036bd70bc07d86678eb41b11ab6abc5432172e9bdb4a8c5b3630e79d9",
+    "development/authoring/families/dev-formatted-starter/family.ts": "5626682fd860f47601411a0d2ecdf4fda661ce1391ceff42b00d538b7497d4f6",
+    "development/authoring/families/dev-formatted-starter/mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "development/authoring/families/dev-formatted-starter/Catalogue.tsx": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+    "development/authoring/families/dev-formatted-starter/tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c",
+    "development/authoring/families/dev-formatted-starter/generation-manifest.json": "0b834180141a9a07b5a5a633d81a39750a3f72d9b5711661c7cd4146a50aa8d1",
+    "src/foundation/ActivityHost.tsx": "cf4e42ef3a16268258117c0744f1271662e46bb565519cfff58f2788716d0fb5",
+    "src/development/catalogue/index.tsx": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e"
+  },
+  "changed": [],
+  "finishedAt": "2026-10-03T03:48:56.390Z"
+}

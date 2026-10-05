@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-03T19:09:46.404Z",
+  "status": "PROOF_PASS_PENDING_FOREMAN_FINAL_SHARED_FREEZE",
+  "files": [
+    {
+      "file": "src/editors/energy-profile/index.tsx",
+      "sha256": "6cb213df23c4505245c273dd37747bec99654c2fbf0476d1a41f86cf63650356"
+    },
+    {
+      "file": "src/editors/energy-profile/styles.css",
+      "sha256": "1727009ae9c8bb5582326542c7838af981233914071124444dcae202723cbdc3"
+    },
+    {
+      "file": "src/chemistry/energy-profile/svg.ts",
+      "sha256": "9a1cc32acaf3b91723c1187c3299d7b770ef35fdb78f17d8a97344220d309311"
+    },
+    {
+      "file": "src/ui/SourceQuestionPlayer.tsx",
+      "sha256": "8579c983d656082163cdac5ff371d4b6325adc64480391a356ad3c937df72e02"
+    },
+    {
+      "file": "src/ui/source-adapters.css",
+      "sha256": "12a9931c27a15e28a801d46aba60c1e605d2b90854e38023843a6dc2cb0c082e"
+    }
+  ],
+  "foremanDisposition": "Later source-adapters comparison-only marking-pane visibility fix; no energy selector change. Full matrix not rerun. Completion held pending final shared CSS signal."
+}

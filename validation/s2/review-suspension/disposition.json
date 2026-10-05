@@ -1,0 +1,66 @@
+{
+  "agentId": "A06",
+  "jobId": "S2-REVIEW-SUSPENSION",
+  "status": "PASS",
+  "verifiedAt": "2026-10-03T00:56:04.332Z",
+  "nativeExecutionStatus": "ESCALATE",
+  "nativeEvidenceSha256": "89e972ecd45c48cbbeb2f7dc385ca1d6b01cc98779565ff0e94ebfb855dde16a",
+  "checks": [
+    {
+      "id": "dot-180000",
+      "status": "PASS",
+      "actualWallMs": 182233,
+      "activeDeltaMs": 180000,
+      "firstFrozenActiveMs": 183541,
+      "nextAttemptId": "6023a42b-e0c7-4163-8502-70e9ef412e77"
+    },
+    {
+      "id": "dot-300000",
+      "status": "PASS",
+      "actualWallMs": 302231,
+      "activeDeltaMs": 300000,
+      "firstFrozenActiveMs": 303522,
+      "nextAttemptId": "ba0f1097-5491-4b3c-9bcb-865ea2ba6008"
+    },
+    {
+      "id": "same-document-native-suspension-boundaries",
+      "status": "PASS",
+      "freezeWallMs": 1790988684785,
+      "resumeWallMs": 1790988691492,
+      "intervalMs": 6707,
+      "monotonicIntervalMs": 6706.599999964237,
+      "activeBeforeMs": 1011,
+      "activeAfterMs": 1011,
+      "activeDeltaMs": 0,
+      "timeOrigin": 1790988682632.5,
+      "documentToken": "5be4bedc-b5e9-4455-a5da-164cb4f3de33",
+      "attemptId": "ba0f1097-5491-4b3c-9bcb-865ea2ba6008"
+    },
+    {
+      "id": "later-dev-document-replacement-guard",
+      "status": "EXPECTED_GUARD_FAILURE",
+      "reason": "Vite disconnect/reload follows clean native resume; later document cannot establish same-document frozen accrual",
+      "newTimeOrigin": 1790988691514.5,
+      "newToken": "71984a6a-1222-4605-a54a-dbc970516c63"
+    }
+  ],
+  "priorClockParity": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "unchangedSinceA07": true
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "unchangedSinceA07": true
+    }
+  ],
+  "priorDisposition": "A07 996ms is unclassified: missing native boundary/timeOrigin/navigation evidence prevents assigning it to legitimate pre-freeze time or frozen accrual. Replaced-document signs are retained. The independent run proves no accrual across trusted same-document freeze/resume and separately identifies later DEV replacement.",
+  "limits": [
+    "No claim about A07 missing 996ms boundary attribution",
+    "The later Vite replacement prevents a same-document post-thaw stability/foreground interval in this optional probe; native freeze/resume boundary proof is complete",
+    "Already accepted acid/structure/background/minimized/pause intervals were not repeated",
+    "No source changes, production deployment, or original-app storage access"
+  ],
+  "usage": null,
+  "effectiveModelEffort": null
+}

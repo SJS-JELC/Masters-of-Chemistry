@@ -1,0 +1,85 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-ENERGY-NEXT-CLASSIFICATION",
+  "status": "ESCALATE",
+  "confidence": "high",
+  "verifiedAt": "2026-10-03T05:24:47.941Z",
+  "reason": "Real Next gesture is lost when blur commits local draft and disables Next during saving before pointerup.",
+  "checks": [
+    "All 14 retained inputs and exact failed/instrumentation proposal hashes verified",
+    "Actual trusted mousedown→input blur→saving/disabled mutation→pointerup sequence captured; click absent",
+    "Affected actual durable session stays on D03/same attempt while current peak270 saves",
+    "Frozen first response peak150, first assessment, timing and single evidence unchanged",
+    "Second trusted click after save creates fresh durable attempt/different code",
+    "Clean control dispatches trusted click and creates fresh durable attempt/different code",
+    "Actual editor/Host/Player source explains synchronous saving disable during native gesture",
+    "No source/worker edits or broad replay; initial hashes and any later current changes separately reported"
+  ],
+  "artifacts": {
+    "execution": {
+      "path": "validation/s5/review-render-harness/energy-next-classification/execution.json",
+      "sha256": "3ecf7a89ba6e082185be1258e7e88870c7b31e7821bad0bdda7e7e827afe2d32"
+    },
+    "fingerprints": {
+      "path": "validation/s5/review-render-harness/energy-next-classification/fingerprints.json",
+      "sha256": "abc52053211e02c7f4d05fbfb8d43aa79f517329a643bb8882907bb73d8120af"
+    }
+  },
+  "timing": {
+    "down": {
+      "type": "mousedown",
+      "at": 5052.199999928474,
+      "wall": 1791004864778,
+      "code": "D03",
+      "nextDisabled": false,
+      "save": "Saved on this device",
+      "focused": "Peak level screen y",
+      "trusted": true,
+      "targetTag": "BUTTON",
+      "target": "Next question"
+    },
+    "blur": {
+      "type": "blur",
+      "at": 5052.600000023842,
+      "wall": 1791004864778,
+      "code": "D03",
+      "nextDisabled": false,
+      "save": "Saved on this device",
+      "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+      "trusted": true,
+      "targetTag": "INPUT",
+      "target": "Peak level screen y"
+    },
+    "saving": {
+      "type": "state-mutation",
+      "at": 5060.5,
+      "wall": 1791004864786,
+      "code": "D03",
+      "nextDisabled": true,
+      "save": "Saving…",
+      "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+    },
+    "up": {
+      "type": "pointerup",
+      "at": 5066.299999952316,
+      "wall": 1791004864792,
+      "code": "D03",
+      "nextDisabled": true,
+      "save": "Saving…",
+      "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+      "trusted": true,
+      "targetTag": "BUTTON",
+      "target": "Next question"
+    }
+  },
+  "currentChanges": [],
+  "recommendation": "A01: allow Next during ordinary saving; await existing queue and authoritative saveFailed.current before advance; preserve pause/error blocking; synchronous nextPending ref and visible busy gate prevent concurrent duplicate Next.",
+  "failedA23Execution": "Earlier failed v2 still lacks post-click snapshot and cannot individually be classified; independent source-faithful reproduction proves the observed product defect.",
+  "pending": "Rebuilt static independent single-click/clean-control, failure-after-blur and double-click checks; A21 shared behaviour revalidation.",
+  "settings": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveSettings": null,
+    "actualUsage": null
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "agentId": "A22",
+  "jobId": "S5-CHEMISTRY-SOURCES",
+  "status": "PASS",
+  "outputPaths": [
+    "validation/s5/chemistry/HANDOVER.md",
+    "validation/s5/chemistry/current-coverage.json",
+    "validation/s5/chemistry/stratified-sample.json",
+    "validation/s5/chemistry/manual-review.json",
+    "validation/s5/chemistry/rendered-inspection.json",
+    "validation/s5/chemistry/final-build-guard.json",
+    "validation/s5/chemistry/final-fingerprints.json",
+    "validation/s5/chemistry/c3-final-source-review.json"
+  ],
+  "confidence": 0.97,
+  "reason": "Complete current source/configuration coverage, substantive per-activity chemistry sample and actual diagrams pass; all three bounded fixes independently accepted against exact final frozen build, with original failures/history retained.",
+  "validation": {
+    "activities": 12,
+    "curriculum": 11,
+    "gems": 16,
+    "targets": 41,
+    "teacherDescriptors": 6227,
+    "originalIdentityEntries": 894,
+    "originalSourceFingerprints": 237,
+    "manualInitialSample": 245,
+    "supplements": {
+      "hardness": 2,
+      "advancedDot": 8
+    },
+    "actualInspectedReviewDiagrams": 157,
+    "finalProductionChecks": 24,
+    "actualInspectedFinalScreenshots": 14,
+    "currentC3AcceptedAlternatives": 22,
+    "originalC3Alternatives": 23,
+    "c3CurrentRegressionGroups": 12,
+    "freezeInputs": 517,
+    "freezeTreeSha256": "75a6c5c275efc120705e199e9527f8241721d41ab24d7a85284ec9f00aa07b88",
+    "retainedFailures": [
+      "CHEM-01",
+      "CHEM-02",
+      "CHEM-03 inherited source K",
+      "validation harness first-pass failures"
+    ],
+    "remainingLimits": "Current full-PDF/canonical managed Python unavailable; documented seed strata are not all2^32 seeds; formal exercise models do not certify unstated solution kinetics; wider offline/original and whole-app UX/time/performance gates assigned separately.",
+    "resourcesClosed": true
+  },
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveEffort": "unknown",
+  "usage": null
+}

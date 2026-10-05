@@ -1,0 +1,1033 @@
+{
+  "capturedAt": "2026-10-03T04:26:20.537Z",
+  "files": {
+    "validation/s5/behaviour/deep-browser.mjs": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__deep-browser.mjs.txt",
+      "sha256": "1b4eba5e3aacf1021b6749935a45ff649411bb030cfdff856b47b9ee56470bed"
+    },
+    "validation/s5/behaviour/deep-browser-results.json": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__deep-browser-results.json.txt",
+      "sha256": "75e0032c40751f7fc055bb98e5de76a27f0a612e14fdb851705547a0034e07b8"
+    },
+    "validation/s5/behaviour/deep-browser-stdout.txt": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__deep-browser-stdout.txt.txt",
+      "sha256": "df4bf23116f38a6519e61fb5f9bce6c92883a4953195b1d61cef642f25c4c008"
+    },
+    "validation/s5/behaviour/deep-first-failure.json": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__deep-first-failure.json.txt",
+      "sha256": "b22f33dd8a7267b1d6038b1405ff5f3fff05b302ce5ced6f98bf63ebd3e7d43f"
+    },
+    "validation/s5/behaviour/deep-first-stdout.txt": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__deep-first-stdout.txt.txt",
+      "sha256": "828127b921382f3b1dfdd3f7ca42c0a19fa853ceb5e85fb27268d531ae5e6c8e"
+    },
+    "validation/s5/behaviour/import-browser.mjs": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__import-browser.mjs.txt",
+      "sha256": "83305f6268babf8d6eac34bef8fd48f0f0ffc4f60f246d214c7e87e4f7cd5fa6"
+    },
+    "validation/s5/behaviour/import-browser-results.json": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__import-browser-results.json.txt",
+      "sha256": "e6fb8768f1378db03f5feec3cdc7e58918d5e9c9e2eb3f84927d00136df62189"
+    },
+    "validation/s5/behaviour/import-browser-stdout.txt": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__import-browser-stdout.txt.txt",
+      "sha256": "c609be08f2adda2ebf8fcb749a567b50c05a17665f2788d9dec12a4f2ab933ba"
+    },
+    "validation/s5/behaviour/import-first-harness-failure.json": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__import-first-harness-failure.json.txt",
+      "sha256": "507ce207f05c744edc2f1350e11c709c3fb40bb4d6f53b493297922bf167e772"
+    },
+    "validation/s5/behaviour/import-first-harness-stdout.txt": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__import-first-harness-stdout.txt.txt",
+      "sha256": "6360501dac276f18c9843e712f44c2a2214ef16201274877892e868fe89a5a52"
+    },
+    "validation/s5/behaviour/proposed-deep-browser.mjs": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__proposed-deep-browser.mjs.txt",
+      "sha256": "33012c10be496f799ee3d6d113f51110a7bc9122d0f0c819fa84ce81e8b6eb8d"
+    },
+    "validation/s5/behaviour/proposed-deep-browser-v2.mjs": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__proposed-deep-browser-v2.mjs.txt",
+      "sha256": "1f413d8e7488722e059932fe358339d27fc58c89172ef9705a8c510494df4a34"
+    },
+    "validation/s5/behaviour/proposed-import-browser.mjs": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__proposed-import-browser.mjs.txt",
+      "sha256": "9ca375bd374dc6dbedfb5a65aef36f07699fd48c0c3fee47952be02b31d9db8b"
+    },
+    "validation/s5/behaviour/server.mjs": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__server.mjs.txt",
+      "sha256": "747cb5f6f51c610a5769fcd6780a94b4e2bfed4dd51b7ad295a9abcbc90ef385"
+    },
+    "validation/s5/behaviour/multipart-source-proof.jsonl": {
+      "path": "validation/s5/review-behaviour-harness/retained/validation__s5__behaviour__multipart-source-proof.jsonl.txt",
+      "sha256": "f47c7d144e7317f62242554c6b9b07929afa75a3ba2c22cf12712ea8bf3f3690"
+    },
+    "src/contracts/question.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__contracts__question.ts.txt",
+      "sha256": "e8f48c83892bbff243cc6370af8ed864436e6fc1c35dbc0b966a6a1010b3810c"
+    },
+    "src/domain/attempt/attempt.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__domain__attempt__attempt.ts.txt",
+      "sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+    },
+    "src/domain/attempt/input-checks.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__domain__attempt__input-checks.ts.txt",
+      "sha256": "eaaf1641dfc9c85d43776851b5c946734f4070d7f3deb4d9e6b2841c8948ebe9"
+    },
+    "src/foundation/ActivityHost.tsx": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__foundation__ActivityHost.tsx.txt",
+      "sha256": "324e4b890abbc81f633a7f4e763b65a3dedeccaf799106cfd93cc25c49f1aec4"
+    },
+    "src/persistence/repository.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__persistence__repository.ts.txt",
+      "sha256": "91b1cec1af7393994689215d1cbacf340b63e051cb33986efd14570ed47ceb22"
+    },
+    "src/ui/QuestionPlayer.tsx": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__ui__QuestionPlayer.tsx.txt",
+      "sha256": "6f05f9af0d883e294c8ce3dd712a324532705476a9a4e33b00f6998a76c1f31c"
+    },
+    "src/compatibility/LegacyImportView.tsx": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__compatibility__LegacyImportView.tsx.txt",
+      "sha256": "df58a51e92e8446c1b6e2fd587337abf3487898aeeb5f42cff86036d3ec96f55"
+    },
+    "src/activities/alevel/acid-base-calculations/provider.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__activities__alevel__acid-base-calculations__provider.ts.txt",
+      "sha256": "e64880eb10b89e72a0bbd404b77b383fa0238b94d70ae00f2673079837de4cce"
+    },
+    "src/activities/alevel/acid-base-calculations/marking.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__activities__alevel__acid-base-calculations__marking.ts.txt",
+      "sha256": "81e671a12f18d2df65d4284c0466e6acc22a871ed9b61c022d8ca7bf5255dea5"
+    },
+    "src/activities/igcse/calorimetry/provider.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__activities__igcse__calorimetry__provider.ts.txt",
+      "sha256": "ae753b6300c9e5ef6a99d9fbb08e9bfe0b3370133895d8e2a43a681ac56933ee"
+    },
+    "src/activities/igcse/calorimetry/marking.ts": {
+      "path": "validation/s5/review-behaviour-harness/retained/src__activities__igcse__calorimetry__marking.ts.txt",
+      "sha256": "c513197ddcc4ccc04c99095e67a395d1074df8d4f2e8e754b480810c66b616cd"
+    }
+  },
+  "actualSourceTranspile": {
+    "typescript": "5.9.3",
+    "source": "src/domain/attempt/attempt.ts",
+    "sourceSha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa",
+    "withoutFileNameDiagnostics": [
+      {
+        "code": 17008,
+        "message": "JSX element 'T' has no corresponding closing tag."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1003,
+        "message": "Identifier expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'}' expected."
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1109,
+        "message": "Expression expected."
+      },
+      {
+        "code": 1382,
+        "message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?"
+      },
+      {
+        "code": 1381,
+        "message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+      },
+      {
+        "code": 1005,
+        "message": "'</' expected."
+      }
+    ],
+    "withFileNameDiagnostics": []
+  }
+}

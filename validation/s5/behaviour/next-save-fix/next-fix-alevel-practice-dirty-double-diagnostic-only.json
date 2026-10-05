@@ -1,0 +1,1094 @@
+{
+  "fixture": {
+    "attempt": {
+      "mode": "student",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "local"
+      },
+      "attemptId": "next-fix-alevel-practice-dirty-double",
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 3,
+        "level": 2
+      },
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/ph-titration-curves",
+        "gemId": "u6-t1-1-9",
+        "level": 2
+      },
+      "currentResponses": {
+        "curve": {
+          "kind": "titration-curve",
+          "before": "before-weak-acid",
+          "after": "after-strong-base",
+          "initialPH": 2.8000000000000003,
+          "equivalenceVolume": 22.5,
+          "finalPH": 12.9,
+          "indicator": "phenolphthalein"
+        }
+      },
+      "assistance": [],
+      "phase": "answering",
+      "timing": {
+        "attemptId": "next-fix-alevel-practice-dirty-double",
+        "activeMs": 0,
+        "idleLimitMs": 600000,
+        "finished": false
+      }
+    },
+    "session": {
+      "kind": "practice",
+      "namespace": {
+        "course": "alevel",
+        "profileId": "local"
+      },
+      "id": "current-session",
+      "target": {
+        "course": "alevel",
+        "activityId": "alevel/ph-titration-curves",
+        "gemId": "u6-t1-1-9",
+        "level": 2
+      },
+      "selection": "fixed-level",
+      "currentAttemptId": "next-fix-alevel-practice-dirty-double",
+      "previousQuestionIds": [
+        "TC01"
+      ],
+      "paused": true
+    },
+    "question": {
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 3,
+        "level": 2
+      },
+      "title": "Build the titration curve · TC-GMPGTV",
+      "context": [
+        {
+          "kind": "text",
+          "text": "50.0 cm³ of 0.200 mol dm⁻³ sodium hydroxide is gradually added to 25.0 cm³ of 0.180 mol dm⁻³ ethanoic acid. Ethanoic acid: pKₐ = 4.76. Complete the pH curve and select a suitable indicator. Round pH to 0.1; volume snaps to 0.5 cm³. Assume 25 °C and additive volumes."
+        }
+      ],
+      "layout": "workspace",
+      "submission": "all-required-parts",
+      "parts": [
+        {
+          "id": "curve",
+          "kind": "titration-curve",
+          "prompt": [
+            {
+              "kind": "text",
+              "text": "Choose both curve sections, set initial and final pH and equivalence volume, then select an indicator."
+            }
+          ],
+          "marks": 6,
+          "required": true,
+          "dependsOn": [],
+          "initial": {
+            "kind": "titration-curve",
+            "before": null,
+            "after": null,
+            "initialPH": 4,
+            "equivalenceVolume": 25,
+            "finalPH": 10,
+            "indicator": null
+          },
+          "markingPolicyId": "titration:TC01"
+        }
+      ],
+      "scaffolds": [
+        {
+          "id": "curve-conventions",
+          "level": 2,
+          "purpose": "Original curve-construction conventions and indicator transition ranges.",
+          "content": [
+            {
+              "kind": "text",
+              "text": "Drag the three anchors or use the numeric controls. pH steps are 0.1; volume steps are 0.5 cm³. The joining pH is calculated from the selected acid/base species. Equivalence means equal acid/base equivalents; an indicator end-point is its observed colour change."
+            }
+          ]
+        }
+      ],
+      "hints": [
+        {
+          "id": "equivalents",
+          "content": [
+            {
+              "kind": "text",
+              "text": "Find moles of acid/base equivalents first. Before equivalence consider the starting reagent and any buffer; after equivalence consider the added reagent and the total mixed volume."
+            }
+          ]
+        }
+      ],
+      "workedAnswer": [
+        {
+          "kind": "text",
+          "text": "On smaller screens, swipe the model graph horizontally to inspect its full axis and final pH."
+        },
+        {
+          "kind": "image",
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20820%20435%22%20role%3D%22img%22%3E%3Ctitle%3EChecked%20TC01%20titration%20curve%3C%2Ftitle%3E%3Cdesc%3EInitial%20pH%202.8%3B%20equivalence%2022.5%20cm%C2%B3%20at%20pH%208.9%3B%20final%20pH%2012.9%3C%2Fdesc%3E%3Crect%20width%3D%22820%22%20height%3D%22435%22%20fill%3D%22white%22%2F%3E%3Cg%20font-family%3D%22sans-serif%22%20font-size%3D%2215%22%20fill%3D%22%2317243a%22%3E%3Cpath%20d%3D%22M70%20350%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%22355%22%20text-anchor%3D%22end%22%3E0%3C%2Ftext%3E%3Cpath%20d%3D%22M70%20304.2857142857143%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%22309.2857142857143%22%20text-anchor%3D%22end%22%3E2%3C%2Ftext%3E%3Cpath%20d%3D%22M70%20258.57142857142856%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%22263.57142857142856%22%20text-anchor%3D%22end%22%3E4%3C%2Ftext%3E%3Cpath%20d%3D%22M70%20212.85714285714286%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%22217.85714285714286%22%20text-anchor%3D%22end%22%3E6%3C%2Ftext%3E%3Cpath%20d%3D%22M70%20167.14285714285717%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%22172.14285714285717%22%20text-anchor%3D%22end%22%3E8%3C%2Ftext%3E%3Cpath%20d%3D%22M70%20121.42857142857142%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%22126.42857142857142%22%20text-anchor%3D%22end%22%3E10%3C%2Ftext%3E%3Cpath%20d%3D%22M70%2075.71428571428572%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%2280.71428571428572%22%20text-anchor%3D%22end%22%3E12%3C%2Ftext%3E%3Cpath%20d%3D%22M70%2030%20H760%22%20stroke%3D%22%23dae0e8%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%2235%22%20text-anchor%3D%22end%22%3E14%3C%2Ftext%3E%3Ctext%20x%3D%2270%22%20y%3D%22377%22%20text-anchor%3D%22middle%22%3E0.0%3C%2Ftext%3E%3Ctext%20x%3D%22208%22%20y%3D%22377%22%20text-anchor%3D%22middle%22%3E10.0%3C%2Ftext%3E%3Ctext%20x%3D%22346%22%20y%3D%22377%22%20text-anchor%3D%22middle%22%3E20.0%3C%2Ftext%3E%3Ctext%20x%3D%22484%22%20y%3D%22377%22%20text-anchor%3D%22middle%22%3E30.0%3C%2Ftext%3E%3Ctext%20x%3D%22622%22%20y%3D%22377%22%20text-anchor%3D%22middle%22%3E40.0%3C%2Ftext%3E%3Ctext%20x%3D%22760%22%20y%3D%22377%22%20text-anchor%3D%22middle%22%3E50.0%3C%2Ftext%3E%3Cpath%20d%3D%22M70%2030%20V350%20H760%22%20fill%3D%22none%22%20stroke%3D%22%2317243a%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M70.00%2C286.00%20L70.00%2C285.99%20L70.03%2C285.95%20L70.31%2C285.49%20L70.62%2C284.97%20L71.55%2C283.46%20L73.11%2C281.06%20L76.21%2C276.96%20L79.31%2C273.74%20L82.42%2C271.17%20L85.53%2C269.05%20L88.63%2C267.25%20L91.73%2C265.68%20L94.84%2C264.30%20L97.94%2C263.05%20L101.05%2C261.92%20L104.16%2C260.88%20L107.26%2C259.92%20L110.37%2C259.03%20L113.47%2C258.19%20L116.58%2C257.40%20L119.68%2C256.64%20L122.78%2C255.93%20L125.89%2C255.25%20L129.00%2C254.59%20L132.10%2C253.97%20L135.20%2C253.36%20L138.31%2C252.78%20L141.41%2C252.21%20L144.52%2C251.66%20L147.63%2C251.13%20L150.73%2C250.61%20L153.83%2C250.10%20L156.94%2C249.60%20L160.04%2C249.12%20L163.15%2C248.64%20L166.25%2C248.18%20L169.36%2C247.72%20L172.47%2C247.27%20L175.57%2C246.82%20L178.67%2C246.38%20L181.78%2C245.95%20L184.88%2C245.53%20L187.99%2C245.10%20L191.10%2C244.69%20L194.20%2C244.27%20L197.31%2C243.86%20L200.41%2C243.45%20L203.52%2C243.05%20L206.62%2C242.64%20L209.73%2C242.24%20L212.83%2C241.85%20L215.94%2C241.45%20L219.04%2C241.05%20L222.15%2C240.65%20L225.25%2C240.26%20L228.35%2C239.86%20L231.46%2C239.47%20L234.57%2C239.07%20L237.67%2C238.67%20L240.78%2C238.27%20L243.88%2C237.87%20L246.99%2C237.47%20L250.09%2C237.06%20L253.19%2C236.65%20L256.30%2C236.24%20L259.40%2C235.83%20L262.51%2C235.41%20L265.62%2C234.99%20L268.72%2C234.56%20L271.82%2C234.13%20L274.93%2C233.69%20L278.04%2C233.25%20L281.14%2C232.79%20L284.25%2C232.34%20L287.35%2C231.87%20L290.46%2C231.39%20L293.56%2C230.91%20L296.67%2C230.41%20L299.77%2C229.90%20L302.88%2C229.38%20L305.98%2C228.84%20L309.08%2C228.29%20L312.19%2C227.73%20L315.30%2C227.14%20L318.40%2C226.53%20L321.50%2C225.90%20L324.61%2C225.24%20L327.71%2C224.56%20L330.82%2C223.84%20L333.93%2C223.08%20L337.03%2C222.28%20L340.13%2C221.43%20L343.24%2C220.53%20L346.34%2C219.55%20L349.45%2C218.50%20L352.56%2C217.35%20L355.66%2C216.07%20L358.77%2C214.64%20L361.87%2C213.01%20L364.97%2C211.10%20L368.08%2C208.78%20L371.19%2C205.83%20L374.29%2C201.72%20L377.39%2C194.75%20L378.95%2C187.84%20L379.88%2C178.74%20L380.19%2C171.91%20L380.47%2C152.55%20L380.50%2C147.21%20L380.50%2C146.57%20M380.50%2C146.57%20L380.50%2C145.79%20L380.54%2C139.42%20L380.88%2C119.19%20L381.26%2C112.34%20L382.40%2C103.27%20L384.29%2C96.41%20L388.09%2C89.58%20L391.88%2C85.61%20L395.68%2C82.81%20L399.47%2C80.65%20L403.27%2C78.89%20L407.06%2C77.42%20L410.86%2C76.15%20L414.66%2C75.03%20L418.45%2C74.04%20L422.24%2C73.15%20L426.04%2C72.34%20L429.83%2C71.59%20L433.63%2C70.91%20L437.42%2C70.28%20L441.22%2C69.69%20L445.01%2C69.14%20L448.81%2C68.63%20L452.61%2C68.14%20L456.40%2C67.68%20L460.19%2C67.25%20L463.99%2C66.84%20L467.79%2C66.45%20L471.58%2C66.07%20L475.38%2C65.72%20L479.17%2C65.38%20L482.97%2C65.06%20L486.76%2C64.74%20L490.56%2C64.44%20L494.35%2C64.16%20L498.14%2C63.88%20L501.94%2C63.61%20L505.74%2C63.36%20L509.53%2C63.11%20L513.33%2C62.87%20L517.12%2C62.64%20L520.91%2C62.41%20L524.71%2C62.19%20L528.50%2C61.98%20L532.30%2C61.78%20L536.10%2C61.58%20L539.89%2C61.39%20L543.69%2C61.20%20L547.48%2C61.02%20L551.28%2C60.84%20L555.07%2C60.67%20L558.87%2C60.50%20L562.66%2C60.33%20L566.46%2C60.17%20L570.25%2C60.02%20L574.04%2C59.86%20L577.84%2C59.72%20L581.63%2C59.57%20L585.43%2C59.43%20L589.22%2C59.29%20L593.02%2C59.16%20L596.81%2C59.02%20L600.61%2C58.89%20L604.40%2C58.77%20L608.20%2C58.64%20L612.00%2C58.52%20L615.79%2C58.40%20L619.59%2C58.28%20L623.38%2C58.17%20L627.17%2C58.06%20L630.97%2C57.95%20L634.76%2C57.84%20L638.56%2C57.73%20L642.35%2C57.63%20L646.15%2C57.53%20L649.95%2C57.43%20L653.74%2C57.33%20L657.53%2C57.23%20L661.33%2C57.14%20L665.13%2C57.05%20L668.92%2C56.95%20L672.71%2C56.86%20L676.51%2C56.78%20L680.31%2C56.69%20L684.10%2C56.60%20L687.90%2C56.52%20L691.69%2C56.44%20L695.49%2C56.35%20L699.28%2C56.27%20L703.07%2C56.20%20L706.87%2C56.12%20L710.66%2C56.04%20L714.46%2C55.97%20L718.25%2C55.89%20L722.05%2C55.82%20L725.85%2C55.75%20L729.64%2C55.68%20L733.44%2C55.61%20L737.23%2C55.54%20L741.02%2C55.47%20L744.82%2C55.40%20L748.61%2C55.34%20L752.41%2C55.27%20L756.21%2C55.21%20L758.10%2C55.17%20L759.24%2C55.16%20L759.62%2C55.15%20L759.96%2C55.14%20L760.00%2C55.14%20L760.00%2C55.14%22%20fill%3D%22none%22%20stroke%3D%22%23235e96%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20d%3D%22M380.5%20146.57142857142856%20V350%22%20stroke%3D%22%237b609e%22%20stroke-dasharray%3D%224%204%22%2F%3E%3Ctext%20x%3D%22415%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%3EVolume%20of%20sodium%20hydroxide%20added%20%2F%20cm%C2%B3%3C%2Ftext%3E%3Ctext%20x%3D%2215%22%20y%3D%22180%22%3EpH%3C%2Ftext%3E%3Ctext%20x%3D%2282%22%20y%3D%2220%22%3ETC01%20%C2%B7%20initial%202.8%20%C2%B7%20equivalence%2022.5%20cm%C2%B3%20%2F%20pH%208.9%20%C2%B7%20final%2012.9%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+          "alt": "Checked titration curve with source-equilibrium shape and all three numerical anchors."
+        },
+        {
+          "kind": "text",
+          "text": "Initial pH 2.8; equivalence 22.5 cm³ (pH 8.9); final pH 12.9."
+        },
+        {
+          "kind": "text",
+          "text": "ethanoic acid requires the weak acid section, rising."
+        },
+        {
+          "kind": "text",
+          "text": "The added sodium hydroxide requires the strong base section."
+        },
+        {
+          "kind": "text",
+          "text": "Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+        },
+        {
+          "kind": "text",
+          "text": "Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+        },
+        {
+          "kind": "text",
+          "text": "Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+        },
+        {
+          "kind": "text",
+          "text": "Phenolphthalein: the transition range must lie within the steep region around equivalence."
+        },
+        {
+          "kind": "text",
+          "text": "The curve uses charge balance, weak-species equilibrium and Kw = 1.0 × 10⁻¹⁴ at 25 °C with ideal concentrations and additive volumes. A weak-acid buffer before equivalence has acid and conjugate base; added weak titrant after equivalence may form a buffer. Diprotic cases use the question’s stated complete-dissociation model."
+        }
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/data.js",
+          "sha256": "b1c6255a35a1380c867e3183034d03e08bf9c67e2b7d57c622eb815ba75ebf00",
+          "symbolOrSection": "complete 36-record source bank; OCR A Chemistry 5.1.3(n–o)"
+        }
+      ]
+    }
+  },
+  "before": {
+    "attempts": [
+      {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "next-fix-alevel-practice-dirty-double",
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC01",
+          "seed": 3,
+          "level": 2
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "currentResponses": {
+          "curve": {
+            "kind": "titration-curve",
+            "before": "before-weak-acid",
+            "after": "after-strong-base",
+            "initialPH": 2.8000000000000003,
+            "equivalenceVolume": 22.5,
+            "finalPH": 12.9,
+            "indicator": "phenolphthalein"
+          }
+        },
+        "assistance": [],
+        "phase": "assessed",
+        "firstResponse": {
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": "before-weak-acid",
+              "after": "after-strong-base",
+              "initialPH": 2.8000000000000003,
+              "equivalenceVolume": 22.5,
+              "finalPH": 12.9,
+              "indicator": "phenolphthalein"
+            }
+          },
+          "submittedAt": 1791005819062,
+          "timing": {
+            "activeMs": 77,
+            "idleLimitMs": 600000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1791005819062,
+          "marks": {
+            "earned": 6,
+            "available": 6,
+            "points": [
+              {
+                "partId": "curve",
+                "pointId": "criterion-1",
+                "earned": 1,
+                "available": 1,
+                "message": "Before-equivalence shape: ethanoic acid requires the weak acid section, rising."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-2",
+                "earned": 1,
+                "available": 1,
+                "message": "After-equivalence shape: The added sodium hydroxide requires the strong base section."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-3",
+                "earned": 1,
+                "available": 1,
+                "message": "Initial pH: Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-4",
+                "earned": 1,
+                "available": 1,
+                "message": "Equivalence volume: Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-5",
+                "earned": 1,
+                "available": 1,
+                "message": "Final pH: Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-6",
+                "earned": 1,
+                "available": 1,
+                "message": "Indicator: Phenolphthalein: the transition range must lie within the steep region around equivalence."
+              }
+            ]
+          },
+          "score": 1,
+          "selfAssessed": false
+        }
+      }
+    ],
+    "sessions": [
+      {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "next-fix-alevel-practice-dirty-double",
+        "previousQuestionIds": [
+          "TC01"
+        ],
+        "paused": false
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "curriculum",
+        "id": "next-fix-alevel-practice-dirty-double",
+        "profileId": "local",
+        "gemId": "u6-t1-1-9",
+        "score": 1,
+        "completedAt": 1791005819062,
+        "selfAssessed": false,
+        "assisted": false,
+        "provenance": "new-attempt",
+        "independent": true,
+        "timing": {
+          "activeMs": 77,
+          "idleLimitMs": 600000
+        },
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC01",
+          "seed": 3,
+          "level": 2
+        },
+        "firstResponse": {
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": "before-weak-acid",
+              "after": "after-strong-base",
+              "initialPH": 2.8000000000000003,
+              "equivalenceVolume": 22.5,
+              "finalPH": 12.9,
+              "indicator": "phenolphthalein"
+            }
+          },
+          "submittedAt": 1791005819062,
+          "timing": {
+            "activeMs": 77,
+            "idleLimitMs": 600000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1791005819062,
+          "marks": {
+            "earned": 6,
+            "available": 6,
+            "points": [
+              {
+                "partId": "curve",
+                "pointId": "criterion-1",
+                "earned": 1,
+                "available": 1,
+                "message": "Before-equivalence shape: ethanoic acid requires the weak acid section, rising."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-2",
+                "earned": 1,
+                "available": 1,
+                "message": "After-equivalence shape: The added sodium hydroxide requires the strong base section."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-3",
+                "earned": 1,
+                "available": 1,
+                "message": "Initial pH: Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-4",
+                "earned": 1,
+                "available": 1,
+                "message": "Equivalence volume: Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-5",
+                "earned": 1,
+                "available": 1,
+                "message": "Final pH: Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-6",
+                "earned": 1,
+                "available": 1,
+                "message": "Indicator: Phenolphthalein: the transition range must lie within the steep region around equivalence."
+              }
+            ]
+          },
+          "score": 1,
+          "selfAssessed": false
+        },
+        "course": "alevel",
+        "activityId": "alevel/ph-titration-curves",
+        "level": 2
+      }
+    ]
+  },
+  "after": {
+    "attempts": [
+      {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "next-fix-alevel-practice-dirty-double",
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC01",
+          "seed": 3,
+          "level": 2
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "currentResponses": {
+          "curve": {
+            "kind": "titration-curve",
+            "before": "before-weak-acid",
+            "after": "after-strong-base",
+            "initialPH": 2.9000000000000004,
+            "equivalenceVolume": 22.5,
+            "finalPH": 12.9,
+            "indicator": "phenolphthalein"
+          }
+        },
+        "assistance": [],
+        "phase": "assessed",
+        "firstResponse": {
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": "before-weak-acid",
+              "after": "after-strong-base",
+              "initialPH": 2.8000000000000003,
+              "equivalenceVolume": 22.5,
+              "finalPH": 12.9,
+              "indicator": "phenolphthalein"
+            }
+          },
+          "submittedAt": 1791005819062,
+          "timing": {
+            "activeMs": 77,
+            "idleLimitMs": 600000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1791005819062,
+          "marks": {
+            "earned": 6,
+            "available": 6,
+            "points": [
+              {
+                "partId": "curve",
+                "pointId": "criterion-1",
+                "earned": 1,
+                "available": 1,
+                "message": "Before-equivalence shape: ethanoic acid requires the weak acid section, rising."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-2",
+                "earned": 1,
+                "available": 1,
+                "message": "After-equivalence shape: The added sodium hydroxide requires the strong base section."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-3",
+                "earned": 1,
+                "available": 1,
+                "message": "Initial pH: Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-4",
+                "earned": 1,
+                "available": 1,
+                "message": "Equivalence volume: Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-5",
+                "earned": 1,
+                "available": 1,
+                "message": "Final pH: Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-6",
+                "earned": 1,
+                "available": 1,
+                "message": "Indicator: Phenolphthalein: the transition range must lie within the steep region around equivalence."
+              }
+            ]
+          },
+          "score": 1,
+          "selfAssessed": false
+        }
+      }
+    ],
+    "sessions": [
+      {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "next-fix-alevel-practice-dirty-double",
+        "previousQuestionIds": [
+          "TC01"
+        ],
+        "paused": false
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "curriculum",
+        "id": "next-fix-alevel-practice-dirty-double",
+        "profileId": "local",
+        "gemId": "u6-t1-1-9",
+        "score": 1,
+        "completedAt": 1791005819062,
+        "selfAssessed": false,
+        "assisted": false,
+        "provenance": "new-attempt",
+        "independent": true,
+        "timing": {
+          "activeMs": 77,
+          "idleLimitMs": 600000
+        },
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC01",
+          "seed": 3,
+          "level": 2
+        },
+        "firstResponse": {
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": "before-weak-acid",
+              "after": "after-strong-base",
+              "initialPH": 2.8000000000000003,
+              "equivalenceVolume": 22.5,
+              "finalPH": 12.9,
+              "indicator": "phenolphthalein"
+            }
+          },
+          "submittedAt": 1791005819062,
+          "timing": {
+            "activeMs": 77,
+            "idleLimitMs": 600000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1791005819062,
+          "marks": {
+            "earned": 6,
+            "available": 6,
+            "points": [
+              {
+                "partId": "curve",
+                "pointId": "criterion-1",
+                "earned": 1,
+                "available": 1,
+                "message": "Before-equivalence shape: ethanoic acid requires the weak acid section, rising."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-2",
+                "earned": 1,
+                "available": 1,
+                "message": "After-equivalence shape: The added sodium hydroxide requires the strong base section."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-3",
+                "earned": 1,
+                "available": 1,
+                "message": "Initial pH: Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-4",
+                "earned": 1,
+                "available": 1,
+                "message": "Equivalence volume: Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-5",
+                "earned": 1,
+                "available": 1,
+                "message": "Final pH: Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-6",
+                "earned": 1,
+                "available": 1,
+                "message": "Indicator: Phenolphthalein: the transition range must lie within the steep region around equivalence."
+              }
+            ]
+          },
+          "score": 1,
+          "selfAssessed": false
+        },
+        "course": "alevel",
+        "activityId": "alevel/ph-titration-curves",
+        "level": 2
+      }
+    ]
+  },
+  "afterDOM": {
+    "code": "TC02",
+    "save": "Saving…"
+  },
+  "events": [
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": false,
+      "save": "Saved on this device",
+      "at": 1053.3999999761581
+    },
+    {
+      "type": "mousedown",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": false,
+      "save": "Saved on this device",
+      "at": 1053.7999999523163
+    },
+    {
+      "type": "blur",
+      "trusted": true,
+      "target": "Initial pH",
+      "nextDisabled": false,
+      "save": "Saved on this device",
+      "at": 1054.5
+    },
+    {
+      "type": "focusout",
+      "trusted": true,
+      "target": "Initial pH",
+      "nextDisabled": false,
+      "save": "Saved on this device",
+      "at": 1054.5
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": false,
+      "save": "Saving…",
+      "at": 1078.8999999761581
+    },
+    {
+      "type": "mouseup",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": false,
+      "save": "Saving…",
+      "at": 1079.1999999284744
+    },
+    {
+      "type": "click",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": false,
+      "save": "Saving…",
+      "at": 1079.3999999761581
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": true,
+      "save": "Saving…",
+      "at": 1090.7999999523163
+    },
+    {
+      "type": "blur",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": true,
+      "save": "Saving…",
+      "at": 1091.3999999761581
+    },
+    {
+      "type": "focusout",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": true,
+      "save": "Saving…",
+      "at": 1091.3999999761581
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "target": "Next question",
+      "nextDisabled": true,
+      "save": "Saving…",
+      "at": 1092
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 2\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/behaviour/next-save-fix/diagnostic-only.mjs:28:611",
+  "finalRows": {
+    "attempts": [
+      {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "a1bfec3f-a821-47b7-8c7f-b4adcecc64db",
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC02",
+          "seed": 1814290383,
+          "level": 2
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "a1bfec3f-a821-47b7-8c7f-b4adcecc64db",
+          "activeMs": 0,
+          "idleLimitMs": 600000,
+          "finished": false
+        }
+      },
+      {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "next-fix-alevel-practice-dirty-double",
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC01",
+          "seed": 3,
+          "level": 2
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "currentResponses": {
+          "curve": {
+            "kind": "titration-curve",
+            "before": "before-weak-acid",
+            "after": "after-strong-base",
+            "initialPH": 2.9000000000000004,
+            "equivalenceVolume": 22.5,
+            "finalPH": 12.9,
+            "indicator": "phenolphthalein"
+          }
+        },
+        "assistance": [],
+        "phase": "assessed",
+        "firstResponse": {
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": "before-weak-acid",
+              "after": "after-strong-base",
+              "initialPH": 2.8000000000000003,
+              "equivalenceVolume": 22.5,
+              "finalPH": 12.9,
+              "indicator": "phenolphthalein"
+            }
+          },
+          "submittedAt": 1791005819062,
+          "timing": {
+            "activeMs": 77,
+            "idleLimitMs": 600000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1791005819062,
+          "marks": {
+            "earned": 6,
+            "available": 6,
+            "points": [
+              {
+                "partId": "curve",
+                "pointId": "criterion-1",
+                "earned": 1,
+                "available": 1,
+                "message": "Before-equivalence shape: ethanoic acid requires the weak acid section, rising."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-2",
+                "earned": 1,
+                "available": 1,
+                "message": "After-equivalence shape: The added sodium hydroxide requires the strong base section."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-3",
+                "earned": 1,
+                "available": 1,
+                "message": "Initial pH: Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-4",
+                "earned": 1,
+                "available": 1,
+                "message": "Equivalence volume: Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-5",
+                "earned": 1,
+                "available": 1,
+                "message": "Final pH: Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-6",
+                "earned": 1,
+                "available": 1,
+                "message": "Indicator: Phenolphthalein: the transition range must lie within the steep region around equivalence."
+              }
+            ]
+          },
+          "score": 1,
+          "selfAssessed": false
+        }
+      }
+    ],
+    "sessions": [
+      {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/ph-titration-curves",
+          "gemId": "u6-t1-1-9",
+          "level": 2
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "a1bfec3f-a821-47b7-8c7f-b4adcecc64db",
+        "previousQuestionIds": [
+          "TC01",
+          "TC02"
+        ],
+        "paused": false
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "curriculum",
+        "id": "next-fix-alevel-practice-dirty-double",
+        "profileId": "local",
+        "gemId": "u6-t1-1-9",
+        "score": 1,
+        "completedAt": 1791005819062,
+        "selfAssessed": false,
+        "assisted": false,
+        "provenance": "new-attempt",
+        "independent": true,
+        "timing": {
+          "activeMs": 77,
+          "idleLimitMs": 600000
+        },
+        "ref": {
+          "activityId": "alevel/ph-titration-curves",
+          "questionId": "TC01",
+          "seed": 3,
+          "level": 2
+        },
+        "firstResponse": {
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": "before-weak-acid",
+              "after": "after-strong-base",
+              "initialPH": 2.8000000000000003,
+              "equivalenceVolume": 22.5,
+              "finalPH": 12.9,
+              "indicator": "phenolphthalein"
+            }
+          },
+          "submittedAt": 1791005819062,
+          "timing": {
+            "activeMs": 77,
+            "idleLimitMs": 600000
+          },
+          "assistance": []
+        },
+        "firstAssessment": {
+          "kind": "marked",
+          "assessedAt": 1791005819062,
+          "marks": {
+            "earned": 6,
+            "available": 6,
+            "points": [
+              {
+                "partId": "curve",
+                "pointId": "criterion-1",
+                "earned": 1,
+                "available": 1,
+                "message": "Before-equivalence shape: ethanoic acid requires the weak acid section, rising."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-2",
+                "earned": 1,
+                "available": 1,
+                "message": "After-equivalence shape: The added sodium hydroxide requires the strong base section."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-3",
+                "earned": 1,
+                "available": 1,
+                "message": "Initial pH: Use [H⁺] ≈ √(Kₐ × c). Rounded initial pH = 2.8."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-4",
+                "earned": 1,
+                "available": 1,
+                "message": "Equivalence volume: Match H⁺ and OH⁻ equivalents: V = (25 × 0.18 × 1) ÷ (0.2 × 1) = 22.5 cm³."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-5",
+                "earned": 1,
+                "available": 1,
+                "message": "Final pH: Divide the excess OH⁻ equivalents by the total volume (75.0 cm³), then calculate pH. Rounded final pH = 12.9."
+              },
+              {
+                "partId": "curve",
+                "pointId": "criterion-6",
+                "earned": 1,
+                "available": 1,
+                "message": "Indicator: Phenolphthalein: the transition range must lie within the steep region around equivalence."
+              }
+            ]
+          },
+          "score": 1,
+          "selfAssessed": false
+        },
+        "course": "alevel",
+        "activityId": "alevel/ph-titration-curves",
+        "level": 2
+      }
+    ]
+  },
+  "dom": {
+    "code": "TC02",
+    "save": "Saved on this device",
+    "events": [
+      {
+        "type": "pointerdown",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": false,
+        "save": "Saved on this device",
+        "at": 1053.3999999761581
+      },
+      {
+        "type": "mousedown",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": false,
+        "save": "Saved on this device",
+        "at": 1053.7999999523163
+      },
+      {
+        "type": "blur",
+        "trusted": true,
+        "target": "Initial pH",
+        "nextDisabled": false,
+        "save": "Saved on this device",
+        "at": 1054.5
+      },
+      {
+        "type": "focusout",
+        "trusted": true,
+        "target": "Initial pH",
+        "nextDisabled": false,
+        "save": "Saved on this device",
+        "at": 1054.5
+      },
+      {
+        "type": "pointerup",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": false,
+        "save": "Saving…",
+        "at": 1078.8999999761581
+      },
+      {
+        "type": "mouseup",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": false,
+        "save": "Saving…",
+        "at": 1079.1999999284744
+      },
+      {
+        "type": "click",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": false,
+        "save": "Saving…",
+        "at": 1079.3999999761581
+      },
+      {
+        "type": "pointerdown",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": true,
+        "save": "Saving…",
+        "at": 1090.7999999523163
+      },
+      {
+        "type": "blur",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": true,
+        "save": "Saving…",
+        "at": 1091.3999999761581
+      },
+      {
+        "type": "focusout",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": true,
+        "save": "Saving…",
+        "at": 1091.3999999761581
+      },
+      {
+        "type": "pointerup",
+        "trusted": true,
+        "target": "Next question",
+        "nextDisabled": true,
+        "save": "Saving…",
+        "at": 1092
+      }
+    ]
+  }
+}

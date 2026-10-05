@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "method": "Pinned workspace Playwright, actual headless Edge, fresh context; owned harness mounts current players and real attempt controller, no app storage or sibling stores",
+  "checks": [
+    {
+      "id": "generic-state-keyboard",
+      "status": "PASS",
+      "checks": [
+        "initial autofocus",
+        "rerender keeps focus",
+        "Enter multipart",
+        "single submit",
+        "ShiftEnter newline",
+        "IME/repeat guards",
+        "wrong unlock",
+        "correct correction",
+        "Next Enter",
+        "edit invalidation",
+        "Clear one dispatch and blank",
+        "first answer score time unchanged",
+        "post-assess GiveUp",
+        "canNext gate",
+        "native button single activation",
+        "select guard"
+      ]
+    }
+  ],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: One row\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/ui-consistency/u1/controls/browser.mjs:74:4"
+}

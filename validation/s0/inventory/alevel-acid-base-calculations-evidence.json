@@ -1,0 +1,2570 @@
+{
+  "activityId": "alevel/acid-base-calculations",
+  "lines": [
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 5,
+      "text": "  const scaffoldCore = window.AcidBaseScaffold;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 11,
+      "text": "    answer: document.getElementById(\"answerContent\"), seedInput: document.getElementById(\"seedInput\"),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 12,
+      "text": "    loadSeed: document.getElementById(\"loadSeed\"), seedFeedback: document.getElementById(\"seedFeedback\")"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 16,
+      "text": "  let seedCounter = 0;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 103,
+      "text": "  function scaffoldNumericMatches(value) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 104,
+      "text": "    return scaffoldCore.numericTokens(value);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 109,
+      "text": "    const standardControl = scaffoldCore.prefersStandardForm(expected)"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 115,
+      "text": "  function scaffoldText(value, partIndex, fieldState) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 119,
+      "text": "    for (const match of scaffoldNumericMatches(source)) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 125,
+      "text": "        html += `<span class=\"scaffold-final-slot\" data-final-slot=\"${partIndex}\" data-expected=\"${fieldState.finalExpected}\" data-tolerance=\"${fieldState.finalTolerance}\"><span class=\"working-marker\" aria-hidden=\"true\"></span></span>`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 134,
+      "text": "  function scaffoldMathExpression(source, partIndex, fieldState) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 136,
+      "text": "    if (isWrappedInParentheses(text)) return `(${scaffoldMathExpression(text.slice(1, -1), partIndex, fieldState)})`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 138,
+      "text": "    if (slash < 0) return scaffoldText(text, partIndex, fieldState);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 144,
+      "text": "    return `<span class=\"fraction\"><span>${scaffoldMathExpression(numerator, partIndex, fieldState)}</span><span>${scaffoldMathExpression(denominator, partIndex, fieldState)}</span></span>${suffix ? ` ${scaffoldMathExpression(suffix, partIndex, fieldState)}` : \"\"}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 149,
+      "text": "    const total = rows.reduce((sum, row) => sum + (row.type === \"equation\" ? scaffoldNumericMatches(row.right).length : 0), 0);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 153,
+      "text": "      ? `<p class=\"math-note scaffold-note\">${notationHtml(row.text)}</p>`"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 154,
+      "text": "      : `<div class=\"scaffold-math-row\"><span class=\"math-lhs\">${notationHtml(row.left)}</span><span class=\"math-equals\">=</span><span class=\"math-rhs\">${scaffoldMathExpression(row.right, partIndex, fieldState)}</span></div>`).join(\"\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 175,
+      "text": "    seedCounter += 1;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 181,
+      "text": "    return ((Date.now() & 0x7FFFFFFF) ^ Math.imul(seedCounter, 2654435761)) >>> 0;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 186,
+      "text": "    const scaffold = renderScaffold(working, index, item);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 188,
+      "text": "      <div class=\"response-prompt\"><label for=\"response-${index}\"><span class=\"part-label\">${String.fromCharCode(97 + index)}</span>${notationHtml(item.prompt)}</label>${scaffold.count ? `<button class=\"scaffold-toggle\" type=\"button\" data-scaffold-toggle=\"${index}\" aria-expanded=\"false\" aria-controls=\"scaffold-${index}\" aria-label=\"Show working framework for part ${String.fromCharCode(97 + index)}\" title=\"Show working framework\">?</button>` : \"\"}</div>"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 189,
+      "text": "      ${scaffold.count ? `<div class=\"working-scaffold\" id=\"scaffold-${index}\" hidden>${scaffold.html}<div class=\"scaffold-actions\"><button type=\"button\" data-check-scaffold=\"${index}\">Check working</button><p class=\"scaffold-feedback\" id=\"scaffold-feedback-${index}\" aria-live=\"polite\"></p></div></div>` : \"\"}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 207,
+      "text": "    <p class=\"scaffold-key\"><span aria-hidden=\"true\">?</span>Open a working framework beside any calculation part if you need one.</p>"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 219,
+      "text": "    elements.question.querySelectorAll(\"[data-scaffold-toggle]\").forEach((button) => button.addEventListener(\"click\", () => toggleScaffold(button)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 220,
+      "text": "    elements.question.querySelectorAll(\"[data-check-scaffold]\").forEach((button) => button.addEventListener(\"click\", () => checkScaffold(button)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 236,
+      "text": "    const scaffold = document.getElementById(button.getAttribute(\"aria-controls\"));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 237,
+      "text": "    if (!scaffold || !scaffold.hidden) return;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 241,
+      "text": "    const finalSlot = scaffold.querySelector(\".scaffold-final-slot\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 245,
+      "text": "      finalInput.classList.add(\"working-input\", \"scaffold-final-input\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 250,
+      "text": "    scaffold.hidden = false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 252,
+      "text": "    button.setAttribute(\"aria-label\", `Working framework open for part ${String.fromCharCode(97 + Number(button.dataset.scaffoldToggle))}`);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 255,
+      "text": "    scaffold.querySelector(\".working-input\")?.focus();"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 260,
+      "text": "      return scaffoldCore.standardValue(editor.querySelector(\".working-mantissa-input\")?.value, editor.querySelector(\".working-exponent-input\")?.value);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 274,
+      "text": "      let parts = scaffoldCore.parseStandardParts(entered);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 275,
+      "text": "      if (!parts && entered && Number.isFinite(core.enteredNumber(entered))) parts = scaffoldCore.standardParts(core.enteredNumber(entered));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 288,
+      "text": "      const combined = scaffoldCore.standardValue(mantissaInput.value, exponentInput.value);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 316,
+      "text": "    const feedback = field.closest(\".working-scaffold\")?.querySelector(\".scaffold-feedback\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 328,
+      "text": "    const scaffold = document.getElementById(`scaffold-${button.dataset.checkScaffold}`);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 329,
+      "text": "    const fields = [...scaffold.querySelectorAll(\"[data-working-editor], .scaffold-final-input\")];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 357,
+      "text": "    const feedback = scaffold.querySelector(\".scaffold-feedback\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 398,
+      "text": "  function renderGenerated(question, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 400,
+      "text": "    currentQuestionId = core.formatQuestionId(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 403,
+      "text": "    QuestionReview.mount(elements.question, currentQuestionId, loadReview);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 406,
+      "text": "    elements.seedInput.value = currentQuestionId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 407,
+      "text": "    elements.seedFeedback.textContent = \"\";"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 408,
+      "text": "    elements.seedFeedback.classList.remove(\"error-text\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 417,
+      "text": "      const seed = core.encodeQuestionId(provisional.templateId, provisional.level, encodedStructure, provisionalSeed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 418,
+      "text": "      const question = core.generate({ level: provisional.level, family: provisional.familyId, template: provisional.templateId, structure: encodedStructure }, seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 419,
+      "text": "      renderGenerated(question, seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 426,
+      "text": "    core.decodeQuestionId(id);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 427,
+      "text": "    elements.seedInput.value = id;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 432,
+      "text": "    if (!QuestionReview.isTeacher()) return;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 434,
+      "text": "      const decoded = core.decodeQuestionId(elements.seedInput.value);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 441,
+      "text": "      const question = core.generate({ level: decoded.level, family: decoded.template.family, template: decoded.template.id, structure: decoded.structure }, decoded.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 442,
+      "text": "      renderGenerated(question, decoded.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 443,
+      "text": "      elements.seedFeedback.textContent = \"Question loaded.\";"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 445,
+      "text": "      elements.seedFeedback.textContent = error.message;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 446,
+      "text": "      elements.seedFeedback.classList.add(\"error-text\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 460,
+      "text": "  elements.seedInput.addEventListener(\"keydown\", (event) => { if (event.key === \"Enter\") loadQuestionId(); });"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 461,
+      "text": "  elements.seedInput.addEventListener(\"input\", () => { elements.seedFeedback.textContent = \"\"; elements.seedFeedback.classList.remove(\"error-text\"); });"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 468,
+      "text": "  elements.seedInput.closest('.seed-loader').hidden = true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+      "line": 470,
+      "text": "  QuestionReview.requested(loadReview);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 12,
+      "text": "  function mulberry32(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 14,
+      "text": "      let t = seed += 0x6D2B79F5;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 599,
+      "text": "  const questionIdPrefix = \"AB\";"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 600,
+      "text": "  const questionIdModulus = 1024;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 601,
+      "text": "  const questionIdRadix = 36;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 602,
+      "text": "  const questionIdDigits = 6;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 603,
+      "text": "  const questionIdCapacity = questionIdRadix ** questionIdDigits;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 604,
+      "text": "  const maximumRandomPart = Math.floor((questionIdCapacity - 1) / questionIdModulus);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 606,
+      "text": "  function encodeQuestionId(templateId, level, structure, randomPart) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 611,
+      "text": "    return (Number(randomPart) % (maximumRandomPart + 1)) * questionIdModulus + configCode;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 614,
+      "text": "  function formatQuestionId(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 615,
+      "text": "    const value = Number(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 616,
+      "text": "    if (!Number.isSafeInteger(value) || value < 0 || value >= questionIdCapacity) throw new Error(\"The question ID value is outside the valid range.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 617,
+      "text": "    return `${questionIdPrefix}-${value.toString(questionIdRadix).toUpperCase().padStart(questionIdDigits, \"0\")}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 620,
+      "text": "  function decodeQuestionId(value) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 623,
+      "text": "    const seed = Number.parseInt(match[1], questionIdRadix);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 624,
+      "text": "    if (!Number.isSafeInteger(seed) || seed < 0 || seed >= questionIdCapacity) throw new Error(\"The question ID value is outside the valid range.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 625,
+      "text": "    const configCode = seed % questionIdModulus;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 632,
+      "text": "    return { seed, level, structure: structureIndex === 1 ? \"single\" : \"staged\", template };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 686,
+      "text": "  function generate(config, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 688,
+      "text": "    const rng = mulberry32((Number(seed) || Date.now()) >>> 0);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 702,
+      "text": "      seed: Number(seed), level, structure, templateId: template.id, templateLabel: template.label,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+      "line": 726,
+      "text": "    scientific, display, encodeQuestionId, decodeQuestionId, formatQuestionId, printWorkingSpace, questionIdPrefix, metadata: data.metadata"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 6,
+      "text": "  const leafId = retiredLeaf ? \"u6-t1-1-5\" : params.get(\"leaf\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 10,
+      "text": "  const scope = model.scopeFor(leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 31,
+      "text": "  function routeKey() { return `${leafId}:${practice}:${practice === \"level\" ? requestedLevel : \"auto\"}`; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 37,
+      "text": "    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(session)); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 43,
+      "text": "      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 51,
+      "text": "    if (!value || value.schema !== 2 || value.routeKey !== routeKey() || value.leafId !== leafId || value.practice !== practice || !value.cycles || typeof value.cycles !== \"object\" || Array.isArray(value.cycles)) return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 54,
+      "text": "      const level = Number(key.slice(leafId.length + 1));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 55,
+      "text": "      if (key !== `${leafId}:${level}` || !availableLevels().includes(level) || !Array.isArray(ids) || ids.some(id => !model.templatesFor(leafId, level).includes(id))) return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 59,
+      "text": "    if (!current || typeof current.id !== \"string\" || !current.id || !availableLevels().includes(current.level) || !model.templatesFor(leafId, current.level).includes(current.templateId) || !Number.isInteger(current.seed) || current.seed < 0 || current.seed > 0xffffffff || !Array.isArray(current.responses) || typeof current.working !== \"string\" || typeof current.submitted !== \"boolean\" || typeof current.recorded !== \"boolean\") return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 63,
+      "text": "      const restored = model.generate(current.templateId, current.level, current.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 67,
+      "text": "  function makeSession() { return { schema: 2, routeKey: routeKey(), leafId, practice, fixedLevel: practice === \"level\" ? requestedLevel : null, cycles: {}, current: null }; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 68,
+      "text": "  function makeCurrent(templateId, level, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 69,
+      "text": "    const responses = model.generate(templateId, level, seed).responses.map(() => \"\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 70,
+      "text": "    return { id: api().attemptId(), level, templateId, seed, responses, working: \"\", submitted: false, recorded: false, score: null, completedAt: null };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 73,
+      "text": "    const level = model.nextLevel(session.practice, session.fixedLevel, api(), leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 75,
+      "text": "    const key = `${leafId}:${level}`, selected = model.chooseTemplate(leafId, level, session.cycles[key], Math.random());"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 81,
+      "text": "    const level = session.current?.level || session.fixedLevel || api().nextLevel(leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 84,
+      "text": "      for (const item of level == null ? availableLevels() : [level]) elements.masteryBar.append(api().bar(api().summary(leafId, item).score, model.LEVEL_LABELS[item], item));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 95,
+      "text": "    if (!session.current.submitted) return `<span class=\"review-id\">${escapeHtml(item.reviewId)}</span>`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 97,
+      "text": "    url.searchParams.set(\"review\", item.reviewId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 98,
+      "text": "    return `<a class=\"review-id\" href=\"${escapeHtml(url.href)}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Review question ${escapeHtml(item.reviewId)} in a new tab\">${escapeHtml(item.reviewId)}</a>`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 101,
+      "text": "    question = session.reviewing ? model.generateFromReview(session.current.reviewId) : model.generate(session.current.templateId, session.current.level, session.current.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 114,
+      "text": "        idleLimitMs: ActiveQuestionTime.allowance('acid', question), saved: item.timing,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 138,
+      "text": "    current.recorded = api().record({ id: current.id, leafId, level: current.level, score: current.score, completedAt: current.completedAt, timing: ActiveQuestionTime.result(current.timing) });"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 182,
+      "text": "    elements.questionPanel.innerHTML = `<header class=\"question-header\"><div><p class=\"question-meta\">READ-ONLY REVIEW</p><h3>${notation(reviewed.templateLabel)}</h3></div><span class=\"review-id\">${escapeHtml(reviewed.reviewId)}</span></header><p>${notation(reviewed.intro)}</p>${dataRows(reviewed)}<div class=\"response-list\">${targets}</div>`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 187,
+      "text": "    const base = `?leaf=${leafId}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 202,
+      "text": "      version: \"acid-base-calculations-test-v1\", leafId, level: session.current.level,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 203,
+      "text": "      templateId: session.current.templateId, seed: session.current.seed,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 218,
+      "text": "    if (!state || state.version !== \"acid-base-calculations-test-v1\" || state.leafId !== leafId || Number(state.level) !== requestedLevel || typeof state.templateId !== \"string\" || !model.templatesFor(leafId, requestedLevel).includes(state.templateId) || !Number.isSafeInteger(state.seed) || state.seed < 0 || state.seed > 0xffffffff || !Array.isArray(state.responses) || state.responses.some(item => typeof item !== \"string\") || typeof state.working !== \"string\" || typeof state.submitted !== \"boolean\") return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 221,
+      "text": "    const generated = model.generate(state.templateId, requestedLevel, state.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 228,
+      "text": "    const seed = state ? state.seed : testHash(`${testBridge.sessionId || \"\"}:${testBridge.attemptId || \"\"}:${leafId}:${requestedLevel}`);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 230,
+      "text": "    const selected = state ? { templateId: state.templateId, used: state.usedTemplates || [state.templateId] } : model.chooseTemplate(leafId, requestedLevel, priorIds, (seed % 1000003) / 1000003);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 231,
+      "text": "    const generated = model.generate(selected.templateId, requestedLevel, seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 237,
+      "text": "    session.current = { id: String(testBridge.attemptId || `acid-test-${seed}`), level: requestedLevel, templateId: selected.templateId, seed, responses, firstResponses: state?.firstResponses ? state.firstResponses.slice() : null, firstResults: state?.firstResults ? structuredClone(state.firstResults) : null, working: state?.working || \"\", submitted: Boolean(state?.submitted), recorded: false, score: state?.score ?? null, completedAt: state?.completedAt ?? null };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 264,
+      "text": "      params.set(\"leaf\", leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 271,
+      "text": "        if (!model.templatesFor(leafId, reviewed.level).includes(reviewed.templateId) || (practice === \"level\" && requestedLevel !== reviewed.level)) throw new Error(\"This review question does not belong to the selected topic and level.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 273,
+      "text": "        session.current = { ...makeCurrent(reviewed.templateId, reviewed.level, reviewed.seed), reviewId: reviewed.reviewId };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 284,
+      "text": "      if (api().renderChoices) api().renderChoices(elements.practiceChoices, { leafId, href: \"index.html\" }); else fallbackChoices();"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 287,
+      "text": "    if (!(practice === \"mastery\" || (practice === \"level\" && availableLevels().includes(requestedLevel)))) { location.replace(`?leaf=${encodeURIComponent(leafId)}`); return; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "line": 288,
+      "text": "    elements.practiceScreen.hidden = false; elements.scopeTitle.textContent = scope.label; elements.changeRoute.href = `?leaf=${leafId}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 37,
+      "text": "  function rng32(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 38,
+      "text": "    let value = Number(seed) >>> 0;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 60,
+      "text": "  function question(templateId, label, intro, rows, responses, working, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 62,
+      "text": "    return Object.freeze({ seed, level: 0, structure: \"direct\", templateId, templateLabel: label,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 70,
+      "text": "    \"ka-to-pka\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 73,
+      "text": "        [answer(\"pka\", \"Calculate pKₐ.\", \"pKₐ\", \"\", pka, \"dp2\")], [`pKₐ = −log₁₀Kₐ = ${pka.toFixed(2)}`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 75,
+      "text": "    \"pka-to-ka\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 78,
+      "text": "        [answer(\"ka\", \"Calculate Kₐ.\", \"Kₐ\", \"mol dm⁻³\", ka)], [`Kₐ = 10^(−pKₐ) = ${sci(ka)} mol dm⁻³`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 80,
+      "text": "    \"ka-from-ph\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 85,
+      "text": "        [`[H⁺] = 10^(−pH) = ${sci(roundedH)} mol dm⁻³`, `Kₐ = [H⁺]²/[HA] = ${sci(ka)} mol dm⁻³`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 87,
+      "text": "    \"ka-after-reconstruction\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 93,
+      "text": "        [`n(HA) = mass/Mᵣ = ${sci(mass / item.mr)} mol`, `[HA] = n/V = ${sci(c)} mol dm⁻³`, `[H⁺] = 10^(−pH) = ${sci(h)} mol dm⁻³`, `Kₐ = [H⁺]²/[HA] = ${sci(ka)} mol dm⁻³`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 95,
+      "text": "    \"strong-acid-preparation\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 100,
+      "text": "        [`Target [H⁺] = [HCl] = 10^(−pH) = ${sci(targetC)} mol dm⁻³`, `n(HCl) = cV = ${sci(targetC * finalV / 1000)} mol`, `Stock volume = n/c = ${(stockV / 1000).toPrecision(3)} dm³ = ${stockV.toPrecision(3)} cm³ (1 dm³ = 1000 cm³)`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 102,
+      "text": "    \"strong-acid-neutralisation\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 108,
+      "text": "        [`HCl + NaOH → NaCl + H₂O`, `Excess n(H⁺) = n(HCl) − n(NaOH) = ${sci(excess)} mol`, `[H⁺] = excess moles/total volume = ${sci(h)} mol dm⁻³`, `pH = −log₁₀[H⁺] = ${ph.toFixed(2)}`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 110,
+      "text": "    \"buffer-component-ratio\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 114,
+      "text": "        [`[H⁺] = 10^(−pH) = ${sci(h)} mol dm⁻³`, `[${item.conjugate}]/[${item.formula}] = Kₐ/[H⁺] = ${ratio.toPrecision(3)}`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 116,
+      "text": "    \"buffer-salt-amount\": (rng, seed) => {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 120,
+      "text": "        [`n(${item.sodiumSaltFormula}) = ratio × n(${item.formula}) = ${sci(nSalt)} mol`], seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 134,
+      "text": "  function decodeCustomReview(reviewId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 135,
+      "text": "    const match = String(reviewId || \"\").trim().toUpperCase().match(/^ABL-([0-9A-Z]{6})$/);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 140,
+      "text": "    return { templateId, level, seed:value };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 157,
+      "text": "  function generate(templateId, level, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 159,
+      "text": "    let generationSeed, reviewId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 161,
+      "text": "      reviewId = customReviewId(templateId, level, seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 162,
+      "text": "      generationSeed = Number.parseInt(reviewId.slice(4), 36);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 165,
+      "text": "      generationSeed = core.encodeQuestionId(templateId, level, Number(level) === 3 ? \"single\" : \"staged\", seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 166,
+      "text": "      reviewId = core.formatQuestionId(generationSeed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 169,
+      "text": "    return Object.freeze(Object.assign({}, generated, { level: Number(level), structure:Number(level) === 3 ? \"single\" : Number(level) === 2 ? \"staged\" : generated.structure, reviewId }));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 171,
+      "text": "  function generateFromReview(reviewId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 172,
+      "text": "    const text = String(reviewId || \"\").trim().toUpperCase();"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 175,
+      "text": "      const generated = custom[decoded.templateId](rng32(decoded.seed), decoded.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 176,
+      "text": "      return Object.freeze(Object.assign({}, generated, { level:decoded.level, reviewId:text }));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 178,
+      "text": "    const decoded = core.decodeQuestionId(text);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 179,
+      "text": "    const generated = core.generate({ level:decoded.level, template:decoded.template.id, family:decoded.template.family, structure:decoded.structure }, decoded.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 180,
+      "text": "    return Object.freeze(Object.assign({}, generated, { reviewId:text }));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 189,
+      "text": "  function nextLevel(mode, fixedLevel, api, leafId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 190,
+      "text": "    return mode === \"mastery\" ? api.nextLevel(leafId) : Number(fixedLevel);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 296,
+      "text": "  function rng32(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 297,
+      "text": "    let value = seed >>> 0;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 332,
+      "text": "  function question(templateId, level, seed, intro, rows, parts, audits = []) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 344,
+      "text": "      version, seed, level, structure: level === 1 ? \"staged\" : \"single\", templateId,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 355,
+      "text": "  function strongBuilder(id, rng, seed, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 359,
+      "text": "      return question(id, level, seed, \"Calculate the pH of the solution.\", [[\"[H⁺] / mol dm⁻³\", scientific(h)]],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 365,
+      "text": "      return question(id, level, seed, \"Calculate the hydrogen-ion concentration of the solution.\", [[\"pH\", dp(ph, 2)]],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 371,
+      "text": "      return question(id, level, seed, `${acid.name} is a monobasic strong acid. Calculate the pH of the solution.`, [[`[${acid.formula}] / mol dm⁻³`, scientific(c)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 379,
+      "text": "      return question(id, level, seed, `${dp(v1, 1)} cm³ of ${acid.name} is diluted with water to ${dp(v2, 1)} cm³. Calculate the final pH.`, [[`Initial [${acid.formula}] / mol dm⁻³`, scientific(c1)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 388,
+      "text": "      return question(id, level, seed, `Prepare ${dp(finalV, 1)} cm³ of ${acid.name} at pH ${dp(target, 2)} from a ${dp(stock, 3)} mol dm⁻³ stock solution. Calculate the stock volume.`, [], [part(response(\"volume\", \"Calculate the stock volume.\", \"Volume\", \"cm³\", stockV),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 395,
+      "text": "    return question(id, level, seed, \"Hydrochloric acid is mixed with sodium hydroxide. The acid is in excess and volumes are additive. Calculate the final pH.\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 403,
+      "text": "  function baseBuilder(id, rng, seed, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 412,
+      "text": "      return question(id, level, seed, `${base.name} is fully dissociated at ${temperature} °C. Calculate the pH.`, [[`[${base.formula}] / mol dm⁻³`, scientific(c)], kwRow(suppliedKw)], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 420,
+      "text": "      return question(id, level, seed, `At ${item.temperature} °C, calculate the pH of pure water.`, [kwRow(item.kw)], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 428,
+      "text": "      return question(id, level, seed, `${dp(mass, 3)} g of ${base.name} is dissolved to make ${dp(volume, 1)} cm³ of solution at 25 °C. Calculate the pH.`, [[\"M_r\", dp(base.mr, 1)], kwRow(kw)], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 438,
+      "text": "      return question(id, level, seed, `${dp(stockV, 1)} cm³ of ${base.name} stock, with mass concentration ${dp(massConcentration, 1)} g dm⁻³, is diluted to ${dp(finalV, 1)} cm³ at 25 °C. Calculate the pH.`, [[\"M_r\", dp(base.mr, 1)], kwRow(kw)], [part(response(\"ph\", \"Calculate the final pH.\", \"pH\", \"\", ph, \"dp2\"),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 448,
+      "text": "      return question(id, level, seed, `A ${dp(sample, 3)} g impure sample of ${base.name} is dissolved to ${dp(volume, 1)} cm³. The impurities are inert and do not react with water. At 25 °C the pH is ${dp(measuredPH, 2)}. Calculate the percentage purity.`, [[\"M_r\", dp(base.mr, 1)], kwRow(kw)], [part(response(\"purity\", \"Calculate the percentage purity.\", \"Purity\", \"%\", purity),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 455,
+      "text": "    return question(id, level, seed, \"Sodium hydroxide is mixed with hydrochloric acid. The alkali is in excess and volumes are additive. Calculate the final pH at 25 °C.\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 462,
+      "text": "  function weakBuilder(id, rng, seed, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 475,
+      "text": "      return question(id, level, seed, `Calculate the pH of ${acid.name}.`, rows, parts, [weakAudit(acid.name, ka, baseConcentration)]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 479,
+      "text": "      return question(id, level, seed, `${dp(mass, 3)} g of ${acid.name} is dissolved to make ${dp(volume, 1)} cm³ of solution. Calculate the pH.`, [[\"M_r\", dp(acid.mr, 1)], [\"K_a / mol dm⁻³\", scientific(acid.ka)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 503,
+      "text": "        return question(id, level, seed, `Calculate the initial concentration of ${acid.name}.`, rows, [...prefix, hPart,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 506,
+      "text": "      if (id === \"weak-acid-ph-ka\") return question(id, level, seed, `Calculate K_a for ${acid.name}.`, rows, [hPart, part(response(\"ka\", \"Calculate K_a.\", \"K_a\", \"mol dm⁻³\", ka), `K_a = [H⁺]²/c = (${scientific(h)})²/${scientific(sourceC)} = ${scientific(ka)} mol dm⁻³`)], [weakAudit(acid.name, ka, sourceC)]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 507,
+      "text": "      if (id === \"weak-acid-ph-pka\") return question(id, level, seed, `Calculate pK_a for ${acid.name}.`, rows, [hPart, part(response(\"ka\", \"Calculate K_a.\", \"K_a\", \"mol dm⁻³\", ka), `K_a = [H⁺]²/c = ${scientific(ka)} mol dm⁻³`), part(response(\"pka\", \"Calculate pK_a.\", \"pK_a\", \"\", pka, \"dp2\"), `pK_a = −log₁₀(${scientific(ka)}) = ${dp(pka, 2)}`)], [weakAudit(acid.name, ka, sourceC)]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 508,
+      "text": "      return question(id, level, seed, `Calculate the percentage dissociation of ${acid.name}.`, rows, [hPart, part(response(\"percent\", \"Calculate percentage dissociation.\", \"Dissociation\", \"%\", percent), `% dissociation = [H⁺]/c × 100 = ${scientific(h)}/${scientific(sourceC)} × 100 = ${percent.toPrecision(3)}%`)], [weakAudit(acid.name, acid.ka, sourceC)]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 513,
+      "text": "      return question(id, level, seed, `Prepare ${dp(volume, 1)} cm³ of ${acid.name} at pH ${dp(target, 2)}. Calculate the mass of pure acid required.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)], [\"M_r\", dp(acid.mr, 1)]], [part(response(\"mass\", \"Calculate the required mass.\", \"Mass\", \"g\", mass),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 521,
+      "text": "      return question(id, level, seed, `A ${dp(sample, 3)} g impure sample of ${acid.name} is dissolved to ${dp(volume, 1)} cm³. The impurities are inert and do not ionise or react with water. The pH is ${dp(measuredPH, 2)}. Calculate the percentage purity.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)], [\"M_r\", dp(acid.mr, 1)]], [part(response(\"purity\", \"Calculate the percentage purity.\", \"Purity\", \"%\", purity),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 528,
+      "text": "    return question(id, level, seed, `${dp(mass, 3)} g of a ${dp(100 * purityFraction, 1)}% pure sample of ${acid.name} is dissolved to make ${dp(volume, 1)} cm³. The measured pH is ${dp(measuredPH, 2)}. Inert impurities do not ionise or react with water. Calculate K_a.`, [[\"M_r\", dp(acid.mr, 1)]], [part(response(\"ka\", \"Calculate K_a.\", \"K_a\", \"mol dm⁻³\", ka),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 535,
+      "text": "  function makingBufferBuilder(id, rng, seed, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 542,
+      "text": "    if (id === \"buffer-component-ratio\") return question(id, level, seed, `A buffer is to be made from ${acid.name} and ${acid.sodiumSalt}. Calculate the required component ratio.`, commonRows.slice(0, 2), ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 547,
+      "text": "    if (id === \"buffer-salt-amount\") return question(id, level, seed, `A buffer is to be made from ${acid.name} and ${acid.sodiumSalt}. Calculate the amount of salt required.`, commonRows, [hPart, ratioPart, saltPart], [bufferAudit(acidAmount, saltAmount)]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 550,
+      "text": "      return question(id, level, seed, `A buffer is to be made from ${acid.name} and solid ${acid.sodiumSalt}. Calculate the salt mass required.`, [...commonRows, [\"M_r of salt\", dp(acid.saltMr, 1)]], [hPart, ratioPart, saltPart,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 556,
+      "text": "      return question(id, level, seed, `A buffer is to be made from ${acid.name} and a ${dp(stock, 3)} mol dm⁻³ ${acid.sodiumSalt} stock solution. Calculate the salt-stock volume required.`, commonRows, [hPart, ratioPart, saltPart,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 563,
+      "text": "      return question(id, level, seed, `${dp(acidV, 1)} cm³ of ${dp(acidC, 3)} mol dm⁻³ ${acid.name} is partially neutralised with ${dp(alkaliC, 3)} mol dm⁻³ sodium hydroxide, then diluted to ${dp(finalV, 1)} cm³. Calculate the alkali volume needed for pH ${dp(target, 2)}.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)]], [part(response(\"volume\", \"Calculate the sodium hydroxide volume.\", \"Volume\", \"cm³\", alkaliV),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 573,
+      "text": "    return question(id, level, seed, `Prepare ${dp(finalV, 1)} cm³ of a pH ${dp(target, 2)} buffer using ${dp(acidStock, 3)} mol dm⁻³ ${acid.name} and ${dp(saltStock, 3)} mol dm⁻³ ${acid.sodiumSalt}. Use only these two solutions and assume their volumes are additive. Calculate the salt-stock volume.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)]], [part(response(\"volume\", \"Calculate the salt-stock volume.\", \"Volume\", \"cm³\", saltV),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 580,
+      "text": "  function bufferBuilder(id, rng, seed, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 584,
+      "text": "      return question(id, level, seed, `A buffer contains ${acid.name} and ${acid.sodiumSalt}. Calculate its pH.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)], [`[${acid.formula}] / mol dm⁻³`, scientific(cHA)], [`[${acid.conjugate}] / mol dm⁻³`, scientific(cA)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 592,
+      "text": "      return question(id, level, seed, `The listed ${acid.name} and ${acid.sodiumSalt} solutions are mixed. Volumes are additive. Calculate the pH.`, [[`[${acid.formula}] / mol dm⁻³`, scientific(ca)], [\"Acid volume / cm³\", dp(va, 1)], [`[${acid.sodiumSaltFormula}] / mol dm⁻³`, scientific(cs)], [\"Salt volume / cm³\", dp(vs, 1)], [\"K_a / mol dm⁻³\", scientific(acid.ka)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 601,
+      "text": "      return question(id, level, seed, `${scientific(initial)} mol ${acid.name} is partially neutralised by ${scientific(added)} mol hydroxide ions. Calculate the pH of the resulting buffer.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 611,
+      "text": "      return question(id, level, seed, `${dp(va, 1)} cm³ of ${dp(ca, 3)} mol dm⁻³ ${acid.name} is mixed with ${dp(vb, 1)} cm³ of ${dp(cb, 3)} mol dm⁻³ sodium hydroxide. Calculate the pH.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)]], ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 623,
+      "text": "      return question(id, level, seed, `A ${acid.name}/${acid.sodiumSalt} buffer contains ${scientific(nHA)} mol acid and ${scientific(nA)} mol conjugate base. ${scientific(added)} mol ${reagent} is added. Calculate the new pH.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)]], [part(response(\"ph\", \"Calculate the new pH.\", \"pH\", \"\", ph, \"dp2\"),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 632,
+      "text": "      return question(id, level, seed, `A ${acid.name}/${acid.sodiumSalt} buffer recipe specifies ${dp(targetAcidMass, 3)} g acid and ${dp(targetSaltMass, 3)} g salt. The acid weighing error is ${acidError >= 0 ? \"+\" : \"\"}${dp(acidError, 3)} g and the salt weighing error is ${saltError >= 0 ? \"+\" : \"\"}${dp(saltError, 3)} g. Calculate the absolute difference between the actual and intended pH.`, [[\"K_a / mol dm⁻³\", scientific(acid.ka)], [`M_r(${acid.formula})`, dp(acid.mr, 1)], [`M_r(${acid.sodiumSaltFormula})`, dp(acid.saltMr, 1)]], [part(response(\"difference\", \"Calculate the absolute pH difference.\", \"pH difference\", \"\", difference, \"dp2\"),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 643,
+      "text": "    return question(id, level, seed, `${dp(acidV, 1)} cm³ of ${dp(acidC, 3)} mol dm⁻³ ${acid.name} is partially neutralised by ${dp(baseV, 1)} cm³ of ${dp(baseC, 3)} mol dm⁻³ sodium hydroxide. The resulting pH is ${dp(referencePH, 2)}. Calculate K_a.`, [], [part(response(\"ka\", \"Calculate K_a.\", \"K_a\", \"mol dm⁻³\", ka),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 670,
+      "text": "  function validSeed(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 671,
+      "text": "    const value = Number(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 675,
+      "text": "  function reviewId(templateId, level, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 676,
+      "text": "    const index = templateIndex.get(templateId), numericLevel = Number(level), numericSeed = validSeed(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 684,
+      "text": "    const index = Number.parseInt(match[1], 36), level = Number(match[2]), seed = Number.parseInt(match[3], 36);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 685,
+      "text": "    if (match[1] !== index.toString(36).toUpperCase() || match[3] !== seed.toString(36).toUpperCase()) throw new Error(\"Non-canonical version 2 acid-base review ID.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 687,
+      "text": "    if (!template || !Number.isSafeInteger(seed) || seed > 0xffffffff || !scopes.some((scope) => scope.levels[level].includes(template.id))) throw new Error(\"Unknown acid-base review template or level.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 688,
+      "text": "    return { templateId: template.id, level, seed };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 690,
+      "text": "  function generate(templateId, level, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 691,
+      "text": "    const numericLevel = Number(level), numericSeed = validSeed(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 700,
+      "text": "    return Object.freeze(Object.assign({}, generated, { reviewId: reviewId(templateId, numericLevel, numericSeed) }));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 706,
+      "text": "      return generate(decoded.templateId, decoded.level, decoded.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 710,
+      "text": "      return Object.freeze(Object.assign({}, historical, { reviewId: text, legacy: true }));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 734,
+      "text": "  function nextLevel(mode, fixedLevel, api, leafId) { return mode === \"mastery\" ? api.nextLevel(leafId) : Number(fixedLevel); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "line": 736,
+      "text": "  root.AcidBaseLevels = Object.freeze({ version, LEVEL_LABELS, scopes, templates, scopeFor, templatesFor, chooseTemplate, generate, generateFromReview, score, nextLevel, decodeV2, reviewId });"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 4,
+      "text": "  const scaffoldCore = globalThis.AcidBaseScaffold;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 21,
+      "text": "  function save(){ if(!session)return; try{localStorage.setItem(STORAGE_KEY,JSON.stringify(session));}catch(error){ elements.levelBanner.textContent=\"Progress cannot be saved in this browser.\"; } }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 22,
+      "text": "  function savedSession(){try{const value=JSON.parse(localStorage.getItem(STORAGE_KEY));return mastery.validateSession(value)?value:null;}catch(error){return null;}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 23,
+      "text": "  function clearSave(){try{localStorage.removeItem(STORAGE_KEY);}catch(error){/* no-op */}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 39,
+      "text": "  function workingEditorMarkup(token,partIndex,number){const label=`Working number ${number} for part ${String.fromCharCode(97+partIndex)}`,standard=scaffoldCore.prefersStandardForm(token.expected)?`<span class=\"working-standard-entry\" hidden><input class=\"working-mantissa-input\" type=\"text\" inputmode=\"decimal\" autocomplete=\"off\" aria-label=\"${label}, standard-form mantissa\"><span>× 10</span><input class=\"working-exponent-input\" type=\"text\" inputmode=\"numeric\" autocomplete=\"off\" aria-label=\"${label}, standard-form exponent\"></span><button class=\"working-notation-toggle\" type=\"button\" data-working-notation-toggle aria-pressed=\"false\" title=\"Enter this number in standard form\">×10ⁿ</button>`:\"\";return `<span class=\"working-entry\"><span class=\"working-value-entry\" data-working-editor data-mode=\"decimal\" data-expected=\"${token.expected}\" data-tolerance=\"${token.tolerance}\"><input class=\"working-input\" type=\"text\" inputmode=\"decimal\" autocomplete=\"off\" aria-label=\"${label}\">${standard}</span><span class=\"working-marker\"></span></span>`;}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 40,
+      "text": "  function scaffoldText(value,partIndex,state){const source=String(value);let cursor=0,html=\"\";for(const token of scaffoldCore.numericTokens(source)){html+=notationHtml(source.slice(cursor,token.index));const number=++state.count;if(number===state.total){html+=`<span class=\"scaffold-final-slot\" data-expected=\"${state.finalExpected}\" data-tolerance=\"${state.finalTolerance}\"><span class=\"working-marker\"></span></span>`;}else{html+=workingEditorMarkup(token,partIndex,number);}cursor=token.index+token.raw.length;}return html+notationHtml(source.slice(cursor));}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 41,
+      "text": "  function scaffoldExpression(source,partIndex,state){return renderMath(source,(text)=>scaffoldText(text,partIndex,state));}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 42,
+      "text": "  function scaffoldMarkup(lines,index,response){const rows=workingRows(lines);const total=rows.reduce((sum,row)=>sum+(row.type===\"equation\"?scaffoldCore.numericTokens(row.right).length:0),0);if(!total)return\"\";const state={count:0,total,finalExpected:response.expected,finalTolerance:response.tolerance};return rows.map((row)=>row.type===\"note\"?`<p class=\"math-note\">${notationHtml(row.text)}</p>`:`<div class=\"scaffold-math-row\"><span class=\"math-lhs\">${notationHtml(row.left)}</span><span class=\"math-equals\">=</span><span class=\"math-rhs\">${scaffoldExpression(row.right,index,state)}</span></div>`).join(\"\");}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 47,
+      "text": "  function responseMarkup(response,index){const scaffold=scaffoldMarkup(question.answerParts[index],index,response);return `<section class=\"response-row\" data-part=\"${index}\"><div class=\"response-prompt\"><label for=\"response-${index}\"><span class=\"part-label\">${String.fromCharCode(97+index)}</span><span>${notationHtml(response.prompt)}</span></label>${scaffold?`<button class=\"scaffold-toggle\" type=\"button\" data-scaffold-toggle=\"${index}\" aria-expanded=\"false\" aria-controls=\"scaffold-${index}\" aria-label=\"Show working framework for part ${String.fromCharCode(97+index)}\">?</button>`:\"\"}</div>${scaffold?`<div class=\"working-scaffold\" id=\"scaffold-${index}\" hidden>${scaffold}<div class=\"scaffold-actions\"><button type=\"button\" data-check-scaffold=\"${index}\">Check working</button><p class=\"scaffold-feedback\" aria-live=\"polite\"></p></div></div>`:\"\"}<div class=\"answer-line\"><span class=\"symbol\">${notationHtml(response.symbol)} =</span>${responseEditorMarkup(index)}<span class=\"unit\">${notationHtml(response.unit||\"\")}</span></div><p class=\"response-feedback\" aria-live=\"polite\"></p></section>`;}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 53,
+      "text": "    elements.questionPanel.innerHTML=`<div class=\"question-header\"><div><p class=\"question-meta\">LEVEL ${session.current.level} · ${notationHtml(question.familyLabel).toUpperCase()}</p><h2 class=\"question-type\">${notationHtml(question.templateLabel)}</h2></div>${session.current.kind===\"proof\"?'<span class=\"proof-chip\">PROOF QUESTION</span>':\"\"}</div><p class=\"question-intro\">${notationHtml(question.intro)}</p><table class=\"data-table\"><tbody>${rows}</tbody></table><p class=\"rounding-note\">Give pH and pK<sub>a</sub> values to 2 decimal places. Give other numerical answers to 3 significant figures unless exact.</p><p class=\"scaffold-key\"><span>?</span>Using a working framework means this question will return later for proof.</p><div class=\"response-list\">${question.responses.map(responseMarkup).join(\"\")}</div><div class=\"action-row\"><button class=\"primary\" id=\"checkAnswer\" type=\"button\">Check answers</button><p class=\"check-summary\" id=\"checkSummary\" aria-live=\"polite\"></p><button class=\"continue-button\" id=\"continueButton\" type=\"button\" hidden>Continue</button></div>`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 54,
+      "text": "    const reviewId=questionCore.formatQuestionId(session.current.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 56,
+      "text": "    review.textContent='Review ID // '+reviewId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 58,
+      "text": "    sidebar.querySelector('[data-review-id]')?.remove();review.dataset.reviewId=reviewId;sidebar.prepend(review);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 60,
+      "text": "    elements.questionPanel.querySelectorAll(\"[data-scaffold-toggle]\").forEach((button)=>button.addEventListener(\"click\",()=>openScaffold(Number(button.dataset.scaffoldToggle),true)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 61,
+      "text": "    elements.questionPanel.querySelectorAll(\"[data-check-scaffold]\").forEach((button)=>button.addEventListener(\"click\",()=>checkScaffold(button)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 69,
+      "text": "    [...new Set([...(session.current.scaffoldParts||[]),...(session.current.incorrectParts||[])])].forEach((index)=>openScaffold(index,false));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 75,
+      "text": "  function workingEditorValue(editor){return editor.dataset.mode===\"standard\"?scaffoldCore.standardValue(editor.querySelector(\".working-mantissa-input\")?.value,editor.querySelector(\".working-exponent-input\")?.value):editor.querySelector(\".working-input\")?.value||\"\";}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 76,
+      "text": "  function clearWorkingEditor(editor){editor.classList.remove(\"working-correct\",\"working-incorrect\");editor.querySelectorAll(\"input\").forEach((input)=>input.removeAttribute(\"aria-invalid\"));const marker=editor.nextElementSibling;if(marker){marker.textContent=\"\";marker.className=\"working-marker\";}const feedback=editor.closest(\".working-scaffold\")?.querySelector(\".scaffold-feedback\");if(feedback)feedback.textContent=\"\";}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 78,
+      "text": "  function toggleWorkingNotation(button){const editor=button.closest(\"[data-working-editor]\"),decimal=editor.querySelector(\".working-input\"),standard=editor.querySelector(\".working-standard-entry\"),mantissa=editor.querySelector(\".working-mantissa-input\"),exponent=editor.querySelector(\".working-exponent-input\"),toStandard=editor.dataset.mode!==\"standard\";if(toStandard){const entered=decimal.value.trim();let parts=scaffoldCore.parseStandardParts(entered);if(!parts&&entered&&Number.isFinite(questionCore.enteredNumber(entered)))parts=scaffoldCore.standardParts(questionCore.enteredNumber(entered));if(parts){mantissa.value=parts.mantissa;exponent.value=parts.exponent;}editor.dataset.mode=\"standard\";decimal.hidden=true;standard.hidden=false;button.textContent=\"123\";button.title=\"Use a single number field\";button.setAttribute(\"aria-pressed\",\"true\");mantissa.focus();}else{const combined=scaffoldCore.standardValue(mantissa.value,exponent.value);if(combined)decimal.value=combined;editor.dataset.mode=\"decimal\";standard.hidden=true;decimal.hidden=false;button.textContent=\"×10ⁿ\";button.title=\"Enter this number in standard form\";button.setAttribute(\"aria-pressed\",\"false\");decimal.focus();}clearWorkingEditor(editor);}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 79,
+      "text": "  function openScaffold(index,manual){const button=elements.questionPanel.querySelector(`[data-scaffold-toggle=\"${index}\"]`),scaffold=document.getElementById(`scaffold-${index}`);if(!button||!scaffold||!scaffold.hidden)return;if(manual&&!session.current.firstSubmitted)mastery.useScaffold(session,index);const row=button.closest(\".response-row\"),answerLine=row.querySelector(\".answer-line\"),editor=answerLine.querySelector(\".value-entry\"),slot=scaffold.querySelector(\".scaffold-final-slot\");if(slot&&editor){editor.dataset.expected=slot.dataset.expected;editor.dataset.tolerance=slot.dataset.tolerance;editor.classList.add(\"scaffold-final-entry\");slot.insertBefore(editor,slot.querySelector(\".working-marker\"));answerLine.hidden=true;}scaffold.hidden=false;button.disabled=true;button.setAttribute(\"aria-expanded\",\"true\");save();if(manual)scaffold.querySelector(\"input:not([hidden])\")?.focus();}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 80,
+      "text": "  function checkScaffold(button){const scaffold=document.getElementById(`scaffold-${button.dataset.checkScaffold}`),editors=[...scaffold.querySelectorAll(\"[data-working-editor]\")],finalEditor=scaffold.querySelector(\".scaffold-final-entry\");let correct=0;editors.forEach((editor)=>{const value=workingEditorValue(editor),result=questionCore.markNumber(value,{expected:Number(editor.dataset.expected),tolerance:Number(editor.dataset.tolerance)}),marker=editor.nextElementSibling;editor.classList.remove(\"working-correct\",\"working-incorrect\");if(result.status===\"correct\"){correct+=1;editor.classList.add(\"working-correct\");marker.textContent=\"✓\";marker.className=\"working-marker correct\";}else{editor.classList.add(\"working-incorrect\");editor.querySelector(\"input:not([hidden])\")?.setAttribute(\"aria-invalid\",\"true\");marker.textContent=value.trim()?\"×\":\"\";marker.className=\"working-marker incorrect\";}});if(finalEditor){const index=Number(finalEditor.dataset.responseEditor),result=questionCore.markNumber(responseValue(index),{expected:Number(finalEditor.dataset.expected),tolerance:Number(finalEditor.dataset.tolerance)}),marker=finalEditor.nextElementSibling;finalEditor.classList.remove(\"working-correct\",\"working-incorrect\");if(result.status===\"correct\"){correct+=1;finalEditor.classList.add(\"working-correct\");marker.textContent=\"✓\";marker.className=\"working-marker correct\";}else{finalEditor.classList.add(\"working-incorrect\");marker.textContent=responseValue(index)?\"×\":\"\";marker.className=\"working-marker incorrect\";}}const total=editors.length+(finalEditor?1:0);scaffold.querySelector(\".scaffold-feedback\").textContent=`${correct}/${total} correct${correct===total?\".\":\" — keep going.\"}`;}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 83,
+      "text": "  function resultSummary(outcome){if(outcome.eligible)return\"Mastery evidence secured.\";if(outcome.allCorrect)return\"Correct, but a scaffold was used. A fresh proof question will return later.\";return\"Not yet. This calculation will return later with fresh values.\";}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+      "line": 90,
+      "text": "  function showFinish(){elements.setupScreen.hidden=true;elements.activityScreen.hidden=true;elements.finishScreen.hidden=false;elements.finishGauge.innerHTML=gaugeHtml();elements.finishStats.innerHTML=`<div class=\"stat\"><strong>${session.stats.firstTimeMastered}</strong>First-time mastery</div><div class=\"stat\"><strong>${session.stats.proofQuestions}</strong>Proof questions</div><div class=\"stat\"><strong>${session.stats.scaffolded}</strong>Scaffolded questions</div>`;save();}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 46,
+      "text": "  function createSession(selectedFamilies, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 58,
+      "text": "      rngState: (Number(seed) || 0x6d2b79f5) >>> 0, usedQuestionIds: [], completed: false,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 59,
+      "text": "      stats: { submitted: 0, firstTimeMastered: 0, proofQuestions: 0, scaffolded: 0 }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 83,
+      "text": "      const seed = questionCore.encodeQuestionId(templateId, level, structure, randomPart);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 84,
+      "text": "      const id = questionCore.formatQuestionId(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 87,
+      "text": "        return seed;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 115,
+      "text": "    const seed = freshQuestionSeed(session, template.id, item.level, structure);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 118,
+      "text": "      structure, seed, firstSubmitted: false, scaffoldUsed: false, scaffoldParts: [], incorrectParts: [],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 130,
+      "text": "    return questionCore.generate({ level: item.level, family: item.familyId, template: item.templateId, structure: item.structure }, item.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 135,
+      "text": "    if (!session.current.scaffoldParts.includes(partIndex)) session.current.scaffoldParts.push(partIndex);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 136,
+      "text": "    if (!session.current.scaffoldUsed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 137,
+      "text": "      session.current.scaffoldUsed = true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 138,
+      "text": "      session.stats.scaffolded += 1;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 161,
+      "text": "      session.current.eligible = allCorrect && !session.current.scaffoldUsed;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+      "line": 173,
+      "text": "      return { accepted: true, first: true, allCorrect, eligible: allCorrect && !session.current.scaffoldUsed, results, autoOpen: session.current.incorrectParts.slice() };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 65,
+      "text": ".rounding-note,.scaffold-key { color:var(--muted); font-size:.8rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 66,
+      "text": ".scaffold-key span { display:inline-grid; width:25px; height:25px; margin-right:7px; place-items:center; border:2px solid var(--cyan); border-radius:50%; color:var(--cyan); font-weight:900; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 71,
+      "text": ".scaffold-toggle { display:grid; width:34px; min-width:34px; height:34px; place-items:center; border:2px solid var(--cyan); border-radius:50%; background:transparent; color:var(--cyan); font-weight:900; }.scaffold-toggle:disabled { opacity:.45; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 75,
+      "text": ".working-scaffold { margin:16px 0 5px 34px; border:1px solid rgba(84,245,181,.34); border-radius:15px; padding:15px 17px; background:var(--answer); }.scaffold-math-row,.worked-block { display:grid; grid-template-columns:minmax(125px,max-content) 20px minmax(0,1fr); gap:5px 4px; align-items:center; }.scaffold-math-row + .scaffold-math-row { margin-top:5px; }.math-lhs { text-align:right; }.math-equals { color:var(--mint); text-align:center; }.math-note { grid-column:1/-1; color:var(--muted); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 76,
+      "text": ".working-entry,.scaffold-final-slot { display:inline-flex; align-items:center; white-space:nowrap; }.working-input { width:82px!important; min-height:34px!important; margin:1px 4px; }.scaffold-final-slot .value-entry { display:inline-flex; width:min(390px,100%); margin:1px 4px; vertical-align:middle; }.scaffold-final-entry.working-correct input { border-color:var(--mint); }.scaffold-final-entry.working-incorrect input { border-color:var(--red); }.working-input.working-correct { border-color:var(--mint); }.working-input.working-incorrect { border-color:var(--red); }.working-marker { display:inline-block; min-width:18px; font-weight:900; text-align:center; }.working-marker.correct { color:var(--mint); }.working-marker.incorrect { color:var(--red); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 78,
+      "text": ".scaffold-actions { display:flex; align-items:center; gap:12px; margin-top:13px; padding-top:12px; border-top:1px solid var(--line); }.scaffold-actions button { min-height:38px; border:1px solid rgba(85,246,255,.3); border-radius:9px; padding:7px 12px; background:rgba(85,246,255,.08); color:var(--cyan); font-weight:900; }.scaffold-feedback { margin:0; color:var(--muted); font-size:.75rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+      "line": 83,
+      "text": "@media(max-width:600px){ .page{width:calc(100% - 20px);padding-top:13px}.family-grid,.gauge-list{grid-template-columns:1fr}.hero,.question-panel,.mastery-panel{padding:17px}.resume-card,.action-row{align-items:stretch;flex-direction:column}.resume-actions{width:100%}.resume-actions button{flex:1}.answer-line{grid-template-columns:1fr max-content;margin-left:0}.answer-line .symbol{grid-column:1/-1}.value-entry{grid-column:1/-1}.standard-entry .mantissa-input{width:96px}.working-scaffold{margin-left:0;padding:12px 9px}.scaffold-math-row,.worked-block{grid-template-columns:minmax(78px,max-content) 17px minmax(0,1fr);font-size:.82rem}.continue-button{width:100%;margin-left:0}.stats{grid-template-columns:1fr}.response-feedback{margin-left:0} }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/template.html",
+      "line": 22,
+      "text": "        <p>Work through one question from each chosen family at Level 1, then Level 2 and Level 3. Questions you miss or scaffold will return with fresh values.</p>"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 73,
+      "text": ".rounding-note,.scaffold-key { color:var(--muted); font-size:.8rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 74,
+      "text": ".scaffold-key span { display:inline-grid; width:25px; height:25px; margin-right:7px; place-items:center; border:2px solid var(--cyan); border-radius:50%; color:var(--cyan); font-weight:900; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 79,
+      "text": ".scaffold-toggle { display:grid; width:34px; min-width:34px; height:34px; place-items:center; border:2px solid var(--cyan); border-radius:50%; background:transparent; color:var(--cyan); font-weight:900; }.scaffold-toggle:disabled { opacity:.45; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 83,
+      "text": ".working-scaffold { margin:16px 0 5px 34px; border:1px solid rgba(84,245,181,.34); border-radius:15px; padding:15px 17px; background:var(--answer); }.scaffold-math-row,.worked-block { display:grid; grid-template-columns:minmax(125px,max-content) 20px minmax(0,1fr); gap:5px 4px; align-items:center; }.scaffold-math-row + .scaffold-math-row { margin-top:5px; }.math-lhs { text-align:right; }.math-equals { color:var(--mint); text-align:center; }.math-note { grid-column:1/-1; color:var(--muted); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 84,
+      "text": ".working-entry,.scaffold-final-slot { display:inline-flex; align-items:center; white-space:nowrap; }.working-input { width:82px!important; min-height:34px!important; margin:1px 4px; }.scaffold-final-slot .value-entry { display:inline-flex; width:min(390px,100%); margin:1px 4px; vertical-align:middle; }.scaffold-final-entry.working-correct input { border-color:var(--mint); }.scaffold-final-entry.working-incorrect input { border-color:var(--red); }.working-input.working-correct { border-color:var(--mint); }.working-input.working-incorrect { border-color:var(--red); }.working-marker { display:inline-block; min-width:18px; font-weight:900; text-align:center; }.working-marker.correct { color:var(--mint); }.working-marker.incorrect { color:var(--red); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 86,
+      "text": ".scaffold-actions { display:flex; align-items:center; gap:12px; margin-top:13px; padding-top:12px; border-top:1px solid var(--line); }.scaffold-actions button { min-height:38px; border:1px solid rgba(85,246,255,.3); border-radius:9px; padding:7px 12px; background:rgba(85,246,255,.08); color:var(--cyan); font-weight:900; }.scaffold-feedback { margin:0; color:var(--muted); font-size:.75rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 91,
+      "text": "@media(max-width:600px){ .page{width:calc(100% - 20px);padding-top:13px}.family-grid,.gauge-list{grid-template-columns:1fr}.hero,.question-panel,.mastery-panel{padding:17px}.resume-card,.action-row{align-items:stretch;flex-direction:column}.resume-actions{width:100%}.resume-actions button{flex:1}.answer-line{grid-template-columns:1fr max-content;margin-left:0}.answer-line .symbol{grid-column:1/-1}.value-entry{grid-column:1/-1}.standard-entry .mantissa-input{width:96px}.working-scaffold{margin-left:0;padding:12px 9px}.scaffold-math-row,.worked-block{grid-template-columns:minmax(78px,max-content) 17px minmax(0,1fr);font-size:.82rem}.continue-button{width:100%;margin-left:0}.stats{grid-template-columns:1fr}.response-feedback{margin-left:0} }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 105,
+      "text": "        <p>Work through one question from each chosen family at Level 1, then Level 2 and Level 3. Questions you miss or scaffold will return with fresh values.</p>"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 240,
+      "text": "  function mulberry32(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 242,
+      "text": "      let t = seed += 0x6D2B79F5;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 819,
+      "text": "  const questionIdPrefix = \"AB\";"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 820,
+      "text": "  const questionIdModulus = 1024;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 821,
+      "text": "  const questionIdRadix = 36;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 822,
+      "text": "  const questionIdDigits = 6;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 823,
+      "text": "  const questionIdCapacity = questionIdRadix ** questionIdDigits;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 824,
+      "text": "  const maximumRandomPart = Math.floor((questionIdCapacity - 1) / questionIdModulus);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 826,
+      "text": "  function encodeQuestionId(templateId, level, structure, randomPart) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 831,
+      "text": "    return (Number(randomPart) % (maximumRandomPart + 1)) * questionIdModulus + configCode;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 834,
+      "text": "  function formatQuestionId(seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 835,
+      "text": "    const value = Number(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 836,
+      "text": "    if (!Number.isSafeInteger(value) || value < 0 || value >= questionIdCapacity) throw new Error(\"The question ID value is outside the valid range.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 837,
+      "text": "    return `${questionIdPrefix}-${value.toString(questionIdRadix).toUpperCase().padStart(questionIdDigits, \"0\")}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 840,
+      "text": "  function decodeQuestionId(value) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 843,
+      "text": "    const seed = Number.parseInt(match[1], questionIdRadix);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 844,
+      "text": "    if (!Number.isSafeInteger(seed) || seed < 0 || seed >= questionIdCapacity) throw new Error(\"The question ID value is outside the valid range.\");"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 845,
+      "text": "    const configCode = seed % questionIdModulus;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 852,
+      "text": "    return { seed, level, structure: structureIndex === 1 ? \"single\" : \"staged\", template };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 906,
+      "text": "  function generate(config, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 908,
+      "text": "    const rng = mulberry32((Number(seed) || Date.now()) >>> 0);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 922,
+      "text": "      seed: Number(seed), level, structure, templateId: template.id, templateLabel: template.label,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 946,
+      "text": "    scientific, display, encodeQuestionId, decodeQuestionId, formatQuestionId, printWorkingSpace, questionIdPrefix, metadata: data.metadata"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1057,
+      "text": "  function createSession(selectedFamilies, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1069,
+      "text": "      rngState: (Number(seed) || 0x6d2b79f5) >>> 0, usedQuestionIds: [], completed: false,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1070,
+      "text": "      stats: { submitted: 0, firstTimeMastered: 0, proofQuestions: 0, scaffolded: 0 }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1094,
+      "text": "      const seed = questionCore.encodeQuestionId(templateId, level, structure, randomPart);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1095,
+      "text": "      const id = questionCore.formatQuestionId(seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1098,
+      "text": "        return seed;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1126,
+      "text": "    const seed = freshQuestionSeed(session, template.id, item.level, structure);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1129,
+      "text": "      structure, seed, firstSubmitted: false, scaffoldUsed: false, scaffoldParts: [], incorrectParts: [],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1141,
+      "text": "    return questionCore.generate({ level: item.level, family: item.familyId, template: item.templateId, structure: item.structure }, item.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1146,
+      "text": "    if (!session.current.scaffoldParts.includes(partIndex)) session.current.scaffoldParts.push(partIndex);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1147,
+      "text": "    if (!session.current.scaffoldUsed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1148,
+      "text": "      session.current.scaffoldUsed = true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1149,
+      "text": "      session.stats.scaffolded += 1;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1172,
+      "text": "      session.current.eligible = allCorrect && !session.current.scaffoldUsed;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1184,
+      "text": "      return { accepted: true, first: true, allCorrect, eligible: allCorrect && !session.current.scaffoldUsed, results, autoOpen: session.current.incorrectParts.slice() };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1212,
+      "text": "  const scaffoldCore = globalThis.AcidBaseScaffold;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1229,
+      "text": "  function save(){ if(!session)return; try{localStorage.setItem(STORAGE_KEY,JSON.stringify(session));}catch(error){ elements.levelBanner.textContent=\"Progress cannot be saved in this browser.\"; } }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1230,
+      "text": "  function savedSession(){try{const value=JSON.parse(localStorage.getItem(STORAGE_KEY));return mastery.validateSession(value)?value:null;}catch(error){return null;}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1231,
+      "text": "  function clearSave(){try{localStorage.removeItem(STORAGE_KEY);}catch(error){/* no-op */}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1247,
+      "text": "  function workingEditorMarkup(token,partIndex,number){const label=`Working number ${number} for part ${String.fromCharCode(97+partIndex)}`,standard=scaffoldCore.prefersStandardForm(token.expected)?`<span class=\"working-standard-entry\" hidden><input class=\"working-mantissa-input\" type=\"text\" inputmode=\"decimal\" autocomplete=\"off\" aria-label=\"${label}, standard-form mantissa\"><span>× 10</span><input class=\"working-exponent-input\" type=\"text\" inputmode=\"numeric\" autocomplete=\"off\" aria-label=\"${label}, standard-form exponent\"></span><button class=\"working-notation-toggle\" type=\"button\" data-working-notation-toggle aria-pressed=\"false\" title=\"Enter this number in standard form\">×10ⁿ</button>`:\"\";return `<span class=\"working-entry\"><span class=\"working-value-entry\" data-working-editor data-mode=\"decimal\" data-expected=\"${token.expected}\" data-tolerance=\"${token.tolerance}\"><input class=\"working-input\" type=\"text\" inputmode=\"decimal\" autocomplete=\"off\" aria-label=\"${label}\">${standard}</span><span class=\"working-marker\"></span></span>`;}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1248,
+      "text": "  function scaffoldText(value,partIndex,state){const source=String(value);let cursor=0,html=\"\";for(const token of scaffoldCore.numericTokens(source)){html+=notationHtml(source.slice(cursor,token.index));const number=++state.count;if(number===state.total){html+=`<span class=\"scaffold-final-slot\" data-expected=\"${state.finalExpected}\" data-tolerance=\"${state.finalTolerance}\"><span class=\"working-marker\"></span></span>`;}else{html+=workingEditorMarkup(token,partIndex,number);}cursor=token.index+token.raw.length;}return html+notationHtml(source.slice(cursor));}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1249,
+      "text": "  function scaffoldExpression(source,partIndex,state){return renderMath(source,(text)=>scaffoldText(text,partIndex,state));}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1250,
+      "text": "  function scaffoldMarkup(lines,index,response){const rows=workingRows(lines);const total=rows.reduce((sum,row)=>sum+(row.type===\"equation\"?scaffoldCore.numericTokens(row.right).length:0),0);if(!total)return\"\";const state={count:0,total,finalExpected:response.expected,finalTolerance:response.tolerance};return rows.map((row)=>row.type===\"note\"?`<p class=\"math-note\">${notationHtml(row.text)}</p>`:`<div class=\"scaffold-math-row\"><span class=\"math-lhs\">${notationHtml(row.left)}</span><span class=\"math-equals\">=</span><span class=\"math-rhs\">${scaffoldExpression(row.right,index,state)}</span></div>`).join(\"\");}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1255,
+      "text": "  function responseMarkup(response,index){const scaffold=scaffoldMarkup(question.answerParts[index],index,response);return `<section class=\"response-row\" data-part=\"${index}\"><div class=\"response-prompt\"><label for=\"response-${index}\"><span class=\"part-label\">${String.fromCharCode(97+index)}</span><span>${notationHtml(response.prompt)}</span></label>${scaffold?`<button class=\"scaffold-toggle\" type=\"button\" data-scaffold-toggle=\"${index}\" aria-expanded=\"false\" aria-controls=\"scaffold-${index}\" aria-label=\"Show working framework for part ${String.fromCharCode(97+index)}\">?</button>`:\"\"}</div>${scaffold?`<div class=\"working-scaffold\" id=\"scaffold-${index}\" hidden>${scaffold}<div class=\"scaffold-actions\"><button type=\"button\" data-check-scaffold=\"${index}\">Check working</button><p class=\"scaffold-feedback\" aria-live=\"polite\"></p></div></div>`:\"\"}<div class=\"answer-line\"><span class=\"symbol\">${notationHtml(response.symbol)} =</span>${responseEditorMarkup(index)}<span class=\"unit\">${notationHtml(response.unit||\"\")}</span></div><p class=\"response-feedback\" aria-live=\"polite\"></p></section>`;}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1261,
+      "text": "    elements.questionPanel.innerHTML=`<div class=\"question-header\"><div><p class=\"question-meta\">LEVEL ${session.current.level} · ${notationHtml(question.familyLabel).toUpperCase()}</p><h2 class=\"question-type\">${notationHtml(question.templateLabel)}</h2></div>${session.current.kind===\"proof\"?'<span class=\"proof-chip\">PROOF QUESTION</span>':\"\"}</div><p class=\"question-intro\">${notationHtml(question.intro)}</p><table class=\"data-table\"><tbody>${rows}</tbody></table><p class=\"rounding-note\">Give pH and pK<sub>a</sub> values to 2 decimal places. Give other numerical answers to 3 significant figures unless exact.</p><p class=\"scaffold-key\"><span>?</span>Using a working framework means this question will return later for proof.</p><div class=\"response-list\">${question.responses.map(responseMarkup).join(\"\")}</div><div class=\"action-row\"><button class=\"primary\" id=\"checkAnswer\" type=\"button\">Check answers</button><p class=\"check-summary\" id=\"checkSummary\" aria-live=\"polite\"></p><button class=\"continue-button\" id=\"continueButton\" type=\"button\" hidden>Continue</button></div>`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1262,
+      "text": "    const reviewId=questionCore.formatQuestionId(session.current.seed);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1264,
+      "text": "    review.textContent='Review ID // '+reviewId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1266,
+      "text": "    sidebar.querySelector('[data-review-id]')?.remove();review.dataset.reviewId=reviewId;sidebar.prepend(review);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1268,
+      "text": "    elements.questionPanel.querySelectorAll(\"[data-scaffold-toggle]\").forEach((button)=>button.addEventListener(\"click\",()=>openScaffold(Number(button.dataset.scaffoldToggle),true)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1269,
+      "text": "    elements.questionPanel.querySelectorAll(\"[data-check-scaffold]\").forEach((button)=>button.addEventListener(\"click\",()=>checkScaffold(button)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1277,
+      "text": "    [...new Set([...(session.current.scaffoldParts||[]),...(session.current.incorrectParts||[])])].forEach((index)=>openScaffold(index,false));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1283,
+      "text": "  function workingEditorValue(editor){return editor.dataset.mode===\"standard\"?scaffoldCore.standardValue(editor.querySelector(\".working-mantissa-input\")?.value,editor.querySelector(\".working-exponent-input\")?.value):editor.querySelector(\".working-input\")?.value||\"\";}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1284,
+      "text": "  function clearWorkingEditor(editor){editor.classList.remove(\"working-correct\",\"working-incorrect\");editor.querySelectorAll(\"input\").forEach((input)=>input.removeAttribute(\"aria-invalid\"));const marker=editor.nextElementSibling;if(marker){marker.textContent=\"\";marker.className=\"working-marker\";}const feedback=editor.closest(\".working-scaffold\")?.querySelector(\".scaffold-feedback\");if(feedback)feedback.textContent=\"\";}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1286,
+      "text": "  function toggleWorkingNotation(button){const editor=button.closest(\"[data-working-editor]\"),decimal=editor.querySelector(\".working-input\"),standard=editor.querySelector(\".working-standard-entry\"),mantissa=editor.querySelector(\".working-mantissa-input\"),exponent=editor.querySelector(\".working-exponent-input\"),toStandard=editor.dataset.mode!==\"standard\";if(toStandard){const entered=decimal.value.trim();let parts=scaffoldCore.parseStandardParts(entered);if(!parts&&entered&&Number.isFinite(questionCore.enteredNumber(entered)))parts=scaffoldCore.standardParts(questionCore.enteredNumber(entered));if(parts){mantissa.value=parts.mantissa;exponent.value=parts.exponent;}editor.dataset.mode=\"standard\";decimal.hidden=true;standard.hidden=false;button.textContent=\"123\";button.title=\"Use a single number field\";button.setAttribute(\"aria-pressed\",\"true\");mantissa.focus();}else{const combined=scaffoldCore.standardValue(mantissa.value,exponent.value);if(combined)decimal.value=combined;editor.dataset.mode=\"decimal\";standard.hidden=true;decimal.hidden=false;button.textContent=\"×10ⁿ\";button.title=\"Enter this number in standard form\";button.setAttribute(\"aria-pressed\",\"false\");decimal.focus();}clearWorkingEditor(editor);}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1287,
+      "text": "  function openScaffold(index,manual){const button=elements.questionPanel.querySelector(`[data-scaffold-toggle=\"${index}\"]`),scaffold=document.getElementById(`scaffold-${index}`);if(!button||!scaffold||!scaffold.hidden)return;if(manual&&!session.current.firstSubmitted)mastery.useScaffold(session,index);const row=button.closest(\".response-row\"),answerLine=row.querySelector(\".answer-line\"),editor=answerLine.querySelector(\".value-entry\"),slot=scaffold.querySelector(\".scaffold-final-slot\");if(slot&&editor){editor.dataset.expected=slot.dataset.expected;editor.dataset.tolerance=slot.dataset.tolerance;editor.classList.add(\"scaffold-final-entry\");slot.insertBefore(editor,slot.querySelector(\".working-marker\"));answerLine.hidden=true;}scaffold.hidden=false;button.disabled=true;button.setAttribute(\"aria-expanded\",\"true\");save();if(manual)scaffold.querySelector(\"input:not([hidden])\")?.focus();}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1288,
+      "text": "  function checkScaffold(button){const scaffold=document.getElementById(`scaffold-${button.dataset.checkScaffold}`),editors=[...scaffold.querySelectorAll(\"[data-working-editor]\")],finalEditor=scaffold.querySelector(\".scaffold-final-entry\");let correct=0;editors.forEach((editor)=>{const value=workingEditorValue(editor),result=questionCore.markNumber(value,{expected:Number(editor.dataset.expected),tolerance:Number(editor.dataset.tolerance)}),marker=editor.nextElementSibling;editor.classList.remove(\"working-correct\",\"working-incorrect\");if(result.status===\"correct\"){correct+=1;editor.classList.add(\"working-correct\");marker.textContent=\"✓\";marker.className=\"working-marker correct\";}else{editor.classList.add(\"working-incorrect\");editor.querySelector(\"input:not([hidden])\")?.setAttribute(\"aria-invalid\",\"true\");marker.textContent=value.trim()?\"×\":\"\";marker.className=\"working-marker incorrect\";}});if(finalEditor){const index=Number(finalEditor.dataset.responseEditor),result=questionCore.markNumber(responseValue(index),{expected:Number(finalEditor.dataset.expected),tolerance:Number(finalEditor.dataset.tolerance)}),marker=finalEditor.nextElementSibling;finalEditor.classList.remove(\"working-correct\",\"working-incorrect\");if(result.status===\"correct\"){correct+=1;finalEditor.classList.add(\"working-correct\");marker.textContent=\"✓\";marker.className=\"working-marker correct\";}else{finalEditor.classList.add(\"working-incorrect\");marker.textContent=responseValue(index)?\"×\":\"\";marker.className=\"working-marker incorrect\";}}const total=editors.length+(finalEditor?1:0);scaffold.querySelector(\".scaffold-feedback\").textContent=`${correct}/${total} correct${correct===total?\".\":\" — keep going.\"}`;}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1291,
+      "text": "  function resultSummary(outcome){if(outcome.eligible)return\"Mastery evidence secured.\";if(outcome.allCorrect)return\"Correct, but a scaffold was used. A fresh proof question will return later.\";return\"Not yet. This calculation will return later with fresh values.\";}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+      "line": 1298,
+      "text": "  function showFinish(){elements.setupScreen.hidden=true;elements.activityScreen.hidden=true;elements.finishScreen.hidden=false;elements.finishGauge.innerHTML=gaugeHtml();elements.finishStats.innerHTML=`<div class=\"stat\"><strong>${session.stats.firstTimeMastered}</strong>First-time mastery</div><div class=\"stat\"><strong>${session.stats.proofQuestions}</strong>Proof questions</div><div class=\"stat\"><strong>${session.stats.scaffolded}</strong>Scaffolded questions</div>`;save();}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 142,
+      "text": ".seed-loader { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 143,
+      "text": ".seed-loader label { color: var(--muted); font-size: .78rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 144,
+      "text": ".seed-row { display: grid; grid-template-columns: minmax(0, 1fr) 72px; gap: 8px; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 145,
+      "text": ".seed-row input { min-height: 42px; font-size: .82rem; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 147,
+      "text": ".seed-feedback { min-height: 1.2em; margin: 7px 0 0; color: var(--mint); font-size: .73rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 148,
+      "text": ".seed-feedback.error-text { color: var(--incorrect); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 170,
+      "text": ".scaffold-key { margin: -7px 0 18px; color: var(--muted); font-size: .82rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 171,
+      "text": ".scaffold-key span { display: inline-grid; width: 25px; height: 25px; margin-right: 7px; place-items: center; border: 2px solid var(--cyan); border-radius: 50%; color: var(--cyan); font-weight: 900; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 179,
+      "text": ".scaffold-toggle {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 193,
+      "text": ".scaffold-toggle:hover { background: rgba(85, 246, 255, .14); color: var(--cyan); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 194,
+      "text": ".scaffold-toggle:disabled { cursor: default; opacity: .45; transform: none; filter: none; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 195,
+      "text": ".working-scaffold { margin: 16px 0 5px 35px; border: 1px solid rgba(84, 245, 181, .34); border-radius: 15px; padding: 15px 17px; background: var(--answer); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 196,
+      "text": ".scaffold-math-row { display: grid; grid-template-columns: minmax(110px, max-content) 20px minmax(0, 1fr); gap: 4px; align-items: center; line-height: 1.65; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 197,
+      "text": ".scaffold-math-row + .scaffold-math-row { margin-top: 5px; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 198,
+      "text": ".scaffold-note { margin: 7px 0; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 199,
+      "text": ".working-entry, .scaffold-final-slot { display: inline-flex; align-items: center; white-space: nowrap; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 208,
+      "text": ".scaffold-final-slot .response-input { width: 130px; min-height: 38px; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 218,
+      "text": ".scaffold-actions { display: flex; align-items: center; gap: 12px; margin-top: 14px; padding-top: 13px; border-top: 1px solid var(--line); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 219,
+      "text": ".scaffold-actions button { width: auto; min-height: 39px; border: 1px solid rgba(85, 246, 255, .3); border-radius: 10px; padding: 7px 13px; background: rgba(85, 246, 255, .08); color: var(--cyan); font-weight: 850; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 220,
+      "text": ".scaffold-feedback { margin: 0; color: var(--muted); font-size: .79rem; font-weight: 750; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 221,
+      "text": ".scaffold-feedback.all-correct { color: var(--correct); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 222,
+      "text": ".scaffold-feedback.has-errors { color: var(--incorrect); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 279,
+      "text": "  .working-scaffold { margin-left: 0; padding: 13px 10px; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 280,
+      "text": "  .scaffold-math-row { grid-template-columns: minmax(78px, max-content) 18px minmax(0, 1fr); font-size: .86rem; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 284,
+      "text": "  .scaffold-actions { align-items: stretch; flex-direction: column; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+      "line": 297,
+      "text": "  body::before, .brand, .control-column, .print-button, .check-row, .feedback, .result-mark, .scaffold-key, .scaffold-toggle, .working-scaffold { display: none !important; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 4,
+      "text": "const storageKey='sjs:c3l6:2012-q2:draft:v1';let state=marking.blank(),editor,restoring=false,introLoaded=false,navigationGeneration=0;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 7,
+      "text": "else{try{state=marking.restore(JSON.parse(localStorage.getItem(storageKey)));}catch{}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 9,
+      "text": "function save(){if(inspection)return;marking.saveable(state);try{localStorage.setItem(storageKey,JSON.stringify(state));$('saveNotice').textContent='';}catch{$('saveNotice').textContent='Progress cannot be saved in this browser. Keep this page open to retain your work.';}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 14,
+      "text": " const key=state.stage,isAssessment=keys.includes(key);$('checkPart').hidden=inspection||key!=='a'||state.complete.a;$('checkPart').disabled=key==='a'&&(!marking.attempted(state,'a')||state.complete.a);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 30,
+      "text": " const key=state.stage;if(key==='a'||key==='intro')return;const host=$('questionPanel');if(key==='b')host.querySelectorAll('.b-step-controls').forEach(node=>node.remove());"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 42,
+      "text": "function refreshThumbnail(){const key=state.stage,host=$('questionPanel');for(const slot of host.querySelectorAll('[data-answer=\"'+CSS.escape(state.selected[key])+'\"] .slot-preview')){slot.replaceChildren();const graph=currentDraft().graph;if(graph.atoms.length)slot.append(thumbnail(graph));else slot.textContent='Click to draw';}if(key==='b')renderRepeatedMolecules();}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 43,
+      "text": "function loadDrawing(){const key=state.stage,item=answers().find(a=>a.id===state.selected[key]);if(!item)return;restoring=true;editor.importState(currentDraft());editor.setReadOnly(key==='b'||key==='c'?isLocked(key,item.id):state.complete[key]);restoring=false;$('answerLabel').textContent='Structure '+item.label+(item.mass?' · relative molecular mass '+item.mass:'');$('readOnly').hidden=!(key==='b'||key==='c'?isLocked(key,item.id):state.complete[key]);}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assessment.js",
+      "line": 46,
+      "text": "  // fully correct check for the exact validated saved answers can seed granular progress."
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/core.js",
+      "line": 27,
+      "text": "      const key = [b.a, b.b].sort((a, c) => a - c).join(':');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/editor.js",
+      "line": 323,
+      "text": "    const key = event.key.toLowerCase();"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 22,
+      "text": "  function allowance(activity, question) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 32,
+      "text": "    return Boolean(value && value.version === 1 && Number.isSafeInteger(value.activeMs) && value.activeMs >= 0 && LIMITS.includes(value.idleLimitMs));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 35,
+      "text": "    return valid(value) && value.finished === true ? {version: 1, activeMs: value.activeMs, idleLimitMs: value.idleLimitMs} : undefined;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 39,
+      "text": "  function create({id, idleLimitMs, saved, completed = false, now = () => performance.now()}) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 40,
+      "text": "    if (!id || !LIMITS.includes(idleLimitMs)) throw Error('Invalid timing question.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 41,
+      "text": "    const restore = valid(saved) && saved.id === id && saved.idleLimitMs === idleLimitMs && typeof saved.finished === 'boolean';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 43,
+      "text": "      running = !finished, last = now(), deadline = last + idleLimitMs;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 51,
+      "text": "    function interact(visible = true) { tick(visible); if (visible && !finished) { running = true; deadline = last + idleLimitMs; } }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 53,
+      "text": "    function snapshot() { return known ? {version: 1, id, activeMs: Math.floor(activeMs), idleLimitMs, finished: Boolean(finished)} : undefined; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.css",
+      "line": 16,
+      "text": ".mastery-bar > .mastery-bar-threshold { display:block; position:absolute; left:var(--mastery-threshold,80%); top:-4px; bottom:-4px; width:2px; margin:0; padding:0; transform:translateX(-50%); background:#fff; box-shadow:0 0 0 1px #11182d; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 7,
+      "text": "  const key = 'masters-alevel-results-v1';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 8,
+      "text": "  const acidKey = 'masters-alevel-results-acid-v2';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 28,
+      "text": "  const config = Object.freeze(Object.fromEntries(["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 29,
+      "text": "    ['l6-t2-1-1', {label: labels['l6-t2-1-1'], halfLives: {1: 3}, progressionVersion: 1, availableGrades: [1], levelLabels: {1: 'Level 1 · Key learning'}}],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 30,
+      "text": "    ['l6-t2-1-2', {label: labels['l6-t2-1-2'], halfLives: {1: 3, 2: 3, 3: 3}, progressionVersion: 1, levelLabels: electronLevelLabels}],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 31,
+      "text": "    ['l6-t2-1-3', {label: labels['l6-t2-1-3'], halfLives: {1: 3, 2: 3, 3: 3}, progressionVersion: 1, levelLabels: electronLevelLabels}],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 32,
+      "text": "    ...[...acidLeaves].map(leafId => [leafId, {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 33,
+      "text": "      label: labels[leafId], halfLives: {1: 2, 2: 2, 3: 2}, progressionVersion: 2, levelLabels: acidLevelLabels"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 35,
+      "text": "    ...[...titrationLeaves].map(leafId => [leafId, {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 36,
+      "text": "      label: labels[leafId], halfLives: {2: 2, 3: 2}, progressionVersion: 1,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 39,
+      "text": "  ].map(([leafId, value]) => [leafId, Object.freeze({"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 40,
+      "text": "    label: value.label, halfLives: Object.freeze(value.halfLives), progressionVersion: value.progressionVersion,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 45,
+      "text": "    'l6-t2-1-4': Object.freeze({label: 'Covalent & Coordinate Bonding (legacy diagrams)', progressionVersion: 1}),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 46,
+      "text": "    'u6-t1-1-4': Object.freeze({label: 'Ka & pKa', progressionVersion: 1})"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 49,
+      "text": "  const threshold = 0.8;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 66,
+      "text": "    if (value.current) value.current.leafId = canonicalLeaf(value.current.leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 88,
+      "text": "  function storage() { try { return root.localStorage; } catch (_) { return null; } }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 89,
+      "text": "  function activeVersion(leafId) { return config[leafId]?.progressionVersion; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 93,
+      "text": "    if (!knownLeaves.has(item.leafId) || (!historical && !Object.hasOwn(config, item.leafId))) return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 94,
+      "text": "    if (item.progressionVersion !== undefined && item.progressionVersion !== 1 && item.progressionVersion !== 2) return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 104,
+      "text": "      const cleaned = {id: item.id, leafId: canonicalLeaf(item.leafId), level: item.level, score: item.score, completedAt: item.completedAt};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 105,
+      "text": "      if (item.leafId === formerCovalentLeaf || item.sourceLeafId === formerCovalentLeaf) cleaned.sourceLeafId = formerCovalentLeaf;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 106,
+      "text": "      if (item.progressionVersion !== undefined) cleaned.progressionVersion = item.progressionVersion;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 114,
+      "text": "      ![60000, 180000, 300000, 600000].includes(value.idleLimitMs)) return undefined;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 115,
+      "text": "    return {version: 1, activeMs: value.activeMs, idleLimitMs: value.idleLimitMs};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 133,
+      "text": "  function evidenceFor(leafId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 134,
+      "text": "    const version = activeVersion(leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 135,
+      "text": "    return records.filter(item => item.leafId === leafId &&"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 136,
+      "text": "      (item.progressionVersion === version || (version === 1 && item.progressionVersion === undefined)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 145,
+      "text": "  function summary(leafId, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 146,
+      "text": "    if (!Object.hasOwn(config, leafId) || !config[leafId].availableGrades.includes(Number(level))) throw Error('Unknown mastery level.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 147,
+      "text": "    const matches = evidenceFor(leafId).filter(item => item.level === Number(level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 148,
+      "text": "    const score = weightedScore(matches.map(item => item.score), config[leafId].halfLives[level]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 151,
+      "text": "    return {level: Number(level), score, mastered: score !== null && score > threshold, count: matches.length,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 154,
+      "text": "  function achievement(leafId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 155,
+      "text": "    if (!Object.hasOwn(config, leafId)) throw Error('Unknown mastery activity.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 156,
+      "text": "    const states = config[leafId].availableGrades.map(level => summary(leafId, level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 161,
+      "text": "  function nextLevel(leafId) { return achievement(leafId).states.find(state => !state.mastered)?.level || null; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 164,
+      "text": "    if (!valid(item, now, {historical: false}) || !Object.hasOwn(config, item.leafId) ||"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 165,
+      "text": "      !config[item.leafId].availableGrades.includes(item.level) ||"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 166,
+      "text": "      (activeVersion(item.leafId) === 2 && item.progressionVersion !== undefined && item.progressionVersion !== 2) ||"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 167,
+      "text": "      (activeVersion(item.leafId) === 1 && item.progressionVersion === 2)) throw Error('Invalid mastery result.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 169,
+      "text": "    if (activeVersion(item.leafId) === 2) savedItem.progressionVersion = 2;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 172,
+      "text": "    const targetKey = activeVersion(item.leafId) === 2 ? acidKey : key;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 177,
+      "text": "        ? records.filter(entry => acidLeaves.has(entry.leafId) && entry.progressionVersion === 2)"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 178,
+      "text": "        : records.filter(entry => !acidLeaves.has(entry.leafId) || entry.progressionVersion !== 2);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 196,
+      "text": "    node.setAttribute('aria-valuetext', score === null ? 'Not assessed yet' : score > threshold ? 'Above the mastery threshold' : 'Mastery threshold not yet exceeded');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 198,
+      "text": "    node.style.setProperty('--mastery-threshold', (threshold * 100) + '%');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 199,
+      "text": "    node.innerHTML = '<span class=\"mastery-bar-fill\" aria-hidden=\"true\"></span><span class=\"mastery-bar-threshold\" aria-hidden=\"true\"></span>';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 215,
+      "text": "    const leafId = headerLeaf(), activity = config[leafId];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 226,
+      "text": "      item.append(label,bar(summary(leafId,level).score,activity.levelLabels[level] + ' mastery',level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 230,
+      "text": "  function renderChoices(container, {leafId, href, fresh = Boolean(root.ActivityLaunch?.fresh)}) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 231,
+      "text": "    if (!Object.hasOwn(config, leafId)) throw Error('Unknown mastery activity.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 233,
+      "text": "    const labelsForLeaf = config[leafId].levelLabels;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 234,
+      "text": "    for (const option of ['mastery', ...config[leafId].availableGrades]) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 239,
+      "text": "      url.searchParams.set('leaf', leafId); url.searchParams.set('practice', option === 'mastery' ? 'mastery' : 'level');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 244,
+      "text": "        const available = config[leafId].availableGrades;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 248,
+      "text": "      else detail.append(bar(summary(leafId, option).score, labelsForLeaf[option] + ' mastery', option));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 253,
+      "text": "  root.ALevelMastery = Object.freeze({key, acidKey, config, threshold, read, history, readHistory: history, clean, migrateRevisionSession, refresh, weightedScore, summary, achievement, nextLevel, record, attemptId, bar, renderChoices, renderHeaderMeters});"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 16,
+      "text": "      const settings = config[record.leafId];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 17,
+      "text": "      const version = record.progressionVersion ?? 1;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 18,
+      "text": "      (settings && version === settings.progressionVersion && settings.availableGrades.includes(record.level)"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 25,
+      "text": "    return records.filter(record => (year === 'all' || record.leafId.startsWith(year + '-')) && record.completedAt >= cutoff);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 35,
+      "text": "      if (timing?.version === 1 && Number.isSafeInteger(timing.activeMs) && timing.activeMs >= 0 && [60000,180000,300000,600000].includes(timing.idleLimitMs)) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 59,
+      "text": "      const key = +midnight(record.completedAt);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 71,
+      "text": "  function build({records, topics, config, weightedScore, threshold, year = 'all', days = 0, now = Date.now()}) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 74,
+      "text": "    const current = filter(split.current.filter(record => supported.has(record.leafId)), year, days, now);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 78,
+      "text": "      counts: counts(current.filter(record => topic.gems.some(gem => gem.id === record.leafId))),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 80,
+      "text": "        const attempts = current.filter(record => record.leafId === gem.id);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 85,
+      "text": "          const evidence = split.current.filter(record => record.leafId === gem.id && record.level === level);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 86,
+      "text": "          const score = weightedScore(evidence.map(record => record.score), config[gem.id].halfLives[level]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 87,
+      "text": "          const state = {score, mastered: score !== null && score > threshold, count: evidence.length};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 95,
+      "text": "    return {topics: rows, counts: counts(current), timeline: timeline(current, days, now), practised: new Set(current.map(record => record.leafId)).size,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 131,
+      "text": "        const raw = localStorage.getItem(key);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 148,
+      "text": "    const data = S.build({records: M.history(), topics, config: M.config, weightedScore: M.weightedScore, threshold: M.threshold, year, days});"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 172,
+      "text": "      const key = `${record.leafId}:${record.level}:${record.progressionVersion ?? 1}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 178,
+      "text": "      row.append(node('strong', '', `${names.get(first.leafId) || first.leafId} · Level ${first.level} · progression ${first.progressionVersion ?? 1}`), outcomes(S.counts(records)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 35,
+      "text": "    const seeds = Math.floor(capacity / modulus);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 36,
+      "text": "    if (seeds < 1) throw new Error('Review configuration exceeds ID capacity.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 45,
+      "text": "        return format(prefix, ((Number(random) >>> 0) % seeds) * modulus + code);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 48,
+      "text": "        const seed = parse(prefix, id); let code = seed % modulus; const config = {};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 54,
+      "text": "        return { seed, config };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 80,
+      "text": "  // Acid-base IDs encode a variable-width base-36 seed (up to seven digits),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 151,
+      "text": "    bar.dataset.reviewId = id;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 172,
+      "text": "  root.QuestionReview = { capacity, format, parse, bank, codec, mount, requested, launcher, isTeacher, syncHeaderCode };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 173,
+      "text": "  if (typeof module !== 'undefined') module.exports = root.QuestionReview;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/shared-theme.css",
+      "line": 96,
+      "text": "/* Unnumbered mastery scale; the white rule marks the configured threshold. */"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/shared-theme.css",
+      "line": 102,
+      "text": ".mastery-bar > .mastery-bar-threshold { display:block; position:absolute; left:var(--mastery-threshold,80%); top:-4px; bottom:-4px; width:2px; margin:0; padding:0; transform:translateX(-50%); background:#fff; box-shadow:0 0 0 1px #11182d; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-bridge.js",
+      "line": 49,
+      "text": "          const questionId = rawQuestionId.match(/\\b(?:AB2-[0-9A-Z]{1,2}-[123]-[0-9A-Z]{1,7}|EB[0-9]{2}|[A-Z][A-Z0-9]{1,9}(?:-[A-Z0-9]{1,3})*-[0-9A-Z]{6})\\b/)?.[0] || '';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-bridge.js",
+      "line": 50,
+      "text": "          const signature = text + '\\\\n' + questionId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-bridge.js",
+      "line": 51,
+      "text": "          if (signature !== reportTitle.previous) { reportTitle.previous = signature; send('title',{title:text,questionId,inlineQuestionId:document.documentElement.dataset?.revisionCode === 'inline'}); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 32,
+      "text": "      session.previous[c.leafId + ':' + c.level] = c.state;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 33,
+      "text": "      session.lastLeaf = c.leafId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 46,
+      "text": "    const leafId = session.round.shift(), level = levelFor(session,leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 47,
+      "text": "    session.current = {attemptId, leafId, level, state: null, result: null};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 59,
+      "text": "    const state = session.gems[c.leafId][c.level], independentPass = result.score === 1 && result.independent;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 62,
+      "text": "    if (independentPass && state.streak >= state.required && summary(c.leafId,c.level).mastered) state.confirmedAt = now;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 80,
+      "text": "      return c === null || (typeof c.attemptId === 'string' && c.attemptId.length > 0 && s.selected.includes(c.leafId) && catalog[c.leafId].levels.includes(c.level) && (c.result === null || validResult(c.result,now)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.css",
+      "line": 19,
+      "text": ".test-bars .mastery-bar{display:block;position:relative;height:10px;background:#070c19;border-radius:8px;overflow:hidden}.test-bars .mastery-bar-fill{position:absolute;inset:0 auto 0 0;width:var(--mastery-fill);background:#f4dd69}.test-bars [data-level=\"2\"] .mastery-bar-fill,.test-bars [data-grade=\"2\"] .mastery-bar-fill{background:#62e3a0}.test-bars [data-level=\"3\"] .mastery-bar-fill,.test-bars [data-grade=\"3\"] .mastery-bar-fill{background:#c79bff}.test-bars .mastery-bar-threshold{position:absolute;top:0;bottom:0;left:var(--mastery-threshold);width:2px;background:#fff}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 5,
+      "text": "  const key = 'masters-' + site + '-test-mode-v1';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 8,
+      "text": "  const catalog = {};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 12,
+      "text": "    const settings = alevel ? M.config[id] : Object.values(IGCSEMasteryConfig.activities).find(item => item.leafId === id);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 34,
+      "text": "  const questionId = document.createElement('span'); questionId.id = 'testQuestionId'; questionId.className = 'header-question-code';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 37,
+      "text": "  codeBadge.append(codeLabel,questionId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 80,
+      "text": "    else { try { records = M.merge(M.read(localStorage),records); } catch (_) {} }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 86,
+      "text": "    try { localStorage.setItem(key,JSON.stringify(session)); } catch (_) { warn(); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 90,
+      "text": "      const raw = localStorage.getItem(key);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 96,
+      "text": "            if (!localStorage.getItem(backupKey)) localStorage.setItem(backupKey, raw);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 97,
+      "text": "            localStorage.setItem(key, JSON.stringify(parsed));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 206,
+      "text": "    const setting = session.gems[c.leafId][c.level];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 207,
+      "text": "    $('testHeading').textContent = catalog[c.leafId].name;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 208,
+      "text": "    $('testLevel').textContent = catalog[c.leafId].labels[c.level];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 211,
+      "text": "      : catalog[c.leafId].levels;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 238,
+      "text": "    questionId.textContent = ''; codeBadge.hidden = true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 242,
+      "text": "    frame = document.createElement('iframe'); frame.id = 'testQuestionFrame'; frame.title = `${catalog[c.leafId].name} — ${catalog[c.leafId].labels[c.level]} question`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 243,
+      "text": "    const url = new URL(catalog[c.leafId].href,document.baseURI);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 244,
+      "text": "    Object.entries({leaf:c.leafId,practice:alevel?'level':'grade',level:c.level,grade:c.level,mode:'pupil',testSession:session.id,testAttempt:c.attemptId}).forEach(([k,v]) => url.searchParams.set(k,v));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 263,
+      "text": "      try { localStorage.setItem(M.key,JSON.stringify(records)); } catch (_) { warn(); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 272,
+      "text": "        payload:{leafId:c.leafId,level:c.level,state:c.state,previous:session.previous[c.leafId+':'+c.level] || null}},location.origin === 'null' ? '*' : location.origin);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 274,
+      "text": "      questionId.textContent = typeof d.payload?.questionId === 'string' ? d.payload.questionId.slice(0,100) : '';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 275,
+      "text": "      codeBadge.hidden = !questionId.textContent || d.payload?.inlineQuestionId === true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 284,
+      "text": "        const item = {...d.payload.evidence,id:c.attemptId,leafId:c.leafId,[alevel?'level':'grade']:c.level,completedAt:d.payload.completedAt};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 21,
+      "text": "    try { return localStorage.getItem(YEAR_KEY) === 'u6' ? 'u6' : 'l6'; } catch (_) { return 'l6'; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 26,
+      "text": "      progress.renderChoices(container, {leafId: id, href: activities[id].href, fresh: true});"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 52,
+      "text": "    try { localStorage.setItem(YEAR_KEY, year); } catch (_) {}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 141,
+      "text": "          if (globalThis.MASTERS_DISPLAY.hiddenGems.includes(id)) return;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 169,
+      "text": "    const id = globalThis.MASTERS_DISPLAY.redirects[original] || original;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/catalog.js",
+      "line": 443,
+      "text": "  \"hiddenGems\": ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/catalog.js",
+      "line": 447,
+      "text": "  \"redirects\": {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/stats.html",
+      "line": 35,
+      "text": "    <p class=\"stats-explanation\">Response accuracy counts fully correct recorded attempts. Current mastery uses all current-progression attempts, weighted towards recent results; the white marker is the 80% threshold.</p>"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-04T19:13:57.220Z",
+  "scope": "Actual source question provider, marking, attempt controller, active clock, immutable save/restore and statistics; existing DEV hooks issue responses only, trusted browser interaction and real clock. No substituted timing.",
+  "results": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "attemptId": "93f3cf71-3bb8-4fed-9beb-3b2cbc633c72",
+      "questionCode": "AB-HFJ6TV",
+      "activeMs": 1341,
+      "score": 1,
+      "restoredEvidenceUnchanged": true,
+      "chartConserved": true,
+      "detail": "Question AB-HFJ6TV · Level 1 · Structured · 04/10/2026, 20:13:46 · Correct · 1 s"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "attemptId": "552fe6ee-53fe-410f-a730-26593574b960",
+      "questionCode": "CAL-3V3MOE",
+      "activeMs": 1314,
+      "score": 1,
+      "restoredEvidenceUnchanged": true,
+      "chartConserved": true,
+      "detail": "Question CAL-3V3MOE · Grade 5–6 · 04/10/2026, 20:13:53 · Correct · 1 s"
+    }
+  ]
+}

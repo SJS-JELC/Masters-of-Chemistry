@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-02T22:36:16.843Z",
+  "scope": "Project files only; dependencies/cache excluded. Workspace has no root Git repository; no git diff claimed.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 53,
+      "sha256": "d244e22059643af37123aa97515960b344e09afd6f58e46b882d63a820cd9a60",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3861,
+      "sha256": "c184a065b7bd08e6b70c77f530afd46817ea6b4bc50b9cabf8533b3ecc03107e",
+      "ownership": "root-owned unchanged"
+    },
+    {
+      "path": "docs/architecture/README.md",
+      "bytes": 16332,
+      "sha256": "d41ed80047a0e0e21165a9760c1da38b67e9ea5c2ac1830de04baa2fa6e3e3a9",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "docs/architecture/s1-work-packages.md",
+      "bytes": 10637,
+      "sha256": "e3c8bb0737a81c80ecae6d9dcb121c3fa8cde091ea1e6034c687273e44494d82",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "docs/inventory/migration-inventory.md",
+      "bytes": 26556,
+      "sha256": "fa5c251c3dc9a78b8d1abf003c38b2ab0f362dbf70a2d3353f5cea17cf5cdb6d",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 4158,
+      "sha256": "5c23ff3c622691700a1a86867dfb6c8506ff1642479038ebaefb53f3832ac75d",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "IMPLEMENTATION.md",
+      "bytes": 10801,
+      "sha256": "043c34988b57d5af6475620322622c03fb54c4d51d1b9c26d1b88eb71265fe73",
+      "ownership": "root-owned unchanged"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 774,
+      "sha256": "8cb371c7e456e9413fe717a6e0b238234cbe4505ee379b9e817187d9efff12a6",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "package.json",
+      "bytes": 342,
+      "sha256": "7189b02437f585625e917eaf2b754ae57e1565d4f3ae2a4d76a181f3438ebc54",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "progress.json",
+      "bytes": 2190,
+      "sha256": "47ab833d4b65f4511f69e01ddb44b1540d5b7b2a0db6bd590c9efba9c9698e5c",
+      "ownership": "foreman progress update"
+    },
+    {
+      "path": "project-contract.json",
+      "bytes": 5968,
+      "sha256": "5cda637c3af8b70a1750e213050c99c3060807c17341513502d1216bbc25ce70",
+      "ownership": "root-owned unchanged"
+    },
+    {
+      "path": "scripts/protect-originals.mjs",
+      "bytes": 3272,
+      "sha256": "c4772926f38379912a9bcdbdbf8f5d3da8eb0e21c805f968474499bb8120be6b",
+      "ownership": "root-owned unchanged"
+    },
+    {
+      "path": "scripts/validate-s0.mjs",
+      "bytes": 3653,
+      "sha256": "b1f44aa9c04323a972c68670a8672c2c67874314cfb716db770ff015fef4c4dc",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "scripts/write-s0-report.mjs",
+      "bytes": 11202,
+      "sha256": "fbd7b3d778b4e7109666ee54af3d0802b799e799875022853c7709d5f5955095",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "scripts/write-s0-scope.mjs",
+      "bytes": 2324,
+      "sha256": "8f225ca5b07fa07b719c04653b7824896fe6a5fccd0decad9d3ac188f95f519d",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "bytes": 4730,
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "bytes": 5006,
+      "sha256": "2a65f2237da81b6578a94688ee91c304285468f392baca41c5383ecd2d7c31b6",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "bytes": 4155,
+      "sha256": "877f564897f1763ce93f2cb3738384bb6132041bfc3b467ce2a5d94e0b716a7f",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "bytes": 1832,
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "bytes": 263,
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "bytes": 3666,
+      "sha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "bytes": 6156,
+      "sha256": "5dbf70a113db90378a4ca49af3c5260b21fc7d90052a3277204fe5d7aab373c8",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "bytes": 2085,
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "bytes": 2302,
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "bytes": 3989,
+      "sha256": "339d603b7769bf39a0d5903d51ae1c40ee0c149aced21b6601b4b174998bb3e9",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 458,
+      "sha256": "0101eaea81b95b7513690e7269758e47277aa3d96cdfa8406644cec8406ba6be",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/original-app-baseline.json",
+      "bytes": 276378,
+      "sha256": "be988874727f246610b386ad02a187729c47f6c4c924005a44f4b3f0be42f29e",
+      "ownership": "root-owned unchanged"
+    },
+    {
+      "path": "validation/original-app-check.json",
+      "bytes": 49921,
+      "sha256": "d3b11eed86a7b74fddebc520344b6939be907d5c0d22bc3cd25a596436bed1b8",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/root-contract-lock.json",
+      "bytes": 134,
+      "sha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81",
+      "ownership": "root-owned unchanged"
+    },
+    {
+      "path": "validation/s0/contracts/clarification-checks.json",
+      "bytes": 518,
+      "sha256": "ed8fccb0b88f73b974d1441a8abe3b5a98c6b59b11f08999d1d0a044255a1142",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/clarification-fixtures.ts",
+      "bytes": 2860,
+      "sha256": "5ff2e62554f000db82d43dd5df4d7c6818604dfc6a7e281c20a0bdd5b4ead7b7",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/clarification-source-evidence.json",
+      "bytes": 996,
+      "sha256": "a938cc7703221ce2658aca982d793effd37d110ed115e81f33595ec698cb4563",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/handover-clarification.json",
+      "bytes": 2104,
+      "sha256": "4742bd77f41e0d84c9493cf392e990313cd592cdd3ea4be10a246506cbd09c4c",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/handover.json",
+      "bytes": 1926,
+      "sha256": "bfd93dc63461fc1aa07586363598a473165c3e06be404ce1a1a566e254089b27",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/reference-checks.json",
+      "bytes": 1879,
+      "sha256": "7cb8ae53730a46bb15df23ce7cd8cd40f5e71595c885b8ea43324315bc59cf03",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/representative-fixtures.ts",
+      "bytes": 9108,
+      "sha256": "7f6c60d590cbf05942b8eb9897409ac34aa29360f6741807f1b94f2c5d8e8f3b",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/source-evidence.json",
+      "bytes": 6702,
+      "sha256": "27e2360ab3f5f69b37febd37000eb6671b7909114d0ff3120aea731c34ef9d09",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/typecheck-clarification.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/validate-clarification.mjs",
+      "bytes": 3380,
+      "sha256": "a37bca858a911ecf7eaccf220c27ea7aa93854225d7b06d9a695a094eb462fd6",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/contracts/validate-reference.mjs",
+      "bytes": 7002,
+      "sha256": "dc97294341bf0a4a746c70b06eedd3ca5c5ed0eab9a91f2bf36ded112e277498",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/control-start.json",
+      "bytes": 821,
+      "sha256": "aa44f0b240735b7d6f3cad816d367b5d98a039916985ad40ffbc1ec6d4c00b70",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/foreman-inventory-check.txt",
+      "bytes": 606,
+      "sha256": "47fcf00f0ee463383d1f7f74233c57d71fc64b44e0cea101eb42a02dfbd44b9e",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/foreman-model-checks.txt",
+      "bytes": 725,
+      "sha256": "e47fcbc367b615ec837a7582101369119fe6173af70e013054ed82edd905431e",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/foreman-report.json",
+      "bytes": 11717,
+      "sha256": "5b5a2a2a618e84ca0dcbf4d34d1424c5fe46f43b1e6a2441158f448e1bd51d4e",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/foreman-typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/integration-check.json",
+      "bytes": 521,
+      "sha256": "549b0c23fe57d783511d0508824d1c841df0c156f71e39ab752e029aa1fdd13c",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-acid-base-calculations-evidence.json",
+      "bytes": 153230,
+      "sha256": "a1a7bda12187c73cbf72779204e5f852a3de61668658d8892711db24c68e7d6a",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-c3l6-organic-reactions-evidence.json",
+      "bytes": 35169,
+      "sha256": "edac38ffbcee31cb544706141e346dcc4849d28af5512129590022f21378d812",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-dot-and-cross-evidence.json",
+      "bytes": 42959,
+      "sha256": "ebc74375b74b0737627f4d49000b96d77b6442e5549d5055bfad6dac25bfa4d3",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-electron-configurations-evidence.json",
+      "bytes": 51924,
+      "sha256": "18be1ed6b2ca05367dea2f2fcf9a5569ce0573489933d0f5a95b7c9a2d077371",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-electrons-bonding-evidence.json",
+      "bytes": 44048,
+      "sha256": "b3e8b6f3c86357f5f08a0f330f2f8f004b734c96ded63ac390b695d6a0ee8a68",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-ph-titration-curves-evidence.json",
+      "bytes": 46588,
+      "sha256": "8bec0be165a18a38a88686b83f3b6cbcd8e2c763ef234e388838de13f98802b3",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/annotations.cjs",
+      "bytes": 13410,
+      "sha256": "d1fdd07a98753c431dbd821615bbeb126800d8c6e236c4a63360c6d9578a906b",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/build-docs.cjs",
+      "bytes": 11653,
+      "sha256": "334b13fadf02e346eab58640b720e9bf925c2c1828a80c96ba2ab85a3c5689fe",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/collect.cjs",
+      "bytes": 16281,
+      "sha256": "e1db4d506a436f72815b4c1934ee70465d215ae9e0a552bc8aa327c6f07aaab8",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/completion.json",
+      "bytes": 2596,
+      "sha256": "a69d9c9a6f42a74dbf321ba0c8b07f5e18bce472fda6b92dd2f883136cdbbda6",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/coverage-manifest.json",
+      "bytes": 2089027,
+      "sha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/coverage-validation.log",
+      "bytes": 300,
+      "sha256": "ba8044a749fc8d4f4e51384ad4894b6c0912ad8254f6fce56e891f95de775281",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/identity-index.json",
+      "bytes": 89810,
+      "sha256": "2e77221de86121719fec2a969fa26038a79263a20ceda31672f25bfeb0d099f1",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-bond-enthalpy-evidence.json",
+      "bytes": 72685,
+      "sha256": "2825d0072326a448182ef4d0d100c3c3c8769252a5659b1de3062575de540b08",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-calorimetry-evidence.json",
+      "bytes": 56751,
+      "sha256": "99e483a387a0a99d9049c91536ff756c5fbfcf45e2c9930fdd4b13d6763c86d7",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-dot-and-cross-evidence.json",
+      "bytes": 64429,
+      "sha256": "856d30572ccd94e5a539202d7cae491745640a3752b3959bca86c3103d491120",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-energetics-practical-evidence.json",
+      "bytes": 65318,
+      "sha256": "9cbce779ab325ad40f928c965fdfc233a1f046d34aa81e13ebd40e44b266400a",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-energy-enthalpy-evidence.json",
+      "bytes": 64692,
+      "sha256": "ac5ccdaf5ec18efe8ea2928c88022b27d7dbc1c24386c77fffbad2f373c2a1ea",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-structure-and-bonding-evidence.json",
+      "bytes": 66007,
+      "sha256": "399866022534f5fb2fd6aaf2effdf31ca9fadce86f6ba801d42303960a51d0b0",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/ported-acid-levels.log",
+      "bytes": 184,
+      "sha256": "80fac0630a671db234b1954c90f5b813496796250d221742c74cd9982892e586",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/preflight-local-inputs.ps1",
+      "bytes": 965,
+      "sha256": "016610ec0d82a89738200f42a0801f5d2f1c15a60f2b12569db2de2dc9e90af2",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/reference-check-results.json",
+      "bytes": 6741,
+      "sha256": "dfe664404fa4164db41b8302a71d603bb56f4f8ca449a3a662731f5de088c1f1",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/reference-validation-map.json",
+      "bytes": 10898,
+      "sha256": "fd0d1f6cdf462594d45a1f0fe2b3600d663eecd894c425df34d2b1682d07c247",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/run-reference-checks.cjs",
+      "bytes": 2273,
+      "sha256": "7a699e9dfdb145ecbf07c5f0d1055026906319980813c26eec8f50c0721fd4fc",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/source-model-validation.json",
+      "bytes": 655,
+      "sha256": "045c26298f5a1fb42c48c8ecd9e5189059d5ad8d182623f627863eba266dae1c",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/source-provenance-availability.json",
+      "bytes": 2417,
+      "sha256": "4cd3c968ea42106ebf31fa549a5e8a0522a22a5e2443e44b940af2506a831593",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_acid_levels.log",
+      "bytes": 1531,
+      "sha256": "b551eed01c6de3982634ee2566fd5286015c32a18cdd8c32b09905ab614a348f",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_acid_progression_chemistry.log",
+      "bytes": 259,
+      "sha256": "cadef799d091f6180457d896aa3183a1259ef8117d0e92086d671a84f810cd9f",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_acid_progression_model.log",
+      "bytes": 209,
+      "sha256": "7c959c67385b84cf9f45ac9ed433ecf55409d2096dd000a20410895e7a1b5296",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_basics_full_answers.log",
+      "bytes": 286,
+      "sha256": "523720d642b44c1b4fc5d48cb581d8691720a9cdc8832b9128fd97a00b90efcc",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_bond_enthalpy_question_generator.log",
+      "bytes": 278,
+      "sha256": "dee5a335c36e55f12a42580e4c594f81aad453eb02a3c58d22569e0fbed06ca6",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_calorimetry_mastery.log",
+      "bytes": 337,
+      "sha256": "0fb0e524ebdf126905c5a99cde37ca5b4cc735f2e8b627144035bfaf1a2acad9",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_calorimetry_question_generator.log",
+      "bytes": 270,
+      "sha256": "dcd69bd0d92069930879656767d1e2ea448219385c9830a673e1eb303361fbaf",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_alevel.log",
+      "bytes": 271,
+      "sha256": "ebaffc74cc429e428089ef19d5bb363d56da3d1889bab2b29722e08e6fbb02ff",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_isomers.log",
+      "bytes": 263,
+      "sha256": "ce2bfe982672aa50af7cf8120ee2996aad55b7239bd7e940355a27be60940d38",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_lithium.log",
+      "bytes": 277,
+      "sha256": "05bac833bc477929062fbb65d8693f1371ba27d1e421303ea720a5ada7f4421c",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_pair_layout.log",
+      "bytes": 1554,
+      "sha256": "4daa8c6b1bba8c2d56c483cbc16d04875ed0dc72b560ab981b575a52aa5c213c",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_electron_configurations.log",
+      "bytes": 382,
+      "sha256": "59dff347c0558911749f6bc7aa7aabd1bc06b6e8906e087ad135448488f203e8",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_electron_levels.log",
+      "bytes": 342,
+      "sha256": "f36f5a6c08c1a0e2447fe13e34efbdd2ab76a6ac77e4ba6ec6259d9fa7191e29",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_energy_enthalpy.log",
+      "bytes": 1323,
+      "sha256": "058c6c14a4b18c2999ab96ee6665b4dc0e169cc83577bdcf2e657621cfffa541",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_ph_titration_curves.log",
+      "bytes": 478,
+      "sha256": "e9242257240ea8ea729868320020e9485933844610ddbb660fcc112ff57c1504",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test_structure_bonding_comparison_generator.log",
+      "bytes": 261,
+      "sha256": "ee3fbb8297d1ed6aeea27e3fff4f58ce5ae4ec311aafb764ae6b5372bfd3f09e",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/test-acid-levels-ported.cjs",
+      "bytes": 3999,
+      "sha256": "38594b10506fc503327bed9a2222ee809970fd1e3d6a86bc0577c3271d070fc8",
+      "ownership": "S0 added/generated"
+    },
+    {
+      "path": "validation/s0/inventory/validate-source-models.cjs",
+      "bytes": 4015,
+      "sha256": "51fb1fe99b28aea447da7020fbaf5402b59b385733a4764756608d5d68106589",
+      "ownership": "S0 added/generated"
+    }
+  ]
+}

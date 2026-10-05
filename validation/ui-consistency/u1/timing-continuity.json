@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T22:12:17.782Z",
+  "clocks": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "priorSha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+      "currentSha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d",
+      "semanticSha256": "795cc9397bc71d49f7579edd0924a743922fae9c731814867f6bc277d179c95d",
+      "semanticEqual": true,
+      "nativeRecordedSha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+      "rawNativeEqual": true
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "priorSha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+      "currentSha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2",
+      "semanticSha256": "2bd4b903cc0486c04168ee823d70e16e634ae9ac2b9edecd9fe76eb6a427eda5",
+      "semanticEqual": true,
+      "nativeRecordedSha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+      "rawNativeEqual": true
+    }
+  ],
+  "retainedNativeEvidence": [
+    {
+      "path": "validation/s2/review-native/partial-verification.json",
+      "sha256": "f4c4afdf11098b91399c5c06954d64a91b6a330990f8b72d7edc5911c6678d2e"
+    },
+    {
+      "path": "validation/s2/review-suspension/disposition.json",
+      "sha256": "767afec67b7bebae2d3d73b4ef791a12e0956f09a742ef62a54e41e2fe4d038e"
+    },
+    {
+      "path": "validation/s2/review-suspension/results.json",
+      "sha256": "89e972ecd45c48cbbeb2f7dc385ca1d6b01cc98779565ff0e94ebfb855dde16a"
+    },
+    {
+      "path": "validation/s3/review-timing/disposition.json",
+      "sha256": "7e49d9e2cbee918d0ee75e8b84babf36d69add17814802b206f31b0823ad72fc"
+    },
+    {
+      "path": "validation/s3/review-timing/results.json",
+      "sha256": "b40ab6f6502d0ab8fa0c391b089696f1db16f6c1f01053e3c0a285e728c73d8b"
+    },
+    {
+      "path": "validation/s3/review-timing/energy-disposition.json",
+      "sha256": "74948233f3d83516b6a93ace032695e6f0cdb28cd218360d95db6805b3fd93a0"
+    },
+    {
+      "path": "validation/s3/electrons/timing-browser-results.json",
+      "sha256": "2bc0965661fcf086ed9fe9e02f1d08dfe43648bb5bfbc0012f446d4ba4794dec"
+    }
+  ],
+  "idleAllowances": [
+    {
+      "limitMs": 60000,
+      "evidence": "validation/s2/review-native/partial-verification.json",
+      "native": true
+    },
+    {
+      "limitMs": 180000,
+      "evidence": "validation/s2/review-suspension/disposition.json",
+      "native": true
+    },
+    {
+      "limitMs": 300000,
+      "evidence": "validation/s2/review-suspension/disposition.json",
+      "native": true
+    },
+    {
+      "limitMs": 600000,
+      "evidence": "validation/s3/review-timing/disposition.json",
+      "native": true
+    }
+  ],
+  "limits": [
+    "A07 replaced-document996ms remains unclassified",
+    "A12 headless9005vs1001 remains unclassified",
+    "Retained Vite post-thaw replacement and conservative whole-tree failures remain ESCALATE raw; accepted boundary dispositions are separate",
+    "A11-specific60/180 idle evidence is headless; shared native-binding evidence carried, no A11-specific native run invented",
+    "Titration adapter raw bytes differ from S3; current constant600000 allowance independently inspected and all current production target timings match native observed600000; clock/binding unchanged. No claim of full S3 host/adapter raw equality",
+    "Final static build timing restore/stats evidence does not relabel prior development-host screenshots as final rendered acceptance"
+  ],
+  "scope": "Exact unchanged timing algorithm/browser binding and retained native evidence; current UI attempts checked separately. No new native OS suspension proof claimed. Attempt action reducer changed only UI markers/Clear; immutable evidence invariants explicitly tested."
+}

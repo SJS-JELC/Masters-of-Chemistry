@@ -1,0 +1,2366 @@
+{
+  "at": "2026-10-03T04:03:46.625Z",
+  "activities": [
+    {
+      "id": "alevel/acid-base-calculations",
+      "strand": "curriculum",
+      "rows": 139,
+      "coverage": [
+        {
+          "kind": "generated",
+          "families": [
+            {
+              "templateId": "h-to-ph",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "ph-to-h",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "strong-acid-direct",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "strong-acid-dilution",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "strong-acid-preparation",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "strong-acid-neutralisation",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "strong-base-direct",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "water-ph-from-kw",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "dihydroxide-direct",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "strong-base-mass",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "temperature-base",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "base-mass-concentration-dilution",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "base-purity",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "excess-strong-base",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "weak-acid-concentration-ph",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-pka-ph",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-amount",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-reverse-concentration",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-ph-ka",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-ph-pka",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-percent",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-pka-concentration",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "weak-acid-target-mass",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "weak-acid-purity",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "weak-acid-preparation-ka",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "buffer-component-ratio",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "buffer-salt-amount",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "buffer-salt-mass",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "buffer-salt-stock-volume",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "buffer-partial-target-alkali",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "buffer-target-volume-stocks",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "buffer-direct",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "buffer-mixed-volumes",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "partial-buffer-moles",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "partial-buffer-solutions",
+              "levels": [
+                1,
+                2
+              ]
+            },
+            {
+              "templateId": "buffer-after-addition",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "buffer-recipe-deviation",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "partial-buffer-ka",
+              "levels": [
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|numeric::",
+          "count": 18,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-0-1-1",
+            "seed": 1,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "ABL-000019",
+            "seed": 45,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|numeric::",
+          "count": 38,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-0-2-1",
+            "seed": 1,
+            "level": 2
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000WO",
+            "seed": 1176,
+            "level": 2
+          }
+        },
+        {
+          "sig": "1|numeric::,numeric::",
+          "count": 12,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-2-1-1",
+            "seed": 1,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000SN",
+            "seed": 1031,
+            "level": 1
+          }
+        },
+        {
+          "sig": "1|numeric::,numeric::,numeric::",
+          "count": 8,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-3-1-1",
+            "seed": 1,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-Q-1-1",
+            "seed": 1,
+            "level": 1
+          }
+        },
+        {
+          "sig": "3|numeric::",
+          "count": 29,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-4-3-1",
+            "seed": 1,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "ABL-00000Z",
+            "seed": 35,
+            "level": 3
+          }
+        },
+        {
+          "sig": "1|numeric::,numeric::,numeric::,numeric::",
+          "count": 6,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-9-1-1",
+            "seed": 1,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-X-1-1",
+            "seed": 1,
+            "level": 1
+          }
+        },
+        {
+          "sig": "1|numeric::,numeric::,numeric::,numeric::,numeric::,numeric::",
+          "count": 1,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-Y-1-1",
+            "seed": 1,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-Y-1-1",
+            "seed": 1,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|numeric::,numeric::,numeric::",
+          "count": 6,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000TL",
+            "seed": 1065,
+            "level": 2
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000TV",
+            "seed": 1075,
+            "level": 2
+          }
+        },
+        {
+          "sig": "2|numeric::,numeric::",
+          "count": 8,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000TN",
+            "seed": 1067,
+            "level": 2
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "ABL-00000V",
+            "seed": 31,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|numeric::,numeric::",
+          "count": 5,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000UU",
+            "seed": 1110,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000V6",
+            "seed": 1122,
+            "level": 3
+          }
+        },
+        {
+          "sig": "3|numeric::,numeric::,numeric::,numeric::,numeric::",
+          "count": 1,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000UV",
+            "seed": 1111,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000UV",
+            "seed": 1111,
+            "level": 3
+          }
+        },
+        {
+          "sig": "3|numeric::,numeric::,numeric::",
+          "count": 7,
+          "first": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000UW",
+            "seed": 1112,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB-0000V5",
+            "seed": 1121,
+            "level": 3
+          }
+        }
+      ],
+      "identityDigest": "e67b24ce8562d8e140918d265208d22ef69e915cd99137bbade3a7d9a2768c95"
+    },
+    {
+      "id": "igcse/structure-and-bonding",
+      "strand": "curriculum",
+      "rows": 18,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "SBC-U5FSU0",
+            "SBC-UFFEIZ",
+            "SBC-3M81WX",
+            "SBC-3C8G7Y",
+            "SBC-E4WN2I",
+            "SBC-EEW8RH",
+            "SBC-4KKN3Z",
+            "SBC-4AL1F0",
+            "SBC-8456XU",
+            "SBC-8E4SMT",
+            "SBC-2C40VA",
+            "SBC-2M3MK9",
+            "SBC-F8MV0J",
+            "SBC-EYN9BK",
+            "SBC-KIHCFZ",
+            "SBC-K8HQR0",
+            "SBC-8H8DTX",
+            "SBC-878S4Y"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "2|explanation:self-rubric:",
+          "count": 9,
+          "first": {
+            "activityId": "igcse/structure-and-bonding",
+            "questionId": "SBC-U5FSU0",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/structure-and-bonding",
+            "questionId": "SBC-8H8DTX",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "3|explanation:self-rubric:",
+          "count": 9,
+          "first": {
+            "activityId": "igcse/structure-and-bonding",
+            "questionId": "SBC-UFFEIZ",
+            "level": 3,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/structure-and-bonding",
+            "questionId": "SBC-878S4Y",
+            "level": 3,
+            "seed": 0
+          }
+        }
+      ],
+      "identityDigest": "7d3d61836cbabad87ff5d37785a1c26ae600cfa78fafe7d613950b6bf88cc54f"
+    },
+    {
+      "id": "alevel/dot-and-cross",
+      "strand": "curriculum",
+      "rows": 123,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "h2",
+            "cl2",
+            "hcl",
+            "h2o",
+            "nh3",
+            "ch4",
+            "o2",
+            "n2",
+            "co2",
+            "c2h6",
+            "c2h4",
+            "ch3cl",
+            "chloroethene",
+            "f2",
+            "br2",
+            "i2",
+            "hf",
+            "hbr",
+            "hi",
+            "h2s",
+            "h2o2",
+            "n2h4",
+            "c2h5cl",
+            "c2h5br",
+            "c2h5i",
+            "c2h5f",
+            "c2h3br",
+            "c2h3f",
+            "c2h4cl2-11",
+            "c2h4cl2-12",
+            "c2h2cl2-11",
+            "c2h2cl2-12",
+            "ethanol",
+            "dimethylether",
+            "ethanal",
+            "ethanoic-acid",
+            "sih4",
+            "methanoic-acid",
+            "propane",
+            "propene",
+            "nacl",
+            "mgo",
+            "mgcl2",
+            "na2o",
+            "cacl2",
+            "potassium-chloride",
+            "potassium-fluoride",
+            "lithium-fluoride",
+            "lithium-chloride",
+            "lithium-oxide",
+            "potassium-bromide",
+            "potassium-iodide",
+            "sodium-fluoride",
+            "sodium-bromide",
+            "magnesium-sulfide",
+            "magnesium-fluoride",
+            "magnesium-bromide",
+            "calcium-sulfide",
+            "calcium-fluoride",
+            "calcium-bromide",
+            "calcium-oxide",
+            "aluminium-oxide",
+            "aluminium-sulfide",
+            "aluminium-fluoride",
+            "sodium-iodide",
+            "magnesium-nitride",
+            "calcium-nitride",
+            "sodium-sulfide",
+            "potassium-oxide",
+            "potassium-sulfide",
+            "naoh",
+            "caoh2",
+            "peroxide-ion",
+            "sodium-peroxide",
+            "magnesium-peroxide",
+            "nitrogen-trichloride",
+            "nitrogen-trifluoride",
+            "sulfur-difluoride",
+            "nitrosyl-chloride",
+            "phosgene",
+            "hydrogen-cyanide",
+            "boron-trifluoride",
+            "ammonium-ion",
+            "carbonate-ion",
+            "nitrate-ion",
+            "tetrahydridoaluminate-ion",
+            "sodium-borohydride",
+            "phosphorus-pentachloride",
+            "sulfur-hexafluoride",
+            "sulfur-tetrafluoride",
+            "chlorine-trifluoride"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|dot-and-cross::",
+          "count": 35,
+          "first": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "h2",
+            "seed": 0,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "potassium-sulfide",
+            "seed": 0,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|dot-and-cross::",
+          "count": 54,
+          "first": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "h2o",
+            "seed": 0,
+            "level": 2
+          },
+          "last": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "hydrogen-cyanide",
+            "seed": 0,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|dot-and-cross::",
+          "count": 34,
+          "first": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "n2",
+            "seed": 0,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "chlorine-trifluoride",
+            "seed": 0,
+            "level": 3
+          }
+        }
+      ],
+      "identityDigest": "57e4f88c9a64bd74c5b1e78baab7f8bbd1ed3b694ed3e1cac00bc44ebb54e892"
+    },
+    {
+      "id": "igcse/dot-and-cross",
+      "strand": "curriculum",
+      "rows": 104,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "h2",
+            "cl2",
+            "hcl",
+            "h2o",
+            "nh3",
+            "ch4",
+            "o2",
+            "n2",
+            "co2",
+            "c2h6",
+            "c2h4",
+            "ch3cl",
+            "chloroethene",
+            "f2",
+            "br2",
+            "i2",
+            "hf",
+            "hbr",
+            "hi",
+            "h2s",
+            "h2o2",
+            "n2h4",
+            "c2h5cl",
+            "c2h5br",
+            "c2h5i",
+            "c2h5f",
+            "c2h3br",
+            "c2h3f",
+            "c2h4cl2-11",
+            "c2h4cl2-12",
+            "c2h2cl2-11",
+            "c2h2cl2-12",
+            "ethanol",
+            "dimethylether",
+            "ethanal",
+            "ethanoic-acid",
+            "sih4",
+            "methanoic-acid",
+            "propane",
+            "propene",
+            "nacl",
+            "mgo",
+            "mgcl2",
+            "na2o",
+            "cacl2",
+            "potassium-chloride",
+            "potassium-fluoride",
+            "lithium-fluoride",
+            "lithium-chloride",
+            "lithium-oxide",
+            "potassium-bromide",
+            "potassium-iodide",
+            "sodium-fluoride",
+            "sodium-bromide",
+            "magnesium-sulfide",
+            "magnesium-fluoride",
+            "magnesium-bromide",
+            "calcium-sulfide",
+            "calcium-fluoride",
+            "calcium-bromide",
+            "calcium-oxide",
+            "aluminium-oxide",
+            "aluminium-sulfide",
+            "aluminium-fluoride",
+            "sodium-iodide",
+            "magnesium-nitride",
+            "calcium-nitride",
+            "sodium-sulfide",
+            "potassium-oxide",
+            "potassium-sulfide",
+            "naoh",
+            "caoh2"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|dot-and-cross::",
+          "count": 37,
+          "first": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "h2",
+            "seed": 0,
+            "level": 1
+          },
+          "last": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "caoh2",
+            "seed": 0,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|dot-and-cross::",
+          "count": 46,
+          "first": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "h2o",
+            "seed": 0,
+            "level": 2
+          },
+          "last": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "potassium-sulfide",
+            "seed": 0,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|dot-and-cross::",
+          "count": 21,
+          "first": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "n2",
+            "seed": 0,
+            "level": 3
+          },
+          "last": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "propene",
+            "seed": 0,
+            "level": 3
+          }
+        }
+      ],
+      "identityDigest": "25eafce9f2e4db7e10a1a80b8f6c6000143ee5043ad1093eff93da188712379b"
+    },
+    {
+      "id": "alevel/ph-titration-curves",
+      "strand": "curriculum",
+      "rows": 36,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "TC01",
+            "TC02",
+            "TC03",
+            "TC04",
+            "TC05",
+            "TC06",
+            "TC07",
+            "TC08",
+            "TC09",
+            "TC10",
+            "TC11",
+            "TC12",
+            "TC13",
+            "TC14",
+            "TC15",
+            "TC16",
+            "TC17",
+            "TC18",
+            "TC19",
+            "TC20",
+            "TC21",
+            "TC22",
+            "TC23",
+            "TC24",
+            "TC25",
+            "TC26",
+            "TC27",
+            "TC28",
+            "TC29",
+            "TC30",
+            "TC31",
+            "TC32",
+            "TC33",
+            "TC34",
+            "TC35",
+            "TC36"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "2|titration-curve::",
+          "count": 18,
+          "first": {
+            "activityId": "alevel/ph-titration-curves",
+            "questionId": "TC01",
+            "seed": 0,
+            "level": 2
+          },
+          "last": {
+            "activityId": "alevel/ph-titration-curves",
+            "questionId": "TC18",
+            "seed": 0,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|titration-curve::",
+          "count": 18,
+          "first": {
+            "activityId": "alevel/ph-titration-curves",
+            "questionId": "TC19",
+            "seed": 0,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/ph-titration-curves",
+            "questionId": "TC36",
+            "seed": 0,
+            "level": 3
+          }
+        }
+      ],
+      "identityDigest": "d0403d6b0dfa51a02c98d9be21eec8e434676f9c64e42767017899995cc1b66f"
+    },
+    {
+      "id": "igcse/calorimetry",
+      "strand": "curriculum",
+      "rows": 4512,
+      "coverage": [
+        {
+          "kind": "generated",
+          "families": [
+            {
+              "templateId": "solution-q",
+              "levels": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "templateId": "combustion-q",
+              "levels": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "templateId": "solution-dh",
+              "levels": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "templateId": "combustion-dh",
+              "levels": [
+                1,
+                2,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|numeric::,numeric::",
+          "count": 588,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-005M9S",
+            "seed": 262144,
+            "level": 1
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-008WI7",
+            "seed": 415375,
+            "level": 1
+          }
+        },
+        {
+          "sig": "1|numeric::",
+          "count": 318,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-006BK0",
+            "seed": 294912,
+            "level": 1
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-006CR3",
+            "seed": 296463,
+            "level": 1
+          }
+        },
+        {
+          "sig": "1|numeric::,numeric::,numeric::",
+          "count": 270,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-0070XS",
+            "seed": 327808,
+            "level": 1
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-00877Z",
+            "seed": 382607,
+            "level": 1
+          }
+        },
+        {
+          "sig": "1|numeric::,numeric::,numeric::,numeric::",
+          "count": 174,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-00779C",
+            "seed": 336000,
+            "level": 1
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-007HXR",
+            "seed": 349839,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|numeric::,numeric::",
+          "count": 588,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-005MAO",
+            "seed": 262176,
+            "level": 2
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-008WJ3",
+            "seed": 415407,
+            "level": 2
+          }
+        },
+        {
+          "sig": "2|numeric::",
+          "count": 318,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-006BKW",
+            "seed": 294944,
+            "level": 2
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-006CRZ",
+            "seed": 296495,
+            "level": 2
+          }
+        },
+        {
+          "sig": "2|numeric::,numeric::,numeric::",
+          "count": 270,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-0070YO",
+            "seed": 327840,
+            "level": 2
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-00878V",
+            "seed": 382639,
+            "level": 2
+          }
+        },
+        {
+          "sig": "2|numeric::,numeric::,numeric::,numeric::",
+          "count": 174,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-0077A8",
+            "seed": 336032,
+            "level": 2
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-007HYN",
+            "seed": 349871,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|numeric::,numeric::",
+          "count": 636,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-005MBK",
+            "seed": 262208,
+            "level": 3
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-008WJZ",
+            "seed": 415439,
+            "level": 3
+          }
+        },
+        {
+          "sig": "3|numeric::",
+          "count": 636,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-006BLS",
+            "seed": 294976,
+            "level": 3
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-009LU7",
+            "seed": 448207,
+            "level": 3
+          }
+        },
+        {
+          "sig": "3|numeric::,numeric::,numeric::",
+          "count": 318,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-0070ZK",
+            "seed": 327872,
+            "level": 3
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-00879R",
+            "seed": 382671,
+            "level": 3
+          }
+        },
+        {
+          "sig": "3|numeric::,numeric::,numeric::,numeric::",
+          "count": 222,
+          "first": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-0077B4",
+            "seed": 336064,
+            "level": 3
+          },
+          "last": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-007HZJ",
+            "seed": 349903,
+            "level": 3
+          }
+        }
+      ],
+      "identityDigest": "d073463c9957f798421f436f6faee62b8670fc47e4b85f2c815755127c492673"
+    },
+    {
+      "id": "igcse/bond-enthalpy",
+      "strand": "curriculum",
+      "rows": 69,
+      "coverage": [
+        {
+          "kind": "generated",
+          "families": [
+            {
+              "templateId": "enthalpy-change",
+              "levels": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "templateId": "unknown-bond",
+              "levels": [
+                2,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|numeric::,numeric::,numeric::",
+          "count": 13,
+          "first": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-0000SG",
+            "seed": 1024,
+            "level": 1
+          },
+          "last": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-0000SV",
+            "seed": 1039,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|numeric::",
+          "count": 32,
+          "first": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-0001S0",
+            "seed": 2304,
+            "level": 2
+          },
+          "last": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-0000ZZ",
+            "seed": 1295,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|numeric::,drawing-self-check::",
+          "count": 24,
+          "first": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-0002RK",
+            "seed": 3584,
+            "level": 3
+          },
+          "last": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-000173",
+            "seed": 1551,
+            "level": 3
+          }
+        }
+      ],
+      "identityDigest": "e94c77677435461ff9fa5dde36072b275e6957170639d8130ef8578e94796424"
+    },
+    {
+      "id": "alevel/electrons-bonding",
+      "strand": "curriculum",
+      "rows": 14,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "EB01",
+            "EB02",
+            "EB03",
+            "EB04",
+            "EB05",
+            "EB06",
+            "EB07",
+            "EB08",
+            "EB09",
+            "EB10",
+            "EB11",
+            "EB12",
+            "EB13",
+            "EB14"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|text::",
+          "count": 14,
+          "first": {
+            "activityId": "alevel/electrons-bonding",
+            "questionId": "EB01",
+            "seed": 0,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/electrons-bonding",
+            "questionId": "EB14",
+            "seed": 0,
+            "level": 1
+          }
+        }
+      ],
+      "identityDigest": "0a4b9046a873d1ffe0ba0a22c1191d45ef685a5f48cd64ab19f83dae7ec1b7c5"
+    },
+    {
+      "id": "alevel/electron-configurations",
+      "strand": "curriculum",
+      "rows": 1144,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "EC-TXDM70",
+            "EC-IN4VCI",
+            "EC-H1IJIZ",
+            "EC-AO2IP1",
+            "EC-CMICC5",
+            "EC-Z8WAF7",
+            "EC-S5BKTF",
+            "EC-KZP5TZ",
+            "EC-QO20JA",
+            "EC-50EMB6",
+            "EC-YY4N4I",
+            "EC-JMR93Q",
+            "EC-FHH6DV",
+            "EC-I52V07",
+            "EC-MFPR58",
+            "EC-4T5O6G",
+            "EC-P2W4TI",
+            "EC-MWCDYA",
+            "EC-1WEIN6",
+            "EC-083FFQ",
+            "EC-CDN1K9",
+            "EC-D8I351",
+            "EC-LDJCQM",
+            "EC-61RGVM",
+            "EC-FD61CW",
+            "EC-G81B1G",
+            "EC-ENI2EG",
+            "EC-73M8ES",
+            "EC-3HEAFY",
+            "EC-QPOH8K",
+            "EC-Q4QLGJ",
+            "EC-NVX0GD",
+            "EC-0P0NJT",
+            "EC-U07CGZ",
+            "EC-YE2PI7",
+            "EC-1TR931",
+            "EC-JOJZQ7",
+            "EC-UGWX17",
+            "EC-37GN6O",
+            "EC-7N7TK4",
+            "EC-BGPC5M",
+            "EC-PFXP0U",
+            "EC-NZEBKE",
+            "EC-P2YD8Q",
+            "EC-X67H1M",
+            "EC-9B5MC8",
+            "EC-DL3Y2V",
+            "EC-3XSPQX",
+            "EC-L391A5",
+            "EC-7KWSTR",
+            "EC-8SM32Z",
+            "EC-VJ9N75",
+            "EC-TH921N",
+            "EC-TXYUKV",
+            "EC-PNWLL0",
+            "EC-UH3QI8",
+            "EC-5AUBIM",
+            "EC-U5RDA2",
+            "EC-RRCPUY",
+            "EC-RGVK0U",
+            "EC-0M40W2",
+            "EC-YHIFOG",
+            "EC-L1Y6R3",
+            "EC-VTPIWH",
+            "EC-9HPFUD",
+            "EC-IDAAMV",
+            "EC-8C1RAR",
+            "EC-M4O2D5",
+            "EC-8SEU39",
+            "EC-U08TL5",
+            "EC-5Y5KG2",
+            "EC-USKHJY",
+            "EC-XTU7YS",
+            "EC-X20F0G",
+            "EC-XM0G84",
+            "EC-U68V60",
+            "EC-HA14U1",
+            "EC-ZPP6R9",
+            "EC-DYUG1A",
+            "EC-FHPFQA",
+            "EC-WQXQK0",
+            "EC-7IU86S",
+            "EC-GHIBTK",
+            "EC-1HHZUS",
+            "EC-KDQH4M",
+            "EC-UTA7U4",
+            "EC-H3BSGB",
+            "EC-I9H6ZP",
+            "EC-TZX6Z5",
+            "EC-TU3FCB",
+            "EC-I6JX1Z",
+            "EC-B5AJ1H",
+            "EC-V2VKRT",
+            "EC-4UOYAT",
+            "EC-HVL9Q6",
+            "EC-IHYOAA",
+            "EC-KIURHC",
+            "EC-0WUB1G",
+            "EC-8S94O8",
+            "EC-Z7WJF8",
+            "EC-EQYVKA",
+            "EC-XE6BVC",
+            "EC-LRXDVR",
+            "EC-E334PL",
+            "EC-X7FG1P",
+            "EC-O7IU5R",
+            "EC-4N00UZ",
+            "EC-UAR6K1",
+            "EC-VUWZ44",
+            "EC-KRMZKA",
+            "EC-JS8BGT",
+            "EC-3V8XC7",
+            "EC-683TCZ",
+            "EC-L6Y81P",
+            "EC-HSGTH9",
+            "EC-G74N8B",
+            "EC-ERXMJZ",
+            "EC-DWJK23",
+            "EC-00F98W",
+            "EC-W9PQXG",
+            "EC-9P1UOQ",
+            "EC-ESQFY6",
+            "EC-LTCXFI",
+            "EC-R878HM",
+            "EC-T9HJMF",
+            "EC-QTN4KJ",
+            "EC-FLQYBS",
+            "EC-MWV38C",
+            "EC-65T1S2",
+            "EC-TXYODY",
+            "EC-GX4H6U",
+            "EC-2CBKR6",
+            "EC-LAWSFR",
+            "EC-HLW8JN",
+            "EC-ICP5PK",
+            "EC-6THFCS",
+            "EC-KU0S2Q",
+            "EC-LUZU8M",
+            "EC-O44H9I",
+            "EC-OX516A",
+            "EC-5F5FGN",
+            "EC-NUVSNN",
+            "EC-GZ855K",
+            "EC-2ZAVVW",
+            "EC-21DMIA",
+            "EC-I6MUUE",
+            "EC-ZHD7RQ",
+            "EC-9GDMAQ",
+            "EC-5TQ3WY",
+            "EC-6CK0VK",
+            "EC-2IXF4V",
+            "EC-W5JL5T",
+            "EC-LRGR45",
+            "EC-QF27AF",
+            "EC-8ET0MB",
+            "EC-VMD2EH",
+            "EC-MA1P54",
+            "EC-7R7ZX2",
+            "EC-9ZDYJT",
+            "EC-RBXM7F",
+            "EC-FB9ZJ3",
+            "EC-MEUR8X",
+            "EC-9G4A81",
+            "EC-6AATTJ",
+            "EC-F4V2EZ",
+            "EC-VLIW4V",
+            "EC-7UIQ04",
+            "EC-D33EQ8",
+            "EC-9MRQGE",
+            "EC-FIF522",
+            "EC-NIXHE2",
+            "EC-7QDFCU",
+            "EC-OQUDSI",
+            "EC-LWHD9S",
+            "EC-9MMV33",
+            "EC-DHWIJL",
+            "EC-CYCI11",
+            "EC-TZCRC7",
+            "EC-BZ3KO3",
+            "EC-OWXC2X",
+            "EC-3OOYH5",
+            "EC-0BN0SL",
+            "EC-VUXW9Q",
+            "EC-E4EZV6",
+            "EC-YCU2TC",
+            "EC-UCW8W4",
+            "EC-GYMGZS",
+            "EC-EJFJP0",
+            "EC-QGDYQ7",
+            "EC-ENK3JF",
+            "EC-9CSDDC",
+            "EC-OH5FHW",
+            "EC-Y35GHM",
+            "EC-R44FHA",
+            "EC-KZPN8E",
+            "EC-BOL26Y",
+            "EC-DUYN19",
+            "EC-JRLDUP",
+            "EC-Y413YY",
+            "EC-A0NIQU",
+            "EC-0E2D0C",
+            "EC-GZYB14",
+            "EC-AVKC30",
+            "EC-J1DHZ4",
+            "EC-AEK88C",
+            "EC-K0ZWOY",
+            "EC-F82RDX",
+            "EC-1KUC1B",
+            "EC-7KTK2Z",
+            "EC-HIIMNP",
+            "EC-TI6STH",
+            "EC-4XHWZ7",
+            "EC-1WL2IP",
+            "EC-0CUJ1P",
+            "EC-NBS2X2",
+            "EC-985IFE",
+            "EC-HWIF7C",
+            "EC-NFN7FW",
+            "EC-R3NBVK",
+            "EC-U0Y718",
+            "EC-JLE2JI",
+            "EC-B5R4UC",
+            "EC-J115IB",
+            "EC-6JK32L",
+            "EC-9I4WMX",
+            "EC-QFWSF7",
+            "EC-UTS5GF",
+            "EC-8J6ZEL",
+            "EC-3Q3YEA",
+            "EC-321MTC",
+            "EC-S7IZ67",
+            "EC-CN7FPT",
+            "EC-HPUATX",
+            "EC-9RHPKN",
+            "EC-W39XW3",
+            "EC-8RB1ZT",
+            "EC-QR3FA6",
+            "EC-0ONCAS",
+            "EC-9DJNC3",
+            "EC-GE51E5",
+            "EC-IC12PL",
+            "EC-5PF4WZ",
+            "EC-TNEGDB",
+            "EC-CUKHVH",
+            "EC-IN2R0I",
+            "EC-68RG68",
+            "EC-SOL08F",
+            "EC-XHS4A9",
+            "EC-909XDH",
+            "EC-UOGWEV",
+            "EC-P1QCDV",
+            "EC-F0JNAX",
+            "EC-54U2GM",
+            "EC-WESRN0",
+            "EC-X9TPXN",
+            "EC-4LDAAT",
+            "EC-AZJADT",
+            "EC-67WXT7",
+            "EC-N8EG2F",
+            "EC-2QGDK5",
+            "EC-YY9U3I",
+            "EC-W7ER9G",
+            "EC-T3K4TF",
+            "EC-5DBOWD",
+            "EC-RP0IGP",
+            "EC-G9RWO3",
+            "EC-47R84F",
+            "EC-RHOB99",
+            "EC-GPGXCE",
+            "EC-VEW59W",
+            "EC-5VP27N",
+            "EC-9P88KD",
+            "EC-N5CA7D",
+            "EC-CWPXSJ",
+            "EC-SGSRLB",
+            "EC-K6EKGD",
+            "EC-YQ0OU9",
+            "EC-7YG1BH",
+            "EC-P5W492",
+            "EC-0E9R9M",
+            "EC-OMZ2NS",
+            "EC-DASILO",
+            "EC-M73D0G",
+            "EC-XTDSRG",
+            "EC-J2GDW4",
+            "EC-IXP5LM",
+            "EC-FKK7EL",
+            "EC-SBPH87",
+            "EC-L1U6IB",
+            "EC-E59XN1",
+            "EC-XPRC8D",
+            "EC-PQ0MYZ",
+            "EC-VC0PWD",
+            "EC-VM4N6P",
+            "EC-805QOQ",
+            "EC-7GQ4RQ",
+            "EC-LXQN30",
+            "EC-PXHIZC",
+            "EC-JT3K18",
+            "EC-237MM8",
+            "EC-PRQFLQ",
+            "EC-EX8CF8",
+            "EC-OD3HKZ",
+            "EC-5HF54D",
+            "EC-72NZYX",
+            "EC-EKS6PV",
+            "EC-YA89MN",
+            "EC-YWVP0D",
+            "EC-O8OHFS",
+            "EC-8XMWD2",
+            "EC-06KNAH",
+            "EC-COPH0R",
+            "EC-R0HPSV",
+            "EC-NDQXBL",
+            "EC-9QWPDT",
+            "EC-S0PG6V",
+            "EC-YQ6IJG",
+            "EC-6WJTYQ",
+            "EC-WE0CXH",
+            "EC-23ECN3",
+            "EC-2458NV",
+            "EC-MSU12D",
+            "EC-UMT039",
+            "EC-2KPJLV",
+            "EC-R5PN6U",
+            "EC-G07HI4",
+            "EC-9XAWUZ",
+            "EC-GWTKDX",
+            "EC-S41ON5",
+            "EC-8XXONV",
+            "EC-85F3ZB",
+            "EC-8WK911",
+            "EC-SHRELA",
+            "EC-CDPW1W",
+            "EC-IEEKWZ",
+            "EC-O6PBKD",
+            "EC-BN0W3D",
+            "EC-K8E80Z",
+            "EC-86DJHB",
+            "EC-RR7ZLP",
+            "EC-5J3SBW",
+            "EC-J5Y402",
+            "EC-4FM9ID",
+            "EC-8NUGA7",
+            "EC-RE7WX7",
+            "EC-2B5TX1",
+            "EC-DBY21X",
+            "EC-0HS1IR",
+            "EC-BPJ950",
+            "EC-HLBMBU",
+            "EC-KDA79P",
+            "EC-ULC5QF",
+            "EC-VZU7C3",
+            "EC-S0HZST",
+            "EC-YVV9ML",
+            "EC-NJBWEZ",
+            "EC-O87BH8",
+            "EC-5W2DBM",
+            "EC-RH7KL1",
+            "EC-KC1CSF",
+            "EC-S9GVIZ",
+            "EC-W0AA1X",
+            "EC-4T573P",
+            "EC-IX5RSZ",
+            "EC-NT9JNJ",
+            "EC-5DDKYJ",
+            "EC-JX7SOW",
+            "EC-O96WP0",
+            "EC-HAL4RU",
+            "EC-B4MQ32",
+            "EC-RLR9YM",
+            "EC-QHW4H6",
+            "EC-4H0YI0",
+            "EC-696B3Q",
+            "EC-01KTZD",
+            "EC-700PJF",
+            "EC-MK83B3",
+            "EC-AYYYOH",
+            "EC-G1QF35",
+            "EC-HQGNFB",
+            "EC-P6X0RE",
+            "EC-WJVV6W",
+            "EC-AL63UF",
+            "EC-M4O2IX",
+            "EC-IVM8EL",
+            "EC-J3TUPR",
+            "EC-XL2L6Z",
+            "EC-1RW735",
+            "EC-MKZ2HJ",
+            "EC-Y5GASJ",
+            "EC-H68EFC",
+            "EC-58P0BG",
+            "EC-DD9I4I",
+            "EC-MPTPRQ",
+            "EC-RPQBIE",
+            "EC-3DJFYQ",
+            "EC-NL014Q",
+            "EC-YFU7RC",
+            "EC-S5UFBR",
+            "EC-Q1R52H",
+            "EC-62NCQ5",
+            "EC-J71ILB",
+            "EC-FNLNQJ",
+            "EC-RRLOG1",
+            "EC-3QS1FN",
+            "EC-KWSPUV",
+            "EC-UXE5MK",
+            "EC-H789O8",
+            "EC-XZKPNA",
+            "EC-N11OUQ",
+            "EC-9G3M0I",
+            "EC-WCDDYU",
+            "EC-RDHS5K",
+            "EC-SXUYTY",
+            "EC-K12NAH",
+            "EC-UVROX7",
+            "EC-FLXCNZ",
+            "EC-UU2R3L",
+            "EC-H78J5T",
+            "EC-9DE7XZ",
+            "EC-MRT269",
+            "EC-SUYBZH",
+            "EC-3RL2X2",
+            "EC-OHBWSQ",
+            "EC-BP462G",
+            "EC-KEF99O",
+            "EC-TAQ3OG",
+            "EC-Q1N13W",
+            "EC-3EECUV",
+            "EC-6TWAUB",
+            "EC-GFLH6W",
+            "EC-RAEJVG",
+            "EC-BNBRK2",
+            "EC-8X3KS6",
+            "EC-VW9DL2",
+            "EC-7UEB4I",
+            "EC-UY1PCM",
+            "EC-HIC5QK",
+            "EC-EYL9KB",
+            "EC-RYD7UT",
+            "EC-WFDW8H",
+            "EC-0TWREZ",
+            "EC-AF0EBB",
+            "EC-PQWL39",
+            "EC-ST5Y8X",
+            "EC-NN0B2L",
+            "EC-PV3PPI",
+            "EC-E138KQ",
+            "EC-I3Q9P4",
+            "EC-76WCUK",
+            "EC-YPU6PS",
+            "EC-EFAN98",
+            "EC-SR7KT6",
+            "EC-OVK6UG",
+            "EC-Q53G8N",
+            "EC-0UTP6X",
+            "EC-PZBOCT",
+            "EC-1F2Q4F",
+            "EC-FWBGLN",
+            "EC-NBJKRL",
+            "EC-DQX1YJ",
+            "EC-IJ6RA7",
+            "EC-VIJY7O",
+            "EC-JN2OV4",
+            "EC-FNLYU6",
+            "EC-CDVIYY",
+            "EC-WEA9I2",
+            "EC-4VQ0I6",
+            "EC-HEB1Q5",
+            "EC-G76EV5",
+            "EC-AG4Q4A",
+            "EC-IHS7LY",
+            "EC-QWK37G",
+            "EC-TQWSHK",
+            "EC-U5H47G",
+            "EC-XHN1CW",
+            "EC-6OJVT8",
+            "EC-0GJ78I",
+            "EC-5JE1TX",
+            "EC-8QOP3J",
+            "EC-P3XU2Z",
+            "EC-ZIGH5H",
+            "EC-UIDSW5",
+            "EC-HS8F9V",
+            "EC-WDBN8R",
+            "EC-2OEVA7",
+            "EC-PAPHKK",
+            "EC-55RHY8",
+            "EC-JUDOM6",
+            "EC-2QN2MI",
+            "EC-MX415M",
+            "EC-SS3BYM",
+            "EC-63NV4Q",
+            "EC-O7YSX4",
+            "EC-HCWQWN",
+            "EC-0G9WY1",
+            "EC-G1ABT9",
+            "EC-W7UVI7",
+            "EC-KTWPAJ",
+            "EC-1RB8RL",
+            "EC-P8UJS1",
+            "EC-AW51XP",
+            "EC-A1PU5I",
+            "EC-RHBX2I",
+            "EC-ANBYXK",
+            "EC-Q0P1QK",
+            "EC-IIITMO",
+            "EC-J6VV3W",
+            "EC-PN8GKG",
+            "EC-TQ92RI",
+            "EC-KFO7W1",
+            "EC-BIZCEB",
+            "EC-7JUWYF",
+            "EC-HHBIC9",
+            "EC-DZ9AT5",
+            "EC-OS5Y7Z",
+            "EC-3F7T1G",
+            "EC-SNLPCA",
+            "EC-DCPEKT",
+            "EC-4LS7UV",
+            "EC-PRFIAR",
+            "EC-47ATZ1",
+            "EC-0STFEL",
+            "EC-BFMD97",
+            "EC-UODNQT",
+            "EC-QOX3AH",
+            "EC-S9TY3M",
+            "EC-7PC51A",
+            "EC-EFHJP0",
+            "EC-GPZWYO",
+            "EC-KEUVUS",
+            "EC-SKKSMG",
+            "EC-4WAMF9",
+            "EC-LK9SQH",
+            "EC-SSDKYA",
+            "EC-I63VSE",
+            "EC-6BQUDG",
+            "EC-M85NE8",
+            "EC-637O38",
+            "EC-51GCWO",
+            "EC-FTJJDP",
+            "EC-54ZL7L",
+            "EC-NNADQY",
+            "EC-3VJ5GM",
+            "EC-5JUSYK",
+            "EC-YU00EW",
+            "EC-069F58",
+            "EC-YK7668",
+            "EC-HBXL7A",
+            "EC-PC4LJG",
+            "EC-WTB3XN",
+            "EC-M1NND1",
+            "EC-6CNTYP",
+            "EC-39V07F",
+            "EC-DTUL4N",
+            "EC-5XH879",
+            "EC-WAG6LM",
+            "EC-DLRC1K",
+            "EC-3LHANB",
+            "EC-JWJKMX",
+            "EC-SV5319",
+            "EC-ATUEA7",
+            "EC-XKEV7F",
+            "EC-WCBBWX"
+          ]
+        },
+        {
+          "kind": "generated",
+          "families": [
+            {
+              "templateId": "matching:2,0,0,0,0,0,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,0,0,0,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,0,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,10,2,6",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,10,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,2,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,3,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,4,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,5,0,0",
+              "levels": [
+                3
+              ]
+            },
+            {
+              "templateId": "matching:2,2,6,2,6,6,0,0",
+              "levels": [
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|electron-configuration::",
+          "count": 156,
+          "first": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-TXDM70",
+            "seed": 0,
+            "level": 1
+          },
+          "last": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-XTDSRG",
+            "seed": 0,
+            "level": 1
+          }
+        },
+        {
+          "sig": "2|electron-configuration::",
+          "count": 340,
+          "first": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-TXDM70",
+            "seed": 0,
+            "level": 2
+          },
+          "last": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-9DE7XZ",
+            "seed": 0,
+            "level": 2
+          }
+        },
+        {
+          "sig": "3|electron-configuration::",
+          "count": 648,
+          "first": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-TXDM70",
+            "seed": 0,
+            "level": 3
+          },
+          "last": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "ECB-00004F",
+            "level": 3,
+            "seed": 159
+          }
+        }
+      ],
+      "identityDigest": "7c613d139896b92a8a66eeeea834f1600ad5c0b306d28356fd3e38d3caacb603"
+    },
+    {
+      "id": "igcse/energy-enthalpy",
+      "strand": "curriculum",
+      "rows": 54,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "C01",
+            "C02",
+            "C05",
+            "C06",
+            "C07",
+            "E01",
+            "E02",
+            "E05",
+            "E06",
+            "E07",
+            "E08",
+            "E09",
+            "E10",
+            "E11",
+            "E12",
+            "E13",
+            "E14",
+            "E15",
+            "E16",
+            "E17",
+            "E18",
+            "A01",
+            "A02",
+            "A03",
+            "A04",
+            "A05",
+            "A07",
+            "A08",
+            "D01",
+            "D02",
+            "D03",
+            "D04",
+            "D05",
+            "D06",
+            "D07",
+            "D08",
+            "D09",
+            "D10",
+            "D11",
+            "D12",
+            "D13",
+            "D14",
+            "D15",
+            "D16",
+            "D17",
+            "D18",
+            "B01",
+            "B02",
+            "B03",
+            "B04",
+            "B05",
+            "B06",
+            "B07",
+            "B08"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "1|text::",
+          "count": 5,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "C01",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "A01",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "1|text::,text::",
+          "count": 4,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "C05",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "A07",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "1|choice::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "C07",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "C07",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "1|choice::,choice::",
+          "count": 9,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E01",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "A08",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "1|text::,choice::",
+          "count": 6,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E09",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "A05",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "1|text::,choice::,choice::",
+          "count": 2,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E10",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E15",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "1|text::,choice::,text::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E17",
+            "level": 1,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E17",
+            "level": 1,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|energy-profile::",
+          "count": 18,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "D01",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "D18",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|choice::,choice::",
+          "count": 2,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B01",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B07",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|text::,text::",
+          "count": 3,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B02",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B06",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|choice::,choice::,choice::",
+          "count": 2,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B03",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B04",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|text::,choice::,text::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B08",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "B08",
+            "level": 2,
+            "seed": 0
+          }
+        }
+      ],
+      "identityDigest": "83204097f5da250d0db56b7bf396de0bb19abaf9f65d939d884af28c817297e0"
+    },
+    {
+      "id": "igcse/energetics-practical",
+      "strand": "curriculum",
+      "rows": 14,
+      "coverage": [
+        {
+          "kind": "fixed",
+          "questionIds": [
+            "EP-BJLHC1",
+            "EP-APMO94",
+            "EP-AZM9Y3",
+            "EP-CXMNAV",
+            "EP-CNN1LW",
+            "EP-DHLUOT",
+            "EP-D7M8ZU",
+            "EP-BTO8IZ",
+            "EP-4G1A0S",
+            "EP-4Q0VPR",
+            "EP-6O192J",
+            "EP-6E1NDK",
+            "EP-780GGH",
+            "EP-6Y0URI"
+          ]
+        }
+      ],
+      "families": [
+        {
+          "sig": "2|text::,text::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-BJLHC1",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-BJLHC1",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|choice::",
+          "count": 4,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-APMO94",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-BTO8IZ",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "2|correction::",
+          "count": 3,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-CXMNAV",
+            "level": 2,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-DHLUOT",
+            "level": 2,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "3|text::,text::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-4G1A0S",
+            "level": 3,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-4G1A0S",
+            "level": 3,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "3|choice::,choice::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-4Q0VPR",
+            "level": 3,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-4Q0VPR",
+            "level": 3,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "3|correction::",
+          "count": 3,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-6O192J",
+            "level": 3,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-780GGH",
+            "level": 3,
+            "seed": 0
+          }
+        },
+        {
+          "sig": "3|text::,choice::",
+          "count": 1,
+          "first": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-6Y0URI",
+            "level": 3,
+            "seed": 0
+          },
+          "last": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-6Y0URI",
+            "level": 3,
+            "seed": 0
+          }
+        }
+      ],
+      "identityDigest": "a28bf122c8e13a11e27e1bcd48feb36a38be723488f464fa4aabcce3f2616645"
+    },
+    {
+      "id": "alevel/c3l6-organic-reactions",
+      "strand": "olympiad",
+      "rows": 0,
+      "separateBank": "src/activities/olympiad/c3l6/bank.json"
+    }
+  ],
+  "total": 6227,
+  "errors": []
+}

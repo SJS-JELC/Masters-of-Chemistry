@@ -1,0 +1,24 @@
+{
+  "id": "EBP-FIX-01",
+  "agentId": "A01-EBP",
+  "status": "ESCALATE",
+  "confidence": 0.98,
+  "output": "apps/Masters-of-Chemistry/src/activities/alevel/explaining-properties",
+  "evidence": "apps/Masters-of-Chemistry/validation/explaining-properties/fix-cycle-01/HANDOVER.md",
+  "changedFileHashes": "apps/Masters-of-Chemistry/validation/explaining-properties/changed-files.json",
+  "fixChangedFileHashes": "apps/Masters-of-Chemistry/validation/explaining-properties/fix-cycle-01/changed-files.json",
+  "validation": {
+    "fourReviewedFixes": "PASS",
+    "currentGates": "PASS",
+    "unitTests": 46,
+    "targetedBankTests": 3,
+    "fixBrowserChecks": 6,
+    "currentPrefixChecks": 5,
+    "bothBuilds": "PASS",
+    "protectedCurrentSupplement": "PASS",
+    "nativeTiming": "PARTIAL_UNESTABLISHED"
+  },
+  "reason": "Four reviewed fixes complete. Actual native EBP attempt launches, but Windows denies foreground activation of its own raw Chrome window; trusted native hidden/foreground and page-freeze timing remain unestablished.",
+  "publication": false,
+  "updatedAt": "2026-10-04T22:23:26.069Z"
+}

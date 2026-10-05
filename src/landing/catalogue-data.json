@@ -1,0 +1,729 @@
+{
+  "alevel": {
+    "groups": [
+      {
+        "key": "l6-t1",
+        "name": "L6 — Teacher 1",
+        "colour": "#55f6ff",
+        "topics": [
+          [
+            1,
+            "Atoms, Ions & Compounds",
+            [
+              "Atomic Structure & Isotopes",
+              "Relative Masses",
+              "Formulae & Equations"
+            ]
+          ],
+          [
+            2,
+            "Amount of Substance",
+            [
+              "Moles & Particles",
+              "Empirical & Molecular Formulae",
+              "Hydrated Salts",
+              "Reacting Masses",
+              "Solutions & Concentrations",
+              "Gas Calculations",
+              "Yield & Atom Economy"
+            ]
+          ],
+          [
+            3,
+            "Acids & Redox",
+            [
+              "Acids, Bases & Neutralisation",
+              "Standard Solutions & Titrations",
+              "Titration Calculations",
+              "Oxidation Numbers",
+              "Redox Reactions"
+            ]
+          ],
+          [
+            4,
+            "Periodicity",
+            [
+              "Periodic Table & Electron Configuration",
+              "Ionisation Energies",
+              "Metallic Structures",
+              "Giant Covalent Structures",
+              "Periodic Trends"
+            ]
+          ],
+          [
+            5,
+            "Group 2",
+            [
+              "Reactivity Trends",
+              "Oxides & Hydroxides",
+              "Uses of Group 2 Compounds"
+            ]
+          ],
+          [
+            6,
+            "Group 7",
+            [
+              "Halogen Properties",
+              "Displacement Reactions",
+              "Disproportionation & Chlorine"
+            ]
+          ],
+          [
+            7,
+            "Chemical Tests",
+            [
+              "Halide Tests",
+              "Carbonate & Sulfate Tests",
+              "Ammonium Tests",
+              "Identifying Unknown Ions"
+            ]
+          ],
+          [
+            8,
+            "Enthalpy",
+            [
+              "Enthalpy Changes & Profiles",
+              "Calorimetry",
+              "Bond Enthalpies",
+              "Hess’s Law"
+            ]
+          ],
+          [
+            9,
+            "Rates of Reaction",
+            [
+              "Collision Theory",
+              "Rate Graphs & Measurements",
+              "Catalysts",
+              "Boltzmann Distributions"
+            ]
+          ],
+          [
+            10,
+            "Equilibrium",
+            [
+              "Dynamic Equilibrium",
+              "Le Chatelier’s Principle",
+              "Industrial Conditions",
+              "Kc",
+              "Kp & Partial Pressures",
+              "Equilibrium Calculations",
+              "Changing Equilibrium Constants"
+            ]
+          ]
+        ]
+      },
+      {
+        "key": "l6-t2",
+        "name": "L6 — Teacher 2",
+        "colour": "#54f5b5",
+        "topics": [
+          [
+            1,
+            "Electrons & Bonding",
+            [
+              "Basics",
+              "Electron Configurations",
+              "Dot-and-Cross Diagrams",
+              "Explaining Properties"
+            ]
+          ],
+          [
+            2,
+            "Molecules",
+            [
+              "Molecular Shapes & Bond Angles",
+              "Electronegativity & Polarity",
+              "Intermolecular Forces",
+              "Hydrogen Bonding",
+              "Simple Molecular Properties"
+            ]
+          ],
+          [
+            3,
+            "Organic Foundations",
+            [
+              "Functional Groups & Homologous Series",
+              "Naming Organic Compounds",
+              "Representing Structures",
+              "Structural Isomerism",
+              "Bond Fission & Curly Arrows"
+            ]
+          ],
+          [
+            4,
+            "Alkanes",
+            [
+              "Structure & Properties",
+              "Combustion",
+              "Radical Substitution"
+            ]
+          ],
+          [
+            5,
+            "Alkenes",
+            [
+              "Double Bonds & Properties",
+              "E/Z Isomerism",
+              "Addition Reactions",
+              "Electrophilic Addition",
+              "Addition Polymers & Sustainability"
+            ]
+          ],
+          [
+            6,
+            "Alcohols",
+            [
+              "Classification & Properties",
+              "Oxidation",
+              "Dehydration & Substitution"
+            ]
+          ],
+          [
+            7,
+            "Haloalkanes",
+            [
+              "Hydrolysis & Reactivity",
+              "Nucleophilic Substitution",
+              "Ozone & Halogen Radicals"
+            ]
+          ],
+          [
+            8,
+            "Organic Synthesis I",
+            [
+              "Reagents & Conditions",
+              "Two-stage Routes",
+              "Reflux & Distillation",
+              "Separating & Purifying Liquids"
+            ]
+          ],
+          [
+            9,
+            "Organic Analysis",
+            [
+              "Mass Spectrometry",
+              "Infrared Spectroscopy",
+              "Thin-layer Chromatography",
+              "Gas Chromatography",
+              "Organic Chemical Tests",
+              "NMR Principles",
+              "Carbon-13 NMR",
+              "Proton NMR",
+              "Combined Structure Deduction"
+            ]
+          ]
+        ]
+      },
+      {
+        "key": "u6-t1",
+        "name": "U6 — Teacher 1",
+        "colour": "#ffde59",
+        "topics": [
+          [
+            1,
+            "Acids, Bases & pH",
+            [
+              "Brønsted–Lowry Acids & Bases",
+              "Strong Acids & pH",
+              "Kw & Strong Bases",
+              "Ka & pKa",
+              "Weak Acid Calculations",
+              "Buffer Action & Uses",
+              "Making Buffers",
+              "Buffer Calculations",
+              "pH Titration Curves",
+              "Indicators & pH Measurement"
+            ]
+          ],
+          [
+            2,
+            "Rate Equations",
+            [
+              "Orders & Rate Equations",
+              "Rate Constants & Units",
+              "Concentration–Time & Rate–Concentration Graphs",
+              "First-order Half-life",
+              "Investigating Rates",
+              "Rate-determining Steps",
+              "Arrhenius Equation"
+            ]
+          ],
+          [
+            3,
+            "Thermodynamics",
+            [
+              "Lattice Enthalpy",
+              "Born–Haber Cycles",
+              "Solution & Hydration Cycles",
+              "Ionic Charge & Radius",
+              "Entropy & Dispersal of Energy",
+              "Entropy Calculations",
+              "Gibbs Free Energy",
+              "Temperature & Feasibility"
+            ]
+          ],
+          [
+            4,
+            "Quantitative Redox",
+            [
+              "Oxidising & Reducing Agents",
+              "Half-equations & Redox Equations",
+              "Manganate(VII) Titrations",
+              "Iodine–Thiosulfate Titrations"
+            ]
+          ],
+          [
+            5,
+            "Electrochemistry",
+            [
+              "Standard Electrode Potentials",
+              "Measuring Cell Potentials",
+              "Cell Calculations & Feasibility",
+              "Storage Cells & Fuel Cells"
+            ]
+          ]
+        ]
+      },
+      {
+        "key": "u6-t2",
+        "name": "U6 — Teacher 2",
+        "colour": "#d4afff",
+        "topics": [
+          [
+            1,
+            "Aromatic",
+            [
+              "Benzene Structure & Evidence",
+              "Naming Aromatic Compounds",
+              "Electrophilic Substitution",
+              "Phenols",
+              "Directing Effects"
+            ]
+          ],
+          [
+            2,
+            "Aldehydes & Ketones",
+            [
+              "Carbonyl Structure & Properties",
+              "Oxidation & Reduction",
+              "Nucleophilic Addition",
+              "Carbonyl Tests"
+            ]
+          ],
+          [
+            3,
+            "Carboxylic Acids & Derivatives",
+            [
+              "Carboxylic Acid Properties & Reactions",
+              "Esterification",
+              "Ester Hydrolysis",
+              "Acyl Chlorides & Acylation"
+            ]
+          ],
+          [
+            4,
+            "Amines, Amino Acids & Chirality",
+            [
+              "Amines & Basicity",
+              "Preparing Amines",
+              "Amino Acid Reactions",
+              "Amides",
+              "Optical Isomerism"
+            ]
+          ],
+          [
+            5,
+            "Condensation Polymers",
+            [
+              "Polyesters",
+              "Polyamides",
+              "Polymer Hydrolysis",
+              "Monomers & Repeat Units"
+            ]
+          ],
+          [
+            6,
+            "Organic Synthesis II",
+            [
+              "Extending Carbon Chains",
+              "Nitrile Reactions",
+              "Multistep Synthesis",
+              "Molecules with Multiple Functional Groups",
+              "Preparing & Purifying Solids"
+            ]
+          ],
+          [
+            7,
+            "Transition Elements",
+            [
+              "d-block Configurations",
+              "Transition-element Properties",
+              "Ligands & Coordination",
+              "Complex Shapes & Isomerism",
+              "Ligand Substitution",
+              "Precipitation Reactions",
+              "Transition-metal Redox",
+              "Identifying Unknown Ions"
+            ]
+          ]
+        ]
+      }
+    ],
+    "activities": {
+      "l6-t2-1-1": {
+        "label": "Electrons & Bonding basics",
+        "href": "activities/electrons-bonding/index.html",
+        "note": "Level 1 typed-answer recall: orbitals, shells, ionic and covalent bonding, with linked periodicity and bond-enthalpy definitions.",
+        "mastery": true,
+        "availableGrades": [
+          1
+        ]
+      },
+      "l6-t2-1-2": {
+        "label": "Electron configurations",
+        "href": "activities/electron-configurations/index.html",
+        "note": "Choose a level or build mastery across all three levels.",
+        "mastery": true
+      },
+      "l6-t2-1-3": {
+        "label": "Dot-and-Cross Diagrams",
+        "href": "activities/dot-and-cross/index.html",
+        "note": "Draw ionic, covalent and coordinate-bonding diagrams together. Levels 1, 2 and 3 each combine the existing question sets at that level.",
+        "mastery": true,
+        "availableGrades": [
+          1,
+          2,
+          3
+        ]
+      },
+      "u6-t1-1-2": {
+        "label": "Acid–base calculations",
+        "href": "activities/acid-base-calculations/index.html",
+        "note": "Numerical practice for this subtopic. Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true
+      },
+      "u6-t1-1-3": {
+        "label": "Acid–base calculations",
+        "href": "activities/acid-base-calculations/index.html",
+        "note": "Numerical practice for this subtopic. Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true
+      },
+      "u6-t1-1-5": {
+        "label": "Acid–base calculations",
+        "href": "activities/acid-base-calculations/index.html",
+        "note": "Numerical practice for this subtopic. Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true
+      },
+      "u6-t1-1-7": {
+        "label": "Acid–base calculations",
+        "href": "activities/acid-base-calculations/index.html",
+        "note": "Numerical practice for this subtopic. Choose Structured, Unstructured or Applications practice, or build mastery across all three levels. Calculation practice does not assess practical preparation methods.",
+        "mastery": true
+      },
+      "u6-t1-1-8": {
+        "label": "Acid–base calculations",
+        "href": "activities/acid-base-calculations/index.html",
+        "note": "Numerical practice for this subtopic. Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true
+      },
+      "u6-t1-1-9": {
+        "label": "pH titration curves",
+        "href": "activities/ph-titration-curves/index.html",
+        "note": "Build and interpret ethanoic-acid/NaOH titration curves and choose a suitable indicator. Choose Level 2 (Unstructured) or Level 3 (Applications) practice, or build mastery across the available levels.",
+        "mastery": true,
+        "availableGrades": [
+          2,
+          3
+        ]
+      },
+      "l6-t2-1-properties": {
+        "label": "Explaining Properties",
+        "note": "Complete and correct explanations of ionic lattices, properties and covalent bond strength. Levels 1 and 2.",
+        "mastery": true,
+        "availableGrades": [
+          1,
+          2
+        ]
+      }
+    },
+    "display": {
+      "hiddenGems": [
+        "u6-t2-7-1",
+        "u6-t1-1-4"
+      ],
+      "redirects": {
+        "u6-t2-7-1": "l6-t2-1-2",
+        "u6-t1-1-4": "u6-t1-1-5"
+      },
+      "identities": {
+        "l6-t2-1-4": "l6-t2-1-properties"
+      }
+    }
+  },
+  "igcse": {
+    "groups": [
+      {
+        "key": "fourth",
+        "name": "Fourth Form",
+        "colour": "#55f6ff",
+        "angle": -90,
+        "topics": [
+          [
+            1,
+            "Particles",
+            [
+              "Basics",
+              "States of Matter",
+              "Diffusion",
+              "Dissolving",
+              "Separating Techniques"
+            ]
+          ],
+          [
+            2,
+            "Atomic Structure & Periodic Table",
+            [
+              "Atomic Structure",
+              "Relative Atomic Mass",
+              "Periodic Table",
+              "Group 1",
+              "Group 7"
+            ]
+          ],
+          [
+            3,
+            "Bonding",
+            [
+              "Ionic Bonding",
+              "Covalent Bonding"
+            ]
+          ],
+          [
+            4,
+            "Chemical Tests",
+            [
+              "Gases",
+              "Cations",
+              "Anions",
+              "Combined"
+            ]
+          ]
+        ]
+      },
+      {
+        "key": "lower",
+        "name": "Lower Fifth",
+        "colour": "#54f5b5",
+        "angle": 30,
+        "topics": [
+          [
+            5,
+            "Rates",
+            [
+              "Collision Theory",
+              "Graphs",
+              "Practical Work"
+            ]
+          ],
+          [
+            6,
+            "Structure & Bonding",
+            [
+              "Simple Molecular",
+              "Giant Covalent",
+              "Ionic",
+              "Metallic",
+              "Comparisons"
+            ]
+          ],
+          [
+            7,
+            "Calculations",
+            [
+              "Masses",
+              "Empirical Formulae",
+              "Solutions",
+              "Gases",
+              "Reactions"
+            ]
+          ],
+          [
+            8,
+            "Acids, Bases, & Salts",
+            [
+              "Basics",
+              "Indicators and pH",
+              "Reactions",
+              "Solubility",
+              "Making Salts"
+            ]
+          ],
+          [
+            9,
+            "Organic I",
+            [
+              "Basics",
+              "Alkanes",
+              "Alkenes",
+              "Crude Oil",
+              "Cracking"
+            ]
+          ],
+          [
+            10,
+            "Energetics",
+            [
+              "Energy and Enthalpy",
+              "Practical Work",
+              "Calorimetry",
+              "Bond Energies"
+            ]
+          ]
+        ]
+      },
+      {
+        "key": "upper",
+        "name": "Upper Fifth",
+        "colour": "#ff5ecb",
+        "angle": 150,
+        "topics": [
+          [
+            11,
+            "Gases",
+            [
+              "Air",
+              "Oxides",
+              "Combustion",
+              "Carbon Dioxide",
+              "Hydrogen and Water"
+            ]
+          ],
+          [
+            12,
+            "Equilibria",
+            [
+              "Reversible Reactions",
+              "Dynamic Equilibrium",
+              "Changing Equilibria"
+            ]
+          ],
+          [
+            13,
+            "Redox & Electrolysis",
+            [
+              "Reactivity",
+              "Redox",
+              "Rusting",
+              "Electrolysis"
+            ]
+          ],
+          [
+            14,
+            "Organic II",
+            [
+              "Alcohols",
+              "Carboxylic Acids",
+              "Esters",
+              "Polymers"
+            ]
+          ],
+          [
+            15,
+            "Practical Chemistry",
+            [
+              "Techniques",
+              "Planning",
+              "Observation",
+              "Data",
+              "Evaluation"
+            ]
+          ]
+        ]
+      }
+    ],
+    "activities": {
+      "fourth-3-1": {
+        "id": "dot-and-cross",
+        "label": "Build ionic diagrams",
+        "type": "diagram",
+        "typeLabel": "Dot & Cross",
+        "href": "activities/dot-and-cross/index.html?category=ionic",
+        "practiceModes": true,
+        "availableGrades": [
+          1,
+          2
+        ]
+      },
+      "fourth-3-2": {
+        "id": "dot-and-cross",
+        "label": "Build covalent diagrams",
+        "type": "diagram",
+        "typeLabel": "Dot & Cross",
+        "href": "activities/dot-and-cross/index.html?category=covalent",
+        "practiceModes": true,
+        "availableGrades": [
+          1,
+          2,
+          3
+        ]
+      },
+      "lower-10-1": {
+        "id": "energy-enthalpy",
+        "practiceModes": true,
+        "availableGrades": [
+          1,
+          2
+        ],
+        "label": "Start Energy & Enthalpy",
+        "type": "short-answer",
+        "typeLabel": "Short answer",
+        "href": "activities/energy-enthalpy/index.html"
+      },
+      "lower-6-5": {
+        "id": "structure-and-bonding",
+        "practiceModes": true,
+        "availableGrades": [
+          2,
+          3
+        ],
+        "label": "Start Structure & Bonding",
+        "type": "long-answer",
+        "typeLabel": "Long answer",
+        "href": "activities/structure-and-bonding/index.html"
+      },
+      "lower-10-2": {
+        "id": "energetics-practical",
+        "practiceModes": true,
+        "availableGrades": [
+          2,
+          3
+        ],
+        "label": "Start Energetics Practical Work",
+        "type": "short-answer",
+        "typeLabel": "Practical reasoning",
+        "href": "activities/energetics-practical/index.html"
+      },
+      "lower-10-3": {
+        "id": "calorimetry",
+        "practiceModes": true,
+        "label": "Start Calorimetry",
+        "type": "calculation",
+        "typeLabel": "Calculation",
+        "href": "activities/calorimetry/index.html"
+      },
+      "lower-10-4": {
+        "id": "bond-enthalpy",
+        "practiceModes": true,
+        "label": "Start Bond Enthalpy",
+        "type": "calculation",
+        "typeLabel": "Calculation",
+        "href": "activities/bond-enthalpy/index.html"
+      }
+    },
+    "display": {
+      "hiddenGems": [],
+      "redirects": {}
+    }
+  }
+}

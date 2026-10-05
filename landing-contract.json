@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "runId": "LANDING-RESTORE-20261003",
+  "authority": "User approved landing restoration plan and instructed implementation; this addendum supersedes generic redesign choices for the landing experience only.",
+  "root": "apps/Masters-of-Chemistry",
+  "scope": "Part 1: original-code landing restoration, in-place course switch, gem launches and original map-based revision selection",
+  "designAuthority": "Actual current sibling landing HTML/CSS/SVG/JS, not stale descriptive READMEs or a fresh visual approximation",
+  "requirements": [
+    "Reuse original markup structure, class names, styles, SVG geometry, fonts, assets and applicable animation functions; adapt DOM/event ownership to React.",
+    "IGCSE original three year columns and 64 gems; A Level original Physical/Organic panes, L6/U6 flip, 152 visible gems (154 IDs minus two source-hidden leaves) and historical hidden aliases.",
+    "In-place IGCSE/A Level course switch using original year-toggle design; remember course and separate A Level year. Preserve explicit old course/question links.",
+    "Full display curriculum is separate from runnable activity registry; unavailable gems remain visible and do not activate new content.",
+    "Restore original details/practice choices, award/freshness visuals, focus/keyboard/dismissal/deep-link/reduced-motion/responsive behavior.",
+    "Restore map-based revision selection, chips, topic/year bulk controls where originally present, count/Clear/Cancel/GO, supported-level expansion and matching-session resume.",
+    "Typed direct launch of chosen gem+level or mastery into existing React host; no second setup screen, no duplicate attempt from effect reruns.",
+    "Home checkpoints and pauses active work, blocks departure on failed save; preserve course-separated progress and sessions.",
+    "Original Revision/Stats/Olympiad tiles; C3L6 remains A Level Olympiad-only and Rocket excluded. Preserve IGCSE eagle teacher mode and unobtrusive teacher/import access.",
+    "Original CSS scoped from generic shell; visual comparison with identical synthetic states at desktop/tablet/mobile is mandatory, not merely no-overflow checks."
+  ],
+  "outOfScope": ["Activity/editor/statistics redesign", "new chemistry or activity content", "mastery mathematics changes", "old app writes or old browser-store writes", "deployment", "backend", "offline"],
+  "integrationDefaults": {
+    "builds": "Keep existing two static entry/build targets as entry points into same switchable application; no hosting migration required.",
+    "coursePrecedence": "Explicit course/deep link, then remembered course, then entry default.",
+    "preferences": "New project-owned namespaced preferences only; never write original keys.",
+    "switch": "Close transient gem details; keep per-course revision selection and year preference; no cross-course evidence mixing.",
+    "history": "Preserve prior accepted rebuild evidence; new validation belongs under validation/landing-restoration."
+  },
+  "delegation": {
+    "structure": "Root plus one foreman, two initial implementation workers, optional one genuine exception reviewer",
+    "requestedModel": "gpt-6.1-sol",
+    "reasoningEffort": "high",
+    "maximumActiveIncludingRoot": 5,
+    "workersMayDelegate": false,
+    "ownership": "Design worker owns landing presentation/catalogue/progress adapter; integration worker owns host routing/launch/session handoff; foreman defines shared contracts first and integrates.",
+    "retry": "One clarified retry for substantive failure, then independent exception/root disposition; routine bugs and integration fixes remain within scope.",
+    "acceptance": "Root code/rendered comparison and meaningful browser/state regression; foreman manages queue/log and compact aggregate."
+  }
+}

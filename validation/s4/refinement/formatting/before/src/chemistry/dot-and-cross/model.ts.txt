@@ -1,0 +1,16 @@
+import {createLayout} from './layout.js';
+import type {BankRecord} from './types.ts';
+const escape=(text:string)=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+/** Checked reference depiction; SVG stays editable/reproducible and React-free. */
+export function modelSVG(record:BankRecord):string {
+ const state=record.reference,layout=createLayout(record.id);
+ const bounds=state.atoms.map(atom=>({x:atom.x-layout.shellRadius(atom),y:atom.y-layout.shellRadius(atom),right:atom.x+layout.shellRadius(atom),bottom:atom.y+layout.shellRadius(atom)}));
+ state.groups.forEach(group=>{const b=layout.groupBounds(state,group.atomIds);if(b)bounds.push({...b,right:b.right+(group.charge?45:0)});});
+ const x=Math.floor(Math.min(...bounds.map(b=>b.x))-24),y=Math.floor(Math.min(...bounds.map(b=>b.y))-24);
+ const width=Math.ceil(Math.max(...bounds.map(b=>b.right))+24-x),height=Math.ceil(Math.max(...bounds.map(b=>b.bottom))+24-y);
+ const atomSVG=state.atoms.map(atom=>`<circle cx="${atom.x}" cy="${atom.y}" r="${layout.shellRadius(atom)}" fill="none" stroke="#9ca3af" stroke-width="1.5"/><text x="${atom.x}" y="${atom.y+7}" text-anchor="middle" font-family="sans-serif" font-size="23" font-weight="bold">${atom.element}</text>`).join('');
+ const electrons=state.electrons.map(electron=>{const p=layout.point(state,electron.anchor);if(!p)throw Error(`${record.id}: unrenderable ${electron.id}`);return electron.symbol==='dot'?`<circle cx="${p.x}" cy="${p.y}" r="3.4"/>`:electron.symbol==='cross'?`<path d="M${p.x-4} ${p.y-4}l8 8m-8 0l8 -8" fill="none" stroke="#111827" stroke-width="2"/>`:`<path d="M${p.x} ${p.y-5}l5 9h-10Z" fill="none" stroke="#111827" stroke-width="2"/>`;}).join('');
+ const groups=state.groups.map(group=>{const bounds=layout.groupBounds(state,group.atomIds);if(!bounds)return '';return `${group.bracket?`<path d="M${bounds.x+12} ${bounds.y}h-12v${bounds.bottom-bounds.y}h12M${bounds.right-12} ${bounds.y}h12v${bounds.bottom-bounds.y}h-12" fill="none" stroke="#111827" stroke-width="2"/>`:''}<text x="${bounds.right+7}" y="${bounds.y+8}" font-family="sans-serif" font-size="22">${layout.chargeText(group.charge)}</text>`;}).join('');
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${x} ${y} ${width} ${height}" role="img"><title>${escape(record.name)}</title><desc>${escape(record.explanation)}</desc><rect x="${x}" y="${y}" width="${width}" height="${height}" fill="white"/>${atomSVG}${electrons}${groups}</svg>`;
+}
+export const modelImage=(record:BankRecord)=>`data:image/svg+xml;charset=utf-8,${encodeURIComponent(modelSVG(record))}`;

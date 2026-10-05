@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T13:12:24.266Z",
+  "checks": [
+    {
+      "id": "typecheck",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "typecheck.log"
+    },
+    {
+      "id": "lifecycle",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "lifecycle.log"
+    },
+    {
+      "id": "build",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "build.log"
+    },
+    {
+      "id": "release-alevel",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "release-alevel.log"
+    },
+    {
+      "id": "release-igcse",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "release-igcse.log"
+    }
+  ],
+  "releases": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 143,
+      "initialJavascriptGzipBytes": 168116,
+      "lazyJavascriptChunks": 62,
+      "manifestSha256": "87346016b96649cc102e81bd97dd5b3e652507012df103e746a4af4769a1ac69",
+      "checkedAt": "2026-10-03T13:12:24.067Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 143,
+      "initialJavascriptGzipBytes": 168115,
+      "lazyJavascriptChunks": 62,
+      "manifestSha256": "e7585404ee29d59b8cf1bcc732bb73955300ac918e71e109a95898edc2417f07",
+      "checkedAt": "2026-10-03T13:12:24.266Z"
+    }
+  ]
+}

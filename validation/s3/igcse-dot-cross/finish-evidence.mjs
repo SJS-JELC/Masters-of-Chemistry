@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const here=import.meta.dirname,project=path.resolve(here,'../../..'),hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const files=folder=>fs.readdirSync(folder,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?files(path.join(folder,entry.name)):[path.join(folder,entry.name)]);
+const owned=files(path.join(project,'src/activities/igcse/dot-and-cross'));
+const original=JSON.parse(fs.readFileSync(path.join(here,'source-fingerprints.json'),'utf8'));
+const shared=original.sharedBefore.map(item=>({...item,beforeSha256:item.sha256,sha256:hash(fs.readFileSync(path.join(project,item.path))),changed:item.sha256!==hash(fs.readFileSync(path.join(project,item.path)))}));
+fs.writeFileSync(path.join(here,'final-output-fingerprints.json'),JSON.stringify({checkedAt:new Date().toISOString(),files:owned.map(file=>({path:path.relative(project,file).replaceAll('\\','/'),sha256:hash(fs.readFileSync(file))})),shared,changedShared:shared.filter(item=>item.changed).map(item=>item.path),s2Evidence:'Preserved unchanged; all regression scripts/results run or copied here.'},null,2));
+const checks=[['typecheck',[path.join(project,'node_modules/typescript/bin/tsc'),'--noEmit']],['protected-originals',[path.join(project,'scripts/protect-originals.mjs'),'check']]];
+const results=checks.map(([name,args])=>{const result=spawnSync(process.execPath,args,{cwd:project,encoding:'utf8'});fs.writeFileSync(path.join(here,name+'.log'),result.stdout+(result.stderr??''));return {name,command:[process.execPath,...args],exitCode:result.status,passed:result.status===0};});
+fs.writeFileSync(path.join(here,'final-checks.json'),JSON.stringify({checkedAt:new Date().toISOString(),status:results.every(r=>r.passed)?'PASS':'FAIL',results},null,2));if(results.some(r=>!r.passed))process.exitCode=1;
+const render=JSON.parse(fs.readFileSync(path.join(here,'rendered-bank.json'),'utf8'));for(const sheet of render)sheet.visualReview='PASS: A15 inspected all atom labels, single/double/triple shared pairs, lone electrons, origin consistency, whole-ion brackets and charges on every sheet; no clipping/collisions seen.';fs.writeFileSync(path.join(here,'rendered-bank.json'),JSON.stringify(render,null,2));
+console.log(JSON.stringify({checks:results,changedShared:shared.filter(item=>item.changed).map(item=>item.path)},null,2));

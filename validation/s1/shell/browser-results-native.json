@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "run": "shell-1790982903310",
+  "focus": "Reviewed native readonly Ctrl+A selection plus precise offsets",
+  "testedAt": "2026-10-02T23:15:06.585Z",
+  "browser": "154.0.4258.48",
+  "browserLaunch": "Pinned workspace Playwright with installed msedge and project-isolated persistent profiles",
+  "viewport": [
+    1440,
+    1000,
+    390,
+    844
+  ],
+  "checks": [
+    {
+      "name": "rubric freeze / ordered offset evidence",
+      "status": "PASS",
+      "detail": "2 sections freeze; two marking points require exact selected evidence and ordered review via explicit offsets. Native keyboard selection also passed."
+    }
+  ],
+  "pageErrors": []
+}

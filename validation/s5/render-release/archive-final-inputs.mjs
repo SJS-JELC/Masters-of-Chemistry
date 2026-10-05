@@ -1,0 +1,3 @@
+﻿import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const here=import.meta.dirname,root=path.resolve(here,'../../..'),initial=JSON.parse(fs.readFileSync(path.join(here,'input-fingerprints.json')));const changed=Object.entries(initial.files).filter(([p,h])=>!p.startsWith('dist/')&&!p.startsWith('release/')&&(!fs.existsSync(path.join(root,p))||crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex')!==h)).map(([p])=>p);console.log(JSON.stringify(changed));
+if(!fs.existsSync(path.join(here,'initial-screens')))fs.cpSync(path.join(here,'screens'),path.join(here,'initial-screens'),{recursive:true});

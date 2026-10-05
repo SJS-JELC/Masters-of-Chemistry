@@ -1,0 +1,21 @@
+{
+  "jobId": "F3-INDEPENDENT",
+  "agentId": "F12",
+  "status": "PASS",
+  "output": "validation/component-fidelity/f3/independent/HANDOVER.md",
+  "confidence": 0.96,
+  "reason": null,
+  "validation": {
+    "status": "PASS",
+    "report": "validation/component-fidelity/f3/independent/report.json",
+    "domainTests": 14,
+    "currentBrowserChecks": 24,
+    "currentAffectedSpecialistAndRenderChecks": 15,
+    "productionEntries": 2,
+    "sourceCorpusRecords": 929,
+    "originalProtected": true,
+    "unresolved": 0
+  },
+  "actualModel": null,
+  "usage": null
+}

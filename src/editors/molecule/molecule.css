@@ -1,0 +1,351 @@
+/* Source editor styles scoped to React; source tiny tools enlarged for touch. */
+.molecule-editor {
+  --ink: #f7f7ff;
+  --muted: #a9afce;
+  --line: rgba(172, 182, 255, 0.19);
+  --soft: rgba(85, 246, 255, 0.09);
+  --cyan: #55f6ff;
+  --error: #ff8290;
+  min-width: 0;
+  max-width: 100%;
+  font-family: Comfortaa, sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+.molecule-editor .drawing-instruction {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 10px 0 14px;
+}
+.molecule-editor .drawing-card {
+  background: linear-gradient(145deg, #161a44, #0a0d26);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow:
+    0 24px 65px #0003,
+    inset 0 1px #ffffff08;
+  overflow: hidden;
+}
+.molecule-editor .editor-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.molecule-editor .tools,
+.molecule-editor .tool-group,
+.molecule-editor .canvas-tools {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.molecule-editor .canvas-tools { flex-wrap: nowrap; margin-left: auto; }
+.molecule-editor button {
+  font: inherit;
+  letter-spacing: normal;
+  min-width: 0;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.molecule-editor button:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+.molecule-editor button:focus-visible,
+.molecule-editor summary:focus-visible {
+  outline: 3px solid #ffde59;
+  outline-offset: 3px;
+}
+.molecule-editor .tool {
+  width: 32px;
+  height: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  background: none;
+  border-radius: 7px;
+  padding: 0;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+.molecule-editor .tool svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.molecule-editor .tool[aria-pressed='true'] {
+  border-color: #55f6ff66;
+  background: #55f6ff18;
+  color: var(--cyan);
+}
+.molecule-editor .tool[data-element='O'][aria-pressed='true'] {
+  color: #ff947f;
+}
+.molecule-editor .tool[data-element='N'][aria-pressed='true'] {
+  color: #8db9ff;
+}
+.molecule-editor .tool[data-element='Cl'][aria-pressed='true'],
+.molecule-editor .tool[data-element='F'][aria-pressed='true'] {
+  color: #75e5a5;
+}
+.molecule-editor .divider {
+  height: 16px;
+  width: 1px;
+  background: var(--line);
+  margin: 0 3px;
+}
+.molecule-editor .clean-button,
+.molecule-editor .clear-button {
+  min-height: 44px;
+  padding: 0 9px;
+  border: 1px solid #55f6ff66;
+  border-radius: 11px;
+  color: var(--cyan);
+  background: #55f6ff0d;
+  font-size: 10px;
+}
+.molecule-editor .clear-button {
+  border-color: #ff829066;
+  color: var(--error);
+  background: #ff82900d;
+}
+.molecule-editor .view-switch {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #080c2466;
+}
+.molecule-editor .view-switch button {
+  min-height: 44px;
+  border: 0;
+  background: none;
+  border-radius: 7px;
+  font-size: 10px;
+  padding: 0 8px;
+  color: var(--muted);
+}
+.molecule-editor .view-switch button[aria-pressed='true'] {
+  background: linear-gradient(115deg, #54f5b5, var(--cyan));
+  color: #071a18;
+}
+.molecule-editor .canvas-wrap {
+  position: relative;
+  height: clamp(360px, 55vh, 600px);
+  background: #06091d66;
+}
+.molecule-workspace {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  outline: none;
+  cursor: crosshair;
+}
+.molecule-workspace:focus-visible {
+  outline: 2px solid #ffde59;
+  outline-offset: -6px;
+  border-radius: 8px;
+}
+.molecule-editor .drawing-help,
+.molecule-alternatives {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.molecule-editor summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 12px 0;
+  color: var(--cyan);
+}
+.molecule-announcement {
+  font-size: 11px;
+  line-height: 1.7;
+  min-height: 0;
+  color: var(--muted);
+  margin: 6px 0;
+}
+.molecule-announcement:empty {
+  display: none;
+}
+.molecule-readonly {
+  font-size: 11px;
+  color: var(--muted);
+}
+.molecule-tools,
+.molecule-inspector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+}
+.molecule-inspector label {
+  display: grid;
+  gap: 0.3rem;
+  max-width: 100%;
+}
+.molecule-inspector select {
+  min-height: 44px;
+  max-width: 100%;
+}
+.molecule-alternatives button {
+  min-height: 44px;
+}
+.molecule-preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.molecule-workspace .bond-line,
+.molecule-preview .bond-line {
+  stroke: var(--ink, #f7f7ff);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+.molecule-workspace .atom-label,
+.molecule-preview .atom-label {
+  font:
+    700 23px Comfortaa, sans-serif;
+  fill: var(--ink, #f7f7ff);
+  pointer-events: none;
+  dominant-baseline: central;
+}
+.molecule-workspace .element-O,
+.molecule-preview .element-O {
+  fill: #ff947f;
+}
+.molecule-workspace .element-N,
+.molecule-preview .element-N {
+  fill: #8db9ff;
+}
+.molecule-workspace .element-Cl,
+.molecule-workspace .element-F,
+.molecule-preview .element-Cl,
+.molecule-preview .element-F {
+  fill: #75e5a5;
+}
+.molecule-workspace .atom-subscript,
+.molecule-preview .atom-subscript {
+  font-size: 14px;
+  baseline-shift: sub;
+}
+.molecule-workspace .atom-charge,
+.molecule-preview .atom-charge {
+  font-size: 14px;
+  baseline-shift: super;
+}
+.molecule-workspace .atom-hit,
+.molecule-preview .atom-hit {
+  fill: transparent;
+}
+.molecule-workspace .bond-hit,
+.molecule-preview .bond-hit {
+  stroke: transparent;
+  stroke-width: 24;
+  fill: none;
+}
+.molecule-workspace .atom-node,
+.molecule-workspace .bond-node {
+  outline: none;
+  cursor: crosshair;
+}
+.molecule-workspace .focus-ring,
+.molecule-preview .focus-ring {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 1.5;
+}
+.molecule-workspace .atom-node:focus-visible .focus-ring,
+.molecule-workspace .atom-node:hover .focus-ring {
+  stroke: var(--cyan);
+}
+.molecule-workspace .bond-node:focus-visible .bond-hit,
+.molecule-workspace .bond-node:hover .bond-hit {
+  stroke: #55f6ff22;
+}
+.molecule-workspace .atom-node.invalid .focus-ring {
+  stroke: var(--error);
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+}
+.molecule-workspace .invalid-mark {
+  fill: var(--error);
+  font:
+    700 14px Comfortaa, sans-serif;
+  pointer-events: none;
+}
+.molecule-workspace .ghost {
+  opacity: 0.65;
+  pointer-events: none;
+}
+.molecule-workspace .preview-end {
+  fill: var(--cyan);
+}
+.molecule-workspace .preview-target {
+  stroke: var(--cyan);
+  stroke-width: 2;
+  fill: none;
+}
+.molecule-workspace.erasing,
+.molecule-workspace.erasing .atom-node,
+.molecule-workspace.erasing .bond-node {
+  cursor: cell;
+}
+.molecule-workspace.panning,
+.molecule-workspace.panning .atom-node,
+.molecule-workspace.panning .bond-node { cursor: grab; }
+.molecule-workspace.panning.dragging,
+.molecule-workspace.panning.dragging .atom-node,
+.molecule-workspace.panning.dragging .bond-node { cursor: grabbing; }
+.molecule-gesture-preview {
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .molecule-editor .editor-bar {
+    justify-content: center;
+  }
+  .molecule-editor .tools,
+  .molecule-editor .tool-group {
+    justify-content: center;
+  }
+  .molecule-editor .divider {
+    display: none;
+  }
+  .molecule-editor .canvas-tools { margin-left: 0; }
+}
+@media (max-width: 600px) {
+  .molecule-editor .tool {
+    width: 44px;
+  }
+  .molecule-editor .canvas-wrap {
+    height: 320px;
+  }
+  .molecule-editor .tool-group {
+    flex-basis: 100%;
+  }
+  .molecule-inspector > * {
+    flex: 1 1 130px;
+  }
+}
+@media (pointer: coarse) {
+  .molecule-editor .tool {
+    width: 44px;
+  }
+}

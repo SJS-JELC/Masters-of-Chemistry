@@ -1,0 +1,1003 @@
+{
+  "agentId": "E02",
+  "jobId": "DOT-CROSS-RESTORE",
+  "reviewedAt": "2026-10-03T10:50:19.988272+00:00",
+  "method": "E02 actual view_image inspection plus unedited PNG metadata/statistics. Pixel statistics supplement exact browser geometry and substantive image review, and are not an acceptance threshold.",
+  "status": "PASS",
+  "screenshots": 125,
+  "pairs": [
+    {
+      "original": "screens/alevel-above-breakpoint-h2o-feedback-original.png",
+      "restored": "screens/alevel-above-breakpoint-h2o-feedback-restored.png",
+      "originalSize": [
+        1052,
+        736
+      ],
+      "restoredSize": [
+        1052,
+        735
+      ],
+      "originalSha256": "72f4b224430cc4fac104c83ab6392370c400d362d009a7500b11113bb1e4d00d",
+      "restoredSha256": "b240e1e3d98c12534daf6e7c017d71edd9bb3cca0eec9b995aa01fbf344e2a88",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-above-breakpoint-h2o-original.png",
+      "restored": "screens/alevel-above-breakpoint-h2o-restored.png",
+      "originalSize": [
+        1052,
+        736
+      ],
+      "restoredSize": [
+        1052,
+        735
+      ],
+      "originalSha256": "3d2d66f8b4997dcb6f9502e5038331c34bca8195a6a1c31741f1cbe908b868fb",
+      "restoredSha256": "8e99c97cada1a33f3d3d0583d0139ab2c37b8803b282d48e2e05628781b8590d",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-above-breakpoint-mgo-feedback-original.png",
+      "restored": "screens/alevel-above-breakpoint-mgo-feedback-restored.png",
+      "originalSize": [
+        1052,
+        736
+      ],
+      "restoredSize": [
+        1052,
+        735
+      ],
+      "originalSha256": "842ccc22b87384e700543c72f290be7fa43efa44cdf6135d3fb574ad154a3ab7",
+      "restoredSha256": "0b89f4a9b427048fb8d017707f2b3c3ddd0be6778cf190afda722a9088c6188b",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-above-breakpoint-mgo-original.png",
+      "restored": "screens/alevel-above-breakpoint-mgo-restored.png",
+      "originalSize": [
+        1052,
+        736
+      ],
+      "restoredSize": [
+        1052,
+        735
+      ],
+      "originalSha256": "5c6ae2f3f80cc8fcf88bc11ece4263ca02a4978c105f553bfcd68f50f779177e",
+      "restoredSha256": "fba168a527a996c6d01cf9f0de186ca4f9568aec36c9d1edd3f749079d4e6792",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-ammonium-ion-answer-circles-false-original.png",
+      "restored": "screens/alevel-ammonium-ion-answer-circles-false-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "14aa2681345f48713e09d036ded1dea2ef3de4657f232a50d835c32c7e413240",
+      "restoredSha256": "acb1bd4da540c01b1e130f3e2e13cd993e21371b4c3fc8edcbf1dc223d450293",
+      "meanAbsoluteRGBDifference": 99.3043613189249
+    },
+    {
+      "original": "screens/alevel-ammonium-ion-answer-circles-true-original.png",
+      "restored": "screens/alevel-ammonium-ion-answer-circles-true-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "c882c3f430b2c96d7598afea4c9534eddde2b5aed1b3c61e584eaea47d662ded",
+      "restoredSha256": "00c150a9c008b5f7cf90fe755fa706f7c40fa9340d15cac0878c1dcc5abac3b5",
+      "meanAbsoluteRGBDifference": 99.3772914934885
+    },
+    {
+      "original": "screens/alevel-atom-drag-preview-original.png",
+      "restored": "screens/alevel-atom-drag-preview-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "7d70b82c3b5f8e917b50ddbb6df2e41e11ec38c0ee997a6e16b014ac5a19bd16",
+      "restoredSha256": "36759cbaee502c860ec92a9fc19ba008743f8726c2409edd60b15ead0c320fae",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-below-breakpoint-h2o-feedback-original.png",
+      "restored": "screens/alevel-below-breakpoint-h2o-feedback-restored.png",
+      "originalSize": [
+        1051,
+        1038
+      ],
+      "restoredSize": [
+        1051,
+        1037
+      ],
+      "originalSha256": "eaa885b16fa2092861cfb46728028d6e809a148b541ea6ff4bb7013ac504e69d",
+      "restoredSha256": "dd2b1a5bf33fc611a6d07f15777f1c71fd3834909dd617d5b013d0dc3e7f2ce0",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-below-breakpoint-h2o-original.png",
+      "restored": "screens/alevel-below-breakpoint-h2o-restored.png",
+      "originalSize": [
+        1051,
+        814
+      ],
+      "restoredSize": [
+        1051,
+        813
+      ],
+      "originalSha256": "d520325925f2c198b33854a5348a4125c7a103d1e7be731b141fe834b3938c3b",
+      "restoredSha256": "d980c5160d528824836c6f9546a5d4f05a22d650bcbc190241331292342dcbdf",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-below-breakpoint-mgo-feedback-original.png",
+      "restored": "screens/alevel-below-breakpoint-mgo-feedback-restored.png",
+      "originalSize": [
+        1051,
+        1038
+      ],
+      "restoredSize": [
+        1051,
+        1037
+      ],
+      "originalSha256": "401896591f315407b3657c5e2970fe6af2eba367a1b6ac97fe2379b73a50dc63",
+      "restoredSha256": "e0911cdb7938a3bbcfc1206f33bb325accea0acbebf87ddc703c17ee5fb24d60",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-below-breakpoint-mgo-original.png",
+      "restored": "screens/alevel-below-breakpoint-mgo-restored.png",
+      "originalSize": [
+        1051,
+        814
+      ],
+      "restoredSize": [
+        1051,
+        813
+      ],
+      "originalSha256": "69757a9c1971f8e67d8e70056988c189d8a6662e9c9fdeef5f50d71a2a7e195c",
+      "restoredSha256": "6dc688529979a4db00a1a868310b9d3f9d8950f7ee74920816dff54ec450f06e",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-charge-group-drag-original.png",
+      "restored": "screens/alevel-charge-group-drag-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "b24c543ddcae3872c69c815c02f712523419844b7c36540e6448661e75affc62",
+      "restoredSha256": "d6814fb6325ad02e272dfe1cacf49172876f79be0a3f0fd5171d76b6e5480257",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-ammonium-ion-original.png",
+      "restored": "screens/alevel-desktop-ammonium-ion-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "ea96370cae27d20a042b7364f0700a339198a319d4e8b42a6e001df370ed26c0",
+      "restoredSha256": "efa9cf9690a0d6c15545b2fe9b8b9af5f7ada6ec461dfb1171a3abb5f31a97ff",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-h2o-feedback-original.png",
+      "restored": "screens/alevel-desktop-h2o-feedback-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "c7089cc6c5daae990094e2693985876f769945662c11dea777fdbada1cb1e032",
+      "restoredSha256": "9725b7933386dd347b4e051dbcae11d1c803b0842b805293637bde7f813744fb",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-h2o-original.png",
+      "restored": "screens/alevel-desktop-h2o-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "1c211d6cdd8b3bea935183e0a05e98154c36fdee8fce46d3420bb8a5ac5f645f",
+      "restoredSha256": "240b7713343584333f510ff7b5cc5ab764ca01adcb66643411b0d4ba142ea0c4",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-mgo-feedback-original.png",
+      "restored": "screens/alevel-desktop-mgo-feedback-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "eee9906bca85c568b1f350db2f5e3c8f644d36573e1f5d6eff605bef4cd03a51",
+      "restoredSha256": "c2fd93c8a6c150d6dd68af5ecb729b75e553e8594cbfb24cf6b7e8d98c6ff0ea",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-mgo-original.png",
+      "restored": "screens/alevel-desktop-mgo-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "c4c0a5d2492af7451131392a3498ef52c1cacfc8fb1512dd56af1d3159bb2d75",
+      "restoredSha256": "8f3c87b50a9c0e1092872c5138293a5bf9a86aa779afb680d8f2f1ee850adcef",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-nitrate-ion-original.png",
+      "restored": "screens/alevel-desktop-nitrate-ion-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "aae1ba48e13c5248f99832c6c7c8880e08521cf60a7ef99ff277bbfea48b3e0d",
+      "restoredSha256": "f2e4d07bd45f05b8d711cb1e8ad599d76d1edbe1a87af5bdb2e09dead681b4ca",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-phosphorus-pentachloride-original.png",
+      "restored": "screens/alevel-desktop-phosphorus-pentachloride-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "62eb122a681c7ec31f851d3be12093f302869df2400d25dbeb6361ea6c750a0c",
+      "restoredSha256": "f4e7bc87ef425217b1a31361d8af53dd82f2bea90ec5fb4e39caedb104840330",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-desktop-sulfur-hexafluoride-original.png",
+      "restored": "screens/alevel-desktop-sulfur-hexafluoride-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "24ae358a5df257983f8646a6117edc40908b7a071092212ed6b4cdb69e1677ec",
+      "restoredSha256": "652b1c9f8a573ac204b99bd4f4c011398588764290a8ebddfad9099f005c7ace",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-electron-relocation-original.png",
+      "restored": "screens/alevel-electron-relocation-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "728309aa7e074cc20b4fe34deabac69abb81a95e2045eb797cad51a77587d10b",
+      "restoredSha256": "992d00cca8877c96e45149091cf818707f0b44310f3c72070fd02122491332ab",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-h2o-answer-circles-false-original.png",
+      "restored": "screens/alevel-h2o-answer-circles-false-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "76763f2221fdb1e7be340457119de406cbc7c4defb63dc5575be79bd6cb7e9aa",
+      "restoredSha256": "c75de30497f9650df516db9930d3a182f3598298e55a9639e7c26b195132ec9b",
+      "meanAbsoluteRGBDifference": 1.6744402881684677
+    },
+    {
+      "original": "screens/alevel-h2o-answer-circles-true-original.png",
+      "restored": "screens/alevel-h2o-answer-circles-true-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "d04b273daf797f173c564a2243131842f01bd12765dfdd5890123f1e0e35ea2a",
+      "restoredSha256": "2a354a66be394b811ef02a34488b9ab473cf59cb04a825c1c0db39058b61e14b",
+      "meanAbsoluteRGBDifference": 2.325501523967858
+    },
+    {
+      "original": "screens/alevel-mobile-h2o-feedback-original.png",
+      "restored": "screens/alevel-mobile-h2o-feedback-restored.png",
+      "originalSize": [
+        366,
+        1051
+      ],
+      "restoredSize": [
+        366,
+        1050
+      ],
+      "originalSha256": "26f5d75d155a8b4bc405c83cb873f65770872efbde0d0fac754e4da95fdb8570",
+      "restoredSha256": "8d58a208a8f0a9e37558bc151e467310f947b675bf9217ccf2c78fc0712428a3",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-mobile-h2o-original.png",
+      "restored": "screens/alevel-mobile-h2o-restored.png",
+      "originalSize": [
+        366,
+        734
+      ],
+      "restoredSize": [
+        366,
+        733
+      ],
+      "originalSha256": "449fda2fcda9eb07f8b4ede25036eac817a72ba17d91b3dd4f5ccb6502cc2a75",
+      "restoredSha256": "f7e45640afd48e0a920df48d92aaa2a47fddbe42131f52f148c1fc5c0c8d200b",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-mobile-mgo-feedback-original.png",
+      "restored": "screens/alevel-mobile-mgo-feedback-restored.png",
+      "originalSize": [
+        366,
+        1107
+      ],
+      "restoredSize": [
+        366,
+        1106
+      ],
+      "originalSha256": "4d8845ad44b38bd827950fbe199bd5ac2e8bdf53fb994d42d377ee84b7a6c8c6",
+      "restoredSha256": "3bca3bbb8e4ed4aed0eec76c53f12909756e96c32e8f6451004da0774c743666",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-mobile-mgo-original.png",
+      "restored": "screens/alevel-mobile-mgo-restored.png",
+      "originalSize": [
+        366,
+        734
+      ],
+      "restoredSize": [
+        366,
+        733
+      ],
+      "originalSha256": "e89c789bcabc2e13d90c33efc7f36bf1a30c0f3724dcee76bf7f1a9b4c5b4670",
+      "restoredSha256": "67a5b237d5f6fb30bb6331e695748251b8750edd6026c10bf0cafc4393ecca72",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-nitrate-ion-answer-circles-false-original.png",
+      "restored": "screens/alevel-nitrate-ion-answer-circles-false-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "0958b66f108e659d4e556effd0dfed69698cb8c463e3cdb902baa0219925aa26",
+      "restoredSha256": "abbd68949921e8952b7785b332ae3d5e71c1cb6842c2674bddf873019cfc4801",
+      "meanAbsoluteRGBDifference": 3.159660570795234
+    },
+    {
+      "original": "screens/alevel-nitrate-ion-answer-circles-true-original.png",
+      "restored": "screens/alevel-nitrate-ion-answer-circles-true-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "a15d133950a53fc91462782265587312929fb958d21c834bbfc21b7cb5d3a144",
+      "restoredSha256": "e79b2adec9a006dd080f0672aebabdc47e0788a7d3459d2b472e1b0e496ed67f",
+      "meanAbsoluteRGBDifference": 3.7465225824328066
+    },
+    {
+      "original": "screens/alevel-phosphorus-pentachloride-answer-circles-false-original.png",
+      "restored": "screens/alevel-phosphorus-pentachloride-answer-circles-false-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "e428b9d7601eb4f067118f39757789922946725c3b94890a91056c8c61c045c5",
+      "restoredSha256": "99ea0f3e3204eb13b0437543529c2ae85ea761c717f39d8ad301a16ff6f5d132",
+      "meanAbsoluteRGBDifference": 2.2985342200055414
+    },
+    {
+      "original": "screens/alevel-phosphorus-pentachloride-answer-circles-true-original.png",
+      "restored": "screens/alevel-phosphorus-pentachloride-answer-circles-true-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "fbc53d6c70be119ceb1760760245a0fb0895c142ec49165b82de2413f7a99025",
+      "restoredSha256": "907cd9371a8ede3e2c980f60cabb81be6b8d2e640addf51fde1cdd8a1a9d8b4d",
+      "meanAbsoluteRGBDifference": 2.99808395677473
+    },
+    {
+      "original": "screens/alevel-tablet-h2o-feedback-original.png",
+      "restored": "screens/alevel-tablet-h2o-feedback-restored.png",
+      "originalSize": [
+        772,
+        874
+      ],
+      "restoredSize": [
+        772,
+        873
+      ],
+      "originalSha256": "aed8540f150dcaf3f6091553b94b51868f349addd1f98bb25d6e198be5ef862e",
+      "restoredSha256": "a2254a4a471512766b12256a10c76fc2ca49daf1cbbedf1079e87f77adb3e5b4",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/alevel-tablet-h2o-original.png",
+      "restored": "screens/alevel-tablet-h2o-restored.png",
+      "originalSize": [
+        772,
+        650
+      ],
+      "restoredSize": [
+        772,
+        650
+      ],
+      "originalSha256": "cc9dfb48db651cddaf7234efcff011e20f67ddba41935e40b1aecbc09975de4c",
+      "restoredSha256": "26c34381faa0c1df58394efe84b66b0d3491fc25e55de8f3fc2657ddb744e8ee",
+      "meanAbsoluteRGBDifference": 1.116531818785705
+    },
+    {
+      "original": "screens/alevel-tablet-mgo-feedback-original.png",
+      "restored": "screens/alevel-tablet-mgo-feedback-restored.png",
+      "originalSize": [
+        772,
+        892
+      ],
+      "restoredSize": [
+        772,
+        892
+      ],
+      "originalSha256": "1d7761c4be61df8763f9dc9bd462ad8b4c46b248bba6dc546b45346eab68eb63",
+      "restoredSha256": "8cd2c7959f85573f2fdf6fb3be2329306517dbdc59851016cf9d263b8a628a5b",
+      "meanAbsoluteRGBDifference": 4.2253842445224095
+    },
+    {
+      "original": "screens/alevel-tablet-mgo-original.png",
+      "restored": "screens/alevel-tablet-mgo-restored.png",
+      "originalSize": [
+        772,
+        650
+      ],
+      "restoredSize": [
+        772,
+        650
+      ],
+      "originalSha256": "877a3986499f5eccde106520af3f006830bbe95f0f85b3af12cf6ef84a57f246",
+      "restoredSha256": "3d240df6d9ccc2d98b140f606177fb81ff47cc614a3a822a3aa83e1ad857c463",
+      "meanAbsoluteRGBDifference": 1.1160468978344626
+    },
+    {
+      "original": "screens/igcse-above-breakpoint-h2o-feedback-original.png",
+      "restored": "screens/igcse-above-breakpoint-h2o-feedback-restored.png",
+      "originalSize": [
+        1052,
+        684
+      ],
+      "restoredSize": [
+        1052,
+        683
+      ],
+      "originalSha256": "ea284e1f47e9c1c4789f7d037f0f9bd8b23e2b242b28fa41377d2b22492fd42c",
+      "restoredSha256": "b4afb64f152c0166aa8b8bf1a6a101bf603da3d10de7e57a695d787e01ba1d53",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-above-breakpoint-h2o-original.png",
+      "restored": "screens/igcse-above-breakpoint-h2o-restored.png",
+      "originalSize": [
+        1052,
+        684
+      ],
+      "restoredSize": [
+        1052,
+        683
+      ],
+      "originalSha256": "45dd7bc5427d01839f7c455878852097e0a0edc942c442edda7a0d5a645da97e",
+      "restoredSha256": "238a66ce62cea6ebc5a9810d3ee86cc6c8bb383ae5d7a4ae77ff377f227c628d",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-above-breakpoint-mgo-feedback-original.png",
+      "restored": "screens/igcse-above-breakpoint-mgo-feedback-restored.png",
+      "originalSize": [
+        1052,
+        684
+      ],
+      "restoredSize": [
+        1052,
+        683
+      ],
+      "originalSha256": "bdf93d6a60f890392589cddb5629247c523c133fdad7955bb73852aa547c2915",
+      "restoredSha256": "57ae38f6d15d62204989f68bacf36c74f4f41059ef2cc2dee4c1a872dcc0a090",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-above-breakpoint-mgo-original.png",
+      "restored": "screens/igcse-above-breakpoint-mgo-restored.png",
+      "originalSize": [
+        1052,
+        684
+      ],
+      "restoredSize": [
+        1052,
+        683
+      ],
+      "originalSha256": "35ed5a69ad4f163ba0a832edb1f8244322e517b7dc0ffb54a7cf2e436c569c9c",
+      "restoredSha256": "a37c045644b456bffc1a62fd1eb7e16b25cdede0cb6206b04437b795907e2dc8",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-atom-drag-preview-original.png",
+      "restored": "screens/igcse-atom-drag-preview-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "4fa019951013067cc09e98d4bf1f5d079df3d0daa43648049ee0a364e320c7f0",
+      "restoredSha256": "806b72061ae8633528fecd5b1c40be81d57dd64b2ddcaeff79c30ed0a766ce4c",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-below-breakpoint-h2o-feedback-original.png",
+      "restored": "screens/igcse-below-breakpoint-h2o-feedback-restored.png",
+      "originalSize": [
+        1051,
+        985
+      ],
+      "restoredSize": [
+        1051,
+        985
+      ],
+      "originalSha256": "d01012141ac2f744efd59addca0c40b2a9bf4b9d77f8841a2823970c5912e974",
+      "restoredSha256": "a8883e22ee3870f0c63eb03bbae12616cd08e90fd7cf8998a95db9185049de36",
+      "meanAbsoluteRGBDifference": 0.840225327260638
+    },
+    {
+      "original": "screens/igcse-below-breakpoint-h2o-original.png",
+      "restored": "screens/igcse-below-breakpoint-h2o-restored.png",
+      "originalSize": [
+        1051,
+        762
+      ],
+      "restoredSize": [
+        1051,
+        761
+      ],
+      "originalSha256": "d14894631473cb1bfad9a6f8a013656a9d6cc34a8de3cd134d2dd9a6a1fa525b",
+      "restoredSha256": "1978071e437874a6347c0203cc41532c1b9ad7b31ea2ec232d2d74277040ef11",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-below-breakpoint-mgo-feedback-original.png",
+      "restored": "screens/igcse-below-breakpoint-mgo-feedback-restored.png",
+      "originalSize": [
+        1051,
+        985
+      ],
+      "restoredSize": [
+        1051,
+        985
+      ],
+      "originalSha256": "06166d2b7db3ad86b57c6b04dcf1ac2b2867664ef892a5b598964698bca976a7",
+      "restoredSha256": "292a39abafb2ddffd413f6ff1db7ecf9eabbb1564e3ddc47861e7eef7badcb5e",
+      "meanAbsoluteRGBDifference": 0.9103353344892705
+    },
+    {
+      "original": "screens/igcse-below-breakpoint-mgo-original.png",
+      "restored": "screens/igcse-below-breakpoint-mgo-restored.png",
+      "originalSize": [
+        1051,
+        762
+      ],
+      "restoredSize": [
+        1051,
+        761
+      ],
+      "originalSha256": "ac7feb32d8ae49e75a934479ef91bc16ee380605ece242671da20f289e38fee9",
+      "restoredSha256": "ea8c996816235cb683036671961ff82efdc37c18692f89f97b4b8d3e5489f8ef",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-desktop-h2o-feedback-original.png",
+      "restored": "screens/igcse-desktop-h2o-feedback-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "948d76113d85a04edf46ab9a2f27b7dd6ab2d75ec7f0a7db3451042f5fae8ef7",
+      "restoredSha256": "c819e54212913c4d9e308fafe85af7121bb967d5e3968b2736c38aeda8009e52",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-desktop-h2o-original.png",
+      "restored": "screens/igcse-desktop-h2o-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "187dcee067779c588f0e411b1ad76fd59f29451a57236b2718fc04258b270379",
+      "restoredSha256": "b9c24fe5eff04e6ebd2f935c0b7ac1ea5c61bd6115c5a5b41df29a59cdecf6cc",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-desktop-mgo-feedback-original.png",
+      "restored": "screens/igcse-desktop-mgo-feedback-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "9a85bce2badbcb22046f1a7084e2214c2d7710f8a339b2b220a52986ed1c63cc",
+      "restoredSha256": "dd033dc2327aedc6a583eba56ef2a85d83dc7915711578dd0f96130ba0d0d337",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-desktop-mgo-original.png",
+      "restored": "screens/igcse-desktop-mgo-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "bf158159d61994cdde822789e1381da648cfa085f61ef9cd30a2030c679f82e9",
+      "restoredSha256": "c4facdb02bddd960d0a83efbe6a236d3b8892c11a2d3a328d2ab6ec17629385f",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-electron-relocation-original.png",
+      "restored": "screens/igcse-electron-relocation-restored.png",
+      "originalSize": [
+        1392,
+        636
+      ],
+      "restoredSize": [
+        1392,
+        635
+      ],
+      "originalSha256": "1062cc2cbcab09d5a8cf40499a169c5c6b94e18d8389f9a04e642d7d787c9d1c",
+      "restoredSha256": "42d69000d205e121bb99267cddfd3353b7b67fddf50480969a192e39090554aa",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-mgo-answer-circles-false-original.png",
+      "restored": "screens/igcse-mgo-answer-circles-false-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "d08863d085a3005def21d75498cf18ae8e6443faee16412e344a678a96b96234",
+      "restoredSha256": "bace012564d584c40635377c08953c8b1c21eb07565cf82e628ea9a9d7304db2",
+      "meanAbsoluteRGBDifference": 2.6076918814075922
+    },
+    {
+      "original": "screens/igcse-mgo-answer-circles-true-original.png",
+      "restored": "screens/igcse-mgo-answer-circles-true-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "7c8f67770acc6177a3b362ac17e60f2ebe31d031028e2334f267ff947e96985c",
+      "restoredSha256": "325e08e047f86ccece6782d50e473cfde6410d36986911e0c970a73378f7b244",
+      "meanAbsoluteRGBDifference": 2.9905680243834856
+    },
+    {
+      "original": "screens/igcse-mobile-h2o-feedback-original.png",
+      "restored": "screens/igcse-mobile-h2o-feedback-restored.png",
+      "originalSize": [
+        366,
+        1004
+      ],
+      "restoredSize": [
+        366,
+        1004
+      ],
+      "originalSha256": "0c8b82b539dcc6bcc677e1c632067c6433f1906451edc2d8fe8a481f6758996c",
+      "restoredSha256": "d9545b5b0ce738799c8df68325f9a5fa1be4aa31e6b53b2dc44a25920622bfb3",
+      "meanAbsoluteRGBDifference": 3.5509473943932828
+    },
+    {
+      "original": "screens/igcse-mobile-h2o-original.png",
+      "restored": "screens/igcse-mobile-h2o-restored.png",
+      "originalSize": [
+        366,
+        688
+      ],
+      "restoredSize": [
+        366,
+        687
+      ],
+      "originalSha256": "3169fd93e87930a77c8ffaa3ef8be5be06106d0de239548f9b8527d82d3bd863",
+      "restoredSha256": "ce00784cdaa5d537aef727340f975b28a55006575b5ab0f79dfa947d47acf4be",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-mobile-mgo-feedback-original.png",
+      "restored": "screens/igcse-mobile-mgo-feedback-restored.png",
+      "originalSize": [
+        366,
+        1060
+      ],
+      "restoredSize": [
+        366,
+        1060
+      ],
+      "originalSha256": "a92d13f0c8b32fd3f3bf43c386c78e7df9a717ff5f001b89870e662403365a9a",
+      "restoredSha256": "4acaad64daad9e6a1929a97cbf9a0914ad977ad39eda5597f50393c5d763ee7c",
+      "meanAbsoluteRGBDifference": 4.651494140289377
+    },
+    {
+      "original": "screens/igcse-mobile-mgo-original.png",
+      "restored": "screens/igcse-mobile-mgo-restored.png",
+      "originalSize": [
+        366,
+        688
+      ],
+      "restoredSize": [
+        366,
+        687
+      ],
+      "originalSha256": "9799a41037616c9c5fc04bdbc1aa634e98b6d3172597140adefff47b62f08516",
+      "restoredSha256": "faf53a99a1b74d18049b316a492700ca17acefc20c990e994186659f563018ae",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-mobile-trusted-touch-original.png",
+      "restored": "screens/igcse-mobile-trusted-touch-restored.png",
+      "originalSize": [
+        366,
+        688
+      ],
+      "restoredSize": [
+        366,
+        687
+      ],
+      "originalSha256": "997a24a3115bb503a8c9a7809d1d71dfc369399e04471e2d10be4e99e3b3134d",
+      "restoredSha256": "903040904f8e58c4fff4943acc1f0615f896106631894a3526ca3fcc9bddf0d6",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-potassium-iodide-answer-circles-false-original.png",
+      "restored": "screens/igcse-potassium-iodide-answer-circles-false-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "1be145ece7514561c525a015259c6ffca0ae0926f3c8ba4350dab83e1d92c188",
+      "restoredSha256": "8b90cb522d5e7b1a4193d59ccce27120df512b32b2cfeb0481ba310e2a7dab6d",
+      "meanAbsoluteRGBDifference": 98.74628151842616
+    },
+    {
+      "original": "screens/igcse-potassium-iodide-answer-circles-true-original.png",
+      "restored": "screens/igcse-potassium-iodide-answer-circles-true-restored.png",
+      "originalSize": [
+        600,
+        401
+      ],
+      "restoredSize": [
+        600,
+        401
+      ],
+      "originalSha256": "5935e343888b28eb43d089d5401ceed6d9075914e5bf52e2b7e752c0b92bfe03",
+      "restoredSha256": "36ad413e0fdc6acd3419637b302edf8058b378fbb40f75e06bcf692de811de9d",
+      "meanAbsoluteRGBDifference": 98.65771958991411
+    },
+    {
+      "original": "screens/igcse-tablet-h2o-feedback-original.png",
+      "restored": "screens/igcse-tablet-h2o-feedback-restored.png",
+      "originalSize": [
+        772,
+        874
+      ],
+      "restoredSize": [
+        772,
+        873
+      ],
+      "originalSha256": "d05861b4ffff201430a9ed74ad9eee9b5628d8f28e3d53552e792e397720ff5b",
+      "restoredSha256": "cf12234869ded392fc5554f54c3eb349d9b44935fbca51d1139bcc2e359eec36",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-tablet-h2o-original.png",
+      "restored": "screens/igcse-tablet-h2o-restored.png",
+      "originalSize": [
+        772,
+        651
+      ],
+      "restoredSize": [
+        772,
+        650
+      ],
+      "originalSha256": "572766db256ec9244dee98a907504fea71c685018931ffd22976de34e21ad248",
+      "restoredSha256": "e7d6c9b5444302fbd4cf77641d5360f3775462046a9c1473a74f58da6ca7ebbf",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-tablet-mgo-feedback-original.png",
+      "restored": "screens/igcse-tablet-mgo-feedback-restored.png",
+      "originalSize": [
+        772,
+        893
+      ],
+      "restoredSize": [
+        772,
+        892
+      ],
+      "originalSha256": "0bbe2c30ac1c64176445fa8008d19d331ca27f3430b4b7f265dc7ca0b3f19507",
+      "restoredSha256": "de4d5743a592abfc32b9ab88ad42ca3a3a42e80404e6d11f88d8634f3e1ac699",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    },
+    {
+      "original": "screens/igcse-tablet-mgo-original.png",
+      "restored": "screens/igcse-tablet-mgo-restored.png",
+      "originalSize": [
+        772,
+        651
+      ],
+      "restoredSize": [
+        772,
+        650
+      ],
+      "originalSha256": "1a7419eda4229f264e6d1bba0deb886892da512613dfee5caa6e265f3bb88028",
+      "restoredSha256": "927a1d3a09d310a26231451e0c288c0671404adad8184c5eecc1ac2242027a27",
+      "rasterComparison": "Not compared: screenshot crop rounding differs by absolute page origin; browser source geometry is checked independently."
+    }
+  ],
+  "inspected": [
+    {
+      "files": [
+        "alevel-desktop-h2o-original.png",
+        "alevel-desktop-h2o-restored.png"
+      ],
+      "finding": "Centered original palette wrapping/order, cyan primary action, navy 520px canvas and 330px pane match; water has two shared pairs and two oxygen lone pairs."
+    },
+    {
+      "files": [
+        "alevel-mobile-mgo-original.png",
+        "alevel-mobile-mgo-restored.png"
+      ],
+      "finding": "Original mobile font sizing/centering, source pane rounding and 280px drawing surface restored. Mg clipping in the source narrow view is retained; separate fitted answer and magnified scrolling remain available."
+    },
+    {
+      "files": [
+        "igcse-tablet-h2o-original.png",
+        "igcse-tablet-h2o-restored.png"
+      ],
+      "finding": "IGCSE 16-element two-symbol palette and stacked canvas/marking topology match tablet source. Minor PNG crop rounding follows different absolute page tops; exact DOM dimensions/styles match."
+    },
+    {
+      "files": [
+        "alevel-above-breakpoint-mgo-restored.png",
+        "alevel-below-breakpoint-mgo-restored.png"
+      ],
+      "finding": "At1100px source side pane/520px height appears; at1099px source pane stacks. Both-ion charge signs/electron origin symbols retain original source geometry."
+    },
+    {
+      "files": [
+        "alevel-desktop-phosphorus-pentachloride-restored.png",
+        "alevel-desktop-sulfur-hexafluoride-restored.png"
+      ],
+      "finding": "Source 100-unit central shells and five/six complete shared pairs remain legible, with three lone pairs on each halogen. No substituted octet-only layout."
+    },
+    {
+      "files": [
+        "alevel-nitrate-ion-answer-circles-true-original.png",
+        "alevel-nitrate-ion-answer-circles-true-restored.png",
+        "igcse-potassium-iodide-answer-circles-false-restored.png"
+      ],
+      "finding": "White Comfortaa checked answers retain source fit/charge/bracket/glyph geometry; nitrate origin triangle is preserved, KI has separate K+ and I- bracket groups and a complete iodide octet with circles hidden."
+    },
+    {
+      "files": [
+        "alevel-atom-drag-preview-original.png",
+        "alevel-atom-drag-preview-restored.png",
+        "igcse-mobile-trusted-touch-restored.png"
+      ],
+      "finding": "Moved-atom preview matches original geometry before commit; trusted touch atom placement and single circle-toggle commit render correctly."
+    },
+    {
+      "files": [
+        "alevel-mobile-non-drag-controls.png"
+      ],
+      "finding": "Open alternatives show readable stacked element/coordinate, electron region/symbol/slot, charge, movement and relocation controls. Magnified canvas scrolls horizontally while page/form controls fit. Intentionally incorrect water fixture produces corrective chemistry feedback."
+    }
+  ],
+  "limits": [
+    "Editor/reference harness evidence does not establish shared attempt/timing/save/revision acceptance.",
+    "Answer crops normalize renderer size to600x400; E01 owns responsive native-dialog gates."
+  ]
+}

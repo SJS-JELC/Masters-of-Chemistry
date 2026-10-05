@@ -1,0 +1,1511 @@
+{
+  "schemaVersion": 1,
+  "runId": "MASTERS-REACT-20261002",
+  "stage": "S3",
+  "agentId": "A01",
+  "status": "PASS",
+  "stageStatus": "awaiting_root_review",
+  "generatedAt": "2026-10-03T02:02:25.126Z",
+  "modelEvidence": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveModel": null,
+    "effectiveEffort": null,
+    "rootModel": null,
+    "actualUsage": null
+  },
+  "workers": [
+    {
+      "agentId": "A11",
+      "jobId": "S3-ELECTRONS",
+      "status": "validated",
+      "result": "PASS",
+      "workerDisposition": "PASS",
+      "evidence": "validation/s3/electrons/completion.json",
+      "foremanEvidence": "validation/s3/integration/owned-verification.json"
+    },
+    {
+      "agentId": "A12",
+      "jobId": "S3-THERMOCHEMISTRY",
+      "status": "validated",
+      "result": "PASS",
+      "workerDisposition": "ESCALATE",
+      "evidence": "validation/s3/thermochemistry/completion.json",
+      "foremanEvidence": "validation/s3/integration/owned-verification.json",
+      "resolution": "Owned checks pass; independently verified native tail resolves pending timing. Original worker ESCALATE remains unchanged."
+    },
+    {
+      "agentId": "A13",
+      "jobId": "S3-ENERGY",
+      "status": "validated",
+      "result": "PASS",
+      "workerDisposition": "ESCALATE",
+      "evidence": "validation/s3/energy/completion.json",
+      "foremanEvidence": "validation/s3/integration/owned-verification.json",
+      "resolution": "Owned checks pass; independently verified native tail resolves pending timing. Original worker ESCALATE remains unchanged."
+    },
+    {
+      "agentId": "A14",
+      "jobId": "S3-TITRATION",
+      "status": "validated",
+      "result": "PASS",
+      "workerDisposition": "PASS",
+      "evidence": "validation/s3/titration/completion.json",
+      "foremanEvidence": "validation/s3/integration/owned-verification.json"
+    },
+    {
+      "agentId": "A15",
+      "jobId": "S3-IGCSE-DOTCROSS",
+      "status": "validated",
+      "result": "PASS",
+      "workerDisposition": "PASS",
+      "evidence": "validation/s3/igcse-dot-cross/completion.json",
+      "foremanEvidence": "validation/s3/integration/owned-verification.json"
+    },
+    {
+      "agentId": "A16",
+      "jobId": "S3-OLYMPIAD-C3L6",
+      "status": "validated",
+      "result": "PASS",
+      "workerDisposition": "PASS",
+      "evidence": "validation/s3/c3l6/completion.json",
+      "foremanEvidence": "validation/s3/integration/owned-verification.json"
+    }
+  ],
+  "reviews": [
+    {
+      "agentId": "A06",
+      "jobId": "S3-REVIEW-TIMING",
+      "status": "validated",
+      "result": "PASS",
+      "evidence": "validation/s3/review-timing/completion.json"
+    },
+    {
+      "agentId": "A07",
+      "jobId": "S3-REVIEW-CO",
+      "status": "validated",
+      "result": "PASS",
+      "evidence": "validation/s3/review-co/completion.json"
+    },
+    {
+      "agentId": "A07",
+      "jobId": "S3-REVIEW-C3-NAME",
+      "status": "validated",
+      "result": "PASS",
+      "evidence": "validation/s3/review-c3-name/completion.json"
+    }
+  ],
+  "coverage": {
+    "sourceActivities": 12,
+    "enabledCompleteActivities": 12,
+    "curriculumActivities": 11,
+    "olympiadActivities": 1,
+    "revisionTargets": 41,
+    "courseTargets": {
+      "alevel": 24,
+      "igcse": 17
+    },
+    "gems": 16,
+    "sourceFingerprints": 237,
+    "historicalIdentityEntries": 894,
+    "bankAuthority": "validation/s0/inventory/coverage-manifest.json",
+    "proof": "validation/s3/integration/complete-registration.test.ts",
+    "activities": {
+      "acid": {
+        "activeTemplates": 38,
+        "routes": 63,
+        "historicalTemplates": 33,
+        "sourceStage": "S2"
+      },
+      "structure": {
+        "comparisons": 9,
+        "rubricPoints": 44,
+        "level2Sections": 7,
+        "level3Sections": 1,
+        "sourceStage": "S2"
+      },
+      "alevelDotCross": {
+        "records": 91,
+        "sourceStage": "S2"
+      },
+      "electronsBonding": {
+        "fixedQuestions": 14,
+        "maskedSeedFixtures": 2880
+      },
+      "electronConfigurations": {
+        "species": 71,
+        "atoms": 36,
+        "mainVariants": 564,
+        "levelPools": [
+          156,
+          340,
+          564
+        ],
+        "level3MatchingFamilies": 10,
+        "reviewedModels": 142,
+        "periodicReferenceEntries": 114,
+        "sourceOmittedCells": 4
+      },
+      "calorimetry": {
+        "templates": 16,
+        "families": 4,
+        "finiteConfigurations": 4512,
+        "seededOutputs": 18048,
+        "reactingAmountChecks": 10416,
+        "frameworkChecks": 39000
+      },
+      "bondEnthalpy": {
+        "balancedReactions": 16,
+        "families": 2,
+        "outputs": 5248,
+        "reviewedCOException": true
+      },
+      "energy": {
+        "activeRecords": 54,
+        "levels": {
+          "1": 28,
+          "2": 26
+        },
+        "profileModels": 18,
+        "supportedLevels": [
+          1,
+          2
+        ],
+        "level3Enabled": false
+      },
+      "practical": {
+        "records": 14,
+        "levels": {
+          "2": 8,
+          "3": 6
+        }
+      },
+      "titration": {
+        "records": 36,
+        "levels": {
+          "2": 18,
+          "3": 18
+        },
+        "idleAllowanceMs": 600000
+      },
+      "igcseDotCross": {
+        "records": 72,
+        "routes": 5,
+        "separateSourceBank": true,
+        "alevelRegressionRecords": 91
+      },
+      "c3l6": {
+        "classifications": 10,
+        "hydrolysisSlots": 12,
+        "hydrolysisUnits": 7,
+        "networkSlots": 9,
+        "acceptedGraphs": 23,
+        "interchangeableEF": true,
+        "GKAlternatives": true,
+        "sourceFiles": 51,
+        "copiedAssets": 44,
+        "metadataOnlyQualifiedAssets": 1,
+        "mastery": false,
+        "revision": false,
+        "gems": false
+      }
+    }
+  },
+  "architecture": {
+    "sharedOwner": "A01",
+    "decisions": [
+      "All12 real complete source activities; one shared curriculum controller/clock/repository/session, separately lazy Olympiad host and completion channel. No legacy page/iframe or new prototype activation.",
+      "Immutable questionID+seed and first response/marks/time/evidence preserved through corrections, reveals, rubric review and reload; corrupt serialization differs from assessably wrong chemistry.",
+      "Optional numeric framework retains original equations/fractions/blank positions and final-answer binding; requested hint assistance persists, intermediate drafts/checks remain source-transient and unmarked.",
+      "Original selectable correction phrases restored with source ranges and safe response serialization. Suitable multiline automatic text and self-rubric remain distinct.",
+      "Self-rubric model statements now Met/Not met/Partly met; zero-weight information has no accuracy prefix.",
+      "C3 stage commands/source-confirmed Restart and genuine saved-chemistry revalidation keep Olympiad outside gems/mastery/revision/time/evidence.",
+      "114-cell source periodic reference retained, including four deliberately unnamed source cells; no expanded question scope.",
+      "Only source-approved presentation correction exceptions: CO missing carbon-minus vector; C3 hydrolysis compound qualified as model instead of incorrect real-species claim. Existing graphs/IDs/answers/masses unchanged.",
+      "Paused player hides response controls until explicit resume; disposed old player cannot overwrite fresh attempt; teacher/review never writes pupil evidence.",
+      "Both complete static course roots under URL prefixes; all banks and specialist editors lazy; no dependency change or publishing."
+    ],
+    "sharedSourceChanges": [
+      "contracts/question.ts: optional source working-framework and correction segments",
+      "contracts/olympiad.ts: typed selected slots and source Restart",
+      "ActivityHost/ProductionFoundation/registry/OlympiadHost: all registrations/editor mounts and isolated completion channel",
+      "DotCrossEditor: source-specific IGCSE2tools/16elements versus Alevel3tools/18elements; chemistry/history/layout unchanged",
+      "ResponseControl/Content/QuestionPlayer: accessible labels, shared optional scaffolds, image internal scrolling and rubric semantics"
+    ],
+    "rootControls": "Six initial hashes unchanged; contract/lock/baseline untouched."
+  },
+  "chemistryExceptions": [
+    {
+      "id": "CO-MISSING-CARBON-CHARGE",
+      "status": "resolved",
+      "independentReview": "validation/s3/review-co/provenance.json",
+      "implementation": "src/chemistry/thermochemistry/reviewed-co-svg.ts",
+      "scope": "One rounded-minus vector; removal recovers sourceSVG byte-for-byte. [C-]#[O+], netzero, balanced CO+2H2 to CH4O and deltaH-119 unchanged."
+    },
+    {
+      "id": "C3-NAME-STRUCTURE",
+      "status": "resolved",
+      "independentReview": "validation/s3/review-c3-name/wording-disposition.json",
+      "implementation": "src/activities/olympiad/c3l6/qualification.json",
+      "scope": "C5/Mr114 hydrazone model; actual gyromitrin C4/Mr100.12 primary reference. Exact truthful student qualification does not reveal D; teacher note records inherited name. Only public SVG title/desc changed; paths/answers/IDs unchanged."
+    }
+  ],
+  "validation": {
+    "deterministic": {
+      "status": "PASS",
+      "tests": 99,
+      "groups": [
+        40,
+        59
+      ],
+      "evidence": "validation/s3/integration/foreman-checks.json",
+      "ownedHashes": [
+        {
+          "file": "electrons/output-fingerprints.json",
+          "count": 22,
+          "status": "PASS"
+        },
+        {
+          "file": "thermochemistry/output-fingerprints.json",
+          "count": 18,
+          "status": "PASS"
+        },
+        {
+          "file": "energy/output-fingerprints.json",
+          "count": 17,
+          "status": "PASS"
+        },
+        {
+          "file": "titration/output-fingerprints.json",
+          "count": 13,
+          "status": "PASS"
+        },
+        {
+          "file": "igcse-dot-cross/final-output-fingerprints.json",
+          "count": 6,
+          "status": "PASS"
+        },
+        {
+          "file": "c3l6/output-fingerprints.json",
+          "count": 62,
+          "status": "PASS"
+        },
+        {
+          "id": "CO-independent-reviewed-exception",
+          "status": "PASS",
+          "sameOriginalBytesAfterRemovingOneApprovedPath": true,
+          "unchangedCalculation": -119
+        }
+      ],
+      "sourceAndControls": "237 original source fingerprints and6 immutable initial controls"
+    },
+    "chemistryReviews": [
+      "validation/s3/electrons/chemistry-render-review.md",
+      "validation/s3/thermochemistry/CHEMISTRY-REVIEW.md",
+      "validation/s3/energy/chemistry-render-review.md",
+      "validation/s3/titration/chemistry-review.md",
+      "validation/s3/igcse-dot-cross/CHEMISTRY-RENDER-REVIEW.md",
+      "validation/s3/c3l6/chemistry-review.md"
+    ],
+    "browser": {
+      "prefix": "validation/s3/integration/build-browser.json",
+      "all41ProductionTargets": "validation/s3/integration/all-host-browser.json",
+      "sharedRootFix": "validation/s3/integration/browser-root-fix.json",
+      "assignedActualControllerRepositorySession": "Each retained worker browser-results/verification evidence; real editors/keyboard/touch/teacher/revision ADD ALL/correction/pause/restore/Next, no independent mocks"
+    },
+    "native": {
+      "evidence": "validation/s3/review-timing/completion.json",
+      "disposition": "validation/s3/review-timing/disposition.json",
+      "energyPractical": "validation/s3/review-timing/energy-disposition.json",
+      "realWallMs": 602244,
+      "activeDeltaMs": 600000,
+      "firstFrozenActiveMs": 610428,
+      "criticalUnchangedHashes": 18,
+      "rawFailuresRetained": true,
+      "scope": "Actual native trusted boundaries/background/minimised/focus-only exclusion/idle/first history/Next. Repository transfer PASS; full statistics chart later."
+    },
+    "builds": {
+      "evidence": "validation/s3/integration/build-check.json",
+      "courses": [
+        {
+          "course": "alevel",
+          "initialShellJavascriptGzipBytes": 142405,
+          "budgetBytes": 204800
+        },
+        {
+          "course": "igcse",
+          "initialShellJavascriptGzipBytes": 142403,
+          "budgetBytes": 204800
+        }
+      ],
+      "dependencyChanges": 0
+    },
+    "protectedOriginals": {
+      "status": "PASS",
+      "fileCount": 1317,
+      "changed": [],
+      "metadataOnly": 523,
+      "evidence": "validation/original-app-check.json"
+    },
+    "rendered": {
+      "scope": "Assigned substantive all-bank model inspection retained; foreman independently inspected representative actual source diagrams/mobile scaffolds/first rubric output/qualified model.",
+      "foremanInspected": [
+        "validation/s3/integration/rubric-met-not-met.png",
+        "validation/s3/electrons/mobile-energy-touch-spin.png",
+        "validation/s3/thermochemistry/mobile-thermometers.png",
+        "validation/s3/energy/profile-mobile-endo.png",
+        "validation/s3/titration/final-mobile-legible-model.png",
+        "validation/s3/igcse-dot-cross/ionic-level2-infer-formula-mobile.png",
+        "validation/s3/review-co/mobile-co-charge-detail.png",
+        "validation/s3/c3l6/qualified-hydrazone-student-mobile.png"
+      ]
+    },
+    "commands": [
+      "node scripts/verify-s3.mjs --build",
+      "node validation/s3/integration/verify-owned.mjs",
+      "node validation/s3/integration/build-browser.mjs",
+      "node validation/s3/integration/all-host-browser.mjs",
+      "node validation/s3/review-timing/verify-results.mjs"
+    ]
+  },
+  "resolvedFailures": [
+    {
+      "id": "AGGREGATE-CWD",
+      "evidence": "validation/s3/integration/foreman-unit-initial.json",
+      "resolution": "95/98 initially:3 source fixture paths needed project cwd, S1goldens require workspace. Runner splits scopes;99/99 final. Original S2fixed3-activity test remains retained and content fixture ported; full12/41 independently tested."
+    },
+    {
+      "id": "PRODUCTION-NAV-SCOPE",
+      "evidence": "validation/s3/integration/build-browser-initial.json",
+      "resolution": "Copied S2nav assertion updated to exact6 registrations percourse; actual final prefixes PASS."
+    },
+    {
+      "id": "NESTED-PERIODIC-DIALOG",
+      "evidence": "validation/s3/integration/all-host-browser-initial.json",
+      "resolution": "Question header selector scoped from nested dialog; exact actual provider question-code expectations verify all41 mountings."
+    },
+    {
+      "id": "NATIVE-PROBES",
+      "evidence": "validation/s3/review-timing/HANDOVER.md",
+      "resolution": "Independent retained raw evidence separates clean trusted suspension from document replacement and unrelated source guard; actual focused ArrowLeft resolves correct trusted-blur stop."
+    }
+  ],
+  "limitations": [
+    {
+      "id": "S4-INTEGRATION",
+      "disposition": "S4",
+      "detail": "Complete statistics/chart transfer, all historical import and link UX, full teacher bank/generator pickers (including4512 calorimetry routes), compact focused practice/mobile references and teacher workspace removal remain S4. Complete banks/codecs already exist; no data truncated."
+    },
+    {
+      "id": "AUTHORING-RELEASE",
+      "disposition": "S4/S5",
+      "detail": "Authoring scaffold/development component catalogue proof, explicit checked runtime-only release inventories and independent final accessibility/performance/chemistry regression remain root-gated later stages."
+    },
+    {
+      "id": "C3-IMPORT-UX",
+      "disposition": "S4",
+      "detail": "Pure substantive v1/v2/v3 saved-graph revalidation is implemented/tested; production legacy import workflow/receipts remain S4. Untimed/absent historical fields remain absent."
+    },
+    {
+      "id": "SOURCE-CLOUD",
+      "disposition": "evidence-limit",
+      "detail": "523 original offline placeholders outside src remain metadata-only; all source code and237 inventory fingerprints readable/unchanged. No hydration attempted."
+    },
+    {
+      "id": "OCR-CURRENT-PDF",
+      "disposition": "retained-S2-limit",
+      "detail": "Current departmental OCR3.1 May2026 mapping and retained official source consulted; no successful line-for-line current large-PDF audit claimed. IGCSE retains its own source curriculum authority."
+    },
+    {
+      "id": "NATIVE-AMBIGUITIES",
+      "disposition": "retained-explicit-limit",
+      "detail": "Original S2 A07 replaced-document996ms and S3 A12 headless9005vs1001 intervals remain unclassified. Clean native boundaries pass independently; failed Vite document guards/broad hashes/Tab+trusted-blur probes remain retained. A11 actual60/180s idle is headless, with unchanged shared native-binding evidence carried; no A11-specific native session claimed.",
+      "evidence": "validation/s3/review-timing/HANDOVER.md"
+    },
+    {
+      "id": "CANONICAL-PYTHON",
+      "disposition": "explicit-environment-limit",
+      "detail": "Managed exact Python3.14.2/RDKit2026.03.6 profile unavailable. Supplementary readonly Python3.13.5/RDKit2025.09.1 invariants are explicitly separate; no full canonical glyph regeneration claimed. CO is independently reviewed one-vector correction; C3 only title/desc changes."
+    }
+  ],
+  "nextPackages": "docs/architecture/s4-work-packages.md",
+  "rootDecisionNeeded": "Accept or request bounded S3 fixes, then explicitly authorise the four exact S4 packages. No S4 dispatched.",
+  "changes": {
+    "inventory": "validation/s3/file-inventory.json",
+    "added": 699,
+    "modified": 17,
+    "removed": 0,
+    "sourceChanges": [
+      {
+        "path": "src/activities/alevel/electron-configurations/index.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "f2fef50ba1d887e4155394642d0efabeb74fc57832a47e7744b98acd81b81816",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electron-configurations/marking.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "52d686c8e5d9cb4fa6489f3f7d66f3fe62a53179de275e877959c8f92398dd6e",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electron-configurations/provider.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "2889233e713a975c947a7e37d1110d01c307622ebefa83835874c07208b57a8e",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/core.d.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/core.js",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/data.d.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/data.js",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "08192144a9e9673473df1c60f69c9dc64397646518882fbc95adffea49831c4c",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/index.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "12f05a0c485a2b4a394d4b17f5c6afe9f8b9518a7650246c5bac38b22b4ea901",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/marking.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "00ba907b77c9a33c0e2901d399bf4434959591b81eed2ab23011f69c1862615f",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/electrons-bonding/provider.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "728790d4c7ff918bca56271a12ed446fa2dfb1b9306336d0b7fd445589cc1fb9",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/ph-titration-curves/bank.json",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/ph-titration-curves/bank.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/ph-titration-curves/index.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "545f5d27ed1b8fb4f5cb1ec2bf61a1b8a9562a3db01b8fa3f6a2ed5b009d665e",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/ph-titration-curves/marking.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "8846d2b08dd7d40979c799b9af399ad3e3807d6ac3df16d4d60943afd655c717",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/alevel/ph-titration-curves/provider.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "801391e3c1d091c4ab0fede2d4d14274cf9f9f3a9bcdc2902d6c83c2bb9fec29",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/bond-enthalpy/index.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "414e72067fda940b7f4dd8e57779c42a2d01b19d6358352ffcbf709e7b6ebe40",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/bond-enthalpy/marking.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "df10d76911960806baa32a8c2969f7beda5e5c528099af50f0604244ac710384",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/bond-enthalpy/provider.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "a318ec1bb0d81285ef2cbe180d0000a143003d63fedec313711f54ae0b608a20",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/calorimetry/index.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "084eae51d5ed2b7c00b813d97342ab29c469d887bfe05a4d3594b45fac1bb563",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/calorimetry/marking.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "5e78880c76a2404690a27c676d152a33cd5a8b15a9f0e836e7e771113584ae1a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/calorimetry/provider.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "fdaace21084a554fccfa7f765778cd6b3eb4274ce2231ae3756cea34adb763b8",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/dot-and-cross/bank.d.ts",
+        "status": "added",
+        "owner": "A15",
+        "sha256": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/dot-and-cross/bank.js",
+        "status": "added",
+        "owner": "A15",
+        "sha256": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/dot-and-cross/index.ts",
+        "status": "added",
+        "owner": "A15",
+        "sha256": "d72a2c12a5719a846c59b2ae0d4af1826aab9e25ea31017acf6482f12f380f73",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/dot-and-cross/marking.ts",
+        "status": "added",
+        "owner": "A15",
+        "sha256": "24758cff024c48f3fdf8366c04a2b05bd5b8ce7baec35f81ddc3a5543d9ccc50",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/dot-and-cross/provider.ts",
+        "status": "added",
+        "owner": "A15",
+        "sha256": "2e3b51c0d94a89c9a4b6c471930b500ac88116bf050ae8bdd2b40d0436334ac8",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/dot-and-cross/types.ts",
+        "status": "added",
+        "owner": "A15",
+        "sha256": "f53d861984ce4b49b710e1ac5f8a8d009f6e846f59e60356059070cf10f25e37",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/data.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "3ddd28a3c096a32649af17cc4d72bc8aea88a8d7e2a4fa176415a12edf5e1185",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/index.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "9e7aef3ea37b8eb42f078f5f37f52128b6cab26597bcb1d347ffb06e14a9b02c",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/marking.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "dba3cb3647323bcfe6fed025b5253870ca226c59746065a2991a7c85507c1b19",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/provider.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "4f743c61d765e5ba541fd47856f08f056b6fa91df00e7ce4fab9f844fb451a79",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/source-core.d.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/source-core.js",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energetics-practical/types.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "a04bce1d245669e29cb0ab6d7d25c4c8fdaeb35dc1872a25baa27b0e920956d7",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/data.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "29f00cb4f48625b01770f5cff0776541eb180777d12f0361b4bfe481be546abe",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/index.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "43f372bbb8e7c761bb55f28a61ab73395b05f1eefa05a66f174d00fdebba1b63",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/marking.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "c60690a9c159ea8c0a384dabc3df459dc674f7e5b88612143316f0e65679b672",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/provider.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "7f7e57ba567906137936275bd328ee03ee1ced06aad83b712dbb2767df58682a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/source-core.d.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/source-core.js",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/igcse/energy-enthalpy/types.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "95f9534e4669e67aee3590c5675e6c46bbd52a18be815e01a2dfb6af63d24a4c",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p2.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p2.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-p1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-r1.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/b/alarm-pheromone-skeletal-notes.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/b/allantoin-skeletal-notes.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitra-esculenta.png",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/b/honey-bee.png",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/c/network.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-01.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-02.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-03.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-04.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-05.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-06.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-07.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-08.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-09.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-10.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-11.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-12.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-13.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-14.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-15.svg",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/bank.json",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/c3l6.css",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "9ff7b59ac39c440add56c0e19336352353a014ecbaf1f49bb40eaa87f1f2371a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/C3L6View.tsx",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "157708dd501def9732e61505952f238afdb52f431b008ed5055743149041c28a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/content.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "0f7a5784f3a1d00df6b274272b95e03a6ac2c651bb20808577e4716618a306c4",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/dependencies.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "eac69b39439f5f4da627f7b21d8617dd8fc15afa1d12f5b645f3ff853a3058b1",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/index.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "7bb6517ff8c791da0a2af55c969a8fbf8bea871decda4909d9614099c64eb253",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/legacy.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "d821e0d3e852e68a6b5184b385aad7accf18b43ab599dc5daaee8ddff81d0269",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/panels.json",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/policy.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "4224aad6deea33039b40bc65949ad6b0f975adcdf7f567ceffd87e37fdcb54ab",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/qualification.json",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "f0f6bab12b5312b81cfa54edf48ab5b2c449d3263282ea134927414ab1b6b1f1",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/qualification.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "e68c91810906c047c46074cd22e7642c10d60791dae356b4994f4d5d54acc7cb",
+        "priorSha256": null
+      },
+      {
+        "path": "src/activities/olympiad/c3l6/source-bank.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "8e6c196313d4f4bb336307cf837b01b4ffc4836b05bcf63f9f2b76c8fff61c4a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/core.d.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/core.js",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/data.d.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/data.js",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "d6234b008a941af0580339fc469d6426f17aefd6633a54a318dc53a1ae39ee24",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/display.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "5be323f235f5d793906b1aee223ff55485f068b08c59e65a5e1a04b538db9977",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/engine.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "94d5091c32485dbdaad67037fb3ec68bf07280e73b4ac688d3aa7e26edcff5f7",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/identity.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "0bbfb6e56cd9031f98ff41b018411f72af820074657d8d04d83a6a620f9abdb3",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/periodic-data.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "8c416a0ebde7b2ac86183062609eb63ae3c201c404230719e588ed4a86137c81",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/electron-configuration/provenance.ts",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/energy-profile/index.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "e86eb0caf877ac52500c336237da5de57a98ed859600c5843ca13d0312a5e8f4",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/energy-profile/svg.ts",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "a55093bcf2aa747323cc982aa923294c40b68d9fac5b8ba56bc99621603d4d99",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/molecule/core.d.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/molecule/core.js",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/molecule/engine.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "079e9ffd41952bb9d9bde0bc0e4fd81b4662b0d0556d02a8161a8341465d4cfb",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/bond-enthalpy-core.d.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/bond-enthalpy-core.js",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/bond-enthalpy-data.js",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/calorimetry-core.d.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/calorimetry-core.js",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/calorimetry-data.js",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/framework.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "ba39dbcc79a84eafca6b7d3636eec89da9ab44f17ab4fe9ae6e6acd36942699b",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/identity.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "92527b2e1b0df2f3d03f7b7808ee43816044fc48cf4a43d9b26dfae2b5c61d7c",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/marking.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "580a9bf169730095e3c37f88ec48326f80fc3eeacc9b4450bc7ac32903359858",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/presentation.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "6819b16e3b281369cbfb7b11a938402b4eee48217b0e8ebe7b1e9678fe656aad",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/reviewed-co-svg.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "27f7dd2df015598baf3d56ba7cab7866eb6aba29129c2c940bfd7aafefaef72d",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/thermochemistry/types.ts",
+        "status": "added",
+        "owner": "A12 (CO single reviewed file A07)",
+        "sha256": "854ff608ec7e581bbe7af9699fe92dcba2ed8454da86fbefa48c4cac7db2a6c5",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/titration-curve/core.d.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/titration-curve/core.js",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/titration-curve/engine.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "51a1c16b3497139fa94eadcb40659a3d7a652d087acccc640b7ce1fbf4e65c9a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/titration-curve/model.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "e7cbb83db0c198f6312ccbb5ee437d98eaef0b8f129ef9f2e5b7c8e76e669698",
+        "priorSha256": null
+      },
+      {
+        "path": "src/chemistry/titration-curve/types.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "f2dcc78961284f6121583ee91ce72685cad43455cc70e7c2cbf5705b51e5d819",
+        "priorSha256": null
+      },
+      {
+        "path": "src/contracts/olympiad.ts",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "466172e7907d64dd3e364b5a8f4e7a976f8060bc2c629269735d613e6789286f",
+        "priorSha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518"
+      },
+      {
+        "path": "src/contracts/question.ts",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "df4c32f3696f6659ffcd5134c6e6ad30b73851e6eea5acc24853f2abb7ce24c7",
+        "priorSha256": "724e6f11676d465fb80fa7088d76c18e2072a5d28f4453fb2fd368532e3fc157"
+      },
+      {
+        "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "e0685e77fc9b819274714876feb32b9ea27effbbbf98c8d7c2dc4964e79f543d",
+        "priorSha256": "fc9d2cf6b87050ee852d4cd0e0602a33656f61655c24e0d9e57e81d700133bef"
+      },
+      {
+        "path": "src/editors/electron-configuration/index.tsx",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "6158d3f34d19f4d9c98ba95285fb27546c8a8d2270412d4a2243ea6080d14f8a",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/electron-configuration/PeriodicReference.tsx",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "7c0bb4b17b871f8f807eaaf2a7afcb1ce0fcd11fcdf275cbeb9645fc0c172f61",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/electron-configuration/styles.css",
+        "status": "added",
+        "owner": "A11",
+        "sha256": "866bc7d7cc7c22b7f2fbc4bbf24586e899f388330c125fe8d4ef6974a5eb4fca",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/energy-profile/index.tsx",
+        "status": "added",
+        "owner": "A13",
+        "sha256": "ece2b789923f140dd2afaca8a997ca3900196ccfd26f6d472f27ccac27d6ef54",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/molecule/index.ts",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "ef50321d6c11325ea9882438caab885b8887b09e8452dc53afddfa9ae31215f5",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/molecule/molecule.css",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "af4cc66fcd8eab8004139fa38e9e7c89e1d38907577fc056e301ec0d020d1406",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/molecule/MoleculeEditor.tsx",
+        "status": "added",
+        "owner": "A16",
+        "sha256": "6d770e36c3e90356f515b9f2a63e1c49d2b30086b758936d7d034b2af7497b64",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/titration-curve/index.ts",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "2e228f5a1ed935793c1803793ed589b1b11624319d0ba4bbcfa6bb26bd2eedc8",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/titration-curve/titration.css",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "ae349b113200397e18183e46e06684913a2c7b7b8f8072071dcd04d37cef172f",
+        "priorSha256": null
+      },
+      {
+        "path": "src/editors/titration-curve/TitrationCurveEditor.tsx",
+        "status": "added",
+        "owner": "A14",
+        "sha256": "174211f89f1a2d543b7009310ceaf3bc138c77d4518b620594a9ec139a23b906",
+        "priorSha256": null
+      },
+      {
+        "path": "src/foundation/ActivityHost.tsx",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "c6bf43df9a035de75fce5c84bd2d265df014c6989a3d6966f3e8e7e0a571d4b6",
+        "priorSha256": "12c7bbe9a6278fcc28fa2bafb18bee451049495e620ea6283a12c7f7d8a3946c"
+      },
+      {
+        "path": "src/foundation/OlympiadHost.tsx",
+        "status": "added",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "aed9e01de4e16914fbdc60c2500378e3a2ca85a399b23131c3630f961c5a8575",
+        "priorSha256": null
+      },
+      {
+        "path": "src/foundation/ProductionFoundation.tsx",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "0634bdae26982f908504025411ed9fce442ea68851808f759d4785685584d60e",
+        "priorSha256": "ecb8a921ce79cf97767bc0c355a46f447c23cdb4da298f7d68799a1e3942a6fa"
+      },
+      {
+        "path": "src/foundation/registry.ts",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "b4e8da4fe12e74b2f5fc5f75740f16a39891d54f34c5a7f4fab23acf8b26f9bc",
+        "priorSha256": "adeccd3a2be2461d03b4107ba4fa4726694afeeeb34d4c2a4a55c058ec923c63"
+      },
+      {
+        "path": "src/styles/platform.css",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "bdb56e000f81177934d7b59136de09d2b5dac52640113cb9e24e2840df94df18",
+        "priorSha256": "08eb76f711f214b2484ae02a1f7110ca5534b24ed310974cd5a2f194c9fd0f8c"
+      },
+      {
+        "path": "src/ui/assessment-label.ts",
+        "status": "added",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "92ff545e5153c51f0381a4a5e3b152614b7d3cfe34c1761b2ce4699f8a791479",
+        "priorSha256": null
+      },
+      {
+        "path": "src/ui/Content.tsx",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "4a3788123c707ff596c0e7882e9eeaa4c1b7f9e1dfcc523ae044a0c635e48a72",
+        "priorSha256": "6b706db34750408129bbdb9389bf57d6bb1991ca9f0dd29f62a6b25dfe9dd021"
+      },
+      {
+        "path": "src/ui/CorrectionSegments.tsx",
+        "status": "added",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "971effa69aa02ac9064665b635d65cf380ae1041f7e52807f3ea27613a5bcc64",
+        "priorSha256": null
+      },
+      {
+        "path": "src/ui/NumericWorkingControl.tsx",
+        "status": "added",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "c155c987144091a80c039e6266fe955ccc2f91a3a075a717cefd07bd21cbe360",
+        "priorSha256": null
+      },
+      {
+        "path": "src/ui/QuestionPlayer.tsx",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "197ed9bfd143fc5d19c56aa7ecdf60b1995a331256096c29c42967860e2df994",
+        "priorSha256": "9ebfeee90c1670a2c7309f3f689a7e86095eed4175fc347c221385cbeb8a799b"
+      },
+      {
+        "path": "src/ui/ResponseControl.tsx",
+        "status": "modified",
+        "owner": "A01 integration or retained earlier stage",
+        "sha256": "090f02bf6de66ad4cb3e136bf85e81789cf9c8562375073aed57ca3f3caa0cec",
+        "priorSha256": "0f1cc9398517c78a01d59b165181f5d4b134cce62de2096b54f2199ab8f98c38"
+      }
+    ],
+    "summary": [
+      "Nine remaining complete activities/real React editors integrate with accepted shared foundation.",
+      "Narrow typed working scaffolds/correction phrases/rubric labels and isolated Olympiad completion preserve pedagogy.",
+      "Two independently reviewed source chemistry presentation corrections; no bank IDs or intended answers replaced.",
+      "All owned/regression/browser/native/build/control/original evidence retained with exact S4 proposal only."
+    ]
+  }
+}

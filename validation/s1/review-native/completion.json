@@ -1,0 +1,30 @@
+{
+  "agentId": "A06",
+  "jobId": "S1-REVIEW-NATIVE",
+  "status": "ESCALATE",
+  "outputPaths": [
+    "validation/s1/review-native/HANDOVER.md",
+    "validation/s1/review-native/native-review.json",
+    "validation/s1/review-native/native-review.mjs",
+    "validation/s1/review-native/original-sequence.png",
+    "validation/s1/review-native/pointer-focused-sequence.png",
+    "validation/s1/review-native/review-complete.png",
+    "validation/s1/review-native/first-execution.json"
+  ],
+  "confidence": 0.97,
+  "reason": "Native test failure is a readonly Edge key-sequence expectation, but current Shift+arrow instructions require a minimal source-owner correction before UX acceptance.",
+  "validation": {
+    "execution": "PASS",
+    "checksPassed": 4,
+    "nativeCtrlA": "Exact 0..45 range confirmed against frozen response",
+    "nonDragOffsets": "Exact 2..9 range records precise",
+    "immutability": "First response/timing/submitted timestamp/assistance unchanged through review and reload",
+    "deduplication": "No history during selection; one record after finish and reload",
+    "plainBrowserBaseline": "Readonly Ctrl+Home/Shift+End stays 0..0; editable baseline selects 0..22; Ctrl+A selects all in both",
+    "pageErrors": 0,
+    "sourceFingerprints": "validation/s1/review-native/native-review.json",
+    "renderedInspection": "Three screenshots visually inspected"
+  },
+  "usage": null,
+  "effectiveModelEffort": "unknown"
+}

@@ -1,0 +1,58 @@
+import type { MarkingPolicy } from '../../../contracts/index.ts';
+import { acidEngine } from './engine.js';
+import { acidSourceQuestion } from './provider.ts';
+
+export const acidMarking: MarkingPolicy = {
+  id: 'acid-v2-numerical',
+  mark(question, responses) {
+    const source = acidSourceQuestion(question.ref);
+    if (
+      question.parts.length !== source.responses.length ||
+      source.responses.some((part, i) => question.parts[i]?.id !== part.key)
+    )
+      throw Error('Acid question parts disagree with their source identity.');
+    const invalid = source.responses.filter((part) => {
+      const response = responses[part.key];
+      return !response || response.kind !== 'numeric' || response.unit !== part.unit;
+    });
+    if (invalid.length)
+      return {
+        accepted: false,
+        issues: invalid.map((part) => ({
+          partId: part.key,
+          message: 'Complete every required numerical response before checking.',
+        })),
+      };
+    const values = source.responses.map((part) => {
+      const response = responses[part.key];
+      return response?.kind === 'numeric' ? response.raw : '';
+    });
+    const outcome = acidEngine.score(values, source.responses);
+    if (!outcome.accepted)
+      return {
+        accepted: false,
+        issues: source.responses.map((part) => ({ partId: part.key, message: outcome.reason })),
+      };
+    const points = source.responses.map((part, i) => ({
+      partId: part.key,
+      pointId: 'numerical-value',
+      earned: outcome.results[i]?.status === 'correct' ? 1 : 0,
+      available: 1,
+      message:
+        outcome.results[i]?.status === 'correct'
+          ? 'Correct within the required numerical precision.'
+          : 'This numerical value is incorrect. Compare your calculation with the worked answer.',
+    }));
+    return {
+      accepted: true,
+      marks: {
+        points,
+        earned: points.reduce((sum, point) => sum + point.earned, 0),
+        available: points.length,
+      },
+    };
+  },
+  masteryScore(marks) {
+    return marks.available > 0 && marks.earned === marks.available ? 1 : marks.earned > 0 ? 0.5 : 0;
+  },
+};

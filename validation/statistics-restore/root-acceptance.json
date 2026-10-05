@@ -1,0 +1,41 @@
+{
+  "status": "ACCEPTED",
+  "jobId": "STATS-RESTORE-01",
+  "acceptedAt": "2026-10-04T19:41:10.175Z",
+  "reviewer": "ROOT",
+  "review": [
+    "Statistics model/view/integration diff inspected",
+    "Final desktop and mobile chart renders inspected",
+    "4 current source fingerprints and 23 retained screenshots independently verified",
+    "Both current release inventories revalidated",
+    "Worker model/timing/browser/preservation evidence reviewed"
+  ],
+  "releases": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 7,
+      "runtimeFileCount": 169,
+      "initialJavascriptGzipBytes": 181280,
+      "lazyJavascriptChunks": 72,
+      "manifestSha256": "394fcdcb7e0b1e27619a371b8c4e588a185d7f8dd9bca70adf7f0254b7208f2e",
+      "checkedAt": "2026-10-04T19:41:10.006Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 169,
+      "initialJavascriptGzipBytes": 181280,
+      "lazyJavascriptChunks": 72,
+      "manifestSha256": "49ec7aa293e1a060e449b4540c41a36b06c4598387b435da9932937b49e644e8",
+      "checkedAt": "2026-10-04T19:41:10.175Z"
+    }
+  ],
+  "workerManifest": "completion.json",
+  "limitations": [
+    "Browser verification used Microsoft Edge; dense original mobile chart labels retained with accessible descriptions."
+  ],
+  "environment": "Cleanup paused by user; exact app and root Playwright dependencies restored. Final gates rerun successfully.",
+  "deployed": false
+}

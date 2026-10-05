@@ -1,0 +1,59 @@
+{
+  "family": "build",
+  "id": "EC-GYMGZS",
+  "limit": 180000,
+  "idleGap": 179998,
+  "idleBefore": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 599,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "idleAfter": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 180597,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "stopped": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 180597,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "beforeFreeze": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 181727,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "background": {
+    "hidden": false,
+    "focused": false,
+    "ticks": 4
+  },
+  "hiddenBefore": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 181727,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "hiddenAfter": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 181727,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "afterFreeze": {
+    "attemptId": "f09-f09-practice-EC-GYMGZS-musqxkcr-4tpa",
+    "activeMs": 190728,
+    "idleLimitMs": 180000,
+    "finished": false
+  },
+  "frozenGap": 9001,
+  "thaw": {
+    "hidden": false,
+    "focused": true
+  },
+  "cdpActuallyFrozen": false
+}

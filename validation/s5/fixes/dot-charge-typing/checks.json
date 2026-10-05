@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-10-03T04:44:20.724Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "typecheck",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\node_modules\\typescript\\bin\\tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "prettier-check",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\node_modules\\prettier\\bin\\prettier.cjs",
+        "--check",
+        "src/editors/dot-and-cross/DotCrossEditor.tsx"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "protected-originals",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\protect-originals.mjs",
+        "check"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "activity.test.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\activity.test.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "test_dot_cross_bank.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\test_dot_cross_bank.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "alevel-activity.test.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\alevel-activity.test.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "alevel-test_dot_cross_alevel.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\alevel-test_dot_cross_alevel.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "alevel-test_dot_cross_isomers.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\alevel-test_dot_cross_isomers.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "alevel-test_dot_cross_lithium.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\alevel-test_dot_cross_lithium.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "name": "alevel-test_dot_cross_pair_layout.mjs",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\dot-charge-typing\\alevel-test_dot_cross_pair_layout.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true
+    }
+  ]
+}

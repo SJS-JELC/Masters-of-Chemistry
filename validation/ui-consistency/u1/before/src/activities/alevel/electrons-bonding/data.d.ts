@@ -1,0 +1,2 @@
+export interface BondingRecord {id:string;sourceRow:number;strand:string;spec:string;prompt:string;fields:readonly {label:string;accept:readonly string[];reject:readonly string[]}[];points:readonly string[];feedback:string;hint:string;responseFormat:string;rules?:readonly (readonly string[])[];leafId:string;level:number;sourceQuestion:string;sourceAnswer:string}
+export const data:{title:string;reviewedSourceSha256:string;leafId:string;level:number;questions:readonly BondingRecord[];source:{path:string;sha256:string;rows:number}};

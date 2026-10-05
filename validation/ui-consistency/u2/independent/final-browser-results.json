@@ -1,0 +1,3077 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-03T22:50:05.254Z",
+  "screens": [
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing alevel navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 232,
+      "name": "alevel-landing-1440"
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing igcse navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 43,
+      "name": "igcse-landing-1440"
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1376,
+      "paneMax": "none",
+      "count": 74,
+      "name": "statistics-1440"
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 31,
+      "name": "teacher-1440"
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1376,
+      "paneMax": "none",
+      "count": 25,
+      "name": "import-1440"
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 8,
+      "name": "olympiad-1440"
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 22,
+      "name": "alevel-acid-base-calculations-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1247,
+          "buttons": [
+            {
+              "y": 924.015625,
+              "right": 980.515625,
+              "height": 44
+            },
+            {
+              "y": 924.015625,
+              "right": 1065.359375,
+              "height": 44
+            },
+            {
+              "y": 924.015625,
+              "right": 1168.34375,
+              "height": 44
+            },
+            {
+              "y": 924.015625,
+              "right": 1247,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 29,
+      "name": "igcse-structure-and-bonding-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1247,
+          "buttons": [
+            {
+              "y": 1238.265625,
+              "right": 980.515625,
+              "height": 44
+            },
+            {
+              "y": 1238.265625,
+              "right": 1065.359375,
+              "height": 44
+            },
+            {
+              "y": 1238.265625,
+              "right": 1168.34375,
+              "height": 44
+            },
+            {
+              "y": 1238.265625,
+              "right": 1247,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 81,
+      "name": "alevel-dot-and-cross-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1280,
+          "buttons": [
+            {
+              "y": 1197.65625,
+              "right": 1013.515625,
+              "height": 44
+            },
+            {
+              "y": 1197.65625,
+              "right": 1098.359375,
+              "height": 44
+            },
+            {
+              "y": 1197.65625,
+              "right": 1201.34375,
+              "height": 44
+            },
+            {
+              "y": 1197.65625,
+              "right": 1280,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 77,
+      "name": "igcse-dot-and-cross-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1280,
+          "buttons": [
+            {
+              "y": 1041.65625,
+              "right": 1013.515625,
+              "height": 44
+            },
+            {
+              "y": 1041.65625,
+              "right": 1098.359375,
+              "height": 44
+            },
+            {
+              "y": 1041.65625,
+              "right": 1201.34375,
+              "height": 44
+            },
+            {
+              "y": 1041.65625,
+              "right": 1280,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 56,
+      "name": "alevel-ph-titration-curves-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1247,
+          "buttons": [
+            {
+              "y": 1118.578125,
+              "right": 980.515625,
+              "height": 44
+            },
+            {
+              "y": 1118.578125,
+              "right": 1065.359375,
+              "height": 44
+            },
+            {
+              "y": 1118.578125,
+              "right": 1168.34375,
+              "height": 44
+            },
+            {
+              "y": 1118.578125,
+              "right": 1247,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 23,
+      "name": "igcse-calorimetry-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1257,
+          "buttons": [
+            {
+              "y": 1133.71875,
+              "right": 990.515625,
+              "height": 44
+            },
+            {
+              "y": 1133.71875,
+              "right": 1075.359375,
+              "height": 44
+            },
+            {
+              "y": 1133.71875,
+              "right": 1178.34375,
+              "height": 44
+            },
+            {
+              "y": 1133.71875,
+              "right": 1257,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 23,
+      "name": "igcse-bond-enthalpy-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1257,
+          "buttons": [
+            {
+              "y": 1407.171875,
+              "right": 990.515625,
+              "height": 44
+            },
+            {
+              "y": 1407.171875,
+              "right": 1075.359375,
+              "height": 44
+            },
+            {
+              "y": 1407.171875,
+              "right": 1178.34375,
+              "height": 44
+            },
+            {
+              "y": 1407.171875,
+              "right": 1257,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 13,
+      "name": "alevel-electrons-bonding-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1247,
+          "buttons": [
+            {
+              "y": 550.171875,
+              "right": 980.515625,
+              "height": 44
+            },
+            {
+              "y": 550.171875,
+              "right": 1065.359375,
+              "height": 44
+            },
+            {
+              "y": 550.171875,
+              "right": 1168.34375,
+              "height": 44
+            },
+            {
+              "y": 550.171875,
+              "right": 1247,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif",
+        "Comfortaa, \"Segoe UI Symbol\", sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 33,
+      "name": "alevel-electron-configurations-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1247,
+          "buttons": [
+            {
+              "y": 733.453125,
+              "right": 980.515625,
+              "height": 44
+            },
+            {
+              "y": 733.453125,
+              "right": 1065.359375,
+              "height": 44
+            },
+            {
+              "y": 733.453125,
+              "right": 1168.34375,
+              "height": 44
+            },
+            {
+              "y": 733.453125,
+              "right": 1247,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 15,
+      "name": "igcse-energy-enthalpy-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1247,
+          "buttons": [
+            {
+              "y": 629.546875,
+              "right": 980.515625,
+              "height": 44
+            },
+            {
+              "y": 629.546875,
+              "right": 1065.359375,
+              "height": 44
+            },
+            {
+              "y": 629.546875,
+              "right": 1168.34375,
+              "height": 44
+            },
+            {
+              "y": 629.546875,
+              "right": 1247,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 1120,
+      "paneMax": "1120px",
+      "count": 28,
+      "name": "igcse-energetics-practical-1440",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 1279,
+          "buttons": [
+            {
+              "y": 829.34375,
+              "right": 1012.515625,
+              "height": 44
+            },
+            {
+              "y": 829.34375,
+              "right": 1097.359375,
+              "height": 44
+            },
+            {
+              "y": 829.34375,
+              "right": 1200.34375,
+              "height": 44
+            },
+            {
+              "y": 829.34375,
+              "right": 1279,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing alevel navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 232,
+      "name": "alevel-landing-820"
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing igcse navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 43,
+      "name": "igcse-landing-820"
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "none",
+      "count": 74,
+      "name": "statistics-820"
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 31,
+      "name": "teacher-820"
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "none",
+      "count": 25,
+      "name": "import-820"
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 8,
+      "name": "olympiad-820"
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 14,
+      "name": "alevel-acid-base-calculations-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 774.40625,
+          "buttons": [
+            {
+              "y": 627.296875,
+              "right": 578.21875,
+              "height": 44
+            },
+            {
+              "y": 627.296875,
+              "right": 640.4375,
+              "height": 44
+            },
+            {
+              "y": 627.296875,
+              "right": 717.15625,
+              "height": 44
+            },
+            {
+              "y": 627.296875,
+              "right": 774.40625,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 29,
+      "name": "igcse-structure-and-bonding-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 774.40625,
+          "buttons": [
+            {
+              "y": 1800.015625,
+              "right": 578.21875,
+              "height": 44
+            },
+            {
+              "y": 1800.015625,
+              "right": 640.4375,
+              "height": 44
+            },
+            {
+              "y": 1800.015625,
+              "right": 717.15625,
+              "height": 44
+            },
+            {
+              "y": 1800.015625,
+              "right": 774.40625,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 81,
+      "name": "alevel-dot-and-cross-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 800,
+          "buttons": [
+            {
+              "y": 1138.828125,
+              "right": 603.8125,
+              "height": 44
+            },
+            {
+              "y": 1138.828125,
+              "right": 666.03125,
+              "height": 44
+            },
+            {
+              "y": 1138.828125,
+              "right": 742.75,
+              "height": 44
+            },
+            {
+              "y": 1138.828125,
+              "right": 800,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 77,
+      "name": "igcse-dot-and-cross-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 800,
+          "buttons": [
+            {
+              "y": 1005.65625,
+              "right": 603.8125,
+              "height": 44
+            },
+            {
+              "y": 1005.65625,
+              "right": 666.03125,
+              "height": 44
+            },
+            {
+              "y": 1005.65625,
+              "right": 742.75,
+              "height": 44
+            },
+            {
+              "y": 1005.65625,
+              "right": 800,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 56,
+      "name": "alevel-ph-titration-curves-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 774.40625,
+          "buttons": [
+            {
+              "y": 1686.03125,
+              "right": 578.21875,
+              "height": 44
+            },
+            {
+              "y": 1686.03125,
+              "right": 640.4375,
+              "height": 44
+            },
+            {
+              "y": 1686.03125,
+              "right": 717.15625,
+              "height": 44
+            },
+            {
+              "y": 1686.03125,
+              "right": 774.40625,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 23,
+      "name": "igcse-calorimetry-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 777,
+          "buttons": [
+            {
+              "y": 1173.828125,
+              "right": 580.8125,
+              "height": 44
+            },
+            {
+              "y": 1173.828125,
+              "right": 643.03125,
+              "height": 44
+            },
+            {
+              "y": 1173.828125,
+              "right": 719.75,
+              "height": 44
+            },
+            {
+              "y": 1173.828125,
+              "right": 777,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 24,
+      "name": "igcse-bond-enthalpy-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 777,
+          "buttons": [
+            {
+              "y": 1365.96875,
+              "right": 580.8125,
+              "height": 44
+            },
+            {
+              "y": 1365.96875,
+              "right": 643.03125,
+              "height": 44
+            },
+            {
+              "y": 1365.96875,
+              "right": 719.75,
+              "height": 44
+            },
+            {
+              "y": 1365.96875,
+              "right": 777,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 13,
+      "name": "alevel-electrons-bonding-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 774.40625,
+          "buttons": [
+            {
+              "y": 625.9375,
+              "right": 578.21875,
+              "height": 44
+            },
+            {
+              "y": 625.9375,
+              "right": 640.4375,
+              "height": 44
+            },
+            {
+              "y": 625.9375,
+              "right": 717.15625,
+              "height": 44
+            },
+            {
+              "y": 625.9375,
+              "right": 774.40625,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif",
+        "Comfortaa, \"Segoe UI Symbol\", sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 33,
+      "name": "alevel-electron-configurations-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 774.40625,
+          "buttons": [
+            {
+              "y": 744.984375,
+              "right": 578.21875,
+              "height": 44
+            },
+            {
+              "y": 744.984375,
+              "right": 640.4375,
+              "height": 44
+            },
+            {
+              "y": 744.984375,
+              "right": 717.15625,
+              "height": 44
+            },
+            {
+              "y": 744.984375,
+              "right": 774.40625,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 17,
+      "name": "igcse-energy-enthalpy-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 774.40625,
+          "buttons": [
+            {
+              "y": 805.3125,
+              "right": 578.21875,
+              "height": 44
+            },
+            {
+              "y": 805.3125,
+              "right": 640.4375,
+              "height": 44
+            },
+            {
+              "y": 805.3125,
+              "right": 717.15625,
+              "height": 44
+            },
+            {
+              "y": 805.3125,
+              "right": 774.40625,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 820,
+      "pageWidth": 820,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 780,
+      "paneMax": "1120px",
+      "count": 14,
+      "name": "igcse-energetics-practical-820",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 799,
+          "buttons": [
+            {
+              "y": 686.328125,
+              "right": 602.8125,
+              "height": 44
+            },
+            {
+              "y": 686.328125,
+              "right": 665.03125,
+              "height": 44
+            },
+            {
+              "y": 686.328125,
+              "right": 741.75,
+              "height": 44
+            },
+            {
+              "y": 686.328125,
+              "right": 799,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing alevel navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 232,
+      "name": "alevel-landing-390"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing igcse navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 43,
+      "name": "igcse-landing-390"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "none",
+      "count": 74,
+      "name": "statistics-390"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 31,
+      "name": "teacher-390"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "none",
+      "count": 25,
+      "name": "import-390"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 8,
+      "name": "olympiad-390"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 14,
+      "name": "alevel-acid-base-calculations-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 363,
+          "buttons": [
+            {
+              "y": 732.09375,
+              "right": 190.34375,
+              "height": 44
+            },
+            {
+              "y": 732.09375,
+              "right": 244.71875,
+              "height": 44
+            },
+            {
+              "y": 732.09375,
+              "right": 313.59375,
+              "height": 44
+            },
+            {
+              "y": 732.09375,
+              "right": 363,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 29,
+      "name": "igcse-structure-and-bonding-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 363,
+          "buttons": [
+            {
+              "y": 2142.359375,
+              "right": 190.34375,
+              "height": 44
+            },
+            {
+              "y": 2142.359375,
+              "right": 244.71875,
+              "height": 44
+            },
+            {
+              "y": 2142.359375,
+              "right": 313.59375,
+              "height": 44
+            },
+            {
+              "y": 2142.359375,
+              "right": 363,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 81,
+      "name": "alevel-dot-and-cross-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 378,
+          "buttons": [
+            {
+              "y": 1310.765625,
+              "right": 205.34375,
+              "height": 44
+            },
+            {
+              "y": 1310.765625,
+              "right": 259.71875,
+              "height": 44
+            },
+            {
+              "y": 1310.765625,
+              "right": 328.59375,
+              "height": 44
+            },
+            {
+              "y": 1310.765625,
+              "right": 378,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 77,
+      "name": "igcse-dot-and-cross-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 378,
+          "buttons": [
+            {
+              "y": 1115.15625,
+              "right": 205.34375,
+              "height": 44
+            },
+            {
+              "y": 1115.15625,
+              "right": 259.71875,
+              "height": 44
+            },
+            {
+              "y": 1115.15625,
+              "right": 328.59375,
+              "height": 44
+            },
+            {
+              "y": 1115.15625,
+              "right": 378,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 56,
+      "name": "alevel-ph-titration-curves-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 363,
+          "buttons": [
+            {
+              "y": 1998.234375,
+              "right": 190.34375,
+              "height": 44
+            },
+            {
+              "y": 1998.234375,
+              "right": 244.71875,
+              "height": 44
+            },
+            {
+              "y": 1998.234375,
+              "right": 313.59375,
+              "height": 44
+            },
+            {
+              "y": 1998.234375,
+              "right": 363,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 24,
+      "name": "igcse-calorimetry-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 355,
+          "buttons": [
+            {
+              "y": 1627.078125,
+              "right": 182.34375,
+              "height": 44
+            },
+            {
+              "y": 1627.078125,
+              "right": 236.71875,
+              "height": 44
+            },
+            {
+              "y": 1627.078125,
+              "right": 305.59375,
+              "height": 44
+            },
+            {
+              "y": 1627.078125,
+              "right": 355,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 26,
+      "name": "igcse-bond-enthalpy-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 355,
+          "buttons": [
+            {
+              "y": 1776.390625,
+              "right": 182.34375,
+              "height": 44
+            },
+            {
+              "y": 1776.390625,
+              "right": 236.71875,
+              "height": 44
+            },
+            {
+              "y": 1776.390625,
+              "right": 305.59375,
+              "height": 44
+            },
+            {
+              "y": 1776.390625,
+              "right": 355,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 13,
+      "name": "alevel-electrons-bonding-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 363,
+          "buttons": [
+            {
+              "y": 683.46875,
+              "right": 190.34375,
+              "height": 44
+            },
+            {
+              "y": 683.46875,
+              "right": 244.71875,
+              "height": 44
+            },
+            {
+              "y": 683.46875,
+              "right": 313.59375,
+              "height": 44
+            },
+            {
+              "y": 683.46875,
+              "right": 363,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif",
+        "Comfortaa, \"Segoe UI Symbol\", sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 32,
+      "name": "alevel-electron-configurations-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 363,
+          "buttons": [
+            {
+              "y": 954.078125,
+              "right": 190.34375,
+              "height": 44
+            },
+            {
+              "y": 954.078125,
+              "right": 244.71875,
+              "height": 44
+            },
+            {
+              "y": 954.078125,
+              "right": 313.59375,
+              "height": 44
+            },
+            {
+              "y": 954.078125,
+              "right": 363,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 17,
+      "name": "igcse-energy-enthalpy-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 363,
+          "buttons": [
+            {
+              "y": 874.6875,
+              "right": 190.34375,
+              "height": 44
+            },
+            {
+              "y": 874.6875,
+              "right": 244.71875,
+              "height": 44
+            },
+            {
+              "y": 874.6875,
+              "right": 313.59375,
+              "height": 44
+            },
+            {
+              "y": 874.6875,
+              "right": 363,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 366,
+      "paneMax": "1120px",
+      "count": 22,
+      "name": "igcse-energetics-practical-390",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 377,
+          "buttons": [
+            {
+              "y": 932.703125,
+              "right": 204.34375,
+              "height": 44
+            },
+            {
+              "y": 932.703125,
+              "right": 258.71875,
+              "height": 44
+            },
+            {
+              "y": 932.703125,
+              "right": 327.59375,
+              "height": 44
+            },
+            {
+              "y": 932.703125,
+              "right": 377,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing alevel navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 232,
+      "name": "alevel-landing-350"
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "landing-course-stage",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        },
+        {
+          "class": "original-landing igcse navigation-ready",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 43,
+      "name": "igcse-landing-350"
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "none",
+      "count": 74,
+      "name": "statistics-350"
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 31,
+      "name": "teacher-350"
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell  ",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "none",
+      "count": 25,
+      "name": "import-350"
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": null,
+      "paneMax": null,
+      "count": 8,
+      "name": "olympiad-350"
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 14,
+      "name": "alevel-acid-base-calculations-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 323,
+          "buttons": [
+            {
+              "y": 756.890625,
+              "right": 150.34375,
+              "height": 44
+            },
+            {
+              "y": 756.890625,
+              "right": 204.71875,
+              "height": 44
+            },
+            {
+              "y": 756.890625,
+              "right": 273.59375,
+              "height": 44
+            },
+            {
+              "y": 756.890625,
+              "right": 323,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 29,
+      "name": "igcse-structure-and-bonding-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 323,
+          "buttons": [
+            {
+              "y": 2166.359375,
+              "right": 150.34375,
+              "height": 44
+            },
+            {
+              "y": 2166.359375,
+              "right": 204.71875,
+              "height": 44
+            },
+            {
+              "y": 2166.359375,
+              "right": 273.59375,
+              "height": 44
+            },
+            {
+              "y": 2166.359375,
+              "right": 323,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 81,
+      "name": "alevel-dot-and-cross-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 338,
+          "buttons": [
+            {
+              "y": 1361.15625,
+              "right": 165.34375,
+              "height": 44
+            },
+            {
+              "y": 1361.15625,
+              "right": 219.71875,
+              "height": 44
+            },
+            {
+              "y": 1361.15625,
+              "right": 288.59375,
+              "height": 44
+            },
+            {
+              "y": 1361.15625,
+              "right": 338,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 77,
+      "name": "igcse-dot-and-cross-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 338,
+          "buttons": [
+            {
+              "y": 1161.15625,
+              "right": 165.34375,
+              "height": 44
+            },
+            {
+              "y": 1161.15625,
+              "right": 219.71875,
+              "height": 44
+            },
+            {
+              "y": 1161.15625,
+              "right": 288.59375,
+              "height": 44
+            },
+            {
+              "y": 1161.15625,
+              "right": 338,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 56,
+      "name": "alevel-ph-titration-curves-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 323,
+          "buttons": [
+            {
+              "y": 2045.78125,
+              "right": 150.34375,
+              "height": 44
+            },
+            {
+              "y": 2045.78125,
+              "right": 204.71875,
+              "height": 44
+            },
+            {
+              "y": 2045.78125,
+              "right": 273.59375,
+              "height": 44
+            },
+            {
+              "y": 2045.78125,
+              "right": 323,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 19,
+      "name": "igcse-calorimetry-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 315,
+          "buttons": [
+            {
+              "y": 1288.0625,
+              "right": 142.34375,
+              "height": 44
+            },
+            {
+              "y": 1288.0625,
+              "right": 196.71875,
+              "height": 44
+            },
+            {
+              "y": 1288.0625,
+              "right": 265.59375,
+              "height": 44
+            },
+            {
+              "y": 1288.0625,
+              "right": 315,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 24,
+      "name": "igcse-bond-enthalpy-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 315,
+          "buttons": [
+            {
+              "y": 1627.75,
+              "right": 142.34375,
+              "height": 44
+            },
+            {
+              "y": 1627.75,
+              "right": 196.71875,
+              "height": 44
+            },
+            {
+              "y": 1627.75,
+              "right": 265.59375,
+              "height": 44
+            },
+            {
+              "y": 1627.75,
+              "right": 315,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 13,
+      "name": "alevel-electrons-bonding-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 323,
+          "buttons": [
+            {
+              "y": 711.8125,
+              "right": 150.34375,
+              "height": 44
+            },
+            {
+              "y": 711.8125,
+              "right": 204.71875,
+              "height": 44
+            },
+            {
+              "y": 711.8125,
+              "right": 273.59375,
+              "height": 44
+            },
+            {
+              "y": 711.8125,
+              "right": 323,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif",
+        "Comfortaa, \"Segoe UI Symbol\", sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 33,
+      "name": "alevel-electron-configurations-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 323,
+          "buttons": [
+            {
+              "y": 835.640625,
+              "right": 150.34375,
+              "height": 44
+            },
+            {
+              "y": 835.640625,
+              "right": 204.71875,
+              "height": 44
+            },
+            {
+              "y": 835.640625,
+              "right": 273.59375,
+              "height": 44
+            },
+            {
+              "y": 835.640625,
+              "right": 323,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 15,
+      "name": "igcse-energy-enthalpy-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 323,
+          "buttons": [
+            {
+              "y": 806.484375,
+              "right": 150.34375,
+              "height": 44
+            },
+            {
+              "y": 806.484375,
+              "right": 204.71875,
+              "height": 44
+            },
+            {
+              "y": 806.484375,
+              "right": 273.59375,
+              "height": 44
+            },
+            {
+              "y": 806.484375,
+              "right": 323,
+              "height": 44
+            }
+          ]
+        }
+      }
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "fonts": [
+        "Comfortaa, sans-serif"
+      ],
+      "badFonts": [],
+      "wrappers": [
+        {
+          "class": "course-shell course-focused course-question-screen",
+          "color": "rgba(0, 0, 0, 0)",
+          "image": "none"
+        }
+      ],
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "bodyColor": "rgb(8, 10, 29)",
+      "stars": "radial-gradient(circle, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle, rgb(85, 246, 255) 1px, rgba(0, 0, 0, 0) 1.5px)",
+      "paneWidth": 326,
+      "paneMax": "1120px",
+      "count": 22,
+      "name": "igcse-energetics-practical-350",
+      "actions": {
+        "actions": [
+          "Check",
+          "Clear",
+          "Give Up",
+          "Next"
+        ],
+        "geometry": {
+          "right": 337,
+          "buttons": [
+            {
+              "y": 913.28125,
+              "right": 164.34375,
+              "height": 44
+            },
+            {
+              "y": 913.28125,
+              "right": 218.71875,
+              "height": 44
+            },
+            {
+              "y": 913.28125,
+              "right": 287.59375,
+              "height": 44
+            },
+            {
+              "y": 913.28125,
+              "right": 337,
+              "height": 44
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "target": "igcse",
+      "busy": "true",
+      "state": {
+        "url": "http://127.0.0.1:5188/alevel.html?run=u03-theme&course=igcse&view=home",
+        "focus": "flipCourse",
+        "count": 1,
+        "inert": false,
+        "animations": [
+          {
+            "frames": [
+              {
+                "opacity": 1,
+                "transform": "translateX(0)"
+              },
+              {
+                "opacity": 0,
+                "transform": "translateX(16px)"
+              }
+            ],
+            "options": {
+              "duration": 110,
+              "easing": "cubic-bezier(.4,0,.2,1)",
+              "fill": "forwards"
+            },
+            "at": 1971.1000000014901
+          },
+          {
+            "frames": [
+              {
+                "opacity": 0,
+                "transform": "translateX(-16px)"
+              },
+              {
+                "opacity": 1,
+                "transform": "translateX(0)"
+              }
+            ],
+            "options": {
+              "duration": 110,
+              "easing": "cubic-bezier(.4,0,.2,1)"
+            },
+            "at": 2162.699999999255
+          }
+        ]
+      }
+    },
+    {
+      "target": "alevel",
+      "busy": "true",
+      "state": {
+        "url": "http://127.0.0.1:5188/alevel.html?run=u03-theme&course=alevel&view=home",
+        "focus": "flipCourse",
+        "count": 1,
+        "inert": false,
+        "animations": [
+          {
+            "frames": [
+              {
+                "opacity": 1,
+                "transform": "translateX(0)"
+              },
+              {
+                "opacity": 0,
+                "transform": "translateX(-16px)"
+              }
+            ],
+            "options": {
+              "duration": 110,
+              "easing": "cubic-bezier(.4,0,.2,1)",
+              "fill": "forwards"
+            },
+            "at": 2354
+          },
+          {
+            "frames": [
+              {
+                "opacity": 0,
+                "transform": "translateX(16px)"
+              },
+              {
+                "opacity": 1,
+                "transform": "translateX(0)"
+              }
+            ],
+            "options": {
+              "duration": 110,
+              "easing": "cubic-bezier(.4,0,.2,1)"
+            },
+            "at": 2557.699999999255
+          }
+        ]
+      }
+    },
+    {
+      "reducedMotion": true,
+      "animationCalls": 0,
+      "focus": "flipCourse"
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-10-03T22:51:41.600Z"
+}

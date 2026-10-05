@@ -1,0 +1,5 @@
+import type {MarkingPolicy} from '../../../contracts/index.ts';
+import {data} from './data.js';
+import {mark} from './core.js';
+import {bondingRecord} from './provider.ts';
+export const electronsBondingMarking:MarkingPolicy={id:'bonding-source-concept-marking',mark(question,responses){const record=bondingRecord(question.ref.questionId);const answers=record.fields.map((_field,i)=>{const response=responses[`answer-${i}`];return response?.kind==='text'?response.value:'';});const result=mark(record,answers,data);if(!result.ready)return {accepted:false,issues:record.fields.map((_field,i)=>({partId:`answer-${i}`,message:result.states[i]==='unknown'?'This wording is not recognised; review the definition before checking.':'Enter your answer before checking.'}))};const earned=result.marks.filter(Boolean).length;return {accepted:true,marks:{earned,available:result.marks.length,points:result.marks.map((passed,i)=>({partId:'answer-0',pointId:`concept-${i}`,earned:passed?1:0,available:1,message:record.points[i]??record.feedback}))}};},masteryScore:marks=>marks.earned===marks.available?1:marks.earned>0?0.5:0};

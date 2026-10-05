@@ -1,0 +1,17 @@
+✔ Both original course organisers match each intermediate addition, cycle, deletion and relocation (6.2015ms)
+✔ All163 source records and2380 electron positions retained; references chemically valid and self-mark correct (592.387ms)
+✔ Circles stay outside chemical snapshots and history through every edit, clear, undo, redo (0.6776ms)
+✔ Source placement30atom/45spacing cap,30degree snap, adaptive view and group bounds preserve shape (0.7177ms)
+✔ Shared-region taps, packing/symbol alternation, relocation, invalid duplicate rejection and cascade (1.5493ms)
+✔ Source charge routing distinguishes covalent local symbol and whole connected ion; charge update preserves group ID (0.6269ms)
+✔ Source checked answer fit/glyphs/Comfortaa/local charge and hidden-circle model stay complete (147.2121ms)
+✔ Persisted optional circle preference and chemical history restore without accepting malformed history (1.3689ms)
+✔ Chemical history100 is bounded without snapshot nesting and circles preference survives long edit series (2.2374ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 923.4678

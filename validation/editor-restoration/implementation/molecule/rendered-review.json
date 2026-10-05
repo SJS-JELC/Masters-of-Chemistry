@@ -1,0 +1,29 @@
+{
+  "agentId": "E03",
+  "status": "PASS",
+  "method": "Substantive visual inspection of actual source/current browser screenshots, with deterministic matching SVG label/bond geometry checks",
+  "inspected": [
+    "desktop-b.png",
+    "mobile-c.png",
+    "mobile-teacher-k.png",
+    "source-mobile-b.png",
+    "compare-clean-original-desktop-structural.png",
+    "compare-clean-react-desktop-structural.png",
+    "compare-clean-react-mobile-structural.png",
+    "compare-clean-original-tablet-skeletal.png",
+    "compare-clean-react-tablet-skeletal.png"
+  ],
+  "findings": [
+    "Cleaned matching source/current dihydroxyketone has legible terminal HO/OH, C=O, hydrogen counts/true subscripts and uncrowded clipped bonds.",
+    "Source/current six cleaned comparisons match exact measured label chunk positions and all bond endpoints. Toolbar height/spacing adaptations shift canvas position but preserve measured molecular geometry.",
+    "Fine-pointer palette restores compact source widths and source desktop row order. Coarse/mobile targets remain44px.",
+    "Source mobile B has the same fixed connected schemes requiring local horizontal scrolling. Current adds visible scroll/keyboard guidance, focusable regions and coloured scrollbars; native keyboard scrolling verified at all three widths.",
+    "Mobile C keeps original720px network coordinates locally scrollable with nine node Checks and nine fallback selection controls; no page overflow.",
+    "Teacher K visibly distinguishes the accepted aldehyde hydrate from the excluded orthoacid and preserves the hydrazone-source qualification. Teacher controls cannot mutate progress."
+  ],
+  "limits": [
+    "Whole accepted shell and44px accessibility adaptations prevent claiming full-page pixel identity.",
+    "All22 alternatives received source equality, formula/topology and policy validation; the visual matching comparison uses one representative12-atom graph in two representations and three viewport widths.",
+    "Headless Edge and CDP touch evidence do not claim a physical touch device or foreground native-app test."
+  ]
+}

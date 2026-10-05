@@ -1,0 +1,250 @@
+import type { ActiveClock, Assessment, AttemptCommand, AttemptController, AttemptTransition, ClockSample, CorrectionFeedback,
+  FrozenResponse, LearningReviewPolicy, PlayerAttempt, RubricJudgement, RubricReview, StudentAttempt, TimingResult } from '../../contracts/attempt.ts';
+import type { MarkingPolicy, Question, RawMarks, Response, Responses } from '../../contracts/question.ts';
+import type { CurriculumEvidence } from '../../contracts/session.ts';
+import { browserClockSample, validTiming } from '../timing/active-clock.ts';
+import { checkQuestionInput } from './input-checks.ts';
+
+function freeze<T>(value: T): T {
+  if (value !== null && typeof value === 'object') { Object.values(value).forEach(child => freeze(child)); Object.freeze(value); }
+  return value;
+}
+const copy = <T>(value: T): T => freeze(structuredClone(value));
+const no = (state: StudentAttempt, message: string): AttemptTransition => ({ accepted: false, state, message });
+const yes = (state: StudentAttempt): AttemptTransition => ({ accepted: true, state: copy(state) });
+const feedback = (state: StudentAttempt, correctionFeedback: CorrectionFeedback): AttemptTransition =>
+  ({ accepted: true, state, correctionFeedback: copy(correctionFeedback) });
+const EMPTY_MARKS: RawMarks = Object.freeze({ earned: 0, available: 0, points: Object.freeze([]) });
+function marksValid(marks: RawMarks): boolean {
+  return Number.isFinite(marks.earned) && Number.isFinite(marks.available) && marks.earned >= 0 && marks.available >= 0
+    && marks.earned <= marks.available && marks.points.every(point => Number.isFinite(point.earned) && Number.isFinite(point.available)
+      && point.earned >= 0 && point.available >= 0 && point.earned <= point.available)
+    && marks.points.reduce((sum,p) => sum+p.earned,0) === marks.earned
+    && marks.points.reduce((sum,p) => sum+p.available,0) === marks.available;
+}
+function scoreFor(policy: MarkingPolicy, marks: RawMarks): 0 | 0.5 | 1 {
+  const score = policy.masteryScore(marks);
+  if (![0,0.5,1].includes(score)) throw new Error('Invalid mastery score from marking policy.');
+  return score;
+}
+export interface AttemptTransitionInput {
+  readonly question: Question; readonly state: StudentAttempt; readonly command: AttemptCommand;
+  readonly policy: MarkingPolicy; readonly learningReviewPolicy?: LearningReviewPolicy;
+  readonly sample: ClockSample; readonly timingResult?: TimingResult;
+}
+function frozen(input: AttemptTransitionInput, at: number): FrozenResponse | undefined {
+  const timing = input.timingResult;
+  if (!timing || !validTiming(timing) || input.state.phase !== 'answering' || timing.idleLimitMs !== input.state.timing.idleLimitMs) return undefined;
+  return copy({ responses: input.state.currentResponses, submittedAt: at, timing, assistance: input.state.assistance });
+}
+function validAt(at: number, sample: ClockSample): boolean { return Number.isFinite(at) && at > 0 && at <= sample.wallMs; }
+function replaceJudgement(review: RubricReview, judgement: RubricJudgement, next: string | null): RubricReview {
+  return { ...review, judgements: review.judgements.map(item => item.pointId === judgement.pointId ? judgement : item), activePointId: next };
+}
+/** Pure state transition: no clock calls, DOM, database or attempt-ID creation. */
+export function transitionAttempt(input: AttemptTransitionInput): AttemptTransition {
+  const { question, state, command, policy } = input;
+  if (state.ref.activityId !== question.ref.activityId || state.ref.questionId !== question.ref.questionId
+    || state.ref.seed !== question.ref.seed || state.ref.level !== question.ref.level) return no(state, 'Question identity does not match the attempt.');
+  switch (command.kind) {
+    case 'respond': {
+      if (state.phase === 'rubric-review') return no(state, 'The explanation is locked during rubric review.');
+      const part = question.parts.find(p => p.id === command.partId);
+      if (!part || command.response.kind !== part.kind) return no(state, 'Response type does not match the displayed part.');
+      if (part.kind === 'drawing-self-check') return no(state, 'Confirm your drawing after the first numerical submission.');
+      const currentResponses: Responses = { ...state.currentResponses, [part.id]: copy(command.response) };
+      return yes({ ...state, currentResponses });
+    }
+    case 'pause': return yes(state);
+    case 'assist': {
+      if (!validAt(command.assistance.at, input.sample)) return no(state, 'Invalid assistance time.');
+      if (state.assistance.some(item => item.kind === command.assistance.kind && item.supportId === command.assistance.supportId)) return yes(state);
+      const assistance = [...state.assistance, copy(command.assistance)];
+      if (state.phase === 'answering' && command.assistance.kind !== 'hint') {
+        const firstResponse = frozen({ ...input, state: { ...state, assistance } }, command.assistance.at);
+        if (!firstResponse) return no(state, 'A matching timing result is required.');
+        const firstAssessment: Assessment = { kind: 'revealed', assessedAt: command.assistance.at, independent: false };
+        const { timing: _timing, ...base } = state;
+        return yes({ ...base, phase: 'assessed', firstResponse, firstAssessment, assistance });
+      }
+      return yes({ ...state, assistance });
+    }
+    case 'check-correction': {
+      if (state.phase !== 'assessed') return no(state, 'Submit the first response before checking corrections.');
+      const autoQuestion: Question = { ...question, parts: question.parts.filter(part => part.kind !== 'explanation' && part.kind !== 'drawing-self-check') };
+      if (!autoQuestion.parts.length) return no(state, 'This question has no automatically marked responses to recheck.');
+      const automaticResponses: Record<string, Response> = {};
+      for (const part of autoQuestion.parts) {
+        const response = state.currentResponses[part.id];
+        if (response) automaticResponses[part.id] = response;
+      }
+      const issues = checkQuestionInput(autoQuestion, automaticResponses);
+      if (issues.length) return feedback(state, { kind: 'correction-learning', status: 'incomplete', issues });
+      const marked = policy.mark(autoQuestion, automaticResponses);
+      if (!marked.accepted) return feedback(state, { kind: 'correction-learning',
+        status: marked.issues.some(issue => issue.textClassification === 'unrecognized') ? 'unrecognized' : 'incomplete', issues: marked.issues });
+      if (!marksValid(marked.marks) || marked.marks.points.some(point => !autoQuestion.parts.some(part => part.id === point.partId)))
+        return no(state, 'The marking policy returned inconsistent automatic correction marks.');
+      return feedback(state, { kind: 'correction-learning', status: marked.marks.earned === marked.marks.available ? 'correct' : 'wrong', marks: marked.marks });
+    }
+    case 'submit': {
+      if (state.phase !== 'answering') return no(state, 'The first response has already been submitted.');
+      if (!validAt(command.at, input.sample)) return no(state, 'Invalid assessment time.');
+      const issues = checkQuestionInput(question, state.currentResponses);
+      if (issues.length) return no(state, issues.map(issue => issue.message).join(' '));
+      const selfParts = question.parts.filter(part => part.kind === 'explanation');
+      const drawingParts = question.parts.filter(part => part.kind === 'drawing-self-check');
+      if (selfParts.length && drawingParts.length) return no(state, 'Registered activities use one source self-review method per question.');
+      const autoQuestion = { ...question, parts: question.parts.filter(part => part.kind !== 'explanation' && part.kind !== 'drawing-self-check') };
+      const marked = autoQuestion.parts.length ? policy.mark(autoQuestion, state.currentResponses) : { accepted: true as const, marks: EMPTY_MARKS };
+      if (!marked.accepted) return no(state, marked.issues.map(issue => issue.message).join(' '));
+      if (!marksValid(marked.marks)) return no(state, 'The marking policy returned inconsistent marks.');
+      const firstResponse = frozen(input, command.at);
+      if (!firstResponse) return no(state, 'A matching timing result is required.');
+      // Remove answering-only timer rather than attach an undefined field.
+      const { timing: _timing, ...base } = state;
+      if (drawingParts.length) return yes({ ...base, phase: 'drawing-review', firstResponse,
+        automaticMarks: marked.marks, checks: drawingParts.map(part => ({ partId: part.id, judgement: 'pending' })) });
+      if (selfParts.length) {
+        const reviews: RubricReview[] = [];
+        for (const part of selfParts) {
+          if (part.kind !== 'explanation') continue;
+          const response = firstResponse.responses[part.id];
+          if (response?.kind !== 'explanation' || !part.rubric.length) return no(state, 'Invalid self-review question.');
+          reviews.push({ partId: part.id, lockedText: part.sections.map(section => response.sections.find(s => s.id === section.id)?.text ?? '').join('\n\n'),
+            judgements: part.rubric.map(point => ({ pointId: point.id, status: 'unjudged' })), activePointId: part.rubric[0]?.id ?? null });
+        }
+        return yes({ ...base, phase: 'rubric-review', firstResponse, reviews, automaticMarks: marked.marks });
+      }
+      return yes({ ...base, phase: 'assessed', firstResponse,
+        firstAssessment: { kind: 'marked', assessedAt: command.at, marks: marked.marks, score: scoreFor(policy, marked.marks), selfAssessed: false } });
+    }
+    case 'judge-rubric': {
+      if (state.phase !== 'rubric-review') return no(state, 'There is no pending rubric review.');
+      const review = state.reviews.find(review => review.partId === command.partId);
+      if (!review || review.activePointId !== command.judgement.pointId) return no(state, 'Review the current marking point in order.');
+      const old = review.judgements.find(item => item.pointId === command.judgement.pointId);
+      if (!old || command.judgement.status === 'unjudged') return no(state, 'Invalid rubric decision.');
+      if (command.judgement.status === 'awaiting-evidence') {
+        if (old.status !== 'unjudged') return no(state, 'This marking point is already being judged.');
+        return yes({ ...state, reviews: state.reviews.map(item => item === review ? replaceJudgement(review,command.judgement,review.activePointId) : item) });
+      }
+      if (command.judgement.status === 'met') {
+        const range = command.judgement.evidence;
+        if (old.status !== 'awaiting-evidence' || !Number.isInteger(range.start) || !Number.isInteger(range.end)
+          || range.start < 0 || range.end <= range.start || range.end > review.lockedText.length
+          || review.lockedText.slice(range.start,range.end) !== range.text || !range.text.trim()) return no(state, 'Link the mark to exact words in the locked answer.');
+      } else if (old.status !== 'unjudged' && old.status !== 'awaiting-evidence') return no(state, 'This marking point is already judged.');
+      const index = review.judgements.findIndex(item => item.pointId === command.judgement.pointId);
+      const next = review.judgements[index+1]?.pointId ?? null;
+      return yes({ ...state, reviews: state.reviews.map(item => item === review ? replaceJudgement(review,command.judgement,next) : item) });
+    }
+    case 'finish-rubric': {
+      if (state.phase !== 'rubric-review') return no(state, 'There is no pending rubric review.');
+      if (!validAt(command.at, input.sample) || command.at < state.firstResponse.submittedAt) return no(state, 'Invalid rubric completion time.');
+      if (state.reviews.some(review => review.activePointId !== null || review.judgements.some(item => item.status !== 'met' && item.status !== 'not-met'))) return no(state, 'Judge every marking point with evidence before finishing.');
+      const points = [...(state.automaticMarks ?? EMPTY_MARKS).points];
+      for (const review of state.reviews) {
+        const part = question.parts.find(part => part.id === review.partId);
+        if (part?.kind !== 'explanation') return no(state, 'Invalid rubric part.');
+        for (const point of part.rubric) points.push({ partId: part.id, pointId: point.id,
+          earned: review.judgements.find(item => item.pointId === point.id)?.status === 'met' ? point.marks : 0, available: point.marks, message: point.text });
+      }
+      const marks = { points, earned: points.reduce((sum,p) => sum+p.earned,0), available: points.reduce((sum,p) => sum+p.available,0) };
+      if (!marksValid(marks)) return no(state, 'Invalid rubric marks.');
+      const { reviews, automaticMarks: _marks, ...base } = state;
+      return yes({ ...base, phase: 'assessed', firstAssessment: { kind: 'self-rubric', assessedAt: command.at,
+        marks, score: scoreFor(policy,marks), selfAssessed: true, reviews } });
+    }
+    case 'confirm-drawing': {
+      if (state.phase !== 'drawing-review') return no(state, 'There is no pending drawing self-check.');
+      if (!validAt(command.at,input.sample) || command.at < state.firstResponse.submittedAt) return no(state, 'Invalid drawing confirmation time.');
+      const check = state.checks.find(check => check.partId === command.partId);
+      const part = question.parts.find(part => part.id === command.partId);
+      if (!check || check.judgement !== 'pending' || part?.kind !== 'drawing-self-check') return no(state, 'This drawing has already been confirmed or is unavailable.');
+      const checks = state.checks.map(check => check.partId === command.partId ? { ...check, judgement: command.matches ? 'pass' as const : 'fail' as const } : check);
+      const currentResponses: Responses = { ...state.currentResponses, [part.id]: { kind: 'drawing-self-check', matches: command.matches } };
+      if (checks.some(check => check.judgement === 'pending')) return yes({ ...state, checks, currentResponses });
+      const points = [...state.automaticMarks.points];
+      for (const check of checks) {
+        const checkedPart = question.parts.find(part => part.id === check.partId);
+        if (checkedPart?.kind !== 'drawing-self-check') return no(state,'Invalid drawing self-check part.');
+        points.push({ partId: check.partId, pointId: check.partId, earned: check.judgement === 'pass' ? checkedPart.marks : 0,
+          available: checkedPart.marks, message: check.judgement === 'pass' ? 'Drawing self-checked against model.' : 'Drawing needs work.' });
+      }
+      const marks = { points, earned: points.reduce((sum,p) => sum+p.earned,0), available: points.reduce((sum,p) => sum+p.available,0) };
+      const { checks: _checks, automaticMarks: _marks, ...base } = state;
+      return yes({ ...base, phase: 'assessed', currentResponses,
+        firstAssessment: { kind: 'self-drawing', assessedAt: command.at, marks, score: scoreFor(policy,marks), selfAssessed: true, checks } });
+    }
+    case 'review-valid-alternative': {
+      if (state.phase !== 'assessed' || state.firstAssessment.kind !== 'marked' || !input.learningReviewPolicy) return no(state, 'No valid-alternative learning review is available.');
+      const point = state.firstAssessment.marks.points.find(point => point.partId === command.decision.partId && point.pointId === command.decision.pointId);
+      if (!point?.learningReview?.eligible || point.earned === point.available) return no(state, 'This point is not eligible for a valid-alternative review.');
+      const decisions = [...(state.learningReview?.decisions ?? []).filter(item => item.partId !== command.decision.partId || item.pointId !== command.decision.pointId), command.decision];
+      const learningReview = input.learningReviewPolicy.review(question,state.firstResponse,state.firstAssessment,state.currentResponses,decisions);
+      if (learningReview.kind !== 'post-assessment-learning' || !marksValid(learningReview.reviewedMarks)) return no(state, 'Invalid learning review.');
+      return yes({ ...state, learningReview });
+    }
+  }
+}
+
+export interface AttemptControllerOptions {
+  readonly question: Question; readonly state: StudentAttempt; readonly policy: MarkingPolicy;
+  readonly learningReviewPolicy?: LearningReviewPolicy; readonly clock: ActiveClock;
+  readonly sample?: () => ClockSample;
+}
+export function createAttemptController(options: AttemptControllerOptions): AttemptController {
+  let state = copy(options.state);
+  if (state.attemptId !== options.clock.attemptId || state.namespace.course !== state.target.course
+    || state.ref.activityId !== state.target.activityId || state.ref.level !== state.target.level
+    || !state.ref.activityId.startsWith(`${state.target.course}/`) || !Number.isInteger(state.ref.seed) || state.ref.seed < 0 || state.ref.seed > 0xffffffff) throw new Error('Inconsistent attempt identity.');
+  if (state.ref.activityId !== options.question.ref.activityId || state.ref.questionId !== options.question.ref.questionId
+    || state.ref.seed !== options.question.ref.seed || state.ref.level !== options.question.ref.level) throw new Error('Question identity does not match the attempt.');
+  const now = options.sample ?? browserClockSample;
+  if (state.phase !== 'answering') options.clock.finish(now());
+  else {
+    const timing=options.clock.checkpoint();
+    if (!timing || timing.finished || state.timing.finished || state.timing.attemptId !== state.attemptId
+      || timing.idleLimitMs !== state.timing.idleLimitMs || timing.activeMs !== state.timing.activeMs) throw new Error('Incompatible answering checkpoint.');
+  }
+  function checkpoint(): StudentAttempt {
+    if (state.phase === 'answering') {
+      const timing = options.clock.checkpoint();
+      if (!timing || timing.finished || timing.idleLimitMs !== state.timing.idleLimitMs) throw new Error('Missing or incompatible answering clock.');
+      state = copy({ ...state, timing });
+    }
+    return state;
+  }
+  return Object.freeze({ state: () => state, checkpoint,
+    sample(sample: ClockSample) { options.clock.sample(sample); return checkpoint(); },
+    interact(sample: ClockSample) { options.clock.interact(sample); return checkpoint(); },
+    dispatch(command: AttemptCommand): AttemptTransition {
+      const sample = now();
+      if (command.kind === 'pause') options.clock.pause(sample); else options.clock.sample(sample);
+      checkpoint();
+      const checkpointTiming = options.clock.checkpoint();
+      const timingResult = checkpointTiming ? { activeMs: checkpointTiming.activeMs, idleLimitMs: checkpointTiming.idleLimitMs } : undefined;
+      const transition = transitionAttempt({ question: options.question, state, command, policy: options.policy, sample,
+        ...(options.learningReviewPolicy ? { learningReviewPolicy: options.learningReviewPolicy } : {}), ...(timingResult ? { timingResult } : {}) });
+      if (transition.accepted) {
+        if (state.phase === 'answering' && transition.state.phase !== 'answering') options.clock.finish(sample);
+        state = transition.state;
+      }
+      return transition;
+    },
+  });
+}
+/** Only immutable first, unassisted student evidence contributes to mastery/statistics. */
+export function assessmentToEvidence(state: PlayerAttempt): CurriculumEvidence | null {
+  if (state.mode !== 'student' || state.phase !== 'assessed' || state.firstAssessment.kind === 'revealed' || state.firstResponse.assistance.length) return null;
+  const common = { kind: 'curriculum' as const, id: state.attemptId, profileId: state.namespace.profileId, gemId: state.target.gemId,
+    score: state.firstAssessment.score, completedAt: state.firstAssessment.assessedAt, selfAssessed: state.firstAssessment.selfAssessed,
+    assisted: false, provenance: 'new-attempt' as const, independent: true as const,
+    timing: state.firstResponse.timing, ref: state.ref, firstResponse: state.firstResponse, firstAssessment: state.firstAssessment };
+  return copy(state.target.course === 'alevel' ? { ...common, course: 'alevel' as const, activityId: state.target.activityId, level: state.target.level }
+    : { ...common, course: 'igcse' as const, activityId: state.target.activityId, grade: state.target.level });
+}
+export function isResponseKind(response: Response, question: Question, partId: string): boolean {
+  return question.parts.some(part => part.id === partId && part.kind === response.kind);
+}

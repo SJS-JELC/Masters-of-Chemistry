@@ -1,0 +1,48 @@
+{
+  "runId": "ISOMER-LAYOUT-20261004",
+  "status": "complete",
+  "acceptedAt": "2026-10-04T12:54:50.128910+00:00",
+  "scope": [
+    "Remove duplicate question title and subtitle",
+    "Question prompt, seven responsive answer boxes, then unchanged evidence and spectrum",
+    "Seven columns at 768px+, four from 481-767px, two at 480px and below",
+    "Prevent question-title/code overlap on this challenge at tablet width"
+  ],
+  "delegation": "Local bounded UI edit; no delegates",
+  "validation": {
+    "typecheck": "PASS",
+    "bothBuilds": "PASS",
+    "sourceBrowserWidths": [
+      1440,
+      1024,
+      820,
+      768,
+      600,
+      390,
+      350
+    ],
+    "productionPrefixes": [
+      "alevel",
+      "igcse"
+    ],
+    "behaviour": "Drawing popup, autosave/reload, focus return, aggregate Check and spectrum enlargement passed",
+    "renderedReview": [
+      "empty-1440.png",
+      "structures-768.png",
+      "empty-390.png"
+    ],
+    "preservation": "Only two UI files changed. Exact clues text, approved NMR SVG, all other source and public assets retained. Original app guard passes."
+  },
+  "fingerprints": [
+    {
+      "path": "src/activities/olympiad/isomers2011/isomers.css",
+      "sha256": "e565eb70c3f354fd72f7d236567d48b3d02572413130b2aa6f25c915fdf9cd75"
+    },
+    {
+      "path": "src/activities/olympiad/isomers2011/IsomerView.tsx",
+      "sha256": "74c66bece335a608ced5542e6f2010b6fdeacd76e7f2a8737f2977d12dad6d43"
+    }
+  ],
+  "unresolved": [],
+  "published": false
+}

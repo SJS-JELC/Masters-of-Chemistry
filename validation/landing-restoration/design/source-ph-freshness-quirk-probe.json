@@ -1,0 +1,353 @@
+{
+  "startedAt": "2026-10-03T08:17:39.413Z",
+  "browser": "Pinned root Playwright1.62.1 with headless Edge; fresh contexts and ephemeral original static origin",
+  "status": "FAIL",
+  "comparisons": [
+    {
+      "name": "alevel-desktop-unassessed",
+      "original": [
+        {
+          "width": 684,
+          "height": 783.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 735.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 783.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 735.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-unassessed-upper",
+      "original": [
+        {
+          "width": 684,
+          "height": 621.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 621.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-unassessed-expanded",
+      "original": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-unassessed-details",
+      "original": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-unassessed-revision",
+      "original": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 306.65625
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 306.65625
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 306.65625
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 306.65625
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh",
+      "original": [
+        {
+          "width": 684,
+          "height": 783.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 735.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 783.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 735.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-upper",
+      "original": [
+        {
+          "width": 684,
+          "height": 621.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 621.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-expanded",
+      "original": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-details",
+      "original": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-yellow-fresh-revision",
+      "original": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 306.65625
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 306.65625
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 975.15625,
+          "x": 24,
+          "y": 306.65625
+        },
+        {
+          "width": 684,
+          "height": 606.15625,
+          "x": 732,
+          "y": 306.65625
+        }
+      ]
+    },
+    {
+      "name": "alevel-desktop-green-steady",
+      "original": [
+        {
+          "width": 684,
+          "height": 783.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 735.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ],
+      "restored": [
+        {
+          "width": 684,
+          "height": 783.15625,
+          "x": 24,
+          "y": 264.546875
+        },
+        {
+          "width": 684,
+          "height": 735.15625,
+          "x": 732,
+          "y": 264.546875
+        }
+      ]
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "browserVersion": "154.0.4258.48",
+  "failure": "AssertionError [ERR_ASSERTION]: alevel-desktop-green-steady original gem colour/freshness rendering\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      fill: 'rgb(32, 39, 68)',\n      filter: 'none',\n      id: 'l6-t1-1-1',\n...\n      fill: 'rgb(84, 245, 181)',\n+     filter: 'none',\n-     filter: 'drop-shadow(rgba(84, 245, 181, 0.45) 0px 0px 5px)',\n      id: 'u6-t1-1-9',\n+     opacity: '0.52',\n-     opacity: '1',\n      stroke: 'rgba(255, 255, 255, 0.78)'\n    },\n    {\n      fill: 'rgb(32, 39, 68)',\n      filter: 'none',\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/landing-restoration/design/compare-browser.mjs:22:10",
+  "finishedAt": "2026-10-03T08:18:17.396Z"
+}

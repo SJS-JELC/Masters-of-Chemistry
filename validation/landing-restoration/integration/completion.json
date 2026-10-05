@@ -1,0 +1,21 @@
+﻿{
+  "agentId": "L03",
+  "jobId": "LANDING-INTEGRATION",
+  "status": "PASS",
+  "outputPath": "validation/landing-restoration/integration/HANDOVER.md",
+  "confidence": 0.96,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "validation": {
+    "typecheck": "PASS",
+    "unit": {"status":"PASS","tests":4,"canonicalGems":16,"supportedTargets":41},
+    "browser": "browser-results.json",
+    "revisionBrowser": "revision-browser-results.json",
+    "failureBrowser": "failure-browser-results.json",
+    "manualCodeReview": "HANDOVER.md",
+    "renderedInspection": ["alevel-focused-home.png", "igcse-focused-home.png"]
+  },
+  "remaining": ["Foreman combined build/regression/protected-original and root acceptance; full landing visual comparison owned by L02/root"]
+}

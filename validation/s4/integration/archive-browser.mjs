@@ -1,0 +1,52 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {createServer} from '../../../node_modules/vite/dist/node/index.js';
+const project=path.resolve(import.meta.dirname,'../../..'),require=createRequire(path.resolve(project,'../../package.json'));
+assert.equal(require('playwright/package.json').version,'1.62.1');
+const {chromium}=require('playwright');
+const browserTemp=path.join(import.meta.dirname,'.archive-browser');fs.mkdirSync(browserTemp,{recursive:true});process.env.TEMP=browserTemp;process.env.TMP=browserTemp;process.env.TMPDIR=browserTemp;
+const server=await createServer({root:project,configFile:false,cacheDir:path.join(import.meta.dirname,'.vite-archive'),server:{host:'127.0.0.1',port:5196,strictPort:true,hmr:false}});await server.listen();
+const browser=await chromium.launch({channel:'msedge',headless:true,args:[`--disk-cache-dir=${path.join(browserTemp,'cache')}`]}),context=await browser.newContext(),page=await context.newPage(),errors=[];
+page.on('pageerror',error=>errors.push(error.message));
+let checks=[];
+try{
+ await page.goto('http://127.0.0.1:5196/alevel.html?run=s4-archive-'+Date.now());
+ checks=await page.evaluate(async()=>{
+  const {default:Dexie}=await import('/node_modules/dexie/dist/dexie.mjs');
+  const {createChemistryRepository,DATABASE_SCHEMA}=await import('/src/persistence/repository.ts');
+  const {productionRegistry}=await import('/src/foundation/registry.ts');
+  const {blankC3Progress}=await import('/src/activities/olympiad/c3l6/index.ts');
+  const equal=(a,b,message)=>{if(JSON.stringify(a)!==JSON.stringify(b))throw Error(message);};
+  const assert=(condition,message)=>{if(!condition)throw Error(message);};
+  const name='masters-of-chemistry-archive-migration-'+Date.now(),namespace={course:'alevel',profileId:'p1'};
+  const registration=productionRegistry.get('alevel/electrons-bonding'),provider=await registration.provider();
+  const target={course:'alevel',activityId:registration.id,gemId:'l6-t2-1-1',level:1},ref=provider.select({...target,seed:1,previousQuestionIds:[]});
+  const attempt={mode:'student',namespace,attemptId:'existing-v1-attempt',ref,target,currentResponses:{},assistance:[],phase:'answering',timing:{attemptId:'existing-v1-attempt',activeMs:345,idleLimitMs:60000,finished:false}};
+  const session={kind:'practice',namespace,id:'current-session',target,selection:'fixed-level',currentAttemptId:attempt.attemptId,previousQuestionIds:[],paused:true};
+  const evidence={kind:'curriculum',provenance:'legacy-import',id:'existing-v1-result',profileId:'p1',course:'alevel',activityId:registration.id,gemId:target.gemId,level:1,score:1,completedAt:1000,sourceKey:'masters-alevel-results-v1'};
+  const challenge=blankC3Progress('p1'),source={key:'old-import-receipt',fingerprint:'v1'},receipt={source,inserted:1,duplicates:0,skipped:[]};
+  const old=new Dexie(name);old.version(1).stores(DATABASE_SCHEMA);
+  const row=(id,value)=>({course:'alevel',profileId:'p1',id,value});
+  await old.table('attempts').add(row(attempt.attemptId,attempt));await old.table('sessions').add(row(session.id,session));await old.table('evidence').add(row(evidence.id,evidence));await old.table('olympiad').add(row(challenge.activityId,challenge));await old.table('receipts').add({course:'alevel',profileId:'p1',key:source.key,fingerprint:source.fingerprint,value:receipt,payload:'v1 retained payload'});
+  const before={};for(const table of old.tables)before[table.name]=await table.toArray();old.close();
+  const storeBefore=Object.fromEntries(Object.entries(localStorage)),originalSet=Storage.prototype.setItem,originalRemove=Storage.prototype.removeItem,originalClear=Storage.prototype.clear;let storeWrites=0;
+  Storage.prototype.setItem=function(...args){storeWrites++;return originalSet.apply(this,args);};Storage.prototype.removeItem=function(...args){storeWrites++;return originalRemove.apply(this,args);};Storage.prototype.clear=function(...args){storeWrites++;return originalClear.apply(this,args);};
+  const repository=createChemistryRepository(name);
+  const restored=await repository.loadAttempt(namespace,attempt.attemptId);assert(restored.ok,'V1 attempt unavailable');equal(restored.value,attempt,'V1 attempt changed');
+  equal((await repository.loadSession(namespace,session.id)).value,session,'V1 session changed');equal((await repository.curriculumHistory(namespace)).value,[evidence],'V1 history changed');equal((await repository.loadOlympiad('p1')).value,challenge,'V1 challenge changed');
+  const archive={namespace,source:{key:'malformed-synthetic-input',fingerprint:'retained-exact'},rawText:'{"id":"rejected-source","incomplete":',notes:['Malformed source retained; no invented assessment.'],skipped:[{sourceId:'rejected-source',reason:'Invalid JSON'}]};
+  equal((await repository.saveImportArchive(archive)).value,'saved','First archive failed');equal((await repository.saveImportArchive(archive)).value,'already-present','Archive dedup failed');
+  const collision=await repository.saveImportArchive({...archive,rawText:'different'});assert(!collision.ok&&collision.error.code==='conflict','Archive collision replaced raw input');
+  equal((await createChemistryRepository(name).importArchives(namespace)).value,[archive],'Archive reload lost exact rejected input');
+  equal((await repository.importArchives({course:'alevel',profileId:'other'})).value,[],'Archive profile leak');equal((await repository.importArchives({course:'igcse',profileId:'p1'})).value,[],'Archive course leak');
+  const oversized=await repository.saveImportArchive({...archive,source:{key:'large',fingerprint:'large'},rawText:'x'.repeat(10000001)});assert(!oversized.ok&&oversized.error.code==='invalid-data','Oversized archive accepted');
+  const corruptArchives=[null,{}, {...archive,source:null}, {...archive,skipped:[null]}, {...archive,unexpected:true}, {...archive,source:{...archive.source,unexpected:true}}];
+  for(const corrupt of corruptArchives){const rejected=await repository.saveImportArchive(corrupt);assert(!rejected.ok&&rejected.error.code==='invalid-data'&&!rejected.error.retryable,'Corrupt archive misclassified as unavailable');}
+  equal((await repository.importArchives(namespace)).value,[archive],'Corrupt archive changed durable source');
+  const inspect=new Dexie(name);await inspect.open();for(const [table,rows] of Object.entries(before))equal(await inspect.table(table).toArray(),rows,'Migration modified '+table);assert(inspect.tables.some(t=>t.name==='archives'),'Archive migration table absent');inspect.close();
+  assert(storeWrites===0,'Legacy storage mutation');equal(Object.fromEntries(Object.entries(localStorage)),storeBefore,'Legacy keys changed');Storage.prototype.setItem=originalSet;Storage.prototype.removeItem=originalRemove;Storage.prototype.clear=originalClear;
+  return [{id:'v1-to-v2-five-table-preservation',status:'PASS',tables:Object.keys(before),activeDraftMs:345,missingHistoricalTimingPreserved:!Object.hasOwn(evidence,'timing')},{id:'exact-raw-archive-dedup-conflict-reload',status:'PASS'},{id:'archive-bounds-course-profile-isolation',status:'PASS',corruptShapesRejected:corruptArchives.length},{id:'legacy-store-read-only',status:'PASS',storeWrites}];
+ });assert.deepEqual(errors,[]);
+}finally{await context.close();await browser.close();await server.close();const result={status:checks.length===4&&!errors.length?'PASS':'FAIL',checkedAt:new Date().toISOString(),playwright:'1.62.1',checks,pageErrors:errors,scope:'Actual V1 Dexie database upgraded by real V2 repository; exact existing draft/session/evidence/Olympiad/receipt rows preserved, rejected source raw archive durable and idempotent. Synthetic new-origin inputs; no original stores written.'};fs.writeFileSync(path.join(import.meta.dirname,'archive-browser.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}

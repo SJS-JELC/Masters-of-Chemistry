@@ -1,0 +1,268 @@
+import { useEffect, useMemo, useState } from 'react';
+import type { CourseDataViewProps, LegacyImportPlan } from '../contracts/integration.ts';
+import type { LegacyImportArchive } from '../contracts/repository.ts';
+import { createChemistryRepository } from '../persistence/index.ts';
+import { planLegacyImport, LEGACY_IMPORT_KEYS } from '../persistence/legacy/plan.ts';
+import {
+  executeLegacyImport,
+  readableLegacyKeys,
+  IMPORT_REPORT_KEY,
+  type ImportExecution,
+} from './import.ts';
+import './legacy-import.css';
+
+export function LegacyImportView({ course, namespace, databaseName }: CourseDataViewProps) {
+  const repository = useMemo(() => createChemistryRepository(databaseName), [databaseName]);
+  const [sourceKey, setSourceKey] = useState<string>(
+    course === 'alevel' ? LEGACY_IMPORT_KEYS[0] : LEGACY_IMPORT_KEYS[2],
+  );
+  const [input, setInput] = useState(''),
+    [snapshots, setSnapshots] = useState<Readonly<Record<string, string>>>({});
+  const [plan, setPlan] = useState<LegacyImportPlan | null>(null),
+    [result, setResult] = useState<ImportExecution | null>(null);
+  const [status, setStatus] = useState(''),
+    [busy, setBusy] = useState(false),
+    [archives, setArchives] = useState<readonly LegacyImportArchive[]>([]);
+  async function refresh() {
+    const r = await repository.importArchives(namespace);
+    if (r.ok) setArchives(r.value);
+    else setStatus(r.error.message);
+  }
+  useEffect(() => {
+    void refresh();
+  }, [repository, namespace.course, namespace.profileId]);
+  async function preview(next: Readonly<Record<string, string>>) {
+    setBusy(true);
+    setResult(null);
+    setStatus('');
+    try {
+      setSnapshots(next);
+      setPlan(await planLegacyImport(namespace, next));
+      setStatus(
+        Object.keys(next).length
+          ? 'Preview ready. Import requires your next choice.'
+          : 'No legacy keys were found on this origin. Paste or upload exported data from the original site.',
+      );
+    } catch (e) {
+      setStatus(String(e));
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function read() {
+    try {
+      const next: Record<string, string> = {};
+      for (const key of readableLegacyKeys(course)) {
+        const text = localStorage.getItem(key);
+        if (text !== null) next[key] = text;
+      }
+      await preview(next);
+    } catch {
+      setStatus('Legacy storage could not be read. Paste or upload an export.');
+    }
+  }
+  async function save() {
+    setBusy(true);
+    try {
+      const r = await executeLegacyImport(repository, namespace, snapshots);
+      setResult(r);
+      setStatus(
+        r.errors.length
+          ? 'Some records could not be imported. The exact sources that saved remain archived; retry or export the report.'
+          : 'Import complete. Original stores were left untouched.',
+      );
+      await refresh();
+    } catch (e) {
+      setStatus(String(e));
+    } finally {
+      setBusy(false);
+    }
+  }
+  function download(value: unknown, name: string) {
+    const blob = new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+  const count = plan?.batches.reduce((n, b) => n + b.curriculum.length + b.olympiad.length, 0) ?? 0;
+  const sourceArchives = archives.filter((a) => a.source.key !== IMPORT_REPORT_KEY),
+    outcomeReports = archives.filter((a) => a.source.key === IMPORT_REPORT_KEY);
+  return (
+    <section className="legacy-import" aria-labelledby="import-heading">
+      <h2 id="import-heading">Import original progress</h2>
+      <p>
+        Choose a source and preview it before importing into this course and profile. Original
+        scores, dates, optional flags and valid timing are preserved. Missing answers, marks and
+        timing remain unknown.
+      </p>
+      <p>
+        Only original result stores and chemically checked C3L6 drawings can become progress. Saved
+        schedulers and practice drafts are archived for inspection; they cannot supply missing first
+        responses or independent timing. Rocket Recall records are retained in the report and
+        excluded from progress.
+      </p>
+      <button disabled={busy} onClick={() => void read()}>
+        Read original keys on this site
+      </button>
+      <p className="import-limits">
+        This button reads only inventoried keys on the current browser origin. It cannot access
+        another site's storage. Original-site exports can be pasted or uploaded below. Maximum 10 MB
+        per source.
+      </p>
+      <label>
+        Original store key
+        <select value={sourceKey} onChange={(e) => setSourceKey(e.target.value)}>
+          {readableLegacyKeys(course).map((key) => (
+            <option key={key}>{key}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Source JSON
+        <textarea
+          value={input}
+          maxLength={10000000}
+          onChange={(e) => setInput(e.target.value)}
+          rows={6}
+        />
+      </label>
+      <label>
+        Upload source JSON
+        <input
+          type="file"
+          accept=".json,application/json"
+          disabled={busy}
+          onChange={async (e) => {
+            const file = e.target.files?.[0];
+            if (!file) return;
+            if (file.size > 10000000) {
+              setStatus('File exceeds 10 MB.');
+              return;
+            }
+            setInput(await file.text());
+          }}
+        />
+      </label>
+      <button disabled={busy || !input} onClick={() => void preview({ [sourceKey]: input })}>
+        Preview source
+      </button>
+      <p role="status">{status}</p>
+      {plan && (
+        <div>
+          <h3>
+            Preview: {count} supported records, {plan.rejected.length} retained exclusions
+          </h3>
+          <ul>
+            {plan.notes.map((note, i) => (
+              <li key={i}>{note}</li>
+            ))}
+          </ul>
+          {plan.rejected.length > 0 && (
+            <details open>
+              <summary>Records excluded from progress</summary>
+              <ul>
+                {plan.rejected.slice(0, 100).map((r, i) => (
+                  <li key={i}>
+                    <strong>
+                      {r.sourceKey} · {r.sourceId}
+                    </strong>
+                    : {r.reason}
+                  </li>
+                ))}
+              </ul>
+              {plan.rejected.length > 100 && (
+                <p>Showing the first 100. Export includes all exclusions and raw records.</p>
+              )}
+            </details>
+          )}
+          <button disabled={busy || !Object.keys(snapshots).length} onClick={() => void save()}>
+            Import reviewed sources
+          </button>{' '}
+          <button
+            onClick={() =>
+              download({ namespace, snapshots, plan, result }, 'legacy-import-report.json')
+            }
+          >
+            Export exact sources and report
+          </button>
+        </div>
+      )}
+      {result && (
+        <div>
+          <h3>Import result</h3>
+          <ul>
+            {result.receipts.map((r) => (
+              <li key={r.source.key}>
+                {r.source.key}: {r.inserted} inserted, {r.duplicates} already present
+              </li>
+            ))}
+            {result.errors.map((e, i) => (
+              <li key={i}>{e}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <h3>Saved source archives ({sourceArchives.length})</h3>
+      <p>
+        These sources are stored in the new database and survive refresh. Original text is retained
+        even when no record is imported.
+      </p>
+      <ul>
+        {sourceArchives.map((a) => (
+          <li key={`${a.source.key}:${a.source.fingerprint}`}>
+            <strong>{a.source.key}</strong> · {a.skipped.length} excluded records{' '}
+            <button onClick={() => download(a, 'legacy-source-archive.json')}>
+              Export archive
+            </button>
+            {a.skipped.length > 0 && (
+              <details>
+                <summary>Reasons</summary>
+                <ul>
+                  {a.skipped.slice(0, 100).map((r, i) => (
+                    <li key={i}>
+                      {r.sourceId}: {r.reason}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </li>
+        ))}
+      </ul>
+      <h3>Saved import outcome reports ({outcomeReports.length})</h3>
+      <p>
+        Each distinct result references the exact source archives and retains exclusions, conflicts
+        and save errors. Repeating an identical result keeps one report.
+      </p>
+      <ul>
+        {outcomeReports.map((a) => (
+          <li key={a.source.fingerprint}>
+            <ul>
+              {a.notes.map((note, i) => (
+                <li key={i}>{note}</li>
+              ))}
+            </ul>
+            <button onClick={() => download(a, 'legacy-import-outcome.json')}>
+              Export outcome report
+            </button>
+            {a.skipped.length > 0 && (
+              <details>
+                <summary>Outcome exclusions</summary>
+                <ul>
+                  {a.skipped.slice(0, 100).map((r, i) => (
+                    <li key={i}>
+                      {r.sourceId}: {r.reason}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}

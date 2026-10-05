@@ -1,0 +1,22 @@
+{
+  "jobId": "S3-TITRATION",
+  "run": "a14-titration-1790990032901",
+  "startedAt": "2026-10-03T01:13:52.901Z",
+  "checks": [
+    "incomplete curve blocks assessment and creates no evidence",
+    "keyboard anchor steps and real numeric/piece/indicator controls construct source curve",
+    "reload restores same question seed/attempt and full curve response",
+    "pointer drag updates meaningful volume and Undo restores prior chemical state",
+    "wrong first5/6 fixed; corrected6/6 learning feedback cannot mutate first/time/evidence",
+    "assessed reload/Next preserves old timing and advances genuine sequential18-question pool",
+    "practice pause/reload/resume",
+    "level3 genuine complete-dissociation diprotic factors, full correct calculation/indicator",
+    "all36 historical teacher models decode/render without evidence; six chemistry-family mobile screens fit",
+    "actual mobile touchscreen selection plus numeric controls available",
+    "U6 revision ADD ALL selects fifteen acid routes plus exactly two true titration levels"
+  ],
+  "errors": [],
+  "status": "FAIL",
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\titration\\browser.mjs:34:216",
+  "finishedAt": "2026-10-03T01:15:00.444Z"
+}

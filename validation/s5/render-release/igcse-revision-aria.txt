@@ -1,0 +1,73 @@
+- link "Skip to question":
+  - /url: "#main-content"
+- banner:
+  - img "St John's School eagle"
+  - paragraph: Masters of Chemistry
+  - heading "IGCSE Chemistry" [level=1]
+  - text: IGCSE
+- navigation "Course views":
+  - button "Practice"
+  - button "Revision"
+  - button "Teacher"
+  - button "Statistics"
+  - button "Import progress"
+- navigation "IGCSE Chemistry activities":
+  - group:
+    - text: Curriculum activities
+    - list:
+      - listitem:
+        - button "Structure and bonding"
+      - listitem:
+        - button "Dot-and-cross diagrams"
+      - listitem:
+        - button "Calorimetry"
+      - listitem:
+        - button "Bond enthalpy"
+      - listitem:
+        - button "Energy and enthalpy"
+      - listitem:
+        - button "Energetics practical"
+- main:
+  - region "Current session":
+    - text: Practice · Energy and enthalpy · Level 2
+    - button "Change activity or view" [expanded]
+  - region "Practice setup":
+    - heading "Build a revision session" [level=2]
+    - text: Activity and level
+    - combobox "Target":
+      - option "Structure and bonding · Level 2"
+      - option "Structure and bonding · Level 3"
+      - option "Ionic bonding · Level 1"
+      - option "Ionic bonding · Level 2"
+      - option "Covalent bonding · Level 1"
+      - option "Covalent bonding · Level 2"
+      - option "Covalent bonding · Level 3"
+      - option "Calorimetry · Level 1"
+      - option "Calorimetry · Level 2"
+      - option "Calorimetry · Level 3"
+      - option "Bond enthalpy · Level 1"
+      - option "Bond enthalpy · Level 2"
+      - option "Bond enthalpy · Level 3"
+      - option "Energy and enthalpy · Level 1"
+      - option "Energy and enthalpy · Level 2" [selected]
+      - option "Energetics practical · Level 2"
+      - option "Energetics practical · Level 3"
+    - text: Session
+    - combobox "Session":
+      - option "Practice"
+      - option "Revision" [selected]
+    - heading "Revision topics" [level=3]
+    - button "ADD ALL lower-6"
+    - button "ADD ALL fourth-3"
+    - button "ADD ALL lower-10"
+    - button "Clear selection"
+    - paragraph: 0 supported target levels selected
+    - button "Teacher preview"
+    - button "Start revision" [disabled]
+  - status: Attempt paused. Resume preserves its question, answer and timing.
+  - button "Resume saved attempt"
+  - paragraph: Resume your saved attempt to continue.
+  - region "Practice progress":
+    - paragraph: 0 saved practice results
+    - paragraph: "Active answering time: 0:01"
+- contentinfo: St John's School · Chemistry

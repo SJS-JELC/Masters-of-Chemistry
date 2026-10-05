@@ -1,0 +1,30 @@
+{
+  "namespace": {
+    "course": "alevel",
+    "profileId": "local"
+  },
+  "source": {
+    "key": "masters-alevel-results-v1",
+    "fingerprint": "847-2e8ddbf4-8dcf46d0"
+  },
+  "rawText": "  [\n {\n  \"leafId\": \"l6-t2-1-1\",\n  \"level\": 1,\n  \"id\": \"s5-legacy-alevel\",\n  \"score\": 1,\n  \"completedAt\": 1791003618376\n },\n {\n  \"leafId\": \"l6-t2-1-1\",\n  \"level\": 1,\n  \"id\": \"s5-second-alevel\",\n  \"score\": 0.5,\n  \"completedAt\": 1791003618377,\n  \"timing\": {\n   \"version\": 1,\n   \"activeMs\": 2468,\n   \"idleLimitMs\": 180000\n  }\n },\n {\n  \"id\": \"s5-historical-acid\",\n  \"leafId\": \"u6-t1-1-2\",\n  \"level\": 1,\n  \"score\": 1,\n  \"completedAt\": 1791003617376,\n  \"progressionVersion\": 1\n },\n {\n  \"leafId\": \"l6-t2-1-1\",\n  \"level\": 1,\n  \"id\": \"s5-legacy-alevel\",\n  \"score\": 1,\n  \"completedAt\": 1791003618376\n },\n {\n  \"leafId\": \"l6-t2-1-1\",\n  \"level\": 1,\n  \"id\": \"s5-legacy-alevel\",\n  \"score\": 0,\n  \"completedAt\": 1791003618376\n },\n {\n  \"id\": \"rocket\",\n  \"leafId\": \"rocket-recall\",\n  \"grade\": 1,\n  \"level\": 1,\n  \"score\": 1,\n  \"completedAt\": 1791003618376\n },\n null\n]\n",
+  "notes": [
+    "Duplicate s5-legacy-alevel within masters-alevel-results-v1 retains the same first evidence.",
+    "Historical stores contain scores and dates, not first responses or raw marks. Missing responses and durations remain absent. Acid V1 evidence is retained under its original progression and does not become V2 mastery.",
+    "Raw archives retain the exact source fingerprint. Import receipts combine that fingerprint with the accepted-record projection; equal cross-store rows keep their own stable source batches and are deduplicated by original attempt ID."
+  ],
+  "skipped": [
+    {
+      "sourceId": "s5-legacy-alevel",
+      "reason": "Conflicting duplicate attempt ID; first valid source record retained."
+    },
+    {
+      "sourceId": "rocket",
+      "reason": "Unsupported A Level result fields"
+    },
+    {
+      "sourceId": "row-6",
+      "reason": "legacy record must be an object"
+    }
+  ]
+}

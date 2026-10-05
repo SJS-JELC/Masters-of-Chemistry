@@ -1,0 +1,4924 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-ENERGY-NEXT-FIX",
+  "startedAt": "2026-10-03T05:31:18.924Z",
+  "browser": "154.0.4258.48",
+  "settings": {
+    "cpu": 4,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": {
+      "offline": false,
+      "latency": 150,
+      "downloadThroughput": 200000,
+      "uploadThroughput": 93750
+    }
+  },
+  "cases": [
+    {
+      "mode": "unfinished-draft",
+      "before": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-unfinished-draft-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 150,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005498503,
+              "timing": {
+                "activeMs": 2148,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005498503,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "A06-fix-unfinished-draft-D03",
+            "previousQuestionIds": [
+              "D03"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-unfinished-draft-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005498503,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2148,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005498503,
+              "timing": {
+                "activeMs": 2148,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005498503,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      },
+      "beforeClick": {
+        "code": "D03",
+        "save": "Saved on this device",
+        "nextDisabled": false,
+        "focused": "Peak level screen y",
+        "draft": "270",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4811.5,
+            "wall": 1791005498601,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 4831.5,
+            "wall": 1791005498621,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4835.100000023842,
+            "wall": 1791005498625,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Control"
+          },
+          {
+            "type": "keydown",
+            "at": 4836.800000071526,
+            "wall": 1791005498626,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "A"
+          },
+          {
+            "type": "keydown",
+            "at": 4839.600000023842,
+            "wall": 1791005498629,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Backspace"
+          },
+          {
+            "type": "input",
+            "at": 4843.200000047684,
+            "wall": 1791005498633,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4844.899999976158,
+            "wall": 1791005498634,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4860.600000023842,
+            "wall": 1791005498650,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "2"
+          },
+          {
+            "type": "input",
+            "at": 4864.399999976158,
+            "wall": 1791005498654,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4911.600000023842,
+            "wall": 1791005498701,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "7"
+          },
+          {
+            "type": "input",
+            "at": 4915.899999976158,
+            "wall": 1791005498706,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4974.200000047684,
+            "wall": 1791005498764,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "0"
+          },
+          {
+            "type": "input",
+            "at": 4977.700000047684,
+            "wall": 1791005498767,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          }
+        ]
+      },
+      "changed": true,
+      "afterClick": {
+        "code": "D07",
+        "save": "Saved on this device",
+        "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherStatisticsImport progressCurriculum activitiesStructure and bondingDot-and-cross diagramsCalorimetryBond enthalpyEnergy and enthalpyEnergetics practicalPractice · Energy and enthalpy · Level 2Change activity or viewPause and saveQuestionReaction Profile Diagrams · EE-2XJSDMD07Level 2Calcium carbonate breaks down in an endothermic reaction. The two energy arrows on this profile are wrong. Put the substance labels on the correct levels and move the arrows to show activation energy and ΔH correctly.CaCO₃ → CaO + CO₂Your response[4 marks]Arrange the energy levels, labels and arrow endpoints. Up on the graph means greater energy. Each arrow has a tail and a single arrowhead.Diagram workspaceDrag a level or an arrow endpoint, or use the controls below. Focus a graph handle and use arrow keys. An attached endpoint follows its energy level. On narrow screens, swipe across empty graph space or scroll horizontally to see the full profile.Undo profile editReset profileFit whole diagramZoom for detailWhole diagram shown. Choose Zoom for detail to inspect labels and use larger controls.text{font:15px sans-serif;fill:#15243b}EnergyProgress of reactionUnlabelledUnlabelledΔHEₐUnlabelled is the left level; unlabelled is the right level. The right level is higher in energy. Arrow endpoints: delta: r to peak; ea: p to peak.Keyboard, touch and non-drag profile controlsScreen y is 55 near the top and 340 near the bottom; a smaller y means higher energy.Type a complete coordinate, then press Enter or leave the field to apply it. Escape cancels an unfinished edit. Invalid coordinates keep the previous profile value.Left level screen yRight level screen yPeak level screen yLeft formula labelPlace labelCaCO₃CaO + CO₂Right formula labelPlace labelCaCO₃CaO + CO₂Activation energy arrowTailFree positionLeft energy levelRight energy levelPeakArrowheadFree positionLeft energy levelRight energy levelPeakArrow x positionRemove activation energy arrowEnthalpy change arrowTailFree positionLeft energy levelRight energy levelPeakArrowheadFree positionLeft energy levelRight energy levelPeakArrow x positionRemove enthalpy change arrowCheck answerRequest hintReveal answer (assisted)PauseSaved on this device1 saved practice resultActive answering time: 0:00St John's School · Chemistry\n",
+        "draft": "85",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4811.5,
+            "wall": 1791005498601,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 4831.5,
+            "wall": 1791005498621,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4835.100000023842,
+            "wall": 1791005498625,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Control"
+          },
+          {
+            "type": "keydown",
+            "at": 4836.800000071526,
+            "wall": 1791005498626,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "A"
+          },
+          {
+            "type": "keydown",
+            "at": 4839.600000023842,
+            "wall": 1791005498629,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Backspace"
+          },
+          {
+            "type": "input",
+            "at": 4843.200000047684,
+            "wall": 1791005498633,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4844.899999976158,
+            "wall": 1791005498634,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4860.600000023842,
+            "wall": 1791005498650,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "2"
+          },
+          {
+            "type": "input",
+            "at": 4864.399999976158,
+            "wall": 1791005498654,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4911.600000023842,
+            "wall": 1791005498701,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "7"
+          },
+          {
+            "type": "input",
+            "at": 4915.899999976158,
+            "wall": 1791005498706,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4974.200000047684,
+            "wall": 1791005498764,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "0"
+          },
+          {
+            "type": "input",
+            "at": 4977.700000047684,
+            "wall": 1791005498767,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "pointerdown",
+            "at": 5067.200000047684,
+            "wall": 1791005498857,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mousedown",
+            "at": 5067.5,
+            "wall": 1791005498857,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 5067.800000071526,
+            "wall": 1791005498857,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "focusout",
+            "at": 5068.200000047684,
+            "wall": 1791005498858,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5075.399999976158,
+            "wall": 1791005498865,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 5079.800000071526,
+            "wall": 1791005498869,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "pointerup",
+            "at": 5081.200000047684,
+            "wall": 1791005498871,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mouseup",
+            "at": 5081.300000071526,
+            "wall": 1791005498871,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "click",
+            "at": 5081.5,
+            "wall": 1791005498871,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5085.800000071526,
+            "wall": 1791005498875,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 5093.600000023842,
+            "wall": 1791005498883,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "focusout",
+            "at": 5093.800000071526,
+            "wall": 1791005498883,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5105.399999976158,
+            "wall": 1791005498895,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5171.700000047684,
+            "wall": 1791005498961,
+            "code": "D07",
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5211.300000071526,
+            "wall": 1791005499001,
+            "code": "D07",
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          }
+        ]
+      },
+      "after": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "16422df9-488d-46cd-a5c2-49dfec8c064e",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D07",
+              "seed": 895845505,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {},
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "16422df9-488d-46cd-a5c2-49dfec8c064e",
+              "activeMs": 0,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          },
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-unfinished-draft-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 270,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005498503,
+              "timing": {
+                "activeMs": 2148,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005498503,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "16422df9-488d-46cd-a5c2-49dfec8c064e",
+            "previousQuestionIds": [
+              "D03",
+              "D07"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-unfinished-draft-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005498503,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2148,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005498503,
+              "timing": {
+                "activeMs": 2148,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005498503,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      }
+    },
+    {
+      "mode": "clean-control",
+      "before": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-clean-control-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 150,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005518860,
+              "timing": {
+                "activeMs": 2120,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005518860,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "A06-fix-clean-control-D03",
+            "previousQuestionIds": [
+              "D03"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-clean-control-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005518860,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2120,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005518860,
+              "timing": {
+                "activeMs": 2120,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005518860,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      },
+      "beforeClick": {
+        "code": "D03",
+        "save": "Saved on this device",
+        "nextDisabled": false,
+        "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherStatisticsImport progressCurriculum activitiesStructure and bondingDot-and-cross diagramsCalorimetryBond enthalpyEnergy and enthalpyEnergetics practicalPractice · Energy and enthalpy · Level 2Change activity or viewPause and saveQuestionReaction Profile Diagrams · EE-1TLDLQD03Level 2Methane burns in oxygen. Build the reaction profile, add the substance labels and show the activation-energy and ΔH arrows. ΔH = −890 kJ mol⁻¹.CH₄ + 2O₂ → CO₂ + 2H₂OYour response[6 marks]Arrange the energy levels, labels and arrow endpoints. Up on the graph means greater energy. Each arrow has a tail and a single arrowhead.Diagram workspaceDrag a level or an arrow endpoint, or use the controls below. Focus a graph handle and use arrow keys. An attached endpoint follows its energy level. On narrow screens, swipe across empty graph space or scroll horizontally to see the full profile.Undo profile editReset profileFit whole diagramZoom for detailWhole diagram shown. Choose Zoom for detail to inspect labels and use larger controls.text{font:15px sans-serif;fill:#15243b}EnergyProgress of reactionCH₄ + 2O₂CO₂ + 2H₂OEₐΔHCH₄ + 2O₂ is the left level; CO₂ + 2H₂O is the right level. The right level is equal in energy. Arrow endpoints: ea: free to free; delta: free to free.Keyboard, touch and non-drag profile controlsScreen y is 55 near the top and 340 near the bottom; a smaller y means higher energy.Type a complete coordinate, then press Enter or leave the field to apply it. Escape cancels an unfinished edit. Invalid coordinates keep the previous profile value.Left level screen yRight level screen yPeak level screen yLeft formula labelPlace labelCH₄ + 2O₂CO₂ + 2H₂ORight formula labelPlace labelCH₄ + 2O₂CO₂ + 2H₂OActivation energy arrowTailFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrowheadFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrow x positionRemove activation energy arrowEnthalpy change arrowTailFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrowheadFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrow x positionRemove enthalpy change arrowYou can edit your response for learning. Your first submission, marks and timing remain fixed.First assessment3 / 6 marksCorrect · Correct formula or label on the left line.Correct · Correct formula or label on the right line.Incorrect · Product energy level matches the stated reaction type.Correct · Peak above both end levels.Incorrect · Activation-energy arrow starts at reactant level and points up to the peak.Incorrect · ΔH arrow starts at reactant level and ends at product level.Check correctionRequest hintShow worked answerNext questionPauseSaved on this device1 saved practice resultTime before first submission: 0:02St John's School · Chemistry\n",
+        "draft": "150",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4789.899999976158,
+            "wall": 1791005518969,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          }
+        ]
+      },
+      "changed": true,
+      "afterClick": {
+        "code": "D11",
+        "save": "Saved on this device",
+        "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherStatisticsImport progressCurriculum activitiesStructure and bondingDot-and-cross diagramsCalorimetryBond enthalpyEnergy and enthalpyEnergetics practicalPractice · Energy and enthalpy · Level 2Change activity or viewPause and saveQuestionReaction Profile Diagrams · EE-05KLXXD11Level 2Build the reaction profile for the equation shown, using ΔH to decide the product energy level. Place both substance labels and both energy arrows.2CO(g) + O₂(g) → 2CO₂(g)ΔH = −566 kJ for the reaction as written.Your response[6 marks]Arrange the energy levels, labels and arrow endpoints. Up on the graph means greater energy. Each arrow has a tail and a single arrowhead.Diagram workspaceDrag a level or an arrow endpoint, or use the controls below. Focus a graph handle and use arrow keys. An attached endpoint follows its energy level. On narrow screens, swipe across empty graph space or scroll horizontally to see the full profile.Undo profile editReset profileAdd activation energy arrowAdd enthalpy change arrowFit whole diagramZoom for detailWhole diagram shown. Choose Zoom for detail to inspect labels and use larger controls.text{font:15px sans-serif;fill:#15243b}EnergyProgress of reactionUnlabelledUnlabelledUnlabelled is the left level; unlabelled is the right level. The right level is equal in energy. Arrow endpoints: .Keyboard, touch and non-drag profile controlsScreen y is 55 near the top and 340 near the bottom; a smaller y means higher energy.Type a complete coordinate, then press Enter or leave the field to apply it. Escape cancels an unfinished edit. Invalid coordinates keep the previous profile value.Left level screen yRight level screen yPeak level screen yLeft formula labelPlace label2CO(g) + O₂(g)2CO₂(g)Right formula labelPlace label2CO(g) + O₂(g)2CO₂(g)Check answerRequest hintReveal answer (assisted)PauseSaved on this device1 saved practice resultActive answering time: 0:00St John's School · Chemistry\n",
+        "draft": "220",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4789.899999976158,
+            "wall": 1791005518969,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "pointerdown",
+            "at": 4847.200000047684,
+            "wall": 1791005519026,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mousedown",
+            "at": 4847.600000023842,
+            "wall": 1791005519027,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "focusin",
+            "at": 4848.100000023842,
+            "wall": 1791005519027,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "pointerup",
+            "at": 4848.700000047684,
+            "wall": 1791005519028,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mouseup",
+            "at": 4848.899999976158,
+            "wall": 1791005519028,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "click",
+            "at": 4849.100000023842,
+            "wall": 1791005519028,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4854.800000071526,
+            "wall": 1791005519034,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saved on this device",
+            "focused": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 4866.700000047684,
+            "wall": 1791005519046,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "focusout",
+            "at": 4867.100000023842,
+            "wall": 1791005519046,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4885.800000071526,
+            "wall": 1791005519065,
+            "code": "D11",
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4955.100000023842,
+            "wall": 1791005519134,
+            "code": "D11",
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          }
+        ]
+      },
+      "after": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-clean-control-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 150,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005518860,
+              "timing": {
+                "activeMs": 2120,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005518860,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          },
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "eae6f572-562e-40f5-b13c-034868c34378",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D11",
+              "seed": 2039162284,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {},
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "eae6f572-562e-40f5-b13c-034868c34378",
+              "activeMs": 0,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "eae6f572-562e-40f5-b13c-034868c34378",
+            "previousQuestionIds": [
+              "D03",
+              "D11"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-clean-control-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005518860,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2120,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005518860,
+              "timing": {
+                "activeMs": 2120,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005518860,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      }
+    },
+    {
+      "mode": "quota-failure-retry",
+      "before": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-quota-failure-retry-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 150,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005538785,
+              "timing": {
+                "activeMs": 2156,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005538785,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "A06-fix-quota-failure-retry-D03",
+            "previousQuestionIds": [
+              "D03"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-quota-failure-retry-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005538785,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2156,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005538785,
+              "timing": {
+                "activeMs": 2156,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005538785,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      },
+      "beforeClick": {
+        "code": "D03",
+        "save": "Saved on this device",
+        "nextDisabled": false,
+        "focused": "Peak level screen y",
+        "draft": "270",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4794.599999904633,
+            "wall": 1791005538879,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 4820.799999952316,
+            "wall": 1791005538905,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4825.099999904633,
+            "wall": 1791005538909,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Control"
+          },
+          {
+            "type": "keydown",
+            "at": 4827.299999952316,
+            "wall": 1791005538911,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "A"
+          },
+          {
+            "type": "keydown",
+            "at": 4837.099999904633,
+            "wall": 1791005538921,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Backspace"
+          },
+          {
+            "type": "input",
+            "at": 4841.199999928474,
+            "wall": 1791005538925,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4842.599999904633,
+            "wall": 1791005538927,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4856.199999928474,
+            "wall": 1791005538940,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "2"
+          },
+          {
+            "type": "input",
+            "at": 4859.699999928474,
+            "wall": 1791005538944,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4909.199999928474,
+            "wall": 1791005538993,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "7"
+          },
+          {
+            "type": "input",
+            "at": 4913.5,
+            "wall": 1791005538997,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4971.799999952316,
+            "wall": 1791005539056,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "0"
+          },
+          {
+            "type": "input",
+            "at": 4975.199999928474,
+            "wall": 1791005539059,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          }
+        ]
+      },
+      "changed": false,
+      "afterClick": {
+        "code": "D03",
+        "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+        "nextDisabled": true,
+        "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherStatisticsImport progressCurriculum activitiesStructure and bondingDot-and-cross diagramsCalorimetryBond enthalpyEnergy and enthalpyEnergetics practicalPractice · Energy and enthalpy · Level 2Change activity or viewPause and saveQuestionReaction Profile Diagrams · EE-1TLDLQD03Level 2Methane burns in oxygen. Build the reaction profile, add the substance labels and show the activation-energy and ΔH arrows. ΔH = −890 kJ mol⁻¹.CH₄ + 2O₂ → CO₂ + 2H₂OYour response[6 marks]Arrange the energy levels, labels and arrow endpoints. Up on the graph means greater energy. Each arrow has a tail and a single arrowhead.Diagram workspaceDrag a level or an arrow endpoint, or use the controls below. Focus a graph handle and use arrow keys. An attached endpoint follows its energy level. On narrow screens, swipe across empty graph space or scroll horizontally to see the full profile.Undo profile editReset profileFit whole diagramZoom for detailWhole diagram shown. Choose Zoom for detail to inspect labels and use larger controls.text{font:15px sans-serif;fill:#15243b}EnergyProgress of reactionCH₄ + 2O₂CO₂ + 2H₂OEₐΔHCH₄ + 2O₂ is the left level; CO₂ + 2H₂O is the right level. The right level is equal in energy. Arrow endpoints: ea: free to free; delta: free to free.Keyboard, touch and non-drag profile controlsScreen y is 55 near the top and 340 near the bottom; a smaller y means higher energy.Type a complete coordinate, then press Enter or leave the field to apply it. Escape cancels an unfinished edit. Invalid coordinates keep the previous profile value.Left level screen yRight level screen yPeak level screen yLeft formula labelPlace labelCH₄ + 2O₂CO₂ + 2H₂ORight formula labelPlace labelCH₄ + 2O₂CO₂ + 2H₂OActivation energy arrowTailFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrowheadFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrow x positionRemove activation energy arrowEnthalpy change arrowTailFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrowheadFree positionLeft energy levelRight energy levelPeakEndpoint screen yArrow x positionRemove enthalpy change arrowYou can edit your response for learning. Your first submission, marks and timing remain fixed.First assessment3 / 6 marksCorrect · Correct formula or label on the left line.Correct · Correct formula or label on the right line.Incorrect · Product energy level matches the stated reaction type.Correct · Peak above both end levels.Incorrect · Activation-energy arrow starts at reactant level and points up to the peak.Incorrect · ΔH arrow starts at reactant level and ends at product level.Check correctionRequest hintShow worked answerNext questionPauseWork has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save1 saved practice resultTime before first submission: 0:02St John's School · Chemistry\n",
+        "draft": "270",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4794.599999904633,
+            "wall": 1791005538879,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 4820.799999952316,
+            "wall": 1791005538905,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4825.099999904633,
+            "wall": 1791005538909,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Control"
+          },
+          {
+            "type": "keydown",
+            "at": 4827.299999952316,
+            "wall": 1791005538911,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "A"
+          },
+          {
+            "type": "keydown",
+            "at": 4837.099999904633,
+            "wall": 1791005538921,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Backspace"
+          },
+          {
+            "type": "input",
+            "at": 4841.199999928474,
+            "wall": 1791005538925,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4842.599999904633,
+            "wall": 1791005538927,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4856.199999928474,
+            "wall": 1791005538940,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "2"
+          },
+          {
+            "type": "input",
+            "at": 4859.699999928474,
+            "wall": 1791005538944,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4909.199999928474,
+            "wall": 1791005538993,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "7"
+          },
+          {
+            "type": "input",
+            "at": 4913.5,
+            "wall": 1791005538997,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4971.799999952316,
+            "wall": 1791005539056,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "0"
+          },
+          {
+            "type": "input",
+            "at": 4975.199999928474,
+            "wall": 1791005539059,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "pointerdown",
+            "at": 5066.199999928474,
+            "wall": 1791005539150,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mousedown",
+            "at": 5066.599999904633,
+            "wall": 1791005539151,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 5067.199999928474,
+            "wall": 1791005539151,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "focusout",
+            "at": 5067.399999976158,
+            "wall": 1791005539151,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5076.5,
+            "wall": 1791005539160,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 5081.899999976158,
+            "wall": 1791005539166,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "pointerup",
+            "at": 5084.099999904633,
+            "wall": 1791005539168,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mouseup",
+            "at": 5084.5,
+            "wall": 1791005539168,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "click",
+            "at": 5084.699999928474,
+            "wall": 1791005539169,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5089.799999952316,
+            "wall": 1791005539174,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 5098.299999952316,
+            "wall": 1791005539182,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "focusout",
+            "at": 5098.599999904633,
+            "wall": 1791005539183,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5109.5,
+            "wall": 1791005539193,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          }
+        ]
+      },
+      "after": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-quota-failure-retry-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 150,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005538785,
+              "timing": {
+                "activeMs": 2156,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005538785,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "A06-fix-quota-failure-retry-D03",
+            "previousQuestionIds": [
+              "D03"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-quota-failure-retry-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005538785,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2156,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005538785,
+              "timing": {
+                "activeMs": 2156,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005538785,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      },
+      "retry": {
+        "dom": {
+          "code": "B07",
+          "save": "Saved on this device",
+          "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherStatisticsImport progressCurriculum activitiesStructure and bondingDot-and-cross diagramsCalorimetryBond enthalpyEnergy and enthalpyEnergetics practicalPractice · Energy and enthalpy · Level 2Change activity or viewPause and saveQuestionBond Enthalpies · EE-6QJW20B07Level 2A student says, “Breaking bonds gives out energy, so the reaction is exothermic.” Complete the statements to correct their explanation.Part 1[1 mark]Breaking bonds actually _____ energy.Choose one answertakes ingives outPart 2[1 mark]In an exothermic reaction, _____ energy is released making bonds than is taken in breaking bonds.Choose one answermorelessCheck answerRequest hintReveal answer (assisted)PauseSaved on this device1 saved practice resultActive answering time: 0:00St John's School · Chemistry\n",
+          "events": [
+            {
+              "type": "installed",
+              "at": 4794.599999904633,
+              "wall": 1791005538879,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            },
+            {
+              "type": "focusin",
+              "at": 4820.799999952316,
+              "wall": 1791005538905,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "keydown",
+              "at": 4825.099999904633,
+              "wall": 1791005538909,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y",
+              "key": "Control"
+            },
+            {
+              "type": "keydown",
+              "at": 4827.299999952316,
+              "wall": 1791005538911,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y",
+              "key": "A"
+            },
+            {
+              "type": "keydown",
+              "at": 4837.099999904633,
+              "wall": 1791005538921,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y",
+              "key": "Backspace"
+            },
+            {
+              "type": "input",
+              "at": 4841.199999928474,
+              "wall": 1791005538925,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "state-mutation",
+              "at": 4842.599999904633,
+              "wall": 1791005538927,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y"
+            },
+            {
+              "type": "keydown",
+              "at": 4856.199999928474,
+              "wall": 1791005538940,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y",
+              "key": "2"
+            },
+            {
+              "type": "input",
+              "at": 4859.699999928474,
+              "wall": 1791005538944,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "keydown",
+              "at": 4909.199999928474,
+              "wall": 1791005538993,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y",
+              "key": "7"
+            },
+            {
+              "type": "input",
+              "at": 4913.5,
+              "wall": 1791005538997,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "keydown",
+              "at": 4971.799999952316,
+              "wall": 1791005539056,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y",
+              "key": "0"
+            },
+            {
+              "type": "input",
+              "at": 4975.199999928474,
+              "wall": 1791005539059,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "pointerdown",
+              "at": 5066.199999928474,
+              "wall": 1791005539150,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "mousedown",
+              "at": 5066.599999904633,
+              "wall": 1791005539151,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Peak level screen y",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "blur",
+              "at": 5067.199999928474,
+              "wall": 1791005539151,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "focusout",
+              "at": 5067.399999976158,
+              "wall": 1791005539151,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "INPUT",
+              "target": "Peak level screen y"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5076.5,
+              "wall": 1791005539160,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saving…",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            },
+            {
+              "type": "focusin",
+              "at": 5081.899999976158,
+              "wall": 1791005539166,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saving…",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "pointerup",
+              "at": 5084.099999904633,
+              "wall": 1791005539168,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saving…",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "mouseup",
+              "at": 5084.5,
+              "wall": 1791005539168,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saving…",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "click",
+              "at": 5084.699999928474,
+              "wall": 1791005539169,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saving…",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5089.799999952316,
+              "wall": 1791005539174,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Saving…",
+              "focused": "Next question"
+            },
+            {
+              "type": "blur",
+              "at": 5098.299999952316,
+              "wall": 1791005539182,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Saving…",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "focusout",
+              "at": 5098.599999904633,
+              "wall": 1791005539183,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Saving…",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5109.5,
+              "wall": 1791005539193,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5355.599999904633,
+              "wall": 1791005539440,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saving…",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5378.699999928474,
+              "wall": 1791005539463,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            },
+            {
+              "type": "pointerdown",
+              "at": 5456.099999904633,
+              "wall": 1791005539540,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "mousedown",
+              "at": 5456.299999952316,
+              "wall": 1791005539540,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "focusin",
+              "at": 5456.699999928474,
+              "wall": 1791005539541,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "pointerup",
+              "at": 5457.399999976158,
+              "wall": 1791005539541,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "mouseup",
+              "at": 5457.5,
+              "wall": 1791005539541,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "click",
+              "at": 5457.799999952316,
+              "wall": 1791005539542,
+              "code": "D03",
+              "nextDisabled": false,
+              "save": "Saved on this device",
+              "focused": "Next question",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5463.599999904633,
+              "wall": 1791005539547,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Saved on this device",
+              "focused": "Next question"
+            },
+            {
+              "type": "blur",
+              "at": 5475.099999904633,
+              "wall": 1791005539559,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "focusout",
+              "at": 5475.199999928474,
+              "wall": 1791005539559,
+              "code": "D03",
+              "nextDisabled": true,
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+              "trusted": true,
+              "targetTag": "BUTTON",
+              "target": "Next question"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5527.799999952316,
+              "wall": 1791005539612,
+              "code": "B07",
+              "save": "Saving…",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            },
+            {
+              "type": "state-mutation",
+              "at": 5556.699999928474,
+              "wall": 1791005539641,
+              "code": "B07",
+              "save": "Saved on this device",
+              "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+            }
+          ]
+        },
+        "durable": {
+          "attempts": [
+            {
+              "mode": "student",
+              "namespace": {
+                "course": "igcse",
+                "profileId": "local"
+              },
+              "attemptId": "88e80314-152c-42e7-9933-998576cfb77b",
+              "ref": {
+                "activityId": "igcse/energy-enthalpy",
+                "questionId": "B07",
+                "seed": 3488130573,
+                "level": 2
+              },
+              "target": {
+                "course": "igcse",
+                "activityId": "igcse/energy-enthalpy",
+                "gemId": "lower-10-1",
+                "level": 2
+              },
+              "currentResponses": {},
+              "assistance": [],
+              "phase": "answering",
+              "timing": {
+                "attemptId": "88e80314-152c-42e7-9933-998576cfb77b",
+                "activeMs": 0,
+                "idleLimitMs": 180000,
+                "finished": false
+              }
+            },
+            {
+              "mode": "student",
+              "namespace": {
+                "course": "igcse",
+                "profileId": "local"
+              },
+              "attemptId": "A06-fix-quota-failure-retry-D03",
+              "ref": {
+                "activityId": "igcse/energy-enthalpy",
+                "questionId": "D03",
+                "seed": 0,
+                "level": 2
+              },
+              "target": {
+                "course": "igcse",
+                "activityId": "igcse/energy-enthalpy",
+                "gemId": "lower-10-1",
+                "level": 2
+              },
+              "currentResponses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 270,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "assistance": [],
+              "phase": "assessed",
+              "firstResponse": {
+                "responses": {
+                  "profile": {
+                    "kind": "energy-profile",
+                    "r": 220,
+                    "p": 220,
+                    "peak": 150,
+                    "left": "CH₄ + 2O₂",
+                    "right": "CO₂ + 2H₂O",
+                    "vertical": "Energy",
+                    "horizontal": "Progress of reaction",
+                    "pathLabel": "Catalysed",
+                    "arrows": {
+                      "ea": {
+                        "x": 300,
+                        "tail": {
+                          "y": 240
+                        },
+                        "head": {
+                          "y": 160
+                        }
+                      },
+                      "delta": {
+                        "x": 560,
+                        "tail": {
+                          "y": 255
+                        },
+                        "head": {
+                          "y": 165
+                        }
+                      }
+                    }
+                  }
+                },
+                "submittedAt": 1791005538785,
+                "timing": {
+                  "activeMs": 2156,
+                  "idleLimitMs": 180000
+                },
+                "assistance": []
+              },
+              "firstAssessment": {
+                "kind": "marked",
+                "assessedAt": 1791005538785,
+                "marks": {
+                  "earned": 3,
+                  "available": 6,
+                  "points": [
+                    {
+                      "partId": "profile",
+                      "pointId": "left",
+                      "earned": 1,
+                      "available": 1,
+                      "message": "Correct formula or label on the left line."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "right",
+                      "earned": 1,
+                      "available": 1,
+                      "message": "Correct formula or label on the right line."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "order",
+                      "earned": 0,
+                      "available": 1,
+                      "message": "Product energy level matches the stated reaction type."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "peak",
+                      "earned": 1,
+                      "available": 1,
+                      "message": "Peak above both end levels."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "ea",
+                      "earned": 0,
+                      "available": 1,
+                      "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "delta",
+                      "earned": 0,
+                      "available": 1,
+                      "message": "ΔH arrow starts at reactant level and ends at product level."
+                    }
+                  ]
+                },
+                "score": 0.5,
+                "selfAssessed": false
+              }
+            }
+          ],
+          "sessions": [
+            {
+              "kind": "practice",
+              "namespace": {
+                "course": "igcse",
+                "profileId": "local"
+              },
+              "id": "current-session",
+              "target": {
+                "course": "igcse",
+                "activityId": "igcse/energy-enthalpy",
+                "gemId": "lower-10-1",
+                "level": 2
+              },
+              "selection": "fixed-level",
+              "currentAttemptId": "88e80314-152c-42e7-9933-998576cfb77b",
+              "previousQuestionIds": [
+                "D03",
+                "B07"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "kind": "curriculum",
+              "id": "A06-fix-quota-failure-retry-D03",
+              "profileId": "local",
+              "gemId": "lower-10-1",
+              "score": 0.5,
+              "completedAt": 1791005538785,
+              "selfAssessed": false,
+              "assisted": false,
+              "provenance": "new-attempt",
+              "independent": true,
+              "timing": {
+                "activeMs": 2156,
+                "idleLimitMs": 180000
+              },
+              "ref": {
+                "activityId": "igcse/energy-enthalpy",
+                "questionId": "D03",
+                "seed": 0,
+                "level": 2
+              },
+              "firstResponse": {
+                "responses": {
+                  "profile": {
+                    "kind": "energy-profile",
+                    "r": 220,
+                    "p": 220,
+                    "peak": 150,
+                    "left": "CH₄ + 2O₂",
+                    "right": "CO₂ + 2H₂O",
+                    "vertical": "Energy",
+                    "horizontal": "Progress of reaction",
+                    "pathLabel": "Catalysed",
+                    "arrows": {
+                      "ea": {
+                        "x": 300,
+                        "tail": {
+                          "y": 240
+                        },
+                        "head": {
+                          "y": 160
+                        }
+                      },
+                      "delta": {
+                        "x": 560,
+                        "tail": {
+                          "y": 255
+                        },
+                        "head": {
+                          "y": 165
+                        }
+                      }
+                    }
+                  }
+                },
+                "submittedAt": 1791005538785,
+                "timing": {
+                  "activeMs": 2156,
+                  "idleLimitMs": 180000
+                },
+                "assistance": []
+              },
+              "firstAssessment": {
+                "kind": "marked",
+                "assessedAt": 1791005538785,
+                "marks": {
+                  "earned": 3,
+                  "available": 6,
+                  "points": [
+                    {
+                      "partId": "profile",
+                      "pointId": "left",
+                      "earned": 1,
+                      "available": 1,
+                      "message": "Correct formula or label on the left line."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "right",
+                      "earned": 1,
+                      "available": 1,
+                      "message": "Correct formula or label on the right line."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "order",
+                      "earned": 0,
+                      "available": 1,
+                      "message": "Product energy level matches the stated reaction type."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "peak",
+                      "earned": 1,
+                      "available": 1,
+                      "message": "Peak above both end levels."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "ea",
+                      "earned": 0,
+                      "available": 1,
+                      "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                    },
+                    {
+                      "partId": "profile",
+                      "pointId": "delta",
+                      "earned": 0,
+                      "available": 1,
+                      "message": "ΔH arrow starts at reactant level and ends at product level."
+                    }
+                  ]
+                },
+                "score": 0.5,
+                "selfAssessed": false
+              },
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "grade": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "duplicate-next",
+      "before": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-duplicate-next-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 150,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005559271,
+              "timing": {
+                "activeMs": 2192,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005559271,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "A06-fix-duplicate-next-D03",
+            "previousQuestionIds": [
+              "D03"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-duplicate-next-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005559271,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2192,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005559271,
+              "timing": {
+                "activeMs": 2192,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005559271,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      },
+      "beforeClick": {
+        "code": "D03",
+        "save": "Saved on this device",
+        "nextDisabled": false,
+        "focused": "Peak level screen y",
+        "draft": "270",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4808.899999976158,
+            "wall": 1791005559366,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 4827.300000071526,
+            "wall": 1791005559384,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4830.700000047684,
+            "wall": 1791005559388,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Control"
+          },
+          {
+            "type": "keydown",
+            "at": 4832.700000047684,
+            "wall": 1791005559390,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "A"
+          },
+          {
+            "type": "keydown",
+            "at": 4835.300000071526,
+            "wall": 1791005559392,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Backspace"
+          },
+          {
+            "type": "input",
+            "at": 4839.200000047684,
+            "wall": 1791005559396,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4840.700000047684,
+            "wall": 1791005559398,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4857.100000023842,
+            "wall": 1791005559414,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "2"
+          },
+          {
+            "type": "input",
+            "at": 4860.5,
+            "wall": 1791005559418,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4911.100000023842,
+            "wall": 1791005559468,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "7"
+          },
+          {
+            "type": "input",
+            "at": 4915.700000047684,
+            "wall": 1791005559473,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4973.600000023842,
+            "wall": 1791005559531,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "0"
+          },
+          {
+            "type": "input",
+            "at": 4977.399999976158,
+            "wall": 1791005559535,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          }
+        ]
+      },
+      "changed": true,
+      "afterClick": {
+        "code": "B06",
+        "save": "Saved on this device",
+        "focused": "Practice · Energy and enthalpy · Level 2Change activity or viewPause and saveQuestionBond Enthalpies · EE-70JHQZB06Level 2Breaking the original bonds takes in more energy than making new bonds releases. What type of reaction is that and what will the sign of ΔH be?Part 1[1 mark]Reaction type: _____Your answerPart 2[1 mark]Sign of ΔH: _____Your answerCheck answerRequest hintReveal answer (assisted)PauseSaved on this device1 saved practice resultActive answering time: 0:00",
+        "events": [
+          {
+            "type": "installed",
+            "at": 4808.899999976158,
+            "wall": 1791005559366,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 4827.300000071526,
+            "wall": 1791005559384,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4830.700000047684,
+            "wall": 1791005559388,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Control"
+          },
+          {
+            "type": "keydown",
+            "at": 4832.700000047684,
+            "wall": 1791005559390,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "A"
+          },
+          {
+            "type": "keydown",
+            "at": 4835.300000071526,
+            "wall": 1791005559392,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "Backspace"
+          },
+          {
+            "type": "input",
+            "at": 4839.200000047684,
+            "wall": 1791005559396,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 4840.700000047684,
+            "wall": 1791005559398,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4857.100000023842,
+            "wall": 1791005559414,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "2"
+          },
+          {
+            "type": "input",
+            "at": 4860.5,
+            "wall": 1791005559418,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4911.100000023842,
+            "wall": 1791005559468,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "7"
+          },
+          {
+            "type": "input",
+            "at": 4915.700000047684,
+            "wall": 1791005559473,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "keydown",
+            "at": 4973.600000023842,
+            "wall": 1791005559531,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y",
+            "key": "0"
+          },
+          {
+            "type": "input",
+            "at": 4977.399999976158,
+            "wall": 1791005559535,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "pointerdown",
+            "at": 5078.399999976158,
+            "wall": 1791005559636,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mousedown",
+            "at": 5078.700000047684,
+            "wall": 1791005559636,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Peak level screen y",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 5079,
+            "wall": 1791005559636,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "focusout",
+            "at": 5079.399999976158,
+            "wall": 1791005559636,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saved on this device",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "INPUT",
+            "target": "Peak level screen y"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5088.300000071526,
+            "wall": 1791005559645,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS"
+          },
+          {
+            "type": "focusin",
+            "at": 5093.300000071526,
+            "wall": 1791005559650,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "pointerup",
+            "at": 5095.100000023842,
+            "wall": 1791005559652,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "mouseup",
+            "at": 5095.300000071526,
+            "wall": 1791005559652,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "click",
+            "at": 5095.5,
+            "wall": 1791005559653,
+            "code": "D03",
+            "nextDisabled": false,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5100.300000071526,
+            "wall": 1791005559657,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Next question"
+          },
+          {
+            "type": "pointerdown",
+            "at": 5103,
+            "wall": 1791005559660,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Next question",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "blur",
+            "at": 5103.800000071526,
+            "wall": 1791005559661,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "focusout",
+            "at": 5104,
+            "wall": 1791005559661,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Skip to questionMasters of ChemistryIGCSE ChemistryIGCSEPracticeRevisionTeacherS",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "pointerup",
+            "at": 5105.200000047684,
+            "wall": 1791005559662,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saving…",
+            "focused": "Practice · Energy and enthalpy · Level 2Change activity or viewPause and saveQue",
+            "trusted": true,
+            "targetTag": "BUTTON",
+            "target": "Next question"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5121,
+            "wall": 1791005559678,
+            "code": "D03",
+            "nextDisabled": true,
+            "save": "Saved on this device",
+            "focused": "Practice · Energy and enthalpy · Level 2Change activity or viewPause and saveQue"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5182,
+            "wall": 1791005559739,
+            "code": "B06",
+            "save": "Saving…",
+            "focused": "Practice · Energy and enthalpy · Level 2Change activity or viewPause and saveQue"
+          },
+          {
+            "type": "state-mutation",
+            "at": 5208.5,
+            "wall": 1791005559766,
+            "code": "B06",
+            "save": "Saved on this device",
+            "focused": "Practice · Energy and enthalpy · Level 2Change activity or viewPause and saveQue"
+          }
+        ]
+      },
+      "after": {
+        "attempts": [
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "2d99ac95-5bd0-4ef7-8bc9-85dc17151530",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "B06",
+              "seed": 366068347,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {},
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "2d99ac95-5bd0-4ef7-8bc9-85dc17151530",
+              "activeMs": 0,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          },
+          {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "A06-fix-duplicate-next-D03",
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "currentResponses": {
+              "profile": {
+                "kind": "energy-profile",
+                "r": 220,
+                "p": 220,
+                "peak": 270,
+                "left": "CH₄ + 2O₂",
+                "right": "CO₂ + 2H₂O",
+                "vertical": "Energy",
+                "horizontal": "Progress of reaction",
+                "pathLabel": "Catalysed",
+                "arrows": {
+                  "ea": {
+                    "x": 300,
+                    "tail": {
+                      "y": 240
+                    },
+                    "head": {
+                      "y": 160
+                    }
+                  },
+                  "delta": {
+                    "x": 560,
+                    "tail": {
+                      "y": 255
+                    },
+                    "head": {
+                      "y": 165
+                    }
+                  }
+                }
+              }
+            },
+            "assistance": [],
+            "phase": "assessed",
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005559271,
+              "timing": {
+                "activeMs": 2192,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005559271,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            }
+          }
+        ],
+        "sessions": [
+          {
+            "kind": "practice",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "id": "current-session",
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/energy-enthalpy",
+              "gemId": "lower-10-1",
+              "level": 2
+            },
+            "selection": "fixed-level",
+            "currentAttemptId": "2d99ac95-5bd0-4ef7-8bc9-85dc17151530",
+            "previousQuestionIds": [
+              "D03",
+              "B06"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "curriculum",
+            "id": "A06-fix-duplicate-next-D03",
+            "profileId": "local",
+            "gemId": "lower-10-1",
+            "score": 0.5,
+            "completedAt": 1791005559271,
+            "selfAssessed": false,
+            "assisted": false,
+            "provenance": "new-attempt",
+            "independent": true,
+            "timing": {
+              "activeMs": 2192,
+              "idleLimitMs": 180000
+            },
+            "ref": {
+              "activityId": "igcse/energy-enthalpy",
+              "questionId": "D03",
+              "seed": 0,
+              "level": 2
+            },
+            "firstResponse": {
+              "responses": {
+                "profile": {
+                  "kind": "energy-profile",
+                  "r": 220,
+                  "p": 220,
+                  "peak": 150,
+                  "left": "CH₄ + 2O₂",
+                  "right": "CO₂ + 2H₂O",
+                  "vertical": "Energy",
+                  "horizontal": "Progress of reaction",
+                  "pathLabel": "Catalysed",
+                  "arrows": {
+                    "ea": {
+                      "x": 300,
+                      "tail": {
+                        "y": 240
+                      },
+                      "head": {
+                        "y": 160
+                      }
+                    },
+                    "delta": {
+                      "x": 560,
+                      "tail": {
+                        "y": 255
+                      },
+                      "head": {
+                        "y": 165
+                      }
+                    }
+                  }
+                }
+              },
+              "submittedAt": 1791005559271,
+              "timing": {
+                "activeMs": 2192,
+                "idleLimitMs": 180000
+              },
+              "assistance": []
+            },
+            "firstAssessment": {
+              "kind": "marked",
+              "assessedAt": 1791005559271,
+              "marks": {
+                "earned": 3,
+                "available": 6,
+                "points": [
+                  {
+                    "partId": "profile",
+                    "pointId": "left",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the left line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "right",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Correct formula or label on the right line."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "order",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Product energy level matches the stated reaction type."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "peak",
+                    "earned": 1,
+                    "available": 1,
+                    "message": "Peak above both end levels."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "ea",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "Activation-energy arrow starts at reactant level and points up to the peak."
+                  },
+                  {
+                    "partId": "profile",
+                    "pointId": "delta",
+                    "earned": 0,
+                    "available": 1,
+                    "message": "ΔH arrow starts at reactant level and ends at product level."
+                  }
+                ]
+              },
+              "score": 0.5,
+              "selfAssessed": false
+            },
+            "course": "igcse",
+            "activityId": "igcse/energy-enthalpy",
+            "grade": 2
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T05:32:39.910Z"
+}

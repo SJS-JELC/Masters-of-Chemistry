@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-03T04:37:35.003Z",
+  "jobId": "S5-FIX-DOT-CHARGE-TYPING",
+  "agentId": "A15",
+  "source": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+  "sha256": "10bc8bb8b2fde87389519806078963fba062f43e8234e13e10381cca474038f6",
+  "diagnosis": "validation/s5/render-release/dot-typing-diagnosis.json",
+  "ownership": [
+    "src/editors/dot-and-cross/DotCrossEditor.tsx",
+    "validation/s5/fixes/dot-charge-typing/"
+  ]
+}

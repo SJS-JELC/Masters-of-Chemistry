@@ -1,0 +1,29 @@
+{
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "jobId": "F1-UI-PILOT",
+  "agentId": "F03",
+  "at": "2026-10-03T16:30:57.840Z",
+  "status": "PASS",
+  "results": [
+    {
+      "id": "typecheck",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "typecheck.log"
+    },
+    {
+      "id": "practical-marking-regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "practical-marking-regression.log"
+    },
+    {
+      "id": "original-final-reference-matrix-and-font",
+      "status": "PASS",
+      "activities": 12,
+      "statesPerActivity": 6,
+      "fontSha256": "75263adf472a717edc4d7d10ea28016591928c98f2cd5da93b0269ef4a919fc9"
+    }
+  ],
+  "historicalSuiteNote": "The unchanged full S3 energy fixture expects obsolete C01-style codes; its two identity-dependent energy checks now fail under canonical-only identity. Focused practical chemistry/marking/controller and provenance checks are preserved and pass; F02 owns canonical coverage replacement."
+}

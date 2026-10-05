@@ -1,0 +1,50 @@
+{
+  "hash": "1611c3d5",
+  "configHash": "41b440c6",
+  "lockfileHash": "7f895b7d",
+  "browserHash": "4f71bcf1",
+  "optimized": {
+    "dexie": {
+      "src": "../../../../../../node_modules/dexie/import-wrapper.mjs",
+      "file": "dexie.js",
+      "fileHash": "aa2c6e5e",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../../../../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "160cdff3",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../../../../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "024d57c0",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../../../../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "474e31b4",
+      "needsInterop": true
+    },
+    "zustand": {
+      "src": "../../../../../../node_modules/zustand/esm/index.mjs",
+      "file": "zustand.js",
+      "fileHash": "a7f3599d",
+      "needsInterop": false
+    },
+    "zustand/vanilla": {
+      "src": "../../../../../../node_modules/zustand/esm/vanilla.mjs",
+      "file": "zustand_vanilla.js",
+      "fileHash": "dedd753b",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "rolldown-runtime-BPOCksWG": {
+      "file": "rolldown-runtime-BPOCksWG.js",
+      "isDynamicEntry": false
+    }
+  }
+}

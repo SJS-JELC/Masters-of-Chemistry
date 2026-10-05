@@ -1,0 +1,43 @@
+# A11 chemistry, source and rendered review
+
+Reviewed 3 October 2026 for S3-ELECTRONS / MASTERS-REACT-20261002. Requested model/effort: GPT-6.1 Sol High. Effective model, effort and usage are not exposed. No second-model routine review is claimed.
+
+## Curriculum and objectives
+
+The retained department map (`resources/curriculum/ocr-a-level/a-level-specification-map.md`) was consulted: it records OCR H432 Version 3.1 (May 2026), reviewed 10 September 2026. The local OCR archive/evidence package explicitly limits archived text to retained evidence, rather than claiming a fresh complete copy of the current specification. Historical data.js metadata remains unchanged: its September 2026 source review/version statements are historical provenance, not a new current-version audit.
+
+Electron configurations retain OCR 2.2.1(b–d), with advanced d-block/ion work linking to 5.3.1(a). Prerequisites are atomic number, ionic charge, shells, subshells and orbital capacity. The measurable goals are to construct and interpret full/abbreviated configurations, construct orbital diagrams obeying the spin rules, use signed charge to identify an element, remove 4s electrons before 3d for ions, and distinguish identical configurations from merely equal electron totals.
+
+The 14 bonding questions retain their precise source specification fields and complete prompts, concept rules, accepted/rejected responses, hints and explanations. They cover 2.2.1/2.2.2 with explicitly linked periodicity (3.1.1) and average bond enthalpy (3.2.1) recall. An f-subshell mentioned in the original general definition is retained; the editor/generator covers only the original eight subshells through 4p. No extra generator content is enabled.
+
+## Substantive chemistry checks
+
+- All 71 species have the original explicit ground-state count vectors. Independently sum each vector to Z − signed charge, check s/p/d capacities and construct the 18 orbital boxes. All 36 atoms retain atomic numbers 1–36.
+- Chromium is [Ar] 3d⁵ 4s¹; copper is [Ar] 3d¹⁰ 4s¹. A deliberately substituted simple-Aufbau chromium configuration is assessed wrong. All d-block ion vectors were independently derived by removing 4s electrons first, then the remaining required 3d electrons from their neutral atom; every retained vector agrees.
+- Pairing before all degenerate orbitals are singly occupied and nonparallel unpaired spins are assessed wrong. Uniform down spins are accepted as physically equivalent. A paired orbital uses the source's opposite-spin state. Malformed orbital row lengths/unsupported spin values block assessment.
+- The energy ladder is explicitly a schematic Aufbau diagram, always through 4p; it is not claimed to depict a species-specific ion energy ordering. 4s is drawn below 3d while ground-state count vectors and ion removal are checked separately.
+- Abbreviation preserves the source's allowed noble-gas cores. A neutral neon atom cannot use itself as its own complete abbreviated core; Na⁺ can use [Ne]. Leaving unused counts blank means zero in the original marking rule. An explicitly supplied empty configuration can therefore be assessed wrong; absence of any response, empty identity, absent short core, nonnumeric counts or malformed boxes blocks assessment.
+- The ten matching families compare complete count vectors. Ga³⁺/Cu⁺/Zn²⁺ share 3d¹⁰ with empty 4s; equal total electrons in a different occupancy are not sufficient. All 2,880 tested mask/seed routes match the original generator exactly: 2,160 valid questions, 720 unavailable/zero-mask routes rejected by both implementations. Full active Level 3 always uses mask15; historical masked ECB codes preserve their source selection mask.
+- Every bonding model accepted field passes the original marking. Negated/incorrect alternatives and partial definitions preserve the source concept marks and 0/0.5/1 mapping. No fuzzy or model-generated wording acceptance was added.
+
+## Source clarity disposition
+
+EB03's raw CSV answer is `sub-shell; electron sub-shell`; EB04's is `shell; electron shell`. These are alternative lists, and their combined semicolon strings are not accepted as one exact answer by the source. Individual entries in `field.accept` pass. The foreman agreed to label these retained raw strings “Accepted alternatives” in the rendered worked answer. Both data and marking remain unchanged; all 14 original bank records compare exactly to source.
+
+## Rendered inspection
+
+Inspected actual installed-Edge screenshots of full and abbreviated notation, horizontal boxes, the energy ladder, matching, identification, worked answers and correction feedback at 1365px desktop and a touch-enabled 390×844 viewport. The editor has one shared frame, keyboard commands, native touch targets, explicit spin selectors, readable formulae and internal horizontal scrolling. Mobile document width stays within the viewport; scrolling the energy panel exposes the d column. Returning the scroll position to the left exposes the s column and increasing-energy axis. Expanded alternatives are deliberately vertical on a small screen.
+
+All 142 model SVG images (71 species × row/energy) loaded successfully in a real browser. Manually inspected contact sheets models-1.png through models-8.png: electron counts, singly occupied and paired orbitals, empty higher subshells, Cr/Cu exceptions and ion 4s removal agree with the retained reference review. The initial model layout put the 1s label too close to the previous 2s box. Increased the energy spacing to52 units, separated label baselines, reduced paired arrow size, and rerendered all images. Final sheets and the actual worked-answer screenshot show distinct labels/boxes and no overlaps. Horizontal model width is660, avoiding unneeded trailing space.
+
+The disabled blank teacher response surface is the explicitly deferred S4 polish boundary; the checked all-four-representation worked answer is visible in teacher/review mode and creates no evidence.
+
+The original active levels page mounts its built-in PeriodicTable reference. Its retained OCR2020 data contains114 named elements, omitting113,115,117 and118; these omissions and all supplied names, atomic numbers, symbols, masses and grid positions are preserved exactly. In particular, source blank masses remain blank rather than becoming invented values. This historical supplied reference is labelled by edition and does not extend the question generator beyond36 atoms. Inspected desktop-periodic-reference.png and mobile-periodic-reference-left.png/right.png: the key, group headings, main table and detached series remain legible, with no overlapping cells. Mobile scrolling is internal and the close control remains accessible. The actual native-dialog browser checks preserve all114 DOM entries, keyboard open/Escape/focus restoration and teacher/touch access. Built-in reference use leaves response, assistance and independent evidence unchanged.
+
+## Timing and real-browser limits
+
+The adapters preserve the exact one-minute bonding allowance, one-minute identification allowance and three-minute construction/matching allowance. Real practice/revision checks show the correct allowance on first response, positive active time, exact question/attempt/drawing reload, immutable first timing after correction/reveal/reload, one saved record, source time transferred into the saved evidence, and fresh Next timing. Source clock logic is owned by the foreman and was not duplicated or changed.
+
+Installed Edge headless does not report a hidden document when another headless tab is selected. The initial hidden-tab assertion was retained as a limitation, not relabelled PASS. CDP “frozen” alone similarly requires proof that renderer timers actually suspended; the retained strict experiment is not claimed as a native suspension check. The unchanged accepted native background/one-minute proof is in validation/s2/review-native; the independently accepted three-minute/five-minute and trusted freeze/resume disposition is validation/s2/review-suspension/disposition.json. A06 owns any required S3 native tail. This worker never launched a headed browser or wrote original storage.
+
+The final owned real-wall-time tests reached both exact idle caps60000/180000, held their accumulated time during overrun, resumed on interaction and stopped/persisted/reloaded the first assessment exactly. The renderer timer diagnostic continued ticking26/27 times during the headless freeze command, confirming that this command did not provide a genuine suspension. Its limitation remains explicit in timing-browser-results.json; no further synthetic lifecycle probes were made after the foreman's stop instruction.

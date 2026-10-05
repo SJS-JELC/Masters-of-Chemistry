@@ -1,0 +1,185 @@
+﻿{
+    "stage":  "S5",
+    "status":  "ACCEPTED",
+    "acceptedAt":  "2026-10-03T06:58:39.8887513Z",
+    "reviewer":  "root",
+    "inputTreeSha256":  "fa9b70c77954462612fb26a8d125d255f0af3456efff569d53a8ae3fa3dd3c52",
+    "requirements":  [
+                         {
+                             "id":  "SCOPE-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/foreman-protected-originals.txt",
+                                              "validation/s5/integration/foreman-source-and-controls.txt",
+                                              "validation/s5/integration/source-ownership.json"
+                                          ]
+                         },
+                         {
+                             "id":  "SCOPE-02",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/foreman-catalogue.txt",
+                                              "validation/s5/integration/foreman-checks.json",
+                                              "validation/s5/behaviour/browser-results.json",
+                                              "validation/s5/integration/release-checks.json"
+                                          ]
+                         },
+                         {
+                             "id":  "SCOPE-03",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/behaviour/c3-erratum-browser-results.json",
+                                              "validation/s5/chemistry/c3-final-source-review.json"
+                                          ]
+                         },
+                         {
+                             "id":  "ARCH-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/foreman-checks.json",
+                                              "validation/s5/behaviour/HANDOVER.md",
+                                              "validation/s5/render-release/HANDOVER.md",
+                                              "docs/architecture/platform.md"
+                                          ]
+                         },
+                         {
+                             "id":  "ARCH-02",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/foreman-typecheck.txt",
+                                              "validation/s5/integration/foreman-unit.txt",
+                                              "validation/s5/integration/foreman-catalogue.txt"
+                                          ]
+                         },
+                         {
+                             "id":  "CONTENT-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/chemistry/current-coverage.json",
+                                              "validation/s5/chemistry/stratified-sample.json",
+                                              "validation/s5/chemistry/manual-review.json",
+                                              "validation/s5/chemistry/c3-transformation-review.json",
+                                              "validation/s5/chemistry/final-production-browser-results.json",
+                                              "docs/inventory/c3-k-erratum.md"
+                                          ]
+                         },
+                         {
+                             "id":  "ASSESS-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/behaviour/deep-browser-results.json",
+                                              "validation/s5/behaviour/revision-browser-results.json",
+                                              "validation/s5/integration/foreman-unit.txt"
+                                          ]
+                         },
+                         {
+                             "id":  "ASSESS-02",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/foreman-unit.txt",
+                                              "validation/s5/behaviour/import-browser-results.json",
+                                              "validation/s5/behaviour/HANDOVER.md"
+                                          ]
+                         },
+                         {
+                             "id":  "TIME-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/active-time-review.json",
+                                              "validation/s5/behaviour/timing-continuity.json",
+                                              "validation/s5/behaviour/deep-browser-results.json",
+                                              "validation/s5/behaviour/revision-browser-results.json"
+                                          ]
+                         },
+                         {
+                             "id":  "STATE-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/behaviour/recovery-browser-results.json",
+                                              "validation/s5/behaviour/deep-browser-results.json",
+                                              "validation/s5/behaviour/import-browser-results.json",
+                                              "validation/s5/behaviour/c3-erratum-browser-results.json",
+                                              "validation/s5/review-render-harness/energy-next-fix/completion.json",
+                                              "validation/s5/behaviour/session-only-save-fix/latest/completion.json"
+                                          ]
+                         },
+                         {
+                             "id":  "UX-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/render-release/completion.json",
+                                              "validation/s5/render-release/HANDOVER.md",
+                                              "validation/s5/render-release/session-only-save-fix/completion.json"
+                                          ]
+                         },
+                         {
+                             "id":  "AUTHOR-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/render-release/completion.json",
+                                              "validation/s5/render-release/HANDOVER.md",
+                                              "validation/s5/render-release/session-only-save-fix/completion.json",
+                                              "validation/s5/chemistry/independent-checks.json",
+                                              "development/authoring/families/dev-s5-independent/README.md",
+                                              "docs/authoring/new-activity.md"
+                                          ]
+                         },
+                         {
+                             "id":  "PERF-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/release-checks.json",
+                                              "validation/s5/render-release/completion.json",
+                                              "validation/s5/render-release/HANDOVER.md",
+                                              "validation/s5/render-release/session-only-save-fix/completion.json"
+                                          ]
+                         },
+                         {
+                             "id":  "RELEASE-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "validation/s5/integration/build-current.json",
+                                              "validation/s5/integration/release-checks.json",
+                                              "validation/s5/integration/preview-smoke.json",
+                                              "validation/s5/render-release/completion.json",
+                                              "validation/s5/render-release/session-only-save-fix/completion.json"
+                                          ]
+                         },
+                         {
+                             "id":  "DELIVERY-01",
+                             "status":  "accepted",
+                             "evidence":  [
+                                              "README.md",
+                                              "HANDOFF.md",
+                                              "validation/s5/foreman-report.json",
+                                              "validation/s5/integration/install-current.json"
+                                          ]
+                         }
+                     ],
+    "checks":  [
+                   "Reran complete check:s5 on final frozen build:156 tests,typecheck,format,catalogue,source/control/original/release/current-evidence gates PASS",
+                   "Verified all517 current inputs and3 independent reviewer acceptances",
+                   "Reviewed final shared persistence queue/session-only completion/resume/retry code and meaningful failure/concurrency browser evidence",
+                   "Reviewed independent stratified chemistry/source audit, source corrections and root-approved C3 K erratum",
+                   "Inspected final mobile failed terminal save keyboard Retry and recovered revision completion screenshots, plus previous accepted whole/editor/teacher views",
+                   "Reviewed authoring scaffold, canonical metadata boundaries, release commands, performance limits and reproducible README"
+               ],
+    "scope":  {
+                  "activities":  12,
+                  "curriculumTargets":  41,
+                  "originalFilesUnchanged":  1317,
+                  "originalContentHashes":  794,
+                  "originalMetadataOnly":  523,
+                  "rocketRecall":  "excluded",
+                  "c3l6":  "Olympiad only",
+                  "deployment":  false
+              },
+    "limits":  [
+                   "523 non-source cloud placeholders validated by metadata only",
+                   "Retained native ambiguities and exact OCR/Python availability limits documented; applicable current checks pass",
+                   "Performance is documented headless throttle profiling, not physical device certification",
+                   "Both static builds share physical deferred chunks; each enables its own six activities",
+                   "Historical absent times/responses remain absent"
+               ],
+    "outcome":  "Authorised local rebuild complete; no deployment"
+}

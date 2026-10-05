@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-04T19:12:57.290Z",
+  "scope": "Actual source question provider, marking, attempt controller, active clock, immutable save/restore and statistics; existing DEV hooks issue responses only, trusted browser interaction and real clock. No substituted timing.",
+  "results": [
+    {
+      "course": "alevel",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Check answer', exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\timing-browser.mjs:11:98",
+      "errors": []
+    },
+    {
+      "course": "igcse",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Check answer', exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\timing-browser.mjs:11:98",
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T03:44:18.201Z",
+  "results": [
+    {
+      "id": "typecheck",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 6209,
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "evidence": "validation/s4/refinement/integration/typecheck.txt"
+    },
+    {
+      "id": "unit",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 16728,
+      "command": [
+        "node",
+        "scripts/test-s4.mjs"
+      ],
+      "evidence": "validation/s4/refinement/integration/unit.txt"
+    },
+    {
+      "id": "catalogue",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 65,
+      "command": [
+        "node",
+        "scripts/write-catalogue-definitions.mjs",
+        "--check"
+      ],
+      "evidence": "validation/s4/refinement/integration/catalogue.txt"
+    },
+    {
+      "id": "sources-controls",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 257,
+      "command": [
+        "node",
+        "scripts/validate-s0.mjs"
+      ],
+      "evidence": "validation/s4/refinement/integration/sources-controls.txt"
+    },
+    {
+      "id": "originals",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 1379,
+      "command": [
+        "node",
+        "scripts/protect-originals.mjs",
+        "check"
+      ],
+      "evidence": "validation/s4/refinement/integration/originals.txt"
+    },
+    {
+      "id": "format",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 4227,
+      "command": [
+        "node",
+        "scripts/format-authored.mjs",
+        "--check"
+      ],
+      "evidence": "validation/s4/refinement/integration/format.txt"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "browser": "installed Edge headless; separate isolated contexts; genuine wall-clock waiting and CDP lifecycle freezing; no injected timestamps",
+  "results": [
+    {
+      "id": "bonding-one-minute",
+      "status": "FAIL",
+      "sourceIdleMs": 60000,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'visible'\n- 'hidden'\n\n    at check (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/electrons/timing-browser.mjs:15:309)\n    at async Promise.allSettled (index 0)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/electrons/timing-browser.mjs:24:1",
+      "errors": []
+    },
+    {
+      "id": "matching-three-minute",
+      "status": "FAIL",
+      "sourceIdleMs": 180000,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'visible'\n- 'hidden'\n\n    at check (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/electrons/timing-browser.mjs:15:309)\n    at async Promise.allSettled (index 1)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/electrons/timing-browser.mjs:24:1",
+      "errors": []
+    }
+  ]
+}

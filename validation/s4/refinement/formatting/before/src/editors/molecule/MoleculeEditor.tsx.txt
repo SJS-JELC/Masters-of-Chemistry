@@ -1,0 +1,78 @@
+import {useRef,useState} from 'react';
+import type {PointerEvent as ReactPointerEvent} from 'react';
+import type {MoleculeElement,MoleculeGraph,MoleculeState,Point} from '../../contracts/editors.ts';
+import {blankMolecule,core,moleculeEngine} from '../../chemistry/molecule/engine.ts';
+import type {MoleculeCommand} from '../../chemistry/molecule/engine.ts';
+import './molecule.css';
+const colours={C:'currentColor',H:'currentColor',O:'#ff7676',N:'#82a8ff',Cl:'#72dc94',F:'#72dc94'};
+function label(graph:MoleculeGraph,id:number,skeletal:boolean){const a=graph.atoms.find(a=>a.id===id)!;const h=core.hydrogens(graph,a);return (skeletal&&a.element==='C'?'':a.element)+(a.element!=='C'||!skeletal?h>0?'H'+(h>1?h:''):'':'')+(a.charge? a.charge>0?'+':'−':'');}
+/** Source coordinates were scaled to thumbnails. Expand geometry for label spacing without mutating saved chemistry. */
+function depictionGraph(graph:MoleculeGraph):MoleculeGraph{
+ const lengths=graph.bonds.map(b=>{const a=graph.atoms.find(a=>a.id===b.a)!,c=graph.atoms.find(a=>a.id===b.b)!;return Math.hypot(a.x-c.x,a.y-c.y);}).filter(n=>n>0).sort((a,b)=>a-b);
+ const xs=graph.atoms.map(a=>a.x),ys=graph.atoms.map(a=>a.y),minX=Math.min(0,...xs),maxX=Math.max(0,...xs),minY=Math.min(0,...ys),maxY=Math.max(0,...ys);
+ const scale=Math.min(65/(lengths[Math.floor(lengths.length/2)]??65),580/Math.max(1,maxX-minX),350/Math.max(1,maxY-minY));
+ return {...graph,atoms:graph.atoms.map(a=>({...a,x:(a.x-(minX+maxX)/2)*scale,y:(a.y-(minY+maxY)/2)*scale}))};
+}
+function Bonds({graph}:{graph:MoleculeGraph}){return <>{graph.bonds.map(b=>{const a=graph.atoms.find(a=>a.id===b.a)!,c=graph.atoms.find(a=>a.id===b.b)!;const d=Math.hypot(c.x-a.x,c.y-a.y)||1,ox=-(c.y-a.y)/d*4,oy=(c.x-a.x)/d*4;return <g key={`${b.a}-${b.b}`} stroke="currentColor" strokeWidth="2.5">{Array.from({length:b.order},(_,i)=>{const n=i-(b.order-1)/2;return <line key={i} x1={a.x+ox*n} y1={a.y+oy*n} x2={c.x+ox*n} y2={c.y+oy*n}/>;})}</g>;})}</>;}
+export function MoleculePreview({graph:source,label:description='Saved molecular structure'}:{graph:MoleculeGraph;label?:string}){
+ const graph=depictionGraph(source);
+ const xs=graph.atoms.map(a=>a.x),ys=graph.atoms.map(a=>a.y),x=Math.min(0,...xs)-30,y=Math.min(0,...ys)-24,w=Math.max(0,...xs)-x+30,h=Math.max(0,...ys)-y+24;
+ return <svg className="molecule-preview" viewBox={`${x} ${y} ${w} ${h}`} role="img" aria-label={description}><Bonds graph={graph}/>{graph.atoms.map(a=>{const text=label(graph,a.id,false),width=Math.max(12,text.length*10);return <g key={a.id}><rect x={a.x-width/2} y={a.y-10} width={width} height={20} rx={3} fill="var(--surface, #151a35)"/><text x={a.x} y={a.y+5} textAnchor="middle" fill={colours[a.element]} fontSize="15" fontWeight="700">{text}</text></g>;})}</svg>;
+}
+export interface MoleculeEditorProps {readonly value:MoleculeState;readonly onChange:(value:MoleculeState)=>void;readonly readOnly:boolean;readonly label?:string}
+export function MoleculeEditor({value=blankMolecule(),onChange,readOnly,label:description='Molecular drawing'}:MoleculeEditorProps){
+ const [element,setElement]=useState<MoleculeElement>('C'),[order,setOrder]=useState<1|2|3>(1),[selected,setSelected]=useState<number|null>(null),[target,setTarget]=useState(''),[angle,setAngle]=useState('0'),[skeletal,setSkeletal]=useState(false),[drag,setDrag]=useState<{id:number;point:Point}|null>(null),[error,setError]=useState('');
+ const [viewport,setViewport]=useState({x:-320,y:-220,w:640,h:440});
+ const gesture=useRef<{id:number;start:Point;origin:Point;moved:boolean}|null>(null),svg=useRef<SVGSVGElement>(null);
+ const atom=value.graph.atoms.find(a=>a.id===selected),valid=core.validate(value.graph);
+ const displayed=readOnly?depictionGraph(value.graph):drag?{...value.graph,atoms:value.graph.atoms.map(a=>a.id===drag.id?{...a,...drag.point}:a)}:value.graph;
+ const send=(cmd:MoleculeCommand)=>{if(readOnly)return;try{onChange(moleculeEngine.apply(value,cmd));setError('');}catch(e){setError(String(e));}};
+ const point=(e:ReactPointerEvent<SVGElement>):Point=>{const matrix=svg.current?.getScreenCTM();if(!matrix)return {x:0,y:0};const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(matrix.inverse());return {x:Math.round(p.x),y:Math.round(p.y)};};
+ const add=()=>{const theta=Number(angle)*Math.PI/180,base=atom??{x:0,y:0};send({kind:'add',element,order,point:{x:base.x+(atom?65*Math.cos(theta):0),y:base.y+(atom?65*Math.sin(theta):0)},...(atom?{parent:atom.id}:{})});};
+ const zoom=(factor:number)=>setViewport(v=>({x:v.x+v.w*(1-factor)/2,y:v.y+v.h*(1-factor)/2,w:Math.max(160,Math.min(2560,v.w*factor)),h:Math.max(110,Math.min(1760,v.h*factor))}));
+ const fit=()=>{const xs=displayed.atoms.map(a=>a.x),ys=displayed.atoms.map(a=>a.y),minX=Math.min(0,...xs),maxX=Math.max(0,...xs),minY=Math.min(0,...ys),maxY=Math.max(0,...ys),w=Math.max(300,maxX-minX+90,(maxY-minY+70)*640/440),h=w*440/640;setViewport({x:(minX+maxX-w)/2,y:(minY+maxY-h)/2,w,h});};
+ return <section className="molecule-editor" aria-label={description}>
+  <p>Carbon has four bonds, oxygen two and nitrogen three in neutral structures. Unshown hydrogens complete valence. Choose an atom, then extend or connect it. Rings require closing a bond.</p>
+  <div className="molecule-tools">
+   <label>New element<select aria-label="New element" disabled={readOnly} value={element} onChange={e=>setElement(e.target.value as MoleculeElement)}>{Object.keys(colours).map(e=><option key={e}>{e}</option>)}</select></label>
+   <label>Bond order<select aria-label="Bond order" disabled={readOnly} value={order} onChange={e=>setOrder(Number(e.target.value) as 1|2|3)}>{[1,2,3].map(n=><option key={n} value={n}>{['Single','Double','Triple'][n-1]}</option>)}</select></label>
+   <label>Direction<select aria-label="Extension direction" disabled={readOnly} value={angle} onChange={e=>setAngle(e.target.value)}>{[0,60,120,180,240,300].map(n=><option key={n} value={n}>{n}°</option>)}</select></label>
+   <button disabled={readOnly} onClick={add}>{atom?'Extend selected atom':'Add atom'}</button>
+   <button disabled={readOnly||!value.history.length} onClick={()=>{gesture.current=null;setDrag(null);send({kind:'undo'});}}>Undo</button>
+   <button disabled={readOnly||!value.graph.atoms.length} onClick={()=>{gesture.current=null;setDrag(null);send({kind:'clear'});setSelected(null);}}>Clear</button>
+   <label><input type="checkbox" checked={skeletal} onChange={e=>setSkeletal(e.target.checked)}/>Skeletal view</label>
+  </div>
+  <div className="molecule-tools molecule-view-tools" aria-label="Molecule view controls"><button onClick={fit}>Fit molecule</button><button onClick={()=>zoom(.8)}>Zoom in</button><button onClick={()=>zoom(1.25)}>Zoom out</button>{(['left','right','up','down'] as const).map(d=><button key={d} aria-label={`Pan ${d}`} onClick={()=>setViewport(v=>({...v,x:v.x+(d==='left'?-v.w/4:d==='right'?v.w/4:0),y:v.y+(d==='up'?-v.h/4:d==='down'?v.h/4:0)}))}>{d==='left'?'←':d==='right'?'→':d==='up'?'↑':'↓'}</button>)}</div>
+  <svg ref={svg} className="molecule-workspace" viewBox={`${viewport.x} ${viewport.y} ${viewport.w} ${viewport.h}`} role="group" aria-label={`${description}. Click empty space to place an atom; select atoms with Tab. Arrow keys move the selected atom.`}
+   onPointerDown={e=>{if(e.target===e.currentTarget&&!readOnly){send({kind:'add',element,order,point:point(e)});setSelected(null);}}}>
+   <Bonds graph={displayed}/>
+   {displayed.atoms.map(a=><g key={a.id} role="button" tabIndex={0} aria-label={`Atom ${a.id}, ${label(displayed,a.id,false)}, select or move`} aria-pressed={selected===a.id} className="molecule-atom"
+    onFocus={()=>setSelected(a.id)} onClick={()=>setSelected(a.id)}
+    onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setSelected(a.id);}if(readOnly)return;if(e.key==='Delete'||e.key==='Backspace'){e.preventDefault();send({kind:'delete-atom',id:a.id});setSelected(null);}const d={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[e.key];if(d){e.preventDefault();send({kind:'move',id:a.id,point:{x:a.x+d[0]!,y:a.y+d[1]!}});}}}
+    onPointerDown={e=>{e.stopPropagation();setSelected(a.id);if(readOnly)return;e.currentTarget.setPointerCapture(e.pointerId);gesture.current={id:a.id,start:point(e),origin:a,moved:false};}}
+    onPointerMove={e=>{const g=gesture.current;if(!g||g.id!==a.id)return;const p=point(e),dx=p.x-g.start.x,dy=p.y-g.start.y;if(Math.hypot(dx,dy)>3)g.moved=true;if(g.moved)setDrag({id:a.id,point:{x:g.origin.x+dx,y:g.origin.y+dy}});}}
+    onPointerUp={e=>{const g=gesture.current;if(g?.id===a.id&&g.moved){const p=point(e);send({kind:'move',id:a.id,point:{x:g.origin.x+p.x-g.start.x,y:g.origin.y+p.y-g.start.y}});}gesture.current=null;setDrag(null);}}
+    onPointerCancel={()=>{gesture.current=null;setDrag(null);}}>
+    <circle cx={a.x} cy={a.y} r={22} fill="transparent" stroke={valid.atoms?.includes(a.id)?'#ff7676':selected===a.id?'#55f6ff':'transparent'} strokeWidth={2}/>
+    {label(displayed,a.id,skeletal)&&<rect x={a.x-Math.max(12,label(displayed,a.id,skeletal).length*11)/2} y={a.y-10} width={Math.max(12,label(displayed,a.id,skeletal).length*11)} height={22} rx={3} fill="var(--surface, #151a35)" pointerEvents="none"/>}
+    <text x={a.x} y={a.y+6} textAnchor="middle" fill={colours[a.element]} fontSize="18" fontWeight="700" pointerEvents="none">{label(displayed,a.id,skeletal)}</text>
+    {skeletal&&a.element==='C'&&<circle cx={a.x} cy={a.y} r={3} fill="currentColor" pointerEvents="none"/>}
+   </g>)}
+   {!displayed.atoms.length&&<text x={0} y={0} textAnchor="middle" fill="currentColor" fontSize={18} pointerEvents="none">Add an atom to begin</text>}
+  </svg>
+  <div className="molecule-inspector">
+   <label>Selected atom<select aria-label="Selected atom" value={atom?.id??''} onChange={e=>setSelected(e.target.value?Number(e.target.value):null)}><option value="">None / detached new atom</option>{value.graph.atoms.map(a=><option key={a.id} value={a.id}>{a.id}: {label(value.graph,a.id,false)}</option>)}</select></label>
+   {atom&&<>
+    <button disabled={readOnly} onClick={()=>send({kind:'element',id:atom.id,element})}>Change selected to {element}</button>
+    <button disabled={readOnly} onClick={()=>{send({kind:'delete-atom',id:atom.id});setSelected(null);}}>Delete atom</button>
+    <label>Charge<select aria-label="Atom charge" disabled={readOnly} value={atom.charge??0} onChange={e=>send({kind:'charge',id:atom.id,charge:Number(e.target.value) as -1|0|1})}>{[-1,0,1].map(n=><option key={n} value={n}>{n===0?'Neutral':n===1?'+1':'−1'}</option>)}</select></label>
+    <label>Hydrogens<select aria-label="Attached hydrogen count" disabled={readOnly} value={atom.h??'auto'} onChange={e=>send({kind:'hydrogens',id:atom.id,h:e.target.value==='auto'?'auto':Number(e.target.value) as 0|1|2|3|4})}><option value="auto">Automatic</option>{[0,1,2,3,4].map(n=><option key={n}>{n}</option>)}</select></label>
+    <label>Connect to atom<select aria-label="Bond target" disabled={readOnly} value={target} onChange={e=>setTarget(e.target.value)}><option value="">Choose atom</option>{value.graph.atoms.filter(a=>a.id!==atom.id).map(a=><option key={a.id} value={a.id}>{a.id}: {a.element}</option>)}</select></label>
+    <button disabled={readOnly||!target||!value.graph.atoms.some(a=>a.id===Number(target)&&a.id!==atom.id)} onClick={()=>send({kind:'bond',a:atom.id,b:Number(target),order})}>Set / close bond</button>
+    <button disabled={readOnly||!value.graph.bonds.some(b=>b.a===atom.id&&b.b===Number(target)||b.b===atom.id&&b.a===Number(target))} onClick={()=>send({kind:'delete-bond',a:atom.id,b:Number(target)})}>Delete bond</button>
+   </>}
+  </div>
+  <p role="status">{error|| (valid.kind==='valid'?`Formula: ${core.formula(value.graph)}`:valid.message)}</p>
+  {readOnly&&<p>Review only. This structure cannot be changed.</p>}
+ </section>;
+}

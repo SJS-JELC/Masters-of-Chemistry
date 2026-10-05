@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "generatorStdout": "{\"status\":\"GENERATED\",\"activities\":13}\n",
+  "syntheticActivity": {
+    "id": "alevel/dev-approved-new-activity",
+    "course": "alevel",
+    "strand": "curriculum",
+    "title": "Independent metadata projection proof",
+    "source": [],
+    "gems": [
+      {
+        "id": "dev-approved-new-gem",
+        "topicId": "dev-approved-topic",
+        "label": "Typed metadata proof",
+        "supportedLevels": [
+          1,
+          3
+        ],
+        "mastery": {
+          "gemId": "dev-approved-new-gem",
+          "supportedLevels": [
+            {
+              "level": 1,
+              "halfLife": 2,
+              "label": "Structured"
+            },
+            {
+              "level": 3,
+              "halfLife": 2,
+              "label": "Application"
+            }
+          ],
+          "threshold": 0.8,
+          "comparison": "strictly-greater",
+          "historicalAliases": [],
+          "legacySourceKeys": [],
+          "activeProgressionVersion": 1
+        }
+      }
+    ]
+  },
+  "addedGem": {
+    "id": "dev-approved-added-gem",
+    "topicId": "dev-added-topic",
+    "label": "Typed metadata proof",
+    "supportedLevels": [
+      2
+    ],
+    "mastery": {
+      "gemId": "dev-approved-added-gem",
+      "supportedLevels": [
+        {
+          "level": 2,
+          "halfLife": 2,
+          "label": "Existingactivitynewgem"
+        }
+      ],
+      "threshold": 0.8,
+      "comparison": "strictly-greater",
+      "historicalAliases": [],
+      "legacySourceKeys": [],
+      "activeProgressionVersion": 1
+    }
+  },
+  "addedTargets": [
+    {
+      "course": "alevel",
+      "activityId": "alevel/acid-base-calculations",
+      "gemId": "dev-approved-added-gem",
+      "level": 2
+    }
+  ],
+  "scope": {
+    "id": "alevel/dev-approved-new-activity",
+    "course": "alevel",
+    "strand": "curriculum",
+    "supportedLevels": [
+      1,
+      3
+    ],
+    "gems": [
+      {
+        "id": "dev-approved-new-gem",
+        "supportedLevels": [
+          1,
+          3
+        ]
+      }
+    ]
+  },
+  "boundary": {
+    "activityId": "alevel/dev-approved-new-activity",
+    "levels": [
+      1,
+      3
+    ]
+  },
+  "revisionTargets": [
+    {
+      "course": "alevel",
+      "activityId": "alevel/dev-approved-new-activity",
+      "gemId": "dev-approved-new-gem",
+      "level": 1
+    },
+    {
+      "course": "alevel",
+      "activityId": "alevel/dev-approved-new-activity",
+      "gemId": "dev-approved-new-gem",
+      "level": 3
+    }
+  ],
+  "method": "Actual unchanged generator on owned copied tree;scopedNode loader injects its generated metadata intoactual unchanged scope,registry,session andpersistence-boundary modules.",
+  "canonicalChain": "authored metadata + frozen migration inventory -> typed definitions -> scope,persistence boundary and registry -> explicit adapter -> revision targets. Metadata alone doesnotenableprovider.",
+  "typedBoundary": "For a genuinely new production activity,the explicit ActivityId union also needs the documented approved extension;notclaimedverifiedhere. Generated family onexistinggemtypechecks separately.",
+  "legacyParserRuntime": {
+    "knownOriginalAccepted": true,
+    "newAuthoredIdentitiesRejected": [
+      {
+        "code": "invalid-data",
+        "message": "Unknown or excluded A Level leaf/level",
+        "retryable": false
+      },
+      {
+        "code": "invalid-data",
+        "message": "Unknown or excluded A Level leaf/level",
+        "retryable": false
+      }
+    ]
+  },
+  "historicalDistinction": "legacy.ts remainsan original-store parser;retired identities stayhistoricalOnly;no new authored identities added.",
+  "productionMutation": false
+}

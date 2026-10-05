@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-03T18:55:15.658Z",
+  "semanticDelta": "F08 SourceQuestionPlayer Enter guard updated after visual freeze; no visual CSS/DOM change; ready-profile invalid/valid Enter and explicit Check verified on current guard",
+  "files": [
+    {
+      "file": "src/editors/energy-profile/index.tsx",
+      "sha256": "6cb213df23c4505245c273dd37747bec99654c2fbf0476d1a41f86cf63650356"
+    },
+    {
+      "file": "src/editors/energy-profile/styles.css",
+      "sha256": "b5382555ee531b2c47378141f4f72de7f7a0c25f282ee8d72fbfe78b58783fe1"
+    },
+    {
+      "file": "src/chemistry/energy-profile/svg.ts",
+      "sha256": "9a1cc32acaf3b91723c1187c3299d7b770ef35fdb78f17d8a97344220d309311"
+    },
+    {
+      "file": "src/ui/SourceQuestionPlayer.tsx",
+      "sha256": "29c52184adcd2975e0f1b96027eb5ec0389716abb0499750be70564a25897152"
+    },
+    {
+      "file": "src/ui/source-presentation.ts",
+      "sha256": "779da9b289898f9a4cf3bf83e3b018a0d534460efb16311b574faa82de745a61"
+    },
+    {
+      "file": "src/ui/SourceResponseControl.tsx",
+      "sha256": "df98574be8a2d6c98f2d5e24857884d55fa5cca417b60073faf20e4dc1846ab6"
+    },
+    {
+      "file": "src/ui/NumericWorkingControl.tsx",
+      "sha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224"
+    },
+    {
+      "file": "src/ui/source-adapters.css",
+      "sha256": "9a19ed9935d230413ee69b275ed24122ba8edae07b81b5c3312c4c19f8bfacce"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    'u6-t1-1-2',
+    'u6-t1-1-3',
+    'u6-t1-1-5',
+    'u6-t1-1-7',
+    'u6-t1-1-8',
++   'u6-t1-1-9'
+  ]
+
+    at Object.<anonymous> (C:\Users\jelc\St John's School Leatherhead\Chemistry - Staff Resources\32. Masters of Chemistry\scripts\test_acid_levels.js:16:8)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'u6-t1-1-2',
+    'u6-t1-1-3',
+    'u6-t1-1-5',
+    'u6-t1-1-7',
+    'u6-t1-1-8',
+    'u6-t1-1-9'
+  ],
+  expected: [ 'u6-t1-1-2', 'u6-t1-1-3', 'u6-t1-1-5', 'u6-t1-1-7', 'u6-t1-1-8' ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.13.1
+✖ scripts\test_acid_levels.js (47.183ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 54.1688
+
+✖ failing tests:
+
+test at scripts\test_acid_levels.js:1:1
+✖ scripts\test_acid_levels.js (47.183ms)
+  'test failed'
+

@@ -1,0 +1,93 @@
+{
+  "startedAt": "2026-10-03T04:26:30.833Z",
+  "status": "FAIL",
+  "checks": [
+    {
+      "id": "alevel-corrupt-session",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "alevel-missing-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "alevel-corrupt-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "alevel-corrupt-history",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryPreservesPersistentFault": true
+    },
+    {
+      "id": "alevel-normal-recovery-teacher",
+      "status": "PASS",
+      "exactAttempt": "d1d2f944-230b-42e5-9a5e-e25632775745",
+      "newEvidence": 0
+    },
+    {
+      "id": "alevel-assessment-after-recovery",
+      "status": "PASS",
+      "independentEvidence": 1,
+      "firstResponseAndTimingFrozen": true,
+      "reloadNoDuplicate": true
+    },
+    {
+      "id": "alevel-unavailable-open",
+      "status": "PASS",
+      "retryRecovered": true,
+      "newAttemptSaved": true
+    },
+    {
+      "id": "igcse-corrupt-session",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "igcse-missing-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "igcse-corrupt-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "igcse-corrupt-history",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryPreservesPersistentFault": true
+    },
+    {
+      "id": "igcse-normal-recovery-teacher",
+      "status": "PASS",
+      "exactAttempt": "69260188-5a39-444d-a416-a20b20bb7b23",
+      "newEvidence": 0
+    },
+    {
+      "id": "igcse-unavailable-open",
+      "status": "PASS",
+      "retryRecovered": true,
+      "newAttemptSaved": true
+    }
+  ],
+  "failures": [
+    {
+      "course": "igcse",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Finish self-review', exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\startup-error\\browser.mjs:63:74"
+    }
+  ],
+  "headless": true,
+  "finishedAt": "2026-10-03T04:27:12.452Z"
+}

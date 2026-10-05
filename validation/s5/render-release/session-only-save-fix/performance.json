@@ -1,0 +1,267 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-03T06:43:20.609Z",
+  "freeze": "fa9b70c77954462612fb26a8d125d255f0af3456efff569d53a8ae3fa3dd3c52",
+  "settings": {
+    "browser": "headless Microsoft Edge, root Playwright1.62.1",
+    "coldViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "editorViewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "CPUThrottleRate": 4,
+    "network": {
+      "latency": 150,
+      "downloadThroughput": 200000,
+      "uploadThroughput": 93750
+    },
+    "cacheDisabled": true,
+    "samples": "One cold shell and one 30-step semantic pointer gesture per course"
+  },
+  "shell": [
+    {
+      "course": "alevel",
+      "sample": 1,
+      "shellReadyMs": 4478.286,
+      "requests": [
+        "http://127.0.0.1:5203/nested/alevel/index.html",
+        "http://127.0.0.1:5203/nested/alevel/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/alevel-BmjP6OFb.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/persistence-D70Xwp8X.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/alevel/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-CKp_7i5J.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/mastery-BkvJw_Rw.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/alevel/assets/ProductionFoundation-CGOeqbfn.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/repository-BqXazQYl.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/alevel/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3066.7000000476837,
+        "navigationId": 9258,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1.600000023841858,
+        "domainLookupStart": 850.8000000715256,
+        "domainLookupEnd": 850.8000000715256,
+        "connectStart": 850.8000000715256,
+        "secureConnectionStart": 0,
+        "connectEnd": 850.8000000715256,
+        "requestStart": 851,
+        "responseStart": 856.9000000953674,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 856.9000000953674,
+        "responseEnd": 1020.3000000715256,
+        "transferSize": 838,
+        "encodedBodySize": 538,
+        "decodedBodySize": 538,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1051.1000000238419,
+        "domContentLoadedEventStart": 2393.8000000715256,
+        "domContentLoadedEventEnd": 2394.2000000476837,
+        "domComplete": 3066.600000023842,
+        "loadEventStart": 3066.600000023842,
+        "loadEventEnd": 3066.7000000476837,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "mobileOverflow": false
+    },
+    {
+      "course": "igcse",
+      "sample": 1,
+      "shellReadyMs": 4535.917200000002,
+      "requests": [
+        "http://127.0.0.1:5203/nested/igcse/index.html",
+        "http://127.0.0.1:5203/nested/igcse/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/igcse-Cd5qMMPc.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/persistence-D70Xwp8X.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/igcse/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-CKp_7i5J.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/mastery-BkvJw_Rw.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/igcse/assets/ProductionFoundation-CGOeqbfn.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/repository-BqXazQYl.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/igcse/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3130.100000023842,
+        "navigationId": 1637,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.6000000238418579,
+        "domainLookupStart": 929.7000000476837,
+        "domainLookupEnd": 929.7000000476837,
+        "connectStart": 929.7000000476837,
+        "secureConnectionStart": 0,
+        "connectEnd": 929.8000000715256,
+        "requestStart": 929.9000000953674,
+        "responseStart": 931.5,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 931.5,
+        "responseEnd": 1101.9000000953674,
+        "transferSize": 835,
+        "encodedBodySize": 535,
+        "decodedBodySize": 535,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1134.4000000953674,
+        "domContentLoadedEventStart": 2459.8000000715256,
+        "domContentLoadedEventEnd": 2460.2000000476837,
+        "domComplete": 3130.100000023842,
+        "loadEventStart": 3130.100000023842,
+        "loadEventEnd": 3130.100000023842,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "mobileOverflow": false
+    }
+  ],
+  "editors": [
+    {
+      "course": "alevel",
+      "sample": 1,
+      "activity": "alevel/ph-titration-curves",
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 0,
+        "level": 2
+      },
+      "steps": 30,
+      "old": "3.1",
+      "shown": "4.2",
+      "beforeAttemptPutCount": 1,
+      "duringAttemptPutCount": 1,
+      "localGestureAndTwoFramesMs": 568.7997999999989,
+      "pointerupToSavedCheckpointMs": 36.78819999999905,
+      "writes": [
+        {
+          "at": 5093.399999976158,
+          "responses": {
+            "curve": {
+              "kind": "titration-curve",
+              "before": null,
+              "after": null,
+              "initialPH": 4.2,
+              "equivalenceVolume": 25,
+              "finalPH": 10,
+              "indicator": null
+            }
+          }
+        }
+      ],
+      "checkpointMatchesDurable": true,
+      "status": "Saved on this device",
+      "desktopOverflow": false
+    },
+    {
+      "course": "igcse",
+      "sample": 1,
+      "activity": "igcse/energy-enthalpy",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D01",
+        "level": 2,
+        "seed": 0
+      },
+      "steps": 30,
+      "old": "200",
+      "shown": "225.26315789473685",
+      "beforeAttemptPutCount": 1,
+      "duringAttemptPutCount": 1,
+      "localGestureAndTwoFramesMs": 568.4000000000015,
+      "pointerupToSavedCheckpointMs": 37.72230000000127,
+      "writes": [
+        {
+          "at": 5194.700000047684,
+          "responses": {
+            "profile": {
+              "kind": "energy-profile",
+              "r": 220,
+              "p": 225.26315789473685,
+              "peak": 85,
+              "left": "",
+              "right": "",
+              "vertical": "Energy",
+              "horizontal": "Progress of reaction",
+              "pathLabel": "Catalysed",
+              "arrows": {}
+            }
+          }
+        }
+      ],
+      "checkpointMatchesDurable": true,
+      "status": "Saved on this device",
+      "desktopOverflow": false
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Bounded single observations only; prior full profile remains tied to earlier35e6 freeze.",
+    "CDP emulation is not physical mobile hardware or a native screen-reader test.",
+    "Automation/transport/two animation frame overhead included; two frames are not hardware presentation.",
+    "Background host CPU/hardware unspecified and unmeasured. Explicit quiet browser interval is separately recorded."
+  ],
+  "browserVersion": "154.0.4258.48",
+  "finishedAt": "2026-10-03T06:43:49.408Z"
+}

@@ -1,0 +1,4165 @@
+{
+  "agentId": "A06",
+  "jobId": "S3-REVIEW-TIMING",
+  "run": "a06s3-murprbse",
+  "profile": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.browser\\a06s3-murprbse",
+  "startedAt": "2026-10-03T01:28:52.334Z",
+  "status": "ESCALATE",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "playwright": "1.62.1",
+  "sourceBefore": [
+    {
+      "path": "src/activities/alevel/acid-base-calculations/data.js",
+      "sha256": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "sha256": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.js",
+      "sha256": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "sha256": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "sha256": "6ec3ab2cb92fb3e5ca0e6614220bd834dab460eba163e5d472a6ccaa38872ed9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/index.ts",
+      "sha256": "81ba8c263bbcc308002ed6b04c9fe60907a71c37042affad91b2a86de0319b9d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "sha256": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/marking.ts",
+      "sha256": "0acec21a97538f90bdc819e6267d5026be1bb79cc6379c337d9de66caf2edd5d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "sha256": "77ef641c88b31fee2c71d90ea62fb3e4d034f54d6cdbfb2e886c5a61f4dce72a"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+      "sha256": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/sources.ts",
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.d.ts",
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.js",
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "sha256": "458be246d3f74b3e6ab37c6986161db3165684c7617830d1dd229b051c3821d4"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/marking.ts",
+      "sha256": "839f9db6d354f936d529ce96f089edfa8f683eccff4f8afef54574f6f32523b2"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/provider.ts",
+      "sha256": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/index.ts",
+      "sha256": "f2fef50ba1d887e4155394642d0efabeb74fc57832a47e7744b98acd81b81816"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/marking.ts",
+      "sha256": "52d686c8e5d9cb4fa6489f3f7d66f3fe62a53179de275e877959c8f92398dd6e"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/provider.ts",
+      "sha256": "0bc49fc665e9673acf8d590a3be73e5efdbae0c118054ce738c7a97dc4d490a2"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/core.d.ts",
+      "sha256": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/core.js",
+      "sha256": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/data.d.ts",
+      "sha256": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/data.js",
+      "sha256": "08192144a9e9673473df1c60f69c9dc64397646518882fbc95adffea49831c4c"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/index.ts",
+      "sha256": "12f05a0c485a2b4a394d4b17f5c6afe9f8b9518a7650246c5bac38b22b4ea901"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/marking.ts",
+      "sha256": "00ba907b77c9a33c0e2901d399bf4434959591b81eed2ab23011f69c1862615f"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/provider.ts",
+      "sha256": "728790d4c7ff918bca56271a12ed446fa2dfb1b9306336d0b7fd445589cc1fb9"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/bank.json",
+      "sha256": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/bank.ts",
+      "sha256": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/index.ts",
+      "sha256": "545f5d27ed1b8fb4f5cb1ec2bf61a1b8a9562a3db01b8fa3f6a2ed5b009d665e"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/marking.ts",
+      "sha256": "8846d2b08dd7d40979c799b9af399ad3e3807d6ac3df16d4d60943afd655c717"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/provider.ts",
+      "sha256": "801391e3c1d091c4ab0fede2d4d14274cf9f9f3a9bcdc2902d6c83c2bb9fec29"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/index.ts",
+      "sha256": "414e72067fda940b7f4dd8e57779c42a2d01b19d6358352ffcbf709e7b6ebe40"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/marking.ts",
+      "sha256": "df10d76911960806baa32a8c2969f7beda5e5c528099af50f0604244ac710384"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/provider.ts",
+      "sha256": "d614fd699098cd7a1945b3f1e233e601672a8461e6552b5c81bbfd03eeb63482"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/index.ts",
+      "sha256": "084eae51d5ed2b7c00b813d97342ab29c469d887bfe05a4d3594b45fac1bb563"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/marking.ts",
+      "sha256": "5e78880c76a2404690a27c676d152a33cd5a8b15a9f0e836e7e771113584ae1a"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/provider.ts",
+      "sha256": "fdaace21084a554fccfa7f765778cd6b3eb4274ce2231ae3756cea34adb763b8"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.d.ts",
+      "sha256": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.js",
+      "sha256": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/index.ts",
+      "sha256": "d72a2c12a5719a846c59b2ae0d4af1826aab9e25ea31017acf6482f12f380f73"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/marking.ts",
+      "sha256": "24758cff024c48f3fdf8366c04a2b05bd5b8ce7baec35f81ddc3a5543d9ccc50"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/provider.ts",
+      "sha256": "2e3b51c0d94a89c9a4b6c471930b500ac88116bf050ae8bdd2b40d0436334ac8"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/types.ts",
+      "sha256": "f53d861984ce4b49b710e1ac5f8a8d009f6e846f59e60356059070cf10f25e37"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/data.ts",
+      "sha256": "3ddd28a3c096a32649af17cc4d72bc8aea88a8d7e2a4fa176415a12edf5e1185"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/index.ts",
+      "sha256": "9e7aef3ea37b8eb42f078f5f37f52128b6cab26597bcb1d347ffb06e14a9b02c"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/marking.ts",
+      "sha256": "dba3cb3647323bcfe6fed025b5253870ca226c59746065a2991a7c85507c1b19"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/provider.ts",
+      "sha256": "4f743c61d765e5ba541fd47856f08f056b6fa91df00e7ce4fab9f844fb451a79"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/source-core.d.ts",
+      "sha256": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/source-core.js",
+      "sha256": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/types.ts",
+      "sha256": "a04bce1d245669e29cb0ab6d7d25c4c8fdaeb35dc1872a25baa27b0e920956d7"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/data.ts",
+      "sha256": "29f00cb4f48625b01770f5cff0776541eb180777d12f0361b4bfe481be546abe"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/index.ts",
+      "sha256": "43f372bbb8e7c761bb55f28a61ab73395b05f1eefa05a66f174d00fdebba1b63"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/marking.ts",
+      "sha256": "c60690a9c159ea8c0a384dabc3df459dc674f7e5b88612143316f0e65679b672"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/provider.ts",
+      "sha256": "7f7e57ba567906137936275bd328ee03ee1ced06aad83b712dbb2767df58682a"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/source-core.d.ts",
+      "sha256": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/source-core.js",
+      "sha256": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/types.ts",
+      "sha256": "95f9534e4669e67aee3590c5675e6c46bbd52a18be815e01a2dfb6af63d24a4c"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/data.ts",
+      "sha256": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/index.ts",
+      "sha256": "fc933e9dcf046d8a6dfab9ac84112cda39bcb66f64e5ec012ddd1daf2c7f9a5d"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/marking.ts",
+      "sha256": "10377dc90ba710e6b2728c589ef96704e6736f098521f48885e27f191dcd31fa"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+      "sha256": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-p1.svg",
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-r1.svg",
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-p1.svg",
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-r1.svg",
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-p1.svg",
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-r1.svg",
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p1.svg",
+      "sha256": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p2.svg",
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-r1.svg",
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-p1.svg",
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-r1.svg",
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-p1.svg",
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-r1.svg",
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-p1.svg",
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-r1.svg",
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p1.svg",
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p2.svg",
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-r1.svg",
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-p1.svg",
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-r1.svg",
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-p1.svg",
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-r1.svg",
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/alarm-pheromone-skeletal-notes.svg",
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/allantoin-skeletal-notes.svg",
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitra-esculenta.png",
+      "sha256": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+      "sha256": "bb82e202a8571b0e9b43933a08bad83204e4b9fc9de3afb498fbf1893137cf1b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/honey-bee.png",
+      "sha256": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg",
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/c/network.svg",
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-01.svg",
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-02.svg",
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-03.svg",
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-04.svg",
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-05.svg",
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-06.svg",
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-07.svg",
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-08.svg",
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-09.svg",
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-10.svg",
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-11.svg",
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-12.svg",
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-13.svg",
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-14.svg",
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-15.svg",
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/bank.json",
+      "sha256": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/c3l6.css",
+      "sha256": "9ff7b59ac39c440add56c0e19336352353a014ecbaf1f49bb40eaa87f1f2371a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/C3L6View.tsx",
+      "sha256": "9415ebb588f70638e3df18443730c3c15f9bfe509b89361e0c827fd17cd25850"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/content.ts",
+      "sha256": "7ec45c1c014ad50f0129ba7103a510eb8d4c2b0672a9dca805acb75ebfc954e0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/dependencies.ts",
+      "sha256": "eac69b39439f5f4da627f7b21d8617dd8fc15afa1d12f5b645f3ff853a3058b1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/index.ts",
+      "sha256": "7bb6517ff8c791da0a2af55c969a8fbf8bea871decda4909d9614099c64eb253"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/legacy.ts",
+      "sha256": "6aec0b39168bf90cfefd5f9d745a08e178f514e6f2c6790980a8bdb9f3491a60"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/panels.json",
+      "sha256": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/policy.ts",
+      "sha256": "e0b6adc78650ea9fd9657afd1f59ddb011d61b3df278926b1e076092932193b1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/source-bank.ts",
+      "sha256": "8e6c196313d4f4bb336307cf837b01b4ffc4836b05bcf63f9f2b76c8fff61c4a"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "sha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "sha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "sha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "sha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "sha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "sha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/core.d.ts",
+      "sha256": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/core.js",
+      "sha256": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/data.d.ts",
+      "sha256": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/data.js",
+      "sha256": "d6234b008a941af0580339fc469d6426f17aefd6633a54a318dc53a1ae39ee24"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/display.ts",
+      "sha256": "5be323f235f5d793906b1aee223ff55485f068b08c59e65a5e1a04b538db9977"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/engine.ts",
+      "sha256": "64a51d14e7080615a1a698bf61d1893888af616c7f6f9a2b48d8e8b0e69302ae"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/identity.ts",
+      "sha256": "0bbfb6e56cd9031f98ff41b018411f72af820074657d8d04d83a6a620f9abdb3"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/provenance.ts",
+      "sha256": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822"
+    },
+    {
+      "path": "src/chemistry/energy-profile/index.ts",
+      "sha256": "e86eb0caf877ac52500c336237da5de57a98ed859600c5843ca13d0312a5e8f4"
+    },
+    {
+      "path": "src/chemistry/energy-profile/svg.ts",
+      "sha256": "a55093bcf2aa747323cc982aa923294c40b68d9fac5b8ba56bc99621603d4d99"
+    },
+    {
+      "path": "src/chemistry/molecule/core.d.ts",
+      "sha256": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7"
+    },
+    {
+      "path": "src/chemistry/molecule/core.js",
+      "sha256": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642"
+    },
+    {
+      "path": "src/chemistry/molecule/engine.ts",
+      "sha256": "079e9ffd41952bb9d9bde0bc0e4fd81b4662b0d0556d02a8161a8341465d4cfb"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-core.d.ts",
+      "sha256": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-core.js",
+      "sha256": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-data.js",
+      "sha256": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.d.ts",
+      "sha256": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.js",
+      "sha256": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-data.js",
+      "sha256": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/framework.ts",
+      "sha256": "ba39dbcc79a84eafca6b7d3636eec89da9ab44f17ab4fe9ae6e6acd36942699b"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/identity.ts",
+      "sha256": "92527b2e1b0df2f3d03f7b7808ee43816044fc48cf4a43d9b26dfae2b5c61d7c"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/marking.ts",
+      "sha256": "580a9bf169730095e3c37f88ec48326f80fc3eeacc9b4450bc7ac32903359858"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/presentation.ts",
+      "sha256": "6819b16e3b281369cbfb7b11a938402b4eee48217b0e8ebe7b1e9678fe656aad"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/types.ts",
+      "sha256": "854ff608ec7e581bbe7af9699fe92dcba2ed8454da86fbefa48c4cac7db2a6c5"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.d.ts",
+      "sha256": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.js",
+      "sha256": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960"
+    },
+    {
+      "path": "src/chemistry/titration-curve/engine.ts",
+      "sha256": "51a1c16b3497139fa94eadcb40659a3d7a652d087acccc640b7ce1fbf4e65c9a"
+    },
+    {
+      "path": "src/chemistry/titration-curve/model.ts",
+      "sha256": "e7cbb83db0c198f6312ccbb5ee437d98eaef0b8f129ef9f2e5b7c8e76e669698"
+    },
+    {
+      "path": "src/chemistry/titration-curve/types.ts",
+      "sha256": "f2dcc78961284f6121583ee91ce72685cad43455cc70e7c2cbf5705b51e5d819"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "sha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "sha256": "c3da2f65ead8b5da046f134fb603fd27d50b5e7fe99ae8a2978de385769498ae"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "sha256": "fa98c8658878c5037e84d8131ead168e44c25f3ea732c6b55fae3c37cebfe01d"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "sha256": "df4c32f3696f6659ffcd5134c6e6ad30b73851e6eea5acc24853f2abb7ce24c7"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "sha256": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "sha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "sha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "sha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "sha256": "d7af00a1ea7daeeb7297502df9d17b9636866322d9da8d775536de5bbeda3cad"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "sha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "sha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "sha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "sha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "sha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "sha256": "e0685e77fc9b819274714876feb32b9ea27effbbbf98c8d7c2dc4964e79f543d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "sha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204"
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "sha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a"
+    },
+    {
+      "path": "src/editors/electron-configuration/index.tsx",
+      "sha256": "86fba0142e89c54b8f7dd95f27d978bfd6f57609a53eda515bcfdbde266d911c"
+    },
+    {
+      "path": "src/editors/electron-configuration/styles.css",
+      "sha256": "774fec9b6744fa1feda64c15ed5d94cb7b246ce99127e145eaa99e64961350f2"
+    },
+    {
+      "path": "src/editors/energy-profile/index.tsx",
+      "sha256": "ece2b789923f140dd2afaca8a997ca3900196ccfd26f6d472f27ccac27d6ef54"
+    },
+    {
+      "path": "src/editors/molecule/index.ts",
+      "sha256": "ef50321d6c11325ea9882438caab885b8887b09e8452dc53afddfa9ae31215f5"
+    },
+    {
+      "path": "src/editors/molecule/molecule.css",
+      "sha256": "af4cc66fcd8eab8004139fa38e9e7c89e1d38907577fc056e301ec0d020d1406"
+    },
+    {
+      "path": "src/editors/molecule/MoleculeEditor.tsx",
+      "sha256": "6d770e36c3e90356f515b9f2a63e1c49d2b30086b758936d7d034b2af7497b64"
+    },
+    {
+      "path": "src/editors/titration-curve/index.ts",
+      "sha256": "2e228f5a1ed935793c1803793ed589b1b11624319d0ba4bbcfa6bb26bd2eedc8"
+    },
+    {
+      "path": "src/editors/titration-curve/titration.css",
+      "sha256": "ae349b113200397e18183e46e06684913a2c7b7b8f8072071dcd04d37cef172f"
+    },
+    {
+      "path": "src/editors/titration-curve/TitrationCurveEditor.tsx",
+      "sha256": "174211f89f1a2d543b7009310ceaf3bc138c77d4518b620594a9ec139a23b906"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "c6bf43df9a035de75fce5c84bd2d265df014c6989a3d6966f3e8e7e0a571d4b6"
+    },
+    {
+      "path": "src/foundation/OlympiadHost.tsx",
+      "sha256": "aed9e01de4e16914fbdc60c2500378e3a2ca85a399b23131c3630f961c5a8575"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "0634bdae26982f908504025411ed9fce442ea68851808f759d4785685584d60e"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "sha256": "b4e8da4fe12e74b2f5fc5f75740f16a39891d54f34c5a7f4fab23acf8b26f9bc"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "sha256": "6e86e614c94025f98c97b0befb0e5094cb02808ab89881025c3673c89d5da088"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "sha256": "15a2665c59fe993bfa2bbc59cd25284240652339367b84e17eb59a1d82b9db7f"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "sha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "sha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "sha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sha256": "e88f83dfe2e31b5487fa2521f4df25c0875941b0f84d50ceeb5bfdb3b2b242a6"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "sha256": "409d39110b6236e99ac22a56b595e69f1c8b4b9b873546780d7f6e0e1387d6c8"
+    },
+    {
+      "path": "src/shell/navigation-view.ts",
+      "sha256": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "sha256": "bdb56e000f81177934d7b59136de09d2b5dac52640113cb9e24e2840df94df18"
+    },
+    {
+      "path": "src/ui/assessment-label.ts",
+      "sha256": "92ff545e5153c51f0381a4a5e3b152614b7d3cfe34c1761b2ce4699f8a791479"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "sha256": "4a3788123c707ff596c0e7882e9eeaa4c1b7f9e1dfcc523ae044a0c635e48a72"
+    },
+    {
+      "path": "src/ui/CorrectionSegments.tsx",
+      "sha256": "971effa69aa02ac9064665b635d65cf380ae1041f7e52807f3ea27613a5bcc64"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "sha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b"
+    },
+    {
+      "path": "src/ui/NumericWorkingControl.tsx",
+      "sha256": "c155c987144091a80c039e6266fe955ccc2f91a3a075a717cefd07bd21cbe360"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "sha256": "197ed9bfd143fc5d19c56aa7ecdf60b1995a331256096c29c42967860e2df994"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "sha256": "090f02bf6de66ad4cb3e136bf85e81789cf9c8562375073aed57ca3f3caa0cec"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "sha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6"
+    }
+  ],
+  "priorEvidence": {
+    "path": "validation/s3/thermochemistry/timing-browser-results-ordinary-freeze.json",
+    "sha256": "551d9efda46746382231d06421c3ce0e8f96683b0b45d38a0c77e8ad39723937",
+    "result": {
+      "status": "FAIL",
+      "mode": "isolated headless installed Edge actual production host; same document CDP freeze and real wall-clock idle",
+      "results": [
+        {
+          "id": "timing-browser",
+          "status": "FAIL",
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n9005 !== 1001\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/timing-browser.mjs:11:313"
+        }
+      ]
+    }
+  },
+  "observations": [
+    {
+      "label": "thermochemistry before freeze",
+      "wallMs": 1790990936125,
+      "monoMs": 3160.900000035763,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "hidden": false,
+      "focused": true,
+      "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+      "phase": "answering",
+      "activeMs": 1001,
+      "idleLimitMs": 180000
+    },
+    {
+      "label": "thermochemistry after thaw",
+      "wallMs": 1790990943982,
+      "monoMs": 1207.3999999761581,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "hidden": true,
+      "focused": true,
+      "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+      "phase": "answering",
+      "activeMs": 1001,
+      "idleLimitMs": 180000
+    }
+  ],
+  "nativeEvents": [
+    {
+      "event": "pageshow",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990933955,
+      "monoMs": 990.7000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": false
+    },
+    {
+      "event": "pageshow",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990933956,
+      "monoMs": 991.4000000357628,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": false
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990933959,
+      "monoMs": 994.7000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990933959,
+      "monoMs": 995,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990933959,
+      "monoMs": 995,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990933959,
+      "monoMs": 995.2000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990934307,
+      "monoMs": 1342.5,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": null
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990934307,
+      "monoMs": 1342.6000000238419,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": null
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990934526,
+      "monoMs": 1561.4000000357628,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 0,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990934526,
+      "monoMs": 1561.7000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 0,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990934560,
+      "monoMs": 1595.5,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 0,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990934560,
+      "monoMs": 1596,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {},
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 0,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "keydown",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990934578,
+      "monoMs": 1613.5,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "key": "Tab",
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 42,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "keydown",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990934578,
+      "monoMs": 1613.7000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "key": "Tab",
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 42,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990934578,
+      "monoMs": 1614.300000011921,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 42,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990934579,
+      "monoMs": 1614.5,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 42,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990934579,
+      "monoMs": 1614.9000000357628,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 42,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990934579,
+      "monoMs": 1615,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": true,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 42,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990936131,
+      "monoMs": 3166.600000023842,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990936131,
+      "monoMs": 3167,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990936131,
+      "monoMs": 3167.2000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990936131,
+      "monoMs": 3167.400000035763,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": false,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "visibilitychange",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990936150,
+      "monoMs": 3185.800000011921,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "visibilitychange",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990936150,
+      "monoMs": 3186.2000000476837,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "freeze",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990936151,
+      "monoMs": 3186.800000011921,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "freeze",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990936151,
+      "monoMs": 3187,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "resume",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990942750,
+      "monoMs": 9785.700000047684,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "resume",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990942750,
+      "monoMs": 9785.900000035763,
+      "timeOrigin": 1790990932964.7,
+      "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990942825,
+      "monoMs": 50.80000001192093,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": true
+    },
+    {
+      "event": "focus",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990942826,
+      "monoMs": 51,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": true
+    },
+    {
+      "event": "pageshow",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990942838,
+      "monoMs": 63.60000002384186,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": true
+    },
+    {
+      "event": "pageshow",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990942838,
+      "monoMs": 63.80000001192093,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": true
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "capture",
+      "wallMs": 1790990944319,
+      "monoMs": 1544.199999988079,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    },
+    {
+      "event": "blur",
+      "trusted": true,
+      "stage": "after handlers",
+      "wallMs": 1790990944319,
+      "monoMs": 1544.6000000238419,
+      "timeOrigin": 1790990942775.2,
+      "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+      "hidden": true,
+      "focused": false,
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      }
+    }
+  ],
+  "navigations": [
+    {
+      "at": 1790990933819,
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze"
+    },
+    {
+      "at": 1790990942824,
+      "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze"
+    }
+  ],
+  "console": [
+    {
+      "at": 1790990933905,
+      "text": "[vite] connecting..."
+    },
+    {
+      "at": 1790990933973,
+      "text": "[vite] connected."
+    },
+    {
+      "at": 1790990942755,
+      "text": "[vite] server connection lost. Polling for restart..."
+    },
+    {
+      "at": 1790990942841,
+      "text": "[vite] connecting..."
+    },
+    {
+      "at": 1790990942862,
+      "text": "[vite] connected."
+    }
+  ],
+  "pageErrors": [],
+  "checks": [],
+  "sourcePolicy": "Target-loaded timing/controller/host/repository/contracts/UI/titration/thermochemistry sources must remain unchanged; unrelated worker source changes recorded separately",
+  "launch": {
+    "exe": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "args": [
+      "--user-data-dir=C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.browser\\a06s3-murprbse",
+      "--remote-debugging-port=9368",
+      "--remote-debugging-address=127.0.0.1",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-background-networking",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-gpu",
+      "--window-size=1440,1000",
+      "about:blank"
+    ],
+    "noDefaults": true,
+    "host": "http://127.0.0.1:5187",
+    "hmr": false
+  },
+  "endpoint": {
+    "Browser": "Chrome/154.0.8037.93",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "V8-Version": "15.4.80.19",
+    "WebKit-Version": "537.36 (@f89f3a4363808e117c592adedcf9947882ac3b79)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9368/devtools/browser/b0935f8a-3a96-4d6e-a3eb-1a06f165aca7"
+  },
+  "browserVersion": "154.0.8037.93",
+  "suspension": [
+    {
+      "id": "thermochemistry",
+      "before": {
+        "label": "thermochemistry before freeze",
+        "wallMs": 1790990936125,
+        "monoMs": 3160.900000035763,
+        "timeOrigin": 1790990932964.7,
+        "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+        "hidden": false,
+        "focused": true,
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "phase": "answering",
+        "activeMs": 1001,
+        "idleLimitMs": 180000
+      },
+      "after": {
+        "label": "thermochemistry after thaw",
+        "wallMs": 1790990943982,
+        "monoMs": 1207.3999999761581,
+        "timeOrigin": 1790990942775.2,
+        "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+        "hidden": true,
+        "focused": true,
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "phase": "answering",
+        "activeMs": 1001,
+        "idleLimitMs": 180000
+      },
+      "requestedAt": 1790990936128,
+      "frozenAckAt": 1790990936134,
+      "thawRequestedAt": 1790990942748,
+      "measuredWallMs": 6614,
+      "events": [
+        {
+          "event": "blur",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990936131,
+          "monoMs": 3166.600000023842,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": false,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "blur",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990936131,
+          "monoMs": 3167,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": false,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "blur",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990936131,
+          "monoMs": 3167.2000000476837,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": false,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "blur",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990936131,
+          "monoMs": 3167.400000035763,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": false,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "visibilitychange",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990936150,
+          "monoMs": 3185.800000011921,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "visibilitychange",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990936150,
+          "monoMs": 3186.2000000476837,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "freeze",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990936151,
+          "monoMs": 3186.800000011921,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "freeze",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990936151,
+          "monoMs": 3187,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "resume",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990942750,
+          "monoMs": 9785.700000047684,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "resume",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990942750,
+          "monoMs": 9785.900000035763,
+          "timeOrigin": 1790990932964.7,
+          "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": false,
+          "attempt": {
+            "mode": "student",
+            "namespace": {
+              "course": "igcse",
+              "profileId": "local"
+            },
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "ref": {
+              "activityId": "igcse/calorimetry",
+              "questionId": "CAL-ULRHXO",
+              "seed": 1850540172,
+              "level": 1
+            },
+            "target": {
+              "course": "igcse",
+              "activityId": "igcse/calorimetry",
+              "gemId": "lower-10-3",
+              "level": 1
+            },
+            "currentResponses": {
+              "deltaT": {
+                "kind": "numeric",
+                "raw": "1",
+                "unit": "°C"
+              }
+            },
+            "assistance": [],
+            "phase": "answering",
+            "timing": {
+              "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+              "activeMs": 1001,
+              "idleLimitMs": 180000,
+              "finished": false
+            }
+          }
+        },
+        {
+          "event": "focus",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990942825,
+          "monoMs": 50.80000001192093,
+          "timeOrigin": 1790990942775.2,
+          "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": true
+        },
+        {
+          "event": "focus",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990942826,
+          "monoMs": 51,
+          "timeOrigin": 1790990942775.2,
+          "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": true
+        },
+        {
+          "event": "pageshow",
+          "trusted": true,
+          "stage": "capture",
+          "wallMs": 1790990942838,
+          "monoMs": 63.60000002384186,
+          "timeOrigin": 1790990942775.2,
+          "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": true
+        },
+        {
+          "event": "pageshow",
+          "trusted": true,
+          "stage": "after handlers",
+          "wallMs": 1790990942838,
+          "monoMs": 63.80000001192093,
+          "timeOrigin": 1790990942775.2,
+          "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+          "hidden": true,
+          "focused": true
+        }
+      ],
+      "navigations": [
+        {
+          "at": 1790990942824,
+          "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze"
+        }
+      ],
+      "freeze": {
+        "event": "freeze",
+        "trusted": true,
+        "stage": "after handlers",
+        "wallMs": 1790990936151,
+        "monoMs": 3187,
+        "timeOrigin": 1790990932964.7,
+        "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+        "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+        "hidden": true,
+        "focused": false,
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "igcse",
+            "profileId": "local"
+          },
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-ULRHXO",
+            "seed": 1850540172,
+            "level": 1
+          },
+          "target": {
+            "course": "igcse",
+            "activityId": "igcse/calorimetry",
+            "gemId": "lower-10-3",
+            "level": 1
+          },
+          "currentResponses": {
+            "deltaT": {
+              "kind": "numeric",
+              "raw": "1",
+              "unit": "°C"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "activeMs": 1001,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      },
+      "resume": {
+        "event": "resume",
+        "trusted": true,
+        "stage": "after handlers",
+        "wallMs": 1790990942750,
+        "monoMs": 9785.900000035763,
+        "timeOrigin": 1790990932964.7,
+        "token": "01192842-39cc-4dcc-b40a-4fb4b8b8473c",
+        "url": "http://127.0.0.1:5187/igcse.html?run=a06s3-murprbse-thermo-freeze",
+        "hidden": true,
+        "focused": false,
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "igcse",
+            "profileId": "local"
+          },
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-ULRHXO",
+            "seed": 1850540172,
+            "level": 1
+          },
+          "target": {
+            "course": "igcse",
+            "activityId": "igcse/calorimetry",
+            "gemId": "lower-10-3",
+            "level": 1
+          },
+          "currentResponses": {
+            "deltaT": {
+              "kind": "numeric",
+              "raw": "1",
+              "unit": "°C"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+            "activeMs": 1001,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      }
+    }
+  ],
+  "failure": {
+    "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 1790990942775.2\n- 1790990932964.7\n          ^\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 1790990942775.2\n- 1790990932964.7\n          ^\n\n    at freeze (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/review-timing/native-check.mjs:43:360)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/review-timing/native-check.mjs:48:115"
+  },
+  "failureSnapshot": {
+    "wallMs": 1790990943988,
+    "monoMs": 1213.699999988079,
+    "timeOrigin": 1790990942775.2,
+    "token": "0f86cfc9-1ec4-44dc-a770-8737b81b194c",
+    "hidden": true,
+    "focused": true,
+    "snapshot": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "deltaT": {
+            "kind": "numeric",
+            "raw": "1",
+            "unit": "°C"
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+          "activeMs": 1001,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "igcse",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "igcse",
+          "activityId": "igcse/calorimetry",
+          "gemId": "lower-10-3",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "d9d4b079-f9f5-44f2-b4d0-3819c6d32d67",
+        "previousQuestionIds": [
+          "CAL-ULRHXO"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "igcse/calorimetry",
+          "questionId": "CAL-ULRHXO",
+          "seed": 1850540172,
+          "level": 1
+        },
+        "title": "Calorimetry · methanol",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Methanol is burned in a spirit burner to heat water."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Quantity",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Mass of water",
+                "150.0 g"
+              ],
+              [
+                "Amount of methanol burned",
+                "0.010 mol"
+              ],
+              [
+                "Initial temperature",
+                "18.2 °C"
+              ],
+              [
+                "Final temperature",
+                "26.2 °C"
+              ],
+              [
+                "Specific heat capacity of water/solution",
+                "4.20 J/g/°C"
+              ]
+            ]
+          },
+          {
+            "kind": "text",
+            "text": "ΔT and Q describe the water or solution. The reaction enthalpy has the opposite sign. Give final numerical answers to 3 significant figures, using unrounded values in subsequent parts."
+          }
+        ],
+        "layout": "multipart",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "deltaT",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate the temperature change, ΔT, in °C. Include a sign in your answer."
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "°C",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 8,
+              "tolerance": 0.00500001
+            },
+            "workingFramework": {
+              "supportId": "working-deltaT",
+              "rows": [
+                {
+                  "left": "ΔT",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "T(final) − T(initial)"
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-deltaT-1",
+                        "expected": 26.2,
+                        "tolerance": 0.050000000000000225
+                      },
+                      " − ",
+                      {
+                        "id": "working-deltaT-2",
+                        "expected": 18.2,
+                        "tolerance": 0.050000000000000225
+                      },
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-deltaT-3",
+                        "expected": 8,
+                        "tolerance": 0.050000000000000225,
+                        "finalResponse": true
+                      },
+                      " °C"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "q",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate the heat energy change of the water, in J. Include a sign in your answer."
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "J",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": 5040,
+              "tolerance": 5.0000100000000005
+            },
+            "workingFramework": {
+              "supportId": "working-q",
+              "rows": [
+                {
+                  "left": "m",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-q-1",
+                        "expected": 150,
+                        "tolerance": 0.050000000000000225
+                      },
+                      " g"
+                    ]
+                  }
+                },
+                {
+                  "left": "Q",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "m × c × ΔT"
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-q-2",
+                        "expected": 150,
+                        "tolerance": 0.5000000000000002
+                      },
+                      " × ",
+                      {
+                        "id": "working-q-3",
+                        "expected": 4.2,
+                        "tolerance": 0.005000000000000222
+                      },
+                      " × (",
+                      {
+                        "id": "working-q-4",
+                        "expected": 8,
+                        "tolerance": 0.050000000000000225
+                      },
+                      ")"
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-q-5",
+                        "expected": 5040,
+                        "tolerance": 0.5000000000000002,
+                        "finalResponse": true
+                      },
+                      " J"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "dh",
+            "kind": "numeric",
+            "inputMode": "text",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Calculate the molar enthalpy change for the methanol burned, in kJ/mol. Include a sign and give your answer to 3 significant figures."
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "unit": "kJ/mol",
+            "acceptance": {
+              "kind": "absolute",
+              "expected": -504,
+              "tolerance": 0.500001
+            },
+            "workingFramework": {
+              "supportId": "working-dh",
+              "rows": [
+                {
+                  "left": "Moles of methanol burned",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-dh-1",
+                        "expected": 0.01,
+                        "tolerance": 0.0005000000000002221
+                      },
+                      " mol (given)"
+                    ]
+                  }
+                },
+                {
+                  "left": "Q in kJ",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "Q in J ÷ ",
+                      {
+                        "id": "working-dh-2",
+                        "expected": 1000,
+                        "tolerance": 0.5000000000000002
+                      },
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-dh-3",
+                        "expected": 5040,
+                        "tolerance": 0.5000000000000002
+                      },
+                      " ÷ ",
+                      {
+                        "id": "working-dh-4",
+                        "expected": 1000,
+                        "tolerance": 0.5000000000000002
+                      },
+                      " (using unrounded Q)"
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-dh-5",
+                        "expected": 5.04,
+                        "tolerance": 0.005000000000000222
+                      },
+                      " kJ"
+                    ]
+                  }
+                },
+                {
+                  "left": "ΔH",
+                  "right": {
+                    "kind": "fraction",
+                    "numerator": [
+                      "−Q"
+                    ],
+                    "denominator": [
+                      "n"
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "fraction",
+                    "numerator": [
+                      "−(",
+                      {
+                        "id": "working-dh-6",
+                        "expected": 5.04,
+                        "tolerance": 0.005000000000000222
+                      },
+                      " kJ)"
+                    ],
+                    "denominator": [
+                      "",
+                      {
+                        "id": "working-dh-7",
+                        "expected": 0.01,
+                        "tolerance": 0.005000000000000222
+                      },
+                      " mol"
+                    ]
+                  }
+                },
+                {
+                  "left": "",
+                  "right": {
+                    "kind": "tokens",
+                    "tokens": [
+                      "",
+                      {
+                        "id": "working-dh-8",
+                        "expected": -504,
+                        "tolerance": 0.5000000000000002,
+                        "finalResponse": true
+                      },
+                      " kJ/mol"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "scaffolds": [],
+        "hints": [
+          {
+            "id": "working-deltaT",
+            "content": [
+              {
+                "kind": "text",
+                "text": "A working framework for temperature change in degrees celsius is available beside the response. Fill the missing numbers, then check your working."
+              }
+            ]
+          },
+          {
+            "id": "working-q",
+            "content": [
+              {
+                "kind": "text",
+                "text": "A working framework for heat energy change in joules is available beside the response. Fill the missing numbers, then check your working."
+              }
+            ]
+          },
+          {
+            "id": "working-dh",
+            "content": [
+              {
+                "kind": "text",
+                "text": "A working framework for molar enthalpy change in kilojoules per mole is available beside the response. Fill the missing numbers, then check your working."
+              }
+            ]
+          }
+        ],
+        "workedAnswer": [
+          {
+            "kind": "formula",
+            "text": "ΔT = T(final) − T(initial)"
+          },
+          {
+            "kind": "formula",
+            "text": "26.2 − 18.2"
+          },
+          {
+            "kind": "formula",
+            "text": "+8.0 °C"
+          },
+          {
+            "kind": "text",
+            "text": "m = 150.0 g"
+          },
+          {
+            "kind": "formula",
+            "text": "Q = m × c × ΔT"
+          },
+          {
+            "kind": "formula",
+            "text": "150 × 4.20 × (+8.0)"
+          },
+          {
+            "kind": "formula",
+            "text": "+5040 J"
+          },
+          {
+            "kind": "formula",
+            "text": "Moles of methanol burned = 0.010 mol (given)"
+          },
+          {
+            "kind": "formula",
+            "text": "Q in kJ = Q in J ÷ 1000"
+          },
+          {
+            "kind": "formula",
+            "text": "+5040 ÷ 1000 (using unrounded Q)"
+          },
+          {
+            "kind": "formula",
+            "text": "+5.04 kJ"
+          },
+          {
+            "kind": "formula",
+            "text": "ΔH = (−Q) ÷ (n)"
+          },
+          {
+            "kind": "formula",
+            "text": "(−(+5.04 kJ)) ÷ (0.01 mol)"
+          },
+          {
+            "kind": "formula",
+            "text": "−504 kJ/mol"
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/calorimetry/core.js",
+            "sha256": "8c540133a5dc4ea8067ff43e4d0bce7a6db79d032a44a296db00c5bfac35a2ac",
+            "symbolOrSection": "Exact calculation generator, routes and source sign conventions"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-igcse-a06s3-murprbse-thermo-freeze",
+      "selectedCount": 0
+    }
+  },
+  "sourceAfter": [
+    {
+      "path": "src/activities/alevel/acid-base-calculations/data.js",
+      "sha256": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "sha256": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.js",
+      "sha256": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "sha256": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "sha256": "6ec3ab2cb92fb3e5ca0e6614220bd834dab460eba163e5d472a6ccaa38872ed9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/index.ts",
+      "sha256": "81ba8c263bbcc308002ed6b04c9fe60907a71c37042affad91b2a86de0319b9d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "sha256": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/marking.ts",
+      "sha256": "0acec21a97538f90bdc819e6267d5026be1bb79cc6379c337d9de66caf2edd5d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "sha256": "77ef641c88b31fee2c71d90ea62fb3e4d034f54d6cdbfb2e886c5a61f4dce72a"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+      "sha256": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/sources.ts",
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.d.ts",
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.js",
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "sha256": "458be246d3f74b3e6ab37c6986161db3165684c7617830d1dd229b051c3821d4"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/marking.ts",
+      "sha256": "839f9db6d354f936d529ce96f089edfa8f683eccff4f8afef54574f6f32523b2"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/provider.ts",
+      "sha256": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/index.ts",
+      "sha256": "f2fef50ba1d887e4155394642d0efabeb74fc57832a47e7744b98acd81b81816"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/marking.ts",
+      "sha256": "52d686c8e5d9cb4fa6489f3f7d66f3fe62a53179de275e877959c8f92398dd6e"
+    },
+    {
+      "path": "src/activities/alevel/electron-configurations/provider.ts",
+      "sha256": "0bc49fc665e9673acf8d590a3be73e5efdbae0c118054ce738c7a97dc4d490a2"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/core.d.ts",
+      "sha256": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/core.js",
+      "sha256": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/data.d.ts",
+      "sha256": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/data.js",
+      "sha256": "08192144a9e9673473df1c60f69c9dc64397646518882fbc95adffea49831c4c"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/index.ts",
+      "sha256": "12f05a0c485a2b4a394d4b17f5c6afe9f8b9518a7650246c5bac38b22b4ea901"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/marking.ts",
+      "sha256": "00ba907b77c9a33c0e2901d399bf4434959591b81eed2ab23011f69c1862615f"
+    },
+    {
+      "path": "src/activities/alevel/electrons-bonding/provider.ts",
+      "sha256": "728790d4c7ff918bca56271a12ed446fa2dfb1b9306336d0b7fd445589cc1fb9"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/bank.json",
+      "sha256": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/bank.ts",
+      "sha256": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/index.ts",
+      "sha256": "545f5d27ed1b8fb4f5cb1ec2bf61a1b8a9562a3db01b8fa3f6a2ed5b009d665e"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/marking.ts",
+      "sha256": "8846d2b08dd7d40979c799b9af399ad3e3807d6ac3df16d4d60943afd655c717"
+    },
+    {
+      "path": "src/activities/alevel/ph-titration-curves/provider.ts",
+      "sha256": "801391e3c1d091c4ab0fede2d4d14274cf9f9f3a9bcdc2902d6c83c2bb9fec29"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/index.ts",
+      "sha256": "414e72067fda940b7f4dd8e57779c42a2d01b19d6358352ffcbf709e7b6ebe40"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/marking.ts",
+      "sha256": "df10d76911960806baa32a8c2969f7beda5e5c528099af50f0604244ac710384"
+    },
+    {
+      "path": "src/activities/igcse/bond-enthalpy/provider.ts",
+      "sha256": "d614fd699098cd7a1945b3f1e233e601672a8461e6552b5c81bbfd03eeb63482"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/index.ts",
+      "sha256": "084eae51d5ed2b7c00b813d97342ab29c469d887bfe05a4d3594b45fac1bb563"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/marking.ts",
+      "sha256": "5e78880c76a2404690a27c676d152a33cd5a8b15a9f0e836e7e771113584ae1a"
+    },
+    {
+      "path": "src/activities/igcse/calorimetry/provider.ts",
+      "sha256": "fdaace21084a554fccfa7f765778cd6b3eb4274ce2231ae3756cea34adb763b8"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.d.ts",
+      "sha256": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.js",
+      "sha256": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/index.ts",
+      "sha256": "d72a2c12a5719a846c59b2ae0d4af1826aab9e25ea31017acf6482f12f380f73"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/marking.ts",
+      "sha256": "24758cff024c48f3fdf8366c04a2b05bd5b8ce7baec35f81ddc3a5543d9ccc50"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/provider.ts",
+      "sha256": "2e3b51c0d94a89c9a4b6c471930b500ac88116bf050ae8bdd2b40d0436334ac8"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/types.ts",
+      "sha256": "f53d861984ce4b49b710e1ac5f8a8d009f6e846f59e60356059070cf10f25e37"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/data.ts",
+      "sha256": "3ddd28a3c096a32649af17cc4d72bc8aea88a8d7e2a4fa176415a12edf5e1185"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/index.ts",
+      "sha256": "9e7aef3ea37b8eb42f078f5f37f52128b6cab26597bcb1d347ffb06e14a9b02c"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/marking.ts",
+      "sha256": "dba3cb3647323bcfe6fed025b5253870ca226c59746065a2991a7c85507c1b19"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/provider.ts",
+      "sha256": "4f743c61d765e5ba541fd47856f08f056b6fa91df00e7ce4fab9f844fb451a79"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/source-core.d.ts",
+      "sha256": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/source-core.js",
+      "sha256": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952"
+    },
+    {
+      "path": "src/activities/igcse/energetics-practical/types.ts",
+      "sha256": "a04bce1d245669e29cb0ab6d7d25c4c8fdaeb35dc1872a25baa27b0e920956d7"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/data.ts",
+      "sha256": "29f00cb4f48625b01770f5cff0776541eb180777d12f0361b4bfe481be546abe"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/index.ts",
+      "sha256": "43f372bbb8e7c761bb55f28a61ab73395b05f1eefa05a66f174d00fdebba1b63"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/marking.ts",
+      "sha256": "c60690a9c159ea8c0a384dabc3df459dc674f7e5b88612143316f0e65679b672"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/provider.ts",
+      "sha256": "7f7e57ba567906137936275bd328ee03ee1ced06aad83b712dbb2767df58682a"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/source-core.d.ts",
+      "sha256": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/source-core.js",
+      "sha256": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb"
+    },
+    {
+      "path": "src/activities/igcse/energy-enthalpy/types.ts",
+      "sha256": "95f9534e4669e67aee3590c5675e6c46bbd52a18be815e01a2dfb6af63d24a4c"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/data.ts",
+      "sha256": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/index.ts",
+      "sha256": "fc933e9dcf046d8a6dfab9ac84112cda39bcb66f64e5ec012ddd1daf2c7f9a5d"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/marking.ts",
+      "sha256": "10377dc90ba710e6b2728c589ef96704e6736f098521f48885e27f191dcd31fa"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+      "sha256": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-p1.svg",
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-01-r1.svg",
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-p1.svg",
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-02-r1.svg",
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-p1.svg",
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-03-r1.svg",
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p1.svg",
+      "sha256": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p2.svg",
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-04-r1.svg",
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-p1.svg",
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-05-r1.svg",
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-p1.svg",
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-06-r1.svg",
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-p1.svg",
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-07-r1.svg",
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p1.svg",
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p2.svg",
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-08-r1.svg",
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-p1.svg",
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-09-r1.svg",
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-p1.svg",
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/a/a-10-r1.svg",
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/alarm-pheromone-skeletal-notes.svg",
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/allantoin-skeletal-notes.svg",
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitra-esculenta.png",
+      "sha256": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+      "sha256": "bb82e202a8571b0e9b43933a08bad83204e4b9fc9de3afb498fbf1893137cf1b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/honey-bee.png",
+      "sha256": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg",
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/c/network.svg",
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-01.svg",
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-02.svg",
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-03.svg",
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-04.svg",
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-05.svg",
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-06.svg",
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-07.svg",
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-08.svg",
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-09.svg",
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-10.svg",
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-11.svg",
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-12.svg",
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-13.svg",
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-14.svg",
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/assets/digitised/intro/example-15.svg",
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/bank.json",
+      "sha256": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/c3l6.css",
+      "sha256": "9ff7b59ac39c440add56c0e19336352353a014ecbaf1f49bb40eaa87f1f2371a"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/C3L6View.tsx",
+      "sha256": "9415ebb588f70638e3df18443730c3c15f9bfe509b89361e0c827fd17cd25850"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/content.ts",
+      "sha256": "7ec45c1c014ad50f0129ba7103a510eb8d4c2b0672a9dca805acb75ebfc954e0"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/dependencies.ts",
+      "sha256": "eac69b39439f5f4da627f7b21d8617dd8fc15afa1d12f5b645f3ff853a3058b1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/index.ts",
+      "sha256": "7bb6517ff8c791da0a2af55c969a8fbf8bea871decda4909d9614099c64eb253"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/legacy.ts",
+      "sha256": "6aec0b39168bf90cfefd5f9d745a08e178f514e6f2c6790980a8bdb9f3491a60"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/panels.json",
+      "sha256": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/policy.ts",
+      "sha256": "e0b6adc78650ea9fd9657afd1f59ddb011d61b3df278926b1e076092932193b1"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/source-bank.ts",
+      "sha256": "8e6c196313d4f4bb336307cf837b01b4ffc4836b05bcf63f9f2b76c8fff61c4a"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "sha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "sha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "sha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "sha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "sha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "sha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/core.d.ts",
+      "sha256": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/core.js",
+      "sha256": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/data.d.ts",
+      "sha256": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/data.js",
+      "sha256": "d6234b008a941af0580339fc469d6426f17aefd6633a54a318dc53a1ae39ee24"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/display.ts",
+      "sha256": "5be323f235f5d793906b1aee223ff55485f068b08c59e65a5e1a04b538db9977"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/engine.ts",
+      "sha256": "64a51d14e7080615a1a698bf61d1893888af616c7f6f9a2b48d8e8b0e69302ae"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/identity.ts",
+      "sha256": "0bbfb6e56cd9031f98ff41b018411f72af820074657d8d04d83a6a620f9abdb3"
+    },
+    {
+      "path": "src/chemistry/electron-configuration/provenance.ts",
+      "sha256": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822"
+    },
+    {
+      "path": "src/chemistry/energy-profile/index.ts",
+      "sha256": "e86eb0caf877ac52500c336237da5de57a98ed859600c5843ca13d0312a5e8f4"
+    },
+    {
+      "path": "src/chemistry/energy-profile/svg.ts",
+      "sha256": "a55093bcf2aa747323cc982aa923294c40b68d9fac5b8ba56bc99621603d4d99"
+    },
+    {
+      "path": "src/chemistry/molecule/core.d.ts",
+      "sha256": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7"
+    },
+    {
+      "path": "src/chemistry/molecule/core.js",
+      "sha256": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642"
+    },
+    {
+      "path": "src/chemistry/molecule/engine.ts",
+      "sha256": "079e9ffd41952bb9d9bde0bc0e4fd81b4662b0d0556d02a8161a8341465d4cfb"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-core.d.ts",
+      "sha256": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-core.js",
+      "sha256": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/bond-enthalpy-data.js",
+      "sha256": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.d.ts",
+      "sha256": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-core.js",
+      "sha256": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/calorimetry-data.js",
+      "sha256": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/framework.ts",
+      "sha256": "ba39dbcc79a84eafca6b7d3636eec89da9ab44f17ab4fe9ae6e6acd36942699b"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/identity.ts",
+      "sha256": "92527b2e1b0df2f3d03f7b7808ee43816044fc48cf4a43d9b26dfae2b5c61d7c"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/marking.ts",
+      "sha256": "580a9bf169730095e3c37f88ec48326f80fc3eeacc9b4450bc7ac32903359858"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/presentation.ts",
+      "sha256": "6819b16e3b281369cbfb7b11a938402b4eee48217b0e8ebe7b1e9678fe656aad"
+    },
+    {
+      "path": "src/chemistry/thermochemistry/types.ts",
+      "sha256": "854ff608ec7e581bbe7af9699fe92dcba2ed8454da86fbefa48c4cac7db2a6c5"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.d.ts",
+      "sha256": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33"
+    },
+    {
+      "path": "src/chemistry/titration-curve/core.js",
+      "sha256": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960"
+    },
+    {
+      "path": "src/chemistry/titration-curve/engine.ts",
+      "sha256": "51a1c16b3497139fa94eadcb40659a3d7a652d087acccc640b7ce1fbf4e65c9a"
+    },
+    {
+      "path": "src/chemistry/titration-curve/model.ts",
+      "sha256": "e7cbb83db0c198f6312ccbb5ee437d98eaef0b8f129ef9f2e5b7c8e76e669698"
+    },
+    {
+      "path": "src/chemistry/titration-curve/types.ts",
+      "sha256": "f2dcc78961284f6121583ee91ce72685cad43455cc70e7c2cbf5705b51e5d819"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "sha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "sha256": "c3da2f65ead8b5da046f134fb603fd27d50b5e7fe99ae8a2978de385769498ae"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "sha256": "fa98c8658878c5037e84d8131ead168e44c25f3ea732c6b55fae3c37cebfe01d"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "sha256": "df4c32f3696f6659ffcd5134c6e6ad30b73851e6eea5acc24853f2abb7ce24c7"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "sha256": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "sha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "sha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "sha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "sha256": "d7af00a1ea7daeeb7297502df9d17b9636866322d9da8d775536de5bbeda3cad"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "sha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "sha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "sha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "sha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "sha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "sha256": "e0685e77fc9b819274714876feb32b9ea27effbbbf98c8d7c2dc4964e79f543d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "sha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204"
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "sha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a"
+    },
+    {
+      "path": "src/editors/electron-configuration/index.tsx",
+      "sha256": "86fba0142e89c54b8f7dd95f27d978bfd6f57609a53eda515bcfdbde266d911c"
+    },
+    {
+      "path": "src/editors/electron-configuration/styles.css",
+      "sha256": "774fec9b6744fa1feda64c15ed5d94cb7b246ce99127e145eaa99e64961350f2"
+    },
+    {
+      "path": "src/editors/energy-profile/index.tsx",
+      "sha256": "ece2b789923f140dd2afaca8a997ca3900196ccfd26f6d472f27ccac27d6ef54"
+    },
+    {
+      "path": "src/editors/molecule/index.ts",
+      "sha256": "ef50321d6c11325ea9882438caab885b8887b09e8452dc53afddfa9ae31215f5"
+    },
+    {
+      "path": "src/editors/molecule/molecule.css",
+      "sha256": "af4cc66fcd8eab8004139fa38e9e7c89e1d38907577fc056e301ec0d020d1406"
+    },
+    {
+      "path": "src/editors/molecule/MoleculeEditor.tsx",
+      "sha256": "6d770e36c3e90356f515b9f2a63e1c49d2b30086b758936d7d034b2af7497b64"
+    },
+    {
+      "path": "src/editors/titration-curve/index.ts",
+      "sha256": "2e228f5a1ed935793c1803793ed589b1b11624319d0ba4bbcfa6bb26bd2eedc8"
+    },
+    {
+      "path": "src/editors/titration-curve/titration.css",
+      "sha256": "ae349b113200397e18183e46e06684913a2c7b7b8f8072071dcd04d37cef172f"
+    },
+    {
+      "path": "src/editors/titration-curve/TitrationCurveEditor.tsx",
+      "sha256": "174211f89f1a2d543b7009310ceaf3bc138c77d4518b620594a9ec139a23b906"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "c6bf43df9a035de75fce5c84bd2d265df014c6989a3d6966f3e8e7e0a571d4b6"
+    },
+    {
+      "path": "src/foundation/OlympiadHost.tsx",
+      "sha256": "aed9e01de4e16914fbdc60c2500378e3a2ca85a399b23131c3630f961c5a8575"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "0634bdae26982f908504025411ed9fce442ea68851808f759d4785685584d60e"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "sha256": "b4e8da4fe12e74b2f5fc5f75740f16a39891d54f34c5a7f4fab23acf8b26f9bc"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "sha256": "6e86e614c94025f98c97b0befb0e5094cb02808ab89881025c3673c89d5da088"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "sha256": "15a2665c59fe993bfa2bbc59cd25284240652339367b84e17eb59a1d82b9db7f"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "sha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "sha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "sha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sha256": "e88f83dfe2e31b5487fa2521f4df25c0875941b0f84d50ceeb5bfdb3b2b242a6"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "sha256": "409d39110b6236e99ac22a56b595e69f1c8b4b9b873546780d7f6e0e1387d6c8"
+    },
+    {
+      "path": "src/shell/navigation-view.ts",
+      "sha256": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "sha256": "bdb56e000f81177934d7b59136de09d2b5dac52640113cb9e24e2840df94df18"
+    },
+    {
+      "path": "src/ui/assessment-label.ts",
+      "sha256": "92ff545e5153c51f0381a4a5e3b152614b7d3cfe34c1761b2ce4699f8a791479"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "sha256": "4a3788123c707ff596c0e7882e9eeaa4c1b7f9e1dfcc523ae044a0c635e48a72"
+    },
+    {
+      "path": "src/ui/CorrectionSegments.tsx",
+      "sha256": "971effa69aa02ac9064665b635d65cf380ae1041f7e52807f3ea27613a5bcc64"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "sha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b"
+    },
+    {
+      "path": "src/ui/NumericWorkingControl.tsx",
+      "sha256": "c155c987144091a80c039e6266fe955ccc2f91a3a075a717cefd07bd21cbe360"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "sha256": "197ed9bfd143fc5d19c56aa7ecdf60b1995a331256096c29c42967860e2df994"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "sha256": "090f02bf6de66ad4cb3e136bf85e81789cf9c8562375073aed57ca3f3caa0cec"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "sha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6"
+    }
+  ],
+  "finishedAt": "2026-10-03T01:29:04.419Z",
+  "scriptSha256": "56853428619fac3b29a98f1bbdee81b26cad0fe8e169c1ac54f70745c4b35d0e"
+}

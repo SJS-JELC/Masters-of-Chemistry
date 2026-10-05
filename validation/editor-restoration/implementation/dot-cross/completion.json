@@ -1,0 +1,54 @@
+{
+  "agentId": "E02",
+  "jobId": "DOT-CROSS-RESTORE",
+  "status": "PASS",
+  "outputPath": "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/HANDOVER.md",
+  "evidencePaths": [
+    "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/verification.json",
+    "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser-results.json",
+    "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/image-review.json",
+    "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/source-fingerprints.json"
+  ],
+  "confidence": 0.98,
+  "exceptionReason": null,
+  "verificationSummary": "Nine focused tests;163 unchanged references/2380 exact electron positions;32 original fingerprints unchanged;24 exact source editor states plus29 total matching comparisons;12 rendered answer states;6 browser groups;125 unedited PNGs;typecheck/owned formatting PASS. Shared host/build acceptance remains E01-owned.",
+  "completedAt": "2026-10-03T10:51:54.391Z",
+  "runtimeFiles": [
+    "src/editors/dot-and-cross/DotCrossEditor.tsx",
+    "src/editors/dot-and-cross/Diagram.tsx",
+    "src/editors/dot-and-cross/editor.css",
+    "src/chemistry/dot-and-cross/engine.ts",
+    "src/chemistry/dot-and-cross/layout.js",
+    "src/chemistry/dot-and-cross/layout.d.ts",
+    "src/chemistry/dot-and-cross/interaction.ts",
+    "src/chemistry/dot-and-cross/model.ts"
+  ],
+  "artifactHashes": [
+    {
+      "path": "HANDOVER.md",
+      "sha256": "b58c4b854b99d6ddfd0a6ebb912c1a4fbfe20d7105c05eb9f7214494d322de44"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "f512a27faa9d0793865624d8b497796465a79379920544497188407de8459c12"
+    },
+    {
+      "path": "browser-results.json",
+      "sha256": "6078dcd952a82fecc97a36189a4e89ad10256baf9c6a0916572aac66373a73c2"
+    },
+    {
+      "path": "image-review.json",
+      "sha256": "6891cc4140c64fbd90a849ed52176bffced2f3bdf5e11d41ce5125f3586ce053"
+    },
+    {
+      "path": "source-fingerprints.json",
+      "sha256": "1da498a155948764e811af8f243fc1f3227e7c1f7398664b439a1d6821c342c1"
+    }
+  ],
+  "requestedSettings": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "effective": "not exposed",
+    "usage": "not exposed"
+  }
+}

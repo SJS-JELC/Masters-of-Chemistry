@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T09:35:32.559Z",
+  "workers": [
+    {
+      "name": "dot-cross",
+      "status": "PASS",
+      "fingerprintedFiles": 49,
+      "screenshots": 58,
+      "manifest": "DOT-CROSS-AUDIT"
+    },
+    {
+      "name": "molecule",
+      "status": "PASS",
+      "fingerprintedFiles": 80,
+      "screenshots": 24,
+      "manifest": "MOLECULE-AUDIT"
+    }
+  ],
+  "currentAcceptedInputFiles": 545,
+  "runtimeUnchanged": true,
+  "protectedOriginals": {
+    "status": "PASS",
+    "readableHashed": 794,
+    "metadataOnly": 523,
+    "knownOfflineFilesOpened": false
+  }
+}

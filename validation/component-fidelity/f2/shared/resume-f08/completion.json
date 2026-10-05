@@ -1,0 +1,53 @@
+{
+  "jobId": "F2-SHARED",
+  "agentId": "F08",
+  "replaces": "F03",
+  "status": "PASS",
+  "output": "validation/component-fidelity/f2/shared/resume-f08/HANDOVER.md",
+  "confidence": 0.93,
+  "reason": null,
+  "validation": {
+    "status": "PASS",
+    "references": [
+      "coverage.json",
+      "smoke.json",
+      "family-browser-results.json",
+      "numeric-final-browser-results.json",
+      "rubric-browser-results.json",
+      "extra-browser-results.json",
+      "ep-browser-results.json",
+      "numeric-source-results.json",
+      "rubric-source-results.json",
+      "written-source-results.json",
+      "graph-final-browser-results.json",
+      "graph-source-results.json",
+      "late-written-results.json",
+      "late-rubric-browser-results.json",
+      "typecheck.log",
+      "capture-freeze.json",
+      "hashes-and-diffs.json",
+      "resume-f08.patch",
+      "f2-shared-current.patch",
+      "contacts.json"
+    ],
+    "coverageRecords": 929,
+    "sourceFamilies": 9,
+    "curriculumActivities": 11,
+    "teacherSignatures": 35,
+    "specialistInvalidEnterNoSubmission": true,
+    "sourceGraphMetricPairs": 6,
+    "sourceFreeze": "2026-10-03T19:58:32.611Z"
+  },
+  "parentGates": [
+    "Foreman combined build/protected/engine regression acceptance",
+    "Specialist completion acceptance",
+    "Existing C3 regression and aggregate final acceptance"
+  ],
+  "runtime": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedReasoning": "high",
+    "effective": null,
+    "usage": null
+  },
+  "finishedAt": "2026-10-03T20:01:06.175Z"
+}

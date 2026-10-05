@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-03T01:35:12.200Z",
+  "playwright": "1.62.1",
+  "checks": [
+    {
+      "id": "true-model-rubric-statements-use-met-not-met",
+      "status": "PASS",
+      "labels": [
+        "Met",
+        "Not met",
+        "Not met",
+        "Not met",
+        "Not met"
+      ],
+      "firstMarks": 1,
+      "firstTime": {
+        "activeMs": 164,
+        "idleLimitMs": 180000
+      }
+    }
+  ],
+  "pageErrors": [
+    "Cannot read properties of undefined (reading 'snapshot')"
+  ],
+  "failure": "page.waitForFunction: TypeError: Cannot read properties of undefined (reading 'snapshot')\n    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:30)\n    at predicate (eval at evaluate (:311:30), <anonymous>:7:27)\n    at next (eval at evaluate (:311:30), <anonymous>:29:33)\n    at eval (eval at evaluate (:311:30), <anonymous>:42:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\integration\\browser-root-fix.mjs:36:34"
+}

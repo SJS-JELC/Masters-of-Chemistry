@@ -1,0 +1,54 @@
+{
+  "CPUThrottle": 1,
+  "network": "unthrottled",
+  "states": [
+    {
+      "stage": "initial",
+      "value": "220"
+    },
+    {
+      "stage": "after delete",
+      "value": "55"
+    },
+    {
+      "stage": "after 2",
+      "value": "340"
+    },
+    {
+      "stage": "after 0",
+      "value": "340"
+    },
+    {
+      "stage": "after 0",
+      "value": "340"
+    }
+  ],
+  "questionCode": "D01",
+  "inputEvents": [
+    {
+      "value": "",
+      "inputType": "deleteContentBackward",
+      "data": null,
+      "trusted": true
+    },
+    {
+      "value": "552",
+      "inputType": "insertText",
+      "data": "2",
+      "trusted": true
+    },
+    {
+      "value": "3400",
+      "inputType": "insertText",
+      "data": "0",
+      "trusted": true
+    },
+    {
+      "value": "3400",
+      "inputType": "insertText",
+      "data": "0",
+      "trusted": true
+    }
+  ],
+  "status": "FAIL"
+}

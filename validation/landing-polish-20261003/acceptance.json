@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "owner": "ROOT",
+  "date": "2026-10-03",
+  "scope": "scope.json",
+  "verification": "verification.json",
+  "checks": {
+    "typescript": "PASS",
+    "builds": "PASS: A Level and IGCSE",
+    "retained_landing_and_routing_tests": "PASS: 7 tests",
+    "browser": "PASS: 5 groups; browser-results.json",
+    "visual_review": "PASS: root inspected current 1440px and 390px screenshots for both courses",
+    "release_validation": "PASS: both regenerated local manifests",
+    "original_apps": "Unchanged: 794 content hashes and 523 offline-file metadata records",
+    "historical_evidence": "222 records unchanged"
+  },
+  "review": "Headers, eagle treatment, page width, selector alignment, exact course labels and footer are consistent. Whole landing surface flips in two 325ms phases. Browser checks cover course switching, keyboard focus, reduced motion, saved year and teacher preferences, back navigation and footer across question, statistics and Olympiad views.",
+  "publication": "Not requested or performed"
+}

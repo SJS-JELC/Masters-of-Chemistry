@@ -1,0 +1,9 @@
+﻿import type {MarkingPolicy} from '../../../contracts/index.ts';
+import {getRecord} from './provider.ts';
+import {grade} from '../../../chemistry/titration-curve/core.js';
+import {checkSubmission} from '../../../chemistry/titration-curve/engine.ts';
+export const titrationMarking:MarkingPolicy={id:'titration-curve',mark(question,responses){
+ const q=getRecord(question.ref.questionId),s=responses.curve;if(s?.kind!=='titration-curve')return {accepted:false,issues:[{partId:'curve',message:'Construct a curve before checking.'}]};
+ const check=checkSubmission(q,s);if(check.status!=='ready')return {accepted:false,issues:check.issues.map(i=>({partId:'curve',message:i.message}))};
+ const result=grade(q,s);return {accepted:true,marks:{earned:result.earned,available:result.total,points:result.items.map((item,index)=>({partId:'curve',pointId:`criterion-${index+1}`,earned:item.correct?1:0,available:1,message:`${item.label}: ${item.feedback}`}))}};
+},masteryScore:marks=>marks.earned===marks.available?1:marks.earned>0?.5:0};

@@ -1,0 +1,40 @@
+{
+    "schemaVersion":  1,
+    "runId":  "LANDING-RESTORE-20261003",
+    "status":  "ACCEPTED",
+    "acceptedAt":  "2026-10-03T10:09:40.6240819+01:00",
+    "owner":  "ROOT",
+    "scope":  "Part 1: faithful original landing restoration in the React app with in-place course toggle",
+    "foremanReport":  "validation/landing-restoration/foreman-report.json",
+    "foremanReportSha256":  "6006918282ec0bed36ca64c3d0400f831bcd381b59c7d0328bf56a4f4bf6ace3",
+    "checks":  [
+                   "Current source/build/evidence freeze PASS: 565 inputs and 188 evidence files",
+                   "Root rerun of seven focused catalogue, progress and routing tests PASS",
+                   "Reviewed retained 156 regression PASS, typecheck, both release checks and both actual static-prefix browser runs",
+                   "Reviewed direct launch, revision resume, Home/Back save guards, course precedence and teacher category integration",
+                   "Local built preview responds HTTP 200"
+               ],
+    "visualReview":  [
+                         "alevel-desktop-unassessed",
+                         "igcse-desktop-unassessed",
+                         "alevel-mobile-unassessed-revision",
+                         "igcse-desktop-unassessed-teacher-details",
+                         "alevel-desktop-purple-due-details",
+                         "igcse-mobile-unassessed-details"
+                     ],
+    "visualMethod":  "Root inspected original/restored full screenshots for these six pairs; foreman and design worker retained review of the 75-pair matrix.",
+    "findings":  [
+                     "Original map layout, gem geometry, type, colour, detail panels and revision presentation faithfully retained",
+                     "Authorised course toggle adds a header row at narrow widths; small Teacher/Import footer links retained",
+                     "Existing activity, marking, mastery, timing and persistence implementations preserved outside bounded landing integration"
+                 ],
+    "limitations":  [
+                        "Original A Level pH levels 2/3 award brightness indexing quirk deliberately preserved; summaries and meters remain correct",
+                        "523 existing cloud files protected by metadata only; accessible original source files have byte hashes",
+                        "Activity/editor/statistics visual restoration is outside Part 1",
+                        "No publication performed"
+                    ],
+    "unresolved":  [
+
+                   ]
+}

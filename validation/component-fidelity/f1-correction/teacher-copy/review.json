@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "path": "src/ui/TeacherPicker.tsx",
+  "changes": [
+    [
+      "Question code not recognised. Enter a complete source ID or historical review code.",
+      "Question code not recognised. Enter a complete canonical question code."
+    ],
+    [
+      "Search names, routes and original",
+      "Search names, routes and canonical"
+    ],
+    [
+      "Open original question code",
+      "Open canonical question code"
+    ],
+    [
+      "Source ID or complete review code",
+      "Canonical question code"
+    ]
+  ],
+  "beforeSha256": "d0b40f3725e1dd9b45c94d9a7e02523b3afd2f6737f1e0956789eb01223916ce",
+  "afterSha256": "70e2bf4f599f1d8f0c1bc0f9655620bf4c18df3f0c8b9bc88ad8a52e5eb5e946",
+  "scope": "Four strings only; no functional code changes"
+}

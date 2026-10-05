@@ -1,0 +1,56 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-BEHAVIOUR-HARNESS",
+  "status": "PASS",
+  "confidence": "high",
+  "reason": "Exact source-backed harness repairs approved for one deep and one import continuation; substantive behaviour remains pending worker execution.",
+  "outputPaths": [
+    "validation/s5/review-behaviour-harness/HANDOVER.md",
+    "validation/s5/review-behaviour-harness/verification.json",
+    "validation/s5/review-behaviour-harness/inputs.json",
+    "validation/s5/review-behaviour-harness/dom-probe.json",
+    "validation/s5/review-behaviour-harness/retained-screenshots.json",
+    "validation/s5/review-behaviour-harness/completion.json"
+  ],
+  "validation": {
+    "deterministicChecks": 8,
+    "assertionsPreserved": true,
+    "realPartialMarks": [
+      {
+        "course": "alevel",
+        "earned": 1,
+        "available": 3
+      },
+      {
+        "course": "igcse",
+        "earned": 1,
+        "available": 3
+      }
+    ],
+    "domProbe": "Both production course import views, no imports/assessments performed",
+    "fullSuiteReplayed": false,
+    "sourceChanges": false,
+    "proposals": {
+      "deep": {
+        "path": "validation/s5/behaviour/proposed-deep-browser-v3.mjs",
+        "sha256": "0d4b3be1e3ce929485dbffddbaf46d8073e256a6cab08c9d255fe4d826124263"
+      },
+      "import": {
+        "path": "validation/s5/behaviour/proposed-import-browser.mjs",
+        "sha256": "9ca375bd374dc6dbedfb5a65aef36f07699fd48c0c3fee47952be02b31d9db8b"
+      },
+      "server": {
+        "path": "validation/s5/behaviour/server.mjs",
+        "sha256": "747cb5f6f51c610a5769fcd6780a94b4e2bfed4dd51b7ad295a9abcbc90ef385"
+      }
+    }
+  },
+  "settings": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveModel": null,
+    "effectiveEffort": null,
+    "actualUsage": null
+  },
+  "finishedAt": "2026-10-03T04:31:54.063Z"
+}

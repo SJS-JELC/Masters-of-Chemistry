@@ -1,0 +1,1588 @@
+{
+  "id": "S2-REVIEW-NATIVE-TAIL",
+  "agentId": "A07",
+  "runId": "MASTERS-REACT-20261002",
+  "run": "a07s2-tail-murnsp64",
+  "startedAt": "2026-10-03T00:33:57.102Z",
+  "status": "ESCALATE",
+  "channel": "chrome",
+  "exe": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "args": [
+    "--user-data-dir=C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.browser\\a07s2-murneguj",
+    "--remote-debugging-port=9367",
+    "--remote-debugging-address=127.0.0.1",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--disable-extensions",
+    "--disable-background-networking",
+    "--disable-background-timer-throttling",
+    "--disable-renderer-backgrounding",
+    "--disable-backgrounding-occluded-windows",
+    "--disable-gpu",
+    "--window-size=1440,1000",
+    "about:blank"
+  ],
+  "profile": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.browser\\a07s2-murneguj",
+  "noDefaults": true,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": null,
+  "effectiveEffort": null,
+  "usage": null,
+  "playwright": "1.62.1",
+  "sourceBefore": [
+    {
+      "path": "src/activities/alevel/acid-base-calculations/data.js",
+      "sha256": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "sha256": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.js",
+      "sha256": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "sha256": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "sha256": "6ec3ab2cb92fb3e5ca0e6614220bd834dab460eba163e5d472a6ccaa38872ed9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/index.ts",
+      "sha256": "81ba8c263bbcc308002ed6b04c9fe60907a71c37042affad91b2a86de0319b9d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "sha256": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/marking.ts",
+      "sha256": "0acec21a97538f90bdc819e6267d5026be1bb79cc6379c337d9de66caf2edd5d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "sha256": "77ef641c88b31fee2c71d90ea62fb3e4d034f54d6cdbfb2e886c5a61f4dce72a"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+      "sha256": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/sources.ts",
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.d.ts",
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.js",
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "sha256": "458be246d3f74b3e6ab37c6986161db3165684c7617830d1dd229b051c3821d4"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/marking.ts",
+      "sha256": "839f9db6d354f936d529ce96f089edfa8f683eccff4f8afef54574f6f32523b2"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/provider.ts",
+      "sha256": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/data.ts",
+      "sha256": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/index.ts",
+      "sha256": "fc933e9dcf046d8a6dfab9ac84112cda39bcb66f64e5ec012ddd1daf2c7f9a5d"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/marking.ts",
+      "sha256": "10377dc90ba710e6b2728c589ef96704e6736f098521f48885e27f191dcd31fa"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+      "sha256": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "sha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "sha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "sha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "sha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "sha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "sha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "sha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "sha256": "c3da2f65ead8b5da046f134fb603fd27d50b5e7fe99ae8a2978de385769498ae"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "sha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "sha256": "724e6f11676d465fb80fa7088d76c18e2072a5d28f4453fb2fd368532e3fc157"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "sha256": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "sha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "sha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "sha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "sha256": "d7af00a1ea7daeeb7297502df9d17b9636866322d9da8d775536de5bbeda3cad"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "sha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "sha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "sha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "sha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "sha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "sha256": "fc9d2cf6b87050ee852d4cd0e0602a33656f61655c24e0d9e57e81d700133bef"
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "sha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204"
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "sha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "12c7bbe9a6278fcc28fa2bafb18bee451049495e620ea6283a12c7f7d8a3946c"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "ecb8a921ce79cf97767bc0c355a46f447c23cdb4da298f7d68799a1e3942a6fa"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "sha256": "adeccd3a2be2461d03b4107ba4fa4726694afeeeb34d4c2a4a55c058ec923c63"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "sha256": "6e86e614c94025f98c97b0befb0e5094cb02808ab89881025c3673c89d5da088"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "sha256": "15a2665c59fe993bfa2bbc59cd25284240652339367b84e17eb59a1d82b9db7f"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "sha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "sha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "sha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sha256": "e88f83dfe2e31b5487fa2521f4df25c0875941b0f84d50ceeb5bfdb3b2b242a6"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "sha256": "409d39110b6236e99ac22a56b595e69f1c8b4b9b873546780d7f6e0e1387d6c8"
+    },
+    {
+      "path": "src/shell/navigation-view.ts",
+      "sha256": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "sha256": "08eb76f711f214b2484ae02a1f7110ca5534b24ed310974cd5a2f194c9fd0f8c"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "sha256": "6b706db34750408129bbdb9389bf57d6bb1991ca9f0dd29f62a6b25dfe9dd021"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "sha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "sha256": "413f4e1258016c3878f5f1ef769ec93d8fb9e6b78ce1f2efcc8c8f99a969a333"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "sha256": "0f1cc9398517c78a01d59b165181f5d4b134cce62de2096b54f2199ab8f98c38"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "sha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6"
+    }
+  ],
+  "priorEvidence": {
+    "path": "a07s2-murneguj-results.json",
+    "sha256": "a9a32d5b2b1e3ee7e4e1be37d908adc69e4e65dda174acb3eee1dcb11a5592ea",
+    "status": "ESCALATE",
+    "sourceUnchanged": true,
+    "carriedChecks": "Acid complete PASS; structure native background/minimized/suspension/restore and full180000ms idle PASS. Prior overall failure remains preserved as a post-idle exact-label selector failure."
+  },
+  "structureContinuation": {
+    "id": "structure-post-idle-continuation",
+    "status": "PASS",
+    "priorAttemptId": "1fd8b361-81cb-485a-bf7a-1f9557ad6138",
+    "priorRef": {
+      "activityId": "igcse/structure-and-bonding",
+      "questionId": "SBC-878S4Y",
+      "seed": 1800078677,
+      "level": 3
+    },
+    "carriedIdleEvidence": "a07s2-murneguj-results.json",
+    "restoredActiveMs": 215716,
+    "firstResponse": {
+      "responses": {
+        "explanation": {
+          "kind": "explanation",
+          "sections": [
+            {
+              "id": "answer",
+              "text": "I am unsure why the bonding and structure produce these different properties."
+            }
+          ]
+        }
+      },
+      "submittedAt": 1790987640511,
+      "timing": {
+        "activeMs": 217240,
+        "idleLimitMs": 180000
+      },
+      "assistance": []
+    },
+    "firstAssessment": {
+      "kind": "self-rubric",
+      "assessedAt": 1790987642520,
+      "marks": {
+        "points": [
+          {
+            "partId": "explanation",
+            "pointId": "point-1",
+            "earned": 0,
+            "available": 1,
+            "message": "Both graphite and diamond have covalent bonding and giant lattice structures made from carbon atoms."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-2",
+            "earned": 0,
+            "available": 1,
+            "message": "In graphite, each carbon atom forms three covalent bonds in layers."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-3",
+            "earned": 0,
+            "available": 1,
+            "message": "Only weak attractions act between the graphite layers."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-4",
+            "earned": 0,
+            "available": 1,
+            "message": "The layers can slide over one another, making graphite soft."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-5",
+            "earned": 0,
+            "available": 1,
+            "message": "In diamond, each carbon atom forms four strong covalent bonds in a rigid three-dimensional lattice."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-6",
+            "earned": 0,
+            "available": 1,
+            "message": "The many strong covalent bonds make diamond hard."
+          }
+        ],
+        "earned": 0,
+        "available": 6
+      },
+      "score": 0,
+      "selfAssessed": true,
+      "reviews": [
+        {
+          "partId": "explanation",
+          "lockedText": "I am unsure why the bonding and structure produce these different properties.",
+          "judgements": [
+            {
+              "pointId": "point-1",
+              "status": "not-met"
+            },
+            {
+              "pointId": "point-2",
+              "status": "not-met"
+            },
+            {
+              "pointId": "point-3",
+              "status": "not-met"
+            },
+            {
+              "pointId": "point-4",
+              "status": "not-met"
+            },
+            {
+              "pointId": "point-5",
+              "status": "not-met"
+            },
+            {
+              "pointId": "point-6",
+              "status": "not-met"
+            }
+          ],
+          "activePointId": null
+        }
+      ]
+    },
+    "screenshot": "a07s2-tail-murnsp64-structure-assessed.png",
+    "nextRef": {
+      "activityId": "igcse/structure-and-bonding",
+      "questionId": "SBC-EEW8RH",
+      "seed": 3486788946,
+      "level": 3
+    },
+    "nextAttemptId": "a8824292-3a12-4a63-9d55-35460c1b47ee"
+  },
+  "cases": [
+    {
+      "id": "dot-180000",
+      "course": "alevel",
+      "family": "dot",
+      "target": "l6-t2-1-3:1",
+      "allowance": 180000,
+      "status": "RUNNING",
+      "startedAt": "2026-10-03T00:34:03.291Z",
+      "observations": [
+        {
+          "label": "foreground",
+          "hidden": false,
+          "focused": true,
+          "visibility": "visible",
+          "wallMs": 1790987645851,
+          "monoMs": 2553.100000023842,
+          "events": [],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2007,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "native other tab foreground",
+          "hidden": true,
+          "focused": false,
+          "visibility": "hidden",
+          "wallMs": 1790987646533,
+          "monoMs": 3235,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2007,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "after background interval",
+          "hidden": true,
+          "focused": false,
+          "visibility": "hidden",
+          "wallMs": 1790987649761,
+          "monoMs": 6462.800000011921,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2007,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "foreground without input",
+          "hidden": false,
+          "focused": true,
+          "visibility": "visible",
+          "wallMs": 1790987651106,
+          "monoMs": 7807.5,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2007,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "trusted key resumes",
+          "hidden": false,
+          "focused": true,
+          "visibility": "visible",
+          "wallMs": 1790987652656,
+          "monoMs": 9357.600000023842,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2677,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "minimized",
+          "hidden": true,
+          "focused": false,
+          "visibility": "hidden",
+          "wallMs": 1790987653201,
+          "monoMs": 9902.600000023842,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            },
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987652669,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987652670,
+              "hidden": true,
+              "focused": false
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "minimized"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2677,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "minimized interval",
+          "hidden": true,
+          "focused": false,
+          "visibility": "hidden",
+          "wallMs": 1790987655033,
+          "monoMs": 11735.300000011921,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            },
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987652669,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987652670,
+              "hidden": true,
+              "focused": false
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "minimized"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2677,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "restore without input",
+          "hidden": false,
+          "focused": true,
+          "visibility": "visible",
+          "wallMs": 1790987656191,
+          "monoMs": 12892.5,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            },
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987652669,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987652670,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987655039,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987655051,
+              "hidden": false,
+              "focused": true
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 2677,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "input after restore",
+          "hidden": false,
+          "focused": true,
+          "visibility": "visible",
+          "wallMs": 1790987657751,
+          "monoMs": 14452.399999976158,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            },
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987652669,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987652670,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987655039,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987655051,
+              "hidden": false,
+              "focused": true
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 3267,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "before native lifecycle freeze",
+          "hidden": false,
+          "focused": true,
+          "visibility": "visible",
+          "wallMs": 1790987657793,
+          "monoMs": 14494.800000011921,
+          "events": [
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987645876,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987649768,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987649769,
+              "hidden": false,
+              "focused": true
+            },
+            {
+              "name": "blur",
+              "trusted": true,
+              "at": 1790987652669,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987652670,
+              "hidden": true,
+              "focused": false
+            },
+            {
+              "name": "visibilitychange",
+              "trusted": true,
+              "at": 1790987655039,
+              "hidden": false,
+              "focused": false
+            },
+            {
+              "name": "focus",
+              "trusted": true,
+              "at": 1790987655051,
+              "hidden": false,
+              "focused": true
+            }
+          ],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 3267,
+          "idleLimitMs": 180000
+        },
+        {
+          "label": "after native lifecycle thaw",
+          "hidden": true,
+          "focused": true,
+          "visibility": "hidden",
+          "wallMs": 1790987665447,
+          "monoMs": 1132.5,
+          "events": [],
+          "window": {
+            "windowId": 799325969,
+            "bounds": {
+              "left": 10,
+              "top": 10,
+              "width": 1440,
+              "height": 1000,
+              "windowState": "normal"
+            }
+          },
+          "phase": "answering",
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 4263,
+          "idleLimitMs": 180000
+        }
+      ],
+      "checks": [
+        "native background stops; focus alone stopped; trusted input resumes",
+        "actual minimized bounds and native hidden/focus stop until trusted input"
+      ],
+      "initialRef": {
+        "activityId": "alevel/dot-and-cross",
+        "questionId": "sodium-iodide",
+        "seed": 1882975638,
+        "level": 1
+      },
+      "initialAttemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+      "suspensionWallMs": 7654
+    }
+  ],
+  "pageErrors": [],
+  "endpoint": {
+    "Browser": "Chrome/154.0.8037.93",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "V8-Version": "15.4.80.19",
+    "WebKit-Version": "537.36 (@f89f3a4363808e117c592adedcf9947882ac3b79)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9367/devtools/browser/fad11813-09d8-4306-97ae-9d552b75b7ce"
+  },
+  "browserVersion": "154.0.8037.93",
+  "failure": {
+    "message": "Expected values to be strictly equal:\n\n4263 !== 3267\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n4263 !== 3267\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/review-native/native-tail-check.mjs:77:375"
+  },
+  "failureSnapshot": {
+    "hidden": true,
+    "focused": true,
+    "body": "Skip to question\n\nMASTERS OF CHEMISTRY\n\nA Level Chemistry\nOCR A\nCurriculum activities\nAcid–base calculations\nDot-and-cross diagrams\nActivity and level\nStrong Acids & pH · Level 1\nStrong Acids & pH · Level 2\nStrong Acids & pH · Level 3\nKw & Strong Bases · Level 1\nKw & Strong Bases · Level 2\nKw & Strong Bases · Level 3\nWeak Acid Calculations · Level 1\nWeak Acid Calculations · Level 2\nWeak Acid Calculations · Level 3\nMaking Buffers · Level 1\nMaking Buffers · Level 2\nMaking Buffers · Level 3\nBuffer Calculations · Level 1\nBuffer Calculations · Level 2\nBuffer Calculations · Level 3\nDot-and-Cross Diagrams · Level 1\nDot-and-Cross Diagrams · Level 2\nDot-and-Cross Diagrams · Level 3\nSession\nPractice\nRevision\nTeacher preview\nStart practice\n\nQUESTION\n\nSodium iodide, NaI · DAC-R3TXGH\nsodium-iodide\nLevel 1\n\nDraw a dot-and-cross diagram for sodium iodide, NaI.\n\nDraw the dot-and-cross diagram for the ions. Metal ions may show an empty former outer shell or a full retained shell: two electrons for Li⁺, eight for the other metals here. Distinguish gained electrons from the anion's own electrons. Use brackets and charges.\n\nBuilt-in support\n\nBuilt-in original drawing conventions; no per-question atom-count hints.\n\nShow outer electrons. Keep origin symbols consistent. A coordinate pair uses two matching symbols. Bracket ions and show their charges; a positive metal ion may show its empty former outer shell or retained complete shell.\n\nYour response\n[1 mark]\n\nBuild the diagram using atoms, shared electron pairs, lone electrons and any required brackets and charges.\n\nDiagram workspace\n\nPlace atoms and electrons. Select atoms to move them or bracket an ion. Dots, crosses and triangles represent electron origins.\n\nDrawing tools\nSelect\nAtom\nDot\nCross\nTriangle\nErase\nElement\nH\nB\nC\nSi\nN\nO\nP\nS\nF\nCl\nBr\nI\nLi\nNa\nK\nMg\nCa\nAl\nUndo\nRedo\nClear diagram\nFit diagram\nMagnify diagram\nMagnify for larger labels and electrons; scroll or swipe to inspect the drawing.\nH\n\nChoose an atom, then tap the canvas or use Add atom.\n\nKeyboard and non-drag controls\nCheck answer\nRequest hint\nReveal answer (assisted)\nPause\nSaved on this device\n\n0 saved practice results\n\nActive answering time: 0:04\n\nDEVELOPMENT VERIFICATION\n\n0 independent curriculum evidence records\n\nPhase: answering\n\nActive time: 4263 ms\n\nAttempt: cf841ca2-7718-4acf-a0cc-b44899de24a9\n\nSession: practice\n\nSt John's School · Chemistry",
+    "snapshot": {
+      "attempt": {
+        "mode": "student",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+        "ref": {
+          "activityId": "alevel/dot-and-cross",
+          "questionId": "sodium-iodide",
+          "seed": 1882975638,
+          "level": 1
+        },
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/dot-and-cross",
+          "gemId": "l6-t2-1-3",
+          "level": 1
+        },
+        "currentResponses": {
+          "diagram": {
+            "kind": "dot-and-cross",
+            "atoms": [
+              {
+                "id": "a1",
+                "element": "H",
+                "x": 400,
+                "y": 325
+              }
+            ],
+            "electrons": [],
+            "groups": [],
+            "history": [
+              {
+                "kind": "dot-and-cross",
+                "atoms": [],
+                "electrons": [],
+                "groups": []
+              }
+            ],
+            "future": []
+          }
+        },
+        "assistance": [],
+        "phase": "answering",
+        "timing": {
+          "attemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+          "activeMs": 4263,
+          "idleLimitMs": 180000,
+          "finished": false
+        }
+      },
+      "session": {
+        "kind": "practice",
+        "namespace": {
+          "course": "alevel",
+          "profileId": "local"
+        },
+        "id": "current-session",
+        "target": {
+          "course": "alevel",
+          "activityId": "alevel/dot-and-cross",
+          "gemId": "l6-t2-1-3",
+          "level": 1
+        },
+        "selection": "fixed-level",
+        "currentAttemptId": "cf841ca2-7718-4acf-a0cc-b44899de24a9",
+        "previousQuestionIds": [
+          "sodium-iodide"
+        ]
+      },
+      "question": {
+        "ref": {
+          "activityId": "alevel/dot-and-cross",
+          "questionId": "sodium-iodide",
+          "seed": 1882975638,
+          "level": 1
+        },
+        "title": "Sodium iodide, NaI · DAC-R3TXGH",
+        "context": [
+          {
+            "kind": "text",
+            "text": "Draw a dot-and-cross diagram for sodium iodide, NaI."
+          },
+          {
+            "kind": "text",
+            "text": "Draw the dot-and-cross diagram for the ions. Metal ions may show an empty former outer shell or a full retained shell: two electrons for Li⁺, eight for the other metals here. Distinguish gained electrons from the anion's own electrons. Use brackets and charges."
+          }
+        ],
+        "layout": "workspace",
+        "submission": "all-required-parts",
+        "parts": [
+          {
+            "id": "diagram",
+            "kind": "dot-and-cross",
+            "prompt": [
+              {
+                "kind": "text",
+                "text": "Build the diagram using atoms, shared electron pairs, lone electrons and any required brackets and charges."
+              }
+            ],
+            "marks": 1,
+            "required": true,
+            "dependsOn": [],
+            "initial": {
+              "kind": "dot-and-cross",
+              "atoms": [],
+              "electrons": [],
+              "groups": []
+            },
+            "markingPolicyId": "dot-cross:sodium-iodide"
+          }
+        ],
+        "scaffolds": [
+          {
+            "id": "inventory-conventions",
+            "level": 1,
+            "purpose": "Built-in original drawing conventions; no per-question atom-count hints.",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Show outer electrons. Keep origin symbols consistent. A coordinate pair uses two matching symbols. Bracket ions and show their charges; a positive metal ion may show its empty former outer shell or retained complete shell."
+              }
+            ]
+          }
+        ],
+        "hints": [
+          {
+            "id": "check-inventory",
+            "content": [
+              {
+                "kind": "text",
+                "text": "Count the original outer electrons and adjust for the total charge. Count shared pairs and non-bonding electrons separately."
+              }
+            ]
+          }
+        ],
+        "workedAnswer": [
+          {
+            "kind": "text",
+            "text": "Checked answer."
+          },
+          {
+            "kind": "text",
+            "text": "On smaller screens, swipe or scroll the model diagram horizontally to inspect all electrons and charges."
+          },
+          {
+            "kind": "image",
+            "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2281%20121%20563%20198%22%20role%3D%22img%22%3E%3Ctitle%3ESodium%20iodide%3C%2Ftitle%3E%3Cdesc%3EThe%20metal%20loses%20its%20outer%20electron(s)%3B%20those%20electrons%20are%20shown%20on%20the%20non-metal%20ion%2C%20whose%20brackets%20and%20charge%20identify%20the%20ion.%20No%20covalent%20shared%20pairs.%20Non-bonding%20inventory%3A%201%20%C3%97%20I%3A%208%20non-bonding%20electrons.%3C%2Fdesc%3E%3Crect%20x%3D%2281%22%20y%3D%22121%22%20width%3D%22563%22%20height%3D%22198%22%20fill%3D%22white%22%2F%3E%3Ccircle%20cx%3D%22180%22%20cy%3D%22220%22%20r%3D%2264%22%20fill%3D%22none%22%20stroke%3D%22%239ca3af%22%20stroke-width%3D%221.5%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22227%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22bold%22%3ENa%3C%2Ftext%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%22220%22%20r%3D%2264%22%20fill%3D%22none%22%20stroke%3D%22%239ca3af%22%20stroke-width%3D%221.5%22%2F%3E%3Ctext%20x%3D%22500%22%20y%3D%22227%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22bold%22%3EI%3C%2Ftext%3E%3Ccircle%20cx%3D%22563.2120537980888%22%20cy%3D%22209.98819423742523%22%20r%3D%223.4%22%2F%3E%3Ccircle%20cx%3D%22563.2120537980888%22%20cy%3D%22230.01180576257477%22%20r%3D%223.4%22%2F%3E%3Ccircle%20cx%3D%22436.7879462019112%22%20cy%3D%22230.0118057625748%22%20r%3D%223.4%22%2F%3E%3Ccircle%20cx%3D%22436.78794620191115%22%20cy%3D%22209.98819423742523%22%20r%3D%223.4%22%2F%3E%3Ccircle%20cx%3D%22510.0118057625748%22%20cy%3D%22283.21205379808885%22%20r%3D%223.4%22%2F%3E%3Ccircle%20cx%3D%22489.9881942374252%22%20cy%3D%22283.21205379808885%22%20r%3D%223.4%22%2F%3E%3Ccircle%20cx%3D%22489.9881942374252%22%20cy%3D%22156.78794620191118%22%20r%3D%223.4%22%2F%3E%3Cpath%20d%3D%22M506.0118057625748%20152.78794620191118l8%208m-8%200l8%20-8%22%20fill%3D%22none%22%20stroke%3D%22%23111827%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M117%20145h-12v150h12M243%20145h12v150h-12%22%20fill%3D%22none%22%20stroke%3D%22%23111827%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22262%22%20y%3D%22153%22%20font-family%3D%22sans-serif%22%20font-size%3D%2222%22%3E%2B%3C%2Ftext%3E%3Cpath%20d%3D%22M437%20145h-12v150h12M563%20145h12v150h-12%22%20fill%3D%22none%22%20stroke%3D%22%23111827%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22582%22%20y%3D%22153%22%20font-family%3D%22sans-serif%22%20font-size%3D%2222%22%3E%E2%88%92%3C%2Ftext%3E%3C%2Fsvg%3E",
+            "alt": "Checked dot-and-cross diagram of Sodium iodide; The metal loses its outer electron(s); those electrons are shown on the non-metal ion, whose brackets and charge identify the ion. No covalent shared pairs. Non-bonding inventory: 1 × I: 8 non-bonding electrons."
+          },
+          {
+            "kind": "text",
+            "text": "The metal loses its outer electron(s); those electrons are shown on the non-metal ion, whose brackets and charge identify the ion. No covalent shared pairs. Non-bonding inventory: 1 × I: 8 non-bonding electrons."
+          }
+        ],
+        "sources": [
+          {
+            "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/data.js",
+            "sha256": "cdf2cff5efaf76f325744c28898681b58570be993cb16499e4584af6ba479432",
+            "symbolOrSection": "complete checked 91-record bank and reference inventory"
+          }
+        ]
+      },
+      "history": [],
+      "saveStatus": {
+        "kind": "saved"
+      },
+      "databaseName": "masters-of-chemistry-alevel-a07s2-tail-murnsp64-dot-180000",
+      "selectedCount": 0
+    }
+  },
+  "sourceAfter": [
+    {
+      "path": "src/activities/alevel/acid-base-calculations/data.js",
+      "sha256": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "sha256": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.js",
+      "sha256": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "sha256": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "sha256": "6ec3ab2cb92fb3e5ca0e6614220bd834dab460eba163e5d472a6ccaa38872ed9"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/index.ts",
+      "sha256": "81ba8c263bbcc308002ed6b04c9fe60907a71c37042affad91b2a86de0319b9d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "sha256": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/marking.ts",
+      "sha256": "0acec21a97538f90bdc819e6267d5026be1bb79cc6379c337d9de66caf2edd5d"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "sha256": "77ef641c88b31fee2c71d90ea62fb3e4d034f54d6cdbfb2e886c5a61f4dce72a"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+      "sha256": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/sources.ts",
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.d.ts",
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.js",
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "sha256": "458be246d3f74b3e6ab37c6986161db3165684c7617830d1dd229b051c3821d4"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/marking.ts",
+      "sha256": "839f9db6d354f936d529ce96f089edfa8f683eccff4f8afef54574f6f32523b2"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/provider.ts",
+      "sha256": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/data.ts",
+      "sha256": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/index.ts",
+      "sha256": "fc933e9dcf046d8a6dfab9ac84112cda39bcb66f64e5ec012ddd1daf2c7f9a5d"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/marking.ts",
+      "sha256": "10377dc90ba710e6b2728c589ef96704e6736f098521f48885e27f191dcd31fa"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+      "sha256": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "sha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "sha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "sha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "sha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "sha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "sha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "sha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "sha256": "c3da2f65ead8b5da046f134fb603fd27d50b5e7fe99ae8a2978de385769498ae"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "sha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "sha256": "724e6f11676d465fb80fa7088d76c18e2072a5d28f4453fb2fd368532e3fc157"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "sha256": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "sha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "sha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "sha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "sha256": "d7af00a1ea7daeeb7297502df9d17b9636866322d9da8d775536de5bbeda3cad"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "sha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "sha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "sha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "sha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "sha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "sha256": "fc9d2cf6b87050ee852d4cd0e0602a33656f61655c24e0d9e57e81d700133bef"
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "sha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204"
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "sha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "12c7bbe9a6278fcc28fa2bafb18bee451049495e620ea6283a12c7f7d8a3946c"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "ecb8a921ce79cf97767bc0c355a46f447c23cdb4da298f7d68799a1e3942a6fa"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "sha256": "adeccd3a2be2461d03b4107ba4fa4726694afeeeb34d4c2a4a55c058ec923c63"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "sha256": "6e86e614c94025f98c97b0befb0e5094cb02808ab89881025c3673c89d5da088"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "sha256": "15a2665c59fe993bfa2bbc59cd25284240652339367b84e17eb59a1d82b9db7f"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "sha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "sha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "sha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sha256": "e88f83dfe2e31b5487fa2521f4df25c0875941b0f84d50ceeb5bfdb3b2b242a6"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "sha256": "409d39110b6236e99ac22a56b595e69f1c8b4b9b873546780d7f6e0e1387d6c8"
+    },
+    {
+      "path": "src/shell/navigation-view.ts",
+      "sha256": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "sha256": "08eb76f711f214b2484ae02a1f7110ca5534b24ed310974cd5a2f194c9fd0f8c"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "sha256": "6b706db34750408129bbdb9389bf57d6bb1991ca9f0dd29f62a6b25dfe9dd021"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "sha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "sha256": "413f4e1258016c3878f5f1ef769ec93d8fb9e6b78ce1f2efcc8c8f99a969a333"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "sha256": "0f1cc9398517c78a01d59b165181f5d4b134cce62de2096b54f2199ab8f98c38"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "sha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6"
+    }
+  ],
+  "sourceUnchanged": true,
+  "finishedAt": "2026-10-03T00:34:25.838Z",
+  "scriptSha256": "5ad4c4abf1b9541c7e147e6289115f4fd8c55634d8d19328506324c276295b9c"
+}

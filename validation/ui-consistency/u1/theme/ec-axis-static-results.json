@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "base": "http://127.0.0.1:5192/alevel/",
+  "checks": [
+    {
+      "viewport": 1440,
+      "pageWidth": 1440,
+      "label": {
+        "left": 400.5,
+        "right": 417.890625,
+        "top": 1092.28125,
+        "bottom": 1194.4375
+      },
+      "scroll": {
+        "left": 193,
+        "right": 1247,
+        "top": 995.609375,
+        "bottom": 1304.109375,
+        "width": 1054,
+        "scrollWidth": 1054
+      },
+      "font": "Comfortaa, sans-serif",
+      "orbitalFont": "Comfortaa, \"Segoe UI Symbol\", sans-serif"
+    },
+    {
+      "viewport": 390,
+      "pageWidth": 390,
+      "label": {
+        "left": 34,
+        "right": 51.390625,
+        "top": 1486.015625,
+        "bottom": 1588.171875
+      },
+      "scroll": {
+        "left": 27,
+        "right": 363,
+        "top": 1389.34375,
+        "bottom": 1697.84375,
+        "width": 336,
+        "scrollWidth": 588
+      },
+      "font": "Comfortaa, sans-serif",
+      "orbitalFont": "Comfortaa, \"Segoe UI Symbol\", sans-serif",
+      "pan": 100
+    },
+    {
+      "viewport": 350,
+      "pageWidth": 350,
+      "label": {
+        "left": 34,
+        "right": 51.390625,
+        "top": 1584.953125,
+        "bottom": 1687.109375
+      },
+      "scroll": {
+        "left": 27,
+        "right": 323,
+        "top": 1488.28125,
+        "bottom": 1796.78125,
+        "width": 296,
+        "scrollWidth": 588
+      },
+      "font": "Comfortaa, sans-serif",
+      "orbitalFont": "Comfortaa, \"Segoe UI Symbol\", sans-serif",
+      "pan": 100
+    }
+  ],
+  "errors": []
+}

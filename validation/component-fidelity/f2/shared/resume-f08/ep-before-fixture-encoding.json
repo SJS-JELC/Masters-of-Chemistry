@@ -1,0 +1,123 @@
+{
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "jobId": "F2-SHARED",
+  "agentId": "F08",
+  "startedAt": "2026-10-03T18:48:30.638Z",
+  "status": "FAIL",
+  "browser": "Microsoft Edge headless / pinned root Playwright 1.62.1",
+  "originalIsolation": "Fresh nonpersistent contexts; synthetic ephemeral source responses; originals served GET/HEAD only; no original builds/user stores",
+  "checks": [],
+  "screenshots": [
+    "react-desktop-full-chrome.png",
+    "react-desktop-unanswered.png",
+    "original-desktop-unanswered.png",
+    "react-desktop-partial.png",
+    "original-desktop-partial.png",
+    "react-desktop-incorrect.png",
+    "original-desktop-incorrect.png"
+  ],
+  "metrics": [
+    {
+      "app": "react",
+      "viewport": "desktop",
+      "correction": {
+        "tag": "DIV",
+        "fontFamily": "\"Playwrite England Joined\", cursive",
+        "fontSize": "17.28px",
+        "lineHeight": "43.2px",
+        "fontWeight": "400",
+        "color": "rgb(244, 246, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "padding": "0px",
+        "border": "0px none rgb(244, 246, 255)",
+        "borderRadius": "0px",
+        "width": 668,
+        "height": 49.203125
+      },
+      "phrase": {
+        "tag": "BUTTON",
+        "fontFamily": "\"Playwrite England Joined\", cursive",
+        "fontSize": "17.28px",
+        "lineHeight": "43.2px",
+        "fontWeight": "400",
+        "color": "rgb(255, 213, 204)",
+        "background": "rgba(255, 157, 135, 0.08)",
+        "padding": "2px 6px",
+        "border": "1px dashed rgba(255, 157, 135, 0.58)",
+        "borderRadius": "6px",
+        "width": 190.671875,
+        "height": 49.203125
+      },
+      "input": {
+        "tag": "INPUT",
+        "fontFamily": "Comfortaa, ui-rounded, system-ui, sans-serif",
+        "fontSize": "16.8px",
+        "lineHeight": "25.2px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(14, 20, 43)",
+        "padding": "12px 13px",
+        "border": "1px solid rgba(175, 223, 215, 0.32)",
+        "borderRadius": "10px",
+        "width": 698,
+        "height": 51.1875
+      },
+      "overflow": false
+    },
+    {
+      "app": "original",
+      "viewport": "desktop",
+      "correction": {
+        "tag": "DIV",
+        "fontFamily": "\"Playwrite England Joined\", cursive",
+        "fontSize": "17.28px",
+        "lineHeight": "43.2px",
+        "fontWeight": "400",
+        "color": "rgb(244, 246, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "padding": "0px",
+        "border": "0px none rgb(244, 246, 255)",
+        "borderRadius": "0px",
+        "width": 968,
+        "height": 49.203125
+      },
+      "phrase": {
+        "tag": "BUTTON",
+        "fontFamily": "\"Playwrite England Joined\", cursive",
+        "fontSize": "17.28px",
+        "lineHeight": "43.2px",
+        "fontWeight": "400",
+        "color": "rgb(255, 213, 204)",
+        "background": "rgba(255, 157, 135, 0.08)",
+        "padding": "2px 6px",
+        "border": "1px dashed rgba(255, 157, 135, 0.58)",
+        "borderRadius": "6px",
+        "width": 190.671875,
+        "height": 49.203125
+      },
+      "input": {
+        "tag": "INPUT",
+        "fontFamily": "Comfortaa, ui-rounded, system-ui, sans-serif",
+        "fontSize": "16.8px",
+        "lineHeight": "25.2px",
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(14, 20, 43)",
+        "padding": "12px 13px",
+        "border": "1px solid rgba(175, 223, 215, 0.32)",
+        "borderRadius": "10px",
+        "width": 998,
+        "height": 51.1875
+      },
+      "overflow": false
+    }
+  ],
+  "errors": [
+    "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '✓',\n+   '✗'\n-   'âœ“',\n-   'âœ—'\n  ]\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/component-fidelity/f2/shared/resume-f08/ep-browser.mjs:57:10"
+  ],
+  "limitations": [
+    "Native OS hidden/minimized/suspend is not tested or claimed in this UI pilot.",
+    "Other activities and graph correction await F2 restoration and rendered acceptance."
+  ],
+  "finishedAt": "2026-10-03T18:48:35.837Z"
+}

@@ -1,0 +1,96 @@
+{
+  "status": "FAIL",
+  "checkedAt": "2026-10-04T19:05:34.311Z",
+  "browser": "headless Microsoft Edge",
+  "playwright": "1.62.1",
+  "timezone": "Europe/London",
+  "run": "stats-restore-1791140723036",
+  "results": [
+    {
+      "id": "alevel-populated-responsive-interactions",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:5188/?course=alevel&view=statistics&run=stats-restore-1791140723036\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5188/?course=alevel&view=statistics&run=stats-restore-1791140723036\", waiting until \"networkidle\"\u001b[22m\n\n    at seed (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:34:13)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:46:24\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:44:3"
+    },
+    {
+      "id": "alevel-empty-responsive",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:5188/?course=alevel&view=statistics&run=stats-restore-1791140723036-empty\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5188/?course=alevel&view=statistics&run=stats-restore-1791140723036-empty\", waiting until \"networkidle\"\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:69:70\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:68:3"
+    },
+    {
+      "id": "alevel-original-layout-comparison",
+      "status": "PASS",
+      "evidence": {
+        "original": [
+          {
+            "title": "Recorded attempts",
+            "value": "11"
+          },
+          {
+            "title": "Fully correct",
+            "value": "91%"
+          },
+          {
+            "title": "Gems practised",
+            "value": "3"
+          },
+          {
+            "title": "Levels mastered",
+            "value": "1 / 24"
+          },
+          {
+            "title": "Estimated active time",
+            "value": "52 min 0 s"
+          }
+        ],
+        "screenshot": "alevel-original-desktop.png",
+        "scope": "Original sources served read-only, synthetic browser storage on separate task origin. Current header uses shared eagle/arrow/background."
+      }
+    },
+    {
+      "id": "igcse-populated-responsive-interactions",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:5188/?course=igcse&view=statistics&run=stats-restore-1791140723036\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5188/?course=igcse&view=statistics&run=stats-restore-1791140723036\", waiting until \"networkidle\"\u001b[22m\n\n    at seed (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:34:13)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:46:24\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:44:3"
+    },
+    {
+      "id": "igcse-empty-responsive",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:5188/?course=igcse&view=statistics&run=stats-restore-1791140723036-empty\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5188/?course=igcse&view=statistics&run=stats-restore-1791140723036-empty\", waiting until \"networkidle\"\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:69:70\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:68:3"
+    },
+    {
+      "id": "igcse-original-layout-comparison",
+      "status": "PASS",
+      "evidence": {
+        "original": [
+          {
+            "title": "Recorded attempts",
+            "value": "27"
+          },
+          {
+            "title": "Fully correct",
+            "value": "37%"
+          },
+          {
+            "title": "Gems practised",
+            "value": "3"
+          },
+          {
+            "title": "Levels mastered",
+            "value": "1 / 17"
+          },
+          {
+            "title": "Estimated active time",
+            "value": "2 h 15 min"
+          }
+        ],
+        "screenshot": "igcse-original-desktop.png",
+        "scope": "Original sources served read-only, synthetic browser storage on separate task origin. Current header uses shared eagle/arrow/background."
+      }
+    },
+    {
+      "id": "storage-failure-and-retry",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:5188/?course=alevel&view=statistics&run=stats-restore-1791140723036-fault\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5188/?course=alevel&view=statistics&run=stats-restore-1791140723036-fault\", waiting until \"networkidle\"\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:84:336\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:30:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:83:2"
+    }
+  ],
+  "errors": []
+}

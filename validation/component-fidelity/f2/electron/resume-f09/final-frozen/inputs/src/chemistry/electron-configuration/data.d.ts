@@ -1,0 +1,3 @@
+export interface Species {readonly id:string;readonly symbol:string;readonly name:string;readonly z:number;readonly charge:number;readonly configuration:string;readonly counts:readonly number[];readonly group:string}
+export interface ElectronData {readonly version:string;readonly subshells:readonly string[];readonly cores:Readonly<Record<string,readonly number[]>>;readonly atoms:readonly Species[];readonly species:readonly Species[];readonly groups:readonly {id:string;label:string;detail:string}[];readonly representations:readonly {id:string;label:string;detail:string}[];readonly capacities:readonly number[];readonly orbitals:readonly number[];readonly metadata:Readonly<Record<string,unknown>>}
+export const data:ElectronData;

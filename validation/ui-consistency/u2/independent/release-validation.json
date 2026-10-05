@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T22:53:00.074Z",
+  "releases": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 7,
+      "runtimeFileCount": 163,
+      "initialJavascriptGzipBytes": 180441,
+      "lazyJavascriptChunks": 70,
+      "manifestSha256": "1f37d391446bf5b637b6763dc0db8ad729a62058854cc2b278b7435f30b65f67",
+      "checkedAt": "2026-10-03T22:53:00.229Z"
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 163,
+      "initialJavascriptGzipBytes": 180440,
+      "lazyJavascriptChunks": 70,
+      "manifestSha256": "d9113dddc12150771e6f9a1d8dad5b73f27858505d32af716e7b41f93d38f314",
+      "checkedAt": "2026-10-03T22:53:00.386Z"
+    }
+  ],
+  "scope": "Fresh read-only validation of existing exact build closure. No rebuild or manifest writes."
+}

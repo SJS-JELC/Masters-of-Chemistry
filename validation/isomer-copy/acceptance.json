@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "acceptedAt": "2026-10-04T13:01:03.565Z",
+  "scope": "Requested question wording with subscript formula, CLUES header, removed redundant paragraph; highlighted right-aligned Check with live verdict to its left. Restart remains on its own row when complete.",
+  "execution": "Local light-touch edit",
+  "validation": {
+    "typecheck": "PASS",
+    "builds": "Both PASS",
+    "browserWidths": [
+      1440,
+      768,
+      390,
+      350
+    ],
+    "verdict": "0 fully correct; 2 correct but in the wrong place.",
+    "rendered": "Mobile verdict and clues inspected",
+    "originals": {
+      "status": "PASS",
+      "checkedAt": "2026-10-04T13:01:03.474Z",
+      "records": 1317,
+      "readable": 794,
+      "metadataOnly": 523,
+      "changed": [],
+      "offlinePolicy": "All523 baseline offline placeholders stat-only; never opened/hydrated. Historical original-app-check.json left untouched."
+    }
+  },
+  "files": [
+    {
+      "path": "src/activities/olympiad/isomers2011/IsomerView.tsx",
+      "sha256": "600d6f02444d11e3c0487cbb72b5f33487dd72f21d32bda07c68a139ac82f7ae"
+    },
+    {
+      "path": "src/activities/olympiad/isomers2011/isomers.css",
+      "sha256": "5004f5fa204819c615db2d0ae722a9fde0d696d9924fedb537fb449522bc27b2"
+    }
+  ],
+  "published": false,
+  "unresolved": []
+}

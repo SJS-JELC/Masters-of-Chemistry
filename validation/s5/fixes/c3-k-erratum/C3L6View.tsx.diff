@@ -1,0 +1,72 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\C3L6View.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\C3L6View.tsx"
+index 6ce2f67..b59c2f9 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\C3L6View.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\C3L6View.tsx"	
+@@ -12,6 +12,7 @@ import { blankMolecule } from '../../../chemistry/molecule/engine.ts';
+ import { stageUnlocked, c3Fingerprint, bFingerprint, cFingerprint } from './policy.ts';
+ import './c3l6.css';
+ import { c3HydrazoneQualification as qualification } from './qualification.ts';
++import { c3KErratum, sourceBank } from './source-bank.ts';
+ export interface C3L6ViewProps {
+   readonly challenge: C3L6Challenge;
+   readonly progress: C3L6Progress;
+@@ -92,6 +93,28 @@ export function C3L6View({
+         </p>
+         {readOnly && <p>Teacher review · reference answers · progress is not saved</p>}
+       </header>
++      {progress.historicalOutcome && (
++        <aside aria-label="Historical outcome and current validation">
++          <h2>Historical outcome retained</h2>
++          <p>
++            The earlier source policy recorded part (b) as{' '}
++            {progress.historicalOutcome.raw.completed.b ? 'complete' : 'incomplete'} and part (c) as{' '}
++            {progress.historicalOutcome.raw.completed.c ? 'complete' : 'incomplete'}. The original
++            answers, drawings and checks remain saved as history.
++          </p>
++          <p>
++            Current validation: part (b) {progress.completed.b ? 'complete' : 'incomplete'}; part
++            (c) {progress.completed.c ? 'complete' : 'incomplete'}. The earlier K structure does not
++            satisfy the corrected hydration policy.
++          </p>
++          <details>
++            <summary>Inspect the retained historical record</summary>
++            <pre style={{ whiteSpace: 'pre-wrap', overflowWrap: 'anywhere' }}>
++              {JSON.stringify(progress.historicalOutcome.raw, null, 2)}
++            </pre>
++          </details>
++        </aside>
++      )}
+       <nav className="c3-nav" aria-label="Challenge stages">
+         {stages.map((s) => (
+           <button
+@@ -112,6 +135,9 @@ export function C3L6View({
+           <dialog ref={restartDialog} aria-labelledby="c3-restart-title">
+             <h2 id="c3-restart-title">Restart this challenge?</h2>
+             <p>This clears the saved drawings and completion for this challenge.</p>
++            {progress.historicalOutcome && (
++              <p>The retained historical outcome will remain saved.</p>
++            )}
+             <div className="c3-nav">
+               <button autoFocus onClick={() => restartDialog.current?.close()}>
+                 Cancel restart
+@@ -419,6 +445,20 @@ export function C3L6View({
+                 ))}
+               </details>
+             )}
++            {readOnly && stage === 'b' && b === 'K' && (
++              <details open aria-label="K source erratum">
++                <summary>Source erratum · excluded K alternative</summary>
++                <p>{c3KErratum.note}</p>
++                <MoleculePreview
++                  graph={
++                    sourceBank.stages.b.answers
++                      .find((s) => s.id === 'K')!
++                      .alternatives.find((a) => a.smiles === c3KErratum.rejectedSourceSmiles)!.graph
++                  }
++                  label="Rejected source alternative: aldehyde retained, orthoacid formed"
++                />
++              </details>
++            )}
+           </section>
+         </div>
+       )}

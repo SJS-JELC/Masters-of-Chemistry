@@ -1,0 +1,18 @@
+{
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "reason": "User requested clean continuation after power loss",
+  "checkpoint": "F1 root accepted; F2 authorized with source implementations and provisional browser evidence; F3 pending root gate",
+  "agentAudit": "Only root survives. Previous F01/F02/F03/F04/F05/F06 handles are unavailable; their disk work must be reconciled rather than repeated.",
+  "replacementForeman": "F07",
+  "replaces": "F01",
+  "instructions": [
+    "Verify current files, source snapshots, JSON integrity and available completion evidence before dispatch",
+    "Preserve completed source work; continue missing validation and fixes only",
+    "Use fresh evidence subdirectories for resumed checks; never overwrite earlier failures/results",
+    "Preserve concurrent OLY2011 implementation and log entries; isolate component-owned diffs",
+    "Historical original-app-check.json changed during concurrent work; record actual discrepancy and provenance, not a fabricated unchanged check",
+    "Do not rerun historical scripts that write old output paths; use F2-owned relocated checks",
+    "Only resume original reference servers and local previews after checking actual ports",
+    "F2 remains authorized; F3 requires root acceptance"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "agentId": "E04",
+  "jobId": "EDITOR-TIMING-DISPOSITION",
+  "status": "PASS",
+  "checkedAt": "2026-10-03T10:44:13.868Z",
+  "meaning": "Independent exception disposition and current idle/source continuity validation; raw failed browser probes remain FAIL. No current actual frozen/native interval or new suspension gate claimed.",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "exceptions": [
+    {
+      "id": "working-source-idle",
+      "disposition": "UNCLASSIFIED",
+      "reason": "Retained active delta is real, but no document, binding, lifecycle or trusted interaction boundary records establish its cause. No source defect or document replacement is inferred."
+    },
+    {
+      "id": "production-freeze",
+      "disposition": "UNESTABLISHED_FREEZE_AND_INADEQUATE_BOUNDARY_MEASUREMENT",
+      "reason": "Original snapshots are separated from boundaries by six-second waits and five-second persistence cadence. Independent same-method headless CDP command produced no freeze/resume events while UI timer continued normally; an actual frozen interval was not established."
+    },
+    {
+      "id": "bounded-hidden-followup",
+      "disposition": "BROWSER_CAPABILITY_LIMIT",
+      "reason": "Headless window minimize request left both actual browser documents visible. Strict hidden guard failed before freezing; no event was manufactured."
+    }
+  ],
+  "currentIdle": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activeMs": 180787,
+      "plateauDeltaMs": 0,
+      "wallSinceLastInputMs": 187045,
+      "sameDocument": true,
+      "trustedInteractionsAfterStart": 0
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activeMs": 180285,
+      "plateauDeltaMs": 0,
+      "wallSinceLastInputMs": 187061,
+      "sameDocument": true,
+      "trustedInteractionsAfterStart": 0
+    }
+  ],
+  "sourceFingerprints": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d",
+      "currentSha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d",
+      "acceptedE0Sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d",
+      "acceptedE0RawEqual": true,
+      "nativeS2RawSha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+      "nativeS2RawEqual": false,
+      "s5AcceptedCurrentRawEqual": true,
+      "s5SemanticBridge": {
+        "semanticEqual": true,
+        "semanticSha256": "795cc9397bc71d49f7579edd0924a743922fae9c731814867f6bc277d179c95d",
+        "priorSha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+      }
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2",
+      "currentSha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2",
+      "acceptedE0Sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2",
+      "acceptedE0RawEqual": true,
+      "nativeS2RawSha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+      "nativeS2RawEqual": false,
+      "s5AcceptedCurrentRawEqual": true,
+      "s5SemanticBridge": {
+        "semanticEqual": true,
+        "semanticSha256": "2bd4b903cc0486c04168ee823d70e16e634ae9ac2b9edecd9fe76eb6a427eda5",
+        "priorSha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+      }
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa",
+      "currentSha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa",
+      "acceptedE0Sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa",
+      "acceptedE0RawEqual": true,
+      "nativeS2RawSha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81",
+      "nativeS2RawEqual": false,
+      "s5AcceptedCurrentRawEqual": null,
+      "s5SemanticBridge": null
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "53fe93d95ed9a6c0b3a2a59abdfacaa682c992989151b32e87848c481b5a890f",
+      "currentSha256": "53fe93d95ed9a6c0b3a2a59abdfacaa682c992989151b32e87848c481b5a890f",
+      "acceptedE0Sha256": "53fe93d95ed9a6c0b3a2a59abdfacaa682c992989151b32e87848c481b5a890f",
+      "acceptedE0RawEqual": true,
+      "nativeS2RawSha256": "12c7bbe9a6278fcc28fa2bafb18bee451049495e620ea6283a12c7f7d8a3946c",
+      "nativeS2RawEqual": false,
+      "s5AcceptedCurrentRawEqual": null,
+      "s5SemanticBridge": null
+    }
+  ],
+  "historicalContinuity": {
+    "acceptedS5Status": "PASS",
+    "exactE0RawIdentity": true,
+    "exactS5ClockBindingCurrentIdentity": true,
+    "nativeRawCurrentIdentity": false,
+    "retainedS5AstFormattingBridge": true,
+    "nativeBackgroundMinimizeSuspension": "Historical evidence carried only with its accepted semantic formatting bridge and raw mismatch limitations; no current native execution claimed."
+  },
+  "sourceOrAppFixRequired": false,
+  "recommendedFutureBoundaryProof": "Immutable same document, actual trusted freeze/resume events, stable token/timeOrigin/attempt ID, no navigation or intervening input, fresh UI response/save immediately before freeze, recorded live counter at lifecycle boundaries, exact saved delta bounded solely by measured last-input-to-freeze interval, further post-thaw exact plateau without input. Acknowledged CDP requests alone cannot substitute for actual lifecycle boundaries.",
+  "visualInspection": {
+    "paths": [
+      "validation/editor-restoration/implementation/integration/exception-review/alevel-failure.png",
+      "validation/editor-restoration/implementation/integration/exception-review/igcse-failure.png"
+    ],
+    "checked": true,
+    "observations": "Both show real course question/editor, two deliberately incomplete H atoms, saved-on-device state, zero results, active timer 3:20. These are retained failure-state timing observations, not source UI or chemistry acceptance."
+  },
+  "limits": [
+    "Working-source interval remains unclassified",
+    "No current actual freeze/background/minimization/OS foreground proof",
+    "One-second counter display precision; no zero-millisecond claim from rounded UI alone",
+    "Original production real idle success measurements were not retained before abort; current independent long probe supplies explicit measurements",
+    "Initial long probe used default nonpersistent Playwright temp; contexts/browser closed, no original profile/store accessed. Executed short probe uses assigned app-local TEMP/TMP via verified 8.3 alias",
+    "Short first-launch path-length failure retained separately",
+    "Full activity/revision/publication gates belong to the foreman, outside this review"
+  ],
+  "evidence": [
+    {
+      "path": "validation/editor-restoration/implementation/integration/source-timing-working-failure/result.json",
+      "sha256": "e3c5cc3eb601d1bd181b61ca6c339b339ad13cc464404e9c2c98ea4be4362a88"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/source-timing-working-failure/script.mjs",
+      "sha256": "82b7b47bf7b68cb4c55ccd71ee653dbebbd1d7b86c8e7b2c60a0751955b09055"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/production-browser-results.json",
+      "sha256": "23cf694f45959cec1d79eb0e731d50cca00ba3814939bd6ac89f5e501d877187"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/production-browser.mjs",
+      "sha256": "fe83a60561cea5efd2c8b18ecd0ff0fcbeef580db50018c8394094f142d4696f"
+    },
+    {
+      "path": "validation/editor-restoration/audit/accepted-current-inputs.json",
+      "sha256": "0ceb0ca8dff079ae83f797d92592b972a13d9e37f8a342e06ccf4e9a290d366e"
+    },
+    {
+      "path": "validation/s2/review-suspension/disposition.json",
+      "sha256": "767afec67b7bebae2d3d73b4ef791a12e0956f09a742ef62a54e41e2fe4d038e"
+    },
+    {
+      "path": "validation/s2/review-suspension/results.json",
+      "sha256": "89e972ecd45c48cbbeb2f7dc385ca1d6b01cc98779565ff0e94ebfb855dde16a"
+    },
+    {
+      "path": "validation/s2/review-suspension/HANDOVER.md",
+      "sha256": "506166886535e71fa860e8e181db5b65914de34dcdbe518674d8d1955b17f757"
+    },
+    {
+      "path": "validation/s5/behaviour/timing-continuity.json",
+      "sha256": "9b6ff08e63d7e9b61d27bdd15166bcbc6d8c6ac3e3f6f616156e895ed3b64d78"
+    },
+    {
+      "path": "validation/s5/behaviour/timing-continuity.mjs",
+      "sha256": "9b40b84cc02642bb4e7b632014126572acf6e2cb6c695ccb84aab453a2669c96"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/boundary-results.json",
+      "sha256": "0cd3eb2201753697a78a1e233a9fb013178e0138e88e0388a05b9aa9c24ba178"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/boundary-first-run.mjs",
+      "sha256": "ab1303da51e9905abf670528d0a6f367994545c0da6f0754a98013145d726e2f"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/boundary-short-results.json",
+      "sha256": "0e6e54b53d715b83c23803ff9b0d98fe9b088c4ead852d2850eacf8be3aad329"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/boundary-probe.mjs",
+      "sha256": "aace9f0e96ba2f5d05df2639ae419199b57be40f2080eab14c56b226886b7b98"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/short-first-launch-failure.json",
+      "sha256": "f168a695be7892055d21793ba9e242671496f764ce13752ddb252d157832906f"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/short-first-launch-script.mjs",
+      "sha256": "9de3194246a8781a05867de0c26593c88b29401a33953550ec32fa1bb1f0e6dd"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/source-review.md",
+      "sha256": "5d6a4422e6dab2a180926d706ddf0490483bd1bf8a1dfede947dbb83bc92fe9f"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/alevel-failure.png",
+      "sha256": "874ce9e84f437c1aa7b657bc48cea78b8f59e6589efa48ce47ae2ffd8dccea08"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/integration/exception-review/igcse-failure.png",
+      "sha256": "a4956fe7b72c6249ee8535b6cdfd8455a4517cae61ecb3edca296004a5f42680"
+    }
+  ]
+}

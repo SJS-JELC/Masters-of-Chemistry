@@ -1,0 +1,17 @@
+{
+  "job": "OLY2011-REVIEW",
+  "startedAt": "2026-10-03T18:54:36.637Z",
+  "checks": [],
+  "errors": [],
+  "status": "FAIL",
+  "browser": "Pinned workspace Playwright; installed Edge; headless",
+  "requests": [],
+  "coldBootstrap": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Olympiad challenges', exact: true }) to be visible\u001b[22m\n",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n4 !== 5\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-2011-q4/review-r01/browser-independent.mjs:35:10\n    at async check (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-2011-q4/review-r01/browser-independent.mjs:16:29)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-2011-q4/review-r01/browser-independent.mjs:31:2",
+  "finishedAt": "2026-10-03T18:55:57.003Z",
+  "cleanup": {
+    "browserClosed": true,
+    "serverExitCode": null,
+    "serverSignal": "SIGTERM"
+  }
+}

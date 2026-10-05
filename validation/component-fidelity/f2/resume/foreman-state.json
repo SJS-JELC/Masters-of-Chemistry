@@ -1,0 +1,51 @@
+{
+  "updatedAt": "2026-10-03T20:10:01.412Z",
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "stage": "F2",
+  "rootGate": "F1 accepted; F2 authorized not root-accepted; F3 forbidden",
+  "staffing": "F07 foreman plus F08–F11 bounded Sol6.1/high replacements; no reviewer/nested delegation",
+  "jobs": [
+    {
+      "jobId": "F2-SHARED",
+      "agentId": "F08",
+      "replaces": "F03",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/shared/resume-f08/completion.json",
+      "evidence": "validation/component-fidelity/f2/shared/resume-f08",
+      "nativeHandle": "/root/component_fidelity_resume/shared_resume",
+      "validation": "validation/component-fidelity/f2/resume/shared-validation.json"
+    },
+    {
+      "jobId": "F2-EC",
+      "agentId": "F09",
+      "replaces": "F04",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/electron/resume-f09/completion.json",
+      "evidence": "validation/component-fidelity/f2/electron/resume-f09",
+      "nativeHandle": "/root/component_fidelity_resume/electron_resume",
+      "validation": "validation/component-fidelity/f2/resume/specialist-validation.json"
+    },
+    {
+      "jobId": "F2-ENERGY",
+      "agentId": "F10",
+      "replaces": "F05",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/energy/resume-f10/completion.json",
+      "evidence": "validation/component-fidelity/f2/energy/resume-f10",
+      "nativeHandle": "/root/component_fidelity_resume/energy_resume",
+      "validation": "validation/component-fidelity/f2/resume/specialist-validation.json"
+    },
+    {
+      "jobId": "F2-TITRATION",
+      "agentId": "F11",
+      "replaces": "F06",
+      "status": "foreman_validated",
+      "manifest": "validation/component-fidelity/f2/titration/resume-f11/completion.json",
+      "evidence": "validation/component-fidelity/f2/titration/resume-f11",
+      "nativeHandle": "/root/component_fidelity_resume/titration_resume",
+      "validation": "validation/component-fidelity/f2/resume/specialist-validation.json"
+    }
+  ],
+  "scope": "Preserve concurrent OLY source/hunks and log; do not accept/review that content.",
+  "publication": false
+}

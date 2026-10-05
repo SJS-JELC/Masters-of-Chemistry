@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "scope": "Startup/restore/history failure, raw preservation, retry recovery and normal/teacher smoke on both courses; optional IGCSE assessment excluded by A01 disposition",
+  "checks": [
+    {
+      "id": "alevel-corrupt-session",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "alevel-missing-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "alevel-corrupt-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "alevel-corrupt-history",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryPreservesPersistentFault": true
+    },
+    {
+      "id": "alevel-normal-recovery-teacher",
+      "status": "PASS",
+      "exactAttempt": "432e3943-f359-476a-bdf9-48e14b2ba8d1",
+      "newEvidence": 0
+    },
+    {
+      "id": "alevel-assessment-after-recovery",
+      "status": "PASS",
+      "independentEvidence": 1,
+      "firstResponseAndTimingFrozen": true,
+      "reloadNoDuplicate": true
+    },
+    {
+      "id": "alevel-unavailable-open",
+      "status": "PASS",
+      "retryRecovered": true,
+      "newAttemptSaved": true
+    },
+    {
+      "id": "igcse-corrupt-session",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "igcse-missing-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "igcse-corrupt-attempt",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryRecoveredExactAttempt": true
+    },
+    {
+      "id": "igcse-corrupt-history",
+      "status": "PASS",
+      "rawPreserved": true,
+      "retryPreservesPersistentFault": true
+    },
+    {
+      "id": "igcse-normal-recovery-teacher",
+      "status": "PASS",
+      "exactAttempt": "a1c53021-91ab-4a69-94e5-70d6c8745677",
+      "newEvidence": 0
+    },
+    {
+      "id": "igcse-unavailable-open",
+      "status": "PASS",
+      "retryRecovered": true,
+      "newAttemptSaved": true
+    }
+  ],
+  "sourceReport": "browser-results.json",
+  "sourceReportStatus": "FAIL",
+  "retainedOptionalFailure": [
+    {
+      "course": "igcse",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 7\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/fixes/startup-error/browser.mjs:59:87"
+    }
+  ],
+  "note": "Source report remains FAIL and is not relabelled. Required individual checks pass; independent final-build A21 assessment review remains pending."
+}

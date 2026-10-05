@@ -1,0 +1,30 @@
+{
+  "id": "S3-REVIEW-CO",
+  "agentId": "A07",
+  "runId": "MASTERS-REACT-20261002",
+  "status": "PASS",
+  "outputPath": "src/chemistry/thermochemistry/reviewed-co-svg.ts",
+  "confidence": 0.99,
+  "reason": null,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": null,
+  "effectiveEffort": null,
+  "usage": null,
+  "validation": {
+    "handover": "validation/s3/review-co/HANDOVER.md",
+    "provenance": "validation/s3/review-co/provenance.json",
+    "chemistry": "validation/s3/review-co/chemistry-check.json",
+    "render": "validation/s3/review-co/render-results.json",
+    "originalSvgSha256": "8290640db0821f819075df57ea3d85f2828fdb9139aa8721ef3e85a0802d4da7",
+    "reviewedSvgSha256": "02de76dd4029588cd04a591c7bb514fb2b6103f5ce96239e24543ec5babae2eb",
+    "manualChemicalReview": "NeutralCO restored asC-minus tripleO-plus; formula, atom, charge, equation and source bond totals agree",
+    "manualRenderReview": "Full desktop and390px mobile image inspected; distinctC-minus/O-plus, no collisions or clipping",
+    "existingSvgBytePreserved": true,
+    "copiedOriginalDataUnchanged": true,
+    "fullManagedRegeneration": false,
+    "newRuntimeFileOnly": "src/chemistry/thermochemistry/reviewed-co-svg.ts"
+  },
+  "integrationOwner": "A12; provider integration and activity checks remain its responsibility",
+  "limits": ["One CO diagram exception only", "Supplementary RDKit2025.09.1 is not managed regeneration provenance", "Root owns S3 acceptance"]
+}

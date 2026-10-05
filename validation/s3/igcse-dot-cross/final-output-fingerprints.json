@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-03T01:25:04.081Z",
+  "files": [
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.d.ts",
+      "sha256": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/bank.js",
+      "sha256": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/index.ts",
+      "sha256": "d72a2c12a5719a846c59b2ae0d4af1826aab9e25ea31017acf6482f12f380f73"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/marking.ts",
+      "sha256": "24758cff024c48f3fdf8366c04a2b05bd5b8ce7baec35f81ddc3a5543d9ccc50"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/provider.ts",
+      "sha256": "2e3b51c0d94a89c9a4b6c471930b500ac88116bf050ae8bdd2b40d0436334ac8"
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/types.ts",
+      "sha256": "f53d861984ce4b49b710e1ac5f8a8d009f6e846f59e60356059070cf10f25e37"
+    }
+  ],
+  "shared": [
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "sha256": "e0685e77fc9b819274714876feb32b9ea27effbbbf98c8d7c2dc4964e79f543d",
+      "beforeSha256": "fc9d2cf6b87050ee852d4cd0e0602a33656f61655c24e0d9e57e81d700133bef",
+      "changed": true
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "sha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204",
+      "beforeSha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204",
+      "changed": false
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "sha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a",
+      "beforeSha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5",
+      "beforeSha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712",
+      "beforeSha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "sha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb",
+      "beforeSha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "sha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03",
+      "beforeSha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "sha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1",
+      "beforeSha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "sha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db",
+      "beforeSha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db",
+      "changed": false
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "sha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6",
+      "beforeSha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6",
+      "changed": false
+    }
+  ],
+  "changedShared": [
+    "src/editors/dot-and-cross/DotCrossEditor.tsx"
+  ],
+  "s2Evidence": "Preserved unchanged; all regression scripts/results run or copied here."
+}

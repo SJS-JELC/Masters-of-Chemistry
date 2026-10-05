@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T05:54:48.999Z",
+  "results": [
+    {
+      "id": "typecheck",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 4459,
+      "evidence": "validation/s5/integration/foreman-typecheck.txt"
+    },
+    {
+      "id": "unit",
+      "command": [
+        "node",
+        "scripts/test-s5.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 13257,
+      "evidence": "validation/s5/integration/foreman-unit.txt"
+    },
+    {
+      "id": "format",
+      "command": [
+        "node",
+        "scripts/format-authored.mjs",
+        "--check"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 2969,
+      "evidence": "validation/s5/integration/foreman-format.txt"
+    },
+    {
+      "id": "catalogue",
+      "command": [
+        "node",
+        "scripts/write-catalogue-definitions.mjs",
+        "--check"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 59,
+      "evidence": "validation/s5/integration/foreman-catalogue.txt"
+    },
+    {
+      "id": "source-and-controls",
+      "command": [
+        "node",
+        "scripts/validate-s0.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 230,
+      "evidence": "validation/s5/integration/foreman-source-and-controls.txt"
+    },
+    {
+      "id": "protected-originals",
+      "command": [
+        "node",
+        "scripts/protect-originals.mjs",
+        "check"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 801,
+      "evidence": "validation/s5/integration/foreman-protected-originals.txt"
+    },
+    {
+      "id": "release",
+      "command": [
+        "node",
+        "scripts/check-release.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 335,
+      "evidence": "validation/s5/integration/foreman-release.txt"
+    },
+    {
+      "id": "runtime-ownership",
+      "status": "PASS",
+      "sourceFiles": 179
+    },
+    {
+      "id": "independent-current-evidence",
+      "status": "PASS",
+      "inputs": 517,
+      "reviews": 3
+    }
+  ]
+}

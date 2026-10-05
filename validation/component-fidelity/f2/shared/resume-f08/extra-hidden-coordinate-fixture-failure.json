@@ -1,0 +1,15 @@
+{
+  "agentId": "F08",
+  "jobId": "F2-SHARED",
+  "status": "FAIL",
+  "startedAt": "2026-10-03T19:11:45.410Z",
+  "checks": [],
+  "shots": [],
+  "errors": [],
+  "limits": [
+    "Fresh synthetic app IndexedDB namespaces and nonpersistent contexts only.",
+    "Native OS suspend/minimize coverage retained by foreman; this browser suite checks reload and first timing."
+  ],
+  "failure": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Final pH', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" value=\"12.9\" inputmode=\"decimal\" aria-label=\"Final pH\" aria-describedby=\"_r_6_\"/>\u001b[22m\n\u001b[2m    - fill(\"15\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    59 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\shared\\resume-f08\\extra-browser.mjs:23:508",
+  "finishedAt": "2026-10-03T19:12:18.420Z"
+}

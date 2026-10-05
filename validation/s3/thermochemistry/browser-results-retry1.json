@@ -1,0 +1,229 @@
+{
+  "status": "FAIL",
+  "mode": "isolated headless installed Edge real production host",
+  "results": [
+    {
+      "id": "six-practice-targets-and-first-correction",
+      "status": "PASS",
+      "evidence": [
+        {
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-4ZHGCV",
+            "seed": 301465615,
+            "level": 1
+          },
+          "firstScore": 0,
+          "marks": {
+            "points": [
+              {
+                "partId": "deltaT",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              },
+              {
+                "partId": "q",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              }
+            ],
+            "earned": 0,
+            "available": 2
+          },
+          "timing": {
+            "activeMs": 213,
+            "idleLimitMs": 180000
+          }
+        },
+        {
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-RNLESQ",
+            "seed": 1672216874,
+            "level": 2
+          },
+          "firstScore": 0,
+          "marks": {
+            "points": [
+              {
+                "partId": "deltaT",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              },
+              {
+                "partId": "q",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              }
+            ],
+            "earned": 0,
+            "available": 2
+          },
+          "timing": {
+            "activeMs": 182,
+            "idleLimitMs": 180000
+          }
+        },
+        {
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-6U5BNW",
+            "seed": 413433932,
+            "level": 3
+          },
+          "firstScore": 0,
+          "marks": {
+            "points": [
+              {
+                "partId": "q",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              }
+            ],
+            "earned": 0,
+            "available": 1
+          },
+          "timing": {
+            "activeMs": 139,
+            "idleLimitMs": 180000
+          }
+        },
+        {
+          "ref": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-1AMWI7",
+            "seed": 78330895,
+            "level": 1
+          },
+          "firstScore": 0,
+          "marks": {
+            "points": [
+              {
+                "partId": "broken",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              },
+              {
+                "partId": "made",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              },
+              {
+                "partId": "dh",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              }
+            ],
+            "earned": 0,
+            "available": 3
+          },
+          "timing": {
+            "activeMs": 196,
+            "idleLimitMs": 180000
+          }
+        },
+        {
+          "ref": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-FIRWUB",
+            "seed": 938528003,
+            "level": 2
+          },
+          "firstScore": 0,
+          "marks": {
+            "points": [
+              {
+                "partId": "unknown-bond",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              }
+            ],
+            "earned": 0,
+            "available": 1
+          },
+          "timing": {
+            "activeMs": 144,
+            "idleLimitMs": 180000
+          }
+        },
+        {
+          "ref": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-A85ATP",
+            "seed": 618345997,
+            "level": 3
+          },
+          "firstScore": 0.5,
+          "marks": {
+            "points": [
+              {
+                "partId": "unknown-bond",
+                "pointId": "numeric",
+                "earned": 0,
+                "available": 1,
+                "message": "This numerical value is incorrect. Compare it with the worked calculation."
+              },
+              {
+                "partId": "displayed-equation",
+                "pointId": "displayed-equation",
+                "earned": 1,
+                "available": 1,
+                "message": "Drawing self-checked against model."
+              }
+            ],
+            "earned": 1,
+            "available": 2
+          },
+          "timing": {
+            "activeMs": 151,
+            "idleLimitMs": 180000
+          }
+        }
+      ]
+    },
+    {
+      "id": "framework-local-check-final-binding-assistance-restore",
+      "status": "PASS",
+      "evidence": {
+        "transientIntermediates": true,
+        "persistedFinal": true,
+        "firstScore": 1,
+        "independentRecords": 0
+      }
+    },
+    {
+      "id": "level3-drawing-fail-aggregate-time-freeze",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:23:786\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:23:2"
+    },
+    {
+      "id": "revision-topic-add-all-pause-reload-next",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at start (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:15:181)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:24:279\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:24:2"
+    },
+    {
+      "id": "all16-displayed-diagrams-and-thermometers-teacher-render",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'Bond enthalpy Â· Hydrogen and chlorine', exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:25:367\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s3\\thermochemistry\\browser.mjs:18:83)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/thermochemistry/browser.mjs:25:2"
+    }
+  ],
+  "errors": []
+}

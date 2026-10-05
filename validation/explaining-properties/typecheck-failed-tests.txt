@@ -1,0 +1,6 @@
+scripts/tests/explaining-properties.test.ts(72,167): error TS2322: Type 'QuestionRef' is not assignable to type 'CurriculumQuestionRef'.
+  Types of property 'activityId' are incompatible.
+    Type 'ActivityId' is not assignable to type 'CurriculumActivityId'.
+      Type '"alevel/c3l6-organic-reactions"' is not assignable to type 'CurriculumActivityId'.
+scripts/tests/explaining-properties.test.ts(77,268): error TS2532: Object is possibly 'undefined'.
+

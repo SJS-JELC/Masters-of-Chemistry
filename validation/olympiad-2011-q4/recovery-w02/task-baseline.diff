@@ -1,0 +1,2518 @@
+Current task-related files compared with immutable root-baseline. Shared file diffs may include concurrent component work.
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\release\\alevel.runtime.json" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\release\\alevel.runtime.json"
+index e222209..6662ade 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\release\\alevel.runtime.json"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\release\\alevel.runtime.json"	
+@@ -1,96 +1,100 @@
+ {
+   "schemaVersion": 1,
+   "course": "alevel",
+-  "generatedAt": "2026-10-03T17:16:22.596Z",
++  "generatedAt": "2026-10-03T18:35:49.439Z",
+   "status": "local-runtime-inventory-no-publication",
+   "buildRoot": "dist/alevel",
+   "entry": "index.html",
+   "shellGzipBudgetBytes": 204800,
+   "gzipMethod": "node:zlib gzipSync default compression; individual files summed",
+   "initialScope": "course entry plus actual ProductionFoundation, default original landing and their eager imports; excludes deferred providers/editors/statistics/import",
+-  "entryOnlyJavascriptGzipBytes": 70448,
++  "entryOnlyJavascriptGzipBytes": 70476,
+   "initialJavascript": [
+-    "assets/alevel-CZuzZ-PC.js",
++    "assets/alevel-EpucoUfU.js",
+     "assets/jsx-runtime-Dk72oS4N.js",
+     "assets/react-dom-X1VypBGM.js",
+     "assets/preload-helper-BaNbYf_w.js",
+-    "assets/ProductionFoundation-gkliupuE.js",
+-    "assets/QuestionLevelPill-BX2_u7VS.js",
+-    "assets/DiagramViewport-DGhHqMlN.js",
+-    "assets/repository-BD5__cSH.js",
++    "assets/ProductionFoundation-oZyKim79.js",
++    "assets/QuestionLevelPill-DezQNVRx.js",
++    "assets/repository-Do6t54Zn.js",
+     "assets/canonical-identity-BbfemJId.js",
+-    "assets/definitions-ldFVBQYl.js",
++    "assets/policy-C8A-n6Tk.js",
++    "assets/engine-BOiqT4al.js",
++    "assets/definitions-CCmCJWCt.js",
+     "assets/alpha-namespace-xEhFAEHR.js",
+-    "assets/persistence-40mGE8vS.js",
+-    "assets/registry-ppZNvF9Z.js",
++    "assets/persistence-CfDgR1R-.js",
++    "assets/registry-DiY3Kdn8.js",
+     "assets/identity-DG87IKCR.js",
+     "assets/dependencies-IbyFZa8N.js",
+     "assets/QuestionChrome-W2lAHlS6.js",
+-    "assets/mastery-BY5OygY0.js",
+-    "assets/course-mastery-ChOwrGqm.js",
+-    "assets/ResponseControl-BFxZqFlK.js",
+-    "assets/landing-C1DmB2VH.js"
++    "assets/mastery-js6cSvn_.js",
++    "assets/course-mastery-LCYrOOCY.js",
++    "assets/ResponseControl-Dk3Si2R0.js",
++    "assets/source-family-DzcIwCwe.js",
++    "assets/landing-Cz0lX6Qn.js"
+   ],
+-  "initialJavascriptGzipBytes": 170952,
++  "initialJavascriptGzipBytes": 178523,
+   "lazyJavascript": [
+-    "assets/DotCrossPlayer-Bh7M88uM.js",
+-    "assets/EnergeticsPracticalPilot-DNDYqEsv.js",
+-    "assets/OlympiadHost-y3aZraCM.js",
++    "assets/DotCrossPlayer-BUxsS_Bt.js",
++    "assets/OlympiadHost-DlyVt3NC.js",
++    "assets/SourceQuestionPlayer-BEi8yUlT.js",
+     "assets/bond-enthalpy-core-B3NxXqut.js",
+     "assets/bond-enthalpy-core-M9vstt1Q.js",
+-    "assets/c3l6-D9bCg6NA.js",
+-    "assets/compatibility-DLU9UIec.js",
++    "assets/c3l6-BvRU9NzR.js",
++    "assets/c3l6-Csgejx8Q.js",
++    "assets/compatibility-DRHupYeS.js",
+     "assets/data-DRsOgynP.js",
+     "assets/data-PGygMTpc.js",
+     "assets/display-BpW8Pz6W.js",
+     "assets/dot-and-cross-B_s7lHD1.js",
+-    "assets/electron-configuration-DWCl-Y-n.js",
+-    "assets/energy-profile-BvIWj0NJ.js",
+-    "assets/engine-2bv4ZnN3.js",
++    "assets/electron-configuration-Bt6jBuT8.js",
++    "assets/energy-profile-BQnItNBa.js",
+     "assets/engine-BPgR3f6M.js",
+     "assets/engine-BoCqYcJ-.js",
+     "assets/engine-C5wdZLjG.js",
+     "assets/engine-CcL3yxLU.js",
++    "assets/engine-cGMxjA0Z.js",
+     "assets/framework-BmviDFsE.js",
+     "assets/identity-CuJJfa1P.js",
+     "assets/identity-Dr_meW4Y.js",
++    "assets/isomers2011-BiltiZTq.js",
+     "assets/layout-BncCbbQB.js",
+     "assets/marking-BKR4iOkM.js",
+     "assets/marking-BQggF3vi.js",
++    "assets/marking-BiP2n4z1.js",
+     "assets/marking-Bp4W3ro5.js",
+     "assets/marking-BxZxGm59.js",
+-    "assets/marking-C8c0VyS-.js",
++    "assets/marking-BxeR-dzM.js",
++    "assets/marking-C6qlgjnZ.js",
+     "assets/marking-CQl_-q1H.js",
+     "assets/marking-Cgahi7NL.js",
+     "assets/marking-Chm4FhyV.js",
++    "assets/marking-CmYCOMJO.js",
+     "assets/marking-DUaHE0VX.js",
+-    "assets/marking-Df7N3d1p.js",
+-    "assets/marking-DqeKWdhE.js",
+-    "assets/marking-DvxylpgH.js",
+     "assets/marking-JTSlmc3C.js",
+     "assets/model-BkCVAwjv.js",
+     "assets/provider-1PW88Uq0.js",
+     "assets/provider-6BRDwFo3.js",
+     "assets/provider-B3tKM6BW.js",
+-    "assets/provider-B6r0PJFn.js",
+-    "assets/provider-BX9Qk7z_.js",
++    "assets/provider-BXFSe5Qo.js",
+     "assets/provider-BaEZ1B4J.js",
+     "assets/provider-Bchj3b0p.js",
+     "assets/provider-BtXidDFM.js",
+     "assets/provider-C4knNNLj.js",
+-    "assets/provider-C5LmJQOB.js",
+     "assets/provider-CGHOmeHy.js",
++    "assets/provider-CL0nklpA.js",
++    "assets/provider-CmYfEUzX.js",
+     "assets/provider-CuAJcp1n.js",
+-    "assets/provider-CwNkwalr.js",
++    "assets/provider-DFg160Es.js",
+     "assets/provider-DPOJXe6C.js",
+     "assets/provider-DSNpIHbh.js",
+-    "assets/provider-DVIl6hpE.js",
+-    "assets/provider-DXkiFun7.js",
+-    "assets/provider-DcIw3Uc7.js",
++    "assets/provider-DZ5ptbKw.js",
+     "assets/provider-DpC5YChp.js",
++    "assets/provider-GZldDoB-.js",
++    "assets/provider-PrYIhOi3.js",
+     "assets/provider-aHLNm46-.js",
+-    "assets/statistics-yztivEUK.js",
+-    "assets/titration-curve-BFgoabrd.js",
++    "assets/statistics-BXsmmV-d.js",
++    "assets/titration-curve-DaYOuO_3.js",
+     "assets/types-BQzY_9Qt.js",
+     "assets/types-CGzZHUAK.js"
+   ],
+@@ -939,6 +943,25 @@
+           "sha256": "58b769b2224562fe50ef5ef61b745b28b4a2a348b21493c2e3084c446a6d017e"
+         }
+       ]
++    },
++    {
++      "id": "alevel/olympiad-2011-q4",
++      "course": "alevel",
++      "strand": "olympiad",
++      "revision": false,
++      "supportedLevels": [],
++      "leafIds": [],
++      "activeBank": "Seven fixed C4H10O constitutional structures",
++      "generatorFamilies": [],
++      "finiteGeneratorConfigurations": 7,
++      "sourceRoot": "resources/Olympiads/audit/organic-pilot-brief.md",
++      "sourceHashes": [
++        {
++          "path": "development/shared/nmr/olympiad-2011-q4/olympiad-2011-q4-compound-3.svg",
++          "sha256": "07d75b648f1117fadaa701ecb875e68331f2dc4a8a451cea1f9591a257ea1d7d",
++          "symbolOrSection": "User-approved compound 3 spectrum; checked question and answer provenance: resources/Olympiads/audit/organic-pilot-brief.md, immutable question pp6–7 and mark scheme p4. Paraphrased Olympiad extension; no curriculum mastery registration."
++        }
++      ]
+     }
+   ],
+   "requiredBrandAssets": [
+@@ -951,7 +974,7 @@
+   "provenance": {
+     "inventoryPath": "validation/s0/inventory/coverage-manifest.json",
+     "inventorySha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+-    "viteManifestSha256": "a270a5067fbcb3683d9904976bdd525dd5aac8cd7a553fa6ce18a36adb0d7be7"
++    "viteManifestSha256": "b296581df7f40efc2ddb1b2cd031e1701e912a59aeaebebaa724fbc5ac652159"
+   },
+   "files": [
+     {
+@@ -997,11 +1020,11 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/DiagramViewport-DGhHqMlN.js",
+-      "bytes": 1175,
+-      "sha256": "f31c7e69b059e1cff6fe35c9d0ac34c0c94ec7c12b38d4c4f11ff91f0502046c",
+-      "gzipBytes": 604,
+-      "role": "initial-javascript"
++      "path": "assets/DotCrossPlayer-BUxsS_Bt.js",
++      "bytes": 7730,
++      "sha256": "64700e7e58740d635a104ae72506ed5056e81afe7deaee91f99efce97f7d71ae",
++      "gzipBytes": 2836,
++      "role": "lazy-runtime"
+     },
+     {
+       "path": "assets/DotCrossPlayer-B_iHdArF.css",
+@@ -1010,30 +1033,16 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/DotCrossPlayer-Bh7M88uM.js",
+-      "bytes": 7730,
+-      "sha256": "b799447c9dba3c3861954d8af5bf7f3f975855d33b2bad35659635f5190f7a30",
+-      "gzipBytes": 2838,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/EnergeticsPracticalPilot-CDMwBhEj.css",
+-      "bytes": 6970,
+-      "sha256": "22e5c4a8903b381488cced666c4ae47e47a593f5ca2fcc59e51197e71edd7d57",
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/EnergeticsPracticalPilot-DNDYqEsv.js",
+-      "bytes": 7062,
+-      "sha256": "b612bfead965e79b0f28e9d17d1d497577b810b19fd5cf0350ce0fcb76b7065f",
+-      "gzipBytes": 2528,
++      "path": "assets/OlympiadHost-BfrW8JKu.css",
++      "bytes": 281,
++      "sha256": "6f35a19f7ed557c2e374c6b6b36d8586244c1b5b36f60d8e95d6a318e47b92df",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/OlympiadHost-y3aZraCM.js",
+-      "bytes": 3594,
+-      "sha256": "41e3327c25fb6c3466ea0bbea1766778f1fc34a9c6c007f328c94478ccfe4700",
+-      "gzipBytes": 1678,
++      "path": "assets/OlympiadHost-DlyVt3NC.js",
++      "bytes": 5278,
++      "sha256": "e2b568a10f8dbdabdb46c1be93f27822173327e3f92fed39e75be29a59aaa9ba",
++      "gzipBytes": 2140,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1043,10 +1052,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/ProductionFoundation-gkliupuE.js",
+-      "bytes": 79136,
+-      "sha256": "f8b829c18c2f5460b580c46248aa151902b3ea93e212b8ef5c6a73349da5016f",
+-      "gzipBytes": 22963,
++      "path": "assets/ProductionFoundation-oZyKim79.js",
++      "bytes": 79441,
++      "sha256": "4e8a1938f8002895d98de1adffb206ce5a0c18e802e28a59c85077b7e902d1a1",
++      "gzipBytes": 23059,
+       "role": "initial-javascript"
+     },
+     {
+@@ -1057,17 +1066,17 @@
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/QuestionLevelPill-BX2_u7VS.js",
+-      "bytes": 1447,
+-      "sha256": "141903331d9d70e443db13a417423881149fb18eebc4ab8df2a17875810c970b",
+-      "gzipBytes": 690,
++      "path": "assets/QuestionLevelPill-DezQNVRx.js",
++      "bytes": 2506,
++      "sha256": "015bcb77e66db7eec67540294052edde503652a40aebd1a7d0ee02eea210ecca",
++      "gzipBytes": 1116,
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/ResponseControl-BFxZqFlK.js",
+-      "bytes": 12881,
+-      "sha256": "12ca7d81bb0987c6b7beddef69979bc4bdaa3e8bd4504b2c4c9cff207fb95e91",
+-      "gzipBytes": 3895,
++      "path": "assets/ResponseControl-Dk3Si2R0.js",
++      "bytes": 15369,
++      "sha256": "308aab3d7005bf3da8a2a8dce64a9b6f65f6c6218009de9c678f71c23975985b",
++      "gzipBytes": 4467,
+       "role": "initial-javascript"
+     },
+     {
+@@ -1082,6 +1091,19 @@
+       "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+       "role": "licensed-brand-asset"
+     },
++    {
++      "path": "assets/SourceQuestionPlayer-87UNoqQZ.css",
++      "bytes": 55943,
++      "sha256": "aad0d50c4d63eb9263d4a9f4f6221b9a195330af2389f66781b44365e37b7c52",
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/SourceQuestionPlayer-BEi8yUlT.js",
++      "bytes": 22593,
++      "sha256": "dbc740b55f0e0da58ab056b6b43f6718b04df115a5271971916da541e3a9ee9c",
++      "gzipBytes": 7278,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/a-01-p1-B7lbrCeA.svg",
+       "bytes": 6887,
+@@ -1215,10 +1237,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/alevel-CZuzZ-PC.js",
+-      "bytes": 208517,
+-      "sha256": "5e800e2a6972d5175cb2e3c19a9acbf7bbfa1f947cf6c0721ad9a7766ac3ad46",
+-      "gzipBytes": 64979,
++      "path": "assets/alevel-EpucoUfU.js",
++      "bytes": 208567,
++      "sha256": "844ed51f5eafdf360d6c6a1bbb911fe809f97fe3089cc083f84689e29f51c6b8",
++      "gzipBytes": 65007,
+       "role": "initial-javascript"
+     },
+     {
+@@ -1255,10 +1277,17 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/c3l6-D9bCg6NA.js",
+-      "bytes": 88831,
+-      "sha256": "037108966924d112767f01403e4dcee1dcbb97f4f5f8197cd1364a99afb9c768",
+-      "gzipBytes": 26396,
++      "path": "assets/c3l6-BvRU9NzR.js",
++      "bytes": 19053,
++      "sha256": "09e39d650faaef127e593d9966b7a32f98e84975b091abdb09dd8c177bcd7f8d",
++      "gzipBytes": 6731,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/c3l6-Csgejx8Q.js",
++      "bytes": 57321,
++      "sha256": "483686710a0285be61310e7f387a8ee7aabdd5600dbb82ecbe0ba978850246bc",
++      "gzipBytes": 15719,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1269,10 +1298,10 @@
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/compatibility-DLU9UIec.js",
+-      "bytes": 12522,
+-      "sha256": "648b8267477f57bd2fa21d23914d036000783c10602c5f672d233f3fc1d5c88b",
+-      "gzipBytes": 4600,
++      "path": "assets/compatibility-DRHupYeS.js",
++      "bytes": 12686,
++      "sha256": "789515cc02a554af4a7f13cb5366ee39abbdbaf0fca5837f0a42f6d312f0fff6",
++      "gzipBytes": 4646,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1282,9 +1311,15 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/course-mastery-ChOwrGqm.js",
++      "path": "assets/compound-3-CSEI4tRe.svg",
++      "bytes": 79090,
++      "sha256": "e2c70e8a6b201e389974056092b2b1c79d2f6d8b24f0085b3f3cb57d3d58bf66",
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/course-mastery-LCYrOOCY.js",
+       "bytes": 2422,
+-      "sha256": "8c82dfb5f573d63137a2c18c837d8ae516cfb43dd5657ca92ed03fd714d40543",
++      "sha256": "d0c57ee37d939dd302a2481c67a517683a630cdb2045f28a2b2a2fcea1f0639b",
+       "gzipBytes": 1073,
+       "role": "initial-javascript"
+     },
+@@ -1303,10 +1338,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/definitions-ldFVBQYl.js",
+-      "bytes": 48429,
+-      "sha256": "11ebf6beea1f52bd03eb0caa34ef6665a0b92daf9a44dd34954d1653132a2ce2",
+-      "gzipBytes": 7724,
++      "path": "assets/definitions-CCmCJWCt.js",
++      "bytes": 48966,
++      "sha256": "1f3bdbc2a4f00c440a8beb0659b1d2c4d8b548c5d15b160460135a7b2f401ced",
++      "gzipBytes": 8011,
+       "role": "initial-javascript"
+     },
+     {
+@@ -1337,32 +1372,38 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/electron-configuration-DBlPFIqb.css",
+-      "bytes": 4316,
+-      "sha256": "976b7ec78a7d70e08bc2cabcbc555a2d3ca62f91a66281ebf5a77f50dad4b0ea",
++      "path": "assets/electron-configuration-193xnpPU.css",
++      "bytes": 10816,
++      "sha256": "b65ebea8724ca7fdecf0f282536f12c4baee1ce0b61fb4e4df97abd6152eddba",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/electron-configuration-DWCl-Y-n.js",
+-      "bytes": 15651,
+-      "sha256": "73c0b0332ed0cdd1fef256f496e3b5206ed82cba95ff1431ba297984a9daea87",
+-      "gzipBytes": 4984,
++      "path": "assets/electron-configuration-Bt6jBuT8.js",
++      "bytes": 20490,
++      "sha256": "95830edae069be8334aa6122a0bfacdf68849d1af0e5bbdd7ffcf79743117211",
++      "gzipBytes": 6415,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/energy-profile-BvIWj0NJ.js",
+-      "bytes": 9936,
+-      "sha256": "08409cfd25bee93cab3993be2aa796a9740a180936cbbc433308d2d315a5f329",
+-      "gzipBytes": 3765,
++      "path": "assets/energy-profile-BQnItNBa.js",
++      "bytes": 11232,
++      "sha256": "a8db7088ac4d2cc6ffdbb2c3756b4b192bfc18abf61ece641fba6968d0646497",
++      "gzipBytes": 4235,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/engine-2bv4ZnN3.js",
+-      "bytes": 1989,
+-      "sha256": "09ed0f1ecf7d53d79e9e6da50f5f790e172e8039ef537aa7a5805e418e074bf1",
+-      "gzipBytes": 828,
++      "path": "assets/energy-profile-BgbZXPU7.css",
++      "bytes": 3485,
++      "sha256": "27b11c5ed2400ab07a1330d6abe943872581be68775f6a0e69b4230fcd97381b",
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/engine-BOiqT4al.js",
++      "bytes": 12596,
++      "sha256": "20e1a1f3038b440d818d5b291bea198ccd1843869e0fec33d4d15baf850fcc45",
++      "gzipBytes": 4726,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/engine-BPgR3f6M.js",
+       "bytes": 39139,
+@@ -1391,6 +1432,13 @@
+       "gzipBytes": 8893,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/engine-cGMxjA0Z.js",
++      "bytes": 1989,
++      "sha256": "7e2600f2cc2677afd811564d3b1334f3d4e1a4b7c8fd777a9e24adfafa5767dd",
++      "gzipBytes": 826,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/example-01-z-ule6NF.svg",
+       "bytes": 188583,
+@@ -1527,6 +1575,19 @@
+       "gzipBytes": 2689,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/isomers2011-BiltiZTq.js",
++      "bytes": 6080,
++      "sha256": "8b573d219c47e71a0431ad1a1197137842eaa1b98ab4d8ed0ec6a7fd5f626fe8",
++      "gzipBytes": 2322,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/isomers2011-Cqd7pXJP.css",
++      "bytes": 1910,
++      "sha256": "6dc5a0d5931416943121ef147a3382182bf1c712f6751a368f1cd50f90cadf6f",
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/jsx-runtime-Dk72oS4N.js",
+       "bytes": 8774,
+@@ -1534,19 +1595,19 @@
+       "gzipBytes": 3327,
+       "role": "initial-javascript"
+     },
+-    {
+-      "path": "assets/landing-C1DmB2VH.js",
+-      "bytes": 34862,
+-      "sha256": "fddfdd1dd585aa3be295c2c5e00838439afbf9b7e76cd9757deb539bbf9b3315",
+-      "gzipBytes": 11358,
+-      "role": "initial-javascript"
+-    },
+     {
+       "path": "assets/landing-CdEM6nhb.css",
+       "bytes": 95102,
+       "sha256": "7d6429328ee81319078c5ae12d62be052ff60502cd79e99fffeb6b100c7c26ba",
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/landing-Cz0lX6Qn.js",
++      "bytes": 34862,
++      "sha256": "e467030eecddcfe4fea2403ca528a98409bdcf089353179e66315f5fb9ff64bb",
++      "gzipBytes": 11359,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/landing/SJS-Eagle.svg",
+       "bytes": 5528,
+@@ -1580,6 +1641,13 @@
+       "gzipBytes": 443,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/marking-BiP2n4z1.js",
++      "bytes": 5388,
++      "sha256": "640c98d54a0b28dfcee7732f0e06e9ff2bbe2f12a9fbf78876ef585d31dc44da",
++      "gzipBytes": 2261,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/marking-Bp4W3ro5.js",
+       "bytes": 1907,
+@@ -1595,10 +1663,17 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/marking-C8c0VyS-.js",
+-      "bytes": 1342,
+-      "sha256": "8b87c55927fd08f4ffdfaeeb3bf663e4176d1684e41539f8c80d2066e2c61a92",
+-      "gzipBytes": 717,
++      "path": "assets/marking-BxeR-dzM.js",
++      "bytes": 69,
++      "sha256": "709bfbf40f7dff49d3aa01cf90f22cf2ffe93fea1830e7a554fa0419e8cb4431",
++      "gzipBytes": 79,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/marking-C6qlgjnZ.js",
++      "bytes": 703,
++      "sha256": "e5d53bf67af503905839ea632643762fccaf94d8996f4bc39be32c175c68762b",
++      "gzipBytes": 416,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1622,6 +1697,13 @@
+       "gzipBytes": 500,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/marking-CmYCOMJO.js",
++      "bytes": 1342,
++      "sha256": "311a3a17e8d64440a6cad52acd59f9de77317e3e29e03a5f50748148d4f5a7df",
++      "gzipBytes": 709,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/marking-DUaHE0VX.js",
+       "bytes": 1233,
+@@ -1629,27 +1711,6 @@
+       "gzipBytes": 636,
+       "role": "lazy-runtime"
+     },
+-    {
+-      "path": "assets/marking-Df7N3d1p.js",
+-      "bytes": 5388,
+-      "sha256": "9d326c7f98adc758f3a5945d3e1c8c9f71f68f0956f4187524f446b679e29a61",
+-      "gzipBytes": 2260,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/marking-DqeKWdhE.js",
+-      "bytes": 703,
+-      "sha256": "9dad984b6ecae01e02ce8e00cbddccd4956642eb81396fa937afc25090c1b9f2",
+-      "gzipBytes": 418,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/marking-DvxylpgH.js",
+-      "bytes": 69,
+-      "sha256": "eb32ba3e249ecca2704ddd8910acdb1dfea8a7f2fd77860edb54ade2bb152b55",
+-      "gzipBytes": 79,
+-      "role": "lazy-runtime"
+-    },
+     {
+       "path": "assets/marking-JTSlmc3C.js",
+       "bytes": 1388,
+@@ -1658,10 +1719,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/mastery-BY5OygY0.js",
++      "path": "assets/mastery-js6cSvn_.js",
+       "bytes": 1470,
+-      "sha256": "b56ae0a39c9361342537e2dc0a7ed59e804bdbd4b577c04fc285ab6fc5210317",
+-      "gzipBytes": 710,
++      "sha256": "36d8b5da8c9d63e0032ca8b51b708fbd890c1b9401f5e61746108cc13632df6f",
++      "gzipBytes": 712,
+       "role": "initial-javascript"
+     },
+     {
+@@ -1684,12 +1745,19 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/persistence-40mGE8vS.js",
++      "path": "assets/persistence-CfDgR1R-.js",
+       "bytes": 33,
+-      "sha256": "3e117b5833921f3767b9f56ae2a8c9499fd2a15ed8afa8aa5669dc049c105e30",
++      "sha256": "c29c246eb88375db86c28a9a686f33a0831e505222607d591db919e816c43659",
+       "gzipBytes": 53,
+       "role": "initial-javascript"
+     },
++    {
++      "path": "assets/policy-C8A-n6Tk.js",
++      "bytes": 2747,
++      "sha256": "8cb53cd9d70a284144ab5130a7f37c177cf3f89c117631066d7cba05a436b90f",
++      "gzipBytes": 1195,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/preload-helper-BaNbYf_w.js",
+       "bytes": 1398,
+@@ -1719,17 +1787,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-B6r0PJFn.js",
+-      "bytes": 74,
+-      "sha256": "fdf91ab8edab265e57d75c3e29438a508031c1a1953ef2bd99a67f86fd987437",
+-      "gzipBytes": 84,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/provider-BX9Qk7z_.js",
+-      "bytes": 71,
+-      "sha256": "cd2d9df388b9a2739e7f32d704268a40f0dd14acc6984b69fee52116c67e818e",
+-      "gzipBytes": 80,
++      "path": "assets/provider-BXFSe5Qo.js",
++      "bytes": 56588,
++      "sha256": "428cb4771c019e2d7f42ba1c14d1d93d326915f76421d2caef88a424b0b826a4",
++      "gzipBytes": 12320,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1760,13 +1821,6 @@
+       "gzipBytes": 5115,
+       "role": "lazy-runtime"
+     },
+-    {
+-      "path": "assets/provider-C5LmJQOB.js",
+-      "bytes": 33657,
+-      "sha256": "cdce09a40726e4df5b9ea89972c4ad0fc95e986d00aa1fea49e1c094f676b38b",
+-      "gzipBytes": 5681,
+-      "role": "lazy-runtime"
+-    },
+     {
+       "path": "assets/provider-CGHOmeHy.js",
+       "bytes": 199,
+@@ -1774,6 +1828,20 @@
+       "gzipBytes": 165,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/provider-CL0nklpA.js",
++      "bytes": 189,
++      "sha256": "a472aecf9353fe048b646e1f9767a8451e5f80bfc6ba59000c2bf8f9706a9a63",
++      "gzipBytes": 138,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/provider-CmYfEUzX.js",
++      "bytes": 90,
++      "sha256": "a19c8f241fa0fc650c67052a58fbdd9d1d832bebe2877f1733bfe7d58791b4d1",
++      "gzipBytes": 94,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/provider-CuAJcp1n.js",
+       "bytes": 6773,
+@@ -1782,10 +1850,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-CwNkwalr.js",
+-      "bytes": 169,
+-      "sha256": "026133323f8122d0a7d73752db1890af6f6b69ab7682b79b6aca9922ef58e84f",
+-      "gzipBytes": 130,
++      "path": "assets/provider-DFg160Es.js",
++      "bytes": 74,
++      "sha256": "9123634ef1df71846026bcc6443e06dc87dd601457ca83b1d314eef148c3dd6c",
++      "gzipBytes": 84,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1803,31 +1871,31 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DVIl6hpE.js",
+-      "bytes": 53675,
+-      "sha256": "8936f3b7d7e140e4a487cf7d365cd7b98bba9a874c3df15dcc2399fa3ff60db1",
+-      "gzipBytes": 11021,
++      "path": "assets/provider-DZ5ptbKw.js",
++      "bytes": 33664,
++      "sha256": "3b817caeaef65e5c8a1d9b815cc51a9f975bae73c8e05846e7c1fbe1365b7067",
++      "gzipBytes": 5684,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DXkiFun7.js",
+-      "bytes": 81,
+-      "sha256": "ed086c53d506d9a12717384518c2db0131ec53c00e33a61baa1ffdadc9431b0e",
+-      "gzipBytes": 90,
++      "path": "assets/provider-DpC5YChp.js",
++      "bytes": 180,
++      "sha256": "449cbc671f8dbced9f87b28c629ee81557a8436f4b009ae31d9ac3ab4878a08d",
++      "gzipBytes": 143,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DcIw3Uc7.js",
+-      "bytes": 74,
+-      "sha256": "8de996fccc25ce33e8456101a1541d10ebcbc4b143f2553a9aa435b1a50d8ea7",
+-      "gzipBytes": 84,
++      "path": "assets/provider-GZldDoB-.js",
++      "bytes": 93,
++      "sha256": "898037cf7638affcf43f5fc8d9b5c0db2ba50d9c2856060398f8d8a3896a4e01",
++      "gzipBytes": 98,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DpC5YChp.js",
+-      "bytes": 180,
+-      "sha256": "449cbc671f8dbced9f87b28c629ee81557a8436f4b009ae31d9ac3ab4878a08d",
+-      "gzipBytes": 143,
++      "path": "assets/provider-PrYIhOi3.js",
++      "bytes": 107,
++      "sha256": "6c460eb554dc09a7f4f545444f6f77b47f199dcd027db3d42508d61cf53ed281",
++      "gzipBytes": 107,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1844,6 +1912,13 @@
+       "gzipBytes": 1393,
+       "role": "initial-javascript"
+     },
++    {
++      "path": "assets/registry-DiY3Kdn8.js",
++      "bytes": 17236,
++      "sha256": "3032dcf85b8aab2ad32a6ce171b9b3ce24584bb68ee3724cc17fe7b1926d360f",
++      "gzipBytes": 5527,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/registry-jwc2JeNr.css",
+       "bytes": 19572,
+@@ -1851,43 +1926,43 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/registry-ppZNvF9Z.js",
+-      "bytes": 16387,
+-      "sha256": "e3756574a4dde07a8796a5e8546f53b125dff052eaa318d224a11f3f9feb1f57",
+-      "gzipBytes": 5343,
++      "path": "assets/repository-Do6t54Zn.js",
++      "bytes": 129647,
++      "sha256": "77ee2e87c3dfda486a0e952c1521cf2aef4eeca7e201464c7d381438c7e60a77",
++      "gzipBytes": 41388,
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/repository-BD5__cSH.js",
+-      "bytes": 128305,
+-      "sha256": "05c2b09ed3adda897662d0baaae340b31ba2075e058cde3f96f43daf13ab6810",
+-      "gzipBytes": 41025,
++      "path": "assets/source-family-DzcIwCwe.js",
++      "bytes": 535,
++      "sha256": "9d5ba636511aaf287c68d6cd7a7b5eb39983e0fb5a7e9de234716bf365a1205d",
++      "gzipBytes": 295,
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/statistics-DG26KD0G.css",
+-      "bytes": 5970,
+-      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec",
++      "path": "assets/statistics-BXsmmV-d.js",
++      "bytes": 15036,
++      "sha256": "d8df01cd3317f20d85fb25d17eaafc82c7e119c7492db8055247e9c3064d423e",
++      "gzipBytes": 4966,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/statistics-yztivEUK.js",
+-      "bytes": 15036,
+-      "sha256": "c1af1fbf3069a71c0c5d5301d99ead6d8e50b8e5324433b50c13d3d749e449d6",
+-      "gzipBytes": 4965,
++      "path": "assets/statistics-DG26KD0G.css",
++      "bytes": 5970,
++      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/titration-curve-BFgoabrd.js",
+-      "bytes": 7277,
+-      "sha256": "4f4aa21461bb865e0fd238202d7f1fdb65f83f84c6e0e52f6ffbbf68989ec769",
+-      "gzipBytes": 3003,
++      "path": "assets/titration-curve-CzobgBdK.css",
++      "bytes": 12673,
++      "sha256": "2d24ff3e56b6aeed064a3697ff95470c1ac079f9943a537cff259b2d5a860c81",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/titration-curve-CDb2mgim.css",
+-      "bytes": 1988,
+-      "sha256": "eb059efca03bb79944463ff7db4f097b29ae3c82ca0da741bbbb6bd3b84af146",
++      "path": "assets/titration-curve-DaYOuO_3.js",
++      "bytes": 10566,
++      "sha256": "641e91b7c50edaa5c061ae26ab972a30b86ea64532bb9a41f16302270cf5704e",
++      "gzipBytes": 3881,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -1907,7 +1982,7 @@
+     {
+       "path": "index.html",
+       "bytes": 617,
+-      "sha256": "fa9326c2c54fe1165ce2102cfa4461c04c1ca6f1e9f75fd52e3d54a7d0f77292",
++      "sha256": "6a10e043c2dbd19802ca7c3c52818855feb5f3a45466704a053bd22c5bcd99d7",
+       "role": "entry"
+     }
+   ],
+@@ -2076,6 +2151,14 @@
+         2,
+         3
+       ]
++    },
++    {
++      "id": "alevel/olympiad-2011-q4",
++      "course": "alevel",
++      "strand": "olympiad",
++      "revision": false,
++      "leafIds": [],
++      "supportedLevels": []
+     }
+   ]
+ }
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\release\\igcse.runtime.json" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\release\\igcse.runtime.json"
+index 0a75038..f53d32f 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\release\\igcse.runtime.json"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\release\\igcse.runtime.json"	
+@@ -1,96 +1,100 @@
+ {
+   "schemaVersion": 1,
+   "course": "igcse",
+-  "generatedAt": "2026-10-03T17:16:22.841Z",
++  "generatedAt": "2026-10-03T18:35:49.650Z",
+   "status": "local-runtime-inventory-no-publication",
+   "buildRoot": "dist/igcse",
+   "entry": "index.html",
+   "shellGzipBudgetBytes": 204800,
+   "gzipMethod": "node:zlib gzipSync default compression; individual files summed",
+   "initialScope": "course entry plus actual ProductionFoundation, default original landing and their eager imports; excludes deferred providers/editors/statistics/import",
+-  "entryOnlyJavascriptGzipBytes": 70448,
++  "entryOnlyJavascriptGzipBytes": 70475,
+   "initialJavascript": [
+-    "assets/igcse-DgsOaaLF.js",
++    "assets/igcse-DysubMba.js",
+     "assets/jsx-runtime-Dk72oS4N.js",
+     "assets/react-dom-X1VypBGM.js",
+     "assets/preload-helper-BaNbYf_w.js",
+-    "assets/ProductionFoundation-gkliupuE.js",
+-    "assets/QuestionLevelPill-BX2_u7VS.js",
+-    "assets/DiagramViewport-DGhHqMlN.js",
+-    "assets/repository-BD5__cSH.js",
++    "assets/ProductionFoundation-oZyKim79.js",
++    "assets/QuestionLevelPill-DezQNVRx.js",
++    "assets/repository-Do6t54Zn.js",
+     "assets/canonical-identity-BbfemJId.js",
+-    "assets/definitions-ldFVBQYl.js",
++    "assets/policy-C8A-n6Tk.js",
++    "assets/engine-BOiqT4al.js",
++    "assets/definitions-CCmCJWCt.js",
+     "assets/alpha-namespace-xEhFAEHR.js",
+-    "assets/persistence-40mGE8vS.js",
+-    "assets/registry-ppZNvF9Z.js",
++    "assets/persistence-CfDgR1R-.js",
++    "assets/registry-DiY3Kdn8.js",
+     "assets/identity-DG87IKCR.js",
+     "assets/dependencies-IbyFZa8N.js",
+     "assets/QuestionChrome-W2lAHlS6.js",
+-    "assets/mastery-BY5OygY0.js",
+-    "assets/course-mastery-ChOwrGqm.js",
+-    "assets/ResponseControl-BFxZqFlK.js",
+-    "assets/landing-C1DmB2VH.js"
++    "assets/mastery-js6cSvn_.js",
++    "assets/course-mastery-LCYrOOCY.js",
++    "assets/ResponseControl-Dk3Si2R0.js",
++    "assets/source-family-DzcIwCwe.js",
++    "assets/landing-Cz0lX6Qn.js"
+   ],
+-  "initialJavascriptGzipBytes": 170952,
++  "initialJavascriptGzipBytes": 178522,
+   "lazyJavascript": [
+-    "assets/DotCrossPlayer-Bh7M88uM.js",
+-    "assets/EnergeticsPracticalPilot-DNDYqEsv.js",
+-    "assets/OlympiadHost-y3aZraCM.js",
++    "assets/DotCrossPlayer-BUxsS_Bt.js",
++    "assets/OlympiadHost-DlyVt3NC.js",
++    "assets/SourceQuestionPlayer-BEi8yUlT.js",
+     "assets/bond-enthalpy-core-B3NxXqut.js",
+     "assets/bond-enthalpy-core-M9vstt1Q.js",
+-    "assets/c3l6-D9bCg6NA.js",
+-    "assets/compatibility-DLU9UIec.js",
++    "assets/c3l6-BvRU9NzR.js",
++    "assets/c3l6-Csgejx8Q.js",
++    "assets/compatibility-DRHupYeS.js",
+     "assets/data-DRsOgynP.js",
+     "assets/data-PGygMTpc.js",
+     "assets/display-BpW8Pz6W.js",
+     "assets/dot-and-cross-B_s7lHD1.js",
+-    "assets/electron-configuration-DWCl-Y-n.js",
+-    "assets/energy-profile-BvIWj0NJ.js",
+-    "assets/engine-2bv4ZnN3.js",
++    "assets/electron-configuration-Bt6jBuT8.js",
++    "assets/energy-profile-BQnItNBa.js",
+     "assets/engine-BPgR3f6M.js",
+     "assets/engine-BoCqYcJ-.js",
+     "assets/engine-C5wdZLjG.js",
+     "assets/engine-CcL3yxLU.js",
++    "assets/engine-cGMxjA0Z.js",
+     "assets/framework-BmviDFsE.js",
+     "assets/identity-CuJJfa1P.js",
+     "assets/identity-Dr_meW4Y.js",
++    "assets/isomers2011-BiltiZTq.js",
+     "assets/layout-BncCbbQB.js",
+     "assets/marking-BKR4iOkM.js",
+     "assets/marking-BQggF3vi.js",
++    "assets/marking-BiP2n4z1.js",
+     "assets/marking-Bp4W3ro5.js",
+     "assets/marking-BxZxGm59.js",
+-    "assets/marking-C8c0VyS-.js",
++    "assets/marking-BxeR-dzM.js",
++    "assets/marking-C6qlgjnZ.js",
+     "assets/marking-CQl_-q1H.js",
+     "assets/marking-Cgahi7NL.js",
+     "assets/marking-Chm4FhyV.js",
++    "assets/marking-CmYCOMJO.js",
+     "assets/marking-DUaHE0VX.js",
+-    "assets/marking-Df7N3d1p.js",
+-    "assets/marking-DqeKWdhE.js",
+-    "assets/marking-DvxylpgH.js",
+     "assets/marking-JTSlmc3C.js",
+     "assets/model-BkCVAwjv.js",
+     "assets/provider-1PW88Uq0.js",
+     "assets/provider-6BRDwFo3.js",
+     "assets/provider-B3tKM6BW.js",
+-    "assets/provider-B6r0PJFn.js",
+-    "assets/provider-BX9Qk7z_.js",
++    "assets/provider-BXFSe5Qo.js",
+     "assets/provider-BaEZ1B4J.js",
+     "assets/provider-Bchj3b0p.js",
+     "assets/provider-BtXidDFM.js",
+     "assets/provider-C4knNNLj.js",
+-    "assets/provider-C5LmJQOB.js",
+     "assets/provider-CGHOmeHy.js",
++    "assets/provider-CL0nklpA.js",
++    "assets/provider-CmYfEUzX.js",
+     "assets/provider-CuAJcp1n.js",
+-    "assets/provider-CwNkwalr.js",
++    "assets/provider-DFg160Es.js",
+     "assets/provider-DPOJXe6C.js",
+     "assets/provider-DSNpIHbh.js",
+-    "assets/provider-DVIl6hpE.js",
+-    "assets/provider-DXkiFun7.js",
+-    "assets/provider-DcIw3Uc7.js",
++    "assets/provider-DZ5ptbKw.js",
+     "assets/provider-DpC5YChp.js",
++    "assets/provider-GZldDoB-.js",
++    "assets/provider-PrYIhOi3.js",
+     "assets/provider-aHLNm46-.js",
+-    "assets/statistics-yztivEUK.js",
+-    "assets/titration-curve-BFgoabrd.js",
++    "assets/statistics-BXsmmV-d.js",
++    "assets/titration-curve-DaYOuO_3.js",
+     "assets/types-BQzY_9Qt.js",
+     "assets/types-CGzZHUAK.js"
+   ],
+@@ -41158,7 +41162,7 @@
+   "provenance": {
+     "inventoryPath": "validation/s0/inventory/coverage-manifest.json",
+     "inventorySha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+-    "viteManifestSha256": "5077ee1d01d2607ee9c855e3e5e90508bd9d8f01eafb64b4912bbe1a7d5800b7"
++    "viteManifestSha256": "8af222609946be080cc1df22fdc0ad0e5ee08d491096132b6a1f56c574cead4d"
+   },
+   "files": [
+     {
+@@ -41204,11 +41208,11 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/DiagramViewport-DGhHqMlN.js",
+-      "bytes": 1175,
+-      "sha256": "f31c7e69b059e1cff6fe35c9d0ac34c0c94ec7c12b38d4c4f11ff91f0502046c",
+-      "gzipBytes": 604,
+-      "role": "initial-javascript"
++      "path": "assets/DotCrossPlayer-BUxsS_Bt.js",
++      "bytes": 7730,
++      "sha256": "64700e7e58740d635a104ae72506ed5056e81afe7deaee91f99efce97f7d71ae",
++      "gzipBytes": 2836,
++      "role": "lazy-runtime"
+     },
+     {
+       "path": "assets/DotCrossPlayer-B_iHdArF.css",
+@@ -41217,30 +41221,16 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/DotCrossPlayer-Bh7M88uM.js",
+-      "bytes": 7730,
+-      "sha256": "b799447c9dba3c3861954d8af5bf7f3f975855d33b2bad35659635f5190f7a30",
+-      "gzipBytes": 2838,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/EnergeticsPracticalPilot-CDMwBhEj.css",
+-      "bytes": 6970,
+-      "sha256": "22e5c4a8903b381488cced666c4ae47e47a593f5ca2fcc59e51197e71edd7d57",
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/EnergeticsPracticalPilot-DNDYqEsv.js",
+-      "bytes": 7062,
+-      "sha256": "b612bfead965e79b0f28e9d17d1d497577b810b19fd5cf0350ce0fcb76b7065f",
+-      "gzipBytes": 2528,
++      "path": "assets/OlympiadHost-BfrW8JKu.css",
++      "bytes": 281,
++      "sha256": "6f35a19f7ed557c2e374c6b6b36d8586244c1b5b36f60d8e95d6a318e47b92df",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/OlympiadHost-y3aZraCM.js",
+-      "bytes": 3594,
+-      "sha256": "41e3327c25fb6c3466ea0bbea1766778f1fc34a9c6c007f328c94478ccfe4700",
+-      "gzipBytes": 1678,
++      "path": "assets/OlympiadHost-DlyVt3NC.js",
++      "bytes": 5278,
++      "sha256": "e2b568a10f8dbdabdb46c1be93f27822173327e3f92fed39e75be29a59aaa9ba",
++      "gzipBytes": 2140,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -41250,10 +41240,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/ProductionFoundation-gkliupuE.js",
+-      "bytes": 79136,
+-      "sha256": "f8b829c18c2f5460b580c46248aa151902b3ea93e212b8ef5c6a73349da5016f",
+-      "gzipBytes": 22963,
++      "path": "assets/ProductionFoundation-oZyKim79.js",
++      "bytes": 79441,
++      "sha256": "4e8a1938f8002895d98de1adffb206ce5a0c18e802e28a59c85077b7e902d1a1",
++      "gzipBytes": 23059,
+       "role": "initial-javascript"
+     },
+     {
+@@ -41264,17 +41254,17 @@
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/QuestionLevelPill-BX2_u7VS.js",
+-      "bytes": 1447,
+-      "sha256": "141903331d9d70e443db13a417423881149fb18eebc4ab8df2a17875810c970b",
+-      "gzipBytes": 690,
++      "path": "assets/QuestionLevelPill-DezQNVRx.js",
++      "bytes": 2506,
++      "sha256": "015bcb77e66db7eec67540294052edde503652a40aebd1a7d0ee02eea210ecca",
++      "gzipBytes": 1116,
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/ResponseControl-BFxZqFlK.js",
+-      "bytes": 12881,
+-      "sha256": "12ca7d81bb0987c6b7beddef69979bc4bdaa3e8bd4504b2c4c9cff207fb95e91",
+-      "gzipBytes": 3895,
++      "path": "assets/ResponseControl-Dk3Si2R0.js",
++      "bytes": 15369,
++      "sha256": "308aab3d7005bf3da8a2a8dce64a9b6f65f6c6218009de9c678f71c23975985b",
++      "gzipBytes": 4467,
+       "role": "initial-javascript"
+     },
+     {
+@@ -41289,6 +41279,19 @@
+       "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+       "role": "licensed-brand-asset"
+     },
++    {
++      "path": "assets/SourceQuestionPlayer-87UNoqQZ.css",
++      "bytes": 55943,
++      "sha256": "aad0d50c4d63eb9263d4a9f4f6221b9a195330af2389f66781b44365e37b7c52",
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/SourceQuestionPlayer-BEi8yUlT.js",
++      "bytes": 22593,
++      "sha256": "dbc740b55f0e0da58ab056b6b43f6718b04df115a5271971916da541e3a9ee9c",
++      "gzipBytes": 7278,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/a-01-p1-B7lbrCeA.svg",
+       "bytes": 6887,
+@@ -41455,10 +41458,17 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/c3l6-D9bCg6NA.js",
+-      "bytes": 88831,
+-      "sha256": "037108966924d112767f01403e4dcee1dcbb97f4f5f8197cd1364a99afb9c768",
+-      "gzipBytes": 26396,
++      "path": "assets/c3l6-BvRU9NzR.js",
++      "bytes": 19053,
++      "sha256": "09e39d650faaef127e593d9966b7a32f98e84975b091abdb09dd8c177bcd7f8d",
++      "gzipBytes": 6731,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/c3l6-Csgejx8Q.js",
++      "bytes": 57321,
++      "sha256": "483686710a0285be61310e7f387a8ee7aabdd5600dbb82ecbe0ba978850246bc",
++      "gzipBytes": 15719,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -41469,10 +41479,10 @@
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/compatibility-DLU9UIec.js",
+-      "bytes": 12522,
+-      "sha256": "648b8267477f57bd2fa21d23914d036000783c10602c5f672d233f3fc1d5c88b",
+-      "gzipBytes": 4600,
++      "path": "assets/compatibility-DRHupYeS.js",
++      "bytes": 12686,
++      "sha256": "789515cc02a554af4a7f13cb5366ee39abbdbaf0fca5837f0a42f6d312f0fff6",
++      "gzipBytes": 4646,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -41482,9 +41492,15 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/course-mastery-ChOwrGqm.js",
++      "path": "assets/compound-3-CSEI4tRe.svg",
++      "bytes": 79090,
++      "sha256": "e2c70e8a6b201e389974056092b2b1c79d2f6d8b24f0085b3f3cb57d3d58bf66",
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/course-mastery-LCYrOOCY.js",
+       "bytes": 2422,
+-      "sha256": "8c82dfb5f573d63137a2c18c837d8ae516cfb43dd5657ca92ed03fd714d40543",
++      "sha256": "d0c57ee37d939dd302a2481c67a517683a630cdb2045f28a2b2a2fcea1f0639b",
+       "gzipBytes": 1073,
+       "role": "initial-javascript"
+     },
+@@ -41503,10 +41519,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/definitions-ldFVBQYl.js",
+-      "bytes": 48429,
+-      "sha256": "11ebf6beea1f52bd03eb0caa34ef6665a0b92daf9a44dd34954d1653132a2ce2",
+-      "gzipBytes": 7724,
++      "path": "assets/definitions-CCmCJWCt.js",
++      "bytes": 48966,
++      "sha256": "1f3bdbc2a4f00c440a8beb0659b1d2c4d8b548c5d15b160460135a7b2f401ced",
++      "gzipBytes": 8011,
+       "role": "initial-javascript"
+     },
+     {
+@@ -41537,32 +41553,38 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/electron-configuration-DBlPFIqb.css",
+-      "bytes": 4316,
+-      "sha256": "976b7ec78a7d70e08bc2cabcbc555a2d3ca62f91a66281ebf5a77f50dad4b0ea",
++      "path": "assets/electron-configuration-193xnpPU.css",
++      "bytes": 10816,
++      "sha256": "b65ebea8724ca7fdecf0f282536f12c4baee1ce0b61fb4e4df97abd6152eddba",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/electron-configuration-DWCl-Y-n.js",
+-      "bytes": 15651,
+-      "sha256": "73c0b0332ed0cdd1fef256f496e3b5206ed82cba95ff1431ba297984a9daea87",
+-      "gzipBytes": 4984,
++      "path": "assets/electron-configuration-Bt6jBuT8.js",
++      "bytes": 20490,
++      "sha256": "95830edae069be8334aa6122a0bfacdf68849d1af0e5bbdd7ffcf79743117211",
++      "gzipBytes": 6415,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/energy-profile-BvIWj0NJ.js",
+-      "bytes": 9936,
+-      "sha256": "08409cfd25bee93cab3993be2aa796a9740a180936cbbc433308d2d315a5f329",
+-      "gzipBytes": 3765,
++      "path": "assets/energy-profile-BQnItNBa.js",
++      "bytes": 11232,
++      "sha256": "a8db7088ac4d2cc6ffdbb2c3756b4b192bfc18abf61ece641fba6968d0646497",
++      "gzipBytes": 4235,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/engine-2bv4ZnN3.js",
+-      "bytes": 1989,
+-      "sha256": "09ed0f1ecf7d53d79e9e6da50f5f790e172e8039ef537aa7a5805e418e074bf1",
+-      "gzipBytes": 828,
++      "path": "assets/energy-profile-BgbZXPU7.css",
++      "bytes": 3485,
++      "sha256": "27b11c5ed2400ab07a1330d6abe943872581be68775f6a0e69b4230fcd97381b",
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/engine-BOiqT4al.js",
++      "bytes": 12596,
++      "sha256": "20e1a1f3038b440d818d5b291bea198ccd1843869e0fec33d4d15baf850fcc45",
++      "gzipBytes": 4726,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/engine-BPgR3f6M.js",
+       "bytes": 39139,
+@@ -41591,6 +41613,13 @@
+       "gzipBytes": 8893,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/engine-cGMxjA0Z.js",
++      "bytes": 1989,
++      "sha256": "7e2600f2cc2677afd811564d3b1334f3d4e1a4b7c8fd777a9e24adfafa5767dd",
++      "gzipBytes": 826,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/example-01-z-ule6NF.svg",
+       "bytes": 188583,
+@@ -41728,12 +41757,25 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/igcse-DgsOaaLF.js",
+-      "bytes": 208516,
+-      "sha256": "1727721a0f11e2ba9f24351954506e02010bc8c8729d586f2c98f185d8fcd995",
+-      "gzipBytes": 64979,
++      "path": "assets/igcse-DysubMba.js",
++      "bytes": 208566,
++      "sha256": "bc75fc5e39b0b02e98968cadaeccdf2f4279b67e3b56716bc5b84570a4099629",
++      "gzipBytes": 65006,
+       "role": "initial-javascript"
+     },
++    {
++      "path": "assets/isomers2011-BiltiZTq.js",
++      "bytes": 6080,
++      "sha256": "8b573d219c47e71a0431ad1a1197137842eaa1b98ab4d8ed0ec6a7fd5f626fe8",
++      "gzipBytes": 2322,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/isomers2011-Cqd7pXJP.css",
++      "bytes": 1910,
++      "sha256": "6dc5a0d5931416943121ef147a3382182bf1c712f6751a368f1cd50f90cadf6f",
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/jsx-runtime-Dk72oS4N.js",
+       "bytes": 8774,
+@@ -41741,19 +41783,19 @@
+       "gzipBytes": 3327,
+       "role": "initial-javascript"
+     },
+-    {
+-      "path": "assets/landing-C1DmB2VH.js",
+-      "bytes": 34862,
+-      "sha256": "fddfdd1dd585aa3be295c2c5e00838439afbf9b7e76cd9757deb539bbf9b3315",
+-      "gzipBytes": 11358,
+-      "role": "initial-javascript"
+-    },
+     {
+       "path": "assets/landing-CdEM6nhb.css",
+       "bytes": 95102,
+       "sha256": "7d6429328ee81319078c5ae12d62be052ff60502cd79e99fffeb6b100c7c26ba",
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/landing-Cz0lX6Qn.js",
++      "bytes": 34862,
++      "sha256": "e467030eecddcfe4fea2403ca528a98409bdcf089353179e66315f5fb9ff64bb",
++      "gzipBytes": 11359,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/landing/SJS-Eagle.svg",
+       "bytes": 5528,
+@@ -41787,6 +41829,13 @@
+       "gzipBytes": 443,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/marking-BiP2n4z1.js",
++      "bytes": 5388,
++      "sha256": "640c98d54a0b28dfcee7732f0e06e9ff2bbe2f12a9fbf78876ef585d31dc44da",
++      "gzipBytes": 2261,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/marking-Bp4W3ro5.js",
+       "bytes": 1907,
+@@ -41802,10 +41851,17 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/marking-C8c0VyS-.js",
+-      "bytes": 1342,
+-      "sha256": "8b87c55927fd08f4ffdfaeeb3bf663e4176d1684e41539f8c80d2066e2c61a92",
+-      "gzipBytes": 717,
++      "path": "assets/marking-BxeR-dzM.js",
++      "bytes": 69,
++      "sha256": "709bfbf40f7dff49d3aa01cf90f22cf2ffe93fea1830e7a554fa0419e8cb4431",
++      "gzipBytes": 79,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/marking-C6qlgjnZ.js",
++      "bytes": 703,
++      "sha256": "e5d53bf67af503905839ea632643762fccaf94d8996f4bc39be32c175c68762b",
++      "gzipBytes": 416,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -41829,6 +41885,13 @@
+       "gzipBytes": 500,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/marking-CmYCOMJO.js",
++      "bytes": 1342,
++      "sha256": "311a3a17e8d64440a6cad52acd59f9de77317e3e29e03a5f50748148d4f5a7df",
++      "gzipBytes": 709,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/marking-DUaHE0VX.js",
+       "bytes": 1233,
+@@ -41836,27 +41899,6 @@
+       "gzipBytes": 636,
+       "role": "lazy-runtime"
+     },
+-    {
+-      "path": "assets/marking-Df7N3d1p.js",
+-      "bytes": 5388,
+-      "sha256": "9d326c7f98adc758f3a5945d3e1c8c9f71f68f0956f4187524f446b679e29a61",
+-      "gzipBytes": 2260,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/marking-DqeKWdhE.js",
+-      "bytes": 703,
+-      "sha256": "9dad984b6ecae01e02ce8e00cbddccd4956642eb81396fa937afc25090c1b9f2",
+-      "gzipBytes": 418,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/marking-DvxylpgH.js",
+-      "bytes": 69,
+-      "sha256": "eb32ba3e249ecca2704ddd8910acdb1dfea8a7f2fd77860edb54ade2bb152b55",
+-      "gzipBytes": 79,
+-      "role": "lazy-runtime"
+-    },
+     {
+       "path": "assets/marking-JTSlmc3C.js",
+       "bytes": 1388,
+@@ -41865,10 +41907,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/mastery-BY5OygY0.js",
++      "path": "assets/mastery-js6cSvn_.js",
+       "bytes": 1470,
+-      "sha256": "b56ae0a39c9361342537e2dc0a7ed59e804bdbd4b577c04fc285ab6fc5210317",
+-      "gzipBytes": 710,
++      "sha256": "36d8b5da8c9d63e0032ca8b51b708fbd890c1b9401f5e61746108cc13632df6f",
++      "gzipBytes": 712,
+       "role": "initial-javascript"
+     },
+     {
+@@ -41891,12 +41933,19 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/persistence-40mGE8vS.js",
++      "path": "assets/persistence-CfDgR1R-.js",
+       "bytes": 33,
+-      "sha256": "3e117b5833921f3767b9f56ae2a8c9499fd2a15ed8afa8aa5669dc049c105e30",
++      "sha256": "c29c246eb88375db86c28a9a686f33a0831e505222607d591db919e816c43659",
+       "gzipBytes": 53,
+       "role": "initial-javascript"
+     },
++    {
++      "path": "assets/policy-C8A-n6Tk.js",
++      "bytes": 2747,
++      "sha256": "8cb53cd9d70a284144ab5130a7f37c177cf3f89c117631066d7cba05a436b90f",
++      "gzipBytes": 1195,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/preload-helper-BaNbYf_w.js",
+       "bytes": 1398,
+@@ -41926,17 +41975,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-B6r0PJFn.js",
+-      "bytes": 74,
+-      "sha256": "fdf91ab8edab265e57d75c3e29438a508031c1a1953ef2bd99a67f86fd987437",
+-      "gzipBytes": 84,
+-      "role": "lazy-runtime"
+-    },
+-    {
+-      "path": "assets/provider-BX9Qk7z_.js",
+-      "bytes": 71,
+-      "sha256": "cd2d9df388b9a2739e7f32d704268a40f0dd14acc6984b69fee52116c67e818e",
+-      "gzipBytes": 80,
++      "path": "assets/provider-BXFSe5Qo.js",
++      "bytes": 56588,
++      "sha256": "428cb4771c019e2d7f42ba1c14d1d93d326915f76421d2caef88a424b0b826a4",
++      "gzipBytes": 12320,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -41967,13 +42009,6 @@
+       "gzipBytes": 5115,
+       "role": "lazy-runtime"
+     },
+-    {
+-      "path": "assets/provider-C5LmJQOB.js",
+-      "bytes": 33657,
+-      "sha256": "cdce09a40726e4df5b9ea89972c4ad0fc95e986d00aa1fea49e1c094f676b38b",
+-      "gzipBytes": 5681,
+-      "role": "lazy-runtime"
+-    },
+     {
+       "path": "assets/provider-CGHOmeHy.js",
+       "bytes": 199,
+@@ -41981,6 +42016,20 @@
+       "gzipBytes": 165,
+       "role": "lazy-runtime"
+     },
++    {
++      "path": "assets/provider-CL0nklpA.js",
++      "bytes": 189,
++      "sha256": "a472aecf9353fe048b646e1f9767a8451e5f80bfc6ba59000c2bf8f9706a9a63",
++      "gzipBytes": 138,
++      "role": "lazy-runtime"
++    },
++    {
++      "path": "assets/provider-CmYfEUzX.js",
++      "bytes": 90,
++      "sha256": "a19c8f241fa0fc650c67052a58fbdd9d1d832bebe2877f1733bfe7d58791b4d1",
++      "gzipBytes": 94,
++      "role": "lazy-runtime"
++    },
+     {
+       "path": "assets/provider-CuAJcp1n.js",
+       "bytes": 6773,
+@@ -41989,10 +42038,10 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-CwNkwalr.js",
+-      "bytes": 169,
+-      "sha256": "026133323f8122d0a7d73752db1890af6f6b69ab7682b79b6aca9922ef58e84f",
+-      "gzipBytes": 130,
++      "path": "assets/provider-DFg160Es.js",
++      "bytes": 74,
++      "sha256": "9123634ef1df71846026bcc6443e06dc87dd601457ca83b1d314eef148c3dd6c",
++      "gzipBytes": 84,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -42010,31 +42059,31 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DVIl6hpE.js",
+-      "bytes": 53675,
+-      "sha256": "8936f3b7d7e140e4a487cf7d365cd7b98bba9a874c3df15dcc2399fa3ff60db1",
+-      "gzipBytes": 11021,
++      "path": "assets/provider-DZ5ptbKw.js",
++      "bytes": 33664,
++      "sha256": "3b817caeaef65e5c8a1d9b815cc51a9f975bae73c8e05846e7c1fbe1365b7067",
++      "gzipBytes": 5684,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DXkiFun7.js",
+-      "bytes": 81,
+-      "sha256": "ed086c53d506d9a12717384518c2db0131ec53c00e33a61baa1ffdadc9431b0e",
+-      "gzipBytes": 90,
++      "path": "assets/provider-DpC5YChp.js",
++      "bytes": 180,
++      "sha256": "449cbc671f8dbced9f87b28c629ee81557a8436f4b009ae31d9ac3ab4878a08d",
++      "gzipBytes": 143,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DcIw3Uc7.js",
+-      "bytes": 74,
+-      "sha256": "8de996fccc25ce33e8456101a1541d10ebcbc4b143f2553a9aa435b1a50d8ea7",
+-      "gzipBytes": 84,
++      "path": "assets/provider-GZldDoB-.js",
++      "bytes": 93,
++      "sha256": "898037cf7638affcf43f5fc8d9b5c0db2ba50d9c2856060398f8d8a3896a4e01",
++      "gzipBytes": 98,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/provider-DpC5YChp.js",
+-      "bytes": 180,
+-      "sha256": "449cbc671f8dbced9f87b28c629ee81557a8436f4b009ae31d9ac3ab4878a08d",
+-      "gzipBytes": 143,
++      "path": "assets/provider-PrYIhOi3.js",
++      "bytes": 107,
++      "sha256": "6c460eb554dc09a7f4f545444f6f77b47f199dcd027db3d42508d61cf53ed281",
++      "gzipBytes": 107,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -42051,6 +42100,13 @@
+       "gzipBytes": 1393,
+       "role": "initial-javascript"
+     },
++    {
++      "path": "assets/registry-DiY3Kdn8.js",
++      "bytes": 17236,
++      "sha256": "3032dcf85b8aab2ad32a6ce171b9b3ce24584bb68ee3724cc17fe7b1926d360f",
++      "gzipBytes": 5527,
++      "role": "initial-javascript"
++    },
+     {
+       "path": "assets/registry-jwc2JeNr.css",
+       "bytes": 19572,
+@@ -42058,43 +42114,43 @@
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/registry-ppZNvF9Z.js",
+-      "bytes": 16387,
+-      "sha256": "e3756574a4dde07a8796a5e8546f53b125dff052eaa318d224a11f3f9feb1f57",
+-      "gzipBytes": 5343,
++      "path": "assets/repository-Do6t54Zn.js",
++      "bytes": 129647,
++      "sha256": "77ee2e87c3dfda486a0e952c1521cf2aef4eeca7e201464c7d381438c7e60a77",
++      "gzipBytes": 41388,
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/repository-BD5__cSH.js",
+-      "bytes": 128305,
+-      "sha256": "05c2b09ed3adda897662d0baaae340b31ba2075e058cde3f96f43daf13ab6810",
+-      "gzipBytes": 41025,
++      "path": "assets/source-family-DzcIwCwe.js",
++      "bytes": 535,
++      "sha256": "9d5ba636511aaf287c68d6cd7a7b5eb39983e0fb5a7e9de234716bf365a1205d",
++      "gzipBytes": 295,
+       "role": "initial-javascript"
+     },
+     {
+-      "path": "assets/statistics-DG26KD0G.css",
+-      "bytes": 5970,
+-      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec",
++      "path": "assets/statistics-BXsmmV-d.js",
++      "bytes": 15036,
++      "sha256": "d8df01cd3317f20d85fb25d17eaafc82c7e119c7492db8055247e9c3064d423e",
++      "gzipBytes": 4966,
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/statistics-yztivEUK.js",
+-      "bytes": 15036,
+-      "sha256": "c1af1fbf3069a71c0c5d5301d99ead6d8e50b8e5324433b50c13d3d749e449d6",
+-      "gzipBytes": 4965,
++      "path": "assets/statistics-DG26KD0G.css",
++      "bytes": 5970,
++      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/titration-curve-BFgoabrd.js",
+-      "bytes": 7277,
+-      "sha256": "4f4aa21461bb865e0fd238202d7f1fdb65f83f84c6e0e52f6ffbbf68989ec769",
+-      "gzipBytes": 3003,
++      "path": "assets/titration-curve-CzobgBdK.css",
++      "bytes": 12673,
++      "sha256": "2d24ff3e56b6aeed064a3697ff95470c1ac079f9943a537cff259b2d5a860c81",
+       "role": "lazy-runtime"
+     },
+     {
+-      "path": "assets/titration-curve-CDb2mgim.css",
+-      "bytes": 1988,
+-      "sha256": "eb059efca03bb79944463ff7db4f097b29ae3c82ca0da741bbbb6bd3b84af146",
++      "path": "assets/titration-curve-DaYOuO_3.js",
++      "bytes": 10566,
++      "sha256": "641e91b7c50edaa5c061ae26ab972a30b86ea64532bb9a41f16302270cf5704e",
++      "gzipBytes": 3881,
+       "role": "lazy-runtime"
+     },
+     {
+@@ -42114,7 +42170,7 @@
+     {
+       "path": "index.html",
+       "bytes": 614,
+-      "sha256": "1205d2e5d992b35b8934b99391e0db0f332f92f81d8e550baae9f1875cb7bf22",
++      "sha256": "96f3f61c3982e8a73e4db700ebf7662a3a8517302f5bcb21fa93f386a8d2635d",
+       "role": "entry"
+     }
+   ],
+@@ -42283,6 +42339,14 @@
+         2,
+         3
+       ]
++    },
++    {
++      "id": "alevel/olympiad-2011-q4",
++      "course": "alevel",
++      "strand": "olympiad",
++      "revision": false,
++      "leafIds": [],
++      "supportedLevels": []
+     }
+   ]
+ }
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\protect-originals.mjs" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\protect-originals.mjs"
+index aa1bca6..5475c8c 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\protect-originals.mjs"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\protect-originals.mjs"	
+@@ -50,7 +50,10 @@ if (mode==='capture') {
+   const baseline=JSON.parse(fs.readFileSync(baselinePath,'utf8'));
+   const changed=[...new Set([...Object.keys(baseline.files),...Object.keys(files)])].filter(key=>JSON.stringify(baseline.files[key])!==JSON.stringify(files[key]));
+   const result={status:changed.length?'FAIL':'PASS',checkedAt:new Date().toISOString(),fileCount:Object.keys(files).length,changed,metadataOnly:Object.keys(files).filter(key=>files[key].contentHashUnavailable)};
+-  fs.writeFileSync(path.join(project,'validation','original-app-check.json'),JSON.stringify(result,null,2)+'\n');
++  const outputIndex = process.argv.indexOf('--output');
++  const output = outputIndex === -1 ? path.join(project,'validation','original-app-check.json') : path.resolve(project,process.argv[outputIndex+1]);
++  if (!output.startsWith(project+path.sep)) throw Error('Protection evidence must stay inside project');
++  fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n');
+   console.log(JSON.stringify({...result,metadataOnly:undefined,metadataOnlyCount:result.metadataOnly.length}));
+   if(changed.length) process.exitCode=1;
+ }
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\release-s4.mjs" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\release-s4.mjs"
+index 0fda798..0b148a3 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\release-s4.mjs"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\release-s4.mjs"	
+@@ -1,9 +1,12 @@
+ /** Source-owned independent course release inventories. No build/deploy/copy side effects. */
+ import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {gzipSync} from 'node:zlib';
+ import {compatibilityRoutes} from '../src/compatibility/routes.ts';
++import { olympiad2011Definition } from '../src/catalogue/olympiad-2011-definition.ts';
+ const project=path.resolve(import.meta.dirname,'..');
+ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+ const coverage=JSON.parse(fs.readFileSync(path.join(project,'validation/s0/inventory/coverage-manifest.json'),'utf8'));
++// Keep frozen migration inventory intact; append separately authorised content.
++coverage.activities.push({id:olympiad2011Definition.id,course:'alevel',strand:'olympiad',supportedLevels:[],leafIds:[],activeBank:'Seven fixed C4H10O constitutional structures',generatorFamilies:[],finiteGeneratorConfigurations:7,sourceRoot:'resources/Olympiads/audit/organic-pilot-brief.md',sourceHashes:olympiad2011Definition.source});
+ const explicitAssets=['assets/SJS-Eagle.svg','assets/fonts/Comfortaa-Bold.ttf','assets/fonts/OFL-Comfortaa.txt','assets/landing/SJS-Eagle.svg','assets/landing/fonts/Comfortaa-Bold.ttf'];
+ export function releaseInventory(course){
+  if(!['alevel','igcse'].includes(course))throw Error('Course must be alevel or igcse');
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\test_revision_registration.mjs" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\test_revision_registration.mjs"
+index fac1e27..4e55bfe 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\test_revision_registration.mjs"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\test_revision_registration.mjs"	
+@@ -13,7 +13,7 @@ import { IDLE_LIMITS } from '../src/domain/timing/active-clock.ts';
+ test('every complete registered gem has genuine practice/revision targets, source tuning and reproducible providers', async () => {
+   const contract = JSON.parse(fs.readFileSync(new URL('../project-contract.json', import.meta.url), 'utf8'));
+   assert.deepEqual(productionRegistry.activities.map(item=>item.id).sort(), contract.activities.map(item=>item.id).sort());
+-  assert.equal(productionRegistry.activities.length,12);
++  assert.equal(productionRegistry.activities.length,13);
+   let total = 0;
+   for (const course of ['alevel','igcse']) {
+     const registrations = productionRegistry.curriculumFor(course);
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\validate-s4-release.mjs" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\validate-s4-release.mjs"
+index a1da82f..83d1e09 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\validate-s4-release.mjs"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\validate-s4-release.mjs"	
+@@ -10,8 +10,8 @@ export function validateRelease(course){
+  const contract=JSON.parse(fs.readFileSync(path.join(project,'project-contract.json'),'utf8'));
+  assert.deepEqual(manifest.activities.map(a=>a.id).sort(),contract.activities.filter(a=>a.course===course).map(a=>a.id).sort());
+  assert.deepEqual(manifest.switchableCourses,['alevel','igcse']);
+- assert.deepEqual(manifest.switchableActivities.map(a=>a.id).sort(),contract.activities.map(a=>a.id).sort(),'Switchable entry must expose exactly the authorised twelve activities');
+- assert.equal(manifest.activities.length,6);assert.equal(new Set(manifest.files.map(f=>f.path)).size,manifest.files.length);
++ assert.deepEqual(manifest.switchableActivities.map(a=>a.id).sort(),contract.activities.map(a=>a.id).sort(),'Switchable entry must expose exactly the authorised thirteen activities');
++ assert.equal(manifest.activities.length,course==='alevel'?7:6);assert.equal(new Set(manifest.files.map(f=>f.path)).size,manifest.files.length);
+  const root=path.join(project,'dist',course),physical=walk(root).filter(p=>!p.startsWith('.vite/'));assert.deepEqual(physical.sort(),manifest.files.map(f=>f.path).sort(),'Unexpected built file outside explicitly approved runtime closure');
+  assert(manifest.initialJavascriptGzipBytes<=204800,'Initial JS gzip budget exceeded');assert(manifest.lazyJavascript.length>0,'No lazy activity code');
+  for(const f of manifest.files){assert(!forbidden.test(f.path),`Nonruntime/excluded release file ${f.path}`);const full=path.resolve(root,f.path);assert(full.startsWith(root+path.sep));const b=fs.readFileSync(full);assert.equal(b.length,f.bytes);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),f.sha256);if(f.path.endsWith('.js')){
+@@ -23,7 +23,7 @@ export function validateRelease(course){
+  for(const asset of manifest.requiredBrandAssets){assert(manifest.files.some(f=>f.path===asset));assert.deepEqual(fs.readFileSync(path.join(root,asset)),fs.readFileSync(path.join(project,'public',asset)),`Licensed brand asset differs from source: ${asset}`);}
+  assert.deepEqual(manifest.files.filter(f=>f.role==='compatibility-alias').map(f=>f.path).sort(),[...compatibilityRoutes[course]].sort());
+  for(const alias of compatibilityRoutes[course]){const html=fs.readFileSync(path.join(root,alias),'utf8');assert(html.length<5000,'Alias should be a tiny relative redirect');assert(!/https?:\/\/|<iframe|DEV-PH-v1|rocket/i.test(html),'Alias contains excluded/external runtime');assert(html.includes('../../index.html'),'Alias must preserve nested static prefix');}
+- for(const a of manifest.activities){assert(a.sourceHashes?.length||Object.keys(a.sourceHashes||{}).length,`Missing provenance ${a.id}`);assert.equal(a.revision,a.strand==='curriculum');if(a.strand==='olympiad'){assert.equal(course,'alevel');assert.equal(a.id,'alevel/c3l6-organic-reactions');assert.equal(a.leafIds.length,0);}}
++ for(const a of manifest.activities){assert(a.sourceHashes?.length||Object.keys(a.sourceHashes||{}).length,`Missing provenance ${a.id}`);assert.equal(a.revision,a.strand==='curriculum');if(a.strand==='olympiad'){assert.equal(course,'alevel');assert(['alevel/c3l6-organic-reactions','alevel/olympiad-2011-q4'].includes(a.id));assert.equal(a.leafIds.length,0);assert.equal(a.supportedLevels.length,0);}}
+  assert(!/iframe|https?:\/\/[^"']+\.js/i.test(fs.readFileSync(path.join(root,'index.html'),'utf8')));
+  return {course,status:'PASS',activityCount:manifest.activities.length,runtimeFileCount:manifest.files.length,initialJavascriptGzipBytes:manifest.initialJavascriptGzipBytes,lazyJavascriptChunks:manifest.lazyJavascript.length,manifestSha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),checkedAt:new Date().toISOString()};
+ }
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\write-catalogue-definitions.mjs" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\write-catalogue-definitions.mjs"
+index 1a93713..6537af5 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\scripts\\write-catalogue-definitions.mjs"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\write-catalogue-definitions.mjs"	
+@@ -31,9 +31,9 @@ for(const addition of authored.gems){
+ const gems=definitions.flatMap(activity=>activity.gems),ids=gems.map(gem=>gem.id);
+ if(ids.some(id=>typeof id!=='string'||/rocket|c3l6/i.test(id))||new Set(ids).size!==ids.length)throw Error('Invalid or duplicate canonical gem ID');
+ for(const gem of gems){if(!Array.isArray(gem.supportedLevels)||!gem.supportedLevels.length||new Set(gem.supportedLevels).size!==gem.supportedLevels.length||gem.supportedLevels.some(level=>![1,2,3].includes(level))||gem.mastery?.gemId!==gem.id||JSON.stringify(gem.mastery.supportedLevels.map(setting=>setting.level).sort())!==JSON.stringify([...gem.supportedLevels].sort()))throw Error('Inconsistent canonical supported levels');}
+-const content=`// Regenerate from accepted source inventory: node scripts/write-catalogue-definitions.mjs\n// Metadata is not an enabled provider; createRegistry registers only explicitly supplied adapters.\nimport type {ActivityDefinition} from './registry.ts';\nexport const activityDefinitions = ${JSON.stringify(definitions,null,2)} as const satisfies readonly ActivityDefinition[];\n`;
++const content=`// Regenerate from accepted source inventory: node scripts/write-catalogue-definitions.mjs\n// Metadata is not an enabled provider; createRegistry registers only explicitly supplied adapters.\nimport type {ActivityDefinition} from './registry.ts';\nimport { olympiad2011Definition } from './olympiad-2011-definition.ts';\nexport const activityDefinitions = ${JSON.stringify(definitions,null,2).slice(0,-1)},\n  olympiad2011Definition\n] as const satisfies readonly ActivityDefinition[];\n`;
+ const target=path.join(project,'src/catalogue/definitions.ts');
+ if(process.argv.includes('--check')) {
+  if(fs.readFileSync(target,'utf8')!==content) throw Error('Catalogue differs from accepted source manifest');
+- console.log(JSON.stringify({status:'PASS',activities:definitions.length,gems:definitions.reduce((n,a)=>n+a.gems.length,0)}));
+-} else {fs.writeFileSync(target,content);console.log(JSON.stringify({status:'GENERATED',activities:definitions.length}));}
++ console.log(JSON.stringify({status:'PASS',activities:definitions.length+1,gems:definitions.reduce((n,a)=>n+a.gems.length,0)}));
++} else {fs.writeFileSync(target,content);console.log(JSON.stringify({status:'GENERATED',activities:definitions.length+1}));}
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\catalogue\\definitions.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\catalogue\\definitions.ts"
+index 773861d..81e700d 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\catalogue\\definitions.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\catalogue\\definitions.ts"	
+@@ -1,6 +1,7 @@
+ // Regenerate from accepted source inventory: node scripts/write-catalogue-definitions.mjs
+ // Metadata is not an enabled provider; createRegistry registers only explicitly supplied adapters.
+ import type {ActivityDefinition} from './registry.ts';
++import { olympiad2011Definition } from './olympiad-2011-definition.ts';
+ export const activityDefinitions = [
+   {
+     "id": "alevel/acid-base-calculations",
+@@ -1375,4 +1376,6 @@ export const activityDefinitions = [
+       }
+     ]
+   }
++,
++  olympiad2011Definition
+ ] as const satisfies readonly ActivityDefinition[];
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\catalogue\\registry.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\catalogue\\registry.ts"
+index 111d5f7..10ecda4 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\catalogue\\registry.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\catalogue\\registry.ts"	
+@@ -15,6 +15,7 @@ import type {
+   IdleLimitMs,
+   LearningReviewPolicy,
+   OlympiadRegistration,
++  OlympiadActivityId,
+ } from '../contracts/index.ts';
+ import { activityDefinitions } from './definitions.ts';
+ 
+@@ -28,7 +29,7 @@ export type ActivityDefinition = DefinitionBase &
+     | Readonly<{ id: ALevelActivityId; course: 'alevel'; strand: 'curriculum' }>
+     | Readonly<{ id: IGCSEActivityId; course: 'igcse'; strand: 'curriculum' }>
+     | Readonly<{
+-        id: 'alevel/c3l6-organic-reactions';
++        id: OlympiadActivityId;
+         course: 'alevel';
+         strand: 'olympiad';
+         gems: readonly [];
+@@ -45,7 +46,7 @@ export interface CurriculumAdapter {
+ /** Definitions remain disabled until their complete checked activity adapter is supplied. */
+ export function createRegistry(
+   adapters: readonly CurriculumAdapter[],
+-  olympiad?: OlympiadRegistration,
++  olympiad?: OlympiadRegistration | readonly OlympiadRegistration[],
+ ): ActivityRegistry {
+   const seen = new Set<ActivityId>();
+   const activities: ActivityRegistration[] = adapters.map((adapter) => {
+@@ -72,14 +73,15 @@ export function createRegistry(
+       ? { ...common, course: 'alevel' as const, id: definition.id }
+       : { ...common, course: 'igcse' as const, id: definition.id };
+   });
+-  if (olympiad) {
++  for (const challenge of olympiad ? Array.isArray(olympiad) ? olympiad : [olympiad] : []) {
+     if (
+-      olympiad.id !== 'alevel/c3l6-organic-reactions' ||
+-      olympiad.strand !== 'olympiad' ||
+-      olympiad.revision !== false
++      !activityDefinitions.some(d => d.id === challenge.id && d.strand === 'olympiad') ||
++      challenge.strand !== 'olympiad' ||
++      challenge.revision !== false || seen.has(challenge.id)
+     )
+       throw Error('Invalid Olympiad registration');
+-    activities.push(olympiad);
++    seen.add(challenge.id);
++    activities.push(challenge);
+   }
+   return {
+     activities: Object.freeze(activities),
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\catalogue\\scope.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\catalogue\\scope.ts"
+index eccf141..d23806e 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\catalogue\\scope.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\catalogue\\scope.ts"	
+@@ -1,5 +1,5 @@
+ // Revision, mastery and persistence use the same checked catalogue metadata.
+-import type { ALevelActivityId, IGCSEActivityId, Level } from '../contracts/index.ts';
++import type { ALevelActivityId, IGCSEActivityId, Level, OlympiadActivityId } from '../contracts/index.ts';
+ import { activityDefinitions } from './definitions.ts';
+ import type { ActivityDefinition } from './registry.ts';
+ type CurriculumScope<Id, Course> = Readonly<{
+@@ -13,7 +13,7 @@ export type ActivityScope =
+   | CurriculumScope<ALevelActivityId, 'alevel'>
+   | CurriculumScope<IGCSEActivityId, 'igcse'>
+   | Readonly<{
+-      id: 'alevel/c3l6-organic-reactions';
++      id: OlympiadActivityId;
+       course: 'alevel';
+       strand: 'olympiad';
+       supportedLevels: readonly [];
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\compatibility\\LegacyImportView.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\compatibility\\LegacyImportView.tsx"
+index 64a0e76..576edef 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\compatibility\\LegacyImportView.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\compatibility\\LegacyImportView.tsx"	
+@@ -32,9 +32,11 @@ export function LegacyImportView({ namespace, databaseName }: CourseDataViewProp
+       if (!history.ok) throw Error(history.error.message);
+       const olympiad =
+         namespace.course === 'alevel' ? await repository.loadOlympiad(namespace.profileId) : null;
++      const isomers = namespace.course === 'alevel' ? await repository.loadOlympiad(namespace.profileId,'alevel/olympiad-2011-q4') : null;
+       if (olympiad && !olympiad.ok) throw Error(olympiad.error.message);
++      if (isomers && !isomers.ok) throw Error(isomers.error.message);
+       const curriculum = history.value,
+-        progress = olympiad?.ok && olympiad.value ? [olympiad.value] : [];
++        progress = [...(olympiad?.ok && olympiad.value ? [olympiad.value] : []), ...(isomers?.ok && isomers.value ? [isomers.value] : [])];
+       const batch: ImportBatch = {
+         namespace,
+         source: {
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\identity.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\identity.ts"
+index 97f322d..f71f2c3 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\identity.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\identity.ts"	
+@@ -24,7 +24,7 @@ export type IGCSEActivityId =
+   | 'igcse/energy-enthalpy'
+   | 'igcse/energetics-practical';
+ export type CurriculumActivityId = ALevelActivityId | IGCSEActivityId;
+-export type OlympiadActivityId = 'alevel/c3l6-organic-reactions';
++export type OlympiadActivityId = 'alevel/c3l6-organic-reactions' | 'alevel/olympiad-2011-q4';
+ export type ActivityId = CurriculumActivityId | OlympiadActivityId;
+ export type Namespace = Readonly<{ course: Course; profileId: ProfileId }>;
+ export type CurriculumTarget =
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\olympiad.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\olympiad.ts"
+index a0ac063..9506a29 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\olympiad.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\olympiad.ts"	
+@@ -3,6 +3,37 @@ import type { ProfileId } from './identity';
+ import type { ContentBlock } from './question';
+ import type { MoleculeGraph } from './editors';
+ 
++export type IsomerBox = '1' | '2' | '3' | '4' | '5' | '6' | '7';
++export interface IsomerCheck {
++  readonly fullyCorrect: number;
++  readonly wrongPlace: number;
++  readonly drawingFingerprint: string;
++}
++export interface IsomerProgress {
++  readonly kind: 'olympiad-completion';
++  readonly course: 'alevel';
++  readonly profileId: ProfileId;
++  readonly activityId: 'alevel/olympiad-2011-q4';
++  readonly drawings: Readonly<Partial<Record<IsomerBox, MoleculeState>>>;
++  readonly selected: IsomerBox;
++  readonly check: IsomerCheck | null;
++  readonly completed: boolean;
++}
++export interface IsomerChallenge {
++  readonly activityId: 'alevel/olympiad-2011-q4';
++  readonly answers: readonly Readonly<{ id: IsomerBox; name: string; smiles: string; graph: MoleculeGraph }>[];
++}
++export type IsomerCommand =
++  | Readonly<{ kind: 'draw'; box: IsomerBox; drawing: MoleculeState }>
++  | Readonly<{ kind: 'select-box'; box: IsomerBox }>
++  | Readonly<{ kind: 'check' | 'restart' }>;
++export interface IsomerPolicy {
++  readonly transition: (challenge: IsomerChallenge, progress: IsomerProgress, command: IsomerCommand) => Readonly<{ accepted: boolean; progress: IsomerProgress; message: string }>;
++  readonly validateCompletion: (challenge: IsomerChallenge, progress: IsomerProgress) => IsomerProgress;
++}
++export type OlympiadProgress = C3L6Progress | IsomerProgress;
++export type OlympiadCommand = ChallengeCommand | IsomerCommand;
++
+ export type C3Classification = 'oxidation' | 'reduction' | 'hydrolysis';
+ export type C3BSlot = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'J' | 'K' | 'L' | 'M';
+ export type C3CSlot = 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\registry.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\registry.ts"
+index fc643b7..06ba43e 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\registry.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\registry.ts"	
+@@ -8,7 +8,7 @@ import type {
+   Level,
+   SourceReference,
+ } from './identity';
+-import type { C3L6Challenge, C3L6Dependencies, C3L6Policy } from './olympiad';
++import type { C3L6Challenge, C3L6Dependencies, C3L6Policy, IsomerChallenge, IsomerPolicy } from './olympiad';
+ import type { MarkingPolicy, Question, QuestionProvider } from './question';
+ import type { MasterySetting } from './session';
+ 
+@@ -41,7 +41,7 @@ export type CurriculumRegistration = RegistrationBase &
+     revision: true;
+   }>;
+ export type OlympiadRegistration = RegistrationBase &
+-  Readonly<{
++  (Readonly<{
+     id: 'alevel/c3l6-organic-reactions';
+     course: 'alevel';
+     strand: 'olympiad';
+@@ -53,7 +53,18 @@ export type OlympiadRegistration = RegistrationBase &
+     gems?: never;
+     mastery?: never;
+     idleAllowance?: never;
+-  }>;
++  }> | Readonly<{
++    id: 'alevel/olympiad-2011-q4';
++    course: 'alevel';
++    strand: 'olympiad';
++    renderer: 'seven-isomer-challenge';
++    provider: () => Promise<IsomerChallenge>;
++    marking: () => Promise<IsomerPolicy>;
++    revision: false;
++    gems?: never;
++    mastery?: never;
++    idleAllowance?: never;
++  }>);
+ export type ActivityRegistration = CurriculumRegistration | OlympiadRegistration;
+ /** Explicit source-owned array, checked for duplicates/exact scope by integration. */
+ export interface ActivityRegistry {
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\repository.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\repository.ts"
+index 1160452..95ab673 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\contracts\\repository.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\repository.ts"	
+@@ -1,6 +1,6 @@
+ import type { AttemptId, Namespace, SessionId } from './identity';
+ import type { StudentAttempt } from './attempt';
+-import type { C3L6Progress } from './olympiad';
++import type { C3L6Progress, OlympiadProgress, IsomerProgress } from './olympiad';
+ import type { CurriculumEvidence, CurriculumSession } from './session';
+ 
+ export type StorageFailure = Readonly<{
+@@ -38,7 +38,7 @@ export interface ImportBatch {
+   readonly namespace: Namespace;
+   readonly source: ImportSource;
+   readonly curriculum: readonly CurriculumEvidence[];
+-  readonly olympiad: readonly C3L6Progress[];
++  readonly olympiad: readonly OlympiadProgress[];
+ }
+ export interface ImportReceipt {
+   readonly source: ImportSource;
+@@ -62,8 +62,11 @@ export interface ChemistryRepository {
+   ) => Promise<RepositoryResult<readonly CurriculumEvidence[]>>;
+   readonly saveCurriculum: (write: CurriculumWrite) => Promise<RepositoryResult<SaveReceipt>>;
+   readonly saveSession: (session: CurriculumSession) => Promise<RepositoryResult<SessionId>>;
+-  readonly loadOlympiad: (profileId: string) => Promise<RepositoryResult<C3L6Progress | null>>;
+-  readonly saveOlympiad: (progress: C3L6Progress) => Promise<RepositoryResult<'saved'>>;
++  readonly loadOlympiad: {
++    (profileId: string, activityId?: 'alevel/c3l6-organic-reactions'): Promise<RepositoryResult<C3L6Progress | null>>;
++    (profileId: string, activityId: 'alevel/olympiad-2011-q4'): Promise<RepositoryResult<IsomerProgress | null>>;
++  };
++  readonly saveOlympiad: (progress: OlympiadProgress) => Promise<RepositoryResult<'saved'>>;
+   readonly importBatch: (batch: ImportBatch) => Promise<RepositoryResult<ImportReceipt>>;
+   readonly saveImportArchive: (
+     archive: LegacyImportArchive,
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\ActivityHost.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"
+index 87c07be..e03d139 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\ActivityHost.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"	
+@@ -106,7 +106,7 @@ export function FoundationApp({
+   onNavigationGuard,
+ }: CurriculumHostIntegration & {
+   readonly course: Course;
+-  readonly onSelectOlympiad?: () => void;
++  readonly onSelectOlympiad?: (id?: import('../contracts/index.ts').OlympiadActivityId) => void;
+ }) {
+   const query = useMemo(() => new URLSearchParams(location.search), []);
+   const run =
+@@ -1055,8 +1055,8 @@ export function FoundationApp({
+           ? { currentActivityId: attempt.ref.activityId }
+           : {})}
+       onSelectActivity={(activityId) => {
+-        if (activityId === 'alevel/c3l6-organic-reactions') {
+-          void selectView('olympiad');
++        if (productionRegistry.get(activityId)?.strand === 'olympiad') {
++          void leaveAttempt().then(saved => { if (saved) onSelectOlympiad?.(activityId as import('../contracts/index.ts').OlympiadActivityId); });
+           return;
+         }
+         if (preview) {
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\OlympiadHost.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\OlympiadHost.tsx"
+index 66650d5..9ad17f5 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\OlympiadHost.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\OlympiadHost.tsx"	
+@@ -1,208 +1,114 @@
+ import { alphaDatabaseName } from '../persistence/alpha-namespace.ts';
+ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+-import type {
+-  ActivityId,
+-  C3L6Challenge,
+-  C3L6Policy,
+-  C3L6Progress,
+-  ChallengeCommand,
+-  PlatformView,
+-} from '../contracts/index.ts';
++import type { ActivityId, C3L6Progress, ChallengeCommand, IsomerCommand, OlympiadActivityId, OlympiadCommand, OlympiadProgress, PlatformView } from '../contracts/index.ts';
+ import { createChemistryRepository } from '../persistence/index.ts';
+ import { CourseShell } from '../shell/CourseShell.tsx';
+ import { productionRegistry } from './registry.ts';
+ import type { SaveStatus } from '../ui/QuestionPlayer.tsx';
+-import type { C3L6View } from '../activities/olympiad/c3l6/index.ts';
+-
+-interface ChallengeRuntime {
+-  challenge: C3L6Challenge;
+-  policy: C3L6Policy;
+-  View: typeof C3L6View;
+-}
++import './olympiad.css';
++type Runtime =
++  | { id: 'alevel/c3l6-organic-reactions'; module: typeof import('../activities/olympiad/c3l6/index.ts') }
++  | { id: 'alevel/olympiad-2011-q4'; module: typeof import('../activities/olympiad/isomers2011/index.ts') };
+ interface OlympiadHarness {
+-  snapshot: () => { progress: C3L6Progress | null; saveStatus: SaveStatus; databaseName: string };
++  snapshot: () => { progress: OlympiadProgress | null; saveStatus: SaveStatus; databaseName: string };
+   flush: () => Promise<void>;
+-  command: (command: ChallengeCommand) => Promise<void>;
+-}
+-declare global {
+-  interface Window {
+-    __mastersOlympiad?: OlympiadHarness;
+-  }
++  command: (command: OlympiadCommand) => Promise<void>;
+ }
++declare global { interface Window { __mastersOlympiad?: OlympiadHarness; } }
+ 
+-/** Completion and drawings have a separate repository channel, without curriculum evidence. */
+-export function OlympiadHost({
+-  onSelectCurriculum,
+-  onSelectView,
+-  onNavigationGuard,
+-}: {
++/** Separate challenge progress channel; never creates curriculum attempts, clocks or evidence. */
++export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge, onSelectView, onNavigationGuard }: {
++  readonly activityId?: OlympiadActivityId;
+   readonly onSelectCurriculum: (id: ActivityId) => void;
++  readonly onSelectChallenge: (id: OlympiadActivityId | undefined) => void;
+   readonly onSelectView?: (view: PlatformView) => void;
+   readonly onNavigationGuard?: (guard: (() => Promise<boolean>) | null) => void;
+ }) {
+-  const query = useMemo(() => new URLSearchParams(location.search), []),
+-    profileId = 'local';
+-  const run =
+-    (import.meta.env.DEV ? query.get('run') || 'local' : 'local')
+-      .replace(/[^a-zA-Z0-9_-]/g, '')
+-      .slice(0, 60) || 'manual';
+-  const databaseName = alphaDatabaseName('alevel', run);
+-  const repository = useMemo(() => createChemistryRepository(databaseName), [databaseName]);
+-  const [runtime, setRuntime] = useState<ChallengeRuntime | null>(null),
+-    [progress, setProgress] = useState<C3L6Progress | null>(null);
+-  const [readOnly, setReadOnly] = useState(
+-    query.get('mode') === 'teacher' || query.get('mode') === 'review',
+-  );
+-  const [saveStatus, setSaveStatus] = useState<SaveStatus>({ kind: 'idle' }),
+-    [message, setMessage] = useState('Loading challenge...');
+-  const stateRef = useRef<C3L6Progress | null>(null),
+-    queue = useRef<Promise<void>>(Promise.resolve()),
+-    saveFailed = useRef(false);
+-  const apply = useCallback((value: C3L6Progress) => {
+-    stateRef.current = value;
+-    setProgress(value);
+-  }, []);
++  const query = useMemo(() => new URLSearchParams(location.search), []), profileId = 'local';
++  const run = (import.meta.env.DEV ? query.get('run') || 'local' : 'local').replace(/[^a-zA-Z0-9_-]/g, '').slice(0,60) || 'manual';
++  const databaseName = alphaDatabaseName('alevel',run), repository = useMemo(() => createChemistryRepository(databaseName),[databaseName]);
++  const [runtime,setRuntime] = useState<Runtime | null>(null), [progress,setProgress] = useState<OlympiadProgress | null>(null);
++  const [readOnly,setReadOnly] = useState(query.get('mode') === 'teacher' || query.get('mode') === 'review');
++  const [saveStatus,setSaveStatus] = useState<SaveStatus>({kind:'idle'}), [message,setMessage] = useState('');
++  const stateRef = useRef<OlympiadProgress | null>(null), queue = useRef<Promise<void>>(Promise.resolve()), saveFailed = useRef(false);
++  const generation = useRef(0), readOnlyRef = useRef(readOnly), activityRef = useRef(activityId);
++  readOnlyRef.current = readOnly; activityRef.current = activityId;
++  const apply = useCallback((value: OlympiadProgress) => { stateRef.current = value; setProgress(value); },[]);
+   useEffect(() => {
+-    let cancelled = false;
++    const version = ++generation.current;
++    stateRef.current = null; setProgress(null); setRuntime(null); setMessage(''); setSaveStatus({kind:'idle'}); saveFailed.current = false;
++    if (!activityId) return;
+     void (async () => {
+-      const module = await import('../activities/olympiad/c3l6/index.ts');
+-      const loaded = await repository.loadOlympiad(profileId);
+-      if (cancelled) return;
+-      setRuntime({ challenge: module.c3Challenge, policy: module.c3Policy, View: module.C3L6View });
+-      if (!loaded.ok) {
+-        setSaveStatus({ kind: 'error', error: loaded.error });
+-        setMessage(loaded.error.message);
+-        apply(module.blankC3Progress(profileId));
+-        return;
++      await queue.current;
++      if (version !== generation.current) return;
++      if (activityId === 'alevel/c3l6-organic-reactions') {
++        const module = await import('../activities/olympiad/c3l6/index.ts');
++        const loaded = await repository.loadOlympiad(profileId);
++        if (version !== generation.current) return;
++        setRuntime({id: activityId,module});
++        apply(loaded.ok && loaded.value ? module.c3Policy.validateCompletion(module.c3Challenge,loaded.value) : module.blankC3Progress(profileId));
++        if (!loaded.ok) { setSaveStatus({kind:'error',error:loaded.error}); setMessage(loaded.error.message); }
++      } else {
++        const module = await import('../activities/olympiad/isomers2011/index.ts');
++        const loaded = await repository.loadOlympiad(profileId, activityId);
++        if (version !== generation.current) return;
++        setRuntime({id:activityId,module});
++        apply(loaded.ok && loaded.value ? module.isomerPolicy.validateCompletion(module.isomerChallenge, loaded.value) : module.blankIsomerProgress(profileId));
++        if (!loaded.ok) { setSaveStatus({kind:'error',error:loaded.error}); setMessage(loaded.error.message); }
+       }
+-      const value = loaded.value
+-        ? module.c3Policy.validateCompletion(module.c3Challenge, loaded.value)
+-        : module.blankC3Progress(profileId);
+-      apply(value);
+-      setMessage(
+-        loaded.value
+-          ? 'Saved challenge restored.'
+-          : 'Work through the reaction challenge. Your drawings and completion save on this device.',
+-      );
+-    })().catch((error) => {
+-      if (!cancelled)
+-        setMessage(error instanceof Error ? error.message : 'The challenge could not be loaded.');
++    })().catch(error => { if (version === generation.current) setMessage(error instanceof Error ? error.message : 'The challenge could not be loaded.'); });
++    return () => { generation.current++; };
++  },[activityId,repository,apply]);
++  const save = useCallback((value: OlympiadProgress) => {
++    const version = generation.current;
++    setSaveStatus({kind:'saving'});
++    const copied = structuredClone(value);
++    const operation = queue.current.then(async () => {
++      const result = await repository.saveOlympiad(copied);
++      if (version !== generation.current) return;
++      saveFailed.current = !result.ok;
++      setSaveStatus(result.ok ? {kind:'saved'} : {kind:'error',error:result.error});
+     });
+-    return () => {
+-      cancelled = true;
+-    };
+-  }, [repository, apply]);
+-  const save = useCallback(
+-    (value: C3L6Progress) => {
+-      setSaveStatus({ kind: 'saving' });
+-      const copied = structuredClone(value);
+-      const operation = queue.current.then(async () => {
+-        const result = await repository.saveOlympiad(copied);
+-        saveFailed.current = !result.ok;
+-        setSaveStatus(result.ok ? { kind: 'saved' } : { kind: 'error', error: result.error });
+-      });
+-      queue.current = operation.catch(() => undefined);
+-      return operation;
+-    },
+-    [repository],
+-  );
+-  const command = useCallback(
+-    async (value: ChallengeCommand) => {
+-      if (!runtime || !stateRef.current || readOnly) return;
+-      const result = runtime.policy.transition(runtime.challenge, stateRef.current, value);
+-      setMessage(result.message);
+-      if (result.accepted) {
+-        apply(result.progress);
+-        await save(result.progress);
+-      }
+-    },
+-    [runtime, readOnly, apply, save],
+-  );
++    queue.current = operation.catch(() => undefined);
++    return operation;
++  },[repository]);
++  const command = useCallback(async (value: OlympiadCommand) => {
++    const current = stateRef.current;
++    if (!runtime || !current || readOnlyRef.current || current.activityId !== activityRef.current) return;
++    let result;
++    if (runtime.id === 'alevel/c3l6-organic-reactions' && current.activityId === runtime.id && !['draw','select-box','check'].includes(value.kind))
++      result = runtime.module.c3Policy.transition(runtime.module.c3Challenge,current as C3L6Progress,value as ChallengeCommand);
++    else if (runtime.id === 'alevel/olympiad-2011-q4' && current.activityId === runtime.id && ['draw','select-box','check','restart'].includes(value.kind))
++      result = runtime.module.isomerPolicy.transition(runtime.module.isomerChallenge,current,value as IsomerCommand);
++    if (!result) return;
++    setMessage(result.message);
++    if (result.accepted) { apply(result.progress); await save(result.progress); }
++  },[runtime,apply,save]);
+   useEffect(() => {
+     if (!import.meta.env.DEV) return;
+-    window.__mastersOlympiad = {
+-      snapshot: () => ({ progress: stateRef.current, saveStatus, databaseName }),
+-      flush: async () => {
+-        await queue.current;
+-      },
+-      command,
+-    };
+-    return () => {
+-      delete window.__mastersOlympiad;
+-    };
+-  }, [saveStatus, databaseName, command]);
+-  const leave = useCallback(async (action: () => void) => {
+-    await queue.current;
+-    if (!saveFailed.current) action();
+-  }, []);
++    window.__mastersOlympiad = {snapshot: () => ({progress:stateRef.current,saveStatus,databaseName}),flush: async () => {await queue.current;},command};
++    return () => { delete window.__mastersOlympiad; };
++  },[saveStatus,databaseName,command]);
++  const leave = useCallback(async (action: () => void) => { await queue.current; if (!saveFailed.current) action(); },[]);
+   useEffect(() => {
+-    onNavigationGuard?.(async () => {
+-      await queue.current;
+-      return !saveFailed.current;
+-    });
++    onNavigationGuard?.(async () => {await queue.current; return !saveFailed.current;});
+     return () => onNavigationGuard?.(null);
+-  }, [onNavigationGuard]);
+-  return (
+-    <CourseShell
+-      course="alevel"
+-      registry={productionRegistry}
+-      currentView="olympiad"
+-      onSelectView={(view) => {
+-        void leave(() => onSelectView?.(view));
+-      }}
+-      currentActivityId="alevel/c3l6-organic-reactions"
+-      questionHeader={{
+-        subtopic: productionRegistry.get('alevel/c3l6-organic-reactions')!.title,
+-        questionId: 'C3L6 2012 Q2',
+-      }}
+-      onSelectActivity={(id) => {
+-        if (id !== 'alevel/c3l6-organic-reactions') void leave(() => onSelectCurriculum(id));
+-      }}
+-    >
++  },[onNavigationGuard]);
++  const registration = activityId ? productionRegistry.get(activityId) : undefined;
++  return <CourseShell course="alevel" registry={productionRegistry} currentView="olympiad"
++    {...(activityId ? {currentActivityId:activityId} : {})}
++    {...(registration ? {questionHeader:{subtopic:registration.title,questionId: activityId === 'alevel/olympiad-2011-q4' ? 'UK Olympiad 2011 Q4' : 'C3L6 2012 Q2'}} : {})}
++    onSelectView={view => {void leave(() => onSelectView?.(view));}}
++    onSelectActivity={id => {void leave(() => { if (productionRegistry.get(id)?.strand === 'olympiad') onSelectChallenge(id as OlympiadActivityId); else onSelectCurriculum(id); });}}>
++    {!activityId ? <section className="olympiad-selector" aria-label="Olympiad challenges"><h1>Olympiad challenges</h1><p>Explore chemistry beyond the course. Your drawings and challenge completion save on this device.</p>{productionRegistry.activities.filter(a => a.strand === 'olympiad').map(a => <button type="button" key={a.id} onClick={() => onSelectChallenge(a.id as OlympiadActivityId)}>{a.title}</button>)}</section> : <>
+       <section className="challenge-mode-controls" aria-label="Challenge mode">
+-        <button type="button" onClick={() => setReadOnly((current) => !current)}>
+-          {readOnly ? 'Return to challenge' : 'Teacher preview'}
+-        </button>
++        <button type="button" onClick={() => {void leave(() => onSelectChallenge(undefined));}}>All Olympiad challenges</button>
++        <button type="button" onClick={() => setReadOnly(v => !v)}>{readOnly ? 'Return to challenge' : 'Teacher preview'}</button>
+       </section>
+-      {runtime && progress ? (
+-        <runtime.View
+-          challenge={runtime.challenge}
+-          progress={progress}
+-          readOnly={readOnly}
+-          onCommand={(value) => {
+-            void command(value);
+-          }}
+-          {...(message !== 'Saved challenge restored.' &&
+-          message !==
+-            'Work through the reaction challenge. Your drawings and completion save on this device.'
+-            ? { status: message }
+-            : {})}
+-        />
+-      ) : (
+-        <p>Loading challenge content...</p>
+-      )}
+-      {!readOnly && saveStatus.kind === 'error' && (
+-        <section
+-          aria-label="Challenge saving failure"
+-          className="save-status save-error"
+-          role="alert"
+-        >
+-          <>
+-            <p>{saveStatus.error.message}</p>
+-            {saveStatus.error.retryable && (
+-              <button
+-                type="button"
+-                onClick={() => {
+-                  const value = stateRef.current;
+-                  if (value) void save(value);
+-                }}
+-              >
+-                Retry save
+-              </button>
+-            )}
+-          </>
+-        </section>
+-      )}
+-    </CourseShell>
+-  );
++      {readOnly && <p role="status">Teacher preview · reference answers · pupil progress is not saved</p>}
++      {runtime?.id === 'alevel/c3l6-organic-reactions' && progress?.activityId === runtime.id ? <runtime.module.C3L6View challenge={runtime.module.c3Challenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} {...(message ? {status:message} : {})} /> :
++       runtime?.id === 'alevel/olympiad-2011-q4' && progress?.activityId === runtime.id ? <runtime.module.IsomerView challenge={runtime.module.isomerChallenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} /> : <p role="status">{message || 'Loading challenge content...'}</p>}
++      {!readOnly && saveStatus.kind === 'error' && <section aria-label="Challenge saving failure" className="save-status save-error" role="alert"><p>{saveStatus.error.message}</p>{saveStatus.error.retryable && <button type="button" onClick={() => {const value = stateRef.current; if (value) void save(value);}}>Retry save</button>}</section>}
++    </>}
++  </CourseShell>;
+ }
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\ProductionFoundation.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ProductionFoundation.tsx"
+index 33db388..d2f9cb1 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\ProductionFoundation.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ProductionFoundation.tsx"	
+@@ -6,6 +6,7 @@ import type {
+   CurriculumEvidence,
+   PlatformView,
+   QuestionRef,
++  OlympiadActivityId,
+ } from '../contracts/index.ts';
+ import type { CurriculumLaunchRequest, LandingLaunchRequest } from '../contracts/landing.ts';
+ import { FoundationApp as CurriculumHost } from './ActivityHost.tsx';
+@@ -45,7 +46,7 @@ function linkInput(url: URL): string | null {
+     : null;
+ }
+ function activityFromURL(url: URL, course: Course): ActivityId | undefined {
+-  const raw = url.searchParams.get('activity');
++  const raw = url.searchParams.get('activity') || (url.searchParams.get('olympiad') === 'c3l6' ? 'alevel/c3l6-organic-reactions' : null);
+   const slug = url.pathname.match(/activities\/([^/]+)/)?.[1];
+   return productionRegistry.activities.find(
+     (item) => item.course === course && (item.id === raw || item.id === `${course}/${slug}`),
+@@ -188,7 +189,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+         url.searchParams.delete(key);
+       url.hash = '';
+       url.searchParams.set('view', next);
+-      if (next === 'olympiad') url.searchParams.set('olympiad', 'c3l6');
++      if (next === 'olympiad') setRequestedActivity(undefined);
+       writeURL(url);
+       setReviewRef(undefined);
+       setTeacherGroup(undefined);
+@@ -221,15 +222,22 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+     },
+     [course, run],
+   );
++  const selectChallenge = useCallback((id: OlympiadActivityId | undefined) => {
++    selectView('olympiad');
++    setRequestedActivity(id);
++    const url = new URL(location.href);
++    if (id) url.searchParams.set('activity',id);
++    writeURL(url,true);
++  },[selectView,writeURL]);
+   const selectActivity = useCallback(
+     (id: ActivityId) => {
+-      if (id === 'alevel/c3l6-organic-reactions') selectView('olympiad');
++      if (productionRegistry.get(id)?.strand === 'olympiad') selectChallenge(id as OlympiadActivityId);
+       else {
+         setRequestedActivity(id);
+         selectView('practice');
+       }
+     },
+-    [selectView],
++    [selectView,selectChallenge],
+   );
+   const selectTeacher = useCallback(
+     (gemId?: string) => {
+@@ -362,7 +370,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+         url.searchParams.set('seed', String(result.ref.seed));
+         url.searchParams.set('activity', result.ref.activityId);
+         writeURL(url, true, resolvedCourse);
+-      } else if (result.kind === 'olympiad' && course === 'alevel') setView('olympiad');
++      } else if (result.kind === 'olympiad' && course === 'alevel') { setRequestedActivity(result.activityId); setView('olympiad'); }
+       else {
+         setLinkMessage(
+           result.kind === 'unrecognized' ? result.reason : 'This link belongs to another course.',
+@@ -434,6 +442,8 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+     return (
+       <Suspense fallback={<p role="status">Loading Olympiad challenge...</p>}>
+         <OlympiadHost
++          {...(requestedActivity && productionRegistry.get(requestedActivity)?.strand === 'olympiad' ? {activityId:requestedActivity as OlympiadActivityId} : {})}
++          onSelectChallenge={selectChallenge}
+           onSelectCurriculum={selectActivity}
+           onSelectView={selectView}
+           onNavigationGuard={registerGuard}
+@@ -476,7 +486,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
+         course={course}
+         view={view === 'olympiad' ? 'practice' : view}
+         onSelectView={selectView}
+-        onSelectOlympiad={() => selectView('olympiad')}
++        onSelectOlympiad={(id) => id ? selectChallenge(id) : selectView('olympiad')}
+         onNavigationGuard={registerGuard}
+         onLaunchConsumed={consumeLaunch}
+         {...(requestedActivity ? { initialActivityId: requestedActivity } : {})}
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\registry.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\registry.ts"
+index d5160a3..2fad8ae 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\foundation\\registry.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\registry.ts"	
+@@ -30,7 +30,7 @@ export const productionRegistry = createRegistry(
+     energyEnthalpyAdapter,
+     energeticsPracticalAdapter,
+   ],
+-  {
++  [{
+     id: 'alevel/c3l6-organic-reactions',
+     course: 'alevel',
+     strand: 'olympiad',
+@@ -42,5 +42,11 @@ export const productionRegistry = createRegistry(
+     dependencies: c3Dependencies,
+     provider: async () => (await import('../activities/olympiad/c3l6/index.ts')).c3Challenge,
+     marking: async () => (await import('../activities/olympiad/c3l6/index.ts')).c3Policy,
+-  },
++  }, {
++    id: 'alevel/olympiad-2011-q4', course: 'alevel', strand: 'olympiad', renderer: 'seven-isomer-challenge', revision: false,
++    title: activityDefinitions.find(item => item.id === 'alevel/olympiad-2011-q4')!.title,
++    release: 'included', source: activityDefinitions.find(item => item.id === 'alevel/olympiad-2011-q4')!.source,
++    provider: async () => (await import('../activities/olympiad/isomers2011/index.ts')).isomerChallenge,
++    marking: async () => (await import('../activities/olympiad/isomers2011/index.ts')).isomerPolicy,
++  }],
+ );
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\persistence\\repository.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\repository.ts"
+index 78650a0..4f3f757 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\persistence\\repository.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\repository.ts"	
+@@ -12,7 +12,7 @@ import type {
+ import type { Namespace } from '../contracts/identity.ts';
+ import type { StudentAttempt } from '../contracts/attempt.ts';
+ import type { CurriculumEvidence, CurriculumSession } from '../contracts/session.ts';
+-import type { C3L6Progress } from '../contracts/olympiad.ts';
++import type { OlympiadProgress } from '../contracts/olympiad.ts';
+ import {
+   EvidenceConflict,
+   InvalidData,
+@@ -168,7 +168,7 @@ export function createRepository(
+   const attempts = database.table<Row<StudentAttempt>, Identity>('attempts');
+   const evidence = database.table<Row<CurriculumEvidence>, Identity>('evidence');
+   const sessions = database.table<Row<CurriculumSession>, Identity>('sessions');
+-  const olympiad = database.table<Row<C3L6Progress>, Identity>('olympiad');
++  const olympiad = database.table<Row<OlympiadProgress>, Identity>('olympiad');
+   const receipts = database.table<ReceiptRow, [string, string, string, string]>('receipts');
+   const archives = database.table<ArchiveRow, [string, string, string, string]>('archives');
+   function nameGuard(): void {
+@@ -361,15 +361,15 @@ export function createRepository(
+         });
+         return copied.id;
+       }),
+-    loadOlympiad: (profileId) =>
++    loadOlympiad: ((profileId: string, activityId = 'alevel/c3l6-organic-reactions') =>
+       result(() =>
+         load(
+           olympiad,
+           { course: 'alevel', profileId },
+-          'alevel/c3l6-organic-reactions',
++          activityId,
+           validateOlympiad,
+         ),
+-      ),
++      )) as ChemistryRepository['loadOlympiad'],
+     saveOlympiad: (progress) =>
+       result(async () => {
+         nameGuard();
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\persistence\\validation.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"
+index 8ee83df..4400062 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\persistence\\validation.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"	
+@@ -2,6 +2,9 @@ import { isCanonicalQuestionId } from '../content/canonical-identity.ts';
+ import { curriculumActivityIds, leafBoundary } from './catalogue-boundary.ts';
+ import type { CurriculumWrite, ImportBatch } from '../contracts/repository.ts';
+ import type { Namespace } from '../contracts/identity.ts';
++import type { IsomerProgress } from '../contracts/olympiad.ts';
++import { isomerBoxes, isomerChallenge } from '../activities/olympiad/isomers2011/content.ts';
++import { isomerPolicy } from '../activities/olympiad/isomers2011/policy.ts';
+ export class InvalidData extends Error {}
+ export class EvidenceConflict extends Error {}
+ export type JsonObject = Record<string, unknown>;
+@@ -267,8 +270,24 @@ export function validateResponse(value: unknown): void {
+       requireData(text(r.value), 'Invalid text');
+       break;
+     case 'numeric':
+-      keys(r, ['kind', 'raw', 'unit']);
++      keys(r, ['kind', 'raw', 'unit', 'working']);
+       requireData(text(r.raw) && text(r.unit), 'Invalid numeric serialization');
++      if (r.working !== undefined) {
++        const working = record(r.working, 'numeric working');
++        requireData(
++          (Object.getPrototypeOf(working) === Object.prototype ||
++            Object.getPrototypeOf(working) === null) &&
++            Object.keys(working).length <= 64 &&
++            Object.entries(working).every(
++              ([key, value]) =>
++                /^[A-Za-z0-9][A-Za-z0-9:_-]{0,99}$/.test(key) &&
++                !['__proto__', 'prototype', 'constructor'].includes(key) &&
++                typeof value === 'string' &&
++                value.length <= 4096,
++            ),
++          'Invalid numeric working serialization',
++        );
++      }
+       break;
+     case 'choice':
+       keys(r, ['kind', 'selected']);
+@@ -1015,6 +1034,21 @@ export function validateWrite(value: CurriculumWrite): void {
+ export function validateOlympiad(value: unknown): void {
+   safeJson(value);
+   const p = record(value, 'Olympiad');
++  if (p.activityId === 'alevel/olympiad-2011-q4') {
++    keys(p, ['kind','course','profileId','activityId','drawings','selected','check','completed']);
++    requireData(p.kind === 'olympiad-completion' && p.course === 'alevel' && id(p.profileId) && isomerBoxes.includes(p.selected as never) && typeof p.completed === 'boolean', 'Invalid seven-box challenge');
++    const drawings = record(p.drawings, 'drawings');
++    requireData(Object.keys(drawings).every(k => isomerBoxes.includes(k as never)), 'Unknown compound box');
++    Object.values(drawings).forEach(validateResponse);
++    if (p.check !== null) {
++      const check = record(p.check, 'aggregate check');
++      keys(check, ['fullyCorrect','wrongPlace','drawingFingerprint']);
++      requireData(Number.isInteger(check.fullyCorrect) && Number.isInteger(check.wrongPlace) && Number(check.fullyCorrect) >= 0 && Number(check.wrongPlace) >= 0 && Number(check.fullyCorrect) + Number(check.wrongPlace) <= 7 && id(check.drawingFingerprint), 'Invalid aggregate counts');
++    }
++    const checked = isomerPolicy.validateCompletion(isomerChallenge, p as unknown as IsomerProgress);
++    requireData(same(p.check, checked.check) && p.completed === checked.completed, 'Stale or forged aggregate completion');
++    return;
++  }
+   keys(p, [
+     'kind',
+     'course',
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\shell\\navigation-view.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\shell\\navigation-view.ts"
+index e8a0056..b4db57e 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\shell\\navigation-view.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\shell\\navigation-view.ts"	
+@@ -32,7 +32,7 @@ export function routeView(url: URL, course: Course): PlatformView {
+     return value as PlatformView;
+   if (
+     course === 'alevel' &&
+-    (query.get('olympiad') === 'c3l6' || query.get('activity') === 'alevel/c3l6-organic-reactions')
++    (query.get('olympiad') === 'c3l6' || ['alevel/c3l6-organic-reactions','alevel/olympiad-2011-q4'].includes(query.get('activity') || ''))
+   )
+     return 'olympiad';
+   if (
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\ui\\teacher-catalogue.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\teacher-catalogue.ts"
+index fab7233..a09ed2f 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\olympiad-2011-q4\\root-baseline\\files\\src\\ui\\teacher-catalogue.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\ui\\teacher-catalogue.ts"	
+@@ -38,6 +38,7 @@ export function teacherCatalogue(
+ }
+ async function load(id: ActivityId): Promise<readonly TeacherCatalogueEntry[]> {
+   switch (id) {
++    case 'alevel/olympiad-2011-q4': return [];
+     case 'alevel/acid-base-calculations': {
+       const [{ acidEngine }, { acidRef, acidAvailableLevels }] = await Promise.all([
+         import('../activities/alevel/acid-base-calculations/engine.js'),

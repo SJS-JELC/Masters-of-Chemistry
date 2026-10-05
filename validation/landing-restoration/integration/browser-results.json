@@ -1,0 +1,52 @@
+{
+  "startedAt": "2026-10-03T08:22:06.484Z",
+  "browser": "154.0.4258.48",
+  "playwright": "1.62.1",
+  "sourceURL": "http://127.0.0.1:5183",
+  "checks": [
+    {
+      "name": "alevel fixed, mastery, fresh, Home, Back, storage and teacher",
+      "status": "PASS",
+      "run": "landing-alevel-1791015726485",
+      "fixedId": "aa806569-b6be-4a02-9620-c90a9e4d3826",
+      "freshId": "52ca5b6a-7792-4d9d-aa54-147b30ecc97f",
+      "masteryId": "5e546095-4305-4343-8635-8997581aefaa",
+      "masteryLevel": 2,
+      "attemptCount": 3,
+      "independentScorePreserved": true,
+      "homeFreshnessRefresh": true,
+      "teacherNoNewEvidence": true,
+      "saveFailureBlocksHomeAndBack": true,
+      "namespacedWrites": [
+        "masters-of-chemistry:landing:course:v1",
+        "masters-of-chemistry:landing:v1:alevel:year",
+        "masters-of-chemistry:landing:v1:alevel:selection",
+        "masters-of-chemistry:landing:v1:alevel:mode"
+      ]
+    },
+    {
+      "name": "igcse fixed, mastery, fresh, Home, Back, storage and teacher",
+      "status": "PASS",
+      "run": "landing-igcse-1791015733045",
+      "fixedId": "bf631a32-efd4-46af-a68c-6b881e087338",
+      "freshId": "4c859110-c86c-48b9-abcf-96eb89125fba",
+      "masteryId": "c331355b-2b46-405a-bcc2-2551acd2b0bb",
+      "masteryLevel": 2,
+      "attemptCount": 3,
+      "independentScorePreserved": true,
+      "homeFreshnessRefresh": true,
+      "teacherNoNewEvidence": true,
+      "saveFailureBlocksHomeAndBack": true,
+      "namespacedWrites": [
+        "masters-of-chemistry:landing:course:v1",
+        "masters-of-chemistry:landing:v1:igcse:year",
+        "masters-of-chemistry:landing:v1:igcse:selection",
+        "masters-of-chemistry:landing:v1:igcse:mode"
+      ]
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T08:22:20.027Z",
+  "status": "PASS"
+}

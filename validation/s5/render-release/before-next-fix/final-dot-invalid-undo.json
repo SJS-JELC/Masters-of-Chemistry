@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "settings": {
+    "CPU": 4,
+    "network": {
+      "latency": 150,
+      "downloadThroughput": 200000,
+      "uploadThroughput": 93750
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "checks": [
+    {
+      "value": "-",
+      "invalidApplyKeepsGroup": true,
+      "visibleStatus": true
+    },
+    {
+      "value": "99",
+      "invalidApplyKeepsGroup": true,
+      "visibleStatus": true
+    },
+    {
+      "undoRemovesChargeGroupPreservesAtom": true,
+      "redoRestoresMinusOne": true
+    },
+    {
+      "afterUndoRedoReload": true,
+      "actualHTMLAccessibleMinusReadback": true
+    }
+  ]
+}

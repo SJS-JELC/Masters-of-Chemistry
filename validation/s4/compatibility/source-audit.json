@@ -1,0 +1,197 @@
+{
+  "checkedAt": "2026-10-03T02:47:03.203Z",
+  "readOnly": true,
+  "originalsExecutedInBrowser": false,
+  "sources": [
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "sha256": "06c29355d24490fe5eebd4add8dc657f215cdfad832d5bab77bc878a1c88d9ff",
+      "bytes": 16291,
+      "reason": "Original result keys, canonical diagram alias, acid progression ownership, optional timing"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/landing/progress.js",
+      "sha256": "09a205d37691f50ec53787c02563d0ab0cf18357ba745f816fe290db8cac75ab",
+      "bytes": 7007,
+      "reason": "Original result key, supported grade checks, timing and retained optional flags"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-mastery-config.js",
+      "sha256": "c30c5ac268befe55670352471328c1ff27acf6e38e47c29597a956acb76e2c31",
+      "bytes": 1334,
+      "reason": "Course grade/leaf boundary"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "sha256": "79626ae491ca6d45be4c706c6e1ee1bb069e189bd032466b8b706d2c859b934e",
+      "bytes": 10459,
+      "reason": "Original stable review hash and query parameter"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/question-review.js",
+      "sha256": "a1d7dfc074959d4432bfe2595b5f97f98ebafcae4ebdf69e28fa988338c66fee",
+      "bytes": 7575,
+      "reason": "Original stable review hash and query parameter"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/index.html",
+      "sha256": "9f0a40b7ccfcfd87540273b40905345c4c5b6169ef264472cd353312156181c2",
+      "bytes": 2895,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/index.html",
+      "sha256": "588fa564ae7679d4ec38f76d68ab62a126e76f5e967a30781739dca307459980",
+      "bytes": 3156,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/index.html",
+      "sha256": "264e80eecaf8714fbdae54843f94927573771769c8ccaedf351485b09ea20d32",
+      "bytes": 4334,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/index.html",
+      "sha256": "c0e64f6ba7e716ddfdb02b7f406eaf6ede12ae1f523ac6c189d95b23a9eafc69",
+      "bytes": 6957,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/index.html",
+      "sha256": "cff0edda8296ed7429b947b2089b48745eafc32a7e278d50da69d0a8c48a951a",
+      "bytes": 6306,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/index.html",
+      "sha256": "11f6a4a3df195216172fc34037a04d55b03961948bd66e0936dc9175b0773f4c",
+      "bytes": 7661,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/calorimetry/index.html",
+      "sha256": "668bbe18f705d28576bb2847548ad5bf751e999949661c69dc82fc348775e846",
+      "bytes": 5546,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/bond-enthalpy/index.html",
+      "sha256": "0a919307b298fc67f3f0929568c9b4b48081c586f09d97bd30b63defb1cfe40c",
+      "bytes": 3949,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/index.html",
+      "sha256": "453aff10e4a239047e696cbebb0f828eb2c56f597c00b49ea20fff713bef8005",
+      "bytes": 3523,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/dot-and-cross/index.html",
+      "sha256": "5f92c4a81914699e6daeb88f0b1a3c20189460f50c81d39e59e246b28ab6c90f",
+      "bytes": 6798,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energy-enthalpy/index.html",
+      "sha256": "a665ce28efb53710cedf69abf6d6cf74beedb7567af6fb6428d257e11ec4c82e",
+      "bytes": 3283,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energetics-practical/index.html",
+      "sha256": "0dbaea28d0d864a3483be2028c712284b870ac9f78b3d7e719c11de434ffc3a0",
+      "bytes": 3761,
+      "reason": "Actual released original route filename"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/dot-and-cross/app.js",
+      "sha256": "981b7cc2516b7a7407133e6483f8e12004eaef2015ccdebc8c4d063dd3f5c36e",
+      "bytes": 34695,
+      "reason": "S0 erratum: actual original reviewBank=QuestionReview.bank('DC',questions); all 72 actual DC codes checked. S0 DAC wording remains unchanged."
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/app.js",
+      "sha256": "2a7bda97aed854fc67cf51a5a402e3e1598ecd7f5166dbff2e9c435e89843dda",
+      "bytes": 39437,
+      "reason": "Actual original QuestionReview.bank('DAC',questions); old/new draft key patterns."
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2",
+      "bytes": 66383,
+      "reason": "S0 erratum: actual custom historical prefix ABL, not ABC; retained fixtures cover AB and ABL."
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/session.js",
+      "sha256": "a5f2ed85e631152fe8ec69ed6eb3fe927a30aa54dea01133b63231af6170190c",
+      "bytes": 10391,
+      "reason": "All original ECB group masks and exact seeded matching options compared"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assessment.js",
+      "sha256": "08279db1bf684e6d2a71514423c433c7a028ef184da928e8785e4e68e6bcbfb5",
+      "bytes": 9237,
+      "reason": "C3 original V1/V2/V3 signature/saved completion source"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/content.js",
+      "sha256": "85fdff203c58aca7ed51e2773570bfc2bc7ffa0bb78a8ebae346c21a10b9b68c",
+      "bytes": 49248,
+      "reason": "C3 source answers and molecular graph alternatives"
+    },
+    {
+      "path": "development/tests/fixtures/acid-legacy-reviews.json",
+      "sha256": "d541c273ddd4f49c998757a4fb0678bd1eadc6a8d28733dd22931444cf6d8985",
+      "bytes": 85824,
+      "reason": "33 immutable historical AB/ABL fixtures"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/numeric-practice.js",
+      "sha256": "426e40fc43b7d9c3ef63ab755ba9578b265c096d7779630d99694fa1b2ff8c56",
+      "bytes": 20231,
+      "reason": "Finite original calorimetry/bond enthalpy scheduler key patterns"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/app.js",
+      "sha256": "a3c004b779ca72ac262c7742edb45a4f91b6845307718434807b10c95978eb97",
+      "bytes": 35456,
+      "reason": "Original draft store patterns and optional saved-result metadata"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energy-enthalpy/app.js",
+      "sha256": "e8bf5a1b0a5117a3be871e7707030c04fe5bffcd6456d053e9b559ef6b779174",
+      "bytes": 11852,
+      "reason": "Original draft store patterns and optional saved-result metadata"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energetics-practical/app.js",
+      "sha256": "cc1979aab40437fed57b5445d795797a6ebde2faa8ecace1d8785346f0618b69",
+      "bytes": 30430,
+      "reason": "Original draft store patterns and optional saved-result metadata"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/session.js",
+      "sha256": "21e29fc7bf87528d202b3b75c8036384664e5fd85b25fa4796a0c9797f47f26b",
+      "bytes": 16318,
+      "reason": "Original Level2/3 saved practice keys and state limits"
+    }
+  ],
+  "errata": [
+    {
+      "inventory": "validation/s0/inventory/identity-index.json",
+      "activity": "igcse/dot-and-cross",
+      "inventoried": "DAC",
+      "actual": "DC",
+      "disposition": "Actual released source authoritative; no invented DAC alias."
+    },
+    {
+      "inventory": "validation/s0/inventory/identity-index.json",
+      "activity": "alevel/acid-base-calculations",
+      "inventoried": "AB/ABC",
+      "actual": "AB/ABL",
+      "disposition": "Actual original custom decoder and frozen fixtures authoritative; no invented ABC alias."
+    }
+  ]
+}

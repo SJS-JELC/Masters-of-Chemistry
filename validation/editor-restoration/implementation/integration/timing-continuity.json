@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T10:46:24.361Z",
+  "inputs": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d",
+      "exactE0Accepted": true,
+      "retainedNativeContinuityMatch": true
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2",
+      "exactE0Accepted": true,
+      "retainedNativeContinuityMatch": true
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "sha256": "ed038029e187baef7d106890401f7725ec40e57b71bdf3355940f00917e1bf2a",
+      "exactE0Accepted": true,
+      "retainedNativeContinuityMatch": true
+    },
+    {
+      "path": "src/activities/igcse/dot-and-cross/index.ts",
+      "sha256": "62bbaf024fd83db37c482a277e90ad851b09cc8de98657ed407ea7d78954755b",
+      "exactE0Accepted": true,
+      "retainedNativeContinuityMatch": false
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "53fe93d95ed9a6c0b3a2a59abdfacaa682c992989151b32e87848c481b5a890f",
+      "exactE0Accepted": true,
+      "retainedNativeContinuityMatch": false
+    }
+  ],
+  "evidence": [
+    {
+      "path": "validation/s5/behaviour/timing-continuity.json",
+      "sha256": "9b6ff08e63d7e9b61d27bdd15166bcbc6d8c6ac3e3f6f616156e895ed3b64d78"
+    },
+    {
+      "path": "validation/s2/review-native/partial-verification.json",
+      "sha256": "f4c4afdf11098b91399c5c06954d64a91b6a330990f8b72d7edc5911c6678d2e"
+    },
+    {
+      "path": "validation/s2/review-suspension/disposition.json",
+      "sha256": "767afec67b7bebae2d3d73b4ef791a12e0956f09a742ef62a54e41e2fe4d038e"
+    },
+    {
+      "path": "validation/s2/review-suspension/results.json",
+      "sha256": "89e972ecd45c48cbbeb2f7dc385ca1d6b01cc98779565ff0e94ebfb855dde16a"
+    },
+    {
+      "path": "validation/s3/review-timing/disposition.json",
+      "sha256": "7e49d9e2cbee918d0ee75e8b84babf36d69add17814802b206f31b0823ad72fc"
+    },
+    {
+      "path": "validation/s3/review-timing/results.json",
+      "sha256": "b40ab6f6502d0ab8fa0c391b089696f1db16f6c1f01053e3c0a285e728c73d8b"
+    }
+  ],
+  "meaning": "Exact unchanged accepted clock/binding/idle adapters/Host carry prior native idle/background/minimise/suspension boundary evidence. New editor UI first-score/restore/Next/stats and final immutable build checks are separate E1 evidence.",
+  "retainedRealIdle": [
+    {
+      "limitMs": 60000,
+      "evidence": "validation/s2/review-native/partial-verification.json",
+      "native": true
+    },
+    {
+      "limitMs": 180000,
+      "evidence": "validation/s2/review-suspension/disposition.json",
+      "native": true
+    },
+    {
+      "limitMs": 300000,
+      "evidence": "validation/s2/review-suspension/disposition.json",
+      "native": true
+    },
+    {
+      "limitMs": 600000,
+      "evidence": "validation/s3/review-timing/disposition.json",
+      "native": true
+    }
+  ],
+  "limits": [
+    "A07 replaced-document996ms remains unclassified",
+    "A12 headless9005vs1001 remains unclassified",
+    "Retained Vite post-thaw replacement and conservative whole-tree failures remain ESCALATE raw; accepted boundary dispositions are separate",
+    "A11-specific60/180 idle evidence is headless; shared native-binding evidence carried, no A11-specific native run invented",
+    "Titration adapter raw bytes differ from S3; current constant600000 allowance independently inspected and all current production target timings match native observed600000; clock/binding unchanged. No claim of full S3 host/adapter raw equality",
+    "Final static build timing restore/stats evidence does not relabel prior development-host screenshots as final rendered acceptance"
+  ],
+  "additionalLimits": [
+    "No E1 physical touch-device or native foreground/background-tab run claimed; trusted headless browser/CDP events are identified explicitly.",
+    "Unclassified working-source idle and stale durable freeze measurements remain raw FAIL, with independent exception disposition separate. Historical stage freezes were not rerun or rewritten after editor source changed."
+  ]
+}

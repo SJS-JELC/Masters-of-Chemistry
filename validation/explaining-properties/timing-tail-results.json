@@ -1,0 +1,2360 @@
+{
+  "status": "PARTIAL",
+  "run": "ebp-time-1791149895178",
+  "startedAt": "2026-10-04T21:38:15.178Z",
+  "method": "Actual headless Microsoft Edge, pinned workspace Playwright1.62.1. Real elapsed 180-second idle, observed trusted input/lifecycle events; no clock replacement or synthetic visibility/events.",
+  "checks": [
+    {
+      "id": "retained-real-idle",
+      "status": "PASS",
+      "evidence": "timing-browser-results.json",
+      "scope": "Reuses valid real180s idle; subsequent raw lifecycle failure remains retained."
+    },
+    {
+      "id": "actual-native-suspension-capability",
+      "status": "UNESTABLISHED",
+      "reason": "Page lifecycle command produces no trusted freeze/resume; successful command is not suspension evidence.",
+      "counterDeltaMs": 8999
+    },
+    {
+      "id": "actual-event-loop-suspension-gap",
+      "status": "PASS",
+      "wallElapsedMs": 8001,
+      "counterDeltaMs": 0,
+      "scope": "Actual8s main-thread stall tests >5s suspension-gap cutoff. Does not claim native OS/page freeze."
+    },
+    {
+      "id": "actual-background-tab-capability",
+      "status": "UNESTABLISHED",
+      "hidden": false,
+      "focused": true,
+      "reason": "Runtime reports every headless tab visible/focused; commands alone are not hidden-tab verification."
+    },
+    {
+      "id": "reload-first-freeze-statistics-transfer",
+      "status": "PASS",
+      "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+      "activeMs": 12141
+    }
+  ],
+  "failures": [],
+  "observations": [
+    {
+      "label": "idle starts after actual input",
+      "wall": 1791149897689,
+      "mono": 1847.1000000089407,
+      "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "correction": {
+              "kind": "correction",
+              "selections": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                }
+              ],
+              "replacement": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "previousQuestionIds": [
+            "EBP-T2F7N4"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "title": "Select and correct one error",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "correction",
+              "kind": "correction",
+              "prompt": [],
+              "marks": 2,
+              "required": true,
+              "dependsOn": [],
+              "sourceText": "Sodium chloride has a high melting point because weak electrostatic attractions between its ions require a large amount of energy to overcome.",
+              "markingPolicyId": "properties-curated",
+              "segments": [
+                {
+                  "id": "phrase-0",
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                },
+                {
+                  "id": "phrase-1",
+                  "start": 49,
+                  "end": 96,
+                  "text": "weak electrostatic attractions between its ions"
+                },
+                {
+                  "id": "phrase-2",
+                  "start": 105,
+                  "end": 141,
+                  "text": "a large amount of energy to overcome"
+                }
+              ],
+              "segmentSelection": "single"
+            }
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Select the one incorrect phrase, then replace it with a chemically correct phrase."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome."
+            }
+          ],
+          "sources": [
+            {
+              "path": "resources/a-level-past-paper-atlas/data/aggregate.json",
+              "sha256": "ec553a5ba6045da2008285264a9a94425e44c4179ceee6095a8f9884149296c7",
+              "symbolOrSection": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B"
+            },
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(c); Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saved"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149895178",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149896815,
+          "mono": 972.8000000119209,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897313,
+          "mono": 1470.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897662,
+          "mono": 1820.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897674,
+          "mono": 1832.300000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897675,
+          "mono": 1832.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897676,
+          "mono": 1834.2000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "before native freeze",
+      "wall": 1791149899360,
+      "mono": 3517.800000011921,
+      "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "correction": {
+              "kind": "correction",
+              "selections": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                }
+              ],
+              "replacement": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 2005,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "previousQuestionIds": [
+            "EBP-T2F7N4"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "title": "Select and correct one error",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "correction",
+              "kind": "correction",
+              "prompt": [],
+              "marks": 2,
+              "required": true,
+              "dependsOn": [],
+              "sourceText": "Sodium chloride has a high melting point because weak electrostatic attractions between its ions require a large amount of energy to overcome.",
+              "markingPolicyId": "properties-curated",
+              "segments": [
+                {
+                  "id": "phrase-0",
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                },
+                {
+                  "id": "phrase-1",
+                  "start": 49,
+                  "end": 96,
+                  "text": "weak electrostatic attractions between its ions"
+                },
+                {
+                  "id": "phrase-2",
+                  "start": 105,
+                  "end": 141,
+                  "text": "a large amount of energy to overcome"
+                }
+              ],
+              "segmentSelection": "single"
+            }
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Select the one incorrect phrase, then replace it with a chemically correct phrase."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome."
+            }
+          ],
+          "sources": [
+            {
+              "path": "resources/a-level-past-paper-atlas/data/aggregate.json",
+              "sha256": "ec553a5ba6045da2008285264a9a94425e44c4179ceee6095a8f9884149296c7",
+              "symbolOrSection": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B"
+            },
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(c); Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saving"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149895178",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149896815,
+          "mono": 972.8000000119209,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897313,
+          "mono": 1470.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897662,
+          "mono": 1820.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897674,
+          "mono": 1832.300000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897675,
+          "mono": 1832.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897676,
+          "mono": 1834.2000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1891.9000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1892.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897735,
+          "mono": 1892.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "after native thaw",
+      "wall": 1791149908996,
+      "mono": 13153.90000000596,
+      "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "correction": {
+              "kind": "correction",
+              "selections": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                }
+              ],
+              "replacement": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "previousQuestionIds": [
+            "EBP-T2F7N4"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "title": "Select and correct one error",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "correction",
+              "kind": "correction",
+              "prompt": [],
+              "marks": 2,
+              "required": true,
+              "dependsOn": [],
+              "sourceText": "Sodium chloride has a high melting point because weak electrostatic attractions between its ions require a large amount of energy to overcome.",
+              "markingPolicyId": "properties-curated",
+              "segments": [
+                {
+                  "id": "phrase-0",
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                },
+                {
+                  "id": "phrase-1",
+                  "start": 49,
+                  "end": 96,
+                  "text": "weak electrostatic attractions between its ions"
+                },
+                {
+                  "id": "phrase-2",
+                  "start": 105,
+                  "end": 141,
+                  "text": "a large amount of energy to overcome"
+                }
+              ],
+              "segmentSelection": "single"
+            }
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Select the one incorrect phrase, then replace it with a chemically correct phrase."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome."
+            }
+          ],
+          "sources": [
+            {
+              "path": "resources/a-level-past-paper-atlas/data/aggregate.json",
+              "sha256": "ec553a5ba6045da2008285264a9a94425e44c4179ceee6095a8f9884149296c7",
+              "symbolOrSection": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B"
+            },
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(c); Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saving"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149895178",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149896815,
+          "mono": 972.8000000119209,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897313,
+          "mono": 1470.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897662,
+          "mono": 1820.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897674,
+          "mono": 1832.300000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897675,
+          "mono": 1832.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897676,
+          "mono": 1834.2000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1891.9000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1892.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897735,
+          "mono": 1892.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "before actual event-loop stall",
+      "wall": 1791149910259,
+      "mono": 14416.60000000894,
+      "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "correction": {
+              "kind": "correction",
+              "selections": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                }
+              ],
+              "replacement": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 12003,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "previousQuestionIds": [
+            "EBP-T2F7N4"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "title": "Select and correct one error",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "correction",
+              "kind": "correction",
+              "prompt": [],
+              "marks": 2,
+              "required": true,
+              "dependsOn": [],
+              "sourceText": "Sodium chloride has a high melting point because weak electrostatic attractions between its ions require a large amount of energy to overcome.",
+              "markingPolicyId": "properties-curated",
+              "segments": [
+                {
+                  "id": "phrase-0",
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                },
+                {
+                  "id": "phrase-1",
+                  "start": 49,
+                  "end": 96,
+                  "text": "weak electrostatic attractions between its ions"
+                },
+                {
+                  "id": "phrase-2",
+                  "start": 105,
+                  "end": 141,
+                  "text": "a large amount of energy to overcome"
+                }
+              ],
+              "segmentSelection": "single"
+            }
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Select the one incorrect phrase, then replace it with a chemically correct phrase."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome."
+            }
+          ],
+          "sources": [
+            {
+              "path": "resources/a-level-past-paper-atlas/data/aggregate.json",
+              "sha256": "ec553a5ba6045da2008285264a9a94425e44c4179ceee6095a8f9884149296c7",
+              "symbolOrSection": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B"
+            },
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(c); Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saving"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149895178",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149896815,
+          "mono": 972.8000000119209,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897313,
+          "mono": 1470.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897662,
+          "mono": 1820.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897674,
+          "mono": 1832.300000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897675,
+          "mono": 1832.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897676,
+          "mono": 1834.2000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1891.9000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1892.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897735,
+          "mono": 1892.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13185.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13186,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13186.10000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149909038,
+          "mono": 13195.60000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149909038,
+          "mono": 13195.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149909039,
+          "mono": 13197.20000000298,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "after actual event-loop stall",
+      "wall": 1791149919878,
+      "mono": 24036.20000000298,
+      "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "correction": {
+              "kind": "correction",
+              "selections": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                }
+              ],
+              "replacement": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 12003,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "previousQuestionIds": [
+            "EBP-T2F7N4"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "title": "Select and correct one error",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "correction",
+              "kind": "correction",
+              "prompt": [],
+              "marks": 2,
+              "required": true,
+              "dependsOn": [],
+              "sourceText": "Sodium chloride has a high melting point because weak electrostatic attractions between its ions require a large amount of energy to overcome.",
+              "markingPolicyId": "properties-curated",
+              "segments": [
+                {
+                  "id": "phrase-0",
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                },
+                {
+                  "id": "phrase-1",
+                  "start": 49,
+                  "end": 96,
+                  "text": "weak electrostatic attractions between its ions"
+                },
+                {
+                  "id": "phrase-2",
+                  "start": 105,
+                  "end": 141,
+                  "text": "a large amount of energy to overcome"
+                }
+              ],
+              "segmentSelection": "single"
+            }
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Select the one incorrect phrase, then replace it with a chemically correct phrase."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome."
+            }
+          ],
+          "sources": [
+            {
+              "path": "resources/a-level-past-paper-atlas/data/aggregate.json",
+              "sha256": "ec553a5ba6045da2008285264a9a94425e44c4179ceee6095a8f9884149296c7",
+              "symbolOrSection": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B"
+            },
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(c); Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saving"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149895178",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149896815,
+          "mono": 972.8000000119209,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897313,
+          "mono": 1470.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897662,
+          "mono": 1820.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897674,
+          "mono": 1832.300000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897675,
+          "mono": 1832.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897676,
+          "mono": 1834.2000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1891.9000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1892.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897735,
+          "mono": 1892.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13185.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13186,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13186.10000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149909038,
+          "mono": 13195.60000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149909038,
+          "mono": 13195.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149909039,
+          "mono": 13197.20000000298,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "other tab foreground",
+      "wall": 1791149926447,
+      "mono": 30604.90000000596,
+      "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "correction": {
+              "kind": "correction",
+              "selections": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                }
+              ],
+              "replacement": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 12003,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+          "previousQuestionIds": [
+            "EBP-T2F7N4"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-T2F7N4",
+            "seed": 2737994970,
+            "level": 1
+          },
+          "title": "Select and correct one error",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Select the one incorrect phrase and write its replacement. One mark for selecting the error and one for a valid replacement."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "correction",
+              "kind": "correction",
+              "prompt": [],
+              "marks": 2,
+              "required": true,
+              "dependsOn": [],
+              "sourceText": "Sodium chloride has a high melting point because weak electrostatic attractions between its ions require a large amount of energy to overcome.",
+              "markingPolicyId": "properties-curated",
+              "segments": [
+                {
+                  "id": "phrase-0",
+                  "start": 0,
+                  "end": 40,
+                  "text": "Sodium chloride has a high melting point"
+                },
+                {
+                  "id": "phrase-1",
+                  "start": 49,
+                  "end": 96,
+                  "text": "weak electrostatic attractions between its ions"
+                },
+                {
+                  "id": "phrase-2",
+                  "start": 105,
+                  "end": 141,
+                  "text": "a large amount of energy to overcome"
+                }
+              ],
+              "segmentSelection": "single"
+            }
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Select the one incorrect phrase, then replace it with a chemically correct phrase."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Sodium chloride has a high melting point because strong electrostatic attractions between its ions require a large amount of energy to overcome."
+            }
+          ],
+          "sources": [
+            {
+              "path": "resources/a-level-past-paper-atlas/data/aggregate.json",
+              "sha256": "ec553a5ba6045da2008285264a9a94425e44c4179ceee6095a8f9884149296c7",
+              "symbolOrSection": "Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B"
+            },
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(c); Adapted ionic-property demand: OCR_2018_JUN_H432-03_Q01_P_B; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saved"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149895178",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149896815,
+          "mono": 972.8000000119209,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897313,
+          "mono": 1470.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897662,
+          "mono": 1820.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897663,
+          "mono": 1820.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897674,
+          "mono": 1832.300000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897675,
+          "mono": 1832.5,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897676,
+          "mono": 1834.2000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 349,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.4000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897727,
+          "mono": 1884.6000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 363,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1891.9000000059605,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149897734,
+          "mono": 1892.1000000089407,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149897735,
+          "mono": 1892.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 413,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13185.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13186,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149909028,
+          "mono": 13186.10000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11004,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "wall": 1791149909038,
+          "mono": 13195.60000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149909038,
+          "mono": 13195.800000011921,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149909039,
+          "mono": 13197.20000000298,
+          "hidden": false,
+          "focused": true,
+          "document": "20a17914-a23d-4072-8a29-c40dc2ec5f30",
+          "timing": {
+            "attemptId": "dfc0e1fb-1f08-4e4b-a39f-a07cdd529b67",
+            "activeMs": 11715,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    }
+  ],
+  "finishedAt": "2026-10-04T21:38:50.399Z"
+}

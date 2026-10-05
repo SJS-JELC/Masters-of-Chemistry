@@ -1,0 +1,179 @@
+{
+  "startedAt": "2026-10-03T05:30:18.179Z",
+  "status": "PASS",
+  "browser": "Microsoft Edge via pinned root Playwright1.62.1,headless",
+  "native": false,
+  "checks": [
+    {
+      "id": "orbital-keyboard-detail-scroll",
+      "before": {
+        "left": 0,
+        "width": 264,
+        "scroll": 600
+      },
+      "after": 80
+    },
+    {
+      "id": "orbital-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "orbital-keyboard-touch-nondrag-restore",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/electron-configurations",
+        "questionId": "EC-CMICC5",
+        "seed": 0,
+        "level": 1
+      }
+    },
+    {
+      "id": "energy-keyboard-detail-scroll",
+      "before": {
+        "left": 0,
+        "width": 264,
+        "scroll": 760
+      },
+      "after": 80
+    },
+    {
+      "id": "energy-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "energy-keyboard-nondrag",
+      "status": "PASS",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D01",
+        "level": 2,
+        "seed": 0
+      }
+    },
+    {
+      "id": "titration-keyboard-detail-scroll",
+      "before": {
+        "left": 0,
+        "width": 264,
+        "scroll": 810
+      },
+      "after": 80
+    },
+    {
+      "id": "titration-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "titration-keyboard-nondrag",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 0,
+        "level": 2
+      }
+    },
+    {
+      "id": "dot-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "dot-nondrag-keyboard",
+      "status": "PASS",
+      "ref": {
+        "activityId": "alevel/dot-and-cross",
+        "questionId": "h2",
+        "seed": 0,
+        "level": 1
+      }
+    },
+    {
+      "id": "teacher-orbital-visible-model-no-disabled-blank-editor",
+      "status": "PASS"
+    },
+    {
+      "id": "teacher-energy-visible-model-no-disabled-blank-editor",
+      "status": "PASS"
+    },
+    {
+      "id": "teacher-titration-visible-model-no-disabled-blank-editor",
+      "status": "PASS"
+    },
+    {
+      "id": "teacher-dot-visible-model-no-disabled-blank-editor",
+      "status": "PASS"
+    },
+    {
+      "id": "molecule-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "C3-actual-prerequisite-ten-classifications-molecule-touch-keyboard-save-restore",
+      "status": "PASS"
+    },
+    {
+      "id": "C3-teacher-reference-structures-network-scroll",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-practice-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-revision-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-teacher-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-statistics-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-import-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "alevel-olympiad-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "igcse-practice-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "igcse-revision-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "igcse-teacher-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "igcse-statistics-control-names",
+      "status": "PASS"
+    },
+    {
+      "id": "igcse-import-control-names",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "browserVersion": "154.0.4258.48",
+  "fonts": {
+    "loaded": true,
+    "brand": "Comfortaa, system-ui, sans-serif",
+    "body": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "faces": [
+      {
+        "family": "Comfortaa",
+        "status": "loaded"
+      }
+    ],
+    "glyphProbe": "H⁺ OH⁻ cm³ ΔH ↑↓ → ₂"
+  },
+  "finishedAt": "2026-10-03T05:30:41.788Z"
+}

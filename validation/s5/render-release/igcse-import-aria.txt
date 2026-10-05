@@ -1,0 +1,32 @@
+- link "Skip to question":
+  - /url: "#main-content"
+- banner:
+  - img "St John's School eagle"
+  - paragraph: Masters of Chemistry
+  - heading "IGCSE Chemistry" [level=1]
+  - text: IGCSE
+- navigation "Course views":
+  - button "Practice"
+  - button "Revision"
+  - button "Teacher"
+  - button "Statistics"
+  - button "Import progress"
+- navigation "IGCSE Chemistry activities":
+  - group:
+    - text: Curriculum activities
+    - list:
+      - listitem:
+        - button "Structure and bonding"
+      - listitem:
+        - button "Dot-and-cross diagrams"
+      - listitem:
+        - button "Calorimetry"
+      - listitem:
+        - button "Bond enthalpy"
+      - listitem:
+        - button "Energy and enthalpy"
+      - listitem:
+        - button "Energetics practical"
+- main:
+  - status: Loading saved-data import...
+- contentinfo: St John's School · Chemistry

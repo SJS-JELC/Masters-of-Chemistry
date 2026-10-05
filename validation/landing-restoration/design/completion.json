@@ -1,0 +1,28 @@
+{
+  "agentId": "L02",
+  "jobId": "LANDING-DESIGN",
+  "status": "PASS",
+  "outputPath": "validation/landing-restoration/design/HANDOVER.md",
+  "confidence": 0.96,
+  "completedAt": "2026-10-03T08:53:03.382Z",
+  "validation": {
+    "typecheck": "typecheck-final.log",
+    "sourceEquivalence": "invariants-final.log",
+    "browserComparison": "browser-comparison.json",
+    "pairs": 75,
+    "interactions": "browser-interactions.json",
+    "matrix": "state-matrix.json",
+    "visualInspection": "visual-inspection.json",
+    "sourceFingerprints": "source-fingerprints.json",
+    "outputFingerprints": "output-fingerprints.json",
+    "ownedSourceFingerprint": "998edb2c5ace2e3d8f160adc08028e0229a439487d529e62c53d69c84cfa569a"
+  },
+  "runtimeAssets": [
+    "public/assets/landing/SJS-Eagle.svg",
+    "public/assets/landing/fonts/Comfortaa-Bold.ttf"
+  ],
+  "risks": [
+    "Original A Level pH levels 2/3 display lookup quirk preserved; shared mastery summaries unchanged."
+  ],
+  "acceptance": "Worker PASS; pending foreman integration and root acceptance."
+}

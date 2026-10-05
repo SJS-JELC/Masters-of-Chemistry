@@ -1,0 +1,28 @@
+{
+  "namespace": {
+    "course": "igcse",
+    "profileId": "local"
+  },
+  "source": {
+    "key": "masters-of-chemistry-import-report-v1",
+    "fingerprint": "1272-a35cb16a-dc8cac96"
+  },
+  "rawText": "{\"errors\":[],\"namespace\":{\"course\":\"igcse\",\"profileId\":\"local\"},\"notes\":[\"Duplicate s5-legacy-igcse within masters-igcse-results-v2 retains the same first evidence.\",\"Historical stores contain scores and dates, not first responses or raw marks. Missing responses and durations remain absent. Acid V1 evidence is retained under its original progression and does not become V2 mastery.\",\"Raw archives retain the exact source fingerprint. Import receipts combine that fingerprint with the accepted-record projection; equal cross-store rows keep their own stable source batches and are deduplicated by original attempt ID.\"],\"receipts\":[{\"duplicates\":0,\"inserted\":3,\"skipped\":[],\"source\":{\"fingerprint\":\"819-e82af6d1-97a04b5d-accepted-808-1f3c8b62-223196e\",\"key\":\"masters-igcse-results-v2\"}}],\"skipped\":[{\"reason\":\"Conflicting duplicate attempt ID; first valid source record retained.\",\"sourceId\":\"s5-legacy-igcse\",\"sourceKey\":\"masters-igcse-results-v2\"},{\"reason\":\"Unsupported IGCSE result fields\",\"sourceId\":\"rocket\",\"sourceKey\":\"masters-igcse-results-v2\"},{\"reason\":\"legacy record must be an object\",\"sourceId\":\"row-6\",\"sourceKey\":\"masters-igcse-results-v2\"}],\"sources\":[{\"archived\":true,\"fingerprint\":\"819-e82af6d1-97a04b5d\",\"key\":\"masters-igcse-results-v2\"}],\"version\":1}",
+  "notes": [
+    "Outcome report: 3 inserted, 0 already present; 3 exclusions."
+  ],
+  "skipped": [
+    {
+      "sourceId": "s5-legacy-igcse",
+      "reason": "masters-igcse-results-v2: Conflicting duplicate attempt ID; first valid source record retained."
+    },
+    {
+      "sourceId": "rocket",
+      "reason": "masters-igcse-results-v2: Unsupported IGCSE result fields"
+    },
+    {
+      "sourceId": "row-6",
+      "reason": "masters-igcse-results-v2: legacy record must be an object"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "agentId": "E02",
+  "jobId": "DOT-CROSS-AUDIT",
+  "status": "PASS",
+  "outputPath": "validation/editor-restoration/audit/dot-cross/audit.json",
+  "evidencePaths": [
+    "validation/editor-restoration/audit/dot-cross/HANDOVER.md",
+    "validation/editor-restoration/audit/dot-cross/inventory-verification.json",
+    "validation/editor-restoration/audit/dot-cross/browser-results.json",
+    "validation/editor-restoration/audit/dot-cross/source-fingerprints.json",
+    "validation/editor-restoration/audit/dot-cross/inspected-original-integrity.json",
+    "validation/editor-restoration/audit/dot-cross/screens"
+  ],
+  "confidence": 0.97,
+  "exceptionReason": null,
+  "validation": {
+    "sourceRecords": 163,
+    "exactBankEquality": true,
+    "referenceSelfChecks": true,
+    "electronGeometryComparisons": 2380,
+    "browserCases": 4,
+    "pageErrors": 0,
+    "originalFilesUnchanged": true,
+    "scope": "Audit complete; proposed E1 interfaces/ownership and functional/visual gates require root acceptance"
+  },
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveSettings": "unknown",
+  "usage": null
+}

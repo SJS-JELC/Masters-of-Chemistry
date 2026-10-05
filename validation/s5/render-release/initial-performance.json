@@ -1,0 +1,785 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-03T04:11:03.913Z",
+  "settings": {
+    "browser": "headless Microsoft Edge, root pinned Playwright1.62.1",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "deviceScaleFactor": 1,
+    "CPUThrottleRate": 4,
+    "network": {
+      "latency": 150,
+      "downloadThroughput": 200000,
+      "uploadThroughput": 93750
+    },
+    "cacheDisabled": true,
+    "hardware": "actual host hardware unspecified;CDP emulation not a physical mobile device"
+  },
+  "shell": [
+    {
+      "course": "alevel",
+      "sample": 1,
+      "shellMs": 4531.6944,
+      "lazyStartToPlayerMs": 942.9508000000005,
+      "initialRequests": [
+        "http://127.0.0.1:5203/nested/alevel/index.html",
+        "http://127.0.0.1:5203/nested/alevel/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/alevel-BjQ_y264.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/persistence-DdgLoTf9.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/alevel/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-B3v0p5ve.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/mastery-C1beql2-.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/alevel/assets/ProductionFoundation-BRW_s1_h.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/repository-CmR7a38u.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg"
+      ],
+      "lazyRequests": [
+        "http://127.0.0.1:5203/nested/alevel/assets/engine-BoCqYcJ-.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/display-BpW8Pz6W.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/provider-CJoHw7jb.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/identity-Dr_meW4Y.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/data-PGygMTpc.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/marking-BQggF3vi.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+        "http://127.0.0.1:5203/nested/alevel/assets/electron-configuration-DBlPFIqb.css"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/alevel/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3086.6999999284744,
+        "navigationId": 5890,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 2.100000023841858,
+        "domainLookupStart": 846,
+        "domainLookupEnd": 846,
+        "connectStart": 846,
+        "secureConnectionStart": 0,
+        "connectEnd": 846.1000000238419,
+        "requestStart": 846.2999999523163,
+        "responseStart": 847.5,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 847.5,
+        "responseEnd": 1021.8999999761581,
+        "transferSize": 838,
+        "encodedBodySize": 538,
+        "decodedBodySize": 538,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1065.1000000238419,
+        "domContentLoadedEventStart": 2410.5,
+        "domContentLoadedEventEnd": 2410.899999976158,
+        "domComplete": 3086.600000023842,
+        "loadEventStart": 3086.6999999284744,
+        "loadEventEnd": 3086.6999999284744,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "longTasks": [
+        {
+          "start": 2344.399999976158,
+          "duration": 67
+        },
+        {
+          "start": 4237.899999976158,
+          "duration": 163
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "course": "alevel",
+      "sample": 2,
+      "shellMs": 4564.1127,
+      "lazyStartToPlayerMs": 937.5321999999996,
+      "initialRequests": [
+        "http://127.0.0.1:5203/nested/alevel/index.html",
+        "http://127.0.0.1:5203/nested/alevel/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/alevel-BjQ_y264.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/persistence-DdgLoTf9.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/alevel/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-B3v0p5ve.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/mastery-C1beql2-.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/alevel/assets/ProductionFoundation-BRW_s1_h.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/repository-CmR7a38u.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg"
+      ],
+      "lazyRequests": [
+        "http://127.0.0.1:5203/nested/alevel/assets/engine-BoCqYcJ-.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/display-BpW8Pz6W.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/provider-CJoHw7jb.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/identity-Dr_meW4Y.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/data-PGygMTpc.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/marking-BQggF3vi.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+        "http://127.0.0.1:5203/nested/alevel/assets/electron-configuration-DBlPFIqb.css"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/alevel/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3128.7000000476837,
+        "navigationId": 4787,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.8999999761581421,
+        "domainLookupStart": 882.8999999761581,
+        "domainLookupEnd": 883.2999999523163,
+        "connectStart": 883.2999999523163,
+        "secureConnectionStart": 0,
+        "connectEnd": 883.7000000476837,
+        "requestStart": 883.7000000476837,
+        "responseStart": 884.6000000238419,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 884.6000000238419,
+        "responseEnd": 1054.8999999761581,
+        "transferSize": 838,
+        "encodedBodySize": 538,
+        "decodedBodySize": 538,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1089.5,
+        "domContentLoadedEventStart": 2466,
+        "domContentLoadedEventEnd": 2466.7999999523163,
+        "domComplete": 3128.600000023842,
+        "loadEventStart": 3128.7000000476837,
+        "loadEventEnd": 3128.7000000476837,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "longTasks": [
+        {
+          "start": 2381,
+          "duration": 86
+        },
+        {
+          "start": 4211.200000047684,
+          "duration": 50
+        },
+        {
+          "start": 4266.700000047684,
+          "duration": 131
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "course": "alevel",
+      "sample": 3,
+      "shellMs": 4577.333600000002,
+      "lazyStartToPlayerMs": 922.9182000000001,
+      "initialRequests": [
+        "http://127.0.0.1:5203/nested/alevel/index.html",
+        "http://127.0.0.1:5203/nested/alevel/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/alevel-BjQ_y264.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/persistence-DdgLoTf9.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/alevel/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/registry-B3v0p5ve.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/mastery-C1beql2-.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/alevel/assets/ProductionFoundation-BRW_s1_h.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/repository-CmR7a38u.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/SJS-Eagle.svg"
+      ],
+      "lazyRequests": [
+        "http://127.0.0.1:5203/nested/alevel/assets/engine-BoCqYcJ-.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/display-BpW8Pz6W.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/provider-CJoHw7jb.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/identity-Dr_meW4Y.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/data-PGygMTpc.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/marking-BQggF3vi.js",
+        "http://127.0.0.1:5203/nested/alevel/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+        "http://127.0.0.1:5203/nested/alevel/assets/electron-configuration-DBlPFIqb.css"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/alevel/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3145.2999999523163,
+        "navigationId": 4920,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1,
+        "domainLookupStart": 896.2999999523163,
+        "domainLookupEnd": 896.2999999523163,
+        "connectStart": 896.2999999523163,
+        "secureConnectionStart": 0,
+        "connectEnd": 896.2999999523163,
+        "requestStart": 896.3999999761581,
+        "responseStart": 897.2999999523163,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 897.2999999523163,
+        "responseEnd": 1068.5,
+        "transferSize": 838,
+        "encodedBodySize": 538,
+        "decodedBodySize": 538,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1125.7999999523163,
+        "domContentLoadedEventStart": 2466.2999999523163,
+        "domContentLoadedEventEnd": 2466.7999999523163,
+        "domComplete": 3145.100000023842,
+        "loadEventStart": 3145.2999999523163,
+        "loadEventEnd": 3145.2999999523163,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "longTasks": [
+        {
+          "start": 2407.7999999523163,
+          "duration": 59
+        },
+        {
+          "start": 4230.199999928474,
+          "duration": 54
+        },
+        {
+          "start": 4289.899999976158,
+          "duration": 144
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "course": "igcse",
+      "sample": 1,
+      "shellMs": 4563.631799999999,
+      "lazyStartToPlayerMs": 1451.449700000001,
+      "initialRequests": [
+        "http://127.0.0.1:5203/nested/igcse/index.html",
+        "http://127.0.0.1:5203/nested/igcse/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/igcse-DOOUYg4U.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/persistence-DdgLoTf9.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/igcse/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-B3v0p5ve.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/mastery-C1beql2-.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/igcse/assets/ProductionFoundation-BRW_s1_h.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/repository-CmR7a38u.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg"
+      ],
+      "lazyRequests": [
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-DWUkYHkW.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-14awNsSH.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/marking-DlPqVdUO.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+        "http://127.0.0.1:5203/nested/igcse/assets/marking-HMFTDCSt.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-BdYJlaaf.js"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/igcse/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3140.7000000476837,
+        "navigationId": 6183,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1.100000023841858,
+        "domainLookupStart": 900.5,
+        "domainLookupEnd": 900.5,
+        "connectStart": 900.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 900.5,
+        "requestStart": 900.6000000238419,
+        "responseStart": 902,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 902,
+        "responseEnd": 1070.3000000715256,
+        "transferSize": 835,
+        "encodedBodySize": 535,
+        "decodedBodySize": 535,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1103.6000000238419,
+        "domContentLoadedEventStart": 2457.899999976158,
+        "domContentLoadedEventEnd": 2458.5,
+        "domComplete": 3140.5,
+        "loadEventStart": 3140.7000000476837,
+        "loadEventEnd": 3140.7000000476837,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "longTasks": [
+        {
+          "start": 2396.5,
+          "duration": 62
+        },
+        {
+          "start": 4240.200000047684,
+          "duration": 62
+        },
+        {
+          "start": 4308.700000047684,
+          "duration": 160
+        },
+        {
+          "start": 5744.700000047684,
+          "duration": 67
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "course": "igcse",
+      "sample": 2,
+      "shellMs": 4530.177799999998,
+      "lazyStartToPlayerMs": 1656.041699999998,
+      "initialRequests": [
+        "http://127.0.0.1:5203/nested/igcse/index.html",
+        "http://127.0.0.1:5203/nested/igcse/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/igcse-DOOUYg4U.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/persistence-DdgLoTf9.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-B3v0p5ve.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/mastery-C1beql2-.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/igcse/assets/ProductionFoundation-BRW_s1_h.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/repository-CmR7a38u.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg"
+      ],
+      "lazyRequests": [
+        "http://127.0.0.1:5203/nested/igcse/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-DWUkYHkW.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-14awNsSH.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/marking-DlPqVdUO.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/marking-HMFTDCSt.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-BdYJlaaf.js"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/igcse/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2935.1999999284744,
+        "navigationId": 5205,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1.1999999284744263,
+        "domainLookupStart": 647.5,
+        "domainLookupEnd": 647.5999999046326,
+        "connectStart": 647.5999999046326,
+        "secureConnectionStart": 0,
+        "connectEnd": 648.3999999761581,
+        "requestStart": 648.3999999761581,
+        "responseStart": 650.1999999284744,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 650.1999999284744,
+        "responseEnd": 817.8999999761581,
+        "transferSize": 835,
+        "encodedBodySize": 535,
+        "decodedBodySize": 535,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 861.6999999284744,
+        "domContentLoadedEventStart": 2260.5999999046326,
+        "domContentLoadedEventEnd": 2261.399999976158,
+        "domComplete": 2935.0999999046326,
+        "loadEventStart": 2935.1999999284744,
+        "loadEventEnd": 2935.1999999284744,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "longTasks": [
+        {
+          "start": 2170.1999999284744,
+          "duration": 92
+        },
+        {
+          "start": 3982.1999999284744,
+          "duration": 62
+        },
+        {
+          "start": 4047.1999999284744,
+          "duration": 109
+        },
+        {
+          "start": 4629.5,
+          "duration": 52
+        },
+        {
+          "start": 5918.799999952316,
+          "duration": 56
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "course": "igcse",
+      "sample": 3,
+      "shellMs": 4617.389399999996,
+      "lazyStartToPlayerMs": 1473.9513000000006,
+      "initialRequests": [
+        "http://127.0.0.1:5203/nested/igcse/index.html",
+        "http://127.0.0.1:5203/nested/igcse/assets/preload-helper-BaNbYf_w.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/jsx-runtime-Dk72oS4N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/igcse-DOOUYg4U.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/Content-CKr9RMoa.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/DiagramViewport-DGhHqMlN.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/persistence-DdgLoTf9.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-ojF_16jp.css",
+        "http://127.0.0.1:5203/nested/igcse/assets/dependencies-IbyFZa8N.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/registry-B3v0p5ve.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/mastery-C1beql2-.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg",
+        "http://127.0.0.1:5203/nested/igcse/assets/ProductionFoundation-BRW_s1_h.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/repository-CmR7a38u.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/SJS-Eagle.svg"
+      ],
+      "lazyRequests": [
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-DWUkYHkW.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-14awNsSH.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+        "http://127.0.0.1:5203/nested/igcse/assets/marking-DlPqVdUO.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/marking-HMFTDCSt.js",
+        "http://127.0.0.1:5203/nested/igcse/assets/provider-BdYJlaaf.js"
+      ],
+      "navigation": {
+        "name": "http://127.0.0.1:5203/nested/igcse/index.html",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 3114.3000000715256,
+        "navigationId": 7827,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 1.7000000476837158,
+        "domainLookupStart": 803,
+        "domainLookupEnd": 803,
+        "connectStart": 803,
+        "secureConnectionStart": 0,
+        "connectEnd": 803.2000000476837,
+        "requestStart": 803.3000000715256,
+        "responseStart": 805.4000000953674,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 805.4000000953674,
+        "responseEnd": 972.7000000476837,
+        "transferSize": 835,
+        "encodedBodySize": 535,
+        "decodedBodySize": 535,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 1023.4000000953674,
+        "domContentLoadedEventStart": 2449.5,
+        "domContentLoadedEventEnd": 2450.5,
+        "domComplete": 3114.100000023842,
+        "loadEventStart": 3114.3000000715256,
+        "loadEventEnd": 3114.3000000715256,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "longTasks": [
+        {
+          "start": 2319.5,
+          "duration": 132
+        },
+        {
+          "start": 4199.5,
+          "duration": 66
+        },
+        {
+          "start": 4271.600000023842,
+          "duration": 181
+        },
+        {
+          "start": 5718.300000071526,
+          "duration": 73
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "pointer-gesture",
+      "sample": 1,
+      "steps": 30,
+      "baseline": {
+        "putCount": 1,
+        "value": "3.1"
+      },
+      "during": {
+        "putCount": 1,
+        "value": "4.2"
+      },
+      "after": {
+        "puts": [
+          {
+            "at": 4790.699999928474,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":3.1,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          },
+          {
+            "at": 5592.5,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":4.2,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          }
+        ],
+        "value": "4.2"
+      },
+      "localRenderMs": 587.9685000000027,
+      "releaseToCheckpointMs": 90.87999999999738,
+      "assertion": "30 real mouse pointer movements changed local chart withzero attempt put;pointerup checkpoint persisted state"
+    },
+    {
+      "kind": "pointer-gesture",
+      "sample": 2,
+      "steps": 30,
+      "baseline": {
+        "putCount": 2,
+        "value": "4.2"
+      },
+      "during": {
+        "putCount": 2,
+        "value": "5.300000000000001"
+      },
+      "after": {
+        "puts": [
+          {
+            "at": 4790.699999928474,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":3.1,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          },
+          {
+            "at": 5592.5,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":4.2,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          },
+          {
+            "at": 6326.399999976158,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":5.300000000000001,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          }
+        ],
+        "value": "5.300000000000001"
+      },
+      "localRenderMs": 586.5151000000042,
+      "releaseToCheckpointMs": 83.56959999999526,
+      "assertion": "30 real mouse pointer movements changed local chart withzero attempt put;pointerup checkpoint persisted state"
+    },
+    {
+      "kind": "pointer-gesture",
+      "sample": 3,
+      "steps": 30,
+      "baseline": {
+        "putCount": 3,
+        "value": "5.300000000000001"
+      },
+      "during": {
+        "putCount": 3,
+        "value": "6.4"
+      },
+      "after": {
+        "puts": [
+          {
+            "at": 4790.699999928474,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":3.1,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          },
+          {
+            "at": 5592.5,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":4.2,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          },
+          {
+            "at": 6326.399999976158,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":5.300000000000001,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          },
+          {
+            "at": 7049,
+            "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":6.4,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+          }
+        ],
+        "value": "6.4"
+      },
+      "localRenderMs": 563.6870999999956,
+      "releaseToCheckpointMs": 100.70339999999851,
+      "assertion": "30 real mouse pointer movements changed local chart withzero attempt put;pointerup checkpoint persisted state"
+    },
+    {
+      "kind": "numeric-typing",
+      "sample": 1,
+      "inputValue": "2.1",
+      "renderMs": 72.37649999999849,
+      "checkpointMs": 90.81659999999829,
+      "puts": [
+        {
+          "at": 7171.5,
+          "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":2.1,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+        }
+      ]
+    },
+    {
+      "kind": "numeric-typing",
+      "sample": 2,
+      "inputValue": "2.2",
+      "renderMs": 80.02560000000085,
+      "checkpointMs": 99.17609999999695,
+      "puts": [
+        {
+          "at": 7260.399999976158,
+          "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":2.2,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+        }
+      ]
+    },
+    {
+      "kind": "numeric-typing",
+      "sample": 3,
+      "inputValue": "2.3",
+      "renderMs": 81.38220000000001,
+      "checkpointMs": 98.81839999999647,
+      "puts": [
+        {
+          "at": 7368.799999952316,
+          "responses": "{\"curve\":{\"kind\":\"titration-curve\",\"before\":null,\"after\":null,\"initialPH\":2.3000000000000003,\"equivalenceVolume\":25,\"finalPH\":10,\"indicator\":null}}"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Small three-sample cold series per course; descriptive timings, no population/device guarantee.",
+    "Two animation frames mark visible response readiness,not hardware presentation.",
+    "Checkpoint times include automation and CDP roundtrip overhead.",
+    "Static release server has no network externalities; CDP network delay/throughput applied."
+  ],
+  "browserVersion": "154.0.4258.48",
+  "editorLongTasks": [],
+  "editorOverflow": false,
+  "finishedAt": "2026-10-03T04:11:53.973Z"
+}

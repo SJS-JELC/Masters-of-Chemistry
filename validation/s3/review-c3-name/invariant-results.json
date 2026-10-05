@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "pythonVersion": "3.13.5",
+  "rdkitVersion": "2025.09.1",
+  "depictedModel": {
+    "smiles": "CC(C)=NN(C)C=O",
+    "formula": "C5H10N2O",
+    "nominalMr": 114,
+    "formalCharge": 0,
+    "atoms": {
+      "C": 5,
+      "N": 2,
+      "O": 1,
+      "H": 10
+    }
+  },
+  "primaryGyromitrinStructure": {
+    "smiles": "C/C=N/N(C)C=O",
+    "formula": "C4H8N2O",
+    "nominalMr": 100,
+    "formalCharge": 0,
+    "atoms": {
+      "C": 4,
+      "N": 2,
+      "O": 1,
+      "H": 8
+    }
+  },
+  "existingProducts": [
+    {
+      "slot": "D",
+      "smiles": "CC(C)=O",
+      "formula": "C3H6O",
+      "nominalMr": 58,
+      "formalCharge": 0,
+      "atoms": {
+        "C": 3,
+        "O": 1,
+        "H": 6
+      }
+    },
+    {
+      "slot": "E",
+      "smiles": "CNN",
+      "formula": "CH6N2",
+      "nominalMr": 46,
+      "formalCharge": 0,
+      "atoms": {
+        "C": 1,
+        "N": 2,
+        "H": 6
+      }
+    },
+    {
+      "slot": "F",
+      "smiles": "O=CO",
+      "formula": "CH2O2",
+      "nominalMr": 46,
+      "formalCharge": 0,
+      "atoms": {
+        "O": 2,
+        "C": 1,
+        "H": 2
+      }
+    }
+  ],
+  "modelCompleteHydrolysis": {
+    "atoms": {
+      "C": 5,
+      "N": 2,
+      "O": 3,
+      "H": 14
+    },
+    "charge": 0,
+    "leftNominalMass": 150,
+    "rightNominalMass": 150
+  },
+  "authenticGyromitrinCompleteHydrolysis": {
+    "atoms": {
+      "C": 4,
+      "N": 2,
+      "O": 3,
+      "H": 12
+    },
+    "charge": 0,
+    "leftNominalMass": 136,
+    "rightNominalMass": 136
+  },
+  "replacementWouldRequireD": {
+    "smiles": "CC=O",
+    "formula": "C2H4O",
+    "nominalMr": 44,
+    "formalCharge": 0,
+    "atoms": {
+      "C": 2,
+      "O": 1,
+      "H": 4
+    }
+  },
+  "scope": "Existing interpreter read-only supplementary invariants, not managed asset regeneration; manual interpretation and render review recorded separately."
+}

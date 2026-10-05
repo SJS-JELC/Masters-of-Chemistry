@@ -1,0 +1,192 @@
+import { validatePreviousQuestionIds } from '../../../content/canonical-identity.ts';
+import { fixedIdentity } from '../../../content/canonical-identity.ts';
+const identity = fixedIdentity('DAC');
+import type {
+  Level,
+  Question,
+  QuestionProvider,
+  QuestionRef,
+  QuestionSelection,
+} from '../../../contracts/index.ts';
+import { bank } from './bank.js';
+import { modelImage } from '../../../chemistry/dot-and-cross/model.ts';
+import type { BankRecord } from '../../../chemistry/dot-and-cross/types.ts';
+export const historicalGemAliases = { 'l6-t2-1-4': 'l6-t2-1-3' } as const;
+export function reviewCode(sourceId: string): string {
+  return identity.code(sourceId);
+}
+/** Apply the original per-level filter before formula de-duplication. Teacher access remains complete. */
+export function pupilPool(
+  level: Level,
+  category: 'all' | 'ionic' | 'covalent' = 'all',
+): readonly BankRecord[] {
+  const seen = new Set<string>();
+  return bank.filter((record) => {
+    const key =
+      record.practiceCategory === 'covalent' && !record.namedSpecies
+        ? `covalent:${record.formula}`
+        : record.id;
+    if (
+      (category !== 'all' && record.practiceCategory !== category) ||
+      !record.grades.includes(level) ||
+      seen.has(key)
+    )
+      return false;
+    seen.add(key);
+    return true;
+  });
+}
+export const teacherQuestionIds = bank.map((record) => reviewCode(record.id));
+const source = {
+  path: 'apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/data.js',
+  sha256: 'cdf2cff5efaf76f325744c28898681b58570be993cb16499e4584af6ba479432',
+  symbolOrSection: 'complete checked 91-record bank and reference inventory',
+};
+export function getRecord(id: string): BankRecord {
+  const record = bank.find((item) => item.id === identity.sourceId(id));
+  if (!record) throw Error(`Unknown dot-and-cross question: ${id}`);
+  return record;
+}
+function seedCheck(seed: number) {
+  if (!Number.isInteger(seed) || seed < 0 || seed > 0xffffffff)
+    throw Error('Question seed must be an unsigned 32-bit integer.');
+}
+function restore(ref: QuestionRef): Question {
+  if (ref.activityId !== 'alevel/dot-and-cross' || ![1, 2, 3].includes(ref.level))
+    throw Error('Unsupported dot-and-cross identity.');
+  seedCheck(ref.seed);
+  const record = getRecord(ref.questionId),
+    isomer = record.category === 'covalent' && !record.namedSpecies;
+  const formula = record.displayFormula.replace(/\d/g, (digit) =>
+    '₀₁₂₃₄₅₆₇₈₉'.charAt(Number(digit)),
+  );
+  // Active A Level hideFormula() returns false. Unnamed neutral tasks deliberately reveal no isomer name.
+  return {
+    ref,
+    title: `${isomer ? formula : `${record.name}, ${formula}`} · ${reviewCode(record.id)}`,
+    context: [
+      {
+        kind: 'text',
+        text: `Draw a dot-and-cross diagram for ${isomer ? formula : `${record.name.toLowerCase()}, ${formula}`}.`,
+      },
+      { kind: 'text', text: record.prompt },
+    ],
+    layout: 'workspace',
+    submission: 'all-required-parts',
+    parts: [
+      {
+        id: 'diagram',
+        kind: 'dot-and-cross',
+        prompt: [
+          {
+            kind: 'text',
+            text: 'Build the diagram using atoms, shared electron pairs, lone electrons and any required brackets and charges.',
+          },
+        ],
+        marks: 1,
+        required: true,
+        dependsOn: [],
+        initial: { kind: 'dot-and-cross', atoms: [], electrons: [], groups: [] },
+        markingPolicyId: `dot-cross:${ref.questionId}`,
+      },
+    ],
+    scaffolds: [
+      {
+        id: 'inventory-conventions',
+        level: ref.level,
+        purpose: 'Built-in original drawing conventions; no per-question atom-count hints.',
+        content: [
+          {
+            kind: 'text',
+            text: 'Show outer electrons. Keep origin symbols consistent. A coordinate pair uses two matching symbols. Bracket ions and show their charges; a positive metal ion may show its empty former outer shell or retained complete shell.',
+          },
+        ],
+      },
+    ],
+    hints: [
+      {
+        id: 'check-inventory',
+        content: [
+          {
+            kind: 'text',
+            text: 'Count the original outer electrons and adjust for the total charge. Count shared pairs and non-bonding electrons separately.',
+          },
+        ],
+      },
+    ],
+    workedAnswer: [
+      {
+        kind: 'text',
+        text: isomer
+          ? `One valid example: ${record.name}. Other valid neutral isomers of this formula are accepted.`
+          : 'Checked answer.',
+      },
+      {
+        kind: 'text',
+        text: 'On smaller screens, swipe or scroll the model diagram horizontally to inspect all electrons and charges.',
+      },
+      {
+        kind: 'image',
+        src: modelImage(record),
+        alt: `Checked dot-and-cross diagram of ${record.name}; ${record.explanation}`,
+      },
+      { kind: 'text', text: record.explanation },
+    ],
+    sources: [source],
+  };
+}
+function select(selection: QuestionSelection): QuestionRef {
+  validatePreviousQuestionIds(selection.activityId, selection.previousQuestionIds);
+  if (
+    selection.activityId !== 'alevel/dot-and-cross' ||
+    (selection.gemId && !['l6-t2-1-3', 'l6-t2-1-4'].includes(selection.gemId))
+  )
+    throw Error('Unsupported dot-and-cross route.');
+  seedCheck(selection.seed);
+  const pool = pupilPool(selection.level);
+  if (!pool.length) throw Error('No dot-and-cross questions at this level.');
+  const remaining = pool.filter(
+    (record) => !selection.previousQuestionIds.includes(reviewCode(record.id)),
+  );
+  let eligible = remaining.length ? remaining : pool;
+  const previous = selection.previousQuestionIds.at(-1),
+    previousRecord = bank.find((record) => reviewCode(record.id) === previous);
+  let random = selection.seed / 4294967296;
+  // Match source selectFreshQuestion: independent category cycles at 1/2, unrestricted level3.
+  if (selection.level <= 2) {
+    const categories = (['ionic', 'covalent'] as const).filter((category) =>
+      pool.some((record) => record.practiceCategory === category),
+    );
+    const desired =
+      categories.find(
+        (category) => previousRecord && category !== previousRecord.practiceCategory,
+      ) ?? categories[Math.floor(random * categories.length)];
+    let balanced = eligible.filter((record) => record.practiceCategory === desired);
+    if (!balanced.length) balanced = pool.filter((record) => record.practiceCategory === desired);
+    eligible = balanced;
+    if (!previousRecord && categories.length) random = (random * categories.length) % 1;
+  }
+  const record = eligible[Math.floor(random * eligible.length)]!;
+  return {
+    activityId: 'alevel/dot-and-cross',
+    questionId: reviewCode(record.id),
+    seed: selection.seed,
+    level: selection.level,
+  };
+}
+export const dotCrossProvider: QuestionProvider = {
+  coverage: [{ kind: 'fixed', questionIds: teacherQuestionIds }],
+  select,
+  restore,
+  resolveLink(code) {
+    const trimmed = code.trim();
+    const record = bank.find((item) => reviewCode(item.id) === trimmed.toUpperCase());
+    if (!record) return null;
+    return {
+      activityId: 'alevel/dot-and-cross',
+      questionId: reviewCode(record.id),
+      seed: 0,
+      level: record.grades[0] ?? 1,
+    };
+  },
+};

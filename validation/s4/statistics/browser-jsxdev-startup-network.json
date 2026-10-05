@@ -1,0 +1,706 @@
+[
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/harness.html?run=statistics-acid&course=alevel",
+    "at": 1790994205586
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/harness.html?run=statistics-acid&course=alevel",
+    "status": 200,
+    "at": 1790994205783
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/harness.tsx",
+    "at": 1790994205784
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/harness.tsx",
+    "status": 200,
+    "at": 1790994216222
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/react-dom_client.js?v=8319ab3a",
+    "at": 1790994216222
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/foundation/ActivityHost.tsx",
+    "at": 1790994216222
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/statistics/index.ts",
+    "at": 1790994216222
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/foundation/registry.ts",
+    "at": 1790994216222
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/styles/platform.css",
+    "at": 1790994216222
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/node_modules/react/jsx-dev-runtime.js?v=8319ab3a",
+    "at": 1790994216223
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/node_modules/react/jsx-dev-runtime.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994222234
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/react-dom_client.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994222399
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/rolldown-runtime-BPOCksWG.js?v=8319ab3a",
+    "at": 1790994222399
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/react.js?v=8319ab3a",
+    "at": 1790994222399
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/statistics/index.ts",
+    "status": 200,
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/statistics/StatisticsView.tsx",
+    "at": 1790994222447
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/foundation/registry.ts",
+    "status": 200,
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/catalogue/registry.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/catalogue/definitions.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/olympiad/c3l6/dependencies.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/acid-base-calculations/index.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/structure-and-bonding/index.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/dot-and-cross/index.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/dot-and-cross/index.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/ph-titration-curves/index.ts",
+    "at": 1790994222447
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/calorimetry/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/bond-enthalpy/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/electrons-bonding/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/electron-configurations/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/energy-enthalpy/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/energetics-practical/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/foundation/ActivityHost.tsx",
+    "status": 200,
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/attempt/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/timing/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/session/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/mastery/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/persistence/index.ts",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/shell/CourseShell.tsx",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/QuestionPlayer.tsx",
+    "at": 1790994222448
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/TeacherPicker.tsx",
+    "at": 1790994222448
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/styles/platform.css",
+    "status": 200,
+    "at": 1790994222486
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/@vite/client",
+    "at": 1790994222486
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/rolldown-runtime-BPOCksWG.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994222530
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/react.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994222625
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/catalogue/definitions.ts",
+    "status": 200,
+    "at": 1790994224272
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/olympiad/c3l6/dependencies.ts",
+    "status": 200,
+    "at": 1790994224272
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/catalogue/registry.ts",
+    "status": 200,
+    "at": 1790994224299
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/acid-base-calculations/index.ts",
+    "status": 200,
+    "at": 1790994224299
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/dot-and-cross/index.ts",
+    "status": 200,
+    "at": 1790994224299
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+    "at": 1790994224299
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+    "at": 1790994224299
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/structure-and-bonding/index.ts",
+    "status": 200,
+    "at": 1790994224299
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/dot-and-cross/index.ts",
+    "status": 200,
+    "at": 1790994224299
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/statistics/StatisticsView.tsx",
+    "status": 200,
+    "at": 1790994224299
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/persistence/repository.ts",
+    "at": 1790994224299
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/statistics/model.ts",
+    "at": 1790994224299
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/statistics/statistics.css",
+    "at": 1790994224299
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/ph-titration-curves/index.ts",
+    "status": 200,
+    "at": 1790994224308
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/calorimetry/index.ts",
+    "status": 200,
+    "at": 1790994224308
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/bond-enthalpy/index.ts",
+    "status": 200,
+    "at": 1790994224308
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/electrons-bonding/index.ts",
+    "status": 200,
+    "at": 1790994224308
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/electron-configurations/index.ts",
+    "status": 200,
+    "at": 1790994224308
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/energy-enthalpy/index.ts",
+    "status": 200,
+    "at": 1790994224308
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/igcse/energetics-practical/index.ts",
+    "status": 200,
+    "at": 1790994224318
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/attempt/index.ts",
+    "status": 200,
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/attempt/attempt.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/attempt/input-checks.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/timing/index.ts",
+    "status": 200,
+    "at": 1790994224319
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/session/index.ts",
+    "status": 200,
+    "at": 1790994224319
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/mastery/index.ts",
+    "status": 200,
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/timing/active-clock.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/timing/browser-binding.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/session/revision.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/session/practice.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/session/selection.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/domain/mastery/course-mastery.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/persistence/index.ts",
+    "status": 200,
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/persistence/legacy.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/persistence/validation.ts",
+    "at": 1790994224319
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/shell/CourseShell.tsx",
+    "status": 200,
+    "at": 1790994224339
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/zustand.js?v=8319ab3a",
+    "at": 1790994224339
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/shell/navigation-view.ts",
+    "at": 1790994224339
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/@vite/client",
+    "status": 200,
+    "at": 1790994224339
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/TeacherPicker.tsx",
+    "status": 200,
+    "at": 1790994224347
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/QuestionPlayer.tsx",
+    "status": 200,
+    "at": 1790994224347
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/teacher-catalogue.ts",
+    "at": 1790994224347
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/Content.tsx",
+    "at": 1790994224347
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/ResponseControl.tsx",
+    "at": 1790994224347
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/TextRangePicker.tsx",
+    "at": 1790994224347
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/assessment-label.ts",
+    "at": 1790994224347
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/statistics/statistics.css",
+    "status": 200,
+    "at": 1790994224396
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+    "status": 200,
+    "at": 1790994224396
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+    "status": 200,
+    "at": 1790994224396
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/attempt/input-checks.ts",
+    "status": 200,
+    "at": 1790994224410
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/timing/active-clock.ts",
+    "status": 200,
+    "at": 1790994224410
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/persistence/repository.ts",
+    "status": 200,
+    "at": 1790994224464
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/dexie.js?v=8319ab3a",
+    "at": 1790994224464
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/session/practice.ts",
+    "status": 200,
+    "at": 1790994224464
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/session/revision.ts",
+    "status": 200,
+    "at": 1790994224464
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/statistics/model.ts",
+    "status": 200,
+    "at": 1790994224464
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/attempt/attempt.ts",
+    "status": 200,
+    "at": 1790994224464
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/timing/browser-binding.ts",
+    "status": 200,
+    "at": 1790994224464
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/session/selection.ts",
+    "status": 200,
+    "at": 1790994224487
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/catalogue/scope.ts",
+    "at": 1790994224487
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/domain/mastery/course-mastery.ts",
+    "status": 200,
+    "at": 1790994224487
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/persistence/legacy.ts",
+    "status": 200,
+    "at": 1790994224487
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/persistence/validation.ts",
+    "status": 200,
+    "at": 1790994224487
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/persistence/catalogue-boundary.ts",
+    "at": 1790994224487
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/zustand.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994224487
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/zustand_vanilla.js?v=8319ab3a",
+    "at": 1790994224487
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/shell/navigation-view.ts",
+    "status": 200,
+    "at": 1790994224503
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/teacher-catalogue.ts",
+    "status": 200,
+    "at": 1790994224503
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/Content.tsx",
+    "status": 200,
+    "at": 1790994224503
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/DiagramViewport.tsx",
+    "at": 1790994224503
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/ResponseControl.tsx",
+    "status": 200,
+    "at": 1790994224503
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/EditorFrame.tsx",
+    "at": 1790994224503
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/NumericWorkingControl.tsx",
+    "at": 1790994224503
+  },
+  {
+    "kind": "request",
+    "url": "http://127.0.0.1:5193/src/ui/CorrectionSegments.tsx",
+    "at": 1790994224503
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/TextRangePicker.tsx",
+    "status": 200,
+    "at": 1790994224503
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/assessment-label.ts",
+    "status": 200,
+    "at": 1790994224520
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/zustand_vanilla.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994224520
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/persistence/catalogue-boundary.ts",
+    "status": 200,
+    "at": 1790994224889
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/catalogue/scope.ts",
+    "status": 200,
+    "at": 1790994224889
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/validation/s4/statistics/vite-cache/deps/dexie.js?v=8319ab3a",
+    "status": 200,
+    "at": 1790994224889
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/EditorFrame.tsx",
+    "status": 200,
+    "at": 1790994224896
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/CorrectionSegments.tsx",
+    "status": 200,
+    "at": 1790994224897
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/NumericWorkingControl.tsx",
+    "status": 200,
+    "at": 1790994224897
+  },
+  {
+    "kind": "response",
+    "url": "http://127.0.0.1:5193/src/ui/DiagramViewport.tsx",
+    "status": 200,
+    "at": 1790994224897
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "method": "Filesystem destination binding only; retained assertions/imports unchanged",
+  "writes": [
+    {
+      "original": "validation/s5/chemistry/electron-coverage.json",
+      "redirected": "validation/editor-restoration/implementation/integration/retained-ports/validation/s5/chemistry/electron-coverage.json"
+    },
+    {
+      "original": "validation/s5/chemistry/electron-matching.json",
+      "redirected": "validation/editor-restoration/implementation/integration/retained-ports/validation/s5/chemistry/electron-matching.json"
+    },
+    {
+      "original": "validation/s5/chemistry/electron-chemistry-reference.json",
+      "redirected": "validation/editor-restoration/implementation/integration/retained-ports/validation/s5/chemistry/electron-chemistry-reference.json"
+    },
+    {
+      "original": "validation/s5/chemistry/electron-model-fingerprints.json",
+      "redirected": "validation/editor-restoration/implementation/integration/retained-ports/validation/s5/chemistry/electron-model-fingerprints.json"
+    }
+  ]
+}

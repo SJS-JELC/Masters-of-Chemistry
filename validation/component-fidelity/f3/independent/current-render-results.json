@@ -1,0 +1,190 @@
+{
+  "agentId": "F12",
+  "jobId": "F3-INDEPENDENT",
+  "status": "PASS",
+  "startedAt": "2026-10-03T20:29:35.894Z",
+  "checks": [
+    {
+      "case": "affected-embedded-energy-actions",
+      "size": "desktop",
+      "id": "EE-19M67S",
+      "metrics": {
+        "wrap": "wrap",
+        "width": 1054,
+        "buttons": [
+          {
+            "text": "Check correction",
+            "width": 163.515625,
+            "y": 923.203125
+          },
+          {
+            "text": "Show worked answer",
+            "width": 188.625,
+            "y": 923.203125
+          },
+          {
+            "text": "Next question",
+            "width": 138.859375,
+            "y": 923.203125
+          }
+        ]
+      },
+      "firstScoreFrozen": true
+    },
+    {
+      "case": "specialist-current-model",
+      "size": "desktop",
+      "family": "titration",
+      "evidenceZero": true
+    },
+    {
+      "case": "specialist-current-model",
+      "size": "desktop",
+      "family": "electron",
+      "evidenceZero": true
+    },
+    {
+      "case": "representative-natural-rubric",
+      "size": "desktop",
+      "id": "SBC-U5FSU0",
+      "preciseKeyboardEvidence": true
+    },
+    {
+      "case": "representative-natural-rubric",
+      "size": "desktop",
+      "id": "SBC-UFFEIZ",
+      "preciseKeyboardEvidence": true
+    },
+    {
+      "case": "affected-embedded-energy-actions",
+      "size": "tablet",
+      "id": "EE-19M67S",
+      "metrics": {
+        "wrap": "wrap",
+        "width": 728.8125,
+        "buttons": [
+          {
+            "text": "Check correction",
+            "width": 163.515625,
+            "y": 915.796875
+          },
+          {
+            "text": "Show worked answer",
+            "width": 188.625,
+            "y": 915.796875
+          },
+          {
+            "text": "Next question",
+            "width": 138.859375,
+            "y": 915.796875
+          }
+        ]
+      },
+      "firstScoreFrozen": true
+    },
+    {
+      "case": "specialist-current-model",
+      "size": "tablet",
+      "family": "titration",
+      "evidenceZero": true
+    },
+    {
+      "case": "specialist-current-model",
+      "size": "tablet",
+      "family": "electron",
+      "evidenceZero": true
+    },
+    {
+      "case": "representative-natural-rubric",
+      "size": "tablet",
+      "id": "SBC-U5FSU0",
+      "preciseKeyboardEvidence": true
+    },
+    {
+      "case": "representative-natural-rubric",
+      "size": "tablet",
+      "id": "SBC-UFFEIZ",
+      "preciseKeyboardEvidence": true
+    },
+    {
+      "case": "affected-embedded-energy-actions",
+      "size": "mobile",
+      "id": "EE-19M67S",
+      "metrics": {
+        "wrap": "wrap",
+        "width": 336,
+        "buttons": [
+          {
+            "text": "Check correction",
+            "width": 163.515625,
+            "y": 752.265625
+          },
+          {
+            "text": "Show worked answer",
+            "width": 188.625,
+            "y": 806.265625
+          },
+          {
+            "text": "Next question",
+            "width": 138.859375,
+            "y": 806.265625
+          }
+        ]
+      },
+      "firstScoreFrozen": true
+    },
+    {
+      "case": "specialist-current-model",
+      "size": "mobile",
+      "family": "titration",
+      "evidenceZero": true
+    },
+    {
+      "case": "specialist-current-model",
+      "size": "mobile",
+      "family": "electron",
+      "evidenceZero": true
+    },
+    {
+      "case": "representative-natural-rubric",
+      "size": "mobile",
+      "id": "SBC-U5FSU0",
+      "preciseKeyboardEvidence": true
+    },
+    {
+      "case": "representative-natural-rubric",
+      "size": "mobile",
+      "id": "SBC-UFFEIZ",
+      "preciseKeyboardEvidence": true
+    }
+  ],
+  "shots": [
+    "current-desktop-energy-unanswered.png",
+    "current-desktop-energy-correct.png",
+    "current-desktop-energy-model.png",
+    "current-desktop-titration-model.png",
+    "current-desktop-electron-model.png",
+    "current-desktop-SBC-U5FSU0-natural-completed.png",
+    "current-desktop-SBC-UFFEIZ-natural-completed.png",
+    "current-tablet-energy-unanswered.png",
+    "current-tablet-energy-correct.png",
+    "current-tablet-energy-model.png",
+    "current-tablet-titration-model.png",
+    "current-tablet-electron-model.png",
+    "current-tablet-SBC-U5FSU0-natural-completed.png",
+    "current-tablet-SBC-UFFEIZ-natural-completed.png",
+    "current-mobile-energy-unanswered.png",
+    "current-mobile-energy-correct.png",
+    "current-mobile-energy-model.png",
+    "current-mobile-titration-model.png",
+    "current-mobile-electron-model.png",
+    "current-mobile-SBC-U5FSU0-natural-completed.png",
+    "current-mobile-SBC-UFFEIZ-natural-completed.png"
+  ],
+  "errors": [],
+  "limits": [
+    "Fresh synthetic app IndexedDB namespaces and nonpersistent contexts only.",
+    "Native OS suspend/minimize coverage retained by foreman; this browser suite checks reload and first timing."
+  ],
+  "finishedAt": "2026-10-03T20:30:34.529Z"
+}

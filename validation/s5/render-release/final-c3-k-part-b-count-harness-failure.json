@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "rawAlternatives": 14,
+  "currentAlternatives": 13,
+  "erratum": {
+    "issueId": "CHEM-03-C3-K-ORTHOACID",
+    "acceptedSmiles": "O=C(O)C(O)O",
+    "rejectedSourceSmiles": "O=CC(O)(O)O",
+    "note": "Source erratum for K: the accepted product is the aldehyde hydrate, 2,2-dihydroxyacetic acid. The inherited alternative retains the aldehyde and forms a hypothetical orthoacid at the carboxyl group; it is not accepted for this reaction. Both have formula C₂H₄O₄ and Mr 92, so formula and mass alone do not distinguish them."
+  },
+  "checks": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n14 !== 23\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/render-release/final-c3-k.mjs:3:12"
+}

@@ -1,0 +1,44 @@
+{
+  "jobId": "EBP-REVIEW",
+  "agentId": "A02-EBP",
+  "startedAt": "2026-10-04T22:02:42.292Z",
+  "run": "ebp-review-1791151362292",
+  "method": "Isolated offscreen installed Chrome; pinned workspace Playwright connectOverCDP(noDefaults:true); trusted native events, no visibility or clock replacement.",
+  "events": [
+    {
+      "event": "focus",
+      "trusted": true,
+      "wall": 1791151363750,
+      "mono": 894.6000000089407,
+      "token": "501ddda5-20d4-4327-90ba-e33a98d99f45",
+      "origin": 1791151362856.2,
+      "hidden": false,
+      "focused": true
+    },
+    {
+      "event": "pageshow",
+      "trusted": true,
+      "wall": 1791151363907,
+      "mono": 1051.7000000029802,
+      "token": "501ddda5-20d4-4327-90ba-e33a98d99f45",
+      "origin": 1791151362856.2,
+      "hidden": false,
+      "focused": true
+    }
+  ],
+  "observations": [],
+  "checks": [],
+  "errors": [],
+  "browserVersion": "154.0.8037.93",
+  "status": "ESCALATE",
+  "failure": {
+    "message": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.question-player') to be visible\u001b[22m\n",
+    "stack": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.question-player') to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\explaining-properties\\independent-review\\native-timing.mjs:20:222"
+  },
+  "failureSnapshot": {
+    "hidden": false,
+    "focused": true,
+    "attempt": null
+  },
+  "finishedAt": "2026-10-04T22:03:13.919Z"
+}

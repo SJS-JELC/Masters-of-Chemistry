@@ -1,0 +1,579 @@
+{
+  "startedAt": "2026-10-03T05:02:56.895Z",
+  "browser": "154.0.4258.48",
+  "playwright": "1.62.1",
+  "checks": [
+    {
+      "id": "alevel-all-targets-practice-revision",
+      "status": "PASS",
+      "practice": [
+        {
+          "key": "u6-t1-1-2:1",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-2-1-OYAYUT",
+            "seed": 1508806901,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-2:2",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-3-2-59S0LY",
+            "seed": 318754582,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-2:3",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-5-3-1GRSYQN",
+            "seed": 3190942175,
+            "level": 3
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "u6-t1-1-3:1",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-A-1-RYWQD7",
+            "seed": 1691220859,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-3:2",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-6-2-HO489T",
+            "seed": 1068433121,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-3:3",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-B-3-KXZZ9V",
+            "seed": 1266429523,
+            "level": 3
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "u6-t1-1-5:1",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-K-1-QES4AY",
+            "seed": 1596947146,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-5:2",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-J-2-B9AVY5",
+            "seed": 680752445,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-5:3",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-M-3-P6STH4",
+            "seed": 1523076664,
+            "level": 3
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "u6-t1-1-7:1",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-R-1-SL5V80",
+            "seed": 1728598608,
+            "level": 1
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "u6-t1-1-7:2",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-S-2-1XP2HY1",
+            "seed": 4214273113,
+            "level": 2
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "u6-t1-1-7:3",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-T-3-1FGI427",
+            "seed": 3111493903,
+            "level": 3
+          },
+          "idleLimitMs": 600000
+        },
+        {
+          "key": "u6-t1-1-8:1",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-Y-1-TSCZGP",
+            "seed": 1801154185,
+            "level": 1
+          },
+          "idleLimitMs": 600000
+        },
+        {
+          "key": "u6-t1-1-8:2",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-V-2-67HGGW",
+            "seed": 375368864,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "u6-t1-1-8:3",
+          "ref": {
+            "activityId": "alevel/acid-base-calculations",
+            "questionId": "AB2-Z-3-BF5S1O",
+            "seed": 690591804,
+            "level": 3
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "l6-t2-1-3:1",
+          "ref": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "hf",
+            "seed": 3826504607,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "l6-t2-1-3:2",
+          "ref": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "methanoic-acid",
+            "seed": 3512637663,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "l6-t2-1-3:3",
+          "ref": {
+            "activityId": "alevel/dot-and-cross",
+            "questionId": "carbonate-ion",
+            "seed": 3215570746,
+            "level": 3
+          },
+          "idleLimitMs": 300000
+        },
+        {
+          "key": "u6-t1-1-9:2",
+          "ref": {
+            "activityId": "alevel/ph-titration-curves",
+            "questionId": "TC01",
+            "seed": 2735306352,
+            "level": 2
+          },
+          "idleLimitMs": 600000
+        },
+        {
+          "key": "u6-t1-1-9:3",
+          "ref": {
+            "activityId": "alevel/ph-titration-curves",
+            "questionId": "TC19",
+            "seed": 1054523230,
+            "level": 3
+          },
+          "idleLimitMs": 600000
+        },
+        {
+          "key": "l6-t2-1-1:1",
+          "ref": {
+            "activityId": "alevel/electrons-bonding",
+            "questionId": "EB05",
+            "seed": 441299801,
+            "level": 1
+          },
+          "idleLimitMs": 60000
+        },
+        {
+          "key": "l6-t2-1-2:1",
+          "ref": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-5AUBIM",
+            "seed": 2921895514,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "l6-t2-1-2:2",
+          "ref": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "EC-P1QCDV",
+            "seed": 3606743764,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "l6-t2-1-2:3",
+          "ref": {
+            "activityId": "alevel/electron-configurations",
+            "questionId": "ECB-4ITLLR",
+            "seed": 3146217033,
+            "level": 3
+          },
+          "idleLimitMs": 180000
+        }
+      ],
+      "revisionTargets": [
+        "u6-t1-1-2:1",
+        "u6-t1-1-2:2",
+        "u6-t1-1-2:3",
+        "u6-t1-1-3:1",
+        "u6-t1-1-3:2",
+        "u6-t1-1-3:3",
+        "u6-t1-1-5:1",
+        "u6-t1-1-5:2",
+        "u6-t1-1-5:3",
+        "u6-t1-1-7:1",
+        "u6-t1-1-7:2",
+        "u6-t1-1-7:3",
+        "u6-t1-1-8:1",
+        "u6-t1-1-8:2",
+        "u6-t1-1-8:3",
+        "l6-t2-1-3:1",
+        "l6-t2-1-3:2",
+        "l6-t2-1-3:3",
+        "u6-t1-1-9:2",
+        "u6-t1-1-9:3",
+        "l6-t2-1-1:1",
+        "l6-t2-1-2:1",
+        "l6-t2-1-2:2",
+        "l6-t2-1-2:3"
+      ],
+      "addAllSelected": 24,
+      "zeroAssistedEvidence": true
+    },
+    {
+      "id": "alevel-aliases-direct-refresh",
+      "status": "PASS",
+      "tested": [
+        {
+          "slug": "acid-base-calculations",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "electrons-bonding",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "electron-configurations",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "dot-and-cross",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "ph-titration-curves",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "c3l6-organic-reactions",
+          "coded": false,
+          "codeless": true,
+          "refresh": true
+        }
+      ],
+      "rocketRejected": true
+    },
+    {
+      "id": "alevel-old-writes-page-errors",
+      "status": "PASS",
+      "pageErrors": [],
+      "oldWrites": []
+    },
+    {
+      "id": "igcse-all-targets-practice-revision",
+      "status": "PASS",
+      "practice": [
+        {
+          "key": "lower-6-5:2",
+          "ref": {
+            "activityId": "igcse/structure-and-bonding",
+            "questionId": "SBC-U5FSU0",
+            "seed": 3196030662,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-6-5:3",
+          "ref": {
+            "activityId": "igcse/structure-and-bonding",
+            "questionId": "SBC-3C8G7Y",
+            "seed": 1433167336,
+            "level": 3
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "fourth-3-1:1",
+          "ref": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "calcium-fluoride",
+            "seed": 3159659000,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "fourth-3-1:2",
+          "ref": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "potassium-sulfide",
+            "seed": 4283235737,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "fourth-3-2:1",
+          "ref": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "h2",
+            "seed": 128566492,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "fourth-3-2:2",
+          "ref": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "h2o",
+            "seed": 91697640,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "fourth-3-2:3",
+          "ref": {
+            "activityId": "igcse/dot-and-cross",
+            "questionId": "c2h5f",
+            "seed": 1884703496,
+            "level": 3
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-3:1",
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-6ZMOHV",
+            "seed": 422641795,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-3:2",
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-CNRW6A",
+            "seed": 765526690,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-3:3",
+          "ref": {
+            "activityId": "igcse/calorimetry",
+            "questionId": "CAL-WLM7KD",
+            "seed": 1971225805,
+            "level": 3
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-4:1",
+          "ref": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-LVQQKR",
+            "seed": 1323105291,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-4:2",
+          "ref": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-PGCOWD",
+            "seed": 1539120397,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-4:3",
+          "ref": {
+            "activityId": "igcse/bond-enthalpy",
+            "questionId": "BE-NB2FI9",
+            "seed": 1409311233,
+            "level": 3
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-1:1",
+          "ref": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "E14",
+            "seed": 3926829412,
+            "level": 1
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-1:2",
+          "ref": {
+            "activityId": "igcse/energy-enthalpy",
+            "questionId": "D09",
+            "seed": 1370477090,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-2:2",
+          "ref": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-AZM9Y3",
+            "seed": 3243902970,
+            "level": 2
+          },
+          "idleLimitMs": 180000
+        },
+        {
+          "key": "lower-10-2:3",
+          "ref": {
+            "activityId": "igcse/energetics-practical",
+            "questionId": "EP-6E1NDK",
+            "seed": 3347933547,
+            "level": 3
+          },
+          "idleLimitMs": 180000
+        }
+      ],
+      "revisionTargets": [
+        "lower-6-5:2",
+        "lower-6-5:3",
+        "fourth-3-1:1",
+        "fourth-3-1:2",
+        "fourth-3-2:1",
+        "fourth-3-2:2",
+        "fourth-3-2:3",
+        "lower-10-3:1",
+        "lower-10-3:2",
+        "lower-10-3:3",
+        "lower-10-4:1",
+        "lower-10-4:2",
+        "lower-10-4:3",
+        "lower-10-1:1",
+        "lower-10-1:2",
+        "lower-10-2:2",
+        "lower-10-2:3"
+      ],
+      "addAllSelected": 17,
+      "zeroAssistedEvidence": true
+    },
+    {
+      "id": "igcse-aliases-direct-refresh",
+      "status": "PASS",
+      "tested": [
+        {
+          "slug": "calorimetry",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "bond-enthalpy",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "structure-and-bonding",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "dot-and-cross",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "energy-enthalpy",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        },
+        {
+          "slug": "energetics-practical",
+          "coded": true,
+          "codeless": true,
+          "refresh": true
+        }
+      ],
+      "rocketRejected": true
+    },
+    {
+      "id": "igcse-old-writes-page-errors",
+      "status": "PASS",
+      "pageErrors": [],
+      "oldWrites": []
+    }
+  ],
+  "failures": [],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T05:04:02.445Z"
+}

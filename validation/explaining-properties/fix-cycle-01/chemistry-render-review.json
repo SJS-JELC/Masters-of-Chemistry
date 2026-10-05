@@ -1,0 +1,27 @@
+{
+  "jobId": "EBP-FIX-01",
+  "reviewedAt": "2026-10-04T22:23:26.048Z",
+  "bankSha256": "3f1ba771bca1c1ee4a1e6f965d77db827ee6c7a134c6ab0e7364809a21da4abe",
+  "scope": "Bounded follow-up to preserved author32-item and independent32-item reviews. No answer, chemistry scope, mark allocation or permanent identity changes.",
+  "items": [
+    {
+      "code": "EBP-S8L4J2",
+      "correctedExplanation": "Complete the missing labels, including charges: A = O2-, B = Ca2+.",
+      "status": "AUTHOR_CHECKED",
+      "notes": "Gap lattice alternation and A/B accessible labels retained; responsive display520px desktop,336px mobile visually checked."
+    },
+    {
+      "code": "EBP-I5B9S3",
+      "correctedExplanation": "The diagram represents part of a giant ionic lattice containing oppositely charged ions.",
+      "status": "AUTHOR_CHECKED",
+      "notes": "Neutral initial text/alt labels disclose no lattice-fragment replacement; incorrect Ca4O4 uses U+2084 subscripts; requested hint contains extended3D explanation; fourCa2+/fourO2- alternating ions visually checked."
+    }
+  ],
+  "renderedEvidence": [
+    "EBP-S8L4J2-desktop.png",
+    "EBP-S8L4J2-mobile.png",
+    "EBP-I5B9S3-desktop.png",
+    "EBP-I5B9S3-mobile.png"
+  ],
+  "nativeLimitation": "Raw Chrome launches actual EBP attempt but remains hidden. Real owned-window restore/raise succeeds; SetForegroundWindow returns false. No visibility/timer property overrides; no native-background/freezing PASS claimed."
+}

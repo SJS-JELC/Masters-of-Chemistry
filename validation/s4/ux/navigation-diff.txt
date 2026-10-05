@@ -1,0 +1,21 @@
+--- before/src/foundation/ActivityHost.tsx
++++ after/src/foundation/ActivityHost.tsx
+@@ -175,7 +175,7 @@
+  const topics=[...new Set(registrations.flatMap(a=>a.gems.map(g=>g.topicId)))];
+  const focused=!!attempt&&!preview&&!paused&&!setupOpen;
+  const targetLabel=(item:CurriculumTarget)=>`${registrations.find(a=>a.id===item.activityId)?.gems.find(g=>g.id===item.gemId)?.label} \u00b7 Level ${item.level}`;
+- return <CourseShell course={course} registry={registry} currentView={localView} onSelectView={next=>void selectView(next)} focused={focused} {...(attempt?{currentActivityId:attempt.ref.activityId}:{})} onSelectActivity={activityId=>{if(activityId==='alevel/c3l6-organic-reactions'){void selectView('olympiad');return;}void leaveAttempt().then(saved=>{if(!saved)return;const item=allTargets.find(t=>t.activityId===activityId);if(item)setTargetKey(`${item.gemId}:${item.level}`);setSetupOpen(true);});}}>
++ return <CourseShell course={course} registry={registry} currentView={localView} onSelectView={next=>void selectView(next)} focused={focused} {...(preview?{currentActivityId:teacherActivity}:attempt?{currentActivityId:attempt.ref.activityId}:{})} onSelectActivity={activityId=>{if(activityId==='alevel/c3l6-organic-reactions'){void selectView('olympiad');return;}if(preview){setTeacherActivity(activityId);return;}void leaveAttempt().then(saved=>{if(!saved)return;const item=allTargets.find(t=>t.activityId===activityId);if(item)setTargetKey(`${item.gemId}:${item.level}`);setSetupOpen(true);});}}>
+   {!preview&&attempt&&<section className="focus-controls" aria-label="Current session"><span>{session?.kind==='revision'?'Revision':'Practice'} {'\u00b7'} {targetLabel(attempt.target)}</span><div className="action-row"><button type="button" disabled={navigationBusy} aria-expanded={setupOpen} onClick={()=>{if(setupOpen)setSetupOpen(false);else void leaveAttempt().then(saved=>{if(saved)setSetupOpen(true);});}}>Change activity or view</button>{!paused&&<button type="button" onClick={()=>void command({kind:'pause'})}>Pause and save</button>}</div></section>}
+   {preview?<TeacherPicker course={course} registry={registry} activityId={teacherActivity} onActivity={setTeacherActivity} onQuestion={openTeacherQuestion} {...(reviewRef||previewQuestion?{initialRef:reviewRef??previewQuestion!.ref}:reviewCode?{initialCode:reviewCode}:{})}/>:(!attempt||setupOpen)&&<section aria-label="Practice setup" className="practice-setup"><h2>{sessionMode==='revision'?'Build a revision session':'Choose your practice'}</h2><label>Activity and level <select aria-label="Target" value={target?`${target.gemId}:${target.level}`:''} onChange={event=>setTargetKey(event.target.value)}>{allTargets.map(item=><option key={`${item.gemId}:${item.level}`} value={`${item.gemId}:${item.level}`}>{targetLabel(item)}</option>)}</select></label>
+    <label>Session <select aria-label="Session" value={sessionMode} onChange={event=>{const mode=event.target.value==='revision'?'revision':'practice';setSessionMode(mode);setLocalView(mode);}}><option value="practice">Practice</option><option value="revision">Revision</option></select></label>
+--- before/src/ui/TeacherPicker.tsx
++++ after/src/ui/TeacherPicker.tsx
+@@ -18,6 +18,7 @@
+   if(!cancelled){setRows(result);setLoading(false);
+    if(initialRef&&!initialHandled.current){initialHandled.current=true;if(initialRef.activityId!==activityId){pendingRef.current=initialRef;onActivity(initialRef.activityId);}setKey(result.find(row=>row.ref.questionId===initialRef.questionId&&row.ref.level===initialRef.level)?.key??'');onQuestion(initialRef);return;}
+    if(initialCode&&!initialHandled.current){initialHandled.current=true;for(const item of registrations){const ref=(await item.provider()).resolveLink(initialCode);if(ref){if(item.id!==activityId){pendingRef.current=ref;onActivity(item.id);}onQuestion(ref);return;}}setError('Question code not recognised for this course.');}
++   initialHandled.current=true;
+    const requested=pendingRef.current?.activityId===activityId?pendingRef.current:null;pendingRef.current=null;
+    const first=result[0];if(requested){setKey(result.find(row=>row.ref.questionId===requested.questionId&&row.ref.level===requested.level)?.key??'');onQuestion(requested);}else if(first){setKey(first.key);onQuestion(first.ref);}}
+ 

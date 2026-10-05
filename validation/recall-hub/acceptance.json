@@ -1,0 +1,49 @@
+{
+  "status": "ACCEPTED",
+  "reviewedAt": "2026-10-04T13:24:19.578Z",
+  "scope": "recall-contract.md",
+  "delegation": "Local; no delegates",
+  "checks": {
+    "typecheck": "PASS",
+    "contentRegeneration": "PASS: prepare_recall.mjs and prepare_flashcards.mjs",
+    "productionBrowser": "browser-results.json",
+    "sharedTable": "../flashcards/results.json",
+    "build": "../flashcards/recall-hub-build.log",
+    "releaseInventories": [
+      "../../release/alevel.runtime.json",
+      "../../release/igcse.runtime.json"
+    ],
+    "registrationAndTiming": "registration-timing.log: six tests passed",
+    "protectedOriginals": "1317 files unchanged; 523 metadata-only placeholders preserved",
+    "historicalRouting": "historical-routing-note.json"
+  },
+  "substantiveReview": "Twelve starter prompts/answers reviewed against retained source excerpts. A-level grammar and solid-state qualification documented; GCSE state-change directions, aqueous symbol and solvent definition checked. No unreviewed bank expansion or former game assets imported.",
+  "renderedReview": "Inspected desktop and mobile hubs and Recall screens. Brain icon readable and consistent; four A-level tiles / three IGCSE tiles fit in one row down to 320px. Card edges, typography, controls and Home visible without clipping.",
+  "limits": [
+    "Six starter cards per course; no full-bank or specification-completeness claim.",
+    "Standalone self-marked practice in memory; no tracking added.",
+    "Not published.",
+    "Historical nested legacy-link routing expectation fails unchanged; current Recall routes and course switches pass."
+  ],
+  "files": {
+    "project-contract.json": "7f9bb03e710f8224ee78b6d9adfb9b9ee0f7402dd7094f700f9cb04d95a83008",
+    "recall-contract.md": "a51f1828b0fc0ec75d62a2d7a124989e60aa7f0e6951a1bc9fd91ceebbd1e18c",
+    "src/contracts/integration.ts": "f7e073398c336479e79fafc088cc27cb3bbc1acf0cb742cb4e52de8b5a0249bb",
+    "src/contracts/landing.ts": "2faacafe25bb6ad8485bd64eb7b30afb73716b563ae1cdb0ac9c41e745464946",
+    "src/shell/navigation-view.ts": "7b658bfdc8d12889f27d73e6e9bfcec2d016f11585ce475e890d69b3340c19b1",
+    "src/shell/CourseShell.tsx": "fbc248bcf4e2b2f77e33e840f1ffe6f3c6a3e7515016fe08c498a14e96d77910",
+    "src/foundation/ProductionFoundation.tsx": "ad653c90b5b4d29372ae45ab95ec2173d470f56aac4c683a9d26a9d778c84e4a",
+    "src/landing/OriginalLanding.tsx": "ab775daffd0b78284bd2b5f647d3b4f6005f79201a490c1abac6693765952ff6",
+    "src/landing/RecallIcon.tsx": "f584b564d87c76cd0a1b9a95f9aef055621dd4c22f5269085e33be8ed1ad80a9",
+    "src/landing/standardisation.css": "496f6d3395aa26486a65ed83a7ebeb111a0c5d8898fce515e18d7e32b987e27b",
+    "src/recall/FlashcardTable.tsx": "ab9c39faffd6e198575cefa8056adc5681d11d3de72dcbfee0f9a315f282af0f",
+    "src/recall/flashcards.css": "51f0b50e60be79d8ab5f4041ecc76a995a4a592bfcd6cfb0056a4eab2472dbc2",
+    "src/recall/RecallView.tsx": "1b2b03da39b9a670111a0ed74b4c251e8e04080d4f41f267a31897377b746575",
+    "src/recall/starter-decks.ts": "2b9cf29c893d320a112ba9d560a5a3405dc9ebe002cd9212e36d4958b1ec5b34",
+    "src/recall/provenance.json": "2e2e3710cfd744d696ab02080d30b8fa6a865cbe4898af73f3c40a7b6c887273",
+    "scripts/prepare_recall.mjs": "3f747c39e914d1192dbd66cbada29b2aa3c5333c017c6632a98cf9e907278a9c",
+    "scripts/review_recall_hub.mjs": "afcff35f8264d16dd8eb8ecfb7d5c61eca1f97c311335939e3c7b49d87d1a23f",
+    "scripts/release-s4.mjs": "57fe8d0c87b35c69026f07e8d25679890872bc4fee859638d8d3a57353482b47",
+    "scripts/validate-s4-release.mjs": "59b18596188dd7e25c0cf44d27b45c294277b3d3f5064b7a4d60125a67c27dd2"
+  }
+}

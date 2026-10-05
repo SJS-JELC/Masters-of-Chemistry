@@ -1,0 +1,66 @@
+{
+  "startedAt": "2026-10-03T08:44:43.639Z",
+  "browser": "154.0.4258.48",
+  "playwright": "1.62.1",
+  "origin": "http://127.0.0.1:5182",
+  "checks": [
+    {
+      "entry": "alevel",
+      "status": "PASS",
+      "initial": "Masters of A Level Chemistry",
+      "switched": "igcse",
+      "gemId": "lower-10-3",
+      "level": 1,
+      "activityTitle": "Calorimetry · Dissolving",
+      "checks": [
+        "static relative prefix",
+        "in-place other-course lazy activity",
+        "exact direct fixed launch",
+        "save/guarded Home",
+        "remembered course reload",
+        "project-only storage keys",
+        "licensed assets/fonts load"
+      ],
+      "keys": [
+        "masters-of-chemistry:landing:course:v1",
+        "masters-of-chemistry:landing:v1:igcse:mode",
+        "masters-of-chemistry:landing:v1:alevel:year",
+        "masters-of-chemistry:landing:v1:alevel:selection",
+        "masters-of-chemistry:landing:v1:alevel:mode",
+        "masters-of-chemistry:landing:v1:igcse:year",
+        "masters-of-chemistry:landing:v1:igcse:selection"
+      ]
+    },
+    {
+      "entry": "igcse",
+      "status": "PASS",
+      "initial": "Masters of IGCSE Chemistry",
+      "switched": "alevel",
+      "gemId": "u6-t1-1-2",
+      "level": 1,
+      "activityTitle": "[H⁺] to pH",
+      "checks": [
+        "static relative prefix",
+        "in-place other-course lazy activity",
+        "exact direct fixed launch",
+        "save/guarded Home",
+        "remembered course reload",
+        "project-only storage keys",
+        "licensed assets/fonts load"
+      ],
+      "keys": [
+        "masters-of-chemistry:landing:course:v1",
+        "masters-of-chemistry:landing:v1:igcse:mode",
+        "masters-of-chemistry:landing:v1:alevel:year",
+        "masters-of-chemistry:landing:v1:alevel:selection",
+        "masters-of-chemistry:landing:v1:alevel:mode",
+        "masters-of-chemistry:landing:v1:igcse:year",
+        "masters-of-chemistry:landing:v1:igcse:selection"
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "failedResponses": [],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T08:44:50.724Z"
+}

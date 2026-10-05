@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T01:37:05.341Z",
+  "playwright": "1.62.1",
+  "checks": [
+    {
+      "id": "true-model-rubric-statements-use-met-not-met",
+      "status": "PASS",
+      "labels": [
+        "Met",
+        "Not met",
+        "Not met",
+        "Not met"
+      ],
+      "firstMarks": 1,
+      "firstTime": {
+        "activeMs": 133,
+        "idleLimitMs": 180000
+      }
+    },
+    {
+      "id": "rubric-label-fix-preserves-first-response-result-time-and-one-evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "paused-attempt-prevents-interaction-and-restores-same-assessed-state",
+      "status": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

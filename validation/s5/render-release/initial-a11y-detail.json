@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Teacher checked orbital energy ladder detail preserves whole orientation and keyboardscroll",
+    "Core source-owned text/focus colour pairs meet4.5:1;actual brand/system body and scientific fallback glyphfonts queriedthroughCDP",
+    "Actual non-drag Addatom/select/Extendselectedatom touch buildsconnectedC-Ograph;Fit/Zoom/Pan actualcontrols work inbothsizes;teacher model detail ispopulated",
+    "FirstTab exposes Skiptoquestion;Enter activatesmainfocusdestination"
+  ],
+  "errors": [],
+  "limits": [
+    "Accessible-name/keyboard/contrast inspection is a bounded manual and invariant review,not an exhaustive WCAG conformance or screen-reader certification.",
+    "CUA reported no apps/browsers and Edge unavailable;all gestures occur in actual headless Edge."
+  ],
+  "brandFonts": {
+    "fonts": [
+      {
+        "familyName": "Comfortaa",
+        "postScriptName": "Comfortaa-Bold",
+        "isCustomFont": true,
+        "glyphCount": 17
+      }
+    ]
+  },
+  "bodyFonts": {
+    "fonts": [
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI",
+        "isCustomFont": false,
+        "glyphCount": 12
+      }
+    ]
+  },
+  "scientificGlyphProbeFonts": {
+    "fonts": [
+      {
+        "familyName": "Comfortaa",
+        "postScriptName": "Comfortaa-Bold",
+        "isCustomFont": true,
+        "glyphCount": 21
+      },
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 3
+      }
+    ]
+  },
+  "contrast": [
+    {
+      "role": "body",
+      "fg": "#eef0ff",
+      "bg": "#080a1d",
+      "ratio": 17.30635435820443
+    },
+    {
+      "role": "question body",
+      "fg": "#eef0ff",
+      "bg": "#11172d",
+      "ratio": 15.657941390608192
+    },
+    {
+      "role": "muted support",
+      "fg": "#b7c1dc",
+      "bg": "#11172d",
+      "ratio": 9.85818770255625
+    },
+    {
+      "role": "primary control",
+      "fg": "#081426",
+      "bg": "#55f6ff",
+      "ratio": 14.066157729918116
+    },
+    {
+      "role": "accent on raised",
+      "fg": "#55f6ff",
+      "bg": "#1a233d",
+      "ratio": 11.84607153172384
+    },
+    {
+      "role": "positive saved",
+      "fg": "#54f5b5",
+      "bg": "#11172d",
+      "ratio": 12.754672140466349
+    },
+    {
+      "role": "diagram labels",
+      "fg": "#17243a",
+      "bg": "#ffffff",
+      "ratio": 15.556939961116552
+    },
+    {
+      "role": "focus yellow",
+      "fg": "#ffde59",
+      "bg": "#1a233d",
+      "ratio": 11.721932138213226
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-04T12:43:02.497Z",
+  "checks": [
+    "Large initial view and main toolbar controls",
+    "Zoom stays centred and preserves graph/history/progress",
+    "Hand drag over an atom pans only, with cancellation and keyboard access",
+    "Drawing and undo retain the chosen zoom/pan",
+    "Zoom limits preserve centre and aspect ratio",
+    "Responsive toolbar, larger labels and touch panning",
+    "C3 read-only structures support zoom and hand without edits"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "scale": 1.3999999482125967,
+      "canvas": {
+        "x": 190,
+        "y": 255.046875,
+        "width": 1060,
+        "height": 495
+      }
+    },
+    {
+      "width": 820,
+      "scale": 1.3999999482125967,
+      "canvas": {
+        "x": 36,
+        "y": 280.046875,
+        "width": 748,
+        "height": 495
+      }
+    },
+    {
+      "width": 390,
+      "scale": 1.4000000133514405,
+      "canvas": {
+        "x": 16,
+        "y": 421.953125,
+        "width": 358,
+        "height": 320
+      }
+    },
+    {
+      "width": 350,
+      "scale": 1.4000000133514405,
+      "canvas": {
+        "x": 16,
+        "y": 456.84375,
+        "width": 318,
+        "height": 320
+      }
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}

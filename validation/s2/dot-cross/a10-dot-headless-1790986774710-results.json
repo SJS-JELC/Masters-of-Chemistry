@@ -1,0 +1,2903 @@
+{
+  "jobId": "S2-DOTCROSS",
+  "run": "a10-dot-headless-1790986774710",
+  "startedAt": "2026-10-03T00:19:34.710Z",
+  "browser": "pinned Playwright Chromium headless; actual headed timing is a separate reservation",
+  "checks": [
+    "actual controller/repository restores diagram and undo/redo history against same ID after reload",
+    "full i2 reference constructed using real non-drag atom/electron/bracket controls",
+    "chemical wrongness is assessed with immutable first response/result/time and one curriculum evidence record",
+    "real undo plus correction check gives correct learning feedback without changing first assessment",
+    "assessed reload keeps first evidence and corrected drawing separate"
+  ],
+  "errors": [],
+  "status": "FAIL",
+  "electronEdits": [
+    {
+      "expected": {
+        "id": "e173",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "bond",
+          "a": "I1",
+          "b": "I2",
+          "slot": 0
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": "a2"
+        },
+        {
+          "label": "Electron slot",
+          "value": "0"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e174",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "bond",
+          "a": "I1",
+          "b": "I2",
+          "slot": 1
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": "a2"
+        },
+        {
+          "label": "Electron slot",
+          "value": "1"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e175",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I1",
+          "slot": 0
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "0"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e176",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I1",
+          "slot": 1
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "1"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e177",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I1",
+          "slot": 2
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "2"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e178",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I1",
+          "slot": 3
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "3"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e179",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I1",
+          "slot": 4
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "4"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e180",
+        "symbol": "dot",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I1",
+          "slot": 5
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "dot"
+        },
+        {
+          "label": "First atom",
+          "value": "a1"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "5"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e181",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I2",
+          "slot": 0
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a2"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "0"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e182",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I2",
+          "slot": 1
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a2"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "1"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e10",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 1
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e183",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I2",
+          "slot": 2
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a2"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "2"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e10",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e11",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 2
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e184",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I2",
+          "slot": 3
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a2"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "3"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e10",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e11",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e12",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 3
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e185",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I2",
+          "slot": 4
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a2"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "4"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e10",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e11",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e12",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e13",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 4
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    },
+    {
+      "expected": {
+        "id": "e186",
+        "symbol": "cross",
+        "anchor": {
+          "kind": "atom",
+          "atomId": "I2",
+          "slot": 5
+        }
+      },
+      "ui": [
+        {
+          "label": "Electron symbol",
+          "value": "cross"
+        },
+        {
+          "label": "First atom",
+          "value": "a2"
+        },
+        {
+          "label": "Second atom",
+          "value": ""
+        },
+        {
+          "label": "Electron slot",
+          "value": "5"
+        }
+      ],
+      "state": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e10",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e11",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e12",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e13",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e14",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 5
+          }
+        }
+      ],
+      "status": "Diagram updated."
+    }
+  ],
+  "constructed": {
+    "questionId": "i2",
+    "state": {
+      "kind": "dot-and-cross",
+      "atoms": [
+        {
+          "id": "a1",
+          "element": "I",
+          "x": 448,
+          "y": 325
+        },
+        {
+          "id": "a2",
+          "element": "I",
+          "x": 552,
+          "y": 325
+        }
+      ],
+      "electrons": [
+        {
+          "id": "e1",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e2",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "a1",
+            "b": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e3",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e4",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e5",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e6",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e7",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e8",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e9",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e10",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e11",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e12",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e13",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e14",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "a2",
+            "slot": 5
+          }
+        }
+      ],
+      "groups": [],
+      "history": [
+        {
+          "kind": "dot-and-cross",
+          "atoms": [],
+          "electrons": [],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            }
+          ],
+          "electrons": [],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [],
+          "electrons": [],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            }
+          ],
+          "electrons": [],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            },
+            {
+              "id": "e8",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 5
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            },
+            {
+              "id": "e8",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 5
+              }
+            },
+            {
+              "id": "e9",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 0
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            },
+            {
+              "id": "e8",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 5
+              }
+            },
+            {
+              "id": "e9",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e10",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 1
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            },
+            {
+              "id": "e8",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 5
+              }
+            },
+            {
+              "id": "e9",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e10",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e11",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 2
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            },
+            {
+              "id": "e8",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 5
+              }
+            },
+            {
+              "id": "e9",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e10",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e11",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e12",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 3
+              }
+            }
+          ],
+          "groups": []
+        },
+        {
+          "kind": "dot-and-cross",
+          "atoms": [
+            {
+              "id": "a1",
+              "element": "I",
+              "x": 448,
+              "y": 325
+            },
+            {
+              "id": "a2",
+              "element": "I",
+              "x": 552,
+              "y": 325
+            }
+          ],
+          "electrons": [
+            {
+              "id": "e1",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e2",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "bond",
+                "a": "a1",
+                "b": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e3",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e4",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e5",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e6",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e7",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 4
+              }
+            },
+            {
+              "id": "e8",
+              "symbol": "dot",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a1",
+                "slot": 5
+              }
+            },
+            {
+              "id": "e9",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 0
+              }
+            },
+            {
+              "id": "e10",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 1
+              }
+            },
+            {
+              "id": "e11",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 2
+              }
+            },
+            {
+              "id": "e12",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 3
+              }
+            },
+            {
+              "id": "e13",
+              "symbol": "cross",
+              "anchor": {
+                "kind": "atom",
+                "atomId": "a2",
+                "slot": 4
+              }
+            }
+          ],
+          "groups": []
+        }
+      ],
+      "future": []
+    },
+    "reference": {
+      "atoms": [
+        {
+          "id": "I1",
+          "element": "I",
+          "x": 448,
+          "y": 325
+        },
+        {
+          "id": "I2",
+          "element": "I",
+          "x": 552,
+          "y": 325
+        }
+      ],
+      "electrons": [
+        {
+          "id": "e173",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "bond",
+            "a": "I1",
+            "b": "I2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e174",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "bond",
+            "a": "I1",
+            "b": "I2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e175",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I1",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e176",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I1",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e177",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I1",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e178",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I1",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e179",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I1",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e180",
+          "symbol": "dot",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I1",
+            "slot": 5
+          }
+        },
+        {
+          "id": "e181",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I2",
+            "slot": 0
+          }
+        },
+        {
+          "id": "e182",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I2",
+            "slot": 1
+          }
+        },
+        {
+          "id": "e183",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I2",
+            "slot": 2
+          }
+        },
+        {
+          "id": "e184",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I2",
+            "slot": 3
+          }
+        },
+        {
+          "id": "e185",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I2",
+            "slot": 4
+          }
+        },
+        {
+          "id": "e186",
+          "symbol": "cross",
+          "anchor": {
+            "kind": "atom",
+            "atomId": "I2",
+            "slot": 5
+          }
+        }
+      ],
+      "groups": []
+    }
+  },
+  "failure": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n'33bbe5e8-8596-4650-bc11-727e294cc8a2'\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s2/dot-cross/browser.mjs:36:57",
+  "finishedAt": "2026-10-03T00:19:41.827Z"
+}

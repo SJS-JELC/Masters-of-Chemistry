@@ -1,0 +1,15 @@
+{
+  "runId": "UI-CONSISTENCY-20261003",
+  "owner": "ROOT",
+  "stage": "U1",
+  "status": "ACCEPTED_FOR_INDEPENDENT_REVIEW",
+  "treeSha256": "3a24f663f5a723272f58ec02e323ae11db8a6ce9eb21b7e268ca1fa75b201b8f",
+  "review": "Reviewed shared action state, Clear/assistance transitions, persistence markers, typed keyboard hook, shared theme, course animation, Olympiad completion selector and desktop/mobile rendered evidence. Identified inherited full-width calorimetry buttons; verified central width:auto fix and corrected full-size desktop render with all-family geometry evidence.",
+  "decisions": [
+    "Retain typed-input Enter behavior without hijacking native buttons or editor shortcuts.",
+    "Retain existing staged Olympiad controls as explicitly selected by the user.",
+    "Transient corrected-answer feedback need not become new persistent assessment evidence.",
+    "Historical generated-summary incident remains documented; authoritative original integrity guard passes."
+  ],
+  "next": "U2: one independent gpt-6.1-sol/high reviewer through existing foreman, bounded fixes and root final acceptance; no publication."
+}

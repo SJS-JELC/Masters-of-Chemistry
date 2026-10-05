@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-04T12:27:36.073Z",
+  "checks": [
+    "No redundant controls or permanent drawing panel",
+    "Isomer popup drawing, undo, keyboard Escape, focus and autosave"
+  ],
+  "layouts": [],
+  "errors": [],
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await dlg.evaluate(d=>d.contains(document.activeElement)))\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-popup/browser.mjs:53:60\n    at async check (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-popup/browser.mjs:26:35)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/olympiad-popup/browser.mjs:51:3",
+  "finishedAt": "2026-10-04T12:27:41.093Z"
+}

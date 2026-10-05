@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T10:55:32.340Z",
+  "agentId": "E02",
+  "jobId": "DOT-CROSS-RESTORE",
+  "fingerprintsChecked": 40,
+  "manifestPath": "validation/editor-restoration/implementation/dot-cross/completion.json",
+  "manifestSha256": "b5464dd1b9216a52445602c2e37032058bcea70ddadb846ad1e15475cc6d4610",
+  "verificationSha256": "f512a27faa9d0793865624d8b497796465a79379920544497188407de8459c12",
+  "evidence": [
+    {
+      "path": "validation/editor-restoration/implementation/dot-cross/browser-results.json",
+      "sha256": "6078dcd952a82fecc97a36189a4e89ad10256baf9c6a0916572aac66373a73c2"
+    },
+    {
+      "path": "validation/editor-restoration/implementation/dot-cross/image-review.json",
+      "sha256": "6891cc4140c64fbd90a849ed52176bffced2f3bdf5e11d41ce5125f3586ce053"
+    }
+  ],
+  "foremanReview": "Relevant dot editor/engine/model/layout and shared UI changes inspected; gesture preview/cancellation, source regions/charges/circles/history/keyboard routing. Owner source-based chemistry/geometry and matching screenshots reviewed; first-attempt/timing/revision/save/teacher integration independently verified."
+}

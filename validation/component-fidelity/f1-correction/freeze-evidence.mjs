@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const here=import.meta.dirname,project=path.resolve(here,'../../..');const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).filter(e=>!e.name.startsWith('.')).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
+const files=walk(here).filter(p=>!p.endsWith('evidence-hashes.json')).map(p=>({path:path.relative(project,p).replaceAll('\\','/'),bytes:fs.statSync(p).size,sha256:crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')}));
+fs.writeFileSync(path.join(here,'evidence-hashes.json'),JSON.stringify({runId:'COMPONENT-FIDELITY-20261003',stage:'F1',capturedAt:new Date().toISOString(),files},null,2)+'\n');console.log(JSON.stringify({files:files.length,aggregateSha256:files.find(p=>p.path.endsWith('/foreman-report.json')).sha256}));

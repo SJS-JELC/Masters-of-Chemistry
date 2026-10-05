@@ -1,0 +1,176 @@
+{
+  "jobId": "STATS-RESTORE-01",
+  "agentId": "A01",
+  "status": "PASS",
+  "reviewedAt": "2026-10-04T19:40:29.657Z",
+  "reviewer": "A01 actual visual inspection through view_image",
+  "sources": [
+    {
+      "path": "src/statistics/StatisticsView.tsx",
+      "sha256": "09bd0306d589cd44e0eff5ac2a75cf11fcc99b4a0862098f9d2ac942c4ae04e9"
+    },
+    {
+      "path": "src/statistics/model.ts",
+      "sha256": "1c76bccef8e20d45f7b69dba88d0c96143262d6afebfa365fb75b5cdfa5ac2d3"
+    },
+    {
+      "path": "src/statistics/statistics.css",
+      "sha256": "6aa33d0ed4157b2d0785534f58de15efc461101992e52c509fc8a89153b255b9"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "6ca365b008dda7d6d16378f9a58872628e3d7a0c3d17bf698a4a47eca99a2983"
+    }
+  ],
+  "browser": "headless Microsoft Edge / Playwright 1.62.1",
+  "timezone": "Europe/London",
+  "findings": [
+    "Original layout, five cards and outcome colours restored with current shared branding.",
+    "Both courses populated and empty desktop/tablet/mobile layouts inspected.",
+    "Threshold geometry, unavailable rows, chronological squares, real-time result detail and production routes inspected.",
+    "Month width and long-history scrolling pass browser geometry checks; original mobile date-label density retained."
+  ],
+  "limitations": [
+    "No claim of testing every browser; original dense mobile date labels have accessible full descriptions."
+  ],
+  "screenshots": [
+    {
+      "path": "alevel-desktop-populated.png",
+      "sha256": "da16da8c5791860b4531c72d168fc289131a1a30f4fe73c9f31bea64e371bd76",
+      "capturedAt": "2026-10-04T19:34:12.187Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-desktop-empty.png",
+      "sha256": "963051402f23da0f59fcb0b4ba107aad83c5bec89bf2e893f028d364bef82354",
+      "capturedAt": "2026-10-04T19:34:15.186Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-tablet-populated.png",
+      "sha256": "f0275a24c430a3c82c9576ac95b0afca9583178e18aaf5af705f764b5a64be41",
+      "capturedAt": "2026-10-04T19:34:12.478Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-tablet-empty.png",
+      "sha256": "ccf0481b0f9ad3fbe9d3ce73f8497b268c55ad0fc20b48be9e0c661ec6a3475e",
+      "capturedAt": "2026-10-04T19:34:15.361Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-mobile-populated.png",
+      "sha256": "e7af2f5d659829031831c4aeca39daa5835e9a0f2db5c0e025f55aba0c4f0863",
+      "capturedAt": "2026-10-04T19:34:12.695Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-mobile-empty.png",
+      "sha256": "9cc3bb7a93db904e9ab2be5ea35a470febc9630e58f833c060c5f40830ccedb8",
+      "capturedAt": "2026-10-04T19:34:15.488Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-mobile-overview.png",
+      "sha256": "bebd710575021fe2e5a3d74e76952751be2b86f600bda4112cacfe3b2089e949",
+      "capturedAt": "2026-10-04T19:34:12.947Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-mobile-chart.png",
+      "sha256": "05d39e1d05ff2ca9336a565f41b8585d36065171104cfc8a4b6ced68fef2c2f4",
+      "capturedAt": "2026-10-04T19:34:12.860Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-original-desktop.png",
+      "sha256": "f349a08c24eac63c712e0bd0164d7b9ff8577c8441d933887fad5333ab346131",
+      "capturedAt": "2026-10-04T19:34:18.162Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-live-timing-transfer.png",
+      "sha256": "fe1cebc86e5aafb1fdf1d78261203101f667acacf99adbd57de65ff0544bef86",
+      "capturedAt": "2026-10-04T19:35:02.427Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "alevel-release-prefix.png",
+      "sha256": "963051402f23da0f59fcb0b4ba107aad83c5bec89bf2e893f028d364bef82354",
+      "capturedAt": "2026-10-04T19:35:10.573Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-desktop-populated.png",
+      "sha256": "c7773ceb68e61d47b96499243ea6f4aab8ae3ca112290fb1d052474e9ef079a2",
+      "capturedAt": "2026-10-04T19:34:21.704Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-desktop-empty.png",
+      "sha256": "7069c8d587abb9897bb42bb7f364b978efd222af7848fd27d6699e60dd637bd1",
+      "capturedAt": "2026-10-04T19:34:24.682Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-tablet-populated.png",
+      "sha256": "41246abf9ec5e66e94092086937d43f7faa3e08ee01adf68179ba6389dcaa7e2",
+      "capturedAt": "2026-10-04T19:34:22.001Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-tablet-empty.png",
+      "sha256": "926ee4ffa87936a7129b5bcff47be31ff8e03cfc81b6432254b9a1cbbbf45cca",
+      "capturedAt": "2026-10-04T19:34:24.859Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-mobile-populated.png",
+      "sha256": "c292fc71c65c7d166bb9a31afeacbfc2e0cf2ffbc4b979b2286097b8c24f9ef0",
+      "capturedAt": "2026-10-04T19:34:22.210Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-mobile-empty.png",
+      "sha256": "cfe500fc987c9018fa28cfb2d1d83c5986269bd208f1416abe7f25a75f71e9c6",
+      "capturedAt": "2026-10-04T19:34:24.998Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-mobile-overview.png",
+      "sha256": "1333877b089377f2d2dbcf49862713576fdae71f0971d449a784ae63f0d4a288",
+      "capturedAt": "2026-10-04T19:34:22.453Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-mobile-chart.png",
+      "sha256": "434f42a2d8d073c58d31871e07bd26979b4ee3b2dc9506f16c28713f121d14a4",
+      "capturedAt": "2026-10-04T19:34:22.370Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-original-desktop.png",
+      "sha256": "6825ac5e1393997844b368440b7353c8204d9284dda0b96f638f28fda1aa5f08",
+      "capturedAt": "2026-10-04T19:34:27.629Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-live-timing-transfer.png",
+      "sha256": "a8f7f6b77bf49aa57023c568fa5289383f966f41f0330d9cbdd8685a0ec432bf",
+      "capturedAt": "2026-10-04T19:35:06.820Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "igcse-release-prefix.png",
+      "sha256": "7069c8d587abb9897bb42bb7f364b978efd222af7848fd27d6699e60dd637bd1",
+      "capturedAt": "2026-10-04T19:35:13.232Z",
+      "visuallyInspected": true
+    },
+    {
+      "path": "storage-error.png",
+      "sha256": "89a51f9b188a9e10e6af39edae1edf09b607192348d41a66ecef986fb7e056c5",
+      "capturedAt": "2026-10-04T19:34:29.585Z",
+      "visuallyInspected": true
+    }
+  ]
+}

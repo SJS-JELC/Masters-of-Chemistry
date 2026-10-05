@@ -1,0 +1,119 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-BEHAVIOUR-HARNESS",
+  "verifiedAt": "2026-10-03T04:32:51.732Z",
+  "status": "PASS",
+  "scope": "Approved harness continuation only; substantive worker behaviour remains pending",
+  "checks": [
+    "All 26 retained artifacts match captured SHA256; current changes separately recorded.",
+    "v3 differs from v1 only by partial-only fixture setup helper and one call.",
+    "Old host unloaded before replacement repository write; fresh unassessed source fixture restores through production UI, exact ID/ref checked.",
+    "Deep script identical to failed original after removing approved setup/readiness additions and reverting two typed response repairs. All original assertions preserved.",
+    "Import proposal has exactly one locator replacement; source content and all import assertions unchanged.",
+    "Both actual production import views independently reproduce changing wrapped-label name; scoped textarea stable.",
+    "Actual installed TypeScript source transform fails without filename and succeeds with .ts filename; current server has exact MIME/filename repairs.",
+    "Actual source provider/marking restores both exact multipart refs and planned answers yield 1/3 marks. No clock/visibility mocking or browser suite replay."
+  ],
+  "currentChanges": [
+    {
+      "file": "src/foundation/ActivityHost.tsx",
+      "retained": "324e4b890abbc81f633a7f4e763b65a3dedeccaf799106cfd93cc25c49f1aec4",
+      "current": "d68fd5ad3a78960a03dd1ac2ea6b16566570f3f9c9283ec762cc5e2842d845c9"
+    },
+    {
+      "file": "src/persistence/repository.ts",
+      "retained": "91b1cec1af7393994689215d1cbacf340b63e051cb33986efd14570ed47ceb22",
+      "current": "a30c77ff7b7e471f99df7422b526b8667d59b162e528d5bb7b39e711c7a060ad"
+    }
+  ],
+  "partial": [
+    {
+      "course": "alevel",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB2-3-1-3",
+        "seed": 3,
+        "level": 1
+      },
+      "parts": 3,
+      "marks": {
+        "points": [
+          {
+            "partId": "amount",
+            "pointId": "numerical-value",
+            "earned": 1,
+            "available": 1,
+            "message": "Correct within the required numerical precision."
+          },
+          {
+            "partId": "concentration",
+            "pointId": "numerical-value",
+            "earned": 0,
+            "available": 1,
+            "message": "This numerical value is incorrect. Compare your calculation with the worked answer."
+          },
+          {
+            "partId": "ph",
+            "pointId": "numerical-value",
+            "earned": 0,
+            "available": 1,
+            "message": "This numerical value is incorrect. Compare your calculation with the worked answer."
+          }
+        ],
+        "earned": 1,
+        "available": 3
+      }
+    },
+    {
+      "course": "igcse",
+      "ref": {
+        "activityId": "igcse/calorimetry",
+        "questionId": "CAL-0070XS",
+        "seed": 327808,
+        "level": 1
+      },
+      "parts": 3,
+      "marks": {
+        "points": [
+          {
+            "partId": "deltaT",
+            "pointId": "numeric",
+            "earned": 1,
+            "available": 1,
+            "message": "Correct to the required numerical precision."
+          },
+          {
+            "partId": "q",
+            "pointId": "numeric",
+            "earned": 0,
+            "available": 1,
+            "message": "This numerical value is incorrect. Compare it with the worked calculation."
+          },
+          {
+            "partId": "dh",
+            "pointId": "numeric",
+            "earned": 0,
+            "available": 1,
+            "message": "This numerical value is incorrect. Compare it with the worked calculation."
+          }
+        ],
+        "earned": 1,
+        "available": 3
+      }
+    }
+  ],
+  "proposals": {
+    "deep": {
+      "path": "validation/s5/behaviour/proposed-deep-browser-v3.mjs",
+      "sha256": "0d4b3be1e3ce929485dbffddbaf46d8073e256a6cab08c9d255fe4d826124263"
+    },
+    "import": {
+      "path": "validation/s5/behaviour/proposed-import-browser.mjs",
+      "sha256": "9ca375bd374dc6dbedfb5a65aef36f07699fd48c0c3fee47952be02b31d9db8b"
+    },
+    "server": {
+      "path": "validation/s5/behaviour/server.mjs",
+      "sha256": "747cb5f6f51c610a5769fcd6780a94b4e2bfed4dd51b7ad295a9abcbc90ef385"
+    }
+  }
+}

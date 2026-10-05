@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "note": "W02 first rerun rewrote deterministic W01 fixtures before discovering their output path. No prior pre-rerun hashes available; do not claim pre-rerun immutability. Separately regenerated recovery fixtures compare byte-identically to current W01 fixtures.",
+  "files": [
+    {
+      "path": "native-correct.json",
+      "sha256": "2f5165d86e06bd6990541d8fef1cc5d67d3076ef986e3c984de5e36d976d5179",
+      "currentImplementationByteEqual": true
+    },
+    {
+      "path": "native-historical-wrong-k.json",
+      "sha256": "d71c23602bdf39878be905d71a581081bf8672c6396c64c562aa254819bee985",
+      "currentImplementationByteEqual": true
+    },
+    {
+      "path": "legacy-v3-historical-wrong-k.json",
+      "sha256": "4e6af4f6322b7991d7e43b6955b88e9cd3397330eceddea2bdeef0549d3d1e09",
+      "currentImplementationByteEqual": true
+    },
+    {
+      "path": "native-revalidated.json",
+      "sha256": "e76722aa647e8510e19e946478c1ecb0abe87df53a4f5d7435b94df3f4b82023",
+      "currentImplementationByteEqual": true
+    }
+  ]
+}

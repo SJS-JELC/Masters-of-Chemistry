@@ -1,0 +1,61 @@
+{
+  "family": "identify",
+  "id": "EC-TXYUKV",
+  "limit": 60000,
+  "idleGap": 60632,
+  "idleBefore": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 0,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "idleAfter": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 60632,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "stopped": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 60632,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "beforeFreeze": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 61838,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "background": {
+    "hidden": false,
+    "focused": false,
+    "ticks": 4
+  },
+  "hiddenBefore": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 61838,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "hiddenAfter": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 61838,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "afterFreeze": {
+    "attemptId": "f09-f09-practice-EC-TXYUKV-musqxkct-ol7w",
+    "activeMs": 61838,
+    "idleLimitMs": 60000,
+    "finished": false
+  },
+  "frozenGap": 0,
+  "thaw": {
+    "ticks": 55,
+    "hidden": false,
+    "focused": false
+  },
+  "ticksImmediatelyBeforeFreeze": 16,
+  "cdpActuallyFrozen": false
+}

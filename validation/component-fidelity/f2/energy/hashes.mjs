@@ -1,0 +1,7 @@
+﻿import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const app=path.resolve('apps/Masters-of-Chemistry'),here=path.join(app,'validation/component-fidelity/f2/energy');
+const paths=['src/editors/energy-profile/index.tsx','src/editors/energy-profile/styles.css','src/chemistry/energy-profile/svg.ts'];
+const results=paths.map(file=>{const current=fs.readFileSync(path.join(app,file)),before=path.join(app,'validation/component-fidelity/f2/before',file);return{path:file,beforeExists:fs.existsSync(before),beforeSha256:fs.existsSync(before)?crypto.createHash('sha256').update(fs.readFileSync(before)).digest('hex'):null,currentSha256:crypto.createHash('sha256').update(current).digest('hex'),bytes:current.length};});
+const invariants=['src/chemistry/energy-profile/index.ts','src/activities/igcse/energy-enthalpy/source-core.js','src/activities/igcse/energy-enthalpy/marking.ts'];
+for(const file of invariants){const before=path.join(app,'validation/component-fidelity/f2/before',file),now=path.join(app,file);results.push({path:file,invariant:true,beforeExists:fs.existsSync(before),beforeSha256:crypto.createHash('sha256').update(fs.readFileSync(before)).digest('hex'),currentSha256:crypto.createHash('sha256').update(fs.readFileSync(now)).digest('hex')});}
+fs.writeFileSync(path.join(here,'change-hashes.json'),JSON.stringify({capturedAt:new Date().toISOString(),paths:results},null,2));console.log(JSON.stringify(results));

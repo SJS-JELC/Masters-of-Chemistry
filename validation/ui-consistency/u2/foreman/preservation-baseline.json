@@ -1,0 +1,3143 @@
+{
+  "at": "2026-10-03T22:54:00.582Z",
+  "purpose": "U2 foreman preservation checkpoint after U1 root gate; does not replace original U1 pre-change evidence.",
+  "currentInputs": 645,
+  "currentInputTree": "3a24f663f5a723272f58ec02e323ae11db8a6ce9eb21b7e268ca1fa75b201b8f",
+  "frozenArtifacts": [
+    {
+      "path": "ui-consistency-contract.json",
+      "bytes": 5419,
+      "sha256": "f760067f4907048057389e11803e512364bc2fe35f725efa63370110d755936f"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/HANDOVER.md",
+      "bytes": 1831,
+      "sha256": "db0147ed932306c976b80bd33e10df11342a830d2062f896a170568dffc2c4a7"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-acid-base-calculations-1440.png",
+      "bytes": 194697,
+      "sha256": "770c8d91781cb05b188fabc947c91d0cbfed61d6534e2f4343833518839cafe4"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-acid-base-calculations-350.png",
+      "bytes": 89217,
+      "sha256": "57aa13f1a79b58a02db2b93659d94f26e2c6dfc3ee55548cc392fcfd0649c371"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-acid-base-calculations-390.png",
+      "bytes": 90905,
+      "sha256": "9f6d7d75f88dc3ebda1cbee22cb768659cb81e40a4fc023c291697d1d6d55690"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-dot-and-cross-1440.png",
+      "bytes": 427082,
+      "sha256": "06cd1c08ace43dffc6b7d8c23511e2fe1bc8fb5c804b4afb1d820f0467b41154"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-dot-and-cross-350.png",
+      "bytes": 249654,
+      "sha256": "4abe6eadcbb9e0e0fe8752b1d1065cbb0cc7d6fbe371472c61459ec1692c5da8"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-dot-and-cross-390.png",
+      "bytes": 266029,
+      "sha256": "80e22c82af5ac429a221ca0b7e68f945a1cb0c8d70bc8428a0d1c32faaabb723"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-electron-configurations-1440.png",
+      "bytes": 200323,
+      "sha256": "e03d935c8f19333e4676c57b56429c4340d56b4c37ee65d9afb944df191a0c26"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-electron-configurations-350.png",
+      "bytes": 95835,
+      "sha256": "5f83d29447deb57bcac4d687d3d0c8ff65e5f1fcbc9308f65a208b356cce837f"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-electron-configurations-390.png",
+      "bytes": 98541,
+      "sha256": "11bb7241f88f57ad5ecba617901df1950b7dfaf2d48824da9bdd7326d4725bfa"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-electrons-bonding-1440.png",
+      "bytes": 199493,
+      "sha256": "186da4c3da8da8889456a06a85b3ef6a0233ae19fd661f7a2aab3293134ebcdf"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-electrons-bonding-350.png",
+      "bytes": 94436,
+      "sha256": "5ca9c936efa89db71e94ce10e7b4db08b892dc2ba22493c9200d5d1574657cd6"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-electrons-bonding-390.png",
+      "bytes": 95110,
+      "sha256": "8d07df3478137a7bdfb842e66ab56c13e88e42c63a52570e0597f9055269cd22"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-ph-titration-curves-1440.png",
+      "bytes": 511284,
+      "sha256": "b565383dff0beedbb5623e5177e205492a978d079a3b590cce7a10e031573da9"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-ph-titration-curves-350.png",
+      "bytes": 302777,
+      "sha256": "24b57b5e971568cbb3dffe94bb9fadd95ad1d49a5b576de172cb8851e64ac801"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-ph-titration-curves-390.png",
+      "bytes": 316348,
+      "sha256": "d34acd0b1b46254bda5c2ee3bebaa2c7ff4364230bdd42dcff3f0262116092bf"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/alevel-release.txt",
+      "bytes": 41,
+      "sha256": "4a7d1fe99ab9c1ecbf86aa5349474d365de82c88066e961236c0a86a7b6cfc85"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/before-igcse-calorimetry-1440.png",
+      "bytes": 480102,
+      "sha256": "61690cbbe6e66c1c11659664a95e0d21c88a4241928b94cd97b119b0e1cab24e"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/browser-before.json",
+      "bytes": 1761,
+      "sha256": "0525d50b7008df5db1194f26dc093e5e7fe0b9f40f1d491a9541233166582f69"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/browser-results.json",
+      "bytes": 40994,
+      "sha256": "2043bb000cf42ec657568cd6b6f10851a7d2d58c630bdf02084b86cee3b0828a"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/browser.mjs",
+      "bytes": 3827,
+      "sha256": "45b0119109a3c055e63f0f06f4a41892a50ae5371fe870441d9092eb42180145"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/build-and-release.json",
+      "bytes": 111919,
+      "sha256": "0d209f2abe278d91ad5e29f9a7edb5126e0947c8d4a5ef203dd812b4328cd8b3"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/build-and-release.mjs",
+      "bytes": 1803,
+      "sha256": "dafbbdc9ce074e9b19ad852f437471f9096b461c6ea7ca5e5b18fc7b93de6b9b"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/build.txt",
+      "bytes": 29814,
+      "sha256": "357a0e5e321a08617344b62d9313dcab64ad2ed33725556c9bd2111641650aad"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/check-originals.mjs",
+      "bytes": 2059,
+      "sha256": "0a7d871018bb1bb8b742af6c43d6955d83e27f12c57c8e1872c30c692c0ad7dc"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/current-inputs.json",
+      "bytes": 113574,
+      "sha256": "f985616fff8cdd86477343b792ee0dfef501cffdb646d33f16e24b429ff466fd"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/finalize.mjs",
+      "bytes": 4730,
+      "sha256": "614b0cda1c733d9599f71a4d2ccd57b9a275f0f6fec89b1b83dd9c33bbc45aa2"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-bond-enthalpy-1440.png",
+      "bytes": 539076,
+      "sha256": "7027a743f38ecd7be078f2be529bcc012f3a287a519aeb86791f92de1c21c1c2"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-bond-enthalpy-350.png",
+      "bytes": 262739,
+      "sha256": "7b0c65fb32f76d21981b7af55957357622149be141c9150c38e45dab8cebfdd0"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-bond-enthalpy-390.png",
+      "bytes": 278332,
+      "sha256": "9a09acb3e17a7d90338d6fabc78260993e1db94aaac055fed011b95989da7b30"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-calorimetry-1440.png",
+      "bytes": 485982,
+      "sha256": "e3be97682cb281a661c7d27d65bc12020efb599c897631451bcc38445512e94c"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-calorimetry-350.png",
+      "bytes": 316018,
+      "sha256": "429fc4449898b51158a1cf2e5c16355216e6ee02667f1f55f93fcb8fc50fe654"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-calorimetry-390.png",
+      "bytes": 322390,
+      "sha256": "55014c82b751efd8e171ccceb78c1d16ffd536e0580c5ead9d085d1cea6efc1d"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-dot-and-cross-1440.png",
+      "bytes": 366257,
+      "sha256": "9023e676ddcc8b89164a23f2800ba61067da7b0d42d54e6a089fc8085da8180e"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-dot-and-cross-350.png",
+      "bytes": 182709,
+      "sha256": "ffdce272d1ad900422f0f70b59ee8328292c490aecb2b47386cbd25429261a68"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-dot-and-cross-390.png",
+      "bytes": 190490,
+      "sha256": "fcb9780e5c6acd601f5a6b62b1c45da5e34925de0c05edd89288b1d1fd26380d"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-energetics-practical-1440.png",
+      "bytes": 214971,
+      "sha256": "81987bca976b86394d8f03b4f23542fb4c3b6487ab627f82530b061f0bb697fb"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-energetics-practical-350.png",
+      "bytes": 98882,
+      "sha256": "833ee84d7a40115ec389f1a8bc9fe0c66102b38d2ce8209f91adb5033ec36fe7"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-energetics-practical-390.png",
+      "bytes": 117171,
+      "sha256": "1ef702b9e00ce676cb6b39f02b05022ef3a266e12d1b1d1ed21e0a6593b2c329"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-energy-enthalpy-1440.png",
+      "bytes": 204941,
+      "sha256": "f7f11913e80b9d2c3a278908247804d5f8ee4c66506578e29eb9fc75c6b484bf"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-energy-enthalpy-350.png",
+      "bytes": 93178,
+      "sha256": "494da75ac79f0b5af400d05aa5fc9185e6a1650e8d8a1dd71119d70adf2bacd0"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-energy-enthalpy-390.png",
+      "bytes": 92432,
+      "sha256": "2c55d6f7ab7ddcbaa5133e0ba35b074c8160699925d888ebca7a5fa6cad72ce9"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-release.txt",
+      "bytes": 40,
+      "sha256": "26dc79c2ff9d7a0051f483636350beb65aeb8cf87054236ea9f97c74646966b6"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-structure-and-bonding-1440.png",
+      "bytes": 243842,
+      "sha256": "2d2174582d1228268fff80f8e7ab91386e5a4f15b8d0078f2d37df615e71bae5"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-structure-and-bonding-350.png",
+      "bytes": 159875,
+      "sha256": "f4ff5662aff256a6c45731b6e9ab16743dc7f4789966c0b9ef7a27648d59a757"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/igcse-structure-and-bonding-390.png",
+      "bytes": 154681,
+      "sha256": "f13dbd606f7c1ca14de0cf901ee28d555b6712aceb52b8ef8cc03f2e8a716c18"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/original-preservation.json",
+      "bytes": 288,
+      "sha256": "f52599c4a15b4208b52b1378ea4ef710a451fded21e4eca1d851f4fa6eb25317"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/report.json",
+      "bytes": 7236,
+      "sha256": "567e54eb9623b54eb09f702697f7f9aa2f448575ec5efed3f2dd21837e05b3d8"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/root-gate.json",
+      "bytes": 1132,
+      "sha256": "579a08ea6de2fb0d4cdeb9552cc7eddaf2dc57d30dc8bc96c058b94f099fb1fa"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/shared-actions.before.css",
+      "bytes": 999,
+      "sha256": "94da05d406560d2533250587436d905883a0d75a075148226badab1291d6c490"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/source-changes.patch",
+      "bytes": 974,
+      "sha256": "04aa65cb1d52e86551cdbcc0904c2ac1727912e670b85da70722c967eac20112"
+    },
+    {
+      "path": "validation/ui-consistency/u1-footer-fix/typecheck.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "validation/ui-consistency/u1/HANDOVER.md",
+      "bytes": 5044,
+      "sha256": "e8e46ec1227d69e036d106dd5cc71a055c94e021037ab0a2dd881b12950cfc81"
+    },
+    {
+      "path": "validation/ui-consistency/u1/alevel-release.txt",
+      "bytes": 41,
+      "sha256": "4a7d1fe99ab9c1ecbf86aa5349474d365de82c88066e961236c0a86a7b6cfc85"
+    },
+    {
+      "path": "validation/ui-consistency/u1/assets-config-preservation.json",
+      "bytes": 3557,
+      "sha256": "c14d36de5db8a72fd619a5d8f8ff7f2bd7aaa05f92304251dd75eda8ec2c7c7f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/data.js",
+      "bytes": 7527,
+      "sha256": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "bytes": 2274,
+      "sha256": "262ff4eee99b5a6d29afbc6e957d72f5d40708d1ea2ddbed8aec1f972f06f229"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/engine.js",
+      "bytes": 57756,
+      "sha256": "e3545bb2800cd62e5ca5a06ca66e3cda0355c6a9c7917d5b051d8bb103260d5c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "bytes": 13735,
+      "sha256": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/identity.ts",
+      "bytes": 3839,
+      "sha256": "d0534bd42aef3b131905e12cb866f9f44bcf2d3500e667d1ee2b8ecdfdfb9678"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "bytes": 1232,
+      "sha256": "0e0f5db4c83a0d216bbaf623c3c15419f06c87275785bcbb3b7143c47a691422"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/index.ts",
+      "bytes": 1073,
+      "sha256": "86c7fb3250a2c7e5edc2a47fc6ebb1b151b146aa655d08c4e7eeb055b1fda992"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "bytes": 57379,
+      "sha256": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/marking.ts",
+      "bytes": 2137,
+      "sha256": "81e671a12f18d2df65d4284c0466e6acc22a871ed9b61c022d8ca7bf5255dea5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "bytes": 1252,
+      "sha256": "938b3f33803a0e2320307b5878ebc4cc1cc6634b6a8aa0384a8bb753d76a2d77"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/provider.ts",
+      "bytes": 6822,
+      "sha256": "5c814cd246f46e8a9fc52b5ed2fabf6f79dd096a16d5140e4dc8d3674a65a67f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/acid-base-calculations/sources.ts",
+      "bytes": 1261,
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/dot-and-cross/bank.d.ts",
+      "bytes": 116,
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/dot-and-cross/bank.js",
+      "bytes": 584003,
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/dot-and-cross/index.ts",
+      "bytes": 578,
+      "sha256": "ed038029e187baef7d106890401f7725ec40e57b71bdf3355940f00917e1bf2a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/dot-and-cross/marking.ts",
+      "bytes": 3047,
+      "sha256": "021fab13ff63986453f52114a885ea0a130154b6b463a72d2ae6b6f483646109"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/dot-and-cross/provider.ts",
+      "bytes": 7257,
+      "sha256": "8fa92593ac99dc063b0b28463d30f008b97af4e1c965442bbc2964efaa1289ab"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electron-configurations/index.ts",
+      "bytes": 733,
+      "sha256": "3fae4dec25808927e37477960975662a67d64bd256fa6ecc9e13efcdd8ed5064"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electron-configurations/marking.ts",
+      "bytes": 1800,
+      "sha256": "2ac0cfadfe42287df16309971364ea96dcda8629061ee05c656fe4e841ea44be"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electron-configurations/provider.ts",
+      "bytes": 9727,
+      "sha256": "da7ce1889761e884ec8e1f9137c5d1aea618909d044ef465a7ef567165a96e9a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/core.d.ts",
+      "bytes": 449,
+      "sha256": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/core.js",
+      "bytes": 2720,
+      "sha256": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/data.d.ts",
+      "bytes": 536,
+      "sha256": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/data.js",
+      "bytes": 19481,
+      "sha256": "08192144a9e9673473df1c60f69c9dc64397646518882fbc95adffea49831c4c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/index.ts",
+      "bytes": 481,
+      "sha256": "6c7e8fbb41e1e8b4979886612741b0ee222c2924b23eb1261667e92b8bf6eb10"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/marking.ts",
+      "bytes": 1488,
+      "sha256": "572ee663798299faf48a945df922cffeb8ddf752f3bac55cb01f5059d6b4a41f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/electrons-bonding/provider.ts",
+      "bytes": 3849,
+      "sha256": "268a1b73b0935b03dbe93530cc929ecd2049e9a5667fb40d36c6645a9baf03bb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/ph-titration-curves/bank.json",
+      "bytes": 30762,
+      "sha256": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/ph-titration-curves/bank.ts",
+      "bytes": 29334,
+      "sha256": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/ph-titration-curves/index.ts",
+      "bytes": 524,
+      "sha256": "45f3f14c670f8797009b86dbe5702223146e8dae3a8d16b910f05c6a6857e112"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/ph-titration-curves/marking.ts",
+      "bytes": 1345,
+      "sha256": "6ef89fc569bf7ffac1fb2d530089b4dd631f96c2b00148ab3740044c173ff21b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/alevel/ph-titration-curves/provider.ts",
+      "bytes": 5271,
+      "sha256": "6856c5643ee7c620ffc2e5903208dbd8fea0a44e33d43e437463553bc47f8ffd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/bond-enthalpy/index.ts",
+      "bytes": 530,
+      "sha256": "dd5d11df657fb8c6a339ec34dbbd3b577a67ab0ef413f490b3533fb9727ee855"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/bond-enthalpy/marking.ts",
+      "bytes": 812,
+      "sha256": "5b1b7566b3bf213aeac5fa189e3bc530c0add2594bcfb36a2a1e289e457dda93"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/bond-enthalpy/provider.ts",
+      "bytes": 6653,
+      "sha256": "49c56a5ee2e9fe759b68f92346c0a8876620a66ba55418b955f67f36f5b81f94"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/calorimetry/index.ts",
+      "bytes": 503,
+      "sha256": "b15ef5ced2df574263dd3c778490ec8e20767065fc2e47b4681407bf23677c20"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/calorimetry/marking.ts",
+      "bytes": 733,
+      "sha256": "c513197ddcc4ccc04c99095e67a395d1074df8d4f2e8e754b480810c66b616cd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/calorimetry/provider.ts",
+      "bytes": 7630,
+      "sha256": "f90392c1f29cd9d2dbfd64e0efa4eec1981ad7292ee8e8939283dc389df410fa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/dot-and-cross/bank.d.ts",
+      "bytes": 87,
+      "sha256": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/dot-and-cross/bank.js",
+      "bytes": 382933,
+      "sha256": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/dot-and-cross/index.ts",
+      "bytes": 523,
+      "sha256": "62bbaf024fd83db37c482a277e90ad851b09cc8de98657ed407ea7d78954755b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/dot-and-cross/marking.ts",
+      "bytes": 3983,
+      "sha256": "776514fddcfcd37c7e5af051d76099631c899514167d86644452bb9cf83e6cd6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/dot-and-cross/provider.ts",
+      "bytes": 6871,
+      "sha256": "684573a3e9611fde165db75057d3f6b374969e899fa9e2277c37120b685e8f0a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/dot-and-cross/types.ts",
+      "bytes": 801,
+      "sha256": "05a04affa1003ff0cd0168a964c6a2e88b2d35c20c23c810e1835947c55dbdc0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/data.ts",
+      "bytes": 33416,
+      "sha256": "3ddd28a3c096a32649af17cc4d72bc8aea88a8d7e2a4fa176415a12edf5e1185"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/index.ts",
+      "bytes": 653,
+      "sha256": "5b09be3c84f7886f0b4ef580ef7c0d4ae7bc9b91c6389b9ddf92ea616bc589ec"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/marking.ts",
+      "bytes": 5721,
+      "sha256": "2c6fee731e92c2deaca535db860c225fc50e07e315b70d0557119bd186b0ad77"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/provider.ts",
+      "bytes": 6071,
+      "sha256": "53e3ed55a1811de02ec4163c3544c3a1f7058520b2523f6cf73af828ae528ea4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/source-core.d.ts",
+      "bytes": 343,
+      "sha256": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/source-core.js",
+      "bytes": 4748,
+      "sha256": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energetics-practical/types.ts",
+      "bytes": 949,
+      "sha256": "40b417daab18963cbf47b4cec1ed41dc71cd3081124f8d7acc3143e0ba75fc20"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/data.ts",
+      "bytes": 66386,
+      "sha256": "29f00cb4f48625b01770f5cff0776541eb180777d12f0361b4bfe481be546abe"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/index.ts",
+      "bytes": 518,
+      "sha256": "f0348c2324fcadc7824ce4b8948b79a9cf0ba1c3a197208942490b221a81a9d3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/marking.ts",
+      "bytes": 2877,
+      "sha256": "55d995e7511ed4582be7acc52e9732db0cba2f5cc1dc88d35096fc749bd23566"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/provider.ts",
+      "bytes": 7064,
+      "sha256": "4636c1881fcc723f99bd17e967dc4b66ab66f47239cd299836abb54c9558881f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/source-core.d.ts",
+      "bytes": 614,
+      "sha256": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/source-core.js",
+      "bytes": 2592,
+      "sha256": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/energy-enthalpy/types.ts",
+      "bytes": 962,
+      "sha256": "3303aee6e4137c08756da11bf45ba0f0946bb4d592b17ee0845d685ae81f1628"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/structure-and-bonding/data.ts",
+      "bytes": 13784,
+      "sha256": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "bytes": 10701,
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/structure-and-bonding/index.ts",
+      "bytes": 587,
+      "sha256": "85f67a839a8353ce6c47ed58e6ea0526f8835170586b79d2d77a1c4617460eca"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/structure-and-bonding/marking.ts",
+      "bytes": 1381,
+      "sha256": "d2c42e181ac5892d1388d8b6d60a1db0d1a0027bdef36521e36650f73600559b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/igcse/structure-and-bonding/provider.ts",
+      "bytes": 6794,
+      "sha256": "a55b7b8e0e8ac1ecca569f02824cd1fca5b4fe79a1a848b1e6134bf9c22028f1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/C3L6View.tsx",
+      "bytes": 28568,
+      "sha256": "31726d07de1f171edad6eed147853ccb6461789a8de46c7de0df2d019b52c0a6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-01-p1.svg",
+      "bytes": 6887,
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-01-r1.svg",
+      "bytes": 7484,
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-02-p1.svg",
+      "bytes": 8948,
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-02-r1.svg",
+      "bytes": 6974,
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-03-p1.svg",
+      "bytes": 4975,
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-03-r1.svg",
+      "bytes": 4160,
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-04-p1.svg",
+      "bytes": 3450,
+      "sha256": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-04-p2.svg",
+      "bytes": 4717,
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-04-r1.svg",
+      "bytes": 5447,
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-05-p1.svg",
+      "bytes": 9009,
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-05-r1.svg",
+      "bytes": 5292,
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-06-p1.svg",
+      "bytes": 9918,
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-06-r1.svg",
+      "bytes": 9689,
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-07-p1.svg",
+      "bytes": 7790,
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-07-r1.svg",
+      "bytes": 6198,
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-08-p1.svg",
+      "bytes": 4221,
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-08-p2.svg",
+      "bytes": 5283,
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-08-r1.svg",
+      "bytes": 7655,
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-09-p1.svg",
+      "bytes": 6459,
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-09-r1.svg",
+      "bytes": 4857,
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-10-p1.svg",
+      "bytes": 9730,
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/a/a-10-r1.svg",
+      "bytes": 7683,
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/b/alarm-pheromone-skeletal-notes.svg",
+      "bytes": 4106,
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/b/allantoin-skeletal-notes.svg",
+      "bytes": 12141,
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/b/gyromitra-esculenta.png",
+      "bytes": 95053,
+      "sha256": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+      "bytes": 4572,
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/b/honey-bee.png",
+      "bytes": 136906,
+      "sha256": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg",
+      "bytes": 6174,
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/c/network.svg",
+      "bytes": 5580,
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-01.svg",
+      "bytes": 188583,
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-02.svg",
+      "bytes": 188485,
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-03.svg",
+      "bytes": 188485,
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-04.svg",
+      "bytes": 188488,
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-05.svg",
+      "bytes": 189181,
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-06.svg",
+      "bytes": 188133,
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-07.svg",
+      "bytes": 188125,
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-08.svg",
+      "bytes": 188260,
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-09.svg",
+      "bytes": 188769,
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-10.svg",
+      "bytes": 188583,
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-11.svg",
+      "bytes": 188126,
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-12.svg",
+      "bytes": 188130,
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-13.svg",
+      "bytes": 188129,
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-14.svg",
+      "bytes": 188040,
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/assets/digitised/intro/example-15.svg",
+      "bytes": 188681,
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/bank.json",
+      "bytes": 47186,
+      "sha256": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/c3l6.css",
+      "bytes": 12231,
+      "sha256": "abf3bfadbe54bfd2390ea03b7109904ca9af30deb310e43995f0f0a0cced9221"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/content.ts",
+      "bytes": 4306,
+      "sha256": "92931b780281c9ebc6a14c0caa0a8a49045f12a3431b290db5aac0877627ef2c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/dependencies.ts",
+      "bytes": 560,
+      "sha256": "b71c1388f88af0e58714c732aa6681f6a9dede6ebb8c684277019b2fd6e4fdcf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/index.ts",
+      "bytes": 247,
+      "sha256": "9b9d16e7cedbc8587fba5be28559f6c67a362521c9b6a77584bf50ed082449f0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/legacy.ts",
+      "bytes": 9571,
+      "sha256": "2e2f7f5b8fcea59a8abc820b438a85e62d18755514ba7d918c304b875abe06af"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/panels.json",
+      "bytes": 4618,
+      "sha256": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/policy.ts",
+      "bytes": 11644,
+      "sha256": "d045419387bc4361acca8f8900cb7b766de39e72db7992441ee17fec2f3518cb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/qualification.json",
+      "bytes": 2335,
+      "sha256": "f0f6bab12b5312b81cfa54edf48ab5b2c449d3263282ea134927414ab1b6b1f1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/qualification.ts",
+      "bytes": 221,
+      "sha256": "40c30c1ec04b3d6bc057509c7e9c114f44a667354df46e37c6d3376fa9c96121"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/c3l6/source-bank.ts",
+      "bytes": 2089,
+      "sha256": "12000c49a3d1a593d7b883948f9fda58c99214fa3f0aa2ea5bd5b21157834313"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/isomers2011/IsomerView.tsx",
+      "bytes": 6591,
+      "sha256": "2d18b04d6f3a25f050fe01015d998061fe867e30f7bfd4bcf2d3b0f22f3be203"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/isomers2011/assets/compound-3.svg",
+      "bytes": 79090,
+      "sha256": "e2c70e8a6b201e389974056092b2b1c79d2f6d8b24f0085b3f3cb57d3d58bf66"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/isomers2011/content.ts",
+      "bytes": 1615,
+      "sha256": "b5c0b01abb0e702d08ff1a49a0b018d489ed98e65ea25ab0fccbb99a3fde79e7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/isomers2011/index.ts",
+      "bytes": 206,
+      "sha256": "f7459e4eb1d764bfe2070b8aea7901b79980d0c9ebd49e3d70a2e2561bcb43aa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/isomers2011/isomers.css",
+      "bytes": 2200,
+      "sha256": "3622cdb3a37e2f74d9ff8b5b306a5156af3e34970806974bd375836b50cfae59"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/activities/olympiad/isomers2011/policy.ts",
+      "bytes": 3669,
+      "sha256": "0b06e76e43f883faa429633ea4c58fda4dfbd1a9b8055c3cfd857230e806445b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/catalogue/authored-metadata.json",
+      "bytes": 37,
+      "sha256": "12fe19562f83e2a52e6295c5b66792ea8ad810684da3ba07613974440c30f2a7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/catalogue/definitions.ts",
+      "bytes": 63992,
+      "sha256": "dff245178a3f6511a02edaf3fe53075e6561cb76f96a25578967a2e41f0f691f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/catalogue/historical-leaves.ts",
+      "bytes": 498,
+      "sha256": "8a0b207e67ffd05abe39adfc94ba9c27f11a04cf97c4911242b4a42617cbe04c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/catalogue/olympiad-2011-definition.ts",
+      "bytes": 696,
+      "sha256": "dc647f9db73620afcecaa1f81da0ca0c6c732a882746b723f96707212394c511"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/catalogue/registry.ts",
+      "bytes": 3380,
+      "sha256": "ca8dab412b67cfca05a299371cd7d7a535df3503a6160f633ff45dd83e94b5ee"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/catalogue/scope.ts",
+      "bytes": 2117,
+      "sha256": "0e3f9cebeb63ac4e36576c08300d5368f9fb9f35da5488cfe16fb1ece79fab81"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/core.d.ts",
+      "bytes": 514,
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/core.js",
+      "bytes": 46848,
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/engine.ts",
+      "bytes": 9613,
+      "sha256": "e36c76c4aadf5e8d0271b9f023ce6273118eb0ec7ca013f2f556d00570a15b36"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/interaction.ts",
+      "bytes": 4928,
+      "sha256": "31a64f6f756e526a6e4faba550c2d57212b8e8bf43e5ca877cad2e29f2eb2fd0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/layout.d.ts",
+      "bytes": 1418,
+      "sha256": "0a9e9eba6475626b00b37c264cad895631ab0fa5122a0123f8806658a2a86b6c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/layout.js",
+      "bytes": 14585,
+      "sha256": "49f2780f7072428a34be1dac881d46a0fad5755a4a3fe05f8ab89b049c240c61"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/model.ts",
+      "bytes": 3711,
+      "sha256": "9ef514ae62c8346c881f4389f68be60f1275916b52ddbf3a18361ecc768f25e7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/dot-and-cross/types.ts",
+      "bytes": 1225,
+      "sha256": "ecea1adad1903d29e33b0d564243c38a61d99ae269d342fb689f5bb272b1f5ee"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/core.d.ts",
+      "bytes": 1134,
+      "sha256": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/core.js",
+      "bytes": 6634,
+      "sha256": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/data.d.ts",
+      "bytes": 736,
+      "sha256": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/data.js",
+      "bytes": 33401,
+      "sha256": "d6234b008a941af0580339fc469d6426f17aefd6633a54a318dc53a1ae39ee24"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/display.ts",
+      "bytes": 2724,
+      "sha256": "9c1e12c04341271a94df81d315c951130127e91709ea23d95661a9863d204b8e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/engine.ts",
+      "bytes": 5208,
+      "sha256": "dac8a146d436eb75fdc3c7674271d4eba561d5cfcfcc2604ea140b77abf262f8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/identity.ts",
+      "bytes": 4183,
+      "sha256": "380ac5a462c4d9bc81385afba8ce1f5e592e26cfaaf8822534622e9a6d6a36a0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/periodic-data.ts",
+      "bytes": 15935,
+      "sha256": "8c416a0ebde7b2ac86183062609eb63ae3c201c404230719e588ed4a86137c81"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/electron-configuration/provenance.ts",
+      "bytes": 1567,
+      "sha256": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/energy-profile/index.ts",
+      "bytes": 2598,
+      "sha256": "8f409196c67112f382c1ffc55302771f749195a74e10a91d160b439d18bfe3c7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/energy-profile/svg.ts",
+      "bytes": 5997,
+      "sha256": "9a1cc32acaf3b91723c1187c3299d7b770ef35fdb78f17d8a97344220d309311"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/molecule/core.d.ts",
+      "bytes": 1181,
+      "sha256": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/molecule/core.js",
+      "bytes": 9816,
+      "sha256": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/molecule/depiction.ts",
+      "bytes": 3130,
+      "sha256": "702a14875ddb1aabf00be918a643ce762000910deb5c52776daa3bdfa5e70c2e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/molecule/engine.ts",
+      "bytes": 7220,
+      "sha256": "3f30d9cad67331d3b3313c0f9d03a9afdf587405c42ca2abaed8c383c4814e3e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/molecule/interaction.ts",
+      "bytes": 3500,
+      "sha256": "74f882c0e0a58024976adc5678d660b1561ee1a6157906738c92fd88f1acbcc5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/molecule/layout.ts",
+      "bytes": 7363,
+      "sha256": "f940ce454b33d8110ada2b305f09fd88b9e97f8300a599bebbed36f6da0bb095"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/bond-enthalpy-core.d.ts",
+      "bytes": 248,
+      "sha256": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/bond-enthalpy-core.js",
+      "bytes": 10042,
+      "sha256": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/bond-enthalpy-data.js",
+      "bytes": 245586,
+      "sha256": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/calorimetry-core.d.ts",
+      "bytes": 315,
+      "sha256": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/calorimetry-core.js",
+      "bytes": 34067,
+      "sha256": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/calorimetry-data.js",
+      "bytes": 7080,
+      "sha256": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/framework.ts",
+      "bytes": 2502,
+      "sha256": "05b11390e8e915a403debd00a325119298c52bb8eb7410a95ac2927bb7e79b5e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/identity.ts",
+      "bytes": 3844,
+      "sha256": "ddfcb258af17be43812ff2b45157eb8b2acc4141299a8d371d83f70b18452601"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/marking.ts",
+      "bytes": 1546,
+      "sha256": "a1ddf0029f493c6aaf3bec8131d49f492e0fed6a4f02e3aa419d73e8eaa4aef3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/presentation.ts",
+      "bytes": 1532,
+      "sha256": "d999a5e1c9095048d189f391c33b31b0000ff22446e0f9f2518f65fae5be7c0d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/reviewed-co-svg.ts",
+      "bytes": 11439,
+      "sha256": "27f7dd2df015598baf3d56ba7cab7866eb6aba29129c2c940bfd7aafefaef72d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/thermochemistry/types.ts",
+      "bytes": 2423,
+      "sha256": "7ea1bcfed51e6d6e5d6d006b2ae175d711b989af5a4dadf7503789686eb29d05"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/titration-curve/core.d.ts",
+      "bytes": 1150,
+      "sha256": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/titration-curve/core.js",
+      "bytes": 8429,
+      "sha256": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/titration-curve/engine.ts",
+      "bytes": 3426,
+      "sha256": "7b81856f141012fcb5b5c7738d6ebe011e0b7a4c52fd692ffacbfccb375dbe19"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/titration-curve/model.ts",
+      "bytes": 2136,
+      "sha256": "5f8e28295afe2fe779dd6a5d99b29fa14ce0ca086a8d091691540b32783c1ce6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/chemistry/titration-curve/types.ts",
+      "bytes": 1819,
+      "sha256": "e07842cdde7b31f132dd50f97fbed05afd0db1505986116b0ed5e401c476ca4f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/compatibility/LegacyImportView.tsx",
+      "bytes": 5126,
+      "sha256": "73a5c9de6ae456f8e01452608a49155f1b8a356abe866159c41d8a356257099d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/compatibility/import.ts",
+      "bytes": 3423,
+      "sha256": "53d81ce6fe9ca0ecede6648d6226699edc1847f15b90bd251418e711976a6bd6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/compatibility/index.ts",
+      "bytes": 251,
+      "sha256": "eedf856554a839df9029e1b79f00b4ccf78e933b03214c998ae0b44a3959d5a6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/compatibility/legacy-import.css",
+      "bytes": 845,
+      "sha256": "c813901b791792841eabf365e78998e49d84d81f4f32f1c98cdf81b8735a3b0a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/compatibility/links.ts",
+      "bytes": 8486,
+      "sha256": "4d94fc9f58d0bfc9d2f12ddda16aa92d02c00830a38349788ff482453db2f4e2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/compatibility/routes.ts",
+      "bytes": 841,
+      "sha256": "06882d52f2a1524e8f5eb5d016a3e088b091608530606756d0796b39317d1afd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/content/canonical-fixed-ids.json",
+      "bytes": 7744,
+      "sha256": "120833b3bc3cb4cfcd597010e2374aa98e5b85db88fee3d5dfb27309c70350a0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/content/canonical-identity.ts",
+      "bytes": 2150,
+      "sha256": "ca543dadd0e00276f98e905fffa0f7468b74323a6b11673f3c7301c7a65ceb02"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/attempt.ts",
+      "bytes": 6726,
+      "sha256": "ded808a30f79a0ec2a59caead722402e909a1eda0615a144e55dd652f7924802"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/editors.ts",
+      "bytes": 5056,
+      "sha256": "a2530f2d1812617cec383d99def7656ab222ee7e435e11c293d9df8dfc19ea1d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/identity.ts",
+      "bytes": 1875,
+      "sha256": "08a91956f99cbde2013b771c944ab7b33a29a1f031de935ff1a9eafee90ce231"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/index.ts",
+      "bytes": 299,
+      "sha256": "5432fedf98453077a170ace6d0a59871ad1971d12da641cf927dce6eccc6c9aa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/integration.ts",
+      "bytes": 2154,
+      "sha256": "8d023d46c1832cf4bc411ddc229d32bb3e840f6c5a6bcdb1c721e1aec60c7257"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/landing.ts",
+      "bytes": 1564,
+      "sha256": "f990d0a328bfb67ebf709534990ee3ef9e1468f629a96ec888aca3c1fefc7955"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/olympiad.ts",
+      "bytes": 5641,
+      "sha256": "3d31ea8c45380459278d25d6d7cfc41b93a5e74a1782383f24cb409cb4b7347b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/question.ts",
+      "bytes": 7934,
+      "sha256": "af044764d43967e9cb7d5e7ad6a38f04b9fd98f7e4b2b2643e6ddce7bead464c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/registry.ts",
+      "bytes": 2523,
+      "sha256": "638e1cec198c7220a75401b6ff120cb062d3e0b910a8bbd2218509debce4c6a1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/repository.ts",
+      "bytes": 3254,
+      "sha256": "8d30cb24648e3353e704ff81c7ac729c44b638693046c25acf0ee55d6f320535"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/contracts/session.ts",
+      "bytes": 4586,
+      "sha256": "3a808ff17de4c5b8b9cc09cad0d979101112254145792f927a81e722c2fd3f72"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/development/FoundationApp.tsx",
+      "bytes": 25626,
+      "sha256": "c53673ff1539b5f22db902e2da18e829664c89ed4021cc59ea3447887edf693a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/development/catalogue/index.tsx",
+      "bytes": 3304,
+      "sha256": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/development/fixtures.ts",
+      "bytes": 13011,
+      "sha256": "9151898f431a174d3455de4cdc04f2213b9e51c6261e42fde9199e2201494451"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/development/identity.ts",
+      "bytes": 2503,
+      "sha256": "e6266c9c4e56cd40c2e88f6679b07c7af79f5fa47d7c8ad2a52e3645dcc5a06c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/attempt/attempt.ts",
+      "bytes": 23003,
+      "sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/attempt/index.ts",
+      "bytes": 318,
+      "sha256": "02b77eadea3c5aadcd1ef6cb79696f188f479540f61210e1c04e050f15433cca"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/attempt/input-checks.ts",
+      "bytes": 9768,
+      "sha256": "eaaf1641dfc9c85d43776851b5c946734f4070d7f3deb4d9e6b2841c8948ebe9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/mastery/course-mastery.ts",
+      "bytes": 5176,
+      "sha256": "87fcf68cd06f71247e3f888fdadddae5960008ee68681750021ef7b48e99496c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/mastery/index.ts",
+      "bytes": 147,
+      "sha256": "19c43574f8a910961ed9f9dff719b9d1c348135e0d4ac1e7460149f90bec0735"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/session/index.ts",
+      "bytes": 546,
+      "sha256": "def1022f61256e880418a4b4f3d7c6da5159f15fb442720191fb6f3ee9325b00"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/session/practice.ts",
+      "bytes": 2939,
+      "sha256": "5c5dd1a1133ecb99052e5f81210c5d50ec25392dcd202505b76393e6da0e8a15"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/session/revision.ts",
+      "bytes": 8868,
+      "sha256": "f3501fa5421bdf8e2d56f82471451fcb8faea3e3a3caf45c122851aad2411678"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/session/selection.ts",
+      "bytes": 3339,
+      "sha256": "7d112d36fbd04570a69806211014b538e511de2d099a82788e5be766cd636ace"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/timing/active-clock.ts",
+      "bytes": 3461,
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/timing/browser-binding.ts",
+      "bytes": 2433,
+      "sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/domain/timing/index.ts",
+      "bytes": 300,
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/dot-and-cross/Diagram.tsx",
+      "bytes": 9242,
+      "sha256": "18f0fbda09a6cc534d2b622a8bd38ad12a9e7513c534525188933dd9db7f5276"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "bytes": 42939,
+      "sha256": "182f2033baf89293fb2f64216408cb2e9aa2562bd707284f108006bf58d35667"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/dot-and-cross/editor.css",
+      "bytes": 14617,
+      "sha256": "3e6955bba6e14f95757a5f75fe3b29c80b9e3d881171d2f4a79922c40f1c25b9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/dot-and-cross/index.ts",
+      "bytes": 55,
+      "sha256": "809bb349829075547b23ebb6db59724f0a6fa74751347cae6ea9a0f5896c57ac"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/electron-configuration/PeriodicReference.tsx",
+      "bytes": 6712,
+      "sha256": "5c2b9aee6b23c943041375e57cc5604c35f7299de4f3804014ed327ad6460947"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/electron-configuration/index.tsx",
+      "bytes": 16043,
+      "sha256": "a6122925da26c26ab101c23875194904724df5bfd2cc4fd48bdc6d913e096f99"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/electron-configuration/styles.css",
+      "bytes": 13553,
+      "sha256": "26541a86eb3c9c8e19e6a6efc6c6df37c5f5af997c65a6a1b8a70e5ff1c7235f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/energy-profile/index.tsx",
+      "bytes": 23148,
+      "sha256": "6cb213df23c4505245c273dd37747bec99654c2fbf0476d1a41f86cf63650356"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/energy-profile/styles.css",
+      "bytes": 4364,
+      "sha256": "1727009ae9c8bb5582326542c7838af981233914071124444dcae202723cbdc3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/molecule/MoleculeEditor.tsx",
+      "bytes": 21302,
+      "sha256": "2438fd4ef8899528dce49670780d81ac6b41148f05d3fbbd03d6727167217a4d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/molecule/MoleculeInspector.tsx",
+      "bytes": 6254,
+      "sha256": "982d44c2bcfae3d9799115e66522b16bd1f0bc9b7e1417c86ee7a4a2930edfcc"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/molecule/Structure.tsx",
+      "bytes": 4025,
+      "sha256": "19126f9fab3997413f4faf74b1be26192ba2ed554e02ea2cc5dc9b34c7b35e67"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/molecule/index.ts",
+      "bytes": 137,
+      "sha256": "3f56b97c9734825ce3e59a39a8b52dd2bb58348f738a1925dae55ff62f8ae711"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/molecule/molecule.css",
+      "bytes": 7304,
+      "sha256": "259a36bee88dae4972af4f22e9c73e6c43674a9f7fe35a8084ecc885849fae39"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/titration-curve/TitrationCurveEditor.tsx",
+      "bytes": 20124,
+      "sha256": "4a73a4f5a2d346f790d52381d48030e6cc1641fa2e1b43793cdd1d84a707fb9a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/titration-curve/index.ts",
+      "bytes": 70,
+      "sha256": "818b5b8c287897a5a8ecc5e14be783a59dd8cce2253f149a284d266fde879ea6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/editors/titration-curve/titration.css",
+      "bytes": 15593,
+      "sha256": "074b3a3fcc9524cb29c752caefe5f70318c3773102f2d9bad0ad16c0628f8b20"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/ActivityHost.tsx",
+      "bytes": 46978,
+      "sha256": "9c2752dd7d1522c90c1d1fe07e3bd82f75a406db8b478b2915c5f6ba54151f72"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/OlympiadHost.tsx",
+      "bytes": 9110,
+      "sha256": "65422242af7736506ec45f05a123feb81abaf86918402e11123f4e8e1d12571b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/ProductionFoundation.tsx",
+      "bytes": 18517,
+      "sha256": "af227b7ebc163fa1cabdad813fad50c1afb93a5ea6549f17a66b00677e9162bf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/olympiad.css",
+      "bytes": 316,
+      "sha256": "11bab3da28a32401eb20f9c125b52e0dfbce399b869e554acaa22af0a73a28af"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/question-heading.ts",
+      "bytes": 1927,
+      "sha256": "37dcf2f16b5c5729da32e5e714adaf0c55aadcb8c1d8c93d2a688e72a150e898"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/registry.ts",
+      "bytes": 2716,
+      "sha256": "f894885007250bb9bf5e5c325dc9713cc713cf02f75c000f5104cdaef5121ed5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/foundation/session-continuation.ts",
+      "bytes": 944,
+      "sha256": "c734cdd137015d908802dcc7a2797bd3818dd0b70f04173280d596cf2fa1e26f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/OriginalLanding.tsx",
+      "bytes": 42880,
+      "sha256": "4471a625c38c92a5ebf67882d19ddb93eb5a14bb5b09d609819cf7d9323b74fa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/StatsIcon.tsx",
+      "bytes": 541,
+      "sha256": "e03a966125d4cefe3ad45fa373ffd123725c69c575aa330fbd79d2f2cb8d7ec7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/adaptation.css",
+      "bytes": 1408,
+      "sha256": "1fdbabb8d5e8b10020fed79715ee9e1cfe7c1f455a96c16fe817cbbc35f764d1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/alevel.css",
+      "bytes": 38124,
+      "sha256": "67a7dae3db8721a0bdae49a0c5dea7a5af9b058fe69ac4b69b37dc72ca86bad8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/animation.ts",
+      "bytes": 1624,
+      "sha256": "23342e9ffa57fcba5b79cf07ca4e8c787fd8ba21b55e65453f7bf6581805bbb0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/catalogue-data.json",
+      "bytes": 19108,
+      "sha256": "d794dc289ccb51f812a8f3f079d8dfa789000c79af7b3c925f7fc4584c935231"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/catalogue.ts",
+      "bytes": 1234,
+      "sha256": "2391c8aa74e73fed2e1acd67db2ebc148287e9e8f43eeeaff3828a0f98af401b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/igcse.css",
+      "bytes": 64491,
+      "sha256": "1e45cdebdc6c3251cc58f896691a8ba868ac80f92c4ab4565b7dc6bcd5340d70"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/index.ts",
+      "bytes": 53,
+      "sha256": "224146f258f96a70310c8de734c3d925e89a83c7bd17f9e912859605913a1b50"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/progress.ts",
+      "bytes": 2451,
+      "sha256": "b13059532c5295e8003bafe67010d65321ce0dab5006dbad7b1cc8d307c36ea7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/landing/standardisation.css",
+      "bytes": 3299,
+      "sha256": "27033f776033ab6458a4970aba955b480a357131b798870820adf01afc47df74"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/main-alevel.tsx",
+      "bytes": 828,
+      "sha256": "b09295f136cb12449529944698319d31d124ad7eed7340c860c00fbbcb39423e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/main-igcse.tsx",
+      "bytes": 827,
+      "sha256": "3368a8ea3d6b0794cc13005a278441111f2d7d983cde4594387a72ef64e1b07f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/alpha-namespace.ts",
+      "bytes": 1266,
+      "sha256": "7cec629d5a9ee1123ca3c5afe5c0312c50ef7a888f07bbb078f1282f36d6b714"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/catalogue-boundary.ts",
+      "bytes": 2504,
+      "sha256": "e17d30c759aadddbb7b0b6917c82c3a4fb4a48134f6d5b38b9370f245c87cab8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/index.ts",
+      "bytes": 219,
+      "sha256": "a79fbc9d642913652dccafaa7407ac650be35c68f9d86ec787a5ed6faf855b8e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/legacy.ts",
+      "bytes": 8832,
+      "sha256": "07e284f2c384fe7bd4452a5207e3324d70eadcba0f89234af1394594598eaa67"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/legacy/plan.ts",
+      "bytes": 2620,
+      "sha256": "a2344e7d8ac75f80c51193246fc5395a5e3b38f9dd92a616ae3f9827100b328d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/repository.ts",
+      "bytes": 16080,
+      "sha256": "5b88054113154eac7c3983d7cac1c9c8f4b7ec36853d843a756bf0433a1f5f7f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/persistence/validation.ts",
+      "bytes": 44038,
+      "sha256": "b50edca56ea56f1a93089b4fa37dda6dbefc48b1236efdc20d9018d9a753a36c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/shell/CourseShell.tsx",
+      "bytes": 6869,
+      "sha256": "f3f8958bc97bb6e2f1043dd8b909df9b0869c8c9511d628c5bab3939ff38d845"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/shell/QuestionChrome.tsx",
+      "bytes": 3085,
+      "sha256": "26386311f1b03bd6902b2679201557b9b8733cde686e46f63b3cfec414ed307d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/shell/navigation-view.ts",
+      "bytes": 4703,
+      "sha256": "a1d4c28e32fbba54d528a96a051d17736617ba6659241d1d04763fa24f252cec"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/statistics/StatisticsView.tsx",
+      "bytes": 19915,
+      "sha256": "516376e75c8db38621a7c688641ba863d2559c033cb82b3da3059d6e7e0a23df"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/statistics/index.ts",
+      "bytes": 64,
+      "sha256": "e2a26330c9457b5e18bcba66780b68f93760ccc2d6099129b45685cb7bddecf3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/statistics/model.ts",
+      "bytes": 7316,
+      "sha256": "f2d6f888a8b48a29959ac82d9ee3aaf515f27d2135d7b853efb1d449e67e0670"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/statistics/statistics.css",
+      "bytes": 6423,
+      "sha256": "49c19930ac5a16d4968d5392a67ce4ae96bed9b08c997dc956cee73d1b1280ba"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/styles/platform.css",
+      "bytes": 20053,
+      "sha256": "853f44d813cce4c48c8d2be351c116391f3c430bfc7918b77549d554ada0480e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/Content.tsx",
+      "bytes": 2170,
+      "sha256": "75828484d282511321b1898eed711506c23cbab60a380134365ec3cccf6e7674"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/CorrectionSegments.tsx",
+      "bytes": 3112,
+      "sha256": "520e5c4a281971036f1dab4b6d11dae14e25ea4d89087f3149820ae35a24cc32"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/DiagramViewport.tsx",
+      "bytes": 1836,
+      "sha256": "d875ab48fe59066cc4d411f07b7d98f1044c7b8c875c39600d3c4ecdbca81609"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/DotCrossPlayer.tsx",
+      "bytes": 12086,
+      "sha256": "03ee06bbe4599a6d357043a92c26165d838a25b1ae0209016ad8fdc2dd44d2e0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/EditorFrame.tsx",
+      "bytes": 1596,
+      "sha256": "13f96e6d8e26889246c65d964c271d13cb220e363f3bc7f8a9c27e4795a03c81"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/EnergeticsPracticalPilot.tsx",
+      "bytes": 14313,
+      "sha256": "cdc7b2555bc65960192ef1b4ed1b31b407b2b34816ec8a5ca9c71f3e4ab7bbdb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/EnergeticsResponseControl.tsx",
+      "bytes": 3787,
+      "sha256": "4a0f461860b691bd3074f9d2b001a2dd6ab23d70f4b896d4403b94d0a4daff58"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/NumericWorkingControl.tsx",
+      "bytes": 10060,
+      "sha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/QuestionLevelPill.tsx",
+      "bytes": 604,
+      "sha256": "43a5139da75dbb56e2ef4233e98824da6d0205514561aecddf86ca83b7e5b889"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/QuestionPlayer.tsx",
+      "bytes": 26469,
+      "sha256": "78f0d8a53cc846196c0ebf21bc0660093b9f5a40a10adfc56f86d35c5a535f92"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/ResponseControl.tsx",
+      "bytes": 11417,
+      "sha256": "a742ebaedda6e91a43575d9df3f934b2972c9eea69d1149ba9a890eb6560b13f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/SourceQuestionPlayer.tsx",
+      "bytes": 29026,
+      "sha256": "cb3df1f69f892b6b45ad78f0f57023b717cbe33aaff5bd078d3555391d933634"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/SourceResponseControl.tsx",
+      "bytes": 6560,
+      "sha256": "75af90129b9d7f6904ed285ef523e486e1f7a01498ba0ece2ced360d40d40386"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/SourceRubricReview.tsx",
+      "bytes": 7059,
+      "sha256": "8a405915bc4d3c6be34422db690ab76ff8177f0a56109cbeca50aacbb08ff87c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/TeacherPicker.tsx",
+      "bytes": 9614,
+      "sha256": "70e2bf4f599f1d8f0c1bc0f9655620bf4c18df3f0c8b9bc88ad8a52e5eb5e946"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/TextRangePicker.tsx",
+      "bytes": 2440,
+      "sha256": "02203023fab51c80488e0bc567e3c43e324c063661ecb0e691c6b01fc6ddf68f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/assessment-label.ts",
+      "bytes": 522,
+      "sha256": "b00e7b626235bf8d6017c7603b982d4e341fbd5791e8fdf85e4f15353b5b1b7d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/dot-cross-player.css",
+      "bytes": 2826,
+      "sha256": "597244a2b67809593af99f590484036bfa0be91722aea329151e4f7cde7a9029"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/energetics-practical-pilot.css",
+      "bytes": 8860,
+      "sha256": "634668ca39474efd87a5be659e9b5fe1577da11749e11bae5c6e18dec92fe7f1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/fonts/OFL-PlaywriteEnglandJoined.txt",
+      "bytes": 4393,
+      "sha256": "0370f5946020846b0ca65e44950d11411ea3bd3c4c0d755916470f9f96cd8cb8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/fonts/PlaywriteEnglandJoined.ttf",
+      "bytes": 340536,
+      "sha256": "75263adf472a717edc4d7d10ea28016591928c98f2cd5da93b0269ef4a919fc9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/historical-acid-catalogue.d.ts",
+      "bytes": 133,
+      "sha256": "fb8801ada21ebd4d9fcc42564fa6399fa6fc7d1fede34e474017607ac31a531c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/historical-acid-catalogue.js",
+      "bytes": 1228,
+      "sha256": "c24eb411f1f691b733433fbad285acc970cde87a64d650515d2edb0ac9f80d66"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/source-adapters.css",
+      "bytes": 12690,
+      "sha256": "2dd8e66655cc949c6e47230b445a05c42dcabc51f19039f6169648bbc41835ab"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/source-components.css",
+      "bytes": 53548,
+      "sha256": "35a93051de3356a1c1e15f0640ef99bb35a53c7db2d239aa6e47c092d78c08fd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/source-family.ts",
+      "bytes": 539,
+      "sha256": "bf3c3c5e0dff3127108d72bd7ff4653fc69d6e0ff8c3b82dfc97dec6efd481d5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/source-presentation.ts",
+      "bytes": 6492,
+      "sha256": "1f432bb1c3c11d492053934cacb796eeb23dc597c37c7810abd3ad08a842cd06"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/src/ui/teacher-catalogue.ts",
+      "bytes": 7122,
+      "sha256": "d22042e4ed06d1c81884af93ab06a9cd09478fc317dcf634701f44f43f9f4b6e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/before/ui-consistency-contract.json",
+      "bytes": 5419,
+      "sha256": "f760067f4907048057389e11803e512364bc2fe35f725efa63370110d755936f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/build-and-release-attempt1.json",
+      "bytes": 212,
+      "sha256": "748028fa484b07b1428f72bc9552b5fdba6c1150407a29576e761a0ba67194ba"
+    },
+    {
+      "path": "validation/ui-consistency/u1/build-and-release-pre-ec-fix.json",
+      "bytes": 111917,
+      "sha256": "b3a3af7e279f570ee8de84fa41d2026132558eef535f5e1df203de77620495e1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/build-and-release-preclosure-pass.json",
+      "bytes": 1160,
+      "sha256": "94a393cbef6f5cb6119216b696a632bc342f7b56e8258fcc7c6a1257e97139cf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/build-and-release.json",
+      "bytes": 111917,
+      "sha256": "42ef31e5fdf0cb4eecf6068886ccddba2b228b33b168935edb377d9d38af67a4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/build-and-release.mjs",
+      "bytes": 1803,
+      "sha256": "dafbbdc9ce074e9b19ad852f437471f9096b461c6ea7ca5e5b18fc7b93de6b9b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/build.txt",
+      "bytes": 29814,
+      "sha256": "32a28468d882158b7f6a91508dafcea96ce011f8d0b94fd027fb6cd6fc115ee7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/central-and-timing-tests.txt",
+      "bytes": 2712,
+      "sha256": "50fc964f26aa07b0fe5ff74dcf0e480c1ea80e1c39e2485502182e4536b72d32"
+    },
+    {
+      "path": "validation/ui-consistency/u1/central-attempt.test.mjs",
+      "bytes": 5558,
+      "sha256": "1e48e33d476bf18fdf2a155739a623702902c55a3a5f81cc8f0a4dcc05908da4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/check-assets-config.mjs",
+      "bytes": 1214,
+      "sha256": "1a6470839d4aa2a7c29e4e308552b6b03c249552e0b3457fe009b22240f0df44"
+    },
+    {
+      "path": "validation/ui-consistency/u1/check-originals.mjs",
+      "bytes": 2059,
+      "sha256": "0a7d871018bb1bb8b742af6c43d6955d83e27f12c57c8e1872c30c692c0ad7dc"
+    },
+    {
+      "path": "validation/ui-consistency/u1/control-state-tests.txt",
+      "bytes": 1232,
+      "sha256": "cfe32dc553e942c521f8d3baa3b1ad40e993f86b529546178963c7ee111a3f55"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls-contact.png",
+      "bytes": 454308,
+      "sha256": "04c582382094146b645a382ccdc22acca121642f006e93201b77c8e0e58fa0b2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls-contact.ps1",
+      "bytes": 1626,
+      "sha256": "c8177a3992442f060ca929554aee50527f685b05238911ed21d4547cfa88504e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/HANDOVER.md",
+      "bytes": 7834,
+      "sha256": "5f60ae5515210db4a7bc527f30b2c2b0a1376d1c0ede186ce5d33aec503350b8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/action-state.test.mjs",
+      "bytes": 5680,
+      "sha256": "9d0bafc6f7c55408984c256fcfd6daeac6bb706a155d40d80cb1a8a68818fd50"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/app-browser-results-pass1.json",
+      "bytes": 811,
+      "sha256": "996801fce96c8f455cc42a62ac8f1d05788ee20d54065c87cc601221b1479c8c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/app-browser-results.json",
+      "bytes": 841,
+      "sha256": "ec1b956a83fcbf33e4e3b1f15137832c8f84519c80231e95bee66f0d42e38131"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/app-browser.mjs",
+      "bytes": 6526,
+      "sha256": "992df33f66df3480044237958bcf22b56f9ee2805eb200e3b5af5437b35c9671"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-final-log.txt",
+      "bytes": 4726,
+      "sha256": "7c6c08a1c662dd1233f79c3f676bd5bd8de15401d0f3be4c831bc33d911f2037"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-before-drawing.json",
+      "bytes": 4218,
+      "sha256": "194f6bf0055a980712c46f86a0012ac17de3d38fbf76ba7caed55bbeeef203dd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-extra-pass1.json",
+      "bytes": 5166,
+      "sha256": "0a5cf4b9f4d57d32fe9eea6bfd4da2a0b573e469a2ab00582a1dce5b9eb84413"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-extra-pass2.json",
+      "bytes": 4257,
+      "sha256": "d241e48571ba2fb71fd6aea4885f43af3ea5dd005a455d2e007fb6533d0e3064"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-matrix.json",
+      "bytes": 3533,
+      "sha256": "82012dd9cec789e5eae4a4dd68c7ed39fc91cf40708e4e708ad04aba2853213a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-pass1.json",
+      "bytes": 1086,
+      "sha256": "f5cec525d63b406c106f5e42389cd9c90f55dfdba33139b4901fa20f95d4a981"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-pass2.json",
+      "bytes": 2428,
+      "sha256": "b983d478dc6ff752f4b4e5922f9b5932788e6c0167a11c524bd5912688d88382"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results-pass3.json",
+      "bytes": 3003,
+      "sha256": "f8e0ff415691ee7427b8e52c7e0915a55cfd928d6df067984dd462abed6baeb7"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser-results.json",
+      "bytes": 4518,
+      "sha256": "ac4474baea9b6e95cbf1734d577da59ce6831b65b8ba28f83858d28fdd21f7cc"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/browser.mjs",
+      "bytes": 12983,
+      "sha256": "b88bbe06709b6132fd98c12976d95dec8bf1e5f9c659f205b6546a41940d8361"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/completion.json",
+      "bytes": 809,
+      "sha256": "85c4d15cf92ec2b8f59fddd9bf471e21c91f0522dfbd5b0b0629ed00d8a58cf6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/harness.html",
+      "bytes": 217,
+      "sha256": "06c7beac32cfcb9b0398aad30e3694ff361cf01c1949fa4ee96d51f30935d9ec"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/harness.tsx",
+      "bytes": 5403,
+      "sha256": "058e76cb8b5bcbea5206bf4b83bfd47800e6b19733dcfa819b260bd981be176c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/owned-changes.patch",
+      "bytes": 34990,
+      "sha256": "7fc7193d772985eb67fd6a0b4de8cbb6e86d06ab682e1c367da9e88572ecc7c9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/actual-app-failure.png",
+      "bytes": 146629,
+      "sha256": "a6e67d3da1eae06bb01af312ae3a76e10aa6d21a5a5ccec24fed2e792a0522fa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/actual-app-reload.png",
+      "bytes": 152849,
+      "sha256": "d0bb975f6a4d142e5527ef22940419e370568036236e40fbbd3098ff5c8eabbf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-acid-base-calculations-1280.png",
+      "bytes": 139693,
+      "sha256": "7d356332397b2093a752d7893566cf3b5da1f3a99429b2999f4e7e98cbb2b10c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-acid-base-calculations-390.png",
+      "bytes": 68471,
+      "sha256": "bec5222b07a284001f05e45e0b6af6fecfe73440f2a5132763035ac86e99ca81"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-acid-base-calculations-768.png",
+      "bytes": 83341,
+      "sha256": "da918c48aeb3634d2a259c9fb19a72c088efd72e822afdea9a46f82f4d35cc4c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-dot-and-cross-1280.png",
+      "bytes": 397740,
+      "sha256": "e1918c267ec6e9b7773cf8784cb488ebc791bdd4a3e9f0158fc6697c99186142"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-dot-and-cross-390.png",
+      "bytes": 220776,
+      "sha256": "4a2e3cea961b0b1b70329b51a980627650188eedda7f0dcb4e58e431ad2963ef"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-dot-and-cross-768.png",
+      "bytes": 263454,
+      "sha256": "baf72d4be9a06e9c4500143550bafb5c59a6a37fc576d6b8705efb732f4b83fc"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-electron-configurations-1280.png",
+      "bytes": 146744,
+      "sha256": "3d69525c39564a744f7a9c7c65858e6ea98052e9f6691313f80eade8fcd5b435"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-electron-configurations-390.png",
+      "bytes": 72835,
+      "sha256": "0b0038f1217d705f0b419b1e48adc608da7b8df41b2349cbbe7cac1485cef0a9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-electron-configurations-768.png",
+      "bytes": 83872,
+      "sha256": "9375a6d3c3184713282bcee8f572be362d6d0a80b4641024da1c361f867c3c61"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-electrons-bonding-1280.png",
+      "bytes": 152087,
+      "sha256": "56ca84565108a84cf0ab027749ae499e8c6ed546856b8b99265c36c300d97be5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-electrons-bonding-390.png",
+      "bytes": 72944,
+      "sha256": "806ddce90ac0b0bde2b28588fbd995e2a5be12c7081ddb6b16d5c3d6c49f6cb8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-electrons-bonding-768.png",
+      "bytes": 88194,
+      "sha256": "f2f3e4bd39f5a444593704528a6334c95eec3666418cbf16b0f273fba4f424ca"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-ph-titration-curves-1280.png",
+      "bytes": 430565,
+      "sha256": "afe42851fb1624b0bde3671b99531c30b01b7c5caf58a7352ace7a623e303a22"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-ph-titration-curves-390.png",
+      "bytes": 285862,
+      "sha256": "15f2ba91665fcc879b3ecfeeed4253d814c3785a34df219c9df0d1a8dde8363e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/alevel-ph-titration-curves-768.png",
+      "bytes": 400864,
+      "sha256": "0d726a2f24d036640013803b4f6d10529a6e5d373cd7676c7776b884dd4b76f5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/failure.png",
+      "bytes": 49675,
+      "sha256": "20bf64342c0c51d1b56afca4859b5ac2152415ffe8c6957cb9aa8c95d1a2adce"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/generic-desktop.png",
+      "bytes": 182783,
+      "sha256": "ee99592c0c5fc9e3b0f44f8a0e4f51c7a3e3e976f60900c72bfb57ee6dacfd24"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-bond-enthalpy-1280.png",
+      "bytes": 460154,
+      "sha256": "ffa4df278029b4007bd101cf3d4ff5b64d1b73b99c33fe4efedd62af6fbd202e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-bond-enthalpy-390.png",
+      "bytes": 248236,
+      "sha256": "d8fca7114e486a5fb16381eab07b5f48a7b9c80ac7f5305f2b752091b9b53c9d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-bond-enthalpy-768.png",
+      "bytes": 344568,
+      "sha256": "79b69b25735a6d26b220babe5d671ad9e3a829cf2e89dcbf3da633e91e9ebd90"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-calorimetry-1280.png",
+      "bytes": 508629,
+      "sha256": "b52e946a10a3386efe19140ab3089adc33452e18036a8efeae2a1e8a3f38008f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-calorimetry-390.png",
+      "bytes": 293515,
+      "sha256": "449025882a9b25b4be2ab1d7d3bf12b4611c828fdc3eaf76ed320f5fd067f659"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-calorimetry-768.png",
+      "bytes": 376215,
+      "sha256": "d761b7224c6f02e96268cc4d917e7354779311b6d2f66818871d5ba12c0b5003"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-dot-and-cross-1280.png",
+      "bytes": 326334,
+      "sha256": "b3fcdbe50d7114fcf89d3d11468470c2b7a4943078905795689af795668c6497"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-dot-and-cross-390.png",
+      "bytes": 158695,
+      "sha256": "46ed128aff5d8d691f6cd17977d94b803e4ff25f7c73357d3aa4104f6b4b63dd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-dot-and-cross-768.png",
+      "bytes": 217442,
+      "sha256": "b2492dbc2704735bc47a283e84767f216d84ed044586bb5de1c1fe5426ad7644"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-energetics-practical-1280.png",
+      "bytes": 151922,
+      "sha256": "56c047fdb0c33fe4527924fe4c481f3889d62d1ecbda253f7db26029012bbdd3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-energetics-practical-390.png",
+      "bytes": 69659,
+      "sha256": "20d55e14a3eb0b50db1980acb28437e67e2d34080d22f73a17d718df4f0a635c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-energetics-practical-768.png",
+      "bytes": 84023,
+      "sha256": "f3ee56c282c5ee8cbe0e221257274cd109d891c342c6d8db7eff467b05f1b536"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-energy-enthalpy-1280.png",
+      "bytes": 155776,
+      "sha256": "c10ddb08712997dc8d27352f27c7bc075458c789ff991c5177a143106577ef7e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-energy-enthalpy-390.png",
+      "bytes": 82183,
+      "sha256": "b93cf7f326e7ce7c496de63125c8f6f3d0a1dffaf3d6fef42c8628a65cbbbfa5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-energy-enthalpy-768.png",
+      "bytes": 88311,
+      "sha256": "570de76818a1fc38b88492a64c888fc49b2588127d389afe30e2aae9afb26dc9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-structure-and-bonding-1280.png",
+      "bytes": 194134,
+      "sha256": "1ebdc1dd4189512a3423e14fa7899f39401b7a8b4288ed513b125afb36ff6e9f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-structure-and-bonding-390.png",
+      "bytes": 126467,
+      "sha256": "1d5e96d2b94c7498e302491497212ffb05a1e3737d499f4a4dfdc7f52fe93cf4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/screens/igcse-structure-and-bonding-768.png",
+      "bytes": 130867,
+      "sha256": "47eb9d8fd0cd55a36eded401a6d9204d74bcf65ecd2082a2e50199f113da9db9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/source-fingerprints.json",
+      "bytes": 1778,
+      "sha256": "ee4029804028f733ac3921689d2e8b21f425ef460fc80905f124b5dc8d6d108f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/typecheck-final-log.txt",
+      "bytes": 60,
+      "sha256": "19da3540224c54ff51fd7974f741a65a5e1c69da2e8b19cd9643dc476100c894"
+    },
+    {
+      "path": "validation/ui-consistency/u1/controls/unit-final-log.txt",
+      "bytes": 619,
+      "sha256": "6966afecc8390c0d3d646d1e925d13ead4185b930f52d5b26d9de2ebb96202d0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/current-inputs.json",
+      "bytes": 113632,
+      "sha256": "05ee649db0fa07ca3c74e5f6bf3651d97fff9823508c7b1859217d50676f8bdf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/evidence-fingerprints.json",
+      "bytes": 55892,
+      "sha256": "89999b7a699fda316f2dd30cea8982e42c4f13fc01f0f1f63389f3d7a4ffa711"
+    },
+    {
+      "path": "validation/ui-consistency/u1/finalize.mjs",
+      "bytes": 8864,
+      "sha256": "b958ba4bff277c5bb3f270657bde93b23e3fe20e22e296a87b2d53af968aeec2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/foreman-report.json",
+      "bytes": 17537,
+      "sha256": "906b0775dd7590267aa845b2be01742bb097952cf8b3182aaff3e74d9564df9d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/igcse-release.txt",
+      "bytes": 40,
+      "sha256": "26dc79c2ff9d7a0051f483636350beb65aeb8cf87054236ea9f97c74646966b6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad-foreman-tests.txt",
+      "bytes": 5040,
+      "sha256": "b7cc10f96c59d4d6c52fd55d600dc3a2f520265d113ab8d3b64c0bd12dc82b1e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/HANDOVER.md",
+      "bytes": 6005,
+      "sha256": "2f6964fbdfc35b91071590a4feb3d8b4e4fe00f0d64b05a651b8f8a1382a6f35"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/browser-pass1-failure.json",
+      "bytes": 4238,
+      "sha256": "d35a84ef23685ccc5b78208d982a215e62aa898651e1add81e4961bae2bbfafe"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/browser-pass1-failure.png",
+      "bytes": 354819,
+      "sha256": "ce5d8cb7e6aa7e8499bcc3e41e1c8c37075aa323f8b6f9e24b8d210f37e284cd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/browser-pass2-race.json",
+      "bytes": 7924,
+      "sha256": "a9184dffa792515f1841e03c469ad163ead247b1317a4b9b884ae3522b72a8ea"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/browser-report.json",
+      "bytes": 101924,
+      "sha256": "56bb21800ba230b2f3991944a7290e75d5e12441d6a7cb40760c4bf82a5fb650"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/browser.mjs",
+      "bytes": 9749,
+      "sha256": "971843b5606b0b39c1e1220892a79ae5b564e8a8c41e3ee181048f995b529042"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-a-1440.png",
+      "bytes": 427746,
+      "sha256": "ac0ed53730fb4847b87c9cc3ceae4cd493fc999e1284022bc436bfec5e5a94a6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-a-350.png",
+      "bytes": 291599,
+      "sha256": "eb8368bcc8cf331214cf3b8225a24cb564e1248cabb7b6b66cd29074947611e8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-a-390.png",
+      "bytes": 295632,
+      "sha256": "5f5e8bb79988cf5b8d87a5971c01899a44640b4288a276ba7bad77e8034a8849"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-a-820.png",
+      "bytes": 327060,
+      "sha256": "0d15be4445f42a4c04a6d5385bbf9aa1b8e9b9c4e981ea6f6a029d0e2a7a90cf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-b-1440.png",
+      "bytes": 405058,
+      "sha256": "d5d70917a49b51de195ce9d7bc8e79c8816636f3072000b99bd9bd54f6a28e99"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-b-350.png",
+      "bytes": 237320,
+      "sha256": "7f8c80d9ffabd0217adaaa8fe37456e70309096570146048c5a2baab6e559120"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-b-390.png",
+      "bytes": 242162,
+      "sha256": "bcd3e8afb3dc4bae3f9c1e818d461d6f093e96519d052940fe88edcfdda530a6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-b-820.png",
+      "bytes": 365996,
+      "sha256": "e9a8cf30fad5ed0534eb8b942c146f7da88fb5f8722cfdbb99a36abf4d6ea5ce"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-c-1440.png",
+      "bytes": 387737,
+      "sha256": "c9cfed64ab84a7f7d206dc3f5ec526574a93a66a0787a22eb037c169ab9f5299"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-c-350.png",
+      "bytes": 243986,
+      "sha256": "0dc6cc0f1bf1cc700c1953e95268b0f912e951bd232141867c401c4adbeb7e5d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-c-390.png",
+      "bytes": 245796,
+      "sha256": "c15add979108e5a9e5175cda6fe05478c5427466b1008e1ba20c2ef81477ed6a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-c-820.png",
+      "bytes": 343992,
+      "sha256": "fdbc941180e0fdb608af1af778ef9d0cb4a0bc99d70b2d5e396c2e4eaca9c2d3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-intro-1440.png",
+      "bytes": 447370,
+      "sha256": "cc59d25e88790dcec1a939c63bb55b365abcf4673ca83b92002465523d08eae5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-intro-350.png",
+      "bytes": 330936,
+      "sha256": "085ca42d30b1903a560429bded08098f28393a0dca7dd7fc9255f5febbca7970"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-intro-390.png",
+      "bytes": 331618,
+      "sha256": "3dc00e55617c8681d0c69357571bea5e3043e45426d5a588ac3be09d0f968dd1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/c3-intro-820.png",
+      "bytes": 330062,
+      "sha256": "50d364ea024ffe445073d04526b21e97dc78efefbf8d12e4c93f8d27ead51289"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/check-originals.mjs",
+      "bytes": 2064,
+      "sha256": "cc36d2f0290aaf950fddb43dfa341a86ee408c324a7e001ce83d85d693e45c54"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/completion.json",
+      "bytes": 969,
+      "sha256": "fddceefa1e1c5b3a92592af4aa9a69e0533463d7b6e1b19cdab34520b067da90"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/completion.test.ts",
+      "bytes": 3097,
+      "sha256": "38b49448aadec8024f57bf38062c38891065bb26645c721d3ed8a2cc1ef773ad"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/contact-sheet.png",
+      "bytes": 740805,
+      "sha256": "d6f037a012bd33cdde099f31bf92da335843b2745f817930c02295967396e20f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/contact-sheet.ps1",
+      "bytes": 1287,
+      "sha256": "25fc514a87e76a572f9fcff9f245365f693a1201cbcf7ab1893a895d9d3982e1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/failure.png",
+      "bytes": 345131,
+      "sha256": "c72e32472b3a0d8345f29009b99592d748e233ad9444a74c42f94e65575cb3d8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/fixtures.ts",
+      "bytes": 2411,
+      "sha256": "11f0d4b4bf37a157dafad32abecebf7431a5b6634d72555681b044dbe1d2b2a3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/integrity.json",
+      "bytes": 11048,
+      "sha256": "e09185ea92a2f9dd1e28334f01838cba304331b951cf695bc865a0e5349694cd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/integrity.mjs",
+      "bytes": 1569,
+      "sha256": "455ba86bf60e7530f9b67c9a0a8c9cfa5862f927b6821f5f738f89a0a449834d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/isomers-1440.png",
+      "bytes": 416336,
+      "sha256": "6dcfe744c9c027621d0fe90de08b07aecfebf0b179c568e7cfa2d8b454380f38"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/isomers-350.png",
+      "bytes": 281419,
+      "sha256": "2a199c396924e10a1264b98af22272073d65df25eef9f075dbd15b81453f0bbd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/isomers-390.png",
+      "bytes": 284166,
+      "sha256": "dbdd9796bf389aea482a8d972bd22b7d79b53e59d39bf386adb4d3cd1ef59552"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/isomers-820.png",
+      "bytes": 362834,
+      "sha256": "7750ea8bde587ebff7c2522f697b2ac7dda4e58636944995364a7fd71b24958e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/legacy-v3-historical-wrong-k.json",
+      "bytes": 28461,
+      "sha256": "4e6af4f6322b7991d7e43b6955b88e9cd3397330eceddea2bdeef0549d3d1e09"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/map-complete-1440.png",
+      "bytes": 354819,
+      "sha256": "ce5d8cb7e6aa7e8499bcc3e41e1c8c37075aa323f8b6f9e24b8d210f37e284cd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/map-partial-1440.png",
+      "bytes": 345131,
+      "sha256": "c72e32472b3a0d8345f29009b99592d748e233ad9444a74c42f94e65575cb3d8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/map-unstarted-1440.png",
+      "bytes": 347025,
+      "sha256": "66384a28cebe49fcc47118d3e1d4ba9a551bf2cc68ad4f1b142dd5928005596e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/map-unstarted-350.png",
+      "bytes": 183675,
+      "sha256": "aa70841271405e0f1f70901c640b40830b9c174235bd79823c515b9dbe1c991d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/map-unstarted-390.png",
+      "bytes": 194076,
+      "sha256": "78ae5595d8d41e7b745347d5d70e01bb0ff4ead6ebb9cf3d7b5564d85410a4b9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/map-unstarted-820.png",
+      "bytes": 266770,
+      "sha256": "b87b639332ed8d4edf212603709e90c6b1ae71f963acc099eb3ae10c109d3db5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/native-correct.json",
+      "bytes": 26710,
+      "sha256": "2f5165d86e06bd6990541d8fef1cc5d67d3076ef986e3c984de5e36d976d5179"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/native-historical-wrong-k.json",
+      "bytes": 26705,
+      "sha256": "d71c23602bdf39878be905d71a581081bf8672c6396c64c562aa254819bee985"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/native-revalidated.json",
+      "bytes": 59335,
+      "sha256": "e76722aa647e8510e19e946478c1ecb0abe87df53a4f5d7435b94df3f4b82023"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/original-preservation.json",
+      "bytes": 288,
+      "sha256": "eb937b3939b512230abccf8be682fbacb3e62f64f8b7cee59f711eb563b2ab5f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/olympiad/unit-tests.txt",
+      "bytes": 5038,
+      "sha256": "7dab80b09028fd83cd12e972d972de2dd6c91d82b1de6d724f25b065ff8dc7b9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/original-preservation.json",
+      "bytes": 288,
+      "sha256": "2aa93d762fbc9c25f3f9943272d094447d79455731c6d2b5da60c1f8579d2e0e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression-results.json",
+      "bytes": 870,
+      "sha256": "c15185f337fe136869e9683c5eca1024e2cec8c0605bba4182ba1776298267b5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression-tests.txt",
+      "bytes": 1526,
+      "sha256": "8e75c26c54e38a61aaad1d9518a081702895f0f908238d4413f247b724760027"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression/acid-pre-correction-fixtures.json",
+      "bytes": 597907,
+      "sha256": "97bdc85d9674cb896b805b50676f59dfca15d897b96668b62abf3903acc16c59"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression/canonical-identity.test.mjs",
+      "bytes": 13604,
+      "sha256": "87d5f4343e04f5a6584283f85c3cf421206d541ec5636a9dc3ba2a51169b600c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression/coverage-results.json",
+      "bytes": 1560,
+      "sha256": "8a2721d33243e559067640822eb94895edad6fddef47b6774b1c0aeb090e50ad"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression/current-export.json",
+      "bytes": 1678,
+      "sha256": "bb063368ff5dc1cd947c3992e0f5746b75d2b0523091bfd33cb121f22d684c8e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression/current-persistence.test.mjs",
+      "bytes": 4177,
+      "sha256": "9ea22000ad36ff181fa35855e20b91f9bbca955a2fdf40a79263e42d2c9d7d3e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/regression/numeric-working.test.mjs",
+      "bytes": 3091,
+      "sha256": "fb05558383ee6ed774b985e0a5e98a1724e85c7f76f4e50cb1f9999088052e8d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/run-regressions.mjs",
+      "bytes": 1638,
+      "sha256": "14f2fc46902fc772d24a4b585d697e6422011001920acc60997ef35aa9d7eaaf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/source-audit.json",
+      "bytes": 87967,
+      "sha256": "b3bcd881fa3d0c0223d457e9b5083f4d1c21d549d4274bf6aa3fbba2c28bb1f1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/source-audit.mjs",
+      "bytes": 2939,
+      "sha256": "a5f1957e86725de6a235b8de38aa176937e8431ca9ebd5fb20d8d49d0984ea3d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/source-changes.patch",
+      "bytes": 150089,
+      "sha256": "d781d757998825484f33cb027e8e14caebac12de1eb2c7241ef06bdcbdaf7b2e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/HANDOVER.md",
+      "bytes": 6463,
+      "sha256": "fd2570959691de8fff6ddeced59830ef6b93373b9b1a1ac131c22f1eb1b1b13b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/acid-model-feedback-390.png",
+      "bytes": 109698,
+      "sha256": "ebd965a63325ac5d82dbdde6ba9835b9ff08619609ffd0e25606eb63c7753139"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-acid-base-calculations-1440.png",
+      "bytes": 197678,
+      "sha256": "85f844e27711467d0dd3867997dc59377f3e2e683f707216abf092c9a2f90bc0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-acid-base-calculations-350.png",
+      "bytes": 93324,
+      "sha256": "eaa994ff6db5e93d5bfb52df68e835db089bc4dea82b0cac4c202863b06470fb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-acid-base-calculations-390.png",
+      "bytes": 113648,
+      "sha256": "32f64532e66cce7fa7d9043b151ddc8ec78722e7e24fba3ac059c8f1ed23dcc3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-dot-and-cross-1440.png",
+      "bytes": 426996,
+      "sha256": "9cdc2b0f9674a1ec14b2e2e9b323f674764be37ce2427d1921a4e639b43f97b2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-dot-and-cross-350.png",
+      "bytes": 257823,
+      "sha256": "a3f2ace6126c47392725095794e2448ce392d417ba1ee8e149b08fc2bcca567b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-dot-and-cross-390.png",
+      "bytes": 258267,
+      "sha256": "b1a1c1e1d7211c18f688d29b995452a79e6144d7e5c051f9eac7fda0db31a388"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-dot-and-cross-820.png",
+      "bytes": 336479,
+      "sha256": "1ca6cf3d07af553c8e9215e365b0e69f0c0e9b6a9ade44a207708d77652bfb68"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electron-configurations-1440.png",
+      "bytes": 191510,
+      "sha256": "1374817171aeb6d9a1c86cb0350557461b25b391f287b37ea95b487712123d6c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electron-configurations-350.png",
+      "bytes": 94635,
+      "sha256": "f211f412cfc5aa231d5657fac03a6c475545e25d79c28833d214fa207698134a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electron-configurations-390.png",
+      "bytes": 97415,
+      "sha256": "0b1566d6210da73ce807fead92383b2e012f7db2fa1dbbcab6523daa2fe18ffa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electron-configurations-820.png",
+      "bytes": 139332,
+      "sha256": "d321c4fe0d0b78ce636f7fd8fae1f20125a03a7506ea714b2c0a888fae008d23"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electrons-bonding-1440.png",
+      "bytes": 218327,
+      "sha256": "e3c2bc9043b8b6d199919b8ca50ab4f3773ec819dec6baff03f7272c85ae24a4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electrons-bonding-350.png",
+      "bytes": 96594,
+      "sha256": "ad6e6ba0bbe0af78fc515f2b758810e062ec890cb9569cf1ab504fa976483d15"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-electrons-bonding-390.png",
+      "bytes": 102613,
+      "sha256": "05a054e75f32823695a00d5b798d0de0babfc4f3ec7e2461b997313ef9fc798c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-landing-1440.png",
+      "bytes": 499943,
+      "sha256": "96facb7ef2c61646568131f2e52148d62e4972eb93808cc814a2c548e8963221"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-landing-350.png",
+      "bytes": 359743,
+      "sha256": "4be72f585f473e2b7160356b7fd8d929ec1512a105b798039f6d4f3a4ae141cb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-landing-390.png",
+      "bytes": 379752,
+      "sha256": "c46ab9ddd3f11469be3ddd85d12a79f2599bbad788191abfb90145ab6d30f6d5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-landing-820.png",
+      "bytes": 450623,
+      "sha256": "cac118d3635d04b4b93b7bb302b0bb4311fd2a4c3b7c4c9e75476a0a20c91401"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-ph-titration-curves-1440.png",
+      "bytes": 527319,
+      "sha256": "c8d35587489535bca4eac0d60dade0d7236e35ad211afe33527503b6430cf698"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-ph-titration-curves-350.png",
+      "bytes": 306721,
+      "sha256": "c5a9b93423f3c4bba506dabe87a4c1e3bd696504f7a72f446f20aa143222a0bf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-ph-titration-curves-390.png",
+      "bytes": 321742,
+      "sha256": "e20c61f4aa575e820ae327da9bef72bed1c2d4ad0a29b72e14c5f3428f1bc27a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/alevel-ph-titration-curves-820.png",
+      "bytes": 461992,
+      "sha256": "18c24973041dbf4976b1a8ad912db097429f149f2bc713bd7009e8b4c736bfa6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-attempt1.json",
+      "bytes": 7324,
+      "sha256": "9bf428bd1385e8b9246e2ca63b92444c6f6b20377cbc05124534ad0c5f284584"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-attempt2.json",
+      "bytes": 44376,
+      "sha256": "b1e9ea34c28dc0c6930e017e8d89f5ea7d546f0f21d3aca4ba615015c1e5864a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-check.mjs",
+      "bytes": 6694,
+      "sha256": "11327f90686f09a3072e5f2ba6673117a8804c7cb7e7dfd46a0ab05595c12084"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-checkpoint.json",
+      "bytes": 57953,
+      "sha256": "e643b0d1a0ea8e662c98eb2824e824cf25910f8a5c4b39f22b14177351a99767"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-extra-attempt1.json",
+      "bytes": 1424,
+      "sha256": "dc34893cd374139a9d0abe1c31e410718e12214a6d58683d858c642140375a91"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-extra-results.json",
+      "bytes": 1147,
+      "sha256": "f75567399feab3a88332e9dfa29b124411ef4e540cf41d30e80caa3896860135"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-extra.mjs",
+      "bytes": 5597,
+      "sha256": "f1ea8b08d76e85089d19439f630592b7e88373c3a976478b1acbd44ff1ee9b6b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/browser-results.json",
+      "bytes": 57994,
+      "sha256": "eee28fe621add8661578684002f6d16c4dfc1b68d4a80a7887024bcbffb1283d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/changed-files.json",
+      "bytes": 3621,
+      "sha256": "df1adaf101855ee44b393a0b5cf346a6650649f55140a2d90e529a50a14f1375"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/completion.json",
+      "bytes": 1689,
+      "sha256": "dabe064983fbec3cbbe72156fba57f7159fea7d00e028e9306f8effcf346dd30"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-desktop.png",
+      "bytes": 457782,
+      "sha256": "6e8e9ff6ea6246a88fd9cfd06c59b25766fa968c2322fa712fc91114430e964b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-final-1440.png",
+      "bytes": 316853,
+      "sha256": "f73b8bca5e1b584251d703684f2944b32f41a132bba10ad00f5f05ef5d5f3b2a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-final-390.png",
+      "bytes": 400558,
+      "sha256": "6d725f8643008025b32e400771647ada615cfdefe7017d6f97816e1039a2d18c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-final.py",
+      "bytes": 962,
+      "sha256": "3c85266ab521a76b61deda2f568b4775a85025fe0e24e5e17f6b405c9fa373c2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-mobile.png",
+      "bytes": 505382,
+      "sha256": "88481fdc486c394e6367fdc5818007237e2c0e15e876364a47dc010453031d25"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-sheets.py",
+      "bytes": 1509,
+      "sha256": "dd5c07c54d76543d8bf39ae13456e2661cd5a2e4c5efd6f0d4ac31332f15dda4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/contact-tablet.png",
+      "bytes": 659199,
+      "sha256": "3412890e37b9bc299f65c250135f42c7f7ed799b71dc4215926fa513817c2cc6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/course-cancellation-remount-1440.png",
+      "bytes": 499943,
+      "sha256": "96facb7ef2c61646568131f2e52148d62e4972eb93808cc814a2c548e8963221"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/dotcross-live-label-fit-390.png",
+      "bytes": 378167,
+      "sha256": "f962ca732e5135168c0eb9a5a15406f975f68f52aee332c579352e740bc7068c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/dotcross-live-label-magnify-390.png",
+      "bytes": 376510,
+      "sha256": "8c4dee7540b203cc5b5eec062532741e4f1f6895c4ff151cb0b9c323e936b80c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-before-390.png",
+      "bytes": 97766,
+      "sha256": "004b60c52c0233b05e5af7aa17ee6074a874a5b616727711e28be8895e2c57b5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-check.mjs",
+      "bytes": 2565,
+      "sha256": "0cf10b90648edd1d37090d361481ca318821f3822b141ca7e77fa4e791fdb570"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-detail-static-1440.png",
+      "bytes": 13023,
+      "sha256": "b303e1b0b3642e460e0213083957e8f262497a2d12ba00cbf0f2be3effb4bf4c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-detail-static-350.png",
+      "bytes": 8194,
+      "sha256": "067eae340d2ab3a13ee7f53e1da690c596ce6152cd6e6a6bca11735c79d6446a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-detail-static-390.png",
+      "bytes": 8313,
+      "sha256": "826f0c94fdd782791a267bb824578d75f8137281a05bd4012177c60a354ccd5a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-source-1440.png",
+      "bytes": 321984,
+      "sha256": "ae7bfffa511a385a034d1c4735ad1fd5f4dff1f8bb83a42e909ba110a116f863"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-source-350.png",
+      "bytes": 210951,
+      "sha256": "6829e06d8f5f3830cdf6c162d32b55bbfaac6d31f76aade113d36d35282f23a5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-source-390.png",
+      "bytes": 215816,
+      "sha256": "857b7bdac1e7c96a345fa2af602f7e16b72408b7222ad8379f8d2e22b90eccb1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-source-results.json",
+      "bytes": 1563,
+      "sha256": "000c15f4f1b7e60d0f67752067f2b7cd40d575e4fecc5cc85645eb8a4757c9fb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-static-1440.png",
+      "bytes": 296521,
+      "sha256": "1878361a5dc9dd18e43a7d7b9269d375820ffcdd65ce9aef574b95d4115d1916"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-static-350.png",
+      "bytes": 189256,
+      "sha256": "91c166258fca11269581f217fcfeaa64b7849068b07502b236ae146d1074a8b9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-static-390.png",
+      "bytes": 191307,
+      "sha256": "c05b9c3ac80ac9167e2ee33ca049c8af177b4626d06163de434d443e93e52518"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-axis-static-results.json",
+      "bytes": 1559,
+      "sha256": "4a45c5a4910c4d4c39f68ce0ea28d560d7689e0238d62679e5ca1138587ffeef"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/ec-extra-debug.png",
+      "bytes": 96185,
+      "sha256": "beef34e4012f25da342b3c51f2f555b9ec22d781085060267533e2eec4255493"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/electron-inspect.png",
+      "bytes": 139373,
+      "sha256": "271400a6cc7c80f2f15a96f51ab511ee0e57da53a60ec582a4990a8bd3d50d5f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/electron-periodic-table-390.png",
+      "bytes": 89380,
+      "sha256": "8a49d7ba60e9bb7a3e6bb60eb84be32ebb3e5876d486b308e047f5f0105d1cc9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/electron-spin-arrow-390.png",
+      "bytes": 96185,
+      "sha256": "beef34e4012f25da342b3c51f2f555b9ec22d781085060267533e2eec4255493"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/evidence-hashes.json",
+      "bytes": 1423,
+      "sha256": "e57ce338f9539e365405c8979085decc5816460b246240c93c3b026ef1d9bf64"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/final-alevel-landing-1440.png",
+      "bytes": 499943,
+      "sha256": "96facb7ef2c61646568131f2e52148d62e4972eb93808cc814a2c548e8963221"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/final-browser-checkpoint.json",
+      "bytes": 3572,
+      "sha256": "8d5e0b3333e9eff23e58b67f5062cf010741b6c3012e92821969de98fd9e8844"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/final-browser-results.json",
+      "bytes": 4145,
+      "sha256": "71a53f3e910df7a863208a9c4d5d9a29e640466fd487cd67ec0ad8422408bf04"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/final-browser.mjs",
+      "bytes": 7303,
+      "sha256": "fa06ea3859af91b3703a4eeb317383ce008c583ea0cc7a2a60e54dd135dbbfac"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/font-migration.json",
+      "bytes": 1032,
+      "sha256": "04ce77cd187e4f8dfd576878591006ed3f2d526b358ae4fb71276c9e73bb66d0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-bond-enthalpy-1440.png",
+      "bytes": 508973,
+      "sha256": "f01a81370aed74e7aeabb027f8a22e68832c542bb4bf5658fe6327714d7087aa"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-bond-enthalpy-350.png",
+      "bytes": 261025,
+      "sha256": "a35679dafed81b4a5157b30d8689e138f541cd9531a3161c55d7343db1e859d8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-bond-enthalpy-390.png",
+      "bytes": 282923,
+      "sha256": "1207eb97773ce07c2ceaa60989eeef5d73b05bb7338b79cf0d7bf4c62d4d2f02"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-calorimetry-1440.png",
+      "bytes": 480860,
+      "sha256": "168846c9f7977bb60be9d1ce4f90afd6b7bbff952bdb850c8b7344af9c0aa519"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-calorimetry-350.png",
+      "bytes": 302886,
+      "sha256": "ec458daddfb6384d3eb75d572d9b690e89e8f3cf8096e198d21897942aaa4420"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-calorimetry-390.png",
+      "bytes": 311566,
+      "sha256": "e5ca8feeb0d65991b134e598d43505a5a72c73248dcd5b5bd31a5c72f6385ee1"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-dot-and-cross-1440.png",
+      "bytes": 368633,
+      "sha256": "33ebbcb5b577457229af89312f406280718c7f53f8101a5ff3dc386383aa0689"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-dot-and-cross-350.png",
+      "bytes": 187371,
+      "sha256": "364c1727b2bd580735c91465f2b99612eb11ca3b1a6d63e3a20bdeaafc9e104c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-dot-and-cross-390.png",
+      "bytes": 196354,
+      "sha256": "598603e1e76a74d50040e33f132db2878beea5a731ae627ed8018d523aec19bd"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energetics-practical-1440.png",
+      "bytes": 222794,
+      "sha256": "7e47be24b62b5096f86fa7091d7d0c7fd1f379834daf774db6f1fd41356d9206"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energetics-practical-350.png",
+      "bytes": 114944,
+      "sha256": "304532d93cbf89b5584ea5b01aadc74635b8f0ab976a343fd83e2db877f5d61d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energetics-practical-390.png",
+      "bytes": 95424,
+      "sha256": "127f25bcc0a106acbe44a1bb87541d2fd5943123a1544f2607eb714277b90f82"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energy-enthalpy-1440.png",
+      "bytes": 217269,
+      "sha256": "c0b1ec079d4fd226c076dfc4d9471888b6f1827aedce5b759834674a9d4074ba"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energy-enthalpy-350.png",
+      "bytes": 88673,
+      "sha256": "5a9ae7f4bf35c7f58e2b229671320562a080c745866ba8148dfe49b65c15ca5d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energy-enthalpy-390.png",
+      "bytes": 104502,
+      "sha256": "29b23e6c5abfc0f2bd6fa743e58ac853f8e8ce8c6d28a343afcece5929f76113"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-energy-enthalpy-820.png",
+      "bytes": 142307,
+      "sha256": "59f93dd78ff7f6da6eb07544b6f6499d91506f13b16346cc20e91837b445f6b0"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-landing-1440.png",
+      "bytes": 506165,
+      "sha256": "11e78a7586fe1a8caefd4d467c13e7a2b68649b083e5be0fc6537c1bb6c96ac3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-landing-350.png",
+      "bytes": 331882,
+      "sha256": "c09e5da391dcd2ca864f0e9573b536ecddf3c9bc2b46ec24aab1b106e28b2115"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-landing-390.png",
+      "bytes": 351273,
+      "sha256": "46d87479d0c94e5134e676c4afda8659083940f65a65af7ff497771b06666ced"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-landing-820.png",
+      "bytes": 467478,
+      "sha256": "b39df938eaf1999fd4fbdf317a03eef0d99ed4bb822d993caac2680b157712e4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-structure-and-bonding-1440.png",
+      "bytes": 242449,
+      "sha256": "446983b19fed6a19101cf14882a6f7adf17532c11c5ba88b21f2b8cb5e645fae"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-structure-and-bonding-350.png",
+      "bytes": 165367,
+      "sha256": "e6c1366ff20e30a4299c55b51b6c370e1840817af9be8f2d71cea0dfd0fe1eb5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/igcse-structure-and-bonding-390.png",
+      "bytes": 168992,
+      "sha256": "6adc5be2eed75f4acbba409ee4aa7fc98e0e454699ecb2559ad692758ed831b4"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/import-1440.png",
+      "bytes": 327420,
+      "sha256": "be4d7a4b655874c69707f5173d0bc337f602230c916008fd0c0ca9f7bf1e4931"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/import-350.png",
+      "bytes": 144403,
+      "sha256": "1264cabcc270e029077801f67d04f31ca4d35c3b6e2198fd45499ad5412b149a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/import-390.png",
+      "bytes": 153314,
+      "sha256": "93d17712ca6324bb50ab2808efd4ea5a3f42325fe38d36e7defc57d1a54fd449"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/import-820.png",
+      "bytes": 240115,
+      "sha256": "836ca169db6cbf79acc18131e507a56881a99ce0fe0f7906e739bc5fa944e94a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/inspect.mjs",
+      "bytes": 789,
+      "sha256": "1ea4948c0fcf7f164942829d6ac8f0e6225237ef11b02e640cacf403c0c9d25c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/legacy-original-check-incident.json",
+      "bytes": 49921,
+      "sha256": "19121984418d14d6c74ed84182bd498f9313c3a59fd4db59f214979bd162c607"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/olympiad-1440.png",
+      "bytes": 347025,
+      "sha256": "66384a28cebe49fcc47118d3e1d4ba9a551bf2cc68ad4f1b142dd5928005596e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/olympiad-350.png",
+      "bytes": 180499,
+      "sha256": "280d94b3540400b67b78c4d82ec06cc91a2d69d075a70aa09d74718f3ba8fee6"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/olympiad-390.png",
+      "bytes": 185657,
+      "sha256": "26d085df4116ab0e358cee9f088205782e5df51b7966f2be52cb3aeaefbad031"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/olympiad-820.png",
+      "bytes": 266770,
+      "sha256": "b87b639332ed8d4edf212603709e90c6b1ae71f963acc099eb3ae10c109d3db5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-acid-base-calculations-1440.png",
+      "bytes": 193418,
+      "sha256": "d3b0c38140423513f8a5765d1098f292bb54c18cae9c9c855ac6532f06aded3b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-acid-base-calculations-390.png",
+      "bytes": 91812,
+      "sha256": "376bc9eb440a97383cb7673b906194dd712737779cd091cbf45a7b4473335d84"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-dot-and-cross-1440.png",
+      "bytes": 427986,
+      "sha256": "350bcbb8b80381dd40ff048d5c4f8286c14b0c5a09a5e285a8aed5f454e992ec"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-dot-and-cross-390.png",
+      "bytes": 264796,
+      "sha256": "3ab272bc7348f7fa433961aab22c239b81939c8e4bbdfc51630b242c1611ae19"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-electron-configurations-1440.png",
+      "bytes": 188251,
+      "sha256": "77dc1dd3ac310ebcbf2ecdd2c8b8a4e3528eda33b8400b5ed4102b4da021489e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-electron-configurations-390.png",
+      "bytes": 97435,
+      "sha256": "b6d299750635400f338a78d984630848042192410c37eefcbea0f85cab2c686e"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-electrons-bonding-1440.png",
+      "bytes": 199493,
+      "sha256": "186da4c3da8da8889456a06a85b3ef6a0233ae19fd661f7a2aab3293134ebcdf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-electrons-bonding-390.png",
+      "bytes": 96800,
+      "sha256": "60923efcdf5b1b6b8f390d4ede3fa465fbd3728349c93303b03a6fec56927116"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-ph-titration-curves-1440.png",
+      "bytes": 511284,
+      "sha256": "b565383dff0beedbb5623e5177e205492a978d079a3b590cce7a10e031573da9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-alevel-ph-titration-curves-390.png",
+      "bytes": 316348,
+      "sha256": "d34acd0b1b46254bda5c2ee3bebaa2c7ff4364230bdd42dcff3f0262116092bf"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-attempt1.json",
+      "bytes": 11201,
+      "sha256": "8f5fe95d0aab1e517913dc7dfd1b40a23273a55dbc2829c9811e99e7647c9011"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-browser.mjs",
+      "bytes": 5319,
+      "sha256": "62c0a772c4caf3e8fc8c1d87df32c5b50b974945d99ab87161ca940d776aedc9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-c3l6-organic-reactions-1440.png",
+      "bytes": 440908,
+      "sha256": "a3b0e614c05d1a022e9c52b012f3609d60ebae0c5e23b63fc6f63700247bcba3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-c3l6-organic-reactions-390.png",
+      "bytes": 319224,
+      "sha256": "434f2f25a61bb7eff06bc45cf3b7c7efbb97ea6b93ca812263e336ee4c13428f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-checkpoint.json",
+      "bytes": 31709,
+      "sha256": "3f8700d78f067c625693bbdd756539060e28bc559951476a6ea7d3e9af68a3c3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-dotcross-live-pan-390.png",
+      "bytes": 379806,
+      "sha256": "4b3980d0bd76a6d02f0e4164c77d510acabc9478bbdda00935cdc5769f6c9d06"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-electron-live-spin-1440.png",
+      "bytes": 188577,
+      "sha256": "492389d0c0a97a430b4e63c2f7b45b0ff7ed09ba60f5afbec4c015369ad2096a"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-electron-live-spin-390.png",
+      "bytes": 97766,
+      "sha256": "004b60c52c0233b05e5af7aa17ee6074a874a5b616727711e28be8895e2c57b5"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-igcse-bond-enthalpy-1440.png",
+      "bytes": 544724,
+      "sha256": "37f9c33aff9c343526a7462f9bd4c0b435429896c46e544396d49b4341bc4470"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-igcse-bond-enthalpy-390.png",
+      "bytes": 278096,
+      "sha256": "0fbac5e333bdc1783ca883fa844f66ee12e78209e5da9180f70303ee99f211b8"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-igcse-calorimetry-1440.png",
+      "bytes": 479489,
+      "sha256": "1e139d27bb1be4ab1461762de73f030e22cfaeedf4393388f42c0d535dfd8a47"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-igcse-calorimetry-390.png",
+      "bytes": 276540,
+      "sha256": "79a133e0b6b579dcb78d8f30c6a2e3db9b7b1afeaa710682804b930e9d465b7b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-igcse-energy-enthalpy-1440.png",
+      "bytes": 215080,
+      "sha256": "7fc0827babb8407a8564ed33e061b1e3fc4bde4e98369fc999050ec662b3089c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-igcse-energy-enthalpy-390.png",
+      "bytes": 114273,
+      "sha256": "b6e86d819c0b8d171e92a0dcf4d952b8102a5fe04eb2618f04d4193e52c8df1d"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-olympiad-2011-q4-1440.png",
+      "bytes": 394629,
+      "sha256": "0c66833de8855c2a5a561a13b79ecc21a2c2ace4f8a22a826eb9615936a02165"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-olympiad-2011-q4-390.png",
+      "bytes": 265239,
+      "sha256": "a967c4cc78647a98e89947d4570605b2359737fcb790d05b8713e40dccdacb50"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/static-results.json",
+      "bytes": 31750,
+      "sha256": "3e4d98d3eecd0d4d9d42a5718c1f877f5ea2ac90e3148b014445d411304fe998"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/statistics-1440.png",
+      "bytes": 741443,
+      "sha256": "cb87413c35df1129810805f498949b766f5a62bfb0f10da4fc520b808d335425"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/statistics-350.png",
+      "bytes": 583285,
+      "sha256": "d5d247ba130a776d6655b09db19f3ba2179d4d9f1725bd7982f7da5331b2809f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/statistics-390.png",
+      "bytes": 580420,
+      "sha256": "fc9e523cd48d318069631b9c98af7ded03e2a64fa521a95fc55cb36226c896f2"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/statistics-820.png",
+      "bytes": 643033,
+      "sha256": "1a6c36cab1b62f6b85acd568d4c6f2e2299008701b5b55c3668c9ecade56a00b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/teacher-1440.png",
+      "bytes": 248518,
+      "sha256": "1047875479f7b202c98bb523b15ca167a2932d6064ec914bc3e575237ff7b57b"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/teacher-350.png",
+      "bytes": 156926,
+      "sha256": "eea106b636378532fc093a2dc6d786b3fc8579a5eeb784527678b3fbda74e97c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/teacher-390.png",
+      "bytes": 157710,
+      "sha256": "8a45b4a2978b9f104e62be927f5dfe1fd532a7046c39053ae38bd4ef43cd8315"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/teacher-820.png",
+      "bytes": 171840,
+      "sha256": "426c4f5db3656a88234e26b5d95f9a84b2de7f07d3ae7119849952ebeb7f4c7f"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/transition-cancellation-results.json",
+      "bytes": 1191,
+      "sha256": "74611840ec2126c6948a838cd30a9f378508479ecd18336269be1ae7c1109e42"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/transition-cancellation.mjs",
+      "bytes": 4352,
+      "sha256": "0ea6622ef543f967a817c5510fb1b21677fc7a14a897c789d77c0d1bdd1ccf48"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3"
+    },
+    {
+      "path": "validation/ui-consistency/u1/theme/year-flip-u6-1440.png",
+      "bytes": 474084,
+      "sha256": "96c96da35af060b8d371d6c465e9c299fff3c845dd8d1d99407bb3fbbde91e4c"
+    },
+    {
+      "path": "validation/ui-consistency/u1/timing-continuity.json",
+      "bytes": 3840,
+      "sha256": "f7b66525b2385b067294292f43a2f8eae76ec1004aab8b4c95e56f74603a3017"
+    },
+    {
+      "path": "validation/ui-consistency/u1/timing-continuity.mjs",
+      "bytes": 1627,
+      "sha256": "1fdec7640935db4de872c02665d7692eda1321912af45c0d0b76edf30628acfb"
+    },
+    {
+      "path": "validation/ui-consistency/u1/typecheck-attempt1.txt",
+      "bytes": 106,
+      "sha256": "d449bf04b547ffcaf4d18416c28a74b1ee9988dbdeda7e01153550f086b6d7a9"
+    },
+    {
+      "path": "validation/ui-consistency/u1/typecheck.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

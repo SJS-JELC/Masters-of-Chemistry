@@ -1,0 +1,55 @@
+{
+  "jobId": "F2-ENERGY",
+  "agentId": "F10",
+  "status": "PASS",
+  "confidence": 0.96,
+  "reason": null,
+  "outputPath": "apps/Masters-of-Chemistry/validation/component-fidelity/f2/energy/resume-f10/HANDOVER.md",
+  "validation": {
+    "deterministicTests": 5,
+    "browserStateGroups": 27,
+    "equivalentStatePairs": 162,
+    "finalMainChecks": 30,
+    "fontRecaptureChecks": 9,
+    "contactSheets": 27,
+    "typecheck": "PASS",
+    "evidence": [
+      "final/browser-results.json",
+      "final-control-font/browser-results.json",
+      "chemistry-determinism-tests.log",
+      "revision-complete-results.json",
+      "variant-interaction-results.json",
+      "invalid-enter-final-results.json",
+      "locked-controls-final-results.json",
+      "timing-settled-results.json",
+      "sampling-gap-results.json",
+      "typecheck.log",
+      "final-input-hashes-complete.json",
+      "final-source-and-current-hashes.json",
+      "resume-only-final.patch",
+      "final/contacts.json",
+      "HANDOVER.md",
+      "late-shared-freeze/continuity-results.json",
+      "late-shared-freeze/disposition.json",
+      "late-shared-freeze/README.md"
+    ],
+    "lateFreezeContinuity": "PASS desktop D03/mobile D05; final shared hashes at 19:22 freeze carried forward under explicit unaffected-scope disposition; three owned files unchanged",
+    "finalCurrentInputHashes": "late-shared-freeze/disposition.json"
+  },
+  "limits": [
+    "No new native hidden/minimized/suspend certification; headless failed probes preserved",
+    "Controlled browser idle timer and measured 6500ms sampling gap verified",
+    "Build/release/protected-roots and independent acceptance remain foreman/root gates"
+  ],
+  "usage": "Unknown; not exposed",
+  "carryForward": {
+    "matrix": "../final/browser-results.json",
+    "fontControls": "../final-control-font/browser-results.json",
+    "variantSizeGroups": 27,
+    "equivalentStatePairs": 162,
+    "contacts": "../final/contacts.json",
+    "reason": "The three energy editor/SVG/style hashes are unchanged. Foreman disposition identifies subsequent shared differences as comparison-only pane visibility and numeric-only review fonts/SVG currentColor/table split/scaffold notes/actions. These change no energy selector or energy rendering branch. Earlier EC duplicate-context suppression is family-specific. The bounded continuity proof establishes matching energy geometry/font/colour/background, exactly one prompt and marking/actions pane, read-only checked model and first-evidence/Enter lifecycle. Its retained proof remains applicable after the later scoped changes; no new matrix or browser rerun is claimed.",
+    "foremanEvidence": "Final F08 freeze 2026-10-03T19:22:19.469Z, current typecheck PASS, explicit F07 unaffected-scope/carry-forward instruction",
+    "rootAcceptance": "Still required; worker PASS is evidence, not stage acceptance"
+  }
+}

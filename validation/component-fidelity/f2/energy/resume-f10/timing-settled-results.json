@@ -1,0 +1,26 @@
+{
+  "jobId": "F2-ENERGY",
+  "agentId": "F10",
+  "startedAt": "2026-10-03T18:46:57.643Z",
+  "status": "PASS",
+  "browser": "Edge headless / pinned root Playwright 1.62.1",
+  "isolation": "Fresh ephemeral browser contexts; original source served readonly. Synthetic source snapshots only in isolated context localStorage.",
+  "checks": [
+    {
+      "kind": "browser-idle-deadline",
+      "idleAllowanceMs": 180000,
+      "realTrustedKeyboardRestarts": true,
+      "idleStops": true,
+      "clock": "Playwright controlled browser Date/performance/timers; no native OS certification",
+      "invisibleTiming": true
+    }
+  ],
+  "screenshots": [],
+  "metrics": [],
+  "errors": [],
+  "limitations": [
+    "No new native OS hide/suspend certification.",
+    "The original has no correction/reveal-model flow; its correction/model paired diagrams are original saved-state rendering of the equivalent corrected/checked model, while React uses the shared live correction/reveal engine."
+  ],
+  "finishedAt": "2026-10-03T18:47:02.891Z"
+}

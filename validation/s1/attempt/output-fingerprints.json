@@ -1,0 +1,62 @@
+﻿[
+    {
+        "path":  "src/domain/attempt/attempt.ts",
+        "sha256":  "ea96a4ebfc613aab55dd47b81d10c4a48f1c8da3823467c5b5919b122cf323e6"
+    },
+    {
+        "path":  "src/domain/attempt/input-checks.ts",
+        "sha256":  "b47a3a1c2c4c8832b4738b366b057896a8795a2a6378a5290aded0e9a4301f56"
+    },
+    {
+        "path":  "src/domain/attempt/index.ts",
+        "sha256":  "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087"
+    },
+    {
+        "path":  "src/domain/timing/active-clock.ts",
+        "sha256":  "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+        "path":  "src/domain/timing/browser-binding.ts",
+        "sha256":  "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac"
+    },
+    {
+        "path":  "src/domain/timing/index.ts",
+        "sha256":  "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    {
+        "path":  "src/contracts/question.ts",
+        "sha256":  "805c85711f9c2345624eea7798bcdf07b7d947cb488a1280224088e356114903"
+    },
+    {
+        "path":  "src/contracts/attempt.ts",
+        "sha256":  "6882787bd17e15f132b9f2fb92d0783c3026a2621875154e3ace0259c61a6aac"
+    },
+    {
+        "path":  "src/contracts/editors.ts",
+        "sha256":  "fbaa324e5cb4aee5140f01565cb8ebb8b8ae56ed14765daac2643ea617927003"
+    },
+    {
+        "path":  "src/contracts/session.ts",
+        "sha256":  "d27e22ce5fc50f6df9e5e1630deec38ace25da4ed07e27483d8c62c14a69ce74"
+    },
+    {
+        "path":  "validation/s1/attempt/attempt.test.mjs",
+        "sha256":  "df811d7fd452776b2f4aaf0f861856d94fece37feb0caa39f210a279945dc888"
+    },
+    {
+        "path":  "validation/s1/attempt/contracts.typecheck.ts",
+        "sha256":  "0794c9f9a630cd6e493d5c98bd827bdc72656af80279ed154e99599165c62706"
+    },
+    {
+        "path":  "validation/s1/attempt/scenarios.ts",
+        "sha256":  "3133bfe2a5bff587cd8c16a221ea88dbadb9b6c41f2f4607c1735420f42ff823"
+    },
+    {
+        "path":  "validation/s1/attempt/browser-check.mjs",
+        "sha256":  "235ff9ad1852b25b056ae3c0fa86ded160e9975147c1c6704b2bffd4ccfb961c"
+    },
+    {
+        "path":  "docs/architecture/s1-attempt.md",
+        "sha256":  "e3e2272e6309d6d9300c3432cde94f85b6d4811b7fabdc4b7a9e62afe1ae3e6d"
+    }
+]

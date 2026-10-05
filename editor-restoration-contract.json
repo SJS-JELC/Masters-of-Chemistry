@@ -1,0 +1,61 @@
+{
+    "schemaVersion":  1,
+    "runId":  "EDITORS-RESTORE-20261003",
+    "authority":  "User: next job individual activity components, starting dot and cross and molecule building, keeping UI and functionality from originals",
+    "status":  "authorised",
+    "scope":  [
+                  "Both A Level and IGCSE dot-and-cross activity presentation and editor interactions",
+                  "Molecule-building editor used by existing Olympiad C3L6 activity, including original contextual controls and drawing behaviour"
+              ],
+    "sourceAuthority":  [
+                            "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross",
+                            "apps/Masters-of-IGCSE-Chemistry/src/activities/dot-and-cross",
+                            "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder",
+                            "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions"
+                        ],
+    "requirements":  [
+                         "Prefer direct reuse of original CSS, DOM topology, SVG/canvas geometry, assets and interaction algorithms over stylistic approximation",
+                         "Preserve intentional course/scaffold differences and all supported question levels/IDs",
+                         "Keep accepted chemistry, marking, timing, first assessment, persistence and revision contracts; adapt original presentation into React without old page wrappers",
+                         "Preserve accepted landing implementation; unrelated activities unchanged",
+                         "Keep original applications read-only, including files, dependencies, Git state and real browser storage",
+                         "Molecule scope is existing editor in C3L6; no standalone prototype registration or new content",
+                         "C3L6 remains Olympiad-only with no curriculum mastery or revision evidence",
+                         "Retain keyboard/touch/non-drag alternatives and read-only teacher behaviour",
+                         "No publication"
+                     ],
+    "stages":  [
+                   {
+                       "outcome":  "Source UI/functionality audit, reuse plan, gaps and exact file ownership",
+                       "gate":  "Root acceptance before implementation",
+                       "id":  "E0"
+                   },
+                   {
+                       "outcome":  "Implement both activity restorations, integrate and verify",
+                       "gate":  "Root code, functionality and rendered acceptance",
+                       "id":  "E1"
+                   }
+               ],
+    "delegation":  {
+                       "workers":  2,
+                       "maximumActiveIncludingRoot":  5,
+                       "retry":  "One clarified bounded retry; genuine substantive exception to separate reviewer or root",
+                       "usage":  null,
+                       "foremen":  1,
+                       "effectiveSettings":  "unknown",
+                       "rationale":  "Separate editor ownership allows source-specific fidelity while one foreman owns shared host integration",
+                       "maximumExceptionReviewers":  1,
+                       "model":  "gpt-6.1-sol",
+                       "effort":  "high",
+                       "workersMayDelegate":  false
+                   },
+    "validation":  [
+                       "Original vs React interaction inventory and reuse/source fingerprints",
+                       "Actual desktop/mobile source-comparison screenshots and visual inspection for representative states",
+                       "Meaningful editor operation checks including original gestures and keyboard/touch alternatives",
+                       "Standalone/revision first check, correction/reveal, next, reload/restore and save-failure boundaries for dot-and-cross",
+                       "C3L6 drawing, sequential stages, saved reload and teacher evidence isolation",
+                       "Chemistry/reference fixtures, focused editor and retained regression tests, typecheck, both builds and release budgets",
+                       "Protected-original checks; current source/evidence fingerprints retained separately from historical S0-S5 and landing evidence"
+                   ]
+}

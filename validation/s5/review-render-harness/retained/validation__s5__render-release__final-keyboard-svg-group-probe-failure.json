@@ -1,0 +1,49 @@
+{
+  "status": "FAIL",
+  "method": "Real focus, Ctrl+A, Backspace, pressSequentially 40ms/character; semantic Enter/blur or Apply; actual IndexedDB state; fresh contexts; headless Edge",
+  "settings": {
+    "CPU": 4,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": {
+      "latency": 150,
+      "downloadThroughput": 200000,
+      "uploadThroughput": 93750
+    }
+  },
+  "checks": [
+    {
+      "editor": "titration",
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 0,
+        "level": 2
+      },
+      "typed": "3.1",
+      "enterCommit": true,
+      "restore": true,
+      "blurCommitAndUndo": true,
+      "invalidRetainedPrior": true,
+      "rawDraftNoCheckpoint": true
+    },
+    {
+      "editor": "energy",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D01",
+        "seed": 0,
+        "level": 2
+      },
+      "typed": "200",
+      "enterCommit": true,
+      "restore": true,
+      "blurCommitAndUndo": true,
+      "invalidRetainedPrior": true,
+      "rawDraftNoCheckpoint": true
+    }
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert((await p.locator('g[aria-label^=\"Ion \"][aria-label$=\"charge -1\"]').ariaSnapshot()).includes('charge -1'))\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/render-release/final-keyboard.mjs:10:837"
+}

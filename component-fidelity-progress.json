@@ -1,0 +1,135 @@
+{
+    "runId":  "COMPONENT-FIDELITY-20261003",
+    "status":  "complete",
+    "currentStage":  "F3",
+    "stages":  {
+                   "F1":  "accepted",
+                   "F2":  "accepted",
+                   "F3":  "accepted"
+               },
+    "rootAcceptance":  {
+                           "F1":  "validation/component-fidelity/f1-correction/root-acceptance.json",
+                           "F2":  "validation/component-fidelity/f2/resume/root-acceptance.json",
+                           "F3":  "validation/component-fidelity/f3/root-acceptance.json"
+                       },
+    "evidenceRoot":  "validation/component-fidelity",
+    "jobs":  [
+                 {
+                     "jobId":  "F1-IDENTITY",
+                     "agentId":  "F02",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f1/identity/completion.json"
+                 },
+                 {
+                     "jobId":  "F1-UI-PILOT",
+                     "agentId":  "F03",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f1/ui-pilot/completion.json"
+                 },
+                 {
+                     "jobId":  "F1-CODEC-DEV",
+                     "secondaryJobId":  "DEV-AUTHORING-CANONICAL",
+                     "agentId":  "F02",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f1-correction/identity/completion.json"
+                 },
+                 {
+                     "jobId":  "F2-SHARED",
+                     "agentId":  "F08",
+                     "replaces":  "F03",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f2/shared/resume-f08/completion.json",
+                     "evidence":  "validation/component-fidelity/f2/shared/resume-f08",
+                     "nativeHandle":  "/root/component_fidelity_resume/shared_resume",
+                     "validation":  "validation/component-fidelity/f2/resume/shared-validation.json"
+                 },
+                 {
+                     "jobId":  "F2-EC",
+                     "agentId":  "F09",
+                     "replaces":  "F04",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f2/electron/resume-f09/completion.json",
+                     "evidence":  "validation/component-fidelity/f2/electron/resume-f09",
+                     "nativeHandle":  "/root/component_fidelity_resume/electron_resume",
+                     "validation":  "validation/component-fidelity/f2/resume/specialist-validation.json"
+                 },
+                 {
+                     "jobId":  "F2-ENERGY",
+                     "agentId":  "F10",
+                     "replaces":  "F05",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f2/energy/resume-f10/completion.json",
+                     "evidence":  "validation/component-fidelity/f2/energy/resume-f10",
+                     "nativeHandle":  "/root/component_fidelity_resume/energy_resume",
+                     "validation":  "validation/component-fidelity/f2/resume/specialist-validation.json"
+                 },
+                 {
+                     "jobId":  "F2-TITRATION",
+                     "agentId":  "F11",
+                     "replaces":  "F06",
+                     "status":  "foreman_validated",
+                     "manifest":  "validation/component-fidelity/f2/titration/resume-f11/completion.json",
+                     "evidence":  "validation/component-fidelity/f2/titration/resume-f11",
+                     "nativeHandle":  "/root/component_fidelity_resume/titration_resume",
+                     "validation":  "validation/component-fidelity/f2/resume/specialist-validation.json"
+                 },
+                 {
+                     "jobId":  "F3-SHARED-FINAL-FIX",
+                     "agentId":  "F08",
+                     "status":  "foreman_validated",
+                     "ownership":  [
+                                       "src/ui/SourceQuestionPlayer.tsx",
+                                       "src/ui/SourceRubricReview.tsx",
+                                       "src/ui/source-adapters.css"
+                                   ],
+                     "evidence":  "validation/component-fidelity/f3/shared-final",
+                     "manifest":  "validation/component-fidelity/f3/shared-final/completion.json",
+                     "validation":  "validation/component-fidelity/f3/foreman/author-validation.json"
+                 },
+                 {
+                     "jobId":  "F3-INDEPENDENT",
+                     "agentId":  "F12",
+                     "status":  "foreman_validated",
+                     "ownership":  [
+                                       "validation/component-fidelity/f3/independent"
+                                   ],
+                     "evidence":  "validation/component-fidelity/f3/independent",
+                     "manifest":  "validation/component-fidelity/f3/independent/completion.json",
+                     "validation":  "validation/component-fidelity/f3/foreman/independent-validation.json"
+                 }
+             ],
+    "evidence":  [
+                     "validation/component-fidelity/f1/foreman-report.json",
+                     "validation/component-fidelity/f1-correction/foreman-report.json",
+                     "validation/component-fidelity/f2/resume/foreman-report.json",
+                     "validation/component-fidelity/f3/foreman/foreman-report.json"
+                 ],
+    "unresolved":  [
+
+                   ],
+    "updatedAt":  "2026-10-03T21:44:53.2059876+01:00",
+    "resolved":  [
+                     {
+                         "id":  "AB-FUTURE-STABILITY",
+                         "evidence":  "validation/component-fidelity/f1-correction/identity/future-stability-results.json"
+                     },
+                     {
+                         "id":  "DEV-AUTHORING-CANONICAL",
+                         "evidence":  "validation/component-fidelity/f1-correction/identity/development-browser-results.json"
+                     },
+                     {
+                         "id":  "TEACHER-CANONICAL-COPY",
+                         "evidence":  "validation/component-fidelity/f1-correction/teacher-copy/review.json"
+                     }
+                 ],
+    "resume":  {
+                   "foreman":  "F07",
+                   "replaces":  "F01",
+                   "evidence":  "validation/component-fidelity/f2/resume",
+                   "requested":  {
+                                     "model":  "gpt-6.1-sol",
+                                     "effort":  "high"
+                                 },
+                   "effective":  null
+               }
+}

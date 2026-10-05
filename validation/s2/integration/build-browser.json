@@ -1,0 +1,289 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T00:42:35.528Z",
+  "playwright": "1.62.1",
+  "results": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "prefix": "/stage-s2/alevel/",
+      "directRefresh": true,
+      "nativeKeyboardZustandDisclosure": true,
+      "computedFonts": [
+        {
+          "selector": "html",
+          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "fontWeight": "400"
+        },
+        {
+          "selector": "body",
+          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "fontWeight": "400"
+        },
+        {
+          "selector": "main p:not(.eyebrow)",
+          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "fontWeight": "400"
+        },
+        {
+          "selector": "h1",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontWeight": "700"
+        },
+        {
+          "selector": "h2",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontWeight": "700"
+        }
+      ],
+      "renderedFonts": [
+        {
+          "selector": "main p:not(.eyebrow)",
+          "fonts": [
+            {
+              "familyName": "Segoe UI",
+              "postScriptName": "SegoeUI",
+              "isCustomFont": false,
+              "glyphCount": 73
+            }
+          ]
+        },
+        {
+          "selector": "h1",
+          "fonts": [
+            {
+              "familyName": "Comfortaa",
+              "postScriptName": "Comfortaa-Bold",
+              "isCustomFont": true,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "selector": "h2",
+          "fonts": [
+            {
+              "familyName": "Comfortaa",
+              "postScriptName": "Comfortaa-Bold",
+              "isCustomFont": true,
+              "glyphCount": 31
+            }
+          ]
+        }
+      ],
+      "visibleCourse": "A Level Chemistry",
+      "elapsedIncludingRefreshMs": 10245,
+      "throttle": {
+        "cpu": 4,
+        "latencyMs": 150,
+        "downloadMbps": 1.6,
+        "uploadKbps": 750
+      },
+      "metrics": {
+        "navigation": [
+          {
+            "domContentLoadedMs": 1564.300000011921,
+            "start": 0
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/alevel-DuXXqqNZ.js",
+            "duration": 1248.5999999642372,
+            "transferSize": 212127
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/jsx-runtime-Dk72oS4N.js",
+            "duration": 258.5,
+            "transferSize": 9074
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/preload-helper-BaNbYf_w.js",
+            "duration": 197.19999998807907,
+            "transferSize": 1698
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/ProductionFoundation-CE9rtt8M.js",
+            "duration": 1430,
+            "transferSize": 243485
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/ProductionFoundation-DlQofr4y.css",
+            "duration": 287.80000001192093,
+            "transferSize": 11142
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/SJS-Eagle.svg",
+            "duration": 218.5,
+            "transferSize": 5828
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/SJS-Eagle.svg",
+            "duration": 188.19999998807907,
+            "transferSize": 5828
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/fonts/Comfortaa-Bold.ttf",
+            "duration": 1020.3999999761581,
+            "transferSize": 140472
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/provider-B1eRuw4_.js",
+            "duration": 174.80000001192093,
+            "transferSize": 369
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/provider-BnLhlXUf.js",
+            "duration": 593.6999999880791,
+            "transferSize": 87691
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/alevel/assets/marking-wP8S0ecO.js",
+            "duration": 177.80000001192093,
+            "transferSize": 1499
+          }
+        ]
+      }
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "prefix": "/stage-s2/igcse/",
+      "directRefresh": true,
+      "nativeKeyboardZustandDisclosure": true,
+      "computedFonts": [
+        {
+          "selector": "html",
+          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "fontWeight": "400"
+        },
+        {
+          "selector": "body",
+          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "fontWeight": "400"
+        },
+        {
+          "selector": "main p:not(.eyebrow)",
+          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "fontWeight": "400"
+        },
+        {
+          "selector": "h1",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontWeight": "700"
+        },
+        {
+          "selector": "h2",
+          "fontFamily": "Comfortaa, system-ui, sans-serif",
+          "fontWeight": "700"
+        }
+      ],
+      "renderedFonts": [
+        {
+          "selector": "main p:not(.eyebrow)",
+          "fonts": [
+            {
+              "familyName": "Segoe UI",
+              "postScriptName": "SegoeUI",
+              "isCustomFont": false,
+              "glyphCount": 101
+            }
+          ]
+        },
+        {
+          "selector": "h1",
+          "fonts": [
+            {
+              "familyName": "Comfortaa",
+              "postScriptName": "Comfortaa-Bold",
+              "isCustomFont": true,
+              "glyphCount": 15
+            }
+          ]
+        },
+        {
+          "selector": "h2",
+          "fonts": [
+            {
+              "familyName": "Comfortaa",
+              "postScriptName": "Comfortaa-Bold",
+              "isCustomFont": true,
+              "glyphCount": 18
+            }
+          ]
+        }
+      ],
+      "visibleCourse": "IGCSE Chemistry",
+      "elapsedIncludingRefreshMs": 9798,
+      "throttle": {
+        "cpu": 4,
+        "latencyMs": 150,
+        "downloadMbps": 1.6,
+        "uploadKbps": 750
+      },
+      "metrics": {
+        "navigation": [
+          {
+            "domContentLoadedMs": 1545.6000000238419,
+            "start": 0
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/igcse-ClbFZOO2.js",
+            "duration": 1270.5,
+            "transferSize": 212126
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/jsx-runtime-Dk72oS4N.js",
+            "duration": 275.19999998807907,
+            "transferSize": 9074
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/preload-helper-BaNbYf_w.js",
+            "duration": 212.4000000357628,
+            "transferSize": 1698
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/ProductionFoundation-CE9rtt8M.js",
+            "duration": 1435.800000011921,
+            "transferSize": 243485
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/ProductionFoundation-DlQofr4y.css",
+            "duration": 274.80000001192093,
+            "transferSize": 11142
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/SJS-Eagle.svg",
+            "duration": 219.5999999642372,
+            "transferSize": 5828
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/SJS-Eagle.svg",
+            "duration": 183.69999998807907,
+            "transferSize": 5828
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/fonts/Comfortaa-Bold.ttf",
+            "duration": 924.6999999880791,
+            "transferSize": 140472
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/provider-CdIF3xRb.js",
+            "duration": 236.30000001192093,
+            "transferSize": 14536
+          },
+          {
+            "name": "http://127.0.0.1:5186/stage-s2/igcse/assets/marking-BxZxGm59.js",
+            "duration": 179.10000002384186,
+            "transferSize": 949
+          }
+        ]
+      }
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "limits": "Throttled real S2 production host and first-assessed restore under two URL prefixes; full editor stress/accessibility remains S5."
+}

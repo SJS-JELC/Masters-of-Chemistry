@@ -1,0 +1,133 @@
+import type { Course, Level, MasteryScore } from '../../contracts/identity.ts';
+import type {
+  CourseMastery,
+  CurriculumEvidence,
+  MasterySetting,
+  MasterySummary,
+} from '../../contracts/session.ts';
+import { activityScope } from '../../catalogue/scope.ts';
+
+/** Source recurrence: unobserved history is zero; the newest question has fixed weight. */
+export function weightedScore(scores: readonly MasteryScore[], halfLife: number): number | null {
+  if (
+    !Number.isFinite(halfLife) ||
+    halfLife <= 0 ||
+    !scores.every((score) => score === 0 || score === 0.5 || score === 1)
+  ) {
+    throw new Error('Invalid mastery evidence or half-life.');
+  }
+  if (!scores.length) return null;
+  const decay = 2 ** (-1 / halfLife);
+  return scores.reduce<number>((value, score) => value * decay + score * (1 - decay), 0);
+}
+
+export function exceedsMasteryThreshold(score: number | null, threshold: number): boolean {
+  return score !== null && score > threshold;
+}
+
+export function nextMasteryLevel(summaries: readonly MasterySummary[]): Level | null {
+  return (
+    [...summaries].sort((a, b) => a.level - b.level).find((summary) => !summary.mastered)?.level ??
+    null
+  );
+}
+
+/** The caller supplies one profile's history. First encountered valid attempt wins before date sorting. */
+export function createCourseMastery(course: Course, now: () => number = Date.now): CourseMastery {
+  return {
+    course,
+    summarize(records, setting, level) {
+      const band = setting.supportedLevels.find((item) => item.level === level);
+      if (
+        !band ||
+        setting.comparison !== 'strictly-greater' ||
+        !Number.isFinite(setting.threshold)
+      ) {
+        throw new Error('Unknown mastery level or setting.');
+      }
+      const timestamp = now();
+      const known = new Set<string>(
+        activityScope
+          .filter((activity) => activity.course === course && activity.strand === 'curriculum')
+          .flatMap((activity) => activity.gems.map((gem) => gem.id)),
+      );
+      if (!known.has(setting.gemId)) throw new Error('Unknown active curriculum mastery gem.');
+      if (course === 'alevel') {
+        known.add('l6-t2-1-4');
+        known.add('u6-t1-1-4');
+      }
+      const seen = new Set<string>();
+      const profiles = new Set<string>();
+      const clean = records.filter((record) => {
+        const recordLevel = record.course === 'alevel' ? record.level : record.grade;
+        if (!Number.isInteger(recordLevel) || ![1, 2, 3].includes(recordLevel)) return false;
+        if (record.course === 'igcse') {
+          const sourceActivity = activityScope.find(
+            (activity) =>
+              activity.course === 'igcse' &&
+              activity.strand === 'curriculum' &&
+              activity.gems.some((gem) => gem.id === record.gemId),
+          );
+          const sourceGem = sourceActivity?.gems.find((gem) => gem.id === record.gemId);
+          const genuineLevels: readonly Level[] = sourceGem?.supportedLevels ?? [];
+          if (!genuineLevels.includes(recordLevel)) return false;
+        }
+        if (
+          record.course !== course ||
+          !known.has(record.gemId) ||
+          !record.id ||
+          !Number.isFinite(record.completedAt) ||
+          record.completedAt <= 0 ||
+          record.completedAt > timestamp ||
+          ![0, 0.5, 1].includes(record.score) ||
+          seen.has(record.id)
+        )
+          return false;
+        seen.add(record.id);
+        profiles.add(record.profileId);
+        return true;
+      });
+      if (profiles.size > 1) throw new Error('Supply one profile namespace to mastery.');
+      const matches = clean
+        .filter((record) => {
+          const sameGem =
+            record.gemId === setting.gemId || setting.historicalAliases.includes(record.gemId);
+          const recordLevel = record.course === 'alevel' ? record.level : record.grade;
+          if (!sameGem || recordLevel !== level) return false;
+          if (record.provenance === 'new-attempt') return true;
+          const active = setting.activeProgressionVersion ?? 1;
+          return (
+            record.progressionVersion === active ||
+            (active === 1 && record.progressionVersion === undefined)
+          );
+        })
+        .sort((a, b) => a.completedAt - b.completedAt);
+      const score = weightedScore(
+        matches.map((record) => record.score),
+        band.halfLife,
+      );
+      return {
+        gemId: setting.gemId,
+        level,
+        score,
+        count: matches.length,
+        mastered: exceedsMasteryThreshold(score, setting.threshold),
+        lastCompletedAt: matches.at(-1)?.completedAt ?? null,
+      };
+    },
+    nextLevel: nextMasteryLevel,
+  };
+}
+
+/** Convenience for hosts; no filtering or mutation of the retained historical records. */
+export function summarizeSettings(
+  course: Course,
+  records: readonly CurriculumEvidence[],
+  settings: readonly MasterySetting[],
+  now: () => number = Date.now,
+): readonly MasterySummary[] {
+  const mastery = createCourseMastery(course, now);
+  return settings.flatMap((setting) =>
+    setting.supportedLevels.map(({ level }) => mastery.summarize(records, setting, level)),
+  );
+}

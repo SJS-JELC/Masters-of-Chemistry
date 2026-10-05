@@ -1,0 +1,733 @@
+﻿{
+    "schemaVersion":  1,
+    "contractVersion":  "1.0.0",
+    "runId":  "MASTERS-REACT-20261002",
+    "currentStage":  "S5",
+    "status":  "complete",
+    "stages":  {
+                   "S0":  {
+                              "status":  "accepted",
+                              "evidence":  [
+                                               "validation/s0/foreman-report.json",
+                                               "HANDOFF.md",
+                                               "validation/s0/integration-check.json",
+                                               "validation/s0/root-acceptance.json"
+                                           ],
+                              "acceptedBy":  "root",
+                              "acceptedAt":  "2026-10-02T22:37:53.957Z"
+                          },
+                   "S1":  {
+                              "status":  "accepted",
+                              "evidence":  [
+                                               "validation/s1/foreman-report.json",
+                                               "HANDOFF.md",
+                                               "validation/s1/integration/foreman-checks.json",
+                                               "validation/s1/integration/build-browser.json",
+                                               "validation/s1/root-fix/foreman-report.json",
+                                               "validation/s1/root-acceptance.json"
+                                           ],
+                              "acceptedBy":  "root",
+                              "acceptedAt":  "2026-10-02T23:55:16.2925481Z"
+                          },
+                   "S2":  {
+                              "status":  "accepted",
+                              "evidence":  [
+                                               "validation/s2/foreman-report.json",
+                                               "HANDOFF.md",
+                                               "validation/s2/integration/foreman-checks.json",
+                                               "validation/s2/review-native/partial-verification.json",
+                                               "validation/s2/review-suspension/completion.json",
+                                               "validation/s2/root-acceptance.json"
+                                           ],
+                              "acceptedBy":  "root",
+                              "acceptedAt":  "2026-10-03T00:59:07.2083907Z"
+                          },
+                   "S3":  {
+                              "status":  "accepted",
+                              "evidence":  [
+                                               "validation/s3/foreman-report.json",
+                                               "HANDOFF.md",
+                                               "validation/s3/integration/foreman-checks.json",
+                                               "validation/s3/integration/owned-verification.json",
+                                               "validation/s3/review-timing/completion.json",
+                                               "validation/s3/root-acceptance.json"
+                                           ],
+                              "acceptedBy":  "root",
+                              "acceptedAt":  "2026-10-03T02:04:23.0051355Z"
+                          },
+                   "S4":  {
+                              "status":  "accepted",
+                              "evidence":  [
+                                               "validation/s4/foreman-report.json",
+                                               "HANDOFF.md",
+                                               "validation/s4/integration/foreman-checks.json",
+                                               "validation/s4/integration/production-browser.json",
+                                               "validation/s4/integration/owned-verification.json",
+                                               "validation/s4/refinement/foreman-report.json",
+                                               "validation/s4/refinement/file-inventory.json",
+                                               "validation/s4/root-acceptance.json"
+                                           ],
+                              "acceptedBy":  "root",
+                              "acceptedAt":  "2026-10-03T03:59:29.1707504Z"
+                          },
+                   "S5":  {
+                              "status":  "accepted",
+                              "evidence":  [
+                                               "validation/s5/foreman-report.json",
+                                               "HANDOFF.md",
+                                               "README.md",
+                                               "validation/s5/integration/foreman-checks.json",
+                                               "validation/s5/behaviour/session-only-save-fix/latest/completion.json",
+                                               "validation/s5/chemistry/session-only-save-fix/final/completion.json",
+                                               "validation/s5/render-release/session-only-save-fix/completion.json",
+                                               "validation/s5/root-acceptance.json"
+                                           ],
+                              "acceptedBy":  "root",
+                              "acceptedAt":  "2026-10-03T06:58:39.8887513Z"
+                          }
+               },
+    "jobs":  [
+                 {
+                     "agentId":  "A02",
+                     "jobId":  "S0-INVENTORY",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s0/inventory/completion.json"
+                 },
+                 {
+                     "agentId":  "A03",
+                     "jobId":  "S0-CONTRACTS",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  [
+                                      "validation/s0/contracts/handover.json",
+                                      "validation/s0/contracts/handover-clarification.json"
+                                  ],
+                     "clarifiedRetries":  1
+                 },
+                 {
+                     "agentId":  "A02",
+                     "jobId":  "S1-SESSION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s1/session/completion.json"
+                 },
+                 {
+                     "agentId":  "A03",
+                     "jobId":  "S1-ATTEMPT",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s1/attempt/handover.json",
+                     "resolution":  "A07 independent real hidden/tab/minimized browser proof, no clock source changes required."
+                 },
+                 {
+                     "agentId":  "A04",
+                     "jobId":  "S1-SHELL",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s1/shell/completion.json"
+                 },
+                 {
+                     "agentId":  "A05",
+                     "jobId":  "S1-PERSISTENCE",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s1/persistence/completion.json"
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S1-REVIEW-NATIVE",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s1/review-native/completion.json",
+                     "resolution":  "A04 corrected unsupported Shift-navigation copy/test; actual Ctrl+A and precise offsets pass."
+                 },
+                 {
+                     "agentId":  "A07",
+                     "jobId":  "S1-REVIEW-BACKGROUND",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s1/review-background/completion.json"
+                 },
+                 {
+                     "agentId":  "A03",
+                     "jobId":  "S1-ATTEMPT-FIX",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s1/attempt/root-fix/handover.json"
+                 },
+                 {
+                     "agentId":  "A04",
+                     "jobId":  "S1-SHELL-FIX",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s1/shell/completion-fix.json"
+                 },
+                 {
+                     "agentId":  "A08",
+                     "jobId":  "S2-ACID",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s2/acid/completion.json",
+                     "resolution":  "Owned gates pass; original worker ESCALATE retained. A07 verified native acid/structure tail and A06 independently completed dot idle/persistence and clean same-document suspension boundaries."
+                 },
+                 {
+                     "agentId":  "A09",
+                     "jobId":  "S2-STRUCTURE",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s2/structure/completion.json",
+                     "resolution":  "Owned gates pass; original worker ESCALATE retained. A07 verified native acid/structure tail and A06 independently completed dot idle/persistence and clean same-document suspension boundaries."
+                 },
+                 {
+                     "agentId":  "A10",
+                     "jobId":  "S2-DOTCROSS",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s2/dot-cross/completion.json",
+                     "resolution":  "Owned gates pass; original worker ESCALATE retained. A07 verified native acid/structure tail and A06 independently completed dot idle/persistence and clean same-document suspension boundaries."
+                 },
+                 {
+                     "agentId":  "A07",
+                     "jobId":  "S2-REVIEW-NATIVE",
+                     "status":  "validated_partial",
+                     "result":  "ESCALATE",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s2/review-native/completion.json",
+                     "resolution":  "Passed acid/structure native gates retained and hash-verified; untested dot gates and document-replacement ambiguity routed to independent A06."
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S2-REVIEW-SUSPENSION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s2/review-suspension/completion.json"
+                 },
+                 {
+                     "agentId":  "A11",
+                     "jobId":  "S3-ELECTRONS",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s3/electrons/completion.json",
+                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                 },
+                 {
+                     "agentId":  "A12",
+                     "jobId":  "S3-THERMOCHEMISTRY",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s3/thermochemistry/completion.json",
+                     "foremanEvidence":  "validation/s3/integration/owned-verification.json",
+                     "resolution":  "Owned checks pass; independently verified native tail resolves pending timing. Original worker ESCALATE remains unchanged."
+                 },
+                 {
+                     "agentId":  "A13",
+                     "jobId":  "S3-ENERGY",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "ESCALATE",
+                     "evidence":  "validation/s3/energy/completion.json",
+                     "foremanEvidence":  "validation/s3/integration/owned-verification.json",
+                     "resolution":  "Owned checks pass; independently verified native tail resolves pending timing. Original worker ESCALATE remains unchanged."
+                 },
+                 {
+                     "agentId":  "A14",
+                     "jobId":  "S3-TITRATION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s3/titration/completion.json",
+                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                 },
+                 {
+                     "agentId":  "A15",
+                     "jobId":  "S3-IGCSE-DOTCROSS",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s3/igcse-dot-cross/completion.json",
+                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                 },
+                 {
+                     "agentId":  "A16",
+                     "jobId":  "S3-OLYMPIAD-C3L6",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s3/c3l6/completion.json",
+                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S3-REVIEW-TIMING",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s3/review-timing/completion.json"
+                 },
+                 {
+                     "agentId":  "A07",
+                     "jobId":  "S3-REVIEW-CO",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s3/review-co/completion.json"
+                 },
+                 {
+                     "agentId":  "A07",
+                     "jobId":  "S3-REVIEW-C3-NAME",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s3/review-c3-name/completion.json"
+                 },
+                 {
+                     "agentId":  "A17",
+                     "jobId":  "S4-UX",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s4/ux/completion.json",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModel":  null,
+                     "effectiveEffort":  null,
+                     "usage":  null
+                 },
+                 {
+                     "agentId":  "A18",
+                     "jobId":  "S4-STATISTICS",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s4/statistics/completion.json",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModel":  null,
+                     "effectiveEffort":  null,
+                     "usage":  null
+                 },
+                 {
+                     "agentId":  "A19",
+                     "jobId":  "S4-COMPATIBILITY",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s4/compatibility/completion.json",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModel":  null,
+                     "effectiveEffort":  null,
+                     "usage":  null
+                 },
+                 {
+                     "agentId":  "A20",
+                     "jobId":  "S4-AUTHORING-RELEASE",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "workerDisposition":  "PASS",
+                     "evidence":  "validation/s4/authoring-release/completion.json",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModel":  null,
+                     "effectiveEffort":  null,
+                     "usage":  null
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S4-REVIEW-COMPLETION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s4/review-browser-startup/completion.json",
+                     "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S4-REVIEW-FOLLOWUP-COMPLETION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s4/review-browser-startup/followup-completion.json",
+                     "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S4-REVIEW-PAUSE-READINESS-COMPLETION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s4/review-browser-startup/pause-readiness-completion.json",
+                     "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S4-REVIEW-HISTORY-READINESS-COMPLETION",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s4/review-browser-startup/history-readiness-completion.json",
+                     "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
+                 },
+                 {
+                     "agentId":  "A20",
+                     "jobId":  "S4-AUTHORING-REFINEMENT",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "evidence":  "validation/s4/authoring-release/refinement/completion.json",
+                     "result":  "PASS"
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S4-REVIEW-SCAFFOLD-STARTUP",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s4/refinement/review-scaffold-startup/completion.json",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S4-REVIEW-FORMATTED-STARTUP",
+                     "status":  "validated",
+                     "result":  "PASS",
+                     "evidence":  "validation/s4/refinement/review-formatted-startup/completion.json",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null
+                 },
+                 {
+                     "agentId":  "A21",
+                     "jobId":  "S5-BEHAVIOUR",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/behaviour/completion.json"
+                 },
+                 {
+                     "agentId":  "A22",
+                     "jobId":  "S5-CHEMISTRY-SOURCES",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/chemistry/completion.json"
+                 },
+                 {
+                     "agentId":  "A23",
+                     "jobId":  "S5-RENDER-ACCESSIBILITY-RELEASE",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/render-release/completion.json"
+                 },
+                 {
+                     "agentId":  "A08",
+                     "jobId":  "S5-FIX-ACID-FORMAT",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/acid-format/completion.json"
+                 },
+                 {
+                     "agentId":  "A12",
+                     "jobId":  "S5-FIX-ELECTRONS-WORDING",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/electrons-wording/completion.json"
+                 },
+                 {
+                     "agentId":  "A17",
+                     "jobId":  "S5-FIX-STARTUP-ERROR",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/startup-error/completion.json"
+                 },
+                 {
+                     "agentId":  "A14",
+                     "jobId":  "S5-FIX-TITRATION-TYPING",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/titration-typing/completion.json"
+                 },
+                 {
+                     "agentId":  "A13",
+                     "jobId":  "S5-FIX-ENERGY-TYPING",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/energy-typing/completion.json"
+                 },
+                 {
+                     "agentId":  "A15",
+                     "jobId":  "S5-FIX-DOT-CHARGE-TYPING",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/dot-charge-typing/completion.json"
+                 },
+                 {
+                     "agentId":  "A16",
+                     "jobId":  "S5-FIX-C3-K-ERRATUM",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/fixes/c3-k-erratum/completion.json"
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S5-REVIEW-BEHAVIOUR-HARNESS",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/review-behaviour-harness/completion.json"
+                 },
+                 {
+                     "agentId":  "A06",
+                     "jobId":  "S5-REVIEW-BEHAVIOUR-HARNESS-HISTORICAL-FOLLOWUP",
+                     "status":  "validated",
+                     "requestedModel":  "gpt-6.1-sol",
+                     "requestedEffort":  "high",
+                     "effectiveModelEffort":  null,
+                     "usage":  null,
+                     "evidence":  "validation/s5/review-behaviour-harness/historical-followup/completion.json"
+                 },
+                 {
+                     "jobId":  "S5-FIX-NEXT-SAVE",
+                     "owner":  "A01",
+                     "status":  "validated",
+                     "evidence":  [
+                                      "validation/s5/fixes/next-save-transition/author-report.json",
+                                      "validation/s5/review-render-harness/energy-next-classification/completion.json"
+                                  ]
+                 },
+                 {
+                     "jobId":  "S5-FIX-SESSION-RESULT",
+                     "owner":  "A01",
+                     "status":  "validated",
+                     "evidence":  [
+                                      "validation/s5/fixes/session-only-save/author-report.json"
+                                  ]
+                 }
+             ],
+    "requirements":  {
+                         "SCOPE-01":  {
+                                          "status":  "validated_awaiting_root_acceptance",
+                                          "evidence":  [
+                                                           "validation/s5/integration/foreman-protected-originals.txt",
+                                                           "validation/s5/integration/foreman-source-and-controls.txt",
+                                                           "validation/s5/integration/source-ownership.json"
+                                                       ]
+                                      },
+                         "SCOPE-02":  {
+                                          "status":  "validated_awaiting_root_acceptance",
+                                          "evidence":  [
+                                                           "validation/s5/integration/foreman-catalogue.txt",
+                                                           "validation/s5/integration/foreman-checks.json",
+                                                           "validation/s5/behaviour/browser-results.json",
+                                                           "validation/s5/integration/release-checks.json"
+                                                       ]
+                                      },
+                         "SCOPE-03":  {
+                                          "status":  "validated_awaiting_root_acceptance",
+                                          "evidence":  [
+                                                           "validation/s5/behaviour/c3-erratum-browser-results.json",
+                                                           "validation/s5/chemistry/c3-final-source-review.json"
+                                                       ]
+                                      },
+                         "ARCH-01":  {
+                                         "status":  "validated_awaiting_root_acceptance",
+                                         "evidence":  [
+                                                          "validation/s5/integration/foreman-checks.json",
+                                                          "validation/s5/behaviour/HANDOVER.md",
+                                                          "validation/s5/render-release/HANDOVER.md",
+                                                          "docs/architecture/platform.md"
+                                                      ]
+                                     },
+                         "ARCH-02":  {
+                                         "status":  "validated_awaiting_root_acceptance",
+                                         "evidence":  [
+                                                          "validation/s5/integration/foreman-typecheck.txt",
+                                                          "validation/s5/integration/foreman-unit.txt",
+                                                          "validation/s5/integration/foreman-catalogue.txt"
+                                                      ]
+                                     },
+                         "CONTENT-01":  {
+                                            "status":  "validated_awaiting_root_acceptance",
+                                            "evidence":  [
+                                                             "validation/s5/chemistry/current-coverage.json",
+                                                             "validation/s5/chemistry/stratified-sample.json",
+                                                             "validation/s5/chemistry/manual-review.json",
+                                                             "validation/s5/chemistry/c3-transformation-review.json",
+                                                             "validation/s5/chemistry/final-production-browser-results.json",
+                                                             "docs/inventory/c3-k-erratum.md"
+                                                         ]
+                                        },
+                         "ASSESS-01":  {
+                                           "status":  "validated_awaiting_root_acceptance",
+                                           "evidence":  [
+                                                            "validation/s5/behaviour/deep-browser-results.json",
+                                                            "validation/s5/behaviour/revision-browser-results.json",
+                                                            "validation/s5/integration/foreman-unit.txt"
+                                                        ]
+                                       },
+                         "ASSESS-02":  {
+                                           "status":  "validated_awaiting_root_acceptance",
+                                           "evidence":  [
+                                                            "validation/s5/integration/foreman-unit.txt",
+                                                            "validation/s5/behaviour/import-browser-results.json",
+                                                            "validation/s5/behaviour/HANDOVER.md"
+                                                        ]
+                                       },
+                         "TIME-01":  {
+                                         "status":  "validated_awaiting_root_acceptance",
+                                         "evidence":  [
+                                                          "validation/s5/integration/active-time-review.json",
+                                                          "validation/s5/behaviour/timing-continuity.json",
+                                                          "validation/s5/behaviour/deep-browser-results.json",
+                                                          "validation/s5/behaviour/revision-browser-results.json"
+                                                      ]
+                                     },
+                         "STATE-01":  {
+                                          "status":  "validated_awaiting_root_acceptance",
+                                          "evidence":  [
+                                                           "validation/s5/behaviour/recovery-browser-results.json",
+                                                           "validation/s5/behaviour/deep-browser-results.json",
+                                                           "validation/s5/behaviour/import-browser-results.json",
+                                                           "validation/s5/behaviour/c3-erratum-browser-results.json",
+                                                           "validation/s5/review-render-harness/energy-next-fix/completion.json",
+                                                           "validation/s5/behaviour/session-only-save-fix/latest/completion.json"
+                                                       ]
+                                      },
+                         "UX-01":  {
+                                       "status":  "validated_awaiting_root_acceptance",
+                                       "evidence":  [
+                                                        "validation/s5/render-release/completion.json",
+                                                        "validation/s5/render-release/HANDOVER.md",
+                                                        "validation/s5/render-release/session-only-save-fix/completion.json"
+                                                    ]
+                                   },
+                         "AUTHOR-01":  {
+                                           "status":  "validated_awaiting_root_acceptance",
+                                           "evidence":  [
+                                                            "validation/s5/render-release/completion.json",
+                                                            "validation/s5/render-release/HANDOVER.md",
+                                                            "validation/s5/render-release/session-only-save-fix/completion.json",
+                                                            "validation/s5/chemistry/independent-checks.json",
+                                                            "development/authoring/families/dev-s5-independent/README.md",
+                                                            "docs/authoring/new-activity.md"
+                                                        ]
+                                       },
+                         "PERF-01":  {
+                                         "status":  "validated_awaiting_root_acceptance",
+                                         "evidence":  [
+                                                          "validation/s5/integration/release-checks.json",
+                                                          "validation/s5/render-release/completion.json",
+                                                          "validation/s5/render-release/HANDOVER.md",
+                                                          "validation/s5/render-release/session-only-save-fix/completion.json"
+                                                      ]
+                                     },
+                         "RELEASE-01":  {
+                                            "status":  "validated_awaiting_root_acceptance",
+                                            "evidence":  [
+                                                             "validation/s5/integration/build-current.json",
+                                                             "validation/s5/integration/release-checks.json",
+                                                             "validation/s5/integration/preview-smoke.json",
+                                                             "validation/s5/render-release/completion.json",
+                                                             "validation/s5/render-release/session-only-save-fix/completion.json"
+                                                         ]
+                                        },
+                         "DELIVERY-01":  {
+                                             "status":  "validated_awaiting_root_acceptance",
+                                             "evidence":  [
+                                                              "README.md",
+                                                              "HANDOFF.md",
+                                                              "validation/s5/foreman-report.json",
+                                                              "validation/s5/integration/install-current.json"
+                                                          ]
+                                         }
+                     },
+    "unresolved":  [
+                       {
+                           "id":  "SOURCE-CLOUD",
+                           "disposition":  "evidence-limit",
+                           "detail":  "523 original offline placeholders outside src remain metadata-only; all source code and237 inventory fingerprints readable/unchanged. No hydration attempted."
+                       },
+                       {
+                           "id":  "OCR-CURRENT-PDF",
+                           "disposition":  "retained-S2-limit",
+                           "detail":  "Current departmental OCR3.1 May2026 mapping and retained official source consulted; no successful line-for-line current large-PDF audit claimed. IGCSE retains its own source curriculum authority."
+                       },
+                       {
+                           "id":  "NATIVE-AMBIGUITIES",
+                           "disposition":  "retained-explicit-limit",
+                           "detail":  "Original S2 A07 replaced-document996ms and S3 A12 headless9005vs1001 intervals remain unclassified. Clean native boundaries pass independently; failed Vite document guards/broad hashes/Tab+trusted-blur probes remain retained. A11 actual60/180s idle is headless, with unchanged shared native-binding evidence carried; no A11-specific native session claimed.",
+                           "evidence":  "validation/s3/review-timing/HANDOVER.md"
+                       },
+                       {
+                           "id":  "CANONICAL-PYTHON",
+                           "disposition":  "explicit-environment-limit",
+                           "detail":  "Managed exact Python3.14.2/RDKit2026.03.6 profile unavailable. Supplementary readonly Python3.13.5/RDKit2025.09.1 invariants are explicitly separate; no full canonical glyph regeneration claimed. CO one-vector correction is independently reviewed. Root-approved C3 K connectivity marking erratum changes current policy/revalidation while preserving original graph/diagram bytes and historical outcomes."
+                       },
+                       {
+                           "id":  "RELEASE-GRAPH",
+                           "disposition":  "truthful-build-scope",
+                           "detail":  "Each independent entry enables its six source activities and owns its runtime manifest. Shared universal registry leaves all referenced deferred course/provider chunks in both physical builds; no physically course-exclusive bank packaging claimed. DEV authoring content and harnesses are absent."
+                       },
+                       {
+                           "id":  "LEGACY-GAPS",
+                           "disposition":  "preserved-source-limit",
+                           "detail":  "Original rows do not contain raw first answers/marks in many cases; historical missing duration stays absent. Old scheduler/practice drafts are archived verbatim with unsupported reasons, not fabricated new attempts."
+                       },
+                       {
+                           "id":  "DEV-COLD-START",
+                           "disposition":  "documented-development-limit",
+                           "detail":  "Cold dependency preparation can exceed30-second fixture navigation; failures/warm continuations retained, no timeout or substantive assertion inflation."
+                       },
+                       {
+                           "id":  "PERFORMANCE-METHOD",
+                           "disposition":  "measurement-limit",
+                           "detail":  "Headless Edge/CDP throttle and trusted page events are documented browser measurements; no OS foreground/host CPU isolation or production field-device certification claimed."
+                       },
+                       {
+                           "id":  "S5-AUTHOR-TAILS",
+                           "disposition":  "independently-resolved",
+                           "detail":  "Author energy tail and historical titration output-write limitations retained; final independent static gates and applicable chemistry fixtures supersede author scope without relabelling raw failures."
+                       }
+                   ],
+    "nextAction":  "Local rebuild accepted. Use README preview/authoring commands. Deployment requires a separate user instruction.",
+    "updatedAt":  "2026-10-03T06:58:39.8887513Z"
+}

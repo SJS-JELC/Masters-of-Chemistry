@@ -1,0 +1,38 @@
+{
+  "owned": {
+    "src/foundation/ActivityHost.tsx": "2fd0fa0c97d659e361b35accfe5baab355f226d5625d7a4cc31d30e3f24188bd",
+    "src/shell/CourseShell.tsx": "232fa29ae5d69e186c08131e0cf009282377523ec950d81f2cfeede63059177a",
+    "src/ui/TeacherPicker.tsx": "d498788ad45215f5322503d3a7e44c30b89fe04197a38b57bf01b20fe7655c1f",
+    "src/ui/teacher-catalogue.ts": "0bdb4042793527e0633c6c0e08d75f58025ffcfb345bf373e020f6fecdbec69c",
+    "src/ui/historical-acid-catalogue.js": "c24eb411f1f691b733433fbad285acc970cde87a64d650515d2edb0ac9f80d66",
+    "src/ui/historical-acid-catalogue.d.ts": "fb8801ada21ebd4d9fcc42564fa6399fa6fc7d1fede34e474017607ac31a531c",
+    "src/ui/DiagramViewport.tsx": "a19f1ec8488c3132e18aae00749b34e988d3be23708670cd110480ac492eca5f",
+    "src/ui/Content.tsx": "4c61959d5ef06232a98012b7b70611e0abf8573d8287c5188055d2d612ee37be",
+    "src/ui/QuestionPlayer.tsx": "62b09807a1caef84799ef591bdc2b01e4384b1a869bf7f3414b1b0f2f8f02a0f",
+    "src/editors/electron-configuration/index.tsx": "9b57a12f29211f8c304b03f5cd4f6ce8725440697febe5e7bc45b736fe47ddca",
+    "src/editors/energy-profile/index.tsx": "eac20c6d892b687c9903944cb74c833efdf84aed40ea69b7555e9bb2bc6a9349",
+    "src/editors/titration-curve/TitrationCurveEditor.tsx": "4b65f9b88998897750b20b892b7edc54b77772c5d0da80ee1840ca1459294767",
+    "src/styles/platform.css": "26fe1cef407084561e973ade32ae68e26980c5adc191f3d3ac1e5b295794fca6"
+  },
+  "acceptedSourcesAndControls": {
+    "src/activities/alevel/acid-base-calculations/provider.ts": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee",
+    "src/activities/alevel/dot-and-cross/provider.ts": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4",
+    "src/activities/alevel/electron-configurations/provider.ts": "2889233e713a975c947a7e37d1110d01c307622ebefa83835874c07208b57a8e",
+    "src/activities/alevel/electrons-bonding/provider.ts": "728790d4c7ff918bca56271a12ed446fa2dfb1b9306336d0b7fd445589cc1fb9",
+    "src/activities/alevel/ph-titration-curves/provider.ts": "801391e3c1d091c4ab0fede2d4d14274cf9f9f3a9bcdc2902d6c83c2bb9fec29",
+    "src/activities/igcse/bond-enthalpy/provider.ts": "a318ec1bb0d81285ef2cbe180d0000a143003d63fedec313711f54ae0b608a20",
+    "src/activities/igcse/calorimetry/provider.ts": "fdaace21084a554fccfa7f765778cd6b3eb4274ce2231ae3756cea34adb763b8",
+    "src/activities/igcse/dot-and-cross/provider.ts": "2e3b51c0d94a89c9a4b6c471930b500ac88116bf050ae8bdd2b40d0436334ac8",
+    "src/activities/igcse/energetics-practical/provider.ts": "4f743c61d765e5ba541fd47856f08f056b6fa91df00e7ce4fab9f844fb451a79",
+    "src/activities/igcse/energy-enthalpy/provider.ts": "7f7e57ba567906137936275bd328ee03ee1ced06aad83b712dbb2767df58682a",
+    "src/activities/igcse/structure-and-bonding/provider.ts": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751",
+    "src/chemistry/electron-configuration/identity.ts": "0bbfb6e56cd9031f98ff41b018411f72af820074657d8d04d83a6a620f9abdb3",
+    "src/chemistry/thermochemistry/identity.ts": "92527b2e1b0df2f3d03f7b7808ee43816044fc48cf4a43d9b26dfae2b5c61d7c",
+    "src/domain/timing/browser-binding.ts": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+    "src/domain/timing/active-clock.ts": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+    "project-contract.json": "5cda637c3af8b70a1750e213050c99c3060807c17341513502d1216bbc25ce70",
+    "AGENTS.md": "c184a065b7bd08e6b70c77f530afd46817ea6b4bc50b9cabf8533b3ecc03107e",
+    "IMPLEMENTATION.md": "043c34988b57d5af6475620322622c03fb54c4d51d1b9c26d1b88eb71265fe73",
+    "validation/s3/root-acceptance.json": "635f1b701377cf56b8c42275a4e6aa254bca8e26bbceac3369befb1a0c3f019d"
+  }
+}

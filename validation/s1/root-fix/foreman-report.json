@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "stage": "S1",
+  "status": "PASS",
+  "stageStatus": "awaiting_root_review",
+  "generatedAt": "2026-10-02T23:54:30.314Z",
+  "workers": [
+    {
+      "agentId": "A03",
+      "jobId": "S1-ATTEMPT-FIX",
+      "status": "validated",
+      "result": "PASS",
+      "evidence": "validation/s1/attempt/root-fix/handover.json"
+    },
+    {
+      "agentId": "A04",
+      "jobId": "S1-SHELL-FIX",
+      "status": "validated",
+      "result": "PASS",
+      "evidence": "validation/s1/shell/completion-fix.json"
+    }
+  ],
+  "changes": [
+    {
+      "path": "src/contracts/attempt.ts",
+      "priorSha256": "6882787bd17e15f132b9f2fb92d0783c3026a2621875154e3ace0259c61a6aac",
+      "currentSha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "priorSha256": "ea96a4ebfc613aab55dd47b81d10c4a48f1c8da3823467c5b5919b122cf323e6",
+      "currentSha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "priorSha256": "462a9941760e64ec3f99a22a6fbc2335e2e5fa305f7b0abc7bc8ebd20016c8f5",
+      "currentSha256": "413f4e1258016c3878f5f1ef769ec93d8fb9e6b78ce1f2efcc8c8f99a969a333"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "priorSha256": "4f979ffa5cffe28f410d214f5046e684cf1af44277a4ed1d9e1f9502d0586d15",
+      "currentSha256": "4e9837e2cb7e9849cad29d6d701e7aff216db298c8bced99b0c826d9f3167e73"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "priorSha256": "14283f4b4b066f9e1e5c07dc3311734e2fb6301e5a5fd7513bbab399f2197bfa",
+      "currentSha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8"
+    },
+    {
+      "path": "alevel.html",
+      "priorSha256": "ed57d450ab4ed423342132cfc9b35a190fb7f87e1b0284d5409df1f198bc5d27",
+      "currentSha256": "6d2f8b0b28a61f1df4c563d2a5b84705684c185793586829c492b2933864aa80"
+    },
+    {
+      "path": "igcse.html",
+      "priorSha256": "dcebf7a800aa4740424496bcfccdf9732c14480770b9c2d93c8a067afedee9b9",
+      "currentSha256": "37530bfeb43aabd47f90b8d31ae2ac7fc7f7a6039346d5db2645eedd9484830c"
+    }
+  ],
+  "correction": {
+    "command": "check-correction",
+    "feedback": "Ephemeral CorrectionFeedback; correct/wrong automatic marks or incomplete/unrecognized issues. Score/time/independent fields forbidden.",
+    "domain": "Assessed automatic parts only, including reveal/mixed aggregate; six new domain cases, no masteryScore call, no StudentAttempt or persistence field.",
+    "host": "Captures feedback and returns before any save/scheduler action; response edits/new identity clear it. Scheduler accepts only the first transition into assessed.",
+    "browser": {
+      "evidence": "validation/s1/shell/browser-correction.json",
+      "groups": 4,
+      "results": [
+        {
+          "name": "alevel wrong first / repeated correction / revision",
+          "status": "PASS",
+          "detail": "Wrong first marks0 and one record remain immutable through wrong/correct/incomplete learning checks, repeated correct checks, edits and reload; exact session/scheduler snapshot unchanged. Next starts a fresh ID with no learning feedback."
+        },
+        {
+          "name": "igcse wrong first / repeated correction / revision",
+          "status": "PASS",
+          "detail": "Wrong first marks0 and one record remain immutable through wrong/correct/incomplete learning checks, repeated correct checks, edits and reload; exact session/scheduler snapshot unchanged. Next starts a fresh ID with no learning feedback."
+        },
+        {
+          "name": "reveal / learning correction",
+          "status": "PASS",
+          "detail": "Reveal stays assisted/nonindependent with zero curriculum evidence; repeated meaningful automatic learning checks preserve frozen first response/time and session."
+        },
+        {
+          "name": "unrecognised correction",
+          "status": "PASS",
+          "detail": "Unrecognised corrected text uses typed issue feedback, distinct from recognised wrong marks and first assessment."
+        }
+      ],
+      "pageErrors": []
+    },
+    "selfReview": "Original frozen explanation/rubric/drawing decisions and numeric first marks retained; no repeat self-review grading."
+  },
+  "typography": {
+    "status": "PASS",
+    "conclusion": "No body font inheritance/reset defect reproduced. Computed html/body/paragraphs use system-ui; actual Windows Edge paragraph glyphs use Segoe UI, headings use custom Comfortaa-Bold. Formula serif remains intentional; no speculative body CSS fix.",
+    "evidence": [
+      "validation/s1/shell/fonts-before.json",
+      "validation/s1/shell/fonts-after.json",
+      "validation/s1/integration/build-browser.json"
+    ],
+    "production": [
+      {
+        "course": "alevel",
+        "computedFonts": [
+          {
+            "selector": "html",
+            "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": "400"
+          },
+          {
+            "selector": "body",
+            "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": "400"
+          },
+          {
+            "selector": "main p:not(.eyebrow)",
+            "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": "400"
+          },
+          {
+            "selector": "h1",
+            "fontFamily": "Comfortaa, system-ui, sans-serif",
+            "fontWeight": "700"
+          },
+          {
+            "selector": "h2",
+            "fontFamily": "Comfortaa, system-ui, sans-serif",
+            "fontWeight": "700"
+          }
+        ],
+        "renderedFonts": [
+          {
+            "selector": "main p:not(.eyebrow)",
+            "fonts": [
+              {
+                "familyName": "Segoe UI",
+                "postScriptName": "SegoeUI",
+                "isCustomFont": false,
+                "glyphCount": 120
+              }
+            ]
+          },
+          {
+            "selector": "h1",
+            "fonts": [
+              {
+                "familyName": "Comfortaa",
+                "postScriptName": "Comfortaa-Bold",
+                "isCustomFont": true,
+                "glyphCount": 17
+              }
+            ]
+          },
+          {
+            "selector": "h2",
+            "fonts": [
+              {
+                "familyName": "Comfortaa",
+                "postScriptName": "Comfortaa-Bold",
+                "isCustomFont": true,
+                "glyphCount": 17
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course": "igcse",
+        "computedFonts": [
+          {
+            "selector": "html",
+            "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": "400"
+          },
+          {
+            "selector": "body",
+            "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": "400"
+          },
+          {
+            "selector": "main p:not(.eyebrow)",
+            "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": "400"
+          },
+          {
+            "selector": "h1",
+            "fontFamily": "Comfortaa, system-ui, sans-serif",
+            "fontWeight": "700"
+          },
+          {
+            "selector": "h2",
+            "fontFamily": "Comfortaa, system-ui, sans-serif",
+            "fontWeight": "700"
+          }
+        ],
+        "renderedFonts": [
+          {
+            "selector": "main p:not(.eyebrow)",
+            "fonts": [
+              {
+                "familyName": "Segoe UI",
+                "postScriptName": "SegoeUI",
+                "isCustomFont": false,
+                "glyphCount": 120
+              }
+            ]
+          },
+          {
+            "selector": "h1",
+            "fonts": [
+              {
+                "familyName": "Comfortaa",
+                "postScriptName": "Comfortaa-Bold",
+                "isCustomFont": true,
+                "glyphCount": 15
+              }
+            ]
+          },
+          {
+            "selector": "h2",
+            "fonts": [
+              {
+                "familyName": "Comfortaa",
+                "postScriptName": "Comfortaa-Bold",
+                "isCustomFont": true,
+                "glyphCount": 17
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "typecheck": "PASS",
+    "domainAndPureTests": 40,
+    "newCorrectionCases": 6,
+    "bothCourseBuilds": "PASS",
+    "bothProductionPrefixAndFontGates": "PASS",
+    "originalFiles": 1317,
+    "originalChanges": [],
+    "controls": "six immutable root hashes preserved",
+    "evidence": "validation/s1/integration/foreman-checks.json"
+  },
+  "renderingRepairs": "Foreman screenshot inspection corrected a UTF-8 DEV target separator; supplementary asset validation found a browser implicit root favicon lookup, so both owned HTML entries now explicitly use the existing course-relative eagle SVG favicon. Prefix browser proof refreshed.",
+  "limits": "S1 foundation fixtures only; original full-bank/editor gates and exact S2 packages remain unchanged. No S2 dispatched.",
+  "decisionNeeded": "Root reviews bounded fixes and accepts S1 before S2 authorization."
+}

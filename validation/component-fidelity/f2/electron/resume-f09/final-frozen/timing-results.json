@@ -1,0 +1,42 @@
+{
+  "jobId": "F2-EC",
+  "agentId": "F09",
+  "startedAt": "2026-10-03T18:49:29.134Z",
+  "checks": [
+    {
+      "family": "identify",
+      "id": "EC-TXYUKV",
+      "idleAllowanceMs": 60000,
+      "idleActiveMs": 60632,
+      "idleStoppedExactly": true,
+      "frozenWallMs": 8000,
+      "countedFreezeGapMs": 0,
+      "sameAttempt": true,
+      "singleScore": true,
+      "statisticsTiming": {
+        "activeMs": 61950,
+        "idleLimitMs": 60000
+      },
+      "statisticsChart": true,
+      "backgroundStopped": true,
+      "cdpActuallyFrozen": false,
+      "visible": {
+        "visible": true,
+        "focused": true
+      }
+    }
+  ],
+  "screenshots": [
+    "timing-identify-statistics.png"
+  ],
+  "metrics": [],
+  "errors": [
+    "build: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(frozenGap>=0&&frozenGap<5000)\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/component-fidelity/f2/electron/resume-f09/final-frozen/timing.mjs:43:458\n    at async Promise.allSettled (index 0)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/component-fidelity/f2/electron/resume-f09/final-frozen/timing.mjs:31:2"
+  ],
+  "limitations": [
+    "Native hidden/minimized/OS suspend not newly tested.",
+    "Original correction drawing is compared by reopening the same isolated source review question with the corrected response: the original EC source freezes assessed answers and has no correction action. Shared React first evidence remains immutable."
+  ],
+  "status": "FAIL",
+  "finishedAt": "2026-10-03T18:53:00.342Z"
+}

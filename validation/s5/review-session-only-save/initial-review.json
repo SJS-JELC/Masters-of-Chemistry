@@ -1,0 +1,119 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-SESSION-ONLY-SAVE",
+  "status": "ESCALATE",
+  "confidence": "high",
+  "capturedAt": "2026-10-03T06:14:24.484Z",
+  "reason": "Genuine Host-only correction/terminal session association defect; successful correction can additionally erase unresolved terminal save failure under current queue semantics.",
+  "freezeTree": "c1c56180ba0bedb54cfa88eb666b22cb951869371488ef332c7a23e0c00e6812",
+  "hashes": {
+    "validation/s5/behaviour/session-only-save-fix/concurrent-results.json": {
+      "sha256": "6b2a95b17bd4bb2a30013180e370845ba7d86a8e5b65299ebbd34b5379b9b5ed",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__concurrent-results.json"
+    },
+    "validation/s5/behaviour/session-only-save-fix/concurrent-browser.mjs": {
+      "sha256": "54e3ec6b5f0c2e2bff15ac56bd0a43c6feb72bfa5e8825142a65cb0d119a148c",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__concurrent-browser.mjs"
+    },
+    "validation/s5/behaviour/session-only-save-fix/concurrent-stdout.txt": {
+      "sha256": "75a27e735da107f6cb447532e41b21e27110fe6f8b351ed36a0a4ebcde427203",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__concurrent-stdout.txt"
+    },
+    "validation/s5/behaviour/session-only-save-fix/alevel-concurrent-failure.json": {
+      "sha256": "12da8ea16de48bbd315101b1297907b5081da2dcedbb5cae880a0c1f750250de",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__alevel-concurrent-failure.json"
+    },
+    "validation/s5/behaviour/session-only-save-fix/igcse-concurrent-failure.json": {
+      "sha256": "f5eeed3d45c01ce0952e0568f9c0e8ee3c7f0962d895a18879606c2dd736dd0c",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__igcse-concurrent-failure.json"
+    },
+    "validation/s5/behaviour/session-only-save-fix/alevel-concurrent-failure.png": {
+      "sha256": "ee01b79bda5541a5976587bfb58281deecd7fc4a8233701c47cdfad3282af061",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__alevel-concurrent-failure.png"
+    },
+    "validation/s5/behaviour/session-only-save-fix/igcse-concurrent-failure.png": {
+      "sha256": "016e918b33b87ad83ce4efe0441dde97db3575a0b9ab5d4827f24742efd009c4",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__igcse-concurrent-failure.png"
+    },
+    "validation/s5/behaviour/session-only-save-fix/freeze-current.json": {
+      "sha256": "d9970827dbc133c4f68304cadbfc47d993de53420b4b8de8c4b2d483646b9e2c",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__freeze-current.json"
+    },
+    "validation/s5/behaviour/session-only-save-fix/ActivityHost-current.tsx.txt": {
+      "sha256": "9075ccdc475cba830fda9aa597c5f19031ae237f31c85278a35f5ade84d13aac",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__ActivityHost-current.tsx.txt"
+    },
+    "validation/s5/behaviour/session-only-save-fix/ActivityHost-before.tsx.txt": {
+      "sha256": "b1e80facaec249c8cb435aae3925cdb7933e100976dacca49c445760e54e3340",
+      "retained": "validation/s5/review-session-only-save/retained/validation__s5__behaviour__session-only-save-fix__ActivityHost-before.tsx.txt"
+    },
+    "src/foundation/ActivityHost.tsx": {
+      "sha256": "9075ccdc475cba830fda9aa597c5f19031ae237f31c85278a35f5ade84d13aac",
+      "retained": "validation/s5/review-session-only-save/retained/src__foundation__ActivityHost.tsx"
+    },
+    "src/persistence/validation.ts": {
+      "sha256": "b3d9682ceb35c6fb6e769355bb087d298d0be75bb50287ed2d496d318a19a99e",
+      "retained": "validation/s5/review-session-only-save/retained/src__persistence__validation.ts"
+    },
+    "src/persistence/repository.ts": {
+      "sha256": "a30c77ff7b7e471f99df7422b526b8667d59b162e528d5bb7b39e711c7a060ad",
+      "retained": "validation/s5/review-session-only-save/retained/src__persistence__repository.ts"
+    },
+    "src/contracts/repository.ts": {
+      "sha256": "2942171d9e37c0ce085bff041f9347e65f095288b7b887ef31dd4de3772e0411",
+      "retained": "validation/s5/review-session-only-save/retained/src__contracts__repository.ts"
+    }
+  },
+  "cases": [
+    {
+      "course": "alevel",
+      "attemptId": "session-terminal-alevel-2",
+      "terminalStatus": "complete",
+      "terminalCurrent": null,
+      "correctionPersisted": false,
+      "durableRaw": "1.1217335967330884",
+      "desiredRaw": "912.5",
+      "firstResponseAssessmentEvidenceImmutable": true,
+      "strongValidatorRejectsMismatchedSession": true,
+      "attemptOnlyCorrectionValid": true
+    },
+    {
+      "course": "igcse",
+      "attemptId": "session-terminal-igcse-2",
+      "terminalStatus": "complete",
+      "terminalCurrent": null,
+      "correctionPersisted": false,
+      "durableRaw": "-844",
+      "desiredRaw": "912.5",
+      "firstResponseAssessmentEvidenceImmutable": true,
+      "strongValidatorRejectsMismatchedSession": true,
+      "attemptOnlyCorrectionValid": true
+    }
+  ],
+  "scope": [
+    "Successful terminal transaction overlapped by correction: pending/current=null session wrongly paired with old assessed attempt",
+    "After-complete correction: committed current=null session likewise incompatible",
+    "Failed terminal followed by correction: successful unrelated write must not clear unresolved failed operation/Retry or revert old session"
+  ],
+  "minimumRecommendation": [
+    "Only saveCurriculum with a session that references that exact attempt; omit session while terminal transition pending and after complete",
+    "Resolve correction session association when queued write executes to avoid stale preterminal session rollback; never commit terminal from correction callback",
+    "Session-only operation owns its commit callback; apply terminal transition only after its actual successful commit",
+    "Remember failed operation identity; unrelated success cannot clear it. Preserve and retry all unresolved operation types, not only latest write",
+    "Preserve learning-only corrections, immutable first evidence, and strong repository validator"
+  ],
+  "validation": [
+    "Both raw real transaction holds and exact failure snapshots retained",
+    "Both durable terminal commits complete/current=null while corrections remain old",
+    "Actual strong validateWrite rejects completed session+old attempt and accepts attempt-only correction for both courses",
+    "First response/assessment and exact evidence unchanged in failed captures",
+    "Source identifies incompatible association and unconditional successful-write failure reset"
+  ],
+  "pending": "Exact A01 Host-only proposed fix review, then A21 actual browser proof for all three required states",
+  "settings": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveSettings": null,
+    "actualUsage": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "agentId":"A03",
+  "jobId":"S1-ATTEMPT-FIX",
+  "runId":"MASTERS-REACT-20261002",
+  "status":"PASS",
+  "requestedModel":"gpt-6.1-sol",
+  "requestedEffort":"high",
+  "effectiveModel":null,
+  "usage":null,
+  "outputPaths":[
+    "src/contracts/attempt.ts",
+    "src/domain/attempt/attempt.ts",
+    "validation/s1/attempt/attempt.test.mjs",
+    "validation/s1/attempt/contracts.typecheck.ts",
+    "docs/architecture/s1-attempt.md",
+    "validation/s1/attempt/root-fix/"
+  ],
+  "interface":{
+    "command":"{kind:'check-correction'}",
+    "result":"AttemptTransition accepted true retains identical state and optional CorrectionFeedback",
+    "feedback":"kind correction-learning; correct/wrong with RawMarks OR incomplete/unrecognized with MarkingIssue[]; score/timing/independent forbidden",
+    "scope":"Assessed automatic parts only, including reveal and mixed aggregates; no repeat rubric/drawing judgement",
+    "persistence":"Ephemeral transition result only; no StudentAttempt, repository schema or evidence changes",
+    "host":"Forward result to player; return before save/scheduler; clear feedback on response edits/adopt/identity",
+    "foremanApproval":"Ephemeral boundary approved; foreman coordinates A04 host/player and confirms no A05 changes required"
+  },
+  "validation":{
+    "strictTypecheck":{"status":"PASS","evidence":"validation/s1/attempt/root-fix/typecheck.txt","newNegativeAssertions":3,"totalS1NegativeAssertions":10},
+    "nativeTypeScriptTests":{"status":"PASS","passed":25,"failed":0,"newCorrectionCases":6,"evidence":"validation/s1/attempt/root-fix/tests.txt"},
+    "fingerprints":{"status":"PASS","sourceFilesUnchanged":9,"evidence":"validation/s1/attempt/root-fix/fingerprints.json"},
+    "browser":"Foreman/A04 own integrated correction browser acceptance; this bounded fix makes no browser completion claim",
+    "retainedOriginalEvidence":"Original validation/s1/attempt/handover.json, tests.txt and browser-results.json remain unchanged; prior background observation issue is not overwritten"
+  },
+  "verifiedInvariants":[
+    "Wrong first result followed by corrected current answer produces correct learning feedback; repeat Checks retain identical state and first evidence/time/score.",
+    "Reveal produces incomplete/correct learning feedback without a first score or independent evidence.",
+    "Blank/malformed numeric input prechecks before marking; unknown text remains unrecognized with source policy rubric support; recognized wrong stays wrong.",
+    "Mixed explanation and drawing aggregates only recheck automatic parts and retain original review decisions and marks.",
+    "Learning Check never calls masteryScore and has no persisted state field.",
+    "Answering/pending-review/self-only attempts cannot create correction marks."
+  ],
+  "scope":"S1 only; no UI, persistence, host, timing runtime, package, original app or S2 edits",
+  "confidence":0.98,
+  "reason":null
+}

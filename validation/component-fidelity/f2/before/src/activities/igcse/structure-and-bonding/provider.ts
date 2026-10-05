@@ -1,0 +1,174 @@
+import { validatePreviousQuestionIds } from '../../../content/canonical-identity.ts';
+import type {
+  Question,
+  QuestionProvider,
+  QuestionRef,
+  QuestionSelection,
+  StandardPart,
+} from '../../../contracts/index.ts';
+import { comparisons, identities, sources } from './data.ts';
+import type { Comparison } from './data.ts';
+
+export const activityId = 'igcse/structure-and-bonding' as const;
+export const gemId = 'lower-6-5';
+const levels = [2, 3] as const;
+function checkSeed(seed: number): void {
+  if (!Number.isInteger(seed) || seed < 0 || seed > 0xffffffff)
+    throw Error('Structure comparison seeds must be unsigned 32-bit integers.');
+}
+/** IDs are the original source-key review hashes, preserved in the accepted inventory. */
+export function comparisonRef(id: string, level: 2 | 3, seed = 0): QuestionRef {
+  checkSeed(seed);
+  const identity = identities.find((item) => item.sourceKey === `${id}:${level}`);
+  if (!identity) throw Error('Unsupported structure comparison or level.');
+  return { activityId, questionId: identity.questionId, level, seed };
+}
+export function guidedSections(
+  question: Comparison,
+): Extract<StandardPart, { kind: 'explanation' }>['sections'] {
+  const propertyLabel =
+    question.focus === 'melting-boiling'
+      ? 'melting or boiling point'
+      : question.focus === 'conductivity'
+        ? 'electrical conductivity'
+        : 'hardness or softness';
+  const help =
+    question.focus === 'melting-boiling'
+      ? `Describe the forces or bonds that must be overcome, then link the energy needed to the ${propertyLabel}.`
+      : question.focus === 'conductivity'
+        ? `State which charged particles can or cannot move, then link this to the ${propertyLabel}.`
+        : `Describe the relevant forces, bonds or movement in the structure, then link this to the ${propertyLabel}.`;
+  return [
+    ...(['left', 'right'] as const).flatMap((side) => [
+      {
+        id: `${side}-bonding`,
+        label: 'Type of bonding',
+        group: question[side].name,
+        presentation: 'single-line' as const,
+        minLength: 5,
+      },
+      {
+        id: `${side}-structure`,
+        label: 'Type of structure',
+        group: question[side].name,
+        presentation: 'single-line' as const,
+        minLength: 5,
+      },
+      {
+        id: `${side}-property`,
+        label: `Link to property: ${question[side].property}`,
+        group: question[side].name,
+        help,
+        presentation: 'multiline' as const,
+        minLength: 5,
+      },
+    ]),
+    {
+      id: 'comparison',
+      label: 'Comparison',
+      presentation: 'multiline' as const,
+      minLength: 5,
+      help: 'Bring both sides together. Explain how the difference or similarity in structure and bonding produces the properties stated in the question.',
+    },
+  ];
+}
+function restore(ref: QuestionRef): Question {
+  checkSeed(ref.seed);
+  if (ref.activityId !== activityId || !levels.includes(ref.level as 2 | 3))
+    throw Error('Structure comparisons support levels 2 and 3 only.');
+  // Runtime restoration uses canonical codes only; source keys remain provenance.
+  const identity = identities.find(
+    (item) => item.sourceKey.endsWith(`:${ref.level}`) && item.questionId === ref.questionId,
+  );
+  if (!identity || !identity.sourceKey.endsWith(`:${ref.level}`))
+    throw Error('Structure comparison identity and level do not match.');
+  const comparison = comparisons.find((item) => `${item.id}:${ref.level}` === identity.sourceKey);
+  if (!comparison) throw Error('Structure comparison source is missing.');
+  const guided = ref.level === 2;
+  const explanation: Extract<StandardPart, { kind: 'explanation' }> = {
+    id: 'explanation',
+    kind: 'explanation',
+    required: true,
+    dependsOn: [],
+    marks: comparison.points.length,
+    prompt: [
+      {
+        kind: 'text',
+        text: guided
+          ? 'Build the explanation one part at a time. Identify the bonding and structure, link each substance to its property, then bring both sides together in the comparison box.'
+          : 'Use structure and bonding to explain the comparison in a fully open response.',
+      },
+    ],
+    sections: guided
+      ? guidedSections(comparison)
+      : [{ id: 'answer', label: 'Your explanation', presentation: 'multiline', minLength: 20 }],
+    minLength: 20,
+    assessment: 'self-rubric',
+    rubric: comparison.points.map((point, index) => ({
+      id: `point-${index + 1}`,
+      text: point.text,
+      marks: 1,
+      ...(point.reject ? { reject: point.reject } : {}),
+    })),
+  };
+  return {
+    ref: { ...ref },
+    title: `${comparison.left.name} and ${comparison.right.name}`,
+    layout: 'workspace',
+    submission: 'all-required-parts',
+    context: [{ kind: 'text', text: comparison.prompt }],
+    parts: [explanation],
+    scaffolds: [],
+    hints: [],
+    workedAnswer: [
+      {
+        kind: 'text',
+        text: 'Award one mark for each independent point. Apply every exclusion. Equivalent chemically valid wording is accepted; the explanation is self-assessed using exact evidence from the frozen answer.',
+      },
+      ...comparison.points.flatMap((point, index) => [
+        { kind: 'text' as const, text: `${index + 1}. ${point.text}` },
+        ...(point.reject ? [{ kind: 'text' as const, text: point.reject }] : []),
+      ]),
+    ],
+    sources,
+  };
+}
+function select(selection: QuestionSelection): QuestionRef {
+  validatePreviousQuestionIds(selection.activityId, selection.previousQuestionIds);
+  checkSeed(selection.seed);
+  if (
+    selection.activityId !== activityId ||
+    (selection.gemId !== undefined && selection.gemId !== gemId) ||
+    !levels.includes(selection.level as 2 | 3)
+  )
+    throw Error('Unsupported structure comparison selection.');
+  const candidates = comparisons.filter(
+    (item) =>
+      !selection.previousQuestionIds.some((id) =>
+        identities.some(
+          (identity) => identity.questionId === id && identity.sourceKey.startsWith(`${item.id}:`),
+        ),
+      ),
+  );
+  const pool = candidates.length ? candidates : comparisons;
+  const picked = pool[selection.seed % pool.length];
+  if (!picked) throw Error('No structure comparisons are available.');
+  return comparisonRef(picked.id, selection.level as 2 | 3, selection.seed);
+}
+function resolveLink(code: string): QuestionRef | null {
+  const normalized = code.trim();
+  const item = identities.find((identity) => identity.questionId === normalized.toUpperCase());
+  if (!item) return null;
+  return {
+    activityId,
+    questionId: item.questionId,
+    level: Number(item.sourceKey.slice(-1)) as 2 | 3,
+    seed: 0,
+  };
+}
+export const structureProvider: QuestionProvider = {
+  coverage: [{ kind: 'fixed', questionIds: identities.map((item) => item.questionId) }],
+  select,
+  restore,
+  resolveLink,
+};

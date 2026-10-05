@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "activity": "alevel/acid-base-calculations",
+      "family": "acid",
+      "checked": 45,
+      "signatures": [
+        "numeric,numeric,numeric",
+        "numeric",
+        "numeric,numeric",
+        "numeric,numeric,numeric,numeric",
+        "numeric,numeric,numeric,numeric,numeric,numeric"
+      ]
+    },
+    {
+      "activity": "igcse/structure-and-bonding",
+      "family": "comparison",
+      "checked": 18,
+      "signatures": [
+        "explanation2",
+        "explanation3"
+      ]
+    },
+    {
+      "activity": "alevel/dot-and-cross",
+      "family": "preserved-dot-cross",
+      "checked": 91,
+      "signatures": [
+        "dot-and-cross"
+      ]
+    },
+    {
+      "activity": "igcse/dot-and-cross",
+      "family": "preserved-dot-cross",
+      "checked": 72,
+      "signatures": [
+        "dot-and-cross"
+      ]
+    },
+    {
+      "activity": "alevel/ph-titration-curves",
+      "family": "titration",
+      "checked": 36,
+      "signatures": [
+        "titration-curve"
+      ]
+    },
+    {
+      "activity": "igcse/calorimetry",
+      "family": "calorimetry",
+      "checked": 9,
+      "signatures": [
+        "numeric,numeric,numeric",
+        "numeric,numeric,numeric,numeric",
+        "numeric"
+      ]
+    },
+    {
+      "activity": "igcse/bond-enthalpy",
+      "family": "bond",
+      "checked": 9,
+      "signatures": [
+        "numeric,numeric,numeric",
+        "numeric",
+        "numeric,drawing-self-check"
+      ]
+    },
+    {
+      "activity": "alevel/electrons-bonding",
+      "family": "bonding",
+      "checked": 14,
+      "signatures": [
+        "text"
+      ]
+    },
+    {
+      "activity": "alevel/electron-configurations",
+      "family": "electron",
+      "checked": 567,
+      "signatures": [
+        "electron-configuration"
+      ]
+    },
+    {
+      "activity": "igcse/energy-enthalpy",
+      "family": "energy",
+      "checked": 54,
+      "signatures": [
+        "text",
+        "text,text",
+        "choicesingle",
+        "choicesingle,choicesingle",
+        "text,choicesingle",
+        "text,choicesingle,choicesingle",
+        "text,choicesingle,text",
+        "energy-profile",
+        "choicesingle,choicesingle,choicesingle"
+      ]
+    },
+    {
+      "activity": "igcse/energetics-practical",
+      "family": "practical",
+      "checked": 14,
+      "signatures": [
+        "text,textshort",
+        "choicesinglemcq",
+        "correctioncorrect",
+        "choicemultiplemulti-select",
+        "text,textgraphshort",
+        "choicesingle,choicesinglemcq",
+        "correctiongraphcorrect",
+        "text,choicesingleshort"
+      ]
+    }
+  ]
+}

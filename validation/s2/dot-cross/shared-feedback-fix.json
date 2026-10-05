@@ -1,0 +1,31 @@
+{
+  "jobId": "S2-DOTCROSS",
+  "checkedAt": "2026-10-03T00:40:38.622Z",
+  "run": "a10-feedback-1790988038622",
+  "status": "PASS",
+  "checks": [
+    "partial aggregate correctly labelled Partly correct; all failed informational criteria have no Correct prefix or strong tag",
+    "correct learning feedback preserves partial first response/assessment and one evidence record",
+    "zero-score aggregate remains Incorrect; zero-weight failed criteria remain plain messages"
+  ],
+  "errors": [],
+  "failedInformationalRows": [
+    {
+      "text": "○ Check the number of non-bonding electrons on each atom.",
+      "strong": 0
+    },
+    {
+      "text": "○ Use dots, crosses or triangles consistently: shared pairs need two distinct symbols, and transferred electrons must be distinguished.",
+      "strong": 0
+    },
+    {
+      "text": "○ Check each ion’s brackets and charge; bracket a whole hydroxide ion together.",
+      "strong": 0
+    },
+    {
+      "text": "○ Check shell counts and the total number of original outer electrons.",
+      "strong": 0
+    }
+  ],
+  "finishedAt": "2026-10-03T00:40:43.659Z"
+}

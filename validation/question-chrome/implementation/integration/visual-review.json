@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T13:17:05.965Z",
+  "reviewer": "H01",
+  "method": "Actual retained images opened with view_image; source and production actual content/layout inspected, beyond automated overflow.",
+  "finalRegeneratedCaptures": [
+    "root-hierarchy-correction/numeric-desktop.png",
+    "root-hierarchy-correction/numeric-mobile.png",
+    "root-hierarchy-correction/dot-desktop.png",
+    "root-hierarchy-correction/dot-mobile.png",
+    "root-hierarchy-correction/olympiad-desktop.png",
+    "root-hierarchy-correction/olympiad-mobile.png"
+  ],
+  "priorInspectedCaptures": [
+    "production-igcse-numeric-mobile.png",
+    "production-igcse-rubric-desktop.png",
+    "production-alevel-titration-teacher-mobile.png",
+    "production-alevel-olympiad-mobile.png",
+    "c3-teacher-stage-b.png"
+  ],
+  "findings": [
+    "Small mint uppercase brand eyebrow above main Comfortaa course/subtopic heading:11px/24px desktop,10px/21px mobile; exact text/order, eagle/pink ID/arrow/divider preserved.",
+    "Desktop numeric scaffolding, table, multipart responses, first-assessment feedback and Next preserved.",
+    "Mobile masthead wraps within pane; preserved drawing geometry/palette/controls and meaningful scientific prompt.",
+    "Rubric scientific heading/instructions and teacher curve/working remain; C3 functional-group diagrams and stages retain context."
+  ],
+  "physicalDeviceOrScreenReaderClaimed": false
+}

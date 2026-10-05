@@ -1,0 +1,5710 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T20:03:30.866Z",
+  "agent": "F07",
+  "jobId": "F2-SHARED",
+  "coverage": 929,
+  "activities": 11,
+  "contacts": 55,
+  "suites": [
+    {
+      "name": "coverage.json",
+      "checks": null,
+      "images": 0
+    },
+    {
+      "name": "smoke.json",
+      "checks": 3,
+      "images": 0
+    },
+    {
+      "name": "family-browser-results.json",
+      "checks": 36,
+      "images": 225
+    },
+    {
+      "name": "numeric-final-browser-results.json",
+      "checks": 9,
+      "images": 63
+    },
+    {
+      "name": "rubric-browser-results.json",
+      "checks": 6,
+      "images": 36
+    },
+    {
+      "name": "extra-browser-results.json",
+      "checks": 38,
+      "images": 38
+    },
+    {
+      "name": "ep-browser-results.json",
+      "checks": 4,
+      "images": 42
+    },
+    {
+      "name": "numeric-source-results.json",
+      "checks": 9,
+      "images": 54
+    },
+    {
+      "name": "rubric-source-results.json",
+      "checks": 6,
+      "images": 36
+    },
+    {
+      "name": "written-source-results.json",
+      "checks": 27,
+      "images": 81
+    },
+    {
+      "name": "graph-final-browser-results.json",
+      "checks": 6,
+      "images": 36
+    },
+    {
+      "name": "graph-source-results.json",
+      "checks": 6,
+      "images": 42
+    },
+    {
+      "name": "late-written-results.json",
+      "checks": 9,
+      "images": 54
+    },
+    {
+      "name": "late-rubric-browser-results.json",
+      "checks": 6,
+      "images": 36
+    }
+  ],
+  "freeze": {
+    "at": "2026-10-03T19:58:32.611Z",
+    "agentId": "F08",
+    "status": "SOURCE-FROZEN-FOR-CAPTURE",
+    "validation": [
+      "coverage.json:929 records/11 curricula; checked specialist models pass actual policies",
+      "smoke.json:3 teacher specialist mounts, source prompt visible, one pane, no evidence/no overflow",
+      "npm.cmd run typecheck PASS",
+      "late-written-results.json PASS9/54 and late-rubric-browser-results.json PASS6/36 on final frozen files"
+    ],
+    "files": [
+      {
+        "file": "src/ui/SourceQuestionPlayer.tsx",
+        "sha256": "b290c0377e36c091913703fa0df71688e04c0146efa482de6e91ccec557b0e71"
+      },
+      {
+        "file": "src/ui/source-presentation.ts",
+        "sha256": "1f432bb1c3c11d492053934cacb796eeb23dc597c37c7810abd3ad08a842cd06"
+      },
+      {
+        "file": "src/ui/SourceResponseControl.tsx",
+        "sha256": "75af90129b9d7f6904ed285ef523e486e1f7a01498ba0ece2ced360d40d40386"
+      },
+      {
+        "file": "src/ui/NumericWorkingControl.tsx",
+        "sha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224"
+      },
+      {
+        "file": "src/ui/source-adapters.css",
+        "sha256": "8cab0376c489fc4536214b3325f075bdba21988d6a1055703edeb5b90204b760"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "file": "family-desktop-AB-0000GJ-unanswered.png",
+      "bytes": 57149,
+      "width": 1120,
+      "height": 838,
+      "sha256": "620803c6182de33cbaf31a38c2767d814442842e27c1f6294f425a79d3297833"
+    },
+    {
+      "file": "family-desktop-AB-0000GJ-partial.png",
+      "bytes": 60493,
+      "width": 1120,
+      "height": 838,
+      "sha256": "aa35254c7100f6fcabfea9acf9b05fc4dda6c9462ba1a9b3f9823ad71747b917"
+    },
+    {
+      "file": "family-desktop-AB-0000GJ-incorrect.png",
+      "bytes": 94737,
+      "width": 1120,
+      "height": 1199,
+      "sha256": "2b6eaf4dec969b589a39e1829ee40e39336aa7b6ec0e5a4799fd7752a6da1558"
+    },
+    {
+      "file": "family-desktop-AB-0000GJ-correction.png",
+      "bytes": 102218,
+      "width": 1120,
+      "height": 1366,
+      "sha256": "dbc7ccd6638aa47e69c15c2ccc6c7946df7a95de712f6ad22aeff4c0d8d03295"
+    },
+    {
+      "file": "family-desktop-AB-0000GJ-model.png",
+      "bytes": 119946,
+      "width": 1120,
+      "height": 1608,
+      "sha256": "626459677545fe39438a4569884b71c73eaee4cb194eeefaf2715e07a81a48a2"
+    },
+    {
+      "file": "family-desktop-AB-0000GJ-correct.png",
+      "bytes": 91497,
+      "width": 1120,
+      "height": 1199,
+      "sha256": "8e831e598a2a962f6179620d5ef6831814dbb7dc1ea036efe13059788e99bdd6"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-unanswered.png",
+      "bytes": 409783,
+      "width": 1120,
+      "height": 1226,
+      "sha256": "2aac010f3a82f9d1194dbe94cf27243b5b2e81974b16a41f99ce7afa73e73fbb"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-partial.png",
+      "bytes": 414370,
+      "width": 1120,
+      "height": 1226,
+      "sha256": "2cb34adf76eae4bee8bbe6a25909d46d7ede3c25172784261f150f5393d84177"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-incorrect.png",
+      "bytes": 430049,
+      "width": 1120,
+      "height": 1685,
+      "sha256": "63adfc669eb51a9d7e170acb17da3a3950cd3efe222dd6c612ea008f99660237"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-correction.png",
+      "bytes": 438839,
+      "width": 1120,
+      "height": 1839,
+      "sha256": "070b8cfb778190e178b5b14ab0ef5b08a58ceaf3586528247655d95928d6d09c"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-model.png",
+      "bytes": 531641,
+      "width": 1120,
+      "height": 2494,
+      "sha256": "bfe702cc0d3537b241b7cacebfb47a75fad211d99610d3d559593242f2a5c1f1"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-correct.png",
+      "bytes": 426145,
+      "width": 1120,
+      "height": 1685,
+      "sha256": "a34cbcb6f987cd3c740c41423553d7544e8cf477c0793aaab1add41c04f90c02"
+    },
+    {
+      "file": "family-desktop-CAL-00I9HC-working.png",
+      "bytes": 469623,
+      "width": 1120,
+      "height": 1412,
+      "sha256": "81600e3ad74863af263a0ea25dff500c3c879f41bb50169cd18e6202f41c82d2"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-unanswered.png",
+      "bytes": 340047,
+      "width": 1120,
+      "height": 1300,
+      "sha256": "a11f2bf6ddbecc57edb02e343393674810bd89fc437e23cd2f40b333370a5c85"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-partial.png",
+      "bytes": 343695,
+      "width": 1120,
+      "height": 1300,
+      "sha256": "c930fbdb472a605f9bef2df5c9f4bf287aebca603d36f129045d5b89cf22e298"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-incorrect.png",
+      "bytes": 369954,
+      "width": 1120,
+      "height": 1780,
+      "sha256": "13e9c156b655623daddba4f07de467038bb6e7d106418d7706859b0c03a6079f"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-correction.png",
+      "bytes": 378685,
+      "width": 1120,
+      "height": 1944,
+      "sha256": "e2d797f050deee401013dfeb55dbc95d6084889f7626f35be707a046461427ec"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-model.png",
+      "bytes": 459706,
+      "width": 1120,
+      "height": 2691,
+      "sha256": "78f95acb82faa2c71a8db448d33c3dd9be864d117f86930b16c7659477705c3a"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-correct.png",
+      "bytes": 366122,
+      "width": 1120,
+      "height": 1780,
+      "sha256": "256e7b2ed95f29bf73894300c5209c7328710e848fb5340e94aab14b1c20b94a"
+    },
+    {
+      "file": "family-desktop-BE-0002DC-working.png",
+      "bytes": 455157,
+      "width": 1120,
+      "height": 1622,
+      "sha256": "bc11790d15c88c4ffc57b8a3f7e73981e8d6b0a2d4ae7ddf225f6842508a4ceb"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-unanswered.png",
+      "bytes": 307830,
+      "width": 1120,
+      "height": 903,
+      "sha256": "0da284fbcf1659601ea49a527a01d74728f0756134dde75dd3e68c6be0f27567"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-partial.png",
+      "bytes": 302287,
+      "width": 1120,
+      "height": 903,
+      "sha256": "a52624950437af1f72595da59695ce3115dedddc7b5f838aa9f0a8b044977e45"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-incorrect.png",
+      "bytes": 316170,
+      "width": 1120,
+      "height": 1266,
+      "sha256": "bf0b986cc78b4cd91ae71ee91cbc47ee6083092f68342458bf71627fa8999f30"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-correction.png",
+      "bytes": 322302,
+      "width": 1120,
+      "height": 1430,
+      "sha256": "47e133596ab156139d10721b569a85c71d5bef3b84ef1e0294bf8f3ae1cd522c"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-model.png",
+      "bytes": 410790,
+      "width": 1120,
+      "height": 2070,
+      "sha256": "96431e9cff277291570b75800c9d611188193a6ab02cceed1cb7b9c907c28765"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-correct.png",
+      "bytes": 313581,
+      "width": 1120,
+      "height": 1266,
+      "sha256": "d11cb881ede4dfb2c1fe8d9daf43708171651ee8aa26dbd0d3dce8664f6a784f"
+    },
+    {
+      "file": "family-desktop-BE-0003K0-working.png",
+      "bytes": 620942,
+      "width": 1120,
+      "height": 1749,
+      "sha256": "4ad5104b53837e2200c4dd90979f0c02c70384ccb7b5ccb8b1a48008d3ec2646"
+    },
+    {
+      "file": "family-desktop-EB-000001-unanswered.png",
+      "bytes": 17804,
+      "width": 1120,
+      "height": 326,
+      "sha256": "45d45657331bc97800dabda9997bd0e4bc40431b221423c6a742a23b7c255b15"
+    },
+    {
+      "file": "family-desktop-EB-000001-partial.png",
+      "bytes": 26595,
+      "width": 1120,
+      "height": 326,
+      "sha256": "e7bc357ddad9e19bd720cdcbdb49a10654aaf0647fdfcb9f32f551c0a8b321fe"
+    },
+    {
+      "file": "family-desktop-EB-000001-incorrect.png",
+      "bytes": 73559,
+      "width": 1120,
+      "height": 1068,
+      "sha256": "9ac50f4cb4e2ac415c2081f3fa223c1726e7e174df4e235da78fb47e0e17abcf"
+    },
+    {
+      "file": "family-desktop-EB-000001-correction.png",
+      "bytes": 89089,
+      "width": 1120,
+      "height": 1240,
+      "sha256": "29445d4227b654f52828650e5ba02954f7958a03c6a9c23446f65adbf0eae63d"
+    },
+    {
+      "file": "family-desktop-EB-000001-model.png",
+      "bytes": 150427,
+      "width": 1120,
+      "height": 1862,
+      "sha256": "d2ca2e0faa983144a7f6c44b3d7db8b2a24432f92cffb658b9ba5e916d68695d"
+    },
+    {
+      "file": "family-desktop-EB-000001-correct.png",
+      "bytes": 80140,
+      "width": 1120,
+      "height": 1068,
+      "sha256": "9c28bc35f86382e677d2346234f35e67be2c074b5f80e7615e29c051d2658751"
+    },
+    {
+      "file": "family-desktop-EE-8IPP11-unanswered.png",
+      "bytes": 26544,
+      "width": 1120,
+      "height": 320,
+      "sha256": "d843e6991203a7d2ade66c10858c9761f3e345e06df8a32e7c98a7f81edc12ff"
+    },
+    {
+      "file": "family-desktop-EE-8IPP11-partial.png",
+      "bytes": 29203,
+      "width": 1120,
+      "height": 320,
+      "sha256": "243d1cb156888e49ae5dcda01cbec94de582659240fdbcdcee9af7d90224ad1c"
+    },
+    {
+      "file": "family-desktop-EE-8IPP11-incorrect.png",
+      "bytes": 49756,
+      "width": 1120,
+      "height": 654,
+      "sha256": "c086149474e37e19f8474032d7064d5cf6badc890ff7ce0f3df87f0d1b0ddd9b"
+    },
+    {
+      "file": "family-desktop-EE-8IPP11-correction.png",
+      "bytes": 57537,
+      "width": 1120,
+      "height": 822,
+      "sha256": "ea309c507a678dc24294cd067bf0fbcfa09094629d15f80044543a6ad9bd7c18"
+    },
+    {
+      "file": "family-desktop-EE-8IPP11-model.png",
+      "bytes": 70990,
+      "width": 1120,
+      "height": 960,
+      "sha256": "68e7ddfccd58a974ebb9f54256259ca9cf3968d53f5aec00fc5d8220838f91fc"
+    },
+    {
+      "file": "family-desktop-EE-8IPP11-correct.png",
+      "bytes": 49474,
+      "width": 1120,
+      "height": 654,
+      "sha256": "82e46ae1e61854835882d58afcab0693f8dfac206beb64cbb9c0e4509b5dc2e1"
+    },
+    {
+      "file": "family-desktop-EE-6US2V7-unanswered.png",
+      "bytes": 29419,
+      "width": 1120,
+      "height": 337,
+      "sha256": "47545d983fbf5819c3675b97b4c30e1f29715dcca1fe02a33108edbe255919cc"
+    },
+    {
+      "file": "family-desktop-EE-6US2V7-partial.png",
+      "bytes": 29734,
+      "width": 1120,
+      "height": 337,
+      "sha256": "945c9aeed846ec9ed1b50cefdafd9ef6c6156cf2ed6bfb39b53745752a4fe496"
+    },
+    {
+      "file": "family-desktop-EE-6US2V7-incorrect.png",
+      "bytes": 69772,
+      "width": 1120,
+      "height": 808,
+      "sha256": "056d2f573748501577a16e124585fd202a9a94f32c4a3c2d5e8c736d4ad26b71"
+    },
+    {
+      "file": "family-desktop-EE-6US2V7-correction.png",
+      "bytes": 77801,
+      "width": 1120,
+      "height": 976,
+      "sha256": "ab326c2e6c5f6077f8018dabe0c9eb5f8708440ad910d93cd65674182e09b618"
+    },
+    {
+      "file": "family-desktop-EE-6US2V7-model.png",
+      "bytes": 110703,
+      "width": 1120,
+      "height": 1312,
+      "sha256": "e25916cfdace9038caf4f1100e43d013a9d056f201476c7a156c61af582787a7"
+    },
+    {
+      "file": "family-desktop-EE-6US2V7-correct.png",
+      "bytes": 69487,
+      "width": 1120,
+      "height": 808,
+      "sha256": "6f2d069e34320a873bb6bb5d11184361753ba2da1a29aece63af399164e561a2"
+    },
+    {
+      "file": "family-desktop-EP-BJLHC1-unanswered.png",
+      "bytes": 37235,
+      "width": 1120,
+      "height": 453,
+      "sha256": "374d3d8541920ff03f65561dd1b9a30af651e1355c268c1d42e6ac0689b87280"
+    },
+    {
+      "file": "family-desktop-EP-BJLHC1-partial.png",
+      "bytes": 40317,
+      "width": 1120,
+      "height": 453,
+      "sha256": "2d8d331575671c2b1842a2bab1385a800796a91c0a8874be68108789d09d6285"
+    },
+    {
+      "file": "family-desktop-EP-BJLHC1-incorrect.png",
+      "bytes": 64122,
+      "width": 1120,
+      "height": 620,
+      "sha256": "f964c29c03cab0451d86f5a3c629f3b2834c17a76a52528c60b9ff48a4a56829"
+    },
+    {
+      "file": "family-desktop-EP-BJLHC1-correction.png",
+      "bytes": 72711,
+      "width": 1120,
+      "height": 748,
+      "sha256": "20bf45bc400c12f3207769b922ee3c68f8525cc7490cd9df01c739518558d971"
+    },
+    {
+      "file": "family-desktop-EP-BJLHC1-model.png",
+      "bytes": 82531,
+      "width": 1120,
+      "height": 917,
+      "sha256": "c178158face5536771795888a623128222c11f465a36be5702099544c11b5d8b"
+    },
+    {
+      "file": "family-desktop-EP-BJLHC1-correct.png",
+      "bytes": 63284,
+      "width": 1120,
+      "height": 566,
+      "sha256": "0f9b84bc39bd4066c5774121776d8ebdeb12c495f42b21ea3afb52d65431f04f"
+    },
+    {
+      "file": "family-desktop-EP-APMO94-unanswered.png",
+      "bytes": 46488,
+      "width": 1120,
+      "height": 432,
+      "sha256": "577c81eff4b726510496fcc0fbe4f40ef748c793c57f8bb3b8c4b4b1ec1f4792"
+    },
+    {
+      "file": "family-desktop-EP-APMO94-partial.png",
+      "bytes": 47839,
+      "width": 1120,
+      "height": 432,
+      "sha256": "7cc623a8f6c4672c9c5b71975ca96337803c97611c7d25f25e052850345b2d37"
+    },
+    {
+      "file": "family-desktop-EP-APMO94-incorrect.png",
+      "bytes": 69276,
+      "width": 1120,
+      "height": 551,
+      "sha256": "5a12c5e34d467fca348d011ab61683d30719550915e02b7b7e6935794268a2f3"
+    },
+    {
+      "file": "family-desktop-EP-APMO94-correction.png",
+      "bytes": 75009,
+      "width": 1120,
+      "height": 680,
+      "sha256": "8045fd67fce3c764c9233569e06fe63fc3dc1c50a529aa94e2a9ff7f2341e919"
+    },
+    {
+      "file": "family-desktop-EP-APMO94-model.png",
+      "bytes": 85185,
+      "width": 1120,
+      "height": 809,
+      "sha256": "5a90658827d67b0545c5464a5447ec32c8b7c63f8bdcc84cfd1c877f5e67e866"
+    },
+    {
+      "file": "family-desktop-EP-APMO94-correct.png",
+      "bytes": 68810,
+      "width": 1120,
+      "height": 551,
+      "sha256": "ec107d6ccb0513cd37b630c54d65f36a4d9d62b3373a7f25821be5bdbcaed535"
+    },
+    {
+      "file": "family-desktop-EP-CXMNAV-unanswered.png",
+      "bytes": 40344,
+      "width": 1120,
+      "height": 426,
+      "sha256": "53de48dd89c2a84943c29b8884b4d5920900deafbfda8b0f4366040227c46c58"
+    },
+    {
+      "file": "family-desktop-EP-CXMNAV-partial.png",
+      "bytes": 43514,
+      "width": 1120,
+      "height": 426,
+      "sha256": "5a698fb74faf8242aa626952ca2155505b98ebc71d1bc1d668ad34f284c3ba97"
+    },
+    {
+      "file": "family-desktop-EP-CXMNAV-incorrect.png",
+      "bytes": 72234,
+      "width": 1120,
+      "height": 663,
+      "sha256": "7344cb90e44a4ac6397f8100c470b65b825018323aa2e0a7f6c15d13c2e3c108"
+    },
+    {
+      "file": "family-desktop-EP-CXMNAV-correction.png",
+      "bytes": 78288,
+      "width": 1120,
+      "height": 792,
+      "sha256": "6f9cfff11a5c5d905a1b05054ede8207c8a67b396d1f4ade76d46936f8257c4a"
+    },
+    {
+      "file": "family-desktop-EP-CXMNAV-model.png",
+      "bytes": 88112,
+      "width": 1120,
+      "height": 928,
+      "sha256": "fec8b7ae1c8baf59ce0482c36a158311276cdff4b65e665a7ef6ee610e0d1b21"
+    },
+    {
+      "file": "family-desktop-EP-CXMNAV-correct.png",
+      "bytes": 68917,
+      "width": 1120,
+      "height": 609,
+      "sha256": "ba6f9517c0710329532f51bd6db187a990d98e6c542d8fb6940009e78b02c641"
+    },
+    {
+      "file": "family-desktop-EP-4G1A0S-unanswered.png",
+      "bytes": 49970,
+      "width": 1120,
+      "height": 765,
+      "sha256": "b1859338d4f7e11adb6a748f0d4f4af47fb9d28313c29596c902334631425524"
+    },
+    {
+      "file": "family-desktop-EP-4G1A0S-partial.png",
+      "bytes": 54285,
+      "width": 1120,
+      "height": 765,
+      "sha256": "4da0513b2f9f51cf5608572746498496d2d9671eaef8e9c4504c371246b3a370"
+    },
+    {
+      "file": "family-desktop-EP-4G1A0S-incorrect.png",
+      "bytes": 89161,
+      "width": 1120,
+      "height": 765,
+      "sha256": "75f0afa943db9e579be3038901090ec44162df09fe2dc5f3365e9ed8863848aa"
+    },
+    {
+      "file": "family-desktop-EP-4G1A0S-correction.png",
+      "bytes": 98815,
+      "width": 1120,
+      "height": 853,
+      "sha256": "9f070fed93e770910c4b2159edabc8f57bb415e2b23cc02b74097085084ffed2"
+    },
+    {
+      "file": "family-desktop-EP-4G1A0S-model.png",
+      "bytes": 117377,
+      "width": 1120,
+      "height": 1076,
+      "sha256": "f4470bc7a16381db52548c02523a1a4787816d75ebb81a358b33ef68c7d90c0b"
+    },
+    {
+      "file": "family-desktop-EP-4G1A0S-correct.png",
+      "bytes": 90087,
+      "width": 1120,
+      "height": 765,
+      "sha256": "fd15d53ce8f8d547685c44c6cd73132bae10eacacbf4e2e4186977eda7605253"
+    },
+    {
+      "file": "family-desktop-EP-780GGH-unanswered.png",
+      "bytes": 59720,
+      "width": 1120,
+      "height": 815,
+      "sha256": "707c94eda2109c4a7a9f4e3f62876cd93fcc2d5712b1726c2c4b93d80e286127"
+    },
+    {
+      "file": "family-desktop-EP-780GGH-partial.png",
+      "bytes": 63593,
+      "width": 1120,
+      "height": 815,
+      "sha256": "771b889b859eec5d104cf5832a9620ee39d950b5208c8b1b2c8b0010e674b82b"
+    },
+    {
+      "file": "family-desktop-EP-780GGH-incorrect.png",
+      "bytes": 95146,
+      "width": 1120,
+      "height": 815,
+      "sha256": "1e7f0da556a774621dee310ea4460c1d67fef449debdb510b35ea3690c32abe6"
+    },
+    {
+      "file": "family-desktop-EP-780GGH-correction.png",
+      "bytes": 101600,
+      "width": 1120,
+      "height": 835,
+      "sha256": "dd8155c962c711375a6a9d443b443f915ed99d2e1005c4046401efb1bef2aebb"
+    },
+    {
+      "file": "family-desktop-EP-780GGH-model.png",
+      "bytes": 116259,
+      "width": 1120,
+      "height": 989,
+      "sha256": "9fc3ed79634e26697ff16b7c6eaf6779622968034b8cfbcbaa9f051b34e6ea94"
+    },
+    {
+      "file": "family-desktop-EP-780GGH-correct.png",
+      "bytes": 93800,
+      "width": 1120,
+      "height": 815,
+      "sha256": "0bbf4fbe76b93a1e8612b41416c5b4873b7a52af64151602ed701dd644a68c5f"
+    },
+    {
+      "file": "family-tablet-AB-0000GJ-unanswered.png",
+      "bytes": 58144,
+      "width": 780,
+      "height": 843,
+      "sha256": "2547ba9cc1e97132755214876585599af45f2307f0f5e9e2a3c5d5ddad835c15"
+    },
+    {
+      "file": "family-tablet-AB-0000GJ-partial.png",
+      "bytes": 61369,
+      "width": 780,
+      "height": 843,
+      "sha256": "83c3145a315bb980617dc12300654631e649ccbf7d787f8f50e0565d82bb5aee"
+    },
+    {
+      "file": "family-tablet-AB-0000GJ-incorrect.png",
+      "bytes": 95134,
+      "width": 780,
+      "height": 1205,
+      "sha256": "35cfd5d4a2b43105978de8e49c05f82e0adac2ce6ca377d82b4498aa1b2ea530"
+    },
+    {
+      "file": "family-tablet-AB-0000GJ-correction.png",
+      "bytes": 101830,
+      "width": 780,
+      "height": 1372,
+      "sha256": "82ec30457f6089207eea47de3e1e9d4cfddcbfd95d50cea531a71f625d68a2c0"
+    },
+    {
+      "file": "family-tablet-AB-0000GJ-model.png",
+      "bytes": 118856,
+      "width": 780,
+      "height": 1614,
+      "sha256": "3e669639fe1d98907ed30745124787c128eb019f6458072ae9d1d7298fc4c12b"
+    },
+    {
+      "file": "family-tablet-AB-0000GJ-correct.png",
+      "bytes": 91976,
+      "width": 780,
+      "height": 1205,
+      "sha256": "8c9dcf0828c0a16ecbdf99496518a4914745fa5a49b56cb609c40e413842c43c"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-unanswered.png",
+      "bytes": 363915,
+      "width": 780,
+      "height": 1291,
+      "sha256": "76daaa7d3082c60c81f0938354ebd51c347c7417c5d9da8bdccb6617cef43197"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-partial.png",
+      "bytes": 368454,
+      "width": 780,
+      "height": 1291,
+      "sha256": "35a10efce502399c7d09a196994d1c4678cabc241a55111db9a4bfbf202bcb40"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-incorrect.png",
+      "bytes": 384113,
+      "width": 780,
+      "height": 1749,
+      "sha256": "b3a1caee08dac9d417e534780e5eb92c273ba6d15aabc2b14f6e3f338f601af7"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-correction.png",
+      "bytes": 392774,
+      "width": 780,
+      "height": 1903,
+      "sha256": "c10cd4b29ea20c550165d11156718f60f2180d39f2302f81cb41aeb8d6a34907"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-model.png",
+      "bytes": 468637,
+      "width": 780,
+      "height": 2582,
+      "sha256": "f54947f01aaeaae7a86c233d1ad915b43fc9a1fa2cb7cdfb551c805948bce1e6"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-correct.png",
+      "bytes": 380627,
+      "width": 780,
+      "height": 1749,
+      "sha256": "9bcd29ffa357eeb030be8f5c5c1afbde94d6fe202262739211ae491a7303025f"
+    },
+    {
+      "file": "family-tablet-CAL-00I9HC-working.png",
+      "bytes": 428284,
+      "width": 780,
+      "height": 1539,
+      "sha256": "50acf9918ae1090fa488c7e8a28cbbe815fcac7aaace0efcc7e2c12e7e7c6df3"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-unanswered.png",
+      "bytes": 296450,
+      "width": 780,
+      "height": 1344,
+      "sha256": "89d059a3af098e9b65861a378fb4ba9e0dd21c2e04ba3c6a8d2655de9afa688f"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-partial.png",
+      "bytes": 300637,
+      "width": 780,
+      "height": 1344,
+      "sha256": "65ea251b84d32d9569acbc446dbb9b3717cf980aed2ea9087aa5f383c90ccbfe"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-incorrect.png",
+      "bytes": 320338,
+      "width": 780,
+      "height": 1823,
+      "sha256": "9eb46ea8ecef601f6f54af74665e0ddde320db11b01dcb03614d5f493cec3816"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-correction.png",
+      "bytes": 328278,
+      "width": 780,
+      "height": 1987,
+      "sha256": "677f346da5bad6f459cdda2e8d4d0f76dd95caa19147bc84a008dbb68dd2b760"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-model.png",
+      "bytes": 400450,
+      "width": 780,
+      "height": 2716,
+      "sha256": "8c31b9dbf29e7ba81d2de3cca0c8d04cdff90dd5fe348b2369c52804608b9c24"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-correct.png",
+      "bytes": 317174,
+      "width": 780,
+      "height": 1823,
+      "sha256": "6ed7e95d841a846aa2b98d8c62b6fe533e38573a92315e2760eb108aca9aab4f"
+    },
+    {
+      "file": "family-tablet-BE-0002DC-working.png",
+      "bytes": 399298,
+      "width": 780,
+      "height": 1699,
+      "sha256": "6043b7a31ec69196e3c439ec1e1ea816dae37b2939f8a3c1217c955b07c88e41"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-unanswered.png",
+      "bytes": 282604,
+      "width": 780,
+      "height": 983,
+      "sha256": "6fad6c88d28eac91ee1e5c28da7e738f3ee5427a9286ad11e53be202cecc13a6"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-partial.png",
+      "bytes": 277966,
+      "width": 780,
+      "height": 983,
+      "sha256": "aefe56a59326188cc0827f976e3c05225ee5f5fc44ba4b2d4320ea359d546251"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-incorrect.png",
+      "bytes": 294527,
+      "width": 780,
+      "height": 1346,
+      "sha256": "659e018298fc1f450522b797f1e77e126b48744e4c8a56a90f6d2397fe372e92"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-correction.png",
+      "bytes": 299699,
+      "width": 780,
+      "height": 1510,
+      "sha256": "5b735ba27193be025266ac99222f60b9f55c74dbbd6d17a8b9af03a730514177"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-model.png",
+      "bytes": 373937,
+      "width": 780,
+      "height": 2155,
+      "sha256": "99c4fa145d5f1f6ae4270e93abdc202e50f60b59e8c0f9cb08500b9baabd0429"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-correct.png",
+      "bytes": 291992,
+      "width": 780,
+      "height": 1346,
+      "sha256": "f0f610779333bd3a1613f997222099df6c12a6b1ad4c58bb90dcf0b974ae1aef"
+    },
+    {
+      "file": "family-tablet-BE-0003K0-working.png",
+      "bytes": 541322,
+      "width": 780,
+      "height": 1852,
+      "sha256": "7a56726ed6ee352aafe3e2b1de55a6e32bf238842d72c333f3635ae9ff2913ed"
+    },
+    {
+      "file": "family-tablet-EB-000001-unanswered.png",
+      "bytes": 18531,
+      "width": 780,
+      "height": 474,
+      "sha256": "eaf923ba2070e21694c323b5f31c2bd685c8d10480291eb58c659c61d803444b"
+    },
+    {
+      "file": "family-tablet-EB-000001-partial.png",
+      "bytes": 26619,
+      "width": 780,
+      "height": 474,
+      "sha256": "a75cb5badbc757c9a1d679979c12aa727a8f6de1e3d90f294bcf5ea7164a2457"
+    },
+    {
+      "file": "family-tablet-EB-000001-incorrect.png",
+      "bytes": 65044,
+      "width": 780,
+      "height": 1004,
+      "sha256": "a538faeaf3a222faa481e6b7b2ef8186f18b8e0d03930e2b0bbe21daa6f2d880"
+    },
+    {
+      "file": "family-tablet-EB-000001-correction.png",
+      "bytes": 79472,
+      "width": 780,
+      "height": 1176,
+      "sha256": "77fe398e6e5fd74ae1f24774e3cdde9c848c1b909c95644a5ba215a7eb240494"
+    },
+    {
+      "file": "family-tablet-EB-000001-model.png",
+      "bytes": 129009,
+      "width": 780,
+      "height": 1590,
+      "sha256": "c84f1710440d474e9b0843eb6e7b63f7ff1f07913e2d2d125cf5047bc2dc7e39"
+    },
+    {
+      "file": "family-tablet-EB-000001-correct.png",
+      "bytes": 71217,
+      "width": 780,
+      "height": 1004,
+      "sha256": "cb25761f92d20b21d1eb98419cf1961c330e06246d16932c0c415eb1f44ea5ce"
+    },
+    {
+      "file": "family-tablet-EE-8IPP11-unanswered.png",
+      "bytes": 27002,
+      "width": 780,
+      "height": 465,
+      "sha256": "a662be865121fe13bcbeec1ed9df7231fc95cabf682508b3b4d39d05131d47aa"
+    },
+    {
+      "file": "family-tablet-EE-8IPP11-partial.png",
+      "bytes": 29597,
+      "width": 780,
+      "height": 465,
+      "sha256": "8fe271fa9c9480ea69222e8ee3bd97b593f547e49107997d91679197c2b0f4cf"
+    },
+    {
+      "file": "family-tablet-EE-8IPP11-incorrect.png",
+      "bytes": 45976,
+      "width": 780,
+      "height": 695,
+      "sha256": "f812e4dd228778b59b3c1e5cb68663dd3779c41bf0de1c15da2110f0ee5e3b38"
+    },
+    {
+      "file": "family-tablet-EE-8IPP11-correction.png",
+      "bytes": 53322,
+      "width": 780,
+      "height": 863,
+      "sha256": "f7daf905972678baaf36d095eacbd4355ea66fa506afe5b3e2a1d8c7d6bdbad2"
+    },
+    {
+      "file": "family-tablet-EE-8IPP11-model.png",
+      "bytes": 65300,
+      "width": 780,
+      "height": 1046,
+      "sha256": "eec1f92c2cbe635df5e7988361e36a77e0c6046533ba0416dbad9cb454bea612"
+    },
+    {
+      "file": "family-tablet-EE-8IPP11-correct.png",
+      "bytes": 45658,
+      "width": 780,
+      "height": 695,
+      "sha256": "56ce2de0cca2cac1945114942846cfb0f2d2facf437252c3c0b6f928910692c9"
+    },
+    {
+      "file": "family-tablet-EE-6US2V7-unanswered.png",
+      "bytes": 29308,
+      "width": 780,
+      "height": 485,
+      "sha256": "4f8815113974bc7c452f2f0f9d8538b9eb18b6a76d307ab88466fc27ecb978c0"
+    },
+    {
+      "file": "family-tablet-EE-6US2V7-partial.png",
+      "bytes": 29670,
+      "width": 780,
+      "height": 485,
+      "sha256": "c2292968f30907ce271fbaf48396feac00c5e9ad2852a99ded8a4fe06786a225"
+    },
+    {
+      "file": "family-tablet-EE-6US2V7-incorrect.png",
+      "bytes": 60705,
+      "width": 780,
+      "height": 768,
+      "sha256": "2b6cb86d3d15520dd150d3ac9159d3a8a9c0005c2559b79dd433c241be8d5dc8"
+    },
+    {
+      "file": "family-tablet-EE-6US2V7-correction.png",
+      "bytes": 68255,
+      "width": 780,
+      "height": 936,
+      "sha256": "1630dffd9f14f1b6acd64243a5183a796b6f12eec7c51d26f020fd6cadc08956"
+    },
+    {
+      "file": "family-tablet-EE-6US2V7-model.png",
+      "bytes": 95424,
+      "width": 780,
+      "height": 1217,
+      "sha256": "b1771fb4180e048471b6182a09b4754fbfeeacaf63b9453d8ba024eb22693744"
+    },
+    {
+      "file": "family-tablet-EE-6US2V7-correct.png",
+      "bytes": 60392,
+      "width": 780,
+      "height": 768,
+      "sha256": "72622a2d867d000b20cccafc6f40b088a4f8707fd311e4c1021b78c14945ebcd"
+    },
+    {
+      "file": "family-tablet-EP-BJLHC1-unanswered.png",
+      "bytes": 36938,
+      "width": 780,
+      "height": 585,
+      "sha256": "e121787a3b68e6d1486e990eb13f549fdc75b7b7e52fbac620ec104a73e016c8"
+    },
+    {
+      "file": "family-tablet-EP-BJLHC1-partial.png",
+      "bytes": 40023,
+      "width": 780,
+      "height": 585,
+      "sha256": "454c7118030092c24d62c648163c8b09760b25b8c5efd3106b1141530ca44d06"
+    },
+    {
+      "file": "family-tablet-EP-BJLHC1-incorrect.png",
+      "bytes": 61388,
+      "width": 780,
+      "height": 872,
+      "sha256": "11a7e5ca1e103fe4cf6078b5e2df341875a0f3e8af16808aa8e7dee4b7ed25fc"
+    },
+    {
+      "file": "family-tablet-EP-BJLHC1-correction.png",
+      "bytes": 69682,
+      "width": 780,
+      "height": 1001,
+      "sha256": "ba293847855d41b42abce40b13018a8a8ff3039a7075999768a842cd0a7a823e"
+    },
+    {
+      "file": "family-tablet-EP-BJLHC1-model.png",
+      "bytes": 80112,
+      "width": 780,
+      "height": 1205,
+      "sha256": "f3ebcd09301338368abd9ad3d8cfced27d8cb991157131742dd8fbec988d1baf"
+    },
+    {
+      "file": "family-tablet-EP-BJLHC1-correct.png",
+      "bytes": 60680,
+      "width": 780,
+      "height": 818,
+      "sha256": "f54e176152ad929ddfd3f47d2a3ddf91f34588c18e400f76e6f8cf7116dd5f3a"
+    },
+    {
+      "file": "family-tablet-EP-APMO94-unanswered.png",
+      "bytes": 46327,
+      "width": 780,
+      "height": 592,
+      "sha256": "40f5291498e3212383f8b2517db6b5372a8a1fa50ac6e0aee3866414072eeec9"
+    },
+    {
+      "file": "family-tablet-EP-APMO94-partial.png",
+      "bytes": 47749,
+      "width": 780,
+      "height": 592,
+      "sha256": "2d11838f19101f5fbdc12ea871b4e4a4c9d9aa45ac6ccb7e344357cb19fe5269"
+    },
+    {
+      "file": "family-tablet-EP-APMO94-incorrect.png",
+      "bytes": 65063,
+      "width": 780,
+      "height": 771,
+      "sha256": "acf5cf48bc90b5251711dbcc4834e62b8cd822d7a79adc91ad202f32fa9591c4"
+    },
+    {
+      "file": "family-tablet-EP-APMO94-correction.png",
+      "bytes": 70494,
+      "width": 780,
+      "height": 899,
+      "sha256": "51fda6b08eedfd213ca9ce270ec54d087925d443c2dff238fa7a4e17c8b2cccd"
+    },
+    {
+      "file": "family-tablet-EP-APMO94-model.png",
+      "bytes": 78986,
+      "width": 780,
+      "height": 1027,
+      "sha256": "2f4f95f2adc288042865b5926b899ac29ecd3541a72e3edb91c748a0047e0bd0"
+    },
+    {
+      "file": "family-tablet-EP-APMO94-correct.png",
+      "bytes": 64615,
+      "width": 780,
+      "height": 771,
+      "sha256": "5fce75b4f553a6e1dbce9bf3347718b4ae646a43b225f93b95e3c0e1ab53a2e5"
+    },
+    {
+      "file": "family-tablet-EP-CXMNAV-unanswered.png",
+      "bytes": 40819,
+      "width": 780,
+      "height": 586,
+      "sha256": "06a040510ee6d1625217fdebee577db2eb877cdf1ed4f999fdaf9d2dbcb08997"
+    },
+    {
+      "file": "family-tablet-EP-CXMNAV-partial.png",
+      "bytes": 43946,
+      "width": 780,
+      "height": 586,
+      "sha256": "b5637155998d493cd522bb7d9dae3100c57d64a9d95e001bcb52da7606ceedd9"
+    },
+    {
+      "file": "family-tablet-EP-CXMNAV-incorrect.png",
+      "bytes": 67572,
+      "width": 780,
+      "height": 872,
+      "sha256": "8b7fa296f1decc4554420749801af3864f468e958590168cca90e0c667c8a63c"
+    },
+    {
+      "file": "family-tablet-EP-CXMNAV-correction.png",
+      "bytes": 73363,
+      "width": 780,
+      "height": 1001,
+      "sha256": "cc8f8355e75291314c9388387619b67a09fb09482f460314e9e76233cac4f76d"
+    },
+    {
+      "file": "family-tablet-EP-CXMNAV-model.png",
+      "bytes": 82783,
+      "width": 780,
+      "height": 1151,
+      "sha256": "6ef4eed25bbac3bd1dad23c83b498d187e636dc857cc1b686d46c29e567c3861"
+    },
+    {
+      "file": "family-tablet-EP-CXMNAV-correct.png",
+      "bytes": 64318,
+      "width": 780,
+      "height": 818,
+      "sha256": "c0155e383674480d10f02bb09148d2c857a8c140ff04f409b66dcf8667c0f46b"
+    },
+    {
+      "file": "family-tablet-EP-4G1A0S-unanswered.png",
+      "bytes": 49761,
+      "width": 780,
+      "height": 934,
+      "sha256": "e5920d4d6c3a5c2a012db2053708bc0d5ef79c907cba7c630084ee30759af7ef"
+    },
+    {
+      "file": "family-tablet-EP-4G1A0S-partial.png",
+      "bytes": 53880,
+      "width": 780,
+      "height": 934,
+      "sha256": "72e2eb25cb1aaa27b13e4c13d8760f0ec245e238912b54d125e5c5682bd41ddc"
+    },
+    {
+      "file": "family-tablet-EP-4G1A0S-incorrect.png",
+      "bytes": 84260,
+      "width": 780,
+      "height": 1243,
+      "sha256": "a64018f4280689aa60b1da899f5eb86b6d2fb5064c71a890196755005f122505"
+    },
+    {
+      "file": "family-tablet-EP-4G1A0S-correction.png",
+      "bytes": 93777,
+      "width": 780,
+      "height": 1371,
+      "sha256": "bcfb18b269b52ff2e76b6a2261e8bb878b01968137dd5cc797ba174e35c61701"
+    },
+    {
+      "file": "family-tablet-EP-4G1A0S-model.png",
+      "bytes": 110752,
+      "width": 780,
+      "height": 1593,
+      "sha256": "644fb7e3ea5580526e52ddfc997ee238bfd6a96d63810b4dfd28f6c1487f570a"
+    },
+    {
+      "file": "family-tablet-EP-4G1A0S-correct.png",
+      "bytes": 84768,
+      "width": 780,
+      "height": 1189,
+      "sha256": "4ffc4af20eeb7a076c5c4edb317897a2865d833f51ee823005aff51328cf67bd"
+    },
+    {
+      "file": "family-tablet-EP-780GGH-unanswered.png",
+      "bytes": 59160,
+      "width": 780,
+      "height": 984,
+      "sha256": "b8f6216c9b312da31402e16d502b66210d1013ca3b5e71ccf407a2a583f19a04"
+    },
+    {
+      "file": "family-tablet-EP-780GGH-partial.png",
+      "bytes": 63126,
+      "width": 780,
+      "height": 984,
+      "sha256": "ff6d33de747b8e593f990a497c4268e740f1a529b55217c5cb2e3cbd2cc6ffd9"
+    },
+    {
+      "file": "family-tablet-EP-780GGH-incorrect.png",
+      "bytes": 90778,
+      "width": 780,
+      "height": 1292,
+      "sha256": "2090fde665a82ebd175592c889e3e8a68d6b63e00ac84b7105b5a2343056513f"
+    },
+    {
+      "file": "family-tablet-EP-780GGH-correction.png",
+      "bytes": 97900,
+      "width": 780,
+      "height": 1421,
+      "sha256": "fe6b3e4e367b6eacfd178739f81bb522e8d647025fcb31b4a0d5f057fd587946"
+    },
+    {
+      "file": "family-tablet-EP-780GGH-model.png",
+      "bytes": 110272,
+      "width": 780,
+      "height": 1588,
+      "sha256": "af4bdc339090c4002f6240dbbd449ca10682a819b13a0a8bd1021ebfc079c036"
+    },
+    {
+      "file": "family-tablet-EP-780GGH-correct.png",
+      "bytes": 88946,
+      "width": 780,
+      "height": 1238,
+      "sha256": "7f364d57ec6bfad8cf126831e195cbeb2bcca368e2e8408cbc2f7e7ec347619b"
+    },
+    {
+      "file": "family-mobile-AB-0000GJ-unanswered.png",
+      "bytes": 56926,
+      "width": 366,
+      "height": 1079,
+      "sha256": "eecb08f8b60cf0482cf3b28fb306b7591e3bc7e67c95b15395f9fa66ca5ddf8d"
+    },
+    {
+      "file": "family-mobile-AB-0000GJ-partial.png",
+      "bytes": 60077,
+      "width": 366,
+      "height": 1079,
+      "sha256": "5a31783a6b4b2369b12d219a6056d4c12425df33a547a44dc9b7e4049fbade12"
+    },
+    {
+      "file": "family-mobile-AB-0000GJ-incorrect.png",
+      "bytes": 95300,
+      "width": 366,
+      "height": 1599,
+      "sha256": "364ef3c68820b9cbe7a89927e57c0847efc72efd8701d7ad7f4914cfaf780625"
+    },
+    {
+      "file": "family-mobile-AB-0000GJ-correction.png",
+      "bytes": 102374,
+      "width": 366,
+      "height": 1766,
+      "sha256": "4ddc345cf25f0a4f9303b95025382cb79fb628722d825008475b53647282d1a5"
+    },
+    {
+      "file": "family-mobile-AB-0000GJ-model.png",
+      "bytes": 118215,
+      "width": 366,
+      "height": 1978,
+      "sha256": "71bf81294c15bad1335a16135db86e5ab37f48fae3b3fda2b7627a1c4bb386d3"
+    },
+    {
+      "file": "family-mobile-AB-0000GJ-correct.png",
+      "bytes": 91749,
+      "width": 366,
+      "height": 1578,
+      "sha256": "ca4bee50f02c7a69180b76005ab555a0ca687c78d71fe054ef9592546d5264b2"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-unanswered.png",
+      "bytes": 273623,
+      "width": 366,
+      "height": 1724,
+      "sha256": "e6a5fc3cbb32dae25e02b6b8bfd2c6bae2e78d8fc7b446eb88c1665b8aaa8202"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-partial.png",
+      "bytes": 278696,
+      "width": 366,
+      "height": 1724,
+      "sha256": "8a7e072c99b8bf5005089f0931b3a1b3f69c3e9c1adba4c23a486e371cd9a5d5"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-incorrect.png",
+      "bytes": 305139,
+      "width": 366,
+      "height": 2283,
+      "sha256": "c287ac1a59633ee91c1b9e0a897b162fdc80f07d065bf65da86c75bc51bcb15e"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-correction.png",
+      "bytes": 313985,
+      "width": 366,
+      "height": 2437,
+      "sha256": "778792a1c97856dc922e0cb1a70e0d9589e873bb1d76c898852dd714a9e230bc"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-model.png",
+      "bytes": 365762,
+      "width": 366,
+      "height": 3138,
+      "sha256": "57ee0e0d9dbebd2c769f00b8191daf3dec3e636cdbee990de474d62fd217547f"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-correct.png",
+      "bytes": 302337,
+      "width": 366,
+      "height": 2262,
+      "sha256": "b86b70c0339ef80115eecc31dba373899512d33323112c2e3c770d6366e23615"
+    },
+    {
+      "file": "family-mobile-CAL-00I9HC-working.png",
+      "bytes": 322418,
+      "width": 366,
+      "height": 2046,
+      "sha256": "f336bfcb29cebb7ec8612040c0f54b03148df81499fb0fe49de0cf687f1907f7"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-unanswered.png",
+      "bytes": 201000,
+      "width": 366,
+      "height": 1519,
+      "sha256": "36f4ee54f916e969e3439c87f0645568ef5ef4e711d4985124ad65abf0b9bad6"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-partial.png",
+      "bytes": 205678,
+      "width": 366,
+      "height": 1519,
+      "sha256": "84e51cb1c694a5369dbe4182a3ca4a7b2d2ef77ddb981a9ddcb0e77e2e5c20d7"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-incorrect.png",
+      "bytes": 233017,
+      "width": 366,
+      "height": 2099,
+      "sha256": "53dd3578a37d10d1124b112f0b97e163766b0781d9c08aa0861f2c5be6584754"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-correction.png",
+      "bytes": 242468,
+      "width": 366,
+      "height": 2263,
+      "sha256": "5cd014daf508697b93beb8f7b91572025907435e244e4f399ac332e7bc80d31e"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-model.png",
+      "bytes": 292687,
+      "width": 366,
+      "height": 3133,
+      "sha256": "c1345555591d65f9c53d74e1bc51aed3288608f4fee8fd0343dfb290282337fc"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-correct.png",
+      "bytes": 230184,
+      "width": 366,
+      "height": 2079,
+      "sha256": "b1e07c1195c6b0920d868f66d6e194098c96a2b7f752fdc67860104e1a336457"
+    },
+    {
+      "file": "family-mobile-BE-0002DC-working.png",
+      "bytes": 269522,
+      "width": 366,
+      "height": 2062,
+      "sha256": "c66286f9b13c3c3e0f51bdfe6a4123bbc333c6a6952f0e09c8c5b086f0b67cbc"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-unanswered.png",
+      "bytes": 205574,
+      "width": 366,
+      "height": 1214,
+      "sha256": "4cafccf3371d5072dd4ae51b4dfad325bd41d230b3b4bcc04983a1e2d1dea6a8"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-partial.png",
+      "bytes": 206056,
+      "width": 366,
+      "height": 1214,
+      "sha256": "b42a67b79e1453d91e02296df5ab0e31973f39d245773f49d25f9817b6c1af61"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-incorrect.png",
+      "bytes": 224086,
+      "width": 366,
+      "height": 1637,
+      "sha256": "5645c90f1b1c5518ae792080be1b5177474058d9aa95e1a831a475e351ef6131"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-correction.png",
+      "bytes": 230493,
+      "width": 366,
+      "height": 1801,
+      "sha256": "7d0bd80536b939eb5d441804836123152aa5326148a08101f079414ba6248187"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-model.png",
+      "bytes": 290343,
+      "width": 366,
+      "height": 2609,
+      "sha256": "98a8a16b266628998d56052c6cbd3ba5020e0189629835444a347cd641696f13"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-correct.png",
+      "bytes": 221755,
+      "width": 366,
+      "height": 1637,
+      "sha256": "b12a3f08d001dc283a7a003c826d4499a9b6e5f30af04fab8b3caed0b3dd4e01"
+    },
+    {
+      "file": "family-mobile-BE-0003K0-working.png",
+      "bytes": 370846,
+      "width": 366,
+      "height": 2633,
+      "sha256": "3f6acd215a92f96c367d61b604afecf22a6fc4a29f94b9537f7f757a4bab32b5"
+    },
+    {
+      "file": "family-mobile-EB-000001-unanswered.png",
+      "bytes": 16969,
+      "width": 366,
+      "height": 503,
+      "sha256": "777ff25bc8d98c6d3f083270d1222578dce919b7c9ae2ab8ba494a695da5ba59"
+    },
+    {
+      "file": "family-mobile-EB-000001-partial.png",
+      "bytes": 24766,
+      "width": 366,
+      "height": 503,
+      "sha256": "d4fd9292b3b0ff990de1a932237077a070ec01516a91e28e9a9c4991568c08a9"
+    },
+    {
+      "file": "family-mobile-EB-000001-incorrect.png",
+      "bytes": 64214,
+      "width": 366,
+      "height": 1305,
+      "sha256": "650b1c7de224df093942e060ce3157863a1caf6f961df7d3467746b2e7e944ed"
+    },
+    {
+      "file": "family-mobile-EB-000001-correction.png",
+      "bytes": 78042,
+      "width": 366,
+      "height": 1477,
+      "sha256": "3444311dbc6c2865d8a3d16ffd447835215cf0a2b9fd4b6c613e57d0fa82373a"
+    },
+    {
+      "file": "family-mobile-EB-000001-model.png",
+      "bytes": 127360,
+      "width": 366,
+      "height": 2069,
+      "sha256": "2f7a39ebb0035cb8f0e30f6104c5ae609e2a9d754b521950d3e02f222333cfdb"
+    },
+    {
+      "file": "family-mobile-EB-000001-correct.png",
+      "bytes": 69748,
+      "width": 366,
+      "height": 1305,
+      "sha256": "9d0eb44e0aa61d1cc87956671064ee984a93d22acaf03501fdd23956637592a5"
+    },
+    {
+      "file": "family-mobile-EE-8IPP11-unanswered.png",
+      "bytes": 24024,
+      "width": 366,
+      "height": 486,
+      "sha256": "cf0e5b9798b3671bdefe3fa6484d5e1a99eba3246a42b4dd981473b0700b6c6b"
+    },
+    {
+      "file": "family-mobile-EE-8IPP11-partial.png",
+      "bytes": 26580,
+      "width": 366,
+      "height": 486,
+      "sha256": "e5b3ae5e65f44e3eb886d58dc65c919057fe17818cce07e455f21af132cd8bf7"
+    },
+    {
+      "file": "family-mobile-EE-8IPP11-incorrect.png",
+      "bytes": 44023,
+      "width": 366,
+      "height": 789,
+      "sha256": "768724899899d08677a87327dfec3f5120fe5f855f89333bde51e83b1ab3fc99"
+    },
+    {
+      "file": "family-mobile-EE-8IPP11-correction.png",
+      "bytes": 51118,
+      "width": 366,
+      "height": 957,
+      "sha256": "d4e1a02b1df2fe6a77ff0ab696fece1bfd453ac13ebaf6934021148c9a619466"
+    },
+    {
+      "file": "family-mobile-EE-8IPP11-model.png",
+      "bytes": 60629,
+      "width": 366,
+      "height": 1106,
+      "sha256": "39e16d1ab30dd0f0ed55881556d99a486e4aaabbfc75fb04bb4bcc376db38c67"
+    },
+    {
+      "file": "family-mobile-EE-8IPP11-correct.png",
+      "bytes": 43724,
+      "width": 366,
+      "height": 789,
+      "sha256": "41d9b0ad4f972d3ededbae73f6060f61898f7cebd3e68ebaeabcebba1db6c751"
+    },
+    {
+      "file": "family-mobile-EE-6US2V7-unanswered.png",
+      "bytes": 26074,
+      "width": 366,
+      "height": 505,
+      "sha256": "3ab668aa6a7b81192dfd010c7fd9cf999ad1ac8538b4ddf41bcc0d8e7744e4f4"
+    },
+    {
+      "file": "family-mobile-EE-6US2V7-partial.png",
+      "bytes": 26419,
+      "width": 366,
+      "height": 505,
+      "sha256": "44bebb24264ec6ac93452a73a64a6c8ce376bd594ceb7e637c0f611e7ea71d2a"
+    },
+    {
+      "file": "family-mobile-EE-6US2V7-incorrect.png",
+      "bytes": 57381,
+      "width": 366,
+      "height": 963,
+      "sha256": "032bcd7236b59e71d5447cc61b5e7071f775e88337ae9c515cc91a2085e63a52"
+    },
+    {
+      "file": "family-mobile-EE-6US2V7-correction.png",
+      "bytes": 64602,
+      "width": 366,
+      "height": 1130,
+      "sha256": "398005e02d264f1fe45ada2e4016f1f4c7f08cc84b7fb625fa32c89b72a0fe02"
+    },
+    {
+      "file": "family-mobile-EE-6US2V7-model.png",
+      "bytes": 86321,
+      "width": 366,
+      "height": 1450,
+      "sha256": "abbd0e792cc4431fdd084d87d7322dc15c9addf5792c21c431d88200d873bfc7"
+    },
+    {
+      "file": "family-mobile-EE-6US2V7-correct.png",
+      "bytes": 57103,
+      "width": 366,
+      "height": 963,
+      "sha256": "c17f164afe4a09f6adccde46cb266063cb9bf4b52c21f4dc0b4286a8e7a3f845"
+    },
+    {
+      "file": "family-mobile-EP-BJLHC1-unanswered.png",
+      "bytes": 31456,
+      "width": 366,
+      "height": 681,
+      "sha256": "106b8c61b30cd1fc1a9a7777b54ff9ecb37a06307eb25e1baa5dcab3537283d4"
+    },
+    {
+      "file": "family-mobile-EP-BJLHC1-partial.png",
+      "bytes": 34499,
+      "width": 366,
+      "height": 681,
+      "sha256": "2d6bfd4f077a318870712e8013c32e86c026c28fb3fa7df0e320cec1e48e6b44"
+    },
+    {
+      "file": "family-mobile-EP-BJLHC1-incorrect.png",
+      "bytes": 56592,
+      "width": 366,
+      "height": 1060,
+      "sha256": "ae9467808c0907620b10e29ecbbb30e5e58cb205bfb3c282c85fb0890fff4961"
+    },
+    {
+      "file": "family-mobile-EP-BJLHC1-correction.png",
+      "bytes": 64590,
+      "width": 366,
+      "height": 1189,
+      "sha256": "ffc154b555854ac25f6aafd43fdd9ad03d26bee780e435e1729e2d0d1310bb44"
+    },
+    {
+      "file": "family-mobile-EP-BJLHC1-model.png",
+      "bytes": 73421,
+      "width": 366,
+      "height": 1357,
+      "sha256": "1984cd272efddb7f913c154023f3fc5247f192edecc7ab1b98b4acd901d42d08"
+    },
+    {
+      "file": "family-mobile-EP-BJLHC1-correct.png",
+      "bytes": 56038,
+      "width": 366,
+      "height": 1006,
+      "sha256": "be88d8467f2ff20c3dfb5f46bae3d82f161dc4f277455e0ab98e0966860ad951"
+    },
+    {
+      "file": "family-mobile-EP-APMO94-unanswered.png",
+      "bytes": 44932,
+      "width": 366,
+      "height": 832,
+      "sha256": "5abc6c5ecad760cbf58376427179db2d7c314ef777eb3e2a8ffa5ef986dc1437"
+    },
+    {
+      "file": "family-mobile-EP-APMO94-partial.png",
+      "bytes": 45005,
+      "width": 366,
+      "height": 832,
+      "sha256": "d4af352d1e280b721f6dc6805e4fe65eb7fdc9cc8fab00eebb631c13169d15c7"
+    },
+    {
+      "file": "family-mobile-EP-APMO94-incorrect.png",
+      "bytes": 62471,
+      "width": 366,
+      "height": 1104,
+      "sha256": "a6030988139f3d0514b528c720b290134ed395ad0f31f8ce4da97402b46e917c"
+    },
+    {
+      "file": "family-mobile-EP-APMO94-correction.png",
+      "bytes": 67865,
+      "width": 366,
+      "height": 1233,
+      "sha256": "8d608380a048a3af533f0db5f0fd8ded1ff67a785613305fa5756b264ea0db07"
+    },
+    {
+      "file": "family-mobile-EP-APMO94-model.png",
+      "bytes": 75647,
+      "width": 366,
+      "height": 1361,
+      "sha256": "e7170b8d44af70d94130da294a03140de15725676444f3120f1c0c1ac1a6f3d3"
+    },
+    {
+      "file": "family-mobile-EP-APMO94-correct.png",
+      "bytes": 62263,
+      "width": 366,
+      "height": 1104,
+      "sha256": "9f83618cb4faef7020f5467cfee0764b8b28da90aa823a1719a11bb38d04d236"
+    },
+    {
+      "file": "family-mobile-EP-CXMNAV-unanswered.png",
+      "bytes": 37249,
+      "width": 366,
+      "height": 744,
+      "sha256": "f1bea4da21e25b1f01af1f8d9ef42641597d621ad6e28f43f594b021f2900fb2"
+    },
+    {
+      "file": "family-mobile-EP-CXMNAV-partial.png",
+      "bytes": 38911,
+      "width": 366,
+      "height": 744,
+      "sha256": "b3fca5d92d65b9d4a1b2f1191990515b32db4a989873a9df20dc3761b9db9abb"
+    },
+    {
+      "file": "family-mobile-EP-CXMNAV-incorrect.png",
+      "bytes": 64550,
+      "width": 366,
+      "height": 1146,
+      "sha256": "e54c02de51a8abc7a8ffc5a6eaa8af7b75d83ebc8ba1ddd478d8da114007920d"
+    },
+    {
+      "file": "family-mobile-EP-CXMNAV-correction.png",
+      "bytes": 70031,
+      "width": 366,
+      "height": 1274,
+      "sha256": "5487de35c0e595411b1dc42a2843b78df0a3cd8b4f92ffd059edc4e432d1fdc0"
+    },
+    {
+      "file": "family-mobile-EP-CXMNAV-model.png",
+      "bytes": 78128,
+      "width": 366,
+      "height": 1388,
+      "sha256": "1cd25e35443165bdbf57c31e559f16939625b3f3e93988ef3003ff47afbec146"
+    },
+    {
+      "file": "family-mobile-EP-CXMNAV-correct.png",
+      "bytes": 61460,
+      "width": 366,
+      "height": 1092,
+      "sha256": "35faddd0d24e314bd0d0dd43cc2cd994d7d218e785a9869f1792868e623216af"
+    },
+    {
+      "file": "family-mobile-EP-4G1A0S-unanswered.png",
+      "bytes": 41172,
+      "width": 366,
+      "height": 927,
+      "sha256": "1572415d699925eb3f4c566fe5a272fc6d16e5d75160ef3ced67754e6a061264"
+    },
+    {
+      "file": "family-mobile-EP-4G1A0S-partial.png",
+      "bytes": 45365,
+      "width": 366,
+      "height": 927,
+      "sha256": "d721809598ebab3ae54cbf2ca0ac678f19ff238a3146eed6937d1ce9e6f9df8f"
+    },
+    {
+      "file": "family-mobile-EP-4G1A0S-incorrect.png",
+      "bytes": 75785,
+      "width": 366,
+      "height": 1389,
+      "sha256": "a3fc6d02e682c5de165c6f288e888ae68dcadef722adacdc8960add703a6415b"
+    },
+    {
+      "file": "family-mobile-EP-4G1A0S-correction.png",
+      "bytes": 84953,
+      "width": 366,
+      "height": 1518,
+      "sha256": "fffc2385bf944fc85086d30240afd5ef1a3e8589968e3d19b74202283599042c"
+    },
+    {
+      "file": "family-mobile-EP-4G1A0S-model.png",
+      "bytes": 100238,
+      "width": 366,
+      "height": 1723,
+      "sha256": "ac975480d61c7b27485cc0abc7130df7b21dd35efc95b154ce984c5b2e4af129"
+    },
+    {
+      "file": "family-mobile-EP-4G1A0S-correct.png",
+      "bytes": 76378,
+      "width": 366,
+      "height": 1335,
+      "sha256": "95730894281bf929def5a75d5bc09c4a54228b7ff2423a39af395eb17febde79"
+    },
+    {
+      "file": "family-mobile-EP-780GGH-unanswered.png",
+      "bytes": 51588,
+      "width": 366,
+      "height": 1054,
+      "sha256": "c02f47f1b6046c606cfe51c80a01e498100e5b273f90ad0e9f366e31da3224b4"
+    },
+    {
+      "file": "family-mobile-EP-780GGH-partial.png",
+      "bytes": 54619,
+      "width": 366,
+      "height": 1054,
+      "sha256": "fa6cd2efd39f612a3e46c6716f0ee560fc7df2b650ae7bf97df2122ae000fdab"
+    },
+    {
+      "file": "family-mobile-EP-780GGH-incorrect.png",
+      "bytes": 82406,
+      "width": 366,
+      "height": 1499,
+      "sha256": "ed23c053dd5257f6f4294bcc7e9016756b325937657a44253c1090c6d3733970"
+    },
+    {
+      "file": "family-mobile-EP-780GGH-correction.png",
+      "bytes": 89231,
+      "width": 366,
+      "height": 1628,
+      "sha256": "77953abbc2ec94b88d747f7533c3ad85690d1856fa050fd23907a095980ddd00"
+    },
+    {
+      "file": "family-mobile-EP-780GGH-model.png",
+      "bytes": 100717,
+      "width": 366,
+      "height": 1782,
+      "sha256": "dcf402347e2f892b5a4e89f6031a398afb4696c97060b75b3dca03c346de30ef"
+    },
+    {
+      "file": "family-mobile-EP-780GGH-correct.png",
+      "bytes": 80676,
+      "width": 366,
+      "height": 1445,
+      "sha256": "bd8a1be5293d1eead9f02368bdcedfda0519e176158dd3cdc78b9861a56d15b7"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-unanswered.png",
+      "bytes": 376505,
+      "width": 1120,
+      "height": 1162,
+      "sha256": "d761f22cf707e0dd9008cc8824bd13f0016a29016e6b5bc28dd7b055d452d03f"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-partial.png",
+      "bytes": 380989,
+      "width": 1120,
+      "height": 1162,
+      "sha256": "c333ad50b3e3f7cbdd79c0748b01dae03a1965ce7c05b522a758df6e6896bf9e"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-incorrect.png",
+      "bytes": 405701,
+      "width": 1120,
+      "height": 1621,
+      "sha256": "06fbdcf72e2b0cb36140f5b2ad9ddf05ee45f3910b12d3acfb2c4850677a1dc9"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-correction.png",
+      "bytes": 414074,
+      "width": 1120,
+      "height": 1775,
+      "sha256": "2be6f16167026c1b219a3cd373ea6465c02906e145cbd9c19d25518918dca55e"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-model.png",
+      "bytes": 508084,
+      "width": 1120,
+      "height": 2430,
+      "sha256": "ec91a2d0bd59a4e2a52229c7396ac94af28d7e86f836da61e518c2902732edd1"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-correct.png",
+      "bytes": 402352,
+      "width": 1120,
+      "height": 1621,
+      "sha256": "78674b0d74eb7bb4a5d45b287499868bff83bd6928be181e67b9649a2a93d121"
+    },
+    {
+      "file": "numeric-final-desktop-CAL-00I9HC-working.png",
+      "bytes": 436534,
+      "width": 1120,
+      "height": 1348,
+      "sha256": "9529c896e78b10249fda98589ac67ad1349e00a55e0704d096c80fb95db04114"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-unanswered.png",
+      "bytes": 340047,
+      "width": 1120,
+      "height": 1300,
+      "sha256": "a11f2bf6ddbecc57edb02e343393674810bd89fc437e23cd2f40b333370a5c85"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-partial.png",
+      "bytes": 343695,
+      "width": 1120,
+      "height": 1300,
+      "sha256": "c930fbdb472a605f9bef2df5c9f4bf287aebca603d36f129045d5b89cf22e298"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-incorrect.png",
+      "bytes": 381168,
+      "width": 1120,
+      "height": 1780,
+      "sha256": "d829a7b23f3c2c4ee99df77f46a8989a6271d7f131a5f1cdb48749a0abff636a"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-correction.png",
+      "bytes": 387833,
+      "width": 1120,
+      "height": 1944,
+      "sha256": "3079d0749d037bbf386b47ad6f58beec9ebe562c1296d1f784f928e39815797b"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-model.png",
+      "bytes": 470501,
+      "width": 1120,
+      "height": 2691,
+      "sha256": "f3db19b127a27fab7c6b3746272ba21f21095de41afd9d8e8b37fbb3fb12d5c1"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-correct.png",
+      "bytes": 377207,
+      "width": 1120,
+      "height": 1780,
+      "sha256": "24cc2f98d60a5bf1a4b55d362ac0002b84abc86feb113d6b0e83194f08fbb9d5"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0002DC-working.png",
+      "bytes": 457809,
+      "width": 1120,
+      "height": 1622,
+      "sha256": "ef2d8e0f78ce9c80f2687e4eaff3cb332e3733a5133c1ddec11186dadd393e03"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-unanswered.png",
+      "bytes": 307830,
+      "width": 1120,
+      "height": 903,
+      "sha256": "0da284fbcf1659601ea49a527a01d74728f0756134dde75dd3e68c6be0f27567"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-partial.png",
+      "bytes": 302287,
+      "width": 1120,
+      "height": 903,
+      "sha256": "a52624950437af1f72595da59695ce3115dedddc7b5f838aa9f0a8b044977e45"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-incorrect.png",
+      "bytes": 327468,
+      "width": 1120,
+      "height": 1266,
+      "sha256": "31db7ed9adf6062bad6a01bd7b4f397605c1a08bded8d6de6d23c8766b19c033"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-correction.png",
+      "bytes": 332126,
+      "width": 1120,
+      "height": 1430,
+      "sha256": "5823cd94df06167e02caf01c669a7385dff65e09e26fac7b67e1d4b228570cb8"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-model.png",
+      "bytes": 421568,
+      "width": 1120,
+      "height": 2070,
+      "sha256": "fdeeb6dfa44519251d83fdb238092c594454e5be1e9321faeffae1b25820b305"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-correct.png",
+      "bytes": 324859,
+      "width": 1120,
+      "height": 1266,
+      "sha256": "44d6fb66e57f50b7b057adb3a5cda515f56570a34284805d8c98a42d27ff3e03"
+    },
+    {
+      "file": "numeric-final-desktop-BE-0003K0-working.png",
+      "bytes": 620161,
+      "width": 1120,
+      "height": 1749,
+      "sha256": "c70e8330abf2633906dc3699ce97704013971d6a0ef4be56030771cc9df2a941"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-unanswered.png",
+      "bytes": 327188,
+      "width": 780,
+      "height": 1203,
+      "sha256": "5f381b3c27a1b3fa2629a672b20e91384b17575d0e6bef6e3d6b22b0955bbf72"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-partial.png",
+      "bytes": 331129,
+      "width": 780,
+      "height": 1203,
+      "sha256": "97fa629ea770b9de32d509059162688a7b005ea268bcaa3618183f5a3894e629"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-incorrect.png",
+      "bytes": 355481,
+      "width": 780,
+      "height": 1661,
+      "sha256": "48ee0344b3187f8be74836b8feca7ad994a3a7ce7de786fd4301d02abea8a780"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-correction.png",
+      "bytes": 362008,
+      "width": 780,
+      "height": 1815,
+      "sha256": "863ae52bbbba2c1923ffef06271fac1eb33aed7e1390bcc01d12cca9a2cffb94"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-model.png",
+      "bytes": 443278,
+      "width": 780,
+      "height": 2494,
+      "sha256": "523a792beb1f90eff953acf9028946702347dcd23a392d7068ff8790d2b2e47d"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-correct.png",
+      "bytes": 352168,
+      "width": 780,
+      "height": 1661,
+      "sha256": "524b879552887e56cf15d4ceba8aaf3e17df989ab44546ef1d50643a99462acd"
+    },
+    {
+      "file": "numeric-final-tablet-CAL-00I9HC-working.png",
+      "bytes": 392520,
+      "width": 780,
+      "height": 1451,
+      "sha256": "1465b934399f530584d4005416d99df657f7eec598a00834e4fa8cfed0870946"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-unanswered.png",
+      "bytes": 296450,
+      "width": 780,
+      "height": 1344,
+      "sha256": "89d059a3af098e9b65861a378fb4ba9e0dd21c2e04ba3c6a8d2655de9afa688f"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-partial.png",
+      "bytes": 300637,
+      "width": 780,
+      "height": 1344,
+      "sha256": "65ea251b84d32d9569acbc446dbb9b3717cf980aed2ea9087aa5f383c90ccbfe"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-incorrect.png",
+      "bytes": 328451,
+      "width": 780,
+      "height": 1823,
+      "sha256": "1ff6ef993b8656741086d779bbabb3e101d68fdae06f3b336b8ad26bd702222d"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-correction.png",
+      "bytes": 334967,
+      "width": 780,
+      "height": 1987,
+      "sha256": "748e9c2d1e7c554b9127ef344a057e233ee34eba6ff5a145239c9651e44db279"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-model.png",
+      "bytes": 408086,
+      "width": 780,
+      "height": 2716,
+      "sha256": "46f4ce9d3b27730f527d62a4abc626c3a307473601e5147b79772bed14385960"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-correct.png",
+      "bytes": 325250,
+      "width": 780,
+      "height": 1823,
+      "sha256": "ab9feb87f79728a9902675cefe23344d18c505ccbf71de98f9eebc3a959f24da"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0002DC-working.png",
+      "bytes": 399259,
+      "width": 780,
+      "height": 1699,
+      "sha256": "b71d3740973645a45c4783fc1d9bbf3736b01fd4bf45c34794905189ae66ebc9"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-unanswered.png",
+      "bytes": 282604,
+      "width": 780,
+      "height": 983,
+      "sha256": "6fad6c88d28eac91ee1e5c28da7e738f3ee5427a9286ad11e53be202cecc13a6"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-partial.png",
+      "bytes": 277966,
+      "width": 780,
+      "height": 983,
+      "sha256": "aefe56a59326188cc0827f976e3c05225ee5f5fc44ba4b2d4320ea359d546251"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-incorrect.png",
+      "bytes": 301736,
+      "width": 780,
+      "height": 1346,
+      "sha256": "5c67a90dd7786e8ece3e78b7bd84354702929942fb03279aa1d7b487bb4b4f3b"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-correction.png",
+      "bytes": 306503,
+      "width": 780,
+      "height": 1510,
+      "sha256": "18714c8c6f46fd818074c4ccdb3d2d004191f7d59f740a2ff78abaf20da6ba2e"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-model.png",
+      "bytes": 381183,
+      "width": 780,
+      "height": 2155,
+      "sha256": "871ac8f7a3bf40e01251ba559c07677c154ea2b21b98698629f03051a4f956fd"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-correct.png",
+      "bytes": 298996,
+      "width": 780,
+      "height": 1346,
+      "sha256": "177831c55091e6249d2abf891245e314f2b90e33a5d77129b77c9a9f52abca11"
+    },
+    {
+      "file": "numeric-final-tablet-BE-0003K0-working.png",
+      "bytes": 541008,
+      "width": 780,
+      "height": 1852,
+      "sha256": "9a1c0b85edd35140dd4b0f24577b2931e10b5ec208b684e763b7cfa3a4fb9a33"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-unanswered.png",
+      "bytes": 241742,
+      "width": 366,
+      "height": 1564,
+      "sha256": "3c68d3474d91d9c26d7c75f19dde1318d7661f53bbf2bc2c2d1e337631bea586"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-partial.png",
+      "bytes": 246963,
+      "width": 366,
+      "height": 1564,
+      "sha256": "1593849f2f1abc92742ed487dfaf803fa4df03744f8cf8b7d884e6259292125b"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-incorrect.png",
+      "bytes": 278759,
+      "width": 366,
+      "height": 2123,
+      "sha256": "49fe5beefa64b5e01b2fa8cfde109d036dfe63e50439537d8d6f25b2ad6f3998"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-correction.png",
+      "bytes": 287765,
+      "width": 366,
+      "height": 2277,
+      "sha256": "13249e9dce4e002ae1f788a4e113ddeffaa536eb6c3f2a0e9aebbc2173212bb1"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-model.png",
+      "bytes": 341138,
+      "width": 366,
+      "height": 2978,
+      "sha256": "25387ac09629d6b5b72f8930a452d3dc7a06f898c9a2368500dabce64246a3cf"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-correct.png",
+      "bytes": 275198,
+      "width": 366,
+      "height": 2102,
+      "sha256": "176e3a8add179405f821789000fb840eb034450da98082af9fd0d58fd42e75e8"
+    },
+    {
+      "file": "numeric-final-mobile-CAL-00I9HC-working.png",
+      "bytes": 290883,
+      "width": 366,
+      "height": 1886,
+      "sha256": "a28d3445e10aed77f0ff4a319e9c0622b15de915f4a685c2372b5370b5e11d6c"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-unanswered.png",
+      "bytes": 201000,
+      "width": 366,
+      "height": 1519,
+      "sha256": "36f4ee54f916e969e3439c87f0645568ef5ef4e711d4985124ad65abf0b9bad6"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-partial.png",
+      "bytes": 205678,
+      "width": 366,
+      "height": 1519,
+      "sha256": "84e51cb1c694a5369dbe4182a3ca4a7b2d2ef77ddb981a9ddcb0e77e2e5c20d7"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-incorrect.png",
+      "bytes": 237374,
+      "width": 366,
+      "height": 2099,
+      "sha256": "bef5eb279a0435da5c80749004a0524b9525f440608039766edbce6d25be1eec"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-correction.png",
+      "bytes": 246662,
+      "width": 366,
+      "height": 2263,
+      "sha256": "2e00c08aa237b75b65fb1dab25a7d1c02452226e9f94825ca82815c2ff7d6988"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-model.png",
+      "bytes": 296850,
+      "width": 366,
+      "height": 3133,
+      "sha256": "35393f2276076a045e4c3b5e101ec7fa86abd714c2abd74f5f69d4bd245059dc"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-correct.png",
+      "bytes": 234560,
+      "width": 366,
+      "height": 2079,
+      "sha256": "7784e3731ca6331a2dd0cebb6cbacf8b048eb64a6410d8d31ae937626736469c"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0002DC-working.png",
+      "bytes": 269522,
+      "width": 366,
+      "height": 2062,
+      "sha256": "c66286f9b13c3c3e0f51bdfe6a4123bbc333c6a6952f0e09c8c5b086f0b67cbc"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-unanswered.png",
+      "bytes": 205574,
+      "width": 366,
+      "height": 1214,
+      "sha256": "4cafccf3371d5072dd4ae51b4dfad325bd41d230b3b4bcc04983a1e2d1dea6a8"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-partial.png",
+      "bytes": 206056,
+      "width": 366,
+      "height": 1214,
+      "sha256": "b42a67b79e1453d91e02296df5ab0e31973f39d245773f49d25f9817b6c1af61"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-incorrect.png",
+      "bytes": 228547,
+      "width": 366,
+      "height": 1637,
+      "sha256": "4d4ff43f563e24cb0cf51654e4dc891603582df53c4c22f16df0b533f43f2c81"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-correction.png",
+      "bytes": 234732,
+      "width": 366,
+      "height": 1801,
+      "sha256": "354f30574e23ed3ab2b5a5f621f3a561471b7368d7153e64c6216bf442d2b4dc"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-model.png",
+      "bytes": 294797,
+      "width": 366,
+      "height": 2609,
+      "sha256": "5246a188caa50cc4f5596bd5b451071057d868e75d53dde2c02176a88ef13438"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-correct.png",
+      "bytes": 226282,
+      "width": 366,
+      "height": 1637,
+      "sha256": "38029ea24799244175d30ec8673b83b175fbe2f332658da72db1fb07d01b5c95"
+    },
+    {
+      "file": "numeric-final-mobile-BE-0003K0-working.png",
+      "bytes": 370846,
+      "width": 366,
+      "height": 2633,
+      "sha256": "3f6acd215a92f96c367d61b604afecf22a6fc4a29f94b9537f7f757a4bab32b5"
+    },
+    {
+      "file": "rubric-desktop-SBC-U5FSU0-unanswered.png",
+      "bytes": 61600,
+      "width": 1120,
+      "height": 1145,
+      "sha256": "1cb28ed9d536d4f23330d94e8c0ac19dc6d3926819617310d0ce72188bd0cf08"
+    },
+    {
+      "file": "rubric-desktop-SBC-U5FSU0-partial.png",
+      "bytes": 81226,
+      "width": 1120,
+      "height": 1145,
+      "sha256": "6feea1d14384d9432c2eedab9a1e6e56a7f327ecad694c8e0d3e078922104b26"
+    },
+    {
+      "file": "rubric-desktop-SBC-U5FSU0-self-review.png",
+      "bytes": 189161,
+      "width": 1120,
+      "height": 1519,
+      "sha256": "673055eb059d8d33e2191e6ac78ae5745ad4c2ff4280cdcd03dbd363bc515d46"
+    },
+    {
+      "file": "rubric-desktop-SBC-U5FSU0-correct.png",
+      "bytes": 866840,
+      "width": 1120,
+      "height": 7812,
+      "sha256": "33abaed778af5dc12e65b90d79c0ebdf266c8dd9caa4b25ec75e28f0e9baf860"
+    },
+    {
+      "file": "rubric-desktop-SBC-U5FSU0-model.png",
+      "bytes": 908093,
+      "width": 1120,
+      "height": 8538,
+      "sha256": "4ae736497eb34132b969954ffbed0581b4c01e39f39e5ef5ea21fbdb6f8c15b0"
+    },
+    {
+      "file": "rubric-desktop-SBC-U5FSU0-incorrect.png",
+      "bytes": 137578,
+      "width": 1120,
+      "height": 1777,
+      "sha256": "1bd0d62c8ace1c18906ceccc413d4cd7619aff8b704e93c406240b05c2ec1588"
+    },
+    {
+      "file": "rubric-desktop-SBC-UFFEIZ-unanswered.png",
+      "bytes": 27398,
+      "width": 1120,
+      "height": 494,
+      "sha256": "8dc67d01f5f2f9bca3300c18133fd5542d1992b402942ab0b75286e83c70bbc0"
+    },
+    {
+      "file": "rubric-desktop-SBC-UFFEIZ-partial.png",
+      "bytes": 41850,
+      "width": 1120,
+      "height": 494,
+      "sha256": "601c8b5be2ffeb0685b50b495842bd02ca333cd0cb0f375227e430ce872fdb9e"
+    },
+    {
+      "file": "rubric-desktop-SBC-UFFEIZ-self-review.png",
+      "bytes": 97138,
+      "width": 1120,
+      "height": 1059,
+      "sha256": "9b0caa56b74a845f46a392eee8fd3a685d744e28be181707b8fd37f56d9b57d1"
+    },
+    {
+      "file": "rubric-desktop-SBC-UFFEIZ-correct.png",
+      "bytes": 233904,
+      "width": 1120,
+      "height": 2757,
+      "sha256": "18d5302eefba65e9dbc5e8078ef369e9b362da008dadad4713d379031dc987e3"
+    },
+    {
+      "file": "rubric-desktop-SBC-UFFEIZ-model.png",
+      "bytes": 275038,
+      "width": 1120,
+      "height": 3483,
+      "sha256": "cd6e881daf329a6315eb3b24a577e2764df392b5d3648dc56fdee2317ca34a3c"
+    },
+    {
+      "file": "rubric-desktop-SBC-UFFEIZ-incorrect.png",
+      "bytes": 123763,
+      "width": 1120,
+      "height": 1777,
+      "sha256": "3a65b47cac9f35a8b9880ebf36aa9d8c1d3ee3c411f3d0f30861767dab4606c5"
+    },
+    {
+      "file": "rubric-tablet-SBC-U5FSU0-unanswered.png",
+      "bytes": 79496,
+      "width": 780,
+      "height": 1739,
+      "sha256": "6c5261e30ff9b452279401d84c620333af211033d3af9760d8557193b8cb8dd3"
+    },
+    {
+      "file": "rubric-tablet-SBC-U5FSU0-partial.png",
+      "bytes": 87125,
+      "width": 780,
+      "height": 1739,
+      "sha256": "b590f8a467095c8d4857011e5947751528e1996d9b7bdbf451687eade13278b0"
+    },
+    {
+      "file": "rubric-tablet-SBC-U5FSU0-self-review.png",
+      "bytes": 178837,
+      "width": 780,
+      "height": 2331,
+      "sha256": "003f3c7f06689ff0fb3523c4ef8f0f6db185c9732c1a560ae4d1b18fb14e8acd"
+    },
+    {
+      "file": "rubric-tablet-SBC-U5FSU0-correct.png",
+      "bytes": 661546,
+      "width": 780,
+      "height": 5241,
+      "sha256": "cc6e1cfe40b50a93d1584a02e526992b72c309f4545f8fbde95f8b921cadb811"
+    },
+    {
+      "file": "rubric-tablet-SBC-U5FSU0-model.png",
+      "bytes": 691879,
+      "width": 780,
+      "height": 5755,
+      "sha256": "c3aeadc9ec2ec773dc2a994695be937c1cc7d82cad6016aabebe5632f902d83a"
+    },
+    {
+      "file": "rubric-tablet-SBC-U5FSU0-incorrect.png",
+      "bytes": 126384,
+      "width": 780,
+      "height": 2378,
+      "sha256": "83105130fa3ed10a1a25aad61da418fa7587c3d21a15f4eab0ec736e4139646c"
+    },
+    {
+      "file": "rubric-tablet-SBC-UFFEIZ-unanswered.png",
+      "bytes": 27290,
+      "width": 780,
+      "height": 504,
+      "sha256": "17539f451175884e71ce7994329703f9b52642d83b4b804d9b848530cef2ccfc"
+    },
+    {
+      "file": "rubric-tablet-SBC-UFFEIZ-partial.png",
+      "bytes": 39891,
+      "width": 780,
+      "height": 504,
+      "sha256": "e73197ec37628f2309f8f5fdcaf12251c6b61990d0d1b30279171cd194206701"
+    },
+    {
+      "file": "rubric-tablet-SBC-UFFEIZ-self-review.png",
+      "bytes": 91596,
+      "width": 780,
+      "height": 1853,
+      "sha256": "a15f7b8a82c05af35d34868eaf76ddcf680257d33790c55bd06906f2dcbeed9f"
+    },
+    {
+      "file": "rubric-tablet-SBC-UFFEIZ-correct.png",
+      "bytes": 195771,
+      "width": 780,
+      "height": 2797,
+      "sha256": "ebfd0f0146aeb51be6b58e780bc04484156721cc86a9e07d2f61ad776894d19d"
+    },
+    {
+      "file": "rubric-tablet-SBC-UFFEIZ-model.png",
+      "bytes": 226793,
+      "width": 780,
+      "height": 3311,
+      "sha256": "c7391e0cd597bdc908132c91335437fea43488aba595a6d9d509ee2523384045"
+    },
+    {
+      "file": "rubric-tablet-SBC-UFFEIZ-incorrect.png",
+      "bytes": 113461,
+      "width": 780,
+      "height": 2378,
+      "sha256": "8637e3e7a8ea2900f979ec5d245cf5cc9702fd5235375d88948ea1515497c918"
+    },
+    {
+      "file": "rubric-mobile-SBC-U5FSU0-unanswered.png",
+      "bytes": 77734,
+      "width": 366,
+      "height": 1945,
+      "sha256": "f681adf1933238396c289b1ed6a38c85e19adce638e24b35f1d1558bbe8e5bc5"
+    },
+    {
+      "file": "rubric-mobile-SBC-U5FSU0-partial.png",
+      "bytes": 82471,
+      "width": 366,
+      "height": 1945,
+      "sha256": "c3035c3dd5b765b81070f47db461440011a2479c38717fadff040591f4332dfc"
+    },
+    {
+      "file": "rubric-mobile-SBC-U5FSU0-self-review.png",
+      "bytes": 183174,
+      "width": 366,
+      "height": 4118,
+      "sha256": "dba39f8b74c072e9d748ee613a83e2f670784cb7c84e8ce217f9f0f6de1f91e4"
+    },
+    {
+      "file": "rubric-mobile-SBC-U5FSU0-correct.png",
+      "bytes": 654373,
+      "width": 366,
+      "height": 10891,
+      "sha256": "c3e0a5d649df1eb4a635c0e8040d02c712e9c1eb1ba96c91865a0e4f9e4c8f51"
+    },
+    {
+      "file": "rubric-mobile-SBC-U5FSU0-model.png",
+      "bytes": 682935,
+      "width": 366,
+      "height": 11617,
+      "sha256": "00a900dc192a63fb1f791aa6579cbbe8a29775ceb37c098464c53e1f400fffa8"
+    },
+    {
+      "file": "rubric-mobile-SBC-U5FSU0-incorrect.png",
+      "bytes": 129055,
+      "width": 366,
+      "height": 2700,
+      "sha256": "db43336250f739afa45e5e3e6694a6041da15c326b4022f75e6267a0362a54fb"
+    },
+    {
+      "file": "rubric-mobile-SBC-UFFEIZ-unanswered.png",
+      "bytes": 28865,
+      "width": 366,
+      "height": 577,
+      "sha256": "c675d08d6c70d3afc7a1727c7968c45c50974bfefbc74159417440eada794926"
+    },
+    {
+      "file": "rubric-mobile-SBC-UFFEIZ-partial.png",
+      "bytes": 35051,
+      "width": 366,
+      "height": 577,
+      "sha256": "38f670f4b0654d950090e6b7fb39c81a0193ae46ee3a0bcc05fb7742dab091ce"
+    },
+    {
+      "file": "rubric-mobile-SBC-UFFEIZ-self-review.png",
+      "bytes": 88919,
+      "width": 366,
+      "height": 1870,
+      "sha256": "5f653f6db90ce79dd36b51358e04abec4ca1819516f1fe04298b92a5fe7de70a"
+    },
+    {
+      "file": "rubric-mobile-SBC-UFFEIZ-correct.png",
+      "bytes": 194276,
+      "width": 366,
+      "height": 3590,
+      "sha256": "90efc51d5beff3c378adad5405bfaa1b1f8ff320792169863f6f11080749e7ed"
+    },
+    {
+      "file": "rubric-mobile-SBC-UFFEIZ-model.png",
+      "bytes": 223416,
+      "width": 366,
+      "height": 4316,
+      "sha256": "504bac69eebf62cd0e2f4d744b7f1e88a53dcb94a2deac6492a32ea21a949ee4"
+    },
+    {
+      "file": "rubric-mobile-SBC-UFFEIZ-incorrect.png",
+      "bytes": 115164,
+      "width": 366,
+      "height": 2609,
+      "sha256": "640b5ec6f312bae958ef618ba67ef8f8b2ea21b92f80be9b59266681529d47c7"
+    },
+    {
+      "file": "invalid-enter-titration.png",
+      "bytes": 510492,
+      "width": 1120,
+      "height": 1351,
+      "sha256": "9036c81d173e25791f4961e9b206e17d73973e5446594fd938e5e5de2d585590"
+    },
+    {
+      "file": "invalid-enter-energy.png",
+      "bytes": 117982,
+      "width": 1120,
+      "height": 1820,
+      "sha256": "624065b80e70061dc12a6d34957fc3594ec062fd4cc19fe7946f5d51a8868904"
+    },
+    {
+      "file": "teacher-mobile-AB-0000GJ.png",
+      "bytes": 76315,
+      "width": 366,
+      "height": 1396,
+      "sha256": "6f0e15d5598c6b7e349f69f2189ee5cef3eef82059c4af8fd74e8c070c7fc397"
+    },
+    {
+      "file": "teacher-mobile-AB-0002J2.png",
+      "bytes": 43637,
+      "width": 366,
+      "height": 799,
+      "sha256": "c33d357bae7aadaa3d417339c99daa83d170a468613ca8e049790dba770b0f49"
+    },
+    {
+      "file": "teacher-mobile-AB-000I8Q.png",
+      "bytes": 59002,
+      "width": 366,
+      "height": 1093,
+      "sha256": "e19076ec61349ef5a4dde2a14a9a35edfcd4c77c111d0c86a21830bad9268b63"
+    },
+    {
+      "file": "teacher-mobile-AB-000I8R.png",
+      "bytes": 88114,
+      "width": 366,
+      "height": 1646,
+      "sha256": "f96438d590f39c91152323fdadb35d9e83218066150389d3fc930c98be7af22c"
+    },
+    {
+      "file": "teacher-mobile-AB-0000GH.png",
+      "bytes": 117366,
+      "width": 366,
+      "height": 2204,
+      "sha256": "dcf6afebc9ea7c4b70e95a23e51d6d38fbc82504cfa6ab0db76d2580dd680c48"
+    },
+    {
+      "file": "teacher-mobile-SBC-U5FSU0.png",
+      "bytes": 108665,
+      "width": 366,
+      "height": 2778,
+      "sha256": "229072e1ae0d01c1d4b765db4147fa1224bffe28ce661ac61b85e1b999b3202a"
+    },
+    {
+      "file": "teacher-mobile-SBC-UFFEIZ.png",
+      "bytes": 57885,
+      "width": 366,
+      "height": 1411,
+      "sha256": "af2e2d1bb6b3e10fb496613f0633a4335e6a38e7fff95c6aaec37b48bab1ae41"
+    },
+    {
+      "file": "teacher-mobile-DAC-3QP3I7.png",
+      "bytes": 170056,
+      "width": 366,
+      "height": 1825,
+      "sha256": "331fa7a71f595408af86cf0214a4f5d85fee74ea393e49583b4e3aefae45333f"
+    },
+    {
+      "file": "teacher-mobile-DC-3QP3I7.png",
+      "bytes": 147996,
+      "width": 366,
+      "height": 1603,
+      "sha256": "7cdb76d1df6e90649a7fc1aba965e047b0f2d6c337e1b551974232c564a74159"
+    },
+    {
+      "file": "teacher-mobile-TC-GMPGTV.png",
+      "bytes": 414438,
+      "width": 366,
+      "height": 2691,
+      "sha256": "6670d095a8410f2ecd6933bf9c2d3acf477d21d2c8a5510401a96155670404c0"
+    },
+    {
+      "file": "teacher-mobile-CAL-00I9HC.png",
+      "bytes": 301519,
+      "width": 366,
+      "height": 2369,
+      "sha256": "ebac7de447a58850d49ed367e0e8bbfc78cb24cdd1ae66ad06759ab46564e37c"
+    },
+    {
+      "file": "teacher-mobile-CAL-02P3MQ.png",
+      "bytes": 352454,
+      "width": 366,
+      "height": 2940,
+      "sha256": "b84c51afd4e678fcd77c9827bc11454d0d7687e45c28109606293b33528a92d4"
+    },
+    {
+      "file": "teacher-mobile-CAL-00KJWG.png",
+      "bytes": 277635,
+      "width": 366,
+      "height": 2097,
+      "sha256": "95bdb702f370031fa7ee4b414146072bc2b7ee3ddf4ffe4eef85d9e6a557359e"
+    },
+    {
+      "file": "teacher-mobile-BE-0002DC.png",
+      "bytes": 260194,
+      "width": 366,
+      "height": 2493,
+      "sha256": "aaecc47d44d9ef83734c4cd1f97b1c2204522eac5d52da5fdc4729ee04999775"
+    },
+    {
+      "file": "teacher-mobile-BE-0002KG.png",
+      "bytes": 229116,
+      "width": 366,
+      "height": 2025,
+      "sha256": "2eaf87f76c260f2f975e101d2b8037fcdadc7e858c28eaaaee74a81c16c03417"
+    },
+    {
+      "file": "teacher-mobile-BE-0003K0.png",
+      "bytes": 262014,
+      "width": 366,
+      "height": 2070,
+      "sha256": "7bc0515a74596f7f04f3480ff071fafff870e1f68149715ae0d5d2de03a6995d"
+    },
+    {
+      "file": "teacher-mobile-EB-000001.png",
+      "bytes": 73728,
+      "width": 366,
+      "height": 1185,
+      "sha256": "6a9781c3ad6a9781913ed566ec4d0e8dcbfb7e6780b69a56cbeeaa62feeee514"
+    },
+    {
+      "file": "teacher-mobile-EC-TXDM70.png",
+      "bytes": 81948,
+      "width": 366,
+      "height": 1812,
+      "sha256": "18c2bcf601a5b434bac97a8f680806d2daaa797c5bbc36246db7d083a39f7ac3"
+    },
+    {
+      "file": "teacher-mobile-EE-8IPP11.png",
+      "bytes": 39720,
+      "width": 366,
+      "height": 694,
+      "sha256": "5e145c5c86aaf02f4ec0aabd0da28e75e1c31b065b79d3130b4cb79e8f19bfa4"
+    },
+    {
+      "file": "teacher-mobile-EE-7ERA95.png",
+      "bytes": 52606,
+      "width": 366,
+      "height": 945,
+      "sha256": "41c0046f9e2d4b2ce3632fd1b28e2da236b23671e04c44f07816b7699c585fce"
+    },
+    {
+      "file": "teacher-mobile-EE-6US2V7.png",
+      "bytes": 54068,
+      "width": 366,
+      "height": 884,
+      "sha256": "720c0179ec84ada6ca96181b114c936f2b98ff2a011807389dfe8954e36f6b8d"
+    },
+    {
+      "file": "teacher-mobile-EE-1Q7XF7.png",
+      "bytes": 79130,
+      "width": 366,
+      "height": 1220,
+      "sha256": "82ebfe6113f2fb2d9466b1587d0a1b8107b4cf23a0cccccaef1a32d02255939b"
+    },
+    {
+      "file": "teacher-mobile-EE-3Y4QYZ.png",
+      "bytes": 67451,
+      "width": 366,
+      "height": 1114,
+      "sha256": "cb018391be3e19c5b96d115909e6f3e0cd911bd21f2a58fca8db22174a16bd31"
+    },
+    {
+      "file": "teacher-mobile-EE-3493E1.png",
+      "bytes": 100374,
+      "width": 366,
+      "height": 1547,
+      "sha256": "47fce8d3fb3d83c0e0e74a07d5f05895904991b2d8eccc30f089aa7ccd433d14"
+    },
+    {
+      "file": "teacher-mobile-EE-3E8P30.png",
+      "bytes": 82628,
+      "width": 366,
+      "height": 1362,
+      "sha256": "8a03c54f7144c02fa1f04c6132a642c028ab29d585a905b21ae6d0166451bfe6"
+    },
+    {
+      "file": "teacher-mobile-EE-19M67S.png",
+      "bytes": 86552,
+      "width": 366,
+      "height": 1396,
+      "sha256": "317d93cf35488ec0cfde1f29c780e66d8f233c68ee2abfd947a41005bf23d90c"
+    },
+    {
+      "file": "teacher-mobile-EE-7UIATW.png",
+      "bytes": 82473,
+      "width": 366,
+      "height": 1381,
+      "sha256": "566bb07ee103eb8cfd4933501a3c1854b31103dab18ec3d9dfef315ee5e51214"
+    },
+    {
+      "file": "teacher-mobile-EP-BJLHC1.png",
+      "bytes": 47364,
+      "width": 366,
+      "height": 918,
+      "sha256": "cd8bdeac03656dabb854cc1f5e190284d7bcdf5567a8f43d729143d6d1fb9187"
+    },
+    {
+      "file": "teacher-mobile-EP-APMO94.png",
+      "bytes": 59598,
+      "width": 366,
+      "height": 1029,
+      "sha256": "c49616dd3e5656b070ae6c7f6bcc90d1634e2b69d09a21bf6000c62a7200dd49"
+    },
+    {
+      "file": "teacher-mobile-EP-CXMNAV.png",
+      "bytes": 53063,
+      "width": 366,
+      "height": 941,
+      "sha256": "496acfa77b5950f3d67daeab038a0e37b74af7f365f9220dcbcba9bdd3a1417e"
+    },
+    {
+      "file": "teacher-mobile-EP-D7M8ZU.png",
+      "bytes": 78234,
+      "width": 366,
+      "height": 1230,
+      "sha256": "def54cc003a74a4baf82e75a4413742c3857fdc9445e1bb0d0995944a45eb90d"
+    },
+    {
+      "file": "teacher-mobile-EP-4G1A0S.png",
+      "bytes": 69238,
+      "width": 366,
+      "height": 1207,
+      "sha256": "1ea6a68626ac07261b55003726491d135dcc7c0d952551ac0b1b80eed762b852"
+    },
+    {
+      "file": "teacher-mobile-EP-4Q0VPR.png",
+      "bytes": 85083,
+      "width": 366,
+      "height": 1430,
+      "sha256": "2a0cf3a133d6510ca2b1e7de73031a81eaf71ba4088027da03f7b622c04428ed"
+    },
+    {
+      "file": "teacher-mobile-EP-780GGH.png",
+      "bytes": 76879,
+      "width": 366,
+      "height": 1297,
+      "sha256": "ccacae9f5f2cc09f42081a9facb4a6cf54d09ecf371f3d823904060c76c1ec88"
+    },
+    {
+      "file": "teacher-mobile-EP-6Y0URI.png",
+      "bytes": 74824,
+      "width": 366,
+      "height": 1230,
+      "sha256": "8097f18841dba98eef381f4d4181a49bd764d1888d1d74cfa6562ee1f71c1d9d"
+    },
+    {
+      "file": "rubric-revision-finished.png",
+      "bytes": 306971,
+      "width": 780,
+      "height": 3333,
+      "sha256": "3cd8cc6b81bc124ce747e94b6d995ba9ab68f260a3fc385104551091988aa96b"
+    },
+    {
+      "file": "react-desktop-full-chrome.png",
+      "bytes": 63038,
+      "width": 1440,
+      "height": 1000,
+      "sha256": "f6414deb24826c74b057f8f04142cedbf286dbe2cacc999c5bb37e0cf4a7d921"
+    },
+    {
+      "file": "react-desktop-unanswered.png",
+      "bytes": 40344,
+      "width": 1120,
+      "height": 426,
+      "sha256": "53de48dd89c2a84943c29b8884b4d5920900deafbfda8b0f4366040227c46c58"
+    },
+    {
+      "file": "original-desktop-unanswered.png",
+      "bytes": 39928,
+      "width": 1398,
+      "height": 379,
+      "sha256": "634c87e585280e86cf690ad66f673bfdd9b9382a2c78c359980a5c49a71b2eef"
+    },
+    {
+      "file": "react-desktop-partial.png",
+      "bytes": 42184,
+      "width": 1120,
+      "height": 426,
+      "sha256": "13d0a06ea3d55b235650a534ddec0772588a5d0ccfa604a29e4a04cef7895863"
+    },
+    {
+      "file": "original-desktop-partial.png",
+      "bytes": 41803,
+      "width": 1398,
+      "height": 379,
+      "sha256": "973a8a93f9d3f65507ae8af68f830f8d57307fcf4985f4ce26ae6d6c43e77fc4"
+    },
+    {
+      "file": "react-desktop-incorrect.png",
+      "bytes": 72572,
+      "width": 1120,
+      "height": 663,
+      "sha256": "1332c1002ebb28244eb737794b004266898e4179bbdc87784995c0d21051d718"
+    },
+    {
+      "file": "original-desktop-incorrect.png",
+      "bytes": 60558,
+      "width": 1398,
+      "height": 511,
+      "sha256": "2eb15dfd5b4fa1bbc7acbd5e641d9ec9375a390246f4d7f157eed2f54277bd7e"
+    },
+    {
+      "file": "react-desktop-correction.png",
+      "bytes": 82966,
+      "width": 1120,
+      "height": 848,
+      "sha256": "6dd691edd2a2fda37157bd540b17b231a8df87b84f7524b3ad0e7664035ac997"
+    },
+    {
+      "file": "original-desktop-correction.png",
+      "bytes": 57122,
+      "width": 1398,
+      "height": 457,
+      "sha256": "079e58888eb494503f79c3d2323dac3efd1976f8dcabd7c403402921dfa64947"
+    },
+    {
+      "file": "react-desktop-model.png",
+      "bytes": 92696,
+      "width": 1120,
+      "height": 984,
+      "sha256": "0529744a17c030a300b6e16e4f23c6b118855547fcc4580546ba2175717df631"
+    },
+    {
+      "file": "original-desktop-model.png",
+      "bytes": 76723,
+      "width": 1398,
+      "height": 736,
+      "sha256": "dca840d200b25f2d25d0211f8ba64b19bc733cabbd00bcf29a5b3eee5429a6cb"
+    },
+    {
+      "file": "react-desktop-correct.png",
+      "bytes": 68902,
+      "width": 1120,
+      "height": 609,
+      "sha256": "88cc497812de8ef0dfd24d807cabc1abf247412f2180f6c51c315f2572ef32b7"
+    },
+    {
+      "file": "original-desktop-correct.png",
+      "bytes": 57122,
+      "width": 1398,
+      "height": 457,
+      "sha256": "079e58888eb494503f79c3d2323dac3efd1976f8dcabd7c403402921dfa64947"
+    },
+    {
+      "file": "react-desktop-teacher-model.png",
+      "bytes": 57039,
+      "width": 1120,
+      "height": 501,
+      "sha256": "807277057c604bfd7ca06586853019ee2d4f8232894a30d93710e57bf596b1c6"
+    },
+    {
+      "file": "react-tablet-full-chrome.png",
+      "bytes": 61161,
+      "width": 820,
+      "height": 1180,
+      "sha256": "00b98a0dda919f09d3e4c933dd1917c87557568d28c7cc07d544bc1d1515e425"
+    },
+    {
+      "file": "react-tablet-unanswered.png",
+      "bytes": 40819,
+      "width": 780,
+      "height": 586,
+      "sha256": "06a040510ee6d1625217fdebee577db2eb877cdf1ed4f999fdaf9d2dbcb08997"
+    },
+    {
+      "file": "original-tablet-unanswered.png",
+      "bytes": 40187,
+      "width": 778,
+      "height": 499,
+      "sha256": "57db96974015d57157d84d1a9884ce2e9655d37fc20e21a1a2f6e7ee5ca02783"
+    },
+    {
+      "file": "react-tablet-partial.png",
+      "bytes": 42641,
+      "width": 780,
+      "height": 586,
+      "sha256": "3908a3c53cfbe79539b2435e07f32ee98f8f32d4eb6f45b37411fcb6db1eb4b5"
+    },
+    {
+      "file": "original-tablet-partial.png",
+      "bytes": 42047,
+      "width": 778,
+      "height": 499,
+      "sha256": "8d4a7afc686d1a723f62646f035256e9bd3f6972b8b287dee56f06f4a395b43f"
+    },
+    {
+      "file": "react-tablet-incorrect.png",
+      "bytes": 67896,
+      "width": 780,
+      "height": 872,
+      "sha256": "89812b4cdf2b16b5f6f5684dba1737eab7191d55137fc069986f310e6e409f57"
+    },
+    {
+      "file": "original-tablet-incorrect.png",
+      "bytes": 58446,
+      "width": 778,
+      "height": 749,
+      "sha256": "39c4f222404300b9ae768e6468d808c36009e4dc860ae6ee406a92c9eec86b95"
+    },
+    {
+      "file": "react-tablet-correction.png",
+      "bytes": 77468,
+      "width": 780,
+      "height": 1034,
+      "sha256": "b6a1925d4b38aa0e2ba8bb856b283d0b1a764bd29772594b282cfd13a8886803"
+    },
+    {
+      "file": "original-tablet-correction.png",
+      "bytes": 55241,
+      "width": 778,
+      "height": 695,
+      "sha256": "16c2cd134f8f22568a5c65c992458fdb518fe83e3557d0fa46306c36189d1391"
+    },
+    {
+      "file": "react-tablet-model.png",
+      "bytes": 86843,
+      "width": 780,
+      "height": 1184,
+      "sha256": "5979ce2e3ef5ce866ea3b1edc98591ff68f581830eb8c1a2506de4b860596bc7"
+    },
+    {
+      "file": "original-tablet-model.png",
+      "bytes": 70399,
+      "width": 778,
+      "height": 897,
+      "sha256": "bb86d9cdc27acdf44fbe91bc57db335c31d6a95c7c2b8def48a6fcd9fa194032"
+    },
+    {
+      "file": "react-tablet-correct.png",
+      "bytes": 64302,
+      "width": 780,
+      "height": 818,
+      "sha256": "29b20138c7a5c018e170ab4694eb0f633212c3e2bb586ed197c2e13b5a0a4f3a"
+    },
+    {
+      "file": "original-tablet-correct.png",
+      "bytes": 55241,
+      "width": 778,
+      "height": 695,
+      "sha256": "16c2cd134f8f22568a5c65c992458fdb518fe83e3557d0fa46306c36189d1391"
+    },
+    {
+      "file": "react-tablet-teacher-model.png",
+      "bytes": 56373,
+      "width": 780,
+      "height": 797,
+      "sha256": "5fbafec7016649b1821f83b84d8e7403f4547cfa88ee9f82d0596bc5ee4c7063"
+    },
+    {
+      "file": "react-mobile-full-chrome.png",
+      "bytes": 53946,
+      "width": 390,
+      "height": 998,
+      "sha256": "46f6df81528cf158b1fbd7d3b23a8a04b8d9db775ab58b49a500d4c9ebce25b9"
+    },
+    {
+      "file": "react-mobile-unanswered.png",
+      "bytes": 37416,
+      "width": 366,
+      "height": 744,
+      "sha256": "46e35b13ca52565d679cd6f4c5ca5ea79836f60fd8eced6c8b05d76f74d11956"
+    },
+    {
+      "file": "original-mobile-unanswered.png",
+      "bytes": 37332,
+      "width": 368,
+      "height": 664,
+      "sha256": "b127772cf8981ec9b58183e821c6be6604719fb5f17a72e79c56b1dcc5d75589"
+    },
+    {
+      "file": "react-mobile-partial.png",
+      "bytes": 37710,
+      "width": 366,
+      "height": 744,
+      "sha256": "c714174ed232185053d40cf2cb441a93efea1409d9cfa1aee0c8bb086f087e1b"
+    },
+    {
+      "file": "original-mobile-partial.png",
+      "bytes": 37719,
+      "width": 368,
+      "height": 664,
+      "sha256": "5e079fcc6d70540904946557e82b8912879ecf4ca39bf7f7de4ee2086d4dafe6"
+    },
+    {
+      "file": "react-mobile-incorrect.png",
+      "bytes": 64867,
+      "width": 366,
+      "height": 1146,
+      "sha256": "2a1f3f5937aa06c4e68a459c87ae387daf44413b835ca7b0d62d0558b8a80bc7"
+    },
+    {
+      "file": "original-mobile-incorrect.png",
+      "bytes": 55194,
+      "width": 368,
+      "height": 1000,
+      "sha256": "01a6ec51a4ebc24fe3f3584ef41e194ababe3bd02767a73cb889569de9710c6d"
+    },
+    {
+      "file": "react-mobile-correction.png",
+      "bytes": 74144,
+      "width": 366,
+      "height": 1330,
+      "sha256": "8508687a69dd544cee17088abad03044cd4a6cd7e2c2663256ae1a59abc50a58"
+    },
+    {
+      "file": "original-mobile-correction.png",
+      "bytes": 52133,
+      "width": 368,
+      "height": 946,
+      "sha256": "459e2287ccdd168ca15480c21ac3d040d6b02f4dab1238054bc018d962c16aa5"
+    },
+    {
+      "file": "react-mobile-model.png",
+      "bytes": 82237,
+      "width": 366,
+      "height": 1444,
+      "sha256": "0f77649f828b8e6e81c5b86fc71792d3878847339e65608f3eb3ac047573bb0b"
+    },
+    {
+      "file": "original-mobile-model.png",
+      "bytes": 67271,
+      "width": 368,
+      "height": 1206,
+      "sha256": "f8a6552df865697c5b31b50acf5bfe015cb19addd71c1389efb2e5a001c56f75"
+    },
+    {
+      "file": "react-mobile-correct.png",
+      "bytes": 61490,
+      "width": 366,
+      "height": 1092,
+      "sha256": "10ac2e943500b5ba35c796eefdc74d675eeaceea4c81dc3908670df79208f963"
+    },
+    {
+      "file": "original-mobile-correct.png",
+      "bytes": 52105,
+      "width": 368,
+      "height": 946,
+      "sha256": "afe4fa8054f0fea0b55ca36e368eb9e3016fc23715f2cc6b6f8b6846849b2a39"
+    },
+    {
+      "file": "react-mobile-teacher-model.png",
+      "bytes": 53063,
+      "width": 366,
+      "height": 941,
+      "sha256": "496acfa77b5950f3d67daeab038a0e37b74af7f365f9220dcbcba9bdd3a1417e"
+    },
+    {
+      "file": "native-desktop-AB-0000GJ-unanswered.png",
+      "bytes": 58918,
+      "width": 1050,
+      "height": 820,
+      "sha256": "08b024854a03aab824b2f8a9f2241902c30b137252bbdb0104dc58ef43b5832a"
+    },
+    {
+      "file": "native-desktop-AB-0000GJ-partial.png",
+      "bytes": 61535,
+      "width": 1050,
+      "height": 820,
+      "sha256": "c089bd61a0a4889f2791ee8b4dd4fd8611c41c388d96b4d840c61b35021f6120"
+    },
+    {
+      "file": "native-desktop-AB-0000GJ-incorrect.png",
+      "bytes": 71394,
+      "width": 1050,
+      "height": 830,
+      "sha256": "ea0d2161b74aacc8404768f270bd957c6776f84918dca0b81eff222b57872269"
+    },
+    {
+      "file": "native-desktop-AB-0000GJ-correction.png",
+      "bytes": 70086,
+      "width": 1050,
+      "height": 830,
+      "sha256": "24f525d368e73b63e6df4b4a1abe69b81073779bbc882d2937da778337465444"
+    },
+    {
+      "file": "native-desktop-AB-0000GJ-model.png",
+      "bytes": 119421,
+      "width": 1050,
+      "height": 1212,
+      "sha256": "4576ea5ed7fee2c6def8be1b6dd309b81ce224cbcf05c2bacc21d5b89ab118ee"
+    },
+    {
+      "file": "native-desktop-AB-0000GJ-correct.png",
+      "bytes": 70086,
+      "width": 1050,
+      "height": 830,
+      "sha256": "24f525d368e73b63e6df4b4a1abe69b81073779bbc882d2937da778337465444"
+    },
+    {
+      "file": "native-desktop-CAL-00I9HC-unanswered.png",
+      "bytes": 365122,
+      "width": 1100,
+      "height": 1037,
+      "sha256": "6c06b158ef10481d06d8e002ef81dc44a554db180afcc4670255ff1c1517c01f"
+    },
+    {
+      "file": "native-desktop-CAL-00I9HC-partial.png",
+      "bytes": 367079,
+      "width": 1100,
+      "height": 1037,
+      "sha256": "ef67d949123231ec7fcd6188102b8feabeb21a969e007db4fa4dad18d26923be"
+    },
+    {
+      "file": "native-desktop-CAL-00I9HC-incorrect.png",
+      "bytes": 367553,
+      "width": 1100,
+      "height": 1120,
+      "sha256": "d7df33e773ffec5b40d2fc268f6a184b308b539d0411dcebe71c76ad3101e34b"
+    },
+    {
+      "file": "native-desktop-CAL-00I9HC-correction.png",
+      "bytes": 365932,
+      "width": 1100,
+      "height": 1120,
+      "sha256": "f420b2be5c88a28f1de5923b4c1e07d34ae95a4d02483f915e9493e4ec8bc26c"
+    },
+    {
+      "file": "native-desktop-CAL-00I9HC-model.png",
+      "bytes": 651415,
+      "width": 1100,
+      "height": 1854,
+      "sha256": "4e8140821afd3d3dd1ee5b515a5a13507cf9bf2d117aaf156d1243cf8571d65b"
+    },
+    {
+      "file": "native-desktop-CAL-00I9HC-correct.png",
+      "bytes": 376815,
+      "width": 1100,
+      "height": 1120,
+      "sha256": "c1e17cd12b3ddd2d782a2ce0965414effc9e27e5213a19f4866d8eca79da0b3d"
+    },
+    {
+      "file": "native-desktop-BE-0002DC-unanswered.png",
+      "bytes": 327834,
+      "width": 1100,
+      "height": 1169,
+      "sha256": "b93fb9764ef3872b9d98dc2e42046e320d8059c8ac80b487d28a4c9930c57214"
+    },
+    {
+      "file": "native-desktop-BE-0002DC-partial.png",
+      "bytes": 330699,
+      "width": 1100,
+      "height": 1169,
+      "sha256": "65d8f8971b93440fdbcca343fdabf732e90e2c579aa74d31e6da766ec1165167"
+    },
+    {
+      "file": "native-desktop-BE-0002DC-incorrect.png",
+      "bytes": 330342,
+      "width": 1100,
+      "height": 1191,
+      "sha256": "4e7786793b95d6c70d85b0e6d951e83df23c2c8cea5d23699a5feb3d967d8668"
+    },
+    {
+      "file": "native-desktop-BE-0002DC-correction.png",
+      "bytes": 328769,
+      "width": 1100,
+      "height": 1191,
+      "sha256": "0230e482358154fe0f12e84da078f143783bf5489250bc8521fb6ba26bb43dc6"
+    },
+    {
+      "file": "native-desktop-BE-0002DC-model.png",
+      "bytes": 607650,
+      "width": 1100,
+      "height": 2044,
+      "sha256": "5944c668865be9c6455c360696fdf6143cdb8ac8f8b642a1410243fe75f4c9b7"
+    },
+    {
+      "file": "native-desktop-BE-0002DC-correct.png",
+      "bytes": 340280,
+      "width": 1100,
+      "height": 1191,
+      "sha256": "341d239522a9efa2c5c48b7cdbae993ea9de98a434c77b805d4cc4104c737b37"
+    },
+    {
+      "file": "native-tablet-AB-0000GJ-unanswered.png",
+      "bytes": 59824,
+      "width": 792,
+      "height": 810,
+      "sha256": "9da7990f18f080ae415a23fb1cb831f6e30b7cb198027632ee97b521c3202ee7"
+    },
+    {
+      "file": "native-tablet-AB-0000GJ-partial.png",
+      "bytes": 61987,
+      "width": 792,
+      "height": 810,
+      "sha256": "66cf841e418db246f31de705cc5c4ba0eec026e12283b7d220b845bed972c931"
+    },
+    {
+      "file": "native-tablet-AB-0000GJ-incorrect.png",
+      "bytes": 72195,
+      "width": 792,
+      "height": 819,
+      "sha256": "706f6f60ef2bd7f4e6c502ed6e222c6b3230d7afa5d8b62150fd8ce56c58ec35"
+    },
+    {
+      "file": "native-tablet-AB-0000GJ-correction.png",
+      "bytes": 70134,
+      "width": 792,
+      "height": 819,
+      "sha256": "db8c79e00eb948764872236db46e498b98cb8644a164cc5a2c5038bca0c18c07"
+    },
+    {
+      "file": "native-tablet-AB-0000GJ-model.png",
+      "bytes": 120118,
+      "width": 792,
+      "height": 1191,
+      "sha256": "1776a3dcf8bb23f54f44c07cb367205d7967fdceedff4d2f7a103773034ea79f"
+    },
+    {
+      "file": "native-tablet-AB-0000GJ-correct.png",
+      "bytes": 70134,
+      "width": 792,
+      "height": 819,
+      "sha256": "db8c79e00eb948764872236db46e498b98cb8644a164cc5a2c5038bca0c18c07"
+    },
+    {
+      "file": "native-tablet-CAL-00I9HC-unanswered.png",
+      "bytes": 331018,
+      "width": 788,
+      "height": 1072,
+      "sha256": "eb0798e9e8d8e166240eb6477253c2e38bfcf54fe4b7fbb9924f1052562a2919"
+    },
+    {
+      "file": "native-tablet-CAL-00I9HC-partial.png",
+      "bytes": 331104,
+      "width": 788,
+      "height": 1072,
+      "sha256": "eb1306e216c12e475ede756245c80c47101b422b544c6360cc213653ed600f8b"
+    },
+    {
+      "file": "native-tablet-CAL-00I9HC-incorrect.png",
+      "bytes": 334836,
+      "width": 788,
+      "height": 1156,
+      "sha256": "a32be974858f65a6daa38747a617a9aa28f7820619801a4c3495113ddb0c35a1"
+    },
+    {
+      "file": "native-tablet-CAL-00I9HC-correction.png",
+      "bytes": 332482,
+      "width": 788,
+      "height": 1156,
+      "sha256": "f2d709715024b78ed3b9642d7221ae865a7ec48f714b7d3b6b63c0203cb163c4"
+    },
+    {
+      "file": "native-tablet-CAL-00I9HC-model.png",
+      "bytes": 584219,
+      "width": 788,
+      "height": 1935,
+      "sha256": "06bab28ceded91d4330742a00befd29832a722b942d6419f86cdd3343f445c1d"
+    },
+    {
+      "file": "native-tablet-CAL-00I9HC-correct.png",
+      "bytes": 344186,
+      "width": 788,
+      "height": 1156,
+      "sha256": "b222e63acf2001a89af9ca83b33c97bd1bb70560eeee1cb8ae5532e0208e6d61"
+    },
+    {
+      "file": "native-tablet-BE-0002DC-unanswered.png",
+      "bytes": 298978,
+      "width": 788,
+      "height": 1207,
+      "sha256": "6884b9f4c49c977d4eca27b9a483dde79b93e07e5e421e67431345850c17b1ee"
+    },
+    {
+      "file": "native-tablet-BE-0002DC-partial.png",
+      "bytes": 299599,
+      "width": 788,
+      "height": 1207,
+      "sha256": "9097ce0792fb1812f4860a7197ed438476f3e67a248e9ad4ff490ef7735b8d36"
+    },
+    {
+      "file": "native-tablet-BE-0002DC-incorrect.png",
+      "bytes": 299196,
+      "width": 788,
+      "height": 1228,
+      "sha256": "d1be62d9a23ffe1be453275365f06075b709954f079c20d618bf3fd20b2b5a10"
+    },
+    {
+      "file": "native-tablet-BE-0002DC-correction.png",
+      "bytes": 297772,
+      "width": 788,
+      "height": 1228,
+      "sha256": "e95933ce703c7d0ab6f19084cb732f09d2b7212e1af23c1892a8e4499315631f"
+    },
+    {
+      "file": "native-tablet-BE-0002DC-model.png",
+      "bytes": 540851,
+      "width": 788,
+      "height": 2081,
+      "sha256": "08dc9d053c2e3c2379e67fc2a7d40c9dc0f0e908f5e173c5f35b3261e05e9b4b"
+    },
+    {
+      "file": "native-tablet-BE-0002DC-correct.png",
+      "bytes": 309675,
+      "width": 788,
+      "height": 1228,
+      "sha256": "05283096ef48df608ae744cc9c1417c9965aaefd55cc7dba1f8d1a20fe0600c5"
+    },
+    {
+      "file": "native-mobile-AB-0000GJ-unanswered.png",
+      "bytes": 57770,
+      "width": 362,
+      "height": 1027,
+      "sha256": "616bab74ac0736b47aa19cef60e15634ab667513f5808424aecb1f8618133db0"
+    },
+    {
+      "file": "native-mobile-AB-0000GJ-partial.png",
+      "bytes": 60081,
+      "width": 362,
+      "height": 1027,
+      "sha256": "084e4060b530615fb440b246935b56d76524d1842c77573ddaf20620a634109c"
+    },
+    {
+      "file": "native-mobile-AB-0000GJ-incorrect.png",
+      "bytes": 73631,
+      "width": 362,
+      "height": 1125,
+      "sha256": "157439f11dac42ac723ce141a2f436ce7f4025fe1c1170b2af4880dd07131b78"
+    },
+    {
+      "file": "native-mobile-AB-0000GJ-correction.png",
+      "bytes": 72073,
+      "width": 362,
+      "height": 1125,
+      "sha256": "91e36c731bcb4e96614fe7d2c8db03beff63e717aa6694e5c74e1bafc96e88b6"
+    },
+    {
+      "file": "native-mobile-AB-0000GJ-model.png",
+      "bytes": 116455,
+      "width": 362,
+      "height": 1536,
+      "sha256": "645d5c8068c3bc408170e921afa105c54de03074b558be884b78e45fa09c8a5c"
+    },
+    {
+      "file": "native-mobile-AB-0000GJ-correct.png",
+      "bytes": 72073,
+      "width": 362,
+      "height": 1125,
+      "sha256": "91e36c731bcb4e96614fe7d2c8db03beff63e717aa6694e5c74e1bafc96e88b6"
+    },
+    {
+      "file": "native-mobile-CAL-00I9HC-unanswered.png",
+      "bytes": 271423,
+      "width": 358,
+      "height": 1465,
+      "sha256": "67760572cc4577c65c348e33cc874c8cf97ad9bbe815134d4179f2863b6aed56"
+    },
+    {
+      "file": "native-mobile-CAL-00I9HC-partial.png",
+      "bytes": 274061,
+      "width": 358,
+      "height": 1465,
+      "sha256": "03fff39f531506b148fc70ece58fa3177be8e6c405acf40b17d5d97cf5d5e342"
+    },
+    {
+      "file": "native-mobile-CAL-00I9HC-incorrect.png",
+      "bytes": 275800,
+      "width": 358,
+      "height": 1592,
+      "sha256": "d27b23e6dc57eac978aa4d4f8144faa2c1cf643315e912df9d956f6e69ac2c3f"
+    },
+    {
+      "file": "native-mobile-CAL-00I9HC-correction.png",
+      "bytes": 272148,
+      "width": 358,
+      "height": 1570,
+      "sha256": "e17445be341affec68d917f390f45f27668981eb2cc45ba57870d58c0afc1e0c"
+    },
+    {
+      "file": "native-mobile-CAL-00I9HC-model.png",
+      "bytes": 450148,
+      "width": 358,
+      "height": 2433,
+      "sha256": "8fd0d3ca55e4ca890cce6f4900f24d444059d9611d96742123c88927f25ae0aa"
+    },
+    {
+      "file": "native-mobile-CAL-00I9HC-correct.png",
+      "bytes": 282975,
+      "width": 358,
+      "height": 1570,
+      "sha256": "8b2fc74b59608844a1e3a5e4dcea815746354fa9d776ff545cdb9c17cf286b01"
+    },
+    {
+      "file": "native-mobile-BE-0002DC-unanswered.png",
+      "bytes": 221176,
+      "width": 358,
+      "height": 1418,
+      "sha256": "e7393584305e41e38aa62a9e46c54dd86623a85ab8cd5bdc360c2181289c0875"
+    },
+    {
+      "file": "native-mobile-BE-0002DC-partial.png",
+      "bytes": 222884,
+      "width": 358,
+      "height": 1418,
+      "sha256": "b4c290af5d10877225c409a2fcac886fe67039bc1f699cf8ac873d0cfa089414"
+    },
+    {
+      "file": "native-mobile-BE-0002DC-incorrect.png",
+      "bytes": 223014,
+      "width": 358,
+      "height": 1484,
+      "sha256": "e1a46cbc86a2f9d054ccd85744e401d71650866e6c860b675ead402dac43a4ea"
+    },
+    {
+      "file": "native-mobile-BE-0002DC-correction.png",
+      "bytes": 219958,
+      "width": 358,
+      "height": 1462,
+      "sha256": "f419c6868a113ed8d5348b631b3c16345f6b7b28bdf4f08139cc72320cbee0dd"
+    },
+    {
+      "file": "native-mobile-BE-0002DC-model.png",
+      "bytes": 396662,
+      "width": 358,
+      "height": 2469,
+      "sha256": "95bc1ca23ff9aa19be0bda6be24d9fa973ec22d1ad0fe7010501f867a143d81f"
+    },
+    {
+      "file": "native-mobile-BE-0002DC-correct.png",
+      "bytes": 231517,
+      "width": 358,
+      "height": 1462,
+      "sha256": "a5575e6dcee99db7a2bf6c57794dc6f7bdb06acccdc5adfd93c3a11928560cdb"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-U5FSU0-unanswered.png",
+      "bytes": 425086,
+      "width": 1408,
+      "height": 1163,
+      "sha256": "8d43db27f916ca9daf1e119dd0571a295f70bdec43eefa0f062889287c34746c"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-U5FSU0-partial.png",
+      "bytes": 423571,
+      "width": 1408,
+      "height": 1163,
+      "sha256": "3b98a9e64d7e03d726d11e1c56090e0d67cb95aac9a2dc09f97e5b4cbeab4a2e"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-U5FSU0-self-review.png",
+      "bytes": 691238,
+      "width": 1408,
+      "height": 1376,
+      "sha256": "04672a04f9efac29f2dac65addec1057a16d86dccbde90b2861defd50063750b"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-U5FSU0-incorrect.png",
+      "bytes": 681008,
+      "width": 1408,
+      "height": 1376,
+      "sha256": "58104b0be2f5b89f5358b3a353139671f6911ef80794f99613d1d2ec52ee841a"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-U5FSU0-correct.png",
+      "bytes": 2068835,
+      "width": 1408,
+      "height": 8567,
+      "sha256": "f798a4593dda301e23bdc15f8530d579e9c572bc35d47bbf0f582d056156ff23"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-U5FSU0-model.png",
+      "bytes": 2069153,
+      "width": 1408,
+      "height": 8567,
+      "sha256": "e4120efdafdc01e91ea5cc100cc6f7af99a90381eb1381228d1b6ee132119c1f"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-UFFEIZ-unanswered.png",
+      "bytes": 223183,
+      "width": 1408,
+      "height": 904,
+      "sha256": "2b3ed12a5aff729d52917575efdc0cb172abce72f78c12cff09c222bc7c41b73"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-UFFEIZ-partial.png",
+      "bytes": 225517,
+      "width": 1408,
+      "height": 904,
+      "sha256": "3bd0c644aaee4a7c9993cdb14efdb024a7757c75c74db160c372d196a50bdedb"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-UFFEIZ-self-review.png",
+      "bytes": 511314,
+      "width": 1408,
+      "height": 1115,
+      "sha256": "b4cf18e4a7ab0367d7a7ab1990a01b50b45f75a3b1fcbf67ddb77f20e9ac4207"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-UFFEIZ-incorrect.png",
+      "bytes": 529359,
+      "width": 1408,
+      "height": 1243,
+      "sha256": "bb4ff8e18c43d4f457fc98a374ba294a3141c664b8995f173d75dabde317c12d"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-UFFEIZ-correct.png",
+      "bytes": 785837,
+      "width": 1408,
+      "height": 2390,
+      "sha256": "5865a36cc1126c3e3272a25f20092e251d22644204d58820424011a8dc4e4282"
+    },
+    {
+      "file": "native-rubric-desktop-SBC-UFFEIZ-model.png",
+      "bytes": 785837,
+      "width": 1408,
+      "height": 2390,
+      "sha256": "5865a36cc1126c3e3272a25f20092e251d22644204d58820424011a8dc4e4282"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-U5FSU0-unanswered.png",
+      "bytes": 385852,
+      "width": 788,
+      "height": 1730,
+      "sha256": "46a5bde60d6f5c953e9dac69ac558a0a9cea149a3e569fcc03fd50f207156329"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-U5FSU0-partial.png",
+      "bytes": 389941,
+      "width": 788,
+      "height": 1730,
+      "sha256": "2b3dca99c8a3968a5ad3287391747a2dc796a8e8abf02bb803f656ab91d90e7d"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-U5FSU0-self-review.png",
+      "bytes": 738583,
+      "width": 788,
+      "height": 2816,
+      "sha256": "0565d95a44184dd8d32fcbf06aae1d5dd9dc59190a7fa7f27441892dec49beac"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-U5FSU0-incorrect.png",
+      "bytes": 748017,
+      "width": 788,
+      "height": 2816,
+      "sha256": "f37cf41dcb1ae8613f6b5b1561c85d1071794276caab1ceb131ae265de54a6d9"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-U5FSU0-correct.png",
+      "bytes": 1946099,
+      "width": 788,
+      "height": 8568,
+      "sha256": "9ae7239722a508fa0c8a015c4c3f6f5be5eaca54127af58b3675c38983ee195a"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-U5FSU0-model.png",
+      "bytes": 1947007,
+      "width": 788,
+      "height": 8568,
+      "sha256": "d37fc6f3d6c08508b9b9bb68e67e384e80a1c271d02e95c12fec0cf48e137586"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-UFFEIZ-unanswered.png",
+      "bytes": 175286,
+      "width": 788,
+      "height": 1061,
+      "sha256": "40b8333099cbb31690d7f4d5fbccc81c164d5a742b142fa00acec386275c0eec"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-UFFEIZ-partial.png",
+      "bytes": 176593,
+      "width": 788,
+      "height": 1061,
+      "sha256": "e8ce7a3dac0c6ca9522d33bd270939f983b7130ec7df511b7a4f81801455c543"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-UFFEIZ-self-review.png",
+      "bytes": 409795,
+      "width": 788,
+      "height": 1145,
+      "sha256": "0a49ae7c43d05cf914f41fb174cb9da4989dd80013378751d187b60a5e6bd41f"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-UFFEIZ-incorrect.png",
+      "bytes": 416282,
+      "width": 788,
+      "height": 1244,
+      "sha256": "39e67e66fbc95b69c2d6fd4782ee550b81fd9a95b612c6ca448a79d49deda838"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-UFFEIZ-correct.png",
+      "bytes": 664897,
+      "width": 788,
+      "height": 2391,
+      "sha256": "8e88502052e2c211bb4c603e03318d5fdea1ed690ad89d3e50f5a1aeb002f92f"
+    },
+    {
+      "file": "native-rubric-tablet-SBC-UFFEIZ-model.png",
+      "bytes": 664897,
+      "width": 788,
+      "height": 2391,
+      "sha256": "8e88502052e2c211bb4c603e03318d5fdea1ed690ad89d3e50f5a1aeb002f92f"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-U5FSU0-unanswered.png",
+      "bytes": 279172,
+      "width": 358,
+      "height": 1999,
+      "sha256": "52f1c038633cfc5c6f9d851d1c663dd806402ba3ed53f7dae39d30c4a751bf0c"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-U5FSU0-partial.png",
+      "bytes": 282133,
+      "width": 358,
+      "height": 1999,
+      "sha256": "4bdb27be121346fd149820dca01d1312c4e2ae4a250710b0a93637b892c390db"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-U5FSU0-self-review.png",
+      "bytes": 563513,
+      "width": 358,
+      "height": 4789,
+      "sha256": "260643ef49861676e0c16386ad75447b5186f962704564b76e2c2169d0713a26"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-U5FSU0-incorrect.png",
+      "bytes": 568951,
+      "width": 358,
+      "height": 4917,
+      "sha256": "79f048916e514c83b67e2e7c55762fcb10b731a4706649b38c92dbf81fcaa4b2"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-U5FSU0-correct.png",
+      "bytes": 1589431,
+      "width": 358,
+      "height": 11493,
+      "sha256": "6c8314e5250917330742b92eb5ed033ba993a53ae2e647a9761baceca175c543"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-U5FSU0-model.png",
+      "bytes": 1589431,
+      "width": 358,
+      "height": 11493,
+      "sha256": "6c8314e5250917330742b92eb5ed033ba993a53ae2e647a9761baceca175c543"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-UFFEIZ-unanswered.png",
+      "bytes": 107062,
+      "width": 358,
+      "height": 864,
+      "sha256": "81a080cb3c907970261babdd3d0242607a9cf90d4fa5322816d54c65a806b908"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-UFFEIZ-partial.png",
+      "bytes": 108260,
+      "width": 358,
+      "height": 864,
+      "sha256": "171de6b7b6c4e8daf1439f2896e16bea4d28369c70c5bdafe41dda8503a455fa"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-UFFEIZ-self-review.png",
+      "bytes": 364444,
+      "width": 358,
+      "height": 2149,
+      "sha256": "b5316574f4fdbcf06113f2d95e3d49cc9cb9bc5a1b156610aa305ac28bd33c55"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-UFFEIZ-incorrect.png",
+      "bytes": 367173,
+      "width": 358,
+      "height": 2278,
+      "sha256": "8a8e5187d5eeca3771be6230e97c20ef12cc2996e0e76cfd3435c2502f7fb30f"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-UFFEIZ-correct.png",
+      "bytes": 533800,
+      "width": 358,
+      "height": 3237,
+      "sha256": "dfb1e79d7a649d0026bc2c1a4af3653a576f153f4f126058ad4ea442639d4f84"
+    },
+    {
+      "file": "native-rubric-mobile-SBC-UFFEIZ-model.png",
+      "bytes": 533800,
+      "width": 358,
+      "height": 3237,
+      "sha256": "dfb1e79d7a649d0026bc2c1a4af3653a576f153f4f126058ad4ea442639d4f84"
+    },
+    {
+      "file": "native-written-desktop-EB-000001-unanswered.png",
+      "bytes": 26880,
+      "width": 980,
+      "height": 451,
+      "sha256": "5ad21334c7bf2f74d70ab6f42cd9c6194ef77ff6ab1bee127a920e7b25782ef0"
+    },
+    {
+      "file": "native-written-desktop-EB-000001-incorrect.png",
+      "bytes": 107866,
+      "width": 980,
+      "height": 1056,
+      "sha256": "3ff7e6b25dc67b6166dcea6b57c2c36b776869300d09e7e6c57254baadde0812"
+    },
+    {
+      "file": "native-written-desktop-EB-000001-correct.png",
+      "bytes": 90911,
+      "width": 980,
+      "height": 971,
+      "sha256": "583f6d3064a416bf13880b78afdb1f596e1874efe1352588af2ebed6a4470a05"
+    },
+    {
+      "file": "native-written-desktop-EE-8IPP11-unanswered.png",
+      "bytes": 29553,
+      "width": 1232,
+      "height": 396,
+      "sha256": "216c9afffa9c30a6c616ae5449882d67f7a782a60b5a02eece48f76453185ed9"
+    },
+    {
+      "file": "native-written-desktop-EE-8IPP11-incorrect.png",
+      "bytes": 54869,
+      "width": 1232,
+      "height": 709,
+      "sha256": "9c9540a249f31d4f4823cd4c030e1efa4b87209204f3aea55fd482140821f3c3"
+    },
+    {
+      "file": "native-written-desktop-EE-8IPP11-correct.png",
+      "bytes": 50135,
+      "width": 1232,
+      "height": 709,
+      "sha256": "ec99911c2d3c6e873396565f6145cb92db4b9b83e93140d2da61697ac5f292ae"
+    },
+    {
+      "file": "native-written-desktop-EE-7ERA95-unanswered.png",
+      "bytes": 33438,
+      "width": 1232,
+      "height": 490,
+      "sha256": "f1b233cc5ed2b4ce55d29ededcc3932feea36dcd36be6731d87a8a088b1953c5"
+    },
+    {
+      "file": "native-written-desktop-EE-7ERA95-incorrect.png",
+      "bytes": 69012,
+      "width": 1232,
+      "height": 894,
+      "sha256": "1079ece4d5b5b96d3ca9ca0e4b0bcdc23a752725809ce81da24498fb06aca805"
+    },
+    {
+      "file": "native-written-desktop-EE-7ERA95-correct.png",
+      "bytes": 64579,
+      "width": 1232,
+      "height": 894,
+      "sha256": "a33dbe4dc1c2692a5bf1366a97179b63374466323d791637f1c96a3835e945e5"
+    },
+    {
+      "file": "native-written-desktop-EE-6US2V7-unanswered.png",
+      "bytes": 32645,
+      "width": 1232,
+      "height": 401,
+      "sha256": "582b6190df9542a091b1383bb4f6c1b3a28f813e7bcab0e2ba6e6a5ab6afe65d"
+    },
+    {
+      "file": "native-written-desktop-EE-6US2V7-incorrect.png",
+      "bytes": 67389,
+      "width": 1232,
+      "height": 745,
+      "sha256": "7b031f4dc98e4bd9e55ee3c25ab382aa00cd1b2f48906e236d2580acfdcb0a1a"
+    },
+    {
+      "file": "native-written-desktop-EE-6US2V7-correct.png",
+      "bytes": 63140,
+      "width": 1232,
+      "height": 745,
+      "sha256": "14ad12789fafca8d6cbb4e71c3e4981fa293d2a41d9fcdd01dcc9daddd087895"
+    },
+    {
+      "file": "native-written-desktop-EE-1Q7XF7-unanswered.png",
+      "bytes": 41733,
+      "width": 1232,
+      "height": 500,
+      "sha256": "92529d8cc41420e005fda703031d41d44e5b57b631ad4fe3c8c961c1088d307d"
+    },
+    {
+      "file": "native-written-desktop-EE-1Q7XF7-incorrect.png",
+      "bytes": 89430,
+      "width": 1232,
+      "height": 912,
+      "sha256": "f8a689e4d337793627acdafd8698a620d0dfaef9627411066268641b3e0a8eda"
+    },
+    {
+      "file": "native-written-desktop-EE-1Q7XF7-correct.png",
+      "bytes": 86094,
+      "width": 1232,
+      "height": 912,
+      "sha256": "1eb58e5c4719805aca81f621b7d91f3d16d2c23ad874ae6253e2b794178c86ed"
+    },
+    {
+      "file": "native-written-desktop-EE-3Y4QYZ-unanswered.png",
+      "bytes": 46499,
+      "width": 1232,
+      "height": 583,
+      "sha256": "0a2e10bcfa54b7c6b77b1e28a1d6c8a6cffe1aacffc4a626fcbee001fa8c79ed"
+    },
+    {
+      "file": "native-written-desktop-EE-3Y4QYZ-incorrect.png",
+      "bytes": 85704,
+      "width": 1232,
+      "height": 990,
+      "sha256": "5de9b971c5548bf9ae2cc988f5f1d2c2e32511dfb734477a1ec0c1f29563ec0e"
+    },
+    {
+      "file": "native-written-desktop-EE-3Y4QYZ-correct.png",
+      "bytes": 81423,
+      "width": 1232,
+      "height": 990,
+      "sha256": "e5d9a854df7ae958245a4ee19d2666d542e80a7e35fcbdf362c1f5d70bc8d334"
+    },
+    {
+      "file": "native-written-desktop-EE-3493E1-unanswered.png",
+      "bytes": 64605,
+      "width": 1232,
+      "height": 715,
+      "sha256": "e060abf4397419ed4177d051a4c394711d7ed0211ebc373349255c955a7873e1"
+    },
+    {
+      "file": "native-written-desktop-EE-3493E1-incorrect.png",
+      "bytes": 120155,
+      "width": 1232,
+      "height": 1191,
+      "sha256": "94c5f1429cca37e23828cb17a9220c2685aa409c60342cf5bfb7870c2f3318af"
+    },
+    {
+      "file": "native-written-desktop-EE-3493E1-correct.png",
+      "bytes": 115672,
+      "width": 1232,
+      "height": 1191,
+      "sha256": "907cdedf0dd18c9702ffbeeaf4742a9561386a1cbdbb7edd97a023deb70b90af"
+    },
+    {
+      "file": "native-written-desktop-EE-3E8P30-unanswered.png",
+      "bytes": 55856,
+      "width": 1232,
+      "height": 710,
+      "sha256": "3cfa0f57383e8202f4beedd7ad6f3ba4da2154eef30b3b29f3f136dcb6e13c5e"
+    },
+    {
+      "file": "native-written-desktop-EE-3E8P30-incorrect.png",
+      "bytes": 103845,
+      "width": 1232,
+      "height": 1182,
+      "sha256": "33ee549781a86d1d3c6966d172c7910a95557406d5fbc22c94fffad8e3f11079"
+    },
+    {
+      "file": "native-written-desktop-EE-3E8P30-correct.png",
+      "bytes": 99213,
+      "width": 1232,
+      "height": 1182,
+      "sha256": "5ec3625d049aac58c1bab59c311cf9d7ff4706ac4e446635d284258417d31de4"
+    },
+    {
+      "file": "native-written-desktop-EE-7UIATW-unanswered.png",
+      "bytes": 47394,
+      "width": 1232,
+      "height": 600,
+      "sha256": "f837f8f044b9ddecf167afeba06712f2f73a3a581c7eea14bd93188f4a74341a"
+    },
+    {
+      "file": "native-written-desktop-EE-7UIATW-incorrect.png",
+      "bytes": 99787,
+      "width": 1232,
+      "height": 1080,
+      "sha256": "0d0a9a799757618295448f0ec5b56692e8d6dad2b94efc0d8aab44b005b0f65f"
+    },
+    {
+      "file": "native-written-desktop-EE-7UIATW-correct.png",
+      "bytes": 95246,
+      "width": 1232,
+      "height": 1080,
+      "sha256": "8188182a5d6d5e89ba8100f6890a6684bea84296e9babc8b01e703012f7a28f8"
+    },
+    {
+      "file": "native-written-tablet-EB-000001-unanswered.png",
+      "bytes": 27277,
+      "width": 788,
+      "height": 474,
+      "sha256": "a110cfe30c26bd8935c2fb40b61aa0c8f19f7ae1bdc8df4353a765c515e01771"
+    },
+    {
+      "file": "native-written-tablet-EB-000001-incorrect.png",
+      "bytes": 115646,
+      "width": 788,
+      "height": 1132,
+      "sha256": "95773b3aa443f9feaf8086b2a949c3276913eb66fb4cf2e659791738e94e03e6"
+    },
+    {
+      "file": "native-written-tablet-EB-000001-correct.png",
+      "bytes": 92683,
+      "width": 788,
+      "height": 1020,
+      "sha256": "5a605ed808cfd1217bcf68b52e25ca0c3290c83a5815e1dfb9a32f4a3602812e"
+    },
+    {
+      "file": "native-written-tablet-EE-8IPP11-unanswered.png",
+      "bytes": 30315,
+      "width": 772,
+      "height": 429,
+      "sha256": "8b6a407f9bf58eedfd56f1af7c4abca86ba9737868f0808eecbfa2a9728d78f0"
+    },
+    {
+      "file": "native-written-tablet-EE-8IPP11-incorrect.png",
+      "bytes": 54751,
+      "width": 772,
+      "height": 743,
+      "sha256": "e302f3e21e0c72951c1fb3ccbb6f537df71bd8a90542122d4a34baa43c934655"
+    },
+    {
+      "file": "native-written-tablet-EE-8IPP11-correct.png",
+      "bytes": 50175,
+      "width": 772,
+      "height": 743,
+      "sha256": "0fe40a5af40b24c007d3faab78e51dd74274389d4d24136a489d159204bdfc38"
+    },
+    {
+      "file": "native-written-tablet-EE-7ERA95-unanswered.png",
+      "bytes": 34936,
+      "width": 772,
+      "height": 524,
+      "sha256": "599cb41dea34857777665dcd1c45ad4c71dc443e6b21015b6a96cea885ad30c6"
+    },
+    {
+      "file": "native-written-tablet-EE-7ERA95-incorrect.png",
+      "bytes": 71249,
+      "width": 772,
+      "height": 928,
+      "sha256": "58e785df38bc19443e712c3b84a54c54053ab3f53f949b251720620efcc0208d"
+    },
+    {
+      "file": "native-written-tablet-EE-7ERA95-correct.png",
+      "bytes": 66929,
+      "width": 772,
+      "height": 928,
+      "sha256": "736fc2f61516eb6916dfb29bf8a50c15b15fc690f68bb6d7f987bf864f93fcee"
+    },
+    {
+      "file": "native-written-tablet-EE-6US2V7-unanswered.png",
+      "bytes": 33567,
+      "width": 772,
+      "height": 434,
+      "sha256": "0d0ab5ae49aa4c07cda24b26ce408788b7aaf6398340c0f05d093faec64b7785"
+    },
+    {
+      "file": "native-written-tablet-EE-6US2V7-incorrect.png",
+      "bytes": 70240,
+      "width": 772,
+      "height": 805,
+      "sha256": "69a128702ff9c1c4a39d01aff6ebcf512967c37d97b61efb04925728a48caf08"
+    },
+    {
+      "file": "native-written-tablet-EE-6US2V7-correct.png",
+      "bytes": 66029,
+      "width": 772,
+      "height": 805,
+      "sha256": "f6b7b7c9a52d9d8629427951bce43da9cafb0836f1bc909f6f31b1b455c0b157"
+    },
+    {
+      "file": "native-written-tablet-EE-1Q7XF7-unanswered.png",
+      "bytes": 43338,
+      "width": 772,
+      "height": 528,
+      "sha256": "f23a11a8e5782337f9569f9f5d004bb9c4fba93b243f27c148b122000bc480a1"
+    },
+    {
+      "file": "native-written-tablet-EE-1Q7XF7-incorrect.png",
+      "bytes": 94966,
+      "width": 772,
+      "height": 992,
+      "sha256": "31cb3f5b2d262e2e6675475c9eaa3dec664830354c2069dc61c111ba451787fb"
+    },
+    {
+      "file": "native-written-tablet-EE-1Q7XF7-correct.png",
+      "bytes": 91670,
+      "width": 772,
+      "height": 992,
+      "sha256": "3de02d5e71040552fe81dfe5218c7044a698247550b7ba65d7555a0ee22155e6"
+    },
+    {
+      "file": "native-written-tablet-EE-3Y4QYZ-unanswered.png",
+      "bytes": 47345,
+      "width": 772,
+      "height": 616,
+      "sha256": "8e94e6bf3851695984d49160fd47d916055e364ff823b20b75a95cc2f7dec33e"
+    },
+    {
+      "file": "native-written-tablet-EE-3Y4QYZ-incorrect.png",
+      "bytes": 86263,
+      "width": 772,
+      "height": 1024,
+      "sha256": "a129ccb48fc5e2ecf25df712527f5b6adb0ff597f58ebac44b3c95d06d43bc3d"
+    },
+    {
+      "file": "native-written-tablet-EE-3Y4QYZ-correct.png",
+      "bytes": 82074,
+      "width": 772,
+      "height": 1024,
+      "sha256": "6aa4d4db028093d055ac13c8aa987423c240c96defb84bed0059eb0be8c152ed"
+    },
+    {
+      "file": "native-written-tablet-EE-3493E1-unanswered.png",
+      "bytes": 65350,
+      "width": 772,
+      "height": 749,
+      "sha256": "ab0a63202e1240c47d9d254b4d187f5dad2ecf3efacf6d9e8e23163c32e138d7"
+    },
+    {
+      "file": "native-written-tablet-EE-3493E1-incorrect.png",
+      "bytes": 121166,
+      "width": 772,
+      "height": 1251,
+      "sha256": "5d7ed5e4e56cb5ec3fe9b9bffc7979a37b57f855b0ffcf129a72636621291e45"
+    },
+    {
+      "file": "native-written-tablet-EE-3493E1-correct.png",
+      "bytes": 116756,
+      "width": 772,
+      "height": 1251,
+      "sha256": "1adcb4da4abc56e63bc295bea12f2a94075addd347c1e62a6812ebd3a43941c6"
+    },
+    {
+      "file": "native-written-tablet-EE-3E8P30-unanswered.png",
+      "bytes": 55465,
+      "width": 772,
+      "height": 711,
+      "sha256": "9ae82f4b8d87b0568b69ebc70076c2aec8c3c491ba86a4dbc1907f0f6e63257f"
+    },
+    {
+      "file": "native-written-tablet-EE-3E8P30-incorrect.png",
+      "bytes": 102804,
+      "width": 772,
+      "height": 1183,
+      "sha256": "f1476c04a3f34d6b705807491aca8edd73d963c142f228a313c694e9ec599cfd"
+    },
+    {
+      "file": "native-written-tablet-EE-3E8P30-correct.png",
+      "bytes": 98251,
+      "width": 772,
+      "height": 1183,
+      "sha256": "8a7c28d36383ca020e49214d84e8fa5868a379fa1519b124e670e178bb47a14e"
+    },
+    {
+      "file": "native-written-tablet-EE-7UIATW-unanswered.png",
+      "bytes": 46145,
+      "width": 772,
+      "height": 601,
+      "sha256": "ef198d09d574735a6e67e34ce57393fd8791aaf10947ec02964aa9e3a9cef317"
+    },
+    {
+      "file": "native-written-tablet-EE-7UIATW-incorrect.png",
+      "bytes": 99174,
+      "width": 772,
+      "height": 1107,
+      "sha256": "8acfcf6d478a1a07e7d911ba3e0fd315d9e581d428e4fc922b799c08b488bba8"
+    },
+    {
+      "file": "native-written-tablet-EE-7UIATW-correct.png",
+      "bytes": 94829,
+      "width": 772,
+      "height": 1107,
+      "sha256": "0037311caf3a0839908ba5e042d3c7a5b7fd90815671c2f585da924cd71576bf"
+    },
+    {
+      "file": "native-written-mobile-EB-000001-unanswered.png",
+      "bytes": 25337,
+      "width": 370,
+      "height": 468,
+      "sha256": "6f155eafbdcc84ff37d2f964e6d97b65e3e179e275b37052605619c0106c9e36"
+    },
+    {
+      "file": "native-written-mobile-EB-000001-incorrect.png",
+      "bytes": 112870,
+      "width": 370,
+      "height": 1522,
+      "sha256": "51b911158cc10e97cae33f337b28bb5aa4e7f7adb69709cb08020b4c29eeb6eb"
+    },
+    {
+      "file": "native-written-mobile-EB-000001-correct.png",
+      "bytes": 88841,
+      "width": 370,
+      "height": 1278,
+      "sha256": "2fbbf82ce7c07a5654ed23a37b971d89886a2e4748c386e205b2987d9a4e3dad"
+    },
+    {
+      "file": "native-written-mobile-EE-8IPP11-unanswered.png",
+      "bytes": 27065,
+      "width": 370,
+      "height": 461,
+      "sha256": "f580b06190290a881c537dffed758d533410301a98dfa5bcaefebb018fdfe038"
+    },
+    {
+      "file": "native-written-mobile-EE-8IPP11-incorrect.png",
+      "bytes": 51155,
+      "width": 370,
+      "height": 827,
+      "sha256": "3845b382a5ecaf618ce6dcf683353399d96898a4031d7f43d6382ed196db737f"
+    },
+    {
+      "file": "native-written-mobile-EE-8IPP11-correct.png",
+      "bytes": 46441,
+      "width": 370,
+      "height": 801,
+      "sha256": "c61a5c07e09abaaaaaed61aad035b474475da5c33152caf8f80eb79f7402f445"
+    },
+    {
+      "file": "native-written-mobile-EE-7ERA95-unanswered.png",
+      "bytes": 30667,
+      "width": 370,
+      "height": 557,
+      "sha256": "52ab0ff0e3c0c91ef3207dc78bacfd30e9b93289be0e27d219cc22aa50153540"
+    },
+    {
+      "file": "native-written-mobile-EE-7ERA95-incorrect.png",
+      "bytes": 65765,
+      "width": 370,
+      "height": 1040,
+      "sha256": "6feeaff9322c4d84db6b2b9bd924f132979876fc83d0bc2feef4934e0e6a0258"
+    },
+    {
+      "file": "native-written-mobile-EE-7ERA95-correct.png",
+      "bytes": 61353,
+      "width": 370,
+      "height": 1014,
+      "sha256": "0d8f1acb7689dbb3f9629f75e73650cb463f2217ebfcb003ffa8d9ad77c3ec6f"
+    },
+    {
+      "file": "native-written-mobile-EE-6US2V7-unanswered.png",
+      "bytes": 29682,
+      "width": 370,
+      "height": 465,
+      "sha256": "f496cc56cdc94fd7b4cb62fefd31997515ef375ff88dfc916d7676bf9d12d463"
+    },
+    {
+      "file": "native-written-mobile-EE-6US2V7-incorrect.png",
+      "bytes": 63346,
+      "width": 370,
+      "height": 967,
+      "sha256": "51b913f19a06506699618d4a6dde0d189c6e331519da91e529818f7a10cd48e7"
+    },
+    {
+      "file": "native-written-mobile-EE-6US2V7-correct.png",
+      "bytes": 58972,
+      "width": 370,
+      "height": 914,
+      "sha256": "28596ff92e5ea8b2ccae4f01548facd1e6fdb9fb68cbf7d1a4ee816b043ab7a6"
+    },
+    {
+      "file": "native-written-mobile-EE-1Q7XF7-unanswered.png",
+      "bytes": 40401,
+      "width": 370,
+      "height": 641,
+      "sha256": "1ba4cb7703cc7a79c14bde1d3a52303b044eac34a577724d9a02fa966adbe307"
+    },
+    {
+      "file": "native-written-mobile-EE-1Q7XF7-incorrect.png",
+      "bytes": 89534,
+      "width": 370,
+      "height": 1291,
+      "sha256": "ce29ba80551b7e1b62a637f178befc9f01dd7117cc7bde430a4ac914506ccbbe"
+    },
+    {
+      "file": "native-written-mobile-EE-1Q7XF7-correct.png",
+      "bytes": 85364,
+      "width": 370,
+      "height": 1264,
+      "sha256": "fa1562ee15638aed29d60437ebbe9621424c59a5e1e35a7eb24039e35793515e"
+    },
+    {
+      "file": "native-written-mobile-EE-3Y4QYZ-unanswered.png",
+      "bytes": 42860,
+      "width": 370,
+      "height": 671,
+      "sha256": "9acbfa8d6f8879af8d41894aeaaea39f77e473c3f401af1645ab452e1dbfec5e"
+    },
+    {
+      "file": "native-written-mobile-EE-3Y4QYZ-incorrect.png",
+      "bytes": 81169,
+      "width": 370,
+      "height": 1185,
+      "sha256": "3829797d7861add4f855d06a3ba125a6032bf6e93e0d41770d4b00e8351e22d4"
+    },
+    {
+      "file": "native-written-mobile-EE-3Y4QYZ-correct.png",
+      "bytes": 76935,
+      "width": 370,
+      "height": 1158,
+      "sha256": "d53bacbed604f6e9116f23dc69563e6c7db5c374c321b4b0385d845f9154f27e"
+    },
+    {
+      "file": "native-written-mobile-EE-3493E1-unanswered.png",
+      "bytes": 59186,
+      "width": 370,
+      "height": 851,
+      "sha256": "de10bd7e06863e3fd54962d7ad50b3ae5f1cdb836bc2bf9fa78ad14efb8af84d"
+    },
+    {
+      "file": "native-written-mobile-EE-3493E1-incorrect.png",
+      "bytes": 114388,
+      "width": 370,
+      "height": 1537,
+      "sha256": "17564ee7ef786be924efd477df17bdd6d8c4433f7657b5624091a5b85dec1d85"
+    },
+    {
+      "file": "native-written-mobile-EE-3493E1-correct.png",
+      "bytes": 110012,
+      "width": 370,
+      "height": 1511,
+      "sha256": "ff76cf2322e5052975bb602b6e6e5792a228d76f0a80199b11bb6470687b7e2d"
+    },
+    {
+      "file": "native-written-mobile-EE-3E8P30-unanswered.png",
+      "bytes": 51929,
+      "width": 370,
+      "height": 821,
+      "sha256": "cdad104c5e6bff1887ffe85e1980f0811dfefde361db1199bc0adf76784b41b5"
+    },
+    {
+      "file": "native-written-mobile-EE-3E8P30-incorrect.png",
+      "bytes": 97933,
+      "width": 370,
+      "height": 1451,
+      "sha256": "4c3be36baa348166e82a3d1c3a161e953b2ca649cd1e10f046b4554dd9610273"
+    },
+    {
+      "file": "native-written-mobile-EE-3E8P30-correct.png",
+      "bytes": 93531,
+      "width": 370,
+      "height": 1424,
+      "sha256": "4dc421444f19daa18849527859cb8ece394b68f4f6697726827a71bfc33fb52b"
+    },
+    {
+      "file": "native-written-mobile-EE-7UIATW-unanswered.png",
+      "bytes": 45107,
+      "width": 370,
+      "height": 715,
+      "sha256": "e3871a1adc9d662782ae2f79545a6099363a732b94e8f8ce6d279abc0474519b"
+    },
+    {
+      "file": "native-written-mobile-EE-7UIATW-incorrect.png",
+      "bytes": 97344,
+      "width": 370,
+      "height": 1432,
+      "sha256": "dfeac140ec16beac467bf4ebd464ec7e4940df7d097113ec01405445ac467336"
+    },
+    {
+      "file": "native-written-mobile-EE-7UIATW-correct.png",
+      "bytes": 93140,
+      "width": 370,
+      "height": 1405,
+      "sha256": "5fa1f392d8eac21475f3aed206853837353a7d24f85e9b4886b70d306b49a251"
+    },
+    {
+      "file": "graph-final-desktop-EP-4G1A0S-unanswered.png",
+      "bytes": 58054,
+      "width": 1120,
+      "height": 728,
+      "sha256": "5771afb8e9dd63c5e02e9ab112baa38951b727331aa9fb0cb69fe909989f9cb4"
+    },
+    {
+      "file": "graph-final-desktop-EP-4G1A0S-partial.png",
+      "bytes": 62402,
+      "width": 1120,
+      "height": 728,
+      "sha256": "493a9bcd189e4d6b6f1411390fb1cc4f4ed009b8cd2928ae858a7b76f1ba998c"
+    },
+    {
+      "file": "graph-final-desktop-EP-4G1A0S-incorrect.png",
+      "bytes": 97266,
+      "width": 1120,
+      "height": 728,
+      "sha256": "b2cd6fb6e7129d37d3cf17142218cd640a746777a2d254d1745ce82301312535"
+    },
+    {
+      "file": "graph-final-desktop-EP-4G1A0S-correction.png",
+      "bytes": 106752,
+      "width": 1120,
+      "height": 853,
+      "sha256": "3ea50e06ca1cbf6e0421c6d4d208afe5b55543dbd015442b542569eb0acc85b3"
+    },
+    {
+      "file": "graph-final-desktop-EP-4G1A0S-model.png",
+      "bytes": 126460,
+      "width": 1120,
+      "height": 1076,
+      "sha256": "5a96a7c71832173b7e2f7217f04e1330fe0c227019b443696e4f27db94c49feb"
+    },
+    {
+      "file": "graph-final-desktop-EP-4G1A0S-correct.png",
+      "bytes": 98696,
+      "width": 1120,
+      "height": 728,
+      "sha256": "f570d6c6328bcedba794112d7457132012c9157bd7752ea60011cb255d40d8ae"
+    },
+    {
+      "file": "graph-final-desktop-EP-780GGH-unanswered.png",
+      "bytes": 67739,
+      "width": 1120,
+      "height": 777,
+      "sha256": "3252d10e8e866b79769a75c1b1d6dc75e70728fa888995e71addf9f7e6b69dd4"
+    },
+    {
+      "file": "graph-final-desktop-EP-780GGH-partial.png",
+      "bytes": 68826,
+      "width": 1120,
+      "height": 777,
+      "sha256": "f429daaabdd716afd1cb197b195db728359848eeaab8c63e35902ff60d2d2eba"
+    },
+    {
+      "file": "graph-final-desktop-EP-780GGH-incorrect.png",
+      "bytes": 103105,
+      "width": 1120,
+      "height": 777,
+      "sha256": "86c39dff3177af303397b85f8450f984e8523b50e6db9d9a86ee88577db1b99f"
+    },
+    {
+      "file": "graph-final-desktop-EP-780GGH-correction.png",
+      "bytes": 110015,
+      "width": 1120,
+      "height": 835,
+      "sha256": "2fb4b759c69a3358c4659cf94a431c74fe2bc792ed2f95072dc560c1e28de9a3"
+    },
+    {
+      "file": "graph-final-desktop-EP-780GGH-model.png",
+      "bytes": 124693,
+      "width": 1120,
+      "height": 989,
+      "sha256": "a2a41e1665dda994fbdf06f973965c831ff6160fb3d1fae7d56749e44912ad12"
+    },
+    {
+      "file": "graph-final-desktop-EP-780GGH-correct.png",
+      "bytes": 101594,
+      "width": 1120,
+      "height": 777,
+      "sha256": "9386ce194a3a4e31c59ef5e115cd28bfea0ccc42a274fc46428729d43ad1043e"
+    },
+    {
+      "file": "graph-final-tablet-EP-4G1A0S-unanswered.png",
+      "bytes": 57751,
+      "width": 780,
+      "height": 887,
+      "sha256": "34f2b54fa550baadbe6bd5b552fe662208a0ca2da58130351a77be9a68a65aa1"
+    },
+    {
+      "file": "graph-final-tablet-EP-4G1A0S-partial.png",
+      "bytes": 62027,
+      "width": 780,
+      "height": 887,
+      "sha256": "9516d6e5e18d8052df80918fb0d5700fe7c3197de4340e86851ef5d474e2c0d1"
+    },
+    {
+      "file": "graph-final-tablet-EP-4G1A0S-incorrect.png",
+      "bytes": 92311,
+      "width": 780,
+      "height": 1196,
+      "sha256": "2aebb5ce628c73854ef8d842616f998e1fc135825f4ebc9d55c240d61b85e85a"
+    },
+    {
+      "file": "graph-final-tablet-EP-4G1A0S-correction.png",
+      "bytes": 101786,
+      "width": 780,
+      "height": 1324,
+      "sha256": "9cb1a17ae287d793679b4bbf247a4c0eada83e491c2c543dff21d4a59d5d6c61"
+    },
+    {
+      "file": "graph-final-tablet-EP-4G1A0S-model.png",
+      "bytes": 118838,
+      "width": 780,
+      "height": 1546,
+      "sha256": "ac3df58010238e0db49eeb0851c63ad0652c6a7fe1c081ab9b684cb54edb2456"
+    },
+    {
+      "file": "graph-final-tablet-EP-4G1A0S-correct.png",
+      "bytes": 92811,
+      "width": 780,
+      "height": 1142,
+      "sha256": "526a7f2ca00a47618bdf33aa63e6d40c335bd3337114e9573b5f7b7eb2cd5ff9"
+    },
+    {
+      "file": "graph-final-tablet-EP-780GGH-unanswered.png",
+      "bytes": 67245,
+      "width": 780,
+      "height": 937,
+      "sha256": "62e5a8eca5a86050066491c0c105cfe0a75b023ff42b8f4e3e8759aed9cbe327"
+    },
+    {
+      "file": "graph-final-tablet-EP-780GGH-partial.png",
+      "bytes": 68253,
+      "width": 780,
+      "height": 937,
+      "sha256": "f9d5f5b1a81169acca0dd2436f494755c46bb186c07fe05b27cbad47b4a6efb8"
+    },
+    {
+      "file": "graph-final-tablet-EP-780GGH-incorrect.png",
+      "bytes": 98695,
+      "width": 780,
+      "height": 1245,
+      "sha256": "df77eebb43711aa361683e8695cb311bd0a4bfe168c65c1efb9d2336afc3261b"
+    },
+    {
+      "file": "graph-final-tablet-EP-780GGH-correction.png",
+      "bytes": 105824,
+      "width": 780,
+      "height": 1374,
+      "sha256": "7b1f856054b005cd6bdb210e4928dd0b9dceeffaf5495eb539481c311d768cbe"
+    },
+    {
+      "file": "graph-final-tablet-EP-780GGH-model.png",
+      "bytes": 118110,
+      "width": 780,
+      "height": 1541,
+      "sha256": "d6c2109db526732e100b8f5bb210a76b18a3deb1914626ba137d30b921e3a6b3"
+    },
+    {
+      "file": "graph-final-tablet-EP-780GGH-correct.png",
+      "bytes": 96856,
+      "width": 780,
+      "height": 1191,
+      "sha256": "29e1f7b07f6010c4044571abdda922e50361ec03b5fadbab739deacf8104c251"
+    },
+    {
+      "file": "graph-final-mobile-EP-4G1A0S-unanswered.png",
+      "bytes": 47137,
+      "width": 366,
+      "height": 933,
+      "sha256": "7f819a631e237e4de95b67dac4f3b6da58bfa53f4c726b7a005a479f7a47a53a"
+    },
+    {
+      "file": "graph-final-mobile-EP-4G1A0S-partial.png",
+      "bytes": 51296,
+      "width": 366,
+      "height": 933,
+      "sha256": "f0c8fb5fdef3c63164ad4d01120783dae4e5a4d9e47dd1bddd0ef826eece2842"
+    },
+    {
+      "file": "graph-final-mobile-EP-4G1A0S-incorrect.png",
+      "bytes": 81716,
+      "width": 366,
+      "height": 1395,
+      "sha256": "c8f0ddaf7b0ee83f0dd7d462df6f22e98ca2c03e967a5bcaa544b95e2e93a87d"
+    },
+    {
+      "file": "graph-final-mobile-EP-4G1A0S-correction.png",
+      "bytes": 90837,
+      "width": 366,
+      "height": 1524,
+      "sha256": "a4fcb34b511a18892ab1ddb9da533a4d5b3b30fc6e655e2df69962c7d4c04601"
+    },
+    {
+      "file": "graph-final-mobile-EP-4G1A0S-model.png",
+      "bytes": 106189,
+      "width": 366,
+      "height": 1729,
+      "sha256": "93e471bc0004861347dc15a604c2d930545bdb1fad9250b5b7c29d3fca67228b"
+    },
+    {
+      "file": "graph-final-mobile-EP-4G1A0S-correct.png",
+      "bytes": 82278,
+      "width": 366,
+      "height": 1341,
+      "sha256": "7c2376b39e5992b08bcb1a36518c825d6cf36b118d957ddf8268c37c2f30f5e1"
+    },
+    {
+      "file": "graph-final-mobile-EP-780GGH-unanswered.png",
+      "bytes": 57489,
+      "width": 366,
+      "height": 1060,
+      "sha256": "660bb207f438a2ca5facc807026e49da882c836a2e4b27d3be8aef1b64254f78"
+    },
+    {
+      "file": "graph-final-mobile-EP-780GGH-partial.png",
+      "bytes": 57796,
+      "width": 366,
+      "height": 1060,
+      "sha256": "15d389ca1beb61e304a8a33a4ee4667a6a5c6f046c8c28f8ce4749f6993a09c3"
+    },
+    {
+      "file": "graph-final-mobile-EP-780GGH-incorrect.png",
+      "bytes": 88288,
+      "width": 366,
+      "height": 1505,
+      "sha256": "f84c00cbc612c8697b7266c37434aad1b5203cb71d76106649d434e1bd03a638"
+    },
+    {
+      "file": "graph-final-mobile-EP-780GGH-correction.png",
+      "bytes": 95116,
+      "width": 366,
+      "height": 1633,
+      "sha256": "7064f787ba8f0e907c20f6b00e2252500e6efdd06250b2c5ea451bae0f79923b"
+    },
+    {
+      "file": "graph-final-mobile-EP-780GGH-model.png",
+      "bytes": 106672,
+      "width": 366,
+      "height": 1787,
+      "sha256": "6f3e707cfd235b31960fedd1d97dedfb9b71df12722354e5878018ead212ef20"
+    },
+    {
+      "file": "graph-final-mobile-EP-780GGH-correct.png",
+      "bytes": 86554,
+      "width": 366,
+      "height": 1451,
+      "sha256": "2da1464b27a3a9885deb5a08fbb341b0db34e3fea72461bdf51ac8b837a1cb7e"
+    },
+    {
+      "file": "native-graph-desktop-EP-4G1A0S-unanswered.png",
+      "bytes": 59669,
+      "width": 1398,
+      "height": 689,
+      "sha256": "6974d04b6c2c0ce2ee2f79b38c3686b6543fe448a1733ab46cb8508f528ba430"
+    },
+    {
+      "file": "native-graph-desktop-EP-4G1A0S-partial.png",
+      "bytes": 64026,
+      "width": 1398,
+      "height": 689,
+      "sha256": "b81b34d634b438d25b18b63e48bb152df83e7087a15c08011d334e749980e770"
+    },
+    {
+      "file": "native-graph-desktop-EP-4G1A0S-incorrect.png",
+      "bytes": 85415,
+      "width": 1398,
+      "height": 689,
+      "sha256": "3471096c797f3450c7b18b2b51af1c5371dce43a5041e2d363fe4e8b5fab0a62"
+    },
+    {
+      "file": "native-graph-desktop-EP-4G1A0S-correction.png",
+      "bytes": 86674,
+      "width": 1398,
+      "height": 689,
+      "sha256": "f9acc589f39451cd7b10c67ccfeee60ced53a381964aa004b5d5891c4c8a9d97"
+    },
+    {
+      "file": "native-graph-desktop-EP-4G1A0S-model.png",
+      "bytes": 109657,
+      "width": 1398,
+      "height": 793,
+      "sha256": "4eb4667355a38a0f9e493943d0479e0f196795fe703a5f638841459d0940d5dd"
+    },
+    {
+      "file": "native-graph-desktop-EP-4G1A0S-correct.png",
+      "bytes": 86686,
+      "width": 1398,
+      "height": 689,
+      "sha256": "179c1800bba3515523012dcaa8a212f014a5095ebc87eac2b3ee073ab157a9af"
+    },
+    {
+      "file": "graph-teacher-desktop-EP-4G1A0S.png",
+      "bytes": 83765,
+      "width": 1120,
+      "height": 802,
+      "sha256": "f99c1da7b6239bcde4907d70892495771978143e68bd5cd1d6f2f684d4787f7f"
+    },
+    {
+      "file": "native-graph-desktop-EP-780GGH-unanswered.png",
+      "bytes": 69295,
+      "width": 1398,
+      "height": 738,
+      "sha256": "aa7b6bd82c7338fb18ce578469a806263c55adb5a8eb035b95c1823c485e644e"
+    },
+    {
+      "file": "native-graph-desktop-EP-780GGH-partial.png",
+      "bytes": 70302,
+      "width": 1398,
+      "height": 738,
+      "sha256": "3687f4bcb2ad1f682842d0221264f749d940309c92bd20da5dc79598cf8b63c5"
+    },
+    {
+      "file": "native-graph-desktop-EP-780GGH-incorrect.png",
+      "bytes": 92277,
+      "width": 1398,
+      "height": 738,
+      "sha256": "8d54d3b2fcd85ac3a5409ba691d9c0fb080746a0743fde1ee8b6f0a93b79014e"
+    },
+    {
+      "file": "native-graph-desktop-EP-780GGH-correction.png",
+      "bytes": 90842,
+      "width": 1398,
+      "height": 738,
+      "sha256": "8feebc4803b768bc99ac88dcd8f9394b58fa6c60157b986eabe5b1b35b218545"
+    },
+    {
+      "file": "native-graph-desktop-EP-780GGH-model.png",
+      "bytes": 112589,
+      "width": 1398,
+      "height": 789,
+      "sha256": "c1b0fa16e7455103ebb81b9772a1fe1cc6b20d02e2444e3aed9c3d0a0e71937d"
+    },
+    {
+      "file": "native-graph-desktop-EP-780GGH-correct.png",
+      "bytes": 90870,
+      "width": 1398,
+      "height": 738,
+      "sha256": "3dcc3b443f9041bbf2ae1df6b1dcc2802fb42e82fc1007176e269ce67fcb7508"
+    },
+    {
+      "file": "graph-teacher-desktop-EP-780GGH.png",
+      "bytes": 89822,
+      "width": 1120,
+      "height": 852,
+      "sha256": "ec7faec712f0bec8cbb57389d8725da4426ed7fdb05079b6dbc6b363b2c47e8a"
+    },
+    {
+      "file": "native-graph-tablet-EP-4G1A0S-unanswered.png",
+      "bytes": 57541,
+      "width": 778,
+      "height": 808,
+      "sha256": "0cd009142f0e849499434c9ac40f2b8329a3efee2c23ba15225321ef549c3fdb"
+    },
+    {
+      "file": "native-graph-tablet-EP-4G1A0S-partial.png",
+      "bytes": 61895,
+      "width": 778,
+      "height": 808,
+      "sha256": "9717d0041fe45fa5a86a2db4bab520876978a3bf37061dfef4bad99fc43f68df"
+    },
+    {
+      "file": "native-graph-tablet-EP-4G1A0S-incorrect.png",
+      "bytes": 80881,
+      "width": 778,
+      "height": 1059,
+      "sha256": "6d3d2c04667fa3ba5da1cce254286d9a271d8eb09a6fdb1aef08451e154ffb6b"
+    },
+    {
+      "file": "native-graph-tablet-EP-4G1A0S-correction.png",
+      "bytes": 82075,
+      "width": 778,
+      "height": 1007,
+      "sha256": "434a664fb800ff6ed39ec85fc1e956a4fd64c12f749a1cd9bb4945f4c5a20d4c"
+    },
+    {
+      "file": "native-graph-tablet-EP-4G1A0S-model.png",
+      "bytes": 103005,
+      "width": 778,
+      "height": 1248,
+      "sha256": "ad4456df437f94bfd1aea80c0a52d373f35a198abc8757631f926d8b7421b955"
+    },
+    {
+      "file": "native-graph-tablet-EP-4G1A0S-correct.png",
+      "bytes": 82091,
+      "width": 778,
+      "height": 1007,
+      "sha256": "407903cb4147febc0d51f817b3c9b6700ffe84d08b7c6d3d0747ad52c7aeac52"
+    },
+    {
+      "file": "graph-teacher-tablet-EP-4G1A0S.png",
+      "bytes": 80689,
+      "width": 780,
+      "height": 1156,
+      "sha256": "81012d82ba8a900ae92bb708b892b4034e5cba7aac67bac31797f2bc58613aeb"
+    },
+    {
+      "file": "native-graph-tablet-EP-780GGH-unanswered.png",
+      "bytes": 66785,
+      "width": 778,
+      "height": 858,
+      "sha256": "5debdbb152ceac0b068f5ab4ac59478faf2913311ff53835051d17c947b2b9e0"
+    },
+    {
+      "file": "native-graph-tablet-EP-780GGH-partial.png",
+      "bytes": 67801,
+      "width": 778,
+      "height": 858,
+      "sha256": "1c13caf65286329f33e257a2bce12cc558b707487172ff02188e308c60f791f9"
+    },
+    {
+      "file": "native-graph-tablet-EP-780GGH-incorrect.png",
+      "bytes": 87024,
+      "width": 778,
+      "height": 1126,
+      "sha256": "1acd1c448a863782aa9c920d6f3eda3a8c5b24435078f5f3bdd6ddfac4245522"
+    },
+    {
+      "file": "native-graph-tablet-EP-780GGH-correction.png",
+      "bytes": 85327,
+      "width": 778,
+      "height": 1072,
+      "sha256": "eb92d49bca5d6bea8e89914067fca6bbe3cb7100306a8cf81bf00f075585141f"
+    },
+    {
+      "file": "native-graph-tablet-EP-780GGH-model.png",
+      "bytes": 103842,
+      "width": 778,
+      "height": 1291,
+      "sha256": "3e3c73996bced0cf05cc4509cbbe067b649152960bc2bc7e3163e8578c15bd5c"
+    },
+    {
+      "file": "native-graph-tablet-EP-780GGH-correct.png",
+      "bytes": 85341,
+      "width": 778,
+      "height": 1072,
+      "sha256": "e9e81d1c38a845d2fa3c5362e7be452a617bc7661a5b56d793447f4c22a813ad"
+    },
+    {
+      "file": "graph-teacher-tablet-EP-780GGH.png",
+      "bytes": 86021,
+      "width": 780,
+      "height": 1165,
+      "sha256": "5bf1dd9a3d14c7cbb4239a39b872643e4d639fc1ba1208e10b42d903e6654c24"
+    },
+    {
+      "file": "native-graph-mobile-EP-4G1A0S-unanswered.png",
+      "bytes": 47161,
+      "width": 368,
+      "height": 861,
+      "sha256": "7ea56250b12d83d908ea86b275820449705f825041a1ad8b77a825f1ded04469"
+    },
+    {
+      "file": "native-graph-mobile-EP-4G1A0S-partial.png",
+      "bytes": 51305,
+      "width": 368,
+      "height": 861,
+      "sha256": "2f1cb01357045a1affce8d92f07c7830b7f59fc0692e33329d4bf5d18b0457dd"
+    },
+    {
+      "file": "native-graph-mobile-EP-4G1A0S-incorrect.png",
+      "bytes": 69343,
+      "width": 368,
+      "height": 1215,
+      "sha256": "11f80174b6d0f13b1b4694db20f7d41a571f61a0fb061113b520bdc2faa295d5"
+    },
+    {
+      "file": "native-graph-mobile-EP-4G1A0S-correction.png",
+      "bytes": 70403,
+      "width": 368,
+      "height": 1163,
+      "sha256": "b80a9cd10cd02da357eecae5f513bc68b77451613dfd002e357bc58c19855526"
+    },
+    {
+      "file": "native-graph-mobile-EP-4G1A0S-model.png",
+      "bytes": 90511,
+      "width": 368,
+      "height": 1462,
+      "sha256": "f6fbfee2e90b93cf978ba7d4690d2cc82efac4a8b416b368d2a6d6b7e5071a5c"
+    },
+    {
+      "file": "native-graph-mobile-EP-4G1A0S-correct.png",
+      "bytes": 70421,
+      "width": 368,
+      "height": 1163,
+      "sha256": "34b5e345f915a69883100cb0f6a196655bb39d089709f2aac4f00fb1f875b33b"
+    },
+    {
+      "file": "graph-teacher-mobile-EP-4G1A0S.png",
+      "bytes": 69238,
+      "width": 366,
+      "height": 1207,
+      "sha256": "1ea6a68626ac07261b55003726491d135dcc7c0d952551ac0b1b80eed762b852"
+    },
+    {
+      "file": "native-graph-mobile-EP-780GGH-unanswered.png",
+      "bytes": 57792,
+      "width": 368,
+      "height": 989,
+      "sha256": "759f9d95832cf4f2f604a51f0dd17f8e3e68eb8d52f48f3e6c1c4ad655541548"
+    },
+    {
+      "file": "native-graph-mobile-EP-780GGH-partial.png",
+      "bytes": 57966,
+      "width": 368,
+      "height": 989,
+      "sha256": "7a77d890c09dd8608c1dbaeecbc5285a93e85c8a378e9830ab0a8901be687b10"
+    },
+    {
+      "file": "native-graph-mobile-EP-780GGH-incorrect.png",
+      "bytes": 77614,
+      "width": 368,
+      "height": 1342,
+      "sha256": "27ff97b7cf762f00c0794d2bd0d60eaa94cc327b2af62248eda1c85b50880d06"
+    },
+    {
+      "file": "native-graph-mobile-EP-780GGH-correction.png",
+      "bytes": 75963,
+      "width": 368,
+      "height": 1288,
+      "sha256": "0f2648c3f2c6fd5ec84a5d151e0baef9ce6093152ef9112a4764595fade61545"
+    },
+    {
+      "file": "native-graph-mobile-EP-780GGH-model.png",
+      "bytes": 94486,
+      "width": 368,
+      "height": 1584,
+      "sha256": "484ab050e3084cc3a2bb10df8c6f6e0766c16825aa3e2093fa1a7079531b80ab"
+    },
+    {
+      "file": "native-graph-mobile-EP-780GGH-correct.png",
+      "bytes": 76022,
+      "width": 368,
+      "height": 1288,
+      "sha256": "de147d33ddcca18f715705f3af4ac4d7b6b1af4c0c8948753827b3b7a42d69ac"
+    },
+    {
+      "file": "graph-teacher-mobile-EP-780GGH.png",
+      "bytes": 76879,
+      "width": 366,
+      "height": 1297,
+      "sha256": "ccacae9f5f2cc09f42081a9facb4a6cf54d09ecf371f3d823904060c76c1ec88"
+    },
+    {
+      "file": "late-written-desktop-EB-000001-unanswered.png",
+      "bytes": 27431,
+      "width": 1120,
+      "height": 388,
+      "sha256": "6d38e7a08a9d28443a9f64d06e79246fa36acf7b4d6f16b107fd8c76850f75e3"
+    },
+    {
+      "file": "late-written-desktop-EB-000001-partial.png",
+      "bytes": 35866,
+      "width": 1120,
+      "height": 388,
+      "sha256": "d99ab9609fbcb983fd273c9803f391ed5cf8c3fc2d6fd02f143396169451fd31"
+    },
+    {
+      "file": "late-written-desktop-EB-000001-incorrect.png",
+      "bytes": 85155,
+      "width": 1120,
+      "height": 1068,
+      "sha256": "0f9571731c9bf448d7d2d33ab91770e353cb587645dd678b877d1f3fa0b49d2d"
+    },
+    {
+      "file": "late-written-desktop-EB-000001-correction.png",
+      "bytes": 99966,
+      "width": 1120,
+      "height": 1240,
+      "sha256": "3e5609116e32833d0001ebc4d30ff37cdd10b0cab6cffb168b0145a3e3269d41"
+    },
+    {
+      "file": "late-written-desktop-EB-000001-model.png",
+      "bytes": 161656,
+      "width": 1120,
+      "height": 1862,
+      "sha256": "37fc3e6dc3937c816d14e60464e6b3aa9f7aea40404eaf0f2122b598df8fdc3a"
+    },
+    {
+      "file": "late-written-desktop-EB-000001-correct.png",
+      "bytes": 91193,
+      "width": 1120,
+      "height": 1068,
+      "sha256": "5c9bd6611e1bc670952c03ce411b13f588a341c4fc7e2953bc657797dff13a83"
+    },
+    {
+      "file": "late-written-desktop-EE-8IPP11-unanswered.png",
+      "bytes": 30082,
+      "width": 1120,
+      "height": 352,
+      "sha256": "46372483d8de924097c44f0da4e2c7db0c45a03c8d6006db4a7a332b28696340"
+    },
+    {
+      "file": "late-written-desktop-EE-8IPP11-partial.png",
+      "bytes": 32745,
+      "width": 1120,
+      "height": 352,
+      "sha256": "a42be321b5546f1c3eece8a3a75c337f6908c58470d0ee466526f9365827d273"
+    },
+    {
+      "file": "late-written-desktop-EE-8IPP11-incorrect.png",
+      "bytes": 53009,
+      "width": 1120,
+      "height": 654,
+      "sha256": "150dc5764173b4d1b96299938d0595af77ec153e7362a09b2b66259ed8f541c5"
+    },
+    {
+      "file": "late-written-desktop-EE-8IPP11-correction.png",
+      "bytes": 60753,
+      "width": 1120,
+      "height": 822,
+      "sha256": "849f6a3909cb4fd2ca7398b12cfe984ebd146e9adf55807b10880e3349a13444"
+    },
+    {
+      "file": "late-written-desktop-EE-8IPP11-model.png",
+      "bytes": 74139,
+      "width": 1120,
+      "height": 960,
+      "sha256": "7e36ebf0eebd3860f674f9445c09395e82df8fc18208dc472f91ff83ea830c0e"
+    },
+    {
+      "file": "late-written-desktop-EE-8IPP11-correct.png",
+      "bytes": 52694,
+      "width": 1120,
+      "height": 654,
+      "sha256": "54b13c626fa95896e904340fb7b1628adf66611570e5f0bc209afd8d67178d90"
+    },
+    {
+      "file": "late-written-desktop-EE-6US2V7-unanswered.png",
+      "bytes": 32913,
+      "width": 1120,
+      "height": 355,
+      "sha256": "ff181caca56349618e0a792d7f431be71d9e1e71a86e91ef6bc137aa4f6ec1f4"
+    },
+    {
+      "file": "late-written-desktop-EE-6US2V7-partial.png",
+      "bytes": 33316,
+      "width": 1120,
+      "height": 355,
+      "sha256": "8960818cf2ab9ceb1c18aa59d3d87640a2469aab430c98f56e5446ca4afdb418"
+    },
+    {
+      "file": "late-written-desktop-EE-6US2V7-incorrect.png",
+      "bytes": 73151,
+      "width": 1120,
+      "height": 808,
+      "sha256": "a9dcb995a7896344402c33de58b8df256a9177c1834fe018b63f41b4d14e3a36"
+    },
+    {
+      "file": "late-written-desktop-EE-6US2V7-correction.png",
+      "bytes": 81153,
+      "width": 1120,
+      "height": 976,
+      "sha256": "23cafe626d511612eb45855f50042c7ea8fdf309c4e566a9b31c1edc3e4d2557"
+    },
+    {
+      "file": "late-written-desktop-EE-6US2V7-model.png",
+      "bytes": 113887,
+      "width": 1120,
+      "height": 1312,
+      "sha256": "80bbf529cbefbd78193fa8c739854a7a6d45cc37c1445b949506ff9f46667bd7"
+    },
+    {
+      "file": "late-written-desktop-EE-6US2V7-correct.png",
+      "bytes": 72893,
+      "width": 1120,
+      "height": 808,
+      "sha256": "8ae217d256a3e4188ca89d09ed5f99b3630071df48d8cb1b39e5783fbfa8e60f"
+    },
+    {
+      "file": "late-written-tablet-EB-000001-unanswered.png",
+      "bytes": 27674,
+      "width": 780,
+      "height": 536,
+      "sha256": "524e9760d0f24448fb474df75c98398c44068a15765591e27b64dbd926a6c43e"
+    },
+    {
+      "file": "late-written-tablet-EB-000001-partial.png",
+      "bytes": 35617,
+      "width": 780,
+      "height": 536,
+      "sha256": "a1bddb0003a046e9c4866c1ab29389d4bfec43f4235ef7927d643a84669aa795"
+    },
+    {
+      "file": "late-written-tablet-EB-000001-incorrect.png",
+      "bytes": 76000,
+      "width": 780,
+      "height": 1066,
+      "sha256": "4b7cae49857584456e17a97381717d83fe666fb52db26d0fa9e3ace274b840b5"
+    },
+    {
+      "file": "late-written-tablet-EB-000001-correction.png",
+      "bytes": 90273,
+      "width": 780,
+      "height": 1238,
+      "sha256": "160ccd2e4f3ce4eadb56848f3f4e2535cb01cdd87435c85c1c55a37c18ffd1c2"
+    },
+    {
+      "file": "late-written-tablet-EB-000001-model.png",
+      "bytes": 139424,
+      "width": 780,
+      "height": 1652,
+      "sha256": "9faf44976ffb592da7f7362ce1ed6242937f349a8a75dcac07753b54bce7221f"
+    },
+    {
+      "file": "late-written-tablet-EB-000001-correct.png",
+      "bytes": 82001,
+      "width": 780,
+      "height": 1066,
+      "sha256": "24e236389039bd51051f4773589dd6ca01d2b8ec94105d736ec207ab02af85b2"
+    },
+    {
+      "file": "late-written-tablet-EE-8IPP11-unanswered.png",
+      "bytes": 30193,
+      "width": 780,
+      "height": 500,
+      "sha256": "1a50b9646e306fffa445e6be225fa62f822ae7360a5b7891f7202954a3d4cd38"
+    },
+    {
+      "file": "late-written-tablet-EE-8IPP11-partial.png",
+      "bytes": 32835,
+      "width": 780,
+      "height": 500,
+      "sha256": "09e4158e53e351cf9d1490c330f6394861847c130824d93434f557ba64435f3f"
+    },
+    {
+      "file": "late-written-tablet-EE-8IPP11-incorrect.png",
+      "bytes": 49326,
+      "width": 780,
+      "height": 731,
+      "sha256": "6f85cacf384b91b6783465cb61d1d5d7c1c2b843a1d1a001fa98676af6773d6c"
+    },
+    {
+      "file": "late-written-tablet-EE-8IPP11-correction.png",
+      "bytes": 56715,
+      "width": 780,
+      "height": 898,
+      "sha256": "73489d63c50570c0e5f9fa9642c25993d74ceebc5000d94384e0ca457999bb38"
+    },
+    {
+      "file": "late-written-tablet-EE-8IPP11-model.png",
+      "bytes": 68446,
+      "width": 780,
+      "height": 1081,
+      "sha256": "f1e79c0c01582921feb46d9bc9c7c1cfcecd937034915cd6330c7c0044a02360"
+    },
+    {
+      "file": "late-written-tablet-EE-8IPP11-correct.png",
+      "bytes": 48996,
+      "width": 780,
+      "height": 731,
+      "sha256": "10021228d76b1a527720e565d0c1f0ac5ca6dec32b860cde44af3ecd9137fda1"
+    },
+    {
+      "file": "late-written-tablet-EE-6US2V7-unanswered.png",
+      "bytes": 32544,
+      "width": 780,
+      "height": 503,
+      "sha256": "e72c8301caba3400d745fe244980e861503829f29eba853a49a0f9ba2aca15f0"
+    },
+    {
+      "file": "late-written-tablet-EE-6US2V7-partial.png",
+      "bytes": 32921,
+      "width": 780,
+      "height": 503,
+      "sha256": "ea90d361e680e9d61c549763a549f03409f51b96d9962b4036cfdf40f0693bf3"
+    },
+    {
+      "file": "late-written-tablet-EE-6US2V7-incorrect.png",
+      "bytes": 64101,
+      "width": 780,
+      "height": 786,
+      "sha256": "967dd60c02fe8eb1fa89283398e077779bbb4e9f8a5d0c4fa683f59252f2e45f"
+    },
+    {
+      "file": "late-written-tablet-EE-6US2V7-correction.png",
+      "bytes": 71685,
+      "width": 780,
+      "height": 954,
+      "sha256": "95558970a5d53ca750cc16fdb732fce1e776a082905dd9c82cdd5569003554c0"
+    },
+    {
+      "file": "late-written-tablet-EE-6US2V7-model.png",
+      "bytes": 98882,
+      "width": 780,
+      "height": 1235,
+      "sha256": "51bf295d0efbce6f106be188cc010f203c76a54f9e16e2a6c69fc2beb9359412"
+    },
+    {
+      "file": "late-written-tablet-EE-6US2V7-correct.png",
+      "bytes": 63770,
+      "width": 780,
+      "height": 786,
+      "sha256": "d6df4f903fc38d8c581e979071e1648ad7f98d9acd66801c4f401b2d47d75125"
+    },
+    {
+      "file": "late-written-mobile-EB-000001-unanswered.png",
+      "bytes": 25675,
+      "width": 366,
+      "height": 589,
+      "sha256": "f53685b2b3c2fe841a01e7641863be4ca707ec66f53962d2c52ee9b120ceadeb"
+    },
+    {
+      "file": "late-written-mobile-EB-000001-partial.png",
+      "bytes": 33387,
+      "width": 366,
+      "height": 589,
+      "sha256": "3dfe083358fd13e5d6871074854bae77e02e26b896bca96d5199353f6a821bfa"
+    },
+    {
+      "file": "late-written-mobile-EB-000001-incorrect.png",
+      "bytes": 74333,
+      "width": 366,
+      "height": 1391,
+      "sha256": "e40dc2cd4be5a373e9335cb68ff8c6e1d487ef2f1c6fea3b1efd05836eedc85a"
+    },
+    {
+      "file": "late-written-mobile-EB-000001-correction.png",
+      "bytes": 88407,
+      "width": 366,
+      "height": 1563,
+      "sha256": "0bdc5b03fb4a905323b941059aa1cb563cbf536e64f19beb4cf3a8c596f3f501"
+    },
+    {
+      "file": "late-written-mobile-EB-000001-model.png",
+      "bytes": 137505,
+      "width": 366,
+      "height": 2155,
+      "sha256": "ead08519ee1b4ef1c07a800f500f5401fbc02c45b4e2cd097ddcdf1d07d5d02f"
+    },
+    {
+      "file": "late-written-mobile-EB-000001-correct.png",
+      "bytes": 80025,
+      "width": 366,
+      "height": 1391,
+      "sha256": "ab1c3f1ad5748470e0f5e4387dc15f1c5e8cb77b81fb27096a740cb1d1a4d67a"
+    },
+    {
+      "file": "late-written-mobile-EE-8IPP11-unanswered.png",
+      "bytes": 27288,
+      "width": 366,
+      "height": 521,
+      "sha256": "305e2643a5360bcb18c2282af063c1823ea94d752d2fb682e9bedcf6549946de"
+    },
+    {
+      "file": "late-written-mobile-EE-8IPP11-partial.png",
+      "bytes": 29847,
+      "width": 366,
+      "height": 521,
+      "sha256": "1736f6042d51308283aea0153c08cba3e17cd8979f9c3a23d5d0de91b82d7486"
+    },
+    {
+      "file": "late-written-mobile-EE-8IPP11-incorrect.png",
+      "bytes": 47137,
+      "width": 366,
+      "height": 825,
+      "sha256": "614b173878efb0b1143fa595805f1ddf8cb466aa03cdc865ec9c02dca18e3a4e"
+    },
+    {
+      "file": "late-written-mobile-EE-8IPP11-correction.png",
+      "bytes": 54344,
+      "width": 366,
+      "height": 992,
+      "sha256": "6161950fffc736f2179634dd5b29d6160d56c2f6f6ad286540e3781717c60af7"
+    },
+    {
+      "file": "late-written-mobile-EE-8IPP11-model.png",
+      "bytes": 63784,
+      "width": 366,
+      "height": 1142,
+      "sha256": "fcf3f6e7f3b8c50cbed5a042eeacc46c9cd428bf5e1864e4ebfd4e787d82bd3f"
+    },
+    {
+      "file": "late-written-mobile-EE-8IPP11-correct.png",
+      "bytes": 46837,
+      "width": 366,
+      "height": 825,
+      "sha256": "99568c01b05154cdd86cd407114bbecca92cd31876ea15fdba9817324024af98"
+    },
+    {
+      "file": "late-written-mobile-EE-6US2V7-unanswered.png",
+      "bytes": 29425,
+      "width": 366,
+      "height": 522,
+      "sha256": "3b2fc8da81fec7b573e2e71755490b6c9f55380baed7bbe4a0af512dd275540f"
+    },
+    {
+      "file": "late-written-mobile-EE-6US2V7-partial.png",
+      "bytes": 29883,
+      "width": 366,
+      "height": 522,
+      "sha256": "7b70959bc2d6b105e33f3022b460972606085efe35eda39d127d65fa2af63d8d"
+    },
+    {
+      "file": "late-written-mobile-EE-6US2V7-incorrect.png",
+      "bytes": 60871,
+      "width": 366,
+      "height": 980,
+      "sha256": "55f772a06a329a810e28f045743194299969473132e92065c203afb638d82487"
+    },
+    {
+      "file": "late-written-mobile-EE-6US2V7-correction.png",
+      "bytes": 68133,
+      "width": 366,
+      "height": 1148,
+      "sha256": "9b4bb694218af3e57ae44c82ba15bd1e68b02ebfe46bc82eeff69d9d62cdaac3"
+    },
+    {
+      "file": "late-written-mobile-EE-6US2V7-model.png",
+      "bytes": 89864,
+      "width": 366,
+      "height": 1468,
+      "sha256": "ef338feffc6712fd23a49b74a7bcd485eea5d8c8a830a3e17d74d33ae3539986"
+    },
+    {
+      "file": "late-written-mobile-EE-6US2V7-correct.png",
+      "bytes": 60608,
+      "width": 366,
+      "height": 980,
+      "sha256": "0fd7c0077210abc631cfba1ba5d905dfa54c93fc3ec3422c351a88683c651cae"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-U5FSU0-unanswered.png",
+      "bytes": 61600,
+      "width": 1120,
+      "height": 1145,
+      "sha256": "1cb28ed9d536d4f23330d94e8c0ac19dc6d3926819617310d0ce72188bd0cf08"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-U5FSU0-partial.png",
+      "bytes": 81226,
+      "width": 1120,
+      "height": 1145,
+      "sha256": "6feea1d14384d9432c2eedab9a1e6e56a7f327ecad694c8e0d3e078922104b26"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-U5FSU0-self-review.png",
+      "bytes": 189161,
+      "width": 1120,
+      "height": 1519,
+      "sha256": "673055eb059d8d33e2191e6ac78ae5745ad4c2ff4280cdcd03dbd363bc515d46"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-U5FSU0-correct.png",
+      "bytes": 866840,
+      "width": 1120,
+      "height": 7812,
+      "sha256": "33abaed778af5dc12e65b90d79c0ebdf266c8dd9caa4b25ec75e28f0e9baf860"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-U5FSU0-model.png",
+      "bytes": 908100,
+      "width": 1120,
+      "height": 8538,
+      "sha256": "600a5c7dabbc6fc7f741da6590ab44f50dd6c6cf04ea309438eae25bb3b54dcb"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-U5FSU0-incorrect.png",
+      "bytes": 137578,
+      "width": 1120,
+      "height": 1777,
+      "sha256": "1bd0d62c8ace1c18906ceccc413d4cd7619aff8b704e93c406240b05c2ec1588"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-UFFEIZ-unanswered.png",
+      "bytes": 27835,
+      "width": 1120,
+      "height": 908,
+      "sha256": "458fb09c6b93dd8f646352c3aac90a358ee62f395c33d861cb753db9f6adfdcd"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-UFFEIZ-partial.png",
+      "bytes": 42433,
+      "width": 1120,
+      "height": 908,
+      "sha256": "dc06c2e110002ba56e63f8cfd807d7c9fde4fcb299e5dd0a350a61cb70e6ee44"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-UFFEIZ-self-review.png",
+      "bytes": 97138,
+      "width": 1120,
+      "height": 1059,
+      "sha256": "9b0caa56b74a845f46a392eee8fd3a685d744e28be181707b8fd37f56d9b57d1"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-UFFEIZ-correct.png",
+      "bytes": 233904,
+      "width": 1120,
+      "height": 2757,
+      "sha256": "18d5302eefba65e9dbc5e8078ef369e9b362da008dadad4713d379031dc987e3"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-UFFEIZ-model.png",
+      "bytes": 275038,
+      "width": 1120,
+      "height": 3483,
+      "sha256": "cd6e881daf329a6315eb3b24a577e2764df392b5d3648dc56fdee2317ca34a3c"
+    },
+    {
+      "file": "late-rubric-desktop-SBC-UFFEIZ-incorrect.png",
+      "bytes": 123763,
+      "width": 1120,
+      "height": 1777,
+      "sha256": "3a65b47cac9f35a8b9880ebf36aa9d8c1d3ee3c411f3d0f30861767dab4606c5"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-U5FSU0-unanswered.png",
+      "bytes": 79496,
+      "width": 780,
+      "height": 1739,
+      "sha256": "6c5261e30ff9b452279401d84c620333af211033d3af9760d8557193b8cb8dd3"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-U5FSU0-partial.png",
+      "bytes": 87125,
+      "width": 780,
+      "height": 1739,
+      "sha256": "b590f8a467095c8d4857011e5947751528e1996d9b7bdbf451687eade13278b0"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-U5FSU0-self-review.png",
+      "bytes": 178837,
+      "width": 780,
+      "height": 2331,
+      "sha256": "003f3c7f06689ff0fb3523c4ef8f0f6db185c9732c1a560ae4d1b18fb14e8acd"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-U5FSU0-correct.png",
+      "bytes": 661546,
+      "width": 780,
+      "height": 5241,
+      "sha256": "cc6e1cfe40b50a93d1584a02e526992b72c309f4545f8fbde95f8b921cadb811"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-U5FSU0-model.png",
+      "bytes": 691879,
+      "width": 780,
+      "height": 5755,
+      "sha256": "c3aeadc9ec2ec773dc2a994695be937c1cc7d82cad6016aabebe5632f902d83a"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-U5FSU0-incorrect.png",
+      "bytes": 126384,
+      "width": 780,
+      "height": 2378,
+      "sha256": "83105130fa3ed10a1a25aad61da418fa7587c3d21a15f4eab0ec736e4139646c"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-UFFEIZ-unanswered.png",
+      "bytes": 28292,
+      "width": 780,
+      "height": 1018,
+      "sha256": "1250d62a81fe6dbec94745c1704fbb4e21557c6c6ae28501ce15e115bd40d624"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-UFFEIZ-partial.png",
+      "bytes": 44157,
+      "width": 780,
+      "height": 1018,
+      "sha256": "bab92ff994add57734e8905b873e5515650ffd9ff4ff13faadb4ec4a6027205a"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-UFFEIZ-self-review.png",
+      "bytes": 91596,
+      "width": 780,
+      "height": 1853,
+      "sha256": "a15f7b8a82c05af35d34868eaf76ddcf680257d33790c55bd06906f2dcbeed9f"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-UFFEIZ-correct.png",
+      "bytes": 195771,
+      "width": 780,
+      "height": 2797,
+      "sha256": "ebfd0f0146aeb51be6b58e780bc04484156721cc86a9e07d2f61ad776894d19d"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-UFFEIZ-model.png",
+      "bytes": 226793,
+      "width": 780,
+      "height": 3311,
+      "sha256": "c7391e0cd597bdc908132c91335437fea43488aba595a6d9d509ee2523384045"
+    },
+    {
+      "file": "late-rubric-tablet-SBC-UFFEIZ-incorrect.png",
+      "bytes": 113461,
+      "width": 780,
+      "height": 2378,
+      "sha256": "8637e3e7a8ea2900f979ec5d245cf5cc9702fd5235375d88948ea1515497c918"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-U5FSU0-unanswered.png",
+      "bytes": 77734,
+      "width": 366,
+      "height": 1945,
+      "sha256": "f681adf1933238396c289b1ed6a38c85e19adce638e24b35f1d1558bbe8e5bc5"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-U5FSU0-partial.png",
+      "bytes": 82471,
+      "width": 366,
+      "height": 1945,
+      "sha256": "c3035c3dd5b765b81070f47db461440011a2479c38717fadff040591f4332dfc"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-U5FSU0-self-review.png",
+      "bytes": 183174,
+      "width": 366,
+      "height": 4118,
+      "sha256": "dba39f8b74c072e9d748ee613a83e2f670784cb7c84e8ce217f9f0f6de1f91e4"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-U5FSU0-correct.png",
+      "bytes": 654373,
+      "width": 366,
+      "height": 10891,
+      "sha256": "c3e0a5d649df1eb4a635c0e8040d02c712e9c1eb1ba96c91865a0e4f9e4c8f51"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-U5FSU0-model.png",
+      "bytes": 682935,
+      "width": 366,
+      "height": 11617,
+      "sha256": "00a900dc192a63fb1f791aa6579cbbe8a29775ceb37c098464c53e1f400fffa8"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-U5FSU0-incorrect.png",
+      "bytes": 129124,
+      "width": 366,
+      "height": 2700,
+      "sha256": "a4ec4fe3f124b8fdf97b67a398d3ac034386b6ed68dee794d00e5a0bc2ef9366"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-UFFEIZ-unanswered.png",
+      "bytes": 28478,
+      "width": 366,
+      "height": 904,
+      "sha256": "a37d164d6c88171f7cc6bec8e10307dc29a8b6120db953f894a7a4a08d1ef470"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-UFFEIZ-partial.png",
+      "bytes": 43872,
+      "width": 366,
+      "height": 904,
+      "sha256": "af5d02b091df19fd96e637dbbbe9fb0f7a53533692f4a2f8c39bb31846056698"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-UFFEIZ-self-review.png",
+      "bytes": 88919,
+      "width": 366,
+      "height": 1870,
+      "sha256": "5f653f6db90ce79dd36b51358e04abec4ca1819516f1fe04298b92a5fe7de70a"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-UFFEIZ-correct.png",
+      "bytes": 194276,
+      "width": 366,
+      "height": 3590,
+      "sha256": "90efc51d5beff3c378adad5405bfaa1b1f8ff320792169863f6f11080749e7ed"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-UFFEIZ-model.png",
+      "bytes": 223416,
+      "width": 366,
+      "height": 4316,
+      "sha256": "504bac69eebf62cd0e2f4d744b7f1e88a53dcb94a2deac6492a32ea21a949ee4"
+    },
+    {
+      "file": "late-rubric-mobile-SBC-UFFEIZ-incorrect.png",
+      "bytes": 115164,
+      "width": 366,
+      "height": 2609,
+      "sha256": "640b5ec6f312bae958ef618ba67ef8f8b2ea21b92f80be9b59266681529d47c7"
+    },
+    {
+      "file": "contact-desktop-AB-0000GJ.png",
+      "bytes": 513231,
+      "width": 1800,
+      "height": 2313,
+      "sha256": "28043ab0228af7f75b2b73b8ad7750dc06fc5a88b51272360f0f82934705c939"
+    },
+    {
+      "file": "contact-desktop-BE-0002DC.png",
+      "bytes": 743830,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "7a8e7a5d298d051b842e64b6a79f2c6c8a71f4f158ccf1338a4a0755bb72f12b"
+    },
+    {
+      "file": "contact-desktop-BE-0003K0.png",
+      "bytes": 455118,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "8c7a0cd872ae6f9aee194a689cfc75b09f20c514b0d3c1f909a78eb2a7ecab91"
+    },
+    {
+      "file": "contact-desktop-CAL-00I9HC.png",
+      "bytes": 961431,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "55f4f89b70c90247070547f3b0fcd14895ae3d18febb35ee4c89c9b62100b918"
+    },
+    {
+      "file": "contact-desktop-EB-000001.png",
+      "bytes": 300774,
+      "width": 1800,
+      "height": 1254,
+      "sha256": "d9312f35c123b60ee74a4eab45a67003eaa5d432ab7f0bd838dd623b6ccb035e"
+    },
+    {
+      "file": "contact-desktop-EE-6US2V7.png",
+      "bytes": 263275,
+      "width": 1800,
+      "height": 1122,
+      "sha256": "b2753ad4eaeb4159c1903d830393d4e30a08f57eae5004ca384db912d93d5fce"
+    },
+    {
+      "file": "contact-desktop-EE-8IPP11.png",
+      "bytes": 210818,
+      "width": 1800,
+      "height": 1000,
+      "sha256": "63a94b0b9125cba945c97fe027b83e3613667a5d9e381d87abad25aab3913a0e"
+    },
+    {
+      "file": "contact-desktop-EP-4G1A0S.png",
+      "bytes": 528117,
+      "width": 1800,
+      "height": 1728,
+      "sha256": "ad480b6a8a40f149b3e2ab05a19ea84c57f295ea3a77e918a1b7d1d2d892ddd6"
+    },
+    {
+      "file": "contact-desktop-EP-780GGH.png",
+      "bytes": 556015,
+      "width": 1800,
+      "height": 1727,
+      "sha256": "c966aa0713154aaec4904d39643d9684d51c468eb698d39870cc97b720834c65"
+    },
+    {
+      "file": "contact-desktop-EP-APMO94.png",
+      "bytes": 273775,
+      "width": 1800,
+      "height": 1000,
+      "sha256": "5ade55bee35867e6e510b2f22c73622671be0f1eaad67a17dbf1d4f2b47b256a"
+    },
+    {
+      "file": "contact-desktop-EP-BJLHC1.png",
+      "bytes": 247730,
+      "width": 1800,
+      "height": 1000,
+      "sha256": "f3c62ac3ff6e18e54a1b82bfc879c9f244400cad847165b6e61759fa7c3cc792"
+    },
+    {
+      "file": "contact-desktop-EP-CXMNAV.png",
+      "bytes": 269734,
+      "width": 1800,
+      "height": 1000,
+      "sha256": "f40d30ed120f33c9b8f7325ce07a32ad6a89c3513fe10ca5effee5064d0962a8"
+    },
+    {
+      "file": "contact-desktop-SBC-U5FSU0.png",
+      "bytes": 991906,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "93505eaa77ec60591f28a4b29919dce9c98888c602cec1fa68b6f6dac88863e7"
+    },
+    {
+      "file": "contact-desktop-SBC-UFFEIZ.png",
+      "bytes": 720084,
+      "width": 1800,
+      "height": 2299,
+      "sha256": "4af46545c8cd86950cb78d504c7bf0db040fb5f009d320652ba444f0bd943d33"
+    },
+    {
+      "file": "contact-ep-desktop.png",
+      "bytes": 409559,
+      "width": 1800,
+      "height": 1553,
+      "sha256": "a253976adda909b2120f07b8817801ad4a816539bf0cc0be2de9cd8013d78790"
+    },
+    {
+      "file": "contact-tablet-AB-0000GJ.png",
+      "bytes": 598126,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "b6bf18bc6ac98b4d0b2afcea3c9fff99e6bbf8425eda14297f0fa28abba06dba"
+    },
+    {
+      "file": "contact-tablet-BE-0002DC.png",
+      "bytes": 652504,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "ab0300c1e16b579d8638e1835752fffa38d02a7b32f7fe4a8b2b9f50dbcd6f66"
+    },
+    {
+      "file": "contact-tablet-BE-0003K0.png",
+      "bytes": 455271,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "807ceca5cc0a6ddfab744c676635ac3719b2df26a6b0c3d3af787632ed070d02"
+    },
+    {
+      "file": "contact-tablet-CAL-00I9HC.png",
+      "bytes": 826847,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "bd8ae807d854b7d34680ecb2d0c0e5809afcc8c10fc922a311ab9addb82beb70"
+    },
+    {
+      "file": "contact-tablet-EB-000001.png",
+      "bytes": 325002,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "11c3cf5da98a7645c94e1ab84aedbf2d77dbd29b97b4ea5588e387221403ecf9"
+    },
+    {
+      "file": "contact-tablet-EE-6US2V7.png",
+      "bytes": 343174,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "73a45ed1a3b44d0dda0f9d57cd19409e6e08449c9fecb9808a0a9206976b16d0"
+    },
+    {
+      "file": "contact-tablet-EE-8IPP11.png",
+      "bytes": 275533,
+      "width": 1800,
+      "height": 1244,
+      "sha256": "70e670816bfaa60f81a2e33b4a9d4c3c22cc3742a1e06829546ea037a11e45b2"
+    },
+    {
+      "file": "contact-tablet-EP-4G1A0S.png",
+      "bytes": 658425,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "0ce28eb81021167d016a5128b7b503d0c73a048fe942f5b882ede7bad8e14c92"
+    },
+    {
+      "file": "contact-tablet-EP-780GGH.png",
+      "bytes": 651720,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "7706757b733c7ffb6cf6a86d335cc75b84a3c19d19ec2f34b9ba4b86da6d4a7d"
+    },
+    {
+      "file": "contact-tablet-EP-APMO94.png",
+      "bytes": 365315,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "deae218005ad7320d31b3a1646c5ee1d7d5e36d9524310e2c2edae70f0c2dc23"
+    },
+    {
+      "file": "contact-tablet-EP-BJLHC1.png",
+      "bytes": 314666,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "666d6b57ab4ab356286659bcc6f751ef3e1df1a934fdd07f20b1f1f41c1f3c2b"
+    },
+    {
+      "file": "contact-tablet-EP-CXMNAV.png",
+      "bytes": 334956,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "b44f5aa2444fb687f8f232c19b8e0ae5d529e750951f7214a327d8bab5e27d8b"
+    },
+    {
+      "file": "contact-tablet-SBC-U5FSU0.png",
+      "bytes": 601437,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "1b4ff4bda63a2c0e595f1f2112a673a09e1a6619016c546d72053dc60fd5cd12"
+    },
+    {
+      "file": "contact-tablet-SBC-UFFEIZ.png",
+      "bytes": 680883,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "47dba9529e83c08a56d6436437621b03b51a8552d0c37e2efb24e83cacc6cce0"
+    },
+    {
+      "file": "contact-ep-tablet.png",
+      "bytes": 591985,
+      "width": 1800,
+      "height": 2411,
+      "sha256": "6b929fc0493f58434dda808b7e009094ccf1720990c44919d0e5ade5919d4927"
+    },
+    {
+      "file": "contact-mobile-AB-0000GJ.png",
+      "bytes": 438415,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "bdb000fc942540f00780b666bc5a7a8d78856b9ec2255a183df10fbcf1adc05b"
+    },
+    {
+      "file": "contact-mobile-BE-0002DC.png",
+      "bytes": 435248,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "13a562e8ee94a404aeb53f8df4b5c5c8e943b22ddd4a3668c88d31e091cb8e75"
+    },
+    {
+      "file": "contact-mobile-BE-0003K0.png",
+      "bytes": 282985,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "175defc7404c6e058c493170dbcf802dab652b17b12b7092fb2154918dfa557b"
+    },
+    {
+      "file": "contact-mobile-CAL-00I9HC.png",
+      "bytes": 518049,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "54bc0c4cb65ed687a2e9e8c555be08bfeae22707ed4ed7c4808e654bacb00139"
+    },
+    {
+      "file": "contact-mobile-EB-000001.png",
+      "bytes": 270154,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "52d068c26e5e3ea5e082652a88eebceccf799fe064cdbd08858402cdd0a3e2d5"
+    },
+    {
+      "file": "contact-mobile-EE-6US2V7.png",
+      "bytes": 300744,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "7465b1b9d7790b1a33fac88fa1ab8b50d1bc3fa21f8f6ab5f467289b780ca864"
+    },
+    {
+      "file": "contact-mobile-EE-8IPP11.png",
+      "bytes": 281799,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "3a8bd19bda5defa5517ed02ee04ccd12f115398ad6749f914233088ffc429980"
+    },
+    {
+      "file": "contact-mobile-EP-4G1A0S.png",
+      "bytes": 495748,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "a8a9d4223c37bfee84a01b54492b62a1cb8e81e5acd98b0d482260fc3dcf579a"
+    },
+    {
+      "file": "contact-mobile-EP-780GGH.png",
+      "bytes": 476986,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "3dcb3e4da9667ed194db2b97fbee7aa8eddf4db84640c975d33c2a0aa7185ef6"
+    },
+    {
+      "file": "contact-mobile-EP-APMO94.png",
+      "bytes": 256682,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "414b028e84d0defeb4d213159a1a2a974631c250133275de45b59ff3f8cc4ad3"
+    },
+    {
+      "file": "contact-mobile-EP-BJLHC1.png",
+      "bytes": 253152,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "75646ee0f786b5937a932ce62935ab6c9e7e214bca5432073b4d97e41a6bea1c"
+    },
+    {
+      "file": "contact-mobile-EP-CXMNAV.png",
+      "bytes": 240869,
+      "width": 1800,
+      "height": 1264,
+      "sha256": "54b761b053547b5bc7d059549aec61f2eaf993daf11d0eb618908c7bd25c7212"
+    },
+    {
+      "file": "contact-mobile-SBC-U5FSU0.png",
+      "bytes": 326919,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "2a3d85b777dff648be8a1197f9af5bba120b274f78e61790bf94981451910ca9"
+    },
+    {
+      "file": "contact-mobile-SBC-UFFEIZ.png",
+      "bytes": 491127,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "12a9052f31e6dbc7233a508df0c88853c75639a7c8afe4518f5394efa1c70ed9"
+    },
+    {
+      "file": "contact-ep-mobile.png",
+      "bytes": 456679,
+      "width": 1800,
+      "height": 2416,
+      "sha256": "fa5477b6f92d9d4f63f4ce905b4d81d87cbd292cd916e21ca85a3ab3cdf61181"
+    },
+    {
+      "file": "contact-source-written-desktop-EB-000001.png",
+      "bytes": 337348,
+      "width": 1800,
+      "height": 1204,
+      "sha256": "c3ed71d72cff0cf2784dfec8b6f32e74e22f0d9335da93746e0bda152c246488"
+    },
+    {
+      "file": "contact-source-written-desktop-EE-8IPP11.png",
+      "bytes": 138597,
+      "width": 1800,
+      "height": 1000,
+      "sha256": "becd19c4fa53f6df99d418cfc427d36c0adef47b7e3262d7c1565741a82e3934"
+    },
+    {
+      "file": "contact-source-written-desktop-EE-6US2V7.png",
+      "bytes": 176588,
+      "width": 1800,
+      "height": 1000,
+      "sha256": "290c4676f18835c1e0d08e9fabb50f06950425677afd4b04e0e59a8726b73e51"
+    },
+    {
+      "file": "contact-source-written-tablet-EB-000001.png",
+      "bytes": 335298,
+      "width": 1800,
+      "height": 1214,
+      "sha256": "7503a5f477cdf118dd9d6652e90d891167e97ffd460ae95192fdd9e672cba0f9"
+    },
+    {
+      "file": "contact-source-written-tablet-EE-8IPP11.png",
+      "bytes": 202554,
+      "width": 1800,
+      "height": 1189,
+      "sha256": "37c4fe6a1fbe4ea53271544aa6a51c16e84df39b8230ad01b97bd37d68f8fcbb"
+    },
+    {
+      "file": "contact-source-written-tablet-EE-6US2V7.png",
+      "bytes": 268348,
+      "width": 1800,
+      "height": 1214,
+      "sha256": "6d134785793e8a6e2fd3015187aea2a5e4bcd5047216c199c389f0a8ee2f8dae"
+    },
+    {
+      "file": "contact-source-written-mobile-EB-000001.png",
+      "bytes": 283954,
+      "width": 1800,
+      "height": 1214,
+      "sha256": "8f6ddcbe40d80cb3164393b2b3a1e351a16aa1dcd1584de0cebc75104572eff0"
+    },
+    {
+      "file": "contact-source-written-mobile-EE-8IPP11.png",
+      "bytes": 296407,
+      "width": 1800,
+      "height": 1214,
+      "sha256": "c8cad6bb732f148b5c7992139646eb41410ddbe65c986ea2f82ca95737f036ad"
+    },
+    {
+      "file": "contact-source-written-mobile-EE-6US2V7.png",
+      "bytes": 344084,
+      "width": 1800,
+      "height": 1214,
+      "sha256": "484152efecd28e9390247a1d4966ff431d3e0b613da399922c213ff85d0a32aa"
+    },
+    {
+      "file": "contact-teacher-all-mobile.png",
+      "bytes": 1720110,
+      "width": 1800,
+      "height": 7524,
+      "sha256": "7b890c30ea1008369fbbfa0c97c27ee5253b251608abe7c05f1e926d9e47512a"
+    }
+  ],
+  "renderedSample": [
+    "contact-mobile-EP-4G1A0S.png",
+    "contact-source-written-mobile-EE-6US2V7.png",
+    "contact-desktop-SBC-UFFEIZ.png",
+    "contact-desktop-CAL-00I9HC.png"
+  ],
+  "inspection": "F07 inspected actual six-state/source contacts, native SVG graph, borderless choice controls, comparison locked evidence layout and numeric working/model rows; F08 retains detailed chemistry/source review.",
+  "limitations": "Superseded black graph and pre-instruction captures retained; latest affected suites supersede only their respective earlier renders."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "level": 1,
+      "family": "enthalpy-change",
+      "code": "BE-000004",
+      "imageEvidence": [
+        {
+          "naturalWidth": 883,
+          "carbonMinus": 1,
+          "parseErrors": 0
+        },
+        {
+          "naturalWidth": 883,
+          "carbonMinus": 1,
+          "parseErrors": 0
+        }
+      ],
+      "deltaH": -119,
+      "independentEvidence": 0
+    },
+    {
+      "level": 2,
+      "family": "enthalpy-change",
+      "code": "BE-000078",
+      "imageEvidence": [
+        {
+          "naturalWidth": 883,
+          "carbonMinus": 1,
+          "parseErrors": 0
+        },
+        {
+          "naturalWidth": 883,
+          "carbonMinus": 1,
+          "parseErrors": 0
+        }
+      ],
+      "deltaH": -119,
+      "independentEvidence": 0
+    },
+    {
+      "level": 2,
+      "family": "unknown-bond",
+      "code": "BE-0001S4",
+      "imageEvidence": [
+        {
+          "naturalWidth": 883,
+          "carbonMinus": 1,
+          "parseErrors": 0
+        },
+        {
+          "naturalWidth": 883,
+          "carbonMinus": 1,
+          "parseErrors": 0
+        }
+      ],
+      "deltaH": -119,
+      "independentEvidence": 0
+    }
+  ],
+  "errors": []
+}

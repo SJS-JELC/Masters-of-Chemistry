@@ -1,0 +1,26 @@
+{
+  "issueId": "C3-BIII-NAME-STRUCTURE",
+  "reviewId": "S3-REVIEW-C3-NAME",
+  "disposition": "APPROVE_BOUNDED_MODEL_QUALIFICATION",
+  "student": {
+    "label": "Hydrazone model compound",
+    "context": "A hydrazone model compound (Mr 114) undergoes hydrolysis to D (58) + E (46) + F (46). Water is the reagent; use the displayed structure and masses.",
+    "imageAlt": "Skeletal formula of the hydrazone model compound used in reaction (iii)",
+    "optionalPartBIntroduction": "Suggest structures for the hydrolysis products using the displayed structures and relative molecular masses. Reaction (iii) uses a model compound.",
+    "avoid": ["Do not call the drawn compound gyromitrin or assert that it is a natural fungal toxin.", "Do not label it propanone-derived in the student prompt, because that would reveal product D."]
+  },
+  "publicCopiedSvgMetadata": {
+    "title": "Hydrazone model compound - skeletal formula (notes)",
+    "description": "Hydrazone model compound used in reaction (iii): line-angle skeletal formula, all-black for printed notes. Canonical SMILES: CC(C)=NN(C)C=O. Rendered using Comfortaa Bold.",
+    "constraint": "If the existing copied SVG is served, correct only its title/desc text. Preserve all paths, geometry, font provenance and rendering. Keep the protected original untouched and retain its original label/fingerprint in provenance. No chemical regeneration is authorised by this disposition."
+  },
+  "teacher": {
+    "note": "The retained digitised exercise labels this structure 'Gyromitrin'. The displayed structure is a propanone-derived hydrazone, CC(C)=NN(C)C=O (C5H10N2O; nominal Mr 114). This activity keeps that drawn model and its original answer slots: D is propanone (58), with methylhydrazine and methanoic acid (46 each) as E/F in either accepted order. Actual gyromitrin is the ethanal-derived compound C/C=N/N(C)C=O (PubChem CID 9548611; C4H8N2O; molar mass 100.12 g/mol). The model is not presented as actual gyromitrin or as a known natural fungal toxin.",
+    "citation": "https://pubchem.ncbi.nlm.nih.gov/compound/Gyromitrin",
+    "provenanceNote": "The inherited Gyromitrin label remains recorded as source metadata. This review did not recover the original paper or historical review and makes no claim about which source introduced the mismatch."
+  },
+  "preserve": ["activity identity", "b-iii unit identity", "D/E/F slot identities", "all existing graph alternatives", "Mr 114 and product masses 58/46/46", "accepted E/F interchange", "dependency and completion semantics", "protected originals"],
+  "implementationOwner": "A16, following foreman/root acceptance of this disposition",
+  "implementationChecks": ["Replace the live b-iii fungal-toxin/name context and alt.", "Qualify any publicly used part-B natural-products heading, historical raster caption or metadata that would assert this model is gyromitrin.", "If serving the copied SVG, apply the exact reviewed title/desc wording without geometry changes; retain both fingerprints.", "Expose the teacher/source note separately from the unsolved student prompt.", "Verify live desktop/mobile output and accessible names, existing D/E/F matching and fingerprints of bank graphs/IDs/dependencies."],
+  "alternativeRequiringRootDecision": "Replace with actual gyromitrin: change reagent diagram/formula/Mr from 114 to 100 and D from propanone/58 to ethanal/44, address E/Z representation and use a new identity for a substantively replaced question. This is not authorised or necessary for the bounded qualification."
+}

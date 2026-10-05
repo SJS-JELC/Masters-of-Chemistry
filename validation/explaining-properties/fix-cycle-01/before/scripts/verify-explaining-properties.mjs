@@ -1,0 +1,34 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {productionRegistry} from '../src/foundation/registry.ts';
+import {activityDefinitions} from '../src/catalogue/definitions.ts';
+import {selectCurriculumTargets} from '../src/domain/session/selection.ts';
+import {propertiesBank} from '../src/activities/alevel/explaining-properties/bank.ts';
+import {leafBoundary} from '../src/persistence/catalogue-boundary.ts';
+import {validateRelease} from './validate-s4-release.mjs';
+import {currentInputs} from './current-inputs.mjs';
+const project=path.resolve(import.meta.dirname,'..'),workspace=path.resolve(project,'../..'),directory=path.join(project,'validation/explaining-properties');
+const read=file=>JSON.parse(fs.readFileSync(path.join(project,file),'utf8').replace(/^\uFEFF/,''));const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const contract=read('project-contract.json'),report={status:'RUNNING',checkedAt:new Date().toISOString(),checks:[],limitations:[]};
+const checks=report.checks;
+assert.equal(contract.contractVersion,'1.2.0');assert.equal(contract.activities.length,14);
+assert.deepEqual(productionRegistry.activities.map(item=>item.id).sort(),contract.activities.map(item=>item.id).sort());
+assert.deepEqual(activityDefinitions.map(item=>item.id).sort(),contract.activities.map(item=>item.id).sort());
+const typed=[...new Set(fs.readFileSync(path.join(project,'src/contracts/identity.ts'),'utf8').match(/(?:alevel|igcse)\/[a-z0-9-]+/g))].sort();assert.deepEqual(typed,contract.activities.map(item=>item.id).sort());
+let count=0;for(const course of ['alevel','igcse']){const registrations=productionRegistry.curriculumFor(course);count+=selectCurriculumTargets(registrations,course,registrations.flatMap(item=>item.gems.map(gem=>gem.id))).length;}assert.equal(count,43);
+assert.equal(propertiesBank.length,32);assert.deepEqual(leafBoundary['l6-t2-1-properties'],{activityId:'alevel/explaining-properties',levels:[1,2]});assert.deepEqual(leafBoundary['l6-t2-1-4'],{activityId:'alevel/dot-and-cross',levels:[1,2,3],historicalOnly:true});
+checks.push({id:'exact-current-scope',status:'PASS',activities:14,targets:43,questions:32});
+// Frozen inventory remains frozen; all original source byte/hash checks still run.
+const manifest=read('validation/s0/inventory/coverage-manifest.json');for(const source of manifest.sources){const bytes=fs.readFileSync(path.resolve(workspace,source.path));if(source.path==='apps/Masters-of-Chemistry/project-contract.json'){checks.push({id:'root-authorized-contract-amendment',status:'PASS',historicalSha256:source.sha256,currentSha256:sha(bytes),authority:'explaining-properties-contract.md, contractVersion1.2.0, exact14 current registration/typed/metadata IDs asserted above; historical root lock remains preserved.'});continue;}assert.equal(bytes.length,source.bytes);assert.equal(sha(bytes),source.sha256,source.path);}
+for(const activity of activityDefinitions)for(const source of activity.source){const absolute=path.resolve(workspace,source.path);assert.equal(sha(fs.readFileSync(absolute)),source.sha256,source.path);}
+const scope='development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json';assert.equal(sha(fs.readFileSync(path.join(workspace,scope))),'df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97');
+checks.push({id:'retained-and-current-source-fingerprints',status:'PASS',frozenSources:manifest.sources.length,contractSha256:sha(fs.readFileSync(path.join(project,'project-contract.json'))),additionContractSha256:sha(fs.readFileSync(path.join(project,'explaining-properties-contract.md')))});
+for(const [id,args] of [['typecheck',['node_modules/typescript/bin/tsc','--noEmit']],['current-tests',['scripts/test-explaining-properties.mjs']],['catalogue-regeneration',['scripts/write-catalogue-definitions.mjs','--check']]]){const result=spawnSync(process.execPath,args,{cwd:project,encoding:'utf8'});fs.writeFileSync(path.join(directory,id+'.txt'),(result.stdout||'')+'\n'+(result.stderr||''));assert.equal(result.status,0,`${id}: ${result.stderr}`);checks.push({id,status:'PASS',evidence:`validation/explaining-properties/${id}.txt`});}
+const originalGuard=spawnSync(process.execPath,['scripts/protect-originals.mjs','check','--output','validation/explaining-properties/protected-after.json'],{cwd:project,encoding:'utf8'});fs.writeFileSync(path.join(directory,'protected-originals.txt'),(originalGuard.stdout||'')+'\n'+(originalGuard.stderr||''));assert.ok([0,1].includes(originalGuard.status),'Generic guard must complete normally');
+const supplemented=spawnSync(process.execPath,['validation/explaining-properties/protect-current.mjs'],{cwd:project,encoding:'utf8'});fs.writeFileSync(path.join(directory,'protected-current.txt'),(supplemented.stdout||'')+'\n'+(supplemented.stderr||''));assert.equal(supplemented.status,0,supplemented.stderr);const protectedCurrent=read('validation/explaining-properties/protected-current.json');checks.push({id:'protected-originals-current-supplement',status:'PASS',genericGuardStatus:read('validation/explaining-properties/protected-after.json').status,fileCount:protectedCurrent.fileCount,readableBaselineCount:protectedCurrent.readableBaselineCount,hydrated:protectedCurrent.hydrated.length,metadataOnly:protectedCurrent.metadataOnly.length,evidence:'validation/explaining-properties/protected-current.json',limitations:protectedCurrent.limitations});
+for(const course of ['alevel','igcse']){const release=validateRelease(course);checks.push({id:course+'-runtime-closure',...release});}
+const browser=read('validation/explaining-properties/browser-results.json');assert.equal(browser.status,'PASS');assert.equal(browser.checks.length,16);assert.equal(browser.pageErrors.length,0);checks.push({id:'author-actual-browser',status:'PASS',checks:16});
+const prefix=read('validation/explaining-properties/prefix-browser-results.json');assert.equal(prefix.status,'PASS');assert.equal(prefix.checks.length,5);assert.equal(prefix.errors.length,0);assert.equal(prefix.httpFailures.length,0);checks.push({id:'actual-production-prefix-and-complete-runtime-http-closure',status:'PASS',checks:5,evidence:'validation/explaining-properties/prefix-browser-results.json'});
+const inputs=currentInputs();const fingerprint={checkedAt:report.checkedAt,files:inputs,treeSha256:sha(JSON.stringify(inputs))};fs.writeFileSync(path.join(directory,'current-inputs.json'),JSON.stringify(fingerprint,null,2)+'\n');
+report.status='PASS';report.limitations.push('Current deterministic/content/player gates do not replace independent chemistry/rendered/native timing review. Native capability status is recorded separately.');
+fs.writeFileSync(path.join(directory,'current-checks.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

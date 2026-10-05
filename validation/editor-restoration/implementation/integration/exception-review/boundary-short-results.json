@@ -1,0 +1,2851 @@
+{
+  "agentId": "E04",
+  "jobId": "EDITOR-TIMING-DISPOSITION",
+  "startedAt": "2026-10-03T10:40:53.612Z",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null,
+  "method": "Pinned root Playwright 1.62.1, fresh headless Edge contexts, immutable production static files, actual trusted UI responses and durable IndexedDB reads; passive lifecycle/counter/input observation only. No DEV harness, original app contexts/storage, artificial clock, allowance change or runtime instrumentation of timing APIs.",
+  "shortRun": true,
+  "tempRoot": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\integration\\exception-review\\short-browser-temp",
+  "browserTemp": "C:\\Users\\jelc\\STJOHN~1\\CHEMIS~1\\325546~1.MAS\\apps\\MASTER~3\\VALIDA~1\\EDITOR~1\\IMPLEM~1\\INTEGR~1\\EXCEPT~1\\SHORT-~1",
+  "sourceBefore": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "53fe93d95ed9a6c0b3a2a59abdfacaa682c992989151b32e87848c481b5a890f"
+    }
+  ],
+  "buildBefore": [
+    {
+      "path": "dist/alevel/.vite/manifest.json",
+      "sha256": "5b1e7f3f4ed472cd396c36939d1d75ae5381a092826b3abffa3dc528f8ed0af9"
+    },
+    {
+      "path": "dist/alevel/activities/acid-base-calculations/index.html",
+      "sha256": "8962049416d86fb22fb03470a76087596fbdd0c693cec622f04351d5cf136c44"
+    },
+    {
+      "path": "dist/alevel/activities/c3l6-organic-reactions/index.html",
+      "sha256": "6e37d69c646079a709e1312e10dda35cc58c58dae4c630dafb2d71fc89fc1d26"
+    },
+    {
+      "path": "dist/alevel/activities/dot-and-cross/index.html",
+      "sha256": "2ea958b85e87b1d475539a4943b90125bea58208fc8b1d79e07f7c0c8a4ea3f8"
+    },
+    {
+      "path": "dist/alevel/activities/electron-configurations/index.html",
+      "sha256": "6b7aae645ef83a379c58bca2396135f95b0310fc303cdeb05f663f67ea308fb6"
+    },
+    {
+      "path": "dist/alevel/activities/electrons-bonding/index.html",
+      "sha256": "7895023c3bf84dbe97c73d6574b5ca67c94e6b1c606465ffa13c1cf18b6d4bc9"
+    },
+    {
+      "path": "dist/alevel/activities/ph-titration-curves/index.html",
+      "sha256": "4a62e29a3af94703481bcfbff51967981bd05e798124afe427e7741f06cf8f16"
+    },
+    {
+      "path": "dist/alevel/assets/a-01-p1-B7lbrCeA.svg",
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "dist/alevel/assets/a-01-r1-CLyJsO-i.svg",
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "dist/alevel/assets/a-02-p1-OjiOrFSK.svg",
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "dist/alevel/assets/a-02-r1-ByyLCGPs.svg",
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "dist/alevel/assets/a-03-p1-eU7CGgOm.svg",
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "dist/alevel/assets/a-03-r1-aA9mPxyz.svg",
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "dist/alevel/assets/a-04-p2-dAwh-l9N.svg",
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "dist/alevel/assets/a-04-r1-Bf5uXb9E.svg",
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "dist/alevel/assets/a-05-p1-D8ELiJut.svg",
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "dist/alevel/assets/a-05-r1-DaggzjaF.svg",
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "dist/alevel/assets/a-06-p1-BllJ0dFl.svg",
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "dist/alevel/assets/a-06-r1-BC-SVKaW.svg",
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "dist/alevel/assets/a-07-p1-tzsCg3f8.svg",
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "dist/alevel/assets/a-07-r1-C6fAdbx9.svg",
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "dist/alevel/assets/a-08-p1-BhrsClnZ.svg",
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "dist/alevel/assets/a-08-p2-D-S-CH0O.svg",
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "dist/alevel/assets/a-08-r1-BxrhkRWY.svg",
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "dist/alevel/assets/a-09-p1-CVYceU8g.svg",
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "dist/alevel/assets/a-09-r1-yd1fQLMm.svg",
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "dist/alevel/assets/a-10-p1-DWARGVV7.svg",
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "dist/alevel/assets/a-10-r1-C1H1Uq8w.svg",
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "dist/alevel/assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "dist/alevel/assets/alevel-tXqsEp1E.js",
+      "sha256": "5dd67558e65cc30762cbc2042f5ea8a3e7bd90c8df4d4b43e1f701c1188c73ea"
+    },
+    {
+      "path": "dist/alevel/assets/allantoin-skeletal-notes-C8SZ2IFM.svg",
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "dist/alevel/assets/bond-enthalpy-core-B3NxXqut.js",
+      "sha256": "d9bff56e78e3a03983a5952b097e348500b5db7bc19473f4e805f74511111baf"
+    },
+    {
+      "path": "dist/alevel/assets/bond-enthalpy-core-M9vstt1Q.js",
+      "sha256": "500fc0a97098541fb81e4d92395c36dcd72a621deafce167d2384d40884b0d51"
+    },
+    {
+      "path": "dist/alevel/assets/c3l6-BWgZs67e.css",
+      "sha256": "b8fd23826254f009eb6ee52aea64d128f030ce3da41633b10f20b76a43fd494a"
+    },
+    {
+      "path": "dist/alevel/assets/c3l6-DYIYoqiL.js",
+      "sha256": "11bcd633867ebdc5c7809f1f2a79aa88e8b474b201dadb921d819daccdba4c97"
+    },
+    {
+      "path": "dist/alevel/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/alevel/assets/compatibility-D1mQKJom.js",
+      "sha256": "3d44ed0e7c4ea16637d3a45c2c3ff71e868fdf1873a79d6a898b9e1d37b5713f"
+    },
+    {
+      "path": "dist/alevel/assets/compatibility-kM1sOJ5b.css",
+      "sha256": "4a4934913994d12ec7afc20a4511f90a04742adc73d5a492f81987efa14205b9"
+    },
+    {
+      "path": "dist/alevel/assets/Content-CKr9RMoa.js",
+      "sha256": "e15d14d815d69b2666d1732aff8c1d42e3f2feb1deaa5a2bc14c59763d9cd439"
+    },
+    {
+      "path": "dist/alevel/assets/course-mastery-ChOwrGqm.js",
+      "sha256": "8c82dfb5f573d63137a2c18c837d8ae516cfb43dd5657ca92ed03fd714d40543"
+    },
+    {
+      "path": "dist/alevel/assets/data-DRsOgynP.js",
+      "sha256": "b7134f80430caaa730a310632f19317181c6ef23737746fcb1a6c8e4037b90fe"
+    },
+    {
+      "path": "dist/alevel/assets/data-PGygMTpc.js",
+      "sha256": "24a44747289255de92c5de8907458fa5a5aa0bd33eae59550fc0aaa218e1aa52"
+    },
+    {
+      "path": "dist/alevel/assets/definitions-ldFVBQYl.js",
+      "sha256": "11ebf6beea1f52bd03eb0caa34ef6665a0b92daf9a44dd34954d1653132a2ce2"
+    },
+    {
+      "path": "dist/alevel/assets/dependencies-IbyFZa8N.js",
+      "sha256": "40baa63b2188a321db2885ec57352f22bec5fff34c46a6c2ed41bae64d3a5e31"
+    },
+    {
+      "path": "dist/alevel/assets/DiagramViewport-DGhHqMlN.js",
+      "sha256": "f31c7e69b059e1cff6fe35c9d0ac34c0c94ec7c12b38d4c4f11ff91f0502046c"
+    },
+    {
+      "path": "dist/alevel/assets/display-BpW8Pz6W.js",
+      "sha256": "f3e24480a79bef0281732ac78549c176bab325c1b6b7ad7780a130da2bf8a417"
+    },
+    {
+      "path": "dist/alevel/assets/dot-and-cross-B-X6szdQ.css",
+      "sha256": "6ce00e9d47043a20a75a86f0898941c5ed3cdd5ae64709ade848dc353b6bec36"
+    },
+    {
+      "path": "dist/alevel/assets/dot-and-cross-Di2-WcK7.js",
+      "sha256": "aa010171d6dc5a864fcbd3e2b6678a6aee4ce5c9d90dc9a354ba1792909873cf"
+    },
+    {
+      "path": "dist/alevel/assets/DotCrossPlayer-B_iHdArF.css",
+      "sha256": "e76c3530842004560cdd9d4ea39d6f377c197f14490e2394964289d2e8a718ad"
+    },
+    {
+      "path": "dist/alevel/assets/DotCrossPlayer-c-RR440m.js",
+      "sha256": "1fb8daf41fa5bafba2d564e5f90a446793dacf2c9b8570347544ce365d2e3a0e"
+    },
+    {
+      "path": "dist/alevel/assets/electron-configuration-DBlPFIqb.css",
+      "sha256": "976b7ec78a7d70e08bc2cabcbc555a2d3ca62f91a66281ebf5a77f50dad4b0ea"
+    },
+    {
+      "path": "dist/alevel/assets/electron-configuration-DWCl-Y-n.js",
+      "sha256": "73c0b0332ed0cdd1fef256f496e3b5206ed82cba95ff1431ba297984a9daea87"
+    },
+    {
+      "path": "dist/alevel/assets/energy-profile-Dfptpr-r.js",
+      "sha256": "38814195d9e884b2a7bddb633ef4aa7b7c4005b829854947706288ae112f0628"
+    },
+    {
+      "path": "dist/alevel/assets/engine-BBuYvrrD.js",
+      "sha256": "42615cf21253e1e6087d091deff8edd9cc7872bf86196449b4900c2c72ba497c"
+    },
+    {
+      "path": "dist/alevel/assets/engine-BoCqYcJ-.js",
+      "sha256": "5604e510766c845cd1bb7fa059aa6905efe739edeed56abf1456dd1798358793"
+    },
+    {
+      "path": "dist/alevel/assets/engine-C-1fMWJy.js",
+      "sha256": "c3001d537086aae694fab9e7c1fd36cc3bb41540f2f2b87450ddfbe091fbea97"
+    },
+    {
+      "path": "dist/alevel/assets/engine-CbOIdEna.js",
+      "sha256": "bb9e672555129654f64f3784915a863fbd3a98a71a22abcd1bbd079050e75eec"
+    },
+    {
+      "path": "dist/alevel/assets/engine-DBdNwAjQ.js",
+      "sha256": "9ca483192d7153013442869ee0005db3ac7fd3b5f15481d51ce35dc79491e629"
+    },
+    {
+      "path": "dist/alevel/assets/example-01-z-ule6NF.svg",
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "dist/alevel/assets/example-02-CO0o4LKf.svg",
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "dist/alevel/assets/example-03-D6k44Rmm.svg",
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "dist/alevel/assets/example-04-Bo4K13nz.svg",
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "dist/alevel/assets/example-05-CRYEGIjy.svg",
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "dist/alevel/assets/example-06-BXoatn3p.svg",
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "dist/alevel/assets/example-07-BjSkFWb4.svg",
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "dist/alevel/assets/example-08-BkHFGDdE.svg",
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "dist/alevel/assets/example-09-eObnlTTe.svg",
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "dist/alevel/assets/example-10-Cdj6GgSb.svg",
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "dist/alevel/assets/example-11-C_sEZP6L.svg",
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "dist/alevel/assets/example-12-BJkQG18m.svg",
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "dist/alevel/assets/example-13-C1QLu3Mg.svg",
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "dist/alevel/assets/example-14-FxDx7nll.svg",
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "dist/alevel/assets/example-15-BWGDoFx9.svg",
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "dist/alevel/assets/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/alevel/assets/fonts/OFL-Comfortaa.txt",
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a"
+    },
+    {
+      "path": "dist/alevel/assets/framework-BmviDFsE.js",
+      "sha256": "b825f0b0a23f0850551fd8879ec22c0574b02b1b7567464a07c418dacb7d26a7"
+    },
+    {
+      "path": "dist/alevel/assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    {
+      "path": "dist/alevel/assets/historical-acid-catalogue-BNnCBYcW.js",
+      "sha256": "789e8f43702d3fe3f60a239c6f60dcd00fdbc547dec0a7f62f658c4bc7b500c0"
+    },
+    {
+      "path": "dist/alevel/assets/identity-CuJJfa1P.js",
+      "sha256": "bf8c463b5a976bbf7c36ef0061b284f0a4f4fd8deb52164ffbc362e8e384a290"
+    },
+    {
+      "path": "dist/alevel/assets/identity-Dr_meW4Y.js",
+      "sha256": "f522dcaac042454377af9e4193b79402d5538af65bc16cf9a1b0a55007015489"
+    },
+    {
+      "path": "dist/alevel/assets/jsx-runtime-Dk72oS4N.js",
+      "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6"
+    },
+    {
+      "path": "dist/alevel/assets/landing/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/alevel/assets/landing/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/alevel/assets/landing-dR-puBIv.css",
+      "sha256": "e0196970ff1540f568a239b318e58399083e8208ed4cc044126107fd34f78d9d"
+    },
+    {
+      "path": "dist/alevel/assets/landing-DrFyil9d.js",
+      "sha256": "bead1a36152de011a2bfb1c5e38aa0f520b7d733fd1fe4b0b49c2c3d6a64cbf8"
+    },
+    {
+      "path": "dist/alevel/assets/layout-BncCbbQB.js",
+      "sha256": "68a7eab10f5ff9f7ff7a4252943eb65d474af5a5a6db478550c369da39047f41"
+    },
+    {
+      "path": "dist/alevel/assets/legacy-DuJxkBxy.js",
+      "sha256": "33942b77ea128f0abf836d6ce3471b9edfabf9d9f41fe8350e2d37a01c3f2bb8"
+    },
+    {
+      "path": "dist/alevel/assets/legacy-ey1vIt2y.js",
+      "sha256": "ce23f1ee22652666b7a7316ec56f0ec4f3bc758637de5d128f816b1a6e6614f5"
+    },
+    {
+      "path": "dist/alevel/assets/marking--RM3gQVp.js",
+      "sha256": "af40a45e4db061512fc34959c80e39672c3be6c3415631afccc9dd205fd8bb54"
+    },
+    {
+      "path": "dist/alevel/assets/marking-B3uwe-A6.js",
+      "sha256": "d7ef7d1f0d21b00a80f88256a225ba3f1f118631ca0ef7952b0d4fbe397cd5d3"
+    },
+    {
+      "path": "dist/alevel/assets/marking-BQggF3vi.js",
+      "sha256": "37fe16479887dc54fbdaa22e765ac445a7c65fae53553c62cd46e0a77f9f863b"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Brw-1bgU.js",
+      "sha256": "1f9d748e79b5c41e498a0777c399da29952df051103faae996cc29e617efd0ae"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Bv48gqhY.js",
+      "sha256": "246bfa51e8fbb96679b1ee579d35273dd7e14e85fe3b7c37a73042332b2eef47"
+    },
+    {
+      "path": "dist/alevel/assets/marking-BxZxGm59.js",
+      "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2"
+    },
+    {
+      "path": "dist/alevel/assets/marking-CavyMb5H.js",
+      "sha256": "c9f4705fe36343b0d4cf3f9824c56cd9232de8a58f726f792d258462f192ca43"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Chm4FhyV.js",
+      "sha256": "f3d83f68dd55fd461ef0088fec31e4408e64cd8a46ccc7d8f73611f79786ff78"
+    },
+    {
+      "path": "dist/alevel/assets/marking-CzcYzkzo.js",
+      "sha256": "7e038a8ee795a2398341db966f1ec2518c5ac14a955da38d403059836580f01d"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Dkl2uSHV.js",
+      "sha256": "ccca175b484dc19912869c8e23498fa75002acf133d7eecd8500f1c5d6b8ec5f"
+    },
+    {
+      "path": "dist/alevel/assets/marking-DlPqVdUO.js",
+      "sha256": "e9faa474a5d2a5ace518af0f1d89627f0e95003291ebac168f444bd9810aed3d"
+    },
+    {
+      "path": "dist/alevel/assets/marking-HMFTDCSt.js",
+      "sha256": "dd88a05087999d47f4ae24e33613415c75433615be1b3a018226ce4217db4ce2"
+    },
+    {
+      "path": "dist/alevel/assets/marking-xsdHVJQF.js",
+      "sha256": "25c9effc81a2ec09d6929d15341a4fe24fb5d59ceb37b7e03c3cc5d6c6662e6b"
+    },
+    {
+      "path": "dist/alevel/assets/mastery-BY5OygY0.js",
+      "sha256": "b56ae0a39c9361342537e2dc0a7ed59e804bdbd4b577c04fc285ab6fc5210317"
+    },
+    {
+      "path": "dist/alevel/assets/model-BGe1yUUr.js",
+      "sha256": "a41aa148449855b0ea745b2aaa60002dea1eed58929253f1e0a9341dce2899f8"
+    },
+    {
+      "path": "dist/alevel/assets/network-DNyUZot2.svg",
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "dist/alevel/assets/olive-fly-pheromone-skeletal-notes-c4RfbPuX.svg",
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "dist/alevel/assets/OlympiadHost-CsPhmVzv.js",
+      "sha256": "1f89e18cc7640d474eca57b69f9dfea63ec8ae54d037d7d20758f6594bdb57d0"
+    },
+    {
+      "path": "dist/alevel/assets/persistence-xdNsdZpA.js",
+      "sha256": "2594c6c08f9bb9d40e495528b5c8a76c48495ac8b091745aab96c323dccbf481"
+    },
+    {
+      "path": "dist/alevel/assets/preload-helper-BaNbYf_w.js",
+      "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034"
+    },
+    {
+      "path": "dist/alevel/assets/ProductionFoundation-t4NQ77Fe.js",
+      "sha256": "fd7ef929a979f712161172c9910130f39b0683307ca2b2aa9b9af6eea4749981"
+    },
+    {
+      "path": "dist/alevel/assets/provider-14awNsSH.js",
+      "sha256": "a2d91c12eed6a8f4aba2f941f3feab2f4bc7c99aa5e935a05d9046263d565ac9"
+    },
+    {
+      "path": "dist/alevel/assets/provider-3KjMRsW8.js",
+      "sha256": "4dc6571d0a3a9889c255f2f5774bb4cf781ee94b021732d964d075c56db6cdd6"
+    },
+    {
+      "path": "dist/alevel/assets/provider-B1PnQ9KN.js",
+      "sha256": "9400a337ae3e21806c98b14cc1422b237204aa767e9536a1832dba140710616d"
+    },
+    {
+      "path": "dist/alevel/assets/provider-B8SV1T1H.js",
+      "sha256": "f82b1a516860516847232a06407c3fd12945bd711759c04581a621fdcff961b5"
+    },
+    {
+      "path": "dist/alevel/assets/provider-BdYJlaaf.js",
+      "sha256": "9aee333438af0910e71ab28053322bb1e57d6dd138cf8d30408be569f80b8a47"
+    },
+    {
+      "path": "dist/alevel/assets/provider-C6IOpngC.js",
+      "sha256": "8b403d5b0db89fff59851b9665b11803825b202c10232cd1c82735914f0d1e17"
+    },
+    {
+      "path": "dist/alevel/assets/provider-C6kF8JAP.js",
+      "sha256": "634fdefaaaa196a59d90170c25151e49c35352c33a6480311fc5623088717b03"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CdIF3xRb.js",
+      "sha256": "44552c856fafd8d2cd2a4d4dbe6eb1ba71045d446f478fea980f15e732040e11"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CI3mbAAD.js",
+      "sha256": "1003b1955521005cdc5ad99159b058f7d50029979962e1325ee6fc3fe6dfb663"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CJoHw7jb.js",
+      "sha256": "ee482ffbb8d5ee01076a7eaaacfc97b41d96892f253e5a1d54c773f7ac38a4b7"
+    },
+    {
+      "path": "dist/alevel/assets/provider-Cnoejs_A.js",
+      "sha256": "94209715b44e69c02c958e6af8435027cbbdea3ad7f7e268bcb155943df126bb"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CqfO2B-b.js",
+      "sha256": "fb88628fc26c69a7775e37691f300e57861f7f150275c3d102962c62532c9079"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CQQw6jqT.js",
+      "sha256": "93e9e03898c398ce4b4c9f136169eb904901da9aa9bc6b78b29f8bf480e3b683"
+    },
+    {
+      "path": "dist/alevel/assets/provider-D02gZywS.js",
+      "sha256": "9c7e4fa417763c39fe1a85903ec70b65c4299cbc7b0fa14789ebfb790e55fbd4"
+    },
+    {
+      "path": "dist/alevel/assets/provider-D4pFRBfJ.js",
+      "sha256": "a881eea91acc0f915b815ebefa11d91f9839edf83cb6d2de4b32285c4fa97bc8"
+    },
+    {
+      "path": "dist/alevel/assets/provider-DWUkYHkW.js",
+      "sha256": "0d5aec264f05a16005d59d38be495d6ebb5eb69820934135988214a3e527cdbd"
+    },
+    {
+      "path": "dist/alevel/assets/provider-DxaAJnoS.js",
+      "sha256": "2228d7c8aceed05e383918af96baa4840144ef2f55522859fd4925adeebc218b"
+    },
+    {
+      "path": "dist/alevel/assets/provider-DyLX4LLn.js",
+      "sha256": "eaed7535d304d035fcf8264d9085dd626f2eed5213cedae56ba53dc225a46422"
+    },
+    {
+      "path": "dist/alevel/assets/provider-PPSOqBcA.js",
+      "sha256": "924d021f294020d21350b5747a03a8fb453388e288745b8594fa56540b569b20"
+    },
+    {
+      "path": "dist/alevel/assets/provider-_5U-wqiV.js",
+      "sha256": "2416961fc5d5482b34933079cb1674012d9d5b5521a52c0970f6f8ec545e594d"
+    },
+    {
+      "path": "dist/alevel/assets/react-dom-X1VypBGM.js",
+      "sha256": "b372cf8b951696bff593ee22910dbff824e7b341bc6cb4e2f21db32052595946"
+    },
+    {
+      "path": "dist/alevel/assets/registry-BcV34_DT.js",
+      "sha256": "c0ec3181a233b4cb6f48db00ccaeeaff8e4b9bd23468959949ab3c902c1e81b0"
+    },
+    {
+      "path": "dist/alevel/assets/registry-ojF_16jp.css",
+      "sha256": "c7f975f46202d6f910a02f5fd8da9d7b2d31ec9c8e1d5f210c941d78cd0f39c7"
+    },
+    {
+      "path": "dist/alevel/assets/repository-CzUCK50U.js",
+      "sha256": "01524c115461cb230e30c424749eb455603b38e8788d67ca0c9063142ff0b585"
+    },
+    {
+      "path": "dist/alevel/assets/ResponseControl-BpQuIfh3.js",
+      "sha256": "c2fbc7d6050e34778d2372bed2431e5514f1c3c2c4a984f8a7f0ce7089069a40"
+    },
+    {
+      "path": "dist/alevel/assets/SJS-Eagle-gPV5upPw.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/alevel/assets/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/alevel/assets/statistics-DG26KD0G.css",
+      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec"
+    },
+    {
+      "path": "dist/alevel/assets/statistics-DHnwjEYJ.js",
+      "sha256": "ef47eb7184b25b4b10fbf937cd45a731a69e7cbdaf1a1c537a9812488f530042"
+    },
+    {
+      "path": "dist/alevel/assets/titration-curve-CDb2mgim.css",
+      "sha256": "eb059efca03bb79944463ff7db4f097b29ae3c82ca0da741bbbb6bd3b84af146"
+    },
+    {
+      "path": "dist/alevel/assets/titration-curve-CvxNrxiQ.js",
+      "sha256": "c0332ae387bbadbf7fe29b326d4b925cda92d89004bf389fef612a68eb2382d9"
+    },
+    {
+      "path": "dist/alevel/assets/types-BQzY_9Qt.js",
+      "sha256": "9f829c506148af680d526ffdd40ba8b61b05c95345269e17400ac40f55d42322"
+    },
+    {
+      "path": "dist/alevel/assets/types-CGzZHUAK.js",
+      "sha256": "5f569da98a193fd6fa32e3125f6443f2088f194c3b5cfc9436844848b91424f1"
+    },
+    {
+      "path": "dist/alevel/index.html",
+      "sha256": "0e58030b8d9496ce5b72b4efffcb53c31eccfe58b055e21e366ebdc9ab993265"
+    },
+    {
+      "path": "dist/igcse/.vite/manifest.json",
+      "sha256": "43454bf43fff37af0c6e9e6b73327e7745118819f5942988db8634df0bc8294a"
+    },
+    {
+      "path": "dist/igcse/activities/bond-enthalpy/index.html",
+      "sha256": "f5e685481b805af86c4278b0d2aac4aee120dd3fdff4bfcf53c394438dae973b"
+    },
+    {
+      "path": "dist/igcse/activities/calorimetry/index.html",
+      "sha256": "248f1df3fdc1a5c9836942e4db3a50bc59f1ce3b7036f3508054767e6cf7425f"
+    },
+    {
+      "path": "dist/igcse/activities/dot-and-cross/index.html",
+      "sha256": "fc19f3fd6beff917036eb7294ab0f8e4771aa668b68c0e2132e08774491743a1"
+    },
+    {
+      "path": "dist/igcse/activities/energetics-practical/index.html",
+      "sha256": "7f8a98032fea1db61d29a56314779248ab3e5d1ba990578d28733f32ec41bc56"
+    },
+    {
+      "path": "dist/igcse/activities/energy-enthalpy/index.html",
+      "sha256": "af1368934ffda2f9bbc8c5c07f7c7eb97763abbab22bd62a1a3537cb2b9964ac"
+    },
+    {
+      "path": "dist/igcse/activities/structure-and-bonding/index.html",
+      "sha256": "5b5ff07cf87c8aa38594c3f9aab96af463fd5b2bd6b2437e2e69fb536237f4e9"
+    },
+    {
+      "path": "dist/igcse/assets/a-01-p1-B7lbrCeA.svg",
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "dist/igcse/assets/a-01-r1-CLyJsO-i.svg",
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "dist/igcse/assets/a-02-p1-OjiOrFSK.svg",
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "dist/igcse/assets/a-02-r1-ByyLCGPs.svg",
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "dist/igcse/assets/a-03-p1-eU7CGgOm.svg",
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "dist/igcse/assets/a-03-r1-aA9mPxyz.svg",
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "dist/igcse/assets/a-04-p2-dAwh-l9N.svg",
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "dist/igcse/assets/a-04-r1-Bf5uXb9E.svg",
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "dist/igcse/assets/a-05-p1-D8ELiJut.svg",
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "dist/igcse/assets/a-05-r1-DaggzjaF.svg",
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "dist/igcse/assets/a-06-p1-BllJ0dFl.svg",
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "dist/igcse/assets/a-06-r1-BC-SVKaW.svg",
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "dist/igcse/assets/a-07-p1-tzsCg3f8.svg",
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "dist/igcse/assets/a-07-r1-C6fAdbx9.svg",
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "dist/igcse/assets/a-08-p1-BhrsClnZ.svg",
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "dist/igcse/assets/a-08-p2-D-S-CH0O.svg",
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "dist/igcse/assets/a-08-r1-BxrhkRWY.svg",
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "dist/igcse/assets/a-09-p1-CVYceU8g.svg",
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "dist/igcse/assets/a-09-r1-yd1fQLMm.svg",
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "dist/igcse/assets/a-10-p1-DWARGVV7.svg",
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "dist/igcse/assets/a-10-r1-C1H1Uq8w.svg",
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "dist/igcse/assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "dist/igcse/assets/allantoin-skeletal-notes-C8SZ2IFM.svg",
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "dist/igcse/assets/bond-enthalpy-core-B3NxXqut.js",
+      "sha256": "d9bff56e78e3a03983a5952b097e348500b5db7bc19473f4e805f74511111baf"
+    },
+    {
+      "path": "dist/igcse/assets/bond-enthalpy-core-M9vstt1Q.js",
+      "sha256": "500fc0a97098541fb81e4d92395c36dcd72a621deafce167d2384d40884b0d51"
+    },
+    {
+      "path": "dist/igcse/assets/c3l6-BWgZs67e.css",
+      "sha256": "b8fd23826254f009eb6ee52aea64d128f030ce3da41633b10f20b76a43fd494a"
+    },
+    {
+      "path": "dist/igcse/assets/c3l6-DYIYoqiL.js",
+      "sha256": "11bcd633867ebdc5c7809f1f2a79aa88e8b474b201dadb921d819daccdba4c97"
+    },
+    {
+      "path": "dist/igcse/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/igcse/assets/compatibility-D1mQKJom.js",
+      "sha256": "3d44ed0e7c4ea16637d3a45c2c3ff71e868fdf1873a79d6a898b9e1d37b5713f"
+    },
+    {
+      "path": "dist/igcse/assets/compatibility-kM1sOJ5b.css",
+      "sha256": "4a4934913994d12ec7afc20a4511f90a04742adc73d5a492f81987efa14205b9"
+    },
+    {
+      "path": "dist/igcse/assets/Content-CKr9RMoa.js",
+      "sha256": "e15d14d815d69b2666d1732aff8c1d42e3f2feb1deaa5a2bc14c59763d9cd439"
+    },
+    {
+      "path": "dist/igcse/assets/course-mastery-ChOwrGqm.js",
+      "sha256": "8c82dfb5f573d63137a2c18c837d8ae516cfb43dd5657ca92ed03fd714d40543"
+    },
+    {
+      "path": "dist/igcse/assets/data-DRsOgynP.js",
+      "sha256": "b7134f80430caaa730a310632f19317181c6ef23737746fcb1a6c8e4037b90fe"
+    },
+    {
+      "path": "dist/igcse/assets/data-PGygMTpc.js",
+      "sha256": "24a44747289255de92c5de8907458fa5a5aa0bd33eae59550fc0aaa218e1aa52"
+    },
+    {
+      "path": "dist/igcse/assets/definitions-ldFVBQYl.js",
+      "sha256": "11ebf6beea1f52bd03eb0caa34ef6665a0b92daf9a44dd34954d1653132a2ce2"
+    },
+    {
+      "path": "dist/igcse/assets/dependencies-IbyFZa8N.js",
+      "sha256": "40baa63b2188a321db2885ec57352f22bec5fff34c46a6c2ed41bae64d3a5e31"
+    },
+    {
+      "path": "dist/igcse/assets/DiagramViewport-DGhHqMlN.js",
+      "sha256": "f31c7e69b059e1cff6fe35c9d0ac34c0c94ec7c12b38d4c4f11ff91f0502046c"
+    },
+    {
+      "path": "dist/igcse/assets/display-BpW8Pz6W.js",
+      "sha256": "f3e24480a79bef0281732ac78549c176bab325c1b6b7ad7780a130da2bf8a417"
+    },
+    {
+      "path": "dist/igcse/assets/dot-and-cross-B-X6szdQ.css",
+      "sha256": "6ce00e9d47043a20a75a86f0898941c5ed3cdd5ae64709ade848dc353b6bec36"
+    },
+    {
+      "path": "dist/igcse/assets/dot-and-cross-Di2-WcK7.js",
+      "sha256": "aa010171d6dc5a864fcbd3e2b6678a6aee4ce5c9d90dc9a354ba1792909873cf"
+    },
+    {
+      "path": "dist/igcse/assets/DotCrossPlayer-B_iHdArF.css",
+      "sha256": "e76c3530842004560cdd9d4ea39d6f377c197f14490e2394964289d2e8a718ad"
+    },
+    {
+      "path": "dist/igcse/assets/DotCrossPlayer-c-RR440m.js",
+      "sha256": "1fb8daf41fa5bafba2d564e5f90a446793dacf2c9b8570347544ce365d2e3a0e"
+    },
+    {
+      "path": "dist/igcse/assets/electron-configuration-DBlPFIqb.css",
+      "sha256": "976b7ec78a7d70e08bc2cabcbc555a2d3ca62f91a66281ebf5a77f50dad4b0ea"
+    },
+    {
+      "path": "dist/igcse/assets/electron-configuration-DWCl-Y-n.js",
+      "sha256": "73c0b0332ed0cdd1fef256f496e3b5206ed82cba95ff1431ba297984a9daea87"
+    },
+    {
+      "path": "dist/igcse/assets/energy-profile-Dfptpr-r.js",
+      "sha256": "38814195d9e884b2a7bddb633ef4aa7b7c4005b829854947706288ae112f0628"
+    },
+    {
+      "path": "dist/igcse/assets/engine-BBuYvrrD.js",
+      "sha256": "42615cf21253e1e6087d091deff8edd9cc7872bf86196449b4900c2c72ba497c"
+    },
+    {
+      "path": "dist/igcse/assets/engine-BoCqYcJ-.js",
+      "sha256": "5604e510766c845cd1bb7fa059aa6905efe739edeed56abf1456dd1798358793"
+    },
+    {
+      "path": "dist/igcse/assets/engine-C-1fMWJy.js",
+      "sha256": "c3001d537086aae694fab9e7c1fd36cc3bb41540f2f2b87450ddfbe091fbea97"
+    },
+    {
+      "path": "dist/igcse/assets/engine-CbOIdEna.js",
+      "sha256": "bb9e672555129654f64f3784915a863fbd3a98a71a22abcd1bbd079050e75eec"
+    },
+    {
+      "path": "dist/igcse/assets/engine-DBdNwAjQ.js",
+      "sha256": "9ca483192d7153013442869ee0005db3ac7fd3b5f15481d51ce35dc79491e629"
+    },
+    {
+      "path": "dist/igcse/assets/example-01-z-ule6NF.svg",
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "dist/igcse/assets/example-02-CO0o4LKf.svg",
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "dist/igcse/assets/example-03-D6k44Rmm.svg",
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "dist/igcse/assets/example-04-Bo4K13nz.svg",
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "dist/igcse/assets/example-05-CRYEGIjy.svg",
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "dist/igcse/assets/example-06-BXoatn3p.svg",
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "dist/igcse/assets/example-07-BjSkFWb4.svg",
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "dist/igcse/assets/example-08-BkHFGDdE.svg",
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "dist/igcse/assets/example-09-eObnlTTe.svg",
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "dist/igcse/assets/example-10-Cdj6GgSb.svg",
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "dist/igcse/assets/example-11-C_sEZP6L.svg",
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "dist/igcse/assets/example-12-BJkQG18m.svg",
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "dist/igcse/assets/example-13-C1QLu3Mg.svg",
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "dist/igcse/assets/example-14-FxDx7nll.svg",
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "dist/igcse/assets/example-15-BWGDoFx9.svg",
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "dist/igcse/assets/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/igcse/assets/fonts/OFL-Comfortaa.txt",
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a"
+    },
+    {
+      "path": "dist/igcse/assets/framework-BmviDFsE.js",
+      "sha256": "b825f0b0a23f0850551fd8879ec22c0574b02b1b7567464a07c418dacb7d26a7"
+    },
+    {
+      "path": "dist/igcse/assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    {
+      "path": "dist/igcse/assets/historical-acid-catalogue-BNnCBYcW.js",
+      "sha256": "789e8f43702d3fe3f60a239c6f60dcd00fdbc547dec0a7f62f658c4bc7b500c0"
+    },
+    {
+      "path": "dist/igcse/assets/identity-CuJJfa1P.js",
+      "sha256": "bf8c463b5a976bbf7c36ef0061b284f0a4f4fd8deb52164ffbc362e8e384a290"
+    },
+    {
+      "path": "dist/igcse/assets/identity-Dr_meW4Y.js",
+      "sha256": "f522dcaac042454377af9e4193b79402d5538af65bc16cf9a1b0a55007015489"
+    },
+    {
+      "path": "dist/igcse/assets/igcse-Cyp86vW4.js",
+      "sha256": "07f3fd07989f1f5ad7007465d9836f2c28e891d14e7aa118d7b596606d0584c4"
+    },
+    {
+      "path": "dist/igcse/assets/jsx-runtime-Dk72oS4N.js",
+      "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6"
+    },
+    {
+      "path": "dist/igcse/assets/landing/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/igcse/assets/landing/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/igcse/assets/landing-dR-puBIv.css",
+      "sha256": "e0196970ff1540f568a239b318e58399083e8208ed4cc044126107fd34f78d9d"
+    },
+    {
+      "path": "dist/igcse/assets/landing-DrFyil9d.js",
+      "sha256": "bead1a36152de011a2bfb1c5e38aa0f520b7d733fd1fe4b0b49c2c3d6a64cbf8"
+    },
+    {
+      "path": "dist/igcse/assets/layout-BncCbbQB.js",
+      "sha256": "68a7eab10f5ff9f7ff7a4252943eb65d474af5a5a6db478550c369da39047f41"
+    },
+    {
+      "path": "dist/igcse/assets/legacy-DuJxkBxy.js",
+      "sha256": "33942b77ea128f0abf836d6ce3471b9edfabf9d9f41fe8350e2d37a01c3f2bb8"
+    },
+    {
+      "path": "dist/igcse/assets/legacy-ey1vIt2y.js",
+      "sha256": "ce23f1ee22652666b7a7316ec56f0ec4f3bc758637de5d128f816b1a6e6614f5"
+    },
+    {
+      "path": "dist/igcse/assets/marking--RM3gQVp.js",
+      "sha256": "af40a45e4db061512fc34959c80e39672c3be6c3415631afccc9dd205fd8bb54"
+    },
+    {
+      "path": "dist/igcse/assets/marking-B3uwe-A6.js",
+      "sha256": "d7ef7d1f0d21b00a80f88256a225ba3f1f118631ca0ef7952b0d4fbe397cd5d3"
+    },
+    {
+      "path": "dist/igcse/assets/marking-BQggF3vi.js",
+      "sha256": "37fe16479887dc54fbdaa22e765ac445a7c65fae53553c62cd46e0a77f9f863b"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Brw-1bgU.js",
+      "sha256": "1f9d748e79b5c41e498a0777c399da29952df051103faae996cc29e617efd0ae"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Bv48gqhY.js",
+      "sha256": "246bfa51e8fbb96679b1ee579d35273dd7e14e85fe3b7c37a73042332b2eef47"
+    },
+    {
+      "path": "dist/igcse/assets/marking-BxZxGm59.js",
+      "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2"
+    },
+    {
+      "path": "dist/igcse/assets/marking-CavyMb5H.js",
+      "sha256": "c9f4705fe36343b0d4cf3f9824c56cd9232de8a58f726f792d258462f192ca43"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Chm4FhyV.js",
+      "sha256": "f3d83f68dd55fd461ef0088fec31e4408e64cd8a46ccc7d8f73611f79786ff78"
+    },
+    {
+      "path": "dist/igcse/assets/marking-CzcYzkzo.js",
+      "sha256": "7e038a8ee795a2398341db966f1ec2518c5ac14a955da38d403059836580f01d"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Dkl2uSHV.js",
+      "sha256": "ccca175b484dc19912869c8e23498fa75002acf133d7eecd8500f1c5d6b8ec5f"
+    },
+    {
+      "path": "dist/igcse/assets/marking-DlPqVdUO.js",
+      "sha256": "e9faa474a5d2a5ace518af0f1d89627f0e95003291ebac168f444bd9810aed3d"
+    },
+    {
+      "path": "dist/igcse/assets/marking-HMFTDCSt.js",
+      "sha256": "dd88a05087999d47f4ae24e33613415c75433615be1b3a018226ce4217db4ce2"
+    },
+    {
+      "path": "dist/igcse/assets/marking-xsdHVJQF.js",
+      "sha256": "25c9effc81a2ec09d6929d15341a4fe24fb5d59ceb37b7e03c3cc5d6c6662e6b"
+    },
+    {
+      "path": "dist/igcse/assets/mastery-BY5OygY0.js",
+      "sha256": "b56ae0a39c9361342537e2dc0a7ed59e804bdbd4b577c04fc285ab6fc5210317"
+    },
+    {
+      "path": "dist/igcse/assets/model-BGe1yUUr.js",
+      "sha256": "a41aa148449855b0ea745b2aaa60002dea1eed58929253f1e0a9341dce2899f8"
+    },
+    {
+      "path": "dist/igcse/assets/network-DNyUZot2.svg",
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "dist/igcse/assets/olive-fly-pheromone-skeletal-notes-c4RfbPuX.svg",
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "dist/igcse/assets/OlympiadHost-CsPhmVzv.js",
+      "sha256": "1f89e18cc7640d474eca57b69f9dfea63ec8ae54d037d7d20758f6594bdb57d0"
+    },
+    {
+      "path": "dist/igcse/assets/persistence-xdNsdZpA.js",
+      "sha256": "2594c6c08f9bb9d40e495528b5c8a76c48495ac8b091745aab96c323dccbf481"
+    },
+    {
+      "path": "dist/igcse/assets/preload-helper-BaNbYf_w.js",
+      "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034"
+    },
+    {
+      "path": "dist/igcse/assets/ProductionFoundation-t4NQ77Fe.js",
+      "sha256": "fd7ef929a979f712161172c9910130f39b0683307ca2b2aa9b9af6eea4749981"
+    },
+    {
+      "path": "dist/igcse/assets/provider-14awNsSH.js",
+      "sha256": "a2d91c12eed6a8f4aba2f941f3feab2f4bc7c99aa5e935a05d9046263d565ac9"
+    },
+    {
+      "path": "dist/igcse/assets/provider-3KjMRsW8.js",
+      "sha256": "4dc6571d0a3a9889c255f2f5774bb4cf781ee94b021732d964d075c56db6cdd6"
+    },
+    {
+      "path": "dist/igcse/assets/provider-B1PnQ9KN.js",
+      "sha256": "9400a337ae3e21806c98b14cc1422b237204aa767e9536a1832dba140710616d"
+    },
+    {
+      "path": "dist/igcse/assets/provider-B8SV1T1H.js",
+      "sha256": "f82b1a516860516847232a06407c3fd12945bd711759c04581a621fdcff961b5"
+    },
+    {
+      "path": "dist/igcse/assets/provider-BdYJlaaf.js",
+      "sha256": "9aee333438af0910e71ab28053322bb1e57d6dd138cf8d30408be569f80b8a47"
+    },
+    {
+      "path": "dist/igcse/assets/provider-C6IOpngC.js",
+      "sha256": "8b403d5b0db89fff59851b9665b11803825b202c10232cd1c82735914f0d1e17"
+    },
+    {
+      "path": "dist/igcse/assets/provider-C6kF8JAP.js",
+      "sha256": "634fdefaaaa196a59d90170c25151e49c35352c33a6480311fc5623088717b03"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CdIF3xRb.js",
+      "sha256": "44552c856fafd8d2cd2a4d4dbe6eb1ba71045d446f478fea980f15e732040e11"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CI3mbAAD.js",
+      "sha256": "1003b1955521005cdc5ad99159b058f7d50029979962e1325ee6fc3fe6dfb663"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CJoHw7jb.js",
+      "sha256": "ee482ffbb8d5ee01076a7eaaacfc97b41d96892f253e5a1d54c773f7ac38a4b7"
+    },
+    {
+      "path": "dist/igcse/assets/provider-Cnoejs_A.js",
+      "sha256": "94209715b44e69c02c958e6af8435027cbbdea3ad7f7e268bcb155943df126bb"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CqfO2B-b.js",
+      "sha256": "fb88628fc26c69a7775e37691f300e57861f7f150275c3d102962c62532c9079"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CQQw6jqT.js",
+      "sha256": "93e9e03898c398ce4b4c9f136169eb904901da9aa9bc6b78b29f8bf480e3b683"
+    },
+    {
+      "path": "dist/igcse/assets/provider-D02gZywS.js",
+      "sha256": "9c7e4fa417763c39fe1a85903ec70b65c4299cbc7b0fa14789ebfb790e55fbd4"
+    },
+    {
+      "path": "dist/igcse/assets/provider-D4pFRBfJ.js",
+      "sha256": "a881eea91acc0f915b815ebefa11d91f9839edf83cb6d2de4b32285c4fa97bc8"
+    },
+    {
+      "path": "dist/igcse/assets/provider-DWUkYHkW.js",
+      "sha256": "0d5aec264f05a16005d59d38be495d6ebb5eb69820934135988214a3e527cdbd"
+    },
+    {
+      "path": "dist/igcse/assets/provider-DxaAJnoS.js",
+      "sha256": "2228d7c8aceed05e383918af96baa4840144ef2f55522859fd4925adeebc218b"
+    },
+    {
+      "path": "dist/igcse/assets/provider-DyLX4LLn.js",
+      "sha256": "eaed7535d304d035fcf8264d9085dd626f2eed5213cedae56ba53dc225a46422"
+    },
+    {
+      "path": "dist/igcse/assets/provider-PPSOqBcA.js",
+      "sha256": "924d021f294020d21350b5747a03a8fb453388e288745b8594fa56540b569b20"
+    },
+    {
+      "path": "dist/igcse/assets/provider-_5U-wqiV.js",
+      "sha256": "2416961fc5d5482b34933079cb1674012d9d5b5521a52c0970f6f8ec545e594d"
+    },
+    {
+      "path": "dist/igcse/assets/react-dom-X1VypBGM.js",
+      "sha256": "b372cf8b951696bff593ee22910dbff824e7b341bc6cb4e2f21db32052595946"
+    },
+    {
+      "path": "dist/igcse/assets/registry-BcV34_DT.js",
+      "sha256": "c0ec3181a233b4cb6f48db00ccaeeaff8e4b9bd23468959949ab3c902c1e81b0"
+    },
+    {
+      "path": "dist/igcse/assets/registry-ojF_16jp.css",
+      "sha256": "c7f975f46202d6f910a02f5fd8da9d7b2d31ec9c8e1d5f210c941d78cd0f39c7"
+    },
+    {
+      "path": "dist/igcse/assets/repository-CzUCK50U.js",
+      "sha256": "01524c115461cb230e30c424749eb455603b38e8788d67ca0c9063142ff0b585"
+    },
+    {
+      "path": "dist/igcse/assets/ResponseControl-BpQuIfh3.js",
+      "sha256": "c2fbc7d6050e34778d2372bed2431e5514f1c3c2c4a984f8a7f0ce7089069a40"
+    },
+    {
+      "path": "dist/igcse/assets/SJS-Eagle-gPV5upPw.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/igcse/assets/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/igcse/assets/statistics-DG26KD0G.css",
+      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec"
+    },
+    {
+      "path": "dist/igcse/assets/statistics-DHnwjEYJ.js",
+      "sha256": "ef47eb7184b25b4b10fbf937cd45a731a69e7cbdaf1a1c537a9812488f530042"
+    },
+    {
+      "path": "dist/igcse/assets/titration-curve-CDb2mgim.css",
+      "sha256": "eb059efca03bb79944463ff7db4f097b29ae3c82ca0da741bbbb6bd3b84af146"
+    },
+    {
+      "path": "dist/igcse/assets/titration-curve-CvxNrxiQ.js",
+      "sha256": "c0332ae387bbadbf7fe29b326d4b925cda92d89004bf389fef612a68eb2382d9"
+    },
+    {
+      "path": "dist/igcse/assets/types-BQzY_9Qt.js",
+      "sha256": "9f829c506148af680d526ffdd40ba8b61b05c95345269e17400ac40f55d42322"
+    },
+    {
+      "path": "dist/igcse/assets/types-CGzZHUAK.js",
+      "sha256": "5f569da98a193fd6fa32e3125f6443f2088f194c3b5cfc9436844848b91424f1"
+    },
+    {
+      "path": "dist/igcse/index.html",
+      "sha256": "f5c7528a60e2fbfc1a17ea9f5a995f47e8c502169bdd442249c9a90173da3b42"
+    }
+  ],
+  "cases": [
+    {
+      "course": "alevel",
+      "status": "FAIL",
+      "observations": [
+        {
+          "label": "real idle starts after first saved UI response",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024056554,
+          "monoMs": 1768.5,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:00",
+          "attemptId": "e6e49262-0684-47fe-9231-551de2990641",
+          "phase": "answering",
+          "activeMs": 776,
+          "idleLimitMs": 180000,
+          "atoms": 1,
+          "evidenceCount": 0
+        },
+        {
+          "label": "fresh UI response/save immediately before freeze",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024056613,
+          "monoMs": 1827,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:00",
+          "attemptId": "e6e49262-0684-47fe-9231-551de2990641",
+          "phase": "answering",
+          "activeMs": 843,
+          "idleLimitMs": 180000,
+          "atoms": 2,
+          "evidenceCount": 0
+        }
+      ],
+      "nativeEvents": [
+        {
+          "kind": "event",
+          "event": "pageshow",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024055547,
+          "monoMs": 761.3999999761581,
+          "hidden": false,
+          "focused": true
+        },
+        {
+          "kind": "event",
+          "event": "pageshow",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024055548,
+          "monoMs": 761.8999999761581,
+          "hidden": false,
+          "focused": true
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024056517,
+          "monoMs": 1731.1999999284744,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024056517,
+          "monoMs": 1731.2999999523163,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024056585,
+          "monoMs": 1799.1000000238419,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024056585,
+          "monoMs": 1799.2999999523163,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pagehide",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024057406,
+          "monoMs": 2619.7999999523163,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        },
+        {
+          "kind": "event",
+          "event": "pagehide",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024057406,
+          "monoMs": 2620.2999999523163,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        },
+        {
+          "kind": "event",
+          "event": "visibilitychange",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024057408,
+          "monoMs": 2621.7999999523163,
+          "hidden": true,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        },
+        {
+          "kind": "event",
+          "event": "visibilitychange",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "wallMs": 1791024057408,
+          "monoMs": 2622,
+          "hidden": true,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        }
+      ],
+      "counterEvents": [
+        {
+          "kind": "counter",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "counter": "Active answering time: 0:00",
+          "wallMs": 1791024055681,
+          "monoMs": 894.8999999761581,
+          "hidden": false,
+          "focused": true
+        },
+        {
+          "kind": "counter",
+          "timeOrigin": 1791024054786.3,
+          "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+          "counter": "Active answering time: 0:01",
+          "wallMs": 1791024056757,
+          "monoMs": 1971,
+          "hidden": false,
+          "focused": true
+        }
+      ],
+      "navigations": [
+        {
+          "wallMs": 1791024055480,
+          "url": "http://127.0.0.1:64253/alevel/?course=alevel&activity=alevel/dot-and-cross&gem=l6-t2-1-3&practice=fixed-level&level=1&fresh=1"
+        },
+        {
+          "wallMs": 1791024055768,
+          "url": "http://127.0.0.1:64253/alevel/?course=alevel&activity=alevel%2Fdot-and-cross&gem=l6-t2-1-3&practice=fixed-level&level=1"
+        }
+      ],
+      "cdpEvents": [],
+      "console": [],
+      "idleInput": {
+        "kind": "event",
+        "event": "pointerdown",
+        "trusted": true,
+        "stage": "capture",
+        "timeOrigin": 1791024054786.3,
+        "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+        "wallMs": 1791024056517,
+        "monoMs": 1731.1999999284744,
+        "hidden": false,
+        "focused": true,
+        "buttons": 1,
+        "counter": "Active answering time: 0:00"
+      },
+      "windowBefore": {
+        "windowId": 1277703622,
+        "bounds": {
+          "left": 10,
+          "top": 10,
+          "width": 1280,
+          "height": 1000,
+          "windowState": "normal"
+        }
+      },
+      "hiddenBeforeFreeze": {
+        "label": "actual document state after headless browser-window minimize request",
+        "timeOrigin": 1791024054786.3,
+        "documentToken": "9a39d6b6-c5c7-4b96-a971-2bc8b3db7d90",
+        "wallMs": 1791024057131,
+        "monoMs": 2345,
+        "hidden": false,
+        "focused": true,
+        "counter": "Active answering time: 0:01",
+        "attemptId": "e6e49262-0684-47fe-9231-551de2990641",
+        "phase": "answering",
+        "activeMs": 843,
+        "idleLimitMs": 180000,
+        "atoms": 2,
+        "evidenceCount": 0
+      },
+      "failure": {
+        "message": "Minimize request must produce an actual hidden browser document\n\nfalse !== true\n",
+        "stack": "AssertionError [ERR_ASSERTION]: Minimize request must produce an actual hidden browser document\n\nfalse !== true\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/integration/exception-review/boundary-probe.mjs:124:16\n    at async Promise.all (index 0)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/integration/exception-review/boundary-probe.mjs:68:3"
+      }
+    },
+    {
+      "course": "igcse",
+      "status": "FAIL",
+      "observations": [
+        {
+          "label": "real idle starts after first saved UI response",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024056557,
+          "monoMs": 1758.1000000238419,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:00",
+          "attemptId": "b7775c15-e989-40a0-a8cf-67cb5e2668a0",
+          "phase": "answering",
+          "activeMs": 789,
+          "idleLimitMs": 180000,
+          "atoms": 1,
+          "evidenceCount": 0
+        },
+        {
+          "label": "fresh UI response/save immediately before freeze",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024056613,
+          "monoMs": 1813.7999999523163,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:00",
+          "attemptId": "b7775c15-e989-40a0-a8cf-67cb5e2668a0",
+          "phase": "answering",
+          "activeMs": 855,
+          "idleLimitMs": 180000,
+          "atoms": 2,
+          "evidenceCount": 0
+        }
+      ],
+      "nativeEvents": [
+        {
+          "kind": "event",
+          "event": "pageshow",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024055550,
+          "monoMs": 751.1000000238419,
+          "hidden": false,
+          "focused": true
+        },
+        {
+          "kind": "event",
+          "event": "pageshow",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024055551,
+          "monoMs": 751.7999999523163,
+          "hidden": false,
+          "focused": true
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024056517,
+          "monoMs": 1717.7000000476837,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024056517,
+          "monoMs": 1717.8999999761581,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024056585,
+          "monoMs": 1785.7999999523163,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pointerdown",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024056585,
+          "monoMs": 1785.8999999761581,
+          "hidden": false,
+          "focused": true,
+          "buttons": 1,
+          "counter": "Active answering time: 0:00"
+        },
+        {
+          "kind": "event",
+          "event": "pagehide",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024057406,
+          "monoMs": 2606.399999976158,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        },
+        {
+          "kind": "event",
+          "event": "pagehide",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024057406,
+          "monoMs": 2606.7999999523163,
+          "hidden": false,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        },
+        {
+          "kind": "event",
+          "event": "visibilitychange",
+          "trusted": true,
+          "stage": "capture",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024057407,
+          "monoMs": 2608.2000000476837,
+          "hidden": true,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        },
+        {
+          "kind": "event",
+          "event": "visibilitychange",
+          "trusted": true,
+          "stage": "after handlers",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "wallMs": 1791024057407,
+          "monoMs": 2608.2999999523163,
+          "hidden": true,
+          "focused": true,
+          "counter": "Active answering time: 0:01"
+        }
+      ],
+      "counterEvents": [
+        {
+          "kind": "counter",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "counter": "Active answering time: 0:00",
+          "wallMs": 1791024055672,
+          "monoMs": 873,
+          "hidden": false,
+          "focused": true
+        },
+        {
+          "kind": "counter",
+          "timeOrigin": 1791024054799.6,
+          "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+          "counter": "Active answering time: 0:01",
+          "wallMs": 1791024056742,
+          "monoMs": 1942.5,
+          "hidden": false,
+          "focused": true
+        }
+      ],
+      "navigations": [
+        {
+          "wallMs": 1791024055496,
+          "url": "http://127.0.0.1:64253/igcse/?course=igcse&activity=igcse/dot-and-cross&gem=fourth-3-1&practice=fixed-level&level=1&fresh=1"
+        },
+        {
+          "wallMs": 1791024055744,
+          "url": "http://127.0.0.1:64253/igcse/?course=igcse&activity=igcse%2Fdot-and-cross&gem=fourth-3-1&practice=fixed-level&level=1"
+        }
+      ],
+      "cdpEvents": [],
+      "console": [],
+      "idleInput": {
+        "kind": "event",
+        "event": "pointerdown",
+        "trusted": true,
+        "stage": "capture",
+        "timeOrigin": 1791024054799.6,
+        "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+        "wallMs": 1791024056517,
+        "monoMs": 1717.7000000476837,
+        "hidden": false,
+        "focused": true,
+        "buttons": 1,
+        "counter": "Active answering time: 0:00"
+      },
+      "windowBefore": {
+        "windowId": 1277703627,
+        "bounds": {
+          "left": 20,
+          "top": 20,
+          "width": 1280,
+          "height": 1000,
+          "windowState": "normal"
+        }
+      },
+      "hiddenBeforeFreeze": {
+        "label": "actual document state after headless browser-window minimize request",
+        "timeOrigin": 1791024054799.6,
+        "documentToken": "9f849ed0-16ea-4498-aff2-5a96ddaaebab",
+        "wallMs": 1791024057131,
+        "monoMs": 2331.5,
+        "hidden": false,
+        "focused": true,
+        "counter": "Active answering time: 0:01",
+        "attemptId": "b7775c15-e989-40a0-a8cf-67cb5e2668a0",
+        "phase": "answering",
+        "activeMs": 855,
+        "idleLimitMs": 180000,
+        "atoms": 2,
+        "evidenceCount": 0
+      },
+      "failure": {
+        "message": "Minimize request must produce an actual hidden browser document\n\nfalse !== true\n",
+        "stack": "AssertionError [ERR_ASSERTION]: Minimize request must produce an actual hidden browser document\n\nfalse !== true\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/integration/exception-review/boundary-probe.mjs:124:16\n    at runNextTicks (node:internal/process/task_queues:64:5)\n    at process.processImmediate (node:internal/timers:472:9)\n    at async Promise.all (index 1)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/integration/exception-review/boundary-probe.mjs:68:3"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "status": "FAIL",
+  "base": "http://127.0.0.1:64253",
+  "browserVersion": "154.0.4258.48",
+  "sourceAfter": [
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "sha256": "6c9319e36b65703919e4de0734c04a58377cd12781b21518a13f22c2e5d1c0c2"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "sha256": "7e82516d333718304f6467342112219e9a9f4a61995ab0624700af1ec67e63aa"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "sha256": "53fe93d95ed9a6c0b3a2a59abdfacaa682c992989151b32e87848c481b5a890f"
+    }
+  ],
+  "buildAfter": [
+    {
+      "path": "dist/alevel/.vite/manifest.json",
+      "sha256": "5b1e7f3f4ed472cd396c36939d1d75ae5381a092826b3abffa3dc528f8ed0af9"
+    },
+    {
+      "path": "dist/alevel/activities/acid-base-calculations/index.html",
+      "sha256": "8962049416d86fb22fb03470a76087596fbdd0c693cec622f04351d5cf136c44"
+    },
+    {
+      "path": "dist/alevel/activities/c3l6-organic-reactions/index.html",
+      "sha256": "6e37d69c646079a709e1312e10dda35cc58c58dae4c630dafb2d71fc89fc1d26"
+    },
+    {
+      "path": "dist/alevel/activities/dot-and-cross/index.html",
+      "sha256": "2ea958b85e87b1d475539a4943b90125bea58208fc8b1d79e07f7c0c8a4ea3f8"
+    },
+    {
+      "path": "dist/alevel/activities/electron-configurations/index.html",
+      "sha256": "6b7aae645ef83a379c58bca2396135f95b0310fc303cdeb05f663f67ea308fb6"
+    },
+    {
+      "path": "dist/alevel/activities/electrons-bonding/index.html",
+      "sha256": "7895023c3bf84dbe97c73d6574b5ca67c94e6b1c606465ffa13c1cf18b6d4bc9"
+    },
+    {
+      "path": "dist/alevel/activities/ph-titration-curves/index.html",
+      "sha256": "4a62e29a3af94703481bcfbff51967981bd05e798124afe427e7741f06cf8f16"
+    },
+    {
+      "path": "dist/alevel/assets/a-01-p1-B7lbrCeA.svg",
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "dist/alevel/assets/a-01-r1-CLyJsO-i.svg",
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "dist/alevel/assets/a-02-p1-OjiOrFSK.svg",
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "dist/alevel/assets/a-02-r1-ByyLCGPs.svg",
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "dist/alevel/assets/a-03-p1-eU7CGgOm.svg",
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "dist/alevel/assets/a-03-r1-aA9mPxyz.svg",
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "dist/alevel/assets/a-04-p2-dAwh-l9N.svg",
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "dist/alevel/assets/a-04-r1-Bf5uXb9E.svg",
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "dist/alevel/assets/a-05-p1-D8ELiJut.svg",
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "dist/alevel/assets/a-05-r1-DaggzjaF.svg",
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "dist/alevel/assets/a-06-p1-BllJ0dFl.svg",
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "dist/alevel/assets/a-06-r1-BC-SVKaW.svg",
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "dist/alevel/assets/a-07-p1-tzsCg3f8.svg",
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "dist/alevel/assets/a-07-r1-C6fAdbx9.svg",
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "dist/alevel/assets/a-08-p1-BhrsClnZ.svg",
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "dist/alevel/assets/a-08-p2-D-S-CH0O.svg",
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "dist/alevel/assets/a-08-r1-BxrhkRWY.svg",
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "dist/alevel/assets/a-09-p1-CVYceU8g.svg",
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "dist/alevel/assets/a-09-r1-yd1fQLMm.svg",
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "dist/alevel/assets/a-10-p1-DWARGVV7.svg",
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "dist/alevel/assets/a-10-r1-C1H1Uq8w.svg",
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "dist/alevel/assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "dist/alevel/assets/alevel-tXqsEp1E.js",
+      "sha256": "5dd67558e65cc30762cbc2042f5ea8a3e7bd90c8df4d4b43e1f701c1188c73ea"
+    },
+    {
+      "path": "dist/alevel/assets/allantoin-skeletal-notes-C8SZ2IFM.svg",
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "dist/alevel/assets/bond-enthalpy-core-B3NxXqut.js",
+      "sha256": "d9bff56e78e3a03983a5952b097e348500b5db7bc19473f4e805f74511111baf"
+    },
+    {
+      "path": "dist/alevel/assets/bond-enthalpy-core-M9vstt1Q.js",
+      "sha256": "500fc0a97098541fb81e4d92395c36dcd72a621deafce167d2384d40884b0d51"
+    },
+    {
+      "path": "dist/alevel/assets/c3l6-BWgZs67e.css",
+      "sha256": "b8fd23826254f009eb6ee52aea64d128f030ce3da41633b10f20b76a43fd494a"
+    },
+    {
+      "path": "dist/alevel/assets/c3l6-DYIYoqiL.js",
+      "sha256": "11bcd633867ebdc5c7809f1f2a79aa88e8b474b201dadb921d819daccdba4c97"
+    },
+    {
+      "path": "dist/alevel/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/alevel/assets/compatibility-D1mQKJom.js",
+      "sha256": "3d44ed0e7c4ea16637d3a45c2c3ff71e868fdf1873a79d6a898b9e1d37b5713f"
+    },
+    {
+      "path": "dist/alevel/assets/compatibility-kM1sOJ5b.css",
+      "sha256": "4a4934913994d12ec7afc20a4511f90a04742adc73d5a492f81987efa14205b9"
+    },
+    {
+      "path": "dist/alevel/assets/Content-CKr9RMoa.js",
+      "sha256": "e15d14d815d69b2666d1732aff8c1d42e3f2feb1deaa5a2bc14c59763d9cd439"
+    },
+    {
+      "path": "dist/alevel/assets/course-mastery-ChOwrGqm.js",
+      "sha256": "8c82dfb5f573d63137a2c18c837d8ae516cfb43dd5657ca92ed03fd714d40543"
+    },
+    {
+      "path": "dist/alevel/assets/data-DRsOgynP.js",
+      "sha256": "b7134f80430caaa730a310632f19317181c6ef23737746fcb1a6c8e4037b90fe"
+    },
+    {
+      "path": "dist/alevel/assets/data-PGygMTpc.js",
+      "sha256": "24a44747289255de92c5de8907458fa5a5aa0bd33eae59550fc0aaa218e1aa52"
+    },
+    {
+      "path": "dist/alevel/assets/definitions-ldFVBQYl.js",
+      "sha256": "11ebf6beea1f52bd03eb0caa34ef6665a0b92daf9a44dd34954d1653132a2ce2"
+    },
+    {
+      "path": "dist/alevel/assets/dependencies-IbyFZa8N.js",
+      "sha256": "40baa63b2188a321db2885ec57352f22bec5fff34c46a6c2ed41bae64d3a5e31"
+    },
+    {
+      "path": "dist/alevel/assets/DiagramViewport-DGhHqMlN.js",
+      "sha256": "f31c7e69b059e1cff6fe35c9d0ac34c0c94ec7c12b38d4c4f11ff91f0502046c"
+    },
+    {
+      "path": "dist/alevel/assets/display-BpW8Pz6W.js",
+      "sha256": "f3e24480a79bef0281732ac78549c176bab325c1b6b7ad7780a130da2bf8a417"
+    },
+    {
+      "path": "dist/alevel/assets/dot-and-cross-B-X6szdQ.css",
+      "sha256": "6ce00e9d47043a20a75a86f0898941c5ed3cdd5ae64709ade848dc353b6bec36"
+    },
+    {
+      "path": "dist/alevel/assets/dot-and-cross-Di2-WcK7.js",
+      "sha256": "aa010171d6dc5a864fcbd3e2b6678a6aee4ce5c9d90dc9a354ba1792909873cf"
+    },
+    {
+      "path": "dist/alevel/assets/DotCrossPlayer-B_iHdArF.css",
+      "sha256": "e76c3530842004560cdd9d4ea39d6f377c197f14490e2394964289d2e8a718ad"
+    },
+    {
+      "path": "dist/alevel/assets/DotCrossPlayer-c-RR440m.js",
+      "sha256": "1fb8daf41fa5bafba2d564e5f90a446793dacf2c9b8570347544ce365d2e3a0e"
+    },
+    {
+      "path": "dist/alevel/assets/electron-configuration-DBlPFIqb.css",
+      "sha256": "976b7ec78a7d70e08bc2cabcbc555a2d3ca62f91a66281ebf5a77f50dad4b0ea"
+    },
+    {
+      "path": "dist/alevel/assets/electron-configuration-DWCl-Y-n.js",
+      "sha256": "73c0b0332ed0cdd1fef256f496e3b5206ed82cba95ff1431ba297984a9daea87"
+    },
+    {
+      "path": "dist/alevel/assets/energy-profile-Dfptpr-r.js",
+      "sha256": "38814195d9e884b2a7bddb633ef4aa7b7c4005b829854947706288ae112f0628"
+    },
+    {
+      "path": "dist/alevel/assets/engine-BBuYvrrD.js",
+      "sha256": "42615cf21253e1e6087d091deff8edd9cc7872bf86196449b4900c2c72ba497c"
+    },
+    {
+      "path": "dist/alevel/assets/engine-BoCqYcJ-.js",
+      "sha256": "5604e510766c845cd1bb7fa059aa6905efe739edeed56abf1456dd1798358793"
+    },
+    {
+      "path": "dist/alevel/assets/engine-C-1fMWJy.js",
+      "sha256": "c3001d537086aae694fab9e7c1fd36cc3bb41540f2f2b87450ddfbe091fbea97"
+    },
+    {
+      "path": "dist/alevel/assets/engine-CbOIdEna.js",
+      "sha256": "bb9e672555129654f64f3784915a863fbd3a98a71a22abcd1bbd079050e75eec"
+    },
+    {
+      "path": "dist/alevel/assets/engine-DBdNwAjQ.js",
+      "sha256": "9ca483192d7153013442869ee0005db3ac7fd3b5f15481d51ce35dc79491e629"
+    },
+    {
+      "path": "dist/alevel/assets/example-01-z-ule6NF.svg",
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "dist/alevel/assets/example-02-CO0o4LKf.svg",
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "dist/alevel/assets/example-03-D6k44Rmm.svg",
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "dist/alevel/assets/example-04-Bo4K13nz.svg",
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "dist/alevel/assets/example-05-CRYEGIjy.svg",
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "dist/alevel/assets/example-06-BXoatn3p.svg",
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "dist/alevel/assets/example-07-BjSkFWb4.svg",
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "dist/alevel/assets/example-08-BkHFGDdE.svg",
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "dist/alevel/assets/example-09-eObnlTTe.svg",
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "dist/alevel/assets/example-10-Cdj6GgSb.svg",
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "dist/alevel/assets/example-11-C_sEZP6L.svg",
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "dist/alevel/assets/example-12-BJkQG18m.svg",
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "dist/alevel/assets/example-13-C1QLu3Mg.svg",
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "dist/alevel/assets/example-14-FxDx7nll.svg",
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "dist/alevel/assets/example-15-BWGDoFx9.svg",
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "dist/alevel/assets/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/alevel/assets/fonts/OFL-Comfortaa.txt",
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a"
+    },
+    {
+      "path": "dist/alevel/assets/framework-BmviDFsE.js",
+      "sha256": "b825f0b0a23f0850551fd8879ec22c0574b02b1b7567464a07c418dacb7d26a7"
+    },
+    {
+      "path": "dist/alevel/assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    {
+      "path": "dist/alevel/assets/historical-acid-catalogue-BNnCBYcW.js",
+      "sha256": "789e8f43702d3fe3f60a239c6f60dcd00fdbc547dec0a7f62f658c4bc7b500c0"
+    },
+    {
+      "path": "dist/alevel/assets/identity-CuJJfa1P.js",
+      "sha256": "bf8c463b5a976bbf7c36ef0061b284f0a4f4fd8deb52164ffbc362e8e384a290"
+    },
+    {
+      "path": "dist/alevel/assets/identity-Dr_meW4Y.js",
+      "sha256": "f522dcaac042454377af9e4193b79402d5538af65bc16cf9a1b0a55007015489"
+    },
+    {
+      "path": "dist/alevel/assets/jsx-runtime-Dk72oS4N.js",
+      "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6"
+    },
+    {
+      "path": "dist/alevel/assets/landing/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/alevel/assets/landing/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/alevel/assets/landing-dR-puBIv.css",
+      "sha256": "e0196970ff1540f568a239b318e58399083e8208ed4cc044126107fd34f78d9d"
+    },
+    {
+      "path": "dist/alevel/assets/landing-DrFyil9d.js",
+      "sha256": "bead1a36152de011a2bfb1c5e38aa0f520b7d733fd1fe4b0b49c2c3d6a64cbf8"
+    },
+    {
+      "path": "dist/alevel/assets/layout-BncCbbQB.js",
+      "sha256": "68a7eab10f5ff9f7ff7a4252943eb65d474af5a5a6db478550c369da39047f41"
+    },
+    {
+      "path": "dist/alevel/assets/legacy-DuJxkBxy.js",
+      "sha256": "33942b77ea128f0abf836d6ce3471b9edfabf9d9f41fe8350e2d37a01c3f2bb8"
+    },
+    {
+      "path": "dist/alevel/assets/legacy-ey1vIt2y.js",
+      "sha256": "ce23f1ee22652666b7a7316ec56f0ec4f3bc758637de5d128f816b1a6e6614f5"
+    },
+    {
+      "path": "dist/alevel/assets/marking--RM3gQVp.js",
+      "sha256": "af40a45e4db061512fc34959c80e39672c3be6c3415631afccc9dd205fd8bb54"
+    },
+    {
+      "path": "dist/alevel/assets/marking-B3uwe-A6.js",
+      "sha256": "d7ef7d1f0d21b00a80f88256a225ba3f1f118631ca0ef7952b0d4fbe397cd5d3"
+    },
+    {
+      "path": "dist/alevel/assets/marking-BQggF3vi.js",
+      "sha256": "37fe16479887dc54fbdaa22e765ac445a7c65fae53553c62cd46e0a77f9f863b"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Brw-1bgU.js",
+      "sha256": "1f9d748e79b5c41e498a0777c399da29952df051103faae996cc29e617efd0ae"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Bv48gqhY.js",
+      "sha256": "246bfa51e8fbb96679b1ee579d35273dd7e14e85fe3b7c37a73042332b2eef47"
+    },
+    {
+      "path": "dist/alevel/assets/marking-BxZxGm59.js",
+      "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2"
+    },
+    {
+      "path": "dist/alevel/assets/marking-CavyMb5H.js",
+      "sha256": "c9f4705fe36343b0d4cf3f9824c56cd9232de8a58f726f792d258462f192ca43"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Chm4FhyV.js",
+      "sha256": "f3d83f68dd55fd461ef0088fec31e4408e64cd8a46ccc7d8f73611f79786ff78"
+    },
+    {
+      "path": "dist/alevel/assets/marking-CzcYzkzo.js",
+      "sha256": "7e038a8ee795a2398341db966f1ec2518c5ac14a955da38d403059836580f01d"
+    },
+    {
+      "path": "dist/alevel/assets/marking-Dkl2uSHV.js",
+      "sha256": "ccca175b484dc19912869c8e23498fa75002acf133d7eecd8500f1c5d6b8ec5f"
+    },
+    {
+      "path": "dist/alevel/assets/marking-DlPqVdUO.js",
+      "sha256": "e9faa474a5d2a5ace518af0f1d89627f0e95003291ebac168f444bd9810aed3d"
+    },
+    {
+      "path": "dist/alevel/assets/marking-HMFTDCSt.js",
+      "sha256": "dd88a05087999d47f4ae24e33613415c75433615be1b3a018226ce4217db4ce2"
+    },
+    {
+      "path": "dist/alevel/assets/marking-xsdHVJQF.js",
+      "sha256": "25c9effc81a2ec09d6929d15341a4fe24fb5d59ceb37b7e03c3cc5d6c6662e6b"
+    },
+    {
+      "path": "dist/alevel/assets/mastery-BY5OygY0.js",
+      "sha256": "b56ae0a39c9361342537e2dc0a7ed59e804bdbd4b577c04fc285ab6fc5210317"
+    },
+    {
+      "path": "dist/alevel/assets/model-BGe1yUUr.js",
+      "sha256": "a41aa148449855b0ea745b2aaa60002dea1eed58929253f1e0a9341dce2899f8"
+    },
+    {
+      "path": "dist/alevel/assets/network-DNyUZot2.svg",
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "dist/alevel/assets/olive-fly-pheromone-skeletal-notes-c4RfbPuX.svg",
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "dist/alevel/assets/OlympiadHost-CsPhmVzv.js",
+      "sha256": "1f89e18cc7640d474eca57b69f9dfea63ec8ae54d037d7d20758f6594bdb57d0"
+    },
+    {
+      "path": "dist/alevel/assets/persistence-xdNsdZpA.js",
+      "sha256": "2594c6c08f9bb9d40e495528b5c8a76c48495ac8b091745aab96c323dccbf481"
+    },
+    {
+      "path": "dist/alevel/assets/preload-helper-BaNbYf_w.js",
+      "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034"
+    },
+    {
+      "path": "dist/alevel/assets/ProductionFoundation-t4NQ77Fe.js",
+      "sha256": "fd7ef929a979f712161172c9910130f39b0683307ca2b2aa9b9af6eea4749981"
+    },
+    {
+      "path": "dist/alevel/assets/provider-14awNsSH.js",
+      "sha256": "a2d91c12eed6a8f4aba2f941f3feab2f4bc7c99aa5e935a05d9046263d565ac9"
+    },
+    {
+      "path": "dist/alevel/assets/provider-3KjMRsW8.js",
+      "sha256": "4dc6571d0a3a9889c255f2f5774bb4cf781ee94b021732d964d075c56db6cdd6"
+    },
+    {
+      "path": "dist/alevel/assets/provider-B1PnQ9KN.js",
+      "sha256": "9400a337ae3e21806c98b14cc1422b237204aa767e9536a1832dba140710616d"
+    },
+    {
+      "path": "dist/alevel/assets/provider-B8SV1T1H.js",
+      "sha256": "f82b1a516860516847232a06407c3fd12945bd711759c04581a621fdcff961b5"
+    },
+    {
+      "path": "dist/alevel/assets/provider-BdYJlaaf.js",
+      "sha256": "9aee333438af0910e71ab28053322bb1e57d6dd138cf8d30408be569f80b8a47"
+    },
+    {
+      "path": "dist/alevel/assets/provider-C6IOpngC.js",
+      "sha256": "8b403d5b0db89fff59851b9665b11803825b202c10232cd1c82735914f0d1e17"
+    },
+    {
+      "path": "dist/alevel/assets/provider-C6kF8JAP.js",
+      "sha256": "634fdefaaaa196a59d90170c25151e49c35352c33a6480311fc5623088717b03"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CdIF3xRb.js",
+      "sha256": "44552c856fafd8d2cd2a4d4dbe6eb1ba71045d446f478fea980f15e732040e11"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CI3mbAAD.js",
+      "sha256": "1003b1955521005cdc5ad99159b058f7d50029979962e1325ee6fc3fe6dfb663"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CJoHw7jb.js",
+      "sha256": "ee482ffbb8d5ee01076a7eaaacfc97b41d96892f253e5a1d54c773f7ac38a4b7"
+    },
+    {
+      "path": "dist/alevel/assets/provider-Cnoejs_A.js",
+      "sha256": "94209715b44e69c02c958e6af8435027cbbdea3ad7f7e268bcb155943df126bb"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CqfO2B-b.js",
+      "sha256": "fb88628fc26c69a7775e37691f300e57861f7f150275c3d102962c62532c9079"
+    },
+    {
+      "path": "dist/alevel/assets/provider-CQQw6jqT.js",
+      "sha256": "93e9e03898c398ce4b4c9f136169eb904901da9aa9bc6b78b29f8bf480e3b683"
+    },
+    {
+      "path": "dist/alevel/assets/provider-D02gZywS.js",
+      "sha256": "9c7e4fa417763c39fe1a85903ec70b65c4299cbc7b0fa14789ebfb790e55fbd4"
+    },
+    {
+      "path": "dist/alevel/assets/provider-D4pFRBfJ.js",
+      "sha256": "a881eea91acc0f915b815ebefa11d91f9839edf83cb6d2de4b32285c4fa97bc8"
+    },
+    {
+      "path": "dist/alevel/assets/provider-DWUkYHkW.js",
+      "sha256": "0d5aec264f05a16005d59d38be495d6ebb5eb69820934135988214a3e527cdbd"
+    },
+    {
+      "path": "dist/alevel/assets/provider-DxaAJnoS.js",
+      "sha256": "2228d7c8aceed05e383918af96baa4840144ef2f55522859fd4925adeebc218b"
+    },
+    {
+      "path": "dist/alevel/assets/provider-DyLX4LLn.js",
+      "sha256": "eaed7535d304d035fcf8264d9085dd626f2eed5213cedae56ba53dc225a46422"
+    },
+    {
+      "path": "dist/alevel/assets/provider-PPSOqBcA.js",
+      "sha256": "924d021f294020d21350b5747a03a8fb453388e288745b8594fa56540b569b20"
+    },
+    {
+      "path": "dist/alevel/assets/provider-_5U-wqiV.js",
+      "sha256": "2416961fc5d5482b34933079cb1674012d9d5b5521a52c0970f6f8ec545e594d"
+    },
+    {
+      "path": "dist/alevel/assets/react-dom-X1VypBGM.js",
+      "sha256": "b372cf8b951696bff593ee22910dbff824e7b341bc6cb4e2f21db32052595946"
+    },
+    {
+      "path": "dist/alevel/assets/registry-BcV34_DT.js",
+      "sha256": "c0ec3181a233b4cb6f48db00ccaeeaff8e4b9bd23468959949ab3c902c1e81b0"
+    },
+    {
+      "path": "dist/alevel/assets/registry-ojF_16jp.css",
+      "sha256": "c7f975f46202d6f910a02f5fd8da9d7b2d31ec9c8e1d5f210c941d78cd0f39c7"
+    },
+    {
+      "path": "dist/alevel/assets/repository-CzUCK50U.js",
+      "sha256": "01524c115461cb230e30c424749eb455603b38e8788d67ca0c9063142ff0b585"
+    },
+    {
+      "path": "dist/alevel/assets/ResponseControl-BpQuIfh3.js",
+      "sha256": "c2fbc7d6050e34778d2372bed2431e5514f1c3c2c4a984f8a7f0ce7089069a40"
+    },
+    {
+      "path": "dist/alevel/assets/SJS-Eagle-gPV5upPw.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/alevel/assets/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/alevel/assets/statistics-DG26KD0G.css",
+      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec"
+    },
+    {
+      "path": "dist/alevel/assets/statistics-DHnwjEYJ.js",
+      "sha256": "ef47eb7184b25b4b10fbf937cd45a731a69e7cbdaf1a1c537a9812488f530042"
+    },
+    {
+      "path": "dist/alevel/assets/titration-curve-CDb2mgim.css",
+      "sha256": "eb059efca03bb79944463ff7db4f097b29ae3c82ca0da741bbbb6bd3b84af146"
+    },
+    {
+      "path": "dist/alevel/assets/titration-curve-CvxNrxiQ.js",
+      "sha256": "c0332ae387bbadbf7fe29b326d4b925cda92d89004bf389fef612a68eb2382d9"
+    },
+    {
+      "path": "dist/alevel/assets/types-BQzY_9Qt.js",
+      "sha256": "9f829c506148af680d526ffdd40ba8b61b05c95345269e17400ac40f55d42322"
+    },
+    {
+      "path": "dist/alevel/assets/types-CGzZHUAK.js",
+      "sha256": "5f569da98a193fd6fa32e3125f6443f2088f194c3b5cfc9436844848b91424f1"
+    },
+    {
+      "path": "dist/alevel/index.html",
+      "sha256": "0e58030b8d9496ce5b72b4efffcb53c31eccfe58b055e21e366ebdc9ab993265"
+    },
+    {
+      "path": "dist/igcse/.vite/manifest.json",
+      "sha256": "43454bf43fff37af0c6e9e6b73327e7745118819f5942988db8634df0bc8294a"
+    },
+    {
+      "path": "dist/igcse/activities/bond-enthalpy/index.html",
+      "sha256": "f5e685481b805af86c4278b0d2aac4aee120dd3fdff4bfcf53c394438dae973b"
+    },
+    {
+      "path": "dist/igcse/activities/calorimetry/index.html",
+      "sha256": "248f1df3fdc1a5c9836942e4db3a50bc59f1ce3b7036f3508054767e6cf7425f"
+    },
+    {
+      "path": "dist/igcse/activities/dot-and-cross/index.html",
+      "sha256": "fc19f3fd6beff917036eb7294ab0f8e4771aa668b68c0e2132e08774491743a1"
+    },
+    {
+      "path": "dist/igcse/activities/energetics-practical/index.html",
+      "sha256": "7f8a98032fea1db61d29a56314779248ab3e5d1ba990578d28733f32ec41bc56"
+    },
+    {
+      "path": "dist/igcse/activities/energy-enthalpy/index.html",
+      "sha256": "af1368934ffda2f9bbc8c5c07f7c7eb97763abbab22bd62a1a3537cb2b9964ac"
+    },
+    {
+      "path": "dist/igcse/activities/structure-and-bonding/index.html",
+      "sha256": "5b5ff07cf87c8aa38594c3f9aab96af463fd5b2bd6b2437e2e69fb536237f4e9"
+    },
+    {
+      "path": "dist/igcse/assets/a-01-p1-B7lbrCeA.svg",
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    {
+      "path": "dist/igcse/assets/a-01-r1-CLyJsO-i.svg",
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    {
+      "path": "dist/igcse/assets/a-02-p1-OjiOrFSK.svg",
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    {
+      "path": "dist/igcse/assets/a-02-r1-ByyLCGPs.svg",
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    {
+      "path": "dist/igcse/assets/a-03-p1-eU7CGgOm.svg",
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    {
+      "path": "dist/igcse/assets/a-03-r1-aA9mPxyz.svg",
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    {
+      "path": "dist/igcse/assets/a-04-p2-dAwh-l9N.svg",
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    {
+      "path": "dist/igcse/assets/a-04-r1-Bf5uXb9E.svg",
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    {
+      "path": "dist/igcse/assets/a-05-p1-D8ELiJut.svg",
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    {
+      "path": "dist/igcse/assets/a-05-r1-DaggzjaF.svg",
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    {
+      "path": "dist/igcse/assets/a-06-p1-BllJ0dFl.svg",
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    {
+      "path": "dist/igcse/assets/a-06-r1-BC-SVKaW.svg",
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    {
+      "path": "dist/igcse/assets/a-07-p1-tzsCg3f8.svg",
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    {
+      "path": "dist/igcse/assets/a-07-r1-C6fAdbx9.svg",
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    {
+      "path": "dist/igcse/assets/a-08-p1-BhrsClnZ.svg",
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    {
+      "path": "dist/igcse/assets/a-08-p2-D-S-CH0O.svg",
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    {
+      "path": "dist/igcse/assets/a-08-r1-BxrhkRWY.svg",
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    {
+      "path": "dist/igcse/assets/a-09-p1-CVYceU8g.svg",
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    {
+      "path": "dist/igcse/assets/a-09-r1-yd1fQLMm.svg",
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    {
+      "path": "dist/igcse/assets/a-10-p1-DWARGVV7.svg",
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    {
+      "path": "dist/igcse/assets/a-10-r1-C1H1Uq8w.svg",
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    {
+      "path": "dist/igcse/assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    {
+      "path": "dist/igcse/assets/allantoin-skeletal-notes-C8SZ2IFM.svg",
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    {
+      "path": "dist/igcse/assets/bond-enthalpy-core-B3NxXqut.js",
+      "sha256": "d9bff56e78e3a03983a5952b097e348500b5db7bc19473f4e805f74511111baf"
+    },
+    {
+      "path": "dist/igcse/assets/bond-enthalpy-core-M9vstt1Q.js",
+      "sha256": "500fc0a97098541fb81e4d92395c36dcd72a621deafce167d2384d40884b0d51"
+    },
+    {
+      "path": "dist/igcse/assets/c3l6-BWgZs67e.css",
+      "sha256": "b8fd23826254f009eb6ee52aea64d128f030ce3da41633b10f20b76a43fd494a"
+    },
+    {
+      "path": "dist/igcse/assets/c3l6-DYIYoqiL.js",
+      "sha256": "11bcd633867ebdc5c7809f1f2a79aa88e8b474b201dadb921d819daccdba4c97"
+    },
+    {
+      "path": "dist/igcse/assets/Comfortaa-Bold-DaLuDTPp.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/igcse/assets/compatibility-D1mQKJom.js",
+      "sha256": "3d44ed0e7c4ea16637d3a45c2c3ff71e868fdf1873a79d6a898b9e1d37b5713f"
+    },
+    {
+      "path": "dist/igcse/assets/compatibility-kM1sOJ5b.css",
+      "sha256": "4a4934913994d12ec7afc20a4511f90a04742adc73d5a492f81987efa14205b9"
+    },
+    {
+      "path": "dist/igcse/assets/Content-CKr9RMoa.js",
+      "sha256": "e15d14d815d69b2666d1732aff8c1d42e3f2feb1deaa5a2bc14c59763d9cd439"
+    },
+    {
+      "path": "dist/igcse/assets/course-mastery-ChOwrGqm.js",
+      "sha256": "8c82dfb5f573d63137a2c18c837d8ae516cfb43dd5657ca92ed03fd714d40543"
+    },
+    {
+      "path": "dist/igcse/assets/data-DRsOgynP.js",
+      "sha256": "b7134f80430caaa730a310632f19317181c6ef23737746fcb1a6c8e4037b90fe"
+    },
+    {
+      "path": "dist/igcse/assets/data-PGygMTpc.js",
+      "sha256": "24a44747289255de92c5de8907458fa5a5aa0bd33eae59550fc0aaa218e1aa52"
+    },
+    {
+      "path": "dist/igcse/assets/definitions-ldFVBQYl.js",
+      "sha256": "11ebf6beea1f52bd03eb0caa34ef6665a0b92daf9a44dd34954d1653132a2ce2"
+    },
+    {
+      "path": "dist/igcse/assets/dependencies-IbyFZa8N.js",
+      "sha256": "40baa63b2188a321db2885ec57352f22bec5fff34c46a6c2ed41bae64d3a5e31"
+    },
+    {
+      "path": "dist/igcse/assets/DiagramViewport-DGhHqMlN.js",
+      "sha256": "f31c7e69b059e1cff6fe35c9d0ac34c0c94ec7c12b38d4c4f11ff91f0502046c"
+    },
+    {
+      "path": "dist/igcse/assets/display-BpW8Pz6W.js",
+      "sha256": "f3e24480a79bef0281732ac78549c176bab325c1b6b7ad7780a130da2bf8a417"
+    },
+    {
+      "path": "dist/igcse/assets/dot-and-cross-B-X6szdQ.css",
+      "sha256": "6ce00e9d47043a20a75a86f0898941c5ed3cdd5ae64709ade848dc353b6bec36"
+    },
+    {
+      "path": "dist/igcse/assets/dot-and-cross-Di2-WcK7.js",
+      "sha256": "aa010171d6dc5a864fcbd3e2b6678a6aee4ce5c9d90dc9a354ba1792909873cf"
+    },
+    {
+      "path": "dist/igcse/assets/DotCrossPlayer-B_iHdArF.css",
+      "sha256": "e76c3530842004560cdd9d4ea39d6f377c197f14490e2394964289d2e8a718ad"
+    },
+    {
+      "path": "dist/igcse/assets/DotCrossPlayer-c-RR440m.js",
+      "sha256": "1fb8daf41fa5bafba2d564e5f90a446793dacf2c9b8570347544ce365d2e3a0e"
+    },
+    {
+      "path": "dist/igcse/assets/electron-configuration-DBlPFIqb.css",
+      "sha256": "976b7ec78a7d70e08bc2cabcbc555a2d3ca62f91a66281ebf5a77f50dad4b0ea"
+    },
+    {
+      "path": "dist/igcse/assets/electron-configuration-DWCl-Y-n.js",
+      "sha256": "73c0b0332ed0cdd1fef256f496e3b5206ed82cba95ff1431ba297984a9daea87"
+    },
+    {
+      "path": "dist/igcse/assets/energy-profile-Dfptpr-r.js",
+      "sha256": "38814195d9e884b2a7bddb633ef4aa7b7c4005b829854947706288ae112f0628"
+    },
+    {
+      "path": "dist/igcse/assets/engine-BBuYvrrD.js",
+      "sha256": "42615cf21253e1e6087d091deff8edd9cc7872bf86196449b4900c2c72ba497c"
+    },
+    {
+      "path": "dist/igcse/assets/engine-BoCqYcJ-.js",
+      "sha256": "5604e510766c845cd1bb7fa059aa6905efe739edeed56abf1456dd1798358793"
+    },
+    {
+      "path": "dist/igcse/assets/engine-C-1fMWJy.js",
+      "sha256": "c3001d537086aae694fab9e7c1fd36cc3bb41540f2f2b87450ddfbe091fbea97"
+    },
+    {
+      "path": "dist/igcse/assets/engine-CbOIdEna.js",
+      "sha256": "bb9e672555129654f64f3784915a863fbd3a98a71a22abcd1bbd079050e75eec"
+    },
+    {
+      "path": "dist/igcse/assets/engine-DBdNwAjQ.js",
+      "sha256": "9ca483192d7153013442869ee0005db3ac7fd3b5f15481d51ce35dc79491e629"
+    },
+    {
+      "path": "dist/igcse/assets/example-01-z-ule6NF.svg",
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    {
+      "path": "dist/igcse/assets/example-02-CO0o4LKf.svg",
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    {
+      "path": "dist/igcse/assets/example-03-D6k44Rmm.svg",
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    {
+      "path": "dist/igcse/assets/example-04-Bo4K13nz.svg",
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    {
+      "path": "dist/igcse/assets/example-05-CRYEGIjy.svg",
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    {
+      "path": "dist/igcse/assets/example-06-BXoatn3p.svg",
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    {
+      "path": "dist/igcse/assets/example-07-BjSkFWb4.svg",
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    {
+      "path": "dist/igcse/assets/example-08-BkHFGDdE.svg",
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    {
+      "path": "dist/igcse/assets/example-09-eObnlTTe.svg",
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    {
+      "path": "dist/igcse/assets/example-10-Cdj6GgSb.svg",
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    {
+      "path": "dist/igcse/assets/example-11-C_sEZP6L.svg",
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    {
+      "path": "dist/igcse/assets/example-12-BJkQG18m.svg",
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    {
+      "path": "dist/igcse/assets/example-13-C1QLu3Mg.svg",
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    {
+      "path": "dist/igcse/assets/example-14-FxDx7nll.svg",
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    {
+      "path": "dist/igcse/assets/example-15-BWGDoFx9.svg",
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    {
+      "path": "dist/igcse/assets/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/igcse/assets/fonts/OFL-Comfortaa.txt",
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a"
+    },
+    {
+      "path": "dist/igcse/assets/framework-BmviDFsE.js",
+      "sha256": "b825f0b0a23f0850551fd8879ec22c0574b02b1b7567464a07c418dacb7d26a7"
+    },
+    {
+      "path": "dist/igcse/assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    {
+      "path": "dist/igcse/assets/historical-acid-catalogue-BNnCBYcW.js",
+      "sha256": "789e8f43702d3fe3f60a239c6f60dcd00fdbc547dec0a7f62f658c4bc7b500c0"
+    },
+    {
+      "path": "dist/igcse/assets/identity-CuJJfa1P.js",
+      "sha256": "bf8c463b5a976bbf7c36ef0061b284f0a4f4fd8deb52164ffbc362e8e384a290"
+    },
+    {
+      "path": "dist/igcse/assets/identity-Dr_meW4Y.js",
+      "sha256": "f522dcaac042454377af9e4193b79402d5538af65bc16cf9a1b0a55007015489"
+    },
+    {
+      "path": "dist/igcse/assets/igcse-Cyp86vW4.js",
+      "sha256": "07f3fd07989f1f5ad7007465d9836f2c28e891d14e7aa118d7b596606d0584c4"
+    },
+    {
+      "path": "dist/igcse/assets/jsx-runtime-Dk72oS4N.js",
+      "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6"
+    },
+    {
+      "path": "dist/igcse/assets/landing/fonts/Comfortaa-Bold.ttf",
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "dist/igcse/assets/landing/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/igcse/assets/landing-dR-puBIv.css",
+      "sha256": "e0196970ff1540f568a239b318e58399083e8208ed4cc044126107fd34f78d9d"
+    },
+    {
+      "path": "dist/igcse/assets/landing-DrFyil9d.js",
+      "sha256": "bead1a36152de011a2bfb1c5e38aa0f520b7d733fd1fe4b0b49c2c3d6a64cbf8"
+    },
+    {
+      "path": "dist/igcse/assets/layout-BncCbbQB.js",
+      "sha256": "68a7eab10f5ff9f7ff7a4252943eb65d474af5a5a6db478550c369da39047f41"
+    },
+    {
+      "path": "dist/igcse/assets/legacy-DuJxkBxy.js",
+      "sha256": "33942b77ea128f0abf836d6ce3471b9edfabf9d9f41fe8350e2d37a01c3f2bb8"
+    },
+    {
+      "path": "dist/igcse/assets/legacy-ey1vIt2y.js",
+      "sha256": "ce23f1ee22652666b7a7316ec56f0ec4f3bc758637de5d128f816b1a6e6614f5"
+    },
+    {
+      "path": "dist/igcse/assets/marking--RM3gQVp.js",
+      "sha256": "af40a45e4db061512fc34959c80e39672c3be6c3415631afccc9dd205fd8bb54"
+    },
+    {
+      "path": "dist/igcse/assets/marking-B3uwe-A6.js",
+      "sha256": "d7ef7d1f0d21b00a80f88256a225ba3f1f118631ca0ef7952b0d4fbe397cd5d3"
+    },
+    {
+      "path": "dist/igcse/assets/marking-BQggF3vi.js",
+      "sha256": "37fe16479887dc54fbdaa22e765ac445a7c65fae53553c62cd46e0a77f9f863b"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Brw-1bgU.js",
+      "sha256": "1f9d748e79b5c41e498a0777c399da29952df051103faae996cc29e617efd0ae"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Bv48gqhY.js",
+      "sha256": "246bfa51e8fbb96679b1ee579d35273dd7e14e85fe3b7c37a73042332b2eef47"
+    },
+    {
+      "path": "dist/igcse/assets/marking-BxZxGm59.js",
+      "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2"
+    },
+    {
+      "path": "dist/igcse/assets/marking-CavyMb5H.js",
+      "sha256": "c9f4705fe36343b0d4cf3f9824c56cd9232de8a58f726f792d258462f192ca43"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Chm4FhyV.js",
+      "sha256": "f3d83f68dd55fd461ef0088fec31e4408e64cd8a46ccc7d8f73611f79786ff78"
+    },
+    {
+      "path": "dist/igcse/assets/marking-CzcYzkzo.js",
+      "sha256": "7e038a8ee795a2398341db966f1ec2518c5ac14a955da38d403059836580f01d"
+    },
+    {
+      "path": "dist/igcse/assets/marking-Dkl2uSHV.js",
+      "sha256": "ccca175b484dc19912869c8e23498fa75002acf133d7eecd8500f1c5d6b8ec5f"
+    },
+    {
+      "path": "dist/igcse/assets/marking-DlPqVdUO.js",
+      "sha256": "e9faa474a5d2a5ace518af0f1d89627f0e95003291ebac168f444bd9810aed3d"
+    },
+    {
+      "path": "dist/igcse/assets/marking-HMFTDCSt.js",
+      "sha256": "dd88a05087999d47f4ae24e33613415c75433615be1b3a018226ce4217db4ce2"
+    },
+    {
+      "path": "dist/igcse/assets/marking-xsdHVJQF.js",
+      "sha256": "25c9effc81a2ec09d6929d15341a4fe24fb5d59ceb37b7e03c3cc5d6c6662e6b"
+    },
+    {
+      "path": "dist/igcse/assets/mastery-BY5OygY0.js",
+      "sha256": "b56ae0a39c9361342537e2dc0a7ed59e804bdbd4b577c04fc285ab6fc5210317"
+    },
+    {
+      "path": "dist/igcse/assets/model-BGe1yUUr.js",
+      "sha256": "a41aa148449855b0ea745b2aaa60002dea1eed58929253f1e0a9341dce2899f8"
+    },
+    {
+      "path": "dist/igcse/assets/network-DNyUZot2.svg",
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    {
+      "path": "dist/igcse/assets/olive-fly-pheromone-skeletal-notes-c4RfbPuX.svg",
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    {
+      "path": "dist/igcse/assets/OlympiadHost-CsPhmVzv.js",
+      "sha256": "1f89e18cc7640d474eca57b69f9dfea63ec8ae54d037d7d20758f6594bdb57d0"
+    },
+    {
+      "path": "dist/igcse/assets/persistence-xdNsdZpA.js",
+      "sha256": "2594c6c08f9bb9d40e495528b5c8a76c48495ac8b091745aab96c323dccbf481"
+    },
+    {
+      "path": "dist/igcse/assets/preload-helper-BaNbYf_w.js",
+      "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034"
+    },
+    {
+      "path": "dist/igcse/assets/ProductionFoundation-t4NQ77Fe.js",
+      "sha256": "fd7ef929a979f712161172c9910130f39b0683307ca2b2aa9b9af6eea4749981"
+    },
+    {
+      "path": "dist/igcse/assets/provider-14awNsSH.js",
+      "sha256": "a2d91c12eed6a8f4aba2f941f3feab2f4bc7c99aa5e935a05d9046263d565ac9"
+    },
+    {
+      "path": "dist/igcse/assets/provider-3KjMRsW8.js",
+      "sha256": "4dc6571d0a3a9889c255f2f5774bb4cf781ee94b021732d964d075c56db6cdd6"
+    },
+    {
+      "path": "dist/igcse/assets/provider-B1PnQ9KN.js",
+      "sha256": "9400a337ae3e21806c98b14cc1422b237204aa767e9536a1832dba140710616d"
+    },
+    {
+      "path": "dist/igcse/assets/provider-B8SV1T1H.js",
+      "sha256": "f82b1a516860516847232a06407c3fd12945bd711759c04581a621fdcff961b5"
+    },
+    {
+      "path": "dist/igcse/assets/provider-BdYJlaaf.js",
+      "sha256": "9aee333438af0910e71ab28053322bb1e57d6dd138cf8d30408be569f80b8a47"
+    },
+    {
+      "path": "dist/igcse/assets/provider-C6IOpngC.js",
+      "sha256": "8b403d5b0db89fff59851b9665b11803825b202c10232cd1c82735914f0d1e17"
+    },
+    {
+      "path": "dist/igcse/assets/provider-C6kF8JAP.js",
+      "sha256": "634fdefaaaa196a59d90170c25151e49c35352c33a6480311fc5623088717b03"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CdIF3xRb.js",
+      "sha256": "44552c856fafd8d2cd2a4d4dbe6eb1ba71045d446f478fea980f15e732040e11"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CI3mbAAD.js",
+      "sha256": "1003b1955521005cdc5ad99159b058f7d50029979962e1325ee6fc3fe6dfb663"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CJoHw7jb.js",
+      "sha256": "ee482ffbb8d5ee01076a7eaaacfc97b41d96892f253e5a1d54c773f7ac38a4b7"
+    },
+    {
+      "path": "dist/igcse/assets/provider-Cnoejs_A.js",
+      "sha256": "94209715b44e69c02c958e6af8435027cbbdea3ad7f7e268bcb155943df126bb"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CqfO2B-b.js",
+      "sha256": "fb88628fc26c69a7775e37691f300e57861f7f150275c3d102962c62532c9079"
+    },
+    {
+      "path": "dist/igcse/assets/provider-CQQw6jqT.js",
+      "sha256": "93e9e03898c398ce4b4c9f136169eb904901da9aa9bc6b78b29f8bf480e3b683"
+    },
+    {
+      "path": "dist/igcse/assets/provider-D02gZywS.js",
+      "sha256": "9c7e4fa417763c39fe1a85903ec70b65c4299cbc7b0fa14789ebfb790e55fbd4"
+    },
+    {
+      "path": "dist/igcse/assets/provider-D4pFRBfJ.js",
+      "sha256": "a881eea91acc0f915b815ebefa11d91f9839edf83cb6d2de4b32285c4fa97bc8"
+    },
+    {
+      "path": "dist/igcse/assets/provider-DWUkYHkW.js",
+      "sha256": "0d5aec264f05a16005d59d38be495d6ebb5eb69820934135988214a3e527cdbd"
+    },
+    {
+      "path": "dist/igcse/assets/provider-DxaAJnoS.js",
+      "sha256": "2228d7c8aceed05e383918af96baa4840144ef2f55522859fd4925adeebc218b"
+    },
+    {
+      "path": "dist/igcse/assets/provider-DyLX4LLn.js",
+      "sha256": "eaed7535d304d035fcf8264d9085dd626f2eed5213cedae56ba53dc225a46422"
+    },
+    {
+      "path": "dist/igcse/assets/provider-PPSOqBcA.js",
+      "sha256": "924d021f294020d21350b5747a03a8fb453388e288745b8594fa56540b569b20"
+    },
+    {
+      "path": "dist/igcse/assets/provider-_5U-wqiV.js",
+      "sha256": "2416961fc5d5482b34933079cb1674012d9d5b5521a52c0970f6f8ec545e594d"
+    },
+    {
+      "path": "dist/igcse/assets/react-dom-X1VypBGM.js",
+      "sha256": "b372cf8b951696bff593ee22910dbff824e7b341bc6cb4e2f21db32052595946"
+    },
+    {
+      "path": "dist/igcse/assets/registry-BcV34_DT.js",
+      "sha256": "c0ec3181a233b4cb6f48db00ccaeeaff8e4b9bd23468959949ab3c902c1e81b0"
+    },
+    {
+      "path": "dist/igcse/assets/registry-ojF_16jp.css",
+      "sha256": "c7f975f46202d6f910a02f5fd8da9d7b2d31ec9c8e1d5f210c941d78cd0f39c7"
+    },
+    {
+      "path": "dist/igcse/assets/repository-CzUCK50U.js",
+      "sha256": "01524c115461cb230e30c424749eb455603b38e8788d67ca0c9063142ff0b585"
+    },
+    {
+      "path": "dist/igcse/assets/ResponseControl-BpQuIfh3.js",
+      "sha256": "c2fbc7d6050e34778d2372bed2431e5514f1c3c2c4a984f8a7f0ce7089069a40"
+    },
+    {
+      "path": "dist/igcse/assets/SJS-Eagle-gPV5upPw.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/igcse/assets/SJS-Eagle.svg",
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "dist/igcse/assets/statistics-DG26KD0G.css",
+      "sha256": "b93faab522b07cfca0ad6795637a34a7a155c4a4d8adae83dd4e3cca0543c3ec"
+    },
+    {
+      "path": "dist/igcse/assets/statistics-DHnwjEYJ.js",
+      "sha256": "ef47eb7184b25b4b10fbf937cd45a731a69e7cbdaf1a1c537a9812488f530042"
+    },
+    {
+      "path": "dist/igcse/assets/titration-curve-CDb2mgim.css",
+      "sha256": "eb059efca03bb79944463ff7db4f097b29ae3c82ca0da741bbbb6bd3b84af146"
+    },
+    {
+      "path": "dist/igcse/assets/titration-curve-CvxNrxiQ.js",
+      "sha256": "c0332ae387bbadbf7fe29b326d4b925cda92d89004bf389fef612a68eb2382d9"
+    },
+    {
+      "path": "dist/igcse/assets/types-BQzY_9Qt.js",
+      "sha256": "9f829c506148af680d526ffdd40ba8b61b05c95345269e17400ac40f55d42322"
+    },
+    {
+      "path": "dist/igcse/assets/types-CGzZHUAK.js",
+      "sha256": "5f569da98a193fd6fa32e3125f6443f2088f194c3b5cfc9436844848b91424f1"
+    },
+    {
+      "path": "dist/igcse/index.html",
+      "sha256": "f5c7528a60e2fbfc1a17ea9f5a995f47e8c502169bdd442249c9a90173da3b42"
+    }
+  ],
+  "sourceUnchanged": true,
+  "buildUnchanged": true,
+  "finishedAt": "2026-10-03T10:40:57.821Z",
+  "scriptSha256": "aace9f0e96ba2f5d05df2639ae419199b57be40f2080eab14c56b226886b7b98"
+}

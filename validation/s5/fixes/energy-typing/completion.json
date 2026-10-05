@@ -1,0 +1,28 @@
+{
+  "id": "S5-FIX-ENERGY-TYPING",
+  "agent": "A13",
+  "status": "PASS",
+  "scope": "Energy numeric draft fix; source frozen, independent A23 final acceptance remains.",
+  "output": "src/editors/energy-profile/index.tsx",
+  "confidence": 0.94,
+  "validation": {
+    "coreBrowser": "4 scenarios PASS; 70 trusted input events",
+    "teacher": "PASS checked model/no editable input/no evidence",
+    "typecheck": "PASS",
+    "prettier": "PASS",
+    "chemistrySource": "5/5 PASS",
+    "fullBrowserTail": "FAIL retained: corrupted Unicode teacher selector; Next/peak tail not executed",
+    "evidence": "validation/s5/fixes/energy-typing/checks.json"
+  },
+  "limits": [
+    "No claim of full browser suite PASS.",
+    "First assessment, correction, immutable history/first response and pause/reload assertions executed before locator failure, without a distinct completed scenario record.",
+    "Next and peak numeric tail left to independent A23 final-build review.",
+    "Headless actual host only; no native foreground timing claims."
+  ],
+  "sourceSha256": "b58d2fd9285e96cb9902705034ec038387339dc3b53ace45e3d18526ce3ee407",
+  "serverClosed": true,
+  "effectiveModel": null,
+  "effectiveEffort": null,
+  "usage": null
+}

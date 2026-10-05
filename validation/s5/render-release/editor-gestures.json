@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "settings": {
+    "browser": "headlessEdge pinnedPlaywright1.62.1",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "CPUThrottle": 4,
+    "network": "unthrottled for targetededitorcheck",
+    "samples": 1,
+    "stepsPerGesture": 30
+  },
+  "checks": [
+    {
+      "id": "energy-real-drag-local-draft-checkpoint",
+      "steps": 30,
+      "beforePutCount": 0,
+      "duringPutCount": 0,
+      "old": "220",
+      "shown": "262.10526315789474",
+      "gestureAndTwoFramesMs": 688.6599000000006,
+      "releaseToPutObservedMs": 60.908300000000054,
+      "writes": [
+        {
+          "store": "attempts",
+          "at": 1786.1000000238419,
+          "value": "{\"profile\":{\"kind\":\"energy-profile\",\"r\":220,\"p\":262.10526315789474,\"peak\":85,\"left\":\"\",\"right\":\"\",\"vertical\":\"Energy\",\"horizontal\":\"Progress of reaction\",\"pathLabel\":\"Catalysed\",\"arrows\":{}}}"
+        }
+      ]
+    },
+    {
+      "id": "dot-real-drag-local-draft-checkpoint",
+      "steps": 30,
+      "beforePutCount": 1,
+      "duringPutCount": 1,
+      "old": "400",
+      "shown": "450.86942698525274",
+      "gestureAndTwoFramesMs": 674.8353000000006,
+      "releaseToPutObservedMs": 36.44050000000061,
+      "writes": [
+        {
+          "store": "attempts",
+          "at": 2116.5,
+          "value": "{\"diagram\":{\"kind\":\"dot-and-cross\",\"atoms\":[{\"id\":\"a1\",\"element\":\"H\",\"x\":450.86942698525274,\"y\":325}],\"electrons\":[],\"groups\":[],\"history\":[{\"kind\":\"dot-and-cross\",\"atoms\":[],\"electrons\":[],\"groups\":[]},{\"kind\":\"dot-and-cross\",\"atoms\":[{\"id\":\"a1\",\"element\":\"H\",\"x\":400,\"y\":325}],\"electrons\":[],\"groups\":[]}],\"future\":[]}}"
+        }
+      ]
+    },
+    {
+      "id": "molecule-real-drag-local-draft-checkpoint",
+      "steps": 30,
+      "beforePutCount": 14,
+      "duringPutCount": 14,
+      "old": "0",
+      "shown": "66",
+      "gestureAndTwoFramesMs": 646.3089999999993,
+      "releaseToPutObservedMs": 32.4359000000004,
+      "writes": [
+        {
+          "store": "olympiad",
+          "at": 4342.5,
+          "value": "{\"A\":{\"kind\":\"molecule\",\"graph\":{\"atoms\":[{\"id\":1,\"element\":\"C\",\"x\":66,\"y\":0}],\"bonds\":[]},\"history\":[{\"atoms\":[],\"bonds\":[]},{\"atoms\":[{\"id\":1,\"element\":\"C\",\"x\":0,\"y\":0}],\"bonds\":[]}]}}"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

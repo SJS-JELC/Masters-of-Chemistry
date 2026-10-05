@@ -1,0 +1,303 @@
+[
+  {
+    "ref": {
+      "activityId": "igcse/structure-and-bonding",
+      "questionId": "SBC-8H8DTX",
+      "level": 2,
+      "seed": 0
+    },
+    "title": "Graphite and Diamond",
+    "layout": "workspace",
+    "submission": "all-required-parts",
+    "context": [
+      {
+        "kind": "text",
+        "text": "Explain, in terms of their structure and bonding, why graphite is soft but diamond is hard."
+      }
+    ],
+    "parts": [
+      {
+        "id": "explanation",
+        "kind": "explanation",
+        "required": true,
+        "dependsOn": [],
+        "marks": 6,
+        "prompt": [
+          {
+            "kind": "text",
+            "text": "Build the explanation one part at a time. Identify the bonding and structure, link each substance to its property, then bring both sides together in the comparison box."
+          }
+        ],
+        "sections": [
+          {
+            "id": "left-bonding",
+            "label": "Type of bonding",
+            "group": "Graphite",
+            "presentation": "single-line",
+            "minLength": 5
+          },
+          {
+            "id": "left-structure",
+            "label": "Type of structure",
+            "group": "Graphite",
+            "presentation": "single-line",
+            "minLength": 5
+          },
+          {
+            "id": "left-property",
+            "label": "Link to property: soft",
+            "group": "Graphite",
+            "help": "Describe the relevant forces, bonds or movement in the structure, then link this to the hardness or softness.",
+            "presentation": "multiline",
+            "minLength": 5
+          },
+          {
+            "id": "right-bonding",
+            "label": "Type of bonding",
+            "group": "Diamond",
+            "presentation": "single-line",
+            "minLength": 5
+          },
+          {
+            "id": "right-structure",
+            "label": "Type of structure",
+            "group": "Diamond",
+            "presentation": "single-line",
+            "minLength": 5
+          },
+          {
+            "id": "right-property",
+            "label": "Link to property: hard",
+            "group": "Diamond",
+            "help": "Describe the relevant forces, bonds or movement in the structure, then link this to the hardness or softness.",
+            "presentation": "multiline",
+            "minLength": 5
+          },
+          {
+            "id": "comparison",
+            "label": "Comparison",
+            "presentation": "multiline",
+            "minLength": 5,
+            "help": "Bring both sides together. Explain how the difference or similarity in structure and bonding produces the properties stated in the question."
+          }
+        ],
+        "minLength": 20,
+        "assessment": "self-rubric",
+        "rubric": [
+          {
+            "id": "point-1",
+            "text": "Both graphite and diamond have covalent bonding and giant lattice structures made from carbon atoms.",
+            "marks": 1
+          },
+          {
+            "id": "point-2",
+            "text": "In graphite, each carbon atom forms three covalent bonds in layers.",
+            "marks": 1
+          },
+          {
+            "id": "point-3",
+            "text": "Only weak attractions act between the graphite layers.",
+            "marks": 1,
+            "reject": "Do not award if the covalent bonds within a graphite layer are described as weak."
+          },
+          {
+            "id": "point-4",
+            "text": "The layers can slide over one another, making graphite soft.",
+            "marks": 1
+          },
+          {
+            "id": "point-5",
+            "text": "In diamond, each carbon atom forms four strong covalent bonds in a rigid three-dimensional lattice.",
+            "marks": 1
+          },
+          {
+            "id": "point-6",
+            "text": "The many strong covalent bonds make diamond hard.",
+            "marks": 1
+          }
+        ]
+      }
+    ],
+    "scaffolds": [],
+    "hints": [],
+    "workedAnswer": [
+      {
+        "kind": "text",
+        "text": "Award one mark for each independent point. Apply every exclusion. Equivalent chemically valid wording is accepted; the explanation is self-assessed using exact evidence from the frozen answer."
+      },
+      {
+        "kind": "text",
+        "text": "1. Both graphite and diamond have covalent bonding and giant lattice structures made from carbon atoms."
+      },
+      {
+        "kind": "text",
+        "text": "2. In graphite, each carbon atom forms three covalent bonds in layers."
+      },
+      {
+        "kind": "text",
+        "text": "3. Only weak attractions act between the graphite layers."
+      },
+      {
+        "kind": "text",
+        "text": "Do not award if the covalent bonds within a graphite layer are described as weak."
+      },
+      {
+        "kind": "text",
+        "text": "4. The layers can slide over one another, making graphite soft."
+      },
+      {
+        "kind": "text",
+        "text": "5. In diamond, each carbon atom forms four strong covalent bonds in a rigid three-dimensional lattice."
+      },
+      {
+        "kind": "text",
+        "text": "6. The many strong covalent bonds make diamond hard."
+      }
+    ],
+    "sources": [
+      {
+        "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/data.js",
+        "sha256": "6f43c088ee0e1c2fe20a580eff294a88b9db605c897212e2cc9a0f6d505a62cd",
+        "symbolOrSection": "StructureBondingComparisonData.questions"
+      },
+      {
+        "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/core.js",
+        "sha256": "3d95f2cbf1f372f0c1d4c28ce7fa0ab7f1f15d63f8815b52d65fab50348c8c8c",
+        "symbolOrSection": "levelTwoSections"
+      },
+      {
+        "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/app.js",
+        "sha256": "a3c004b779ca72ac262c7742edb45a4f91b6845307718434807b10c95978eb97",
+        "symbolOrSection": "levelTwoHtml, levelThreeHtml, lockAnswer"
+      }
+    ]
+  },
+  {
+    "ref": {
+      "activityId": "igcse/structure-and-bonding",
+      "questionId": "SBC-878S4Y",
+      "level": 3,
+      "seed": 0
+    },
+    "title": "Graphite and Diamond",
+    "layout": "workspace",
+    "submission": "all-required-parts",
+    "context": [
+      {
+        "kind": "text",
+        "text": "Explain, in terms of their structure and bonding, why graphite is soft but diamond is hard."
+      }
+    ],
+    "parts": [
+      {
+        "id": "explanation",
+        "kind": "explanation",
+        "required": true,
+        "dependsOn": [],
+        "marks": 6,
+        "prompt": [
+          {
+            "kind": "text",
+            "text": "Use structure and bonding to explain the comparison in a fully open response."
+          }
+        ],
+        "sections": [
+          {
+            "id": "answer",
+            "label": "Your explanation",
+            "presentation": "multiline",
+            "minLength": 20
+          }
+        ],
+        "minLength": 20,
+        "assessment": "self-rubric",
+        "rubric": [
+          {
+            "id": "point-1",
+            "text": "Both graphite and diamond have covalent bonding and giant lattice structures made from carbon atoms.",
+            "marks": 1
+          },
+          {
+            "id": "point-2",
+            "text": "In graphite, each carbon atom forms three covalent bonds in layers.",
+            "marks": 1
+          },
+          {
+            "id": "point-3",
+            "text": "Only weak attractions act between the graphite layers.",
+            "marks": 1,
+            "reject": "Do not award if the covalent bonds within a graphite layer are described as weak."
+          },
+          {
+            "id": "point-4",
+            "text": "The layers can slide over one another, making graphite soft.",
+            "marks": 1
+          },
+          {
+            "id": "point-5",
+            "text": "In diamond, each carbon atom forms four strong covalent bonds in a rigid three-dimensional lattice.",
+            "marks": 1
+          },
+          {
+            "id": "point-6",
+            "text": "The many strong covalent bonds make diamond hard.",
+            "marks": 1
+          }
+        ]
+      }
+    ],
+    "scaffolds": [],
+    "hints": [],
+    "workedAnswer": [
+      {
+        "kind": "text",
+        "text": "Award one mark for each independent point. Apply every exclusion. Equivalent chemically valid wording is accepted; the explanation is self-assessed using exact evidence from the frozen answer."
+      },
+      {
+        "kind": "text",
+        "text": "1. Both graphite and diamond have covalent bonding and giant lattice structures made from carbon atoms."
+      },
+      {
+        "kind": "text",
+        "text": "2. In graphite, each carbon atom forms three covalent bonds in layers."
+      },
+      {
+        "kind": "text",
+        "text": "3. Only weak attractions act between the graphite layers."
+      },
+      {
+        "kind": "text",
+        "text": "Do not award if the covalent bonds within a graphite layer are described as weak."
+      },
+      {
+        "kind": "text",
+        "text": "4. The layers can slide over one another, making graphite soft."
+      },
+      {
+        "kind": "text",
+        "text": "5. In diamond, each carbon atom forms four strong covalent bonds in a rigid three-dimensional lattice."
+      },
+      {
+        "kind": "text",
+        "text": "6. The many strong covalent bonds make diamond hard."
+      }
+    ],
+    "sources": [
+      {
+        "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/data.js",
+        "sha256": "6f43c088ee0e1c2fe20a580eff294a88b9db605c897212e2cc9a0f6d505a62cd",
+        "symbolOrSection": "StructureBondingComparisonData.questions"
+      },
+      {
+        "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/core.js",
+        "sha256": "3d95f2cbf1f372f0c1d4c28ce7fa0ab7f1f15d63f8815b52d65fab50348c8c8c",
+        "symbolOrSection": "levelTwoSections"
+      },
+      {
+        "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/app.js",
+        "sha256": "a3c004b779ca72ac262c7742edb45a4f91b6845307718434807b10c95978eb97",
+        "symbolOrSection": "levelTwoHtml, levelThreeHtml, lockAnswer"
+      }
+    ]
+  }
+]

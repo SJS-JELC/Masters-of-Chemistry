@@ -1,0 +1,39 @@
+{
+  "CPUThrottle": 1,
+  "network": "unthrottled",
+  "states": [
+    {
+      "stage": "after delete",
+      "value": "0"
+    },
+    {
+      "stage": "after -",
+      "value": "0"
+    },
+    {
+      "stage": "after 1",
+      "value": "01"
+    }
+  ],
+  "inputEvents": [
+    {
+      "value": "",
+      "inputType": "deleteContentBackward",
+      "data": null,
+      "trusted": true
+    },
+    {
+      "value": "",
+      "inputType": "insertText",
+      "data": "-",
+      "trusted": true
+    },
+    {
+      "value": "01",
+      "inputType": "insertText",
+      "data": "1",
+      "trusted": true
+    }
+  ],
+  "status": "FAIL"
+}

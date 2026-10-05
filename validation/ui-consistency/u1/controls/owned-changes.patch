@@ -1,0 +1,928 @@
+diff --git a/validation/ui-consistency/u1/before/src/ui/QuestionPlayer.tsx b/src/ui/QuestionPlayer.tsx
+index a2c26e3..9a67942 100644
+--- a/validation/ui-consistency/u1/before/src/ui/QuestionPlayer.tsx
++++ b/src/ui/QuestionPlayer.tsx
+@@ -1,3 +1,5 @@
++import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
++import { useQuestionKeyboard } from './use-question-keyboard.ts';
+ import { useId, Suspense, lazy } from 'react';
+ import type { ReactNode } from 'react';
+ import type {
+@@ -166,6 +168,21 @@ export function QuestionPlayer({
+   const chrome = useQuestionChrome();
+   const displayTitle = questionDisplayTitle(question);
+   const repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
++  const actions = useQuestionActions({
++    attempt,
++    correctionFeedback,
++    onCommand,
++    onNext,
++    canNext,
++    canCorrect: question.parts.some(
++      (part) => part.kind !== 'explanation' && part.kind !== 'drawing-self-check',
++    ),
++  });
++  const keyboard = useQuestionKeyboard(
++    `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
++    attempt.mode === 'student',
++    actions,
++  );
+   if (sourceFamilies[question.ref.activityId])
+     return (
+       <Suspense fallback={<p role="status">Loading written correction…</p>}>
+@@ -224,6 +241,7 @@ export function QuestionPlayer({
+   };
+   return (
+     <article
++      {...keyboard}
+       className={`question-player layout-${question.layout}`}
+       {...(repeatedTitle
+         ? { 'aria-label': displayTitle }
+@@ -276,6 +294,7 @@ export function QuestionPlayer({
+               <Content blocks={part.prompt} />
+               {student && (
+                 <ResponseControl
++                  key={`${part.id}:${actions.clearRevision}`}
+                   part={part}
+                   response={attempt.currentResponses[part.id]}
+                   readOnly={readOnly}
+@@ -616,65 +635,24 @@ export function QuestionPlayer({
+       )}
+       {student && (
+         <footer className="player-footer">
+-          <div className="action-row">
+-            {!reviewing && !assessed && (
+-              <button
+-                type="button"
+-                className="primary"
+-                onClick={() => onCommand({ kind: 'submit', at: Date.now() })}
+-              >
+-                {question.parts.some(
+-                  (part) => part.kind === 'explanation' || part.kind === 'drawing-self-check',
+-                )
+-                  ? 'Submit and freeze response'
+-                  : 'Check answer'}
+-              </button>
+-            )}
+-            {canCheckCorrection && (
+-              <button type="button" onClick={() => onCommand({ kind: 'check-correction' })}>
+-                Check correction
+-              </button>
+-            )}
+-            {!reviewing &&
+-              question.hints
+-                .filter((hint) => !shownSupport.some((item) => item.supportId === hint.id))
+-                .map((hint) => (
+-                  <button
+-                    type="button"
+-                    key={hint.id}
+-                    onClick={() =>
+-                      onCommand({
+-                        kind: 'assist',
+-                        assistance: { kind: 'hint', supportId: hint.id, at: Date.now() },
+-                      })
+-                    }
+-                  >
+-                    Request hint
+-                  </button>
+-                ))}
+-            {!reviewing && !showedAnswer && (
+-              <button
+-                type="button"
+-                onClick={() =>
+-                  onCommand({
+-                    kind: 'assist',
+-                    assistance: {
+-                      kind: assessed ? 'worked-answer' : 'reveal',
+-                      supportId: 'worked-answer',
+-                      at: Date.now(),
+-                    },
+-                  })
+-                }
+-              >
+-                {assessed ? 'Show worked answer' : 'Reveal answer (assisted)'}
+-              </button>
+-            )}
+-            {assessed && (
+-              <button type="button" className="primary" disabled={!canNext} onClick={onNext}>
+-                Next question
+-              </button>
+-            )}
+-          </div>
++          {!reviewing &&
++            question.hints
++              .filter((hint) => !shownSupport.some((item) => item.supportId === hint.id))
++              .map((hint) => (
++                <button
++                  type="button"
++                  key={hint.id}
++                  onClick={() =>
++                    onCommand({
++                      kind: 'assist',
++                      assistance: { kind: 'hint', supportId: hint.id, at: Date.now() },
++                    })
++                  }
++                >
++                  Request hint
++                </button>
++              ))}
++          <QuestionActions actions={actions} />
+           {saveStatus.kind === 'error' && (
+             <div className="save-status save-error" role="alert">
+               <>
+diff --git a/validation/ui-consistency/u1/before/src/ui/SourceQuestionPlayer.tsx b/src/ui/SourceQuestionPlayer.tsx
+index 2680ef3..05e3d2a 100644
+--- a/validation/ui-consistency/u1/before/src/ui/SourceQuestionPlayer.tsx
++++ b/src/ui/SourceQuestionPlayer.tsx
+@@ -1,3 +1,6 @@
++import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
++import { useQuestionKeyboard } from './use-question-keyboard.ts';
++import { responseFingerprint } from './action-state.ts';
+ import { lazy, Suspense, use } from 'react';
+ import type { ContentBlock, QuestionPart, Response } from '../contracts/question.ts';
+ import type { QuestionPlayerProps } from './QuestionPlayer.tsx';
+@@ -209,6 +212,22 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+   const ready = question.parts.every((part) =>
+     responseReady(part, responses[part.id], source.fields[part.id]?.count),
+   );
++  const actions = useQuestionActions({
++    attempt,
++    correctionFeedback,
++    onCommand,
++    onNext,
++    canNext,
++    ready,
++    canCorrect: question.parts.some(
++      (part) => part.kind !== 'explanation' && part.kind !== 'drawing-self-check',
++    ),
++  });
++  const keyboard = useQuestionKeyboard(
++    `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
++    student,
++    actions,
++  );
+   const send = (partId: string, response: Response) => {
+     if (student && !reviewing) onCommand({ kind: 'respond', partId, response });
+   };
+@@ -388,49 +407,6 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           />
+         ) : null;
+       })}
+-      {student && !reviewing && (
+-        <div className="actions pupil-answer-actions">
+-          {!assessed && (
+-            <button
+-              type="button"
+-              className="button primary check-answer"
+-              disabled={!ready}
+-              onClick={() => onCommand({ kind: 'submit', at: Date.now() })}
+-            >
+-              {family === 'acid' ? 'Check answers' : 'Check answer'}
+-            </button>
+-          )}
+-          {assessed && assessment?.kind !== 'self-rubric' && assessment?.kind !== 'revealed' && (
+-            <button
+-              type="button"
+-              className="button primary"
+-              disabled={!ready}
+-              onClick={() => onCommand({ kind: 'check-correction' })}
+-            >
+-              Check correction
+-            </button>
+-          )}
+-          {!shownAnswer && (
+-            <button
+-              type="button"
+-              className="button secondary"
+-              onClick={() => assist('worked-answer', assessed ? 'worked-answer' : 'reveal')}
+-            >
+-              {assessed ? 'Show worked answer' : 'Reveal answer (assisted)'}
+-            </button>
+-          )}
+-          {assessed && (
+-            <button
+-              type="button"
+-              className="button secondary next-button"
+-              disabled={!canNext}
+-              onClick={onNext}
+-            >
+-              Next question
+-            </button>
+-          )}
+-        </div>
+-      )}
+       {student &&
+         !reviewing &&
+         question.hints
+@@ -592,37 +568,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+     </aside>
+   );
+   const content = (
+-    <div
+-      className="question-content source-content"
+-      onKeyDown={(event) => {
+-        if (
+-          event.key !== 'Enter' ||
+-          event.defaultPrevented ||
+-          embedded ||
+-          event.shiftKey ||
+-          event.nativeEvent.isComposing ||
+-          event.repeat ||
+-          !student ||
+-          reviewing ||
+-          family === 'comparison'
+-        )
+-          return;
+-        if (
+-          !(event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement)
+-        )
+-          return;
+-        event.preventDefault();
+-        const inputs = Array.from(
+-          event.currentTarget.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+-            'input:not([type=radio]):not([type=checkbox]),textarea',
+-          ),
+-        );
+-        const next = inputs[inputs.indexOf(event.target) + 1];
+-        if (next) next.focus();
+-        else if (ready)
+-          onCommand(assessed ? { kind: 'check-correction' } : { kind: 'submit', at: Date.now() });
+-      }}
+-    >
++    <div className="question-content source-content">
+       {source.practical ? (
+         <div className="question-text">
+           <p className="context">{source.practical.context}</p>
+@@ -701,7 +647,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           {question.parts.map((part, index) =>
+             embedded ? (
+               <ResponseControl
+-                key={`${question.ref.questionId}:${part.id}`}
++                key={`${question.ref.questionId}:${part.id}:${actions.clearRevision}`}
+                 part={part}
+                 response={
+                   !student
+@@ -716,7 +662,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+               />
+             ) : (
+               <SourceResponseControl
+-                key={`${question.ref.questionId}:${part.id}`}
++                key={`${question.ref.questionId}:${part.id}:${actions.clearRevision}`}
+                 part={part}
+                 response={responses[part.id]}
+                 readOnly={!student || reviewing}
+@@ -728,7 +674,13 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+                   const marks =
+                     correctionFeedback && 'marks' in correctionFeedback
+                       ? correctionFeedback.marks
+-                      : assessment && 'marks' in assessment
++                      : assessment &&
++                          attempt.mode === 'student' &&
++                          attempt.phase === 'assessed' &&
++                          !attempt.currentResponseChanged &&
++                          responseFingerprint(responses) ===
++                            responseFingerprint(attempt.firstResponse.responses) &&
++                          'marks' in assessment
+                         ? assessment.marks
+                         : undefined;
+                   const points = marks?.points.filter((point) => point.partId === part.id);
+@@ -757,6 +709,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+   );
+   return (
+     <article
++      {...keyboard}
+       className={`question-player source-player source-${family}${family === 'practical' ? ' ep-pilot' : ''}${family === 'comparison' ? ' comparison-pupil' : ''}${embedded ? ' source-embedded' : ''}`}
+       aria-label={question.title}
+     >
+@@ -781,6 +734,11 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           {pane}
+         </div>
+       )}
++      {student && (
++        <footer className="player-footer">
++          <QuestionActions actions={actions} />
++        </footer>
++      )}
+     </article>
+   );
+ }
+diff --git a/validation/ui-consistency/u1/before/src/ui/DotCrossPlayer.tsx b/src/ui/DotCrossPlayer.tsx
+index 9e3c4b3..6f1be55 100644
+--- a/validation/ui-consistency/u1/before/src/ui/DotCrossPlayer.tsx
++++ b/src/ui/DotCrossPlayer.tsx
+@@ -1,3 +1,5 @@
++import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
++import { useQuestionKeyboard } from './use-question-keyboard.ts';
+ import { useEffect, useId, useRef, useState } from 'react';
+ import type { QuestionPlayerProps } from './QuestionPlayer.tsx';
+ import type { BankRecord } from '../chemistry/dot-and-cross/types.ts';
+@@ -38,23 +40,8 @@ export function DotCrossPlayer({
+   const assessed = student && attempt.phase === 'assessed';
+   const assessment = assessed ? attempt.firstAssessment : undefined;
+   const support = student ? attempt.assistance : [];
+-  const showedAnswer =
+-    !student || support.some((s) => s.kind === 'reveal' || s.kind === 'worked-answer');
+   const part = question.parts[0];
+   const current = part ? attempt.currentResponses[part.id] : undefined;
+-  const first = assessed && part ? attempt.firstResponse.responses[part.id] : undefined;
+-  const sameDiagram =
+-    current?.kind === 'dot-and-cross' &&
+-    first?.kind === 'dot-and-cross' &&
+-    JSON.stringify([current.atoms, current.electrons, current.groups]) ===
+-      JSON.stringify([first.atoms, first.electrons, first.groups]);
+-  const currentCorrect =
+-    correctionFeedback?.status === 'correct' ||
+-    (!correctionFeedback &&
+-      sameDiagram &&
+-      assessment &&
+-      assessment.kind !== 'revealed' &&
+-      assessment.marks.earned === assessment.marks.available);
+   const circles = current?.kind === 'dot-and-cross' ? current.circles !== false : true;
+   useEffect(() => {
+     let cancelled = false;
+@@ -92,18 +79,19 @@ export function DotCrossPlayer({
+   const reference: DotCrossState | undefined = record
+     ? { kind: 'dot-and-cross', ...record.reference }
+     : undefined;
+-  const openAnswer = () => {
+-    if (student && !showedAnswer)
+-      onCommand({
+-        kind: 'assist',
+-        assistance: {
+-          kind: assessed ? 'worked-answer' : 'reveal',
+-          supportId: 'worked-answer',
+-          at: Date.now(),
+-        },
+-      });
+-    setAnswerOpen(true);
+-  };
++  const actions = useQuestionActions({
++    attempt,
++    correctionFeedback,
++    onCommand,
++    onNext,
++    canNext,
++    onShowAnswer: () => setAnswerOpen(true),
++  });
++  const keyboard = useQuestionKeyboard(
++    `${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`,
++    student,
++    actions,
++  );
+   const answer = (
+     <>
+       {record ? (
+@@ -129,34 +117,7 @@ export function DotCrossPlayer({
+   );
+   const pane = (
+     <>
+-      {student ? (
+-        <div className="actions">
+-          <button
+-            type="button"
+-            className={currentCorrect ? '' : 'primary'}
+-            data-dot-action="check"
+-            onClick={() =>
+-              onCommand(
+-                assessed ? { kind: 'check-correction' } : { kind: 'submit', at: Date.now() },
+-              )
+-            }
+-          >
+-            {assessed ? 'Check correction' : 'Check diagram'}
+-          </button>
+-          <button type="button" disabled={!assessed} onClick={openAnswer}>
+-            Show answer
+-          </button>
+-          <button
+-            type="button"
+-            className={currentCorrect ? 'primary' : ''}
+-            data-dot-action="next"
+-            disabled={!assessed || !canNext}
+-            onClick={onNext}
+-          >
+-            Next question →
+-          </button>
+-        </div>
+-      ) : (
++      {!student && (
+         <p className="mode-notice" role="status">
+           Read only. This view creates no assessment or progress evidence.
+         </p>
+@@ -256,11 +217,6 @@ export function DotCrossPlayer({
+               </button>
+             ),
+           )}
+-        {student && !showedAnswer && (
+-          <button type="button" onClick={openAnswer}>
+-            Reveal answer (assisted)
+-          </button>
+-        )}
+       </details>
+       {student && saveStatus.kind === 'error' && (
+         <div className="save-status save-error" role="alert">
+@@ -276,6 +232,7 @@ export function DotCrossPlayer({
+   );
+   return (
+     <article
++      {...keyboard}
+       className="question-player dot-cross-player layout-workspace"
+       {...(repeatedTitle ? { 'aria-label': displayTitle } : { 'aria-labelledby': id + '-title' })}
+     >
+@@ -292,6 +249,7 @@ export function DotCrossPlayer({
+         <Content blocks={question.context} />
+       </section>
+       <ResponseControl
++        key={`${part.id}:${actions.clearRevision}`}
+         part={part}
+         response={student ? current : reference}
+         readOnly={!student}
+@@ -341,6 +299,11 @@ export function DotCrossPlayer({
+           </ul>
+         </details>
+       )}
++      {student && (
++        <footer className="player-footer">
++          <QuestionActions actions={actions} />
++        </footer>
++      )}
+     </article>
+   );
+ }
+NEW FILE src/ui/QuestionActions.tsx
+import { useState } from 'react';
+import type { AttemptCommand, CorrectionFeedback, PlayerAttempt } from '../contracts/attempt.ts';
+import { questionActionState } from './action-state.ts';
+import './shared-actions.css';
+
+export function useQuestionActions({
+  attempt,
+  correctionFeedback,
+  onCommand,
+  onNext,
+  ready = true,
+  canNext = true,
+  canCorrect = true,
+  onShowAnswer,
+}: {
+  attempt: PlayerAttempt;
+  correctionFeedback?: CorrectionFeedback | undefined;
+  onCommand: (command: AttemptCommand) => void;
+  onNext: () => void;
+  ready?: boolean;
+  canNext?: boolean;
+  canCorrect?: boolean;
+  onShowAnswer?: () => void;
+}) {
+  const [clearRevision, setClearRevision] = useState(0);
+  const state = questionActionState(attempt, correctionFeedback, { ready, canNext, canCorrect });
+  const check = () => {
+    if (state.checkEnabled)
+      onCommand(
+        attempt.mode === 'student' && attempt.phase === 'assessed'
+          ? { kind: 'check-correction' }
+          : { kind: 'submit', at: Date.now() },
+      );
+  };
+  const clear = () => {
+    if (!state.clearEnabled) return;
+    onCommand({ kind: 'clear' });
+    // Reset transient editor drafts/undo/working feedback as well as the owned response.
+    setClearRevision((value) => value + 1);
+  };
+  const giveUp = () => {
+    if (!state.giveUpEnabled) return;
+    onCommand({
+      kind: 'assist',
+      assistance: {
+        kind:
+          attempt.mode === 'student' && attempt.phase === 'assessed' ? 'worked-answer' : 'reveal',
+        supportId: 'worked-answer',
+        at: Date.now(),
+      },
+    });
+    onShowAnswer?.();
+  };
+  const next = () => {
+    if (state.nextEnabled) onNext();
+  };
+  return {
+    state,
+    check,
+    clear,
+    giveUp,
+    next,
+    clearRevision,
+    defaultAction: () => (state.primary === 'next' ? next() : check()),
+  };
+}
+
+export type QuestionActionsController = ReturnType<typeof useQuestionActions>;
+
+/** The one curriculum question-end row. Specialist review controls remain in their own panels. */
+export function QuestionActions({ actions }: { actions: QuestionActionsController }) {
+  return (
+    <div className="question-actions" role="group" aria-label="Question actions">
+      <button
+        type="button"
+        data-question-action="check"
+        className={actions.state.primary === 'check' ? 'primary' : ''}
+        disabled={!actions.state.checkEnabled}
+        onClick={actions.check}
+      >
+        Check
+      </button>
+      <button
+        type="button"
+        data-question-action="clear"
+        disabled={!actions.state.clearEnabled}
+        onClick={actions.clear}
+      >
+        Clear
+      </button>
+      <button
+        type="button"
+        data-question-action="give-up"
+        disabled={!actions.state.giveUpEnabled}
+        onClick={actions.giveUp}
+      >
+        Give Up
+      </button>
+      <button
+        type="button"
+        data-question-action="next"
+        className={actions.state.primary === 'next' ? 'primary' : ''}
+        disabled={!actions.state.nextEnabled}
+        onClick={actions.next}
+      >
+        Next
+      </button>
+    </div>
+  );
+}
+
+NEW FILE src/ui/action-state.ts
+import type { CorrectionFeedback, PlayerAttempt } from '../contracts/attempt.ts';
+
+/** Stable response comparison also supports attempts saved before the UI markers existed. */
+export function responseFingerprint(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(responseFingerprint).join(',')}]`;
+  if (value !== null && typeof value === 'object')
+    return `{${Object.entries(value)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, item]) => `${JSON.stringify(key)}:${responseFingerprint(item)}`)
+      .join(',')}}`;
+  return JSON.stringify(value) ?? 'undefined';
+}
+
+export interface QuestionActionState {
+  readonly primary: 'check' | 'next';
+  readonly checkEnabled: boolean;
+  readonly clearEnabled: boolean;
+  readonly giveUpEnabled: boolean;
+  readonly nextEnabled: boolean;
+  readonly currentCorrect: boolean;
+}
+
+/** UI availability never creates an assessment or skips a staged review. */
+export function questionActionState(
+  attempt: PlayerAttempt,
+  correctionFeedback: CorrectionFeedback | undefined,
+  { ready = true, canNext = true, canCorrect = true } = {},
+): QuestionActionState {
+  const student = attempt.mode === 'student';
+  const reviewing =
+    student && (attempt.phase === 'rubric-review' || attempt.phase === 'drawing-review');
+  const assessed = student && attempt.phase === 'assessed';
+  const sameFirst =
+    assessed &&
+    !attempt.currentResponseChanged &&
+    responseFingerprint(attempt.currentResponses) ===
+      responseFingerprint(attempt.firstResponse.responses);
+  const currentCorrect =
+    assessed &&
+    (correctionFeedback?.status === 'correct' ||
+      (!correctionFeedback &&
+        sameFirst &&
+        attempt.firstAssessment.kind !== 'revealed' &&
+        attempt.firstAssessment.marks.earned === attempt.firstAssessment.marks.available));
+  const gaveUp =
+    student &&
+    (attempt.currentGiveUp === true ||
+      (attempt.currentGiveUp === undefined &&
+        !attempt.currentResponseChanged &&
+        assessed &&
+        attempt.firstAssessment.kind === 'revealed' &&
+        sameFirst));
+  return {
+    primary: currentCorrect || gaveUp ? 'next' : 'check',
+    checkEnabled: student && !reviewing && ready && (!assessed || canCorrect),
+    clearEnabled: student && !reviewing,
+    giveUpEnabled: student && !reviewing,
+    nextEnabled: assessed && canNext,
+    currentCorrect,
+  };
+}
+
+NEW FILE src/ui/use-question-keyboard.ts
+import { useEffect, useRef } from 'react';
+import type { KeyboardEvent } from 'react';
+import type { QuestionActionsController } from './QuestionActions.tsx';
+
+const selector = 'input[data-answer-input],textarea[data-answer-input]';
+function enabledFields(node: HTMLElement) {
+  return Array.from(node.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(selector)).filter(
+    (field) =>
+      !field.disabled &&
+      !field.readOnly &&
+      !field.closest('fieldset:disabled,dialog,[data-question-keyboard="ignore"]') &&
+      field.getClientRects().length > 0,
+  );
+}
+
+/** Answer inputs opt in; native buttons, selects, editors and dialogs retain their own shortcuts. */
+export function useQuestionKeyboard(
+  identity: string,
+  enabled: boolean,
+  actions: QuestionActionsController,
+) {
+  const ref = useRef<HTMLElement>(null);
+  const focusedIdentity = useRef<string | null>(null);
+  useEffect(() => {
+    if (!enabled || focusedIdentity.current === identity || !ref.current) return;
+    const node = ref.current;
+    const focusFirst = (deferred = false) => {
+      const first = enabledFields(node)[0];
+      if (!first) return false;
+      focusedIdentity.current = identity;
+      // Do not steal focus if the pupil already chose an editor control while it loaded.
+      if (!deferred || !node.contains(document.activeElement)) first.focus({ preventScroll: true });
+      return true;
+    };
+    if (focusFirst()) return;
+    if (!node.querySelector('[role="status"]')) {
+      focusedIdentity.current = identity;
+      return;
+    }
+    // Lazy editor inputs may appear after this player has committed.
+    const observer = new MutationObserver(() => {
+      if (focusFirst(true)) observer.disconnect();
+    });
+    observer.observe(node, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [identity, enabled]);
+  const onKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (
+      !enabled ||
+      event.key !== 'Enter' ||
+      event.defaultPrevented ||
+      event.shiftKey ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.repeat ||
+      event.nativeEvent.isComposing ||
+      event.nativeEvent.keyCode === 229
+    )
+      return;
+    const target = event.target;
+    if (
+      !(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) ||
+      !target.matches(selector) ||
+      target.closest('dialog,[data-question-keyboard="ignore"]')
+    )
+      return;
+    const fields = enabledFields(event.currentTarget);
+    const index = fields.indexOf(target);
+    if (index < 0) return;
+    event.preventDefault();
+    if (actions.state.primary === 'next') actions.defaultAction();
+    else if (fields[index + 1]) fields[index + 1]!.focus();
+    else actions.defaultAction();
+  };
+  return { ref, onKeyDown };
+}
+
+NEW FILE src/ui/shared-actions.css
+.question-player .question-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(0.25rem, 1vw, 0.65rem);
+  width: 100%;
+  min-width: 0;
+  margin-block: 0.8rem;
+}
+.question-player .question-actions button[data-question-action][type='button'] {
+  flex: 0 1 auto;
+  min-width: 0;
+  min-height: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0.65rem clamp(0.5rem, 1.2vw, 1rem);
+  font-family: Comfortaa, sans-serif;
+  font-size: clamp(0.72rem, 1.3vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  border: 1px solid var(--border, #46516f);
+  border-radius: 9px;
+  color: var(--ink, #eef0ff);
+  background: var(--surface-raised, #1a233d);
+  transform: none;
+}
+.question-player .question-actions button[data-question-action][type='button'].primary {
+  color: #081426;
+  background: var(--accent, #55f6ff);
+  border-color: var(--accent, #55f6ff);
+}
+.question-player .question-actions button:disabled {
+  opacity: 0.45;
+}
+
+diff --git a/validation/ui-consistency/u1/before/src/ui/ResponseControl.tsx b/src/ui/ResponseControl.tsx
+index ce3de7a..b7aafc8 100644
+--- a/validation/ui-consistency/u1/before/src/ui/ResponseControl.tsx
++++ b/src/ui/ResponseControl.tsx
+@@ -119,6 +119,7 @@ export function ResponseControl({
+           Your answer
+           {part.presentation === 'multiline' ? (
+             <textarea
++              data-answer-input="true"
+               id={id}
+               aria-label="Your answer"
+               rows={7}
+@@ -128,6 +129,7 @@ export function ResponseControl({
+             />
+           ) : (
+             <input
++              data-answer-input="true"
+               id={id}
+               readOnly={readOnly}
+               value={value}
+@@ -181,6 +183,7 @@ export function ResponseControl({
+                       {section.help && <span className="support-note">{section.help}</span>}
+                       {section.presentation === 'single-line' ? (
+                         <input
++                          data-answer-input="true"
+                           id={`${id}-${section.id}`}
+                           readOnly={readOnly}
+                           value={value}
+@@ -188,6 +191,7 @@ export function ResponseControl({
+                         />
+                       ) : (
+                         <textarea
++                          data-answer-input="true"
+                           id={`${id}-${section.id}`}
+                           aria-label={section.label}
+                           rows={5}
+@@ -251,6 +255,7 @@ export function ResponseControl({
+           <label className="response-label" htmlFor={id}>
+             Replacement / correction
+             <textarea
++              data-answer-input="true"
+               id={id}
+               aria-label="Replacement / correction"
+               rows={4}
+diff --git a/validation/ui-consistency/u1/before/src/ui/SourceResponseControl.tsx b/src/ui/SourceResponseControl.tsx
+index 0353a27..6f5f99b 100644
+--- a/validation/ui-consistency/u1/before/src/ui/SourceResponseControl.tsx
++++ b/src/ui/SourceResponseControl.tsx
+@@ -70,6 +70,7 @@ export function SourceResponseControl({
+         <label htmlFor={id}>{label}</label>
+         {family === 'bonding' || field?.multiline || part.presentation === 'multiline' ? (
+           <textarea
++            data-answer-input="true"
+             id={id}
+             className="answer-input"
+             rows={4}
+@@ -82,6 +83,7 @@ export function SourceResponseControl({
+           />
+         ) : (
+           <input
++            data-answer-input="true"
+             id={id}
+             className="answer-input"
+             autoComplete="off"
+@@ -154,6 +156,7 @@ export function SourceResponseControl({
+           {section.help && <p className="scaffold-help">{section.help}</p>}
+           {short ? (
+             <input
++              data-answer-input="true"
+               id={`${id}-${section.id}`}
+               className="student-response short-response"
+               readOnly={readOnly}
+@@ -162,6 +165,7 @@ export function SourceResponseControl({
+             />
+           ) : (
+             <textarea
++              data-answer-input="true"
+               id={`${id}-${section.id}`}
+               className="student-response"
+               readOnly={readOnly}
+diff --git a/validation/ui-consistency/u1/before/src/ui/NumericWorkingControl.tsx b/src/ui/NumericWorkingControl.tsx
+index 3aef76a..01848ec 100644
+--- a/validation/ui-consistency/u1/before/src/ui/NumericWorkingControl.tsx
++++ b/src/ui/NumericWorkingControl.tsx
+@@ -77,6 +77,7 @@ export function NumericWorkingControl({
+             {token.finalResponse ? 'Final answer' : `Working number ${token.id}`}
+           </span>
+           <input
++            data-answer-input="true"
+             className={
+               source
+                 ? `${token.finalResponse ? 'response-input' : 'working-input'}${checked ? (!(token.finalResponse ? raw : (values[token.id] ?? '')).trim() ? ' unanswered' : Math.abs(workingNumber(token.finalResponse ? raw : (values[token.id] ?? '')) - token.expected) <= token.tolerance ? ' correct' : ' incorrect') : ''}`
+@@ -130,6 +131,7 @@ export function NumericWorkingControl({
+   if (source) {
+     const input = (
+       <input
++        data-answer-input="true"
+         id={id}
+         className={`response-input${source.result ? ` pupil-${source.result}` : ''}`}
+         aria-invalid={source.result === 'incorrect' ? true : undefined}
+@@ -233,6 +235,7 @@ export function NumericWorkingControl({
+         <label className="response-label" htmlFor={id}>
+           Your answer {part.unit && <span className="unit">({part.unit})</span>}
+           <input
++            data-answer-input="true"
+             id={id}
+             inputMode={part.inputMode ?? 'decimal'}
+             readOnly={readOnly}
+diff --git a/validation/ui-consistency/u1/before/src/ui/EnergeticsResponseControl.tsx b/src/ui/EnergeticsResponseControl.tsx
+index da87664..135a6fe 100644
+--- a/validation/ui-consistency/u1/before/src/ui/EnergeticsResponseControl.tsx
++++ b/src/ui/EnergeticsResponseControl.tsx
+@@ -73,6 +73,7 @@ export function EnergeticsResponseControl({
+         <div className="field-set">
+           <label htmlFor={id}>{fieldLabel ?? 'Replacement / correction'}</label>
+           <input
++            data-answer-input="true"
+             ref={replacement}
+             id={id}
+             className="answer-input"
+@@ -90,6 +91,7 @@ export function EnergeticsResponseControl({
+     const label = fieldLabel ?? 'Your answer';
+     const props = {
+       id,
++      'data-answer-input': 'true',
+       readOnly,
+       value,
+       'aria-label': label,
+diff --git a/validation/ui-consistency/u1/before/src/editors/electron-configuration/index.tsx b/src/editors/electron-configuration/index.tsx
+index 9294b8a..3a92714 100644
+--- a/validation/ui-consistency/u1/before/src/editors/electron-configuration/index.tsx
++++ b/src/editors/electron-configuration/index.tsx
+@@ -313,6 +313,7 @@ export function ElectronConfigurationEditor({
+           <label className="identity-entry">
+             <span>Element name or symbol</span>
+             <input
++              data-answer-input="true"
+               type="text"
+               maxLength={80}
+               autoComplete="off"
+@@ -355,37 +356,6 @@ export function ElectronConfigurationEditor({
+                 disabled={readOnly}
+                 onSpin={(index, orbital, value) => send({ kind: 'spin', index, orbital, value })}
+               />
+-              <details className="ec-alternatives">
+-                <summary>Set spins without cycling</summary>
+-                <div className="ec-spin-alternatives">
+-                  {data.subshells.flatMap((label, index) =>
+-                    state.boxes[index]!.map((spin, orbital) => (
+-                      <label key={`${index}-${orbital}`}>
+-                        {label} orbital {orbital + 1}
+-                        <select
+-                          aria-label={`${label} orbital ${orbital + 1}`}
+-                          disabled={readOnly}
+-                          value={spin}
+-                          onChange={(event) =>
+-                            send({
+-                              kind: 'spin',
+-                              index,
+-                              orbital,
+-                              value: Number(event.target.value) as OrbitalSpin,
+-                            })
+-                          }
+-                        >
+-                          {spinText.map((text, value) => (
+-                            <option key={value} value={value}>
+-                              {text}
+-                            </option>
+-                          ))}
+-                        </select>
+-                      </label>
+-                    )),
+-                  )}
+-                </div>
+-              </details>
+             </>
+           ) : (
+             <>
+@@ -418,6 +388,7 @@ export function ElectronConfigurationEditor({
+                     <label className="subshell-entry" key={label}>
+                       {label}
+                       <input
++                        data-answer-input="true"
+                         aria-label={`Electrons in ${label}`}
+                         type="text"
+                         inputMode="numeric"

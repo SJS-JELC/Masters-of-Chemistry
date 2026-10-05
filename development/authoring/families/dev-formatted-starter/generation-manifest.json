@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "slug": "dev-formatted-starter",
+  "prefix": "AB",
+  "generatedAt": "2026-10-03T03:42:54.715Z",
+  "generator": "development/authoring/scaffold.mjs",
+  "templateFingerprints": {
+    "development/authoring/data.ts": "9e4e7e6ffbe3be6107df36f54e6e5ff5859973a4de9c60c8b786c3723f696601",
+    "development/authoring/family.ts": "9c351a45b6aee48fdeba385285e53e46dae76eb658c99e74076192a9a6985c58",
+    "development/authoring/registry.ts": "2a981d6f577c092b0125a094adf6ea81d2679a9a99efb98a34c908561f52edfd",
+    "src/development/catalogue/index.tsx": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e",
+    "development/authoring/templates/family.test.mjs": "185b3c6f1c9e807bc8db4b52fa8972a1539fb0137e565895050823a858c6bf71",
+    "development/authoring/templates/browser.mjs": "1e130ab764e9ab9a3e84a91e32709dcdcb6cef25b0208872bdaa0179e202ce3e"
+  },
+  "generatedFingerprints": {
+    "Catalogue.tsx": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+    "README.md": "5bd12b0ecabd694b18addac807a1986d79a61e46699395041443fea2cd3bc8a3",
+    "authoring-plan.json": "7c5ead0c8fe598fabfa72b56ff79df92475499c65e944b95daa58693f0973595",
+    "browser.mjs": "a245fee036bd70bc07d86678eb41b11ab6abc5432172e9bdb4a8c5b3630e79d9",
+    "data.ts": "a662641e71f67f289ff3c76accd541ade716a8194e38f26c0c6f63caa0c5de32",
+    "family.test.mjs": "367d42c97198eb239021bdeca39f894da4f85fb876b26e7cbfdf9ade075ccfe7",
+    "family.ts": "5626682fd860f47601411a0d2ecdf4fda661ce1391ceff42b00d538b7497d4f6",
+    "mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "preview.html": "40762055bfaa4625fdc3eb83e71fb1fdfc28dadc9ebbb900173d298acab5cc9a",
+    "provenance.ts": "68fe0d101e9262dd47b60e8578a2d3f4468daa1bb537fc4e08c8d064025cd799",
+    "registry.ts": "1be9546eda9a4e9fdfea8aa167541a642bc89a4b29478b0dac616bf0556ca56d",
+    "tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c"
+  },
+  "preview": "http://127.0.0.1:5181/development/authoring/families/dev-formatted-starter/preview.html",
+  "evidence": "validation/component-fidelity/f1-correction/identity/authoring/dev-formatted-starter",
+  "permanentDevelopmentSlot": 49,
+  "seedDomain": [
+    0,
+    11337407
+  ],
+  "canonicalCorrectionAt": "2026-10-03T17:08:55.123Z",
+  "currentCanonicalInputs": {
+    "src/development/identity.ts": "e6266c9c4e56cd40c2e88f6679b07c7af79f5fa47d7c8ad2a52e3645dcc5a06c",
+    "development/authoring/family-slots.json": "e41b0e1735cfce17dcea02a8087bf84b26c553f8d2be2e097954eef99fcfd7d7",
+    "development/authoring/data.ts": "9e4e7e6ffbe3be6107df36f54e6e5ff5859973a4de9c60c8b786c3723f696601",
+    "development/authoring/family.ts": "91f366f4b26bd043110ed31e160ac2722a8d4db8ea6c40d4a8ca1955063b3ac6",
+    "development/authoring/registry.ts": "2a981d6f577c092b0125a094adf6ea81d2679a9a99efb98a34c908561f52edfd",
+    "src/development/catalogue/index.tsx": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e",
+    "development/authoring/templates/family.test.mjs": "d5a80c852784fe0103116bced336d3838a5b1dd837a1c0927ec19189354d6db4",
+    "development/authoring/templates/browser.mjs": "69e3fbc8f32896b69cf9bc0c53fab4b05645ca0f034d285690bf82561908ab1f"
+  },
+  "currentFingerprints": {
+    "Catalogue.tsx": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+    "README.md": "f22e7b8fa20bbeb03fb23cd6ea489be56ecc1d4531742aee11d4c3c2ed33335c",
+    "authoring-plan.json": "7399ea13c0bdf25d0cd3a236852c1e3ab0f3d5f16badca4dfe577f73ec62a493",
+    "browser.mjs": "5e379f99e2d69e455ee00a2f60fefc51999966881dfc3761fd3f8366e6bebcda",
+    "data.ts": "a662641e71f67f289ff3c76accd541ade716a8194e38f26c0c6f63caa0c5de32",
+    "family.test.mjs": "d5a80c852784fe0103116bced336d3838a5b1dd837a1c0927ec19189354d6db4",
+    "family.ts": "8a079d7aa36407762fd5cf83ecea6adaf02c12deb12c6b8b19cf6570e2f51dff",
+    "mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "preview.html": "40762055bfaa4625fdc3eb83e71fb1fdfc28dadc9ebbb900173d298acab5cc9a",
+    "provenance.ts": "68fe0d101e9262dd47b60e8578a2d3f4468daa1bb537fc4e08c8d064025cd799",
+    "registry.ts": "1be9546eda9a4e9fdfea8aa167541a642bc89a4b29478b0dac616bf0556ca56d",
+    "tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c"
+  }
+}

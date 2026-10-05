@@ -1,0 +1,35 @@
+{
+  "agentId": "A08",
+  "jobId": "S5-FIX-ACID-FORMAT",
+  "status": "PASS",
+  "outputPath": "src/activities/alevel/acid-base-calculations/provider.ts",
+  "confidence": 0.99,
+  "reason": "Per-response precision follows actual source format and units; original numerical semantics and all other question fields are preserved.",
+  "sourceFrozen": true,
+  "finalAcceptance": "Pending independent A22 source/final-build recheck and A01 integration acceptance; worker PASS only.",
+  "validation": {
+    "regression": "validation/s5/fixes/acid-format/format-results.json",
+    "compiler": "validation/s5/fixes/acid-format/compiler.json",
+    "fingerprints": "validation/s5/fixes/acid-format/fingerprints.json",
+    "diff": "validation/s5/fixes/acid-format/provider.diff",
+    "handover": "validation/s5/fixes/acid-format/HANDOVER.md",
+    "currentRoutes": 63,
+    "realQuestions": 412,
+    "realResponses": 715,
+    "otherAcidSourceFilesUnchanged": 10,
+    "sourceRegression": "AB-0000SN: 46.875 ±0.0051; 46.88 accepted, 46.9 rejected",
+    "prettier": "3.6.2 exact owned-file check PASS",
+    "commands": [
+      "node validation/s5/fixes/acid-format/format-regression.mjs",
+      "npm.cmd run typecheck",
+      "node node_modules/prettier/bin/prettier.cjs --check src/activities/alevel/acid-base-calculations/provider.ts validation/s5/fixes/acid-format/format-regression.mjs"
+    ]
+  },
+  "runtime": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedEffort": "high",
+    "effectiveModel": null,
+    "effectiveEffort": null,
+    "usage": null
+  }
+}

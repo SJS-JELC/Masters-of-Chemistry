@@ -1,0 +1,29 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\legacy.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\legacy.ts"
+index f8e846a..95ede70 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\legacy.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\olympiad\\c3l6\\legacy.ts"	
+@@ -8,7 +8,7 @@ import type {
+ import type { ProfileId } from '../../../contracts/identity.ts';
+ import type { MoleculeState } from '../../../contracts/editors.ts';
+ import { assertMoleculeState } from '../../../chemistry/molecule/engine.ts';
+-import { sourceBank, chemicalChallenge, bUnits } from './source-bank.ts';
++import { sourceBank, chemicalChallenge, bUnits, c3KErratum } from './source-bank.ts';
+ import {
+   blankC3Progress,
+   c3Fingerprint,
+@@ -250,6 +250,15 @@ export function revalidateC3Legacy(raw: unknown, profileId: ProfileId): C3Legacy
+     issues.push('Historical part (b) completion lacks valid current chemical checks.');
+   if (complete.c === true && !p.completed.c)
+     issues.push('Historical part (c) completion lacks valid current chemical checks.');
++  if (
++    drawingsB.K &&
++    (complete.b === true || object(object(r.unitChecks)['b-iv-3']).passed === true) &&
++    !moleculeMatches(
++      drawingsB.K,
++      chemicalChallenge.hydrolysis.find((u) => u.unitId === 'b-iv-3')!.slots[0]!,
++    )
++  )
++    issues.push(c3KErratum.note);
+   return {
+     accepted: issues.length === 0,
+     progress: issues.length ? null : p,

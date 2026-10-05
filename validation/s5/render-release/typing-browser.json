@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "CPUThrottle": 4,
+  "network": {
+    "latency": 150,
+    "downloadThroughput": 200000,
+    "uploadThroughput": 93750
+  },
+  "method": "Actual focus,Control+A,Backspace and pressSequentially keystrokes;twoRAF then Enter semantic commit and Saved indicator;3samples",
+  "samples": [
+    {
+      "value": "3.1",
+      "characters": 3,
+      "characterDelayMs": 40,
+      "inputAndTwoFramesMs": 214.4344000000001,
+      "savedIndicatorMs": 322.3204999999998
+    },
+    {
+      "value": "4.2",
+      "characters": 3,
+      "characterDelayMs": 40,
+      "inputAndTwoFramesMs": 216.60560000000078,
+      "savedIndicatorMs": 283.0036
+    },
+    {
+      "value": "5.3",
+      "characters": 3,
+      "characterDelayMs": 40,
+      "inputAndTwoFramesMs": 199.16640000000007,
+      "savedIndicatorMs": 265.27770000000055
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Use LF for text source files on every platform.
+* text=auto eol=lf
+
+# Windows command scripts require CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Retained validation evidence must keep its original bytes and fingerprints.
+/validation/** -text

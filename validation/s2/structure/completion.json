@@ -1,0 +1,44 @@
+{
+  "id": "S2-STRUCTURE",
+  "status": "ESCALATE",
+  "outputPath": "src/activities/igcse/structure-and-bonding/index.ts",
+  "confidence": 0.98,
+  "reason": "Owned implementation and validation pass; foreman must attach the final independent A07 native timing disposition before complete stage acceptance.",
+  "validation": {
+    "ownedStatus": "PASS",
+    "typecheck": "PASS",
+    "domain": {
+      "passed": 6,
+      "total": 6,
+      "evidence": "validation/s2/structure/tests.txt"
+    },
+    "browser": {
+      "passed": 4,
+      "total": 4,
+      "pageErrors": 0,
+      "evidence": "validation/s2/structure/browser-results.json"
+    },
+    "chemistry": "validation/s2/structure/CHEMISTRY-REVIEW.md",
+    "renderedInspection": "Six retained desktop/mobile screenshots inspected by A09; complete prompts, level pedagogy and exclusions legible; no horizontal overflow.",
+    "coverage": {
+      "comparisons": 9,
+      "rubricPointsPerLevel": 44,
+      "questionLevelIdentities": 18,
+      "level2Sections": 7,
+      "level3Sections": 1,
+      "enabledLevels": [
+        2,
+        3
+      ],
+      "dormantLevel1Tables": 9
+    },
+    "native": {
+      "owner": "A07",
+      "path": "validation/s2/review-native/",
+      "disposition": "Foreman reports retained source180000ms idle/background/suspension/restore evidence; final independent first-assessment/reload/Next tail still being completed."
+    },
+    "handover": "validation/s2/structure/HANDOVER.md",
+    "sourceFingerprints": "validation/s2/structure/source-fingerprints.json",
+    "outputFingerprints": "validation/s2/structure/output-fingerprints.json"
+  }
+}

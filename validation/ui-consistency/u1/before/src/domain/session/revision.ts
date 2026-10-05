@@ -1,0 +1,257 @@
+import type {
+  AttemptId,
+  CurriculumQuestionRef,
+  CurriculumTarget,
+  GemId,
+  Namespace,
+  SessionId,
+} from '../../contracts/identity.ts';
+import type {
+  MasterySetting,
+  MasterySummary,
+  RevisionLevelState,
+  RevisionScheduler,
+  RevisionSession,
+} from '../../contracts/session.ts';
+import { sameTarget, supportedCurriculumLevels, validCurriculumTarget } from './selection.ts';
+
+export const DAY_MS = 86400000;
+export const REVISION_WEEK_MS = 7 * DAY_MS;
+
+function summaryFor(
+  summaries: readonly MasterySummary[],
+  target: CurriculumTarget,
+): MasterySummary {
+  const summary = summaries.find(
+    (item) => item.gemId === target.gemId && item.level === target.level,
+  );
+  if (!summary) throw new Error('Missing mastery summary for revision target.');
+  return summary;
+}
+
+function initialState(
+  target: CurriculumTarget,
+  summary: MasterySummary,
+  now: number,
+): RevisionLevelState {
+  // Source initial recency uses completed whole days; expiry below uses exact elapsed ms.
+  const days =
+    summary.lastCompletedAt === null
+      ? null
+      : Math.max(0, Math.floor((now - summary.lastCompletedAt) / DAY_MS));
+  return {
+    target,
+    mode: summary.mastered ? 'check' : 'practice',
+    required: summary.mastered && days !== null && days > 7 ? 2 : 1,
+    streak: 0,
+    confirmedAt: null,
+    initialScore: summary.score,
+  };
+}
+
+function nextLevel(session: RevisionSession, gemId: GemId): RevisionLevelState | undefined {
+  return session.levels
+    .filter((item) => item.target.gemId === gemId && item.confirmedAt === null)
+    .sort((a, b) => a.target.level - b.target.level)[0];
+}
+
+function validateTime(now: number): void {
+  if (!Number.isFinite(now) || now <= 0) throw new Error('Invalid revision timestamp.');
+}
+
+export interface CreateRevisionSessionInput {
+  readonly namespace: Namespace;
+  readonly id: SessionId;
+  readonly selected: readonly CurriculumTarget[];
+  readonly settings: readonly MasterySetting[];
+  readonly summaries: readonly MasterySummary[];
+  readonly now: number;
+}
+
+export function createRevisionSession({
+  namespace,
+  id,
+  selected,
+  settings,
+  summaries,
+  now,
+}: CreateRevisionSessionInput): RevisionSession {
+  validateTime(now);
+  if (
+    !id.trim() ||
+    !namespace.profileId.trim() ||
+    !selected.length ||
+    selected.some((target) => target.course !== namespace.course || !validCurriculumTarget(target))
+  ) {
+    throw new Error('Select available curriculum targets in one namespace.');
+  }
+  const selectedGemIds = [...new Set(selected.map((target) => target.gemId))];
+  for (const gemId of selectedGemIds) {
+    const candidates = settings.filter((item) => item.gemId === gemId);
+    const setting = candidates[0];
+    const targets = selected.filter((target) => target.gemId === gemId);
+    const first = targets[0];
+    const sourceLevels = first ? supportedCurriculumLevels(first) : [];
+    if (
+      candidates.length !== 1 ||
+      !setting ||
+      sourceLevels.length !== targets.length ||
+      !sourceLevels.every((level) => targets.some((target) => target.level === level)) ||
+      new Set(targets.map((target) => target.level)).size !== targets.length ||
+      setting.supportedLevels.length !== targets.length ||
+      !setting.supportedLevels.every(({ level }) =>
+        targets.some((target) => target.level === level),
+      )
+    ) {
+      throw new Error('Select every genuinely supported level for each revision gem.');
+    }
+  }
+  return {
+    kind: 'revision',
+    namespace,
+    id,
+    createdAt: now,
+    status: 'active',
+    selectedGemIds,
+    levels: selected.map((target) => initialState(target, summaryFor(summaries, target), now)),
+    round: [],
+    lastGemId: null,
+    current: null,
+    previous: [],
+    submittedAttemptIds: [],
+  };
+}
+
+export const revisionScheduler: RevisionScheduler = {
+  next(session, summaries, now, attemptId) {
+    validateTime(now);
+    if (session.status === 'paused' || (session.current && !session.current.completed))
+      return session;
+    let previous = session.previous;
+    let lastGemId = session.lastGemId;
+    if (session.current) {
+      const { target, ref } = session.current;
+      lastGemId = target.gemId;
+      if (ref)
+        previous = [
+          ...previous.filter((item) => !sameTarget(item.target, target)),
+          { target, ref },
+        ];
+    }
+    const levels = session.levels.map((state) =>
+      state.confirmedAt !== null &&
+      (now - state.confirmedAt > REVISION_WEEK_MS || !summaryFor(summaries, state.target).mastered)
+        ? initialState(state.target, summaryFor(summaries, state.target), now)
+        : state,
+    );
+    let nextSession: RevisionSession = { ...session, current: null, levels, previous, lastGemId };
+    let round = nextSession.round.filter((gem) => nextLevel(nextSession, gem) !== undefined);
+    if (!round.length)
+      round = nextSession.selectedGemIds
+        .filter((gem) => nextLevel(nextSession, gem) !== undefined)
+        .sort((a, b) => {
+          const la = nextLevel(nextSession, a),
+            lb = nextLevel(nextSession, b);
+          if (!la || !lb) throw new Error('Incomplete revision ordering.');
+          return (
+            la.target.level - lb.target.level ||
+            (summaryFor(summaries, la.target).score ?? 0) -
+              (summaryFor(summaries, lb.target).score ?? 0) ||
+            a.localeCompare(b)
+          );
+        });
+    if (!round.length) return { ...nextSession, round, status: 'complete' };
+    if (round[0] === lastGemId && round.length > 1)
+      round = [...round.slice(1), round[0]].filter((id): id is string => id !== undefined);
+    const gem = round[0];
+    const level = gem ? nextLevel(nextSession, gem) : undefined;
+    if (!level) throw new Error('Revision selection could not select a level.');
+    if (
+      !attemptId.trim() ||
+      session.submittedAttemptIds.includes(attemptId) ||
+      session.current?.attemptId === attemptId
+    )
+      throw new Error('Next requires a fresh attempt ID.');
+    nextSession = {
+      ...nextSession,
+      round: round.slice(1),
+      status: 'active',
+      current: { attemptId, target: level.target, ref: null, completed: false },
+    };
+    return nextSession;
+  },
+  accept(session, outcome, summaries, now) {
+    validateTime(now);
+    const current = session.current;
+    if (
+      !current ||
+      current.completed ||
+      current.attemptId !== outcome.attemptId ||
+      session.submittedAttemptIds.includes(outcome.attemptId) ||
+      ![0, 0.5, 1].includes(outcome.score) ||
+      typeof outcome.independent !== 'boolean' ||
+      !Number.isFinite(outcome.completedAt) ||
+      outcome.completedAt <= 0 ||
+      outcome.completedAt > now
+    )
+      return session;
+    const independentPass = outcome.score === 1 && outcome.independent;
+    const levels = session.levels.map((state) => {
+      if (!sameTarget(state.target, current.target)) return state;
+      const streak = independentPass ? state.streak + 1 : 0;
+      const mode = !independentPass && state.mode === 'check' ? 'practice' : state.mode;
+      const required = !independentPass && state.mode === 'check' ? 2 : state.required;
+      const confirmedAt =
+        independentPass && streak >= required && summaryFor(summaries, current.target).mastered
+          ? now
+          : state.confirmedAt;
+      return { ...state, streak, mode, required, confirmedAt };
+    });
+    return {
+      ...session,
+      levels,
+      current: { ...current, completed: true },
+      submittedAttemptIds: [...session.submittedAttemptIds, outcome.attemptId],
+    };
+  },
+};
+
+export function bindRevisionQuestion(
+  session: RevisionSession,
+  ref: CurriculumQuestionRef,
+): RevisionSession {
+  const current = session.current;
+  if (
+    !current ||
+    current.completed ||
+    ref.activityId !== current.target.activityId ||
+    ref.level !== current.target.level ||
+    !ref.questionId ||
+    !Number.isInteger(ref.seed) ||
+    ref.seed < 0 ||
+    ref.seed > 0xffffffff
+  )
+    throw new Error('Question does not match the revision target.');
+  if (
+    current.ref &&
+    (current.ref.questionId !== ref.questionId ||
+      current.ref.seed !== ref.seed ||
+      current.ref.activityId !== ref.activityId ||
+      current.ref.level !== ref.level)
+  ) {
+    throw new Error('Cannot replace an existing current question.');
+  }
+  return current.ref ? session : { ...session, current: { ...current, ref } };
+}
+
+export function pauseRevisionSession(session: RevisionSession): RevisionSession {
+  return session.status === 'complete' ? session : { ...session, status: 'paused' };
+}
+
+export function resumeRevisionSession(session: RevisionSession): RevisionSession {
+  return session.status === 'paused' ? { ...session, status: 'active' } : session;
+}
+
+export function revisionAttemptId(session: RevisionSession): AttemptId | null {
+  return session.current?.attemptId ?? null;
+}

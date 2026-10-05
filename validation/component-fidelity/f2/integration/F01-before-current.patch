@@ -1,0 +1,177 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\activities\\igcse\\energy-enthalpy\\provider.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\igcse\\energy-enthalpy\\provider.ts"
+index 78fb1d0..d369256 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\activities\\igcse\\energy-enthalpy\\provider.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\activities\\igcse\\energy-enthalpy\\provider.ts"	
+@@ -8,7 +8,8 @@ import type {
+   QuestionSelection,
+   QuestionPart,
+ } from '../../../contracts/index.ts';
+-import type { EnergyBank } from './types.ts';
++import type { EnergyBank, ProfileOptions } from './types.ts';
++import type { EnergyProfileState } from '../../../contracts/editors.ts';
+ import { data as sourceData } from './data.ts';
+ import { modelProfile, initialProfile } from '../../../chemistry/energy-profile/index.ts';
+ import { profileSVG, svgImage } from '../../../chemistry/energy-profile/svg.ts';
+@@ -34,6 +35,34 @@ export function energyRef(id: string, seed = 0): QuestionRef {
+     seed,
+   };
+ }
++/** Original EnergyEditor.reference variants, selected by source diagram metadata. */
++export function energyReference(code: string): { model: EnergyProfileState; options: Partial<ProfileOptions>; alt: string } {
++  let model: EnergyProfileState = {
++    ...modelProfile({ polarity: code.startsWith('Y') ? 'endo' : 'exo' } as import('./types.ts').EnergyRecord),
++    left: 'A',
++    right: 'C',
++  };
++  let options: Partial<ProfileOptions> = { letters: true };
++  if (code === 'Y-arrows') {
++    options = { ...options, numberArrows: true };
++    model = { ...model, arrows: {
++      ea: { x: 280, tail: { anchor: 'r' }, head: { anchor: 'peak' } },
++      delta: { x: 560, tail: { anchor: 'r' }, head: { anchor: 'p' } },
++    } };
++  }
++  if (code === 'X-wrong') model = { ...model, arrows: {
++    delta: { x: 560, tail: { anchor: 'peak' }, head: { anchor: 'p' } },
++  } };
++  if (code === 'Y-axes') model = { ...model, vertical: '', horizontal: '' };
++  if (code === 'Z') {
++    model = { ...model, r: 220, p: 300, peak: 145 };
++    options = { ...options, overlay: true, letters: false };
++  }
++  const alt = code === 'Z'
++    ? 'Energy pathways P and Q: solid P has a higher peak than dashed Q, with the same reactant and product levels.'
++    : `Profile ${code.startsWith('Y') ? 'Y' : 'X'}: A is the reactant level, B the peak and C the product level. Products are ${model.p < model.r ? 'higher' : 'lower'} in energy than reactants.${code === 'Y-arrows' ? ' Arrow 1 runs from A to B; arrow 2 runs from A to C.' : code === 'X-wrong' ? ' The displayed enthalpy arrow runs from the peak to the product level.' : code === 'Y-axes' ? ' Both axes require labels.' : ''}`;
++  return { model, options, alt };
++}
+ function restore(ref: QuestionRef): Question {
+   seedCheck(ref.seed);
+   const q = record(ref.questionId);
+@@ -82,15 +111,11 @@ function restore(ref: QuestionRef): Question {
+   ];
+   const diagram = q.diagram
+     ? (() => {
+-        const m = {
+-          ...modelProfile({ ...q, polarity: q.diagram.startsWith('Y') ? 'endo' : 'exo' }),
+-          left: 'A',
+-          right: 'C',
+-        };
++        const reference = energyReference(q.diagram!);
+         return {
+           kind: 'image' as const,
+-          src: svgImage(profileSVG(m, { letters: true })),
+-          alt: 'Profile Y: A is the reactant level, B the peak and C the product level. Products are higher in energy than reactants.',
++          src: svgImage(profileSVG(reference.model, reference.options)),
++          alt: reference.alt,
+         };
+       })()
+     : null;
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\contracts\\question.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\question.ts"
+index 26572a9..3a7fc16 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\contracts\\question.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\question.ts"	
+@@ -23,7 +23,13 @@ export type TextRange = Readonly<{ start: number; end: number; text: string }>;
+ export type Response =
+   | Readonly<{ kind: 'choice'; selected: readonly string[] }>
+   | Readonly<{ kind: 'text'; value: string }>
+-  | Readonly<{ kind: 'numeric'; raw: string; unit: string }>
++  | Readonly<{
++      kind: 'numeric';
++      raw: string;
++      unit: string;
++      /** Learner working drafts, restored with the answer but never independently marked. */
++      working?: Readonly<Record<string, string>>;
++    }>
+   | Readonly<{ kind: 'explanation'; sections: readonly Readonly<{ id: string; text: string }>[] }>
+   | Readonly<{ kind: 'correction'; selections: readonly TextRange[]; replacement: string }>
+   | Readonly<{ kind: 'diagram-selection'; selectedObjectIds: readonly string[] }>
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\foundation\\ActivityHost.tsx" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"
+index 87c07be..e03d139 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\foundation\\ActivityHost.tsx"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\foundation\\ActivityHost.tsx"	
+@@ -106,7 +106,7 @@ export function FoundationApp({
+   onNavigationGuard,
+ }: CurriculumHostIntegration & {
+   readonly course: Course;
+-  readonly onSelectOlympiad?: () => void;
++  readonly onSelectOlympiad?: (id?: import('../contracts/index.ts').OlympiadActivityId) => void;
+ }) {
+   const query = useMemo(() => new URLSearchParams(location.search), []);
+   const run =
+@@ -1055,8 +1055,8 @@ export function FoundationApp({
+           ? { currentActivityId: attempt.ref.activityId }
+           : {})}
+       onSelectActivity={(activityId) => {
+-        if (activityId === 'alevel/c3l6-organic-reactions') {
+-          void selectView('olympiad');
++        if (productionRegistry.get(activityId)?.strand === 'olympiad') {
++          void leaveAttempt().then(saved => { if (saved) onSelectOlympiad?.(activityId as import('../contracts/index.ts').OlympiadActivityId); });
+           return;
+         }
+         if (preview) {
+
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\persistence\\validation.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"
+index 8ee83df..4400062 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\component-fidelity\\f2\\before\\src\\persistence\\validation.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\persistence\\validation.ts"	
+@@ -2,6 +2,9 @@ import { isCanonicalQuestionId } from '../content/canonical-identity.ts';
+ import { curriculumActivityIds, leafBoundary } from './catalogue-boundary.ts';
+ import type { CurriculumWrite, ImportBatch } from '../contracts/repository.ts';
+ import type { Namespace } from '../contracts/identity.ts';
++import type { IsomerProgress } from '../contracts/olympiad.ts';
++import { isomerBoxes, isomerChallenge } from '../activities/olympiad/isomers2011/content.ts';
++import { isomerPolicy } from '../activities/olympiad/isomers2011/policy.ts';
+ export class InvalidData extends Error {}
+ export class EvidenceConflict extends Error {}
+ export type JsonObject = Record<string, unknown>;
+@@ -267,8 +270,24 @@ export function validateResponse(value: unknown): void {
+       requireData(text(r.value), 'Invalid text');
+       break;
+     case 'numeric':
+-      keys(r, ['kind', 'raw', 'unit']);
++      keys(r, ['kind', 'raw', 'unit', 'working']);
+       requireData(text(r.raw) && text(r.unit), 'Invalid numeric serialization');
++      if (r.working !== undefined) {
++        const working = record(r.working, 'numeric working');
++        requireData(
++          (Object.getPrototypeOf(working) === Object.prototype ||
++            Object.getPrototypeOf(working) === null) &&
++            Object.keys(working).length <= 64 &&
++            Object.entries(working).every(
++              ([key, value]) =>
++                /^[A-Za-z0-9][A-Za-z0-9:_-]{0,99}$/.test(key) &&
++                !['__proto__', 'prototype', 'constructor'].includes(key) &&
++                typeof value === 'string' &&
++                value.length <= 4096,
++            ),
++          'Invalid numeric working serialization',
++        );
++      }
+       break;
+     case 'choice':
+       keys(r, ['kind', 'selected']);
+@@ -1015,6 +1034,21 @@ export function validateWrite(value: CurriculumWrite): void {
+ export function validateOlympiad(value: unknown): void {
+   safeJson(value);
+   const p = record(value, 'Olympiad');
++  if (p.activityId === 'alevel/olympiad-2011-q4') {
++    keys(p, ['kind','course','profileId','activityId','drawings','selected','check','completed']);
++    requireData(p.kind === 'olympiad-completion' && p.course === 'alevel' && id(p.profileId) && isomerBoxes.includes(p.selected as never) && typeof p.completed === 'boolean', 'Invalid seven-box challenge');
++    const drawings = record(p.drawings, 'drawings');
++    requireData(Object.keys(drawings).every(k => isomerBoxes.includes(k as never)), 'Unknown compound box');
++    Object.values(drawings).forEach(validateResponse);
++    if (p.check !== null) {
++      const check = record(p.check, 'aggregate check');
++      keys(check, ['fullyCorrect','wrongPlace','drawingFingerprint']);
++      requireData(Number.isInteger(check.fullyCorrect) && Number.isInteger(check.wrongPlace) && Number(check.fullyCorrect) >= 0 && Number(check.wrongPlace) >= 0 && Number(check.fullyCorrect) + Number(check.wrongPlace) <= 7 && id(check.drawingFingerprint), 'Invalid aggregate counts');
++    }
++    const checked = isomerPolicy.validateCompletion(isomerChallenge, p as unknown as IsomerProgress);
++    requireData(same(p.check, checked.check) && p.completed === checked.completed, 'Stale or forged aggregate completion');
++    return;
++  }
+   keys(p, [
+     'kind',
+     'course',
+

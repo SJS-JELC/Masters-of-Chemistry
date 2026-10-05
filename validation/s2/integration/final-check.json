@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T00:58:03.837Z",
+  "nativeFinalSourceHashes": 75,
+  "immutableControls": 6,
+  "protectedOriginalFiles": 1317,
+  "reportAndProgressStatus": "awaiting_root_review",
+  "S0": "root accepted",
+  "S1": "root accepted",
+  "S3": "pending; undispatched",
+  "sourceChanges": 44,
+  "evidence": [
+    "validation/s2/integration/foreman-checks.json",
+    "validation/s2/review-suspension/disposition.json",
+    "validation/s2/review-native/partial-verification.json",
+    "validation/original-app-check.json"
+  ]
+}

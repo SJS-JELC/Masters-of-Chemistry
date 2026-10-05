@@ -1,0 +1,9 @@
+{
+  "jobId": "S5-FIX-TITRATION-TYPING",
+  "status": "FAIL",
+  "startedAt": "2026-10-03T04:34:06.580Z",
+  "checks": [],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 5.300000000000001\n- 5.3\n     ^\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/fixes/titration-typing/browser.mjs:15:68",
+  "finishedAt": "2026-10-03T04:34:10.833Z"
+}

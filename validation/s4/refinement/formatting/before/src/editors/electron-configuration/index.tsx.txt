@@ -1,0 +1,30 @@
+import {DiagramViewport} from '../../ui/DiagramViewport.tsx';
+import type {EditorSurfaceProps} from '../../ui/EditorFrame.tsx';
+import type {ElectronConfigurationState,OrbitalSpin} from '../../contracts/index.ts';
+import {data} from '../../chemistry/electron-configuration/data.js';
+import {getVariant} from '../../chemistry/electron-configuration/identity.ts';
+import {abbreviation,boxes,energyOrder} from '../../chemistry/electron-configuration/core.js';
+import {apply,blankState} from '../../chemistry/electron-configuration/engine.ts';
+import {notation,speciesLabel,spinText,spinArrow} from '../../chemistry/electron-configuration/display.ts';
+import type {Command} from '../../chemistry/electron-configuration/engine.ts';
+import './styles.css';
+import {PeriodicReference} from './PeriodicReference.tsx';
+function OrbitalDiagram({spins,energy,disabled,onSpin}:{spins:ElectronConfigurationState['boxes']|readonly (readonly OrbitalSpin[])[];energy:boolean;disabled:boolean;onSpin?:(index:number,orbital:number,value:OrbitalSpin)=>void}){
+ const indices=energy?energyOrder():data.subshells.map((_label,i)=>i);
+ return <DiagramViewport label={energy?'Orbital energy ladder':'Horizontal orbital diagram'}><div className="ec-scroll" tabIndex={0} role="region" aria-label={energy?'Schematic orbital energy ladder; horizontal scrolling available':'Horizontal orbital diagram; horizontal scrolling available'}><div className={energy?'ec-energy':'ec-row'}>
+ {energy&&<div className="ec-energy-axis">Increasing energy ↑<small>Schematic Aufbau ladder</small></div>}
+ {indices.map((index,order)=><div key={index} className="ec-subshell" style={energy?{gridRow:8-order,gridColumn:2+'spd'.indexOf(data.subshells[index]![1]!)}:{}}><span>{data.subshells[index]}</span><div className="ec-orbitals">{spins[index]!.map((spin,orbital)=><button type="button" key={orbital} className="ec-box" disabled={disabled} aria-label={`${data.subshells[index]}, orbital ${orbital+1}: ${spinText[spin]}`} onClick={()=>onSpin?.(index,orbital,spin===0?1:spin===1?3:0)} onKeyDown={event=>{const value=({'0':0,'1':1,'2':3,'d':2,'D':2} as const)[event.key as '0'|'1'|'2'|'d'|'D'];if(value!==undefined){event.preventDefault();onSpin?.(index,orbital,value);}}}>{spinArrow[spin]||<span aria-hidden="true">·</span>}</button>)}</div></div>)}
+ </div></div></DiagramViewport>;
+}
+export function ElectronConfigurationEditor({part,response,readOnly,onResponse}:EditorSurfaceProps){
+ const q=getVariant(part.markingPolicyId.split(':').at(-1)!); // IDs themselves contain no colon.
+ const state=response?.kind==='electron-configuration'?response:part.initial.kind==='electron-configuration'?part.initial:blankState();
+ const send=(command:Command)=>{if(!readOnly)onResponse(apply(state,command));};
+ if(q.kind==='bonus')return <div className="ec-workspace"><PeriodicReference/><p className="ec-notation">{notation(q.counts)}</p><div className="ec-matching">{q.options.map(id=>{const item=data.species.find(item=>item.id===id)!;return <label key={id}><span><strong>{speciesLabel(id)}</strong> {item.name}<small>Atomic number {item.z}</small></span><input type="checkbox" disabled={readOnly} checked={state.selectedSpeciesIds.includes(id)} onChange={()=>send({kind:'select',id})} aria-label={`${item.name}, charge ${item.charge}`}/></label>;})}</div></div>;
+ const item=data.species.find(item=>item.id===q.speciesId)!,orbital=q.representation==='row'||q.representation==='energy';
+ if(q.direction==='identify'){
+  const short=abbreviation(item);return <div className="ec-workspace"><PeriodicReference/>{orbital?<OrbitalDiagram spins={boxes(item.counts)} energy={q.representation==='energy'} disabled={true}/>:<p className="ec-notation">{notation(q.representation==='short'?short.counts:item.counts,q.representation==='short'?short.core:'')}</p>}<label className="ec-identity">Element name or symbol<input type="text" maxLength={80} autoComplete="off" autoCapitalize="off" spellCheck={false} disabled={readOnly} value={state.identity} onChange={event=>send({kind:'identity',value:event.target.value})}/></label></div>;
+ }
+ return <div className="ec-workspace"><PeriodicReference/>{orbital?<><p>Tap a box or press Space to cycle empty → ↑ → ↑↓ → empty. Keyboard: 0 = empty, 1 = ↑, 2 = ↑↓, D = ↓.</p><OrbitalDiagram spins={state.boxes} energy={q.representation==='energy'} disabled={readOnly} onSpin={(index,orbital,value)=>send({kind:'spin',index,orbital,value})}/><details><summary>Set spins without cycling</summary><div className="ec-spin-alternatives">{data.subshells.flatMap((label,index)=>state.boxes[index]!.map((spin,orbital)=><label key={`${index}-${orbital}`}>{label} orbital {orbital+1}<select aria-label={label+" orbital "+(orbital+1)} disabled={readOnly} value={spin} onChange={event=>send({kind:'spin',index,orbital,value:Number(event.target.value) as OrbitalSpin})}>{spinText.map((text,i)=><option key={i} value={i}>{text}</option>)}</select></label>))}</div></details></>:<>{q.representation==='short'&&<label>Noble-gas core<select aria-label="Noble-gas core" disabled={readOnly} value={state.core} onChange={event=>send({kind:'core',value:event.target.value})}><option value="">Choose a core</option>{Object.keys(data.cores).map(core=><option key={core} value={core}>{core}</option>)}</select></label>}<div className="ec-counts">{data.subshells.map((label,index)=>data.cores[state.core]?.[index]?null:<label key={label}>{label}<input aria-label={`Electrons in ${label}`} type="text" inputMode="numeric" maxLength={2} autoComplete="off" disabled={readOnly} value={state.counts[index]} onChange={event=>send({kind:'count',index,value:event.target.value})}/></label>)}</div></>}
+ <button type="button" disabled={readOnly} onClick={()=>send({kind:'clear'})}>Clear configuration</button></div>;
+}

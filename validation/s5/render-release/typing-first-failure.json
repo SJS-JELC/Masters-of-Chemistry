@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "CPUThrottle": 4,
+  "network": {
+    "latency": 150,
+    "downloadThroughput": 200000,
+    "uploadThroughput": 93750
+  },
+  "method": "Actual focus,Control+A,Backspace and pressSequentially keystrokes;twoRAF thenSaved indicator;3samples",
+  "samples": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'14' !== '3.1'\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/render-release/typing-browser.mjs:3:702"
+}

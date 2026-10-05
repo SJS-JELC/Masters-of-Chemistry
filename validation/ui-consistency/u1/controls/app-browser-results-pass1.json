@@ -1,0 +1,7 @@
+{
+  "status": "FAIL",
+  "method": "Current production entry in DEV on port5188; real headless Edge and isolated alpha-v2 run namespace; IndexedDB readback, reload and Next; no sibling storage",
+  "checks": [],
+  "errors": [],
+  "failure": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Saved on this device', { exact: true }) to be visible\u001b[22m\n\n    at saved (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\controls\\app-browser.mjs:17:82)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u1\\controls\\app-browser.mjs:33:58"
+}

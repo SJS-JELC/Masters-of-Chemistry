@@ -1,0 +1,149 @@
+{
+  "runId": "MOLECULE-TOOLBAR-20261004",
+  "status": "complete",
+  "acceptedAt": "2026-10-04T12:45:49.911Z",
+  "execution": "Local bounded implementation and review; no delegates.",
+  "changes": [
+    "Default drawing scale 1.4 pixels/unit, approximately 2.55 times previous 0.55; saved molecules centred and fitted when opened.",
+    "Zoom in/out, hand pan and Fit molecule in main toolbar; alternative controls/view section removed.",
+    "Viewport is local UI state separate from molecular graph, remains stable through edits/undo, scales proportionally on resize; mouse/touch/keyboard pan and read-only viewing supported."
+  ],
+  "validation": {
+    "typecheck": "PASS",
+    "bothBuilds": "PASS",
+    "chemistryTests": 18,
+    "toolbarBrowserChecks": 7,
+    "popupRegressionChecks": 10,
+    "productionChecks": 6,
+    "viewportWidths": [
+      1440,
+      820,
+      390,
+      350
+    ],
+    "sourceAudit": {
+      "status": "PASS",
+      "changed": [
+        "src/editors/molecule/molecule.css",
+        "src/editors/molecule/MoleculeEditor.tsx",
+        "src/editors/molecule/camera.ts"
+      ],
+      "unchangedBaselineFiles": 300,
+      "preserved": "All other source and public assets byte-identical, including chemistry, policies, persistence and scientific assets."
+    },
+    "originals": {
+      "status": "PASS",
+      "checkedAt": "2026-10-04T12:44:14.193Z",
+      "records": 1317,
+      "readable": 794,
+      "metadataOnly": 523,
+      "changed": [],
+      "offlinePolicy": "All523 baseline offline placeholders stat-only; never opened/hydrated. Historical original-app-check.json left untouched."
+    },
+    "releases": [
+      {
+        "course": "alevel",
+        "status": "PASS",
+        "activityCount": 7,
+        "runtimeFileCount": 165,
+        "initialJavascriptGzipBytes": 180514,
+        "lazyJavascriptChunks": 71,
+        "manifestSha256": "2269ac4f3b1d95cb0c11c97353656623c13e315d662409d6d7903d0d9750c157",
+        "checkedAt": "2026-10-04T12:44:46.355Z"
+      },
+      {
+        "course": "igcse",
+        "status": "PASS",
+        "activityCount": 6,
+        "runtimeFileCount": 165,
+        "initialJavascriptGzipBytes": 180514,
+        "lazyJavascriptChunks": 71,
+        "manifestSha256": "2235e319f531b330ece9512b306db76ac277a797f7b0ff3c730d0ff8f85942a6",
+        "checkedAt": "2026-10-04T12:44:46.504Z"
+      }
+    ],
+    "renderedReview": [
+      "toolbar-1440.png",
+      "toolbar-390.png",
+      "c3-readonly-350.png"
+    ]
+  },
+  "notes": [
+    "Initial blank-click test overlapped the correctly panned existing atom; corrected test to select empty canvas. Original probe retained.",
+    "Mobile/touch checks use pinned Playwright and installed headless Edge emulation; no physical-device claim."
+  ],
+  "unresolved": [],
+  "published": false,
+  "fingerprints": [
+    {
+      "path": "src/editors/molecule/molecule.css",
+      "bytes": 7726,
+      "sha256": "bb020e0bb23696d85959f8710617bb05817cc549fb8dfad5257e13e7faf9324e"
+    },
+    {
+      "path": "src/editors/molecule/MoleculeEditor.tsx",
+      "bytes": 22281,
+      "sha256": "a25b45f7025e9e140fc426c114bd52033a20537e92bce50dce4ba5c4f9686524"
+    },
+    {
+      "path": "src/editors/molecule/camera.ts",
+      "bytes": 1399,
+      "sha256": "f1a36010c80f313b5b57a1adce7fe394cda12ba4a83578ee85ebe058ad74b910"
+    },
+    {
+      "path": "validation/molecule-toolbar/browser.mjs",
+      "bytes": 7254,
+      "sha256": "51c599c4871010a2212f8e8ad947e3cf6ee06e49423e61c2c03bef38e52e54dc"
+    },
+    {
+      "path": "validation/molecule-toolbar/popup-regression.mjs",
+      "bytes": 12475,
+      "sha256": "dde084a0b087887560bd8c40159866ccc70f92eaa89ba8adfb72b563011bd3fa"
+    },
+    {
+      "path": "validation/molecule-toolbar/production.mjs",
+      "bytes": 4366,
+      "sha256": "729606e223ea6c0fa87a6bfec9ca5303643cbb4497e471a2c32012f9b082abba"
+    },
+    {
+      "path": "validation/molecule-toolbar/browser-report.json",
+      "bytes": 1256,
+      "sha256": "e23e70978171e70f64c05c5cb239ea543c77d1d5c59d46863b7075dfea5c7ab1"
+    },
+    {
+      "path": "validation/molecule-toolbar/popup-regression-report.json",
+      "bytes": 3083,
+      "sha256": "e041a310ac261d760d6258466275827ab08763c3a09e0f0b6abc62becc092686"
+    },
+    {
+      "path": "validation/molecule-toolbar/production-report.json",
+      "bytes": 487,
+      "sha256": "82f103225566d62c59bf41bfa4ba3f48d080ec1b060e1aaea4e37686cd85aecb"
+    },
+    {
+      "path": "validation/molecule-toolbar/source-audit.json",
+      "bytes": 344,
+      "sha256": "081ab91417aa97ad6d041d4d04bfc73ae616d8b647bf2806da5cbd19890baad8"
+    },
+    {
+      "path": "validation/molecule-toolbar/releases.json",
+      "bytes": 633,
+      "sha256": "17664ced39f840048e4c4c6a06e17395c7e4fb6d61206e2a6c5c2d2491041c7b"
+    },
+    {
+      "path": "validation/molecule-toolbar/original-preservation.json",
+      "bytes": 288,
+      "sha256": "46fc3e82f454ff79c91c5a1a84c7ae8401b6908d86d5a3365d05e356b9498155"
+    },
+    {
+      "path": "release/alevel.runtime.json",
+      "bytes": 76478,
+      "sha256": "2269ac4f3b1d95cb0c11c97353656623c13e315d662409d6d7903d0d9750c157"
+    },
+    {
+      "path": "release/igcse.runtime.json",
+      "bytes": 1279909,
+      "sha256": "2235e319f531b330ece9512b306db76ac277a797f7b0ff3c730d0ff8f85942a6"
+    }
+  ]
+}

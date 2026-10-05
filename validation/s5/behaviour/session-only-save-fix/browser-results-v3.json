@@ -1,0 +1,1874 @@
+{
+  "startedAt": "2026-10-03T06:08:02.936Z",
+  "browser": "154.0.4258.48",
+  "playwright": "1.62.1",
+  "checks": [
+    {
+      "id": "next-fix-alevel-practice-dirty-single",
+      "status": "PASS",
+      "scenario": "dirty-single",
+      "course": "alevel",
+      "mode": "practice",
+      "previousId": "next-fix-alevel-practice-dirty-single",
+      "nextId": "8102126a-4ceb-4011-8aba-ed87409a62db",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 3430737737,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 78,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1205.8999999761581
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1206.1000000238419
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1206.8999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1207.1000000238419
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1235.2999999523163
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1235.5
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1235.7999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1253.6000000238419
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1253.6999999284744
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-practice-dirty-double",
+      "status": "PASS",
+      "scenario": "dirty-double",
+      "course": "alevel",
+      "mode": "practice",
+      "previousId": "next-fix-alevel-practice-dirty-double",
+      "nextId": "2e459417-fe0a-4ad8-9070-a6b2504ee4f6",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 1084691222,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 78,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1173
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1173.2000000476837
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1174
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1174
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1198.4000000953674
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1198.6000000238419
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1198.9000000953674
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1212.3000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1213
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1213
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1213.8000000715256
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-practice-dirty-quota",
+      "status": "PASS",
+      "scenario": "dirty-quota",
+      "course": "alevel",
+      "mode": "practice",
+      "previousId": "next-fix-alevel-practice-dirty-quota",
+      "nextId": "62ea8972-0eca-41a9-8bbf-bb6e3289db5d",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 2107993571,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 75,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": true,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1071.8999999761581
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1072.1000000238419
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1072.8000000715256
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1072.8000000715256
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1097.2000000476837
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1097.3999999761581
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1097.6000000238419
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1113.6000000238419
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1113.6000000238419
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1195.1000000238419
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1196.7000000476837
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1347.6000000238419
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1347.8000000715256
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1348.8999999761581
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1349
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1349.2000000476837
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1366.6000000238419
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1366.8000000715256
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-practice-normal",
+      "status": "PASS",
+      "scenario": "normal",
+      "course": "alevel",
+      "mode": "practice",
+      "previousId": "next-fix-alevel-practice-normal",
+      "nextId": "f83657fd-3493-4d41-8be9-84227743858e",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 1089794557,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 76,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 490.90000009536743
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 491.10000002384186
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 491.90000009536743
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 492.10000002384186
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 492.3000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 531.1000000238419
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 531.1000000238419
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-revision-dirty-single",
+      "status": "PASS",
+      "scenario": "dirty-single",
+      "course": "alevel",
+      "mode": "revision",
+      "previousId": "next-fix-alevel-revision-dirty-single",
+      "nextId": "d3cad4af-a6e6-49d3-89e2-d9fcab85d96b",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 3813421636,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 48,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1095.5999999046326
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1095.8999999761581
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1096.5
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1096.5
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1120.5
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1120.6999999284744
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1120.7999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1136.8999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1136.8999999761581
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-revision-dirty-double",
+      "status": "PASS",
+      "scenario": "dirty-double",
+      "course": "alevel",
+      "mode": "revision",
+      "previousId": "next-fix-alevel-revision-dirty-double",
+      "nextId": "802a5d8d-83f8-486c-97f7-7c348b8022cd",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 359601212,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 74,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1095
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1095.2999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1095.8999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1096.1000000238419
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1123.1999999284744
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1123.5
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1123.6000000238419
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1133.7999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1134.2999999523163
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1134.5
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1135
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-revision-dirty-quota",
+      "status": "PASS",
+      "scenario": "dirty-quota",
+      "course": "alevel",
+      "mode": "revision",
+      "previousId": "next-fix-alevel-revision-dirty-quota",
+      "nextId": "ea09ebef-8773-481c-ba38-6708aecdf046",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 1352354668,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 45,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": true,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1039
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1039.3000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1039.9000000953674
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Initial pH",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1040
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1065.9000000953674
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1066.1000000238419
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1066.3000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1081.1000000238419
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1081.1000000238419
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1174.8000000715256
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1176
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1339.4000000953674
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1339.6000000238419
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1340.2000000476837
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1340.4000000953674
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1340.6000000238419
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1368.4000000953674
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1368.6000000238419
+        }
+      ]
+    },
+    {
+      "id": "next-fix-alevel-revision-normal",
+      "status": "PASS",
+      "scenario": "normal",
+      "course": "alevel",
+      "mode": "revision",
+      "previousId": "next-fix-alevel-revision-normal",
+      "nextId": "0321aa4a-4706-4345-a7da-e1c672911a9b",
+      "nextRef": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC02",
+        "seed": 2338832191,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 79,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 493.89999997615814
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 494.09999990463257
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 494.89999997615814
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 495.09999990463257
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 495.2999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 542.8999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 543
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-practice-dirty-single",
+      "status": "PASS",
+      "scenario": "dirty-single",
+      "course": "igcse",
+      "mode": "practice",
+      "previousId": "next-fix-igcse-practice-dirty-single",
+      "nextId": "b91c5087-3c01-4b7c-a6be-3ccff2c53bd9",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D11",
+        "seed": 3351538584,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 71,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1018.3999999761581
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1018.5
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1019.1999999284744
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1019.1999999284744
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1032.3999999761581
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1032.5999999046326
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1032.7999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1045.5999999046326
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1045.5999999046326
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-practice-dirty-double",
+      "status": "PASS",
+      "scenario": "dirty-double",
+      "course": "igcse",
+      "mode": "practice",
+      "previousId": "next-fix-igcse-practice-dirty-double",
+      "nextId": "6f78bc91-b83f-4c85-8ff2-5227911a1db4",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D04",
+        "seed": 4180357777,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 70,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1011.8999999761581
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1012.3000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1012.8000000715256
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1013.1000000238419
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1026.5
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1026.6000000238419
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1026.8999999761581
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1032.1000000238419
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1032.7000000476837
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1032.7000000476837
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1033.3000000715256
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-practice-dirty-quota",
+      "status": "PASS",
+      "scenario": "dirty-quota",
+      "course": "igcse",
+      "mode": "practice",
+      "previousId": "next-fix-igcse-practice-dirty-quota",
+      "nextId": "375a0771-b346-4b5c-bc93-63fd1be5a147",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "D15",
+        "seed": 2396417713,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 73,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": true,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1019.5
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1019.8000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1020.5
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1020.7000000476837
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1033.8999999761581
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1034.1000000238419
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1034.3000000715256
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1044.8999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1044.8999999761581
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1142.2000000476837
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1143.3999999761581
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1299.8000000715256
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1300
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1300.8000000715256
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1301
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1301.2000000476837
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1313.3000000715256
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1313.3000000715256
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-practice-normal",
+      "status": "PASS",
+      "scenario": "normal",
+      "course": "igcse",
+      "mode": "practice",
+      "previousId": "next-fix-igcse-practice-normal",
+      "nextId": "583a3eb3-5da1-407a-99ac-ae03b309ad1d",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "B06",
+        "seed": 3480079072,
+        "level": 2
+      },
+      "firstScore": 1,
+      "firstActiveMs": 38,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 335.10000002384186
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 335.5
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 336.2999999523163
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 336.5
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 336.5
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 366.5
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 366.5
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-revision-dirty-single",
+      "status": "PASS",
+      "scenario": "dirty-single",
+      "course": "igcse",
+      "mode": "revision",
+      "previousId": "next-fix-igcse-revision-dirty-single",
+      "nextId": "41085db9-857f-4539-877e-8dcc58c6bf22",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "E06",
+        "level": 1,
+        "seed": 3550994560
+      },
+      "firstScore": 1,
+      "firstActiveMs": 74,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1060.8999999761581
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1061.2999999523163
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1062
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1062.1000000238419
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1076.8999999761581
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1077
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1077.2000000476837
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1091.3999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1091.5
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-revision-dirty-double",
+      "status": "PASS",
+      "scenario": "dirty-double",
+      "course": "igcse",
+      "mode": "revision",
+      "previousId": "next-fix-igcse-revision-dirty-double",
+      "nextId": "8985b22e-d4a5-4500-bcdb-f474e6579efc",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "E13",
+        "level": 1,
+        "seed": 2750399443
+      },
+      "firstScore": 1,
+      "firstActiveMs": 74,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1034.0999999046326
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1034.3999999761581
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1034.8999999761581
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1035.0999999046326
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1047.6999999284744
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1047.7999999523163
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1048
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1054.8999999761581
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1055.5
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1055.5
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1056.0999999046326
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-revision-dirty-quota",
+      "status": "PASS",
+      "scenario": "dirty-quota",
+      "course": "igcse",
+      "mode": "revision",
+      "previousId": "next-fix-igcse-revision-dirty-quota",
+      "nextId": "df147a03-6474-4af9-bed2-7f8d8bdfd6fb",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "A08",
+        "level": 1,
+        "seed": 493524863
+      },
+      "firstScore": 1,
+      "firstActiveMs": 73,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": true,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1059.7999999523163
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1060.1000000238419
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1060.6000000238419
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Peak level screen y",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1060.7000000476837
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1073.8999999761581
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1074.1000000238419
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saving…",
+          "at": 1074.3999999761581
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1086.7999999523163
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saving…",
+          "at": 1086.7999999523163
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1188.7999999523163
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Work has not been saved. Storage is full. Your current work remains in memory; free space and retry.Retry save",
+          "at": 1190.2000000476837
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1337
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1337.2000000476837
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1337.7999999523163
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1338
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 1338
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1350.2999999523163
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 1350.3999999761581
+        }
+      ]
+    },
+    {
+      "id": "next-fix-igcse-revision-normal",
+      "status": "PASS",
+      "scenario": "normal",
+      "course": "igcse",
+      "mode": "revision",
+      "previousId": "next-fix-igcse-revision-normal",
+      "nextId": "5ff67ec5-2284-423c-9ab2-83a1ad369f7f",
+      "nextRef": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "C06",
+        "level": 1,
+        "seed": 1014333883
+      },
+      "firstScore": 1,
+      "firstActiveMs": 61,
+      "newPersistedMs": 0,
+      "immutableFirst": true,
+      "singleEvidence": true,
+      "exactlyOneNewAttempt": true,
+      "localDraftReset": true,
+      "quotaBlockedAndRetry": false,
+      "pauseReloadGuard": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 425.1999999284744
+        },
+        {
+          "type": "mousedown",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 425.5
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 426.1999999284744
+        },
+        {
+          "type": "mouseup",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 426.5
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": false,
+          "save": "Saved on this device",
+          "at": 426.5
+        },
+        {
+          "type": "blur",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 456.39999997615814
+        },
+        {
+          "type": "focusout",
+          "trusted": true,
+          "target": "Next question",
+          "nextDisabled": true,
+          "save": "Saved on this device",
+          "at": 456.5
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "settings": {
+    "cpuRate": 4,
+    "viewport": {
+      "width": 900,
+      "height": 900
+    }
+  },
+  "pageErrors": [],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T06:08:50.810Z"
+}

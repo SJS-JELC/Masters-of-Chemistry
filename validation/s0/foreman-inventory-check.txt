@@ -1,0 +1,7 @@
+Observed successful foreman command output at 2026-10-02T23:26:57+01:00 (Europe/London); recorded during S0 finalisation.
+Working directory: workspace root.
+Command: node apps/Masters-of-Chemistry/validation/s0/inventory/collect.cjs check
+Exit code: 0
+{"status":"PASS","activities":12,"fingerprintedSources":237,"check":"full regenerated manifest matches retained coverage and current source bytes"}
+
+Earlier foreman invocation from the project directory failed ENOENT because this documented tool expects the workspace cwd. It was rerun with the documented cwd. No worker output/source change was needed.

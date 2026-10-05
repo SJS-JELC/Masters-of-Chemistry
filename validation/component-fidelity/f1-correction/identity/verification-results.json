@@ -1,0 +1,105 @@
+{
+  "jobId": "F1-CODEC-DEV",
+  "finishedAt": "2026-10-03T17:08:55.116Z",
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "typecheck",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "all-authoring-tests",
+      "args": [
+        "--test",
+        "development/authoring/families/dev-formatted-starter/family.test.mjs",
+        "development/authoring/families/dev-refinement-starter/family.test.mjs",
+        "development/authoring/families/dev-reviewed-starter/family.test.mjs",
+        "development/authoring/families/dev-runnable-acid/family.test.mjs",
+        "development/authoring/families/dev-runnable-dilution/family.test.mjs",
+        "development/authoring/families/dev-s5-independent/family.test.mjs",
+        "development/authoring/families/dev-canonical-correction/family.test.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-formatted-starter",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-formatted-starter/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-refinement-starter",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-refinement-starter/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-reviewed-starter",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-reviewed-starter/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-runnable-acid",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-runnable-acid/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-runnable-dilution",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-runnable-dilution/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-s5-independent",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-s5-independent/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "typecheck-dev-canonical-correction",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--project",
+        "development/authoring/families/dev-canonical-correction/tsconfig.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "scaffold-rejected-inputs-no-write",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+﻿{
+    "runId":  "OLY2011-20261003",
+    "status":  "accepted",
+    "acceptedAt":  "2026-10-03T20:04:53.3969273+01:00",
+    "acceptedBy":  "ROOT",
+    "scope":  "Olympiad 2011 Q4 addition only, current Masters-of-Chemistry app",
+    "implementation":  "recovery-w02/completion.json",
+    "independentReview":  "review-r01/completion.json",
+    "rootReview":  [
+                       "Reviewed marking policy and seven explicit answer graphs",
+                       "Reviewed typed host/registry/repository and routing integration diffs",
+                       "Inspected retained desktop source/partial/teacher images and independent keyboard/mobile captures",
+                       "All 35 final reviewer task fingerprints match current files"
+                   ],
+    "validation":  [
+                       "55 applicable implementation tests",
+                       "18 independent targeted tests",
+                       "10 implementation and 6 independent browser groups",
+                       "Both builds and production entry smoke checks",
+                       "Typecheck, current release integrity and protected-original checks"
+                   ],
+    "approvedSpectrumSha256":  "07d75b648f1117fadaa701ecb875e68331f2dc4a8a451cea1f9591a257ea1d7d",
+    "limitations":  [
+                        "Separate concurrent component-fidelity work is outside this acceptance",
+                        "Historical broad fixture failures remain documented; no all-suite pass claimed",
+                        "Four W01 deterministic fixtures lack pre-recovery hashes; independently reproduced current bytes match",
+                        "Headless Edge and emulated touch; no physical-device or screen-reader verification"
+                    ],
+    "published":  false
+}

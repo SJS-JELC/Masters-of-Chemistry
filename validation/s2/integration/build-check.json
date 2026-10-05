@@ -1,0 +1,271 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T00:41:53.578Z",
+  "courses": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "initialShellJavascriptGzipBytes": 137830,
+      "budgetBytes": 204800,
+      "chunks": [
+        {
+          "key": "_engine-k291iQOc.js",
+          "file": "assets/engine-k291iQOc.js",
+          "bytes": 27770,
+          "gzipBytes": 8304,
+          "initial": false,
+          "sha256": "4be3b16b2df6ea9f99237b65124d1eea101d69bedb56ada634c538c48026f6c9"
+        },
+        {
+          "key": "_jsx-runtime-Dk72oS4N.js",
+          "file": "assets/jsx-runtime-Dk72oS4N.js",
+          "bytes": 8774,
+          "gzipBytes": 3327,
+          "initial": true,
+          "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6"
+        },
+        {
+          "key": "_layout-D1I_w8V5.js",
+          "file": "assets/layout-D1I_w8V5.js",
+          "bytes": 5713,
+          "gzipBytes": 2362,
+          "initial": false,
+          "sha256": "682dd21c1d8e882359e5e34c1ad0899f885462b62201337aa3bd7dfb46482ac1"
+        },
+        {
+          "key": "_preload-helper-BaNbYf_w.js",
+          "file": "assets/preload-helper-BaNbYf_w.js",
+          "bytes": 1398,
+          "gzipBytes": 749,
+          "initial": true,
+          "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034"
+        },
+        {
+          "key": "_provider-BnLhlXUf.js",
+          "file": "assets/provider-BnLhlXUf.js",
+          "bytes": 87391,
+          "gzipBytes": 22747,
+          "initial": false,
+          "sha256": "1b9d055117fa19487b93d18f3e298d9370b1e00c4ab66fbe73638ea763e048bc"
+        },
+        {
+          "key": "_provider-DSbCVPl-.js",
+          "file": "assets/provider-DSbCVPl-.js",
+          "bytes": 273859,
+          "gzipBytes": 21512,
+          "initial": false,
+          "sha256": "98956b1c2f6aa1d976f686db63219af5f362b57969a0a1cdfd5f3234bf41c839"
+        },
+        {
+          "key": "alevel.html",
+          "file": "assets/alevel-DuXXqqNZ.js",
+          "bytes": 211827,
+          "gzipBytes": 65556,
+          "initial": true,
+          "sha256": "04c6dac173fcf9acb69f3f112b4bfcbd47b6637f0dcd3f407aedbcebe3e963fd"
+        },
+        {
+          "key": "src/activities/alevel/acid-base-calculations/marking.ts",
+          "file": "assets/marking-wP8S0ecO.js",
+          "bytes": 1199,
+          "gzipBytes": 617,
+          "initial": false,
+          "sha256": "23b9e3d5c0fbfea1c43fba46db0bdf14a9b4c222b0a9cbf6efe18e1c39c740e8"
+        },
+        {
+          "key": "src/activities/alevel/acid-base-calculations/provider.ts",
+          "file": "assets/provider-B1eRuw4_.js",
+          "bytes": 69,
+          "gzipBytes": 79,
+          "initial": false,
+          "sha256": "f29bea1e9066b8646a495510600a80e16d56d474ac49f08a4917c1b11536c202"
+        },
+        {
+          "key": "src/activities/alevel/dot-and-cross/marking.ts",
+          "file": "assets/marking-Df3U_Mlw.js",
+          "bytes": 1376,
+          "gzipBytes": 723,
+          "initial": false,
+          "sha256": "db682a9ac2fc7f230697e31d55aa42d776cf7efb7feeb28025a1b90b70f1000c"
+        },
+        {
+          "key": "src/activities/alevel/dot-and-cross/provider.ts",
+          "file": "assets/provider-CiJ99J9X.js",
+          "bytes": 73,
+          "gzipBytes": 83,
+          "initial": false,
+          "sha256": "96cd3a24522fe7c869da3995dca4714db6113284620ce94922a86df03ad5eb1e"
+        },
+        {
+          "key": "src/activities/igcse/structure-and-bonding/marking.ts",
+          "file": "assets/marking-BxZxGm59.js",
+          "bytes": 649,
+          "gzipBytes": 400,
+          "initial": false,
+          "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2"
+        },
+        {
+          "key": "src/activities/igcse/structure-and-bonding/provider.ts",
+          "file": "assets/provider-CdIF3xRb.js",
+          "bytes": 14236,
+          "gzipBytes": 3916,
+          "initial": false,
+          "sha256": "44552c856fafd8d2cd2a4d4dbe6eb1ba71045d446f478fea980f15e732040e11"
+        },
+        {
+          "key": "src/editors/dot-and-cross/index.ts",
+          "file": "assets/dot-and-cross-CId3dOFD.js",
+          "bytes": 11897,
+          "gzipBytes": 3988,
+          "initial": false,
+          "sha256": "f0ae1a2f60fbf3c3debb70238b3c0c3ff4767f573cd0a5dbef8d47e6caca1eb9"
+        },
+        {
+          "key": "src/foundation/ProductionFoundation.tsx",
+          "file": "assets/ProductionFoundation-CE9rtt8M.js",
+          "bytes": 243185,
+          "gzipBytes": 68198,
+          "initial": true,
+          "sha256": "e31793dde043c24248c086cf354144b7ffc60e05acca2bb01edabaeb52845694"
+        }
+      ],
+      "scope": "Real shared production host; complete banks and dot-cross editor lazy-loaded on activity opening."
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "initialShellJavascriptGzipBytes": 137829,
+      "budgetBytes": 204800,
+      "chunks": [
+        {
+          "key": "_engine-k291iQOc.js",
+          "file": "assets/engine-k291iQOc.js",
+          "bytes": 27770,
+          "gzipBytes": 8304,
+          "initial": false,
+          "sha256": "4be3b16b2df6ea9f99237b65124d1eea101d69bedb56ada634c538c48026f6c9"
+        },
+        {
+          "key": "_jsx-runtime-Dk72oS4N.js",
+          "file": "assets/jsx-runtime-Dk72oS4N.js",
+          "bytes": 8774,
+          "gzipBytes": 3327,
+          "initial": true,
+          "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6"
+        },
+        {
+          "key": "_layout-D1I_w8V5.js",
+          "file": "assets/layout-D1I_w8V5.js",
+          "bytes": 5713,
+          "gzipBytes": 2362,
+          "initial": false,
+          "sha256": "682dd21c1d8e882359e5e34c1ad0899f885462b62201337aa3bd7dfb46482ac1"
+        },
+        {
+          "key": "_preload-helper-BaNbYf_w.js",
+          "file": "assets/preload-helper-BaNbYf_w.js",
+          "bytes": 1398,
+          "gzipBytes": 749,
+          "initial": true,
+          "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034"
+        },
+        {
+          "key": "_provider-BnLhlXUf.js",
+          "file": "assets/provider-BnLhlXUf.js",
+          "bytes": 87391,
+          "gzipBytes": 22747,
+          "initial": false,
+          "sha256": "1b9d055117fa19487b93d18f3e298d9370b1e00c4ab66fbe73638ea763e048bc"
+        },
+        {
+          "key": "_provider-DSbCVPl-.js",
+          "file": "assets/provider-DSbCVPl-.js",
+          "bytes": 273859,
+          "gzipBytes": 21512,
+          "initial": false,
+          "sha256": "98956b1c2f6aa1d976f686db63219af5f362b57969a0a1cdfd5f3234bf41c839"
+        },
+        {
+          "key": "igcse.html",
+          "file": "assets/igcse-ClbFZOO2.js",
+          "bytes": 211826,
+          "gzipBytes": 65555,
+          "initial": true,
+          "sha256": "9e51147a360945cdc471515be09826bd118ab4e01131a75a77137860b2c758ed"
+        },
+        {
+          "key": "src/activities/alevel/acid-base-calculations/marking.ts",
+          "file": "assets/marking-wP8S0ecO.js",
+          "bytes": 1199,
+          "gzipBytes": 617,
+          "initial": false,
+          "sha256": "23b9e3d5c0fbfea1c43fba46db0bdf14a9b4c222b0a9cbf6efe18e1c39c740e8"
+        },
+        {
+          "key": "src/activities/alevel/acid-base-calculations/provider.ts",
+          "file": "assets/provider-B1eRuw4_.js",
+          "bytes": 69,
+          "gzipBytes": 79,
+          "initial": false,
+          "sha256": "f29bea1e9066b8646a495510600a80e16d56d474ac49f08a4917c1b11536c202"
+        },
+        {
+          "key": "src/activities/alevel/dot-and-cross/marking.ts",
+          "file": "assets/marking-Df3U_Mlw.js",
+          "bytes": 1376,
+          "gzipBytes": 723,
+          "initial": false,
+          "sha256": "db682a9ac2fc7f230697e31d55aa42d776cf7efb7feeb28025a1b90b70f1000c"
+        },
+        {
+          "key": "src/activities/alevel/dot-and-cross/provider.ts",
+          "file": "assets/provider-CiJ99J9X.js",
+          "bytes": 73,
+          "gzipBytes": 83,
+          "initial": false,
+          "sha256": "96cd3a24522fe7c869da3995dca4714db6113284620ce94922a86df03ad5eb1e"
+        },
+        {
+          "key": "src/activities/igcse/structure-and-bonding/marking.ts",
+          "file": "assets/marking-BxZxGm59.js",
+          "bytes": 649,
+          "gzipBytes": 400,
+          "initial": false,
+          "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2"
+        },
+        {
+          "key": "src/activities/igcse/structure-and-bonding/provider.ts",
+          "file": "assets/provider-CdIF3xRb.js",
+          "bytes": 14236,
+          "gzipBytes": 3916,
+          "initial": false,
+          "sha256": "44552c856fafd8d2cd2a4d4dbe6eb1ba71045d446f478fea980f15e732040e11"
+        },
+        {
+          "key": "src/editors/dot-and-cross/index.ts",
+          "file": "assets/dot-and-cross-CId3dOFD.js",
+          "bytes": 11897,
+          "gzipBytes": 3988,
+          "initial": false,
+          "sha256": "f0ae1a2f60fbf3c3debb70238b3c0c3ff4767f573cd0a5dbef8d47e6caca1eb9"
+        },
+        {
+          "key": "src/foundation/ProductionFoundation.tsx",
+          "file": "assets/ProductionFoundation-CE9rtt8M.js",
+          "bytes": 243185,
+          "gzipBytes": 68198,
+          "initial": true,
+          "sha256": "e31793dde043c24248c086cf354144b7ffc60e05acca2bb01edabaeb52845694"
+        }
+      ],
+      "scope": "Real shared production host; complete banks and dot-cross editor lazy-loaded on activity opening."
+    }
+  ],
+  "checks": [
+    "two course static roots and relative-prefix manifest assets",
+    "DEV fixture/harness and Rocket excluded",
+    "real production host included",
+    "complete activity/provider and editor lazy boundaries",
+    "initial entry plus host/static dependency gzip measured <=204800 bytes"
+  ]
+}

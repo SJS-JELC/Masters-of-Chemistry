@@ -1,0 +1,16 @@
+✔ Actual full catalogue and hidden redirect inventory match original catalogues (3.6602ms)
+✔ Landing progress agrees with source recurrence, awards, supported levels and freshness boundaries (446.9083ms)
+✔ Source CSS scoping does not rewrite gem-body class tokens (1.8476ms)
+✔ all 41 registered target levels map exactly to their 16 gems and source providers (151.7989ms)
+✔ display-only, hidden alias, Olympiad and cross-course leaves cannot enable curriculum content (0.2977ms)
+✔ course precedence and Home default retain explicit old links and entry preferences (0.801ms)
+✔ revision selection comparison ignores ordering but preserves exact course and supported level set (0.4086ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 604.286
+

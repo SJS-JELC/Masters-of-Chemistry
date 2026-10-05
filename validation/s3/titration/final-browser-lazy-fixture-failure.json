@@ -1,0 +1,8 @@
+{
+  "startedAt": "2026-10-03T01:17:12.815Z",
+  "status": "FAIL",
+  "checks": [],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await page.locator('.worked-answer .content').evaluate(el=>el.scrollWidth>el.clientWidth))\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s3/titration/final-browser.mjs:6:249",
+  "finishedAt": "2026-10-03T01:17:14.896Z"
+}

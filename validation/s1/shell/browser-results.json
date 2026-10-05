@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "run": "shell-1790982635289",
+  "focus": "Remaining scenarios after foreman HMR/async-save disposition; earlier successful checks retained in browser-results-first.json",
+  "testedAt": "2026-10-02T23:11:00.139Z",
+  "browser": "154.0.4258.48",
+  "browserLaunch": "Pinned workspace Playwright with installed msedge and project-isolated persistent profiles",
+  "viewport": [
+    1440,
+    1000,
+    390,
+    844
+  ],
+  "checks": [
+    {
+      "name": "rubric freeze / ordered offset evidence",
+      "status": "PASS",
+      "detail": "2 sections freeze; two marking points require exact selected evidence and ordered review via explicit offsets. Native keyboard selection has separate unresolved diagnostic; no native PASS claimed."
+    },
+    {
+      "name": "postnumeric drawing review",
+      "status": "PASS",
+      "detail": "Model hidden during independent calculation; numeric response/time freezes before explicit model/criteria yes-no confirmation; aggregate first evidence only after confirmation."
+    },
+    {
+      "name": "correction non-drag / restoration",
+      "status": "PASS",
+      "detail": "Explicit offsets select exact source range; range and correction survive reload."
+    },
+    {
+      "name": "choice keyboard selection",
+      "status": "PASS",
+      "detail": "Native labelled selection provides keyboard/non-drag alternative."
+    },
+    {
+      "name": "choice-dropdown keyboard selection",
+      "status": "PASS",
+      "detail": "Native labelled selection provides keyboard/non-drag alternative."
+    },
+    {
+      "name": "choice-multiple keyboard selection",
+      "status": "PASS",
+      "detail": "Native labelled selection provides keyboard/non-drag alternative."
+    },
+    {
+      "name": "diagram keyboard selection",
+      "status": "PASS",
+      "detail": "Native labelled selection provides keyboard/non-drag alternative."
+    },
+    {
+      "name": "injected workspace touch / restoration",
+      "status": "PASS",
+      "detail": "Accessible button surface emits semantic editor state, restores exact data, and fits 390px viewport. Full chemistry editor remains activity-stage work."
+    },
+    {
+      "name": "alevel teacher exclusion",
+      "status": "PASS",
+      "detail": "Read-only injected editor, no assessment action, no attempt and no evidence; responsive view."
+    },
+    {
+      "name": "igcse teacher exclusion",
+      "status": "PASS",
+      "detail": "Read-only injected editor, no assessment action, no attempt and no evidence; responsive view."
+    }
+  ],
+  "pageErrors": []
+}

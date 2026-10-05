@@ -1,0 +1,87 @@
+{
+  "startedAt": "2026-10-03T17:51:00.864Z",
+  "browser": "Pinned workspace Playwright + installed Edge, headless actual React UI",
+  "checks": [
+    {
+      "id": "selector-and-url-selection",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:05.621Z"
+    },
+    {
+      "id": "desktop-keyboard-editor-partial-check-uniform-feedback",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:06.142Z"
+    },
+    {
+      "id": "duplicate-exact-priority-independent-undo-restore",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:07.378Z"
+    },
+    {
+      "id": "spectrum-keyboard-zoom-neutral-metadata",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:07.541Z"
+    },
+    {
+      "id": "save-error-memory-guard-retry",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:07.732Z"
+    },
+    {
+      "id": "teacher-readonly-no-pupil-write",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:08.108Z"
+    },
+    {
+      "id": "c3-retained-isolation-navigation-and-history",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:09.246Z"
+    },
+    {
+      "id": "all-correct-lock-completion-restore-restart-isolation",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:10.616Z"
+    },
+    {
+      "id": "repository-transactions-union-validation-no-curriculum-evidence",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:10.685Z"
+    },
+    {
+      "id": "tablet-and-mobile-real-pointer-touch-editing",
+      "status": "PASS",
+      "at": "2026-10-03T17:51:13.570Z"
+    }
+  ],
+  "errors": [],
+  "status": "PASS",
+  "repository": {
+    "counts": {
+      "attempts": 0,
+      "evidence": 0,
+      "sessions": 0
+    },
+    "imported": {
+      "source": {
+        "key": "current",
+        "fingerprint": "import"
+      },
+      "inserted": 2,
+      "duplicates": 0,
+      "skipped": []
+    },
+    "duplicate": {
+      "source": {
+        "key": "current",
+        "fingerprint": "import"
+      },
+      "inserted": 0,
+      "duplicates": 2,
+      "skipped": []
+    },
+    "c3Retained": true,
+    "forgery": "invalid-data",
+    "failure": "quota"
+  },
+  "finishedAt": "2026-10-03T17:51:13.570Z"
+}

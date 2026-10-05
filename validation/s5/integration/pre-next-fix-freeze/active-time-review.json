@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T05:11:54.475Z",
+  "scope": "Review retained native clock/binding continuity and current actual production restore/first-assessment/statistics evidence. This command does not rerun native wall-clock intervals.",
+  "hashMethod": "Native reports and timing source use UTF8 text with optional BOM removed, matching the independent continuity verifier.",
+  "idleAllowances": [
+    {
+      "limitMs": 60000,
+      "evidence": "validation/s2/review-native/partial-verification.json",
+      "native": true
+    },
+    {
+      "limitMs": 180000,
+      "evidence": "validation/s2/review-suspension/disposition.json",
+      "native": true
+    },
+    {
+      "limitMs": 300000,
+      "evidence": "validation/s2/review-suspension/disposition.json",
+      "native": true
+    },
+    {
+      "limitMs": 600000,
+      "evidence": "validation/s3/review-timing/disposition.json",
+      "native": true
+    }
+  ],
+  "currentFreezeTree": "75a6c5c275efc120705e199e9527f8241721d41ab24d7a85284ec9f00aa07b88",
+  "actualCurrentBrowserEvidence": [
+    "validation/s5/behaviour/deep-browser-results.json",
+    "validation/s5/behaviour/revision-browser-results.json",
+    "validation/s5/behaviour/recovery-browser-results.json"
+  ],
+  "preservedLimits": [
+    "A07 replaced-document996ms remains unclassified",
+    "A12 headless9005vs1001 remains unclassified",
+    "Retained Vite post-thaw replacement and conservative whole-tree failures remain ESCALATE raw; accepted boundary dispositions are separate",
+    "A11-specific60/180 idle evidence is headless; shared native-binding evidence carried, no A11-specific native run invented",
+    "Titration adapter raw bytes differ from S3; current constant600000 allowance independently inspected and all current production target timings match native observed600000; clock/binding unchanged. No claim of full S3 host/adapter raw equality",
+    "Final static build timing restore/stats evidence does not relabel prior development-host screenshots as final rendered acceptance"
+  ]
+}

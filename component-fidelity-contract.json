@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "COMPONENT-FIDELITY-20261003",
+  "authority": "User approved plan, requested canonical internal IDs, waived old alpha compatibility, and instructed implementation",
+  "owner": "ROOT",
+  "supersedes": ["Earlier requirements to preserve old question IDs and legacy alpha progress/link compatibility, for this new app only"],
+  "requirements": {
+    "identity": "All curriculum internal and visible question IDs match ^[A-Z]{2,3}-[A-Z0-9]{6}$. Canonical IDs throughout providers, responses, marking, history, persistence and links. Olympiad exempt.",
+    "prefixes": {"acidBase":"AB","electronsBonding":"EB","electronConfiguration":"EC","electronMatching":"ECB","alevelDotCross":"DAC","igcseDotCross":"DC","titration":"TC","calorimetry":"CAL","bondEnthalpy":"BE","structureBonding":"SBC","energyEnthalpy":"EE","energeticsPractical":"EP"},
+    "codes": "Retain compliant IDs; promote existing review codes; fixed permanent collision-checked mappings. Acid-base reversible base36 six-character configuration/seed encoding with bounded seed space using existing codec approach, not truncation/hashing. Same canonical code reproduces same question.",
+    "alpha": "Fresh versioned alpha data namespace; old test storage untouched and unused; no old-code migration or obsolete-code compatibility required. Preserve raw original source references as provenance.",
+    "fidelity": "Reuse original final component DOM/CSS/fonts/SVGs and interactions for electron configuration, reaction profiles, pH curves, typed/numeric answers, written correction, self-review and feedback. Preserve educational distinctions. Scoped React components, not legacy page wrappers.",
+    "chrome": "Keep accepted common masthead, pink code only at top, grade/level pill, footer and invisible timing. No restored redundant headings/timers/pause controls.",
+    "stats": "Single shared original A Level bar-chart SVG component used identically by both courses.",
+    "boundaries": "Only apps/Masters-of-Chemistry implementation/artifacts plus authorized swarm log/archive. Original siblings and their stores untouched. Existing shared assessment engine retains first-score/timing ownership. No Rocket, new activities, deployment or backend. Olympiad remains outside mastery. Preserve accepted dot-cross and molecule editor experience."
+  },
+  "delegation": {"foremen":1,"model":"gpt-6.1-sol","effort":"high","initialWorkers":2,"maximumImplementationWorkers":4,"maximumReviewers":1,"maximumTeamIncludingRoot":7,"workersMayDelegate":false,"retry":"One clarified bounded retry, then root escalation; no silent model substitution"},
+  "stages": [
+    {"id":"F1","title":"Identity and representative UI foundation","workers":["Canonical IDs and alpha namespace","Original reference matrix and typed-answer/correction pilot"],"foreman":"Shared interfaces and Stats icon; validation; no F2 dispatch until root accepts"},
+    {"id":"F2","title":"Full component restoration","workers":["Electron configuration","Reaction profiles","pH curves","Shared typed/numeric/correction/self-review/feedback"],"gate":"Root source and rendered review before independent acceptance"},
+    {"id":"F3","title":"Independent integration and final acceptance","workers":["Independent canonical identity, UI and learning-flow review"],"gate":"Fix failures; root final acceptance"}
+  ],
+  "acceptance": ["Format/uniqueness/round-trip/coverage and generated boundary checks","Fresh data namespace, no writes/reads of old test storage","Original-vs-React equivalent-state rendered evidence: unanswered/partial/incorrect/correct/correction/model","Desktop/tablet/mobile keyboard/pointer/touch-compatible interaction checks","Practice/revision/teacher restoration, first evidence, invisible timing and no correction duplicate evidence","Relevant chemistry/marking regression, typecheck, both builds and release budget checks","Original hashes or known offline metadata unchanged; prior evidence preserved","Final original-source and shared-code diff review plus actual rendered inspection"]
+}

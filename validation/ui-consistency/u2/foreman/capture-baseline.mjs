@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {currentInputs} from '../../../../scripts/current-inputs.mjs';
+const app = path.resolve(import.meta.dirname, '../../../..');
+const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+const walk = dir => fs.readdirSync(dir, {withFileTypes: true}).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
+const accepted = JSON.parse(fs.readFileSync(path.join(app, 'validation/ui-consistency/u1-footer-fix/current-inputs.json'), 'utf8'));
+const inputs = currentInputs();
+assert.deepEqual(inputs, accepted.inputs, 'Root-accepted source/build closure must remain current');
+const files = ['validation/ui-consistency/u1', 'validation/ui-consistency/u1-footer-fix'].flatMap(dir => walk(path.join(app, dir)));
+files.push(path.join(app, 'ui-consistency-contract.json'));
+const rows = files.sort().map(file => ({path: path.relative(app, file).replaceAll('\\', '/'), bytes: fs.statSync(file).size, sha256: hash(fs.readFileSync(file))}));
+const result = {at: new Date().toISOString(), purpose: 'U2 foreman preservation checkpoint after U1 root gate; does not replace original U1 pre-change evidence.', currentInputs: inputs.length, currentInputTree: hash(JSON.stringify(inputs)), frozenArtifacts: rows};
+fs.writeFileSync(path.join(import.meta.dirname, 'preservation-baseline.json'), JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify({currentInputs: result.currentInputs, currentInputTree: result.currentInputTree, frozenArtifacts: rows.length}));

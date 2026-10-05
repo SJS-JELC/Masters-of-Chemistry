@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "pythonVersion": "3.13.5",
+  "rdkitVersion": "2025.09.1",
+  "all23GraphSmilesFormulaChecks": [
+    {
+      "stage": "b",
+      "id": "A",
+      "alternative": 1,
+      "formula": "CH2O2",
+      "canonicalSmiles": "O=CO",
+      "nominalMass": 46,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "B",
+      "alternative": 1,
+      "formula": "C4H10O",
+      "canonicalSmiles": "CC(C)CO",
+      "nominalMass": 74,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "C",
+      "alternative": 1,
+      "formula": "C9H18O3",
+      "canonicalSmiles": "O=C(CCCCO)CCCCO",
+      "nominalMass": 174,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "D",
+      "alternative": 1,
+      "formula": "C3H6O",
+      "canonicalSmiles": "CC(C)=O",
+      "nominalMass": 58,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "E",
+      "alternative": 1,
+      "formula": "CH6N2",
+      "canonicalSmiles": "CNN",
+      "nominalMass": 46,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "F",
+      "alternative": 1,
+      "formula": "CH2O2",
+      "canonicalSmiles": "O=CO",
+      "nominalMass": 46,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "G",
+      "alternative": 1,
+      "formula": "C4H8N4O4",
+      "canonicalSmiles": "NC(=O)NC(NC(N)=O)C(=O)O",
+      "nominalMass": 176,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "G",
+      "alternative": 2,
+      "formula": "C4H8N4O4",
+      "canonicalSmiles": "NC(=O)NC(=O)C(O)NC(N)=O",
+      "nominalMass": 176,
+      "unspecifiedChiralCentres": [
+        [
+          6,
+          "?"
+        ]
+      ]
+    },
+    {
+      "stage": "b",
+      "id": "H",
+      "alternative": 1,
+      "formula": "C2H2O3",
+      "canonicalSmiles": "O=CC(=O)O",
+      "nominalMass": 74,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "J",
+      "alternative": 1,
+      "formula": "CH4N2O",
+      "canonicalSmiles": "NC(N)=O",
+      "nominalMass": 60,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "K",
+      "alternative": 1,
+      "formula": "C2H4O4",
+      "canonicalSmiles": "O=C(O)C(O)O",
+      "nominalMass": 92,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "K",
+      "alternative": 2,
+      "formula": "C2H4O4",
+      "canonicalSmiles": "O=CC(O)(O)O",
+      "nominalMass": 92,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "L",
+      "alternative": 1,
+      "formula": "CO2",
+      "canonicalSmiles": "O=C=O",
+      "nominalMass": 44,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "b",
+      "id": "M",
+      "alternative": 1,
+      "formula": "H3N",
+      "canonicalSmiles": "N",
+      "nominalMass": 17,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "R",
+      "alternative": 1,
+      "formula": "C6H14O2",
+      "canonicalSmiles": "CCOC(C)OCC",
+      "nominalMass": 118,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "S",
+      "alternative": 1,
+      "formula": "C2H6O",
+      "canonicalSmiles": "CCO",
+      "nominalMass": 46,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "T",
+      "alternative": 1,
+      "formula": "C2H4O",
+      "canonicalSmiles": "CC=O",
+      "nominalMass": 44,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "U",
+      "alternative": 1,
+      "formula": "C2H4O2",
+      "canonicalSmiles": "CC(=O)O",
+      "nominalMass": 60,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "V",
+      "alternative": 1,
+      "formula": "C4H6O3",
+      "canonicalSmiles": "CC(=O)OC(C)=O",
+      "nominalMass": 102,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "W",
+      "alternative": 1,
+      "formula": "C6H10O4",
+      "canonicalSmiles": "CC(=O)OCCOC(C)=O",
+      "nominalMass": 146,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "X",
+      "alternative": 1,
+      "formula": "C2H6O2",
+      "canonicalSmiles": "OCCO",
+      "nominalMass": 62,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "Y",
+      "alternative": 1,
+      "formula": "C4H8O2",
+      "canonicalSmiles": "C1COCCO1",
+      "nominalMass": 88,
+      "unspecifiedChiralCentres": []
+    },
+    {
+      "stage": "c",
+      "id": "Z",
+      "alternative": 1,
+      "formula": "C2H4O",
+      "canonicalSmiles": "C1CO1",
+      "nominalMass": 44,
+      "unspecifiedChiralCentres": []
+    }
+  ],
+  "validSourceSvgXmlFiles": 42,
+  "scope": "Supplementary read-only existing-interpreter invariant checks, not managed regeneration. Accompanying substantive chemistry/render review required.",
+  "sourceNamingIssue": {
+    "depictedBiiiSmiles": "CC(C)=NN(C)C=O",
+    "depictedFormula": "C5H10N2O",
+    "depictedNominalMass": 114,
+    "pubchemCID": 9548611,
+    "pubchemSmiles": "C/C=N/N(C)C=O",
+    "pubchemFormula": "C4H8N2O",
+    "pubchemNominalMass": 100,
+    "status": "APPROVED_BOUNDED_MODEL_QUALIFICATION",
+    "independentDisposition": "validation/s3/review-c3-name/wording-disposition.json"
+  }
+}

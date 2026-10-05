@@ -1,0 +1,32 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-FORMATTED-STARTUP",
+  "status": "PASS",
+  "confidence": 0.98,
+  "reason": "Equivalent cold-cache startup reproduces delayed dependency responses beyond30s, while unchanged formatted fixture starts on warm5195; approve exactly one unchanged full suite there.",
+  "outputPaths": [
+    "validation/s4/refinement/review-formatted-startup/HANDOVER.md",
+    "validation/s4/refinement/review-formatted-startup/disposition.json",
+    "validation/s4/refinement/review-formatted-startup/diagnostic.json",
+    "validation/s4/refinement/review-formatted-startup/original-browser-results.json",
+    "validation/s4/refinement/review-formatted-startup/original-browser.mjs.txt",
+    "validation/s4/refinement/review-formatted-startup/original-generation-manifest.json.txt",
+    "validation/s4/refinement/review-formatted-startup/verify-disposition.mjs"
+  ],
+  "validation": {
+    "status": "PASS",
+    "fixtureModification": null,
+    "originalLauncherManifestMatches": true,
+    "substantiveAssertionsUnchanged": true,
+    "coldTimeoutReproduced": true,
+    "warmActualHostReadyMs": 580,
+    "sourceHashesStable": 9,
+    "parentNodeTempRootsVerified": true,
+    "fullBehavior": "Pending one unchanged A20 suite on existing warm5195",
+    "coldDevStartupLimit": "Automatic dependency/transform initialization exceeds30s fixture navigation budget"
+  },
+  "sourceWritesByReviewer": false,
+  "ownBrowsersAndPrivateServerClosed": true,
+  "effectiveModelEffort": null,
+  "usage": null
+}

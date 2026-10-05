@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-03T12:21:21.895Z",
+  "ports": [
+    {
+      "port": 5182,
+      "page": "alevel.html",
+      "status": 404,
+      "vite": false
+    },
+    {
+      "port": 5182,
+      "page": "alevel/alevel.html",
+      "status": 404,
+      "vite": false
+    },
+    {
+      "port": 5183,
+      "page": "alevel.html",
+      "status": 200,
+      "vite": true
+    },
+    {
+      "port": 5183,
+      "page": "alevel/alevel.html",
+      "status": 404,
+      "vite": false
+    }
+  ],
+  "disposition": "5183 source Vite responds. 5182 paths return404; verify prefix/path before reuse, do not stop others."
+}

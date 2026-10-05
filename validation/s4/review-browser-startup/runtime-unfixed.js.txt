@@ -1,0 +1,8 @@
+"use strict";
+if ("development" === "production") {
+	module.exports = require("./cjs/react-jsx-dev-runtime.production.js");
+} else {
+	module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJtYXBwaW5ncyI6IkFBQUE7QUFFQSxzQkFBNkIsY0FBYztDQUN6QyxPQUFPLFVBQVUsUUFBUSwyQ0FBMkM7QUFDdEUsT0FBTztDQUNMLE9BQU8sVUFBVSxRQUFRLDRDQUE0QztBQUN2RSIsIm5hbWVzIjpbXSwic291cmNlcyI6WyJqc3gtZGV2LXJ1bnRpbWUuanM/dj02OTlhZTM2MyJdLCJ2ZXJzaW9uIjozLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5cbmlmIChwcm9jZXNzLmVudi5OT0RFX0VOViA9PT0gJ3Byb2R1Y3Rpb24nKSB7XG4gIG1vZHVsZS5leHBvcnRzID0gcmVxdWlyZSgnLi9janMvcmVhY3QtanN4LWRldi1ydW50aW1lLnByb2R1Y3Rpb24uanMnKTtcbn0gZWxzZSB7XG4gIG1vZHVsZS5leHBvcnRzID0gcmVxdWlyZSgnLi9janMvcmVhY3QtanN4LWRldi1ydW50aW1lLmRldmVsb3BtZW50LmpzJyk7XG59XG4iXSwieF9nb29nbGVfaWdub3JlTGlzdCI6WzBdfQ==

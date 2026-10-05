@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-02T22:35:24.708Z",
+  "checks": [
+    "25 representative source files hashed without writes",
+    "active acid bank contains 38 templates",
+    "AB2 source review identity reproduces question for seed 123",
+    "C3L6 B and C slot unions match actual answer IDs",
+    "Activity ID union matches all twelve authorised registrations exactly",
+    "Contracts have type-only imports and no any/unknown payload erasure"
+  ],
+  "acidRepresentative": {
+    "version": 2,
+    "seed": 123,
+    "level": 1,
+    "structure": "staged",
+    "templateId": "h-to-ph",
+    "templateLabel": "[H⁺] to pH",
+    "familyLabel": "pH and [H⁺]",
+    "target": "pH",
+    "intro": "Calculate the pH of the solution.",
+    "rows": [
+      {
+        "label": "[H⁺] / mol dm⁻³",
+        "value": "0.00250"
+      }
+    ],
+    "responses": [
+      {
+        "key": "ph",
+        "prompt": "Calculate pH.",
+        "symbol": "pH",
+        "unit": "",
+        "expected": 2.602059991327962,
+        "format": "dp2",
+        "tolerance": 0.0051
+      }
+    ],
+    "allResponses": [
+      {
+        "key": "ph",
+        "prompt": "Calculate pH.",
+        "symbol": "pH",
+        "unit": "",
+        "expected": 2.602059991327962,
+        "format": "dp2",
+        "tolerance": 0.0051
+      }
+    ],
+    "working": [
+      "pH = −log₁₀[H⁺] = −log₁₀(0.00250) = 2.60"
+    ],
+    "answerParts": [
+      [
+        "pH = −log₁₀[H⁺] = −log₁₀(0.00250) = 2.60"
+      ]
+    ],
+    "audit": [
+      {
+        "name": "finite physical values",
+        "valid": true,
+        "detail": "All generated answers are finite and non-negative."
+      }
+    ],
+    "reviewId": "AB2-0-1-3F"
+  },
+  "limitations": [
+    "Compile fixtures are semantic examples, not migrated checked banks.",
+    "S0 does not implement runtime or browser acceptance."
+  ]
+}

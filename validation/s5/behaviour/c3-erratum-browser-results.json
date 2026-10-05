@@ -1,0 +1,46 @@
+{
+  "startedAt": "2026-10-03T05:00:57.773Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "native-wrong-k-immutable-history",
+      "status": "PASS",
+      "currentKCorrect": 0,
+      "historicalOutcomeExact": true,
+      "currentB": false,
+      "currentC": false
+    },
+    {
+      "id": "current-correct-k-restart-history",
+      "status": "PASS",
+      "correctedCurrentCompletion": {
+        "a": true,
+        "b": true,
+        "c": true
+      },
+      "historyUnaffectedByCorrectionRestart": true
+    },
+    {
+      "id": "wrong-k-legacy-import-raw-archive",
+      "status": "PASS",
+      "supported": 0,
+      "rawPreserved": true,
+      "challengeUnaffected": true
+    },
+    {
+      "id": "current-full-challenge-statistics-isolation",
+      "status": "PASS",
+      "completion": {
+        "a": true,
+        "b": true,
+        "c": true
+      },
+      "drawingsB": 12,
+      "drawingsC": 9,
+      "curriculumRows": 0,
+      "activeMs": 0
+    }
+  ],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T05:01:11.800Z"
+}

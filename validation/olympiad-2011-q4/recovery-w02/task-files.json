@@ -1,0 +1,222 @@
+{
+  "capturedAt": "2026-10-03T18:44:52.538Z",
+  "files": {
+    "release/alevel.runtime.json": {
+      "sha256": "f9a1c90e5f945a62b7c7f43cfb8877c9386b5abe60482ed9b45299078c05e881",
+      "beforeSha256": "d50a9bd49e6ba8ea128ddf7009c38aa5d34dd121cf2e7eb262e50d908ea7db4f",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "release/igcse.runtime.json": {
+      "sha256": "7927d70a9cce514f85330cd32b0119224b71d709c2b501d86571cd439d25f27d",
+      "beforeSha256": "0c8b61c03836f711b24cca75df634fdbb8a770da2fba4063d3df94162f4abac2",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/prepare-olympiad-2011.mjs": {
+      "sha256": "9a2df43638ac9e0892056df096acf5210b7ff9d4da61035511c311339118a96c",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/prepare-olympiad-regression.mjs": {
+      "sha256": "547e39eb8ce5c9bc4ba34f39ab5361aa8c18e0a5501cace7b42e1a1462e1353c",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/protect-originals.mjs": {
+      "sha256": "29fa4c5c385dae59d6176891f536215b56ebc753ec5012a5ee0a31bbbf059b82",
+      "beforeSha256": "c4772926f38379912a9bcdbdbf8f5d3da8eb0e21c805f968474499bb8120be6b",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/release-s4.mjs": {
+      "sha256": "d79cbdcede13e6332a36c073a9babb8e0b9cc7954bb1b290f1a5ba449df13c7e",
+      "beforeSha256": "44b9647626af29004ad0b7d1d8eb5785428f0e75e667b62af2b1de7b2e726b6f",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/test-olympiad-2011.mjs": {
+      "sha256": "adfe7c377e6505fd441b0f532fe03e7ec928f82b5818c6bf1cc249411a4b2498",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/test_revision_registration.mjs": {
+      "sha256": "e30493da616a46a31d01eb9108ebd5fdd18288b2f399360e2097517602b15bb0",
+      "beforeSha256": "de27cc8257a4c0ca564d5c7cfb6ab05bceeca449e84efe793af4f0f5ddd6bf59",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/tests/c3-regression.test.ts": {
+      "sha256": "ed8e5978dc975a83fa06acf027c1ca92f13390201d15544ab70b02837bd71e27",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/tests/olympiad-2011.test.ts": {
+      "sha256": "4e4fe0f24157a046a25eba3a58c0f328ce9b1d5b3341aef1727cc067315fec34",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/validate-s4-release.mjs": {
+      "sha256": "79190628fd04f300ca5dd8464c7e555fa0562f22d487546c640a166dedfc91e0",
+      "beforeSha256": "f38b506ae475d0f8f5eb1059a747e14e69ed76b712e68e02141f2296b41264dc",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "scripts/write-catalogue-definitions.mjs": {
+      "sha256": "1b6f4ef2fe612733aa1fbfb1aa55c979cc4c1595262fa59269c035b4782a9d06",
+      "beforeSha256": "54ff6cedd8c1202dd9b673a12726f1c76d97907f95e6334ce92ff146ce252cad",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/activities/olympiad/isomers2011/IsomerView.tsx": {
+      "sha256": "2d18b04d6f3a25f050fe01015d998061fe867e30f7bfd4bcf2d3b0f22f3be203",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/activities/olympiad/isomers2011/assets/compound-3.svg": {
+      "sha256": "e2c70e8a6b201e389974056092b2b1c79d2f6d8b24f0085b3f3cb57d3d58bf66",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/activities/olympiad/isomers2011/content.ts": {
+      "sha256": "b5c0b01abb0e702d08ff1a49a0b018d489ed98e65ea25ab0fccbb99a3fde79e7",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/activities/olympiad/isomers2011/index.ts": {
+      "sha256": "f7459e4eb1d764bfe2070b8aea7901b79980d0c9ebd49e3d70a2e2561bcb43aa",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/activities/olympiad/isomers2011/isomers.css": {
+      "sha256": "3622cdb3a37e2f74d9ff8b5b306a5156af3e34970806974bd375836b50cfae59",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/activities/olympiad/isomers2011/policy.ts": {
+      "sha256": "0b06e76e43f883faa429633ea4c58fda4dfbd1a9b8055c3cfd857230e806445b",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/catalogue/definitions.ts": {
+      "sha256": "dff245178a3f6511a02edaf3fe53075e6561cb76f96a25578967a2e41f0f691f",
+      "beforeSha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/catalogue/olympiad-2011-definition.ts": {
+      "sha256": "dc647f9db73620afcecaa1f81da0ca0c6c732a882746b723f96707212394c511",
+      "beforeSha256": null,
+      "status": "new",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/catalogue/registry.ts": {
+      "sha256": "ca8dab412b67cfca05a299371cd7d7a535df3503a6160f633ff45dd83e94b5ee",
+      "beforeSha256": "1160e03814098ddf7ccb5659691f464ef9c207131ed4251f830e8f6bdbd20674",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/catalogue/scope.ts": {
+      "sha256": "0e3f9cebeb63ac4e36576c08300d5368f9fb9f35da5488cfe16fb1ece79fab81",
+      "beforeSha256": "60e29eac3bbf05c3207fedcbb8da2fd31c1749f48b945c592d5b33e5c3dba66e",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/compatibility/LegacyImportView.tsx": {
+      "sha256": "73a5c9de6ae456f8e01452608a49155f1b8a356abe866159c41d8a356257099d",
+      "beforeSha256": "852532bbe18dcbca738f9b61299e2d4e9030068d8f25a4b2661a1f17a2b45826",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/contracts/identity.ts": {
+      "sha256": "08a91956f99cbde2013b771c944ab7b33a29a1f031de935ff1a9eafee90ce231",
+      "beforeSha256": "fb06e70214ae4fda223493c03cbf46e2fb7f2e878f6f0830b567e6996c9d04c6",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/contracts/olympiad.ts": {
+      "sha256": "3d31ea8c45380459278d25d6d7cfc41b93a5e74a1782383f24cb409cb4b7347b",
+      "beforeSha256": "57d096592f6a3c144aa377b56691c01635dc63b6301c84e7642b4b20ca9650d7",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/contracts/registry.ts": {
+      "sha256": "638e1cec198c7220a75401b6ff120cb062d3e0b910a8bbd2218509debce4c6a1",
+      "beforeSha256": "5d67fe98e282a884ea50a8226e5b2575c1243b1604134376cbdea3b490eb7781",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/contracts/repository.ts": {
+      "sha256": "8d30cb24648e3353e704ff81c7ac729c44b638693046c25acf0ee55d6f320535",
+      "beforeSha256": "2942171d9e37c0ce085bff041f9347e65f095288b7b887ef31dd4de3772e0411",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/foundation/ActivityHost.tsx": {
+      "sha256": "9c2752dd7d1522c90c1d1fe07e3bd82f75a406db8b478b2915c5f6ba54151f72",
+      "beforeSha256": "2872382316267e4dc8b87ac594210042696b47ab51e3ef37ae71b3a416569af8",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/foundation/OlympiadHost.tsx": {
+      "sha256": "65422242af7736506ec45f05a123feb81abaf86918402e11123f4e8e1d12571b",
+      "beforeSha256": "8bdede5ae5db8962efc0ae008418f9f10d6a7a9edbb1af923a48e0a8e54bb7fc",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/foundation/ProductionFoundation.tsx": {
+      "sha256": "af227b7ebc163fa1cabdad813fad50c1afb93a5ea6549f17a66b00677e9162bf",
+      "beforeSha256": "16a93ecb3490537f75d87669bc68e0b9a082449bd9ca2c1addae7a496da3b7d5",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/foundation/registry.ts": {
+      "sha256": "f894885007250bb9bf5e5c325dc9713cc713cf02f75c000f5104cdaef5121ed5",
+      "beforeSha256": "a0e4c16aab324c59a3bf10ecf11c91de8ac9dddf07a783a081c204eeff439286",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/persistence/repository.ts": {
+      "sha256": "5b88054113154eac7c3983d7cac1c9c8f4b7ec36853d843a756bf0433a1f5f7f",
+      "beforeSha256": "6c2438c39302d9541ca2529632375ae95006a2da9167f3eb22f0b350a6b033d3",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/persistence/validation.ts": {
+      "sha256": "b50edca56ea56f1a93089b4fa37dda6dbefc48b1236efdc20d9018d9a753a36c",
+      "beforeSha256": "0f3338e5e82262dc19b9ebc4669e56175f3028415e362ad6e153192ecf33e57a",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/shell/navigation-view.ts": {
+      "sha256": "a1d4c28e32fbba54d528a96a051d17736617ba6659241d1d04763fa24f252cec",
+      "beforeSha256": "5f8fd6fbd8f67d837d351cfcaf1f4c8fc1431b9a06bbb30a49883a31c5d95bcb",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    },
+    "src/ui/teacher-catalogue.ts": {
+      "sha256": "d22042e4ed06d1c81884af93ab06a9cd09478fc317dcf634701f44f43f9f4b6e",
+      "beforeSha256": "fd4e6461668079360425466a8e645024366c29cd99650f50875bf7ab12499328",
+      "status": "modified-existing",
+      "scope": "Task-related current state; some shared files also contain unrelated concurrent edits"
+    }
+  },
+  "w02Edits": [
+    "scripts/prepare-olympiad-2011.mjs",
+    "src/activities/olympiad/isomers2011/assets/compound-3.svg",
+    "scripts/prepare-olympiad-regression.mjs",
+    "scripts/tests/c3-regression.test.ts"
+  ],
+  "note": "W02 changes only neutral description markup and configurable evidence paths; W01 implemented the task. Root baseline remains authoritative. Shared diffs include concurrent component work and do not imply its acceptance."
+}

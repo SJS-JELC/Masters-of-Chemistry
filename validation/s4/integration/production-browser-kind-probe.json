@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "startedAt": "2026-10-03T02:50:40.787Z",
+  "checks": [],
+  "pageErrors": [],
+  "builds": {
+    "alevel": "4bd41ba965ac75db28efd296e44e32fb3f481708b6690f067ff981c062758341",
+    "igcse": "f3ee14e958922fc4e296701f92d3a64f3acc4b9082ebe22848822a0fc215ca44"
+  },
+  "failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(question.parts.every(part=>part.kind==='number'))\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s4/integration/production-browser.mjs:18:87",
+  "finishedAt": "2026-10-03T02:50:42.160Z"
+}

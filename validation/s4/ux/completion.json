@@ -1,0 +1,32 @@
+{
+  "stableJobId": "S4-UX",
+  "agentId": "A17",
+  "status": "PASS",
+  "output": "validation/s4/ux/HANDOVER.md",
+  "confidence": 0.94,
+  "requestedModel": "gpt-6.1-sol",
+  "requestedReasoningEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveReasoningEffort": "unknown",
+  "usage": "unknown",
+  "validation": {
+    "catalogue": "validation/s4/ux/catalogue-results.json",
+    "teacherCompleteChecks": "validation/s4/ux/teacher-catalogue-browser-results.json",
+    "finalTail": "validation/s4/ux/accepted-tail-browser-results.json",
+    "touchNetwork": "validation/s4/ux/touch-network-results.json",
+    "timingAndStatistics": "validation/s4/ux/timing-navigation-results.json",
+    "molecule": "validation/s4/ux/molecule-browser-results.json",
+    "sourceHashes": "validation/s4/ux/source-hashes.json",
+    "typecheck": "PASS",
+    "s3RegressionTests": 99,
+    "protectedApps": "PASS",
+    "teacherNavigation": "validation/s4/ux/teacher-navigation-after-results.json",
+    "navigationScope": "validation/s4/ux/navigation-checks.json"
+  },
+  "limits": [
+    "No new native background-state claim; accepted S3 native timing evidence and original limits retained.",
+    "Worker PASS is separate from foreman/root acceptance and S5 independent verification."
+  ],
+  "retainedFailures": "HANDOVER.md records every failed probe and its bounded correction.",
+  "updatedAt": "2026-10-03T03:10:36.097128+00:00"
+}

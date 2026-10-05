@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "startedAt": "2026-10-03T23:05:13.590Z",
+  "checks": [],
+  "errors": [],
+  "failure": "locator.click: Error: strict mode violation: getByRole('button', { name: 'Back to course map', exact: true }) resolved to 2 elements:\n    1) <button type=\"button\" class=\"question-brand-mark\" aria-label=\"Back to course map\">…</button> aka getByRole('button', { name: 'Back to course map' }).first()\n    2) <button type=\"button\" class=\"question-back\" title=\"Back to course map\" aria-label=\"Back to course map\">…</button> aka getByRole('button', { name: 'Back to course map', description: 'Back to course map' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Back to course map', exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u2\\independent\\revision-and-prefix.mjs:8:72",
+  "finishedAt": "2026-10-03T23:05:17.870Z"
+}

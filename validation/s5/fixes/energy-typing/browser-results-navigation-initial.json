@@ -1,0 +1,83 @@
+{
+  "status": "FAIL",
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Teacher preview', exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\energy-typing\\browser-checks.mjs:12:1864\n    at async run (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\energy-typing\\browser-checks.mjs:6:71)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/fixes/energy-typing/browser-checks.mjs:12:1",
+  "results": [
+    {
+      "id": "trusted-delete-sequential-longer-blur-enter",
+      "status": "PASS",
+      "evidence": {
+        "question": "D01",
+        "states": [
+          {
+            "stage": "deleted",
+            "value": "",
+            "semantic": 220
+          },
+          {
+            "stage": "after 2",
+            "value": "2",
+            "semantic": 220
+          },
+          {
+            "stage": "after 0",
+            "value": "20",
+            "semantic": 220
+          },
+          {
+            "stage": "after 0",
+            "value": "200",
+            "semantic": 220
+          }
+        ],
+        "enter": 200,
+        "blur": 300,
+        "decimal": 155.5,
+        "noEvidence": true
+      }
+    },
+    {
+      "id": "invalid-empty-range-nonfinite-recovery-escape",
+      "status": "PASS",
+      "evidence": {
+        "invalidInputs": [
+          "",
+          "400",
+          "Infinity",
+          "wrong",
+          "2e"
+        ],
+        "semanticPreserved": 155.5,
+        "recovered": 200,
+        "escape": true
+      }
+    },
+    {
+      "id": "external-state-undo-reset-pointer-key",
+      "status": "PASS",
+      "evidence": {
+        "undo": true,
+        "externalResponse": true,
+        "reset": 220,
+        "keyboard": 200,
+        "pointer": true,
+        "zeroEvidence": true
+      }
+    },
+    {
+      "id": "all-numeric-controls-endpoint-and-x-local-drafts",
+      "status": "PASS",
+      "evidence": {
+        "endpointTail": 305,
+        "arrowX": 500,
+        "xOutOfRangeKept": true
+      }
+    },
+    {
+      "id": "first-assessment-correction-readonly-next-immutability",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Teacher preview', exact: true })\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\energy-typing\\browser-checks.mjs:12:1864\n    at async run (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\energy-typing\\browser-checks.mjs:6:71)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/fixes/energy-typing/browser-checks.mjs:12:1"
+    }
+  ],
+  "pageErrors": [],
+  "inputEvents": []
+}

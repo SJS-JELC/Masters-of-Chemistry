@@ -1,0 +1,2298 @@
+{
+  "schemaVersion": 1,
+  "course": "alevel",
+  "generatedAt": "2026-10-04T19:25:26.553Z",
+  "status": "local-runtime-inventory-no-publication",
+  "buildRoot": "dist/alevel",
+  "entry": "index.html",
+  "shellGzipBudgetBytes": 204800,
+  "gzipMethod": "node:zlib gzipSync default compression; individual files summed",
+  "initialScope": "course entry plus actual ProductionFoundation, default original landing and their eager imports; excludes deferred providers/editors/statistics/import",
+  "entryOnlyJavascriptGzipBytes": 70484,
+  "initialJavascript": [
+    "assets/alevel-Y9DdiGpH.js",
+    "assets/jsx-runtime-Dk72oS4N.js",
+    "assets/react-dom-X1VypBGM.js",
+    "assets/preload-helper-BaNbYf_w.js",
+    "assets/ProductionFoundation-4CCqThx3.js",
+    "assets/Content-BvpHyxrO.js",
+    "assets/repository-CnPdXuRn.js",
+    "assets/canonical-identity-BbfemJId.js",
+    "assets/policy-C8A-n6Tk.js",
+    "assets/engine-BOiqT4al.js",
+    "assets/definitions-BOZRiy2-.js",
+    "assets/alpha-namespace-xEhFAEHR.js",
+    "assets/persistence-B6ewj_Cc.js",
+    "assets/registry-COeEm8kx.js",
+    "assets/identity-DG87IKCR.js",
+    "assets/dependencies-IbyFZa8N.js",
+    "assets/QuestionChrome-lCTvniY-.js",
+    "assets/mastery-7nqyzpEr.js",
+    "assets/course-mastery-C9EVRbq1.js",
+    "assets/QuestionLevelPill-NjBnMmY6.js",
+    "assets/source-family-DzcIwCwe.js",
+    "assets/landing-LxvC9YwZ.js",
+    "assets/SJS-Eagle-Y-g8FGE-.js",
+    "assets/catalogue-C1Ko9ASt.js",
+    "assets/RecallIcon-D6P3QWpl.js"
+  ],
+  "initialJavascriptGzipBytes": 181280,
+  "lazyJavascript": [
+    "assets/DotCrossPlayer-JMqjxJ51.js",
+    "assets/DrawingDialog-DSNOo0fm.js",
+    "assets/OlympiadHost-C4O8uM0-.js",
+    "assets/RecallView-ChrCyREI.js",
+    "assets/SourceQuestionPlayer-C6kqWnxU.js",
+    "assets/bond-enthalpy-core-B3NxXqut.js",
+    "assets/bond-enthalpy-core-M9vstt1Q.js",
+    "assets/c3l6-BOO4LScT.js",
+    "assets/c3l6-Cn2WJRhh.js",
+    "assets/compatibility-NOeAnr6s.js",
+    "assets/core-BFWXsLAB.js",
+    "assets/core-BSXqJyKP.js",
+    "assets/core-COc-HSB_.js",
+    "assets/core-Ioaehl0T.js",
+    "assets/data-DRsOgynP.js",
+    "assets/data-PGygMTpc.js",
+    "assets/display-DEyThlzt.js",
+    "assets/dot-and-cross-CxzzZBYb.js",
+    "assets/electron-configuration-B7ReRB2w.js",
+    "assets/energy-profile-DCLHUIEw.js",
+    "assets/energy-profile-DGEE1DhX.js",
+    "assets/energy-profile-DtXBhrbd.js",
+    "assets/engine-B3HWeeUt.js",
+    "assets/engine-BPgR3f6M.js",
+    "assets/engine-C5wdZLjG.js",
+    "assets/engine-CXoK2JpW.js",
+    "assets/engine-CcL3yxLU.js",
+    "assets/engine-UF5aSuX5.js",
+    "assets/framework-BmviDFsE.js",
+    "assets/identity-BO4b6x9Y.js",
+    "assets/identity-Db2xAhq5.js",
+    "assets/isomers2011-BLN0igke.js",
+    "assets/layout-BncCbbQB.js",
+    "assets/marking-2sQNnrS1.js",
+    "assets/marking-BKR4iOkM.js",
+    "assets/marking-Bp4W3ro5.js",
+    "assets/marking-BxZxGm59.js",
+    "assets/marking-ByqZXLZs.js",
+    "assets/marking-CA9Gr1Ct.js",
+    "assets/marking-CQl_-q1H.js",
+    "assets/marking-Cgahi7NL.js",
+    "assets/marking-Chm4FhyV.js",
+    "assets/marking-DUaHE0VX.js",
+    "assets/marking-JTSlmc3C.js",
+    "assets/marking-KUc9hFO_.js",
+    "assets/marking-NIvja89r.js",
+    "assets/model-BkCVAwjv.js",
+    "assets/policy-CIQDzu06.js",
+    "assets/provider-1PW88Uq0.js",
+    "assets/provider-6BRDwFo3.js",
+    "assets/provider-B3tKM6BW.js",
+    "assets/provider-BZy8x6GQ.js",
+    "assets/provider-BaEZ1B4J.js",
+    "assets/provider-Bchj3b0p.js",
+    "assets/provider-BtXidDFM.js",
+    "assets/provider-C0UXogSY.js",
+    "assets/provider-C4knNNLj.js",
+    "assets/provider-CGHOmeHy.js",
+    "assets/provider-CL0nklpA.js",
+    "assets/provider-CdDqnUEC.js",
+    "assets/provider-DHPFymvO.js",
+    "assets/provider-DI7R-HMq.js",
+    "assets/provider-DPOJXe6C.js",
+    "assets/provider-DSNpIHbh.js",
+    "assets/provider-DpC5YChp.js",
+    "assets/provider-GZldDoB-.js",
+    "assets/provider-PrYIhOi3.js",
+    "assets/provider-aHLNm46-.js",
+    "assets/statistics-C7_Frvu4.js",
+    "assets/titration-curve-fKxHktbm.js",
+    "assets/types-BQzY_9Qt.js",
+    "assets/types-CGzZHUAK.js"
+  ],
+  "activities": [
+    {
+      "id": "alevel/acid-base-calculations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ],
+      "leafIds": [
+        "u6-t1-1-2",
+        "u6-t1-1-3",
+        "u6-t1-1-5",
+        "u6-t1-1-7",
+        "u6-t1-1-8"
+      ],
+      "activeBank": "AcidBaseLevels.templates",
+      "generatorFamilies": [
+        {
+          "id": "active-v2",
+          "templateCount": 38,
+          "levelRouteCount": 63,
+          "seedDomain": "unsigned uint32, encoded canonically in AB2 review ID"
+        },
+        {
+          "id": "legacy-compatibility",
+          "templateCount": 33,
+          "source": "AcidBaseCore.generate and legacy decoder retained separately"
+        }
+      ],
+      "finiteGeneratorConfigurations": null,
+      "sourceRoot": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/app.js",
+          "bytes": 25796,
+          "sha256": "dc81ed08d58b04794d944658b99c1a78276bbb6609c501f7b9bde54d75637037"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/core.js",
+          "bytes": 57358,
+          "sha256": "7ea6d506602387d1887742fc8f1899dfaf867c2b4f9e0234440b7cf8c2f8093f"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/data.js",
+          "bytes": 7535,
+          "sha256": "0002363d5bb1b723a10806e1faf1038d41af130a2265f96cb89bc1da94db8903"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/index.html",
+          "bytes": 2895,
+          "sha256": "9f0a40b7ccfcfd87540273b40905345c4c5b6169ef264472cd353312156181c2"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+          "bytes": 23719,
+          "sha256": "a5bfb680e23325cb25c25bdeba8024d236be7909a54b9f790a7766a51c2b10b7"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.css",
+          "bytes": 6430,
+          "sha256": "0dd0300492f396362bc0cfa7ce813f56650309d1c84bdc8d78dc264719e3d6d7"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+          "bytes": 66383,
+          "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/app.js",
+          "bytes": 25660,
+          "sha256": "e9af6fc733d2dc33f1c7f0c72602ac8968519f58c92a69af1876ddda2e5221bf"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/core.js",
+          "bytes": 9230,
+          "sha256": "f915737b901b618727bcc8f278400e6e3f665c5e781bb9e04686de44aeaa81d2"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/styles.css",
+          "bytes": 14679,
+          "sha256": "375055e44de7d698d9e276fa94232230f70e957e18d536a76cf7a6d52f68c452"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery-src/template.html",
+          "bytes": 3135,
+          "sha256": "f4ece6f8891429f1cd84d39f7fb2e13900b665dac75d7a5687159af42faa514a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/mastery.html",
+          "bytes": 322167,
+          "sha256": "79b5f2f3bbf700b8f3135232d0a28344dbc0a3a5b3e530c98d90946196b39dcd"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/scaffold.js",
+          "bytes": 3332,
+          "sha256": "0db8306a2dcc32e1a0ecb9b81496788689cff1962948ed0b68592ee53a171228"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/styles.css",
+          "bytes": 18093,
+          "sha256": "26dff981d5c9f826d1de5b4469fd3aca95014a3202256c62ee0a7b82461e199e"
+        }
+      ]
+    },
+    {
+      "id": "alevel/electrons-bonding",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1
+      ],
+      "leafIds": [
+        "l6-t2-1-1"
+      ],
+      "activeBank": "BondingData.questions",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": null,
+      "sourceRoot": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+          "bytes": 17000,
+          "sha256": "5d5d5e814eb20f789c6a1ccdb00a4772c357f63d105882504500e6686eeba82c"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/core.js",
+          "bytes": 2879,
+          "sha256": "f5e833bd177f17f0a26c80242c96de7f257fc1f8f7a464211f158df0919a8381"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+          "bytes": 20140,
+          "sha256": "edacb29ca884603acbb0408fc676786e069e9ce75332a4321b07ccb65cad04f2"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/index.html",
+          "bytes": 3156,
+          "sha256": "588fa564ae7679d4ec38f76d68ab62a126e76f5e967a30781739dca307459980"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/styles.css",
+          "bytes": 4342,
+          "sha256": "8ffa94dcd915d80f4c32812f69d9ec28f6133c958a0c3ed4b19afb9c8f804571"
+        }
+      ]
+    },
+    {
+      "id": "alevel/electron-configurations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ],
+      "leafIds": [
+        "l6-t2-1-2"
+      ],
+      "activeBank": "ElectronData.species",
+      "generatorFamilies": [
+        {
+          "id": "main",
+          "variantCount": 564,
+          "sourceKeyFields": [
+            "speciesId",
+            "direction",
+            "representation"
+          ]
+        },
+        {
+          "id": "matching",
+          "level": 3,
+          "selection": "up to three isoelectronic positives, three negatives, seeded shuffle; complete group-mask 15 in active ECB codec",
+          "templates": [
+            {
+              "counts": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "He",
+                "Li:1",
+                "Be:2"
+              ],
+              "positiveCount": 3,
+              "negativeCount": 68
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Ne",
+                "N:-3",
+                "O:-2",
+                "F:-1",
+                "Na:1",
+                "Mg:2",
+                "Al:3"
+              ],
+              "positiveCount": 7,
+              "negativeCount": 64
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                0,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Ar",
+                "P:-3",
+                "S:-2",
+                "Cl:-1",
+                "K:1",
+                "Ca:2",
+                "Sc:3",
+                "Ti:4"
+              ],
+              "positiveCount": 8,
+              "negativeCount": 63
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                10,
+                2,
+                6
+              ],
+              "positiveIds": [
+                "Kr",
+                "As:-3",
+                "Se:-2",
+                "Br:-1"
+              ],
+              "positiveCount": 4,
+              "negativeCount": 67
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                10,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Ga:3",
+                "Cu:1",
+                "Zn:2"
+              ],
+              "positiveCount": 3,
+              "negativeCount": 68
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                2,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Ti:2",
+                "V:3"
+              ],
+              "positiveCount": 2,
+              "negativeCount": 69
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                3,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "V:2",
+                "Cr:3"
+              ],
+              "positiveCount": 2,
+              "negativeCount": 69
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                4,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Cr:2",
+                "Mn:3"
+              ],
+              "positiveCount": 2,
+              "negativeCount": 69
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                5,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Mn:2",
+                "Fe:3"
+              ],
+              "positiveCount": 2,
+              "negativeCount": 69
+            },
+            {
+              "counts": [
+                2,
+                2,
+                6,
+                2,
+                6,
+                6,
+                0,
+                0
+              ],
+              "positiveIds": [
+                "Fe:2",
+                "Co:3"
+              ],
+              "positiveCount": 2,
+              "negativeCount": 69
+            }
+          ],
+          "templateCount": 10
+        }
+      ],
+      "finiteGeneratorConfigurations": null,
+      "sourceRoot": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/README.md",
+          "bytes": 10255,
+          "sha256": "51c3c2cc131e1bbd32beac3f992dfd6f9d5c62b0138d5f5b9365e66b0bacfca3"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/app.js",
+          "bytes": 20643,
+          "sha256": "008c561dd8227ca193549aab27959184c8eb1e656ea02ac423c266ebf40583ba"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/core.js",
+          "bytes": 6670,
+          "sha256": "5d57fdbf2c27e74fe904deae31cbe83def8c1ca7f2fa2046c7350b89554c007a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/data.js",
+          "bytes": 5108,
+          "sha256": "7f5a4b5b668bc08de0c1d7a1bd794335504de3672702a880c549cf21ec7cafd0"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/index.html",
+          "bytes": 4334,
+          "sha256": "264e80eecaf8714fbdae54843f94927573771769c8ccaedf351485b09ea20d32"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/levels-app.js",
+          "bytes": 28356,
+          "sha256": "5aa42c96f7dfc50a586650bda925f74a989d1aea809085fdd6319099748aeed8"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/levels.js",
+          "bytes": 15391,
+          "sha256": "4bbaaae96cb5d90c18f79960a90c9929b162d131fd595c80c7ce5950191348a9"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/mastery.html",
+          "bytes": 266339,
+          "sha256": "33b1dfa97c229a873209e487a212b2138aa5597ba5987450ee7e79c8a108a039"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/session.js",
+          "bytes": 10391,
+          "sha256": "a5f2ed85e631152fe8ec69ed6eb3fe927a30aa54dea01133b63231af6170190c"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/styles.css",
+          "bytes": 14839,
+          "sha256": "beaba48de0ee9aa4e4a65a5dfa5a8e8c16f3e455fc7c14551f88b67025feaf29"
+        }
+      ]
+    },
+    {
+      "id": "alevel/dot-and-cross",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ],
+      "leafIds": [
+        "l6-t2-1-3"
+      ],
+      "activeBank": "DotCrossData.questions",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": null,
+      "sourceRoot": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/app.js",
+          "bytes": 39437,
+          "sha256": "2a7bda97aed854fc67cf51a5a402e3e1598ecd7f5166dbff2e9c435e89843dda"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/core.js",
+          "bytes": 47196,
+          "sha256": "2300513ad8b155323ae81fa13308435e44813cdfd2fe584bcf5a805f34f7da01"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/data.js",
+          "bytes": 44809,
+          "sha256": "cdf2cff5efaf76f325744c28898681b58570be993cb16499e4584af6ba479432"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/index.html",
+          "bytes": 6957,
+          "sha256": "c0e64f6ba7e716ddfdb02b7f406eaf6ede12ae1f523ac6c189d95b23a9eafc69"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/renderer.js",
+          "bytes": 23025,
+          "sha256": "9fc050d379095ee84dbea25307064c63bcf90e025ed466e77739c38a2464911a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/styles.css",
+          "bytes": 22545,
+          "sha256": "097894f334f3b16f68269a234c60f40ed9b749820048d9e9c8a4646a25a5f8f4"
+        }
+      ]
+    },
+    {
+      "id": "alevel/ph-titration-curves",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        2,
+        3
+      ],
+      "leafIds": [
+        "u6-t1-1-9"
+      ],
+      "activeBank": "TitrationData.questions",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": null,
+      "sourceRoot": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/app.js",
+          "bytes": 20226,
+          "sha256": "63e9784331c9fc03e3ec7b28e2f7ec43fe6660e2bc4515d1d5cdfba34e5773e3"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/core.js",
+          "bytes": 8505,
+          "sha256": "5d9399d8c33c8aa5e80fe7dd7a5b2231ecb1190a73bed768c98970045ee50846"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/data.js",
+          "bytes": 31035,
+          "sha256": "b1c6255a35a1380c867e3183034d03e08bf9c67e2b7d57c622eb815ba75ebf00"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/index.html",
+          "bytes": 6306,
+          "sha256": "cff0edda8296ed7429b947b2089b48745eafc32a7e278d50da69d0a8c48a951a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/session.js",
+          "bytes": 16318,
+          "sha256": "21e29fc7bf87528d202b3b75c8036384664e5fd85b25fa4796a0c9797f47f26b"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/styles.css",
+          "bytes": 16970,
+          "sha256": "3c1385975b25515f10a0e17cf7b26c77768e85c78982af291c550f8250036972"
+        }
+      ]
+    },
+    {
+      "id": "alevel/c3l6-organic-reactions",
+      "course": "alevel",
+      "strand": "olympiad",
+      "revision": false,
+      "supportedLevels": [],
+      "leafIds": [],
+      "activeBank": "C3L6Content.stages",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": null,
+      "sourceRoot": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.css",
+          "bytes": 25170,
+          "sha256": "8eaf785d6e06094c372c4a2e6f80cfa912d0df7b2564d32920ace9832baa5158"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+          "bytes": 16230,
+          "sha256": "98469a93941c5e2559d4022a254a7c5b6b66c32764b24e63e737b72ff029e870"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assessment.js",
+          "bytes": 9237,
+          "sha256": "08279db1bf684e6d2a71514423c433c7a028ef184da928e8785e4e68e6bcbfb5"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-01-p1.svg",
+          "bytes": 6887,
+          "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-01-r1.svg",
+          "bytes": 7484,
+          "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-02-p1.svg",
+          "bytes": 8948,
+          "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-02-r1.svg",
+          "bytes": 6974,
+          "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-03-p1.svg",
+          "bytes": 4975,
+          "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-03-r1.svg",
+          "bytes": 4160,
+          "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-04-p1.svg",
+          "bytes": 3450,
+          "sha256": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-04-p2.svg",
+          "bytes": 4717,
+          "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-04-r1.svg",
+          "bytes": 5447,
+          "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-05-p1.svg",
+          "bytes": 9009,
+          "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-05-r1.svg",
+          "bytes": 5292,
+          "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-06-p1.svg",
+          "bytes": 9918,
+          "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-06-r1.svg",
+          "bytes": 9689,
+          "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-07-p1.svg",
+          "bytes": 7790,
+          "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-07-r1.svg",
+          "bytes": 6198,
+          "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-08-p1.svg",
+          "bytes": 4221,
+          "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-08-p2.svg",
+          "bytes": 5283,
+          "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-08-r1.svg",
+          "bytes": 7655,
+          "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-09-p1.svg",
+          "bytes": 6459,
+          "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-09-r1.svg",
+          "bytes": 4857,
+          "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-10-p1.svg",
+          "bytes": 9730,
+          "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/a/a-10-r1.svg",
+          "bytes": 7683,
+          "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/alarm-pheromone-skeletal-notes.svg",
+          "bytes": 4106,
+          "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/allantoin-skeletal-notes.svg",
+          "bytes": 12141,
+          "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/gyromitra-esculenta.png",
+          "bytes": 95053,
+          "sha256": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+          "bytes": 4523,
+          "sha256": "bb82e202a8571b0e9b43933a08bad83204e4b9fc9de3afb498fbf1893137cf1b"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/honey-bee.png",
+          "bytes": 136906,
+          "sha256": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg",
+          "bytes": 6174,
+          "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/c/network.svg",
+          "bytes": 5580,
+          "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-01.svg",
+          "bytes": 188583,
+          "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-02.svg",
+          "bytes": 188485,
+          "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-03.svg",
+          "bytes": 188485,
+          "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-04.svg",
+          "bytes": 188488,
+          "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-05.svg",
+          "bytes": 189181,
+          "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-06.svg",
+          "bytes": 188133,
+          "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-07.svg",
+          "bytes": 188125,
+          "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-08.svg",
+          "bytes": 188260,
+          "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-09.svg",
+          "bytes": 188769,
+          "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-10.svg",
+          "bytes": 188583,
+          "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-11.svg",
+          "bytes": 188126,
+          "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-12.svg",
+          "bytes": 188130,
+          "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-13.svg",
+          "bytes": 188129,
+          "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-14.svg",
+          "bytes": 188040,
+          "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/intro/example-15.svg",
+          "bytes": 188681,
+          "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image1.jpeg",
+          "bytes": 4952,
+          "sha256": "bb89cbdea7519c3818d6f04cca85c4f6f9143a6f6e4e268bf742841d86776443"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image2.jpeg",
+          "bytes": 4619,
+          "sha256": "7efe2880b1874ff49cba94034ebff8d1199f4d169462504058eb0972cf77862a"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image3.png",
+          "bytes": 135392,
+          "sha256": "70fba5cfade80d892e2472fde5ba1a5f74917a559482cc3db9af88f717052ca7"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image4.png",
+          "bytes": 73527,
+          "sha256": "159abb59e9950edd92b9440e5c9b47793a14e9071ac9513ff5fed703ecdeb266"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image5.png",
+          "bytes": 68057,
+          "sha256": "7ee6ae53296248daa8d65b2d1c8498b2ceee4a6220c474665a76d0978a77102d"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image6.png",
+          "bytes": 326764,
+          "sha256": "41f4c414f211ccbac476466c980396de93830e2c3b994c23d71b89099d4126d2"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/question-image7.png",
+          "bytes": 80634,
+          "sha256": "80d30daedff9c66a14c9be6473d7dceb3209182cde219a2b385da2e2f4bbfa54"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/content.js",
+          "bytes": 49248,
+          "sha256": "85fdff203c58aca7ed51e2773570bfc2bc7ffa0bb78a8ebae346c21a10b9b68c"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/index.html",
+          "bytes": 7661,
+          "sha256": "11f6a4a3df195216172fc34037a04d55b03961948bd66e0936dc9175b0773f4c"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/panels/a.html",
+          "bytes": 6070,
+          "sha256": "33f1f987fb9933e75cfa57e1614b582ee82214856f14e3f051b655ceda4bfca2"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/panels/b.html",
+          "bytes": 7639,
+          "sha256": "ff8e44d740f178a792511df92561645c5c4ec2c249cb058d7fb9702d53f572f7"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/panels/c.html",
+          "bytes": 5814,
+          "sha256": "34d56c4c2ba993ebb936633dc10a357d53edc8a2f5c2cf9f08b37057189b915c"
+        },
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/panels/intro.html",
+          "bytes": 6073,
+          "sha256": "58b769b2224562fe50ef5ef61b745b28b4a2a348b21493c2e3084c446a6d017e"
+        }
+      ]
+    },
+    {
+      "id": "alevel/olympiad-2011-q4",
+      "course": "alevel",
+      "strand": "olympiad",
+      "revision": false,
+      "supportedLevels": [],
+      "leafIds": [],
+      "activeBank": "Seven fixed C4H10O constitutional structures",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": 7,
+      "sourceRoot": "resources/Olympiads/audit/organic-pilot-brief.md",
+      "sourceHashes": [
+        {
+          "path": "development/shared/nmr/olympiad-2011-q4/olympiad-2011-q4-compound-3.svg",
+          "sha256": "07d75b648f1117fadaa701ecb875e68331f2dc4a8a451cea1f9591a257ea1d7d",
+          "symbolOrSection": "User-approved compound 3 spectrum; checked question and answer provenance: resources/Olympiads/audit/organic-pilot-brief.md, immutable question pp6–7 and mark scheme p4. Paraphrased Olympiad extension; no curriculum mastery registration."
+        }
+      ]
+    }
+  ],
+  "requiredBrandAssets": [
+    "assets/SJS-Eagle.svg",
+    "assets/fonts/Comfortaa-Bold.ttf",
+    "assets/fonts/OFL-Comfortaa.txt",
+    "assets/landing/SJS-Eagle.svg",
+    "assets/landing/fonts/Comfortaa-Bold.ttf"
+  ],
+  "provenance": {
+    "inventoryPath": "validation/s0/inventory/coverage-manifest.json",
+    "inventorySha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+    "viteManifestSha256": "0cbf2a29fdc833b37eafec4f724fdbe6d97bd1498b327c31f61afedc06cd3978"
+  },
+  "files": [
+    {
+      "path": "activities/acid-base-calculations/index.html",
+      "bytes": 759,
+      "sha256": "e9d61413f1138a2fd8276fff34b52edebee8a1b0f1a0612b6ecd34f3f06a3d4a",
+      "role": "compatibility-alias"
+    },
+    {
+      "path": "activities/c3l6-organic-reactions/index.html",
+      "bytes": 759,
+      "sha256": "e6e1ce882825799de13a592038ef755333b6749cbe0faa934375a03dd0557f46",
+      "role": "compatibility-alias"
+    },
+    {
+      "path": "activities/dot-and-cross/index.html",
+      "bytes": 732,
+      "sha256": "34bedb925ee06f8e4b888792b2f4d2096d1ef2f0466b9222cc19a477cde7feb2",
+      "role": "compatibility-alias"
+    },
+    {
+      "path": "activities/electron-configurations/index.html",
+      "bytes": 762,
+      "sha256": "dec19d9c41b7ab951254da31aef6ba539a481f66fd5bfb324fe0b4d4eae55b75",
+      "role": "compatibility-alias"
+    },
+    {
+      "path": "activities/electrons-bonding/index.html",
+      "bytes": 744,
+      "sha256": "f498c57eb85532abed8f145ab4e8f75f3b90c4d29530d3b6b1a5236dde106f30",
+      "role": "compatibility-alias"
+    },
+    {
+      "path": "activities/ph-titration-curves/index.html",
+      "bytes": 750,
+      "sha256": "73f1db7a53d768bd724c04bc7eca653cfc0015576ab6757c3250d2271369269e",
+      "role": "compatibility-alias"
+    },
+    {
+      "path": "assets/Comfortaa-Bold-DaLuDTPp.ttf",
+      "bytes": 140172,
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/Content-BvpHyxrO.js",
+      "bytes": 2206,
+      "sha256": "adacbe71cce25e4035d928b73f814471b9e02bb5c179a02b9324ea8c26bcf1d5",
+      "gzipBytes": 958,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/DotCrossPlayer-67Lq1k7o.css",
+      "bytes": 2521,
+      "sha256": "60c44994e98f0d468c0246a14096305f4a383974ce89615cd9f93bec9932d484",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/DotCrossPlayer-JMqjxJ51.js",
+      "bytes": 7005,
+      "sha256": "f8e72d843354b480f7213cabc7a1be361b16450064d834993aeadbb45aca12fa",
+      "gzipBytes": 2634,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/DrawingDialog-C5QmI8PR.css",
+      "bytes": 1073,
+      "sha256": "3e9ac04ebe981e2fbc929a6590702c52bdad81a18fa4157f55a82007577ae0c1",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/DrawingDialog-DSNOo0fm.js",
+      "bytes": 1330,
+      "sha256": "4e169ce4daed69c1ac807301e937d9af293c817bcb4413f9ab8b5f21fd2761ca",
+      "gzipBytes": 714,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/OlympiadHost-C4O8uM0-.js",
+      "bytes": 9698,
+      "sha256": "c532fb935ec01ab89c3311f4461869e79eef71a7025672b72620768ddb90773a",
+      "gzipBytes": 3671,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/OlympiadHost-D6uZ9kYB.css",
+      "bytes": 3161,
+      "sha256": "ec12a2c6d28cac905c2547563bfb5d32b7ab44870b14d9a7aaf070226fd90bc4",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/ProductionFoundation-4CCqThx3.js",
+      "bytes": 80415,
+      "sha256": "9aa31336507b7bed60ad753dc26fd5d6d549a030d7cd1508182f0150fc7125d3",
+      "gzipBytes": 23411,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/QuestionChrome-lCTvniY-.js",
+      "bytes": 1641,
+      "sha256": "30ae3b5f3d8b8e57cddc1a9ad57460233fa91e3f31957035c3ae94d943df1b85",
+      "gzipBytes": 818,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/QuestionLevelPill-CwT3oe4y.css",
+      "bytes": 857,
+      "sha256": "f9c2bcfb4fc05951867ee40d3ae81e4d673dd6e1c9199494f2a35edbe7154f99",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/QuestionLevelPill-NjBnMmY6.js",
+      "bytes": 19795,
+      "sha256": "d69669a4cb6e4b187bda6d5d10788bd1ea6b5747d9dc7b227278d66afb0a9dd3",
+      "gzipBytes": 6014,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/RecallIcon-D6P3QWpl.js",
+      "bytes": 547,
+      "sha256": "ef0c3531de9c598552cd4f2c7d9fa266bce13a864b939de5218b92d6e37d359c",
+      "gzipBytes": 363,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/RecallView-ChrCyREI.js",
+      "bytes": 10533,
+      "sha256": "eef4ff4a48b3cb788c591c12e018aca70ab279580942a7d54ef07a64ed26fd4a",
+      "gzipBytes": 3713,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/RecallView-DxjDm2VF.css",
+      "bytes": 7797,
+      "sha256": "8259288ac1add608c754327937d578d6cc0e3791ce44a54627a8151e14b7b009",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/SJS-Eagle-Y-g8FGE-.js",
+      "bytes": 770,
+      "sha256": "ddb4d2a942c9dd8a2f8e11254be50db28adccad9b6660b63d0fc657b11f53f29",
+      "gzipBytes": 413,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/SJS-Eagle-gPV5upPw.svg",
+      "bytes": 5528,
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/SJS-Eagle.svg",
+      "bytes": 5528,
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+      "role": "licensed-brand-asset"
+    },
+    {
+      "path": "assets/SourceQuestionPlayer-C6kqWnxU.js",
+      "bytes": 27458,
+      "sha256": "0bf1fd43efba1d12a5516f48c92f650d94bc3a1cad06521f42267e649eaacba4",
+      "gzipBytes": 8774,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/SourceQuestionPlayer-dC0UFpUm.css",
+      "bytes": 61125,
+      "sha256": "9c7249a56cc8d62661aaee9f13f229acb2311ee86c2ae54e4bc18931ac129308",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-01-p1-B7lbrCeA.svg",
+      "bytes": 6887,
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-01-r1-CLyJsO-i.svg",
+      "bytes": 7484,
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-02-p1-OjiOrFSK.svg",
+      "bytes": 8948,
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-02-r1-ByyLCGPs.svg",
+      "bytes": 6974,
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-03-p1-eU7CGgOm.svg",
+      "bytes": 4975,
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-03-r1-aA9mPxyz.svg",
+      "bytes": 4160,
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-04-p2-dAwh-l9N.svg",
+      "bytes": 4717,
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-04-r1-Bf5uXb9E.svg",
+      "bytes": 5447,
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-05-p1-D8ELiJut.svg",
+      "bytes": 9009,
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-05-r1-DaggzjaF.svg",
+      "bytes": 5292,
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-06-p1-BllJ0dFl.svg",
+      "bytes": 9918,
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-06-r1-BC-SVKaW.svg",
+      "bytes": 9689,
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-07-p1-tzsCg3f8.svg",
+      "bytes": 7790,
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-07-r1-C6fAdbx9.svg",
+      "bytes": 6198,
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-08-p1-BhrsClnZ.svg",
+      "bytes": 4221,
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-08-p2-D-S-CH0O.svg",
+      "bytes": 5283,
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-08-r1-BxrhkRWY.svg",
+      "bytes": 7655,
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-09-p1-CVYceU8g.svg",
+      "bytes": 6459,
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-09-r1-yd1fQLMm.svg",
+      "bytes": 4857,
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-10-p1-DWARGVV7.svg",
+      "bytes": 9730,
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/a-10-r1-C1H1Uq8w.svg",
+      "bytes": 7683,
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
+      "bytes": 4106,
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/alevel-Y9DdiGpH.js",
+      "bytes": 208597,
+      "sha256": "c91abe2dbc7e63c84efbc5f2d5770fa460adb27cd40d97810c01182c9db48dca",
+      "gzipBytes": 65015,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/allantoin-skeletal-notes-C8SZ2IFM.svg",
+      "bytes": 12141,
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/alpha-namespace-xEhFAEHR.js",
+      "bytes": 525,
+      "sha256": "e1a5f807341367aa657cabd85fd08167d143cec4c12d31b8bdf0978c36a0f4a0",
+      "gzipBytes": 348,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/bond-enthalpy-core-B3NxXqut.js",
+      "bytes": 240472,
+      "sha256": "d9bff56e78e3a03983a5952b097e348500b5db7bc19473f4e805f74511111baf",
+      "gzipBytes": 51402,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/bond-enthalpy-core-M9vstt1Q.js",
+      "bytes": 71,
+      "sha256": "500fc0a97098541fb81e4d92395c36dcd72a621deafce167d2384d40884b0d51",
+      "gzipBytes": 84,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/c3l6-BOO4LScT.js",
+      "bytes": 17313,
+      "sha256": "c29bbc8b52f89c3d8a72785bfa3c9f55aa5f61408b7bb79ffddcfe04409996b9",
+      "gzipBytes": 6300,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/c3l6-Cn2WJRhh.js",
+      "bytes": 36467,
+      "sha256": "1685a0826ce33707e0669e0791c065e85cf4eeebedc79a6665e22dd28d34784a",
+      "gzipBytes": 11154,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/c3l6-DR2Uf9DR.css",
+      "bytes": 16196,
+      "sha256": "f381f5702fddd6de913a09bc5bf30f7bc5217d6a6a3951bd43567ea5c986bdc4",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/canonical-identity-BbfemJId.js",
+      "bytes": 6825,
+      "sha256": "fd08ef10fc7e951bb6f59b01a3472744fa42864be0953ce3a3e65555a713eed0",
+      "gzipBytes": 2701,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/catalogue-C1Ko9ASt.js",
+      "bytes": 10392,
+      "sha256": "5cc78a95d52897efc1786df1630484e6d0f64d02f950deec20145772be7d12fe",
+      "gzipBytes": 3498,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/compatibility-DNtqPy_4.css",
+      "bytes": 852,
+      "sha256": "4a619e5c2d6ff6d4d004602240abe4dafd2b583843598346e852bdf6e3ca1946",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/compatibility-NOeAnr6s.js",
+      "bytes": 12768,
+      "sha256": "de905d0732b3b383ee2aa4e4b0be5a9d8c1cf05d9dee8c4300b4fcc2ff8ce0d1",
+      "gzipBytes": 4692,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/compound-3-CSEI4tRe.svg",
+      "bytes": 79090,
+      "sha256": "e2c70e8a6b201e389974056092b2b1c79d2f6d8b24f0085b3f3cb57d3d58bf66",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/core-BFWXsLAB.js",
+      "bytes": 59,
+      "sha256": "2250d93a23d9cb8982dee4073f6d1a8eb161c9c4d3c8a78534790968b191ded2",
+      "gzipBytes": 74,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/core-BSXqJyKP.js",
+      "bytes": 3944,
+      "sha256": "770c1fba01f51d6d3fc459c84c1e7c96cfebb00e7c5bbb506ecfbae8c9115059",
+      "gzipBytes": 1813,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/core-COc-HSB_.js",
+      "bytes": 57,
+      "sha256": "56880d32be5492ea360a494f1bf601a69cd346d3aab151fc922ce5ee6ec57f92",
+      "gzipBytes": 72,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/core-Ioaehl0T.js",
+      "bytes": 5429,
+      "sha256": "bca4441d0d96dad70ded51669642b4175a402a40a6d0770a193aa778502fc70e",
+      "gzipBytes": 2214,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/course-mastery-C9EVRbq1.js",
+      "bytes": 2422,
+      "sha256": "617f53faa15ee6f8673217d64cf6c31b20118b23cba42651e2ca466e649369c3",
+      "gzipBytes": 1073,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/data-DRsOgynP.js",
+      "bytes": 57,
+      "sha256": "b7134f80430caaa730a310632f19317181c6ef23737746fcb1a6c8e4037b90fe",
+      "gzipBytes": 70,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/data-PGygMTpc.js",
+      "bytes": 14328,
+      "sha256": "24a44747289255de92c5de8907458fa5a5aa0bd33eae59550fc0aaa218e1aa52",
+      "gzipBytes": 2180,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/definitions-BOZRiy2-.js",
+      "bytes": 48952,
+      "sha256": "bc6adf1055ea005c4d947b8610d4f63cd6b3e6a7bacf1638d45d0a6c35398788",
+      "gzipBytes": 8012,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/dependencies-IbyFZa8N.js",
+      "bytes": 342,
+      "sha256": "40baa63b2188a321db2885ec57352f22bec5fff34c46a6c2ed41bae64d3a5e31",
+      "gzipBytes": 195,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/display-DEyThlzt.js",
+      "bytes": 1787,
+      "sha256": "f9f72222bd4fc32591028e840bf4915a47c0b2510bbb40e79596e40c2926c754",
+      "gzipBytes": 1058,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/dot-and-cross-BCzdr7By.css",
+      "bytes": 12321,
+      "sha256": "b07508acc659a544fedd9a338816d6902b01a20edefa88c8dc9326355e8ebeb0",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/dot-and-cross-CxzzZBYb.js",
+      "bytes": 29384,
+      "sha256": "b775fd7a7669c94b6161e507f7d5e88be564cc0a32eabcdbe01ea95ddf648698",
+      "gzipBytes": 9505,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/electron-configuration-B7ReRB2w.js",
+      "bytes": 20056,
+      "sha256": "4b9235d89bd75b223a05af3723d8bc213519a5ed7cf0aa8cd468794b7b3c6207",
+      "gzipBytes": 6294,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/electron-configuration-D5_7OFyi.css",
+      "bytes": 10769,
+      "sha256": "2525f07de3d40f9ff1a5d0026d66a204e7cd494d5d2c847c703e81b1ccfff3c6",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/energy-profile-DCLHUIEw.js",
+      "bytes": 3394,
+      "sha256": "8a2d8b7fbdf969a4d59ce99260ff2510908380dcb1a7b007e5a4bc2520534099",
+      "gzipBytes": 1634,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/energy-profile-DGEE1DhX.js",
+      "bytes": 11274,
+      "sha256": "007557112c0aa5cd3e1e0f1d9d1866570f2c9ca39c5a19f26644b276415d6d9c",
+      "gzipBytes": 4245,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/energy-profile-DK2_48UF.css",
+      "bytes": 3593,
+      "sha256": "a3d4f07224b6b9ca57c3f0dfeec485ac7ccd4fef834f00c8ce5ab2d7907ded86",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/energy-profile-DtXBhrbd.js",
+      "bytes": 75,
+      "sha256": "b1e44fc83b4ce7f990c59bb6ada367e6ca431860afd06d5eb6701dbc13e2b131",
+      "gzipBytes": 86,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/engine-B3HWeeUt.js",
+      "bytes": 1985,
+      "sha256": "e8d00f74f1ac8a09752a11d37b1932be0d0f3a87d0549a053c5347ca92a2c734",
+      "gzipBytes": 820,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/engine-BOiqT4al.js",
+      "bytes": 12596,
+      "sha256": "20e1a1f3038b440d818d5b291bea198ccd1843869e0fec33d4d15baf850fcc45",
+      "gzipBytes": 4726,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/engine-BPgR3f6M.js",
+      "bytes": 39139,
+      "sha256": "d15af2ade88ec3948cd2c6e41b7e4a982c3ff689be7e3c17a87c0616e986b635",
+      "gzipBytes": 10053,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/engine-C5wdZLjG.js",
+      "bytes": 65,
+      "sha256": "634ccf327647fbec7d13bce19a2ddee225898f3c10249b22decd4796a5b8c035",
+      "gzipBytes": 77,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/engine-CXoK2JpW.js",
+      "bytes": 92,
+      "sha256": "c752a9e360fd608bc5b7707bb6ba05c818521f61f94a3688210bf234304fda4c",
+      "gzipBytes": 99,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/engine-CcL3yxLU.js",
+      "bytes": 29488,
+      "sha256": "2ef4672bd6b0efd483593ff3fce12a7a83be90dcfa53233fa0bc55ba53e86b3d",
+      "gzipBytes": 8893,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/engine-UF5aSuX5.js",
+      "bytes": 2558,
+      "sha256": "02924873854eab2292faee9fc4d676dd9ece6c828c823def735589b86d760011",
+      "gzipBytes": 992,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-01-z-ule6NF.svg",
+      "bytes": 188583,
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-02-CO0o4LKf.svg",
+      "bytes": 188485,
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-03-D6k44Rmm.svg",
+      "bytes": 188485,
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-04-Bo4K13nz.svg",
+      "bytes": 188488,
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-05-CRYEGIjy.svg",
+      "bytes": 189181,
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-06-BXoatn3p.svg",
+      "bytes": 188133,
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-07-BjSkFWb4.svg",
+      "bytes": 188125,
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-08-BkHFGDdE.svg",
+      "bytes": 188260,
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-09-eObnlTTe.svg",
+      "bytes": 188769,
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-10-Cdj6GgSb.svg",
+      "bytes": 188583,
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-11-C_sEZP6L.svg",
+      "bytes": 188126,
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-12-BJkQG18m.svg",
+      "bytes": 188130,
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-13-C1QLu3Mg.svg",
+      "bytes": 188129,
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-14-FxDx7nll.svg",
+      "bytes": 188040,
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/example-15-BWGDoFx9.svg",
+      "bytes": 188681,
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/fonts/Comfortaa-Bold.ttf",
+      "bytes": 140172,
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
+      "role": "licensed-brand-asset"
+    },
+    {
+      "path": "assets/fonts/OFL-Comfortaa.txt",
+      "bytes": 4519,
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a",
+      "role": "licensed-brand-asset"
+    },
+    {
+      "path": "assets/framework-BmviDFsE.js",
+      "bytes": 3795,
+      "sha256": "b825f0b0a23f0850551fd8879ec22c0574b02b1b7567464a07c418dacb7d26a7",
+      "gzipBytes": 1874,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
+      "bytes": 4572,
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/identity-BO4b6x9Y.js",
+      "bytes": 2109,
+      "sha256": "c38df090473f46a02274a4c75e7cc9a43c841a3e0cea832d3c006ae2bad11c24",
+      "gzipBytes": 1095,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/identity-DG87IKCR.js",
+      "bytes": 2041,
+      "sha256": "0b6e1e2c5fafd540a5db2449e26223a5224b4767980c46c670e560eea24604e9",
+      "gzipBytes": 1012,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/identity-Db2xAhq5.js",
+      "bytes": 219,
+      "sha256": "c74948db2f2ce61789120e08ed8be8717095ed448136141651f971faeb91ba72",
+      "gzipBytes": 164,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/isomers2011-BLN0igke.js",
+      "bytes": 5889,
+      "sha256": "826d56c6fb020b73c76fad0b67343b697f3010610fdf90e3007c905d371d438a",
+      "gzipBytes": 2267,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/isomers2011-gAsGXFTv.css",
+      "bytes": 2551,
+      "sha256": "0ab836c8c2502fd80da8063c2fc5f12abff7aec61b9798027d4a8e83362084e8",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/jsx-runtime-Dk72oS4N.js",
+      "bytes": 8774,
+      "sha256": "c5f4f8da0038e4082afc00542f93aa1bb64bc5777801d67197507865915a89b6",
+      "gzipBytes": 3327,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/landing-B2P1thQ2.css",
+      "bytes": 94923,
+      "sha256": "e125c59c8a25dd2a2dd77bbb10226344f7ed089b3f162001200a2c07228f6c61",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/landing-LxvC9YwZ.js",
+      "bytes": 24137,
+      "sha256": "c14a42ffa706c11c8ae4adee69237964f96d3954ac1bbb8e1b5f6a3b217c1102",
+      "gzipBytes": 7888,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/landing/SJS-Eagle.svg",
+      "bytes": 5528,
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+      "role": "licensed-brand-asset"
+    },
+    {
+      "path": "assets/landing/fonts/Comfortaa-Bold.ttf",
+      "bytes": 140172,
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
+      "role": "licensed-brand-asset"
+    },
+    {
+      "path": "assets/layout-BncCbbQB.js",
+      "bytes": 6411,
+      "sha256": "68a7eab10f5ff9f7ff7a4252943eb65d474af5a5a6db478550c369da39047f41",
+      "gzipBytes": 2624,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-2sQNnrS1.js",
+      "bytes": 69,
+      "sha256": "45dcb8a1f9a4ee16c1b93002b50b3e2e5cc7653c3d2de014bbcb95a676f538ca",
+      "gzipBytes": 79,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-BKR4iOkM.js",
+      "bytes": 1911,
+      "sha256": "9c97d0dc3b23516e68469c3b73fd9ce878245bbdb4140828f77b26e1bada6809",
+      "gzipBytes": 942,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-Bp4W3ro5.js",
+      "bytes": 1907,
+      "sha256": "ed2361bb70659b5b8069f242c6786220b0099c3cc5dfc9f23bc9da5741cf2950",
+      "gzipBytes": 978,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-BxZxGm59.js",
+      "bytes": 649,
+      "sha256": "754315495d1b06fd4392cd19f25b190c66bbcd8ee61896ceb93c0e3eeedabae2",
+      "gzipBytes": 400,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-ByqZXLZs.js",
+      "bytes": 5388,
+      "sha256": "a24ee0e81805b017e4e6e2b5b9e8985089fe4f8f182c22102f0e223d7041f790",
+      "gzipBytes": 2259,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-CA9Gr1Ct.js",
+      "bytes": 740,
+      "sha256": "cf66c0a79df3c959fb0d4180253cf9277176a9399c7bd905807d7b4745be26d2",
+      "gzipBytes": 432,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-CQl_-q1H.js",
+      "bytes": 473,
+      "sha256": "01ad6813b5a79333e736a7f53de9ab07e43d221639c9c6fb74a2797a53d8b67d",
+      "gzipBytes": 302,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-Cgahi7NL.js",
+      "bytes": 395,
+      "sha256": "c978dadf98dd1475f14465cf0374aab79a6fef5bb9656bdf92bc288c0f00b7b5",
+      "gzipBytes": 278,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-Chm4FhyV.js",
+      "bytes": 815,
+      "sha256": "f3d83f68dd55fd461ef0088fec31e4408e64cd8a46ccc7d8f73611f79786ff78",
+      "gzipBytes": 500,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-DUaHE0VX.js",
+      "bytes": 1233,
+      "sha256": "e7fba9d0ad357121959fd0b35054bafadf7ee67551ec0597785c2c07aed6d45d",
+      "gzipBytes": 636,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-JTSlmc3C.js",
+      "bytes": 1388,
+      "sha256": "2093e4bf2b7042533e87822e040917e42ae00a93d25500d82878f35fe4fd993d",
+      "gzipBytes": 726,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-KUc9hFO_.js",
+      "bytes": 945,
+      "sha256": "7f68e8f7407f5e3c77049e6ddb19788d6b13df78d7690ac9a184b50002f01e5b",
+      "gzipBytes": 463,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-NIvja89r.js",
+      "bytes": 1379,
+      "sha256": "1367a4077b6f26762685ad4dfec6804536bae043985eda5e46ee0ba187226e91",
+      "gzipBytes": 726,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/mastery-7nqyzpEr.js",
+      "bytes": 1470,
+      "sha256": "f6cb58f92cc59559c22c9ebd341e39a9dd5dbc02fd2312eca190d0814fb66a10",
+      "gzipBytes": 713,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/model-BkCVAwjv.js",
+      "bytes": 2351,
+      "sha256": "0e3ff235220548a4e3a8fabb75cc27cb3fb02393ef11b3c3be9de3f1458b6f0b",
+      "gzipBytes": 1165,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/network-DNyUZot2.svg",
+      "bytes": 5580,
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/olive-fly-pheromone-skeletal-notes-c4RfbPuX.svg",
+      "bytes": 6174,
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/persistence-B6ewj_Cc.js",
+      "bytes": 33,
+      "sha256": "bafeaf7a245810f3a94961802a84ef9d2055414bd319bc70150975a87f3cd3b7",
+      "gzipBytes": 53,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/policy-C8A-n6Tk.js",
+      "bytes": 2747,
+      "sha256": "8cb53cd9d70a284144ab5130a7f37c177cf3f89c117631066d7cba05a436b90f",
+      "gzipBytes": 1195,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/policy-CIQDzu06.js",
+      "bytes": 20749,
+      "sha256": "0d088161dbf081c7469fea012d4e3a28f65eb2660a66fe6daf65e00129c98ef9",
+      "gzipBytes": 5499,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/preload-helper-BaNbYf_w.js",
+      "bytes": 1398,
+      "sha256": "49e31bba082196935782ac14bbedbc2a8e7c4229f918bc086ab5dd08ca015034",
+      "gzipBytes": 749,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/provider-1PW88Uq0.js",
+      "bytes": 29053,
+      "sha256": "0596cd17451439dcd3d4b8e8cb6d8bb5978275912cf513c05b72d58fc9f9d303",
+      "gzipBytes": 8914,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-6BRDwFo3.js",
+      "bytes": 189583,
+      "sha256": "62fad604da1aae2d2adbc3f516154231112a305a4f9b97755c49ae6346ca05b3",
+      "gzipBytes": 14435,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-B3tKM6BW.js",
+      "bytes": 272074,
+      "sha256": "8d259209f427de8123a4893545378c57e97ae4f74fe48ea0a2a8490a65b75e9f",
+      "gzipBytes": 20650,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-BZy8x6GQ.js",
+      "bytes": 90,
+      "sha256": "d801f9e8d3a9bd1ed4e0075de59207c835bf9c7c455eb6bf300310a3d99d8efa",
+      "gzipBytes": 94,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-BaEZ1B4J.js",
+      "bytes": 233,
+      "sha256": "012a033ffe8c4522f0e7553ee6e78e60ade22ebfe874bda75b9b79cdfbdaedee",
+      "gzipBytes": 184,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-Bchj3b0p.js",
+      "bytes": 27624,
+      "sha256": "7ac4c4b2c029e00527a96d4bdca1d7bee727150e789cfb2214ef7c416dffee51",
+      "gzipBytes": 7343,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-BtXidDFM.js",
+      "bytes": 15535,
+      "sha256": "c6b9a0868f8ef480d88a04152b56c03137c6c039c9f7fd90053632e30a4dbc6c",
+      "gzipBytes": 4121,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-C0UXogSY.js",
+      "bytes": 53268,
+      "sha256": "ddb31742997e58a24a36bcda183c6c836521d5c34e6020fdf0ecd0212806ffe8",
+      "gzipBytes": 11117,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-C4knNNLj.js",
+      "bytes": 14042,
+      "sha256": "622e8bc1027867dbe489a205362aca031a012708d9484f9841988f1f4d85a8c6",
+      "gzipBytes": 5115,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-CGHOmeHy.js",
+      "bytes": 199,
+      "sha256": "e5ae7a2316caa72a274e6a0e5d456aa87456bfd9e4fe90381562c44688e25895",
+      "gzipBytes": 165,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-CL0nklpA.js",
+      "bytes": 189,
+      "sha256": "a472aecf9353fe048b646e1f9767a8451e5f80bfc6ba59000c2bf8f9706a9a63",
+      "gzipBytes": 138,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-CdDqnUEC.js",
+      "bytes": 6805,
+      "sha256": "875cd941e126b815e91d5eb2b6cafbd1d6daf5fc24de5735a0fa2e7df73a5bf0",
+      "gzipBytes": 2806,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DHPFymvO.js",
+      "bytes": 28347,
+      "sha256": "fba01e915510470687a219d1dec1c1a3d55d1a8865fab4fac5976be8628f6933",
+      "gzipBytes": 3802,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DI7R-HMq.js",
+      "bytes": 91,
+      "sha256": "4a9ee173cd95c0bcde6d2e7f941bd2a206f10e9b111651af69954891d859f285",
+      "gzipBytes": 98,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DPOJXe6C.js",
+      "bytes": 286,
+      "sha256": "2ccebd088e179e9155106d0cad0538d033c2e163bce7d873640a736b416e7228",
+      "gzipBytes": 192,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DSNpIHbh.js",
+      "bytes": 4490,
+      "sha256": "12938143e53eb8a5aedb14fed8ff392cdcc77d29c5841ad54323a59397e4ff92",
+      "gzipBytes": 2103,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DpC5YChp.js",
+      "bytes": 180,
+      "sha256": "449cbc671f8dbced9f87b28c629ee81557a8436f4b009ae31d9ac3ab4878a08d",
+      "gzipBytes": 143,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-GZldDoB-.js",
+      "bytes": 93,
+      "sha256": "898037cf7638affcf43f5fc8d9b5c0db2ba50d9c2856060398f8d8a3896a4e01",
+      "gzipBytes": 98,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-PrYIhOi3.js",
+      "bytes": 107,
+      "sha256": "6c460eb554dc09a7f4f545444f6f77b47f199dcd027db3d42508d61cf53ed281",
+      "gzipBytes": 107,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-aHLNm46-.js",
+      "bytes": 14226,
+      "sha256": "39c686e1ddb80bb3db2a4bccd7850c7d54d163eee545ea953c7a94ad3bcb28e2",
+      "gzipBytes": 3941,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/react-dom-X1VypBGM.js",
+      "bytes": 3864,
+      "sha256": "b372cf8b951696bff593ee22910dbff824e7b341bc6cb4e2f21db32052595946",
+      "gzipBytes": 1393,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/registry-BGVFj63B.css",
+      "bytes": 20753,
+      "sha256": "f91006946e3d9cf52527d23259b55bef4a5503eae532478cb680e56b96a6310b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/registry-COeEm8kx.js",
+      "bytes": 17527,
+      "sha256": "0e5003c88814732b11e903eae3c81fdbb34878ad42d10495d949d842c2569bc2",
+      "gzipBytes": 5652,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/repository-CnPdXuRn.js",
+      "bytes": 130029,
+      "sha256": "e88eedfa5dec92609e21e5d3c853156459017e05304422823c5416918917c754",
+      "gzipBytes": 41458,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/source-family-DzcIwCwe.js",
+      "bytes": 535,
+      "sha256": "9d5ba636511aaf287c68d6cd7a7b5eb39983e0fb5a7e9de234716bf365a1205d",
+      "gzipBytes": 295,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/statistics-C7_Frvu4.js",
+      "bytes": 18636,
+      "sha256": "4eba0ec1b3eb73a833ca1023bf3d69605cffe27f0e6d544749f5084d91eb1ded",
+      "gzipBytes": 6347,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/statistics-Cw33m-Dt.css",
+      "bytes": 12469,
+      "sha256": "405820f912df4961a05f9d919d65470d145a612cfcc8f8af3a525907c61d2be7",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/titration-curve-bnszjQyW.css",
+      "bytes": 12775,
+      "sha256": "29843904fe3e9ff4050797aa9b65cf6093dfa504dce4e5419d6ab25cb9cdb6cb",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/titration-curve-fKxHktbm.js",
+      "bytes": 10640,
+      "sha256": "da819257ab4e21563363437d49607289ff16e40312b6010eb26e7183654df65f",
+      "gzipBytes": 3918,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/types-BQzY_9Qt.js",
+      "bytes": 145,
+      "sha256": "9f829c506148af680d526ffdd40ba8b61b05c95345269e17400ac40f55d42322",
+      "gzipBytes": 138,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/types-CGzZHUAK.js",
+      "bytes": 69,
+      "sha256": "5f569da98a193fd6fa32e3125f6443f2088f194c3b5cfc9436844848b91424f1",
+      "gzipBytes": 84,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "index.html",
+      "bytes": 617,
+      "sha256": "87eb0e8eb828cbc0d5b896c2c92cbe732818a5d2228c9f4922a811cfcfaee245",
+      "role": "entry"
+    }
+  ],
+  "switchableCourses": [
+    "alevel",
+    "igcse"
+  ],
+  "switchableActivities": [
+    {
+      "id": "alevel/acid-base-calculations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "u6-t1-1-2",
+        "u6-t1-1-3",
+        "u6-t1-1-5",
+        "u6-t1-1-7",
+        "u6-t1-1-8"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "alevel/electrons-bonding",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "l6-t2-1-1"
+      ],
+      "supportedLevels": [
+        1
+      ]
+    },
+    {
+      "id": "alevel/electron-configurations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "l6-t2-1-2"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "alevel/dot-and-cross",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "l6-t2-1-3"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "alevel/ph-titration-curves",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "u6-t1-1-9"
+      ],
+      "supportedLevels": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "alevel/c3l6-organic-reactions",
+      "course": "alevel",
+      "strand": "olympiad",
+      "revision": false,
+      "leafIds": [],
+      "supportedLevels": []
+    },
+    {
+      "id": "igcse/calorimetry",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "lower-10-3"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "igcse/bond-enthalpy",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "lower-10-4"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "igcse/structure-and-bonding",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "lower-6-5"
+      ],
+      "supportedLevels": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "igcse/dot-and-cross",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "fourth-3-1",
+        "fourth-3-2"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "igcse/energy-enthalpy",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "lower-10-1"
+      ],
+      "supportedLevels": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "igcse/energetics-practical",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "lower-10-2"
+      ],
+      "supportedLevels": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "alevel/olympiad-2011-q4",
+      "course": "alevel",
+      "strand": "olympiad",
+      "revision": false,
+      "leafIds": [],
+      "supportedLevels": []
+    }
+  ],
+  "hubViews": [
+    {
+      "id": "recall",
+      "courses": [
+        "alevel",
+        "igcse"
+      ],
+      "title": "Recall",
+      "kind": "standalone-self-marked",
+      "starterCardsPerCourse": 6,
+      "mastery": false,
+      "timingEvidence": false,
+      "curriculumRevision": false,
+      "scope": "recall-contract.md",
+      "sourceProvenance": "src/recall/provenance.json",
+      "provenanceSha256": "2e2e3710cfd744d696ab02080d30b8fa6a865cbe4898af73f3c40a7b6c887273"
+    }
+  ]
+}

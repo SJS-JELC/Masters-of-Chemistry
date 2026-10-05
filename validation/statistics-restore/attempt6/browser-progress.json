@@ -1,0 +1,98 @@
+[
+  {
+    "id": "alevel-populated-responsive-interactions",
+    "status": "FAIL",
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5203/alevel.html?course=alevel&view=statistics&run=stats-restore-1791141490715\", waiting until \"networkidle\"\u001b[22m\n\n    at seed (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:38:13)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:54:24\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:33:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:52:3"
+  },
+  {
+    "id": "alevel-empty-responsive",
+    "status": "FAIL",
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5203/alevel.html?course=alevel&view=statistics&run=stats-restore-1791141490715-empty\", waiting until \"networkidle\"\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:79:70\n    at async scenario (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\statistics-restore\\browser.mjs:33:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:78:3"
+  },
+  {
+    "id": "alevel-original-layout-comparison",
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: Month cards must agree with original source for identical historical records\n+ actual - expected\n\n+ [\n+   '27',\n+   '37%',\n+   '3',\n+   '1 / 24',\n+   '2 h 17 min'\n+ ]\n- undefined\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:89:159\n    at async scenario (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:33:51)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/statistics-restore/browser.mjs:84:3"
+  },
+  {
+    "id": "igcse-populated-responsive-interactions",
+    "status": "PASS",
+    "evidence": {
+      "count": 28,
+      "total": 8340000,
+      "seeded": {
+        "fixture": "validated historical records; isolated IndexedDB fixture seed, no migration/import change",
+        "records": 28
+      },
+      "monthOverview": [
+        "27",
+        "37%",
+        "3",
+        "1 / 17",
+        "2 h 15 min"
+      ],
+      "evidenceUnchanged": true,
+      "latest20": {
+        "firstLabel": "Question CAL-5 · Grade 9 · 04/10/2026, 19:58:10 · Incorrect · Time not recorded",
+        "lastLabel": "Question CAL-24 · Grade 5–6 · 04/10/2026, 20:17:10 · Correct · 12 min 30 s"
+      },
+      "backURL": "http://127.0.0.1:5203/alevel.html?course=igcse&view=home&run=stats-restore-1791141490715",
+      "screenshots": [
+        "igcse-desktop-populated.png",
+        "igcse-tablet-populated.png",
+        "igcse-mobile-populated.png"
+      ]
+    }
+  },
+  {
+    "id": "igcse-empty-responsive",
+    "status": "PASS",
+    "evidence": {
+      "noInventedTime": "0"
+    }
+  },
+  {
+    "id": "igcse-original-layout-comparison",
+    "status": "PASS",
+    "evidence": {
+      "original": [
+        {
+          "title": "Recorded attempts",
+          "value": "27"
+        },
+        {
+          "title": "Fully correct",
+          "value": "37%"
+        },
+        {
+          "title": "Gems practised",
+          "value": "3"
+        },
+        {
+          "title": "Levels mastered",
+          "value": "1 / 17"
+        },
+        {
+          "title": "Estimated active time",
+          "value": "2 h 15 min"
+        }
+      ],
+      "current": [
+        "27",
+        "37%",
+        "3",
+        "1 / 17",
+        "2 h 15 min"
+      ],
+      "screenshot": "igcse-original-desktop.png",
+      "scope": "Original sources served read-only, synthetic browser storage on separate task origin. Current header uses shared eagle/arrow/background."
+    }
+  },
+  {
+    "id": "storage-failure-and-retry",
+    "status": "PASS",
+    "evidence": {
+      "retryRecovered": true
+    }
+  }
+]

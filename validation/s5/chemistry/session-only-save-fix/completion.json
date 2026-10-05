@@ -1,0 +1,39 @@
+{
+  "agentId": "A22",
+  "jobId": "S5-CHEMISTRY-SOURCES",
+  "followup": "SESSION-ONLY-SAVE-CURRENT-FREEZE",
+  "status": "PASS",
+  "outputPaths": [
+    "validation/s5/chemistry/session-only-save-fix/HANDOVER.md",
+    "validation/s5/chemistry/session-only-save-fix/verification.json",
+    "validation/s5/chemistry/session-only-save-fix/source-guard.json",
+    "validation/s5/chemistry/session-only-save-fix/ActivityHost.diff"
+  ],
+  "priorAcceptancePaths": [
+    "validation/s5/chemistry/completion.json",
+    "validation/s5/chemistry/next-save-fix/completion.json"
+  ],
+  "confidence": 0.97,
+  "reason": "Latest517 freeze bytes match; Host-only source correction leaves all chemistry/marking/editors/C3 and original237 exact; three actual production continuity checks and inspected screenshots pass.",
+  "validation": {
+    "latestFreeze": "c1c56180ba0bedb54cfa88eb666b22cb951869371488ef332c7a23e0c00e6812",
+    "previousFollowupFreeze": "35e6c969f6b9f5fefff7577922dd6703b6a645dc2308a460d44d19d3ce790eb1",
+    "exactInputs": 517,
+    "sourceChangeOnly": "src/foundation/ActivityHost.tsx",
+    "chemicalContentMarkingEditorsC3Unchanged": true,
+    "originalSourceFingerprintsUnchanged": 237,
+    "substantivePriorAndFirstFollowupPreserved": true,
+    "productionChecks": 3,
+    "actuallyInspectedScreenshots": 3,
+    "runtimeErrors": 0,
+    "browserRetries": 0,
+    "resourcesClosed": true,
+    "actualSessionOnlyLifecycleOwner": "A21",
+    "remainingLimits": "Prior full OCR PDF/canonical managed Python, seed-space, formal-model and offline/wider-original boundaries remain explicit and unchanged."
+  },
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveEffort": "unknown",
+  "usage": null
+}

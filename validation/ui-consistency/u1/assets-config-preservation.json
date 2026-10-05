@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T22:23:13.269Z",
+  "baseline": "Accepted F3 final build-source-inputs.json; includes final Olympiad additions as dependencies",
+  "checked": [
+    {
+      "path": ".prettierrc.json",
+      "bytes": 106,
+      "sha256": "35080a3d925e9d6fd8fe8d8ad8792a5f810481eca547bc12755e5c51856656ab"
+    },
+    {
+      "path": "alevel.html",
+      "bytes": 351,
+      "sha256": "6d2f8b0b28a61f1df4c563d2a5b84705684c185793586829c492b2933864aa80"
+    },
+    {
+      "path": "igcse.html",
+      "bytes": 348,
+      "sha256": "37530bfeb43aabd47f90b8d31ae2ac7fc7f7a6039346d5db2645eedd9484830c"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 30605,
+      "sha256": "4560e1664de6af8268a6d4806ee6dd2ff3471a7bec556e3fef956e9639376bd1"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1420,
+      "sha256": "f0bcd2851d2c192be32927299e364001ea45152dcc3e76b22221ae195f99a2d5"
+    },
+    {
+      "path": "public/assets/SJS-Eagle.svg",
+      "bytes": 5528,
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "public/assets/fonts/Comfortaa-Bold.ttf",
+      "bytes": 140172,
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "public/assets/fonts/OFL-Comfortaa.txt",
+      "bytes": 4519,
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a"
+    },
+    {
+      "path": "public/assets/landing/SJS-Eagle.svg",
+      "bytes": 5528,
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404"
+    },
+    {
+      "path": "public/assets/landing/fonts/Comfortaa-Bold.ttf",
+      "bytes": 140172,
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 806,
+      "sha256": "08b88324e689cc16393077c661a2205b466ecfbef524d71ff5dabc7f74023ef6"
+    },
+    {
+      "path": "scripts/check-release.mjs",
+      "bytes": 484,
+      "sha256": "752c1a43a61e42067c58b4119f4b395384875dddf641f5a2341f594b981cc18f"
+    },
+    {
+      "path": "scripts/current-inputs.mjs",
+      "bytes": 1314,
+      "sha256": "03646d0a9546a2ffa92bbc3d5e5551634ee78f03d305ae9802ef44c7f304362b"
+    },
+    {
+      "path": "scripts/preview.mjs",
+      "bytes": 1682,
+      "sha256": "ff72b26f7d6093e6278f1b044212dd006e2f2aec233478ed50d9271ef0ee3440"
+    },
+    {
+      "path": "scripts/release-s4.mjs",
+      "bytes": 5359,
+      "sha256": "d79cbdcede13e6332a36c073a9babb8e0b9cc7954bb1b290f1a5ba449df13c7e"
+    },
+    {
+      "path": "scripts/test-s5.mjs",
+      "bytes": 2041,
+      "sha256": "cefaf63556742e9f0da224d40b4b5122ced333541aa0f3ab08abc32904454d76"
+    },
+    {
+      "path": "scripts/validate-s4-release.mjs",
+      "bytes": 4922,
+      "sha256": "79190628fd04f300ca5dd8464c7e555fa0562f22d487546c640a166dedfc91e0"
+    },
+    {
+      "path": "scripts/verify-s5.mjs",
+      "bytes": 4096,
+      "sha256": "3afaa218ce509f62935c11c5e2a5e361d73b4afb96a095e8d1d51a8dc8bb098e"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 934,
+      "sha256": "d9a12e3019af054e8eeefef1546e78abfec0b887fe3a5dfa682e0bad568a66b8"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 610,
+      "sha256": "fa62aa1cf5ef853d1c705993fafe722f0e9dcbf0f16125694ac0a8c586703593"
+    }
+  ],
+  "scope": "All public assets, dependencies/lock/configuration, course entries and relevant build scripts remain byte-identical. Outlined chemistry and NMR sources separately checked in source/OLY audits."
+}

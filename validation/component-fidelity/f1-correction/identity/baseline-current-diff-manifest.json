@@ -1,0 +1,140 @@
+{
+  "baseline": "validation/component-fidelity/f1-correction/baseline.json",
+  "rows": [
+    {
+      "path": "src/activities/alevel/acid-base-calculations/identity.ts",
+      "baselineSha256": "81ec353ff89913f18c7e232ae8b32d5baf30a92e7105fc7de73b15f8b1afab4c",
+      "currentSha256": "d0534bd42aef3b131905e12cb866f9f44bcf2d3500e667d1ee2b8ecdfdfb9678",
+      "changed": true,
+      "beforeTextCaptured": true
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "baselineSha256": "d416b99b4572616ffa7b80bd9950b68ac6486b940a74fe2ad96f13685f8867d9",
+      "currentSha256": "c53673ff1539b5f22db902e2da18e829664c89ed4021cc59ea3447887edf693a",
+      "changed": true,
+      "beforeTextCaptured": true
+    },
+    {
+      "path": "src/development/catalogue/index.tsx",
+      "baselineSha256": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e",
+      "currentSha256": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e",
+      "changed": false,
+      "beforeTextCaptured": true
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "baselineSha256": "6bb779c17714c8f7194a07f44ed53addf7a895f1df1592022a231abca5c1c63d",
+      "currentSha256": "9151898f431a174d3455de4cdc04f2213b9e51c6261e42fde9199e2201494451",
+      "changed": true,
+      "beforeTextCaptured": true
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "baselineSha256": "c9fdb7d2e773d087f02ca39e1689fa31354f4c904a4b3cf9187da53eddf8b353",
+      "currentSha256": "2872382316267e4dc8b87ac594210042696b47ab51e3ef37ae71b3a416569af8",
+      "changed": true,
+      "beforeTextCaptured": true
+    },
+    {
+      "path": "src/persistence/alpha-namespace.ts",
+      "baselineSha256": "409b031f3af501259281d4f3b8563f63630c46d7cedcf79ee7216f069e2be24b",
+      "currentSha256": "7cec629d5a9ee1123ca3c5afe5c0312c50ef7a888f07bbb078f1282f36d6b714",
+      "changed": true,
+      "beforeTextCaptured": true
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "src/development/identity.ts",
+      "beforeSha256": null,
+      "sha256": "e6266c9c4e56cd40c2e88f6679b07c7af79f5fa47d7c8ad2a52e3645dcc5a06c",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/family-slots.json",
+      "beforeSha256": null,
+      "sha256": "e41b0e1735cfce17dcea02a8087bf84b26c553f8d2be2e097954eef99fcfd7d7",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/authoring-plan.json",
+      "beforeSha256": null,
+      "sha256": "e50140ceb1dfb3cf70ee08f816ffd60e0e6cee0527c6983fd290a43c6989e67d",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/browser.mjs",
+      "beforeSha256": null,
+      "sha256": "9cb3bc3279a685d1df080636eb8ce4000b58316775f38b7d9d26f33979ceb13b",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/Catalogue.tsx",
+      "beforeSha256": null,
+      "sha256": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/data.ts",
+      "beforeSha256": null,
+      "sha256": "a662641e71f67f289ff3c76accd541ade716a8194e38f26c0c6f63caa0c5de32",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/family.test.mjs",
+      "beforeSha256": null,
+      "sha256": "9494a6769c960694de0c6c51f0df2a4d181c380763bd1cdcfffd71ae1511f83b",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/family.ts",
+      "beforeSha256": null,
+      "sha256": "0f09a346a255f8b65f37426050ea24f8a0191e7ef5bae7873ca5993ea668323e",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/generation-manifest.json",
+      "beforeSha256": null,
+      "sha256": "c59631deda3cd0477748116bb623e48d65b226e2f992b6f2e4909f829473f333",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/mount.tsx",
+      "beforeSha256": null,
+      "sha256": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/preview.html",
+      "beforeSha256": null,
+      "sha256": "40762055bfaa4625fdc3eb83e71fb1fdfc28dadc9ebbb900173d298acab5cc9a",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/provenance.ts",
+      "beforeSha256": null,
+      "sha256": "8b26d3a9ea4e48c99e4f8a35c8ff64c83b1e8d40fb7e0bad10addac689645b8b",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/README.md",
+      "beforeSha256": null,
+      "sha256": "d40719649eaadd03e603521ac6689a5cc741fedb77ee98d7725050cb8bb3a731",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/registry.ts",
+      "beforeSha256": null,
+      "sha256": "9c0accfd0aef26bc74f6207f8fe0a197aee45e8b258765b2499303e5c8e44e59",
+      "diff": "before-current-source.patch"
+    },
+    {
+      "path": "development/authoring/families/dev-canonical-correction/tsconfig.json",
+      "beforeSha256": null,
+      "sha256": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c",
+      "diff": "before-current-source.patch"
+    }
+  ],
+  "exactTextDiff": "before-current-source.patch"
+}

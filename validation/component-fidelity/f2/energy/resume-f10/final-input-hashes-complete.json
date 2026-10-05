@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-03T19:02:58.505Z",
+  "captures": "final covers nine variants; final-control-font supersedes D05/D08 controls after scoped font fix; source geometry unchanged",
+  "sharedSemanticGuard": "SourceQuestionPlayer guard verified by invalid-enter-final; no visual change",
+  "files": [
+    {
+      "file": "src/editors/energy-profile/index.tsx",
+      "sha256": "6cb213df23c4505245c273dd37747bec99654c2fbf0476d1a41f86cf63650356"
+    },
+    {
+      "file": "src/editors/energy-profile/styles.css",
+      "sha256": "1727009ae9c8bb5582326542c7838af981233914071124444dcae202723cbdc3"
+    },
+    {
+      "file": "src/chemistry/energy-profile/svg.ts",
+      "sha256": "9a1cc32acaf3b91723c1187c3299d7b770ef35fdb78f17d8a97344220d309311"
+    },
+    {
+      "file": "src/ui/SourceQuestionPlayer.tsx",
+      "sha256": "fca09c309dc972824d0b8e804924e865f4444503af7722afb5b35fd859c995da"
+    },
+    {
+      "file": "src/ui/source-presentation.ts",
+      "sha256": "779da9b289898f9a4cf3bf83e3b018a0d534460efb16311b574faa82de745a61"
+    },
+    {
+      "file": "src/ui/SourceResponseControl.tsx",
+      "sha256": "df98574be8a2d6c98f2d5e24857884d55fa5cca417b60073faf20e4dc1846ab6"
+    },
+    {
+      "file": "src/ui/NumericWorkingControl.tsx",
+      "sha256": "7bef6fc8a327d0c4bb3e64589acd9d256b0bfcbb9c6a925f35034cff13157224"
+    },
+    {
+      "file": "src/ui/source-adapters.css",
+      "sha256": "afa0482650c0e6ef61d05f14f36d88d46913edaed1c62f88cb147d78d5d60bb6"
+    }
+  ]
+}

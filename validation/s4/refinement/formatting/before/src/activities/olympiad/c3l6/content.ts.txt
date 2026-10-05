@@ -1,0 +1,29 @@
+import type {C3L6Challenge,C3BUnitId} from '../../../contracts/olympiad.ts';
+import type {ContentBlock} from '../../../contracts/question.ts';
+import panels from './panels.json';
+import {sourceBank,bUnits} from './source-bank.ts';
+import {c3Dependencies} from './dependencies.ts';
+import {c3HydrazoneQualification as qualification} from './qualification.ts';
+export {sourceBank,bUnits} from './source-bank.ts';
+const urls=import.meta.glob('./assets/digitised/**/*.svg',{eager:true,query:'?url',import:'default'}) as Record<string,string>;
+export const c3Image=(path:string)=>urls['./'+path]??'';
+const text=(text:string):ContentBlock=>({kind:'text',text});
+const image=(path:string,alt:string):ContentBlock=>({kind:'image',src:c3Image(path),alt});
+const contexts:Record<C3BUnitId,readonly ContentBlock[]>={
+ 'b-i':[text('An alarm pheromone in the honey bee (Mr 102) + H₂O ⇌ A (46) + B (74). Suggest the hydrolysis products.'),image('assets/digitised/b/alarm-pheromone-skeletal-notes.svg','Honey bee alarm pheromone: methanoate ester of 2-methylpropan-1-ol')],
+ 'b-ii':[text('A sex pheromone of the olive fly (Mr 156) + H₂O ⇌ C (174). Suggest the hydrolysis product.'),image('assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg','Olive fly pheromone: cyclic ketal with two four-carbon chains')],
+ 'b-iii':[text(qualification.student.context),image('assets/digitised/b/gyromitrin-skeletal-notes.svg',qualification.student.imageAlt)],
+ 'b-iv-1':[text('Allantoin (Mr 158) + H₂O ⇌ G (176). Draw the first hydrolysis product.'),image('assets/digitised/b/allantoin-skeletal-notes.svg','Allantoin, a five-membered ring with two carbonyl groups and a ureido group')],
+ 'b-iv-2':[text('Continue the sequence: G (176) + H₂O ⇌ H (74) + 2 J (60). Your saved G appears below.')],
+ 'b-iv-3':[text('Continue from your saved H: H (74) + H₂O ⇌ K (92). Suggest the product.')],
+ 'b-iv-4':[text('Continue from your saved J: J (60) + H₂O ⇌ L (44) + 2 M (17). Suggest both products.')]
+};
+export const c3Challenge:C3L6Challenge={activityId:'alevel/c3l6-organic-reactions',
+ introduction:[text('Cambridge Chemistry Challenge Lower Sixth, 2012 question 2. Olympiad extension. Classify simple organic reactions and reason from functional groups, molecular masses and linked structures.'),
+ ...panels.paragraphs.map(text),...Array.from({length:3},(_,level)=>({kind:'table' as const,headers:[`Level ${level+1}: carbon has ${level+1} bond${level?'s':''} to electronegative atoms`],rows:[] })),
+ ...Array.from({length:15},(_,i)=>image(`assets/digitised/intro/example-${String(i+1).padStart(2,'0')}.svg`,`Functional-group level ${Math.floor(i/5)+1}, example ${i%5+1}; circled carbon`))],
+ classifications:sourceBank.stages.a.answers.map(a=>({...a,reaction:(panels.reactions.find(r=>r.id===a.id)?.images??[]).flatMap((im,i)=>[...(i===1?[text('→')]:i>1?[text('+')]:[]),image(im.src,im.alt)])})),
+ hydrolysis:bUnits.map(unit=>({unitId:unit.id,context:contexts[unit.id],slots:unit.slots.map(id=>sourceBank.stages.b.answers.find(a=>a.id===id)!)})),
+ network:{context:[text('Draw mystery compounds R–Z. All contain only C, H and O. Each carbon is bonded to exactly one other carbon; no C=C or C≡C bonds occur. A C=O bond is usually more thermodynamically stable than two C–OH bonds.'),text('Hydrolysis of R gives 2 S + T; S oxidises to T, then T oxidises to U. Hydrolysis of W gives 2 U + X. V hydrolyses to 2 U. Y hydrolyses to 2 X. Z hydrolyses to X; dimerisation of Z gives Y.'),image('assets/digitised/c/network.svg','Reaction network R–Z with oxidation, hydrolysis and dimerisation relationships')],slots:sourceBank.stages.c.answers},
+ dependencies:c3Dependencies
+};

@@ -1,0 +1,39 @@
+{
+  "issueId": "C3-BIII-NAME-STRUCTURE",
+  "status": "RESOLVED_APPROVED_BOUNDED_MODEL_QUALIFICATION",
+  "reportedBy": "A16",
+  "sourcePaths": [
+    "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/panels/b.html",
+    "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assets/digitised/b/gyromitrin-skeletal-notes.svg",
+    "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/content.js"
+  ],
+  "sourceClaim": {
+    "name": "Gyromitrin",
+    "nominalMass": 114
+  },
+  "depictedStructureInterpretation": {
+    "smiles": "CC(C)=NN(C)C=O",
+    "formula": "C5H10N2O",
+    "nominalMass": 114,
+    "hydrolysisProducts": [
+      "propanone / C3H6O / 58",
+      "methylhydrazine / CH6N2 / 46",
+      "methanoic acid / CH2O2 / 46"
+    ]
+  },
+  "primaryReference": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Gyromitrin",
+    "cid": 9548611,
+    "accessDate": "2026-10-03",
+    "name": "Gyromitrin",
+    "formula": "C4H8N2O",
+    "molecularWeight": "100.12 g/mol",
+    "smiles": "C/C=N/N(C)C=O"
+  },
+  "invariantEvidence": "validation/s3/c3l6/rdkit-results.json sourceNamingIssue; actual existing Python3.13.5/RDKit2025.09.1 read-only supplementary check",
+  "scope": "Source graph/products/Mr are internally consistent, but real-compound naming differs. Source original paper/historical chemistry review is not recovered; no offline placeholder hydrated.",
+  "ownership": "A07 independent review approved exact qualification; A01 authorised implementation. Protected originals, glyph geometry, bank graphs/IDs/Mr/answers and completion unchanged.",
+  "disposition": "validation/s3/review-c3-name/wording-disposition.json",
+  "implementation": "src/activities/olympiad/c3l6/qualification.json; exact student/teacher/public SVG metadata applied",
+  "geometryEvidence": "validation/s3/c3l6/output-fingerprints.json metadataQualifiedAssets"
+}

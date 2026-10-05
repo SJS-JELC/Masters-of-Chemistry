@@ -1,0 +1,4166 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-03T00:58:04.077Z",
+  "comparison": "Accepted S1 retained hashes; no root Git repository or git diff claimed.",
+  "exclusions": [
+    "node_modules",
+    ".npm-cache",
+    "dist",
+    ".vite",
+    ".browser",
+    "browser-profile",
+    "browser-profiles",
+    "p",
+    "p-edge",
+    "p-ordinary",
+    "validation/s2/foreman-report.json",
+    "validation/s2/file-inventory.json",
+    "hidden isolated browser profiles"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 63,
+      "sha256": "a3a3e1d47c8ea559e26b23b778c11ec21c5219685cb6b125c3ecd52b22053167",
+      "status": "unchanged",
+      "priorSha256": "a3a3e1d47c8ea559e26b23b778c11ec21c5219685cb6b125c3ecd52b22053167",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3861,
+      "sha256": "c184a065b7bd08e6b70c77f530afd46817ea6b4bc50b9cabf8533b3ecc03107e",
+      "status": "unchanged",
+      "priorSha256": "c184a065b7bd08e6b70c77f530afd46817ea6b4bc50b9cabf8533b3ecc03107e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "alevel.html",
+      "bytes": 351,
+      "sha256": "6d2f8b0b28a61f1df4c563d2a5b84705684c185793586829c492b2933864aa80",
+      "status": "unchanged",
+      "priorSha256": "6d2f8b0b28a61f1df4c563d2a5b84705684c185793586829c492b2933864aa80",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "docs/architecture/README.md",
+      "bytes": 16483,
+      "sha256": "41994b30454c0b56f06b185594451d8a63c425fff673496a0bfee9d84e6440db",
+      "status": "unchanged",
+      "priorSha256": "41994b30454c0b56f06b185594451d8a63c425fff673496a0bfee9d84e6440db",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "docs/architecture/s1-attempt.md",
+      "bytes": 9737,
+      "sha256": "ffc8e1631bfd506f099ad381bd49d959529f577c12c2bedcda1456fa851c35ad",
+      "status": "unchanged",
+      "priorSha256": "ffc8e1631bfd506f099ad381bd49d959529f577c12c2bedcda1456fa851c35ad",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "docs/architecture/s1-work-packages.md",
+      "bytes": 10637,
+      "sha256": "e3c8bb0737a81c80ecae6d9dcb121c3fa8cde091ea1e6034c687273e44494d82",
+      "status": "unchanged",
+      "priorSha256": "e3c8bb0737a81c80ecae6d9dcb121c3fa8cde091ea1e6034c687273e44494d82",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "docs/architecture/s2-work-packages.md",
+      "bytes": 6814,
+      "sha256": "4329eddc53f034e9b654a76a2da1c45febb65a7fc1075fa7717de14f5f2157a4",
+      "status": "unchanged",
+      "priorSha256": "4329eddc53f034e9b654a76a2da1c45febb65a7fc1075fa7717de14f5f2157a4",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "docs/architecture/s3-work-packages.md",
+      "bytes": 7659,
+      "sha256": "170d00bdd7a092ff7f349d926ccdeed90c51610583bad66b99feef42c20dc4bf",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "docs/inventory/migration-inventory.md",
+      "bytes": 26556,
+      "sha256": "fa5c251c3dc9a78b8d1abf003c38b2ab0f362dbf70a2d3353f5cea17cf5cdb6d",
+      "status": "unchanged",
+      "priorSha256": "fa5c251c3dc9a78b8d1abf003c38b2ab0f362dbf70a2d3353f5cea17cf5cdb6d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 1658,
+      "sha256": "e7b99e71b55be422fd6df75819dea878c70d54be3656aeae406471b03b4006a2",
+      "status": "modified",
+      "priorSha256": "5e33d8d0758ebb96acf150abab2c8c66554c7128c66aa4968675e0a1cef011e9",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "igcse.html",
+      "bytes": 348,
+      "sha256": "37530bfeb43aabd47f90b8d31ae2ac7fc7f7a6039346d5db2645eedd9484830c",
+      "status": "unchanged",
+      "priorSha256": "37530bfeb43aabd47f90b8d31ae2ac7fc7f7a6039346d5db2645eedd9484830c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "IMPLEMENTATION.md",
+      "bytes": 10801,
+      "sha256": "043c34988b57d5af6475620322622c03fb54c4d51d1b9c26d1b88eb71265fe73",
+      "status": "unchanged",
+      "priorSha256": "043c34988b57d5af6475620322622c03fb54c4d51d1b9c26d1b88eb71265fe73",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 30068,
+      "sha256": "9a85a9acde04ac5f7d83718d2a5bed4b6a149d51a3aa60ed9efd93f763b5e83c",
+      "status": "unchanged",
+      "priorSha256": "9a85a9acde04ac5f7d83718d2a5bed4b6a149d51a3aa60ed9efd93f763b5e83c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "package.json",
+      "bytes": 780,
+      "sha256": "4456cce37f92af69b4e93709e837f38a56665ae5e077dcb04874f11e5320bdce",
+      "status": "modified",
+      "priorSha256": "840e35f3621dc906cb5f294e3d07b6d95b556a2d375060dde40f8c9808b24097",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "progress.json",
+      "bytes": 8030,
+      "sha256": "e7c2a27da72b8180ef0ff78fa80f2954a47be1e45c4ceb4b1ac1be3a145bd5fc",
+      "status": "modified",
+      "priorSha256": "56e8794f319581e26dc2350803a859a4a294eafe4d76938a6c1d7417b0367aa5",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "project-contract.json",
+      "bytes": 5968,
+      "sha256": "5cda637c3af8b70a1750e213050c99c3060807c17341513502d1216bbc25ce70",
+      "status": "unchanged",
+      "priorSha256": "5cda637c3af8b70a1750e213050c99c3060807c17341513502d1216bbc25ce70",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "public/assets/fonts/Comfortaa-Bold.ttf",
+      "bytes": 140172,
+      "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
+      "status": "unchanged",
+      "priorSha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "public/assets/fonts/OFL-Comfortaa.txt",
+      "bytes": 4519,
+      "sha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a",
+      "status": "unchanged",
+      "priorSha256": "bc85bae0b512b799bbfb2b916e4d0a34cfd963d09778cd783e248b479e67760a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "public/assets/SJS-Eagle.svg",
+      "bytes": 5528,
+      "sha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+      "status": "unchanged",
+      "priorSha256": "ceecfa817270a574355624ee5b950d64bb7b04653cc661075c2e5845c249f404",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "bytes": 716,
+      "sha256": "d76829e305bc1c864f4f7fec622abc0e59963914613de5c82ba0fcbd92ac55cc",
+      "status": "unchanged",
+      "priorSha256": "d76829e305bc1c864f4f7fec622abc0e59963914613de5c82ba0fcbd92ac55cc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/protect-originals.mjs",
+      "bytes": 3272,
+      "sha256": "c4772926f38379912a9bcdbdbf8f5d3da8eb0e21c805f968474499bb8120be6b",
+      "status": "unchanged",
+      "priorSha256": "c4772926f38379912a9bcdbdbf8f5d3da8eb0e21c805f968474499bb8120be6b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/serve-s2-builds.mjs",
+      "bytes": 1222,
+      "sha256": "eb30cb400eb1fcc9a166cdb8f56e1f5f7eb9543e2e44634b42bdbb35088f75e7",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/test-s1.mjs",
+      "bytes": 821,
+      "sha256": "f1a8b0578538af5697cef432af508c915169af29f72d89f5c76a605c40db523d",
+      "status": "unchanged",
+      "priorSha256": "f1a8b0578538af5697cef432af508c915169af29f72d89f5c76a605c40db523d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/test-s2.mjs",
+      "bytes": 793,
+      "sha256": "b051b14b0c8add6edabbe4e670834b88c5d45598d2b92796d499932590931c9b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/validate-s0.mjs",
+      "bytes": 3653,
+      "sha256": "b1f44aa9c04323a972c68670a8672c2c67874314cfb716db770ff015fef4c4dc",
+      "status": "unchanged",
+      "priorSha256": "b1f44aa9c04323a972c68670a8672c2c67874314cfb716db770ff015fef4c4dc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/validate-s1-builds.mjs",
+      "bytes": 2177,
+      "sha256": "181bce8b6e4b95359a3ffb950cbfe967932e25e442f3e880941df1ddf446e581",
+      "status": "unchanged",
+      "priorSha256": "181bce8b6e4b95359a3ffb950cbfe967932e25e442f3e880941df1ddf446e581",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/validate-s2-builds.mjs",
+      "bytes": 3165,
+      "sha256": "bb8fda4e01b7ed2ba112aaaf19600b7f8157ac01c688eac9198a34093df45c83",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/verify-s1.mjs",
+      "bytes": 2467,
+      "sha256": "d49a4768f8c41d73ef8f865cde0fcb94d8ffe2b090e56b5d057163f2e5b66d64",
+      "status": "unchanged",
+      "priorSha256": "d49a4768f8c41d73ef8f865cde0fcb94d8ffe2b090e56b5d057163f2e5b66d64",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/verify-s2.mjs",
+      "bytes": 2569,
+      "sha256": "4506d60cab6b31b9783990f504f315dbdae65fd779eec4e559f568a5441180ad",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/write-catalogue-definitions.mjs",
+      "bytes": 3023,
+      "sha256": "807c290a0aea2526c121bd56b612afb214416908ec38bec457a8c3b140961297",
+      "status": "unchanged",
+      "priorSha256": "807c290a0aea2526c121bd56b612afb214416908ec38bec457a8c3b140961297",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/write-s0-report.mjs",
+      "bytes": 11202,
+      "sha256": "fbd7b3d778b4e7109666ee54af3d0802b799e799875022853c7709d5f5955095",
+      "status": "unchanged",
+      "priorSha256": "fbd7b3d778b4e7109666ee54af3d0802b799e799875022853c7709d5f5955095",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/write-s0-scope.mjs",
+      "bytes": 2324,
+      "sha256": "8f225ca5b07fa07b719c04653b7824896fe6a5fccd0decad9d3ac188f95f519d",
+      "status": "unchanged",
+      "priorSha256": "8f225ca5b07fa07b719c04653b7824896fe6a5fccd0decad9d3ac188f95f519d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/write-s1-report.mjs",
+      "bytes": 19151,
+      "sha256": "952b6b5fb6705dbfb7901062a66bc23b1923d10bd23865701aaac7775ef834c7",
+      "status": "unchanged",
+      "priorSha256": "952b6b5fb6705dbfb7901062a66bc23b1923d10bd23865701aaac7775ef834c7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "scripts/write-s2-report.mjs",
+      "bytes": 19171,
+      "sha256": "71340083ba15ea7a4efd6cd9a1388db281d1442c9560e142c59428a1ba892e49",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/data.js",
+      "bytes": 7527,
+      "sha256": "856cd6641266154d3763af9c0d5da9b649a3922c2abc63f110b9ad53d5264a51",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.d.ts",
+      "bytes": 1959,
+      "sha256": "0d559fd5d25179481afe7cac48797c431f152aa4c09327e05aed560e1d03b12d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/engine.js",
+      "bytes": 52576,
+      "sha256": "6a24d852f6cef6fe474c50c98caa5af9ad12b1f998574dbf2f5297d33b5b0ce9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/historical-levels.js",
+      "bytes": 13735,
+      "sha256": "dd7cbcb8d2f1d9b3c06d65f1df1e650d75a880802913e005df3bc7353f1c738b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+      "bytes": 1230,
+      "sha256": "6ec3ab2cb92fb3e5ca0e6614220bd834dab460eba163e5d472a6ccaa38872ed9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/index.ts",
+      "bytes": 1236,
+      "sha256": "81ba8c263bbcc308002ed6b04c9fe60907a71c37042affad91b2a86de0319b9d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/legacy-core.js",
+      "bytes": 57379,
+      "sha256": "44ffb87eedfdb3659271b0c96c72505d45c90d3af8645661a71d48d9b77fe2a5",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/marking.ts",
+      "bytes": 1677,
+      "sha256": "0acec21a97538f90bdc819e6267d5026be1bb79cc6379c337d9de66caf2edd5d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+      "bytes": 1301,
+      "sha256": "77ef641c88b31fee2c71d90ea62fb3e4d034f54d6cdbfb2e886c5a61f4dce72a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/provider.ts",
+      "bytes": 5140,
+      "sha256": "ac174a4bfd13d6518c22e7f1ca5360c8058a59a1cb33cefd2ae61532c47d99ee",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/acid-base-calculations/sources.ts",
+      "bytes": 1261,
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.d.ts",
+      "bytes": 116,
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/bank.js",
+      "bytes": 584003,
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/index.ts",
+      "bytes": 540,
+      "sha256": "458be246d3f74b3e6ab37c6986161db3165684c7617830d1dd229b051c3821d4",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/marking.ts",
+      "bytes": 2284,
+      "sha256": "839f9db6d354f936d529ce96f089edfa8f683eccff4f8afef54574f6f32523b2",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/activities/alevel/dot-and-cross/provider.ts",
+      "bytes": 5800,
+      "sha256": "6cba75e2414a502515e90b55d07a504f80579f3b657bbaf81de45edd67d3c2f4",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/data.ts",
+      "bytes": 13784,
+      "sha256": "e5d205bb3e4b25009ea3875a1f13b98d45e0a25b633f20af6da3f555b8c0a159",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/dormant-level-one.json",
+      "bytes": 10701,
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/index.ts",
+      "bytes": 554,
+      "sha256": "fc933e9dcf046d8a6dfab9ac84112cda39bcb66f64e5ec012ddd1daf2c7f9a5d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/marking.ts",
+      "bytes": 1200,
+      "sha256": "10377dc90ba710e6b2728c589ef96704e6736f098521f48885e27f191dcd31fa",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "src/activities/igcse/structure-and-bonding/provider.ts",
+      "bytes": 5778,
+      "sha256": "09c916cec9e058fa8e42e39a3ebbf0502ca28d5c8599bcb09074b05886fd4751",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "src/catalogue/definitions.ts",
+      "bytes": 63893,
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b",
+      "status": "unchanged",
+      "priorSha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/catalogue/registry.ts",
+      "bytes": 2695,
+      "sha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61",
+      "status": "unchanged",
+      "priorSha256": "9e0f3799b17187fe6e7380e7ad80cdb0da1a23948926988cb4c88e0196258b61",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/catalogue/scope.ts",
+      "bytes": 4730,
+      "sha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306",
+      "status": "unchanged",
+      "priorSha256": "d9c6961561aea3eb755ff4842cb3d81eb4d711aff66fd739d722609883d0d306",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.d.ts",
+      "bytes": 514,
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/core.js",
+      "bytes": 46848,
+      "sha256": "dbc84dd813429e4f925ded1e521b6fd0dcaf2e70ffc130799c86799598c70ce5",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/engine.ts",
+      "bytes": 3815,
+      "sha256": "a40f51922ab78e2fffc39d77e6d2847a5124f8de09d30797af12e88fe45c34fb",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.d.ts",
+      "bytes": 924,
+      "sha256": "64021974f05d6516b445f4177e42bed81a4210ac47c5674cdd32c80bbce231b1",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/layout.js",
+      "bytes": 12717,
+      "sha256": "0a386ada4d3d6c6a23ce300e9849aa2fdcb0767129cd42f7957529c60ebb0b03",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/model.ts",
+      "bytes": 2589,
+      "sha256": "6c59aac2b029d4e0fc352f82a5c13baf8c20b04faa7b327c9a43aeaa7ff360db",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/chemistry/dot-and-cross/types.ts",
+      "bytes": 1077,
+      "sha256": "51250c06ccf797b50ce917a37389712fa0b5162cc3f8d7b9123477137ce6f8a6",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/contracts/attempt.ts",
+      "bytes": 6299,
+      "sha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b",
+      "status": "unchanged",
+      "priorSha256": "ee186e975afecd824f8a1b0323c10c74dec15183151f6955f879fd3e7921ca0b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "bytes": 4767,
+      "sha256": "c3da2f65ead8b5da046f134fb603fd27d50b5e7fe99ae8a2978de385769498ae",
+      "status": "modified",
+      "priorSha256": "fbaa324e5cb4aee5140f01565cb8ebb8b8ae56ed14765daac2643ea617927003",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/identity.ts",
+      "bytes": 1832,
+      "sha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0",
+      "status": "unchanged",
+      "priorSha256": "25271db02962b5a460699e26657cb291f9c46baf4592c5bcc9eb73937e3e1aa0",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/index.ts",
+      "bytes": 263,
+      "sha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e",
+      "status": "unchanged",
+      "priorSha256": "8d07a8159f14a254eabe60e07ae1a98735d64f3fdc041066846294cbe295526e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/olympiad.ts",
+      "bytes": 3666,
+      "sha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518",
+      "status": "unchanged",
+      "priorSha256": "5c1b763be733654f7e85b0acaaf1408843fc5865a10deffbe5b33af8211f7518",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/question.ts",
+      "bytes": 6489,
+      "sha256": "724e6f11676d465fb80fa7088d76c18e2072a5d28f4453fb2fd368532e3fc157",
+      "status": "modified",
+      "priorSha256": "805c85711f9c2345624eea7798bcdf07b7d947cb488a1280224088e356114903",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/registry.ts",
+      "bytes": 2085,
+      "sha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0",
+      "status": "unchanged",
+      "priorSha256": "79dc7026fa2dd72ff934f6946343428b3f79f6504e80529203993d689671b7c0",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/repository.ts",
+      "bytes": 2302,
+      "sha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5",
+      "status": "unchanged",
+      "priorSha256": "74a69ef842b5b2a8eca70bf5b1364e530b8d5f35325cebb9d189937e9f7543e5",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "bytes": 4301,
+      "sha256": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24",
+      "status": "modified",
+      "priorSha256": "d27e22ce5fc50f6df9e5e1630deec38ace25da4ed07e27483d8c62c14a69ce74",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/development/fixtures.ts",
+      "bytes": 8709,
+      "sha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d",
+      "status": "unchanged",
+      "priorSha256": "149fb8adf1ec5b5884c2b72e79979dedff6379ad9fd2ec7616fcd12f12a5eb8d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/development/FoundationApp.tsx",
+      "bytes": 19428,
+      "sha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8",
+      "status": "unchanged",
+      "priorSha256": "614d0ac73380e5bb9a02ed6e1d772576deb45e61636d1daf9b9636e9af0da4c8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/attempt/attempt.ts",
+      "bytes": 20308,
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81",
+      "status": "unchanged",
+      "priorSha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/attempt/index.ts",
+      "bytes": 309,
+      "sha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087",
+      "status": "unchanged",
+      "priorSha256": "ec35ed9027590ecd5af2f83bb11a0fcfe854d34f70a3837dc823e6e2929bb087",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/attempt/input-checks.ts",
+      "bytes": 8708,
+      "sha256": "d7af00a1ea7daeeb7297502df9d17b9636866322d9da8d775536de5bbeda3cad",
+      "status": "modified",
+      "priorSha256": "b47a3a1c2c4c8832b4738b366b057896a8795a2a6378a5290aded0e9a4301f56",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/mastery/course-mastery.ts",
+      "bytes": 4669,
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789",
+      "status": "unchanged",
+      "priorSha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/mastery/index.ts",
+      "bytes": 136,
+      "sha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb",
+      "status": "unchanged",
+      "priorSha256": "3345871420ab8712f902cee72dfd0b34e953dab52ab388c50e524af099c268bb",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/session/index.ts",
+      "bytes": 518,
+      "sha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a",
+      "status": "unchanged",
+      "priorSha256": "933186c401efcdcc9d8f46c6509485163a8b4dfbe9cd74adeb4c30479bb8670a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/session/practice.ts",
+      "bytes": 2674,
+      "sha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc",
+      "status": "unchanged",
+      "priorSha256": "72773e41c2b11720b1260e4b63240af22a8e5b0bce6669b231a188541dccc3bc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/session/revision.ts",
+      "bytes": 8159,
+      "sha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316",
+      "status": "unchanged",
+      "priorSha256": "de0258dbdf7b5d06ba77e1f9747f7752a02569ea1b6cc422bdf26be4ef91b316",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/session/selection.ts",
+      "bytes": 3167,
+      "sha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904",
+      "status": "unchanged",
+      "priorSha256": "4464229bbe2983cd26bd678170d44546f0b4f5f62246d4bf69ac8a354961b904",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/timing/active-clock.ts",
+      "bytes": 3231,
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+      "status": "unchanged",
+      "priorSha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/timing/browser-binding.ts",
+      "bytes": 2262,
+      "sha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+      "status": "unchanged",
+      "priorSha256": "98d33c4fab653466f7174dd8c6233d6c4cbe7dad05fa364182dc9fe6fb9b6aac",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/domain/timing/index.ts",
+      "bytes": 300,
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d",
+      "status": "unchanged",
+      "priorSha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/editors/dot-and-cross/DotCrossEditor.tsx",
+      "bytes": 14860,
+      "sha256": "fc9d2cf6b87050ee852d4cd0e0602a33656f61655c24e0d9e57e81d700133bef",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/editors/dot-and-cross/editor.css",
+      "bytes": 1935,
+      "sha256": "0b242249ecb946fccaf1b71a98b2f2adcc77d08bdb488d397f31097444ba0204",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/editors/dot-and-cross/index.ts",
+      "bytes": 53,
+      "sha256": "cd8f56079f0ce5004a40be6c542fd9059c50c8fda1153a39b5e267da582eda7a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "bytes": 21159,
+      "sha256": "12c7bbe9a6278fcc28fa2bafb18bee451049495e620ea6283a12c7f7d8a3946c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "bytes": 88,
+      "sha256": "ecb8a921ce79cf97767bc0c355a46f447c23cdb4da298f7d68799a1e3942a6fa",
+      "status": "modified",
+      "priorSha256": "d1ea6d0ed377438eaa540eeb6b786ccc8ec78895d001f69276219c5f9754d17f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/foundation/registry.ts",
+      "bytes": 397,
+      "sha256": "adeccd3a2be2461d03b4107ba4fa4726694afeeeb34d4c2a4a55c058ec923c63",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/main-alevel.tsx",
+      "bytes": 490,
+      "sha256": "6e86e614c94025f98c97b0befb0e5094cb02808ab89881025c3673c89d5da088",
+      "status": "modified",
+      "priorSha256": "82be457ae837795938d74605e637da78718216e2f80e470866d19362779fd54e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/main-igcse.tsx",
+      "bytes": 489,
+      "sha256": "15a2665c59fe993bfa2bbc59cd25284240652339367b84e17eb59a1d82b9db7f",
+      "status": "modified",
+      "priorSha256": "bb08c0f0f4f61da093e62364c3a936894342e85eb18bd8306ef2192074adc255",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/persistence/catalogue-boundary.ts",
+      "bytes": 1734,
+      "sha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63",
+      "status": "unchanged",
+      "priorSha256": "208d59a12454e54b724db1e914e5e2986c3cd66d528995774982aaadc16f7b63",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "bytes": 275,
+      "sha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8",
+      "status": "unchanged",
+      "priorSha256": "d041873de13d17948b9081f7a72df3b20efc1ccf5cf78b77af27b19158bdd8d8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/persistence/legacy.ts",
+      "bytes": 7909,
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41",
+      "status": "unchanged",
+      "priorSha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/persistence/repository.ts",
+      "bytes": 12028,
+      "sha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75",
+      "status": "unchanged",
+      "priorSha256": "96759f324c731ca6b0821675136df1f1e65bcb1803b2914fc3794b4bcbcf8c75",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "bytes": 38138,
+      "sha256": "e88f83dfe2e31b5487fa2521f4df25c0875941b0f84d50ceeb5bfdb3b2b242a6",
+      "status": "modified",
+      "priorSha256": "83744261aa1330fcc863036a6a8fe1db6cf4883cbe7f53f111bfda3025e42576",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "bytes": 3279,
+      "sha256": "409d39110b6236e99ac22a56b595e69f1c8b4b9b873546780d7f6e0e1387d6c8",
+      "status": "unchanged",
+      "priorSha256": "409d39110b6236e99ac22a56b595e69f1c8b4b9b873546780d7f6e0e1387d6c8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/shell/navigation-view.ts",
+      "bytes": 719,
+      "sha256": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917",
+      "status": "unchanged",
+      "priorSha256": "5bec86d0cca4f2256c294aff6ba1e5fd3d0524293ac7014ff6caf6c99e8e2917",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/styles/platform.css",
+      "bytes": 10760,
+      "sha256": "08eb76f711f214b2484ae02a1f7110ca5534b24ed310974cd5a2f194c9fd0f8c",
+      "status": "modified",
+      "priorSha256": "4e9837e2cb7e9849cad29d6d701e7aff216db298c8bced99b0c826d9f3167e73",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/ui/Content.tsx",
+      "bytes": 839,
+      "sha256": "6b706db34750408129bbdb9389bf57d6bb1991ca9f0dd29f62a6b25dfe9dd021",
+      "status": "unchanged",
+      "priorSha256": "6b706db34750408129bbdb9389bf57d6bb1991ca9f0dd29f62a6b25dfe9dd021",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/ui/EditorFrame.tsx",
+      "bytes": 1327,
+      "sha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b",
+      "status": "unchanged",
+      "priorSha256": "d2e3798dea8113809d5071144a44a49db3686ce46f1546a1ab8f63e177e3994b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "bytes": 14515,
+      "sha256": "9ebfeee90c1670a2c7309f3f689a7e86095eed4175fc347c221385cbeb8a799b",
+      "status": "modified",
+      "priorSha256": "413f4e1258016c3878f5f1ef769ec93d8fb9e6b78ce1f2efcc8c8f99a969a333",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/ui/ResponseControl.tsx",
+      "bytes": 6361,
+      "sha256": "0f1cc9398517c78a01d59b165181f5d4b134cce62de2096b54f2199ab8f98c38",
+      "status": "modified",
+      "priorSha256": "8804fecd04b81193a0d9cadc4f80366809bd0d2a073a7bfcc62be70640f8c2b8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "src/ui/TextRangePicker.tsx",
+      "bytes": 1946,
+      "sha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6",
+      "status": "unchanged",
+      "priorSha256": "bbbae73a6b7dd0bae64eb15ee066c1981739830ec02d557f14e8e2f6508fa5c6",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 708,
+      "sha256": "4a9f9892e20732015b95de2be9e289c5a3dac58d47388cc1e4805d269f723037",
+      "status": "modified",
+      "priorSha256": "0ff019296d6e13c786bab32604ad65a371805cff2d444d213ed32061d0d14e16",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/original-app-baseline.json",
+      "bytes": 276378,
+      "sha256": "be988874727f246610b386ad02a187729c47f6c4c924005a44f4b3f0be42f29e",
+      "status": "unchanged",
+      "priorSha256": "be988874727f246610b386ad02a187729c47f6c4c924005a44f4b3f0be42f29e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/original-app-check.json",
+      "bytes": 49921,
+      "sha256": "e46d978e47b539af37a75d22d1e9fd13b1e002679538b6b63f4b4626ba31cde0",
+      "status": "modified",
+      "priorSha256": "e73ad203b214fb383e952d4032f5e96beedc23411d766074ac9fad01fe150d8a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/root-contract-lock.json",
+      "bytes": 134,
+      "sha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81",
+      "status": "unchanged",
+      "priorSha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/clarification-checks.json",
+      "bytes": 518,
+      "sha256": "ed8fccb0b88f73b974d1441a8abe3b5a98c6b59b11f08999d1d0a044255a1142",
+      "status": "unchanged",
+      "priorSha256": "ed8fccb0b88f73b974d1441a8abe3b5a98c6b59b11f08999d1d0a044255a1142",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/clarification-fixtures.ts",
+      "bytes": 2860,
+      "sha256": "5ff2e62554f000db82d43dd5df4d7c6818604dfc6a7e281c20a0bdd5b4ead7b7",
+      "status": "unchanged",
+      "priorSha256": "5ff2e62554f000db82d43dd5df4d7c6818604dfc6a7e281c20a0bdd5b4ead7b7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/clarification-source-evidence.json",
+      "bytes": 996,
+      "sha256": "a938cc7703221ce2658aca982d793effd37d110ed115e81f33595ec698cb4563",
+      "status": "unchanged",
+      "priorSha256": "a938cc7703221ce2658aca982d793effd37d110ed115e81f33595ec698cb4563",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/handover-clarification.json",
+      "bytes": 2104,
+      "sha256": "4742bd77f41e0d84c9493cf392e990313cd592cdd3ea4be10a246506cbd09c4c",
+      "status": "unchanged",
+      "priorSha256": "4742bd77f41e0d84c9493cf392e990313cd592cdd3ea4be10a246506cbd09c4c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/handover.json",
+      "bytes": 1926,
+      "sha256": "bfd93dc63461fc1aa07586363598a473165c3e06be404ce1a1a566e254089b27",
+      "status": "unchanged",
+      "priorSha256": "bfd93dc63461fc1aa07586363598a473165c3e06be404ce1a1a566e254089b27",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/reference-checks.json",
+      "bytes": 1879,
+      "sha256": "7cb8ae53730a46bb15df23ce7cd8cd40f5e71595c885b8ea43324315bc59cf03",
+      "status": "unchanged",
+      "priorSha256": "7cb8ae53730a46bb15df23ce7cd8cd40f5e71595c885b8ea43324315bc59cf03",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/representative-fixtures.ts",
+      "bytes": 9108,
+      "sha256": "7f6c60d590cbf05942b8eb9897409ac34aa29360f6741807f1b94f2c5d8e8f3b",
+      "status": "unchanged",
+      "priorSha256": "7f6c60d590cbf05942b8eb9897409ac34aa29360f6741807f1b94f2c5d8e8f3b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/source-evidence.json",
+      "bytes": 6702,
+      "sha256": "27e2360ab3f5f69b37febd37000eb6671b7909114d0ff3120aea731c34ef9d09",
+      "status": "unchanged",
+      "priorSha256": "27e2360ab3f5f69b37febd37000eb6671b7909114d0ff3120aea731c34ef9d09",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/typecheck-clarification.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "status": "unchanged",
+      "priorSha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "status": "unchanged",
+      "priorSha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/validate-clarification.mjs",
+      "bytes": 3380,
+      "sha256": "a37bca858a911ecf7eaccf220c27ea7aa93854225d7b06d9a695a094eb462fd6",
+      "status": "unchanged",
+      "priorSha256": "a37bca858a911ecf7eaccf220c27ea7aa93854225d7b06d9a695a094eb462fd6",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/contracts/validate-reference.mjs",
+      "bytes": 7002,
+      "sha256": "dc97294341bf0a4a746c70b06eedd3ca5c5ed0eab9a91f2bf36ded112e277498",
+      "status": "unchanged",
+      "priorSha256": "dc97294341bf0a4a746c70b06eedd3ca5c5ed0eab9a91f2bf36ded112e277498",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/control-start.json",
+      "bytes": 821,
+      "sha256": "aa44f0b240735b7d6f3cad816d367b5d98a039916985ad40ffbc1ec6d4c00b70",
+      "status": "unchanged",
+      "priorSha256": "aa44f0b240735b7d6f3cad816d367b5d98a039916985ad40ffbc1ec6d4c00b70",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/file-inventory.json",
+      "bytes": 20056,
+      "sha256": "3011bd16a213f781d5e062ef215689b6e34ba1801f57fa87ee419fbb1091d010",
+      "status": "unchanged",
+      "priorSha256": "3011bd16a213f781d5e062ef215689b6e34ba1801f57fa87ee419fbb1091d010",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/foreman-inventory-check.txt",
+      "bytes": 606,
+      "sha256": "47fcf00f0ee463383d1f7f74233c57d71fc64b44e0cea101eb42a02dfbd44b9e",
+      "status": "unchanged",
+      "priorSha256": "47fcf00f0ee463383d1f7f74233c57d71fc64b44e0cea101eb42a02dfbd44b9e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/foreman-model-checks.txt",
+      "bytes": 725,
+      "sha256": "e47fcbc367b615ec837a7582101369119fe6173af70e013054ed82edd905431e",
+      "status": "unchanged",
+      "priorSha256": "e47fcbc367b615ec837a7582101369119fe6173af70e013054ed82edd905431e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/foreman-report.json",
+      "bytes": 11717,
+      "sha256": "5b5a2a2a618e84ca0dcbf4d34d1424c5fe46f43b1e6a2441158f448e1bd51d4e",
+      "status": "unchanged",
+      "priorSha256": "5b5a2a2a618e84ca0dcbf4d34d1424c5fe46f43b1e6a2441158f448e1bd51d4e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/foreman-typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "status": "unchanged",
+      "priorSha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/HANDOFF.md",
+      "bytes": 4158,
+      "sha256": "5c23ff3c622691700a1a86867dfb6c8506ff1642479038ebaefb53f3832ac75d",
+      "status": "unchanged",
+      "priorSha256": "5c23ff3c622691700a1a86867dfb6c8506ff1642479038ebaefb53f3832ac75d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/integration-check.json",
+      "bytes": 521,
+      "sha256": "0a282a0e7bdf8d6aaa6cb2fb84ead76ec93146003ffbbd54a1eb24524340ef40",
+      "status": "modified",
+      "priorSha256": "601f47b24818d6783d158feaa845cda2193b8dbb9df0a20c24458cb5b987a6be",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-acid-base-calculations-evidence.json",
+      "bytes": 153230,
+      "sha256": "a1a7bda12187c73cbf72779204e5f852a3de61668658d8892711db24c68e7d6a",
+      "status": "unchanged",
+      "priorSha256": "a1a7bda12187c73cbf72779204e5f852a3de61668658d8892711db24c68e7d6a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-c3l6-organic-reactions-evidence.json",
+      "bytes": 35169,
+      "sha256": "edac38ffbcee31cb544706141e346dcc4849d28af5512129590022f21378d812",
+      "status": "unchanged",
+      "priorSha256": "edac38ffbcee31cb544706141e346dcc4849d28af5512129590022f21378d812",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-dot-and-cross-evidence.json",
+      "bytes": 42959,
+      "sha256": "ebc74375b74b0737627f4d49000b96d77b6442e5549d5055bfad6dac25bfa4d3",
+      "status": "unchanged",
+      "priorSha256": "ebc74375b74b0737627f4d49000b96d77b6442e5549d5055bfad6dac25bfa4d3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-electron-configurations-evidence.json",
+      "bytes": 51924,
+      "sha256": "18be1ed6b2ca05367dea2f2fcf9a5569ce0573489933d0f5a95b7c9a2d077371",
+      "status": "unchanged",
+      "priorSha256": "18be1ed6b2ca05367dea2f2fcf9a5569ce0573489933d0f5a95b7c9a2d077371",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-electrons-bonding-evidence.json",
+      "bytes": 44048,
+      "sha256": "b3e8b6f3c86357f5f08a0f330f2f8f004b734c96ded63ac390b695d6a0ee8a68",
+      "status": "unchanged",
+      "priorSha256": "b3e8b6f3c86357f5f08a0f330f2f8f004b734c96ded63ac390b695d6a0ee8a68",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/alevel-ph-titration-curves-evidence.json",
+      "bytes": 46588,
+      "sha256": "8bec0be165a18a38a88686b83f3b6cbcd8e2c763ef234e388838de13f98802b3",
+      "status": "unchanged",
+      "priorSha256": "8bec0be165a18a38a88686b83f3b6cbcd8e2c763ef234e388838de13f98802b3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/annotations.cjs",
+      "bytes": 13410,
+      "sha256": "d1fdd07a98753c431dbd821615bbeb126800d8c6e236c4a63360c6d9578a906b",
+      "status": "unchanged",
+      "priorSha256": "d1fdd07a98753c431dbd821615bbeb126800d8c6e236c4a63360c6d9578a906b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/build-docs.cjs",
+      "bytes": 11653,
+      "sha256": "334b13fadf02e346eab58640b720e9bf925c2c1828a80c96ba2ab85a3c5689fe",
+      "status": "unchanged",
+      "priorSha256": "334b13fadf02e346eab58640b720e9bf925c2c1828a80c96ba2ab85a3c5689fe",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/collect.cjs",
+      "bytes": 16281,
+      "sha256": "e1db4d506a436f72815b4c1934ee70465d215ae9e0a552bc8aa327c6f07aaab8",
+      "status": "unchanged",
+      "priorSha256": "e1db4d506a436f72815b4c1934ee70465d215ae9e0a552bc8aa327c6f07aaab8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/completion.json",
+      "bytes": 2596,
+      "sha256": "a69d9c9a6f42a74dbf321ba0c8b07f5e18bce472fda6b92dd2f883136cdbbda6",
+      "status": "unchanged",
+      "priorSha256": "a69d9c9a6f42a74dbf321ba0c8b07f5e18bce472fda6b92dd2f883136cdbbda6",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/coverage-manifest.json",
+      "bytes": 2089027,
+      "sha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+      "status": "unchanged",
+      "priorSha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/coverage-validation.log",
+      "bytes": 300,
+      "sha256": "ba8044a749fc8d4f4e51384ad4894b6c0912ad8254f6fce56e891f95de775281",
+      "status": "unchanged",
+      "priorSha256": "ba8044a749fc8d4f4e51384ad4894b6c0912ad8254f6fce56e891f95de775281",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/identity-index.json",
+      "bytes": 89810,
+      "sha256": "2e77221de86121719fec2a969fa26038a79263a20ceda31672f25bfeb0d099f1",
+      "status": "unchanged",
+      "priorSha256": "2e77221de86121719fec2a969fa26038a79263a20ceda31672f25bfeb0d099f1",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-bond-enthalpy-evidence.json",
+      "bytes": 72685,
+      "sha256": "2825d0072326a448182ef4d0d100c3c3c8769252a5659b1de3062575de540b08",
+      "status": "unchanged",
+      "priorSha256": "2825d0072326a448182ef4d0d100c3c3c8769252a5659b1de3062575de540b08",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-calorimetry-evidence.json",
+      "bytes": 56751,
+      "sha256": "99e483a387a0a99d9049c91536ff756c5fbfcf45e2c9930fdd4b13d6763c86d7",
+      "status": "unchanged",
+      "priorSha256": "99e483a387a0a99d9049c91536ff756c5fbfcf45e2c9930fdd4b13d6763c86d7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-dot-and-cross-evidence.json",
+      "bytes": 64429,
+      "sha256": "856d30572ccd94e5a539202d7cae491745640a3752b3959bca86c3103d491120",
+      "status": "unchanged",
+      "priorSha256": "856d30572ccd94e5a539202d7cae491745640a3752b3959bca86c3103d491120",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-energetics-practical-evidence.json",
+      "bytes": 65318,
+      "sha256": "9cbce779ab325ad40f928c965fdfc233a1f046d34aa81e13ebd40e44b266400a",
+      "status": "unchanged",
+      "priorSha256": "9cbce779ab325ad40f928c965fdfc233a1f046d34aa81e13ebd40e44b266400a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-energy-enthalpy-evidence.json",
+      "bytes": 64692,
+      "sha256": "ac5ccdaf5ec18efe8ea2928c88022b27d7dbc1c24386c77fffbad2f373c2a1ea",
+      "status": "unchanged",
+      "priorSha256": "ac5ccdaf5ec18efe8ea2928c88022b27d7dbc1c24386c77fffbad2f373c2a1ea",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/igcse-structure-and-bonding-evidence.json",
+      "bytes": 66007,
+      "sha256": "399866022534f5fb2fd6aaf2effdf31ca9fadce86f6ba801d42303960a51d0b0",
+      "status": "unchanged",
+      "priorSha256": "399866022534f5fb2fd6aaf2effdf31ca9fadce86f6ba801d42303960a51d0b0",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/ported-acid-levels.log",
+      "bytes": 184,
+      "sha256": "80fac0630a671db234b1954c90f5b813496796250d221742c74cd9982892e586",
+      "status": "unchanged",
+      "priorSha256": "80fac0630a671db234b1954c90f5b813496796250d221742c74cd9982892e586",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/preflight-local-inputs.ps1",
+      "bytes": 965,
+      "sha256": "016610ec0d82a89738200f42a0801f5d2f1c15a60f2b12569db2de2dc9e90af2",
+      "status": "unchanged",
+      "priorSha256": "016610ec0d82a89738200f42a0801f5d2f1c15a60f2b12569db2de2dc9e90af2",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/reference-check-results.json",
+      "bytes": 6741,
+      "sha256": "dfe664404fa4164db41b8302a71d603bb56f4f8ca449a3a662731f5de088c1f1",
+      "status": "unchanged",
+      "priorSha256": "dfe664404fa4164db41b8302a71d603bb56f4f8ca449a3a662731f5de088c1f1",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/reference-validation-map.json",
+      "bytes": 10898,
+      "sha256": "fd0d1f6cdf462594d45a1f0fe2b3600d663eecd894c425df34d2b1682d07c247",
+      "status": "unchanged",
+      "priorSha256": "fd0d1f6cdf462594d45a1f0fe2b3600d663eecd894c425df34d2b1682d07c247",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/run-reference-checks.cjs",
+      "bytes": 2273,
+      "sha256": "7a699e9dfdb145ecbf07c5f0d1055026906319980813c26eec8f50c0721fd4fc",
+      "status": "unchanged",
+      "priorSha256": "7a699e9dfdb145ecbf07c5f0d1055026906319980813c26eec8f50c0721fd4fc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/source-model-validation.json",
+      "bytes": 655,
+      "sha256": "045c26298f5a1fb42c48c8ecd9e5189059d5ad8d182623f627863eba266dae1c",
+      "status": "unchanged",
+      "priorSha256": "045c26298f5a1fb42c48c8ecd9e5189059d5ad8d182623f627863eba266dae1c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/source-provenance-availability.json",
+      "bytes": 2417,
+      "sha256": "4cd3c968ea42106ebf31fa549a5e8a0522a22a5e2443e44b940af2506a831593",
+      "status": "unchanged",
+      "priorSha256": "4cd3c968ea42106ebf31fa549a5e8a0522a22a5e2443e44b940af2506a831593",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test-acid-levels-ported.cjs",
+      "bytes": 3999,
+      "sha256": "38594b10506fc503327bed9a2222ee809970fd1e3d6a86bc0577c3271d070fc8",
+      "status": "unchanged",
+      "priorSha256": "38594b10506fc503327bed9a2222ee809970fd1e3d6a86bc0577c3271d070fc8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_acid_levels.log",
+      "bytes": 1531,
+      "sha256": "b551eed01c6de3982634ee2566fd5286015c32a18cdd8c32b09905ab614a348f",
+      "status": "unchanged",
+      "priorSha256": "b551eed01c6de3982634ee2566fd5286015c32a18cdd8c32b09905ab614a348f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_acid_progression_chemistry.log",
+      "bytes": 259,
+      "sha256": "cadef799d091f6180457d896aa3183a1259ef8117d0e92086d671a84f810cd9f",
+      "status": "unchanged",
+      "priorSha256": "cadef799d091f6180457d896aa3183a1259ef8117d0e92086d671a84f810cd9f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_acid_progression_model.log",
+      "bytes": 209,
+      "sha256": "7c959c67385b84cf9f45ac9ed433ecf55409d2096dd000a20410895e7a1b5296",
+      "status": "unchanged",
+      "priorSha256": "7c959c67385b84cf9f45ac9ed433ecf55409d2096dd000a20410895e7a1b5296",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_basics_full_answers.log",
+      "bytes": 286,
+      "sha256": "523720d642b44c1b4fc5d48cb581d8691720a9cdc8832b9128fd97a00b90efcc",
+      "status": "unchanged",
+      "priorSha256": "523720d642b44c1b4fc5d48cb581d8691720a9cdc8832b9128fd97a00b90efcc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_bond_enthalpy_question_generator.log",
+      "bytes": 278,
+      "sha256": "dee5a335c36e55f12a42580e4c594f81aad453eb02a3c58d22569e0fbed06ca6",
+      "status": "unchanged",
+      "priorSha256": "dee5a335c36e55f12a42580e4c594f81aad453eb02a3c58d22569e0fbed06ca6",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_calorimetry_mastery.log",
+      "bytes": 337,
+      "sha256": "0fb0e524ebdf126905c5a99cde37ca5b4cc735f2e8b627144035bfaf1a2acad9",
+      "status": "unchanged",
+      "priorSha256": "0fb0e524ebdf126905c5a99cde37ca5b4cc735f2e8b627144035bfaf1a2acad9",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_calorimetry_question_generator.log",
+      "bytes": 270,
+      "sha256": "dcd69bd0d92069930879656767d1e2ea448219385c9830a673e1eb303361fbaf",
+      "status": "unchanged",
+      "priorSha256": "dcd69bd0d92069930879656767d1e2ea448219385c9830a673e1eb303361fbaf",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_alevel.log",
+      "bytes": 271,
+      "sha256": "ebaffc74cc429e428089ef19d5bb363d56da3d1889bab2b29722e08e6fbb02ff",
+      "status": "unchanged",
+      "priorSha256": "ebaffc74cc429e428089ef19d5bb363d56da3d1889bab2b29722e08e6fbb02ff",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_isomers.log",
+      "bytes": 263,
+      "sha256": "ce2bfe982672aa50af7cf8120ee2996aad55b7239bd7e940355a27be60940d38",
+      "status": "unchanged",
+      "priorSha256": "ce2bfe982672aa50af7cf8120ee2996aad55b7239bd7e940355a27be60940d38",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_lithium.log",
+      "bytes": 277,
+      "sha256": "05bac833bc477929062fbb65d8693f1371ba27d1e421303ea720a5ada7f4421c",
+      "status": "unchanged",
+      "priorSha256": "05bac833bc477929062fbb65d8693f1371ba27d1e421303ea720a5ada7f4421c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_dot_cross_pair_layout.log",
+      "bytes": 1554,
+      "sha256": "4daa8c6b1bba8c2d56c483cbc16d04875ed0dc72b560ab981b575a52aa5c213c",
+      "status": "unchanged",
+      "priorSha256": "4daa8c6b1bba8c2d56c483cbc16d04875ed0dc72b560ab981b575a52aa5c213c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_electron_configurations.log",
+      "bytes": 382,
+      "sha256": "59dff347c0558911749f6bc7aa7aabd1bc06b6e8906e087ad135448488f203e8",
+      "status": "unchanged",
+      "priorSha256": "59dff347c0558911749f6bc7aa7aabd1bc06b6e8906e087ad135448488f203e8",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_electron_levels.log",
+      "bytes": 342,
+      "sha256": "f36f5a6c08c1a0e2447fe13e34efbdd2ab76a6ac77e4ba6ec6259d9fa7191e29",
+      "status": "unchanged",
+      "priorSha256": "f36f5a6c08c1a0e2447fe13e34efbdd2ab76a6ac77e4ba6ec6259d9fa7191e29",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_energy_enthalpy.log",
+      "bytes": 1323,
+      "sha256": "058c6c14a4b18c2999ab96ee6665b4dc0e169cc83577bdcf2e657621cfffa541",
+      "status": "unchanged",
+      "priorSha256": "058c6c14a4b18c2999ab96ee6665b4dc0e169cc83577bdcf2e657621cfffa541",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_ph_titration_curves.log",
+      "bytes": 478,
+      "sha256": "e9242257240ea8ea729868320020e9485933844610ddbb660fcc112ff57c1504",
+      "status": "unchanged",
+      "priorSha256": "e9242257240ea8ea729868320020e9485933844610ddbb660fcc112ff57c1504",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/test_structure_bonding_comparison_generator.log",
+      "bytes": 261,
+      "sha256": "ee3fbb8297d1ed6aeea27e3fff4f58ce5ae4ec311aafb764ae6b5372bfd3f09e",
+      "status": "unchanged",
+      "priorSha256": "ee3fbb8297d1ed6aeea27e3fff4f58ce5ae4ec311aafb764ae6b5372bfd3f09e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/inventory/validate-source-models.cjs",
+      "bytes": 4015,
+      "sha256": "51fb1fe99b28aea447da7020fbaf5402b59b385733a4764756608d5d68106589",
+      "status": "unchanged",
+      "priorSha256": "51fb1fe99b28aea447da7020fbaf5402b59b385733a4764756608d5d68106589",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s0/root-acceptance.json",
+      "bytes": 1394,
+      "sha256": "e3885839f876794eb5681cbc448406b4fab72f12e8391fde49c7ab183da7b0fe",
+      "status": "unchanged",
+      "priorSha256": "e3885839f876794eb5681cbc448406b4fab72f12e8391fde49c7ab183da7b0fe",
+      "owner": "root gate"
+    },
+    {
+      "path": "validation/s1/attempt/attempt.test.mjs",
+      "bytes": 32179,
+      "sha256": "ae50d86e60b9b8ba8f21623c3a44397b93995df854ec36d90b7e6f040af55e64",
+      "status": "unchanged",
+      "priorSha256": "ae50d86e60b9b8ba8f21623c3a44397b93995df854ec36d90b7e6f040af55e64",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/browser-check.mjs",
+      "bytes": 10626,
+      "sha256": "235ff9ad1852b25b056ae3c0fa86ded160e9975147c1c6704b2bffd4ccfb961c",
+      "status": "unchanged",
+      "priorSha256": "235ff9ad1852b25b056ae3c0fa86ded160e9975147c1c6704b2bffd4ccfb961c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/browser-failure-attempt-1790982232877.json",
+      "bytes": 3600,
+      "sha256": "9381a3d901cbbc74b2b6588b3ba60fb027e4f9cea2db1126256aac35fb333595",
+      "status": "unchanged",
+      "priorSha256": "9381a3d901cbbc74b2b6588b3ba60fb027e4f9cea2db1126256aac35fb333595",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/browser-failure-attempt-1790982417627.json",
+      "bytes": 3600,
+      "sha256": "518b9a1002a4607ae1378a9641733528ee4a4fb906a0cb673647e766c0477d82",
+      "status": "unchanged",
+      "priorSha256": "518b9a1002a4607ae1378a9641733528ee4a4fb906a0cb673647e766c0477d82",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/browser-failure-attempt-1790982448749.json",
+      "bytes": 3600,
+      "sha256": "fc41f9d2162e829e26525908c925f484d9391f2898d6e364e20a3e3306672d1b",
+      "status": "unchanged",
+      "priorSha256": "fc41f9d2162e829e26525908c925f484d9391f2898d6e364e20a3e3306672d1b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/browser-failure.png",
+      "bytes": 99205,
+      "sha256": "a45d08697d7679a1b9643d46d484b450baacaba8a057f0167b51e5860cb477bb",
+      "status": "unchanged",
+      "priorSha256": "a45d08697d7679a1b9643d46d484b450baacaba8a057f0167b51e5860cb477bb",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/browser-results.json",
+      "bytes": 1758,
+      "sha256": "b1b039ff962605040d44326931269c5486f9f25cb5e2acd1fd45e44ddeda000c",
+      "status": "unchanged",
+      "priorSha256": "b1b039ff962605040d44326931269c5486f9f25cb5e2acd1fd45e44ddeda000c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/contracts.typecheck.ts",
+      "bytes": 2895,
+      "sha256": "c44b5fe4e465a9283ca8e1ac9a034ff872436a2cee62f90fdef7e577449e0252",
+      "status": "unchanged",
+      "priorSha256": "c44b5fe4e465a9283ca8e1ac9a034ff872436a2cee62f90fdef7e577449e0252",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/drawing-first-freeze.png",
+      "bytes": 129288,
+      "sha256": "079521f1657187c670c60d51ad573e3736b6a51a2a9a82df4d3b2b322ba2c29a",
+      "status": "unchanged",
+      "priorSha256": "079521f1657187c670c60d51ad573e3736b6a51a2a9a82df4d3b2b322ba2c29a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/handover.json",
+      "bytes": 3464,
+      "sha256": "0d53b8fc6df12d7ca856838b9e9dd88366b00f08447ea529025dbbe90297d6cc",
+      "status": "unchanged",
+      "priorSha256": "0d53b8fc6df12d7ca856838b9e9dd88366b00f08447ea529025dbbe90297d6cc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/idle-cutoff.png",
+      "bytes": 100141,
+      "sha256": "ff57137e8d26fa420273550d96228a86ad045e9c440b5b3eb08073cfee784f84",
+      "status": "unchanged",
+      "priorSha256": "ff57137e8d26fa420273550d96228a86ad045e9c440b5b3eb08073cfee784f84",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/numeric-first-freeze.png",
+      "bytes": 107488,
+      "sha256": "194138a7efd6433ceea6070ab3efb2e5f8a2ded9be9c6422b923de16cba904d1",
+      "status": "unchanged",
+      "priorSha256": "194138a7efd6433ceea6070ab3efb2e5f8a2ded9be9c6422b923de16cba904d1",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/output-fingerprints.json",
+      "bytes": 2336,
+      "sha256": "4b90cdea8a33256fbdd9b6e831f43b32b0aebb280c5b9e19192e7ff1e33b91c3",
+      "status": "unchanged",
+      "priorSha256": "4b90cdea8a33256fbdd9b6e831f43b32b0aebb280c5b9e19192e7ff1e33b91c3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/root-fix/fingerprints.json",
+      "bytes": 3860,
+      "sha256": "8631fb510a8f5dfe06c2dd111b8daf06e860c81a4cef42a803810271005589df",
+      "status": "unchanged",
+      "priorSha256": "8631fb510a8f5dfe06c2dd111b8daf06e860c81a4cef42a803810271005589df",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/root-fix/handover.json",
+      "bytes": 2926,
+      "sha256": "03bf821c4438d37c9396471585e9e05c8c57491cae639e1e00ff093afb4856fb",
+      "status": "unchanged",
+      "priorSha256": "03bf821c4438d37c9396471585e9e05c8c57491cae639e1e00ff093afb4856fb",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/root-fix/tests.txt",
+      "bytes": 5332,
+      "sha256": "13a05c18466860c46a88b9008d8e702e70e2d6b94099ea5571d4f6923b5109c2",
+      "status": "unchanged",
+      "priorSha256": "13a05c18466860c46a88b9008d8e702e70e2d6b94099ea5571d4f6923b5109c2",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/root-fix/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "status": "unchanged",
+      "priorSha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/rubric-first-freeze.png",
+      "bytes": 121813,
+      "sha256": "74c396c80f2d556dbde74c99cdeac4411a1fc96c84d057545204a835da3c430b",
+      "status": "unchanged",
+      "priorSha256": "74c396c80f2d556dbde74c99cdeac4411a1fc96c84d057545204a835da3c430b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/scenarios.ts",
+      "bytes": 3349,
+      "sha256": "3133bfe2a5bff587cd8c16a221ea88dbadb9b6c41f2f4607c1735420f42ff823",
+      "status": "unchanged",
+      "priorSha256": "3133bfe2a5bff587cd8c16a221ea88dbadb9b6c41f2f4607c1735420f42ff823",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/source-evidence.json",
+      "bytes": 2613,
+      "sha256": "b7ddf2c7a0d50a4a597028abac860bfc1119a4573cfc4c6e3e7173d9c86d4708",
+      "status": "unchanged",
+      "priorSha256": "b7ddf2c7a0d50a4a597028abac860bfc1119a4573cfc4c6e3e7173d9c86d4708",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/tests.txt",
+      "bytes": 3998,
+      "sha256": "b7cbaf5b799bb1fb9dadd16bd3d16a859b3815707252837e9be9bd11183c605a",
+      "status": "unchanged",
+      "priorSha256": "b7cbaf5b799bb1fb9dadd16bd3d16a859b3815707252837e9be9bd11183c605a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/attempt/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "status": "unchanged",
+      "priorSha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/before-root-fix/file-inventory.json",
+      "bytes": 75928,
+      "sha256": "ceec5c74b49dfe71857a0bf53283a81c9498f553e89a0fae5ac8c0d510dcdff5",
+      "status": "unchanged",
+      "priorSha256": "ceec5c74b49dfe71857a0bf53283a81c9498f553e89a0fae5ac8c0d510dcdff5",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/before-root-fix/foreman-report.json",
+      "bytes": 27345,
+      "sha256": "1f615a8ba368d202b8dcc08bf6a27a1baa0e50d48557dcaa5ecc270a95748e8b",
+      "status": "unchanged",
+      "priorSha256": "1f615a8ba368d202b8dcc08bf6a27a1baa0e50d48557dcaa5ecc270a95748e8b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/before-root-fix/HANDOFF.md",
+      "bytes": 7642,
+      "sha256": "2f7fa43da55747558ade3c216afe87edc23f4018bf61c15c56578169d45eb3ad",
+      "status": "unchanged",
+      "priorSha256": "2f7fa43da55747558ade3c216afe87edc23f4018bf61c15c56578169d45eb3ad",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/file-inventory.json",
+      "bytes": 81921,
+      "sha256": "bcae32f184b1e7edd221b30cbb443c0623320dbe0f483099eeb092915f8a4834",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/foreman-report.json",
+      "bytes": 31590,
+      "sha256": "12ce60b692d147f11d7ab23fdc7f0f64ce63c664c698e338ed334e3e0dc68dfd",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/HANDOFF.md",
+      "bytes": 9498,
+      "sha256": "5e33d8d0758ebb96acf150abab2c8c66554c7128c66aa4968675e0a1cef011e9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/alevel-first-evidence.png",
+      "bytes": 109640,
+      "sha256": "76388557f70cd05456549fe75ce88ba90146edfe319c560da327581ca1372a26",
+      "status": "unchanged",
+      "priorSha256": "76388557f70cd05456549fe75ce88ba90146edfe319c560da327581ca1372a26",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/alevel-production-prefix.png",
+      "bytes": 32093,
+      "sha256": "f9329b1e4613f54fa3318c760ddbe248c819ba5f7c51ed3f3713afbcf39eb98a",
+      "status": "unchanged",
+      "priorSha256": "f9329b1e4613f54fa3318c760ddbe248c819ba5f7c51ed3f3713afbcf39eb98a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/alevel-revision-pause-restore-rotation-assistance-failure.png",
+      "bytes": 111744,
+      "sha256": "3ff181d05b3ae7cc0b13e4af8aa97f0c2555727e8fe9ef69c8250d9f45dcfef5",
+      "status": "unchanged",
+      "priorSha256": "3ff181d05b3ae7cc0b13e4af8aa97f0c2555727e8fe9ef69c8250d9f45dcfef5",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/browser-results-composition-barrier.json",
+      "bytes": 3249,
+      "sha256": "ab9c461aa4646ad9ef2de5d53264c908abfc938e96b3f2a3a8bbb1491c83f080",
+      "status": "unchanged",
+      "priorSha256": "ab9c461aa4646ad9ef2de5d53264c908abfc938e96b3f2a3a8bbb1491c83f080",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/browser-results-hmr-interrupted.json",
+      "bytes": 3582,
+      "sha256": "fe28f48ec7f9cd3b89041d1cdf1d3d87256c8f82ee601b94c036c3b162adf2fb",
+      "status": "unchanged",
+      "priorSha256": "fe28f48ec7f9cd3b89041d1cdf1d3d87256c8f82ee601b94c036c3b162adf2fb",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/browser-results-initial.json",
+      "bytes": 2944,
+      "sha256": "10bf5cf1f6da72bfe77eab6033e028db73af6c18acf9c270d835b4876e92046e",
+      "status": "unchanged",
+      "priorSha256": "10bf5cf1f6da72bfe77eab6033e028db73af6c18acf9c270d835b4876e92046e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/browser-results-wait-predicate.json",
+      "bytes": 3582,
+      "sha256": "e88c9f460dd6d46b91a21c687d7a9efae839c41e8b963f83c5cdb9458193217e",
+      "status": "unchanged",
+      "priorSha256": "e88c9f460dd6d46b91a21c687d7a9efae839c41e8b963f83c5cdb9458193217e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/browser-results.json",
+      "bytes": 2722,
+      "sha256": "d074c71d66629d5b9ff412f28a9dacfd983e2ab595f71a24f9ca82b5f8b79a27",
+      "status": "unchanged",
+      "priorSha256": "d074c71d66629d5b9ff412f28a9dacfd983e2ab595f71a24f9ca82b5f8b79a27",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/browser-tests.mjs",
+      "bytes": 9823,
+      "sha256": "7c4eb87f5c08fe1d64cca188da7585bf481dac040b08c1406b7dd8ccd09c0957",
+      "status": "unchanged",
+      "priorSha256": "7c4eb87f5c08fe1d64cca188da7585bf481dac040b08c1406b7dd8ccd09c0957",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/build-browser.json",
+      "bytes": 7498,
+      "sha256": "cd23e8dd0b4c9ae40d8ab01a1b5a24b2936620af42cbd93d0f67b6b23e683668",
+      "status": "unchanged",
+      "priorSha256": "cd23e8dd0b4c9ae40d8ab01a1b5a24b2936620af42cbd93d0f67b6b23e683668",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/build-browser.mjs",
+      "bytes": 5788,
+      "sha256": "e89355c7428e26ef2199c4d1c390abb85e027605682f03becd4b4035da816728",
+      "status": "unchanged",
+      "priorSha256": "e89355c7428e26ef2199c4d1c390abb85e027605682f03becd4b4035da816728",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/build-check.json",
+      "bytes": 2242,
+      "sha256": "52bf4053cba6ca3a8b84a913265666b5a0b6cba67f78c33459de649e975dbb28",
+      "status": "unchanged",
+      "priorSha256": "52bf4053cba6ca3a8b84a913265666b5a0b6cba67f78c33459de649e975dbb28",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-build-check.txt",
+      "bytes": 1674,
+      "sha256": "cc6b3382124746a061842123f6d5624110678d7594f0badc06fbf463bc180420",
+      "status": "unchanged",
+      "priorSha256": "cc6b3382124746a061842123f6d5624110678d7594f0badc06fbf463bc180420",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-build.txt",
+      "bytes": 1312,
+      "sha256": "75366af791c99241ade975a1e310ed7b9e762a47206827cfe234bdb9a3cfa55e",
+      "status": "unchanged",
+      "priorSha256": "75366af791c99241ade975a1e310ed7b9e762a47206827cfe234bdb9a3cfa55e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-catalogue.txt",
+      "bytes": 45,
+      "sha256": "9eb4e45efec5345e7e22038194c0cb706c6bd7fda88a3c42cda763c4f9311496",
+      "status": "unchanged",
+      "priorSha256": "9eb4e45efec5345e7e22038194c0cb706c6bd7fda88a3c42cda763c4f9311496",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-checks.json",
+      "bytes": 2425,
+      "sha256": "c615bef4c08f3574e42fe5daa032b04ee484f45e7a3cf112862a4ca5db69f623",
+      "status": "unchanged",
+      "priorSha256": "c615bef4c08f3574e42fe5daa032b04ee484f45e7a3cf112862a4ca5db69f623",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-protected-originals.txt",
+      "bytes": 112,
+      "sha256": "d0aca4a03009f3ca038cd542ee33cedf97312d53beaacc5f8b391f0dbc669082",
+      "status": "unchanged",
+      "priorSha256": "d0aca4a03009f3ca038cd542ee33cedf97312d53beaacc5f8b391f0dbc669082",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-source-and-controls.txt",
+      "bytes": 451,
+      "sha256": "458cd29dba829af6f62212374a1fdef548015f15e045798119dd631733b294ce",
+      "status": "unchanged",
+      "priorSha256": "458cd29dba829af6f62212374a1fdef548015f15e045798119dd631733b294ce",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-typecheck.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "unchanged",
+      "priorSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/foreman-unit.txt",
+      "bytes": 4171,
+      "sha256": "ae7c8526f93000e0f599de45e641f851319ad5103b140674e5e55e3b5809fc3a",
+      "status": "unchanged",
+      "priorSha256": "ae7c8526f93000e0f599de45e641f851319ad5103b140674e5e55e3b5809fc3a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/igcse-production-prefix.png",
+      "bytes": 32575,
+      "sha256": "ff2c62abab661065c613942caa3a6633db37462b1e768796d9d1ba2d204982e4",
+      "status": "unchanged",
+      "priorSha256": "ff2c62abab661065c613942caa3a6633db37462b1e768796d9d1ba2d204982e4",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/igcse-revision.png",
+      "bytes": 114194,
+      "sha256": "d8d4e85a24d0d66e72c2444fd7774ca9e4eba9373c85ffdd32a497cee6aa2024",
+      "status": "unchanged",
+      "priorSha256": "d8d4e85a24d0d66e72c2444fd7774ca9e4eba9373c85ffdd32a497cee6aa2024",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/integration/rendering-repairs.json",
+      "bytes": 250,
+      "sha256": "8a00670fe3a5daa095e8e1032d9eefb88df2c2fc321e8f8513efe227b3293a33",
+      "status": "unchanged",
+      "priorSha256": "8a00670fe3a5daa095e8e1032d9eefb88df2c2fc321e8f8513efe227b3293a33",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/browser-result.png",
+      "bytes": 59217,
+      "sha256": "26727fc4108394ac2b3b0c699fafb7d1702840fb0c3bb31fbb612327e216e72c",
+      "status": "unchanged",
+      "priorSha256": "26727fc4108394ac2b3b0c699fafb7d1702840fb0c3bb31fbb612327e216e72c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/browser-results.json",
+      "bytes": 2012,
+      "sha256": "984ba6092065df44fd1ad6f69a1359cdbc184f1ec690b6e47a6519c8378da02b",
+      "status": "unchanged",
+      "priorSha256": "984ba6092065df44fd1ad6f69a1359cdbc184f1ec690b6e47a6519c8378da02b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/browser-scenarios.ts",
+      "bytes": 10857,
+      "sha256": "6c37a173203cc08fb8fc3edd0f2b3b9bd1ddb70c053ace9c1ef3146039a02674",
+      "status": "unchanged",
+      "priorSha256": "6c37a173203cc08fb8fc3edd0f2b3b9bd1ddb70c053ace9c1ef3146039a02674",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/browser.html",
+      "bytes": 710,
+      "sha256": "742bcb255a5226c2f79f71cfbb5653d6d12db83b38e82a0da78396407d11c1a0",
+      "status": "unchanged",
+      "priorSha256": "742bcb255a5226c2f79f71cfbb5653d6d12db83b38e82a0da78396407d11c1a0",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/completion.json",
+      "bytes": 1241,
+      "sha256": "1dfc4fc7427c80a8eb3c6b4b6317a1f5b5651733ef469071c0ce6d977205348c",
+      "status": "unchanged",
+      "priorSha256": "1dfc4fc7427c80a8eb3c6b4b6317a1f5b5651733ef469071c0ce6d977205348c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/fixtures.ts",
+      "bytes": 2812,
+      "sha256": "ded77fe1c834b917636e1f9d898c425c6ce13ea216e8c15c85c3968569c3a95d",
+      "status": "unchanged",
+      "priorSha256": "ded77fe1c834b917636e1f9d898c425c6ce13ea216e8c15c85c3968569c3a95d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/format-owned.mjs",
+      "bytes": 690,
+      "sha256": "f50971ad0864780d20bb84fdb425829e4149c47305450326aa4b1464963926e7",
+      "status": "unchanged",
+      "priorSha256": "f50971ad0864780d20bb84fdb425829e4149c47305450326aa4b1464963926e7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/HANDOVER.md",
+      "bytes": 5582,
+      "sha256": "1b81ecc94eb9c98081d9ad3d86adcc837dde90b20e34978bba8c6e5d451f6c22",
+      "status": "unchanged",
+      "priorSha256": "1b81ecc94eb9c98081d9ad3d86adcc837dde90b20e34978bba8c6e5d451f6c22",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/integrated-browser-results.json",
+      "bytes": 2496,
+      "sha256": "d11ed02ffa1b31c65f7a1978c5afdefd46d81ebbd1817e4d85bc2c50a40f2bce",
+      "status": "unchanged",
+      "priorSha256": "d11ed02ffa1b31c65f7a1978c5afdefd46d81ebbd1817e4d85bc2c50a40f2bce",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/integrated-browser.png",
+      "bytes": 126953,
+      "sha256": "99cab9e04362a5c44d223615f5a4d83ac295756efc82f6ae3fd8d63b2ad6f9f7",
+      "status": "unchanged",
+      "priorSha256": "99cab9e04362a5c44d223615f5a4d83ac295756efc82f6ae3fd8d63b2ad6f9f7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/persistence.test.ts",
+      "bytes": 6018,
+      "sha256": "fac0003c73993f0408ad7d2c49488b713680d494591094223ee09953a0ce7738",
+      "status": "unchanged",
+      "priorSha256": "fac0003c73993f0408ad7d2c49488b713680d494591094223ee09953a0ce7738",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/protected-apps.txt",
+      "bytes": 414,
+      "sha256": "ad4ac7f714229e610f23ced0debe2715914e2083e3f1d804640bbb64cb16776f",
+      "status": "unchanged",
+      "priorSha256": "ad4ac7f714229e610f23ced0debe2715914e2083e3f1d804640bbb64cb16776f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/pure-tests.txt",
+      "bytes": 1512,
+      "sha256": "9d6432f8d4e7866bf283e7f80af0f361107fbc0526f79eca1830f63779243cce",
+      "status": "unchanged",
+      "priorSha256": "9d6432f8d4e7866bf283e7f80af0f361107fbc0526f79eca1830f63779243cce",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/run-browser.mjs",
+      "bytes": 2887,
+      "sha256": "ad545405aa0062603ed6c1e02da2d9b509bf4230a664726e2773b7eac283ab9a",
+      "status": "unchanged",
+      "priorSha256": "ad545405aa0062603ed6c1e02da2d9b509bf4230a664726e2773b7eac283ab9a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/run-integrated-browser.mjs",
+      "bytes": 5525,
+      "sha256": "27d4f9484409af7cc4b69a33b247c27e966a66452ea8da67b622fd615f775fb9",
+      "status": "unchanged",
+      "priorSha256": "27d4f9484409af7cc4b69a33b247c27e966a66452ea8da67b622fd615f775fb9",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/source-evidence.json",
+      "bytes": 2879,
+      "sha256": "3ff77a248c8c90702ceda3242a597f92598268ccb15fe5b3e1cd125460d8bbae",
+      "status": "unchanged",
+      "priorSha256": "3ff77a248c8c90702ceda3242a597f92598268ccb15fe5b3e1cd125460d8bbae",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/source-evidence.mjs",
+      "bytes": 1909,
+      "sha256": "fda9293ddecaeed37cddc0b8add7ea48fc370a3ed5ebafd26e2a5eabcca1f394",
+      "status": "unchanged",
+      "priorSha256": "fda9293ddecaeed37cddc0b8add7ea48fc370a3ed5ebafd26e2a5eabcca1f394",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/tsconfig.json",
+      "bytes": 103,
+      "sha256": "7b60dd6c2e61c1dc04695f407918848dfad9fd96ffeb6d4c75b63d69516a7d61",
+      "status": "unchanged",
+      "priorSha256": "7b60dd6c2e61c1dc04695f407918848dfad9fd96ffeb6d4c75b63d69516a7d61",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/persistence/typecheck.txt",
+      "bytes": 122,
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "status": "unchanged",
+      "priorSha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/background-check.mjs",
+      "bytes": 11558,
+      "sha256": "2d1feddcf9070e058fe7bd3acfc6f5fe8be5e887928a6cb34674f2bbe9e090c6",
+      "status": "unchanged",
+      "priorSha256": "2d1feddcf9070e058fe7bd3acfc6f5fe8be5e887928a6cb34674f2bbe9e090c6",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-background-restored-assessment.png",
+      "bytes": 232581,
+      "sha256": "edf091e5032e31d0ecea616fed7f5a54acddfa5f002419e8a1a01080e955a4d5",
+      "status": "unchanged",
+      "priorSha256": "edf091e5032e31d0ecea616fed7f5a54acddfa5f002419e8a1a01080e955a4d5",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-hidden-launch-failure.png",
+      "bytes": 132076,
+      "sha256": "91a47ae6d2c08a10fd0bab4ef11b4bfc47e98fd515b4f60afd25a788c1269c31",
+      "status": "unchanged",
+      "priorSha256": "91a47ae6d2c08a10fd0bab4ef11b4bfc47e98fd515b4f60afd25a788c1269c31",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-hidden-launch-host-load-failure.json",
+      "bytes": 11566,
+      "sha256": "e3c3e74469cf5efe18b93543ba0f69540c0dd9591d6ec876f9ecb7c2a7953150",
+      "status": "unchanged",
+      "priorSha256": "e3c3e74469cf5efe18b93543ba0f69540c0dd9591d6ec876f9ecb7c2a7953150",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-initial-host-load-failure.json",
+      "bytes": 11371,
+      "sha256": "41379b02b14ef2b6a6a3db92f4d2211b2f0093721b576a205ffceaa16d0d4c5c",
+      "status": "unchanged",
+      "priorSha256": "41379b02b14ef2b6a6a3db92f4d2211b2f0093721b576a205ffceaa16d0d4c5c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-results.json",
+      "bytes": 20052,
+      "sha256": "ca18698006ff8fe881db529c63b9cc2671796552364c1e84904678c7e76c78ec",
+      "status": "unchanged",
+      "priorSha256": "ca18698006ff8fe881db529c63b9cc2671796552364c1e84904678c7e76c78ec",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-sandbox-launch-failure.json",
+      "bytes": 10249,
+      "sha256": "12956df3573999cc21d0ec30e5ea3f86099cc7c17de986714f6621aa3f558b8f",
+      "status": "unchanged",
+      "priorSha256": "12956df3573999cc21d0ec30e5ea3f86099cc7c17de986714f6621aa3f558b8f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-visible-launch-failure.png",
+      "bytes": 132076,
+      "sha256": "91a47ae6d2c08a10fd0bab4ef11b4bfc47e98fd515b4f60afd25a788c1269c31",
+      "status": "unchanged",
+      "priorSha256": "91a47ae6d2c08a10fd0bab4ef11b4bfc47e98fd515b4f60afd25a788c1269c31",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/chrome-visible-launch-host-load-failure.json",
+      "bytes": 11725,
+      "sha256": "d66dc7a841d84ecb12c265bae2c7cc08292736d5377ff59fe6002c1540b21a20",
+      "status": "unchanged",
+      "priorSha256": "d66dc7a841d84ecb12c265bae2c7cc08292736d5377ff59fe6002c1540b21a20",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/completion.json",
+      "bytes": 1221,
+      "sha256": "07ef2884d2b57b1c9699994cc0e31236f8325b1bc858cfb473ce19f47f2e812e",
+      "status": "unchanged",
+      "priorSha256": "07ef2884d2b57b1c9699994cc0e31236f8325b1bc858cfb473ce19f47f2e812e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/edge-failure.png",
+      "bytes": 132067,
+      "sha256": "33adef6fa01bc21eaa2c880bd646c9f44cea44b418a5e8e125196af4c4fdcedf",
+      "status": "unchanged",
+      "priorSha256": "33adef6fa01bc21eaa2c880bd646c9f44cea44b418a5e8e125196af4c4fdcedf",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/edge-results.json",
+      "bytes": 11094,
+      "sha256": "1f61f56633d166ac8b2ed56dcb2bf292f6a98368e67912aea4d8a610c46b0fdd",
+      "status": "unchanged",
+      "priorSha256": "1f61f56633d166ac8b2ed56dcb2bf292f6a98368e67912aea4d8a610c46b0fdd",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/review.md",
+      "bytes": 5471,
+      "sha256": "e29bdc79af6921527abfde05e270428bf770bab8527a57f84b4896e9f8c09a33",
+      "status": "unchanged",
+      "priorSha256": "e29bdc79af6921527abfde05e270428bf770bab8527a57f84b4896e9f8c09a33",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/verification.json",
+      "bytes": 381,
+      "sha256": "6c6c27a2e6f719cd5729dfc3fe5e8827950a847fb19610dc059b34526ea75c5a",
+      "status": "unchanged",
+      "priorSha256": "6c6c27a2e6f719cd5729dfc3fe5e8827950a847fb19610dc059b34526ea75c5a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-background/verify-results.mjs",
+      "bytes": 2523,
+      "sha256": "2db4a15e3fa3be856274d153a28c2e86c792dfbf41ae38db10c2d0b419e9205f",
+      "status": "unchanged",
+      "priorSha256": "2db4a15e3fa3be856274d153a28c2e86c792dfbf41ae38db10c2d0b419e9205f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/completion.json",
+      "bytes": 1441,
+      "sha256": "e08ade184ece65f86af5a3782f13a1add64de62a12162218c056f254d7ec16cc",
+      "status": "unchanged",
+      "priorSha256": "e08ade184ece65f86af5a3782f13a1add64de62a12162218c056f254d7ec16cc",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/first-execution.json",
+      "bytes": 26775,
+      "sha256": "ba23370f084bfd8361a743b8e7179bb87eccb2510c7e22f6103c23c48f761f35",
+      "status": "unchanged",
+      "priorSha256": "ba23370f084bfd8361a743b8e7179bb87eccb2510c7e22f6103c23c48f761f35",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/HANDOVER.md",
+      "bytes": 3631,
+      "sha256": "68658707e02821726518f62455d217c5658adcce368ea00da0655182b8ca1898",
+      "status": "unchanged",
+      "priorSha256": "68658707e02821726518f62455d217c5658adcce368ea00da0655182b8ca1898",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/native-review.json",
+      "bytes": 52327,
+      "sha256": "cc94e4ad873892be1d96decf7adcfa4212fdfd92dcfd890cd9d0bfaeae2e96ee",
+      "status": "unchanged",
+      "priorSha256": "cc94e4ad873892be1d96decf7adcfa4212fdfd92dcfd890cd9d0bfaeae2e96ee",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/native-review.mjs",
+      "bytes": 9121,
+      "sha256": "37871e616a88265bfa21225e6b932a692d6b316372619b72e68842197fe3a7f9",
+      "status": "unchanged",
+      "priorSha256": "37871e616a88265bfa21225e6b932a692d6b316372619b72e68842197fe3a7f9",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/original-sequence.png",
+      "bytes": 153985,
+      "sha256": "4501549c9874f59e7603e3ba0b343fee73cd284fdb2c0f7d0da780640fd69cce",
+      "status": "unchanged",
+      "priorSha256": "4501549c9874f59e7603e3ba0b343fee73cd284fdb2c0f7d0da780640fd69cce",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/pointer-focused-sequence.png",
+      "bytes": 155298,
+      "sha256": "897349217950b421dc24393474247c552c1fbd7ed5506eb13772fb171ab4d28e",
+      "status": "unchanged",
+      "priorSha256": "897349217950b421dc24393474247c552c1fbd7ed5506eb13772fb171ab4d28e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/review-native/review-complete.png",
+      "bytes": 123147,
+      "sha256": "18a570b6524067588f3114d0d4a57fe906c7ba8f971df53a2f64322a64752988",
+      "status": "unchanged",
+      "priorSha256": "18a570b6524067588f3114d0d4a57fe906c7ba8f971df53a2f64322a64752988",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/root-acceptance.json",
+      "bytes": 1539,
+      "sha256": "69051b8f05699eee16be5c0f0bd3c4cb1dc468cb2c69bd469b4b71dd3637d078",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "root gate"
+    },
+    {
+      "path": "validation/s1/root-fix/foreman-report.json",
+      "bytes": 9459,
+      "sha256": "2f35a38971a8fa4ce36ed449dbf8ee6c5004ac47203ebc4dfcfbfc0cba5ecaed",
+      "status": "unchanged",
+      "priorSha256": "2f35a38971a8fa4ce36ed449dbf8ee6c5004ac47203ebc4dfcfbfc0cba5ecaed",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/capture-source-golden.mjs",
+      "bytes": 7003,
+      "sha256": "1612a050aa087d903de74a8c732338c1caff6c2234ba8510b0ed4f7e6af47a84",
+      "status": "unchanged",
+      "priorSha256": "1612a050aa087d903de74a8c732338c1caff6c2234ba8510b0ed4f7e6af47a84",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/completion.json",
+      "bytes": 2460,
+      "sha256": "21c2e822b7c881d430ba1f052a562091d75f39e94856f70df7253adfb11ab66e",
+      "status": "unchanged",
+      "priorSha256": "21c2e822b7c881d430ba1f052a562091d75f39e94856f70df7253adfb11ab66e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/HANDOVER.md",
+      "bytes": 7907,
+      "sha256": "04a6f4df64c72398ff8ed9dace57ac440cef1a1fa8d574356ff3b4f9262b53f9",
+      "status": "unchanged",
+      "priorSha256": "04a6f4df64c72398ff8ed9dace57ac440cef1a1fa8d574356ff3b4f9262b53f9",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/session.test.mjs",
+      "bytes": 12854,
+      "sha256": "b4a9ff468898ccc3922a7e1535bc6ce6771e6bfc3dca6f3701f2d9faebaed1b3",
+      "status": "unchanged",
+      "priorSha256": "b4a9ff468898ccc3922a7e1535bc6ce6771e6bfc3dca6f3701f2d9faebaed1b3",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/source-golden.json",
+      "bytes": 889039,
+      "sha256": "89aa07f32138c3beb6fd3c36185f3553c1b68d9f3a9300192794364b5aa288f4",
+      "status": "unchanged",
+      "priorSha256": "89aa07f32138c3beb6fd3c36185f3553c1b68d9f3a9300192794364b5aa288f4",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/tests.log",
+      "bytes": 929,
+      "sha256": "915227007261adab1ddcb45a0edf6a430705c397cb03686994d691eb34526eae",
+      "status": "unchanged",
+      "priorSha256": "915227007261adab1ddcb45a0edf6a430705c397cb03686994d691eb34526eae",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/tsconfig.json",
+      "bytes": 182,
+      "sha256": "65e40ae3197a2a42dc6c27621be77da22437099f8746a9eeaaf964cf1acfabf1",
+      "status": "unchanged",
+      "priorSha256": "65e40ae3197a2a42dc6c27621be77da22437099f8746a9eeaaf964cf1acfabf1",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/type-contract-fixtures.ts",
+      "bytes": 1431,
+      "sha256": "58c1a071eb196418911a5e96e4b4449df1f31757ee9ad1dd84847b51dd3bc9d6",
+      "status": "unchanged",
+      "priorSha256": "58c1a071eb196418911a5e96e4b4449df1f31757ee9ad1dd84847b51dd3bc9d6",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/typecheck.log",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "unchanged",
+      "priorSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/verification.json",
+      "bytes": 976,
+      "sha256": "dc1704d4630f6e47974b491189c862d17dd7fea35f5784572bf260e7750aed92",
+      "status": "unchanged",
+      "priorSha256": "dc1704d4630f6e47974b491189c862d17dd7fea35f5784572bf260e7750aed92",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/session/verify.cjs",
+      "bytes": 1119,
+      "sha256": "ba43c84b09c2abd7d1186ddcf0f11e76ae70ac7288b0caf8111fcf75c4f27e54",
+      "status": "unchanged",
+      "priorSha256": "ba43c84b09c2abd7d1186ddcf0f11e76ae70ac7288b0caf8111fcf75c4f27e54",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/alevel-desktop.png",
+      "bytes": 109667,
+      "sha256": "caee0abbbef53661ebcd33ddd531da0def41b0488990699860d6d91adcb26a44",
+      "status": "unchanged",
+      "priorSha256": "caee0abbbef53661ebcd33ddd531da0def41b0488990699860d6d91adcb26a44",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/alevel-mobile.png",
+      "bytes": 83894,
+      "sha256": "889113f350ac6ce70d5c0bf8c129498ca6b01363a43480cb86e3ef50f21cd162",
+      "status": "unchanged",
+      "priorSha256": "889113f350ac6ce70d5c0bf8c129498ca6b01363a43480cb86e3ef50f21cd162",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/alevel-teacher-mobile.png",
+      "bytes": 97253,
+      "sha256": "ccd117ff31f2b2c735a157551336df1222c716013df7d93352bb3a36c780267c",
+      "status": "unchanged",
+      "priorSha256": "ccd117ff31f2b2c735a157551336df1222c716013df7d93352bb3a36c780267c",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/alevel-workspace-mobile.png",
+      "bytes": 97642,
+      "sha256": "c6aae07f2eb3dc97a150710e684821710a843af9f752b1cf1a981a2249d0b5a2",
+      "status": "unchanged",
+      "priorSha256": "c6aae07f2eb3dc97a150710e684821710a843af9f752b1cf1a981a2249d0b5a2",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-checks.mjs",
+      "bytes": 16082,
+      "sha256": "9591c56167b5bbdcdd60e8a14dde16b110d53291c205128dbe0b28986ef8f234",
+      "status": "unchanged",
+      "priorSha256": "9591c56167b5bbdcdd60e8a14dde16b110d53291c205128dbe0b28986ef8f234",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-correction.json",
+      "bytes": 1329,
+      "sha256": "5fbc4a6ecb85e2c314c25ba4b41a5e7e045779dc0a32388c7c6cde739281cdac",
+      "status": "unchanged",
+      "priorSha256": "5fbc4a6ecb85e2c314c25ba4b41a5e7e045779dc0a32388c7c6cde739281cdac",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-correction.mjs",
+      "bytes": 7679,
+      "sha256": "c9ba7656d595655a9a283ec31b790f90047a68fd372850d324850321db7e84e5",
+      "status": "unchanged",
+      "priorSha256": "c9ba7656d595655a9a283ec31b790f90047a68fd372850d324850321db7e84e5",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-fonts.mjs",
+      "bytes": 3488,
+      "sha256": "5a75477ef781d64f9a769168aa67d8d920b4c8f541a46bec1b43d987ef378bcb",
+      "status": "unchanged",
+      "priorSha256": "5a75477ef781d64f9a769168aa67d8d920b4c8f541a46bec1b43d987ef378bcb",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-learning-review-first.json",
+      "bytes": 447,
+      "sha256": "06c2cb237dfa2ccdb5dcc459d957cf7c745dd2e52348ad08868264e1961c3b21",
+      "status": "unchanged",
+      "priorSha256": "06c2cb237dfa2ccdb5dcc459d957cf7c745dd2e52348ad08868264e1961c3b21",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-learning-review.json",
+      "bytes": 489,
+      "sha256": "556b17457157d8ccb2bf8f0872833527c00ad32808770a5bad363410d71f0a0b",
+      "status": "unchanged",
+      "priorSha256": "556b17457157d8ccb2bf8f0872833527c00ad32808770a5bad363410d71f0a0b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-learning-review.mjs",
+      "bytes": 4526,
+      "sha256": "13a2ec47c433c32101db86a545e580c8e986e73d2c7a7920cd66b4184ca3318a",
+      "status": "unchanged",
+      "priorSha256": "13a2ec47c433c32101db86a545e580c8e986e73d2c7a7920cd66b4184ca3318a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results-dropdown-label.json",
+      "bytes": 1569,
+      "sha256": "03133010c4abf59552b880638d7856f0b27aff61f952f634cc412ab74881ce03",
+      "status": "unchanged",
+      "priorSha256": "03133010c4abf59552b880638d7856f0b27aff61f952f634cc412ab74881ce03",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results-first.json",
+      "bytes": 5380,
+      "sha256": "3e7016678122961207595484327a7b4c9940a2ca809d8e3228a96a5d69fc9c30",
+      "status": "unchanged",
+      "priorSha256": "3e7016678122961207595484327a7b4c9940a2ca809d8e3228a96a5d69fc9c30",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results-native-diagnostic.json",
+      "bytes": 597,
+      "sha256": "d819b37ed9eaafc64d88e6d19dd70a1021e7798e85fc084433d0a935e6f5cc74",
+      "status": "unchanged",
+      "priorSha256": "d819b37ed9eaafc64d88e6d19dd70a1021e7798e85fc084433d0a935e6f5cc74",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results-native.json",
+      "bytes": 674,
+      "sha256": "14afeb1ba82d339841f4957c97324a7f0001bc39d474fcb64cfe72f603042010",
+      "status": "unchanged",
+      "priorSha256": "14afeb1ba82d339841f4957c97324a7f0001bc39d474fcb64cfe72f603042010",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results-save-race.json",
+      "bytes": 840,
+      "sha256": "51f5e430072b56bb755929b86f869d9005efa12823e3149bbba444804236ed8d",
+      "status": "unchanged",
+      "priorSha256": "51f5e430072b56bb755929b86f869d9005efa12823e3149bbba444804236ed8d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results-second.json",
+      "bytes": 1755,
+      "sha256": "9189b4e9f7411ed5ed93ba3fd6148f8c51c435482815b1180aea53d517b5de1e",
+      "status": "unchanged",
+      "priorSha256": "9189b4e9f7411ed5ed93ba3fd6148f8c51c435482815b1180aea53d517b5de1e",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/browser-results.json",
+      "bytes": 2567,
+      "sha256": "a9429f29e140059f8403d52e4db1a5337f8333c94badbe2b49c0d78d12de5de7",
+      "status": "unchanged",
+      "priorSha256": "a9429f29e140059f8403d52e4db1a5337f8333c94badbe2b49c0d78d12de5de7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/completion-fix.json",
+      "bytes": 1357,
+      "sha256": "ecc0b14731d18590a847b664f836007bfed1ce583f9739856823d3a07551de15",
+      "status": "unchanged",
+      "priorSha256": "ecc0b14731d18590a847b664f836007bfed1ce583f9739856823d3a07551de15",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/completion.json",
+      "bytes": 2277,
+      "sha256": "8d431a359addf7eb5128bc6e94c1bdbdf797c4d640e28b0ee9cbf4a8fb00fe6a",
+      "status": "unchanged",
+      "priorSha256": "8d431a359addf7eb5128bc6e94c1bdbdf797c4d640e28b0ee9cbf4a8fb00fe6a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/correction-after-reveal.png",
+      "bytes": 128209,
+      "sha256": "cb3775ed2db4d28fb9df5aaa83b1c497b367a86b6d4ca5ffe67d44a5ec7843f0",
+      "status": "unchanged",
+      "priorSha256": "cb3775ed2db4d28fb9df5aaa83b1c497b367a86b6d4ca5ffe67d44a5ec7843f0",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/correction-alevel-encoding-before.png",
+      "bytes": 129888,
+      "sha256": "6c5134ed71a80ee82c5cdcef9e954d5e60ea7b2b7fc2140dbaca6b629282f5bb",
+      "status": "unchanged",
+      "priorSha256": "6c5134ed71a80ee82c5cdcef9e954d5e60ea7b2b7fc2140dbaca6b629282f5bb",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/correction-alevel.png",
+      "bytes": 129433,
+      "sha256": "dbeec35f5e4589d6d75cfca99ca74f668d2bd9d7bc96aa9b9fa1f2bb434c5fa7",
+      "status": "unchanged",
+      "priorSha256": "dbeec35f5e4589d6d75cfca99ca74f668d2bd9d7bc96aa9b9fa1f2bb434c5fa7",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/correction-igcse.png",
+      "bytes": 132649,
+      "sha256": "f297c2ff11aab9f69eabd6c99e62b4b5d3ce2d330cea72e29a55f044308ded72",
+      "status": "unchanged",
+      "priorSha256": "f297c2ff11aab9f69eabd6c99e62b4b5d3ce2d330cea72e29a55f044308ded72",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/fonts-after-alevel.png",
+      "bytes": 97165,
+      "sha256": "6ce5debeddcf1db4728d882b2d4a685e6153d85c1aaaf83a61bebd80b27804df",
+      "status": "unchanged",
+      "priorSha256": "6ce5debeddcf1db4728d882b2d4a685e6153d85c1aaaf83a61bebd80b27804df",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/fonts-after-igcse.png",
+      "bytes": 99157,
+      "sha256": "c5f2689ce072df309f15f4cc400782587e9c48f856b5590330b53ae9b207d13f",
+      "status": "unchanged",
+      "priorSha256": "c5f2689ce072df309f15f4cc400782587e9c48f856b5590330b53ae9b207d13f",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/fonts-after.json",
+      "bytes": 10806,
+      "sha256": "be236c5f597782935b8043d0ba2cef2d3255ce0c1a655cbf6fd6b6d047ddc78b",
+      "status": "unchanged",
+      "priorSha256": "be236c5f597782935b8043d0ba2cef2d3255ce0c1a655cbf6fd6b6d047ddc78b",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/fonts-before-alevel.png",
+      "bytes": 96674,
+      "sha256": "21ce6f24e37b7bc68a6ae799dd5faef5c747b5772ab8fd4943f82d073c023496",
+      "status": "unchanged",
+      "priorSha256": "21ce6f24e37b7bc68a6ae799dd5faef5c747b5772ab8fd4943f82d073c023496",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/fonts-before-igcse.png",
+      "bytes": 98899,
+      "sha256": "8161f877d71cdf87255663e269f074be8502525130c6d66b02eeb23c9c3e67ac",
+      "status": "unchanged",
+      "priorSha256": "8161f877d71cdf87255663e269f074be8502525130c6d66b02eeb23c9c3e67ac",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/fonts-before.json",
+      "bytes": 10807,
+      "sha256": "b747ef673696cbe4187241f03294011924e2947af76565b979b1549ce45c727d",
+      "status": "unchanged",
+      "priorSha256": "b747ef673696cbe4187241f03294011924e2947af76565b979b1549ce45c727d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/HANDOFF.md",
+      "bytes": 11568,
+      "sha256": "3bd83a9ee324ecdef90a9f4fddcbe115e4d2e4e1234f91adecd939ec71417616",
+      "status": "unchanged",
+      "priorSha256": "3bd83a9ee324ecdef90a9f4fddcbe115e4d2e4e1234f91adecd939ec71417616",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/igcse-desktop.png",
+      "bytes": 112179,
+      "sha256": "d5b689059a9860bd2701a6c984fee35ec1501f1789d38bb9ea3dbe29d0a3dc19",
+      "status": "unchanged",
+      "priorSha256": "d5b689059a9860bd2701a6c984fee35ec1501f1789d38bb9ea3dbe29d0a3dc19",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/igcse-drawing-review.png",
+      "bytes": 137977,
+      "sha256": "a23cc25cf0b01f1ac3665f89c8d10ff5d9abeeb4c8d2894d4c8aa2c26b94c63d",
+      "status": "unchanged",
+      "priorSha256": "a23cc25cf0b01f1ac3665f89c8d10ff5d9abeeb4c8d2894d4c8aa2c26b94c63d",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/igcse-learning-review.png",
+      "bytes": 140355,
+      "sha256": "c06de129d7e1f184397ca74bb0df2bb538715b98ddb4fa0c7533a3087239ae16",
+      "status": "unchanged",
+      "priorSha256": "c06de129d7e1f184397ca74bb0df2bb538715b98ddb4fa0c7533a3087239ae16",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/igcse-rubric.png",
+      "bytes": 132792,
+      "sha256": "b32c1a6faf8786ec45e15c07a5b49a64b73527b5f77154930f6f0a2fbd55bd89",
+      "status": "unchanged",
+      "priorSha256": "b32c1a6faf8786ec45e15c07a5b49a64b73527b5f77154930f6f0a2fbd55bd89",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/igcse-teacher-mobile.png",
+      "bytes": 99051,
+      "sha256": "978e65de72c0bffc4e770219464dae3c00e600a81137eb8b75090a4983c497fe",
+      "status": "unchanged",
+      "priorSha256": "978e65de72c0bffc4e770219464dae3c00e600a81137eb8b75090a4983c497fe",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/implementation-fingerprints.json",
+      "bytes": 1746,
+      "sha256": "18110bc11b7e3b725a1394c7e8a745c15412c0be8ebe082ad9cafd36342969cf",
+      "status": "unchanged",
+      "priorSha256": "18110bc11b7e3b725a1394c7e8a745c15412c0be8ebe082ad9cafd36342969cf",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/native-selection-reviewed.json",
+      "bytes": 175,
+      "sha256": "0f97b799bbc51375621db70401618c8aa105efa0ff6bf8dbe3ca17f5faf3f343",
+      "status": "unchanged",
+      "priorSha256": "0f97b799bbc51375621db70401618c8aa105efa0ff6bf8dbe3ca17f5faf3f343",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/native-selection.json",
+      "bytes": 173,
+      "sha256": "51a685c80d7f7774a1c7c20446cd628b40c94e509cb798fa174b75e0459e3a6a",
+      "status": "unchanged",
+      "priorSha256": "51a685c80d7f7774a1c7c20446cd628b40c94e509cb798fa174b75e0459e3a6a",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/source-provenance.json",
+      "bytes": 1113,
+      "sha256": "2afaf1b39a6cacffe3113d81c5bb09d9f5230614401116f4e1615c9aaadad578",
+      "status": "unchanged",
+      "priorSha256": "2afaf1b39a6cacffe3113d81c5bb09d9f5230614401116f4e1615c9aaadad578",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s1/shell/typecheck.json",
+      "bytes": 307,
+      "sha256": "6b5027d32d8d5c71a109696d27535311d1865ad5b66cf85ab461ae384888e892",
+      "status": "unchanged",
+      "priorSha256": "6b5027d32d8d5c71a109696d27535311d1865ad5b66cf85ab461ae384888e892",
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/acid/.gitignore",
+      "bytes": 112,
+      "sha256": "a2adfe80a3870ff9717c0d3af00f2b97cb22ef83e4c1c8dec7c5a21f46ae3ddc",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/adapter-results.json",
+      "bytes": 700,
+      "sha256": "883edaeeeac887ef92e357f66d5cdcedba6047db1bda4dae642494d63bdd71b0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/adapter-tests.mjs",
+      "bytes": 10200,
+      "sha256": "fdc76d6f0ce85505867f6147ffcd8d4571740691e6f8efca75eef57af2831282",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/all15-active-acid-targets-real-launch-failure.png",
+      "bytes": 100127,
+      "sha256": "05f93660d76384ed659c0a5e05112e79f2a816734fd3661d421a681895909574",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/browser-progress.json",
+      "bytes": 6005,
+      "sha256": "f57dd62099278d2ff6f1624da486572503eb1237abe37b8780653f4aa5892332",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/browser-run-retry.log",
+      "bytes": 3078,
+      "sha256": "57236c124054ea6ace4bd12cac269d7b0001dcba312b8b88986dbe7890fcd45f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/browser-run.log",
+      "bytes": 3072,
+      "sha256": "7e594bbd91aceed462611ebf77048982c46610afd1386af7a4466095fc9b33e3",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/browser-tests.mjs",
+      "bytes": 14741,
+      "sha256": "36bcf9290b8050a5e71e5c6ecee69e730f9e9441fbfd707a87ad25ff19f7a43c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/chemistry-reference.log",
+      "bytes": 91,
+      "sha256": "9af7af118b29562dcd97122c319f547ffba7925e4a063754c3c069d730d7508f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/chemistry-reference.mjs",
+      "bytes": 26136,
+      "sha256": "5860112663eb54911342cb701de9c5dd42696901594e8f0ceec01496f4a68537",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/CHEMISTRY-REVIEW.md",
+      "bytes": 7524,
+      "sha256": "06950617c8e66001b0ccea7fdfc40b74dce1f1ef04f258450de954e7d2c360fb",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/completion.json",
+      "bytes": 3496,
+      "sha256": "7a6f5fbeaa55b771d541cbcd42b858027d3b3ab30266e8bd701e2e97e66dd01d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/desktop-application-teacher.png",
+      "bytes": 116677,
+      "sha256": "686ee6c88f8b517b42981320afc43ef01957ded2ac8dfa296111320d936b1513",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/desktop-buffer-recipe-deviation.png",
+      "bytes": 129343,
+      "sha256": "698d3d324fbd05c5889dbfe3584d28f6da8d85c17677939437d8b1f1e0dad389",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/desktop-structured-correction.png",
+      "bytes": 161943,
+      "sha256": "67e02fe0175d04cef7bded5265a59523b5132bec0260fe388f2dec9ad7b3f1d6",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/extract-engines.mjs",
+      "bytes": 4082,
+      "sha256": "ee568a38070e92ac868cc9fc26e073bb533852d636aea65c7b0669de02d44724",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/HANDOVER.md",
+      "bytes": 4667,
+      "sha256": "6ea854825c24b2dad2849bb02710fd4f20dfd85d206804e59954e50cc1363efa",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/historical-review.png",
+      "bytes": 95166,
+      "sha256": "4b69daa3065ada95e2ae399238ae5007c4fbaac906e4171089d64a39d9b4ca93",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/mobile-application-teacher.png",
+      "bytes": 103841,
+      "sha256": "06c519d6fe5ce5cd27eb6a50be1b30e5c95262edc6d5c847de6ce23f0cebed68",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/mobile-buffer-recipe-deviation.png",
+      "bytes": 116744,
+      "sha256": "9c8bf826c1d0ad5d0cf18a83d741ea261ae03f84ad25cc8681728a8a23c49bb6",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/mobile-four-part-weak-acid.png",
+      "bytes": 115289,
+      "sha256": "df366076c00559a52e8b5f79e6c406ae3d554b54814dcbca723b2bd4b344820c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/native-browser-stderr.log",
+      "bytes": 4238,
+      "sha256": "acfb76a03ec7db4360e314be405cf87e6938d4b78ab1c9352393cd454ccb8e87",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/ordinary-browser-results-initial.json",
+      "bytes": 4639,
+      "sha256": "4a3dca791fd582a698cf4d35dfa9c2f8ea94526cefb760c247603705702f65d6",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/ordinary-browser-results.json",
+      "bytes": 7177,
+      "sha256": "988a0c1b3412ee8c83c13850bb79294b6247f746c71e738a3127e3ab55f7b481",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/ordinary-browser-retry.log",
+      "bytes": 8984,
+      "sha256": "73e7de6d8191b21dbcd71bc5a01a4fc8aca859fbded63f650b368145a34b52b2",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/ordinary-browser-run.log",
+      "bytes": 7730,
+      "sha256": "2d3c10136c5852c6e54c3f9ecee189efcbdc40366c30b777851f84d6821db12d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/port-reference.mjs",
+      "bytes": 959,
+      "sha256": "d88277811478c83e9baa8b2a544d056ae99a1d16c3af9074d9319aa0a242700a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/render-bank-results.json",
+      "bytes": 22266,
+      "sha256": "7128c6a8fd42c1efff22184a248f3f1d66bc18ff0bfd5c7145e1bd8fed5b1431",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/render-bank.log",
+      "bytes": 96,
+      "sha256": "4e8dde1e250784d8bc63032a26dec842971efabc60e4a545b34d75d19dff37e0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/render-bank.mjs",
+      "bytes": 3713,
+      "sha256": "61c6c6c545fe43c226ded638aa2da9dc10f0e7cb5307093da83b9c79a10fd4f2",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/RENDER-REVIEW.md",
+      "bytes": 4007,
+      "sha256": "84348cee06466f125c5467eaaffc8a40133db197d91936d02b965e0f36fba657",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/revision-add-all-pause-reload-next-failure.png",
+      "bytes": 113807,
+      "sha256": "764d0f2d6d013e6c19bb4ebd52022ccdbbd3dcb47fd6a9ca23122c9789547214",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/revision-next.png",
+      "bytes": 106589,
+      "sha256": "fd28099a6a04c73a932736a5cc476e1ff0b8776c5b865f31d75fb675417186e4",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/source-extraction.json",
+      "bytes": 1548,
+      "sha256": "0cd16141274ecac1e06646065fe18972d526658471c757642dbca92ad044ebd0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/structured-partial-incomplete-correction-fixed-evidence-failure.png",
+      "bytes": 108419,
+      "sha256": "fbc1f0d66a0fa879bdf79265205f412da4780f96ccf89683065aa2338bf01e8f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/acid/typecheck.log",
+      "bytes": 63,
+      "sha256": "eb744a80a67eb43634940688fd0c1b7f0e06a98b09bc63188483adbac6898fa7",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A08"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790986661506-results.json",
+      "bytes": 713,
+      "sha256": "46eee0afdc9d88ae0f4e17ce973a820053c019966b6360ca57d1318eb8e68503",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790986697912-results.json",
+      "bytes": 10775,
+      "sha256": "1c49ae0d1714bfadd33b580b7871e4a9e9d347b61ae138ce6384588812710119",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790986734570-results.json",
+      "bytes": 10775,
+      "sha256": "f88681e1896eaf3d66a56da8bc64e55796856e53a9cf53c9eff1e6f57271b450",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790986756416-results.json",
+      "bytes": 27280,
+      "sha256": "311c8827d66971d9c0c8d5cbab557c3166dc1fa837253601379fb0dcc8bf12a3",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790986774710-results.json",
+      "bytes": 62194,
+      "sha256": "8ba007759ab5eba696ded8a9c1449fd7efa2b5a43acdb012796f481b04526177",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790986796760-results.json",
+      "bytes": 62412,
+      "sha256": "2b2f19daa55df24161ed72d93c1473b7a9db4729999ae94eb4318f9dc6923d27",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/a10-dot-headless-1790987556727-results.json",
+      "bytes": 12919,
+      "sha256": "72a4c425e84e87d7169650a896fb8adae4f5805cb547e566358a043caf711a97",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/activity.test.mjs",
+      "bytes": 7748,
+      "sha256": "2ebebc759d39f17e88295f609b6168ca2aa7c8df8965e90322a41febcad03a03",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/activity.test.mjs.log",
+      "bytes": 702,
+      "sha256": "782c651379f024a9fb7b240de2ae8f745e9363fb1b2f1c2aa0b8fa974a54172c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/atlas-provenance.json",
+      "bytes": 446,
+      "sha256": "0a81a239c5402d6f1642138f56e52cce07557cb145c7573460791685d3359fe2",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/browser-failure.png",
+      "bytes": 136422,
+      "sha256": "bf0859848695a1db49677b00bb72735783762bf0e44a36abd5adb1826f52356a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/browser-results.json",
+      "bytes": 13137,
+      "sha256": "a6ae84222f3558fcc2da5e0078922a8d52979f35414d7f9088e0b64380454010",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/browser.mjs",
+      "bytes": 13706,
+      "sha256": "6a5646e6ccaed584ba3247a8487096c5d899a7f36be8ca47d95fdd8ba75c75ce",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/changed-file-inventory.json",
+      "bytes": 1242,
+      "sha256": "0838b46b1ebeeeccd869aff8bc2bb9bb65e8aae8e38e0d02bbc7c0ce0f647ad3",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/CHEMISTRY-REVIEW.md",
+      "bytes": 7245,
+      "sha256": "3fffefa04fa7e571dc5e923447c4ffa7b2de3bd2f0d0b3ee76f748f43acae781",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/completion.json",
+      "bytes": 1065,
+      "sha256": "88c06877ccd0aec8429b196012a4c61a3473f852b0e6bae0959d786b966681d4",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/coverage.json",
+      "bytes": 7365,
+      "sha256": "c0f44570afa5a57c49db4dd00c6fe5c2ac473b053cd9e7cccdcb61df04f54e1f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/extract.mjs",
+      "bytes": 2915,
+      "sha256": "1ac42837a57fd6579bbb41cb875374444baba0b6c1670a75f205a7d7c655110a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/feedback-fix.mjs",
+      "bytes": 6107,
+      "sha256": "9bbbe4b5d45cddc3e90687e89f99707523436400fac41c29df2dbec365800e1e",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/final-source-fingerprints.json",
+      "bytes": 2361,
+      "sha256": "f16fe629c4141e0bc61565bd412ebf83c233738771af288457f97d702d3872df",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/finish-evidence.mjs",
+      "bytes": 1560,
+      "sha256": "8714167ef20153a7711b7ca5ca408990fbe85e02246391eccca0cf9b5d85a972",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/HANDOVER.md",
+      "bytes": 8105,
+      "sha256": "54c26f73b9f13e197af319ef833248424a5ba1547803f2b2770098d7f8f4a331",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/mobile-editor.png",
+      "bytes": 160008,
+      "sha256": "1f797c7e42b0f9187e756e6847e6d7ccfbb3b96ff62153e2bf7846fe4fbeabb0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/mobile-magnified-ionic-editor.png",
+      "bytes": 283015,
+      "sha256": "39b0c597288b886b520ebb063dc63719e34e96ec4167779ed3d9789f23924b48",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/mobile-touch-placement.png",
+      "bytes": 116035,
+      "sha256": "011f4353d411bf98eb03aea990677b40ed8900cbf25d19211fe58ac43e4a2b73",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/port-reference-checks.mjs",
+      "bytes": 4213,
+      "sha256": "789ee78940d1a21e11df79d3d59f41a35b393403f41374cb17b8a77824825d8a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/practice-correction-desktop.png",
+      "bytes": 323939,
+      "sha256": "dd15514a1d8ae862680a3cba65ef12cc9fcf3f71c5f9b01decefab8b0be6292f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/reference-review.json",
+      "bytes": 16682,
+      "sha256": "a7dc6e7c2485b6d8bfeb4b1caa2b9040691ed1ebeb1e2257f4ae5b0d540641c0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/render-bank.mjs",
+      "bytes": 2589,
+      "sha256": "1c5a86b6bebdf3aaf1f4e23ebaab00e34b18619158ad63af45f460a012d1543b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-01-09.html",
+      "bytes": 24682,
+      "sha256": "36a0309e3b19babc5bb3e4162528b9b1ba1fc5c60077497ba92eab343940188d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-01-09.png",
+      "bytes": 165442,
+      "sha256": "fc92c440a9bfda1bed5f6c8f56e78ddf045c41935f5ee4dc732cbaae34adcc19",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-10-18.html",
+      "bytes": 32466,
+      "sha256": "6bb617462b71eece0b569f23315c7580029aa2569d5849c5d4e27c4164b8e97b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-10-18.png",
+      "bytes": 178352,
+      "sha256": "295d21d2165faf6f5c8d97b30a91dd114d1b824813b3492c84ee62ecce42d3c3",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-19-27.html",
+      "bytes": 39239,
+      "sha256": "0bb1ffd520a07716d016a98ca4855754c9de0b0c17cb489ca315847875b1a617",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-19-27.png",
+      "bytes": 186982,
+      "sha256": "a015c37b0794a5b46d237ee3d70a37dd3463df188f0e61e275487c3786b1d765",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-28-36.html",
+      "bytes": 51145,
+      "sha256": "1c211aca7cf9e1ac1eae48ac973867ae88b582bfbca02b5c60b4c5b56bbe3843",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-28-36.png",
+      "bytes": 218772,
+      "sha256": "7e714fe1f8b834fa0145f261fa581ed37accd6348de17c6a9ca965c9604f74b9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-37-45.html",
+      "bytes": 36585,
+      "sha256": "f071cf39f2afd11ac8653e3fd5b9518c15a52eb49235d177f001692020ca7c75",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-37-45.png",
+      "bytes": 146464,
+      "sha256": "ba2e1ec8aff1658417038486cb1f9104c9abce71056cb22d6c35eadc7f435ac1",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-46-54.html",
+      "bytes": 25275,
+      "sha256": "e8c90b7d1f6eb9c61127ff24624025e8afef8b12669f32aeb138ec875ae8f8bf",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-46-54.png",
+      "bytes": 68454,
+      "sha256": "405d3149959ade9a86b08504b4b87664d4c4842c31d6ea4d44b8dbaa2b35ac0a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-55-63.html",
+      "bytes": 37421,
+      "sha256": "c2c842926b783f997ed9ec8e7cea0a327ad98c270354ef44d6d5fae20dab4384",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-55-63.png",
+      "bytes": 83981,
+      "sha256": "ba21e8033913fc1cc1a09a5e4d678aab4b29b65d5caa02c8baf7fabd5a98e1fa",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-64-72.html",
+      "bytes": 37242,
+      "sha256": "ec3c2eedcb15109ae11c2e99b34941fc46b303e2672801b65b448f11b9a3f7e3",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-64-72.png",
+      "bytes": 104406,
+      "sha256": "1c3bef5cbe67c5419193d126ce389de1ee9810a67b520933f180bb205de202e5",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-73-81.html",
+      "bytes": 40809,
+      "sha256": "8f2005dfa3808e778c1a6a2219a81ec6e981b5b7c41225b80acbe363cdb9ae78",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-73-81.png",
+      "bytes": 151827,
+      "sha256": "1dc258fed36e323de569da4e4f03dd8ddbef2f337183898c4a37a48189d3e022",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-82-90.html",
+      "bytes": 54489,
+      "sha256": "e0fd89cc4e8978fce5df876b5fe1cc5fd711c0000e9c066a6af974157673e5c0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-82-90.png",
+      "bytes": 208830,
+      "sha256": "33289fe27849c708841fad46765290e23e9a46974b15f97ef0fde5288f49bdb1",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-91-91.html",
+      "bytes": 6295,
+      "sha256": "a5513018adb54190acd2309172958c64948e75d33db9c4bbdbf28ec803c190ec",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank/bank-91-91.png",
+      "bytes": 37028,
+      "sha256": "507a8c5c6ce407920d269313e08015f395e5f332b25f5c1b2bd36b0769294d13",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/rendered-bank.json",
+      "bytes": 7928,
+      "sha256": "97ed76657d45853d7bd125614e4a74e40f776d96500d3dbfa9509618df97894d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/revision-next-desktop.png",
+      "bytes": 137186,
+      "sha256": "08dd9d1ec0344c9d4e8ae5ada72c77655c922a275ea2d035d8c02f738b136a15",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/run-checks.mjs",
+      "bytes": 1043,
+      "sha256": "073515e46b0fbd08bb3a862b6ced5fc730846a93aa993de3fb300592f66310f3",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/shared-feedback-fix.json",
+      "bytes": 1119,
+      "sha256": "a9ac35c39d3292929585812aa3cd0106e932ed92993215cb1d7290c9122ea393",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/shared-feedback-fixed-ionic-correction.png",
+      "bytes": 257277,
+      "sha256": "a3ad50a1c6fab438b4fe6431344e3d811deffada380276e16458ce1470f3231c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/shared-feedback-fixed-partial-ionic.png",
+      "bytes": 220553,
+      "sha256": "e3b9ff8abed59f53e1ae35eda7172965fbf5ebcbd6122eec31ade3b2bbe40344",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/shared-feedback-fixed-wrong-ionic.png",
+      "bytes": 211274,
+      "sha256": "bc6ba7e9ecc3d1374ec8e857a04ec2ebe40d794e17bf673e5cdd9214f1b95780",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/shared-informational-label-failure.png",
+      "bytes": 323939,
+      "sha256": "dd15514a1d8ae862680a3cba65ef12cc9fcf3f71c5f9b01decefab8b0be6292f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/source-fingerprints.json",
+      "bytes": 1287,
+      "sha256": "be9e29b54a7828d29a142d47328b3c9157c8fda324df17462a39fb89139a152f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/teacher-carbonate-ion-desktop.png",
+      "bytes": 207364,
+      "sha256": "d554eff734e118065ef36226f9e6ff001bafea3edd3294ffe824fea5b8d52747",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/teacher-carbonate-ion-mobile.png",
+      "bytes": 149218,
+      "sha256": "86f17f57f2bfbc6aba9110d78f7f58d63b713e1488c2bf7ece1f73083718dea9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/teacher-magnesium-peroxide-desktop.png",
+      "bytes": 176189,
+      "sha256": "5e8faaeb941a9cb7041f038c87462918ec3374743964f4b018866c96392d4775",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/teacher-magnesium-peroxide-mobile.png",
+      "bytes": 135056,
+      "sha256": "c64c1b9a1e55c703bfd4f1904bcf0c0d679a0561c0c4569ceac86d01daae9693",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/teacher-sulfur-hexafluoride-desktop.png",
+      "bytes": 225735,
+      "sha256": "2686065de9b00409afe447b2c6dbb55f47bb6d18f3683f8a813fe23b4d726aa5",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/teacher-sulfur-hexafluoride-mobile.png",
+      "bytes": 147008,
+      "sha256": "819138c6694fcaccaa85d2ef103fba158f4067b4e20f41b2b2de2d977cd5d947",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_alevel.mjs",
+      "bytes": 10935,
+      "sha256": "33ab1a683a638425ec57ca11d8cf7811b1992a4ebecc2b72b55aaa6a47d49b24",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_alevel.mjs.log",
+      "bytes": 107,
+      "sha256": "8d706d6466e4e3aca8423f71e10a05d9cd96aa2ff516a55bdacfa73565a566cf",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_bank.mjs",
+      "bytes": 7030,
+      "sha256": "6334b2b33417fb0d58f190127b8642d9e0c86b697517a7b85c55d14d01567a73",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_bank.mjs.log",
+      "bytes": 127,
+      "sha256": "9466c39a0805380ccb6fa0dd9c4a8ba53c14bafec35ca183f9d20ba225971f42",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_isomers.mjs",
+      "bytes": 4731,
+      "sha256": "2874263a0ea6e388fc6a3bd7a7d9a917b40ccce3c4c0904cf34f92ecf9d82134",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_isomers.mjs.log",
+      "bytes": 100,
+      "sha256": "83487350deba8112756059df6f69948e88496b6ef1c1f8bb3555699f3d4c41a4",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_lithium.mjs",
+      "bytes": 2287,
+      "sha256": "776d9cf494770247687bcfcbae94f23bc86d44d6e22d21064c13a8a7720c47fc",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_lithium.mjs.log",
+      "bytes": 114,
+      "sha256": "b6da322a3876c383d29e3432cd15cd3c20ef1c1b2eb1b8e3456e9d61fc9bfd2b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_pair_layout.mjs",
+      "bytes": 4326,
+      "sha256": "88dde6e01e943e8f1f33012a42c246794a9cd2c5c305c683e4c25bcedea0b1ef",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/test_dot_cross_pair_layout.mjs.log",
+      "bytes": 931,
+      "sha256": "ae95d59eb9f6186d708897d61822cc1f68c448402ad99a6009177fdeb3ce7ac5",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/dot-cross/unit-results.json",
+      "bytes": 2054,
+      "sha256": "f9f0588e3b63f7f8427c1472401beff651b8c54767463b1d72c32530e272a7fb",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A10"
+    },
+    {
+      "path": "validation/s2/integration/alevel-production-prefix.png",
+      "bytes": 101036,
+      "sha256": "b3e1b76c964838709531415e5f8249f807d1b479c040acb9bcea3b639220e296",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/build-browser.json",
+      "bytes": 8888,
+      "sha256": "b31de66df06161139be49d939fba370008a754586efb5922bd0722c366780a09",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/build-browser.mjs",
+      "bytes": 7364,
+      "sha256": "f9e1b8b6a951861652227f602da84ae5d6146fb96315899380a057b3671a40a8",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/build-check.json",
+      "bytes": 9834,
+      "sha256": "1cfc0dc6bed98c14130976883b76be9f0f86f7da6b7eb23c5acce2bcef9afe2d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/complete-coverage.test.ts",
+      "bytes": 5017,
+      "sha256": "c0b34e1f6f9ffc3bce8697cc3555c5763574f00893b43fea05d1961e9df93b24",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/dev-typography.json",
+      "bytes": 4472,
+      "sha256": "36c8d31656ea56ed934beae2ca9344c8e0c22f2edd9b731267ba3e9d4d37f77a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/dev-typography.mjs",
+      "bytes": 1988,
+      "sha256": "f04903c69effc0b4fb24a95199d5485f760351f61dd43db2c4ec789679b27385",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/final-check.json",
+      "bytes": 550,
+      "sha256": "0bc77f8336674d94cb14e2c95ccaa67be50803bc1ce105bafe3513067e20aa63",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-acid-coverage.txt",
+      "bytes": 621,
+      "sha256": "1a60d5c87f8239fe587d4c5331b5ab8c0f651777a2f2446c65ce7fb3c35e346f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-acid-independent-chemistry.txt",
+      "bytes": 88,
+      "sha256": "093c29173e8e04c40b8ae8216cfacc1897441c397809473ef4d3ea37659eb471",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-build-check.txt",
+      "bytes": 152,
+      "sha256": "73e4a97b9d168e15799e9ecd4856130df2e669d1ffad421b7285410b0374077e",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-build.txt",
+      "bytes": 3457,
+      "sha256": "2bac74cb41d16cbb24b358a63bf56d5a396ab9229947bfe081766de5a589a6c0",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-catalogue.txt",
+      "bytes": 45,
+      "sha256": "9eb4e45efec5345e7e22038194c0cb706c6bd7fda88a3c42cda763c4f9311496",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-checks.json",
+      "bytes": 3314,
+      "sha256": "3c8f3def0f75b775c36b78b8bb20bed5a06049742f556b635cf91d09c07b3ee8",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-protected-originals.txt",
+      "bytes": 112,
+      "sha256": "844d1314987fef536534eba6834ea8f2033e8c932909bbcf3ea4a1144f05cb5d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-s1-unit.txt",
+      "bytes": 4174,
+      "sha256": "437487bb2bd94ad3ae0a23f703928a7302d6de2c8140ed0870b4896fffc5eeba",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-s2-unit.txt",
+      "bytes": 1988,
+      "sha256": "9e919ed8855da9e27056dfe7288602c9f332299127f0a309c571b1e9b26314d8",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-source-and-controls.txt",
+      "bytes": 451,
+      "sha256": "c08115d821764ce14ff4fca23e89bdadf75d96b0f1ba7ec20c4fa16040d8481f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/foreman-typecheck.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/igcse-production-prefix.png",
+      "bytes": 134304,
+      "sha256": "387475b470bb72ba746519a8ddabdb07eca8713fc5346a5061d61edc2e594a54",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/interface-rationale.json",
+      "bytes": 2074,
+      "sha256": "5ed6e186d7893d8cec011189a5163cbe3570c4dabd4f4e883878c7cd2f838450",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/integration/shared-boundaries.test.ts",
+      "bytes": 3819,
+      "sha256": "7ba43d86c35b7e79f6afc40413b2f096430462be01f4f8ac1d80a635784ab61f",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A01 integration or retained earlier stage"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murncnj4-browser-stderr.log",
+      "bytes": 1963,
+      "sha256": "0085531eef0a22a3ea6c089e8a0ac4c8c6f532842bdde96f508798ad90379273",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murncnj4-failure.png",
+      "bytes": 175558,
+      "sha256": "3d96398cb7db17c6a95e0cc52dc965796a06fd73647970ed50e299b75c7e30fc",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murncnj4-results.json",
+      "bytes": 40239,
+      "sha256": "4251bad2c101771b03a4cedf6c6f6b0673fecf2781c92dd0a9cc5749af0e3c57",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murneguj-acid-60000-assessed.png",
+      "bytes": 202342,
+      "sha256": "9d674e9b7002c0d88d91eaca759977354cf55ead90f1cd044d701e25cb32d142",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murneguj-browser-stderr.log",
+      "bytes": 1982,
+      "sha256": "35ae0c47658e79a79214bbb217f913933e97940868a5b1448d2f213ad6fbb901",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murneguj-failure.png",
+      "bytes": 158816,
+      "sha256": "eea1d2af209ae3cb4c652b26b1d6f2ad564a8215f2c97ab84410cd0571de7f47",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-murneguj-results.json",
+      "bytes": 75993,
+      "sha256": "a9a32d5b2b1e3ee7e4e1be37d908adc69e4e65dda174acb3eee1dcb11a5592ea",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-tail-murnsp64-browser-stderr.log",
+      "bytes": 1249,
+      "sha256": "bd58bad49f965207610dd184b7f847b36282d756c5574f872ea03edf02a50b28",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-tail-murnsp64-failure.png",
+      "bytes": 293135,
+      "sha256": "7b9f77a7e4712ba558bcd9f5e7bdc4d48ff891fc21b59085df8367061aae0928",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-tail-murnsp64-results.json",
+      "bytes": 57220,
+      "sha256": "0dcbe916a6fba57668d0680fc43de70c962848accb36d014edcb4b27be744b2b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/a07s2-tail-murnsp64-structure-assessed.png",
+      "bytes": 245234,
+      "sha256": "4d920fffbb881b99f3ea7e474cb954ab21801c31f1b8b51df7b4086edd95d1ed",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/completion.json",
+      "bytes": 1766,
+      "sha256": "8262a50fe85f687d25b69cc292b1d96093b06e9a1ac38aa90c9fe284e13e450a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/latest-results.json",
+      "bytes": 75993,
+      "sha256": "a9a32d5b2b1e3ee7e4e1be37d908adc69e4e65dda174acb3eee1dcb11a5592ea",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/native-check-initial-thaw-sequence.mjs",
+      "bytes": 14307,
+      "sha256": "1f12fdcf8d4719766b6ef0c72f96eb395a482ab3528a6674499c0a4d526180f2",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/native-check-selector-failure.mjs",
+      "bytes": 14903,
+      "sha256": "3de4013550180a9a4bb613665e4a28f8f8c3ff6f06f5f285f670314ce1a4c9b9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/native-check.mjs",
+      "bytes": 14903,
+      "sha256": "3de4013550180a9a4bb613665e4a28f8f8c3ff6f06f5f285f670314ce1a4c9b9",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/native-tail-check.mjs",
+      "bytes": 18854,
+      "sha256": "5ad4c4abf1b9541c7e147e6289115f4fd8c55634d8d19328506324c276295b9c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/partial-verification.json",
+      "bytes": 1690,
+      "sha256": "f4c4afdf11098b91399c5c06954d64a91b6a330990f8b72d7edc5911c6678d2e",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/review.md",
+      "bytes": 7027,
+      "sha256": "b3aac79d284d79ed59b5e8696a9621d4bbb0b60c69dcee10348ed3b0c906cb93",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/tail-results.json",
+      "bytes": 57220,
+      "sha256": "0dcbe916a6fba57668d0680fc43de70c962848accb36d014edcb4b27be744b2b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/verify-partial.mjs",
+      "bytes": 4866,
+      "sha256": "84f7e3078b24c2000cc99fa4bc21e8d5ebf8566d929bed46610492174ed26d79",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-native/verify-results.mjs",
+      "bytes": 3518,
+      "sha256": "8f7551d923c275d28de3b0fdd716c6e7c45d102a1f833681e24e187f2ef83247",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A07"
+    },
+    {
+      "path": "validation/s2/review-suspension/browser-stderr.log",
+      "bytes": 4989,
+      "sha256": "c50f06a7e209ae679b5460ef1c3cd7f3221339f12f6c2e5838198fb9471dfdb6",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/completion.json",
+      "bytes": 1884,
+      "sha256": "684f7bc8d55ba8fa0ba7c3c63853320999bf1e92510cad034743553ebf33f98c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/disposition.json",
+      "bytes": 2583,
+      "sha256": "767afec67b7bebae2d3d73b4ef791a12e0956f09a742ef62a54e41e2fe4d038e",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/dot-180000-assessed.png",
+      "bytes": 312950,
+      "sha256": "4f740f66b4a479147ed35761707bed9bb0a22b35a86592c0109f53719b9fb0c2",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/dot-300000-assessed.png",
+      "bytes": 298392,
+      "sha256": "8834416aa4228744280e04f8b55b3562d1f084bd50d00d426899097e20ba8236",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/failure.png",
+      "bytes": 282980,
+      "sha256": "d5f62af98fa7e31a9715d3b33a00de63604299234d05e499de32f0058ba4059d",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/first-setup-browser-stderr.log",
+      "bytes": 2861,
+      "sha256": "ecdc49a8214484132ff6f64deeb9c936b9f2e24d9df1f95e1e70c475dd922354",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/first-setup-failure.json",
+      "bytes": 28691,
+      "sha256": "e8afa0e059ac286f26406d3888cd250091e2c73536a58f8641d7a972d677893b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/HANDOVER.md",
+      "bytes": 4885,
+      "sha256": "506166886535e71fa860e8e181db5b65914de34dcdbe518674d8d1955b17f757",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/native-check.mjs",
+      "bytes": 14341,
+      "sha256": "5e008239f5e07b88373585b8df8e372df8f92a6032d55b4ac47ee5a5f63c19cb",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/results.json",
+      "bytes": 345186,
+      "sha256": "89e972ecd45c48cbbeb2f7dc385ca1d6b01cc98779565ff0e94ebfb855dde16a",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/review-suspension/verify-results.mjs",
+      "bytes": 5146,
+      "sha256": "23d61dbd906e6a9ce8139178092a29c159515d762fc0356eb14be86b0d887231",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A06"
+    },
+    {
+      "path": "validation/s2/structure/browser-checks.mjs",
+      "bytes": 14587,
+      "sha256": "74c37ee202c759d0f132ebc9581614e82e0b4802b161b5ed22e85cef291c0865",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/browser-launch-initial.json",
+      "bytes": 686,
+      "sha256": "cc767f5a40b08325e2a1d0561635387f5b9f984c7de9c3688d49d9bd02ea61ed",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/browser-results-ordinary-initial.json",
+      "bytes": 4531,
+      "sha256": "c4acb96b68d73302f7120a1eab31ae1f579c8125df4cab90e32058b1a8384595",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/browser-results.json",
+      "bytes": 3532,
+      "sha256": "1782132191ceb10c4166c04eccdd004c7133c13a30659450f71d86f60e951b39",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/CHEMISTRY-REVIEW.md",
+      "bytes": 6297,
+      "sha256": "04d67e86030f37f7b37a5050efc38f72e9a1cc23eaca9b5df0223e4e5345b3fc",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/completion.json",
+      "bytes": 1621,
+      "sha256": "a55e8cba625d4426f428ca2b0cc6701d1c90d025d67f9f5e7c52f5d31103a6fe",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/desktop-L2-evidence.png",
+      "bytes": 217019,
+      "sha256": "8ae81a4733cf94d8a9d4f8680b3dd0146b522a5010af49e79150f67dc66f4f5c",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/desktop-L2-writing.png",
+      "bytes": 101468,
+      "sha256": "67482eb3b3573ac09219a7ba50c7832d85236e45653f237664e512af72ec2bba",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/desktop-L3-open-review.png",
+      "bytes": 125664,
+      "sha256": "69d5a1b7d13701f72cfa68eb7fbc02412463d45b1a3b9608147acea8ef024df5",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/desktop-teacher-full-rubric.png",
+      "bytes": 103810,
+      "sha256": "b9d137142c1da3cceb2369c04bf403d98c4df2b1feaa5f976760ced86e0168ad",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/extract-source.mjs",
+      "bytes": 2901,
+      "sha256": "13cccb1be8709219c8f7a080c64677c4d1d0b92c5531611fdfce75b9cd7dfc65",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/HANDOVER.md",
+      "bytes": 7150,
+      "sha256": "eb38275bc606b71ce80b1d331820c84fddbba55cb377dfd4999b0e03b96fe7e4",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/mobile-L2-review.png",
+      "bytes": 196265,
+      "sha256": "10293e1a2192b8920fc605f69f151b09ba16327449891ddfc2584568f8ef80b8",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/mobile-L2-writing.png",
+      "bytes": 119447,
+      "sha256": "87cc694d6f3c12d4d6d758ee6a8a5a1e5ed68fbc506e24204ec0ecb767f8d5eb",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/mobile-teacher-full-rubric.png",
+      "bytes": 89018,
+      "sha256": "ec1054194dea5840f5adc9e0806876b4b3dcfb049ad60dd30ae0a81a8ea299dd",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/output-fingerprints.json",
+      "bytes": 906,
+      "sha256": "d00aad6155624621739ee546abb820e6781bb1334e98485beb414e16fc7b731b",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/practice-L2-pending-review-reload-exact-evidence-time-failure.png",
+      "bytes": 161072,
+      "sha256": "4f5b3100aa345149bfe48dad3c081dcdf7758eb020cec073841175bf884b4566",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/practice-L3-open-writing-first-freeze-failure.png",
+      "bytes": 117173,
+      "sha256": "3d179acf28b4172d6a53ad2b0027fd8f014282676c61e4ed3f8ade6956316719",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/revision-pause-reload-resume-scheduler-failure.png",
+      "bytes": 166639,
+      "sha256": "e1e22fe79c70c0e969c41ecd7d80e4eff19e30057d8ef6c2ff4a3cd75039ca40",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/source-fingerprints.json",
+      "bytes": 1281,
+      "sha256": "d3e5d4027de45963a72c58ea187acc8ea947e032990587da268b90d0e1905d07",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/structure.test.mjs",
+      "bytes": 10056,
+      "sha256": "ff34c6df37055657aeb8ee35e333dd7d71b21faed4c566b8438e29e12e1a79df",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/teacher-complete-historical-bank-mobile-failure.png",
+      "bytes": 100933,
+      "sha256": "d80ec185e35a53eb363b2ff359b9a44d428504c2762d1a4243f487a4baabaa07",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "validation/s2/structure/tests.txt",
+      "bytes": 1356,
+      "sha256": "f6aeb819d4641249f9b0938ab3785d1e366681bd166fe0292a48d22d29b61f65",
+      "status": "added",
+      "priorSha256": null,
+      "owner": "A09"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 610,
+      "sha256": "fa62aa1cf5ef853d1c705993fafe722f0e9dcbf0f16125694ac0a8c586703593",
+      "status": "unchanged",
+      "priorSha256": "fa62aa1cf5ef853d1c705993fafe722f0e9dcbf0f16125694ac0a8c586703593",
+      "owner": "A01 integration or retained earlier stage"
+    }
+  ]
+}

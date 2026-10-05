@@ -1,0 +1,57 @@
+{
+  "agentId": "A03",
+  "jobId": "S1-ATTEMPT",
+  "runId": "MASTERS-REACT-20261002",
+  "status": "ESCALATE",
+  "implementationStatus": "PASS",
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": null,
+  "usage": null,
+  "outputPaths": [
+    "src/domain/attempt/attempt.ts",
+    "src/domain/attempt/input-checks.ts",
+    "src/domain/attempt/index.ts",
+    "src/domain/timing/active-clock.ts",
+    "src/domain/timing/browser-binding.ts",
+    "src/domain/timing/index.ts",
+    "src/contracts/question.ts",
+    "src/contracts/attempt.ts",
+    "src/contracts/editors.ts",
+    "src/contracts/session.ts",
+    "docs/architecture/README.md",
+    "docs/architecture/s1-attempt.md",
+    "validation/s1/attempt/"
+  ],
+  "validation": {
+    "strictTypecheck": {"status":"PASS","evidence":"validation/s1/attempt/typecheck.txt","negativeAssertions":7},
+    "nativeTypeScriptTests": {"status":"PASS","passed":19,"failed":0,"evidence":"validation/s1/attempt/tests.txt"},
+    "sourceFingerprints": "validation/s1/attempt/source-evidence.json",
+    "browser": {"status":"PARTIAL","passedChecks":6,"pageErrors":0,"evidence":"validation/s1/attempt/browser-results.json"},
+    "visualInspection": {
+      "status":"PASS",
+      "screenshots":["numeric-first-freeze.png","idle-cutoff.png","rubric-first-freeze.png","drawing-first-freeze.png"],
+      "observation":"Inspected saved numeric correction with immutable correct result, real idle cutoff, two-section partial rubric result and partial drawing aggregate; controls and feedback legible."
+    },
+    "originalSources":"READ_ONLY",
+    "scope":"S1 foundation only; no source-bank enablement, full chemistry editor migration, S2, build/dependency changes or publication"
+  },
+  "blocker": {
+    "kind":"browser-observation-environment",
+    "check":"Actual hidden/background/focus exclusion in a real browser",
+    "observed":"document.hidden=false and document.hasFocus=true after real tab switching and Chrome window minimisation, including a CDP request disabling Playwright focus emulation; window bounds report minimised.",
+    "dispositionNeeded":"Foreman/root obtains a usable real background observation or records the unresolved acceptance condition. No fabricated visibility state or synthetic event substituted.",
+    "runtimeDefectEstablished":false,
+    "deterministicHiddenFocusSuspensionTests":"PASS",
+    "retainedFailures":["browser-failure-attempt-1790982232877.json","browser-failure-attempt-1790982417627.json","browser-failure-attempt-1790982448749.json"]
+  },
+  "assumptions": [
+    "Host owns explicit Start/Next identity, provider restoration, checkpoint persistence, save failure display and scheduler Next.",
+    "Marking and valid-alternative eligibility are injected source policies; no automatic language chemistry checker invented.",
+    "Included registered source questions use one self-review method per question; combining explanation and drawing self review is rejected.",
+    "Development fixtures verify integrated foundation behaviour and do not establish full original activity acceptance.",
+    "Course mastery/session/persistence implementations preserve the approved legacy provenance/version rules in their own ownership."
+  ],
+  "confidence": 0.96,
+  "reason": "Implementation and deterministic checks pass; six integrated browser checks pass, but the required genuine background observation remains blocked by persistent visible/focused browser state."
+}

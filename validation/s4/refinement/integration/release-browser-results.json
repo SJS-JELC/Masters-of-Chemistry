@@ -1,0 +1,81 @@
+{
+  "startedAt": "2026-10-03T03:46:26.959Z",
+  "checks": [
+    "Independent course manifests against current build",
+    "Relative nested static prefixes/direct index refresh",
+    "All twelve explicit old activity aliases redirect under nested course prefix and destination refresh",
+    "Saved activity direct refresh",
+    "Initial no-provider loading and lazy activity code",
+    "Actual loaded initial shell JS gzip<=204800",
+    "Production DEV harness absent",
+    "390px activity render without document overflow"
+  ],
+  "courses": [
+    {
+      "course": "alevel",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 129,
+      "initialJavascriptGzipBytes": 150983,
+      "lazyJavascriptChunks": 59,
+      "manifestSha256": "a58326235697bf9ef884adb9459d2a6de0e9f71a04499dd151a75e06a452946e",
+      "checkedAt": "2026-10-03T03:46:27.847Z",
+      "actualInitialGzipBytes": 150983,
+      "initialFiles": [
+        "assets/preload-helper-BaNbYf_w.js",
+        "assets/jsx-runtime-Dk72oS4N.js",
+        "assets/alevel-BjQ_y264.js",
+        "assets/Content-CKr9RMoa.js",
+        "assets/DiagramViewport-DGhHqMlN.js",
+        "assets/persistence-DdgLoTf9.js",
+        "assets/dependencies-IbyFZa8N.js",
+        "assets/registry-B3v0p5ve.js",
+        "assets/ProductionFoundation-BRW_s1_h.js",
+        "assets/mastery-C1beql2-.js",
+        "assets/repository-CmR7a38u.js"
+      ],
+      "postStartJavascriptFiles": [
+        "assets/provider-DsDrIyEf.js",
+        "assets/provider-DCS_jX0F.js",
+        "assets/engine-DBdNwAjQ.js",
+        "assets/marking-DXx95Bv2.js"
+      ],
+      "prefix": "http://127.0.0.1:5198/chemistry/alevel/",
+      "developmentHarnessAbsent": true
+    },
+    {
+      "course": "igcse",
+      "status": "PASS",
+      "activityCount": 6,
+      "runtimeFileCount": 129,
+      "initialJavascriptGzipBytes": 150982,
+      "lazyJavascriptChunks": 59,
+      "manifestSha256": "8f38db2f89b7638d17302490f2442a2796af08dd5fba1fc5a25d5f17b2af206f",
+      "checkedAt": "2026-10-03T03:46:37.477Z",
+      "actualInitialGzipBytes": 150982,
+      "initialFiles": [
+        "assets/preload-helper-BaNbYf_w.js",
+        "assets/jsx-runtime-Dk72oS4N.js",
+        "assets/igcse-DOOUYg4U.js",
+        "assets/Content-CKr9RMoa.js",
+        "assets/DiagramViewport-DGhHqMlN.js",
+        "assets/persistence-DdgLoTf9.js",
+        "assets/dependencies-IbyFZa8N.js",
+        "assets/registry-B3v0p5ve.js",
+        "assets/ProductionFoundation-BRW_s1_h.js",
+        "assets/mastery-C1beql2-.js",
+        "assets/repository-CmR7a38u.js"
+      ],
+      "postStartJavascriptFiles": [
+        "assets/provider-CdIF3xRb.js",
+        "assets/marking-BxZxGm59.js"
+      ],
+      "prefix": "http://127.0.0.1:5198/chemistry/igcse/",
+      "developmentHarnessAbsent": true
+    }
+  ],
+  "errors": [],
+  "browserTempRoot": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s4\\refinement\\integration\\release-browser-temp",
+  "status": "PASS",
+  "finishedAt": "2026-10-03T03:46:46.714Z"
+}

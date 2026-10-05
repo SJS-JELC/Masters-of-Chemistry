@@ -1,0 +1,52 @@
+{
+  "jobId": "F3-SHARED-FINAL-FIX",
+  "agentId": "F08",
+  "status": "PASS",
+  "output": "validation/component-fidelity/f3/shared-final/HANDOVER.md",
+  "confidence": 0.96,
+  "reason": null,
+  "validation": {
+    "status": "PASS",
+    "references": [
+      "energy-actions-results.json",
+      "numeric-browser-results.json",
+      "acid-results.json",
+      "rubric-browser-results.json",
+      "revision-results.json",
+      "typecheck.json",
+      "contacts.json",
+      "freeze.json",
+      "f3-only.patch",
+      "fixture-startup-failure.json"
+    ],
+    "cases": 22,
+    "rawPngs": 148,
+    "sourceFreeze": "2026-10-03T20:22:19.516Z"
+  },
+  "sourceHashes": [
+    {
+      "file": "src/ui/SourceQuestionPlayer.tsx",
+      "sha256": "cb3df1f69f892b6b45ad78f0f57023b717cbe33aaff5bd078d3555391d933634"
+    },
+    {
+      "file": "src/ui/SourceRubricReview.tsx",
+      "sha256": "8a405915bc4d3c6be34422db690ab76ff8177f0a56109cbeca50aacbb08ff87c"
+    },
+    {
+      "file": "src/ui/source-adapters.css",
+      "sha256": "2dd8e66655cc949c6e47230b445a05c42dcabc51f19039f6169648bbc41835ab"
+    }
+  ],
+  "remainingGates": [
+    "F12 independent source/runtime review",
+    "F07 final build/protected closure",
+    "ROOT final acceptance"
+  ],
+  "runtime": {
+    "requestedModel": "gpt-6.1-sol",
+    "requestedReasoning": "high",
+    "effective": null,
+    "usage": null
+  },
+  "finishedAt": "2026-10-03T20:27:09.612Z"
+}

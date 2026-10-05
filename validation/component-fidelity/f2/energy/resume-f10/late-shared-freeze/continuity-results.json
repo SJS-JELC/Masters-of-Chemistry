@@ -1,0 +1,69 @@
+{
+  "jobId": "F2-ENERGY",
+  "agentId": "F10",
+  "startedAt": "2026-10-03T19:07:22.013Z",
+  "status": "PASS",
+  "browser": "Edge headless / pinned root Playwright 1.62.1",
+  "isolation": "Fresh ephemeral browser contexts; original source served readonly. Synthetic source snapshots only in isolated context localStorage.",
+  "checks": [
+    {
+      "kind": "late-shared-freeze-continuity",
+      "size": "desktop",
+      "id": "D03",
+      "promptExactlyOnce": true,
+      "modelMountedReadonly": true,
+      "oneMarkingActionsPane": true,
+      "computedDiagramMatchesRetainedMatrix": true,
+      "inputFontMatchesFinalSource": false,
+      "noAutoAssessmentOnEnter": true,
+      "invalidNumericDraftProtected": true,
+      "explicitCheckScore": 1,
+      "firstScoreTimingAndSingleEvidenceRestored": true,
+      "metrics": {
+        "width": 720,
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontWeight": "700",
+        "fontSize": "15px",
+        "fill": "rgb(244, 246, 255)",
+        "bg": "rgb(9, 15, 35)",
+        "overflow": false
+      }
+    },
+    {
+      "kind": "late-shared-freeze-continuity",
+      "size": "mobile",
+      "id": "D05",
+      "promptExactlyOnce": true,
+      "modelMountedReadonly": true,
+      "oneMarkingActionsPane": true,
+      "computedDiagramMatchesRetainedMatrix": true,
+      "inputFontMatchesFinalSource": true,
+      "noAutoAssessmentOnEnter": true,
+      "invalidNumericDraftProtected": false,
+      "explicitCheckScore": 1,
+      "firstScoreTimingAndSingleEvidenceRestored": true,
+      "metrics": {
+        "width": 336,
+        "fontFamily": "Comfortaa, sans-serif",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "fill": "rgb(244, 246, 255)",
+        "bg": "rgb(9, 15, 35)",
+        "overflow": false
+      }
+    }
+  ],
+  "screenshots": [
+    "desktop-D03-unanswered-full.png",
+    "desktop-D03-model-full.png",
+    "mobile-D05-unanswered-full.png",
+    "mobile-D05-model-full.png"
+  ],
+  "metrics": [],
+  "errors": [],
+  "limitations": [
+    "No new native OS hide/suspend certification.",
+    "The original has no correction/reveal-model flow; its correction/model paired diagrams are original saved-state rendering of the equivalent corrected/checked model, while React uses the shared live correction/reveal engine."
+  ],
+  "finishedAt": "2026-10-03T19:07:32.670Z"
+}

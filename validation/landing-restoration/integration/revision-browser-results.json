@@ -1,0 +1,46 @@
+{
+  "startedAt": "2026-10-03T08:13:21.539Z",
+  "browser": "154.0.4258.48",
+  "checks": [
+    {
+      "name": "alevel revision matching resume and changed set",
+      "status": "PASS",
+      "fixture": "revision-alevel-1791015201708",
+      "originalAttempt": "e924a251-e849-4712-ac6b-0f39a17bd856",
+      "resumedAttempt": "e924a251-e849-4712-ac6b-0f39a17bd856",
+      "changedAttempt": "24661174-22b5-40f5-af01-682bae956d88",
+      "selectedGemCount": 6,
+      "expandedLevelCount": 17,
+      "responsesRestored": true
+    },
+    {
+      "name": "igcse revision matching resume and changed set",
+      "status": "PASS",
+      "fixture": "revision-igcse-1791015205426",
+      "originalAttempt": "24501262-774f-4c95-9876-2144953ce0f1",
+      "resumedAttempt": "24501262-774f-4c95-9876-2144953ce0f1",
+      "changedAttempt": "87a16720-c6f0-4c35-84dc-869953097c03",
+      "selectedGemCount": 4,
+      "expandedLevelCount": 10,
+      "responsesRestored": true
+    },
+    {
+      "name": "course preference namespaces hash aliases and direct links",
+      "status": "PASS",
+      "fixture": "routing-1791015209119",
+      "rememberedCourseWinsEntry": true,
+      "explicitCourseWinsPreference": true,
+      "hiddenAliasesRedirected": true,
+      "oldQuestionTeacherOnly": true,
+      "courseDatabases": [
+        "masters-of-chemistry-igcse-routing-1791015209119",
+        "masters-of-chemistry-alevel-routing-1791015209119"
+      ],
+      "olympiadHome": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T08:13:37.602Z",
+  "status": "PASS"
+}

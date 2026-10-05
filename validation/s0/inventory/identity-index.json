@@ -1,0 +1,3663 @@
+{
+  "schemaVersion": 1,
+  "identitySource": "Existing permanent source IDs and original QuestionReview.bank FNV-1a hash; never display order",
+  "activities": [
+    {
+      "id": "alevel/acid-base-calculations",
+      "convention": "AB2-<canonical template index base36>-<level>-<unsigned seed base36>; generateFromReview also preserves legacy AB/ABC decoding. Existing template list indices must not be reordered.",
+      "entries": [],
+      "count": 0
+    },
+    {
+      "id": "alevel/electrons-bonding",
+      "convention": "Fixed EB01–EB14 source IDs directly used by question/review URL; no hash codec.",
+      "entries": [
+        {
+          "sourceKey": "EB01",
+          "questionId": "EB01"
+        },
+        {
+          "sourceKey": "EB02",
+          "questionId": "EB02"
+        },
+        {
+          "sourceKey": "EB03",
+          "questionId": "EB03"
+        },
+        {
+          "sourceKey": "EB04",
+          "questionId": "EB04"
+        },
+        {
+          "sourceKey": "EB05",
+          "questionId": "EB05"
+        },
+        {
+          "sourceKey": "EB06",
+          "questionId": "EB06"
+        },
+        {
+          "sourceKey": "EB07",
+          "questionId": "EB07"
+        },
+        {
+          "sourceKey": "EB08",
+          "questionId": "EB08"
+        },
+        {
+          "sourceKey": "EB09",
+          "questionId": "EB09"
+        },
+        {
+          "sourceKey": "EB10",
+          "questionId": "EB10"
+        },
+        {
+          "sourceKey": "EB11",
+          "questionId": "EB11"
+        },
+        {
+          "sourceKey": "EB12",
+          "questionId": "EB12"
+        },
+        {
+          "sourceKey": "EB13",
+          "questionId": "EB13"
+        },
+        {
+          "sourceKey": "EB14",
+          "questionId": "EB14"
+        }
+      ],
+      "count": 14
+    },
+    {
+      "id": "alevel/electron-configurations",
+      "convention": "EC source-key hash on speciesId:direction:representation, ECB seeded matching; session RNG xorshift32. Preserve session.js matching generator even though app.js/mastery.html are inactive.",
+      "entries": [
+        {
+          "sourceKey": "H:build:full",
+          "questionId": "EC-TXDM70"
+        },
+        {
+          "sourceKey": "H:identify:full",
+          "questionId": "EC-IN4VCI"
+        },
+        {
+          "sourceKey": "H:build:row",
+          "questionId": "EC-H1IJIZ"
+        },
+        {
+          "sourceKey": "H:identify:row",
+          "questionId": "EC-AO2IP1"
+        },
+        {
+          "sourceKey": "H:build:energy",
+          "questionId": "EC-CMICC5"
+        },
+        {
+          "sourceKey": "H:identify:energy",
+          "questionId": "EC-Z8WAF7"
+        },
+        {
+          "sourceKey": "He:build:full",
+          "questionId": "EC-S5BKTF"
+        },
+        {
+          "sourceKey": "He:identify:full",
+          "questionId": "EC-KZP5TZ"
+        },
+        {
+          "sourceKey": "He:build:row",
+          "questionId": "EC-QO20JA"
+        },
+        {
+          "sourceKey": "He:identify:row",
+          "questionId": "EC-50EMB6"
+        },
+        {
+          "sourceKey": "He:build:energy",
+          "questionId": "EC-YY4N4I"
+        },
+        {
+          "sourceKey": "He:identify:energy",
+          "questionId": "EC-JMR93Q"
+        },
+        {
+          "sourceKey": "Li:build:full",
+          "questionId": "EC-FHH6DV"
+        },
+        {
+          "sourceKey": "Li:identify:full",
+          "questionId": "EC-I52V07"
+        },
+        {
+          "sourceKey": "Li:build:row",
+          "questionId": "EC-P2W4TI"
+        },
+        {
+          "sourceKey": "Li:identify:row",
+          "questionId": "EC-MWCDYA"
+        },
+        {
+          "sourceKey": "Li:build:energy",
+          "questionId": "EC-1WEIN6"
+        },
+        {
+          "sourceKey": "Li:identify:energy",
+          "questionId": "EC-083FFQ"
+        },
+        {
+          "sourceKey": "Be:build:full",
+          "questionId": "EC-CDN1K9"
+        },
+        {
+          "sourceKey": "Be:identify:full",
+          "questionId": "EC-D8I351"
+        },
+        {
+          "sourceKey": "Be:build:row",
+          "questionId": "EC-FD61CW"
+        },
+        {
+          "sourceKey": "Be:identify:row",
+          "questionId": "EC-G81B1G"
+        },
+        {
+          "sourceKey": "Be:build:energy",
+          "questionId": "EC-ENI2EG"
+        },
+        {
+          "sourceKey": "Be:identify:energy",
+          "questionId": "EC-73M8ES"
+        },
+        {
+          "sourceKey": "B:build:full",
+          "questionId": "EC-3HEAFY"
+        },
+        {
+          "sourceKey": "B:identify:full",
+          "questionId": "EC-QPOH8K"
+        },
+        {
+          "sourceKey": "B:build:row",
+          "questionId": "EC-0P0NJT"
+        },
+        {
+          "sourceKey": "B:identify:row",
+          "questionId": "EC-U07CGZ"
+        },
+        {
+          "sourceKey": "B:build:energy",
+          "questionId": "EC-YE2PI7"
+        },
+        {
+          "sourceKey": "B:identify:energy",
+          "questionId": "EC-1TR931"
+        },
+        {
+          "sourceKey": "C:build:full",
+          "questionId": "EC-JOJZQ7"
+        },
+        {
+          "sourceKey": "C:identify:full",
+          "questionId": "EC-UGWX17"
+        },
+        {
+          "sourceKey": "C:build:row",
+          "questionId": "EC-BGPC5M"
+        },
+        {
+          "sourceKey": "C:identify:row",
+          "questionId": "EC-PFXP0U"
+        },
+        {
+          "sourceKey": "C:build:energy",
+          "questionId": "EC-NZEBKE"
+        },
+        {
+          "sourceKey": "C:identify:energy",
+          "questionId": "EC-P2YD8Q"
+        },
+        {
+          "sourceKey": "N:build:full",
+          "questionId": "EC-X67H1M"
+        },
+        {
+          "sourceKey": "N:identify:full",
+          "questionId": "EC-9B5MC8"
+        },
+        {
+          "sourceKey": "N:build:row",
+          "questionId": "EC-L391A5"
+        },
+        {
+          "sourceKey": "N:identify:row",
+          "questionId": "EC-7KWSTR"
+        },
+        {
+          "sourceKey": "N:build:energy",
+          "questionId": "EC-8SM32Z"
+        },
+        {
+          "sourceKey": "N:identify:energy",
+          "questionId": "EC-VJ9N75"
+        },
+        {
+          "sourceKey": "O:build:full",
+          "questionId": "EC-TH921N"
+        },
+        {
+          "sourceKey": "O:identify:full",
+          "questionId": "EC-TXYUKV"
+        },
+        {
+          "sourceKey": "O:build:row",
+          "questionId": "EC-5AUBIM"
+        },
+        {
+          "sourceKey": "O:identify:row",
+          "questionId": "EC-U5RDA2"
+        },
+        {
+          "sourceKey": "O:build:energy",
+          "questionId": "EC-RRCPUY"
+        },
+        {
+          "sourceKey": "O:identify:energy",
+          "questionId": "EC-RGVK0U"
+        },
+        {
+          "sourceKey": "F:build:full",
+          "questionId": "EC-0M40W2"
+        },
+        {
+          "sourceKey": "F:identify:full",
+          "questionId": "EC-YHIFOG"
+        },
+        {
+          "sourceKey": "F:build:row",
+          "questionId": "EC-9HPFUD"
+        },
+        {
+          "sourceKey": "F:identify:row",
+          "questionId": "EC-IDAAMV"
+        },
+        {
+          "sourceKey": "F:build:energy",
+          "questionId": "EC-8C1RAR"
+        },
+        {
+          "sourceKey": "F:identify:energy",
+          "questionId": "EC-M4O2D5"
+        },
+        {
+          "sourceKey": "Ne:build:full",
+          "questionId": "EC-8SEU39"
+        },
+        {
+          "sourceKey": "Ne:identify:full",
+          "questionId": "EC-U08TL5"
+        },
+        {
+          "sourceKey": "Ne:build:row",
+          "questionId": "EC-XTU7YS"
+        },
+        {
+          "sourceKey": "Ne:identify:row",
+          "questionId": "EC-X20F0G"
+        },
+        {
+          "sourceKey": "Ne:build:energy",
+          "questionId": "EC-XM0G84"
+        },
+        {
+          "sourceKey": "Ne:identify:energy",
+          "questionId": "EC-U68V60"
+        },
+        {
+          "sourceKey": "Na:build:full",
+          "questionId": "EC-HA14U1"
+        },
+        {
+          "sourceKey": "Na:identify:full",
+          "questionId": "EC-ZPP6R9"
+        },
+        {
+          "sourceKey": "Na:build:row",
+          "questionId": "EC-WQXQK0"
+        },
+        {
+          "sourceKey": "Na:identify:row",
+          "questionId": "EC-7IU86S"
+        },
+        {
+          "sourceKey": "Na:build:energy",
+          "questionId": "EC-GHIBTK"
+        },
+        {
+          "sourceKey": "Na:identify:energy",
+          "questionId": "EC-1HHZUS"
+        },
+        {
+          "sourceKey": "Mg:build:full",
+          "questionId": "EC-KDQH4M"
+        },
+        {
+          "sourceKey": "Mg:identify:full",
+          "questionId": "EC-UTA7U4"
+        },
+        {
+          "sourceKey": "Mg:build:row",
+          "questionId": "EC-TZX6Z5"
+        },
+        {
+          "sourceKey": "Mg:identify:row",
+          "questionId": "EC-TU3FCB"
+        },
+        {
+          "sourceKey": "Mg:build:energy",
+          "questionId": "EC-I6JX1Z"
+        },
+        {
+          "sourceKey": "Mg:identify:energy",
+          "questionId": "EC-B5AJ1H"
+        },
+        {
+          "sourceKey": "Al:build:full",
+          "questionId": "EC-V2VKRT"
+        },
+        {
+          "sourceKey": "Al:identify:full",
+          "questionId": "EC-4UOYAT"
+        },
+        {
+          "sourceKey": "Al:build:row",
+          "questionId": "EC-KIURHC"
+        },
+        {
+          "sourceKey": "Al:identify:row",
+          "questionId": "EC-0WUB1G"
+        },
+        {
+          "sourceKey": "Al:build:energy",
+          "questionId": "EC-8S94O8"
+        },
+        {
+          "sourceKey": "Al:identify:energy",
+          "questionId": "EC-Z7WJF8"
+        },
+        {
+          "sourceKey": "Si:build:full",
+          "questionId": "EC-EQYVKA"
+        },
+        {
+          "sourceKey": "Si:identify:full",
+          "questionId": "EC-XE6BVC"
+        },
+        {
+          "sourceKey": "Si:build:row",
+          "questionId": "EC-X7FG1P"
+        },
+        {
+          "sourceKey": "Si:identify:row",
+          "questionId": "EC-O7IU5R"
+        },
+        {
+          "sourceKey": "Si:build:energy",
+          "questionId": "EC-4N00UZ"
+        },
+        {
+          "sourceKey": "Si:identify:energy",
+          "questionId": "EC-UAR6K1"
+        },
+        {
+          "sourceKey": "P:build:full",
+          "questionId": "EC-VUWZ44"
+        },
+        {
+          "sourceKey": "P:identify:full",
+          "questionId": "EC-KRMZKA"
+        },
+        {
+          "sourceKey": "P:build:row",
+          "questionId": "EC-683TCZ"
+        },
+        {
+          "sourceKey": "P:identify:row",
+          "questionId": "EC-L6Y81P"
+        },
+        {
+          "sourceKey": "P:build:energy",
+          "questionId": "EC-HSGTH9"
+        },
+        {
+          "sourceKey": "P:identify:energy",
+          "questionId": "EC-G74N8B"
+        },
+        {
+          "sourceKey": "S:build:full",
+          "questionId": "EC-ERXMJZ"
+        },
+        {
+          "sourceKey": "S:identify:full",
+          "questionId": "EC-DWJK23"
+        },
+        {
+          "sourceKey": "S:build:row",
+          "questionId": "EC-9P1UOQ"
+        },
+        {
+          "sourceKey": "S:identify:row",
+          "questionId": "EC-ESQFY6"
+        },
+        {
+          "sourceKey": "S:build:energy",
+          "questionId": "EC-LTCXFI"
+        },
+        {
+          "sourceKey": "S:identify:energy",
+          "questionId": "EC-R878HM"
+        },
+        {
+          "sourceKey": "Cl:build:full",
+          "questionId": "EC-T9HJMF"
+        },
+        {
+          "sourceKey": "Cl:identify:full",
+          "questionId": "EC-QTN4KJ"
+        },
+        {
+          "sourceKey": "Cl:build:row",
+          "questionId": "EC-65T1S2"
+        },
+        {
+          "sourceKey": "Cl:identify:row",
+          "questionId": "EC-TXYODY"
+        },
+        {
+          "sourceKey": "Cl:build:energy",
+          "questionId": "EC-GX4H6U"
+        },
+        {
+          "sourceKey": "Cl:identify:energy",
+          "questionId": "EC-2CBKR6"
+        },
+        {
+          "sourceKey": "Ar:build:full",
+          "questionId": "EC-LAWSFR"
+        },
+        {
+          "sourceKey": "Ar:identify:full",
+          "questionId": "EC-HLW8JN"
+        },
+        {
+          "sourceKey": "Ar:build:row",
+          "questionId": "EC-KU0S2Q"
+        },
+        {
+          "sourceKey": "Ar:identify:row",
+          "questionId": "EC-LUZU8M"
+        },
+        {
+          "sourceKey": "Ar:build:energy",
+          "questionId": "EC-O44H9I"
+        },
+        {
+          "sourceKey": "Ar:identify:energy",
+          "questionId": "EC-OX516A"
+        },
+        {
+          "sourceKey": "K:build:full",
+          "questionId": "EC-5F5FGN"
+        },
+        {
+          "sourceKey": "K:identify:full",
+          "questionId": "EC-NUVSNN"
+        },
+        {
+          "sourceKey": "K:build:row",
+          "questionId": "EC-21DMIA"
+        },
+        {
+          "sourceKey": "K:identify:row",
+          "questionId": "EC-I6MUUE"
+        },
+        {
+          "sourceKey": "K:build:energy",
+          "questionId": "EC-ZHD7RQ"
+        },
+        {
+          "sourceKey": "K:identify:energy",
+          "questionId": "EC-9GDMAQ"
+        },
+        {
+          "sourceKey": "Ca:build:full",
+          "questionId": "EC-5TQ3WY"
+        },
+        {
+          "sourceKey": "Ca:identify:full",
+          "questionId": "EC-6CK0VK"
+        },
+        {
+          "sourceKey": "Ca:build:row",
+          "questionId": "EC-LRGR45"
+        },
+        {
+          "sourceKey": "Ca:identify:row",
+          "questionId": "EC-QF27AF"
+        },
+        {
+          "sourceKey": "Ca:build:energy",
+          "questionId": "EC-8ET0MB"
+        },
+        {
+          "sourceKey": "Ca:identify:energy",
+          "questionId": "EC-VMD2EH"
+        },
+        {
+          "sourceKey": "Ga:build:full",
+          "questionId": "EC-QR3FA6"
+        },
+        {
+          "sourceKey": "Ga:identify:full",
+          "questionId": "EC-0ONCAS"
+        },
+        {
+          "sourceKey": "Ga:build:row",
+          "questionId": "EC-IC12PL"
+        },
+        {
+          "sourceKey": "Ga:identify:row",
+          "questionId": "EC-5PF4WZ"
+        },
+        {
+          "sourceKey": "Ga:build:energy",
+          "questionId": "EC-TNEGDB"
+        },
+        {
+          "sourceKey": "Ga:identify:energy",
+          "questionId": "EC-CUKHVH"
+        },
+        {
+          "sourceKey": "Ge:build:full",
+          "questionId": "EC-IN2R0I"
+        },
+        {
+          "sourceKey": "Ge:identify:full",
+          "questionId": "EC-68RG68"
+        },
+        {
+          "sourceKey": "Ge:build:row",
+          "questionId": "EC-909XDH"
+        },
+        {
+          "sourceKey": "Ge:identify:row",
+          "questionId": "EC-UOGWEV"
+        },
+        {
+          "sourceKey": "Ge:build:energy",
+          "questionId": "EC-P1QCDV"
+        },
+        {
+          "sourceKey": "Ge:identify:energy",
+          "questionId": "EC-F0JNAX"
+        },
+        {
+          "sourceKey": "As:build:full",
+          "questionId": "EC-54U2GM"
+        },
+        {
+          "sourceKey": "As:identify:full",
+          "questionId": "EC-WESRN0"
+        },
+        {
+          "sourceKey": "As:build:row",
+          "questionId": "EC-AZJADT"
+        },
+        {
+          "sourceKey": "As:identify:row",
+          "questionId": "EC-67WXT7"
+        },
+        {
+          "sourceKey": "As:build:energy",
+          "questionId": "EC-N8EG2F"
+        },
+        {
+          "sourceKey": "As:identify:energy",
+          "questionId": "EC-2QGDK5"
+        },
+        {
+          "sourceKey": "Se:build:full",
+          "questionId": "EC-YY9U3I"
+        },
+        {
+          "sourceKey": "Se:identify:full",
+          "questionId": "EC-W7ER9G"
+        },
+        {
+          "sourceKey": "Se:build:row",
+          "questionId": "EC-RP0IGP"
+        },
+        {
+          "sourceKey": "Se:identify:row",
+          "questionId": "EC-G9RWO3"
+        },
+        {
+          "sourceKey": "Se:build:energy",
+          "questionId": "EC-47R84F"
+        },
+        {
+          "sourceKey": "Se:identify:energy",
+          "questionId": "EC-RHOB99"
+        },
+        {
+          "sourceKey": "Br:build:full",
+          "questionId": "EC-GPGXCE"
+        },
+        {
+          "sourceKey": "Br:identify:full",
+          "questionId": "EC-VEW59W"
+        },
+        {
+          "sourceKey": "Br:build:row",
+          "questionId": "EC-N5CA7D"
+        },
+        {
+          "sourceKey": "Br:identify:row",
+          "questionId": "EC-CWPXSJ"
+        },
+        {
+          "sourceKey": "Br:build:energy",
+          "questionId": "EC-SGSRLB"
+        },
+        {
+          "sourceKey": "Br:identify:energy",
+          "questionId": "EC-K6EKGD"
+        },
+        {
+          "sourceKey": "Kr:build:full",
+          "questionId": "EC-YQ0OU9"
+        },
+        {
+          "sourceKey": "Kr:identify:full",
+          "questionId": "EC-7YG1BH"
+        },
+        {
+          "sourceKey": "Kr:build:row",
+          "questionId": "EC-OMZ2NS"
+        },
+        {
+          "sourceKey": "Kr:identify:row",
+          "questionId": "EC-DASILO"
+        },
+        {
+          "sourceKey": "Kr:build:energy",
+          "questionId": "EC-M73D0G"
+        },
+        {
+          "sourceKey": "Kr:identify:energy",
+          "questionId": "EC-XTDSRG"
+        },
+        {
+          "sourceKey": "Li:build:short",
+          "questionId": "EC-MFPR58"
+        },
+        {
+          "sourceKey": "Li:identify:short",
+          "questionId": "EC-4T5O6G"
+        },
+        {
+          "sourceKey": "Be:build:short",
+          "questionId": "EC-LDJCQM"
+        },
+        {
+          "sourceKey": "Be:identify:short",
+          "questionId": "EC-61RGVM"
+        },
+        {
+          "sourceKey": "B:build:short",
+          "questionId": "EC-Q4QLGJ"
+        },
+        {
+          "sourceKey": "B:identify:short",
+          "questionId": "EC-NVX0GD"
+        },
+        {
+          "sourceKey": "C:build:short",
+          "questionId": "EC-37GN6O"
+        },
+        {
+          "sourceKey": "C:identify:short",
+          "questionId": "EC-7N7TK4"
+        },
+        {
+          "sourceKey": "N:build:short",
+          "questionId": "EC-DL3Y2V"
+        },
+        {
+          "sourceKey": "N:identify:short",
+          "questionId": "EC-3XSPQX"
+        },
+        {
+          "sourceKey": "O:build:short",
+          "questionId": "EC-PNWLL0"
+        },
+        {
+          "sourceKey": "O:identify:short",
+          "questionId": "EC-UH3QI8"
+        },
+        {
+          "sourceKey": "F:build:short",
+          "questionId": "EC-L1Y6R3"
+        },
+        {
+          "sourceKey": "F:identify:short",
+          "questionId": "EC-VTPIWH"
+        },
+        {
+          "sourceKey": "Ne:build:short",
+          "questionId": "EC-5Y5KG2"
+        },
+        {
+          "sourceKey": "Ne:identify:short",
+          "questionId": "EC-USKHJY"
+        },
+        {
+          "sourceKey": "Na:build:short",
+          "questionId": "EC-DYUG1A"
+        },
+        {
+          "sourceKey": "Na:identify:short",
+          "questionId": "EC-FHPFQA"
+        },
+        {
+          "sourceKey": "Mg:build:short",
+          "questionId": "EC-H3BSGB"
+        },
+        {
+          "sourceKey": "Mg:identify:short",
+          "questionId": "EC-I9H6ZP"
+        },
+        {
+          "sourceKey": "Al:build:short",
+          "questionId": "EC-HVL9Q6"
+        },
+        {
+          "sourceKey": "Al:identify:short",
+          "questionId": "EC-IHYOAA"
+        },
+        {
+          "sourceKey": "Si:build:short",
+          "questionId": "EC-LRXDVR"
+        },
+        {
+          "sourceKey": "Si:identify:short",
+          "questionId": "EC-E334PL"
+        },
+        {
+          "sourceKey": "P:build:short",
+          "questionId": "EC-JS8BGT"
+        },
+        {
+          "sourceKey": "P:identify:short",
+          "questionId": "EC-3V8XC7"
+        },
+        {
+          "sourceKey": "S:build:short",
+          "questionId": "EC-00F98W"
+        },
+        {
+          "sourceKey": "S:identify:short",
+          "questionId": "EC-W9PQXG"
+        },
+        {
+          "sourceKey": "Cl:build:short",
+          "questionId": "EC-FLQYBS"
+        },
+        {
+          "sourceKey": "Cl:identify:short",
+          "questionId": "EC-MWV38C"
+        },
+        {
+          "sourceKey": "Ar:build:short",
+          "questionId": "EC-ICP5PK"
+        },
+        {
+          "sourceKey": "Ar:identify:short",
+          "questionId": "EC-6THFCS"
+        },
+        {
+          "sourceKey": "K:build:short",
+          "questionId": "EC-GZ855K"
+        },
+        {
+          "sourceKey": "K:identify:short",
+          "questionId": "EC-2ZAVVW"
+        },
+        {
+          "sourceKey": "Ca:build:short",
+          "questionId": "EC-2IXF4V"
+        },
+        {
+          "sourceKey": "Ca:identify:short",
+          "questionId": "EC-W5JL5T"
+        },
+        {
+          "sourceKey": "Ga:build:short",
+          "questionId": "EC-9DJNC3"
+        },
+        {
+          "sourceKey": "Ga:identify:short",
+          "questionId": "EC-GE51E5"
+        },
+        {
+          "sourceKey": "Ge:build:short",
+          "questionId": "EC-SOL08F"
+        },
+        {
+          "sourceKey": "Ge:identify:short",
+          "questionId": "EC-XHS4A9"
+        },
+        {
+          "sourceKey": "As:build:short",
+          "questionId": "EC-X9TPXN"
+        },
+        {
+          "sourceKey": "As:identify:short",
+          "questionId": "EC-4LDAAT"
+        },
+        {
+          "sourceKey": "Se:build:short",
+          "questionId": "EC-T3K4TF"
+        },
+        {
+          "sourceKey": "Se:identify:short",
+          "questionId": "EC-5DBOWD"
+        },
+        {
+          "sourceKey": "Br:build:short",
+          "questionId": "EC-5VP27N"
+        },
+        {
+          "sourceKey": "Br:identify:short",
+          "questionId": "EC-9P88KD"
+        },
+        {
+          "sourceKey": "Kr:build:short",
+          "questionId": "EC-P5W492"
+        },
+        {
+          "sourceKey": "Kr:identify:short",
+          "questionId": "EC-0E9R9M"
+        },
+        {
+          "sourceKey": "Li:1:build:full",
+          "questionId": "EC-J2GDW4"
+        },
+        {
+          "sourceKey": "Li:1:identify:full",
+          "questionId": "EC-IXP5LM"
+        },
+        {
+          "sourceKey": "Li:1:build:short",
+          "questionId": "EC-FKK7EL"
+        },
+        {
+          "sourceKey": "Li:1:identify:short",
+          "questionId": "EC-SBPH87"
+        },
+        {
+          "sourceKey": "Li:1:build:row",
+          "questionId": "EC-L1U6IB"
+        },
+        {
+          "sourceKey": "Li:1:identify:row",
+          "questionId": "EC-E59XN1"
+        },
+        {
+          "sourceKey": "Li:1:build:energy",
+          "questionId": "EC-XPRC8D"
+        },
+        {
+          "sourceKey": "Li:1:identify:energy",
+          "questionId": "EC-PQ0MYZ"
+        },
+        {
+          "sourceKey": "Be:2:build:full",
+          "questionId": "EC-VC0PWD"
+        },
+        {
+          "sourceKey": "Be:2:identify:full",
+          "questionId": "EC-VM4N6P"
+        },
+        {
+          "sourceKey": "Be:2:build:short",
+          "questionId": "EC-805QOQ"
+        },
+        {
+          "sourceKey": "Be:2:identify:short",
+          "questionId": "EC-7GQ4RQ"
+        },
+        {
+          "sourceKey": "Be:2:build:row",
+          "questionId": "EC-LXQN30"
+        },
+        {
+          "sourceKey": "Be:2:identify:row",
+          "questionId": "EC-PXHIZC"
+        },
+        {
+          "sourceKey": "Be:2:build:energy",
+          "questionId": "EC-JT3K18"
+        },
+        {
+          "sourceKey": "Be:2:identify:energy",
+          "questionId": "EC-237MM8"
+        },
+        {
+          "sourceKey": "N:-3:build:full",
+          "questionId": "EC-PRQFLQ"
+        },
+        {
+          "sourceKey": "N:-3:identify:full",
+          "questionId": "EC-EX8CF8"
+        },
+        {
+          "sourceKey": "N:-3:build:short",
+          "questionId": "EC-OD3HKZ"
+        },
+        {
+          "sourceKey": "N:-3:identify:short",
+          "questionId": "EC-5HF54D"
+        },
+        {
+          "sourceKey": "N:-3:build:row",
+          "questionId": "EC-72NZYX"
+        },
+        {
+          "sourceKey": "N:-3:identify:row",
+          "questionId": "EC-EKS6PV"
+        },
+        {
+          "sourceKey": "N:-3:build:energy",
+          "questionId": "EC-YA89MN"
+        },
+        {
+          "sourceKey": "N:-3:identify:energy",
+          "questionId": "EC-YWVP0D"
+        },
+        {
+          "sourceKey": "O:-2:build:full",
+          "questionId": "EC-O8OHFS"
+        },
+        {
+          "sourceKey": "O:-2:identify:full",
+          "questionId": "EC-8XMWD2"
+        },
+        {
+          "sourceKey": "O:-2:build:short",
+          "questionId": "EC-06KNAH"
+        },
+        {
+          "sourceKey": "O:-2:identify:short",
+          "questionId": "EC-COPH0R"
+        },
+        {
+          "sourceKey": "O:-2:build:row",
+          "questionId": "EC-R0HPSV"
+        },
+        {
+          "sourceKey": "O:-2:identify:row",
+          "questionId": "EC-NDQXBL"
+        },
+        {
+          "sourceKey": "O:-2:build:energy",
+          "questionId": "EC-9QWPDT"
+        },
+        {
+          "sourceKey": "O:-2:identify:energy",
+          "questionId": "EC-S0PG6V"
+        },
+        {
+          "sourceKey": "F:-1:build:full",
+          "questionId": "EC-YQ6IJG"
+        },
+        {
+          "sourceKey": "F:-1:identify:full",
+          "questionId": "EC-6WJTYQ"
+        },
+        {
+          "sourceKey": "F:-1:build:short",
+          "questionId": "EC-WE0CXH"
+        },
+        {
+          "sourceKey": "F:-1:identify:short",
+          "questionId": "EC-23ECN3"
+        },
+        {
+          "sourceKey": "F:-1:build:row",
+          "questionId": "EC-2458NV"
+        },
+        {
+          "sourceKey": "F:-1:identify:row",
+          "questionId": "EC-MSU12D"
+        },
+        {
+          "sourceKey": "F:-1:build:energy",
+          "questionId": "EC-UMT039"
+        },
+        {
+          "sourceKey": "F:-1:identify:energy",
+          "questionId": "EC-2KPJLV"
+        },
+        {
+          "sourceKey": "Na:1:build:full",
+          "questionId": "EC-R5PN6U"
+        },
+        {
+          "sourceKey": "Na:1:identify:full",
+          "questionId": "EC-G07HI4"
+        },
+        {
+          "sourceKey": "Na:1:build:short",
+          "questionId": "EC-9XAWUZ"
+        },
+        {
+          "sourceKey": "Na:1:identify:short",
+          "questionId": "EC-GWTKDX"
+        },
+        {
+          "sourceKey": "Na:1:build:row",
+          "questionId": "EC-S41ON5"
+        },
+        {
+          "sourceKey": "Na:1:identify:row",
+          "questionId": "EC-8XXONV"
+        },
+        {
+          "sourceKey": "Na:1:build:energy",
+          "questionId": "EC-85F3ZB"
+        },
+        {
+          "sourceKey": "Na:1:identify:energy",
+          "questionId": "EC-8WK911"
+        },
+        {
+          "sourceKey": "Mg:2:build:full",
+          "questionId": "EC-SHRELA"
+        },
+        {
+          "sourceKey": "Mg:2:identify:full",
+          "questionId": "EC-CDPW1W"
+        },
+        {
+          "sourceKey": "Mg:2:build:short",
+          "questionId": "EC-IEEKWZ"
+        },
+        {
+          "sourceKey": "Mg:2:identify:short",
+          "questionId": "EC-O6PBKD"
+        },
+        {
+          "sourceKey": "Mg:2:build:row",
+          "questionId": "EC-BN0W3D"
+        },
+        {
+          "sourceKey": "Mg:2:identify:row",
+          "questionId": "EC-K8E80Z"
+        },
+        {
+          "sourceKey": "Mg:2:build:energy",
+          "questionId": "EC-86DJHB"
+        },
+        {
+          "sourceKey": "Mg:2:identify:energy",
+          "questionId": "EC-RR7ZLP"
+        },
+        {
+          "sourceKey": "Al:3:build:full",
+          "questionId": "EC-5J3SBW"
+        },
+        {
+          "sourceKey": "Al:3:identify:full",
+          "questionId": "EC-J5Y402"
+        },
+        {
+          "sourceKey": "Al:3:build:short",
+          "questionId": "EC-4FM9ID"
+        },
+        {
+          "sourceKey": "Al:3:identify:short",
+          "questionId": "EC-8NUGA7"
+        },
+        {
+          "sourceKey": "Al:3:build:row",
+          "questionId": "EC-RE7WX7"
+        },
+        {
+          "sourceKey": "Al:3:identify:row",
+          "questionId": "EC-2B5TX1"
+        },
+        {
+          "sourceKey": "Al:3:build:energy",
+          "questionId": "EC-DBY21X"
+        },
+        {
+          "sourceKey": "Al:3:identify:energy",
+          "questionId": "EC-0HS1IR"
+        },
+        {
+          "sourceKey": "P:-3:build:full",
+          "questionId": "EC-BPJ950"
+        },
+        {
+          "sourceKey": "P:-3:identify:full",
+          "questionId": "EC-HLBMBU"
+        },
+        {
+          "sourceKey": "P:-3:build:short",
+          "questionId": "EC-KDA79P"
+        },
+        {
+          "sourceKey": "P:-3:identify:short",
+          "questionId": "EC-ULC5QF"
+        },
+        {
+          "sourceKey": "P:-3:build:row",
+          "questionId": "EC-VZU7C3"
+        },
+        {
+          "sourceKey": "P:-3:identify:row",
+          "questionId": "EC-S0HZST"
+        },
+        {
+          "sourceKey": "P:-3:build:energy",
+          "questionId": "EC-YVV9ML"
+        },
+        {
+          "sourceKey": "P:-3:identify:energy",
+          "questionId": "EC-NJBWEZ"
+        },
+        {
+          "sourceKey": "S:-2:build:full",
+          "questionId": "EC-O87BH8"
+        },
+        {
+          "sourceKey": "S:-2:identify:full",
+          "questionId": "EC-5W2DBM"
+        },
+        {
+          "sourceKey": "S:-2:build:short",
+          "questionId": "EC-RH7KL1"
+        },
+        {
+          "sourceKey": "S:-2:identify:short",
+          "questionId": "EC-KC1CSF"
+        },
+        {
+          "sourceKey": "S:-2:build:row",
+          "questionId": "EC-S9GVIZ"
+        },
+        {
+          "sourceKey": "S:-2:identify:row",
+          "questionId": "EC-W0AA1X"
+        },
+        {
+          "sourceKey": "S:-2:build:energy",
+          "questionId": "EC-4T573P"
+        },
+        {
+          "sourceKey": "S:-2:identify:energy",
+          "questionId": "EC-IX5RSZ"
+        },
+        {
+          "sourceKey": "Cl:-1:build:full",
+          "questionId": "EC-NT9JNJ"
+        },
+        {
+          "sourceKey": "Cl:-1:identify:full",
+          "questionId": "EC-5DDKYJ"
+        },
+        {
+          "sourceKey": "Cl:-1:build:short",
+          "questionId": "EC-JX7SOW"
+        },
+        {
+          "sourceKey": "Cl:-1:identify:short",
+          "questionId": "EC-O96WP0"
+        },
+        {
+          "sourceKey": "Cl:-1:build:row",
+          "questionId": "EC-HAL4RU"
+        },
+        {
+          "sourceKey": "Cl:-1:identify:row",
+          "questionId": "EC-B4MQ32"
+        },
+        {
+          "sourceKey": "Cl:-1:build:energy",
+          "questionId": "EC-RLR9YM"
+        },
+        {
+          "sourceKey": "Cl:-1:identify:energy",
+          "questionId": "EC-QHW4H6"
+        },
+        {
+          "sourceKey": "K:1:build:full",
+          "questionId": "EC-4H0YI0"
+        },
+        {
+          "sourceKey": "K:1:identify:full",
+          "questionId": "EC-696B3Q"
+        },
+        {
+          "sourceKey": "K:1:build:short",
+          "questionId": "EC-01KTZD"
+        },
+        {
+          "sourceKey": "K:1:identify:short",
+          "questionId": "EC-700PJF"
+        },
+        {
+          "sourceKey": "K:1:build:row",
+          "questionId": "EC-MK83B3"
+        },
+        {
+          "sourceKey": "K:1:identify:row",
+          "questionId": "EC-AYYYOH"
+        },
+        {
+          "sourceKey": "K:1:build:energy",
+          "questionId": "EC-G1QF35"
+        },
+        {
+          "sourceKey": "K:1:identify:energy",
+          "questionId": "EC-HQGNFB"
+        },
+        {
+          "sourceKey": "Ca:2:build:full",
+          "questionId": "EC-P6X0RE"
+        },
+        {
+          "sourceKey": "Ca:2:identify:full",
+          "questionId": "EC-WJVV6W"
+        },
+        {
+          "sourceKey": "Ca:2:build:short",
+          "questionId": "EC-AL63UF"
+        },
+        {
+          "sourceKey": "Ca:2:identify:short",
+          "questionId": "EC-M4O2IX"
+        },
+        {
+          "sourceKey": "Ca:2:build:row",
+          "questionId": "EC-IVM8EL"
+        },
+        {
+          "sourceKey": "Ca:2:identify:row",
+          "questionId": "EC-J3TUPR"
+        },
+        {
+          "sourceKey": "Ca:2:build:energy",
+          "questionId": "EC-XL2L6Z"
+        },
+        {
+          "sourceKey": "Ca:2:identify:energy",
+          "questionId": "EC-1RW735"
+        },
+        {
+          "sourceKey": "Ga:3:build:full",
+          "questionId": "EC-MKZ2HJ"
+        },
+        {
+          "sourceKey": "Ga:3:identify:full",
+          "questionId": "EC-Y5GASJ"
+        },
+        {
+          "sourceKey": "Ga:3:build:short",
+          "questionId": "EC-H68EFC"
+        },
+        {
+          "sourceKey": "Ga:3:identify:short",
+          "questionId": "EC-58P0BG"
+        },
+        {
+          "sourceKey": "Ga:3:build:row",
+          "questionId": "EC-DD9I4I"
+        },
+        {
+          "sourceKey": "Ga:3:identify:row",
+          "questionId": "EC-MPTPRQ"
+        },
+        {
+          "sourceKey": "Ga:3:build:energy",
+          "questionId": "EC-RPQBIE"
+        },
+        {
+          "sourceKey": "Ga:3:identify:energy",
+          "questionId": "EC-3DJFYQ"
+        },
+        {
+          "sourceKey": "As:-3:build:full",
+          "questionId": "EC-NL014Q"
+        },
+        {
+          "sourceKey": "As:-3:identify:full",
+          "questionId": "EC-YFU7RC"
+        },
+        {
+          "sourceKey": "As:-3:build:short",
+          "questionId": "EC-S5UFBR"
+        },
+        {
+          "sourceKey": "As:-3:identify:short",
+          "questionId": "EC-Q1R52H"
+        },
+        {
+          "sourceKey": "As:-3:build:row",
+          "questionId": "EC-62NCQ5"
+        },
+        {
+          "sourceKey": "As:-3:identify:row",
+          "questionId": "EC-J71ILB"
+        },
+        {
+          "sourceKey": "As:-3:build:energy",
+          "questionId": "EC-FNLNQJ"
+        },
+        {
+          "sourceKey": "As:-3:identify:energy",
+          "questionId": "EC-RRLOG1"
+        },
+        {
+          "sourceKey": "Se:-2:build:full",
+          "questionId": "EC-3QS1FN"
+        },
+        {
+          "sourceKey": "Se:-2:identify:full",
+          "questionId": "EC-KWSPUV"
+        },
+        {
+          "sourceKey": "Se:-2:build:short",
+          "questionId": "EC-UXE5MK"
+        },
+        {
+          "sourceKey": "Se:-2:identify:short",
+          "questionId": "EC-H789O8"
+        },
+        {
+          "sourceKey": "Se:-2:build:row",
+          "questionId": "EC-XZKPNA"
+        },
+        {
+          "sourceKey": "Se:-2:identify:row",
+          "questionId": "EC-N11OUQ"
+        },
+        {
+          "sourceKey": "Se:-2:build:energy",
+          "questionId": "EC-9G3M0I"
+        },
+        {
+          "sourceKey": "Se:-2:identify:energy",
+          "questionId": "EC-WCDDYU"
+        },
+        {
+          "sourceKey": "Br:-1:build:full",
+          "questionId": "EC-RDHS5K"
+        },
+        {
+          "sourceKey": "Br:-1:identify:full",
+          "questionId": "EC-SXUYTY"
+        },
+        {
+          "sourceKey": "Br:-1:build:short",
+          "questionId": "EC-K12NAH"
+        },
+        {
+          "sourceKey": "Br:-1:identify:short",
+          "questionId": "EC-UVROX7"
+        },
+        {
+          "sourceKey": "Br:-1:build:row",
+          "questionId": "EC-FLXCNZ"
+        },
+        {
+          "sourceKey": "Br:-1:identify:row",
+          "questionId": "EC-UU2R3L"
+        },
+        {
+          "sourceKey": "Br:-1:build:energy",
+          "questionId": "EC-H78J5T"
+        },
+        {
+          "sourceKey": "Br:-1:identify:energy",
+          "questionId": "EC-9DE7XZ"
+        },
+        {
+          "sourceKey": "Sc:build:full",
+          "questionId": "EC-MA1P54"
+        },
+        {
+          "sourceKey": "Sc:identify:full",
+          "questionId": "EC-7R7ZX2"
+        },
+        {
+          "sourceKey": "Sc:build:short",
+          "questionId": "EC-9ZDYJT"
+        },
+        {
+          "sourceKey": "Sc:identify:short",
+          "questionId": "EC-RBXM7F"
+        },
+        {
+          "sourceKey": "Sc:build:row",
+          "questionId": "EC-FB9ZJ3"
+        },
+        {
+          "sourceKey": "Sc:identify:row",
+          "questionId": "EC-MEUR8X"
+        },
+        {
+          "sourceKey": "Sc:build:energy",
+          "questionId": "EC-9G4A81"
+        },
+        {
+          "sourceKey": "Sc:identify:energy",
+          "questionId": "EC-6AATTJ"
+        },
+        {
+          "sourceKey": "Ti:build:full",
+          "questionId": "EC-F4V2EZ"
+        },
+        {
+          "sourceKey": "Ti:identify:full",
+          "questionId": "EC-VLIW4V"
+        },
+        {
+          "sourceKey": "Ti:build:short",
+          "questionId": "EC-7UIQ04"
+        },
+        {
+          "sourceKey": "Ti:identify:short",
+          "questionId": "EC-D33EQ8"
+        },
+        {
+          "sourceKey": "Ti:build:row",
+          "questionId": "EC-9MRQGE"
+        },
+        {
+          "sourceKey": "Ti:identify:row",
+          "questionId": "EC-FIF522"
+        },
+        {
+          "sourceKey": "Ti:build:energy",
+          "questionId": "EC-NIXHE2"
+        },
+        {
+          "sourceKey": "Ti:identify:energy",
+          "questionId": "EC-7QDFCU"
+        },
+        {
+          "sourceKey": "V:build:full",
+          "questionId": "EC-OQUDSI"
+        },
+        {
+          "sourceKey": "V:identify:full",
+          "questionId": "EC-LWHD9S"
+        },
+        {
+          "sourceKey": "V:build:short",
+          "questionId": "EC-9MMV33"
+        },
+        {
+          "sourceKey": "V:identify:short",
+          "questionId": "EC-DHWIJL"
+        },
+        {
+          "sourceKey": "V:build:row",
+          "questionId": "EC-CYCI11"
+        },
+        {
+          "sourceKey": "V:identify:row",
+          "questionId": "EC-TZCRC7"
+        },
+        {
+          "sourceKey": "V:build:energy",
+          "questionId": "EC-BZ3KO3"
+        },
+        {
+          "sourceKey": "V:identify:energy",
+          "questionId": "EC-OWXC2X"
+        },
+        {
+          "sourceKey": "Cr:build:full",
+          "questionId": "EC-3OOYH5"
+        },
+        {
+          "sourceKey": "Cr:identify:full",
+          "questionId": "EC-0BN0SL"
+        },
+        {
+          "sourceKey": "Cr:build:short",
+          "questionId": "EC-VUXW9Q"
+        },
+        {
+          "sourceKey": "Cr:identify:short",
+          "questionId": "EC-E4EZV6"
+        },
+        {
+          "sourceKey": "Cr:build:row",
+          "questionId": "EC-YCU2TC"
+        },
+        {
+          "sourceKey": "Cr:identify:row",
+          "questionId": "EC-UCW8W4"
+        },
+        {
+          "sourceKey": "Cr:build:energy",
+          "questionId": "EC-GYMGZS"
+        },
+        {
+          "sourceKey": "Cr:identify:energy",
+          "questionId": "EC-EJFJP0"
+        },
+        {
+          "sourceKey": "Mn:build:full",
+          "questionId": "EC-QGDYQ7"
+        },
+        {
+          "sourceKey": "Mn:identify:full",
+          "questionId": "EC-ENK3JF"
+        },
+        {
+          "sourceKey": "Mn:build:short",
+          "questionId": "EC-9CSDDC"
+        },
+        {
+          "sourceKey": "Mn:identify:short",
+          "questionId": "EC-OH5FHW"
+        },
+        {
+          "sourceKey": "Mn:build:row",
+          "questionId": "EC-Y35GHM"
+        },
+        {
+          "sourceKey": "Mn:identify:row",
+          "questionId": "EC-R44FHA"
+        },
+        {
+          "sourceKey": "Mn:build:energy",
+          "questionId": "EC-KZPN8E"
+        },
+        {
+          "sourceKey": "Mn:identify:energy",
+          "questionId": "EC-BOL26Y"
+        },
+        {
+          "sourceKey": "Fe:build:full",
+          "questionId": "EC-DUYN19"
+        },
+        {
+          "sourceKey": "Fe:identify:full",
+          "questionId": "EC-JRLDUP"
+        },
+        {
+          "sourceKey": "Fe:build:short",
+          "questionId": "EC-Y413YY"
+        },
+        {
+          "sourceKey": "Fe:identify:short",
+          "questionId": "EC-A0NIQU"
+        },
+        {
+          "sourceKey": "Fe:build:row",
+          "questionId": "EC-0E2D0C"
+        },
+        {
+          "sourceKey": "Fe:identify:row",
+          "questionId": "EC-GZYB14"
+        },
+        {
+          "sourceKey": "Fe:build:energy",
+          "questionId": "EC-AVKC30"
+        },
+        {
+          "sourceKey": "Fe:identify:energy",
+          "questionId": "EC-J1DHZ4"
+        },
+        {
+          "sourceKey": "Co:build:full",
+          "questionId": "EC-AEK88C"
+        },
+        {
+          "sourceKey": "Co:identify:full",
+          "questionId": "EC-K0ZWOY"
+        },
+        {
+          "sourceKey": "Co:build:short",
+          "questionId": "EC-F82RDX"
+        },
+        {
+          "sourceKey": "Co:identify:short",
+          "questionId": "EC-1KUC1B"
+        },
+        {
+          "sourceKey": "Co:build:row",
+          "questionId": "EC-7KTK2Z"
+        },
+        {
+          "sourceKey": "Co:identify:row",
+          "questionId": "EC-HIIMNP"
+        },
+        {
+          "sourceKey": "Co:build:energy",
+          "questionId": "EC-TI6STH"
+        },
+        {
+          "sourceKey": "Co:identify:energy",
+          "questionId": "EC-4XHWZ7"
+        },
+        {
+          "sourceKey": "Ni:build:full",
+          "questionId": "EC-1WL2IP"
+        },
+        {
+          "sourceKey": "Ni:identify:full",
+          "questionId": "EC-0CUJ1P"
+        },
+        {
+          "sourceKey": "Ni:build:short",
+          "questionId": "EC-NBS2X2"
+        },
+        {
+          "sourceKey": "Ni:identify:short",
+          "questionId": "EC-985IFE"
+        },
+        {
+          "sourceKey": "Ni:build:row",
+          "questionId": "EC-HWIF7C"
+        },
+        {
+          "sourceKey": "Ni:identify:row",
+          "questionId": "EC-NFN7FW"
+        },
+        {
+          "sourceKey": "Ni:build:energy",
+          "questionId": "EC-R3NBVK"
+        },
+        {
+          "sourceKey": "Ni:identify:energy",
+          "questionId": "EC-U0Y718"
+        },
+        {
+          "sourceKey": "Cu:build:full",
+          "questionId": "EC-JLE2JI"
+        },
+        {
+          "sourceKey": "Cu:identify:full",
+          "questionId": "EC-B5R4UC"
+        },
+        {
+          "sourceKey": "Cu:build:short",
+          "questionId": "EC-J115IB"
+        },
+        {
+          "sourceKey": "Cu:identify:short",
+          "questionId": "EC-6JK32L"
+        },
+        {
+          "sourceKey": "Cu:build:row",
+          "questionId": "EC-9I4WMX"
+        },
+        {
+          "sourceKey": "Cu:identify:row",
+          "questionId": "EC-QFWSF7"
+        },
+        {
+          "sourceKey": "Cu:build:energy",
+          "questionId": "EC-UTS5GF"
+        },
+        {
+          "sourceKey": "Cu:identify:energy",
+          "questionId": "EC-8J6ZEL"
+        },
+        {
+          "sourceKey": "Zn:build:full",
+          "questionId": "EC-3Q3YEA"
+        },
+        {
+          "sourceKey": "Zn:identify:full",
+          "questionId": "EC-321MTC"
+        },
+        {
+          "sourceKey": "Zn:build:short",
+          "questionId": "EC-S7IZ67"
+        },
+        {
+          "sourceKey": "Zn:identify:short",
+          "questionId": "EC-CN7FPT"
+        },
+        {
+          "sourceKey": "Zn:build:row",
+          "questionId": "EC-HPUATX"
+        },
+        {
+          "sourceKey": "Zn:identify:row",
+          "questionId": "EC-9RHPKN"
+        },
+        {
+          "sourceKey": "Zn:build:energy",
+          "questionId": "EC-W39XW3"
+        },
+        {
+          "sourceKey": "Zn:identify:energy",
+          "questionId": "EC-8RB1ZT"
+        },
+        {
+          "sourceKey": "Sc:3:build:full",
+          "questionId": "EC-MRT269"
+        },
+        {
+          "sourceKey": "Sc:3:identify:full",
+          "questionId": "EC-SUYBZH"
+        },
+        {
+          "sourceKey": "Sc:3:build:short",
+          "questionId": "EC-3RL2X2"
+        },
+        {
+          "sourceKey": "Sc:3:identify:short",
+          "questionId": "EC-OHBWSQ"
+        },
+        {
+          "sourceKey": "Sc:3:build:row",
+          "questionId": "EC-BP462G"
+        },
+        {
+          "sourceKey": "Sc:3:identify:row",
+          "questionId": "EC-KEF99O"
+        },
+        {
+          "sourceKey": "Sc:3:build:energy",
+          "questionId": "EC-TAQ3OG"
+        },
+        {
+          "sourceKey": "Sc:3:identify:energy",
+          "questionId": "EC-Q1N13W"
+        },
+        {
+          "sourceKey": "Ti:2:build:full",
+          "questionId": "EC-3EECUV"
+        },
+        {
+          "sourceKey": "Ti:2:identify:full",
+          "questionId": "EC-6TWAUB"
+        },
+        {
+          "sourceKey": "Ti:2:build:short",
+          "questionId": "EC-GFLH6W"
+        },
+        {
+          "sourceKey": "Ti:2:identify:short",
+          "questionId": "EC-RAEJVG"
+        },
+        {
+          "sourceKey": "Ti:2:build:row",
+          "questionId": "EC-BNBRK2"
+        },
+        {
+          "sourceKey": "Ti:2:identify:row",
+          "questionId": "EC-8X3KS6"
+        },
+        {
+          "sourceKey": "Ti:2:build:energy",
+          "questionId": "EC-VW9DL2"
+        },
+        {
+          "sourceKey": "Ti:2:identify:energy",
+          "questionId": "EC-7UEB4I"
+        },
+        {
+          "sourceKey": "Ti:3:build:full",
+          "questionId": "EC-UY1PCM"
+        },
+        {
+          "sourceKey": "Ti:3:identify:full",
+          "questionId": "EC-HIC5QK"
+        },
+        {
+          "sourceKey": "Ti:3:build:short",
+          "questionId": "EC-EYL9KB"
+        },
+        {
+          "sourceKey": "Ti:3:identify:short",
+          "questionId": "EC-RYD7UT"
+        },
+        {
+          "sourceKey": "Ti:3:build:row",
+          "questionId": "EC-WFDW8H"
+        },
+        {
+          "sourceKey": "Ti:3:identify:row",
+          "questionId": "EC-0TWREZ"
+        },
+        {
+          "sourceKey": "Ti:3:build:energy",
+          "questionId": "EC-AF0EBB"
+        },
+        {
+          "sourceKey": "Ti:3:identify:energy",
+          "questionId": "EC-PQWL39"
+        },
+        {
+          "sourceKey": "Ti:4:build:full",
+          "questionId": "EC-ST5Y8X"
+        },
+        {
+          "sourceKey": "Ti:4:identify:full",
+          "questionId": "EC-NN0B2L"
+        },
+        {
+          "sourceKey": "Ti:4:build:short",
+          "questionId": "EC-PV3PPI"
+        },
+        {
+          "sourceKey": "Ti:4:identify:short",
+          "questionId": "EC-E138KQ"
+        },
+        {
+          "sourceKey": "Ti:4:build:row",
+          "questionId": "EC-I3Q9P4"
+        },
+        {
+          "sourceKey": "Ti:4:identify:row",
+          "questionId": "EC-76WCUK"
+        },
+        {
+          "sourceKey": "Ti:4:build:energy",
+          "questionId": "EC-YPU6PS"
+        },
+        {
+          "sourceKey": "Ti:4:identify:energy",
+          "questionId": "EC-EFAN98"
+        },
+        {
+          "sourceKey": "V:2:build:full",
+          "questionId": "EC-SR7KT6"
+        },
+        {
+          "sourceKey": "V:2:identify:full",
+          "questionId": "EC-OVK6UG"
+        },
+        {
+          "sourceKey": "V:2:build:short",
+          "questionId": "EC-Q53G8N"
+        },
+        {
+          "sourceKey": "V:2:identify:short",
+          "questionId": "EC-0UTP6X"
+        },
+        {
+          "sourceKey": "V:2:build:row",
+          "questionId": "EC-PZBOCT"
+        },
+        {
+          "sourceKey": "V:2:identify:row",
+          "questionId": "EC-1F2Q4F"
+        },
+        {
+          "sourceKey": "V:2:build:energy",
+          "questionId": "EC-FWBGLN"
+        },
+        {
+          "sourceKey": "V:2:identify:energy",
+          "questionId": "EC-NBJKRL"
+        },
+        {
+          "sourceKey": "V:3:build:full",
+          "questionId": "EC-DQX1YJ"
+        },
+        {
+          "sourceKey": "V:3:identify:full",
+          "questionId": "EC-IJ6RA7"
+        },
+        {
+          "sourceKey": "V:3:build:short",
+          "questionId": "EC-VIJY7O"
+        },
+        {
+          "sourceKey": "V:3:identify:short",
+          "questionId": "EC-JN2OV4"
+        },
+        {
+          "sourceKey": "V:3:build:row",
+          "questionId": "EC-FNLYU6"
+        },
+        {
+          "sourceKey": "V:3:identify:row",
+          "questionId": "EC-CDVIYY"
+        },
+        {
+          "sourceKey": "V:3:build:energy",
+          "questionId": "EC-WEA9I2"
+        },
+        {
+          "sourceKey": "V:3:identify:energy",
+          "questionId": "EC-4VQ0I6"
+        },
+        {
+          "sourceKey": "Cr:2:build:full",
+          "questionId": "EC-HEB1Q5"
+        },
+        {
+          "sourceKey": "Cr:2:identify:full",
+          "questionId": "EC-G76EV5"
+        },
+        {
+          "sourceKey": "Cr:2:build:short",
+          "questionId": "EC-AG4Q4A"
+        },
+        {
+          "sourceKey": "Cr:2:identify:short",
+          "questionId": "EC-IHS7LY"
+        },
+        {
+          "sourceKey": "Cr:2:build:row",
+          "questionId": "EC-QWK37G"
+        },
+        {
+          "sourceKey": "Cr:2:identify:row",
+          "questionId": "EC-TQWSHK"
+        },
+        {
+          "sourceKey": "Cr:2:build:energy",
+          "questionId": "EC-U5H47G"
+        },
+        {
+          "sourceKey": "Cr:2:identify:energy",
+          "questionId": "EC-XHN1CW"
+        },
+        {
+          "sourceKey": "Cr:3:build:full",
+          "questionId": "EC-6OJVT8"
+        },
+        {
+          "sourceKey": "Cr:3:identify:full",
+          "questionId": "EC-0GJ78I"
+        },
+        {
+          "sourceKey": "Cr:3:build:short",
+          "questionId": "EC-5JE1TX"
+        },
+        {
+          "sourceKey": "Cr:3:identify:short",
+          "questionId": "EC-8QOP3J"
+        },
+        {
+          "sourceKey": "Cr:3:build:row",
+          "questionId": "EC-P3XU2Z"
+        },
+        {
+          "sourceKey": "Cr:3:identify:row",
+          "questionId": "EC-ZIGH5H"
+        },
+        {
+          "sourceKey": "Cr:3:build:energy",
+          "questionId": "EC-UIDSW5"
+        },
+        {
+          "sourceKey": "Cr:3:identify:energy",
+          "questionId": "EC-HS8F9V"
+        },
+        {
+          "sourceKey": "Mn:2:build:full",
+          "questionId": "EC-WDBN8R"
+        },
+        {
+          "sourceKey": "Mn:2:identify:full",
+          "questionId": "EC-2OEVA7"
+        },
+        {
+          "sourceKey": "Mn:2:build:short",
+          "questionId": "EC-PAPHKK"
+        },
+        {
+          "sourceKey": "Mn:2:identify:short",
+          "questionId": "EC-55RHY8"
+        },
+        {
+          "sourceKey": "Mn:2:build:row",
+          "questionId": "EC-JUDOM6"
+        },
+        {
+          "sourceKey": "Mn:2:identify:row",
+          "questionId": "EC-2QN2MI"
+        },
+        {
+          "sourceKey": "Mn:2:build:energy",
+          "questionId": "EC-MX415M"
+        },
+        {
+          "sourceKey": "Mn:2:identify:energy",
+          "questionId": "EC-SS3BYM"
+        },
+        {
+          "sourceKey": "Mn:3:build:full",
+          "questionId": "EC-63NV4Q"
+        },
+        {
+          "sourceKey": "Mn:3:identify:full",
+          "questionId": "EC-O7YSX4"
+        },
+        {
+          "sourceKey": "Mn:3:build:short",
+          "questionId": "EC-HCWQWN"
+        },
+        {
+          "sourceKey": "Mn:3:identify:short",
+          "questionId": "EC-0G9WY1"
+        },
+        {
+          "sourceKey": "Mn:3:build:row",
+          "questionId": "EC-G1ABT9"
+        },
+        {
+          "sourceKey": "Mn:3:identify:row",
+          "questionId": "EC-W7UVI7"
+        },
+        {
+          "sourceKey": "Mn:3:build:energy",
+          "questionId": "EC-KTWPAJ"
+        },
+        {
+          "sourceKey": "Mn:3:identify:energy",
+          "questionId": "EC-1RB8RL"
+        },
+        {
+          "sourceKey": "Fe:2:build:full",
+          "questionId": "EC-P8UJS1"
+        },
+        {
+          "sourceKey": "Fe:2:identify:full",
+          "questionId": "EC-AW51XP"
+        },
+        {
+          "sourceKey": "Fe:2:build:short",
+          "questionId": "EC-A1PU5I"
+        },
+        {
+          "sourceKey": "Fe:2:identify:short",
+          "questionId": "EC-RHBX2I"
+        },
+        {
+          "sourceKey": "Fe:2:build:row",
+          "questionId": "EC-ANBYXK"
+        },
+        {
+          "sourceKey": "Fe:2:identify:row",
+          "questionId": "EC-Q0P1QK"
+        },
+        {
+          "sourceKey": "Fe:2:build:energy",
+          "questionId": "EC-IIITMO"
+        },
+        {
+          "sourceKey": "Fe:2:identify:energy",
+          "questionId": "EC-J6VV3W"
+        },
+        {
+          "sourceKey": "Fe:3:build:full",
+          "questionId": "EC-PN8GKG"
+        },
+        {
+          "sourceKey": "Fe:3:identify:full",
+          "questionId": "EC-TQ92RI"
+        },
+        {
+          "sourceKey": "Fe:3:build:short",
+          "questionId": "EC-KFO7W1"
+        },
+        {
+          "sourceKey": "Fe:3:identify:short",
+          "questionId": "EC-BIZCEB"
+        },
+        {
+          "sourceKey": "Fe:3:build:row",
+          "questionId": "EC-7JUWYF"
+        },
+        {
+          "sourceKey": "Fe:3:identify:row",
+          "questionId": "EC-HHBIC9"
+        },
+        {
+          "sourceKey": "Fe:3:build:energy",
+          "questionId": "EC-DZ9AT5"
+        },
+        {
+          "sourceKey": "Fe:3:identify:energy",
+          "questionId": "EC-OS5Y7Z"
+        },
+        {
+          "sourceKey": "Co:2:build:full",
+          "questionId": "EC-3F7T1G"
+        },
+        {
+          "sourceKey": "Co:2:identify:full",
+          "questionId": "EC-SNLPCA"
+        },
+        {
+          "sourceKey": "Co:2:build:short",
+          "questionId": "EC-DCPEKT"
+        },
+        {
+          "sourceKey": "Co:2:identify:short",
+          "questionId": "EC-4LS7UV"
+        },
+        {
+          "sourceKey": "Co:2:build:row",
+          "questionId": "EC-PRFIAR"
+        },
+        {
+          "sourceKey": "Co:2:identify:row",
+          "questionId": "EC-47ATZ1"
+        },
+        {
+          "sourceKey": "Co:2:build:energy",
+          "questionId": "EC-0STFEL"
+        },
+        {
+          "sourceKey": "Co:2:identify:energy",
+          "questionId": "EC-BFMD97"
+        },
+        {
+          "sourceKey": "Co:3:build:full",
+          "questionId": "EC-UODNQT"
+        },
+        {
+          "sourceKey": "Co:3:identify:full",
+          "questionId": "EC-QOX3AH"
+        },
+        {
+          "sourceKey": "Co:3:build:short",
+          "questionId": "EC-S9TY3M"
+        },
+        {
+          "sourceKey": "Co:3:identify:short",
+          "questionId": "EC-7PC51A"
+        },
+        {
+          "sourceKey": "Co:3:build:row",
+          "questionId": "EC-EFHJP0"
+        },
+        {
+          "sourceKey": "Co:3:identify:row",
+          "questionId": "EC-GPZWYO"
+        },
+        {
+          "sourceKey": "Co:3:build:energy",
+          "questionId": "EC-KEUVUS"
+        },
+        {
+          "sourceKey": "Co:3:identify:energy",
+          "questionId": "EC-SKKSMG"
+        },
+        {
+          "sourceKey": "Ni:2:build:full",
+          "questionId": "EC-4WAMF9"
+        },
+        {
+          "sourceKey": "Ni:2:identify:full",
+          "questionId": "EC-LK9SQH"
+        },
+        {
+          "sourceKey": "Ni:2:build:short",
+          "questionId": "EC-SSDKYA"
+        },
+        {
+          "sourceKey": "Ni:2:identify:short",
+          "questionId": "EC-I63VSE"
+        },
+        {
+          "sourceKey": "Ni:2:build:row",
+          "questionId": "EC-6BQUDG"
+        },
+        {
+          "sourceKey": "Ni:2:identify:row",
+          "questionId": "EC-M85NE8"
+        },
+        {
+          "sourceKey": "Ni:2:build:energy",
+          "questionId": "EC-637O38"
+        },
+        {
+          "sourceKey": "Ni:2:identify:energy",
+          "questionId": "EC-51GCWO"
+        },
+        {
+          "sourceKey": "Cu:1:build:full",
+          "questionId": "EC-FTJJDP"
+        },
+        {
+          "sourceKey": "Cu:1:identify:full",
+          "questionId": "EC-54ZL7L"
+        },
+        {
+          "sourceKey": "Cu:1:build:short",
+          "questionId": "EC-NNADQY"
+        },
+        {
+          "sourceKey": "Cu:1:identify:short",
+          "questionId": "EC-3VJ5GM"
+        },
+        {
+          "sourceKey": "Cu:1:build:row",
+          "questionId": "EC-5JUSYK"
+        },
+        {
+          "sourceKey": "Cu:1:identify:row",
+          "questionId": "EC-YU00EW"
+        },
+        {
+          "sourceKey": "Cu:1:build:energy",
+          "questionId": "EC-069F58"
+        },
+        {
+          "sourceKey": "Cu:1:identify:energy",
+          "questionId": "EC-YK7668"
+        },
+        {
+          "sourceKey": "Cu:2:build:full",
+          "questionId": "EC-HBXL7A"
+        },
+        {
+          "sourceKey": "Cu:2:identify:full",
+          "questionId": "EC-PC4LJG"
+        },
+        {
+          "sourceKey": "Cu:2:build:short",
+          "questionId": "EC-WTB3XN"
+        },
+        {
+          "sourceKey": "Cu:2:identify:short",
+          "questionId": "EC-M1NND1"
+        },
+        {
+          "sourceKey": "Cu:2:build:row",
+          "questionId": "EC-6CNTYP"
+        },
+        {
+          "sourceKey": "Cu:2:identify:row",
+          "questionId": "EC-39V07F"
+        },
+        {
+          "sourceKey": "Cu:2:build:energy",
+          "questionId": "EC-DTUL4N"
+        },
+        {
+          "sourceKey": "Cu:2:identify:energy",
+          "questionId": "EC-5XH879"
+        },
+        {
+          "sourceKey": "Zn:2:build:full",
+          "questionId": "EC-WAG6LM"
+        },
+        {
+          "sourceKey": "Zn:2:identify:full",
+          "questionId": "EC-DLRC1K"
+        },
+        {
+          "sourceKey": "Zn:2:build:short",
+          "questionId": "EC-3LHANB"
+        },
+        {
+          "sourceKey": "Zn:2:identify:short",
+          "questionId": "EC-JWJKMX"
+        },
+        {
+          "sourceKey": "Zn:2:build:row",
+          "questionId": "EC-SV5319"
+        },
+        {
+          "sourceKey": "Zn:2:identify:row",
+          "questionId": "EC-ATUEA7"
+        },
+        {
+          "sourceKey": "Zn:2:build:energy",
+          "questionId": "EC-XKEV7F"
+        },
+        {
+          "sourceKey": "Zn:2:identify:energy",
+          "questionId": "EC-WCBBWX"
+        }
+      ],
+      "count": 564
+    },
+    {
+      "id": "alevel/dot-and-cross",
+      "convention": "DAC source-key hash; fixed bank IDs survive order changes. Former covalent leaf l6-t2-1-4 canonicalises to l6-t2-1-3 while sourceLeafId/history are retained.",
+      "entries": [
+        {
+          "sourceKey": "h2",
+          "questionId": "DAC-3QP3I7"
+        },
+        {
+          "sourceKey": "cl2",
+          "questionId": "DAC-HZF6UW"
+        },
+        {
+          "sourceKey": "hcl",
+          "questionId": "DAC-1V5N2O"
+        },
+        {
+          "sourceKey": "h2o",
+          "questionId": "DAC-2TUEUO"
+        },
+        {
+          "sourceKey": "nh3",
+          "questionId": "DAC-RFWJQW"
+        },
+        {
+          "sourceKey": "ch4",
+          "questionId": "DAC-K4F28E"
+        },
+        {
+          "sourceKey": "o2",
+          "questionId": "DAC-83OXXG"
+        },
+        {
+          "sourceKey": "n2",
+          "questionId": "DAC-200U61"
+        },
+        {
+          "sourceKey": "co2",
+          "questionId": "DAC-GBEF73"
+        },
+        {
+          "sourceKey": "c2h6",
+          "questionId": "DAC-3O652I"
+        },
+        {
+          "sourceKey": "c2h4",
+          "questionId": "DAC-346XOK"
+        },
+        {
+          "sourceKey": "ch3cl",
+          "questionId": "DAC-UFJGZK"
+        },
+        {
+          "sourceKey": "chloroethene",
+          "questionId": "DAC-79B5GV"
+        },
+        {
+          "sourceKey": "f2",
+          "questionId": "DAC-6F31O1"
+        },
+        {
+          "sourceKey": "br2",
+          "questionId": "DAC-BCJCZP"
+        },
+        {
+          "sourceKey": "i2",
+          "questionId": "DAC-36MQMA"
+        },
+        {
+          "sourceKey": "hf",
+          "questionId": "DAC-PB9RFN"
+        },
+        {
+          "sourceKey": "hbr",
+          "questionId": "DAC-1V8SKN"
+        },
+        {
+          "sourceKey": "hi",
+          "questionId": "DAC-SX4LGA"
+        },
+        {
+          "sourceKey": "h2s",
+          "questionId": "DAC-1PW02S"
+        },
+        {
+          "sourceKey": "h2o2",
+          "questionId": "DAC-3O6752"
+        },
+        {
+          "sourceKey": "n2h4",
+          "questionId": "DAC-7SXOD1"
+        },
+        {
+          "sourceKey": "c2h5cl",
+          "questionId": "DAC-8NMXCG"
+        },
+        {
+          "sourceKey": "c2h5br",
+          "questionId": "DAC-8NQ2UF"
+        },
+        {
+          "sourceKey": "c2h5i",
+          "questionId": "DAC-HM3K62"
+        },
+        {
+          "sourceKey": "c2h5f",
+          "questionId": "DAC-E08Q5F"
+        },
+        {
+          "sourceKey": "c2h3br",
+          "questionId": "DAC-GJ5H4X"
+        },
+        {
+          "sourceKey": "c2h3f",
+          "questionId": "DAC-E007JP"
+        },
+        {
+          "sourceKey": "c2h4cl2-11",
+          "questionId": "DAC-0BU7VS"
+        },
+        {
+          "sourceKey": "c2h4cl2-12",
+          "questionId": "DAC-15T0YP"
+        },
+        {
+          "sourceKey": "c2h2cl2-11",
+          "questionId": "DAC-1TKMUQ"
+        },
+        {
+          "sourceKey": "c2h2cl2-12",
+          "questionId": "DAC-1JL15R"
+        },
+        {
+          "sourceKey": "ethanol",
+          "questionId": "DAC-GJ1CRK"
+        },
+        {
+          "sourceKey": "dimethylether",
+          "questionId": "DAC-YHNXPV"
+        },
+        {
+          "sourceKey": "ethanal",
+          "questionId": "DAC-QJ86C6"
+        },
+        {
+          "sourceKey": "ethanoic-acid",
+          "questionId": "DAC-S89QPM"
+        },
+        {
+          "sourceKey": "sih4",
+          "questionId": "DAC-T2GV99"
+        },
+        {
+          "sourceKey": "methanoic-acid",
+          "questionId": "DAC-C7GS7P"
+        },
+        {
+          "sourceKey": "propane",
+          "questionId": "DAC-Q19TTQ"
+        },
+        {
+          "sourceKey": "propene",
+          "questionId": "DAC-5158JU"
+        },
+        {
+          "sourceKey": "nacl",
+          "questionId": "DAC-4JLX3Z"
+        },
+        {
+          "sourceKey": "mgo",
+          "questionId": "DAC-JOOLC6"
+        },
+        {
+          "sourceKey": "mgcl2",
+          "questionId": "DAC-1YQGJK"
+        },
+        {
+          "sourceKey": "na2o",
+          "questionId": "DAC-4Y56I3"
+        },
+        {
+          "sourceKey": "cacl2",
+          "questionId": "DAC-X3X5OS"
+        },
+        {
+          "sourceKey": "potassium-chloride",
+          "questionId": "DAC-18XJKH"
+        },
+        {
+          "sourceKey": "potassium-fluoride",
+          "questionId": "DAC-A0K3AX"
+        },
+        {
+          "sourceKey": "lithium-fluoride",
+          "questionId": "DAC-MJ072I"
+        },
+        {
+          "sourceKey": "lithium-chloride",
+          "questionId": "DAC-RZNGG2"
+        },
+        {
+          "sourceKey": "lithium-oxide",
+          "questionId": "DAC-QJBBSN"
+        },
+        {
+          "sourceKey": "potassium-bromide",
+          "questionId": "DAC-25NGYR"
+        },
+        {
+          "sourceKey": "potassium-iodide",
+          "questionId": "DAC-BZBX25"
+        },
+        {
+          "sourceKey": "sodium-fluoride",
+          "questionId": "DAC-QP5SQ5"
+        },
+        {
+          "sourceKey": "sodium-bromide",
+          "questionId": "DAC-35P9R3"
+        },
+        {
+          "sourceKey": "magnesium-sulfide",
+          "questionId": "DAC-CIDT7S"
+        },
+        {
+          "sourceKey": "magnesium-fluoride",
+          "questionId": "DAC-KTTM9Q"
+        },
+        {
+          "sourceKey": "magnesium-bromide",
+          "questionId": "DAC-M4MVNE"
+        },
+        {
+          "sourceKey": "calcium-sulfide",
+          "questionId": "DAC-RSV3NE"
+        },
+        {
+          "sourceKey": "calcium-fluoride",
+          "questionId": "DAC-XKVJTS"
+        },
+        {
+          "sourceKey": "calcium-bromide",
+          "questionId": "DAC-VBWOU0"
+        },
+        {
+          "sourceKey": "calcium-oxide",
+          "questionId": "DAC-3W20JD"
+        },
+        {
+          "sourceKey": "aluminium-oxide",
+          "questionId": "DAC-0MS1BU"
+        },
+        {
+          "sourceKey": "aluminium-sulfide",
+          "questionId": "DAC-U5U0TL"
+        },
+        {
+          "sourceKey": "aluminium-fluoride",
+          "questionId": "DAC-MV4MB1"
+        },
+        {
+          "sourceKey": "sodium-iodide",
+          "questionId": "DAC-R3TXGH"
+        },
+        {
+          "sourceKey": "magnesium-nitride",
+          "questionId": "DAC-YOPV8F"
+        },
+        {
+          "sourceKey": "calcium-nitride",
+          "questionId": "DAC-PI54RL"
+        },
+        {
+          "sourceKey": "sodium-sulfide",
+          "questionId": "DAC-2DL561"
+        },
+        {
+          "sourceKey": "potassium-oxide",
+          "questionId": "DAC-ESHFAU"
+        },
+        {
+          "sourceKey": "potassium-sulfide",
+          "questionId": "DAC-GUVMUT"
+        },
+        {
+          "sourceKey": "naoh",
+          "questionId": "DAC-5OQL33"
+        },
+        {
+          "sourceKey": "caoh2",
+          "questionId": "DAC-MGEU2C"
+        },
+        {
+          "sourceKey": "peroxide-ion",
+          "questionId": "DAC-8PXRXM"
+        },
+        {
+          "sourceKey": "sodium-peroxide",
+          "questionId": "DAC-V2BM3P"
+        },
+        {
+          "sourceKey": "magnesium-peroxide",
+          "questionId": "DAC-WXT6VY"
+        },
+        {
+          "sourceKey": "nitrogen-trichloride",
+          "questionId": "DAC-TI96CJ"
+        },
+        {
+          "sourceKey": "nitrogen-trifluoride",
+          "questionId": "DAC-G53FIJ"
+        },
+        {
+          "sourceKey": "sulfur-difluoride",
+          "questionId": "DAC-GA9BTC"
+        },
+        {
+          "sourceKey": "nitrosyl-chloride",
+          "questionId": "DAC-XSU194"
+        },
+        {
+          "sourceKey": "phosgene",
+          "questionId": "DAC-E2MLMQ"
+        },
+        {
+          "sourceKey": "hydrogen-cyanide",
+          "questionId": "DAC-CQN3R9"
+        },
+        {
+          "sourceKey": "boron-trifluoride",
+          "questionId": "DAC-F7B1ET"
+        },
+        {
+          "sourceKey": "ammonium-ion",
+          "questionId": "DAC-T7FE5B"
+        },
+        {
+          "sourceKey": "carbonate-ion",
+          "questionId": "DAC-EGSQGN"
+        },
+        {
+          "sourceKey": "nitrate-ion",
+          "questionId": "DAC-QOMT69"
+        },
+        {
+          "sourceKey": "tetrahydridoaluminate-ion",
+          "questionId": "DAC-KCND93"
+        },
+        {
+          "sourceKey": "sodium-borohydride",
+          "questionId": "DAC-JBGD2G"
+        },
+        {
+          "sourceKey": "phosphorus-pentachloride",
+          "questionId": "DAC-MVGPSJ"
+        },
+        {
+          "sourceKey": "sulfur-hexafluoride",
+          "questionId": "DAC-OCSB2N"
+        },
+        {
+          "sourceKey": "sulfur-tetrafluoride",
+          "questionId": "DAC-6L0F2L"
+        },
+        {
+          "sourceKey": "chlorine-trifluoride",
+          "questionId": "DAC-EYYHCF"
+        }
+      ],
+      "count": 91
+    },
+    {
+      "id": "alevel/ph-titration-curves",
+      "convention": "TC01–TC36 fixed source IDs plus QuestionReview bank prefix TC.",
+      "entries": [
+        {
+          "sourceKey": "TC01",
+          "questionId": "TC-GMPGTV"
+        },
+        {
+          "sourceKey": "TC02",
+          "questionId": "TC-GWP2IU"
+        },
+        {
+          "sourceKey": "TC03",
+          "questionId": "TC-H6OO7T"
+        },
+        {
+          "sourceKey": "TC04",
+          "questionId": "TC-HGO9WS"
+        },
+        {
+          "sourceKey": "TC05",
+          "questionId": "TC-HQNVLR"
+        },
+        {
+          "sourceKey": "TC06",
+          "questionId": "TC-I0NHAQ"
+        },
+        {
+          "sourceKey": "TC07",
+          "questionId": "TC-IAN2ZP"
+        },
+        {
+          "sourceKey": "TC08",
+          "questionId": "TC-IKMOOO"
+        },
+        {
+          "sourceKey": "TC09",
+          "questionId": "TC-IUMADN"
+        },
+        {
+          "sourceKey": "TC10",
+          "questionId": "TC-I0QMSP"
+        },
+        {
+          "sourceKey": "TC11",
+          "questionId": "TC-HQR13Q"
+        },
+        {
+          "sourceKey": "TC12",
+          "questionId": "TC-HGRFER"
+        },
+        {
+          "sourceKey": "TC13",
+          "questionId": "TC-H6RTPS"
+        },
+        {
+          "sourceKey": "TC14",
+          "questionId": "TC-J4P1KL"
+        },
+        {
+          "sourceKey": "TC15",
+          "questionId": "TC-IUPFVM"
+        },
+        {
+          "sourceKey": "TC16",
+          "questionId": "TC-IKPU6N"
+        },
+        {
+          "sourceKey": "TC17",
+          "questionId": "TC-IAQ8HO"
+        },
+        {
+          "sourceKey": "TC18",
+          "questionId": "TC-K8NGCH"
+        },
+        {
+          "sourceKey": "TC19",
+          "questionId": "TC-JYNUNI"
+        },
+        {
+          "sourceKey": "TC20",
+          "questionId": "TC-JOREGI"
+        },
+        {
+          "sourceKey": "TC21",
+          "questionId": "TC-JYR05H"
+        },
+        {
+          "sourceKey": "TC22",
+          "questionId": "TC-J4S72K"
+        },
+        {
+          "sourceKey": "TC23",
+          "questionId": "TC-JERSRJ"
+        },
+        {
+          "sourceKey": "TC24",
+          "questionId": "TC-IKSZOM"
+        },
+        {
+          "sourceKey": "TC25",
+          "questionId": "TC-IUSLDL"
+        },
+        {
+          "sourceKey": "TC26",
+          "questionId": "TC-I0TSAO"
+        },
+        {
+          "sourceKey": "TC27",
+          "questionId": "TC-IATDZN"
+        },
+        {
+          "sourceKey": "TC28",
+          "questionId": "TC-LWO80A"
+        },
+        {
+          "sourceKey": "TC29",
+          "questionId": "TC-M6NTP9"
+        },
+        {
+          "sourceKey": "TC30",
+          "questionId": "TC-LU98XN"
+        },
+        {
+          "sourceKey": "TC31",
+          "questionId": "TC-LK9N8O"
+        },
+        {
+          "sourceKey": "TC32",
+          "questionId": "TC-ME8GBL"
+        },
+        {
+          "sourceKey": "TC33",
+          "questionId": "TC-M48UMM"
+        },
+        {
+          "sourceKey": "TC34",
+          "questionId": "TC-MY7NPJ"
+        },
+        {
+          "sourceKey": "TC35",
+          "questionId": "TC-MO820K"
+        },
+        {
+          "sourceKey": "TC36",
+          "questionId": "TC-NI6V3H"
+        }
+      ],
+      "count": 36
+    },
+    {
+      "id": "alevel/c3l6-organic-reactions",
+      "convention": "Challenge c3l6:2012-q2; stage+source target labels (a (1)–(10), b A–M without I, c R–Z); no random generator.",
+      "entries": [
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(1)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(2)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(3)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(4)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(5)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(6)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(7)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(8)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(9)"
+        },
+        {
+          "sourceStage": "a",
+          "sourceTarget": "(10)"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "A"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "B"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "C"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "D"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "E"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "F"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "G"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "H"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "J"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "K"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "L"
+        },
+        {
+          "sourceStage": "b",
+          "sourceTarget": "M"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "R"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "S"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "T"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "U"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "V"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "W"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "X"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "Y"
+        },
+        {
+          "sourceStage": "c",
+          "sourceTarget": "Z"
+        }
+      ],
+      "count": 31
+    },
+    {
+      "id": "igcse/calorimetry",
+      "convention": "CAL mixed-radix codec in generated-review.js, uint32 seed and mulberry32 generation; codec generates from decoded canonical seed, not original UI randomness.",
+      "entries": [],
+      "count": 0
+    },
+    {
+      "id": "igcse/bond-enthalpy",
+      "convention": "BE mixed-radix codec reaction radix256/difficulty radix4 with canonical seed; no bank truncation or reaction reordering in codec values.",
+      "entries": [],
+      "count": 0
+    },
+    {
+      "id": "igcse/structure-and-bonding",
+      "convention": "SBC hash on question.id:level; 18 supported question-level identities, not table order.",
+      "entries": [
+        {
+          "sourceKey": "water-sodium-chloride-melting:2",
+          "questionId": "SBC-U5FSU0"
+        },
+        {
+          "sourceKey": "water-sodium-chloride-melting:3",
+          "questionId": "SBC-UFFEIZ"
+        },
+        {
+          "sourceKey": "methane-magnesium-oxide-boiling:2",
+          "questionId": "SBC-3M81WX"
+        },
+        {
+          "sourceKey": "methane-magnesium-oxide-boiling:3",
+          "questionId": "SBC-3C8G7Y"
+        },
+        {
+          "sourceKey": "hexane-methane-boiling:2",
+          "questionId": "SBC-E4WN2I"
+        },
+        {
+          "sourceKey": "hexane-methane-boiling:3",
+          "questionId": "SBC-EEW8RH"
+        },
+        {
+          "sourceKey": "diamond-sodium-chloride-melting:2",
+          "questionId": "SBC-4KKN3Z"
+        },
+        {
+          "sourceKey": "diamond-sodium-chloride-melting:3",
+          "questionId": "SBC-4AL1F0"
+        },
+        {
+          "sourceKey": "c60-diamond-melting:2",
+          "questionId": "SBC-8456XU"
+        },
+        {
+          "sourceKey": "c60-diamond-melting:3",
+          "questionId": "SBC-8E4SMT"
+        },
+        {
+          "sourceKey": "graphite-diamond-conductivity:2",
+          "questionId": "SBC-2C40VA"
+        },
+        {
+          "sourceKey": "graphite-diamond-conductivity:3",
+          "questionId": "SBC-2M3MK9"
+        },
+        {
+          "sourceKey": "solid-molten-sodium-chloride-conductivity:2",
+          "questionId": "SBC-F8MV0J"
+        },
+        {
+          "sourceKey": "solid-molten-sodium-chloride-conductivity:3",
+          "questionId": "SBC-EYN9BK"
+        },
+        {
+          "sourceKey": "copper-sodium-chloride-conductivity:2",
+          "questionId": "SBC-KIHCFZ"
+        },
+        {
+          "sourceKey": "copper-sodium-chloride-conductivity:3",
+          "questionId": "SBC-K8HQR0"
+        },
+        {
+          "sourceKey": "graphite-diamond-hardness:2",
+          "questionId": "SBC-8H8DTX"
+        },
+        {
+          "sourceKey": "graphite-diamond-hardness:3",
+          "questionId": "SBC-878S4Y"
+        }
+      ],
+      "count": 18
+    },
+    {
+      "id": "igcse/dot-and-cross",
+      "convention": "DAC source-key hash with category/grade in saved state, source fixed molecule IDs.",
+      "entries": [
+        {
+          "sourceKey": "h2",
+          "questionId": "DAC-3QP3I7"
+        },
+        {
+          "sourceKey": "cl2",
+          "questionId": "DAC-HZF6UW"
+        },
+        {
+          "sourceKey": "hcl",
+          "questionId": "DAC-1V5N2O"
+        },
+        {
+          "sourceKey": "h2o",
+          "questionId": "DAC-2TUEUO"
+        },
+        {
+          "sourceKey": "nh3",
+          "questionId": "DAC-RFWJQW"
+        },
+        {
+          "sourceKey": "ch4",
+          "questionId": "DAC-K4F28E"
+        },
+        {
+          "sourceKey": "o2",
+          "questionId": "DAC-83OXXG"
+        },
+        {
+          "sourceKey": "n2",
+          "questionId": "DAC-200U61"
+        },
+        {
+          "sourceKey": "co2",
+          "questionId": "DAC-GBEF73"
+        },
+        {
+          "sourceKey": "c2h6",
+          "questionId": "DAC-3O652I"
+        },
+        {
+          "sourceKey": "c2h4",
+          "questionId": "DAC-346XOK"
+        },
+        {
+          "sourceKey": "ch3cl",
+          "questionId": "DAC-UFJGZK"
+        },
+        {
+          "sourceKey": "chloroethene",
+          "questionId": "DAC-79B5GV"
+        },
+        {
+          "sourceKey": "f2",
+          "questionId": "DAC-6F31O1"
+        },
+        {
+          "sourceKey": "br2",
+          "questionId": "DAC-BCJCZP"
+        },
+        {
+          "sourceKey": "i2",
+          "questionId": "DAC-36MQMA"
+        },
+        {
+          "sourceKey": "hf",
+          "questionId": "DAC-PB9RFN"
+        },
+        {
+          "sourceKey": "hbr",
+          "questionId": "DAC-1V8SKN"
+        },
+        {
+          "sourceKey": "hi",
+          "questionId": "DAC-SX4LGA"
+        },
+        {
+          "sourceKey": "h2s",
+          "questionId": "DAC-1PW02S"
+        },
+        {
+          "sourceKey": "h2o2",
+          "questionId": "DAC-3O6752"
+        },
+        {
+          "sourceKey": "n2h4",
+          "questionId": "DAC-7SXOD1"
+        },
+        {
+          "sourceKey": "c2h5cl",
+          "questionId": "DAC-8NMXCG"
+        },
+        {
+          "sourceKey": "c2h5br",
+          "questionId": "DAC-8NQ2UF"
+        },
+        {
+          "sourceKey": "c2h5i",
+          "questionId": "DAC-HM3K62"
+        },
+        {
+          "sourceKey": "c2h5f",
+          "questionId": "DAC-E08Q5F"
+        },
+        {
+          "sourceKey": "c2h3br",
+          "questionId": "DAC-GJ5H4X"
+        },
+        {
+          "sourceKey": "c2h3f",
+          "questionId": "DAC-E007JP"
+        },
+        {
+          "sourceKey": "c2h4cl2-11",
+          "questionId": "DAC-0BU7VS"
+        },
+        {
+          "sourceKey": "c2h4cl2-12",
+          "questionId": "DAC-15T0YP"
+        },
+        {
+          "sourceKey": "c2h2cl2-11",
+          "questionId": "DAC-1TKMUQ"
+        },
+        {
+          "sourceKey": "c2h2cl2-12",
+          "questionId": "DAC-1JL15R"
+        },
+        {
+          "sourceKey": "ethanol",
+          "questionId": "DAC-GJ1CRK"
+        },
+        {
+          "sourceKey": "dimethylether",
+          "questionId": "DAC-YHNXPV"
+        },
+        {
+          "sourceKey": "ethanal",
+          "questionId": "DAC-QJ86C6"
+        },
+        {
+          "sourceKey": "ethanoic-acid",
+          "questionId": "DAC-S89QPM"
+        },
+        {
+          "sourceKey": "sih4",
+          "questionId": "DAC-T2GV99"
+        },
+        {
+          "sourceKey": "methanoic-acid",
+          "questionId": "DAC-C7GS7P"
+        },
+        {
+          "sourceKey": "propane",
+          "questionId": "DAC-Q19TTQ"
+        },
+        {
+          "sourceKey": "propene",
+          "questionId": "DAC-5158JU"
+        },
+        {
+          "sourceKey": "nacl",
+          "questionId": "DAC-4JLX3Z"
+        },
+        {
+          "sourceKey": "mgo",
+          "questionId": "DAC-JOOLC6"
+        },
+        {
+          "sourceKey": "mgcl2",
+          "questionId": "DAC-1YQGJK"
+        },
+        {
+          "sourceKey": "na2o",
+          "questionId": "DAC-4Y56I3"
+        },
+        {
+          "sourceKey": "cacl2",
+          "questionId": "DAC-X3X5OS"
+        },
+        {
+          "sourceKey": "potassium-chloride",
+          "questionId": "DAC-18XJKH"
+        },
+        {
+          "sourceKey": "potassium-fluoride",
+          "questionId": "DAC-A0K3AX"
+        },
+        {
+          "sourceKey": "lithium-fluoride",
+          "questionId": "DAC-MJ072I"
+        },
+        {
+          "sourceKey": "lithium-chloride",
+          "questionId": "DAC-RZNGG2"
+        },
+        {
+          "sourceKey": "lithium-oxide",
+          "questionId": "DAC-QJBBSN"
+        },
+        {
+          "sourceKey": "potassium-bromide",
+          "questionId": "DAC-25NGYR"
+        },
+        {
+          "sourceKey": "potassium-iodide",
+          "questionId": "DAC-BZBX25"
+        },
+        {
+          "sourceKey": "sodium-fluoride",
+          "questionId": "DAC-QP5SQ5"
+        },
+        {
+          "sourceKey": "sodium-bromide",
+          "questionId": "DAC-35P9R3"
+        },
+        {
+          "sourceKey": "magnesium-sulfide",
+          "questionId": "DAC-CIDT7S"
+        },
+        {
+          "sourceKey": "magnesium-fluoride",
+          "questionId": "DAC-KTTM9Q"
+        },
+        {
+          "sourceKey": "magnesium-bromide",
+          "questionId": "DAC-M4MVNE"
+        },
+        {
+          "sourceKey": "calcium-sulfide",
+          "questionId": "DAC-RSV3NE"
+        },
+        {
+          "sourceKey": "calcium-fluoride",
+          "questionId": "DAC-XKVJTS"
+        },
+        {
+          "sourceKey": "calcium-bromide",
+          "questionId": "DAC-VBWOU0"
+        },
+        {
+          "sourceKey": "calcium-oxide",
+          "questionId": "DAC-3W20JD"
+        },
+        {
+          "sourceKey": "aluminium-oxide",
+          "questionId": "DAC-0MS1BU"
+        },
+        {
+          "sourceKey": "aluminium-sulfide",
+          "questionId": "DAC-U5U0TL"
+        },
+        {
+          "sourceKey": "aluminium-fluoride",
+          "questionId": "DAC-MV4MB1"
+        },
+        {
+          "sourceKey": "sodium-iodide",
+          "questionId": "DAC-R3TXGH"
+        },
+        {
+          "sourceKey": "magnesium-nitride",
+          "questionId": "DAC-YOPV8F"
+        },
+        {
+          "sourceKey": "calcium-nitride",
+          "questionId": "DAC-PI54RL"
+        },
+        {
+          "sourceKey": "sodium-sulfide",
+          "questionId": "DAC-2DL561"
+        },
+        {
+          "sourceKey": "potassium-oxide",
+          "questionId": "DAC-ESHFAU"
+        },
+        {
+          "sourceKey": "potassium-sulfide",
+          "questionId": "DAC-GUVMUT"
+        },
+        {
+          "sourceKey": "naoh",
+          "questionId": "DAC-5OQL33"
+        },
+        {
+          "sourceKey": "caoh2",
+          "questionId": "DAC-MGEU2C"
+        }
+      ],
+      "count": 72
+    },
+    {
+      "id": "igcse/energy-enthalpy",
+      "convention": "EE hash on fixed question.id; historical custom core status model does not replace shared mastery equations.",
+      "entries": [
+        {
+          "sourceKey": "C01",
+          "questionId": "EE-8IPP11"
+        },
+        {
+          "sourceKey": "C02",
+          "questionId": "EE-7OQVY4"
+        },
+        {
+          "sourceKey": "C05",
+          "questionId": "EE-7ERA95"
+        },
+        {
+          "sourceKey": "C06",
+          "questionId": "EE-6KSH68"
+        },
+        {
+          "sourceKey": "C07",
+          "questionId": "EE-6US2V7"
+        },
+        {
+          "sourceKey": "E01",
+          "questionId": "EE-1Q7XF7"
+        },
+        {
+          "sourceKey": "E02",
+          "questionId": "EE-207J46"
+        },
+        {
+          "sourceKey": "E05",
+          "questionId": "EE-2U6C73"
+        },
+        {
+          "sourceKey": "E06",
+          "questionId": "EE-345XW2"
+        },
+        {
+          "sourceKey": "E07",
+          "questionId": "EE-3E5JL1"
+        },
+        {
+          "sourceKey": "E08",
+          "questionId": "EE-3O55A0"
+        },
+        {
+          "sourceKey": "E09",
+          "questionId": "EE-3Y4QYZ"
+        },
+        {
+          "sourceKey": "E10",
+          "questionId": "EE-3493E1"
+        },
+        {
+          "sourceKey": "E11",
+          "questionId": "EE-2U9HP2"
+        },
+        {
+          "sourceKey": "E12",
+          "questionId": "EE-2K9W03"
+        },
+        {
+          "sourceKey": "E13",
+          "questionId": "EE-2AAAB4"
+        },
+        {
+          "sourceKey": "E14",
+          "questionId": "EE-487I5X"
+        },
+        {
+          "sourceKey": "E15",
+          "questionId": "EE-3Y7WGY"
+        },
+        {
+          "sourceKey": "E16",
+          "questionId": "EE-3O8ARZ"
+        },
+        {
+          "sourceKey": "E17",
+          "questionId": "EE-3E8P30"
+        },
+        {
+          "sourceKey": "E18",
+          "questionId": "EE-5C5WXT"
+        },
+        {
+          "sourceKey": "A01",
+          "questionId": "EE-IR0U3J"
+        },
+        {
+          "sourceKey": "A02",
+          "questionId": "EE-J10FSI"
+        },
+        {
+          "sourceKey": "A03",
+          "questionId": "EE-JB01HH"
+        },
+        {
+          "sourceKey": "A04",
+          "questionId": "EE-HD2TMO"
+        },
+        {
+          "sourceKey": "A05",
+          "questionId": "EE-HN2FBN"
+        },
+        {
+          "sourceKey": "A07",
+          "questionId": "EE-I71MPL"
+        },
+        {
+          "sourceKey": "A08",
+          "questionId": "EE-KOY1YC"
+        },
+        {
+          "sourceKey": "D01",
+          "questionId": "EE-19M67S"
+        },
+        {
+          "sourceKey": "D02",
+          "questionId": "EE-23KZAP"
+        },
+        {
+          "sourceKey": "D03",
+          "questionId": "EE-1TLDLQ"
+        },
+        {
+          "sourceKey": "D04",
+          "questionId": "EE-2NK6ON"
+        },
+        {
+          "sourceKey": "D05",
+          "questionId": "EE-2DKKZO"
+        },
+        {
+          "sourceKey": "D06",
+          "questionId": "EE-37JE2L"
+        },
+        {
+          "sourceKey": "D07",
+          "questionId": "EE-2XJSDM"
+        },
+        {
+          "sourceKey": "D08",
+          "questionId": "EE-YCT0C3"
+        },
+        {
+          "sourceKey": "D09",
+          "questionId": "EE-Y2TEN4"
+        },
+        {
+          "sourceKey": "D10",
+          "questionId": "EE-YWP282"
+        },
+        {
+          "sourceKey": "D11",
+          "questionId": "EE-05KLXX"
+        },
+        {
+          "sourceKey": "D12",
+          "questionId": "EE-YCPUU4"
+        },
+        {
+          "sourceKey": "D13",
+          "questionId": "EE-YMPGJ3"
+        },
+        {
+          "sourceKey": "D14",
+          "questionId": "EE-XSQNG6"
+        },
+        {
+          "sourceKey": "D15",
+          "questionId": "EE-Y2Q955"
+        },
+        {
+          "sourceKey": "D16",
+          "questionId": "EE-X8RG28"
+        },
+        {
+          "sourceKey": "D17",
+          "questionId": "EE-XIR1R7"
+        },
+        {
+          "sourceKey": "D18",
+          "questionId": "EE-23HTSQ"
+        },
+        {
+          "sourceKey": "B01",
+          "questionId": "EE-8EHI7U"
+        },
+        {
+          "sourceKey": "B02",
+          "questionId": "EE-84HWIV"
+        },
+        {
+          "sourceKey": "B03",
+          "questionId": "EE-7UIATW"
+        },
+        {
+          "sourceKey": "B04",
+          "questionId": "EE-7KIP4X"
+        },
+        {
+          "sourceKey": "B05",
+          "questionId": "EE-7AJ3FY"
+        },
+        {
+          "sourceKey": "B06",
+          "questionId": "EE-70JHQZ"
+        },
+        {
+          "sourceKey": "B07",
+          "questionId": "EE-6QJW20"
+        },
+        {
+          "sourceKey": "B08",
+          "questionId": "EE-6GKAD1"
+        }
+      ],
+      "count": 54
+    },
+    {
+      "id": "igcse/energetics-practical",
+      "convention": "EP fixed IDs are already stable review IDs; source question patterns retained; no generated content seed.",
+      "entries": [
+        {
+          "sourceKey": "EP-BJLHC1",
+          "questionId": "EP-BJLHC1"
+        },
+        {
+          "sourceKey": "EP-APMO94",
+          "questionId": "EP-APMO94"
+        },
+        {
+          "sourceKey": "EP-AZM9Y3",
+          "questionId": "EP-AZM9Y3"
+        },
+        {
+          "sourceKey": "EP-CXMNAV",
+          "questionId": "EP-CXMNAV"
+        },
+        {
+          "sourceKey": "EP-CNN1LW",
+          "questionId": "EP-CNN1LW"
+        },
+        {
+          "sourceKey": "EP-DHLUOT",
+          "questionId": "EP-DHLUOT"
+        },
+        {
+          "sourceKey": "EP-D7M8ZU",
+          "questionId": "EP-D7M8ZU"
+        },
+        {
+          "sourceKey": "EP-BTO8IZ",
+          "questionId": "EP-BTO8IZ"
+        },
+        {
+          "sourceKey": "EP-4G1A0S",
+          "questionId": "EP-4G1A0S"
+        },
+        {
+          "sourceKey": "EP-4Q0VPR",
+          "questionId": "EP-4Q0VPR"
+        },
+        {
+          "sourceKey": "EP-6O192J",
+          "questionId": "EP-6O192J"
+        },
+        {
+          "sourceKey": "EP-6E1NDK",
+          "questionId": "EP-6E1NDK"
+        },
+        {
+          "sourceKey": "EP-780GGH",
+          "questionId": "EP-780GGH"
+        },
+        {
+          "sourceKey": "EP-6Y0URI",
+          "questionId": "EP-6Y0URI"
+        }
+      ],
+      "count": 14
+    }
+  ]
+}

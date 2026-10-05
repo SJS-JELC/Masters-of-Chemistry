@@ -1,0 +1,66 @@
+import type { CalculationBlock } from './types.ts';
+type Field = { id: string; expected: number; tolerance: number; finalResponse?: true };
+type Token = string | Field;
+type Right =
+  | { kind: 'tokens'; tokens: Token[] }
+  | { kind: 'fraction'; numerator: Token[]; denominator: Token[] };
+/** Source scaffoldNumericMatches, numberTolerance and workingRowGroups, without HTML. */
+export function workingFramework(blocks: readonly CalculationBlock[], supportId: string) {
+  const fields: Field[] = [];
+  function tokens(source: string): Token[] {
+    const out: Token[] = [];
+    let cursor = 0;
+    const matches = [...source.matchAll(/[+−-]?(?:\d+(?:\.\d*)?|\.\d+)/g)].filter((match) => {
+      const before = source[match.index! - 1] || '',
+        after = source[match.index! + match[0].length] || '';
+      return !/[A-Za-z]/.test(before) && !/[A-Za-z]/.test(after) && before !== '-' && after !== '-';
+    });
+    for (const match of matches) {
+      out.push(source.slice(cursor, match.index));
+      const raw = match[0],
+        normalised = raw.replace(/[+−]/g, ''),
+        places = normalised.includes('.') ? normalised.split('.')[1]!.length : 0,
+        field = {
+          id: `${supportId}-${fields.length + 1}`,
+          expected: Number(raw.replace('−', '-')),
+          tolerance: 0.5 * 10 ** -places + Number.EPSILON,
+        };
+      fields.push(field);
+      out.push(field);
+      cursor = match.index! + raw.length;
+    }
+    out.push(source.slice(cursor));
+    return out;
+  }
+  const rows = blocks
+    .flatMap((block) =>
+      block.type === 'math'
+        ? block.rows
+        : block.text
+            .split(/;\s*|\.\s+(?=[A-ZΔn])/)
+            .filter(Boolean)
+            .flatMap((fragment) => {
+              const pieces = fragment.split(/\s=\s/);
+              return pieces.length === 1
+                ? [['', fragment] as const]
+                : [
+                    [pieces[0]!, pieces[1]!] as const,
+                    ...pieces.slice(2).map((p) => ['', p] as const),
+                  ];
+            }),
+    )
+    .map(([left, right]) => ({
+      left,
+      right:
+        typeof right === 'string'
+          ? ({ kind: 'tokens', tokens: tokens(right) } as Right)
+          : ({
+              kind: 'fraction',
+              numerator: tokens(right.fraction[0]),
+              denominator: tokens(right.fraction[1]),
+            } as Right),
+    }));
+  const last = fields.at(-1);
+  if (last) last.finalResponse = true;
+  return { supportId, rows };
+}

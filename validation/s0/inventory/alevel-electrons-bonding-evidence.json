@@ -1,0 +1,975 @@
+{
+  "activityId": "alevel/electrons-bonding",
+  "lines": [
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 47,
+      "text": "    const savedQuestion = D.questions.find(item => item.id === value?.questionId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 49,
+      "text": "      typeof value.questionId === 'string' && eligible.some(item => item.id === value.questionId) &&"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 50,
+      "text": "      savedQuestion && value.leafId === savedQuestion.leafId && Number(value.level) === 1 &&"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 62,
+      "text": "      const saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 64,
+      "text": "      const savedQuestion = D.questions.find(item => item.id === saved.questionId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 65,
+      "text": "      if (requestedLeaf && bank.some(item => item.leafId === requestedLeaf) && savedQuestion.leafId !== requestedLeaf) return null;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 66,
+      "text": "      if (pinnedQuestionId && saved.questionId !== pinnedQuestionId) return null;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 78,
+      "text": "      questionId: question.id,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 79,
+      "text": "      leafId: question.leafId,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 103,
+      "text": "      localStorage.setItem(STORE_KEY, JSON.stringify(saved));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 113,
+      "text": "      return D.questions.filter(item => item.leafId === bridge.leafId && Number(item.level) === Number(bridge.level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 115,
+      "text": "    if (requestedLeaf && D.questions.some(item => item.leafId === requestedLeaf)) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 116,
+      "text": "      return bank.filter(item => item.leafId === requestedLeaf);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 133,
+      "text": "  function chooseQuestion(items, previousId, seed) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 137,
+      "text": "    return candidates[(hash(seed) - 1) % candidates.length];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 146,
+      "text": "      questionId: question.id,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 147,
+      "text": "      leafId: question.leafId,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 165,
+      "text": "        leafId: question.leafId,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 227,
+      "text": "    $('questionId').textContent = question.id;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 251,
+      "text": "        idleLimitMs: 60000,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 288,
+      "text": "    const seed = `${attempt?.attemptId || ''}:${Date.now()}:${previousId || ''}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 289,
+      "text": "    begin(chooseQuestion(items, previousId, seed));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 381,
+      "text": "      ? `No Level 1 questions are available for ${bridge.leafId}.`"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 392,
+      "text": "    initialQuestion = D.questions.find(item => item.id === restored.questionId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 395,
+      "text": "    initialQuestion = restored && D.questions.find(item => item.id === restored.questionId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 398,
+      "text": "    const previousId = testing && bridge.previous?.leafId === bridge.leafId && Number(bridge.previous?.level) === Number(bridge.level)"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 399,
+      "text": "      ? bridge.previous.questionId : null;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/app.js",
+      "line": 401,
+      "text": "    initialQuestion = fixed || chooseQuestion(items, previousId, `${bridge?.sessionId || 'practice'}:${bridge?.attemptId || pinnedQuestionId || Date.now()}:${bridge?.leafId || requestedLeaf || 'all'}`);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 5,
+      "text": "  \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 52,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 87,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 124,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 161,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 200,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 238,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 278,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 318,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 359,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 402,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 441,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 480,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 520,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/data.js",
+      "line": 568,
+      "text": "      \"leafId\": \"l6-t2-1-1\","
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/electrons-bonding/index.html",
+      "line": 38,
+      "text": "        <span class=\"question-meta\"><span id=\"questionId\" class=\"review-id\" aria-label=\"Question ID\"></span><span id=\"format\" class=\"badge\">Level 1 · short answer</span></span>"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 4,
+      "text": "const storageKey='sjs:c3l6:2012-q2:draft:v1';let state=marking.blank(),editor,restoring=false,introLoaded=false,navigationGeneration=0;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 7,
+      "text": "else{try{state=marking.restore(JSON.parse(localStorage.getItem(storageKey)));}catch{}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 9,
+      "text": "function save(){if(inspection)return;marking.saveable(state);try{localStorage.setItem(storageKey,JSON.stringify(state));$('saveNotice').textContent='';}catch{$('saveNotice').textContent='Progress cannot be saved in this browser. Keep this page open to retain your work.';}}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 14,
+      "text": " const key=state.stage,isAssessment=keys.includes(key);$('checkPart').hidden=inspection||key!=='a'||state.complete.a;$('checkPart').disabled=key==='a'&&(!marking.attempted(state,'a')||state.complete.a);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 30,
+      "text": " const key=state.stage;if(key==='a'||key==='intro')return;const host=$('questionPanel');if(key==='b')host.querySelectorAll('.b-step-controls').forEach(node=>node.remove());"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 42,
+      "text": "function refreshThumbnail(){const key=state.stage,host=$('questionPanel');for(const slot of host.querySelectorAll('[data-answer=\"'+CSS.escape(state.selected[key])+'\"] .slot-preview')){slot.replaceChildren();const graph=currentDraft().graph;if(graph.atoms.length)slot.append(thumbnail(graph));else slot.textContent='Click to draw';}if(key==='b')renderRepeatedMolecules();}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "line": 43,
+      "text": "function loadDrawing(){const key=state.stage,item=answers().find(a=>a.id===state.selected[key]);if(!item)return;restoring=true;editor.importState(currentDraft());editor.setReadOnly(key==='b'||key==='c'?isLocked(key,item.id):state.complete[key]);restoring=false;$('answerLabel').textContent='Structure '+item.label+(item.mass?' · relative molecular mass '+item.mass:'');$('readOnly').hidden=!(key==='b'||key==='c'?isLocked(key,item.id):state.complete[key]);}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assessment.js",
+      "line": 46,
+      "text": "  // fully correct check for the exact validated saved answers can seed granular progress."
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/core.js",
+      "line": 27,
+      "text": "      const key = [b.a, b.b].sort((a, c) => a - c).join(':');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/editor.js",
+      "line": 323,
+      "text": "    const key = event.key.toLowerCase();"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 22,
+      "text": "  function allowance(activity, question) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 32,
+      "text": "    return Boolean(value && value.version === 1 && Number.isSafeInteger(value.activeMs) && value.activeMs >= 0 && LIMITS.includes(value.idleLimitMs));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 35,
+      "text": "    return valid(value) && value.finished === true ? {version: 1, activeMs: value.activeMs, idleLimitMs: value.idleLimitMs} : undefined;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 39,
+      "text": "  function create({id, idleLimitMs, saved, completed = false, now = () => performance.now()}) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 40,
+      "text": "    if (!id || !LIMITS.includes(idleLimitMs)) throw Error('Invalid timing question.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 41,
+      "text": "    const restore = valid(saved) && saved.id === id && saved.idleLimitMs === idleLimitMs && typeof saved.finished === 'boolean';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 43,
+      "text": "      running = !finished, last = now(), deadline = last + idleLimitMs;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 51,
+      "text": "    function interact(visible = true) { tick(visible); if (visible && !finished) { running = true; deadline = last + idleLimitMs; } }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "line": 53,
+      "text": "    function snapshot() { return known ? {version: 1, id, activeMs: Math.floor(activeMs), idleLimitMs, finished: Boolean(finished)} : undefined; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.css",
+      "line": 16,
+      "text": ".mastery-bar > .mastery-bar-threshold { display:block; position:absolute; left:var(--mastery-threshold,80%); top:-4px; bottom:-4px; width:2px; margin:0; padding:0; transform:translateX(-50%); background:#fff; box-shadow:0 0 0 1px #11182d; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 7,
+      "text": "  const key = 'masters-alevel-results-v1';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 8,
+      "text": "  const acidKey = 'masters-alevel-results-acid-v2';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 28,
+      "text": "  const config = Object.freeze(Object.fromEntries(["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 29,
+      "text": "    ['l6-t2-1-1', {label: labels['l6-t2-1-1'], halfLives: {1: 3}, progressionVersion: 1, availableGrades: [1], levelLabels: {1: 'Level 1 · Key learning'}}],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 30,
+      "text": "    ['l6-t2-1-2', {label: labels['l6-t2-1-2'], halfLives: {1: 3, 2: 3, 3: 3}, progressionVersion: 1, levelLabels: electronLevelLabels}],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 31,
+      "text": "    ['l6-t2-1-3', {label: labels['l6-t2-1-3'], halfLives: {1: 3, 2: 3, 3: 3}, progressionVersion: 1, levelLabels: electronLevelLabels}],"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 32,
+      "text": "    ...[...acidLeaves].map(leafId => [leafId, {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 33,
+      "text": "      label: labels[leafId], halfLives: {1: 2, 2: 2, 3: 2}, progressionVersion: 2, levelLabels: acidLevelLabels"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 35,
+      "text": "    ...[...titrationLeaves].map(leafId => [leafId, {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 36,
+      "text": "      label: labels[leafId], halfLives: {2: 2, 3: 2}, progressionVersion: 1,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 39,
+      "text": "  ].map(([leafId, value]) => [leafId, Object.freeze({"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 40,
+      "text": "    label: value.label, halfLives: Object.freeze(value.halfLives), progressionVersion: value.progressionVersion,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 45,
+      "text": "    'l6-t2-1-4': Object.freeze({label: 'Covalent & Coordinate Bonding (legacy diagrams)', progressionVersion: 1}),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 46,
+      "text": "    'u6-t1-1-4': Object.freeze({label: 'Ka & pKa', progressionVersion: 1})"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 49,
+      "text": "  const threshold = 0.8;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 66,
+      "text": "    if (value.current) value.current.leafId = canonicalLeaf(value.current.leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 88,
+      "text": "  function storage() { try { return root.localStorage; } catch (_) { return null; } }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 89,
+      "text": "  function activeVersion(leafId) { return config[leafId]?.progressionVersion; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 93,
+      "text": "    if (!knownLeaves.has(item.leafId) || (!historical && !Object.hasOwn(config, item.leafId))) return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 94,
+      "text": "    if (item.progressionVersion !== undefined && item.progressionVersion !== 1 && item.progressionVersion !== 2) return false;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 104,
+      "text": "      const cleaned = {id: item.id, leafId: canonicalLeaf(item.leafId), level: item.level, score: item.score, completedAt: item.completedAt};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 105,
+      "text": "      if (item.leafId === formerCovalentLeaf || item.sourceLeafId === formerCovalentLeaf) cleaned.sourceLeafId = formerCovalentLeaf;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 106,
+      "text": "      if (item.progressionVersion !== undefined) cleaned.progressionVersion = item.progressionVersion;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 114,
+      "text": "      ![60000, 180000, 300000, 600000].includes(value.idleLimitMs)) return undefined;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 115,
+      "text": "    return {version: 1, activeMs: value.activeMs, idleLimitMs: value.idleLimitMs};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 133,
+      "text": "  function evidenceFor(leafId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 134,
+      "text": "    const version = activeVersion(leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 135,
+      "text": "    return records.filter(item => item.leafId === leafId &&"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 136,
+      "text": "      (item.progressionVersion === version || (version === 1 && item.progressionVersion === undefined)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 145,
+      "text": "  function summary(leafId, level) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 146,
+      "text": "    if (!Object.hasOwn(config, leafId) || !config[leafId].availableGrades.includes(Number(level))) throw Error('Unknown mastery level.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 147,
+      "text": "    const matches = evidenceFor(leafId).filter(item => item.level === Number(level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 148,
+      "text": "    const score = weightedScore(matches.map(item => item.score), config[leafId].halfLives[level]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 151,
+      "text": "    return {level: Number(level), score, mastered: score !== null && score > threshold, count: matches.length,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 154,
+      "text": "  function achievement(leafId) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 155,
+      "text": "    if (!Object.hasOwn(config, leafId)) throw Error('Unknown mastery activity.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 156,
+      "text": "    const states = config[leafId].availableGrades.map(level => summary(leafId, level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 161,
+      "text": "  function nextLevel(leafId) { return achievement(leafId).states.find(state => !state.mastered)?.level || null; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 164,
+      "text": "    if (!valid(item, now, {historical: false}) || !Object.hasOwn(config, item.leafId) ||"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 165,
+      "text": "      !config[item.leafId].availableGrades.includes(item.level) ||"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 166,
+      "text": "      (activeVersion(item.leafId) === 2 && item.progressionVersion !== undefined && item.progressionVersion !== 2) ||"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 167,
+      "text": "      (activeVersion(item.leafId) === 1 && item.progressionVersion === 2)) throw Error('Invalid mastery result.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 169,
+      "text": "    if (activeVersion(item.leafId) === 2) savedItem.progressionVersion = 2;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 172,
+      "text": "    const targetKey = activeVersion(item.leafId) === 2 ? acidKey : key;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 177,
+      "text": "        ? records.filter(entry => acidLeaves.has(entry.leafId) && entry.progressionVersion === 2)"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 178,
+      "text": "        : records.filter(entry => !acidLeaves.has(entry.leafId) || entry.progressionVersion !== 2);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 196,
+      "text": "    node.setAttribute('aria-valuetext', score === null ? 'Not assessed yet' : score > threshold ? 'Above the mastery threshold' : 'Mastery threshold not yet exceeded');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 198,
+      "text": "    node.style.setProperty('--mastery-threshold', (threshold * 100) + '%');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 199,
+      "text": "    node.innerHTML = '<span class=\"mastery-bar-fill\" aria-hidden=\"true\"></span><span class=\"mastery-bar-threshold\" aria-hidden=\"true\"></span>';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 215,
+      "text": "    const leafId = headerLeaf(), activity = config[leafId];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 226,
+      "text": "      item.append(label,bar(summary(leafId,level).score,activity.levelLabels[level] + ' mastery',level));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 230,
+      "text": "  function renderChoices(container, {leafId, href, fresh = Boolean(root.ActivityLaunch?.fresh)}) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 231,
+      "text": "    if (!Object.hasOwn(config, leafId)) throw Error('Unknown mastery activity.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 233,
+      "text": "    const labelsForLeaf = config[leafId].levelLabels;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 234,
+      "text": "    for (const option of ['mastery', ...config[leafId].availableGrades]) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 239,
+      "text": "      url.searchParams.set('leaf', leafId); url.searchParams.set('practice', option === 'mastery' ? 'mastery' : 'level');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 244,
+      "text": "        const available = config[leafId].availableGrades;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 248,
+      "text": "      else detail.append(bar(summary(leafId, option).score, labelsForLeaf[option] + ' mastery', option));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "line": 253,
+      "text": "  root.ALevelMastery = Object.freeze({key, acidKey, config, threshold, read, history, readHistory: history, clean, migrateRevisionSession, refresh, weightedScore, summary, achievement, nextLevel, record, attemptId, bar, renderChoices, renderHeaderMeters});"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 16,
+      "text": "      const settings = config[record.leafId];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 17,
+      "text": "      const version = record.progressionVersion ?? 1;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 18,
+      "text": "      (settings && version === settings.progressionVersion && settings.availableGrades.includes(record.level)"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 25,
+      "text": "    return records.filter(record => (year === 'all' || record.leafId.startsWith(year + '-')) && record.completedAt >= cutoff);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 35,
+      "text": "      if (timing?.version === 1 && Number.isSafeInteger(timing.activeMs) && timing.activeMs >= 0 && [60000,180000,300000,600000].includes(timing.idleLimitMs)) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 59,
+      "text": "      const key = +midnight(record.completedAt);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 71,
+      "text": "  function build({records, topics, config, weightedScore, threshold, year = 'all', days = 0, now = Date.now()}) {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 74,
+      "text": "    const current = filter(split.current.filter(record => supported.has(record.leafId)), year, days, now);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 78,
+      "text": "      counts: counts(current.filter(record => topic.gems.some(gem => gem.id === record.leafId))),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 80,
+      "text": "        const attempts = current.filter(record => record.leafId === gem.id);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 85,
+      "text": "          const evidence = split.current.filter(record => record.leafId === gem.id && record.level === level);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 86,
+      "text": "          const score = weightedScore(evidence.map(record => record.score), config[gem.id].halfLives[level]);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 87,
+      "text": "          const state = {score, mastered: score !== null && score > threshold, count: evidence.length};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "line": 95,
+      "text": "    return {topics: rows, counts: counts(current), timeline: timeline(current, days, now), practised: new Set(current.map(record => record.leafId)).size,"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 131,
+      "text": "        const raw = localStorage.getItem(key);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 148,
+      "text": "    const data = S.build({records: M.history(), topics, config: M.config, weightedScore: M.weightedScore, threshold: M.threshold, year, days});"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 172,
+      "text": "      const key = `${record.leafId}:${record.level}:${record.progressionVersion ?? 1}`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "line": 178,
+      "text": "      row.append(node('strong', '', `${names.get(first.leafId) || first.leafId} · Level ${first.level} · progression ${first.progressionVersion ?? 1}`), outcomes(S.counts(records)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 35,
+      "text": "    const seeds = Math.floor(capacity / modulus);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 36,
+      "text": "    if (seeds < 1) throw new Error('Review configuration exceeds ID capacity.');"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 45,
+      "text": "        return format(prefix, ((Number(random) >>> 0) % seeds) * modulus + code);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 48,
+      "text": "        const seed = parse(prefix, id); let code = seed % modulus; const config = {};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 54,
+      "text": "        return { seed, config };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 80,
+      "text": "  // Acid-base IDs encode a variable-width base-36 seed (up to seven digits),"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 151,
+      "text": "    bar.dataset.reviewId = id;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 172,
+      "text": "  root.QuestionReview = { capacity, format, parse, bank, codec, mount, requested, launcher, isTeacher, syncHeaderCode };"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/question-review.js",
+      "line": 173,
+      "text": "  if (typeof module !== 'undefined') module.exports = root.QuestionReview;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/shared-theme.css",
+      "line": 96,
+      "text": "/* Unnumbered mastery scale; the white rule marks the configured threshold. */"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/shared-theme.css",
+      "line": 102,
+      "text": ".mastery-bar > .mastery-bar-threshold { display:block; position:absolute; left:var(--mastery-threshold,80%); top:-4px; bottom:-4px; width:2px; margin:0; padding:0; transform:translateX(-50%); background:#fff; box-shadow:0 0 0 1px #11182d; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-bridge.js",
+      "line": 49,
+      "text": "          const questionId = rawQuestionId.match(/\\b(?:AB2-[0-9A-Z]{1,2}-[123]-[0-9A-Z]{1,7}|EB[0-9]{2}|[A-Z][A-Z0-9]{1,9}(?:-[A-Z0-9]{1,3})*-[0-9A-Z]{6})\\b/)?.[0] || '';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-bridge.js",
+      "line": 50,
+      "text": "          const signature = text + '\\\\n' + questionId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-bridge.js",
+      "line": 51,
+      "text": "          if (signature !== reportTitle.previous) { reportTitle.previous = signature; send('title',{title:text,questionId,inlineQuestionId:document.documentElement.dataset?.revisionCode === 'inline'}); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 32,
+      "text": "      session.previous[c.leafId + ':' + c.level] = c.state;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 33,
+      "text": "      session.lastLeaf = c.leafId;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 46,
+      "text": "    const leafId = session.round.shift(), level = levelFor(session,leafId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 47,
+      "text": "    session.current = {attemptId, leafId, level, state: null, result: null};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 59,
+      "text": "    const state = session.gems[c.leafId][c.level], independentPass = result.score === 1 && result.independent;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 62,
+      "text": "    if (independentPass && state.streak >= state.required && summary(c.leafId,c.level).mastered) state.confirmedAt = now;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "line": 80,
+      "text": "      return c === null || (typeof c.attemptId === 'string' && c.attemptId.length > 0 && s.selected.includes(c.leafId) && catalog[c.leafId].levels.includes(c.level) && (c.result === null || validResult(c.result,now)));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.css",
+      "line": 19,
+      "text": ".test-bars .mastery-bar{display:block;position:relative;height:10px;background:#070c19;border-radius:8px;overflow:hidden}.test-bars .mastery-bar-fill{position:absolute;inset:0 auto 0 0;width:var(--mastery-fill);background:#f4dd69}.test-bars [data-level=\"2\"] .mastery-bar-fill,.test-bars [data-grade=\"2\"] .mastery-bar-fill{background:#62e3a0}.test-bars [data-level=\"3\"] .mastery-bar-fill,.test-bars [data-grade=\"3\"] .mastery-bar-fill{background:#c79bff}.test-bars .mastery-bar-threshold{position:absolute;top:0;bottom:0;left:var(--mastery-threshold);width:2px;background:#fff}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 5,
+      "text": "  const key = 'masters-' + site + '-test-mode-v1';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 8,
+      "text": "  const catalog = {};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 12,
+      "text": "    const settings = alevel ? M.config[id] : Object.values(IGCSEMasteryConfig.activities).find(item => item.leafId === id);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 34,
+      "text": "  const questionId = document.createElement('span'); questionId.id = 'testQuestionId'; questionId.className = 'header-question-code';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 37,
+      "text": "  codeBadge.append(codeLabel,questionId);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 80,
+      "text": "    else { try { records = M.merge(M.read(localStorage),records); } catch (_) {} }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 86,
+      "text": "    try { localStorage.setItem(key,JSON.stringify(session)); } catch (_) { warn(); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 90,
+      "text": "      const raw = localStorage.getItem(key);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 96,
+      "text": "            if (!localStorage.getItem(backupKey)) localStorage.setItem(backupKey, raw);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 97,
+      "text": "            localStorage.setItem(key, JSON.stringify(parsed));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 206,
+      "text": "    const setting = session.gems[c.leafId][c.level];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 207,
+      "text": "    $('testHeading').textContent = catalog[c.leafId].name;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 208,
+      "text": "    $('testLevel').textContent = catalog[c.leafId].labels[c.level];"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 211,
+      "text": "      : catalog[c.leafId].levels;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 238,
+      "text": "    questionId.textContent = ''; codeBadge.hidden = true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 242,
+      "text": "    frame = document.createElement('iframe'); frame.id = 'testQuestionFrame'; frame.title = `${catalog[c.leafId].name} — ${catalog[c.leafId].labels[c.level]} question`;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 243,
+      "text": "    const url = new URL(catalog[c.leafId].href,document.baseURI);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 244,
+      "text": "    Object.entries({leaf:c.leafId,practice:alevel?'level':'grade',level:c.level,grade:c.level,mode:'pupil',testSession:session.id,testAttempt:c.attemptId}).forEach(([k,v]) => url.searchParams.set(k,v));"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 263,
+      "text": "      try { localStorage.setItem(M.key,JSON.stringify(records)); } catch (_) { warn(); }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 272,
+      "text": "        payload:{leafId:c.leafId,level:c.level,state:c.state,previous:session.previous[c.leafId+':'+c.level] || null}},location.origin === 'null' ? '*' : location.origin);"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 274,
+      "text": "      questionId.textContent = typeof d.payload?.questionId === 'string' ? d.payload.questionId.slice(0,100) : '';"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 275,
+      "text": "      codeBadge.hidden = !questionId.textContent || d.payload?.inlineQuestionId === true;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode.js",
+      "line": 284,
+      "text": "        const item = {...d.payload.evidence,id:c.attemptId,leafId:c.leafId,[alevel?'level':'grade']:c.level,completedAt:d.payload.completedAt};"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 21,
+      "text": "    try { return localStorage.getItem(YEAR_KEY) === 'u6' ? 'u6' : 'l6'; } catch (_) { return 'l6'; }"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 26,
+      "text": "      progress.renderChoices(container, {leafId: id, href: activities[id].href, fresh: true});"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 52,
+      "text": "    try { localStorage.setItem(YEAR_KEY, year); } catch (_) {}"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 141,
+      "text": "          if (globalThis.MASTERS_DISPLAY.hiddenGems.includes(id)) return;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/app.js",
+      "line": 169,
+      "text": "    const id = globalThis.MASTERS_DISPLAY.redirects[original] || original;"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/catalog.js",
+      "line": 443,
+      "text": "  \"hiddenGems\": ["
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/landing/catalog.js",
+      "line": 447,
+      "text": "  \"redirects\": {"
+    },
+    {
+      "file": "apps/Masters-of-A-Level-Chemistry/src/stats.html",
+      "line": 35,
+      "text": "    <p class=\"stats-explanation\">Response accuracy counts fully correct recorded attempts. Current mastery uses all current-progression attempts, weighted towards recent results; the white marker is the 80% threshold.</p>"
+    }
+  ]
+}

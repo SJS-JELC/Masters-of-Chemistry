@@ -1,0 +1,1029 @@
+{
+  "status": "FAIL",
+  "run": "ebp-time-1791149268708",
+  "startedAt": "2026-10-04T21:27:48.708Z",
+  "method": "Actual headless Microsoft Edge, pinned workspace Playwright1.62.1. Real elapsed 180-second idle, observed trusted input/lifecycle events; no clock replacement or synthetic visibility/events.",
+  "checks": [
+    {
+      "id": "actual-180000ms-idle",
+      "status": "PASS",
+      "activeMs": 180061,
+      "plateauMs": 6500,
+      "wallSinceInput": 190168,
+      "sameDocument": true
+    }
+  ],
+  "failures": [
+    {
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(freeze&&resume&&freeze.trusted&&resume.trusted)\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/explaining-properties/timing-browser.mjs:24:144"
+    }
+  ],
+  "observations": [
+    {
+      "label": "idle starts after actual input",
+      "wall": 1791149270673,
+      "mono": 1294.2999999970198,
+      "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "gap-0": {
+              "kind": "text",
+              "value": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 62,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "previousQuestionIds": [
+            "EBP-M5V9A3"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "title": "Complete the explanation",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Complete each gap. Each gap is worth one mark."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "gap-0",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 1"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "strength"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            },
+            {
+              "id": "gap-1",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 2"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "stronger"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            }
+          ],
+          "sentenceTokens": [
+            "Average bond enthalpy is a measure of covalent bond ",
+            {
+              "partId": "gap-0"
+            },
+            ". The larger its value, the ",
+            {
+              "partId": "gap-1"
+            },
+            " the bond."
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Connect the observation to the particles and their arrangement."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Average bond enthalpy is a measure of covalent bond strength. The larger its value, the stronger the bond."
+            }
+          ],
+          "sources": [
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(f); Specification-authored; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saved"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149268708",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149270332,
+          "mono": 952.7000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149270598,
+          "mono": 1219.5,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149270661,
+          "mono": 1282,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "allowance exhausted",
+      "wall": 1791149460829,
+      "mono": 191450.10000000894,
+      "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "gap-0": {
+              "kind": "text",
+              "value": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 180061,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "previousQuestionIds": [
+            "EBP-M5V9A3"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "title": "Complete the explanation",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Complete each gap. Each gap is worth one mark."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "gap-0",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 1"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "strength"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            },
+            {
+              "id": "gap-1",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 2"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "stronger"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            }
+          ],
+          "sentenceTokens": [
+            "Average bond enthalpy is a measure of covalent bond ",
+            {
+              "partId": "gap-0"
+            },
+            ". The larger its value, the ",
+            {
+              "partId": "gap-1"
+            },
+            " the bond."
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Connect the observation to the particles and their arrangement."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Average bond enthalpy is a measure of covalent bond strength. The larger its value, the stronger the bond."
+            }
+          ],
+          "sources": [
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(f); Specification-authored; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saved"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149268708",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149270332,
+          "mono": 952.7000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149270598,
+          "mono": 1219.5,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149270661,
+          "mono": 1282,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "idle plateau",
+      "wall": 1791149467337,
+      "mono": 197958.5,
+      "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "gap-0": {
+              "kind": "text",
+              "value": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 180061,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "previousQuestionIds": [
+            "EBP-M5V9A3"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "title": "Complete the explanation",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Complete each gap. Each gap is worth one mark."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "gap-0",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 1"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "strength"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            },
+            {
+              "id": "gap-1",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 2"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "stronger"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            }
+          ],
+          "sentenceTokens": [
+            "Average bond enthalpy is a measure of covalent bond ",
+            {
+              "partId": "gap-0"
+            },
+            ". The larger its value, the ",
+            {
+              "partId": "gap-1"
+            },
+            " the bond."
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Connect the observation to the particles and their arrangement."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Average bond enthalpy is a measure of covalent bond strength. The larger its value, the stronger the bond."
+            }
+          ],
+          "sources": [
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(f); Specification-authored; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saved"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149268708",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149270332,
+          "mono": 952.7000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149270598,
+          "mono": 1219.5,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149270661,
+          "mono": 1282,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "before native freeze",
+      "wall": 1791149468972,
+      "mono": 199593.40000000596,
+      "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "gap-0": {
+              "kind": "text",
+              "value": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 181322,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "previousQuestionIds": [
+            "EBP-M5V9A3"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "title": "Complete the explanation",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Complete each gap. Each gap is worth one mark."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "gap-0",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 1"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "strength"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            },
+            {
+              "id": "gap-1",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 2"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "stronger"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            }
+          ],
+          "sentenceTokens": [
+            "Average bond enthalpy is a measure of covalent bond ",
+            {
+              "partId": "gap-0"
+            },
+            ". The larger its value, the ",
+            {
+              "partId": "gap-1"
+            },
+            " the bond."
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Connect the observation to the particles and their arrangement."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Average bond enthalpy is a measure of covalent bond strength. The larger its value, the stronger the bond."
+            }
+          ],
+          "sources": [
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(f); Specification-authored; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saving"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149268708",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149270332,
+          "mono": 952.7000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149270598,
+          "mono": 1219.5,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149270661,
+          "mono": 1282,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149467349,
+          "mono": 197970.10000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 180061,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    },
+    {
+      "label": "after native thaw",
+      "wall": 1791149478599,
+      "mono": 209219.79999999702,
+      "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+      "hidden": false,
+      "focused": true,
+      "snapshot": {
+        "attempt": {
+          "mode": "student",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "currentResponses": {
+            "gap-0": {
+              "kind": "text",
+              "value": "ions"
+            }
+          },
+          "assistance": [],
+          "phase": "answering",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 190322,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        "session": {
+          "kind": "practice",
+          "namespace": {
+            "course": "alevel",
+            "profileId": "local"
+          },
+          "id": "current-session",
+          "target": {
+            "course": "alevel",
+            "activityId": "alevel/explaining-properties",
+            "gemId": "l6-t2-1-properties",
+            "level": 1
+          },
+          "selection": "fixed-level",
+          "currentAttemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+          "previousQuestionIds": [
+            "EBP-M5V9A3"
+          ]
+        },
+        "question": {
+          "ref": {
+            "activityId": "alevel/explaining-properties",
+            "questionId": "EBP-M5V9A3",
+            "seed": 382316087,
+            "level": 1
+          },
+          "title": "Complete the explanation",
+          "context": [
+            {
+              "kind": "text",
+              "text": "Complete each gap. Each gap is worth one mark."
+            }
+          ],
+          "layout": "compact",
+          "submission": "all-required-parts",
+          "parts": [
+            {
+              "id": "gap-0",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 1"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "strength"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            },
+            {
+              "id": "gap-1",
+              "kind": "text",
+              "prompt": [
+                {
+                  "kind": "text",
+                  "text": "Gap 2"
+                }
+              ],
+              "marks": 1,
+              "required": true,
+              "dependsOn": [],
+              "accepted": [
+                "stronger"
+              ],
+              "normalization": "chemical-text",
+              "presentation": "single-line"
+            }
+          ],
+          "sentenceTokens": [
+            "Average bond enthalpy is a measure of covalent bond ",
+            {
+              "partId": "gap-0"
+            },
+            ". The larger its value, the ",
+            {
+              "partId": "gap-1"
+            },
+            " the bond."
+          ],
+          "scaffolds": [],
+          "hints": [
+            {
+              "id": "properties-hint",
+              "content": [
+                {
+                  "kind": "text",
+                  "text": "Connect the observation to the particles and their arrangement."
+                }
+              ]
+            }
+          ],
+          "workedAnswer": [
+            {
+              "kind": "text",
+              "text": "Average bond enthalpy is a measure of covalent bond strength. The larger its value, the stronger the bond."
+            }
+          ],
+          "sources": [
+            {
+              "path": "development/alevel/validation/electrons-bonding-audit-20261004/official-specification-scope.json",
+              "sha256": "df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97",
+              "symbolOrSection": "OCR Chemistry A Version 3.1 May 2026; 2.2.2(f); Specification-authored; teaching marks, not OCR mark allocations."
+            }
+          ]
+        },
+        "history": [],
+        "saveStatus": {
+          "kind": "saving"
+        },
+        "databaseName": "masters-of-chemistry-alpha-v2-alevel-ebp-time-1791149268708",
+        "selectedCount": 0
+      },
+      "events": [
+        {
+          "type": "pageshow",
+          "trusted": true,
+          "wall": 1791149270332,
+          "mono": 952.7000000029802,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "focus",
+          "trusted": true,
+          "wall": 1791149270598,
+          "mono": 1219.5,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d"
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149270661,
+          "mono": 1282,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 0,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        },
+        {
+          "type": "input",
+          "trusted": true,
+          "wall": 1791149467349,
+          "mono": 197970.10000000894,
+          "hidden": false,
+          "focused": true,
+          "document": "8f0bcf1d-2ab6-4cd1-9594-a79d3d01894d",
+          "timing": {
+            "attemptId": "d3936946-d0f6-4028-b8e3-e97aa6d358a1",
+            "activeMs": 180061,
+            "idleLimitMs": 180000,
+            "finished": false
+          }
+        }
+      ]
+    }
+  ],
+  "finishedAt": "2026-10-04T21:31:18.608Z"
+}

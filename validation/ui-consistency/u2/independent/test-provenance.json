@@ -1,0 +1,104 @@
+[
+  {
+    "name": "check-originals.mjs",
+    "from": "validation/ui-consistency/u1-footer-fix/check-originals.mjs",
+    "originalSha256": "0a7d871018bb1bb8b742af6c43d6955d83e27f12c57c8e1872c30c692c0ad7dc",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "footer-browser.mjs",
+    "from": "validation/ui-consistency/u1-footer-fix/browser.mjs",
+    "originalSha256": "45b0119109a3c055e63f0f06f4a41892a50ae5371fe870441d9092eb42180145",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "app-browser.mjs",
+    "from": "validation/ui-consistency/u1/controls/app-browser.mjs",
+    "originalSha256": "992df33f66df3480044237958bcf22b56f9ee2805eb200e3b5af5437b35c9671",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "action-state.test.mjs",
+    "from": "validation/ui-consistency/u1/controls/action-state.test.mjs",
+    "originalSha256": "9d0bafc6f7c55408984c256fcfd6daeac6bb706a155d40d80cb1a8a68818fd50",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "central-attempt.test.mjs",
+    "from": "validation/ui-consistency/u1/central-attempt.test.mjs",
+    "originalSha256": "1e48e33d476bf18fdf2a155739a623702902c55a3a5f81cc8f0a4dcc05908da4",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "completion.test.ts",
+    "from": "validation/ui-consistency/u1/olympiad/completion.test.ts",
+    "originalSha256": "38b49448aadec8024f57bf38062c38891065bb26645c721d3ed8a2cc1ef773ad",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "fixtures.ts",
+    "from": "validation/ui-consistency/u1/olympiad/fixtures.ts",
+    "originalSha256": "11f0d4b4bf37a157dafad32abecebf7431a5b6634d72555681b044dbe1d2b2a3",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "olympiad-browser.mjs",
+    "from": "validation/ui-consistency/u1/olympiad/browser.mjs",
+    "originalSha256": "971843b5606b0b39c1e1220892a79ae5b564e8a8c41e3ee181048f995b529042",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "theme-browser.mjs",
+    "from": "validation/ui-consistency/u1/theme/final-browser.mjs",
+    "originalSha256": "fa06ea3859af91b3703a4eeb317383ce008c583ea0cc7a2a60e54dd135dbbfac",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "extra-browser.mjs",
+    "from": "validation/ui-consistency/u1/theme/browser-extra.mjs",
+    "originalSha256": "f1ea8b08d76e85089d19439f630592b7e88373c3a976478b1acbd44ff1ee9b6b",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "transition-cancellation.mjs",
+    "from": "validation/ui-consistency/u1/theme/transition-cancellation.mjs",
+    "originalSha256": "0ea6622ef543f967a817c5510fb1b21677fc7a14a897c789d77c0d1bdd1ccf48",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "ec-axis-check.mjs",
+    "from": "validation/ui-consistency/u1/theme/ec-axis-check.mjs",
+    "originalSha256": "0cf10b90648edd1d37090d361481ca318821f3822b141ca7e77fa4e791fdb570",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "canonical-identity.test.mjs",
+    "from": "validation/ui-consistency/u1/regression/canonical-identity.test.mjs",
+    "originalSha256": "87d5f4343e04f5a6584283f85c3cf421206d541ec5636a9dc3ba2a51169b600c",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "current-persistence.test.mjs",
+    "from": "validation/ui-consistency/u1/regression/current-persistence.test.mjs",
+    "originalSha256": "9ea22000ad36ff181fa35855e20b91f9bbca955a2fdf40a79263e42d2c9d7d3e",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "numeric-working.test.mjs",
+    "from": "validation/ui-consistency/u1/regression/numeric-working.test.mjs",
+    "originalSha256": "fb05558383ee6ed774b985e0a5e98a1724e85c7f76f4e50cb1f9999088052e8d",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "acid-pre-correction-fixtures.json",
+    "from": "validation/ui-consistency/u1/regression/acid-pre-correction-fixtures.json",
+    "originalSha256": "97bdc85d9674cb896b805b50676f59dfca15d897b96668b62abf3903acc16c59",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  },
+  {
+    "name": "current-export.json",
+    "from": "validation/ui-consistency/u1/regression/current-export.json",
+    "originalSha256": "bb063368ff5dc1cd947c3992e0f5746b75d2b0523091bfd33cb121f22d684c8e",
+    "purpose": "Current independent rerun; output paths and imports rebased; fresh isolated U05 storage/TEMP. Theme viewport set expanded."
+  }
+]

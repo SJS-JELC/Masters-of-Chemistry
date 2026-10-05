@@ -1,0 +1,131 @@
+{
+  "runId": "MASTERS-REACT-20261002",
+  "jobId": "S0-CONTRACTS",
+  "sources": [
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels.js",
+      "symbolOrSection": "generate, reviewId, score, 38 active templates",
+      "sha256": "87a9e253b876e4daa122382da6a1a4ac445fd5efe4d7d2c67198ae6b7ba211e2"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/levels-app.js",
+      "symbolOrSection": "active controller, response and scaffold restoration",
+      "sha256": "a5bfb680e23325cb25c25bdeba8024d236be7909a54b9f790a7766a51c2b10b7"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/acid-base-calculations/scaffold.js",
+      "symbolOrSection": "built-in structured scaffolds",
+      "sha256": "0db8306a2dcc32e1a0ecb9b81496788689cff1962948ed0b68592ee53a171228"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/core.js",
+      "symbolOrSection": "validateState, anchored electrons, groups and marking",
+      "sha256": "2300513ad8b155323ae81fa13308435e44813cdfd2fe584bcf5a805f34f7da01"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/dot-and-cross/data.js",
+      "symbolOrSection": "fixed level-specific diagrams",
+      "sha256": "cdf2cff5efaf76f325744c28898681b58570be993cb16499e4584af6ba479432"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/core.js",
+      "symbolOrSection": "blankResponse, markBuild, box spin states",
+      "sha256": "5d57fdbf2c27e74fe904deae31cbe83def8c1ca7f2fa2046c7350b89554c007a"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/levels.js",
+      "symbolOrSection": "active LEVELS and generator scheduling",
+      "sha256": "4bbaaae96cb5d90c18f79960a90c9929b162d131fd595c80c7ce5950191348a9"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/electron-configurations/levels-app.js",
+      "symbolOrSection": "active page controller",
+      "sha256": "5aa42c96f7dfc50a586650bda925f74a989d1aea809085fdd6319099748aeed8"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/ph-titration-curves/core.js",
+      "symbolOrSection": "initial, curve, grade, accepted indicators",
+      "sha256": "5d9399d8c33c8aa5e80fe7dd7a5b2231ecb1190a73bed768c98970045ee50846"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "symbolOrSection": "allowance, create, snapshot, finish and browser suspension",
+      "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "symbolOrSection": "course config, historical aliases, zero-prior recurrence",
+      "sha256": "06c29355d24490fe5eebd4add8dc657f215cdfad832d5bab77bc878a1c88d9ff"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/test-mode-core.js",
+      "symbolOrSection": "next, accept, expire and confirmation streaks",
+      "sha256": "dfba3de6abb4ccc89e3351c0a74ec536fb31fc1bfcbf9bc8047e491d9eb77854"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/data.js",
+      "symbolOrSection": "fixed question IDs, marking points and reject text",
+      "sha256": "6f43c088ee0e1c2fe20a580eff294a88b9db605c897212e2cc9a0f6d505a62cd"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/core.js",
+      "symbolOrSection": "levelTwoSections and levelOneTables",
+      "sha256": "3d95f2cbf1f372f0c1d4c28ce7fa0ab7f1f15d63f8815b52d65fab50348c8c8c"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/structure-and-bonding/app.js",
+      "symbolOrSection": "lockedText, evidence ranges, sequential self review and timing",
+      "sha256": "a3c004b779ca72ac262c7742edb45a4f91b6845307718434807b10c95978eb97"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/activities/energy-enthalpy/core.js",
+      "symbolOrSection": "model, attached/free arrow ends and repair mode",
+      "sha256": "68d1b881797c08ea96fd4bafe567bad96c0f6d3ef8fc9ac14f0bce37bcde1d75"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/landing/progress.js",
+      "symbolOrSection": "grade evidence, questionScore and mastery recurrence",
+      "sha256": "09a205d37691f50ec53787c02563d0ab0cf18357ba745f816fe290db8cac75ab"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-mastery-config.js",
+      "symbolOrSection": "supported grades and per-gem half-lives",
+      "sha256": "c30c5ac268befe55670352471328c1ff27acf6e38e47c29597a956acb76e2c31"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-question-time.js",
+      "symbolOrSection": "IGCSE question allowances and freeze boundary",
+      "sha256": "a3d43df6300fb12e99635a89dff817a1602f7d67c1b355ba37b477abf661322f"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/content.js",
+      "symbolOrSection": "classification and B/C answer slots",
+      "sha256": "85fdff203c58aca7ed51e2773570bfc2bc7ffa0bb78a8ebae346c21a10b9b68c"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/assessment.js",
+      "symbolOrSection": "B_UNITS, E/F equivalence, unlock and stale checks",
+      "sha256": "08279db1bf684e6d2a71514423c433c7a028ef184da928e8785e4e68e6bcbfb5"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/c3l6-organic-reactions/activity.js",
+      "symbolOrSection": "drawing selection, editor export/import and read-only completed slots",
+      "sha256": "98469a93941c5e2559d4022a254a7c5b6b66c32764b24e63e737b72ff029e870"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/core.js",
+      "symbolOrSection": "bounded atom graph, valence and isomorphism dependency only",
+      "sha256": "51998318fa2fd0f162cd6c67d54a4779fdfb060e595e4fc3cad4a850072b0ed9"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/editor.js",
+      "symbolOrSection": "graph/history exportState and importState dependency only",
+      "sha256": "2526aad33137030726c522beb3b79dd4adbe50dcd71aa5b25675461a980a25b7"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/activities/molecule-builder/mechanism-ui.js",
+      "symbolOrSection": "optional annotation field serialization; prototype never enabled",
+      "sha256": "4e299e6284027e2a3f6f6ea5ce0381ac7434f575cd8af52df22a636c2f9faf07"
+    }
+  ]
+}

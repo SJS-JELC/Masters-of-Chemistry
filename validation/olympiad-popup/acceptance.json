@@ -1,0 +1,193 @@
+{
+  "runId": "OLYMPIAD-POPUP-20261004",
+  "status": "complete",
+  "owner": "ROOT",
+  "delegation": "Local execution as approved; no subagents",
+  "acceptedAt": "2026-10-04T12:35:17.589Z",
+  "requirements": {
+    "drawing": "Both challenges use shared autosaving dialog opened from answer/structure boxes; Done closes, focused drawing Escape cancels, normal Escape closes; completed structures read-only; focus restored.",
+    "navigation": "Both question arrows and eagle return to Olympiad landing, landing arrow returns to A Level; existing save guard preserved.",
+    "c3": "Restart within stage toolbar, generic preamble and pill removed, substantive Introduction retained.",
+    "preservation": "No chemistry, marking, storage schema, scientific asset, original app or publication changes."
+  },
+  "validation": {
+    "typecheck": "PASS",
+    "builds": [
+      "alevel",
+      "igcse"
+    ],
+    "chemistryRegressionTests": 18,
+    "browserChecks": 10,
+    "responsiveChecks": 11,
+    "productionChecks": 6,
+    "sourceAudit": {
+      "status": "PASS",
+      "changed": [
+        "src/foundation/OlympiadHost.tsx",
+        "src/landing/OlympiadLanding.tsx",
+        "src/shell/CourseShell.tsx",
+        "src/shell/QuestionChrome.tsx",
+        "src/activities/olympiad/c3l6/c3l6.css",
+        "src/activities/olympiad/c3l6/C3L6View.tsx",
+        "src/activities/olympiad/isomers2011/isomers.css",
+        "src/activities/olympiad/isomers2011/IsomerView.tsx",
+        "src/activities/olympiad/DrawingDialog.tsx",
+        "src/activities/olympiad/drawing-dialog.css"
+      ],
+      "unchangedBaselineFiles": 292,
+      "scope": "Only eight existing UI files and two shared popup files. Chemistry, policies, molecule engine/editor, persistence and public assets unchanged."
+    },
+    "originals": {
+      "status": "PASS",
+      "checkedAt": "2026-10-04T12:29:15.175Z",
+      "records": 1317,
+      "readable": 794,
+      "metadataOnly": 523,
+      "changed": [],
+      "offlinePolicy": "All523 baseline offline placeholders stat-only; never opened/hydrated. Historical original-app-check.json left untouched."
+    },
+    "releaseBudgetBytes": 204800,
+    "releases": [
+      {
+        "course": "alevel",
+        "status": "PASS",
+        "activityCount": 7,
+        "runtimeFileCount": 165,
+        "initialJavascriptGzipBytes": 180517,
+        "lazyJavascriptChunks": 71,
+        "manifestSha256": "73a0046c1bada3eb331fcffdde9386f3866212b88a1fce738d08ab4c74cdf120",
+        "checkedAt": "2026-10-04T12:31:32.321Z"
+      },
+      {
+        "course": "igcse",
+        "status": "PASS",
+        "activityCount": 6,
+        "runtimeFileCount": 165,
+        "initialJavascriptGzipBytes": 180517,
+        "lazyJavascriptChunks": 71,
+        "manifestSha256": "2d4b42d35b0e0311a89e1cc18fb9a89c11d0866899b95e8caf495185ddf63804",
+        "checkedAt": "2026-10-04T12:31:32.459Z"
+      }
+    ],
+    "renderedInspection": [
+      "isomer-popup-390.png",
+      "c3-b-popup-1440.png",
+      "c3-b-question-350.png",
+      "production-landing-390.png",
+      "production-popup-390.png"
+    ]
+  },
+  "resolvedFindings": [
+    "Native dialog Tab could reach browser chrome: shared explicit focus wrap now covers summaries and excludes closed-details controls; real browser passes.",
+    "Two new Unicode glyphs were corrupted during shell text transfer; corrected and verified in rendered exports.",
+    "Production smoke probes corrected to start curriculum practice and explicitly select A Level after saved IGCSE preference; retained failed probes are test setup issues."
+  ],
+  "limitations": [
+    "Headless installed Edge via pinned workspace Playwright; emulated mobile/touch, not physical-device certification.",
+    "Existing asynchronous persistence durability begins at commit; guarded app navigation waits for pending saves."
+  ],
+  "fingerprints": [
+    {
+      "path": "src/foundation/OlympiadHost.tsx",
+      "bytes": 10364,
+      "sha256": "c13e8b7727a15f4b0c2bfcb7bca126deff7dc7078db360effdd973817da8c4aa"
+    },
+    {
+      "path": "src/landing/OlympiadLanding.tsx",
+      "bytes": 3427,
+      "sha256": "faae545fa7beb194e72eda13a4d5a3ebc60f08f0b8d62a4a28eedba179078437"
+    },
+    {
+      "path": "src/shell/CourseShell.tsx",
+      "bytes": 7110,
+      "sha256": "5ce2f4ef64346ef77494c7fac6da6e1c3d88f2e5fc46672f3ad6e83734e8b637"
+    },
+    {
+      "path": "src/shell/QuestionChrome.tsx",
+      "bytes": 3125,
+      "sha256": "e2f1ad40e6eddf83a560a503ffaa6a8bb57679695ee4f274ad009ee1c535a490"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/c3l6.css",
+      "bytes": 12293,
+      "sha256": "0d4a37d9e87d9b2a8f2633f3a6ae8c70a95457c3d5ec2ab67b77009d70e5d620"
+    },
+    {
+      "path": "src/activities/olympiad/c3l6/C3L6View.tsx",
+      "bytes": 28088,
+      "sha256": "623d581bef5c4e5eb8d08877d073327debd915567f4a2f4132cc5304f903d4ae"
+    },
+    {
+      "path": "src/activities/olympiad/isomers2011/isomers.css",
+      "bytes": 2180,
+      "sha256": "f65ee174ec6b7cd321a1bb44051215dced44c01cff7eab5af1c4ea626d9e0394"
+    },
+    {
+      "path": "src/activities/olympiad/isomers2011/IsomerView.tsx",
+      "bytes": 6559,
+      "sha256": "4afbd8aee087fb06a559eb6c1bfa21b329049a2ceeb70ba551f6c045019be840"
+    },
+    {
+      "path": "src/activities/olympiad/DrawingDialog.tsx",
+      "bytes": 2113,
+      "sha256": "b00438f9f86b53cba7c9c75353c51ac7986e459cfed4292edc51e5852d31d8bc"
+    },
+    {
+      "path": "src/activities/olympiad/drawing-dialog.css",
+      "bytes": 1234,
+      "sha256": "9f64668390be11368a81d3b5f79bc0f6c79620da6b84047c43b4e3b478b0b9d2"
+    },
+    {
+      "path": "validation/olympiad-popup/browser.mjs",
+      "bytes": 12433,
+      "sha256": "7268009f29982a7e3acd8819df1a97a12295cdc0ee07dcc850762c7f1124c5ad"
+    },
+    {
+      "path": "validation/olympiad-popup/production.mjs",
+      "bytes": 3849,
+      "sha256": "ce8f5163091f8dbc629a8aa25b163708bdc73a8e8626fffe46c3af4346a81327"
+    },
+    {
+      "path": "validation/olympiad-popup/browser-report.json",
+      "bytes": 3066,
+      "sha256": "27a1945c373a64be1723dfb829261e995bd421d4b60bf73ba9f03f8725388a47"
+    },
+    {
+      "path": "validation/olympiad-popup/production-report.json",
+      "bytes": 487,
+      "sha256": "5489a57349646ca25eaeeea260e2f61a092b0d753dde0307245ae9eab530fd96"
+    },
+    {
+      "path": "validation/olympiad-popup/releases.json",
+      "bytes": 633,
+      "sha256": "bc37048367a649b1f029b63ebf03ecdbf722a482d4847eae8f693be5a0aa0804"
+    },
+    {
+      "path": "validation/olympiad-popup/source.patch",
+      "bytes": 21278,
+      "sha256": "32d7ba156f545449d58c0e97f46cfcbcf69d813cba14ea1c6748cab6aeec01db"
+    },
+    {
+      "path": "validation/olympiad-popup/source-audit.json",
+      "bytes": 700,
+      "sha256": "8297bc8874565d81b947d46b07feb5fc41ce3f533d2d025d628d3890e95bba68"
+    },
+    {
+      "path": "validation/olympiad-popup/original-preservation.json",
+      "bytes": 288,
+      "sha256": "0f5744f0e1c55bcfa66499acac16e6115b7a211a962a59cddbe141991dcf2c08"
+    },
+    {
+      "path": "release/alevel.runtime.json",
+      "bytes": 76478,
+      "sha256": "73a0046c1bada3eb331fcffdde9386f3866212b88a1fce738d08ab4c74cdf120"
+    },
+    {
+      "path": "release/igcse.runtime.json",
+      "bytes": 1279909,
+      "sha256": "2d4b42d35b0e0311a89e1cc18fb9a89c11d0866899b95e8caf495185ddf63804"
+    }
+  ],
+  "unresolved": [],
+  "published": false
+}

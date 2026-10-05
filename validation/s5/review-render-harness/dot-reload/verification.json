@@ -1,0 +1,49 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-AX-DOT-HARNESS-RELOAD-FOLLOWUP",
+  "status": "PASS",
+  "verifiedAt": "2026-10-03T05:19:03.332Z",
+  "checks": [
+    "Exact prior and new proposal hashes verified",
+    "Only one outer-details click inserted after unchanged reload persistence assertion",
+    "All previous typing/draft/commit/charge/DOM/AX/persistence assertions and timeouts preserved",
+    "Raw failure resolves inventory summary but explicitly reports it not visible",
+    "Source outer and inner details have no open attribute or persisted expansion state",
+    "Independent retained actual DOM proves inventory is nested inside outer controls",
+    "Actual meaningful HTML and AX minus readback retained separately",
+    "All five captured artifact hashes match current bytes"
+  ],
+  "hashes": {
+    "validation/s5/render-release/final-keyboard-reload-closed-details-failure.json": {
+      "sha256": "436b30cf29d4450c8e34f33641b3da68db4c119004e91ad098ab5290785cc130",
+      "retained": "validation/s5/review-render-harness/dot-reload/retained/validation__s5__render-release__final-keyboard-reload-closed-details-failure.json"
+    },
+    "validation/s5/render-release/final-keyboard-proposal.mjs": {
+      "sha256": "ace700d1596729c5967a67ae416673abb13b2288766411a0b7035e88cd21a67c",
+      "retained": "validation/s5/review-render-harness/dot-reload/retained/validation__s5__render-release__final-keyboard-proposal.mjs"
+    },
+    "validation/s5/render-release/final-keyboard-proposal-v2.mjs": {
+      "sha256": "7446881ace979ff49870ba8c42a9f66745e9132d87f238a43b322b8d4693d6ba",
+      "retained": "validation/s5/review-render-harness/dot-reload/retained/validation__s5__render-release__final-keyboard-proposal-v2.mjs"
+    },
+    "src/editors/dot-and-cross/DotCrossEditor.tsx": {
+      "sha256": "ba5a3100b01ae8379f4a912ae81b526070572bc75e3c61bb89c3f63f876c6cb3",
+      "retained": "validation/s5/review-render-harness/dot-reload/retained/src__editors__dot-and-cross__DotCrossEditor.tsx"
+    },
+    "validation/s5/review-render-harness/dom-probe.json": {
+      "sha256": "80b9bca0e839017ed428c0f4347c7bd0d63140d2bd6f3311b9f966226f840f2b",
+      "retained": "validation/s5/review-render-harness/dot-reload/retained/validation__s5__review-render-harness__dom-probe.json"
+    }
+  },
+  "currentChanges": [],
+  "approvedProposal": {
+    "path": "validation/s5/render-release/final-keyboard-proposal-v2.mjs",
+    "sha256": "7446881ace979ff49870ba8c42a9f66745e9132d87f238a43b322b8d4693d6ba"
+  },
+  "scope": "One bounded exact selector/expansion continuation after parent acceptance; final worker behaviour pending",
+  "limits": [
+    "No reviewer browser or full-tail replay in this follow-up",
+    "Fresh closed state is established by source default native details semantics and actual failed visibility log, not a new reviewer reload snapshot",
+    "Earlier independent open DOM/AX snapshot is retained as structural/readback evidence; no SVG group AX-name inference"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-03T20:31:56.651Z",
+  "typecheck": {
+    "chunk_id": "73c995",
+    "wall_time_seconds": 9.2508413,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "build": {
+    "chunk_id": "9393a8",
+    "wall_time_seconds": 2.4277859,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "logs": [
+    "typecheck-final.log",
+    "build-final.log"
+  ],
+  "scope": "Final three-file shared freeze; build includes foreign OLY dependencies without content acceptance."
+}

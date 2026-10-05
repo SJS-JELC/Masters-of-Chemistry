@@ -1,0 +1,9 @@
+{
+  "historicalTest": "validation/landing-restoration/integration/launch-routing.test.ts",
+  "observed": "3 PASS, 1 FAIL: historical nested ?legacy= URL expects IGCSE while current routeCourse returns remembered A Level.",
+  "unchangedCourseRoutingMatches": [
+    "validation/ui-consistency/u1/before/src/shell/navigation-view.ts",
+    "validation/olympiad-2011-q4/root-baseline/files/src/shell/navigation-view.ts"
+  ],
+  "disposition": "The Recall change adds only its view to routeView; course-routing functions are unchanged. New Recall browser and route assertions pass. Historical test expectation retained unchanged."
+}

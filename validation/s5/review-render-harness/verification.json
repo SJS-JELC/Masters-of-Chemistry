@@ -1,0 +1,70 @@
+{
+  "agentId": "A06",
+  "jobId": "S5-REVIEW-AX-DOT-HARNESS",
+  "status": "PASS",
+  "verifiedAt": "2026-10-03T05:10:59.067Z",
+  "checks": [
+    "Exact proposal SHA256 verified",
+    "Only two inventory locators add .last(); all baseline assertions preserved",
+    "Both raw failures retained separately, prior two editor PASS records preserved",
+    "Actual source confirms nested inventory beneath alternatives",
+    "Actual browser reproduces two broad matches and one inner inventory",
+    "Retained DOM document order confirms .last() selects the inner inventory",
+    "Actual HTML and AX inventory expose minus; generic SVG group DOM label is not treated as AX name",
+    "All six captured files unchanged at verification; independent timestamps show no performance overlap"
+  ],
+  "hashes": {
+    "validation/s5/render-release/final-keyboard-svg-group-probe-failure.json": {
+      "sha256": "9aeb329c4d3a489d09d7d17fe60e552bc9638c127f254c02849d0539ff64f1ad",
+      "retained": "validation/s5/review-render-harness/retained/validation__s5__render-release__final-keyboard-svg-group-probe-failure.json"
+    },
+    "validation/s5/render-release/final-keyboard-nested-details-selector-failure.json": {
+      "sha256": "a9c75e3d007643a551194113e7ee59da22b793aa6a886e89c80d4d6bcac3dc35",
+      "retained": "validation/s5/review-render-harness/retained/validation__s5__render-release__final-keyboard-nested-details-selector-failure.json"
+    },
+    "validation/s5/render-release/final-keyboard-nested-details-baseline.mjs": {
+      "sha256": "c135ca2d04bbe612711ccaf0a687c0f0e7e9f9083c0b65b7db865e07531b9496",
+      "retained": "validation/s5/review-render-harness/retained/validation__s5__render-release__final-keyboard-nested-details-baseline.mjs"
+    },
+    "validation/s5/render-release/final-keyboard-proposal.mjs": {
+      "sha256": "ace700d1596729c5967a67ae416673abb13b2288766411a0b7035e88cd21a67c",
+      "retained": "validation/s5/review-render-harness/retained/validation__s5__render-release__final-keyboard-proposal.mjs"
+    },
+    "validation/s5/render-release/seed-static.mjs": {
+      "sha256": "c3d2db5c0b9dcc55e0ee0f26e886fdad850bdc60fd95061b095aa8a8cc759c34",
+      "retained": "validation/s5/review-render-harness/retained/validation__s5__render-release__seed-static.mjs"
+    },
+    "src/editors/dot-and-cross/DotCrossEditor.tsx": {
+      "sha256": "ba5a3100b01ae8379f4a912ae81b526070572bc75e3c61bb89c3f63f876c6cb3",
+      "retained": "validation/s5/review-render-harness/retained/src__editors__dot-and-cross__DotCrossEditor.tsx"
+    }
+  },
+  "currentChanges": [],
+  "domProbe": {
+    "path": "validation/s5/review-render-harness/dom-probe.json",
+    "sha256": "80b9bca0e839017ed428c0f4347c7bd0d63140d2bd6f3311b9f966226f840f2b",
+    "startedAt": "2026-10-03T05:06:44.629Z",
+    "finishedAt": "2026-10-03T05:06:46.541Z",
+    "browser": "154.0.4258.48"
+  },
+  "overlap": {
+    "performancePath": "validation/s5/render-release/performance.json",
+    "sha256": "fcb807eb1215ddef849bdd296cd8234923ceefda8b660f7b9936fad2e1e3d999",
+    "performanceStartedAt": "2026-10-03T05:05:37.752Z",
+    "performanceFinishedAt": "2026-10-03T05:06:25.986Z",
+    "probeStartedAt": "2026-10-03T05:06:44.629Z",
+    "probeFinishedAt": "2026-10-03T05:06:46.541Z",
+    "separationMs": 18643,
+    "overlap": false
+  },
+  "approvedProposal": {
+    "path": "validation/s5/render-release/final-keyboard-proposal.mjs",
+    "sha256": "ace700d1596729c5967a67ae416673abb13b2288766411a0b7035e88cd21a67c"
+  },
+  "scope": "Exactly one bounded selector continuation; full assertion outcome pending A23",
+  "limitations": [
+    "First failed SVG snapshot was not retained by A23; independent current SVG snapshot retained separately",
+    "Narrow DOM-only probe used fill and tap; genuine sequential typing proof remains the worker assertion tail",
+    "No performance acceptance claim by A06; only start/end timestamp reconciliation examined"
+  ]
+}

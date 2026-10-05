@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import { currentInputs } from '../../../../scripts/current-inputs.mjs';
+const project=path.resolve(import.meta.dirname,'../../../..'),workspace=path.resolve(project,'../..');
+const json=file=>JSON.parse(fs.readFileSync(path.join(project,file),'utf8'));
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const prefix='validation/question-chrome/audit/';
+const completion=json(prefix+'presentation/completion.json');
+assert.equal(completion.stableId,'H0-PRESENTATION');assert.equal(completion.agentId,'H02');assert.equal(completion.status,'PASS');
+const inventory=json(prefix+'presentation/source-inventory.json');
+let checked=0;
+for(const items of Object.values(inventory)) if(Array.isArray(items)) for(const item of items) if(item.path&&item.sha256) {assert.equal(hash(path.join(workspace,item.path)),item.sha256,item.path);checked++;}
+const verification=json(prefix+'presentation/audit-verification.json');assert.equal(verification.result,'PASS');assert.deepEqual(verification.mismatches,[]);assert.equal(verification.pinkRuleExact,true);
+const before=json(prefix+'integration/accepted-current-inputs.json').inputs,now=currentInputs();assert.deepEqual(now,before,'H0 must not alter accepted runtime/build closure');
+const protectedOriginals=json(prefix+'integration/protected-originals.json');assert.equal(protectedOriginals.status,'PASS');
+const historical=json(prefix+'integration/historical-evidence-fingerprints.json');for(const item of historical.files) assert.equal(hash(path.join(project,item.path)),item.sha256,item.path);
+const result={status:'PASS',checkedAt:new Date().toISOString(),workerManifestValid:true,workerSourceHashesChecked:checked,workerSourceFidelityReviewed:true,currentInputsUnchanged:now.length,historicalEvidenceFilesUnchanged:historical.files.length,protectedOriginals:protectedOriginals.counts,knownOfflineFilesOpened:false,runtimeEdits:false};
+fs.writeFileSync(path.join(import.meta.dirname,'foreman-validation.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

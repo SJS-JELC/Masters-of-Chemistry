@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-04T19:35:18.685Z",
+  "sources": [
+    {
+      "path": "src/statistics/StatisticsView.tsx",
+      "sha256": "09bd0306d589cd44e0eff5ac2a75cf11fcc99b4a0862098f9d2ac942c4ae04e9"
+    },
+    {
+      "path": "src/statistics/model.ts",
+      "sha256": "1c76bccef8e20d45f7b69dba88d0c96143262d6afebfa365fb75b5cdfa5ac2d3"
+    },
+    {
+      "path": "src/statistics/statistics.css",
+      "sha256": "6aa33d0ed4157b2d0785534f58de15efc461101992e52c509fc8a89153b255b9"
+    },
+    {
+      "path": "src/foundation/ProductionFoundation.tsx",
+      "sha256": "6ca365b008dda7d6d16378f9a58872628e3d7a0c3d17bf698a4a47eca99a2983"
+    }
+  ],
+  "sourceChangedAfterSuccessfulBuild": false,
+  "typecheckEvidence": "typecheck.txt",
+  "modelEvidence": "model-timing.txt",
+  "buildEvidence": "build.txt",
+  "releaseEvidence": "release-checks.json",
+  "environment": {
+    "nodeModulesAvailable": true,
+    "distAvailable": true
+  },
+  "reports": {
+    "typecheck.txt": {
+      "mtimeUTC": "2026-10-04T19:25:15.070Z",
+      "sha256": "398f86a14b8634419d98a9e9a901adb9a26f55e0eb6d411833f500f65e30a3f3"
+    },
+    "model-timing.txt": {
+      "mtimeUTC": "2026-10-04T19:25:22.825Z",
+      "sha256": "b04424b0fd10251ab24e65e4cca692134cbdbc51f8630a0d22ec825190fbd24d"
+    },
+    "build.txt": {
+      "mtimeUTC": "2026-10-04T19:25:26.252Z",
+      "sha256": "954b9fac1c96ac92875fbeba4d02eb4e3131a37adc5c6e1fd0e39502b0297d8c"
+    },
+    "release-checks.json": {
+      "mtimeUTC": "2026-10-04T19:35:18.595Z",
+      "sha256": "7e042fc755ca5d0d0a9c85666bd7e661de7374279650348380fc52ddbc2dc6f5"
+    },
+    "timing-browser-results.json": {
+      "mtimeUTC": "2026-10-04T19:35:07.471Z",
+      "sha256": "bdf6504a7a6c1e6529d2e059f17b2b2de0d9618e97750ce4c2a5951ef24d23c3"
+    },
+    "release-browser-results.json": {
+      "mtimeUTC": "2026-10-04T19:35:14.217Z",
+      "sha256": "903e5ffb8f006364d18c4b988c72f95bf99b0975706a2db4954115b552cbf950"
+    },
+    "original-preservation.json": {
+      "mtimeUTC": "2026-10-04T19:35:17.848Z",
+      "sha256": "b1dcae4713893d199019f45ac58f27e2538008d41a429582abe67a0253798234"
+    }
+  }
+}

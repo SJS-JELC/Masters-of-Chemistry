@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-03T10:25:35.574Z",
+  "protectedUnchangedCount": 70,
+  "ownedRuntimeFiles": [
+    "apps/Masters-of-Chemistry/src/editors/molecule/MoleculeEditor.tsx",
+    "apps/Masters-of-Chemistry/src/editors/molecule/MoleculeInspector.tsx",
+    "apps/Masters-of-Chemistry/src/editors/molecule/Structure.tsx",
+    "apps/Masters-of-Chemistry/src/editors/molecule/molecule.css",
+    "apps/Masters-of-Chemistry/src/chemistry/molecule/engine.ts",
+    "apps/Masters-of-Chemistry/src/chemistry/molecule/layout.ts",
+    "apps/Masters-of-Chemistry/src/chemistry/molecule/interaction.ts",
+    "apps/Masters-of-Chemistry/src/chemistry/molecule/depiction.ts",
+    "apps/Masters-of-Chemistry/src/activities/olympiad/c3l6/C3L6View.tsx",
+    "apps/Masters-of-Chemistry/src/activities/olympiad/c3l6/c3l6.css"
+  ],
+  "checks": [
+    {
+      "check": "unit-results",
+      "status": "PASS"
+    },
+    {
+      "check": "typecheck",
+      "status": "PASS"
+    },
+    {
+      "check": "browser-results.json",
+      "status": "PASS"
+    },
+    {
+      "check": "compare-results.json",
+      "status": "PASS"
+    },
+    {
+      "check": "compare-clean-results.json",
+      "status": "PASS"
+    },
+    {
+      "check": "edge-results.json",
+      "status": "PASS"
+    }
+  ],
+  "notes": [
+    "Crowded comparison raw metadata originally said10-heavy-atom; actual fixture and all comparison counts are12. Cleaned report uses correct12 count.",
+    "Headless Edge trusted browser/CDP events; physical touch device and foreground desktop app interaction were not claimed.",
+    "Broad build, shared Host/storage failure and root acceptance gates belong to E01/root."
+  ]
+}

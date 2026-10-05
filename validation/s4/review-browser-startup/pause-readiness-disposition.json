@@ -1,0 +1,56 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-BROWSER-PAUSE-READINESS",
+  "status": "PASS",
+  "checkedAt": "2026-10-03T02:45:38.234Z",
+  "confidence": 0.99,
+  "classification": "Fixture readiness race; no application restore failure established",
+  "exactChange": {
+    "from": "await page.waitForFunction(()=>window.__mastersActivity?.snapshot().session?.paused===true);",
+    "to": "await page.waitForFunction(id=>{const restored=window.__mastersActivity?.snapshot();return restored?.session?.paused===true&&restored.attempt?.attemptId===id;},paused.attempt.attemptId);"
+  },
+  "fingerprints": {
+    "pause-readiness-browser-results.json": {
+      "from": "validation/s4/statistics/browser-results.json",
+      "sha256": "f97a832feafbc3a0bfcbda80e19f2578ff4fcbe73e8c7f2d6e32498fe48a22a0",
+      "retainedCopy": true
+    },
+    "pause-readiness-browser-progress.json": {
+      "from": "validation/s4/statistics/browser-progress.json",
+      "sha256": "317b5f8fd7b974488236b68c64382065cc9e7ac86af9122e94da1cf229e367a8",
+      "retainedCopy": true
+    },
+    "pause-readiness-browser-network.json": {
+      "from": "validation/s4/statistics/browser-network.json",
+      "sha256": "240f8276cc32813c882a1ce85ff7ef8563b21b3ca6a567cfe2c9a22728229dac",
+      "retainedCopy": true
+    },
+    "pause-readiness-original-browser.mjs.txt": {
+      "from": "validation/s4/review-browser-startup/proposed-browser.mjs.txt",
+      "sha256": "feb503a742bee0e7135a5010f474ea8b4a15074b2b2903092aeb4accbba47025",
+      "retainedCopy": false
+    },
+    "pause-readiness-host.tsx.txt": {
+      "from": "src/foundation/ActivityHost.tsx",
+      "sha256": "2fd0fa0c97d659e361b35accfe5baab355f226d5625d7a4cc31d30e3f24188bd",
+      "retainedCopy": true
+    },
+    "pause-readiness-failure.png": {
+      "from": "validation/s4/statistics/actual-acid-first-score-correction-pause-reload-chart-failure.png",
+      "sha256": "1fb3ed7ea00a73d56884c346e159856aa914cffa7fb8b9348ac45a4920e8ce03",
+      "retainedCopy": true
+    }
+  },
+  "proposedSha256": "94899d58bb1d4a58846a6b8bdffceddc77fba80f2b4ff2c8ff00cac230d95f30",
+  "originalSha256": "feb503a742bee0e7135a5010f474ea8b4a15074b2b2903092aeb4accbba47025",
+  "assertionsTailSha256": "b210617eab916a53ffef6dd8eee3e5d649b3dc53f708a0d2af9c38188d0cfe6e",
+  "reason": "sessionRef is applied before await loadAttempt and await resolve; stateRef remains null until applyAttempt. flush does not await initialization.",
+  "approvedScope": "One exact readiness predicate addition, all response/time/identity and later suite assertions unchanged",
+  "limits": [
+    "Current source ordering and retained TypeError support the readiness race; no retry performed and restored state correctness still requires unchanged assertions",
+    "Screenshot captured later shows restored paused UI, not the exact failing snapshot",
+    "Earlier correct/partial/correction/reveal/reload assertions were reached successfully in this sequential execution; no standalone completed scenario PASS exists"
+  ],
+  "effectiveModelEffort": null,
+  "usage": null
+}

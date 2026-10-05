@@ -1,0 +1,169 @@
+{
+  "jobId": "S4-COMPATIBILITY",
+  "agentId": "A19",
+  "startedAt": "2026-10-03T02:35:28.330Z",
+  "origin": "http://127.0.0.1:5197/stage-s4",
+  "sampledBuild": {
+    "dist/alevel/index.html": "452b805d50e30f5d904d4b7bfa96b3cf4d140fc025213d17a0e1a6f03b2cac81",
+    "dist/alevel/activities/acid-base-calculations/index.html": "8962049416d86fb22fb03470a76087596fbdd0c693cec622f04351d5cf136c44",
+    "dist/alevel/activities/electrons-bonding/index.html": "7895023c3bf84dbe97c73d6574b5ca67c94e6b1c606465ffa13c1cf18b6d4bc9",
+    "dist/alevel/activities/electron-configurations/index.html": "6b7aae645ef83a379c58bca2396135f95b0310fc303cdeb05f663f67ea308fb6",
+    "dist/alevel/activities/dot-and-cross/index.html": "2ea958b85e87b1d475539a4943b90125bea58208fc8b1d79e07f7c0c8a4ea3f8",
+    "dist/alevel/activities/ph-titration-curves/index.html": "4a62e29a3af94703481bcfbff51967981bd05e798124afe427e7741f06cf8f16",
+    "dist/alevel/activities/c3l6-organic-reactions/index.html": "6e37d69c646079a709e1312e10dda35cc58c58dae4c630dafb2d71fc89fc1d26",
+    "dist/igcse/index.html": "0c2cb1aca3916ce0952303d28cf753be4b36dd9a13e6de528cff9ea840ec19bc",
+    "dist/igcse/activities/calorimetry/index.html": "248f1df3fdc1a5c9836942e4db3a50bc59f1ce3b7036f3508054767e6cf7425f",
+    "dist/igcse/activities/bond-enthalpy/index.html": "f5e685481b805af86c4278b0d2aac4aee120dd3fdff4bfcf53c394438dae973b",
+    "dist/igcse/activities/structure-and-bonding/index.html": "5b5ff07cf87c8aa38594c3f9aab96af463fd5b2bd6b2437e2e69fb536237f4e9",
+    "dist/igcse/activities/dot-and-cross/index.html": "fc19f3fd6beff917036eb7294ab0f8e4771aa668b68c0e2132e08774491743a1",
+    "dist/igcse/activities/energy-enthalpy/index.html": "af1368934ffda2f9bbc8c5c07f7c7eb97763abbab22bd62a1a3537cb2b9964ac",
+    "dist/igcse/activities/energetics-practical/index.html": "7f8a98032fea1db61d29a56314779248ab3e5d1ba990578d28733f32ec41bc56"
+  },
+  "checks": [
+    "All 12 actual original filenames load under /stage-s4/<course>/; 11 original question codes restore exact identity and teacher ref after canonical refresh; C3 opens separate Olympiad.",
+    "Canonical fixed n2 Level 3 / uint32 max seed survives real refresh."
+  ],
+  "errors": [],
+  "routes": [
+    {
+      "course": "alevel",
+      "route": "activities/acid-base-calculations/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "alevel/acid-base-calculations",
+        "questionId": "AB2-0-1-3F",
+        "seed": 123,
+        "level": 1
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/alevel/index.html?review=AB2-0-1-3F&view=teacher&level=1&seed=123&activity=alevel%2Facid-base-calculations"
+    },
+    {
+      "course": "alevel",
+      "route": "activities/electrons-bonding/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "alevel/electrons-bonding",
+        "questionId": "EB01",
+        "seed": 0,
+        "level": 1
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/alevel/index.html?review=EB01&view=teacher&level=1&seed=0&activity=alevel%2Felectrons-bonding"
+    },
+    {
+      "course": "alevel",
+      "route": "activities/electron-configurations/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "alevel/electron-configurations",
+        "questionId": "EC-TXDM70",
+        "seed": 0,
+        "level": 1
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/alevel/index.html?review=EC-TXDM70&view=teacher&level=1&seed=0&activity=alevel%2Felectron-configurations"
+    },
+    {
+      "course": "alevel",
+      "route": "activities/dot-and-cross/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "alevel/dot-and-cross",
+        "questionId": "n2",
+        "seed": 0,
+        "level": 2
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/alevel/index.html?review=n2&view=teacher&level=2&seed=0&activity=alevel%2Fdot-and-cross"
+    },
+    {
+      "course": "alevel",
+      "route": "activities/ph-titration-curves/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "alevel/ph-titration-curves",
+        "questionId": "TC01",
+        "seed": 0,
+        "level": 2
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/alevel/index.html?review=TC01&view=teacher&level=2&seed=0&activity=alevel%2Fph-titration-curves"
+    },
+    {
+      "course": "alevel",
+      "route": "activities/c3l6-organic-reactions/index.html",
+      "kind": "olympiad",
+      "url": "http://127.0.0.1:5197/stage-s4/alevel/index.html?view=olympiad&activity=alevel%2Fc3l6-organic-reactions"
+    },
+    {
+      "course": "igcse",
+      "route": "activities/calorimetry/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "igcse/calorimetry",
+        "questionId": "CAL-0J73EO",
+        "seed": 32243712,
+        "level": 1
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/igcse/index.html?review=CAL-0J73EO&view=teacher&level=1&seed=32243712&activity=igcse%2Fcalorimetry"
+    },
+    {
+      "course": "igcse",
+      "route": "activities/bond-enthalpy/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "igcse/bond-enthalpy",
+        "questionId": "BE-002P6U",
+        "seed": 125958,
+        "level": 1
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/igcse/index.html?review=BE-002P6U&view=teacher&level=1&seed=125958&activity=igcse%2Fbond-enthalpy"
+    },
+    {
+      "course": "igcse",
+      "route": "activities/structure-and-bonding/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "igcse/structure-and-bonding",
+        "questionId": "SBC-U5FSU0",
+        "level": 2,
+        "seed": 0
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/igcse/index.html?review=SBC-U5FSU0&view=teacher&level=2&seed=0&activity=igcse%2Fstructure-and-bonding"
+    },
+    {
+      "course": "igcse",
+      "route": "activities/dot-and-cross/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "igcse/dot-and-cross",
+        "questionId": "h2",
+        "seed": 0,
+        "level": 1
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/igcse/index.html?review=h2&view=teacher&level=1&seed=0&activity=igcse%2Fdot-and-cross"
+    },
+    {
+      "course": "igcse",
+      "route": "activities/energy-enthalpy/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "igcse/energy-enthalpy",
+        "questionId": "C01",
+        "level": 1,
+        "seed": 0
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/igcse/index.html?review=C01&view=teacher&level=1&seed=0&activity=igcse%2Fenergy-enthalpy"
+    },
+    {
+      "course": "igcse",
+      "route": "activities/energetics-practical/index.html",
+      "kind": "curriculum",
+      "ref": {
+        "activityId": "igcse/energetics-practical",
+        "questionId": "EP-BJLHC1",
+        "level": 2,
+        "seed": 0
+      },
+      "url": "http://127.0.0.1:5197/stage-s4/igcse/index.html?review=EP-BJLHC1&view=teacher&level=2&seed=0&activity=igcse%2Fenergetics-practical"
+    }
+  ],
+  "status": "PASS",
+  "finishedAt": "2026-10-03T02:35:38.385Z"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T08:44:04.690Z",
+  "results": [
+    {
+      "id": "originals",
+      "status": "PASS",
+      "source": "scripts/protect-originals.mjs",
+      "sourceSha256": "c4772926f38379912a9bcdbdbf8f5d3da8eb0e21c805f968474499bb8120be6b",
+      "substitutions": [
+        "project path binding for stdin execution",
+        "report destination only"
+      ],
+      "exitCode": 0,
+      "evidence": "validation/landing-restoration/aggregate/originals.log"
+    },
+    {
+      "id": "source-controls",
+      "status": "PASS",
+      "source": "scripts/validate-s0.mjs",
+      "sourceSha256": "b1f44aa9c04323a972c68670a8672c2c67874314cfb716db770ff015fef4c4dc",
+      "substitutions": [
+        "project path binding for stdin execution",
+        "report destination only"
+      ],
+      "exitCode": 0,
+      "evidence": "validation/landing-restoration/aggregate/source-controls.log"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "agentId": "A21",
+  "jobId": "S5-BEHAVIOUR",
+  "status": "PASS",
+  "outputPaths": [
+    "validation/s5/behaviour/HANDOVER.md",
+    "validation/s5/behaviour/coverage.json",
+    "validation/s5/behaviour/verification-final.json"
+  ],
+  "confidence": 0.96,
+  "reason": "All assigned final-static runtime and saved-data checks passed; retained native timing continuity and historical limitations remain explicit.",
+  "validation": {
+    "currentStaticBrowserGroups": 28,
+    "allSupportedTargets": 41,
+    "sourceStatisticsTests": 6,
+    "registrationTimingTests": 6,
+    "immutableSourceBuildFiles": 499,
+    "allForemanFreezeHashesVerified": 517,
+    "actualTimingEvidence": "validation/s5/behaviour/timing-continuity.json",
+    "currentInputTree": "e934c0232af2e8a15b0748de8096d3ea5effbb17b65144fc27fea320afff3b5e",
+    "foremanFreezeTree": "75a6c5c275efc120705e199e9527f8241721d41ab24d7a85284ec9f00aa07b88",
+    "retainedLimits": true,
+    "browsersServersClosed": true
+  },
+  "requestedSettings": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high"
+  },
+  "effectiveSettings": "unknown",
+  "usage": null
+}

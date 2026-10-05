@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-03T03:05:38.302Z",
+  "playwright": "1.62.1",
+  "checks": [
+    {
+      "id": "v1-to-v2-five-table-preservation",
+      "status": "PASS",
+      "tables": [
+        "attempts",
+        "evidence",
+        "sessions",
+        "olympiad",
+        "receipts"
+      ],
+      "activeDraftMs": 345,
+      "missingHistoricalTimingPreserved": true
+    },
+    {
+      "id": "exact-raw-archive-dedup-conflict-reload",
+      "status": "PASS"
+    },
+    {
+      "id": "archive-bounds-course-profile-isolation",
+      "status": "PASS",
+      "corruptShapesRejected": 6
+    },
+    {
+      "id": "legacy-store-read-only",
+      "status": "PASS",
+      "storeWrites": 0
+    }
+  ],
+  "pageErrors": [],
+  "scope": "Actual V1 Dexie database upgraded by real V2 repository; exact existing draft/session/evidence/Olympiad/receipt rows preserved, rejected source raw archive durable and idempotent. Synthetic new-origin inputs; no original stores written."
+}

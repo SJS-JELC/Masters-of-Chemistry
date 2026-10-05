@@ -1,0 +1,385 @@
+diff --git a/validation/component-fidelity/f3/shared-final/before/SourceQuestionPlayer.tsx b/src/ui/SourceQuestionPlayer.tsx
+index e7ba939..2680ef3 100644
+--- a/validation/component-fidelity/f3/shared-final/before/SourceQuestionPlayer.tsx
++++ b/src/ui/SourceQuestionPlayer.tsx
+@@ -272,6 +272,100 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+       : assessment?.kind === 'self-rubric'
+         ? assessment.reviews
+         : [];
++  const completedRubric = assessment?.kind === 'self-rubric';
++  const compactAssessment =
++    (completedRubric || question.parts.some((part) => part.kind === 'numeric')) &&
++    !(
++      assessment &&
++      'marks' in assessment &&
++      assessment.marks.points.some(
++        (point) =>
++          learningReviewEnabled &&
++          point.earned !== point.available &&
++          point.learningReview?.eligible,
++      )
++    );
++  const assessmentDetails =
++    assessment && assessment.kind !== 'revealed' ? (
++      <>
++        <div className="field-results mark-list">
++          {assessment.marks.points.map((point) => {
++            const correct = point.earned === point.available;
++            const field = source.fields[point.pointId] ?? source.fields[point.partId];
++            const errorModel = source.practical?.correction?.segments.find(
++              (s) => s.id === source.practical?.correction?.errorId,
++            )?.text;
++            const model = point.pointId === 'error' ? errorModel : field?.model;
++            const equivalent =
++              (assessed &&
++                attempt.learningReview?.decisions.some(
++                  (x) =>
++                    x.partId === point.partId &&
++                    x.pointId === point.pointId &&
++                    x.judgement === 'equivalent',
++                )) ||
++              false;
++            return (
++              <div
++                className={`result-row ${correct ? 'is-correct pass' : 'fail'}`}
++                key={`${point.partId}:${point.pointId}`}
++              >
++                <span className="result-icon" aria-label={correct ? 'Correct' : 'Incorrect'}>
++                  {correct ? '✓' : '✗'}
++                </span>
++                <div className="result-text">
++                  {family === 'titration' ? (
++                    <span className="curve-check">{point.message}</span>
++                  ) : (
++                    <>
++                      {family === 'practical' && model ? (
++                        <em>{model}</em>
++                      ) : (
++                        <strong>
++                          {assessmentPointLabel(
++                            question.parts.find((p) => p.id === point.partId),
++                            point.earned,
++                            point.available,
++                          )}
++                        </strong>
++                      )}
++                      <span>
++                        {point.pointId === 'error'
++                          ? 'Identify the highlighted erroneous phrase before replacing it.'
++                          : family === 'bonding'
++                            ? point.message
++                            : (field?.feedback ?? point.message)}
++                      </span>
++                    </>
++                  )}
++                  {learningReviewEnabled && !correct && point.learningReview?.eligible && (
++                    <button
++                      type="button"
++                      className="override-button"
++                      aria-pressed={equivalent}
++                      onClick={() =>
++                        onCommand({
++                          kind: 'review-valid-alternative',
++                          decision: {
++                            partId: point.partId,
++                            pointId: point.pointId,
++                            judgement: equivalent ? 'not-equivalent' : 'equivalent',
++                            reviewer: 'student',
++                          },
++                        })
++                      }
++                    >
++                      My answer means the same
++                    </button>
++                  )}
++                </div>
++              </div>
++            );
++          })}
++        </div>
++        {source.feedback && <p>{source.feedback}</p>}
++      </>
++    ) : null;
+   const pane = (
+     <aside
+       className={`marking marking-pane${family === 'practical' ? ' marking' : ''}`}
+@@ -289,6 +383,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+             key={review.partId}
+             part={part}
+             review={review}
++            completed={completedRubric}
+             onCommand={onCommand}
+           />
+         ) : null;
+@@ -367,7 +462,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+       )}
+       {assessment && (
+         <section
+-          className="results assessment-feedback feedback"
++          className={`results assessment-feedback feedback${compactAssessment ? ' compact-first-assessment' : ''}`}
+           role="status"
+           aria-label="First assessment"
+         >
+@@ -376,85 +471,21 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+           ) : (
+             <>
+               <h3 className="score">
+-                {assessment.kind === 'self-rubric' ? 'Self-assessed score: ' : ''}
++                {completedRubric
++                  ? 'First self-assessed score: '
++                  : compactAssessment
++                    ? 'First score: '
++                    : ''}
+                 {assessment.marks.earned}/{assessment.marks.available}
+               </h3>
+-              <div className="field-results mark-list">
+-                {assessment.marks.points.map((point) => {
+-                  const correct = point.earned === point.available;
+-                  const field = source.fields[point.pointId] ?? source.fields[point.partId];
+-                  const errorModel = source.practical?.correction?.segments.find(
+-                    (s) => s.id === source.practical?.correction?.errorId,
+-                  )?.text;
+-                  const model = point.pointId === 'error' ? errorModel : field?.model;
+-                  const equivalent =
+-                    (assessed &&
+-                      attempt.learningReview?.decisions.some(
+-                        (x) =>
+-                          x.partId === point.partId &&
+-                          x.pointId === point.pointId &&
+-                          x.judgement === 'equivalent',
+-                      )) ||
+-                    false;
+-                  return (
+-                    <div
+-                      className={`result-row ${correct ? 'is-correct pass' : 'fail'}`}
+-                      key={`${point.partId}:${point.pointId}`}
+-                    >
+-                      <span className="result-icon" aria-label={correct ? 'Correct' : 'Incorrect'}>
+-                        {correct ? '✓' : '✗'}
+-                      </span>
+-                      <div className="result-text">
+-                        {family === 'titration' ? (
+-                          <span className="curve-check">{point.message}</span>
+-                        ) : (
+-                          <>
+-                            {family === 'practical' && model ? (
+-                              <em>{model}</em>
+-                            ) : (
+-                              <strong>
+-                                {assessmentPointLabel(
+-                                  question.parts.find((p) => p.id === point.partId),
+-                                  point.earned,
+-                                  point.available,
+-                                )}
+-                              </strong>
+-                            )}
+-                            <span>
+-                              {point.pointId === 'error'
+-                                ? 'Identify the highlighted erroneous phrase before replacing it.'
+-                                : family === 'bonding'
+-                                  ? point.message
+-                                  : (field?.feedback ?? point.message)}
+-                            </span>
+-                          </>
+-                        )}
+-                        {learningReviewEnabled && !correct && point.learningReview?.eligible && (
+-                          <button
+-                            type="button"
+-                            className="override-button"
+-                            aria-pressed={equivalent}
+-                            onClick={() =>
+-                              onCommand({
+-                                kind: 'review-valid-alternative',
+-                                decision: {
+-                                  partId: point.partId,
+-                                  pointId: point.pointId,
+-                                  judgement: equivalent ? 'not-equivalent' : 'equivalent',
+-                                  reviewer: 'student',
+-                                },
+-                              })
+-                            }
+-                          >
+-                            My answer means the same
+-                          </button>
+-                        )}
+-                      </div>
+-                    </div>
+-                  );
+-                })}
+-              </div>
+-              {source.feedback && <p>{source.feedback}</p>}
++              {compactAssessment ? (
++                <details className="original-first-marking">
++                  <summary>Review original first marking</summary>
++                  {assessmentDetails}
++                </details>
++              ) : (
++                assessmentDetails
++              )}
+             </>
+           )}
+           <p className="first-result-note">
+@@ -646,7 +677,12 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
+       ) : null}
+       {rubric.length > 0 ? (
+         rubric.map((review) => (
+-          <SourceFrozenAnswer key={review.partId} review={review} onCommand={onCommand} />
++          <SourceFrozenAnswer
++            key={review.partId}
++            review={review}
++            completed={completedRubric}
++            onCommand={onCommand}
++          />
+         ))
+       ) : (
+         <div
+diff --git a/validation/component-fidelity/f3/shared-final/before/SourceRubricReview.tsx b/src/ui/SourceRubricReview.tsx
+index fa67b6d..13403b4 100644
+--- a/validation/component-fidelity/f3/shared-final/before/SourceRubricReview.tsx
++++ b/src/ui/SourceRubricReview.tsx
+@@ -8,10 +8,12 @@ export function SourceRubricScheme({
+   part,
+   review,
+   onCommand,
++  completed = false,
+ }: {
+   part: Explanation;
+   review: RubricReview;
+   onCommand: (c: AttemptCommand) => void;
++  completed?: boolean;
+ }) {
+   return (
+     <section className="review-card marking-card">
+@@ -32,7 +34,7 @@ export function SourceRubricScheme({
+                 <p className="point-text">{point.text}</p>
+               </div>
+               {point.reject && <p className="exclusion">NO MARK: {point.reject}</p>}
+-              {active && (
++              {active && !completed && (
+                 <span className="next-label">
+                   {awaiting ? 'NOW HIGHLIGHT YOUR ANSWER' : 'DO THIS NEXT'}
+                 </span>
+@@ -44,7 +46,7 @@ export function SourceRubricScheme({
+                 <button
+                   type="button"
+                   className="decision no"
+-                  disabled={!active || awaiting}
++                  disabled={completed || !active || awaiting}
+                   onClick={() =>
+                     onCommand({
+                       kind: 'judge-rubric',
+@@ -58,7 +60,7 @@ export function SourceRubricScheme({
+                 <button
+                   type="button"
+                   className="decision yes"
+-                  disabled={!active || awaiting}
++                  disabled={completed || !active || awaiting}
+                   onClick={() =>
+                     onCommand({
+                       kind: 'judge-rubric',
+@@ -79,13 +81,17 @@ export function SourceRubricScheme({
+           {review.judgements.filter((x) => x.status === 'met' || x.status === 'not-met').length}/
+           {part.rubric.length} points reviewed
+         </p>
+-        <button
+-          type="button"
+-          disabled={review.activePointId !== null}
+-          onClick={() => onCommand({ kind: 'finish-rubric', at: Date.now() })}
+-        >
+-          Finish marking
+-        </button>
++        {completed ? (
++          <p>Marking complete. Your judgements and evidence are saved.</p>
++        ) : (
++          <button
++            type="button"
++            disabled={review.activePointId !== null}
++            onClick={() => onCommand({ kind: 'finish-rubric', at: Date.now() })}
++          >
++            Finish marking
++          </button>
++        )}
+       </div>
+     </section>
+   );
+@@ -93,13 +99,15 @@ export function SourceRubricScheme({
+ export function SourceFrozenAnswer({
+   review,
+   onCommand,
++  completed = false,
+ }: {
+   review: RubricReview;
+   onCommand: (c: AttemptCommand) => void;
++  completed?: boolean;
+ }) {
+   const container = useRef<HTMLDivElement>(null);
+   const decision = review.judgements.find((x) => x.pointId === review.activePointId);
+-  const awaiting = decision?.status === 'awaiting-evidence';
++  const awaiting = !completed && decision?.status === 'awaiting-evidence';
+   const choose = (start: number, end: number) => {
+     if (
+       !awaiting ||
+@@ -141,12 +149,14 @@ export function SourceFrozenAnswer({
+   return (
+     <section className="review-card answer-card">
+       <h3>Your locked answer</h3>
+-      <p className={`instruction${awaiting ? ' awaiting' : ''}`}>
+-        {awaiting
+-          ? 'Highlight the words in your answer that meet this marking point.'
+-          : review.activePointId
+-            ? 'Review the next marking point on the left.'
+-            : 'All points reviewed. Finish marking to record your self-assessed score.'}
++      <p className={`instruction${completed ? ' complete' : awaiting ? ' awaiting' : ''}`}>
++        {completed
++          ? 'Marking complete. Your self-assessed score and evidence are saved.'
++          : awaiting
++            ? 'Highlight the words in your answer that meet this marking point.'
++            : review.activePointId
++              ? 'Review the next marking point on the left.'
++              : 'All points reviewed. Finish marking to record your self-assessed score.'}
+       </p>
+       <div
+         ref={container}
+@@ -168,7 +178,9 @@ export function SourceFrozenAnswer({
+         })}
+       </div>
+       <p className="auto-note">
+-        Release the mouse or lift your finger after selecting text to save your evidence.
++        {completed
++          ? 'Your first answer and evidence remain fixed.'
++          : 'Release the mouse or lift your finger after selecting text to save your evidence.'}
+       </p>
+       {awaiting && (
+         <details className="keyboard-evidence">
+diff --git a/validation/component-fidelity/f3/shared-final/before/source-adapters.css b/src/ui/source-adapters.css
+index 0ff114b..169a1b4 100644
+--- a/validation/component-fidelity/f3/shared-final/before/source-adapters.css
++++ b/src/ui/source-adapters.css
+@@ -111,6 +111,27 @@
+   font-size: 0.78rem;
+   color: #a9afce;
+ }
++.source-player .compact-first-assessment .score {
++  font-size: 1rem;
++  margin-bottom: 8px;
++}
++.source-player .original-first-marking {
++  margin: 8px 0;
++}
++.source-player .original-first-marking > summary {
++  padding: 8px 0;
++  font-size: 0.85rem;
++}
++/* Canonical EE action sizing, with content widths retained when the row wraps. */
++.source-player.source-energy .pupil-answer-actions > button {
++  flex: 0 1 auto;
++  width: max-content;
++  max-width: 100%;
++  min-height: 46px;
++  padding: 10px 16px;
++  border-radius: 10px;
++  font-size: 0.9rem;
++}
+ .source-player .source-provenance {
+   font-size: 0.72rem;
+   overflow-wrap: anywhere;

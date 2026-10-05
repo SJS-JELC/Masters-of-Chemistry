@@ -1,0 +1,7 @@
+{
+  "status": "RETRY_WITH_SHORTER_OWNED_PATH",
+  "reason": "Headless Edge initial profile launch failed because nested app-owned temp path exceeded Windows filename length; no page or product check ran.",
+  "evidence": "Tool launch output (not retained full raw log): Crashpad CreateDirectory filename or extension too long (0xCE); Failed to create initial profile.",
+  "fix": "Use shorter new-app .qhc-tmp; no external temp or real browser store.",
+  "recordedAt": "2026-10-03T13:14:24.719Z"
+}

@@ -1,0 +1,694 @@
+{
+  "startedAt": "2026-10-03T10:42:35.545Z",
+  "method": "Pinned root Playwright1.62.1/headless Edge/fresh isolated contexts; original reference static server readonly on ephemeral port. Matching reference snapshots via isolated bridge stub; new harness mounts real React editor and source-style pane, no attempt engine. Shared host gates foreman-owned.",
+  "origins": {
+    "old": "http://127.0.0.1:54460",
+    "new": "http://127.0.0.1:5183"
+  },
+  "comparisons": [
+    {
+      "label": "alevel-desktop-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-desktop-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-tablet-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-tablet-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-mobile-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-mobile-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-below-breakpoint-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-below-breakpoint-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-above-breakpoint-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-above-breakpoint-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-desktop-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-desktop-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-tablet-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-tablet-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-mobile-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-mobile-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-below-breakpoint-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-below-breakpoint-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-above-breakpoint-h2o",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-above-breakpoint-mgo",
+      "course": "igcse",
+      "question": "mgo",
+      "viewport": {
+        "width": 1100,
+        "height": 900
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-desktop-ammonium-ion",
+      "course": "alevel",
+      "question": "ammonium-ion",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-desktop-phosphorus-pentachloride",
+      "course": "alevel",
+      "question": "phosphorus-pentachloride",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-desktop-sulfur-hexafluoride",
+      "course": "alevel",
+      "question": "sulfur-hexafluoride",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-desktop-nitrate-ion",
+      "course": "alevel",
+      "question": "nitrate-ion",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-atom-drag-preview",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-atom-drag-preview",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-electron-relocation",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "igcse-electron-relocation",
+      "course": "igcse",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0,
+      "rawNumericalDifferences": []
+    },
+    {
+      "label": "alevel-charge-group-drag",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": [],
+      "coordinatePrecision": 0.001,
+      "rawNumericalDifferences": [
+        {
+          "key": "atoms",
+          "original": [
+            {
+              "text": "O",
+              "x": "550.0000122070312",
+              "y": "353.9999816894532",
+              "font": "Comfortaa, system-ui, sans-serif",
+              "size": "25px",
+              "fill": "rgb(255, 148, 127)"
+            },
+            {
+              "text": "H",
+              "x": "470.0000122070312",
+              "y": "353.9999816894532",
+              "font": "Comfortaa, system-ui, sans-serif",
+              "size": "25px",
+              "fill": "rgb(247, 247, 255)"
+            },
+            {
+              "text": "H",
+              "x": "630.0000122070312",
+              "y": "353.9999816894532",
+              "font": "Comfortaa, system-ui, sans-serif",
+              "size": "25px",
+              "fill": "rgb(247, 247, 255)"
+            }
+          ],
+          "restored": [
+            {
+              "text": "O",
+              "x": "550.0000122070312",
+              "y": "354.0000106811524",
+              "font": "Comfortaa, system-ui, sans-serif",
+              "size": "25px",
+              "fill": "rgb(255, 148, 127)"
+            },
+            {
+              "text": "H",
+              "x": "470.0000122070312",
+              "y": "354.0000106811524",
+              "font": "Comfortaa, system-ui, sans-serif",
+              "size": "25px",
+              "fill": "rgb(247, 247, 255)"
+            },
+            {
+              "text": "H",
+              "x": "630.0000122070312",
+              "y": "354.0000106811524",
+              "font": "Comfortaa, system-ui, sans-serif",
+              "size": "25px",
+              "fill": "rgb(247, 247, 255)"
+            }
+          ]
+        },
+        {
+          "key": "electrons",
+          "original": [
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "498.0000122070312",
+              "cy": "339.9999816894532",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "path",
+              "d": "M494.0000122070312 345.9999816894532l8 8m-8 0l8 -8",
+              "cx": null,
+              "cy": null,
+              "r": null,
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "602.0000122070312",
+              "cy": "349.9999816894532",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "path",
+              "d": "M598.0000122070312 335.9999816894532l8 8m-8 0l8 -8",
+              "cx": null,
+              "cy": null,
+              "r": null,
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "539.9882064444564",
+              "cy": "281.78792789136435",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "560.011817969606",
+              "cy": "281.78792789136435",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "560.011817969606",
+              "cy": "408.21203548754204",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "539.9882064444564",
+              "cy": "408.21203548754204",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            }
+          ],
+          "restored": [
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "498.0000122070312",
+              "cy": "340.0000106811524",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "path",
+              "d": "M494.0000122070312 346.0000106811524l8 8m-8 0l8 -8",
+              "cx": null,
+              "cy": null,
+              "r": null,
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "602.0000122070312",
+              "cy": "350.0000106811524",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "path",
+              "d": "M598.0000122070312 336.0000106811524l8 8m-8 0l8 -8",
+              "cx": null,
+              "cy": null,
+              "r": null,
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "539.9882064444564",
+              "cy": "281.78795688306354",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "560.011817969606",
+              "cy": "281.78795688306354",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "560.011817969606",
+              "cy": "408.21206447924123",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            },
+            {
+              "tag": "circle",
+              "d": null,
+              "cx": "539.9882064444564",
+              "cy": "408.21206447924123",
+              "r": "3",
+              "fill": "rgb(247, 247, 255)",
+              "stroke": "rgb(247, 247, 255)",
+              "width": "2.5px"
+            }
+          ]
+        },
+        {
+          "key": "shells",
+          "original": [
+            {
+              "cx": "550.0000122070312",
+              "cy": "344.9999816894532",
+              "r": "64",
+              "stroke": "rgb(117, 128, 169)",
+              "opacity": "0.72"
+            },
+            {
+              "cx": "470.0000122070312",
+              "cy": "344.9999816894532",
+              "r": "40",
+              "stroke": "rgb(117, 128, 169)",
+              "opacity": "0.72"
+            },
+            {
+              "cx": "630.0000122070312",
+              "cy": "344.9999816894532",
+              "r": "40",
+              "stroke": "rgb(117, 128, 169)",
+              "opacity": "0.72"
+            }
+          ],
+          "restored": [
+            {
+              "cx": "550.0000122070312",
+              "cy": "345.0000106811524",
+              "r": "64",
+              "stroke": "rgb(117, 128, 169)",
+              "opacity": "0.72"
+            },
+            {
+              "cx": "470.0000122070312",
+              "cy": "345.0000106811524",
+              "r": "40",
+              "stroke": "rgb(117, 128, 169)",
+              "opacity": "0.72"
+            },
+            {
+              "cx": "630.0000122070312",
+              "cy": "345.0000106811524",
+              "r": "40",
+              "stroke": "rgb(117, 128, 169)",
+              "opacity": "0.72"
+            }
+          ]
+        },
+        {
+          "key": "brackets",
+          "original": [
+            "M429.0000122070312 269.9999816894532H419.0000122070312V419.9999816894532H429.0000122070312 M671.0000122070312 269.9999816894532H681.0000122070312V419.9999816894532H671.0000122070312"
+          ],
+          "restored": [
+            "M429.0000122070312 270.0000106811524H419.0000122070312V420.0000106811524H429.0000122070312 M671.0000122070312 270.0000106811524H681.0000122070312V420.0000106811524H671.0000122070312"
+          ]
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "name": "matching-state source SVG/CSS geometry across both courses desktop/tablet/mobile/breakpoint",
+      "status": "PASS",
+      "pairs": 24,
+      "matchingReferenceRecords": true
+    },
+    {
+      "name": "checked source answer SVG fit, glyphs, local charges and circles on both courses",
+      "status": "PASS",
+      "renderedPairs": 12,
+      "exactSourceDrawingAttributesAndComputedStyles": true,
+      "normalised600x400AnswerCrops": true,
+      "sharedNativeDialogResponsiveGate": "foreman-owned"
+    },
+    {
+      "name": "source/new element palette drag, snap, ghost, rollback, touch and semantic commits",
+      "status": "PASS",
+      "sourcePlacementParity": true,
+      "gesturePreviewUnpersisted": true,
+      "escapeOutsideLostCapture": true
+    },
+    {
+      "name": "electron repeated regions, existing-mark tap/cycle, relocation and palette symbol drag",
+      "status": "PASS",
+      "repeatedTap": true,
+      "symbolCycle": true,
+      "relocation": true,
+      "paletteSymbolDrag": true
+    },
+    {
+      "name": "charge palette local/whole-ion/group drag, circle toggle/history, keyboard and readonly",
+      "status": "PASS",
+      "chargeRouting": true,
+      "groupDrag": true,
+      "circlesHistory": true,
+      "focusedKeyboardDeleteMove": true,
+      "readonly": true,
+      "trustedCDPTouch": true
+    },
+    {
+      "name": "non-drag controls, body keyboard routing, persisted circle/history restoration and magnified viewport",
+      "status": "PASS",
+      "manualAtomsElectronsChargeRelocation": true,
+      "bodyKeyboardHistoryAndCheck": true,
+      "serializedCirclesAndHistoryRestored": true,
+      "readonlyNonDrag": true,
+      "magnifiedHorizontalViewport": true
+    }
+  ],
+  "pageErrors": [],
+  "failures": [],
+  "browserVersion": "154.0.4258.48",
+  "status": "PASS",
+  "finishedAt": "2026-10-03T10:47:50.115Z"
+}

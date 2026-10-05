@@ -1,0 +1,65 @@
+- link "Skip to question":
+  - /url: "#main-content"
+- banner:
+  - img "St John's School eagle"
+  - paragraph: Masters of Chemistry
+  - heading "IGCSE Chemistry" [level=1]
+  - text: IGCSE
+- main:
+  - region "Current session":
+    - text: Revision · Calorimetry · Level 3
+    - button "Change activity or view"
+    - button "Pause and save"
+  - article "Calorimetry · ethanol":
+    - paragraph: Question
+    - heading "Calorimetry · ethanol" [level=2]
+    - code: CAL-0VS72L
+    - text: Level 3
+    - paragraph: Ethanol is burned in a spirit burner to heat water.
+    - table:
+      - rowgroup:
+        - row "Quantity Value":
+          - columnheader "Quantity"
+          - columnheader "Value"
+      - rowgroup:
+        - row "Mass of water 100.0 g":
+          - cell "Mass of water"
+          - cell "100.0 g"
+        - row "Mass of ethanol 0.552 g":
+          - cell "Mass of ethanol"
+          - cell "0.552 g"
+        - row "Mᵣ of C₂H₅OH 46.0":
+          - cell "Mᵣ of C₂H₅OH"
+          - cell "46.0"
+        - row "Temperature change, ΔT +24.1 °C":
+          - cell "Temperature change, ΔT"
+          - cell "+24.1 °C"
+        - row "Specific heat capacity of water/solution 4.20 J/g/°C":
+          - cell "Specific heat capacity of water/solution"
+          - cell "4.20 J/g/°C"
+    - paragraph: ΔT and Q describe the water or solution. The reaction enthalpy has the opposite sign. Give final numerical answers to 3 significant figures, using unrounded values in subsequent parts.
+    - region "Your response":
+      - heading "Your response" [level=3]
+      - text: "[1 mark]"
+      - paragraph: Calculate the molar enthalpy change for the ethanol burned, in kJ/mol. Include a sign and give your answer to 3 significant figures.
+      - text: Your answer (kJ/mol)
+      - textbox "Your answer (kJ/mol)": "-844"
+      - button "Show working framework"
+    - paragraph: You can edit your response for learning. Your first submission, marks and timing remain fixed.
+    - status "First assessment":
+      - heading "First assessment" [level=3]
+      - paragraph: 1 / 1 marks
+      - paragraph:
+        - strong: Correct
+        - text: · Correct to the required numerical precision.
+    - button "Check correction"
+    - button "Request hint"
+    - button "Show worked answer"
+    - button "Next question"
+    - button "Pause"
+    - text: Saved on this device
+  - region "Practice progress":
+    - paragraph: 33 saved practice results
+    - paragraph: "Time before first submission: 0:00"
+    - paragraph: Revision complete
+- contentinfo: St John's School · Chemistry

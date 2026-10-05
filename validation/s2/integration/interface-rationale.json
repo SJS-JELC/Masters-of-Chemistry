@@ -1,0 +1,36 @@
+{
+  "owner": "A01",
+  "stage": "S2",
+  "changes": [
+    {
+      "path": "src/contracts/question.ts",
+      "reason": "Source structure L2 uses seven grouped short/long inputs with minimum5 characters each; L3 deliberately one open minimum20 character answer. Optional presentation/group/minLength preserve both, enforced before first freeze."
+    },
+    {
+      "path": "src/contracts/editors.ts",
+      "reason": "Bounded nonrecursive dotcross semantic undo/redo snapshots retain draft history across actual repository reload."
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "reason": "Allow only bounded100 history/future snapshots and validate each with the existing structural integrity gate; chemistry wrongness remains assessable."
+    },
+    {
+      "path": "src/contracts/session.ts",
+      "reason": "Optional boolean practice paused preserves explicit pause on reload, while absent historical state remains active. Repository accepts only boolean; host resume saves same attempt/session identity."
+    },
+    {
+      "path": "src/contracts/question.ts numeric.inputMode",
+      "reason": "Acid source uses text keyboard for e/standard-form scientific notation; ordinary numeric parts retain decimal default. Empty dimensionless units render without empty parentheses."
+    },
+    {
+      "path": "src/ui/QuestionPlayer.tsx",
+      "reason": "Zero-weight dot-cross criteria are informational messages; do not label them Correct merely because0 equals0."
+    },
+    {
+      "path": "src/foundation/ActivityHost.tsx",
+      "reason": "Real lazy content/marking, one production controller/clock/repository/scheduler, exact review codes, optional persisted practice pause, correction feedback early return before storage/scheduler. Technical verification counters/UUID/phase are DEV-only; production has saved-result count and formatted first/active answering time."
+    }
+  ],
+  "rootDecision": "Root explicitly confirmed L2 seven sections/L3 open response preserves intended source scope; no extra approval needed.",
+  "bankScopeUnchanged": true
+}

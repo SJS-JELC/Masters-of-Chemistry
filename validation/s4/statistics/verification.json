@@ -1,0 +1,246 @@
+{
+  "agentId": "A18",
+  "jobId": "S4-STATISTICS",
+  "checkedAt": "2026-10-03T02:58:28.035Z",
+  "status": "PASS",
+  "ownership": [
+    "src/statistics/",
+    "validation/s4/statistics/"
+  ],
+  "sources": [
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats-core.js",
+      "bytes": 5988,
+      "sha256": "9db808b8f652b49bac15ff24138a4964294d6a3f1264d870e3fbf9cef9a02a74"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-stats.js",
+      "bytes": 13646,
+      "sha256": "74b4ccbb9a36f75e4616993a5ab4b657d0897272ed3b88f50f55a06a0a7c2c0c"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/alevel-mastery.js",
+      "bytes": 16291,
+      "sha256": "06c29355d24490fe5eebd4add8dc657f215cdfad832d5bab77bc878a1c88d9ff"
+    },
+    {
+      "path": "apps/Masters-of-A-Level-Chemistry/src/assets/active-question-time.js",
+      "bytes": 6442,
+      "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-stats-core.js",
+      "bytes": 5975,
+      "sha256": "b0c008aec1db4040355169e022a1d8efd2caa2404d3af74968b1ea8e020c35b6"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-stats-progress.js",
+      "bytes": 795,
+      "sha256": "98a3620cf79084c7f20f6465b9f5baa103a7203a7924cf5834d6cf0a7353ebf3"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-stats.js",
+      "bytes": 13635,
+      "sha256": "82e27c33758d95f25a3cd5eb2c1a593e48b478633bedf1824fc7266d0013965c"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/igcse-mastery-config.js",
+      "bytes": 1334,
+      "sha256": "c30c5ac268befe55670352471328c1ff27acf6e38e47c29597a956acb76e2c31"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/landing/progress.js",
+      "bytes": 7007,
+      "sha256": "09a205d37691f50ec53787c02563d0ab0cf18357ba745f816fe290db8cac75ab"
+    },
+    {
+      "path": "apps/Masters-of-IGCSE-Chemistry/src/assets/active-question-time.js",
+      "bytes": 6442,
+      "sha256": "880de66cf058351c1a4ef35fb762aa2e93740974fdd56c941c1de2ff0d463fbb"
+    }
+  ],
+  "sharedImports": [
+    {
+      "path": "apps/Masters-of-Chemistry/src/domain/mastery/course-mastery.ts",
+      "bytes": 4669,
+      "sha256": "8e8b08b0fe7509527218d2674c58b71db2da3292d059555b888ce54ec566a789"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/domain/attempt/attempt.ts",
+      "bytes": 20308,
+      "sha256": "7cecdd1752bbc97dd0d5e29d83a722b3b6b0f260e7b2ff9942493ab645f1ee81"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/domain/timing/active-clock.ts",
+      "bytes": 3231,
+      "sha256": "d479ce02fd5f2fa009e3a808ee19bd54a98445e8bba64cda64939eeef635bf65"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/persistence/repository.ts",
+      "bytes": 15205,
+      "sha256": "1ed4048246084a5d47d5235fa2e402e85517f278c5c63b9ea976d1797bde9ac0"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/persistence/legacy.ts",
+      "bytes": 7909,
+      "sha256": "43b95d90b96c2cde24f9a3e02af0b8c2709bf52117848a217edbc8312311ea41"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/foundation/ActivityHost.tsx",
+      "bytes": 25784,
+      "sha256": "2fd0fa0c97d659e361b35accfe5baab355f226d5625d7a4cc31d30e3f24188bd"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/foundation/registry.ts",
+      "bytes": 1991,
+      "sha256": "b4e8da4fe12e74b2f5fc5f75740f16a39891d54f34c5a7f4fab23acf8b26f9bc"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/contracts/integration.ts",
+      "bytes": 1480,
+      "sha256": "26a0c2352039603df97fd9ef78124c3bf5cd7f824fdaa8762cbcfeafdbd4b708"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/contracts/session.ts",
+      "bytes": 4301,
+      "sha256": "5dcf32a7cd453e661878586f3893fa909c6f2f76c3557d9e7331327c38422d24"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/catalogue/definitions.ts",
+      "bytes": 63893,
+      "sha256": "06b4c3fb50888386c2ced3dc4a6a68b319bc370258481415dca57e51247adc4b"
+    }
+  ],
+  "owned": [
+    {
+      "path": "apps/Masters-of-Chemistry/src/statistics/index.ts",
+      "bytes": 61,
+      "sha256": "5cfbd978aa678f788e517e2d470c4e29dd6714290670d4bcfda59cc036b4adfd"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/statistics/model.ts",
+      "bytes": 6289,
+      "sha256": "794a636bc28fa014ad404a0137893fb7076da2ecf8935755e0e31a9738bd0ee9"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/statistics/statistics.css",
+      "bytes": 6423,
+      "sha256": "49c19930ac5a16d4968d5392a67ce4ae96bed9b08c997dc956cee73d1b1280ba"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/src/statistics/StatisticsView.tsx",
+      "bytes": 13436,
+      "sha256": "7e4fcccd39833b2864cfbe96a7d52c0a65fb4d56c03c3e2f9b41621cb9a4af8f"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/model.test.mjs",
+      "bytes": 5990,
+      "sha256": "e855c68a9cf704397fe37ec779cb286fb45489649d8507a4315b5ade30d50cb2"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/browser.mjs",
+      "bytes": 18856,
+      "sha256": "14ff80c1a81a67f167a145aa98caecd33101e5b95a9db5dd20b6f2d2bc9e245a"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/harness.html",
+      "bytes": 271,
+      "sha256": "422a8030151f5926d81fef16dbc7ad9b07a39240f0275bbb578078e1ee6fca59"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/harness.tsx",
+      "bytes": 780,
+      "sha256": "60e412fcd638fc21e021fbcaf4d8ecbfae3ce790b170592e2718199cadd46c06"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/HANDOVER.md",
+      "bytes": 10200,
+      "sha256": "25117f770a71274d16d2905016453b7118b483cc785a448beab38ea893c20d1f"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/verify.mjs",
+      "bytes": 3196,
+      "sha256": "a9b85b796834ec5bbe3e0dcba3f84cb85f2b7f333d9275343767cd5f6ca4286d"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/browser-results.json",
+      "bytes": 27989,
+      "sha256": "bb5ec3918e92f07d6a8340bbba7c117b506aed2251b8893646a3969b3712b270"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/reviewed-continuation.json",
+      "bytes": 537,
+      "sha256": "adaed38e95357182914faec6cc787fea273ea914bc84985de7b4727302d0d544"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/readiness-continuation.json",
+      "bytes": 471,
+      "sha256": "b593bbce49103fd591b63df7da6aeb3fa90454e15cafc5eb8f2adea020a55847"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/history-readiness-continuation.json",
+      "bytes": 522,
+      "sha256": "dec8434e37e610ffef58852635ebe846cc9a446c5c9241aaf9a261719856a709"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/accessible-label-fix.json",
+      "bytes": 320,
+      "sha256": "dc081c6e274704c6f0f393aabb024c7fec2631db7bc0ffb9a9efc2897442abe5"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/caption-selector-fix.json",
+      "bytes": 444,
+      "sha256": "293c632f0272983bc537418c45dfb5e841bbd72d009dca711bcec404f9e3a5f9"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/render-inspection.json",
+      "bytes": 1307,
+      "sha256": "f3e94e2733965cdd07326a33a2b443edb5d473389170bdcbeba6467828bcb08d"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/desktop-question-marks.png",
+      "bytes": 212812,
+      "sha256": "9b15386eff97ecd72c66496088fe97f1caaed257f8cae87c811536d702b2a05d"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/desktop-untimed-and-archive.png",
+      "bytes": 215487,
+      "sha256": "6d28471613ada62a249a97249230e2310e9d94f340e3c491b8f41268f2072cde"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/mobile-chart.png",
+      "bytes": 255428,
+      "sha256": "2ea392c66b1a82b99112dbdce12e92bad3e4d43e13a1ce7166739bb3647daf35"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/mobile-day-detail.png",
+      "bytes": 255048,
+      "sha256": "883bd594ab7ff39bae6a1fde4a7bcb889c2933b194b1646111e398c321b666b1"
+    },
+    {
+      "path": "apps/Masters-of-Chemistry/validation/s4/statistics/igcse-assisted-history.png",
+      "bytes": 176095,
+      "sha256": "70029f8053ce8c734f413a62070cc3b65982790b03fbcc802c3e6f9a8bc2723f"
+    }
+  ],
+  "checks": [
+    {
+      "name": "model",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "validation/s4/statistics/model.log"
+    },
+    {
+      "name": "typecheck",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "validation/s4/statistics/typecheck.log"
+    },
+    {
+      "name": "originals",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "validation/s4/statistics/originals.log"
+    }
+  ]
+}

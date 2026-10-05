@@ -1,0 +1,88 @@
+{
+  "agentId": "F08",
+  "jobId": "F2-SHARED",
+  "status": "PASS",
+  "startedAt": "2026-10-03T20:22:22.140Z",
+  "checks": [
+    {
+      "tag": "desktop-AB-0000GJ",
+      "family": "acid",
+      "states": [
+        "unanswered",
+        "partial",
+        "incorrect",
+        "correct",
+        "correction",
+        "model"
+      ],
+      "restore": true,
+      "firstScoreTimeFrozen": true,
+      "historyDedup": true,
+      "nextFresh": true,
+      "overflow": false
+    },
+    {
+      "tag": "tablet-AB-0000GJ",
+      "family": "acid",
+      "states": [
+        "unanswered",
+        "partial",
+        "incorrect",
+        "correct",
+        "correction",
+        "model"
+      ],
+      "restore": true,
+      "firstScoreTimeFrozen": true,
+      "historyDedup": true,
+      "nextFresh": true,
+      "overflow": false
+    },
+    {
+      "tag": "mobile-AB-0000GJ",
+      "family": "acid",
+      "states": [
+        "unanswered",
+        "partial",
+        "incorrect",
+        "correct",
+        "correction",
+        "model"
+      ],
+      "restore": true,
+      "firstScoreTimeFrozen": true,
+      "historyDedup": true,
+      "nextFresh": true,
+      "overflow": false
+    }
+  ],
+  "shots": [
+    "acid-desktop-AB-0000GJ-unanswered.png",
+    "acid-desktop-AB-0000GJ-partial.png",
+    "acid-desktop-AB-0000GJ-original-details.png",
+    "acid-desktop-AB-0000GJ-incorrect.png",
+    "acid-desktop-AB-0000GJ-correction.png",
+    "acid-desktop-AB-0000GJ-model.png",
+    "acid-desktop-AB-0000GJ-correct.png",
+    "acid-tablet-AB-0000GJ-unanswered.png",
+    "acid-tablet-AB-0000GJ-partial.png",
+    "acid-tablet-AB-0000GJ-original-details.png",
+    "acid-tablet-AB-0000GJ-incorrect.png",
+    "acid-tablet-AB-0000GJ-correction.png",
+    "acid-tablet-AB-0000GJ-model.png",
+    "acid-tablet-AB-0000GJ-correct.png",
+    "acid-mobile-AB-0000GJ-unanswered.png",
+    "acid-mobile-AB-0000GJ-partial.png",
+    "acid-mobile-AB-0000GJ-original-details.png",
+    "acid-mobile-AB-0000GJ-incorrect.png",
+    "acid-mobile-AB-0000GJ-correction.png",
+    "acid-mobile-AB-0000GJ-model.png",
+    "acid-mobile-AB-0000GJ-correct.png"
+  ],
+  "errors": [],
+  "limits": [
+    "Fresh synthetic app IndexedDB namespaces and nonpersistent contexts only.",
+    "Native OS suspend/minimize coverage retained by foreman; this browser suite checks reload and first timing."
+  ],
+  "finishedAt": "2026-10-03T20:23:00.058Z"
+}

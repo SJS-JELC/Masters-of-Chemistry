@@ -1,0 +1,130 @@
+{
+  "startedAt": "2026-10-03T10:05:48.689Z",
+  "method": "Pinned root Playwright1.62.1/headless Edge/fresh isolated contexts; original reference static server readonly on ephemeral port. Matching reference snapshots via isolated bridge stub; new harness mounts real React editor and source-style pane, no attempt engine. Shared host gates foreman-owned.",
+  "origins": {
+    "old": "http://127.0.0.1:64903",
+    "new": "http://127.0.0.1:5183"
+  },
+  "comparisons": [
+    {
+      "label": "alevel-desktop-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-desktop-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-tablet-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-tablet-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-mobile-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-mobile-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-below-breakpoint-h2o",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-below-breakpoint-mgo",
+      "course": "alevel",
+      "question": "mgo",
+      "viewport": {
+        "width": 1099,
+        "height": 900
+      },
+      "differences": []
+    },
+    {
+      "label": "alevel-charge-group-drag",
+      "course": "alevel",
+      "question": "h2o",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "differences": []
+    }
+  ],
+  "operations": [
+    {
+      "name": "charge palette local/whole-ion/group drag, circle toggle/history, keyboard and readonly",
+      "status": "PASS",
+      "chargeRouting": true,
+      "groupDrag": true,
+      "circlesHistory": true,
+      "focusedKeyboardDeleteMove": true,
+      "readonly": true,
+      "trustedCDPTouch": true
+    }
+  ],
+  "pageErrors": [],
+  "failures": [
+    {
+      "name": "matching-state source SVG/CSS geometry across both courses desktop/tablet/mobile/breakpoint",
+      "error": "page.evaluate: TypeError: Cannot read properties of null (reading 'querySelector')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:81)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\dot-cross\\browser.mjs:23:53)\n    at compare (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\dot-cross\\browser.mjs:25:134)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser.mjs:32:300\n    at async check (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\dot-cross\\browser.mjs:29:48)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser.mjs:31:2"
+    },
+    {
+      "name": "source/new element palette drag, snap, ghost, rollback, touch and semantic commits",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 400.00000457763673\n- 400\n     ^\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser.mjs:38:251\n    at async check (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser.mjs:29:48)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser.mjs:36:2"
+    },
+    {
+      "name": "electron repeated regions, existing-mark tap/cycle, relocation and palette symbol drag",
+      "error": "locator.boundingBox: Error: strict mode violation: locator('#canvas [data-electron]') resolved to 3 elements:\n    1) <g tabindex=\"0\" role=\"button\" class=\"electron\" data-electron=\"e3\" aria-label=\"cross electron, shared by a1 and a2\">…</g> aka getByRole('button', { name: 'cross electron, shared by a1' }).first()\n    2) <g tabindex=\"0\" role=\"button\" class=\"electron\" data-electron=\"e4\" aria-label=\"dot electron, shared by a1 and a2\">…</g> aka getByRole('button', { name: 'dot electron, shared by a1' })\n    3) <g tabindex=\"0\" role=\"button\" class=\"electron\" data-electron=\"e5\" aria-label=\"cross electron, shared by a1 and a2\">…</g> aka getByRole('button', { name: 'cross electron, shared by a1' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for locator('#canvas [data-electron]')\u001b[22m\n\n    at dragTo (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\dot-cross\\browser.mjs:28:88)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\dot-cross\\browser.mjs:49:663\n    at async check (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\editor-restoration\\implementation\\dot-cross\\browser.mjs:29:48)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/browser.mjs:47:2"
+    }
+  ],
+  "browserVersion": "154.0.4258.48",
+  "status": "FAIL",
+  "finishedAt": "2026-10-03T10:07:34.298Z"
+}

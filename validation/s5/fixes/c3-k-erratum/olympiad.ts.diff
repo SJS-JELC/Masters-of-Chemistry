@@ -1,0 +1,17 @@
+diff --git "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\olympiad.ts" "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\olympiad.ts"
+index 2e9aec0..a0ac063 100644
+--- "a/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\fixes\\c3-k-erratum\\before\\olympiad.ts"	
++++ "b/C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\src\\contracts\\olympiad.ts"	
+@@ -27,6 +27,12 @@ export interface C3L6Progress {
+   readonly unitChecks: Readonly<Partial<Record<C3BUnitId, ChallengeCheck>>>;
+   readonly slotChecks: Readonly<Partial<Record<C3CSlot, ChallengeCheck>>>;
+   readonly completed: Readonly<{ a: boolean; b: boolean; c: boolean }>;
++  /** Exact prior saved outcome retained separately from current chemical validation. */
++  readonly historicalOutcome?: Readonly<{
++    policyVersion: 'c3l6-source-bank-23';
++    reason: 'K-orthoacid-erratum';
++    raw: Omit<C3L6Progress, 'historicalOutcome'> & { readonly historicalOutcome?: never };
++  }>;
+   readonly gemId?: never;
+   readonly score?: never;
+   readonly mastery?: never;

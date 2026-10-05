@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-03T20:05:08.843Z",
+  "owner": "F07",
+  "issue": "Historical test selected the first descendant details, now the preserved molecule editor details rather than the direct C3 reference structures section.",
+  "scope": "Test-only locator refinement to direct reference section by its exact source summary. Existing one accepted K figure and explicitly rejected alternative assertions unchanged; no runtime source changes.",
+  "raw": [
+    "c3-reference-locator-failure-final-c3-k.json",
+    "c3-reference-locator-failure-c3-browser-final.log"
+  ]
+}

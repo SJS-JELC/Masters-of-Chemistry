@@ -1,0 +1,5 @@
+scripts/tests/explaining-properties.test.ts(72,11): error TS2375: Type '{ mode: "student"; namespace: { course: "alevel"; profileId: string; }; attemptId: string; target: { course: "alevel"; activityId: "alevel/explaining-properties"; gemId: string; level: 1 | 2; }; ... 4 more ...; timing: TimingCheckpoint | undefined; }' is not assignable to type 'StudentAttempt' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'timing' are incompatible.
+    Type 'TimingCheckpoint | undefined' is not assignable to type 'TimingCheckpoint'.
+      Type 'undefined' is not assignable to type 'TimingCheckpoint'.
+

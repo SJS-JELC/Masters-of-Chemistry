@@ -1,0 +1,26 @@
+﻿{
+    "runId":  "OLY2011-20261003",
+    "status":  "complete",
+    "contract":  "olympiad-2011-q4-contract.md",
+    "jobs":  [
+                 {
+                     "id":  "OLY2011-IMPLEMENT",
+                     "agent":  "W02",
+                     "status":  "accepted"
+                 },
+                 {
+                     "id":  "OLY2011-REVIEW",
+                     "agent":  "R01",
+                     "status":  "accepted"
+                 }
+             ],
+    "accepted":  true,
+    "approvedSpectrumSha256":  "07d75b648f1117fadaa701ecb875e68331f2dc4a8a451cea1f9591a257ea1d7d",
+    "recovery":  {
+                     "at":  "2026-10-03T19:30:47.0039523+01:00",
+                     "replaces":  "W01",
+                     "reason":  "Power cut: previous agent gone; saved implementation and validation retained"
+                 },
+    "acceptedAt":  "2026-10-03T20:04:53.3969273+01:00",
+    "acceptance":  "validation/olympiad-2011-q4/root-acceptance.json"
+}

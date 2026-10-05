@@ -1,0 +1,9 @@
+import type { CurriculumAdapter } from '../../../catalogue/registry.ts';
+export const bondEnthalpyAdapter: CurriculumAdapter = {
+  id: 'igcse/bond-enthalpy',
+  provider: () => import('./provider.ts').then((m) => m.bondProvider),
+  marking: () => import('./marking.ts').then((m) => m.bondMarking),
+  idleAllowance: () => 180000,
+  idleRationale:
+    'Original IGCSEQuestionTime: three minutes idle for bond inventories and calculations. Level 3 time stops at first numerical submission, before displayed-equation self-review.',
+};

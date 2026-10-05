@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "strict": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "validation/s0/contracts/**/*.ts",
+    "validation/s1/**/*.ts",
+    "validation/s2/**/*.ts",
+    "vite.config.ts",
+    "validation/s3/**/*.ts",
+    "validation/s4/**/*.ts",
+    "scripts/tests/**/*.ts"
+  ],
+  "exclude": [
+    "validation/s3/integration/complete-registration.test.ts",
+    "validation/s4/compatibility/compatibility.test.ts"
+  ]
+}

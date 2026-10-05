@@ -1,0 +1,38 @@
+/* Shared landing chrome: A Level width/toggle geometry, original IGCSE eagle. */
+.landing-course-stage{overflow-x:clip;min-height:100vh}
+.landing-course-surface{min-width:0}
+.original-landing .landing-shell.landing-shell{width:min(1880px,calc(100% - 48px));margin:auto;padding:28px 0 24px}
+.original-landing .landing-header.landing-header{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:16px;margin-bottom:32px}
+.original-landing .landing-header .landing-title{min-width:0}
+.original-landing .landing-header .eyebrow{margin:0 0 5px;color:#a9b3ca;font:700 .8rem/1.45 Comfortaa, sans-serif;letter-spacing:.065em}
+.original-landing .landing-header.landing-header h1{margin:0;font:700 clamp(1.2rem,2.4vw,1.65rem)/1.45 Comfortaa,sans-serif;color:#f2f4ff}
+.original-landing .landing-header h1 span{color:#81e6df}
+.original-landing .landing-header .landing-eagle{display:grid;width:52px;height:52px;min-height:52px;aspect-ratio:1;place-items:center;border:1px solid rgba(84,245,181,.45);border-radius:15px;background:rgba(84,245,181,.07);box-shadow:inset 0 0 24px rgba(84,245,181,.08),0 0 20px rgba(84,245,181,.08);padding:0}
+.original-landing .landing-header .landing-eagle img{width:31px;height:40px;object-fit:contain}
+.original-landing.igcse[data-learning-mode="teacher"] .landing-eagle{background:#fff;border-color:#fff}
+.original-landing .landing-header .landing-switches{display:grid;grid-template-columns:210px 270px;align-items:center;gap:18px;margin-left:0;width:auto}
+.original-landing .landing-header .subject-toggle{display:flex;align-items:center;justify-content:center;gap:10px;margin:0;min-height:48px;padding:4px;border:0;border-radius:30px;background:transparent;font:700 .875rem Comfortaa, sans-serif;color:#f2f4ff;white-space:nowrap}
+.original-landing .landing-header .toggle-track{flex:0 0 76px}
+.original-landing .landing-header .physical-label{color:#ffe29a}
+.original-landing .landing-header .organic-label{color:#a9b3ca}
+.original-landing .landing-header .subject-toggle[aria-checked="true"] .physical-label{color:#a9b3ca}
+.original-landing .landing-header .subject-toggle[aria-checked="true"] .organic-label{color:#d8d1ff}
+.original-landing .landing-header .site-tools{width:auto;margin:0;align-items:center;justify-content:center}
+.original-landing .landing-header .prototype-tag{margin:0}
+.original-landing .closing-line{margin:26px 0 0;text-align:center;color:#a9b3ca;font:700 .75rem/1.6 Comfortaa, sans-serif;opacity:.8}
+@media(max-width:1100px){
+  .original-landing .landing-header.landing-header{grid-template-columns:52px minmax(0,1fr);gap:12px;margin-bottom:24px}
+  .original-landing .landing-header .landing-switches{grid-column:1/-1;justify-content:center}
+}
+@media(max-width:760px){.original-landing .landing-shell.landing-shell{width:calc(100% - 32px)}}
+@media(max-width:560px){
+  .original-landing .landing-header .landing-switches{grid-template-columns:270px;gap:4px}
+  .original-landing .landing-header .subject-toggle{grid-column:auto;font-size:.75rem;gap:7px}
+  .original-landing .landing-header .site-tools{min-height:48px}
+  .original-landing .landing-header .eyebrow{font-size:.65rem}
+}
+@media(prefers-reduced-motion:reduce){.landing-course-surface{transform:none!important}}
+.original-landing .test-tile.recall-tile svg{color:#a8d9c5}
+.original-landing.test-selecting .recall-tile{display:none!important}
+/* Four A-level hub tiles stay together, including narrow phone screens. */
+@media(max-width:600px){.original-landing.alevel .test-tile-row{gap:10px}.original-landing.alevel:not(.test-selecting) .test-tile{width:calc((100% - 30px)/4);max-width:82px;min-width:0;font-size:.7rem}}

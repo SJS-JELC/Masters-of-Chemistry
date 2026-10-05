@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';
+const here=import.meta.dirname;
+let s=fs.readFileSync(path.join(here,'production-retry/production-timing.mjs'),'utf8').replaceAll("'../../../../../../../src/","'../../../../../../src/").replaceAll("'../../../../../../..'","'../../../../../..'");
+const begin=s.indexOf('const control='),end=s.indexOf('const answer=referenceState');s=s.slice(0,begin)+s.slice(end);
+s=s.replace("assert(await p.locator('.statistics-chart').isVisible());", "assert(await p.locator('.statistics-chart').isVisible());const expectedMs=first.firstResponse.timing.activeMs;assert.equal(await p.locator('[data-testid=statistics-time]').getAttribute('data-active-ms'),String(expectedMs));const bar=p.locator('.statistics-chart button[data-active-ms=\"'+expectedMs+'\"]');assert.equal(await bar.count(),1);await bar.scrollIntoViewIfNeeded();assert(await bar.locator('.statistics-bar').evaluate(e=>e.getBoundingClientRect().height>0));await bar.click();assert.equal(await bar.getAttribute('aria-pressed'),'true');assert.match(await p.locator('.statistics-day-detail').innerText(),/1 assessments/);");
+const a=s.indexOf('report.checks.push('),b=s.indexOf("console.log('PASS '+family)",a);s=s.slice(0,a)+"report.checks.push({family,id,firstTiming:first.firstResponse.timing,chartActiveMs:expectedMs,historyTiming:assessed.evidence[0].value.timing,barHasHeight:true,selectedDayTotal:await p.locator('.statistics-day-detail').innerText(),debugGlobalsAbsent:true});"+s.slice(b);
+s=s.replaceAll('production-timing-results.json','production-chart-results.json').replace("'production-'+family+'-statistics.png'","'production-'+family+'-statistics-chart.png'");
+fs.writeFileSync(path.join(here,'production-chart.mjs'),s);

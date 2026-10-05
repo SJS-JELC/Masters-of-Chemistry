@@ -1,0 +1,141 @@
+{
+  "agentId": "A06",
+  "jobId": "S4-REVIEW-FORMATTED-STARTUP",
+  "status": "PASS",
+  "confidence": 0.98,
+  "checkedAt": "2026-10-03T03:53:15.821Z",
+  "scope": "Approve ONE unchanged full-suite continuation on existing warm5195; behavioral PASS remains pending",
+  "diagnosis": "Cold Vite automatic dependency/transform startup exceeds this fixture 30000ms navigation budget. Equivalent fresh-cache server reproduces pending app modules and absent host; same source/matching Node temp on existing warm host succeeds.",
+  "cold": {
+    "port": 5200,
+    "navigationBudgetMs": 30000,
+    "htmlResponseMs": 9989,
+    "mountResponseMs": 22109,
+    "reactDomResponseMs": 39483,
+    "hostReady": false,
+    "renderer": {
+      "href": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-cold-private-1790999280392",
+      "readyState": "interactive",
+      "timeOrigin": 1790999281453,
+      "hostReady": false,
+      "attempt": null
+    },
+    "pendingRequests": [
+      {
+        "url": "http://127.0.0.1:5200/src/styles/platform.css",
+        "at": 1790999302501
+      },
+      {
+        "url": "http://127.0.0.1:5200/src/foundation/ActivityHost.tsx",
+        "at": 1790999319969
+      },
+      {
+        "url": "http://127.0.0.1:5200/src/ui/Content.tsx",
+        "at": 1790999319969
+      },
+      {
+        "url": "http://127.0.0.1:5200/src/ui/ResponseControl.tsx",
+        "at": 1790999319969
+      },
+      {
+        "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/registry.ts",
+        "at": 1790999319969
+      },
+      {
+        "url": "http://127.0.0.1:5200/development/authoring/families/dev-formatted-starter/family.ts",
+        "at": 1790999319969
+      }
+    ],
+    "console": [
+      {
+        "kind": "debug",
+        "text": "[vite] connecting...",
+        "at": 1790999319966
+      },
+      {
+        "kind": "debug",
+        "text": "[vite] connected.",
+        "at": 1790999320001
+      }
+    ]
+  },
+  "warm": {
+    "port": 5195,
+    "domReadyMs": 514,
+    "hostReadyMs": 580,
+    "renderer": {
+      "href": "http://127.0.0.1:5195/development/authoring/families/dev-formatted-starter/preview.html?run=a06-formatted-current-host-1790999332328",
+      "readyState": "complete",
+      "timeOrigin": 1790999332337.3,
+      "hostReady": true,
+      "historyLength": 0,
+      "attempt": null
+    },
+    "console": [
+      {
+        "kind": "debug",
+        "text": "[vite] connecting...",
+        "at": 1790999332739
+      },
+      {
+        "kind": "debug",
+        "text": "[vite] connected.",
+        "at": 1790999332766
+      },
+      {
+        "kind": "info",
+        "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+        "at": 1790999332836
+      },
+      {
+        "kind": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "at": 1790999332910
+      }
+    ],
+    "pendingRequests": 0
+  },
+  "sourceHashesStable": {
+    "development/authoring/serve.mjs": "62ec734f7709e70bf7354025bccf8f01f748d99a9c5e125ef4686a8d3c2c5c62",
+    "development/authoring/families/dev-formatted-starter/browser.mjs": "a245fee036bd70bc07d86678eb41b11ab6abc5432172e9bdb4a8c5b3630e79d9",
+    "development/authoring/families/dev-formatted-starter/family.ts": "5626682fd860f47601411a0d2ecdf4fda661ce1391ceff42b00d538b7497d4f6",
+    "development/authoring/families/dev-formatted-starter/mount.tsx": "94393c918cc84d84c017bc3d2428ae52f5cdff653ff4cc312d2f3b4b9d4dd5c8",
+    "development/authoring/families/dev-formatted-starter/Catalogue.tsx": "90b00984b96c5e9186143d6c15a7c05777ec31511e25c49b2abad60ea2bde13a",
+    "development/authoring/families/dev-formatted-starter/tsconfig.json": "c524f975148920a021ba931f1ab700af83f346ef7f4b936781e2c0664327b73c",
+    "development/authoring/families/dev-formatted-starter/generation-manifest.json": "0b834180141a9a07b5a5a633d81a39750a3f72d9b5711661c7cd4146a50aa8d1",
+    "src/foundation/ActivityHost.tsx": "cf4e42ef3a16268258117c0744f1271662e46bb565519cfff58f2788716d0fb5",
+    "src/development/catalogue/index.tsx": "fdc38bb431b98b4fff0982e0d9b037b4bc2b508535ce650e49f142069345124e"
+  },
+  "sourceHashCount": 9,
+  "originalLauncherSha256": "a245fee036bd70bc07d86678eb41b11ab6abc5432172e9bdb4a8c5b3630e79d9",
+  "generationManifestSha256": "0b834180141a9a07b5a5a633d81a39750a3f72d9b5711661c7cd4146a50aa8d1",
+  "manifestLauncherMatches": true,
+  "originalFailureSha256": "65363c2b6254ac48cb4106c0230b99f1722715b00abbf79935b88b4f5ae753bf",
+  "diagnosticSha256": "5e78098ba2e05065778776a4a8c6591b320f8ce472ee2c1d890c8097d276e4ee",
+  "unchangedAssertionTailSha256": "b11fcbc043af91e514603ac9c24b7d0cf3b9cab7d04903c44ff85ee0f9da100d",
+  "fixtureModification": null,
+  "assertionsUnchanged": true,
+  "exactContinuation": {
+    "command": "node development/authoring/families/dev-formatted-starter/browser.mjs",
+    "server": "existing 127.0.0.1:5195",
+    "constraints": [
+      "No regeneration",
+      "No server restart",
+      "No cache clear",
+      "No fixture/config/timeout/assertion change",
+      "One full suite only; retain substantive failures"
+    ]
+  },
+  "limits": [
+    "Original failed run lacks detailed request chronology; independent equivalent cold reproduction diagnoses its startup class, not every missing original event",
+    "Warm existing server and cold private server differ by port/cache state; actual source/config pattern/browser/context/Node temp mechanism match",
+    "Cold dev startup remains a documented environment limitation; no timeout inflation or source workaround is accepted here",
+    "Warm console contains one unclassified resource404, retained; no JavaScript page errors and actual host succeeds",
+    "No fixed/seeded/marking/timing/revision/reload behavior checked by A06; A20 unchanged full suite remains required",
+    "Private cold server5200 and own browsers closed; A01 existing5195 untouched"
+  ],
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModelEffort": null,
+  "usage": null
+}

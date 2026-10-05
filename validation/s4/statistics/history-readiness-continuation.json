@@ -1,0 +1,10 @@
+{
+  "authorizedBy": "A01",
+  "review": "validation/s4/review-browser-startup",
+  "before": "8feead1e96fe6f0b4c4b90ea6b5a81a084f744645e186f0dee36f36c9f56f4d1",
+  "after": "2aff47cf63dc2af3bcf6ea47470aed9876cc7465931074f052717bee18a70629",
+  "substantiveAssertionsTailUnchanged": true,
+  "tail": "335625aefcc286307fa0bdf8e3d291fd5617bfe4dd6e0ca62250de84b6717000",
+  "change": "Assessment helper awaits actual assessmentToEvidence expected ID/presence and saved state publication",
+  "checkedAt": "2026-10-03T02:48:20.390Z"
+}

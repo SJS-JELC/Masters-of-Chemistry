@@ -1,0 +1,51 @@
+warning: in the working copy of 'validation/s5/fixes/acid-format/before-provider.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/activities/alevel/acid-base-calculations/provider.ts', LF will be replaced by CRLF the next time Git touches it
+diff --git a/validation/s5/fixes/acid-format/before-provider.ts b/src/activities/alevel/acid-base-calculations/provider.ts
+index 2af99cb..55a8d28 100644
+--- a/validation/s5/fixes/acid-format/before-provider.ts
++++ b/src/activities/alevel/acid-base-calculations/provider.ts
+@@ -6,7 +6,7 @@ import type {
+   QuestionSelection,
+   Level,
+ } from '../../../contracts/index.ts';
+-import { acidEngine, type AcidQuestion } from './engine.js';
++import { acidEngine, type AcidQuestion, type AcidResponse } from './engine.js';
+ import { acidSources } from './sources.ts';
+ 
+ export const acidActivityId = 'alevel/acid-base-calculations' as const;
+@@ -41,6 +41,17 @@ function superscript(text: string): string {
+ function text(value: string): ContentBlock {
+   return { kind: 'text', text: acidNotation(value) };
+ }
++function roundingInstruction(response: AcidResponse): string {
++  const precision: Record<AcidResponse['format'], string> = {
++    dp2: 'to 2 decimal places',
++    dp3: 'to 3 decimal places',
++    sf3: 'to 3 significant figures',
++    sf4: 'to 4 significant figures',
++    integer: 'as a whole number',
++  };
++  const quantity = response.unit ? `${response.symbol} (${response.unit})` : response.symbol;
++  return `Give ${quantity} ${precision[response.format]}.`;
++}
+ export function acidRef(item: AcidQuestion): QuestionRef {
+   return {
+     activityId: acidActivityId,
+@@ -78,7 +89,7 @@ export function acidQuestion(item: AcidQuestion): Question {
+       text(item.intro),
+       ...rows,
+       text(
+-        'Give pH and pKₐ to 2 decimal places. Give other numerical answers to 3 significant figures unless exact. You can enter standard form as 1.23e-4.',
++        'Use the rounding instructions shown with each response. You can enter standard form as 1.23e-4.',
+       ),
+       ...(item.legacy
+         ? [
+@@ -96,6 +107,7 @@ export function acidQuestion(item: AcidQuestion): Question {
+       inputMode: 'text',
+       prompt: [
+         text(response.prompt),
++        text(roundingInstruction(response)),
+         { kind: 'formula', text: `${acidNotation(response.symbol)} =` },
+       ],
+       marks: 1,
+

@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "reviewer": "A22",
+  "at": "2026-10-03T05:05:19.222Z",
+  "foremanFreezeTreeSha256": "75a6c5c275efc120705e199e9527f8241721d41ab24d7a85284ec9f00aa07b88",
+  "freezeManifestSha256": "2d96e75f04650dd9ae7310d5455d240c70fb13591169ae54e534acedf45fd711",
+  "inputCount": 517,
+  "allCurrentInputsExact": true,
+  "inputRowsSha256": "75a6c5c275efc120705e199e9527f8241721d41ab24d7a85284ec9f00aa07b88",
+  "releases": [
+    {
+      "course": "alevel",
+      "manifestSha256": "f8e70c3ad97bff98d36675bb00bad2f1a84e71f9754dde741c8108363d51cb0f",
+      "initialJavascriptGzipBytes": 151520,
+      "runtimeFiles": 129,
+      "lazyJavascriptChunks": 59
+    },
+    {
+      "course": "igcse",
+      "manifestSha256": "72e673aeec902d71d94505b0a26ea816ab2ce683bc621cd1c92ab23f9e543f60",
+      "initialJavascriptGzipBytes": 151520,
+      "runtimeFiles": 129,
+      "lazyJavascriptChunks": 59
+    }
+  ],
+  "productionBrowser": {
+    "status": "PASS",
+    "checks": 24,
+    "errors": [],
+    "method": "Actual frozen production build, UI and native IndexedDB in fresh synthetic browser contexts; no DEV harness API or source/build mutation.",
+    "finishedAt": "2026-10-03T05:02:36.555Z",
+    "actualBrowser": "154.0.4258.48",
+    "playwright": "1.62.1"
+  },
+  "screenshots": [
+    {
+      "file": "final-teacher-AB-0000SN.png",
+      "sha256": "f7feeadc2dd7e26c1a9fb70649fb5693fc89d81f0a9fb51bb6c12916042b4aab",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-teacher-AB2-3-1-1.png",
+      "sha256": "f0f41eb3418eb41043ac6a0d50a7892e226d658019898d09e3de78358a4db637",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-teacher-ABL-00000V.png",
+      "sha256": "a10975b3513c1c12d37cc2bb329bc2edc72bb7d9a1d656608eaebaa21adf06c7",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-teacher-EB07.png",
+      "sha256": "b99941169281efd326a5cb615d1905a3d6d062ad96fdddb1013148b8a6afca76",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-teacher-EB08.png",
+      "sha256": "440e99f1aa0a4b4b5c67b2fc386f15c0abd9a420ff5d3607a162b2ba5e991d37",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-teacher-EB09.png",
+      "sha256": "c31f6abf4b966cd64770edaf520828a835b29ebb6fc98edd8280a8fc4985d6b0",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-pupil-acid-format.png",
+      "sha256": "54ed9268df9d77095a062be766e863ef121cd4b86089053a1e9ad00222979658",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-pupil-EB07.png",
+      "sha256": "3070de79b689821e5aaea0e4a88d4e7566f4678e8ca6abcb4a1d45980813dc36",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-pupil-EB08.png",
+      "sha256": "bd3924631d9d9214ec1eec2fdc8def380c7f9ab54a17e70fd7e53e29a449be10",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-pupil-EB09.png",
+      "sha256": "86af547d764e549dd70d8bb2d70008037049cc2ba2816a81631a339e27b77622",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Source quantities, units, rounding/qualified prompt, checked model and actual pupil accepted answers agree."
+    },
+    {
+      "file": "final-c3-K-accepted-and-erratum.png",
+      "sha256": "b9af67ddf97f10e9e4d5cbe7da0529a27624f41086d86f073899b0c3414601cf",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": true,
+      "chemicalObservations": "Correct aldehyde hydrate CH(OH)2–COOH and separately labelled excluded CHO–C(OH)3; new correct1, wrong0, retained history/current incomplete distinguished."
+    },
+    {
+      "file": "final-c3-historical-K-current-incorrect.png",
+      "sha256": "3eae3ac28924a70cff8717fa64e52d3d3021e2d0c511e8f5f68b0ce006b03992",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": false,
+      "chemicalObservations": "Correct aldehyde hydrate CH(OH)2–COOH and separately labelled excluded CHO–C(OH)3; new correct1, wrong0, retained history/current incomplete distinguished."
+    },
+    {
+      "file": "final-c3-wrong-K-marked-incorrect.png",
+      "sha256": "413f368bd9c3564ea5aae79b0fd3b366aa8930b40c868e12ed1319445050eab2",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": false,
+      "chemicalObservations": "Correct aldehyde hydrate CH(OH)2–COOH and separately labelled excluded CHO–C(OH)3; new correct1, wrong0, retained history/current incomplete distinguished."
+    },
+    {
+      "file": "final-c3-correct-K-marked-correct.png",
+      "sha256": "1b933d84ce885b9545c6860081da334ac7075e29a7274e2f810e596ccc1d1ca1",
+      "actuallyInspected": true,
+      "identicalToActuallyInspectedFirstPass": false,
+      "chemicalObservations": "Correct aldehyde hydrate CH(OH)2–COOH and separately labelled excluded CHO–C(OH)3; new correct1, wrong0, retained history/current incomplete distinguished."
+    }
+  ],
+  "manualInspectionMethod": "All fourteen final screenshot bytes actually inspected: eleven exactly equal the already inspected first-pass screenshots, three changed/new C3 screenshots inspected after retry. Earlier raw23 answer previews and all157 review diagrams separately actually inspected; current22 geometry unchanged and final K reference/marking inspected in frozen production build.",
+  "retry": {
+    "count": 1,
+    "reason": "Harness waited for transient Saved challenge restored text after navigation had cleared status; obsolete status wait removed, substantive restoration/raw-history/drawing/current-check/save assertions retained. No source edit or timeout inflation.",
+    "retained": "final-production-browser-first-wait-failure.json/.log/.png and final-production-browser.first-wait.retained.mjs"
+  },
+  "resourceCleanup": "Browser/context and own port5202 server closed in awaited finally before successful process completion."
+}

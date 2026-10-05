@@ -1,0 +1,75 @@
+{
+  "startedAt": "2026-10-03T04:10:01.340Z",
+  "browser": "154.0.4258.48",
+  "checks": [
+    {
+      "id": "igcse-self-rubric-freeze-evidence-immutable",
+      "status": "PASS",
+      "attemptId": "20cb06c5-dd05-4bbd-8e3e-1a33bc3dbe2c",
+      "kind": "self-rubric",
+      "marks": {
+        "points": [
+          {
+            "partId": "explanation",
+            "pointId": "point-1",
+            "earned": 1,
+            "available": 1,
+            "message": "Diamond has covalent bonding and a giant lattice structure."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-2",
+            "earned": 0,
+            "available": 1,
+            "message": "Many strong covalent bonds between carbon atoms must be broken to melt diamond."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-3",
+            "earned": 0,
+            "available": 1,
+            "message": "Sodium chloride has ionic bonding and a giant lattice structure."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-4",
+            "earned": 0,
+            "available": 1,
+            "message": "Strong electrostatic attractions act between oppositely charged ions; accept between sodium ions, Na⁺, and chloride ions, Cl⁻."
+          },
+          {
+            "partId": "explanation",
+            "pointId": "point-5",
+            "earned": 0,
+            "available": 1,
+            "message": "Large amounts of energy are required to overcome the strong bonding or attractions in both structures."
+          }
+        ],
+        "earned": 1,
+        "available": 5
+      },
+      "activeMs": 1261,
+      "judgementTimeExcluded": true
+    }
+  ],
+  "failures": [
+    {
+      "id": "actual-source-repository-faults-version-isolation",
+      "status": "FAIL",
+      "error": "page.evaluate: SyntaxError: Unexpected token ','\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:13:84\n    at run (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:5:77)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:13:8"
+    },
+    {
+      "id": "alevel-first-scores-corrections-pause-stats-ui",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Saved on this device', { exact: true }) to be visible\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:32:60\n    at async run (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:5:71)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/behaviour/deep-browser.mjs:27:41"
+    },
+    {
+      "id": "igcse-first-scores-corrections-pause-stats-ui",
+      "status": "FAIL",
+      "error": "page.evaluate: TypeError: Failed to resolve module specifier \"react/jsx-runtime\". Relative references must start with either \"/\", \"./\", or \"../\".\n    at getQuestion (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:9:43)\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:29:87\n    at async run (C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\s5\\behaviour\\deep-browser.mjs:5:71)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/s5/behaviour/deep-browser.mjs:27:41"
+    }
+  ],
+  "pageErrors": [],
+  "finishedAt": "2026-10-03T04:10:38.317Z",
+  "status": "FAIL"
+}

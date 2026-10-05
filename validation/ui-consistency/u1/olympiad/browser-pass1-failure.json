@@ -1,0 +1,128 @@
+{
+  "startedAt": "2026-10-03T22:12:50.774Z",
+  "run": "ui-u04-1791065570774",
+  "databaseName": "masters-of-chemistry-alpha-v2-alevel-ui-u04-1791065570774",
+  "browser": "Pinned workspace Playwright / installed Edge headless",
+  "checks": [
+    {
+      "name": "exactly-two-registered-gems-accessible-dim-unstarted",
+      "status": "PASS",
+      "at": "2026-10-03T22:12:52.694Z"
+    },
+    {
+      "name": "both-partial-states-policy-seeded-return-reload",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "name": "map-unstarted",
+      "width": 350,
+      "scrollWidth": 350,
+      "frame": null,
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "fonts": [
+        {
+          "selector": "H1",
+          "text": "Masters of A Level Chemistry",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "C3L6 organic reactions",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "UK Olympiad 2011 · Seven isomers",
+          "font": "Comfortaa, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "map-unstarted",
+      "width": 390,
+      "scrollWidth": 390,
+      "frame": null,
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "fonts": [
+        {
+          "selector": "H1",
+          "text": "Masters of A Level Chemistry",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "C3L6 organic reactions",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "UK Olympiad 2011 · Seven isomers",
+          "font": "Comfortaa, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "map-unstarted",
+      "width": 820,
+      "scrollWidth": 820,
+      "frame": null,
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "fonts": [
+        {
+          "selector": "H1",
+          "text": "Masters of A Level Chemistry",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "C3L6 organic reactions",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "UK Olympiad 2011 · Seven isomers",
+          "font": "Comfortaa, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "map-unstarted",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "frame": null,
+      "bodyBackground": "radial-gradient(circle at 78% 12%, rgba(105, 75, 255, 0.22), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 10% 80%, rgba(19, 205, 184, 0.12), rgba(0, 0, 0, 0) 448px), none",
+      "fonts": [
+        {
+          "selector": "H1",
+          "text": "Masters of A Level Chemistry",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "C3L6 organic reactions",
+          "font": "Comfortaa, sans-serif"
+        },
+        {
+          "selector": "STRONG",
+          "text": "UK Olympiad 2011 · Seven isomers",
+          "font": "Comfortaa, sans-serif"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "map-unstarted-350.png",
+    "map-unstarted-390.png",
+    "map-unstarted-820.png",
+    "map-unstarted-1440.png",
+    "map-partial-1440.png",
+    "map-complete-1440.png",
+    "failure.png"
+  ],
+  "errors": [],
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'unstarted'\n- 'complete'\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/ui-consistency/u1/olympiad/browser.mjs:38:152",
+  "finishedAt": "2026-10-03T22:12:57.794Z"
+}

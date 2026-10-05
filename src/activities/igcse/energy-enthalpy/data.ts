@@ -1,4 +1,4 @@
-// Complete unchanged source bank. Regenerate: node validation/s3/energy/extract.mjs
+// Complete unchanged source bank. Regenerate: node scripts/source-generation/energy/extract.mjs
 export const data = {
   "strands": [
     {

@@ -1,4 +1,4 @@
-/* Pure chemical engine extracted unchanged from checked source. See validation/s2/dot-cross/source-fingerprints.json. */
+/* Pure chemical engine extracted unchanged from checked source. See .artifacts/source-generation/dot-cross/source-fingerprints.json. */
 
 
   var SYMBOLS = ['dot', 'cross', 'triangle'];

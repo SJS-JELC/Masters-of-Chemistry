@@ -1,9 +1,0 @@
-{
-  "status": "PASS",
-  "scope": "Only the pre-existing F01 optional numeric-working validation hunk is part of component F2. Foreign OLY imports/validator are excluded from this review patch and preserved in the actual current file, which F07 did not edit.",
-  "currentFileSha256": "b50edca56ea56f1a93089b4fa37dda6dbefc48b1236efdc20d9018d9a753a36c",
-  "componentNumericCaseSha256": "18f00296ffa30abe8cb45417f58e350b76c999c7a5059af32e0a6d12d1c56c0d",
-  "beforeFileSha256": "0f3338e5e82262dc19b9ebc4669e56175f3028415e362ad6e153192ecf33e57a",
-  "comparisonArtifact": "validation-component-only.ts",
-  "notRuntimeSource": true
-}

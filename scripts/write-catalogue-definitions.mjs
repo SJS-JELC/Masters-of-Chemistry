@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const manifest=JSON.parse(fs.readFileSync(path.join(project,'validation/s0/inventory/coverage-manifest.json'),'utf8'));
+const manifest=JSON.parse(fs.readFileSync(path.join(project,'resources/source-generation/inventory/coverage-manifest.json'),'utf8'));
 const titles={
  'alevel/acid-base-calculations':'Acid–base calculations','alevel/electrons-bonding':'Electrons and bonding','alevel/electron-configurations':'Electron configurations','alevel/dot-and-cross':'Dot-and-cross diagrams','alevel/ph-titration-curves':'pH titration curves','alevel/c3l6-organic-reactions':'A Class of their Own',
  'igcse/calorimetry':'Calorimetry','igcse/bond-enthalpy':'Bond enthalpy','igcse/structure-and-bonding':'Structure and bonding','igcse/dot-and-cross':'Dot-and-cross diagrams','igcse/energy-enthalpy':'Energy and enthalpy','igcse/energetics-practical':'Energetics practical'

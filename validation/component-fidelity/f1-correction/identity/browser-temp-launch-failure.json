@@ -1,9 +1,0 @@
-{
-  "status": "FAIL",
-  "scope": "initial dev-s5-independent browser launch",
-  "reason": "ENAMETOOLONG: Windows temporary profile path exceeded limit before Chromium launch",
-  "attemptedPath": "validation/component-fidelity/f1-correction/identity/authoring/dev-s5-independent/browser-temp/playwright_chromiumdev_profile-XXXXXX",
-  "fix": "Short app-owned validation/component-fidelity/f1-correction/identity/.bt directory",
-  "finalReport": "authoring/dev-s5-independent/browser-results.json",
-  "record": "Actual tool error retained here; original wall-clock measurement not exposed"
-}

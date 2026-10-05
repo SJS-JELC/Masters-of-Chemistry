@@ -1,5 +1,0 @@
-import type {C3L6Dependencies} from '../../../contracts/olympiad.ts';
-export const c3Dependencies:C3L6Dependencies={
- bUnits:[{id:'b-i',slots:['A','B']},{id:'b-ii',slots:['C']},{id:'b-iii',slots:['D','E','F']},{id:'b-iv-1',slots:['G']},{id:'b-iv-2',slots:['H','J']},{id:'b-iv-3',slots:['K']},{id:'b-iv-4',slots:['L','M']}],
- interchangeable:[['E','F']],unlocks:[{stage:'b',requires:'a-correct'},{stage:'c',requires:'all-b-units-correct'}]
-};

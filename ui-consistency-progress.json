@@ -1,4 +1,5 @@
 {
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
   "runId": "UI-CONSISTENCY-20261003",
   "status": "complete",
   "currentStage": "complete",
@@ -9,15 +10,15 @@
   "rootAcceptance": {
     "status": "ACCEPTED",
     "at": "2026-10-03T23:16:39.707Z",
-    "path": "validation/ui-consistency/u2/root-acceptance.json"
+    "path": "retired historical path: validation/ui-consistency/u2/root-acceptance.json"
   },
-  "evidenceRoot": "validation/ui-consistency",
+  "evidenceRoot": "retired historical path: validation/ui-consistency",
   "jobs": [
     {
       "agentId": "U02",
       "jobId": "UI-CONTROLS-U1",
       "status": "FOREMAN_VALIDATED",
-      "manifest": "validation/ui-consistency/u1/controls/completion.json",
+      "manifest": "retired historical path: validation/ui-consistency/u1/controls/completion.json",
       "requestedModel": "gpt-6.1-sol",
       "requestedEffort": "high",
       "effectiveSettings": "unknown",
@@ -27,7 +28,7 @@
       "agentId": "U03",
       "jobId": "UI-THEME-U1",
       "status": "FOREMAN_VALIDATED",
-      "manifest": "validation/ui-consistency/u1/theme/completion.json",
+      "manifest": "retired historical path: validation/ui-consistency/u1/theme/completion.json",
       "requestedModel": "gpt-6.1-sol",
       "requestedEffort": "high",
       "effectiveSettings": "unknown",
@@ -37,7 +38,7 @@
       "agentId": "U04",
       "jobId": "UI-OLYMPIAD-U1",
       "status": "FOREMAN_VALIDATED",
-      "manifest": "validation/ui-consistency/u1/olympiad/completion.json",
+      "manifest": "retired historical path: validation/ui-consistency/u1/olympiad/completion.json",
       "requestedModel": "gpt-6.1-sol",
       "requestedEffort": "high",
       "effectiveSettings": "unknown",
@@ -47,30 +48,30 @@
       "agentId": "U05",
       "jobId": "UI-INDEPENDENT-U2",
       "status": "FOREMAN_VALIDATED",
-      "manifest": "validation/ui-consistency/u2/independent/completion.json",
+      "manifest": "retired historical path: validation/ui-consistency/u2/independent/completion.json",
       "requestedModel": "gpt-6.1-sol",
       "requestedEffort": "high",
       "effectiveSettings": "unknown",
       "usage": "not exposed"
     }
   ],
-  "evidence": "validation/ui-consistency/u2/foreman/foreman-report.json",
+  "evidence": "retired historical path: validation/ui-consistency/u2/foreman/foreman-report.json",
   "currentInputTree": "3a24f663f5a723272f58ec02e323ae11db8a6ce9eb21b7e268ca1fa75b201b8f",
   "unresolved": [],
   "updatedAt": "2026-10-03T23:16:39.707Z",
-  "u1RootGate": "validation/ui-consistency/u1-footer-fix/root-gate.json",
+  "u1RootGate": "retired historical path: validation/ui-consistency/u1-footer-fix/root-gate.json",
   "nextAction": "Complete; no publication.",
   "footerFix": {
     "jobId": "UI-FOOTER-FIX",
     "status": "ROOT_ACCEPTED_FOR_INDEPENDENT_REVIEW",
-    "evidence": "validation/ui-consistency/u1-footer-fix/report.json"
+    "evidence": "retired historical path: validation/ui-consistency/u1-footer-fix/report.json"
   },
   "rootDispositionsRequired": [],
   "boundaries": [
     {
       "id": "UNCOMMITTED-CLEAR-RELOAD",
       "disposition": "Accepted persistence boundary, not a blocker for this UI scope. A forced navigation before the asynchronous save commits can restore the previously saved draft. Both production prefixes pass committed reload; frozen first assessment and timing remain intact. No claim of durability for uncommitted writes.",
-      "evidence": "validation/ui-consistency/u2/independent/revision-and-prefix-immediate-reload-probe.json"
+      "evidence": "retired historical path: validation/ui-consistency/u2/independent/revision-and-prefix-immediate-reload-probe.json"
     }
   ]
 }

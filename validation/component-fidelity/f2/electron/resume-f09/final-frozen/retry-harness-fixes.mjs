@@ -1,4 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';
-const here=import.meta.dirname;
-const production=path.join(here,'production-retry/production-timing.mjs');fs.copyFileSync(production,production+'.before-temp-fix.txt');let s=fs.readFileSync(production,'utf8');s=s.replaceAll("path.join(here,'.prod-temp')","path.join(project,'.f09-production-tmp')");fs.writeFileSync(production,s);
-let r=fs.readFileSync(path.join(here,'revision-diagnostic.mjs'),'utf8').replaceAll('snapshot:await snap(p)','body:await p.locator(\'body\').innerText()').replaceAll('revision-home-diagnostic.json','revision-home-diagnostic-v2.json').replaceAll('revision-reload-diagnostic.json','revision-reload-diagnostic-v2.json').replaceAll('revision-results.json','revision-results-v2.json');fs.writeFileSync(path.join(here,'revision-diagnostic-v2.mjs'),r);

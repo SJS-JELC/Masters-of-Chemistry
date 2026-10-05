@@ -7,7 +7,7 @@ import { routeView, routeCourse } from '../src/shell/navigation-view.ts';
 
 const project = path.resolve(import.meta.dirname, '..');
 const { chromium } = createRequire(path.resolve(project, '../../package.json'))('playwright');
-const output = path.join(project, 'validation/recall-hub');
+const output = path.join(project, '.artifacts/recall-hub');
 fs.mkdirSync(output, { recursive: true });
 const base = process.env.RECALL_PREVIEW || 'http://127.0.0.1:5182';
 const browser = await chromium.launch({ channel: 'msedge', headless: true });

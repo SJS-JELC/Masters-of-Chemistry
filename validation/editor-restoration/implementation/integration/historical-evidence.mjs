@@ -1,7 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
-const project=path.resolve(import.meta.dirname,'../../../..'),file=path.join(import.meta.dirname,'historical-evidence-fingerprints.json');
-const hash=path=>crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex');
-function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
-const files=['s0','s1','s2','s3','s4','s5','landing-restoration'].flatMap(stage=>walk(path.join(project,'validation',stage))).sort().map(file=>({path:path.relative(project,file).replaceAll('\\','/'),bytes:fs.statSync(file).size,sha256:hash(file)}));
-if(process.argv.includes('--capture')){assert(!fs.existsSync(file),'Historical evidence capture already exists');fs.writeFileSync(file,JSON.stringify({capturedAt:new Date().toISOString(),scope:'Historical S0-S5 and accepted landing evidence, including retained source/tests/screenshots/raw failures; E1 is separate.',files},null,2)+'\n');console.log(JSON.stringify({status:'CAPTURED',files:files.length}));}
-else{const baseline=JSON.parse(fs.readFileSync(file,'utf8'));assert.deepEqual(files,baseline.files,'Historical evidence changed');const result={status:'PASS',checkedAt:new Date().toISOString(),files:files.length};fs.writeFileSync(path.join(import.meta.dirname,'historical-evidence-check.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}

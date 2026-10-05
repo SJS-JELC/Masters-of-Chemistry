@@ -490,7 +490,7 @@ export function FoundationApp({ course }: { readonly course: Course }) {
       },
       history: loadHistory,
       persistenceScenarios: async () => {
-        const module = await import('../../validation/s1/persistence/browser-scenarios.ts');
+        const module = await import('../../scripts/browser/shared/persistence/browser-scenarios.ts');
         return module.runPersistenceScenarios();
       },
       respond: async (partId, response) => {

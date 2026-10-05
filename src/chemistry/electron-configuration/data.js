@@ -1,4 +1,4 @@
-// Exact extracted source data. Regenerate: node validation/s3/electrons/extract-sources.mjs
+// Exact extracted source data. Regenerate: node scripts/source-generation/electrons/extract-sources.mjs
 export const data = {
   "version": "electron-configurations-v1",
   "subshells": [

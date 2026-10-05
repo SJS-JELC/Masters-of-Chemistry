@@ -14,7 +14,7 @@ Thumbs.db
 __pycache__/
 *.py[cod]
 
-# Temporary browser profiles and dependency caches (retain validation evidence)
+# Temporary browser profiles and dependency caches
 /.npm-cache-*/
 /.*-tmp/
 /.*-temp/
@@ -26,5 +26,6 @@ browser-temp/
 .bt/
 playwright_*_profile-*/
 vite-cache/
-/validation/s4/review-browser-startup/cache-fixed/
-/validation/explaining-properties/independent-review/ebp-review-*/
+node-compile-cache/
+# Generated check reports, screenshots, browser profiles and migration scratch files.
+/.artifacts/

@@ -1,4 +1,0 @@
-﻿import fs from 'node:fs';import path from 'node:path';import {createRequire} from 'node:module';
-const project=path.resolve(import.meta.dirname,'../../..'),require=createRequire(path.resolve(project,'../../package.json'));process.env.TEMP=process.env.TMP=path.join(project,'.component-fidelity-tmp');
-const browser=await require('playwright').chromium.launch({channel:'msedge',headless:true});const context=await browser.newContext({viewport:{width:1440,height:1000}});const page=await context.newPage();
-await page.goto('http://127.0.0.1:5197/alevel/index.html');await page.locator('#statsTile svg').waitFor();await page.evaluate(()=>document.fonts.ready);await page.locator('#statsTile').screenshot({path:path.join(import.meta.dirname,'stats-original-alevel.png')});await context.close();await browser.close();

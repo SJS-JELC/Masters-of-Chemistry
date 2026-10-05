@@ -1,5 +1,7 @@
 # S5 independent verification proposal
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Awaiting root S4 acceptance. No S5 work has been dispatched. Use three fresh GPT-6.1 Sol High workers, narrow contexts, no child delegation; foreman owns integration, fixes and deterministic checks. Authors remain available for bounded corrections, not independent acceptance of their own work.
 
 ## S5-BEHAVIOUR

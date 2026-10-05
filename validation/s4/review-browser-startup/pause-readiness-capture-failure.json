@@ -1,8 +1,0 @@
-{
-  "status": "FAIL",
-  "stage": "exact pre-edit needle guard",
-  "expectedOccurrences": 1,
-  "actualOccurrences": 0,
-  "reason": "Worker had applied proposed readiness condition by capture time; preserve current copy and use earlier immutable approved launcher baseline",
-  "effect": "No browser or source actions"
-}

@@ -1,8 +1,0 @@
-import type {CurriculumAdapter} from '../../../catalogue/registry.ts';
-export const dotCrossAdapter:CurriculumAdapter={
- id:'alevel/dot-and-cross',
- provider:async()=>(await import('./provider.ts')).dotCrossProvider,
- marking:async()=>(await import('./marking.ts')).dotCrossMarking,
- idleAllowance:question=>question.ref.level===3?300000:180000,
- idleRationale:'Original A Level allowance: three minutes for routine spatial diagrams at levels 1/2; five minutes for advanced level 3 inventories and coordinate or expanded-shell species.'
-};

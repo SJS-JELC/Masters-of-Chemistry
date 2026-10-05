@@ -3,7 +3,7 @@ import {proofRef,proofProvider,proofQuestion,proofMarking,dilutionValues,activit
 import {proofRegistry} from './registry.ts';
 import {authoringSources} from './provenance.ts';
 import {topicTargets} from '../../../../src/domain/session/index.ts';
-const evidence=path.resolve(import.meta.dirname,'../../../../validation/component-fidelity/f1-correction/identity/authoring',path.basename(import.meta.dirname));fs.mkdirSync(evidence,{recursive:true});
+const evidence=path.resolve(import.meta.dirname,'../../../../.artifacts/authoring',path.basename(import.meta.dirname));fs.mkdirSync(evidence,{recursive:true});
 const repo=path.resolve(import.meta.dirname,'../../../../../..');
 test('every independent finite configuration conserves moles and yields correct logarithm; identity stable',()=>{
  const rows=[];

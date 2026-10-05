@@ -1,0 +1,20 @@
+{
+  "reason": "User-authorised deletion of historical validation reports on 2026-10-05; these tools aggregated or froze those reports rather than regenerating source or testing current behavior.",
+  "files": [
+    "scripts/write-s0-report.mjs",
+    "scripts/write-s1-report.mjs",
+    "scripts/write-s2-report.mjs",
+    "scripts/write-s3-report.mjs",
+    "scripts/write-s4-report.mjs",
+    "scripts/write-s4-refinement-report.mjs",
+    "scripts/write-s5-report.mjs",
+    "scripts/update-s5-progress.mjs",
+    "scripts/write-landing-aggregate.mjs",
+    "scripts/verify-landing-freeze.mjs"
+  ],
+  "notRecreated": [
+    "historical independent review evidence",
+    "historical acceptance fingerprints"
+  ],
+  "restoredExecutableTool": "scripts/write-s0-scope.mjs is a scope assertion, not a report writer; it remains executable with the migrated inventory input."
+}

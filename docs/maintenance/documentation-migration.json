@@ -1,0 +1,1607 @@
+{
+  "job_id": "DOC-CLEANUP",
+  "agent_id": "A05",
+  "status": "PASS",
+  "startedAt": "2026-10-05T18:36:57.310Z",
+  "scope": {
+    "excluded": [
+      "AGENTS.md",
+      "IMPLEMENTATION.md",
+      "*contract*",
+      "docs/maintenance/* except this manifest",
+      "src/**",
+      "scripts/**",
+      "validation/**",
+      "siblings"
+    ]
+  },
+  "progressChanges": [
+    {
+      "file": "component-fidelity-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "rootAcceptance.F1",
+          "formerPath": "validation/component-fidelity/f1-correction/root-acceptance.json"
+        },
+        {
+          "field": "rootAcceptance.F2",
+          "formerPath": "validation/component-fidelity/f2/resume/root-acceptance.json"
+        },
+        {
+          "field": "rootAcceptance.F3",
+          "formerPath": "validation/component-fidelity/f3/root-acceptance.json"
+        },
+        {
+          "field": "evidenceRoot",
+          "formerPath": "validation/component-fidelity"
+        },
+        {
+          "field": "jobs.0.manifest",
+          "formerPath": "validation/component-fidelity/f1/identity/completion.json"
+        },
+        {
+          "field": "jobs.1.manifest",
+          "formerPath": "validation/component-fidelity/f1/ui-pilot/completion.json"
+        },
+        {
+          "field": "jobs.2.manifest",
+          "formerPath": "validation/component-fidelity/f1-correction/identity/completion.json"
+        },
+        {
+          "field": "jobs.3.manifest",
+          "formerPath": "validation/component-fidelity/f2/shared/resume-f08/completion.json"
+        },
+        {
+          "field": "jobs.3.evidence",
+          "formerPath": "validation/component-fidelity/f2/shared/resume-f08"
+        },
+        {
+          "field": "jobs.3.validation",
+          "formerPath": "validation/component-fidelity/f2/resume/shared-validation.json"
+        },
+        {
+          "field": "jobs.4.manifest",
+          "formerPath": "validation/component-fidelity/f2/electron/resume-f09/completion.json"
+        },
+        {
+          "field": "jobs.4.evidence",
+          "formerPath": "validation/component-fidelity/f2/electron/resume-f09"
+        },
+        {
+          "field": "jobs.4.validation",
+          "formerPath": "validation/component-fidelity/f2/resume/specialist-validation.json"
+        },
+        {
+          "field": "jobs.5.manifest",
+          "formerPath": "validation/component-fidelity/f2/energy/resume-f10/completion.json"
+        },
+        {
+          "field": "jobs.5.evidence",
+          "formerPath": "validation/component-fidelity/f2/energy/resume-f10"
+        },
+        {
+          "field": "jobs.5.validation",
+          "formerPath": "validation/component-fidelity/f2/resume/specialist-validation.json"
+        },
+        {
+          "field": "jobs.6.manifest",
+          "formerPath": "validation/component-fidelity/f2/titration/resume-f11/completion.json"
+        },
+        {
+          "field": "jobs.6.evidence",
+          "formerPath": "validation/component-fidelity/f2/titration/resume-f11"
+        },
+        {
+          "field": "jobs.6.validation",
+          "formerPath": "validation/component-fidelity/f2/resume/specialist-validation.json"
+        },
+        {
+          "field": "jobs.7.evidence",
+          "formerPath": "validation/component-fidelity/f3/shared-final"
+        },
+        {
+          "field": "jobs.7.manifest",
+          "formerPath": "validation/component-fidelity/f3/shared-final/completion.json"
+        },
+        {
+          "field": "jobs.7.validation",
+          "formerPath": "validation/component-fidelity/f3/foreman/author-validation.json"
+        },
+        {
+          "field": "jobs.8.ownership.0",
+          "formerPath": "validation/component-fidelity/f3/independent"
+        },
+        {
+          "field": "jobs.8.evidence",
+          "formerPath": "validation/component-fidelity/f3/independent"
+        },
+        {
+          "field": "jobs.8.manifest",
+          "formerPath": "validation/component-fidelity/f3/independent/completion.json"
+        },
+        {
+          "field": "jobs.8.validation",
+          "formerPath": "validation/component-fidelity/f3/foreman/independent-validation.json"
+        },
+        {
+          "field": "evidence.0",
+          "formerPath": "validation/component-fidelity/f1/foreman-report.json"
+        },
+        {
+          "field": "evidence.1",
+          "formerPath": "validation/component-fidelity/f1-correction/foreman-report.json"
+        },
+        {
+          "field": "evidence.2",
+          "formerPath": "validation/component-fidelity/f2/resume/foreman-report.json"
+        },
+        {
+          "field": "evidence.3",
+          "formerPath": "validation/component-fidelity/f3/foreman/foreman-report.json"
+        },
+        {
+          "field": "resolved.0.evidence",
+          "formerPath": "validation/component-fidelity/f1-correction/identity/future-stability-results.json"
+        },
+        {
+          "field": "resolved.1.evidence",
+          "formerPath": "validation/component-fidelity/f1-correction/identity/development-browser-results.json"
+        },
+        {
+          "field": "resolved.2.evidence",
+          "formerPath": "validation/component-fidelity/f1-correction/teacher-copy/review.json"
+        },
+        {
+          "field": "resume.evidence",
+          "formerPath": "validation/component-fidelity/f2/resume"
+        }
+      ]
+    },
+    {
+      "file": "editor-restoration-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "stages.E1.foremanReport",
+          "formerPath": "validation/editor-restoration/implementation/foreman-report.json"
+        },
+        {
+          "field": "stages.E1.jobs.0.manifest",
+          "formerPath": "validation/editor-restoration/implementation/dot-cross/completion.json"
+        },
+        {
+          "field": "stages.E1.jobs.1.manifest",
+          "formerPath": "validation/editor-restoration/implementation/molecule/completion.json"
+        },
+        {
+          "field": "stages.E1.exceptionReview.manifest",
+          "formerPath": "validation/editor-restoration/implementation/integration/exception-review/completion.json"
+        },
+        {
+          "field": "stages.E1.exceptionReview.disposition",
+          "formerPath": "validation/editor-restoration/implementation/integration/exception-review/disposition.json"
+        },
+        {
+          "field": "stages.E0.foremanReport",
+          "formerPath": "validation/editor-restoration/audit/foreman-report.json"
+        },
+        {
+          "field": "stages.E0.jobs.0.evidence",
+          "formerPath": "validation/editor-restoration/audit/dot-cross/completion.json"
+        },
+        {
+          "field": "stages.E0.jobs.1.evidence",
+          "formerPath": "validation/editor-restoration/audit/molecule/completion.json"
+        },
+        {
+          "field": "rootAcceptance",
+          "formerPath": "validation/editor-restoration/implementation/root-acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "isomer-layout-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "evidence",
+          "formerPath": "validation\\isomer-layout\\acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "landing-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "jobs.0.outputPath",
+          "formerPath": "validation/landing-restoration/design/HANDOVER.md"
+        },
+        {
+          "field": "jobs.1.outputPath",
+          "formerPath": "validation/landing-restoration/integration/HANDOVER.md"
+        },
+        {
+          "field": "jobs.2.outputPath",
+          "formerPath": "validation/landing-restoration/integration/teacher-category/HANDOVER.md"
+        },
+        {
+          "field": "evidence.0",
+          "formerPath": "validation/landing-restoration/foreman-report.json"
+        },
+        {
+          "field": "rootAcceptance",
+          "formerPath": "validation/landing-restoration/root-acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "molecule-toolbar-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "evidence",
+          "formerPath": "validation/molecule-toolbar/acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "olympiad-2011-q4-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "acceptance",
+          "formerPath": "validation/olympiad-2011-q4/root-acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "olympiad-popup-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "evidence",
+          "formerPath": "validation/olympiad-popup/acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "stages.S0.evidence.0",
+          "formerPath": "validation/s0/foreman-report.json"
+        },
+        {
+          "field": "stages.S0.evidence.2",
+          "formerPath": "validation/s0/integration-check.json"
+        },
+        {
+          "field": "stages.S0.evidence.3",
+          "formerPath": "validation/s0/root-acceptance.json"
+        },
+        {
+          "field": "stages.S1.evidence.0",
+          "formerPath": "validation/s1/foreman-report.json"
+        },
+        {
+          "field": "stages.S1.evidence.2",
+          "formerPath": "validation/s1/integration/foreman-checks.json"
+        },
+        {
+          "field": "stages.S1.evidence.3",
+          "formerPath": "validation/s1/integration/build-browser.json"
+        },
+        {
+          "field": "stages.S1.evidence.4",
+          "formerPath": "validation/s1/root-fix/foreman-report.json"
+        },
+        {
+          "field": "stages.S1.evidence.5",
+          "formerPath": "validation/s1/root-acceptance.json"
+        },
+        {
+          "field": "stages.S2.evidence.0",
+          "formerPath": "validation/s2/foreman-report.json"
+        },
+        {
+          "field": "stages.S2.evidence.2",
+          "formerPath": "validation/s2/integration/foreman-checks.json"
+        },
+        {
+          "field": "stages.S2.evidence.3",
+          "formerPath": "validation/s2/review-native/partial-verification.json"
+        },
+        {
+          "field": "stages.S2.evidence.4",
+          "formerPath": "validation/s2/review-suspension/completion.json"
+        },
+        {
+          "field": "stages.S2.evidence.5",
+          "formerPath": "validation/s2/root-acceptance.json"
+        },
+        {
+          "field": "stages.S3.evidence.0",
+          "formerPath": "validation/s3/foreman-report.json"
+        },
+        {
+          "field": "stages.S3.evidence.2",
+          "formerPath": "validation/s3/integration/foreman-checks.json"
+        },
+        {
+          "field": "stages.S3.evidence.3",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "stages.S3.evidence.4",
+          "formerPath": "validation/s3/review-timing/completion.json"
+        },
+        {
+          "field": "stages.S3.evidence.5",
+          "formerPath": "validation/s3/root-acceptance.json"
+        },
+        {
+          "field": "stages.S4.evidence.0",
+          "formerPath": "validation/s4/foreman-report.json"
+        },
+        {
+          "field": "stages.S4.evidence.2",
+          "formerPath": "validation/s4/integration/foreman-checks.json"
+        },
+        {
+          "field": "stages.S4.evidence.3",
+          "formerPath": "validation/s4/integration/production-browser.json"
+        },
+        {
+          "field": "stages.S4.evidence.4",
+          "formerPath": "validation/s4/integration/owned-verification.json"
+        },
+        {
+          "field": "stages.S4.evidence.5",
+          "formerPath": "validation/s4/refinement/foreman-report.json"
+        },
+        {
+          "field": "stages.S4.evidence.6",
+          "formerPath": "validation/s4/refinement/file-inventory.json"
+        },
+        {
+          "field": "stages.S4.evidence.7",
+          "formerPath": "validation/s4/root-acceptance.json"
+        },
+        {
+          "field": "stages.S5.evidence.0",
+          "formerPath": "validation/s5/foreman-report.json"
+        },
+        {
+          "field": "stages.S5.evidence.3",
+          "formerPath": "validation/s5/integration/foreman-checks.json"
+        },
+        {
+          "field": "stages.S5.evidence.4",
+          "formerPath": "validation/s5/behaviour/session-only-save-fix/latest/completion.json"
+        },
+        {
+          "field": "stages.S5.evidence.5",
+          "formerPath": "validation/s5/chemistry/session-only-save-fix/final/completion.json"
+        },
+        {
+          "field": "stages.S5.evidence.6",
+          "formerPath": "validation/s5/render-release/session-only-save-fix/completion.json"
+        },
+        {
+          "field": "stages.S5.evidence.7",
+          "formerPath": "validation/s5/root-acceptance.json"
+        },
+        {
+          "field": "jobs.0.evidence",
+          "formerPath": "validation/s0/inventory/completion.json"
+        },
+        {
+          "field": "jobs.1.evidence.0",
+          "formerPath": "validation/s0/contracts/handover.json"
+        },
+        {
+          "field": "jobs.1.evidence.1",
+          "formerPath": "validation/s0/contracts/handover-clarification.json"
+        },
+        {
+          "field": "jobs.2.evidence",
+          "formerPath": "validation/s1/session/completion.json"
+        },
+        {
+          "field": "jobs.3.evidence",
+          "formerPath": "validation/s1/attempt/handover.json"
+        },
+        {
+          "field": "jobs.4.evidence",
+          "formerPath": "validation/s1/shell/completion.json"
+        },
+        {
+          "field": "jobs.5.evidence",
+          "formerPath": "validation/s1/persistence/completion.json"
+        },
+        {
+          "field": "jobs.6.evidence",
+          "formerPath": "validation/s1/review-native/completion.json"
+        },
+        {
+          "field": "jobs.7.evidence",
+          "formerPath": "validation/s1/review-background/completion.json"
+        },
+        {
+          "field": "jobs.8.evidence",
+          "formerPath": "validation/s1/attempt/root-fix/handover.json"
+        },
+        {
+          "field": "jobs.9.evidence",
+          "formerPath": "validation/s1/shell/completion-fix.json"
+        },
+        {
+          "field": "jobs.10.evidence",
+          "formerPath": "validation/s2/acid/completion.json"
+        },
+        {
+          "field": "jobs.11.evidence",
+          "formerPath": "validation/s2/structure/completion.json"
+        },
+        {
+          "field": "jobs.12.evidence",
+          "formerPath": "validation/s2/dot-cross/completion.json"
+        },
+        {
+          "field": "jobs.13.evidence",
+          "formerPath": "validation/s2/review-native/completion.json"
+        },
+        {
+          "field": "jobs.14.evidence",
+          "formerPath": "validation/s2/review-suspension/completion.json"
+        },
+        {
+          "field": "jobs.15.evidence",
+          "formerPath": "validation/s3/electrons/completion.json"
+        },
+        {
+          "field": "jobs.15.foremanEvidence",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "jobs.16.evidence",
+          "formerPath": "validation/s3/thermochemistry/completion.json"
+        },
+        {
+          "field": "jobs.16.foremanEvidence",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "jobs.17.evidence",
+          "formerPath": "validation/s3/energy/completion.json"
+        },
+        {
+          "field": "jobs.17.foremanEvidence",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "jobs.18.evidence",
+          "formerPath": "validation/s3/titration/completion.json"
+        },
+        {
+          "field": "jobs.18.foremanEvidence",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "jobs.19.evidence",
+          "formerPath": "validation/s3/igcse-dot-cross/completion.json"
+        },
+        {
+          "field": "jobs.19.foremanEvidence",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "jobs.20.evidence",
+          "formerPath": "validation/s3/c3l6/completion.json"
+        },
+        {
+          "field": "jobs.20.foremanEvidence",
+          "formerPath": "validation/s3/integration/owned-verification.json"
+        },
+        {
+          "field": "jobs.21.evidence",
+          "formerPath": "validation/s3/review-timing/completion.json"
+        },
+        {
+          "field": "jobs.22.evidence",
+          "formerPath": "validation/s3/review-co/completion.json"
+        },
+        {
+          "field": "jobs.23.evidence",
+          "formerPath": "validation/s3/review-c3-name/completion.json"
+        },
+        {
+          "field": "jobs.24.evidence",
+          "formerPath": "validation/s4/ux/completion.json"
+        },
+        {
+          "field": "jobs.25.evidence",
+          "formerPath": "validation/s4/statistics/completion.json"
+        },
+        {
+          "field": "jobs.26.evidence",
+          "formerPath": "validation/s4/compatibility/completion.json"
+        },
+        {
+          "field": "jobs.27.evidence",
+          "formerPath": "validation/s4/authoring-release/completion.json"
+        },
+        {
+          "field": "jobs.28.evidence",
+          "formerPath": "validation/s4/review-browser-startup/completion.json"
+        },
+        {
+          "field": "jobs.29.evidence",
+          "formerPath": "validation/s4/review-browser-startup/followup-completion.json"
+        },
+        {
+          "field": "jobs.30.evidence",
+          "formerPath": "validation/s4/review-browser-startup/pause-readiness-completion.json"
+        },
+        {
+          "field": "jobs.31.evidence",
+          "formerPath": "validation/s4/review-browser-startup/history-readiness-completion.json"
+        },
+        {
+          "field": "jobs.32.evidence",
+          "formerPath": "validation/s4/authoring-release/refinement/completion.json"
+        },
+        {
+          "field": "jobs.33.evidence",
+          "formerPath": "validation/s4/refinement/review-scaffold-startup/completion.json"
+        },
+        {
+          "field": "jobs.34.evidence",
+          "formerPath": "validation/s4/refinement/review-formatted-startup/completion.json"
+        },
+        {
+          "field": "jobs.35.evidence",
+          "formerPath": "validation/s5/behaviour/completion.json"
+        },
+        {
+          "field": "jobs.36.evidence",
+          "formerPath": "validation/s5/chemistry/completion.json"
+        },
+        {
+          "field": "jobs.37.evidence",
+          "formerPath": "validation/s5/render-release/completion.json"
+        },
+        {
+          "field": "jobs.38.evidence",
+          "formerPath": "validation/s5/fixes/acid-format/completion.json"
+        },
+        {
+          "field": "jobs.39.evidence",
+          "formerPath": "validation/s5/fixes/electrons-wording/completion.json"
+        },
+        {
+          "field": "jobs.40.evidence",
+          "formerPath": "validation/s5/fixes/startup-error/completion.json"
+        },
+        {
+          "field": "jobs.41.evidence",
+          "formerPath": "validation/s5/fixes/titration-typing/completion.json"
+        },
+        {
+          "field": "jobs.42.evidence",
+          "formerPath": "validation/s5/fixes/energy-typing/completion.json"
+        },
+        {
+          "field": "jobs.43.evidence",
+          "formerPath": "validation/s5/fixes/dot-charge-typing/completion.json"
+        },
+        {
+          "field": "jobs.44.evidence",
+          "formerPath": "validation/s5/fixes/c3-k-erratum/completion.json"
+        },
+        {
+          "field": "jobs.45.evidence",
+          "formerPath": "validation/s5/review-behaviour-harness/completion.json"
+        },
+        {
+          "field": "jobs.46.evidence",
+          "formerPath": "validation/s5/review-behaviour-harness/historical-followup/completion.json"
+        },
+        {
+          "field": "jobs.47.evidence.0",
+          "formerPath": "validation/s5/fixes/next-save-transition/author-report.json"
+        },
+        {
+          "field": "jobs.47.evidence.1",
+          "formerPath": "validation/s5/review-render-harness/energy-next-classification/completion.json"
+        },
+        {
+          "field": "jobs.48.evidence.0",
+          "formerPath": "validation/s5/fixes/session-only-save/author-report.json"
+        },
+        {
+          "field": "requirements.SCOPE-01.evidence.0",
+          "formerPath": "validation/s5/integration/foreman-protected-originals.txt"
+        },
+        {
+          "field": "requirements.SCOPE-01.evidence.1",
+          "formerPath": "validation/s5/integration/foreman-source-and-controls.txt"
+        },
+        {
+          "field": "requirements.SCOPE-01.evidence.2",
+          "formerPath": "validation/s5/integration/source-ownership.json"
+        },
+        {
+          "field": "requirements.SCOPE-02.evidence.0",
+          "formerPath": "validation/s5/integration/foreman-catalogue.txt"
+        },
+        {
+          "field": "requirements.SCOPE-02.evidence.1",
+          "formerPath": "validation/s5/integration/foreman-checks.json"
+        },
+        {
+          "field": "requirements.SCOPE-02.evidence.2",
+          "formerPath": "validation/s5/behaviour/browser-results.json"
+        },
+        {
+          "field": "requirements.SCOPE-02.evidence.3",
+          "formerPath": "validation/s5/integration/release-checks.json"
+        },
+        {
+          "field": "requirements.SCOPE-03.evidence.0",
+          "formerPath": "validation/s5/behaviour/c3-erratum-browser-results.json"
+        },
+        {
+          "field": "requirements.SCOPE-03.evidence.1",
+          "formerPath": "validation/s5/chemistry/c3-final-source-review.json"
+        },
+        {
+          "field": "requirements.ARCH-01.evidence.0",
+          "formerPath": "validation/s5/integration/foreman-checks.json"
+        },
+        {
+          "field": "requirements.ARCH-01.evidence.1",
+          "formerPath": "validation/s5/behaviour/HANDOVER.md"
+        },
+        {
+          "field": "requirements.ARCH-01.evidence.2",
+          "formerPath": "validation/s5/render-release/HANDOVER.md"
+        },
+        {
+          "field": "requirements.ARCH-02.evidence.0",
+          "formerPath": "validation/s5/integration/foreman-typecheck.txt"
+        },
+        {
+          "field": "requirements.ARCH-02.evidence.1",
+          "formerPath": "validation/s5/integration/foreman-unit.txt"
+        },
+        {
+          "field": "requirements.ARCH-02.evidence.2",
+          "formerPath": "validation/s5/integration/foreman-catalogue.txt"
+        },
+        {
+          "field": "requirements.CONTENT-01.evidence.0",
+          "formerPath": "validation/s5/chemistry/current-coverage.json"
+        },
+        {
+          "field": "requirements.CONTENT-01.evidence.1",
+          "formerPath": "validation/s5/chemistry/stratified-sample.json"
+        },
+        {
+          "field": "requirements.CONTENT-01.evidence.2",
+          "formerPath": "validation/s5/chemistry/manual-review.json"
+        },
+        {
+          "field": "requirements.CONTENT-01.evidence.3",
+          "formerPath": "validation/s5/chemistry/c3-transformation-review.json"
+        },
+        {
+          "field": "requirements.CONTENT-01.evidence.4",
+          "formerPath": "validation/s5/chemistry/final-production-browser-results.json"
+        },
+        {
+          "field": "requirements.ASSESS-01.evidence.0",
+          "formerPath": "validation/s5/behaviour/deep-browser-results.json"
+        },
+        {
+          "field": "requirements.ASSESS-01.evidence.1",
+          "formerPath": "validation/s5/behaviour/revision-browser-results.json"
+        },
+        {
+          "field": "requirements.ASSESS-01.evidence.2",
+          "formerPath": "validation/s5/integration/foreman-unit.txt"
+        },
+        {
+          "field": "requirements.ASSESS-02.evidence.0",
+          "formerPath": "validation/s5/integration/foreman-unit.txt"
+        },
+        {
+          "field": "requirements.ASSESS-02.evidence.1",
+          "formerPath": "validation/s5/behaviour/import-browser-results.json"
+        },
+        {
+          "field": "requirements.ASSESS-02.evidence.2",
+          "formerPath": "validation/s5/behaviour/HANDOVER.md"
+        },
+        {
+          "field": "requirements.TIME-01.evidence.0",
+          "formerPath": "validation/s5/integration/active-time-review.json"
+        },
+        {
+          "field": "requirements.TIME-01.evidence.1",
+          "formerPath": "validation/s5/behaviour/timing-continuity.json"
+        },
+        {
+          "field": "requirements.TIME-01.evidence.2",
+          "formerPath": "validation/s5/behaviour/deep-browser-results.json"
+        },
+        {
+          "field": "requirements.TIME-01.evidence.3",
+          "formerPath": "validation/s5/behaviour/revision-browser-results.json"
+        },
+        {
+          "field": "requirements.STATE-01.evidence.0",
+          "formerPath": "validation/s5/behaviour/recovery-browser-results.json"
+        },
+        {
+          "field": "requirements.STATE-01.evidence.1",
+          "formerPath": "validation/s5/behaviour/deep-browser-results.json"
+        },
+        {
+          "field": "requirements.STATE-01.evidence.2",
+          "formerPath": "validation/s5/behaviour/import-browser-results.json"
+        },
+        {
+          "field": "requirements.STATE-01.evidence.3",
+          "formerPath": "validation/s5/behaviour/c3-erratum-browser-results.json"
+        },
+        {
+          "field": "requirements.STATE-01.evidence.4",
+          "formerPath": "validation/s5/review-render-harness/energy-next-fix/completion.json"
+        },
+        {
+          "field": "requirements.STATE-01.evidence.5",
+          "formerPath": "validation/s5/behaviour/session-only-save-fix/latest/completion.json"
+        },
+        {
+          "field": "requirements.UX-01.evidence.0",
+          "formerPath": "validation/s5/render-release/completion.json"
+        },
+        {
+          "field": "requirements.UX-01.evidence.1",
+          "formerPath": "validation/s5/render-release/HANDOVER.md"
+        },
+        {
+          "field": "requirements.UX-01.evidence.2",
+          "formerPath": "validation/s5/render-release/session-only-save-fix/completion.json"
+        },
+        {
+          "field": "requirements.AUTHOR-01.evidence.0",
+          "formerPath": "validation/s5/render-release/completion.json"
+        },
+        {
+          "field": "requirements.AUTHOR-01.evidence.1",
+          "formerPath": "validation/s5/render-release/HANDOVER.md"
+        },
+        {
+          "field": "requirements.AUTHOR-01.evidence.2",
+          "formerPath": "validation/s5/render-release/session-only-save-fix/completion.json"
+        },
+        {
+          "field": "requirements.AUTHOR-01.evidence.3",
+          "formerPath": "validation/s5/chemistry/independent-checks.json"
+        },
+        {
+          "field": "requirements.PERF-01.evidence.0",
+          "formerPath": "validation/s5/integration/release-checks.json"
+        },
+        {
+          "field": "requirements.PERF-01.evidence.1",
+          "formerPath": "validation/s5/render-release/completion.json"
+        },
+        {
+          "field": "requirements.PERF-01.evidence.2",
+          "formerPath": "validation/s5/render-release/HANDOVER.md"
+        },
+        {
+          "field": "requirements.PERF-01.evidence.3",
+          "formerPath": "validation/s5/render-release/session-only-save-fix/completion.json"
+        },
+        {
+          "field": "requirements.RELEASE-01.evidence.0",
+          "formerPath": "validation/s5/integration/build-current.json"
+        },
+        {
+          "field": "requirements.RELEASE-01.evidence.1",
+          "formerPath": "validation/s5/integration/release-checks.json"
+        },
+        {
+          "field": "requirements.RELEASE-01.evidence.2",
+          "formerPath": "validation/s5/integration/preview-smoke.json"
+        },
+        {
+          "field": "requirements.RELEASE-01.evidence.3",
+          "formerPath": "validation/s5/render-release/completion.json"
+        },
+        {
+          "field": "requirements.RELEASE-01.evidence.4",
+          "formerPath": "validation/s5/render-release/session-only-save-fix/completion.json"
+        },
+        {
+          "field": "requirements.DELIVERY-01.evidence.2",
+          "formerPath": "validation/s5/foreman-report.json"
+        },
+        {
+          "field": "requirements.DELIVERY-01.evidence.3",
+          "formerPath": "validation/s5/integration/install-current.json"
+        },
+        {
+          "field": "unresolved.2.evidence",
+          "formerPath": "validation/s3/review-timing/HANDOVER.md"
+        }
+      ]
+    },
+    {
+      "file": "question-chrome-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "rootAcceptance",
+          "formerPath": "validation/question-chrome/implementation/root-acceptance.json"
+        }
+      ]
+    },
+    {
+      "file": "ui-consistency-progress.json",
+      "action": "mark historical validation references retired; add historicalEvidenceDisposition",
+      "retiredFields": [
+        {
+          "field": "rootAcceptance.path",
+          "formerPath": "validation/ui-consistency/u2/root-acceptance.json"
+        },
+        {
+          "field": "evidenceRoot",
+          "formerPath": "validation/ui-consistency"
+        },
+        {
+          "field": "jobs.0.manifest",
+          "formerPath": "validation/ui-consistency/u1/controls/completion.json"
+        },
+        {
+          "field": "jobs.1.manifest",
+          "formerPath": "validation/ui-consistency/u1/theme/completion.json"
+        },
+        {
+          "field": "jobs.2.manifest",
+          "formerPath": "validation/ui-consistency/u1/olympiad/completion.json"
+        },
+        {
+          "field": "jobs.3.manifest",
+          "formerPath": "validation/ui-consistency/u2/independent/completion.json"
+        },
+        {
+          "field": "evidence",
+          "formerPath": "validation/ui-consistency/u2/foreman/foreman-report.json"
+        },
+        {
+          "field": "u1RootGate",
+          "formerPath": "validation/ui-consistency/u1-footer-fix/root-gate.json"
+        },
+        {
+          "field": "footerFix.evidence",
+          "formerPath": "validation/ui-consistency/u1-footer-fix/report.json"
+        },
+        {
+          "field": "boundaries.0.evidence",
+          "formerPath": "validation/ui-consistency/u2/independent/revision-and-prefix-immediate-reload-probe.json"
+        }
+      ]
+    }
+  ],
+  "documentationChanges": [
+    {
+      "file": "README.md",
+      "actions": [
+        {
+          "pattern": "^node scripts\\/review_active_question_time\\.mjs\\r?\\n",
+          "to": ""
+        },
+        {
+          "from": "checks retained independent acceptance against current fingerprints.",
+          "to": "checks current deterministic invariants. Historical acceptance artifacts were retired;"
+        },
+        {
+          "pattern": "The timing review checks retained native boundaries[\\s\\S]*?native wall intervals\\.\\r?\\n",
+          "to": "Fresh native timing, browser and chemistry review remains necessary after substantive changes.\n"
+        },
+        {
+          "from": "Current browser commands and fingerprints are in [the final evidence map](validation/s5/foreman-report.json).",
+          "to": "Current browser recipes and evidence retirement are described in [validation cleanup](docs/maintenance/validation-cleanup.md)."
+        },
+        {
+          "pattern": "Final acceptance evidence, current hashes, commands and remaining dispositions\\r?\\nare linked from[^\\r\\n]+",
+          "to": "Historical acceptance and limits are described in [handoff](HANDOFF.md); its reports were retired. See [validation cleanup](docs/maintenance/validation-cleanup.md) for retained checks and dependencies."
+        },
+        {
+          "from": "and [author validation](validation/explaining-properties/HANDOVER.md).",
+          "to": "Historical author/reviewer reports were retired; current tests are retained."
+        },
+        {
+          "from": "14-activity/43-target contract, all retained/current source hashes, both runtime",
+          "to": "14-activity/43-target contract, retained source-generation fingerprints, both runtime"
+        },
+        {
+          "from": "historical evidence. No publication is included.",
+          "to": "historical records; their report files were retired. No publication is included."
+        },
+        {
+          "action": "Document current pre-existing protected-source/fingerprint drift and assertion failures; point to parent check matrix"
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "HANDOFF.md",
+      "actions": [
+        {
+          "from": "# Final local implementation",
+          "to": "# Historical final local implementation"
+        },
+        {
+          "pattern": "Both course builds and all three independent reviews pass against frozen inputs\\. Root accepted the finished local app; see \\[final acceptance\\]\\(validation\\/s5\\/root-acceptance\\.json\\)\\.",
+          "to": "At the original S5 gate, both course builds and three independent reviews passed against the then-frozen inputs, and root accepted the local app. These are historical results; the acceptance report was retired."
+        },
+        {
+          "pattern": "\\[Final evidence map\\]\\(validation\\/s5\\/foreman-report\\.json\\) maps all 15 requirements, current hashes, detailed reviews and limitations\\.",
+          "to": "The former final evidence map covered the 15 original requirements; its report files were retired."
+        }
+      ],
+      "retiredLinks": [
+        {
+          "label": "Source changes",
+          "formerPath": "validation/s5/integration/source-ownership.json"
+        },
+        {
+          "label": "Behaviour/timing/restore/import",
+          "formerPath": "validation/s5/behaviour/HANDOVER.md"
+        },
+        {
+          "label": "current Next/save verification",
+          "formerPath": "validation/s5/behaviour/next-save-fix/HANDOVER.md"
+        },
+        {
+          "label": "final session write verification",
+          "formerPath": "validation/s5/behaviour/session-only-save-fix/latest/HANDOVER.md"
+        },
+        {
+          "label": "Complete chemistry/source/render sample",
+          "formerPath": "validation/s5/chemistry/HANDOVER.md"
+        },
+        {
+          "label": "current source continuity",
+          "formerPath": "validation/s5/chemistry/next-save-fix/HANDOVER.md"
+        },
+        {
+          "label": "final chemistry continuity",
+          "formerPath": "validation/s5/chemistry/session-only-save-fix/final/HANDOVER.md"
+        },
+        {
+          "label": "Current render/accessibility/typing/performance/release/authoring",
+          "formerPath": "validation/s5/render-release/HANDOVER.md"
+        },
+        {
+          "label": "final host/release follow-up",
+          "formerPath": "validation/s5/render-release/session-only-save-fix/HANDOVER.md"
+        }
+      ],
+      "retirementNote": true
+    },
+    {
+      "file": "LANDING-HANDOFF.md",
+      "actions": [
+        {
+          "pattern": "^node scripts\\/verify-landing-freeze\\.mjs\\r?\\n",
+          "to": ""
+        },
+        {
+          "from": "node validation/landing-restoration/aggregate/prefix-browser.mjs",
+          "to": "node scripts/browser/landing/aggregate/prefix-browser.mjs"
+        },
+        {
+          "pattern": "The current landing check preserves[\\s\\S]*?seven focused landing tests and current type\\/build\\/release checks passed\\.",
+          "to": "`check:landing` performs current deterministic landing checks; the retained browser recipe above performs fresh prefix checks. The original landing gate reused 156 regressions and passed seven focused landing tests and type/build/release checks. Its report artifacts were retired; these current recipes do not recreate historical acceptance."
+        },
+        {
+          "pattern": "^- \\[[^\\n]+\\]\\(validation\\/[^\\n]+\\)\\r?\\n",
+          "to": ""
+        },
+        {
+          "from": "Comparison sheets link to all full-resolution screenshots.",
+          "to": "The retired comparison sheets linked to full-resolution screenshots."
+        },
+        {
+          "from": "Raw failed probes remain alongside their accepted corrected runs.",
+          "to": "Failed probes and corrected-run evidence were deleted with validation history."
+        },
+        {
+          "from": "Final root code/render acceptance is pending in `landing-progress.json`.",
+          "to": "Historical root acceptance status is recorded in `landing-progress.json`; this cleanup does not reaccept the landing."
+        },
+        {
+          "from": "The existing preview on 5182 was left running. Live source is also available on 5183;",
+          "to": "The original handoff left a preview running on 5182. For a fresh live-source preview on 5183,"
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/formatting.md",
+      "actions": [
+        {
+          "from": "The first formatting pass retains",
+          "to": "The first formatting pass recorded"
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/README.md",
+      "actions": [
+        {
+          "from": "node validation/s0/contracts/validate-reference.mjs",
+          "to": "npm.cmd run test:s5"
+        },
+        {
+          "pattern": "Bounded S0 clarification adds[\\s\\S]*?All three additional negative assertions prevent reviewed feedback becoming independent assessment\\/evidence\\.",
+          "to": "Historical S0 clarification added compile fixtures and corroborating source reports. Its standalone validators and reports were retired. Current retained regression suites cover assessment/evidence boundaries; run `npm.cmd run test:s5` alongside typecheck."
+        }
+      ],
+      "retiredLinks": [
+        {
+          "label": "`source-evidence.json`",
+          "formerPath": "../../validation/s0/contracts/source-evidence.json"
+        }
+      ],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s1-attempt.md",
+      "actions": [
+        {
+          "from": "node --test validation/s1/attempt/attempt.test.mjs",
+          "to": "npm.cmd run test:s5"
+        },
+        {
+          "pattern": "^node validation\\/s1\\/attempt\\/browser-check\\.mjs\\r?\\n",
+          "to": ""
+        },
+        {
+          "pattern": "The browser command expects[\\s\\S]*?No deployment or publication is involved\\.",
+          "to": "The original S1 browser recipe and reports were retired. Its earlier results and blocked observation are historical; fresh browser review must establish timing after substantive changes. No deployment is involved."
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s1-work-packages.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s2-work-packages.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s3-dispatch.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s3-work-packages.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s4-dispatch.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s4-work-packages.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/architecture/s5-work-packages.md",
+      "actions": [],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/authoring/new-activity.md",
+      "actions": [
+        {
+          "from": " `write-s0-scope.mjs` verifies accepted source evidence; it is not an onboarding generation step.",
+          "to": " Historical `write-s0-scope.mjs` and its reports were retired; frozen source inventory is not an onboarding generation step."
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/authoring/README.md",
+      "actions": [
+        {
+          "pattern": "# In another shell, using pinned root Playwright1\\.62\\.1:\\r?\\nnode validation\\/component-fidelity\\/f1-correction\\/identity\\/authoring-root-browser\\.mjs\\r?\\n",
+          "to": "# Use the browser fixture generated with the new family for fresh host verification.\n"
+        },
+        {
+          "pattern": "# Stop the authoring server before this port5195 static-browser check:\\r?\\nnode validation\\/s4\\/authoring-release\\/release-browser\\.mjs\\r?\\n",
+          "to": "# Current course-prefix checks after building:\nnode scripts/browser/landing/aggregate/prefix-browser.mjs\n"
+        },
+        {
+          "from": "`browser-level-scope-probe.json` retains the failure.",
+          "to": "The retired `browser-level-scope-probe.json` recorded that failure."
+        },
+        {
+          "from": "Initial S3-dist fingerprints remain in",
+          "to": "Initial S3-dist fingerprints were recorded in the now-retired"
+        },
+        {
+          "from": "`release-browser.mjs` independently measures",
+          "to": "The retired S4 `release-browser.mjs` independently measured"
+        },
+        {
+          "from": "Browser outputs, temporary profiles and disk cache are directed into the owned validation folder.",
+          "to": "Fresh browser outputs use disposable validation output; deleted old reports are not current evidence."
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/inventory/c3-k-erratum.md",
+      "actions": [
+        {
+          "from": "The independent primary-source evidence and substantive review are retained in",
+          "to": "The historical independent primary-source evidence and substantive review were recorded in"
+        },
+        {
+          "from": "Evidence is retained under",
+          "to": "Historical evidence was recorded under"
+        },
+        {
+          "from": "The original S3 fixtures and their historical claims remain byte-preserved;",
+          "to": "Retained executable S3 fixtures preserve source behaviour; their old report files were retired."
+        },
+        {
+          "from": "A22 provides independent substantive chemistry acceptance; A21/A23 provide independent final-build storage/import/view acceptance.",
+          "to": "A22 historically provided chemistry acceptance; A21/A23 provided storage/import/view acceptance. Their retired reports do not establish fresh acceptance. Run `node scripts/test-s5.mjs` for retained regressions and conduct fresh chemistry/browser review after substantive changes."
+        }
+      ],
+      "retiredLinks": [
+        {
+          "label": "CHEM-03",
+          "formerPath": "../../validation/s5/chemistry/chem-03.json"
+        },
+        {
+          "label": "the bounded fix folder",
+          "formerPath": "../../validation/s5/fixes/c3-k-erratum/HANDOVER.md"
+        }
+      ],
+      "retirementNote": true
+    },
+    {
+      "file": "docs/inventory/migration-inventory.md",
+      "actions": [
+        {
+          "pattern": "From the workspace root:[\\s\\S]*?```\\r?\\n",
+          "to": "From this app directory, verify current canonical catalogue output with:\n\n```powershell\nnode scripts/write-catalogue-definitions.mjs --check\n```\n\nThe original collection and document-generation recipes were retired. Frozen source-generation inputs remain in `resources/source-generation/inventory/`; they are not fresh chemistry or browser acceptance.\n"
+        },
+        {
+          "from": "../../validation/s0/inventory/coverage-manifest.json",
+          "to": "../../resources/source-generation/inventory/coverage-manifest.json"
+        },
+        {
+          "from": "Per-activity `*-evidence.json` files retain source path/line/text for IDs, random seeds, marking, scaffolds, timing and storage.",
+          "to": "Former per-activity evidence reports were retired. Current generated activity provenance remains with source modules."
+        },
+        {
+          "from": "`identity-index.json` maps",
+          "to": "`resources/source-generation/inventory/identity-index.json` maps"
+        },
+        {
+          "from": "`reference-validation-map.json` maps each activity to checks, retained source provenance and status.",
+          "to": "The retired `reference-validation-map.json` historically mapped activity checks and provenance."
+        }
+      ],
+      "retiredLinks": [],
+      "retirementNote": true
+    }
+  ],
+  "validation": {
+    "checkedAt": "2026-10-05T18:43:40.341Z",
+    "issues": [],
+    "statusChecks": [
+      {
+        "file": "component-fidelity-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "editor-restoration-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "isomer-layout-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "landing-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "molecule-toolbar-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "olympiad-2011-q4-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "olympiad-popup-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "question-chrome-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      },
+      {
+        "file": "ui-consistency-progress.json",
+        "allOriginalFieldsPreservedExceptEvidenceLabels": true
+      }
+    ],
+    "commands": [
+      {
+        "file": "LANDING-HANDOFF.md",
+        "target": "scripts/browser/landing/aggregate/prefix-browser.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "scripts/test-component-identity.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "scripts/release-s4.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "scripts/validate-s4-release.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "scripts/release-s4.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "scripts/validate-s4-release.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "scripts/browser/landing/aggregate/prefix-browser.mjs",
+        "exists": true
+      },
+      {
+        "file": "docs/inventory/migration-inventory.md",
+        "target": "scripts/write-catalogue-definitions.mjs",
+        "exists": true
+      }
+    ],
+    "maintenanceLinks": [
+      {
+        "file": "README.md",
+        "target": "docs/maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "README.md",
+        "target": "docs/maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "README.md",
+        "target": "docs/maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "HANDOFF.md",
+        "target": "docs/maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "LANDING-HANDOFF.md",
+        "target": "docs/maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/formatting.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/README.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s1-attempt.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s1-work-packages.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s2-work-packages.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s3-dispatch.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s3-work-packages.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s4-dispatch.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s4-work-packages.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/architecture/s5-work-packages.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/authoring/new-activity.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/authoring/README.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/inventory/c3-k-erratum.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      },
+      {
+        "file": "docs/inventory/migration-inventory.md",
+        "target": "../maintenance/validation-cleanup.md",
+        "parentOwnedPending": true
+      }
+    ],
+    "scope": "Documentation hyperlinks/active Node commands; JSON parse and preservation of historical status/date/result/hash/limit facts. No new chemistry, browser, build or acceptance claim.",
+    "status": "PASS"
+  },
+  "files": [
+    {
+      "file": "README.md",
+      "beforeSha256": "6c9b9c17ff0e40ea6ca052d46131fb25273a5dcdb4af4a220b9f6a6f8ebcb649",
+      "afterSha256": "2a6eb524ca5d6419859e297647e22db227b9149fba87ff4cf56e6a5ce2dc7187",
+      "changed": true
+    },
+    {
+      "file": "HANDOFF.md",
+      "beforeSha256": "a14c293fee87329e546d0ee15fd57f6a4ff92f87715b6b1aaf72eb2c04230336",
+      "afterSha256": "7ea1e07044c9255521c9e4853633b4992a3ca64a003a96114d473e3f92daa09b",
+      "changed": true
+    },
+    {
+      "file": "LANDING-HANDOFF.md",
+      "beforeSha256": "cb1cad2c69e45d6138d4b2e8c6893ac8f01e2900b0e36a5405d91810fc64399a",
+      "afterSha256": "e5f73526a498672f2c0367df42c3db7dfa0499de7c858045187330a551888651",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/formatting.md",
+      "beforeSha256": "fb6726ff0cdb2d4bb7a6304694ea7db32d113918ec13f9e949178b9a8b2fa142",
+      "afterSha256": "0816025bce1e3909151a8dff53b8fed51df18342779b775a8b1545cbc07d3fc6",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/platform.md",
+      "beforeSha256": "b284e6f3da39f0ff99f2bf0cb155d0855de56be18f8d5d7025d92a9b309921d1",
+      "afterSha256": "b284e6f3da39f0ff99f2bf0cb155d0855de56be18f8d5d7025d92a9b309921d1",
+      "changed": false
+    },
+    {
+      "file": "docs/architecture/README.md",
+      "beforeSha256": "41994b30454c0b56f06b185594451d8a63c425fff673496a0bfee9d84e6440db",
+      "afterSha256": "7ea3e9e00dff5bec32c0e8581b039f89e25803656bc38ebb0c0a6b7b2cfaae8d",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s1-attempt.md",
+      "beforeSha256": "ffc8e1631bfd506f099ad381bd49d959529f577c12c2bedcda1456fa851c35ad",
+      "afterSha256": "a0838cc4e73ecc262486d5230af8d478b5ab2581ad99a49fdf5f5a62b9769500",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s1-work-packages.md",
+      "beforeSha256": "e3c8bb0737a81c80ecae6d9dcb121c3fa8cde091ea1e6034c687273e44494d82",
+      "afterSha256": "b9eda4bf4de7398417b0ef2286e0c8809fe43a0d234e828cf7e75b0a6887ad83",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s2-work-packages.md",
+      "beforeSha256": "4329eddc53f034e9b654a76a2da1c45febb65a7fc1075fa7717de14f5f2157a4",
+      "afterSha256": "6892183288b012f697f7a11b10aec52a7f0c350c65cf7cbb089864f3a4a174c9",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s3-dispatch.md",
+      "beforeSha256": "39ec0a3db95731980a62ac8106d145e69c3255de15ce16ab6d850950a5c64bf8",
+      "afterSha256": "c82f3b115d00920efc9ffb105301f79d8244ae627d3f048bebacc36d682817b8",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s3-work-packages.md",
+      "beforeSha256": "170d00bdd7a092ff7f349d926ccdeed90c51610583bad66b99feef42c20dc4bf",
+      "afterSha256": "b19524b98e2760425380f0f217e46aa849351d4bcee9de79c0097bf8eb14572a",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s4-dispatch.md",
+      "beforeSha256": "eb971b4c73d42c46cc203ca3ffd1c0fbe2906fa9285a3d62ef8b426f9a2b9f73",
+      "afterSha256": "0af2ae7b599b2340c5a09cfac4b789f7e2d9ba03b38e51331046679b2b473090",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s4-work-packages.md",
+      "beforeSha256": "10641dfdf92d0d5937244ffae1a0b3ee9b56af3ea01e413519cce0959f7a22f6",
+      "afterSha256": "48ecd01e9400815ab4e12dbdd40d6aabfe294bbe35eeeb80db171757ecc6e0d9",
+      "changed": true
+    },
+    {
+      "file": "docs/architecture/s5-work-packages.md",
+      "beforeSha256": "9db7b47fa6acd6b990f7aceb94e743210a34a4c5e5efbdab3dad62861b4c4b2c",
+      "afterSha256": "8a14a6e2d12cb933617c523ac3ae6d2930887f3d470a7a532884b8f7cba71176",
+      "changed": true
+    },
+    {
+      "file": "docs/authoring/chemistry-review.md",
+      "beforeSha256": "ccb1ee55578a54d9332af9ea96bd645331edf8cdf3f9e51e37491feee0199be5",
+      "afterSha256": "ccb1ee55578a54d9332af9ea96bd645331edf8cdf3f9e51e37491feee0199be5",
+      "changed": false
+    },
+    {
+      "file": "docs/authoring/new-activity.md",
+      "beforeSha256": "2a127aa48c80fbe0edb4d77e524b4c48968129ba765d6078dc886cd17bdd2ce2",
+      "afterSha256": "7d934eef5e09c3920b388c7dcdbf9f344900d49dffb20f294de7634941c91129",
+      "changed": true
+    },
+    {
+      "file": "docs/authoring/README.md",
+      "beforeSha256": "2e87a054c5ffdcd3a91763f9907b8b58bc10b3f1fd3e2d83dcdff5e43109e0e9",
+      "afterSha256": "09772a1a678efe0bb6171d339ae0ebd330d57f31c72b63bd692214a92e10e029",
+      "changed": true
+    },
+    {
+      "file": "docs/inventory/c3-k-erratum.md",
+      "beforeSha256": "ff1218d20e8cd42b80f0677e885ae96519f8820087475acf512cd35ed1096ddf",
+      "afterSha256": "271e6ac08177ac8f6429a5a3a7fe0bc67c1d9258e3def617edb09149bc4190a1",
+      "changed": true
+    },
+    {
+      "file": "docs/inventory/migration-inventory.md",
+      "beforeSha256": "fa5c251c3dc9a78b8d1abf003c38b2ab0f362dbf70a2d3353f5cea17cf5cdb6d",
+      "afterSha256": "e8afc868e2829982f289a436fea5a12e50ef9786f8322b999e51def85bb7a7ad",
+      "changed": true
+    },
+    {
+      "file": "component-fidelity-progress.json",
+      "beforeSha256": "49eca46ea2b347813a0052feb46fe8d056ebb5adeded9ea6705c386cc3dc5a94",
+      "afterSha256": "d81c976e978167317223d832b9e25e13d8c7220269aa468d495e16b6d2885397",
+      "changed": true
+    },
+    {
+      "file": "editor-restoration-progress.json",
+      "beforeSha256": "eb7cc8028ea35070d1a23921872ee2ef6f8c7698bc127b52865cefc851391ba7",
+      "afterSha256": "7b3aa0eb12b126dbd2aefff462c5501a91efceaad8970e2ce1e5ac6f25a4a0d8",
+      "changed": true
+    },
+    {
+      "file": "isomer-layout-progress.json",
+      "beforeSha256": "8f1ead4f85ccb5a67058af74be5308080740e99bd3cf77c380d9b2edaf11e13a",
+      "afterSha256": "e2e9b938415453a414be8e032523dc707b850873f212c938a4caf7f46f94308e",
+      "changed": true
+    },
+    {
+      "file": "landing-progress.json",
+      "beforeSha256": "7156dca039cfdd1992da33584eebe777199f63b93b80cf0da6b9048a3f5fdcfe",
+      "afterSha256": "7965ab614e1558f2e226f06b9549061340a7674b8f6699f7416a59e2f7cb14df",
+      "changed": true
+    },
+    {
+      "file": "molecule-toolbar-progress.json",
+      "beforeSha256": "cbbbf18c1356f98fd3a574bc0c98e64b02bf57e82b0cc468a85166c4124158af",
+      "afterSha256": "4de7fad0b27f6ecdaac3d7767421c04f37a5409813a76b7c19a70c9a4447df55",
+      "changed": true
+    },
+    {
+      "file": "olympiad-2011-q4-progress.json",
+      "beforeSha256": "e9ea12f9ee917b1b1efc34d335a3db2817726e4a99c1d252bdf827a73297238a",
+      "afterSha256": "45fd2687d8f51e9ea86c94f94c15683f9299a5cb4944927b2e737e628d5ec381",
+      "changed": true
+    },
+    {
+      "file": "olympiad-popup-progress.json",
+      "beforeSha256": "6f198e7ea9b8ab3ae8b590d1dbb863868cff43fa534bdf53cb89ec4de777877f",
+      "afterSha256": "1e1f59146e6d13b32fe159ea87544bb9c3a08657bbecee85e8bedb6bc38034a6",
+      "changed": true
+    },
+    {
+      "file": "progress.json",
+      "beforeSha256": "cbd2da39885785357528913ccd3f845e857595415ca19db1f1a459144a7e06cf",
+      "afterSha256": "c9baba75551c76fd6c042a2ac43a033207cfbd29a4a576fefab13242765d61ec",
+      "changed": true
+    },
+    {
+      "file": "question-chrome-progress.json",
+      "beforeSha256": "6842ddb6226f114d4fcb180da54596892d8fefb803075230c297cd8edb8619dd",
+      "afterSha256": "1b6064007e60645b934b193b223421068eb4cee7591a7f7f814b393da7cc813d",
+      "changed": true
+    },
+    {
+      "file": "ui-consistency-progress.json",
+      "beforeSha256": "10ddb4a6b77ba49376e4204fa79653989feeb19cbc45b5ddedcf13025f11c433",
+      "afterSha256": "968b59cab8abe0a9ac0f147e16fd84cce32d5ecb97c21a766b03b277358ba390",
+      "changed": true
+    }
+  ],
+  "finishedAt": "2026-10-05T18:44:29.008Z",
+  "summary": {
+    "changedDocumentation": 17,
+    "changedProgress": 10,
+    "retiredProgressFields": 206,
+    "scope": "Documentation cleanup only; historical acceptance is not fresh acceptance.",
+    "pendingIntegration": "Parent writes docs/maintenance/validation-cleanup.md and validates aggregate cleanup. Its maintenance link was intentionally pending at worker validation time."
+  }
+}

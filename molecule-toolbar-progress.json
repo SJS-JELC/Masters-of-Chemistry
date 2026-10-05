@@ -1,6 +1,7 @@
 {
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
   "runId": "MOLECULE-TOOLBAR-20261004",
   "status": "complete",
   "acceptedAt": "2026-10-04T12:45:49.911Z",
-  "evidence": "validation/molecule-toolbar/acceptance.json"
+  "evidence": "retired historical path: validation/molecule-toolbar/acceptance.json"
 }

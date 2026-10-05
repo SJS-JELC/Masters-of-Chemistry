@@ -34,7 +34,8 @@ It does not overwrite either original app or teacher review exports.
 
 The browser check uses the workspace-pinned Playwright and installed Edge. It saves
 results, browser screenshots and a measured standalone component bundle under
-`validation/flashcards/`. `FLASHCARD_URL` can override the local preview URL.
+ignored `.artifacts/flashcards/`. Historical reports were deleted in the
+user-authorised cleanup. `FLASHCARD_URL` can override the local preview URL.
 The bundle measurement includes the reused content/diagram renderer and excludes
 React, the demo deck and the existing shared font; it is not a whole-app download
 measurement. Previous `failure.*` files retain superseded development failures;

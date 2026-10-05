@@ -1,4 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';
-const project=path.resolve(import.meta.dirname,'../../../..');let s=fs.readFileSync(path.join(project,'validation/s5/render-release/final-c3-k.mjs'),'utf8');
-s=s.replace('../../../../../node_modules/playwright','../../../../../../node_modules/playwright').replaceAll('../../../src/','../../../../src/').replace("process.env.TEMP=path.join(here,'tmp')","process.env.TEMP=path.join(project,'.component-fidelity-tmp')").replace("const here=import.meta.dirname;","const here=import.meta.dirname,project=path.resolve(here,'../../../..');fs.mkdirSync(path.join(here,'screens'),{recursive:true});").replace('http://127.0.0.1:5203/nested/alevel/index.html?view=olympiad','http://127.0.0.1:5192/alevel/index.html?view=olympiad&activity=alevel%2Fc3l6-organic-reactions');
-fs.writeFileSync(new URL('./c3-browser.mjs',import.meta.url),s);

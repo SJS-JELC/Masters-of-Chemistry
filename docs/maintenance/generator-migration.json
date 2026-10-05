@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "jobId": "GENERATOR-MIGRATION",
+  "agentId": "A03",
+  "status": "PASS",
+  "completedAt": "2026-10-05T18:42:12.163Z",
+  "mappings": [
+    {
+      "from": "validation/s2/acid/extract-engines.mjs",
+      "to": "scripts/source-generation/acid/extract-engines.mjs",
+      "originalSha256": "ee568a38070e92ac868cc9fc26e073bb533852d636aea65c7b0669de02d44724",
+      "migratedSha256": "5adfdf8815f5c5a053c6e3bb212433413f3f1d158979c30f86e679a2ada0f670"
+    },
+    {
+      "from": "validation/s2/structure/extract-source.mjs",
+      "to": "scripts/source-generation/structure/extract-source.mjs",
+      "originalSha256": "13cccb1be8709219c8f7a080c64677c4d1d0b92c5531611fdfce75b9cd7dfc65",
+      "migratedSha256": "0e7b26627514f5c892bb0c21489e72f2fb16ba76c75b20b3767a0899a362a16f"
+    },
+    {
+      "from": "validation/s2/dot-cross/extract.mjs",
+      "to": "scripts/source-generation/dot-cross/extract.mjs",
+      "originalSha256": "1ac42837a57fd6579bbb41cb875374444baba0b6c1670a75f205a7d7c655110a",
+      "migratedSha256": "74c57f8466e9a0a36485c9788fd98cd3421803924b4bb9b46bf11a75d7960852"
+    },
+    {
+      "from": "validation/s3/electrons/extract-sources.mjs",
+      "to": "scripts/source-generation/electrons/extract-sources.mjs",
+      "originalSha256": "55a05afbfbd250cf9ba961f7b17d14846fddcd6335421f4d108a828794d18865",
+      "migratedSha256": "55dd70b8ad8cd2a27e667ef13209e561e422327071230f356b334e5be84300a9"
+    },
+    {
+      "from": "validation/s3/energy/extract.mjs",
+      "to": "scripts/source-generation/energy/extract.mjs",
+      "originalSha256": "f925a1e9fa54bc60f60740858ae06ffb651c0d19b4178d565073787791afc143",
+      "migratedSha256": "385648943358e04c7e19513c6201412d798d1672f29e5c21b5f594f85885db19"
+    },
+    {
+      "from": "validation/s3/thermochemistry/extract.mjs",
+      "to": "scripts/source-generation/thermochemistry/extract.mjs",
+      "originalSha256": "4d629cb905e4e481f223444e4b3d6bb64f8805ff4a31a6eb9b764e69d65dcc3f",
+      "migratedSha256": "7981486fb8f7cadc44de12ad783bd73f6a25c073b4e2c6ffdc55007b71a97d0e"
+    },
+    {
+      "from": "validation/s3/titration/extract.mjs",
+      "to": "scripts/source-generation/titration/extract.mjs",
+      "originalSha256": "a7c70507f844bcbc649ed0c275211ae35b3b0514a0ab8267cb383d553c102cd1",
+      "migratedSha256": "7b0b5acc3f3fe5f40e6dd0ddeaf4a5f08cbfd51b4fcdeee20d2c91f010480486"
+    },
+    {
+      "from": "validation/s3/igcse-dot-cross/extract.mjs",
+      "to": "scripts/source-generation/igcse-dot-cross/extract.mjs",
+      "originalSha256": "41eb31148ba6f30904b60de8420c88e0d0e939935d4f9ed0dc3813f23ad94c06",
+      "migratedSha256": "9e8ac3c10e201bbabaf37b39dd59ef706ecb3dde628fd13ce92b6b023a4a4695"
+    },
+    {
+      "from": "validation/s3/c3l6/extract-sources.mjs",
+      "to": "scripts/source-generation/c3l6/extract-sources.mjs",
+      "originalSha256": "9927c37d8391361b85aef6e1b71e67987e05d363f62011fdbec1063b5450888d",
+      "migratedSha256": "e0173f520914c707b4566740ee45a752856dc2b4112a1b3dc289308bc4ba0537"
+    },
+    {
+      "from": "validation/component-fidelity/f2/shared/extract-source-css.mjs",
+      "to": "scripts/source-generation/styles/extract-source-css.mjs",
+      "originalSha256": "e349a3859d27138351597e4bf43cd5ad9115c75ffa171f26135dc64c0c72addd",
+      "migratedSha256": "a1e9a840ba189cf02b17515c602a434ac6332a1ea1a43aa53ac6fc0aa41e1958"
+    },
+    {
+      "from": "validation/component-fidelity/f2/electron/extract-styles.mjs",
+      "to": "scripts/source-generation/electron-styles/extract-styles.mjs",
+      "originalSha256": "54b83da6c756f332601ef97b6852719da8862520fbf92bb0ec028b0fed9fc15a",
+      "migratedSha256": "3866fd5e2766b5e6b00681b6e46f98623ae7f28ab0578c8fb3aa61915f5b711d"
+    },
+    {
+      "from": "validation/s3/review-co/create-reviewed-svg.mjs",
+      "to": "scripts/source-generation/review-co/create-reviewed-svg.mjs",
+      "originalSha256": "8ed04e1665f7548c6d5264e8de0f55a7b4efaf6c956879d37166b3961cf390a7",
+      "migratedSha256": "67c7d30579e105cf876c08387954c0c21ad5052cbbde056a0182fd92ea6d7c41"
+    },
+    {
+      "from": "validation/explaining-properties/register.mjs",
+      "to": "scripts/source-generation/explaining-properties/register.mjs",
+      "disposition": "Authored metadata and landing registration generator retained after final source-documentation audit"
+    }
+  ],
+  "retainedInputs": [
+    {
+      "from": "validation/s0/inventory/coverage-manifest.json",
+      "to": "resources/source-generation/inventory/coverage-manifest.json",
+      "sha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/s0/inventory/identity-index.json",
+      "to": "resources/source-generation/inventory/identity-index.json",
+      "sha256": "2e77221de86121719fec2a969fa26038a79263a20ceda31672f25bfeb0d099f1",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/s0/control-start.json",
+      "to": "resources/source-generation/controls/control-start.json",
+      "sha256": "aa44f0b240735b7d6f3cad816d367b5d98a039916985ad40ffbc1ec6d4c00b70",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/root-contract-lock.json",
+      "to": "resources/source-generation/controls/root-contract-lock.json",
+      "sha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/component-fidelity/f1/ui-pilot/reference-matrix.json",
+      "to": "resources/source-generation/styles/source-css-inputs.json",
+      "sha256": "e239cb19d37270353c4b014ed1729755ff5324263c6eba9c88fa1775f8450837",
+      "retention": "ordered CSS path/hash/byte inputs only, historical report fields removed"
+    }
+  ],
+  "changedSourceComments": [
+    "src/activities/alevel/acid-base-calculations/data.js",
+    "src/activities/alevel/acid-base-calculations/engine.js",
+    "src/activities/alevel/acid-base-calculations/historical-levels.js",
+    "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+    "src/activities/alevel/acid-base-calculations/legacy-core.js",
+    "src/activities/alevel/acid-base-calculations/persisted-codes.ts",
+    "src/activities/alevel/electrons-bonding/data.js",
+    "src/activities/igcse/energetics-practical/data.ts",
+    "src/activities/igcse/energy-enthalpy/data.ts",
+    "src/activities/igcse/structure-and-bonding/data.ts",
+    "src/chemistry/dot-and-cross/core.js",
+    "src/chemistry/electron-configuration/data.js"
+  ],
+  "sourceAndHistoricalControls": {
+    "schemaVersion": 1,
+    "status": "FAIL",
+    "mode": "historical-s0-baseline",
+    "checkedAt": "2026-10-05T18:41:18.867Z",
+    "activities": 12,
+    "sources": 237,
+    "sourceCheck": {
+      "status": "FAIL",
+      "failures": [
+        {
+          "path": "apps/Masters-of-Chemistry/project-contract.json",
+          "reason": "byte/hash mismatch"
+        }
+      ]
+    },
+    "structuralCheck": {
+      "status": "PASS",
+      "failures": []
+    },
+    "historicalBaseline": {
+      "status": "DIFFERS",
+      "recordedAt": "2026-10-02T22:09:06.9870685+00:00",
+      "controls": [
+        {
+          "originalPath": "AGENTS.md",
+          "currentPath": "AGENTS.md",
+          "expectedSha256": "c184a065b7bd08e6b70c77f530afd46817ea6b4bc50b9cabf8533b3ecc03107e",
+          "actualSha256": "c184a065b7bd08e6b70c77f530afd46817ea6b4bc50b9cabf8533b3ecc03107e",
+          "status": "PASS"
+        },
+        {
+          "originalPath": "IMPLEMENTATION.md",
+          "currentPath": "IMPLEMENTATION.md",
+          "expectedSha256": "043c34988b57d5af6475620322622c03fb54c4d51d1b9c26d1b88eb71265fe73",
+          "actualSha256": "0ec9d5d597e4d721c24061244dc92a1f428ad2ff76dbcce22382572eaa95839c",
+          "status": "FAIL"
+        },
+        {
+          "originalPath": "scripts/protect-originals.mjs",
+          "currentPath": "scripts/protect-originals.mjs",
+          "expectedSha256": "c4772926f38379912a9bcdbdbf8f5d3da8eb0e21c805f968474499bb8120be6b",
+          "actualSha256": "b9f1933e2c4b1ca0d57beaeef83cfbdbcbc78c87e2b534d12a87fd9acb1b1fdc",
+          "status": "FAIL"
+        },
+        {
+          "originalPath": "validation/original-app-baseline.json",
+          "currentPath": "resources/source-generation/controls/original-app-baseline.json",
+          "expectedSha256": "be988874727f246610b386ad02a187729c47f6c4c924005a44f4b3f0be42f29e",
+          "actualSha256": "be988874727f246610b386ad02a187729c47f6c4c924005a44f4b3f0be42f29e",
+          "status": "PASS"
+        },
+        {
+          "originalPath": "project-contract.json",
+          "currentPath": "project-contract.json",
+          "expectedSha256": "5cda637c3af8b70a1750e213050c99c3060807c17341513502d1216bbc25ce70",
+          "actualSha256": "c46cf3af7cf333f61e8e3bcfed3aca29aa0d7c3f1c84c47904ec5431a9295685",
+          "status": "FAIL"
+        },
+        {
+          "originalPath": "validation/root-contract-lock.json",
+          "currentPath": "resources/source-generation/controls/root-contract-lock.json",
+          "expectedSha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81",
+          "actualSha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81",
+          "status": "PASS"
+        }
+      ],
+      "failures": [
+        "historical control differs: IMPLEMENTATION.md",
+        "historical control differs: scripts/protect-originals.mjs",
+        "historical control differs: project-contract.json",
+        "current contract differs from historical S0 lock",
+        "current activities differ from frozen twelve-activity S0 scope"
+      ],
+      "originalContractSha256": "5cda637c3af8b70a1750e213050c99c3060807c17341513502d1216bbc25ce70"
+    },
+    "retiredChecks": [
+      "Historical worker handover/output existence checks and write-s0-scope were stage machinery removed with authorised validation cleanup.",
+      "Current catalogue check: node scripts/write-catalogue-definitions.mjs --check"
+    ],
+    "limitations": [
+      "This deterministic source check does not claim new chemistry or rendered acceptance.",
+      "Frozen sourceEvidence fields preserve historical identifiers; deleted review files are not runtime or regeneration inputs.",
+      "--sources-only explicitly excludes historical-control equality from command exit status; baseline differences remain visible."
+    ]
+  },
+  "sourceImportMigration": {
+    "path": "src/development/FoundationApp.tsx",
+    "from": "../../validation/s1/persistence/browser-scenarios.ts",
+    "to": "../../scripts/browser/shared/persistence/browser-scenarios.ts",
+    "ownerOfRetainedModule": "A04"
+  },
+  "checks": [
+    {
+      "id": "frozen-input-integrity",
+      "status": "PASS",
+      "detail": "Coverage/identity inventory and historical control/contract-lock JSON remain byte-identical."
+    },
+    {
+      "id": "catalogue-check",
+      "status": "PASS",
+      "command": "node scripts/write-catalogue-definitions.mjs --check",
+      "activities": 14,
+      "gems": 17,
+      "baseline": "Same PASS and counts before/after migration; generated definitions untouched."
+    },
+    {
+      "id": "generator-content-preservation",
+      "status": "PASS",
+      "detail": "Ran original and relocated generators read-only against the same live immutable sources. Compared final generated outputs after normalising only the leading provenance comment. All 12 output sets retain identical content.",
+      "generators": [
+        {
+          "original": "validation/s2/acid/extract-engines.mjs",
+          "migrated": "scripts/source-generation/acid/extract-engines.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 7,
+          "currentOutputDrift": [
+            "src/activities/alevel/acid-base-calculations/engine.js",
+            "src/activities/alevel/acid-base-calculations/idle-allowances.ts",
+            "src/activities/alevel/acid-base-calculations/persisted-codes.ts"
+          ],
+          "baselineExitCode": 1,
+          "migratedExitCode": 1
+        },
+        {
+          "original": "validation/s2/structure/extract-source.mjs",
+          "migrated": "scripts/source-generation/structure/extract-source.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 2,
+          "currentOutputDrift": [],
+          "baselineExitCode": 1,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/s2/dot-cross/extract.mjs",
+          "migrated": "scripts/source-generation/dot-cross/extract.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 3,
+          "currentOutputDrift": [
+            "src/chemistry/dot-and-cross/layout.js"
+          ],
+          "baselineExitCode": 1,
+          "migratedExitCode": 1
+        },
+        {
+          "original": "validation/s3/electrons/extract-sources.mjs",
+          "migrated": "scripts/source-generation/electrons/extract-sources.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 6,
+          "currentOutputDrift": [],
+          "baselineExitCode": 1,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/s3/energy/extract.mjs",
+          "migrated": "scripts/source-generation/energy/extract.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 4,
+          "currentOutputDrift": [],
+          "baselineExitCode": 1,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/s3/thermochemistry/extract.mjs",
+          "migrated": "scripts/source-generation/thermochemistry/extract.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 4,
+          "currentOutputDrift": [],
+          "baselineExitCode": 0,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/s3/titration/extract.mjs",
+          "migrated": "scripts/source-generation/titration/extract.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 2,
+          "currentOutputDrift": [],
+          "baselineExitCode": 0,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/s3/igcse-dot-cross/extract.mjs",
+          "migrated": "scripts/source-generation/igcse-dot-cross/extract.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 1,
+          "currentOutputDrift": [],
+          "baselineExitCode": 0,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/s3/c3l6/extract-sources.mjs",
+          "migrated": "scripts/source-generation/c3l6/extract-sources.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 47,
+          "currentOutputDrift": [],
+          "baselineExitCode": 0,
+          "migratedExitCode": 0
+        },
+        {
+          "original": "validation/component-fidelity/f2/shared/extract-source-css.mjs",
+          "migrated": "scripts/source-generation/styles/extract-source-css.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 1,
+          "currentOutputDrift": [
+            "src/ui/source-components.css"
+          ],
+          "baselineExitCode": 1,
+          "migratedExitCode": 1
+        },
+        {
+          "original": "validation/component-fidelity/f2/electron/extract-styles.mjs",
+          "migrated": "scripts/source-generation/electron-styles/extract-styles.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 1,
+          "currentOutputDrift": [
+            "src/editors/electron-configuration/styles.css"
+          ],
+          "baselineExitCode": 1,
+          "migratedExitCode": 1
+        },
+        {
+          "original": "validation/s3/review-co/create-reviewed-svg.mjs",
+          "migrated": "scripts/source-generation/review-co/create-reviewed-svg.mjs",
+          "unchangedGeneratedContent": true,
+          "checkedFinalOutputs": 1,
+          "currentOutputDrift": [],
+          "baselineExitCode": 1,
+          "migratedExitCode": 0
+        }
+      ]
+    },
+    {
+      "id": "source-and-historical-controls",
+      "status": "EXPECTED_HISTORICAL_FAILURE",
+      "command": "node scripts/validate-s0.mjs",
+      "detail": "236 of 237 frozen source hashes match; the additional project-contract source record changed with later authorised scope. Current typed identity/Olympiad invariants pass. Historical controls report authorised later changes explicitly and still return nonzero; no hashes replaced.",
+      "evidence": ".artifacts/source-generation/source-and-historical-controls.json"
+    },
+    {
+      "id": "original-validation-preservation",
+      "status": "PASS",
+      "detail": "Original validation files read/copied only; deletion belongs to foreman after dependency audit."
+    },
+    {
+      "id": "authored-properties-registration",
+      "status": "PASS",
+      "command": "node scripts/source-generation/explaining-properties/register.mjs --check",
+      "checkedGeneratedFiles": 2,
+      "differences": [],
+      "scope": "Final integration retained the documented authored metadata/landing generator; the read-only check never writes live source."
+    }
+  ],
+  "limitations": [
+    "Integration restored the original reviewed-co-svg.ts provenance comment to preserve its exact frozen regression fingerprint. Its historical validation path is an identifier only; use scripts/source-generation/review-co/create-reviewed-svg.mjs for regeneration.",
+    "Four historical generators retain pre-existing differences against refined live outputs: acid (engine/typing), dot-cross layout, shared component CSS and electron styles. Original-versus-relocated output comparison proves these are not migration changes. --check exposes them without writing live files; regeneration requires deliberate review of accepted refinements.",
+    "Frozen coverage-manifest sourceEvidence values and control-start keys preserve historical path identifiers. Their deleted reports are not executable inputs; do not treat these identifiers as current review evidence.",
+    "Only true input fixtures and executable extraction/correction pathways retained. Historical screenshots, chemistry PASS reports, timing outputs and worker completion/handover files are not moved.",
+    "No new chemical content, source structures, answers, scores, IDs or qualification policy generated into live src.",
+    "Runtime/browser integration and final validation-tree deletion belong to the foreman/other owners; this manifest covers the generator dependency migration.",
+    "Read-only --check suppresses diagnostic report writes. Normal regeneration writes diagnostic fingerprints under .artifacts/source-generation/ and preserves the original sibling sources."
+  ],
+  "usage": null
+}

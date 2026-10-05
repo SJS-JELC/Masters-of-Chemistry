@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "jobId": "TOOL-MIGRATION",
+  "agentId": "A04",
+  "mappings": [
+    {
+      "old": "validation/landing-restoration/aggregate/prefix-browser.mjs",
+      "new": "scripts/browser/landing/aggregate/prefix-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/aggregate"
+    },
+    {
+      "old": "validation/landing-restoration/design/reuse-originals.mjs",
+      "new": "scripts/browser/landing/design/reuse-originals.mjs",
+      "disposition": "retained-reference-generator",
+      "outputs": ".artifacts/browser/landing/design"
+    },
+    {
+      "old": "validation/landing-restoration/design/compare-browser.mjs",
+      "new": "scripts/browser/landing/design/compare-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/design"
+    },
+    {
+      "old": "validation/landing-restoration/design/interaction-browser.mjs",
+      "new": "scripts/browser/landing/design/interaction-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/design"
+    },
+    {
+      "old": "validation/landing-restoration/integration/browser.mjs",
+      "new": "scripts/browser/landing/integration/browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/integration"
+    },
+    {
+      "old": "validation/landing-restoration/integration/revision-browser.mjs",
+      "new": "scripts/browser/landing/integration/revision-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/integration"
+    },
+    {
+      "old": "validation/landing-restoration/integration/failure-browser.mjs",
+      "new": "scripts/browser/landing/integration/failure-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/integration"
+    },
+    {
+      "old": "validation/landing-restoration/integration/teacher-category/browser.mjs",
+      "new": "scripts/browser/landing/integration/teacher-category/browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/landing/integration/teacher-category"
+    },
+    {
+      "old": "validation/olympiad-2011-q4/recovery-w02/browser.mjs",
+      "new": "scripts/browser/olympiad/browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/olympiad"
+    },
+    {
+      "old": "validation/olympiad-2011-q4/recovery-w02/async-navigation.mjs",
+      "new": "scripts/browser/olympiad/async-navigation.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/olympiad"
+    },
+    {
+      "old": "validation/olympiad-2011-q4/recovery-w02/production-smoke.mjs",
+      "new": "scripts/browser/olympiad/production-smoke.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/olympiad"
+    },
+    {
+      "old": "validation/explaining-properties/browser.mjs",
+      "new": "scripts/browser/explaining-properties/browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/explaining-properties"
+    },
+    {
+      "old": "validation/explaining-properties/timing-browser.mjs",
+      "new": "scripts/browser/explaining-properties/timing-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/explaining-properties"
+    },
+    {
+      "old": "validation/explaining-properties/fix-cycle-01/prefix-browser.mjs",
+      "new": "scripts/browser/explaining-properties/prefix-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/explaining-properties"
+    },
+    {
+      "old": "validation/explaining-properties/fix-cycle-01/visual-browser.mjs",
+      "new": "scripts/browser/explaining-properties/visual-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/explaining-properties"
+    },
+    {
+      "old": "validation/component-fidelity/f3/shared-final/acid-browser.mjs",
+      "new": "scripts/browser/component-fidelity/acid-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/component-fidelity"
+    },
+    {
+      "old": "validation/component-fidelity/f3/shared-final/numeric-browser.mjs",
+      "new": "scripts/browser/component-fidelity/numeric-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/component-fidelity"
+    },
+    {
+      "old": "validation/component-fidelity/f3/shared-final/rubric-browser.mjs",
+      "new": "scripts/browser/component-fidelity/rubric-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/component-fidelity"
+    },
+    {
+      "old": "validation/component-fidelity/f3/shared-final/revision-browser.mjs",
+      "new": "scripts/browser/component-fidelity/revision-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/component-fidelity"
+    },
+    {
+      "old": "validation/component-fidelity/f3/shared-final/energy-actions-browser.mjs",
+      "new": "scripts/browser/component-fidelity/energy-actions-browser.mjs",
+      "disposition": "retained-runnable",
+      "outputs": ".artifacts/browser/component-fidelity"
+    },
+    {
+      "old": "validation/landing-restoration/design/harness.html",
+      "new": "scripts/browser/fixtures/landing/harness.html",
+      "disposition": "required-test-or-fixture"
+    },
+    {
+      "old": "validation/landing-restoration/design/harness.tsx",
+      "new": "scripts/browser/fixtures/landing/harness.tsx",
+      "disposition": "required-test-or-fixture"
+    },
+    {
+      "old": "validation/landing-restoration/design/invariants.test.mjs",
+      "new": "scripts/tests/landing/invariants.test.mjs",
+      "disposition": "required-test-or-fixture"
+    },
+    {
+      "old": "validation/landing-restoration/integration/launch-routing.test.ts",
+      "new": "scripts/tests/landing/launch-routing.test.ts",
+      "disposition": "required-test-or-fixture"
+    },
+    {
+      "old": "validation/component-fidelity/f2/shared/resume-f08/fixtures.json",
+      "new": "scripts/browser/fixtures/component-fidelity.json",
+      "disposition": "required-test-or-fixture"
+    },
+    {
+      "old": "scripts/prepare-olympiad-2011.mjs",
+      "new": "scripts/prepare-olympiad-2011.mjs",
+      "disposition": "generated-output-relocated-to-.artifacts"
+    },
+    {
+      "old": "scripts/review_flashcards.mjs",
+      "new": "scripts/review_flashcards.mjs",
+      "disposition": "generated-output-relocated-to-.artifacts"
+    },
+    {
+      "old": "scripts/review_recall_hub.mjs",
+      "new": "scripts/review_recall_hub.mjs",
+      "disposition": "generated-output-relocated-to-.artifacts"
+    },
+    {
+      "old": "scripts/validate-s1-builds.mjs",
+      "new": "scripts/validate-s1-builds.mjs",
+      "disposition": "generated-output-relocated-to-.artifacts"
+    },
+    {
+      "old": "scripts/validate-s2-builds.mjs",
+      "new": "scripts/validate-s2-builds.mjs",
+      "disposition": "generated-output-relocated-to-.artifacts"
+    },
+    {
+      "old": "scripts/validate-s3-builds.mjs",
+      "new": "scripts/validate-s3-builds.mjs",
+      "disposition": "generated-output-relocated-to-.artifacts"
+    },
+    {
+      "old": "scripts/prepare_flashcards.mjs",
+      "new": "scripts/prepare_flashcards.mjs",
+      "disposition": "retained-source-verifier-no-validation-runtime-dependency"
+    },
+    {
+      "old": "scripts/review_active_question_time.mjs",
+      "new": null,
+      "disposition": "retired-historical-report-tool"
+    },
+    {
+      "old": "validation/landing-restoration/design/write-review.mjs",
+      "new": null,
+      "disposition": "retired-historical-report-tool"
+    },
+    {
+      "old": "validation/s1/persistence/browser-scenarios.ts",
+      "new": "scripts/browser/shared/persistence/browser-scenarios.ts",
+      "disposition": "required-dev-runtime-module"
+    },
+    {
+      "old": "validation/s1/persistence/fixtures.ts",
+      "new": "scripts/browser/shared/persistence/fixtures.ts",
+      "disposition": "required-dev-runtime-module"
+    },
+    {
+      "old": null,
+      "new": "scripts/browser/smoke.mjs",
+      "disposition": "current-migration-smoke",
+      "outputs": ".artifacts/browser/smoke"
+    },
+    {
+      "old": "validation/explaining-properties/fix-cycle-01/native-timing.mjs",
+      "new": "scripts/browser/explaining-properties/native-timing.mjs",
+      "disposition": "retained-native-timing-suite-not-run",
+      "outputs": ".artifacts/browser/explaining-properties/native"
+    },
+    {
+      "old": "validation/explaining-properties/fix-cycle-01/foreground-owned-chrome.ps1",
+      "new": "scripts/browser/explaining-properties/foreground-owned-chrome.ps1",
+      "disposition": "required-native-timing-helper"
+    }
+  ],
+  "policy": "Retain runnable assertions and their input fixtures; retire historical evidence and report-only writers. Browser outputs use ignored .artifacts/browser and pinned workspace Playwright.",
+  "validation": {
+    "syntax": {
+      "status": "PASS",
+      "modules": 33,
+      "evidence": ".artifacts/tool-migration/syntax.json"
+    },
+    "importClosure": {
+      "status": "PASS",
+      "files": 28,
+      "imports": 52,
+      "evidence": ".artifacts/tool-migration/dependencies.json"
+    },
+    "currentBrowserSmoke": {
+      "status": "PASS",
+      "checks": 5,
+      "evidence": ".artifacts/browser/smoke/results.json",
+      "renderedInspection": [
+        ".artifacts/browser/smoke/alevel-current-home-mobile.png",
+        ".artifacts/browser/smoke/igcse-current-home-mobile.png",
+        ".artifacts/browser/smoke/olympiad-seven-boxes.png"
+      ]
+    },
+    "flashcardReproduction": {
+      "status": "PASS",
+      "command": "node scripts/prepare_flashcards.mjs"
+    },
+    "preservedHistoricalFindings": [
+      {
+        "evidence": ".artifacts/tool-migration/landing-tests.txt",
+        "result": "6 PASS / 1 FAIL",
+        "reason": "Original legacy-query unwrapping expectation fails on current route helpers; direct defaults/activity/hash and all current provider/gem/level coverage assertions retained."
+      },
+      {
+        "evidence": ".artifacts/browser/olympiad/async-navigation.json",
+        "result": "FAIL",
+        "reason": "Current UI lacks historical All Olympiad challenges control; executable preserves the asynchronous stale-load assertion."
+      }
+    ],
+    "notRun": "Full retained substantive/browser/native suites were migrated without claiming current acceptance; syntax/import gates and focused current smoke establish runnable relocation only."
+  },
+  "testScopeUpdates": [
+    {
+      "file": "scripts/tests/landing/invariants.test.mjs",
+      "reason": "Authorized Explaining Properties addition: original catalogue subset remains byte/data equivalent; explicit new activity and identities checks added; source-masterys equivalence remains limited to original gems; current17-gem inventory asserted."
+    },
+    {
+      "file": "scripts/tests/landing/launch-routing.test.ts",
+      "reason": "Authorized current coverage updated to17 gems/43 supported levels; each actual provider/select/restore/practice/revision/unsupported-level assertion retained."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "scripts/browser/fixtures/landing/harness.html",
+      "sha256": "67062a5d89b6daadc8618a7373cb3f7bc1b73d020c9051317286df5b0aaafb64"
+    },
+    {
+      "path": "scripts/browser/fixtures/landing/harness.tsx",
+      "sha256": "c9af309e40ba90ffe9169fc5f0dae6696158e0f31eeea47cfc5852c0b5ea95b1"
+    },
+    {
+      "path": "scripts/tests/landing/invariants.test.mjs",
+      "sha256": "1c32c7e9d101b0a959b7d1e6c10731bcf7e4d5c23b00a7398f1944fd18bce53e"
+    },
+    {
+      "path": "scripts/tests/landing/launch-routing.test.ts",
+      "sha256": "20a4e105ba9c785416fd6785cfb4cc2ab057f324883b2697a1f3dad5eb6ab526"
+    },
+    {
+      "path": "scripts/browser/fixtures/component-fidelity.json",
+      "sha256": "76653a2ff028ba1be3d33c67b20c54646782497428c7920e161c984e67bdc3a7"
+    }
+  ]
+}

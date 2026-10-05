@@ -1,3 +1,0 @@
-﻿import fs from 'node:fs';import {spawnSync} from 'node:child_process';
-const here='validation/s5/fixes/titration-typing';const result=spawnSync('git',['diff','--no-index','--',here+'/editor-before.tsx','src/editors/titration-curve/TitrationCurveEditor.tsx'],{encoding:'utf8'});fs.writeFileSync(here+'/editor.diff',result.stdout);if(![0,1].includes(result.status))throw Error(result.stderr);
-const report=JSON.parse(fs.readFileSync(here+'/browser-results.json','utf8'));report.checks=report.checks.map(s=>s.replace('teacher anchors remain disabled/read only','current teacher shows checked model without editable anchor controls'));fs.writeFileSync(here+'/browser-results.json',JSON.stringify(report,null,2));

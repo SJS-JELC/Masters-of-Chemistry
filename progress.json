@@ -1,4 +1,5 @@
 ﻿{
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
     "schemaVersion":  1,
     "contractVersion":  "1.0.0",
     "runId":  "MASTERS-REACT-20261002",
@@ -8,10 +9,10 @@
                    "S0":  {
                               "status":  "accepted",
                               "evidence":  [
-                                               "validation/s0/foreman-report.json",
+                                               "retired historical path: validation/s0/foreman-report.json",
                                                "HANDOFF.md",
-                                               "validation/s0/integration-check.json",
-                                               "validation/s0/root-acceptance.json"
+                                               "retired historical path: validation/s0/integration-check.json",
+                                               "retired historical path: validation/s0/root-acceptance.json"
                                            ],
                               "acceptedBy":  "root",
                               "acceptedAt":  "2026-10-02T22:37:53.957Z"
@@ -19,12 +20,12 @@
                    "S1":  {
                               "status":  "accepted",
                               "evidence":  [
-                                               "validation/s1/foreman-report.json",
+                                               "retired historical path: validation/s1/foreman-report.json",
                                                "HANDOFF.md",
-                                               "validation/s1/integration/foreman-checks.json",
-                                               "validation/s1/integration/build-browser.json",
-                                               "validation/s1/root-fix/foreman-report.json",
-                                               "validation/s1/root-acceptance.json"
+                                               "retired historical path: validation/s1/integration/foreman-checks.json",
+                                               "retired historical path: validation/s1/integration/build-browser.json",
+                                               "retired historical path: validation/s1/root-fix/foreman-report.json",
+                                               "retired historical path: validation/s1/root-acceptance.json"
                                            ],
                               "acceptedBy":  "root",
                               "acceptedAt":  "2026-10-02T23:55:16.2925481Z"
@@ -32,12 +33,12 @@
                    "S2":  {
                               "status":  "accepted",
                               "evidence":  [
-                                               "validation/s2/foreman-report.json",
+                                               "retired historical path: validation/s2/foreman-report.json",
                                                "HANDOFF.md",
-                                               "validation/s2/integration/foreman-checks.json",
-                                               "validation/s2/review-native/partial-verification.json",
-                                               "validation/s2/review-suspension/completion.json",
-                                               "validation/s2/root-acceptance.json"
+                                               "retired historical path: validation/s2/integration/foreman-checks.json",
+                                               "retired historical path: validation/s2/review-native/partial-verification.json",
+                                               "retired historical path: validation/s2/review-suspension/completion.json",
+                                               "retired historical path: validation/s2/root-acceptance.json"
                                            ],
                               "acceptedBy":  "root",
                               "acceptedAt":  "2026-10-03T00:59:07.2083907Z"
@@ -45,12 +46,12 @@
                    "S3":  {
                               "status":  "accepted",
                               "evidence":  [
-                                               "validation/s3/foreman-report.json",
+                                               "retired historical path: validation/s3/foreman-report.json",
                                                "HANDOFF.md",
-                                               "validation/s3/integration/foreman-checks.json",
-                                               "validation/s3/integration/owned-verification.json",
-                                               "validation/s3/review-timing/completion.json",
-                                               "validation/s3/root-acceptance.json"
+                                               "retired historical path: validation/s3/integration/foreman-checks.json",
+                                               "retired historical path: validation/s3/integration/owned-verification.json",
+                                               "retired historical path: validation/s3/review-timing/completion.json",
+                                               "retired historical path: validation/s3/root-acceptance.json"
                                            ],
                               "acceptedBy":  "root",
                               "acceptedAt":  "2026-10-03T02:04:23.0051355Z"
@@ -58,14 +59,14 @@
                    "S4":  {
                               "status":  "accepted",
                               "evidence":  [
-                                               "validation/s4/foreman-report.json",
+                                               "retired historical path: validation/s4/foreman-report.json",
                                                "HANDOFF.md",
-                                               "validation/s4/integration/foreman-checks.json",
-                                               "validation/s4/integration/production-browser.json",
-                                               "validation/s4/integration/owned-verification.json",
-                                               "validation/s4/refinement/foreman-report.json",
-                                               "validation/s4/refinement/file-inventory.json",
-                                               "validation/s4/root-acceptance.json"
+                                               "retired historical path: validation/s4/integration/foreman-checks.json",
+                                               "retired historical path: validation/s4/integration/production-browser.json",
+                                               "retired historical path: validation/s4/integration/owned-verification.json",
+                                               "retired historical path: validation/s4/refinement/foreman-report.json",
+                                               "retired historical path: validation/s4/refinement/file-inventory.json",
+                                               "retired historical path: validation/s4/root-acceptance.json"
                                            ],
                               "acceptedBy":  "root",
                               "acceptedAt":  "2026-10-03T03:59:29.1707504Z"
@@ -73,14 +74,14 @@
                    "S5":  {
                               "status":  "accepted",
                               "evidence":  [
-                                               "validation/s5/foreman-report.json",
+                                               "retired historical path: validation/s5/foreman-report.json",
                                                "HANDOFF.md",
                                                "README.md",
-                                               "validation/s5/integration/foreman-checks.json",
-                                               "validation/s5/behaviour/session-only-save-fix/latest/completion.json",
-                                               "validation/s5/chemistry/session-only-save-fix/final/completion.json",
-                                               "validation/s5/render-release/session-only-save-fix/completion.json",
-                                               "validation/s5/root-acceptance.json"
+                                               "retired historical path: validation/s5/integration/foreman-checks.json",
+                                               "retired historical path: validation/s5/behaviour/session-only-save-fix/latest/completion.json",
+                                               "retired historical path: validation/s5/chemistry/session-only-save-fix/final/completion.json",
+                                               "retired historical path: validation/s5/render-release/session-only-save-fix/completion.json",
+                                               "retired historical path: validation/s5/root-acceptance.json"
                                            ],
                               "acceptedBy":  "root",
                               "acceptedAt":  "2026-10-03T06:58:39.8887513Z"
@@ -92,7 +93,7 @@
                      "jobId":  "S0-INVENTORY",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s0/inventory/completion.json"
+                     "evidence":  "retired historical path: validation/s0/inventory/completion.json"
                  },
                  {
                      "agentId":  "A03",
@@ -100,8 +101,8 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "evidence":  [
-                                      "validation/s0/contracts/handover.json",
-                                      "validation/s0/contracts/handover-clarification.json"
+                                      "retired historical path: validation/s0/contracts/handover.json",
+                                      "retired historical path: validation/s0/contracts/handover-clarification.json"
                                   ],
                      "clarifiedRetries":  1
                  },
@@ -111,7 +112,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s1/session/completion.json"
+                     "evidence":  "retired historical path: validation/s1/session/completion.json"
                  },
                  {
                      "agentId":  "A03",
@@ -119,7 +120,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s1/attempt/handover.json",
+                     "evidence":  "retired historical path: validation/s1/attempt/handover.json",
                      "resolution":  "A07 independent real hidden/tab/minimized browser proof, no clock source changes required."
                  },
                  {
@@ -128,7 +129,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s1/shell/completion.json"
+                     "evidence":  "retired historical path: validation/s1/shell/completion.json"
                  },
                  {
                      "agentId":  "A05",
@@ -136,7 +137,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s1/persistence/completion.json"
+                     "evidence":  "retired historical path: validation/s1/persistence/completion.json"
                  },
                  {
                      "agentId":  "A06",
@@ -144,7 +145,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s1/review-native/completion.json",
+                     "evidence":  "retired historical path: validation/s1/review-native/completion.json",
                      "resolution":  "A04 corrected unsupported Shift-navigation copy/test; actual Ctrl+A and precise offsets pass."
                  },
                  {
@@ -153,21 +154,21 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s1/review-background/completion.json"
+                     "evidence":  "retired historical path: validation/s1/review-background/completion.json"
                  },
                  {
                      "agentId":  "A03",
                      "jobId":  "S1-ATTEMPT-FIX",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s1/attempt/root-fix/handover.json"
+                     "evidence":  "retired historical path: validation/s1/attempt/root-fix/handover.json"
                  },
                  {
                      "agentId":  "A04",
                      "jobId":  "S1-SHELL-FIX",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s1/shell/completion-fix.json"
+                     "evidence":  "retired historical path: validation/s1/shell/completion-fix.json"
                  },
                  {
                      "agentId":  "A08",
@@ -175,7 +176,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s2/acid/completion.json",
+                     "evidence":  "retired historical path: validation/s2/acid/completion.json",
                      "resolution":  "Owned gates pass; original worker ESCALATE retained. A07 verified native acid/structure tail and A06 independently completed dot idle/persistence and clean same-document suspension boundaries."
                  },
                  {
@@ -184,7 +185,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s2/structure/completion.json",
+                     "evidence":  "retired historical path: validation/s2/structure/completion.json",
                      "resolution":  "Owned gates pass; original worker ESCALATE retained. A07 verified native acid/structure tail and A06 independently completed dot idle/persistence and clean same-document suspension boundaries."
                  },
                  {
@@ -193,7 +194,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s2/dot-cross/completion.json",
+                     "evidence":  "retired historical path: validation/s2/dot-cross/completion.json",
                      "resolution":  "Owned gates pass; original worker ESCALATE retained. A07 verified native acid/structure tail and A06 independently completed dot idle/persistence and clean same-document suspension boundaries."
                  },
                  {
@@ -202,7 +203,7 @@
                      "status":  "validated_partial",
                      "result":  "ESCALATE",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s2/review-native/completion.json",
+                     "evidence":  "retired historical path: validation/s2/review-native/completion.json",
                      "resolution":  "Passed acid/structure native gates retained and hash-verified; untested dot gates and document-replacement ambiguity routed to independent A06."
                  },
                  {
@@ -211,7 +212,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s2/review-suspension/completion.json"
+                     "evidence":  "retired historical path: validation/s2/review-suspension/completion.json"
                  },
                  {
                      "agentId":  "A11",
@@ -219,8 +220,8 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s3/electrons/completion.json",
-                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                     "evidence":  "retired historical path: validation/s3/electrons/completion.json",
+                     "foremanEvidence":  "retired historical path: validation/s3/integration/owned-verification.json"
                  },
                  {
                      "agentId":  "A12",
@@ -228,8 +229,8 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s3/thermochemistry/completion.json",
-                     "foremanEvidence":  "validation/s3/integration/owned-verification.json",
+                     "evidence":  "retired historical path: validation/s3/thermochemistry/completion.json",
+                     "foremanEvidence":  "retired historical path: validation/s3/integration/owned-verification.json",
                      "resolution":  "Owned checks pass; independently verified native tail resolves pending timing. Original worker ESCALATE remains unchanged."
                  },
                  {
@@ -238,8 +239,8 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "ESCALATE",
-                     "evidence":  "validation/s3/energy/completion.json",
-                     "foremanEvidence":  "validation/s3/integration/owned-verification.json",
+                     "evidence":  "retired historical path: validation/s3/energy/completion.json",
+                     "foremanEvidence":  "retired historical path: validation/s3/integration/owned-verification.json",
                      "resolution":  "Owned checks pass; independently verified native tail resolves pending timing. Original worker ESCALATE remains unchanged."
                  },
                  {
@@ -248,8 +249,8 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s3/titration/completion.json",
-                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                     "evidence":  "retired historical path: validation/s3/titration/completion.json",
+                     "foremanEvidence":  "retired historical path: validation/s3/integration/owned-verification.json"
                  },
                  {
                      "agentId":  "A15",
@@ -257,8 +258,8 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s3/igcse-dot-cross/completion.json",
-                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                     "evidence":  "retired historical path: validation/s3/igcse-dot-cross/completion.json",
+                     "foremanEvidence":  "retired historical path: validation/s3/integration/owned-verification.json"
                  },
                  {
                      "agentId":  "A16",
@@ -266,29 +267,29 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s3/c3l6/completion.json",
-                     "foremanEvidence":  "validation/s3/integration/owned-verification.json"
+                     "evidence":  "retired historical path: validation/s3/c3l6/completion.json",
+                     "foremanEvidence":  "retired historical path: validation/s3/integration/owned-verification.json"
                  },
                  {
                      "agentId":  "A06",
                      "jobId":  "S3-REVIEW-TIMING",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s3/review-timing/completion.json"
+                     "evidence":  "retired historical path: validation/s3/review-timing/completion.json"
                  },
                  {
                      "agentId":  "A07",
                      "jobId":  "S3-REVIEW-CO",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s3/review-co/completion.json"
+                     "evidence":  "retired historical path: validation/s3/review-co/completion.json"
                  },
                  {
                      "agentId":  "A07",
                      "jobId":  "S3-REVIEW-C3-NAME",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s3/review-c3-name/completion.json"
+                     "evidence":  "retired historical path: validation/s3/review-c3-name/completion.json"
                  },
                  {
                      "agentId":  "A17",
@@ -296,7 +297,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s4/ux/completion.json",
+                     "evidence":  "retired historical path: validation/s4/ux/completion.json",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
                      "effectiveModel":  null,
@@ -309,7 +310,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s4/statistics/completion.json",
+                     "evidence":  "retired historical path: validation/s4/statistics/completion.json",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
                      "effectiveModel":  null,
@@ -322,7 +323,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s4/compatibility/completion.json",
+                     "evidence":  "retired historical path: validation/s4/compatibility/completion.json",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
                      "effectiveModel":  null,
@@ -335,7 +336,7 @@
                      "status":  "validated",
                      "result":  "PASS",
                      "workerDisposition":  "PASS",
-                     "evidence":  "validation/s4/authoring-release/completion.json",
+                     "evidence":  "retired historical path: validation/s4/authoring-release/completion.json",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
                      "effectiveModel":  null,
@@ -347,7 +348,7 @@
                      "jobId":  "S4-REVIEW-COMPLETION",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s4/review-browser-startup/completion.json",
+                     "evidence":  "retired historical path: validation/s4/review-browser-startup/completion.json",
                      "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
                  },
                  {
@@ -355,7 +356,7 @@
                      "jobId":  "S4-REVIEW-FOLLOWUP-COMPLETION",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s4/review-browser-startup/followup-completion.json",
+                     "evidence":  "retired historical path: validation/s4/review-browser-startup/followup-completion.json",
                      "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
                  },
                  {
@@ -363,7 +364,7 @@
                      "jobId":  "S4-REVIEW-PAUSE-READINESS-COMPLETION",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s4/review-browser-startup/pause-readiness-completion.json",
+                     "evidence":  "retired historical path: validation/s4/review-browser-startup/pause-readiness-completion.json",
                      "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
                  },
                  {
@@ -371,7 +372,7 @@
                      "jobId":  "S4-REVIEW-HISTORY-READINESS-COMPLETION",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s4/review-browser-startup/history-readiness-completion.json",
+                     "evidence":  "retired historical path: validation/s4/review-browser-startup/history-readiness-completion.json",
                      "scope":  "Exact harness launcher/readiness exception; actual behavior verified subsequently by A18 and final static foreman browser."
                  },
                  {
@@ -380,7 +381,7 @@
                      "status":  "validated",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
-                     "evidence":  "validation/s4/authoring-release/refinement/completion.json",
+                     "evidence":  "retired historical path: validation/s4/authoring-release/refinement/completion.json",
                      "result":  "PASS"
                  },
                  {
@@ -388,7 +389,7 @@
                      "jobId":  "S4-REVIEW-SCAFFOLD-STARTUP",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s4/refinement/review-scaffold-startup/completion.json",
+                     "evidence":  "retired historical path: validation/s4/refinement/review-scaffold-startup/completion.json",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
@@ -399,7 +400,7 @@
                      "jobId":  "S4-REVIEW-FORMATTED-STARTUP",
                      "status":  "validated",
                      "result":  "PASS",
-                     "evidence":  "validation/s4/refinement/review-formatted-startup/completion.json",
+                     "evidence":  "retired historical path: validation/s4/refinement/review-formatted-startup/completion.json",
                      "requestedModel":  "gpt-6.1-sol",
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
@@ -413,7 +414,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/behaviour/completion.json"
+                     "evidence":  "retired historical path: validation/s5/behaviour/completion.json"
                  },
                  {
                      "agentId":  "A22",
@@ -423,7 +424,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/chemistry/completion.json"
+                     "evidence":  "retired historical path: validation/s5/chemistry/completion.json"
                  },
                  {
                      "agentId":  "A23",
@@ -433,7 +434,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/render-release/completion.json"
+                     "evidence":  "retired historical path: validation/s5/render-release/completion.json"
                  },
                  {
                      "agentId":  "A08",
@@ -443,7 +444,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/acid-format/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/acid-format/completion.json"
                  },
                  {
                      "agentId":  "A12",
@@ -453,7 +454,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/electrons-wording/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/electrons-wording/completion.json"
                  },
                  {
                      "agentId":  "A17",
@@ -463,7 +464,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/startup-error/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/startup-error/completion.json"
                  },
                  {
                      "agentId":  "A14",
@@ -473,7 +474,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/titration-typing/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/titration-typing/completion.json"
                  },
                  {
                      "agentId":  "A13",
@@ -483,7 +484,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/energy-typing/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/energy-typing/completion.json"
                  },
                  {
                      "agentId":  "A15",
@@ -493,7 +494,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/dot-charge-typing/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/dot-charge-typing/completion.json"
                  },
                  {
                      "agentId":  "A16",
@@ -503,7 +504,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/fixes/c3-k-erratum/completion.json"
+                     "evidence":  "retired historical path: validation/s5/fixes/c3-k-erratum/completion.json"
                  },
                  {
                      "agentId":  "A06",
@@ -513,7 +514,7 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/review-behaviour-harness/completion.json"
+                     "evidence":  "retired historical path: validation/s5/review-behaviour-harness/completion.json"
                  },
                  {
                      "agentId":  "A06",
@@ -523,15 +524,15 @@
                      "requestedEffort":  "high",
                      "effectiveModelEffort":  null,
                      "usage":  null,
-                     "evidence":  "validation/s5/review-behaviour-harness/historical-followup/completion.json"
+                     "evidence":  "retired historical path: validation/s5/review-behaviour-harness/historical-followup/completion.json"
                  },
                  {
                      "jobId":  "S5-FIX-NEXT-SAVE",
                      "owner":  "A01",
                      "status":  "validated",
                      "evidence":  [
-                                      "validation/s5/fixes/next-save-transition/author-report.json",
-                                      "validation/s5/review-render-harness/energy-next-classification/completion.json"
+                                      "retired historical path: validation/s5/fixes/next-save-transition/author-report.json",
+                                      "retired historical path: validation/s5/review-render-harness/energy-next-classification/completion.json"
                                   ]
                  },
                  {
@@ -539,7 +540,7 @@
                      "owner":  "A01",
                      "status":  "validated",
                      "evidence":  [
-                                      "validation/s5/fixes/session-only-save/author-report.json"
+                                      "retired historical path: validation/s5/fixes/session-only-save/author-report.json"
                                   ]
                  }
              ],
@@ -547,106 +548,106 @@
                          "SCOPE-01":  {
                                           "status":  "validated_awaiting_root_acceptance",
                                           "evidence":  [
-                                                           "validation/s5/integration/foreman-protected-originals.txt",
-                                                           "validation/s5/integration/foreman-source-and-controls.txt",
-                                                           "validation/s5/integration/source-ownership.json"
+                                                           "retired historical path: validation/s5/integration/foreman-protected-originals.txt",
+                                                           "retired historical path: validation/s5/integration/foreman-source-and-controls.txt",
+                                                           "retired historical path: validation/s5/integration/source-ownership.json"
                                                        ]
                                       },
                          "SCOPE-02":  {
                                           "status":  "validated_awaiting_root_acceptance",
                                           "evidence":  [
-                                                           "validation/s5/integration/foreman-catalogue.txt",
-                                                           "validation/s5/integration/foreman-checks.json",
-                                                           "validation/s5/behaviour/browser-results.json",
-                                                           "validation/s5/integration/release-checks.json"
+                                                           "retired historical path: validation/s5/integration/foreman-catalogue.txt",
+                                                           "retired historical path: validation/s5/integration/foreman-checks.json",
+                                                           "retired historical path: validation/s5/behaviour/browser-results.json",
+                                                           "retired historical path: validation/s5/integration/release-checks.json"
                                                        ]
                                       },
                          "SCOPE-03":  {
                                           "status":  "validated_awaiting_root_acceptance",
                                           "evidence":  [
-                                                           "validation/s5/behaviour/c3-erratum-browser-results.json",
-                                                           "validation/s5/chemistry/c3-final-source-review.json"
+                                                           "retired historical path: validation/s5/behaviour/c3-erratum-browser-results.json",
+                                                           "retired historical path: validation/s5/chemistry/c3-final-source-review.json"
                                                        ]
                                       },
                          "ARCH-01":  {
                                          "status":  "validated_awaiting_root_acceptance",
                                          "evidence":  [
-                                                          "validation/s5/integration/foreman-checks.json",
-                                                          "validation/s5/behaviour/HANDOVER.md",
-                                                          "validation/s5/render-release/HANDOVER.md",
+                                                          "retired historical path: validation/s5/integration/foreman-checks.json",
+                                                          "retired historical path: validation/s5/behaviour/HANDOVER.md",
+                                                          "retired historical path: validation/s5/render-release/HANDOVER.md",
                                                           "docs/architecture/platform.md"
                                                       ]
                                      },
                          "ARCH-02":  {
                                          "status":  "validated_awaiting_root_acceptance",
                                          "evidence":  [
-                                                          "validation/s5/integration/foreman-typecheck.txt",
-                                                          "validation/s5/integration/foreman-unit.txt",
-                                                          "validation/s5/integration/foreman-catalogue.txt"
+                                                          "retired historical path: validation/s5/integration/foreman-typecheck.txt",
+                                                          "retired historical path: validation/s5/integration/foreman-unit.txt",
+                                                          "retired historical path: validation/s5/integration/foreman-catalogue.txt"
                                                       ]
                                      },
                          "CONTENT-01":  {
                                             "status":  "validated_awaiting_root_acceptance",
                                             "evidence":  [
-                                                             "validation/s5/chemistry/current-coverage.json",
-                                                             "validation/s5/chemistry/stratified-sample.json",
-                                                             "validation/s5/chemistry/manual-review.json",
-                                                             "validation/s5/chemistry/c3-transformation-review.json",
-                                                             "validation/s5/chemistry/final-production-browser-results.json",
+                                                             "retired historical path: validation/s5/chemistry/current-coverage.json",
+                                                             "retired historical path: validation/s5/chemistry/stratified-sample.json",
+                                                             "retired historical path: validation/s5/chemistry/manual-review.json",
+                                                             "retired historical path: validation/s5/chemistry/c3-transformation-review.json",
+                                                             "retired historical path: validation/s5/chemistry/final-production-browser-results.json",
                                                              "docs/inventory/c3-k-erratum.md"
                                                          ]
                                         },
                          "ASSESS-01":  {
                                            "status":  "validated_awaiting_root_acceptance",
                                            "evidence":  [
-                                                            "validation/s5/behaviour/deep-browser-results.json",
-                                                            "validation/s5/behaviour/revision-browser-results.json",
-                                                            "validation/s5/integration/foreman-unit.txt"
+                                                            "retired historical path: validation/s5/behaviour/deep-browser-results.json",
+                                                            "retired historical path: validation/s5/behaviour/revision-browser-results.json",
+                                                            "retired historical path: validation/s5/integration/foreman-unit.txt"
                                                         ]
                                        },
                          "ASSESS-02":  {
                                            "status":  "validated_awaiting_root_acceptance",
                                            "evidence":  [
-                                                            "validation/s5/integration/foreman-unit.txt",
-                                                            "validation/s5/behaviour/import-browser-results.json",
-                                                            "validation/s5/behaviour/HANDOVER.md"
+                                                            "retired historical path: validation/s5/integration/foreman-unit.txt",
+                                                            "retired historical path: validation/s5/behaviour/import-browser-results.json",
+                                                            "retired historical path: validation/s5/behaviour/HANDOVER.md"
                                                         ]
                                        },
                          "TIME-01":  {
                                          "status":  "validated_awaiting_root_acceptance",
                                          "evidence":  [
-                                                          "validation/s5/integration/active-time-review.json",
-                                                          "validation/s5/behaviour/timing-continuity.json",
-                                                          "validation/s5/behaviour/deep-browser-results.json",
-                                                          "validation/s5/behaviour/revision-browser-results.json"
+                                                          "retired historical path: validation/s5/integration/active-time-review.json",
+                                                          "retired historical path: validation/s5/behaviour/timing-continuity.json",
+                                                          "retired historical path: validation/s5/behaviour/deep-browser-results.json",
+                                                          "retired historical path: validation/s5/behaviour/revision-browser-results.json"
                                                       ]
                                      },
                          "STATE-01":  {
                                           "status":  "validated_awaiting_root_acceptance",
                                           "evidence":  [
-                                                           "validation/s5/behaviour/recovery-browser-results.json",
-                                                           "validation/s5/behaviour/deep-browser-results.json",
-                                                           "validation/s5/behaviour/import-browser-results.json",
-                                                           "validation/s5/behaviour/c3-erratum-browser-results.json",
-                                                           "validation/s5/review-render-harness/energy-next-fix/completion.json",
-                                                           "validation/s5/behaviour/session-only-save-fix/latest/completion.json"
+                                                           "retired historical path: validation/s5/behaviour/recovery-browser-results.json",
+                                                           "retired historical path: validation/s5/behaviour/deep-browser-results.json",
+                                                           "retired historical path: validation/s5/behaviour/import-browser-results.json",
+                                                           "retired historical path: validation/s5/behaviour/c3-erratum-browser-results.json",
+                                                           "retired historical path: validation/s5/review-render-harness/energy-next-fix/completion.json",
+                                                           "retired historical path: validation/s5/behaviour/session-only-save-fix/latest/completion.json"
                                                        ]
                                       },
                          "UX-01":  {
                                        "status":  "validated_awaiting_root_acceptance",
                                        "evidence":  [
-                                                        "validation/s5/render-release/completion.json",
-                                                        "validation/s5/render-release/HANDOVER.md",
-                                                        "validation/s5/render-release/session-only-save-fix/completion.json"
+                                                        "retired historical path: validation/s5/render-release/completion.json",
+                                                        "retired historical path: validation/s5/render-release/HANDOVER.md",
+                                                        "retired historical path: validation/s5/render-release/session-only-save-fix/completion.json"
                                                     ]
                                    },
                          "AUTHOR-01":  {
                                            "status":  "validated_awaiting_root_acceptance",
                                            "evidence":  [
-                                                            "validation/s5/render-release/completion.json",
-                                                            "validation/s5/render-release/HANDOVER.md",
-                                                            "validation/s5/render-release/session-only-save-fix/completion.json",
-                                                            "validation/s5/chemistry/independent-checks.json",
+                                                            "retired historical path: validation/s5/render-release/completion.json",
+                                                            "retired historical path: validation/s5/render-release/HANDOVER.md",
+                                                            "retired historical path: validation/s5/render-release/session-only-save-fix/completion.json",
+                                                            "retired historical path: validation/s5/chemistry/independent-checks.json",
                                                             "development/authoring/families/dev-s5-independent/README.md",
                                                             "docs/authoring/new-activity.md"
                                                         ]
@@ -654,20 +655,20 @@
                          "PERF-01":  {
                                          "status":  "validated_awaiting_root_acceptance",
                                          "evidence":  [
-                                                          "validation/s5/integration/release-checks.json",
-                                                          "validation/s5/render-release/completion.json",
-                                                          "validation/s5/render-release/HANDOVER.md",
-                                                          "validation/s5/render-release/session-only-save-fix/completion.json"
+                                                          "retired historical path: validation/s5/integration/release-checks.json",
+                                                          "retired historical path: validation/s5/render-release/completion.json",
+                                                          "retired historical path: validation/s5/render-release/HANDOVER.md",
+                                                          "retired historical path: validation/s5/render-release/session-only-save-fix/completion.json"
                                                       ]
                                      },
                          "RELEASE-01":  {
                                             "status":  "validated_awaiting_root_acceptance",
                                             "evidence":  [
-                                                             "validation/s5/integration/build-current.json",
-                                                             "validation/s5/integration/release-checks.json",
-                                                             "validation/s5/integration/preview-smoke.json",
-                                                             "validation/s5/render-release/completion.json",
-                                                             "validation/s5/render-release/session-only-save-fix/completion.json"
+                                                             "retired historical path: validation/s5/integration/build-current.json",
+                                                             "retired historical path: validation/s5/integration/release-checks.json",
+                                                             "retired historical path: validation/s5/integration/preview-smoke.json",
+                                                             "retired historical path: validation/s5/render-release/completion.json",
+                                                             "retired historical path: validation/s5/render-release/session-only-save-fix/completion.json"
                                                          ]
                                         },
                          "DELIVERY-01":  {
@@ -675,8 +676,8 @@
                                              "evidence":  [
                                                               "README.md",
                                                               "HANDOFF.md",
-                                                              "validation/s5/foreman-report.json",
-                                                              "validation/s5/integration/install-current.json"
+                                                              "retired historical path: validation/s5/foreman-report.json",
+                                                              "retired historical path: validation/s5/integration/install-current.json"
                                                           ]
                                          }
                      },
@@ -695,7 +696,7 @@
                            "id":  "NATIVE-AMBIGUITIES",
                            "disposition":  "retained-explicit-limit",
                            "detail":  "Original S2 A07 replaced-document996ms and S3 A12 headless9005vs1001 intervals remain unclassified. Clean native boundaries pass independently; failed Vite document guards/broad hashes/Tab+trusted-blur probes remain retained. A11 actual60/180s idle is headless, with unchanged shared native-binding evidence carried; no A11-specific native session claimed.",
-                           "evidence":  "validation/s3/review-timing/HANDOVER.md"
+                           "evidence":  "retired historical path: validation/s3/review-timing/HANDOVER.md"
                        },
                        {
                            "id":  "CANONICAL-PYTHON",

@@ -1,5 +1,7 @@
 # S4 authorised dispatch and shared interfaces
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Root accepted S3 at 2026-10-03T02:04:23.0051355Z. S4 only is authorised. A01 remains foreman; four new direct Sol6.1 High workers, fork none, no worker children. Maximum four implementation plus two genuine-exception reviewers initially; root/foreman total eight at maximum, within26. Stable IDs A17-A20. No model substitution; one clarified bounded retry, then independent substantive exception disposition. Effective model/effort/usage unknown unless exposed. Root alone accepts stage.
 
 Read `src/contracts/integration.ts`: `PlatformView`, `CourseDataViewProps`, `TeacherCatalogueEntry`, `CompatibilityResolution`, `LegacyImportPlan`, and optional `CurriculumHostIntegration`. A01 owns all `src/contracts/`, persistence repository/schema, package/config, `ProductionFoundation.tsx`, `OlympiadHost.tsx`, registry aggregation and main entries. It may refine interfaces without weakening root scope. No source snapshots or invented history.

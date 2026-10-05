@@ -50,6 +50,12 @@ test('exact approved bank, levels, permanent identities, full corrected feedback
   assert.equal((await teacherCatalogue(activityId)).length,32);
 });
 test('provider bounds, no immediate repeats, full level coverage and exact legacy alias isolation',()=>{
+  const cao=provider.restore(provider.resolveLink('EBP-I5B9S3')!);
+  assert(!/fragment|continues|three-dimensional|giant ionic/i.test(JSON.stringify(cao.context)),'Initial CaO correction context must not supply the replacement answer');
+  assert(cao.hints.some(hint=>JSON.stringify(hint).includes('three-dimensional')));
+  const correction=cao.parts[0]!;assert.equal(correction.kind,'correction');
+  if(correction.kind==='correction')assert.equal(correction.segments?.[1]?.text,'a complete Ca₄O₄ molecule');
+  assert.equal(productionRegistry.activities.find(activity=>activity.id==='alevel/c3l6-organic-reactions')?.title,'A Class of their Own');
   assert.deepEqual(leafBoundary[gemId],{activityId,levels:[1,2]});
   assert.deepEqual(leafBoundary['l6-t2-1-4'],{activityId:'alevel/dot-and-cross',levels:[1,2,3],historicalOnly:true});
   const landing=JSON.parse(fs.readFileSync(new URL('../../src/landing/catalogue-data.json',import.meta.url),'utf8'));

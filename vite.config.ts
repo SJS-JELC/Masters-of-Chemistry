@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
   return {
     base: process.env.MASTERS_BASE_PATH || './',
     publicDir: path.join(project, 'public'),
-    server: {host:'127.0.0.1', port:5181, strictPort:true},
+    server: {host:'127.0.0.1', port:5181, strictPort:true, watch:{ignored:['**/.artifacts/**']}},
     build: {
       outDir:path.join(project, 'dist',course), emptyOutDir:true,
       manifest:true,

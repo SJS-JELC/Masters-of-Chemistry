@@ -7,7 +7,7 @@ const files=[
  'scripts/tests/explaining-properties.test.ts',
  'scripts/tests/current-catalogue-boundary.test.ts',
  'scripts/tests/olympiad-2011.test.ts',
- ...['action-state','central-attempt','canonical-identity','current-persistence','numeric-working'].map(name=>`validation/ui-consistency/u2/independent/${name}.test.mjs`),
+ ...['action-state','central-attempt','canonical-identity','current-persistence','numeric-working'].map(name=>`scripts/tests/legacy/ui-consistency/u2/independent/${name}.test.mjs`),
  'scripts/test_revision_registration.mjs','scripts/test_active_question_time.mjs',
 ];
 const result=spawnSync(process.execPath,['--test',...files],{cwd:project,stdio:'inherit'});

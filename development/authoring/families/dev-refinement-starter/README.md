@@ -13,6 +13,6 @@ node development/authoring/serve.mjs --refinement
 node development/authoring/families/dev-refinement-starter/browser.mjs
 ```
 
-The preview mounts the actual unchanged ActivityHost with this registry. Fixtures verify fixed/72seeded configurations, correct/wrong/incomplete input, code+seed restore, first evidence/timing, correction/reload, canonical3level revision and teacher no-evidence. Outputs go to validation/component-fidelity/f1-correction/identity/authoring/dev-refinement-starter.
+The preview mounts the actual unchanged ActivityHost with this registry. Fixtures verify fixed/72seeded configurations, correct/wrong/incomplete input, code+seed restore, first evidence/timing, correction/reload, canonical3level revision and teacher no-evidence. Outputs go to .artifacts/authoring/dev-refinement-starter.
 
 Edit data/provider/marking/scaffolds and regenerate provenance deliberately when authoring new chemistry. See docs/authoring/new-activity.md for genuinely new activity/gem metadata and optional editor integration.

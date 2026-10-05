@@ -1,7 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';import http from 'node:http';import {createServer} from '../../../node_modules/vite/dist/node/index.js';
-const root=path.resolve(import.meta.dirname,'../../..'),mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.ttf':'font/ttf','.json':'application/json'};
-const staticServer=http.createServer((q,r)=>{try{const parts=decodeURIComponent(new URL(q.url,'http://localhost').pathname).split('/').filter(Boolean);if(parts[0]!=='nested'||!['alevel','igcse'].includes(parts[1]))throw Error();const folder=path.join(root,'dist',parts[1]),file=path.resolve(folder,...(parts.slice(2).length?parts.slice(2):['index.html']));if(!file.startsWith(folder+path.sep)||!fs.statSync(file).isFile())throw Error();r.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});fs.createReadStream(file).pipe(r);}catch{r.writeHead(404).end();}});
-await new Promise(ok=>staticServer.listen(5203,'127.0.0.1',ok));
-const dev=await createServer({configFile:false,root,cacheDir:path.join(import.meta.dirname,'vite-cache'),server:{host:'127.0.0.1',port:5195,strictPort:true},publicDir:path.join(root,'public')});await dev.listen();
-console.log('A23 ready static 5203 /nested/{course}/index.html and owned-cache DEV 5195');
-for(const s of ['SIGINT','SIGTERM'])process.on(s,async()=>{await dev.close();staticServer.close();process.exit();});

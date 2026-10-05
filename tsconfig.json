@@ -25,16 +25,16 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "validation/s0/contracts/**/*.ts",
-    "validation/s1/**/*.ts",
-    "validation/s2/**/*.ts",
+    "scripts/tests/legacy/s1/**/*.ts",
+    "scripts/tests/legacy/s2/**/*.ts",
     "vite.config.ts",
-    "validation/s3/**/*.ts",
-    "validation/s4/**/*.ts",
-    "scripts/tests/**/*.ts"
+    "scripts/tests/legacy/s3/**/*.ts",
+    "scripts/tests/legacy/s4/**/*.ts",
+    "scripts/browser/shared/persistence/**/*.ts",
+    "scripts/tests/*.ts"
   ],
   "exclude": [
-    "validation/s3/integration/complete-registration.test.ts",
-    "validation/s4/compatibility/compatibility.test.ts"
+    "scripts/tests/legacy/s3/integration/complete-registration.test.ts",
+    "scripts/tests/legacy/s4/compatibility/compatibility.test.ts"
   ]
 }

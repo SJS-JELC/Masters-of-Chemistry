@@ -16,7 +16,7 @@ assert(!/methylpropan|butanol|OH broad|methine/i.test(result));
 const target = path.join(project, 'src/activities/olympiad/isomers2011/assets/compound-3.svg');
 fs.mkdirSync(path.dirname(target), {recursive:true});
 fs.writeFileSync(target, result);
-const evidence = path.join(project, 'validation/olympiad-2011-q4/implementation');
+const evidence = path.join(project, '.artifacts/olympiad-2011-q4/implementation');
 fs.mkdirSync(evidence, {recursive:true});
 fs.writeFileSync(path.join(evidence, 'spectrum-provenance.json'), JSON.stringify({source: path.relative(project,source), sourceSha256: expected, runtimeSha256: sha(result), changes: 'Only metadata, title and description replaced; neutral-stripped SVG byte equality passes', generatedAt:new Date().toISOString()},null,2)+'\n');
 console.log('Approved drawing content preserved; neutral runtime spectrum generated.');

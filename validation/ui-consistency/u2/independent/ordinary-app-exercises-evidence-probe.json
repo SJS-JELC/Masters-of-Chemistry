@@ -1,9 +1,0 @@
-{
-  "status": "FAIL",
-  "startedAt": "2026-10-03T22:56:47.782Z",
-  "method": "Ordinary current app, isolated Edge context. Valid deterministic question/session setup only; actual controls, central controller, IndexedDB, reload and statistics. Energy correct response supplied from checked model through DEV response API, explicitly identified.",
-  "checks": [],
-  "errors": [],
-  "failure": "AssertionError [ERR_ASSERTION]: EC correct correction evidence count\n\n1 !== 0\n\n    at immutable (file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/ui-consistency/u2/independent/app-exercises.mjs:24:380)\n    at async file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/ui-consistency/u2/independent/app-exercises.mjs:33:83",
-  "finishedAt": "2026-10-03T22:56:51.541Z"
-}

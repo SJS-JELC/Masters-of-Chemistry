@@ -1,4 +1,4 @@
-// Reproducible pure-engine extraction. See validation/s2/acid/extract-engines.mjs.
+// Reproducible pure-engine extraction. See scripts/source-generation/acid/extract-engines.mjs.
 import {acidData} from './data.js';
 import {legacyCore} from './legacy-core.js';
 

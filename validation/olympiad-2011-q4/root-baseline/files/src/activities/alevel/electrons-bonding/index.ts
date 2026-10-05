@@ -1,9 +1,0 @@
-import type { CurriculumAdapter } from '../../../catalogue/registry.ts';
-export const electronsBondingAdapter: CurriculumAdapter = {
-  id: 'alevel/electrons-bonding',
-  provider: async () => (await import('./provider.ts')).electronsBondingProvider,
-  marking: async () => (await import('./marking.ts')).electronsBondingMarking,
-  idleAllowance: () => 60000,
-  idleRationale:
-    'Exact reviewed original app one-minute idle allowance for short Level 1 recall and definitions.',
-};

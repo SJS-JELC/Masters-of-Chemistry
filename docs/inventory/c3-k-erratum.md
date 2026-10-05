@@ -1,10 +1,12 @@
 # C3L6 K hydration source erratum
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Decision: S5-FIX-C3-K-ERRATUM, authorised by root through A01, 2026-10-03.
 
 The inherited bank contains two K graphs with the same formula C₂H₄O₄ and nominal Mr 92. H is glyoxylic acid, O=CC(=O)O. The current task asks for H + H₂O ⇌ K. The accepted product is the aldehyde hydrate, O=C(O)C(O)O (2,2-dihydroxyacetic acid). The second source graph, O=CC(O)(O)O, retains the aldehyde and converts the carboxyl group into C(OH)₃. It depicts a hypothetical orthoacid, rather than the conventional aqueous aldehyde hydrate for this reaction. Formula, mass, valence and source-isomorphism checks pass for both graphs and cannot establish the intended chemistry.
 
-The independent primary-source evidence and substantive review are retained in [CHEM-03](../../validation/s5/chemistry/chem-03.json). That evidence cites the [IUPAC orthoacid definition](https://goldbook.iupac.org/terms/view/O04331) and [primary aqueous glyoxylic-acid research](https://pubs.acs.org/jpcafh/article/120/21/3817/1332886/Aqueous-Photochemistry-of-Glyoxylic-Acid). The historical exam paper and draft report were not recovered; no claim is made that the exam itself supplied the erroneous alternative.
+The historical independent primary-source evidence and substantive review were recorded in CHEM-03 (retired historical evidence; former path `../../validation/s5/chemistry/chem-03.json`). That evidence cites the [IUPAC orthoacid definition](https://goldbook.iupac.org/terms/view/O04331) and [primary aqueous glyoxylic-acid research](https://pubs.acs.org/jpcafh/article/120/21/3817/1332886/Aqueous-Photochemistry-of-Glyoxylic-Acid). The historical exam paper and draft report were not recovered; no claim is made that the exam itself supplied the erroneous alternative.
 
 ## Retention and current policy
 
@@ -20,4 +22,4 @@ The historical v1/v2/v3 parser still recognises the original source-bank signatu
 
 ## Verification
 
-Evidence is retained under [the bounded fix folder](../../validation/s5/fixes/c3-k-erratum/HANDOVER.md): a full port of all seven original S3 test groups, three additional chemistry/history groups, positive and negative type fixtures, source fingerprints, exact diffs, desktop/mobile browser results and screenshots. The original S3 fixtures and their historical claims remain byte-preserved; the S5 record explicitly supersedes their unqualified acceptance of K alternative 2. A22 provides independent substantive chemistry acceptance; A21/A23 provide independent final-build storage/import/view acceptance.
+Historical evidence was recorded under the bounded fix folder (retired historical evidence; former path `../../validation/s5/fixes/c3-k-erratum/HANDOVER.md`): a full port of all seven original S3 test groups, three additional chemistry/history groups, positive and negative type fixtures, source fingerprints, exact diffs, desktop/mobile browser results and screenshots. Retained executable S3 fixtures preserve source behaviour; their old report files were retired. the S5 record explicitly supersedes their unqualified acceptance of K alternative 2. A22 historically provided chemistry acceptance; A21/A23 provided storage/import/view acceptance. Their retired reports do not establish fresh acceptance. Run `node scripts/test-s5.mjs` for retained regressions and conduct fresh chemistry/browser review after substantive changes.

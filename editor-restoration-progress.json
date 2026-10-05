@@ -1,16 +1,17 @@
 {
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
     "status":  "complete",
     "stages":  {
                    "E1":  {
                               "status":  "accepted",
-                              "foremanReport":  "validation/editor-restoration/implementation/foreman-report.json",
+                              "foremanReport":  "retired historical path: validation/editor-restoration/implementation/foreman-report.json",
                               "jobs":  [
                                            {
                                                "agentId":  "E02",
                                                "jobId":  "DOT-CROSS-RESTORE",
                                                "status":  "accepted_by_foreman",
                                                "workerStatus":  "PASS",
-                                               "manifest":  "validation/editor-restoration/implementation/dot-cross/completion.json",
+                                               "manifest":  "retired historical path: validation/editor-restoration/implementation/dot-cross/completion.json",
                                                "manifestSha256":  "b5464dd1b9216a52445602c2e37032058bcea70ddadb846ad1e15475cc6d4610",
                                                "output":  "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/dot-cross/HANDOVER.md",
                                                "confidence":  0.98
@@ -20,7 +21,7 @@
                                                "jobId":  "MOLECULE-RESTORE",
                                                "status":  "accepted_by_foreman",
                                                "workerStatus":  "PASS",
-                                               "manifest":  "validation/editor-restoration/implementation/molecule/completion.json",
+                                               "manifest":  "retired historical path: validation/editor-restoration/implementation/molecule/completion.json",
                                                "manifestSha256":  "a0c248a549fe7c6de620b85c349f67af0c3a9a1dffe39e574e9e80371228de3c",
                                                "output":  "apps/Masters-of-Chemistry/validation/editor-restoration/implementation/molecule/HANDOVER.md",
                                                "confidence":  0.95
@@ -30,31 +31,31 @@
                                                       "agentId":  "E04",
                                                       "jobId":  "EDITOR-TIMING-DISPOSITION",
                                                       "status":  "accepted_by_foreman",
-                                                      "manifest":  "validation/editor-restoration/implementation/integration/exception-review/completion.json",
-                                                      "disposition":  "validation/editor-restoration/implementation/integration/exception-review/disposition.json",
+                                                      "manifest":  "retired historical path: validation/editor-restoration/implementation/integration/exception-review/completion.json",
+                                                      "disposition":  "retired historical path: validation/editor-restoration/implementation/integration/exception-review/disposition.json",
                                                       "newNativeFreezeEstablished":  false
                                                   }
                           },
                    "E0":  {
                               "status":  "accepted",
-                              "foremanReport":  "validation/editor-restoration/audit/foreman-report.json",
+                              "foremanReport":  "retired historical path: validation/editor-restoration/audit/foreman-report.json",
                               "jobs":  [
                                            {
                                                "agentId":  "E02",
                                                "jobId":  "DOT-CROSS-AUDIT",
                                                "status":  "accepted_by_foreman",
-                                               "evidence":  "validation/editor-restoration/audit/dot-cross/completion.json"
+                                               "evidence":  "retired historical path: validation/editor-restoration/audit/dot-cross/completion.json"
                                            },
                                            {
                                                "agentId":  "E03",
                                                "jobId":  "MOLECULE-AUDIT",
                                                "status":  "accepted_by_foreman",
-                                               "evidence":  "validation/editor-restoration/audit/molecule/completion.json"
+                                               "evidence":  "retired historical path: validation/editor-restoration/audit/molecule/completion.json"
                                            }
                                        ]
                           }
                },
-    "rootAcceptance":  "validation/editor-restoration/implementation/root-acceptance.json",
+    "rootAcceptance":  "retired historical path: validation/editor-restoration/implementation/root-acceptance.json",
     "runId":  "EDITORS-RESTORE-20261003",
     "currentStage":  "E1",
     "updatedAt":  "2026-10-03T12:04:49.2487576+01:00",

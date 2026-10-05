@@ -6,7 +6,7 @@ import ts from 'typescript';
 import prettier from 'prettier';
 
 const project = path.resolve(import.meta.dirname, '..');
-const evidence = path.join(project, 'validation/s4/refinement/formatting');
+const evidence = path.join(project, '.artifacts/formatting');
 const write = process.argv.includes('--write');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const generatedNames = new Set(['data.ts', 'bank.ts', 'sources.ts', 'provenance.ts', 'periodic-data.ts', 'reviewed-co-svg.ts']);

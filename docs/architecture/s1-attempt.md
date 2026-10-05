@@ -1,5 +1,7 @@
 # S1 attempt implementation and shared contract refinements
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Owner A03, job S1-ATTEMPT, run MASTERS-REACT-20261002. This document clarifies the accepted S0 boundaries; it does not enable an activity or authorise S2.
 
 ## Public modules and host responsibilities
@@ -44,8 +46,7 @@ Commands from the new project:
 
 ```powershell
 npm.cmd run typecheck
-node --test validation/s1/attempt/attempt.test.mjs
-node validation/s1/attempt/browser-check.mjs
+npm.cmd run test:s5
 ```
 
-The browser command expects the foreman's development host at port 5181, installed Chrome, and an isolated profile under this job's validation directory. The sandbox required approved process-launch escalation; automatic review approved it. No deployment or publication is involved.
+The original S1 browser recipe and reports were retired. Its earlier results and blocked observation are historical; fresh browser review must establish timing after substantive changes. No deployment is involved.

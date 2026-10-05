@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 const project = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const workspace = path.resolve(project, '../..');
 const contract = JSON.parse(fs.readFileSync(path.join(project, 'project-contract.json'), 'utf8'));
-const baselinePath = path.join(project, 'validation', 'original-app-baseline.json');
+const baselinePath = path.join(project, 'resources/source-generation/controls/original-app-baseline.json');
 const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
 function snapshot() {
@@ -51,8 +51,9 @@ if (mode==='capture') {
   const changed=[...new Set([...Object.keys(baseline.files),...Object.keys(files)])].filter(key=>JSON.stringify(baseline.files[key])!==JSON.stringify(files[key]));
   const result={status:changed.length?'FAIL':'PASS',checkedAt:new Date().toISOString(),fileCount:Object.keys(files).length,changed,metadataOnly:Object.keys(files).filter(key=>files[key].contentHashUnavailable)};
   const outputIndex = process.argv.indexOf('--output');
-  const output = outputIndex === -1 ? path.join(project,'validation','original-app-check.json') : path.resolve(project,process.argv[outputIndex+1]);
+  const output = outputIndex === -1 ? path.join(project,'.artifacts','protected-originals.json') : path.resolve(project,process.argv[outputIndex+1]);
   if (!output.startsWith(project+path.sep)) throw Error('Protection evidence must stay inside project');
+  fs.mkdirSync(path.dirname(output),{recursive:true});
   fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify({...result,metadataOnly:undefined,metadataOnlyCount:result.metadataOnly.length}));
   if(changed.length) process.exitCode=1;

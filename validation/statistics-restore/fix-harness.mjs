@@ -1,1 +1,0 @@
-﻿import fs from 'node:fs';const file='validation/statistics-restore/browser.mjs';let text=fs.readFileSync(file,'utf8').replaceAll('${base}/?','${base}/alevel.html?').replaceAll("'l6-t2-1-1'","'l6-t2-1-2'");fs.writeFileSync(file,text);

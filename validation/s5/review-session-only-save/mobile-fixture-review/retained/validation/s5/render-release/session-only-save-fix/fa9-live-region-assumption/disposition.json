@@ -1,8 +1,0 @@
-{
-  "status": "Proposed source-backed terminal live-region clarification",
-  "baselineSha256": "1e46d79fc827cd238f52b0fe9192caa0ccd6c9886c5865c7a1c4fb601b4aca1a",
-  "proposalSha256": "d0190eb5b0c044eebd8bc45ae0d22e31e771dd74a0a016233e3bd2bc320f9581",
-  "source": "QuestionPlayer.tsx:636 save-status aria-live polite vs ActivityHost.tsx paused save-error role alert",
-  "preserved": "All desired-durable-state/immutable-evidence/disabled-Next/Tab-focus-visible/Enter-Retry/AX-snapshot/no-overflow/reload assertions and30000ms deadline",
-  "rawTerminalFinding": "Visible error and Retry, no false completion, generic role alert selector absent; actual polite announcement region exists"
-}

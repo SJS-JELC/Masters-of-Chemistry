@@ -1,5 +1,7 @@
 # S3 authorised dispatch
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Root accepted S2 at 2026-10-03T00:59:07Z and authorised S3 only. The six exact groups in `s3-work-packages.md` are now authorised; S4 remains pending. A01 is the sole foreman and log owner. Initial/max implementation workers: six, requested `gpt-6.1-sol` / `high`, narrow forks, no child delegation. Up to two independent Sol High reviewers are reserved for genuine exceptions, not routine second reviews. Root plus foreman plus six workers plus two reviewers uses ten of the 26 available slots. Effective settings and usage remain unknown unless exposed. One clarified bounded retry, then independent disposition/root for substantive failures. Existing S2 proof is retained.
 
 ## Common worker package

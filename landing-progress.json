@@ -1,4 +1,5 @@
 {
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
     "runId":  "LANDING-RESTORE-20261003",
     "status":  "complete",
     "stage":  "Part 1 original landing restoration",
@@ -7,24 +8,24 @@
                      "agentId":  "L02",
                      "jobId":  "LANDING-DESIGN",
                      "status":  "ACCEPTED",
-                     "outputPath":  "validation/landing-restoration/design/HANDOVER.md"
+                     "outputPath":  "retired historical path: validation/landing-restoration/design/HANDOVER.md"
                  },
                  {
                      "agentId":  "L03",
                      "jobId":  "LANDING-INTEGRATION",
                      "status":  "ACCEPTED",
-                     "outputPath":  "validation/landing-restoration/integration/HANDOVER.md"
+                     "outputPath":  "retired historical path: validation/landing-restoration/integration/HANDOVER.md"
                  },
                  {
                      "agentId":  "L03",
                      "jobId":  "LANDING-TEACHER-CATEGORY",
                      "status":  "ACCEPTED",
-                     "outputPath":  "validation/landing-restoration/integration/teacher-category/HANDOVER.md"
+                     "outputPath":  "retired historical path: validation/landing-restoration/integration/teacher-category/HANDOVER.md"
                  }
              ],
     "evidence":  [
-                     "validation/landing-restoration/foreman-report.json",
+                     "retired historical path: validation/landing-restoration/foreman-report.json",
                      "LANDING-HANDOFF.md"
                  ],
-    "rootAcceptance":  "validation/landing-restoration/root-acceptance.json"
+    "rootAcceptance":  "retired historical path: validation/landing-restoration/root-acceptance.json"
 }

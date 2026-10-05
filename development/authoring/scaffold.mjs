@@ -7,7 +7,7 @@ if(!output.startsWith(root+path.sep)||fs.existsSync(output))throw Error('Scaffol
 const slotPath=path.join(import.meta.dirname,'family-slots.json'),slots=JSON.parse(fs.readFileSync(slotPath,'utf8'));
 const slot=Array.from({length:16},(_,i)=>i+48).find(i=>!Object.values(slots).includes(i));if(slot===undefined)throw Error('DEV authoring slots exhausted; review a new codec context rather than renumbering.');
 const prefix='AB',relative=`development/authoring/families/${slug}`;
-const evidenceRelative=`validation/component-fidelity/f1-correction/identity/authoring/${slug}`;
+const evidenceRelative=`.artifacts/authoring/${slug}`;
 const source=(p)=>fs.readFileSync(path.join(project,p),'utf8');
 const sha=(b)=>crypto.createHash('sha256').update(b).digest('hex');
 const inputPaths=['src/development/identity.ts','development/authoring/family-slots.json','development/authoring/data.ts','development/authoring/family.ts','development/authoring/registry.ts','src/development/catalogue/index.tsx','development/authoring/templates/family.test.mjs','development/authoring/templates/browser.mjs'];

@@ -1,1 +1,0 @@
-﻿import fs from 'node:fs';const file='validation/statistics-restore/browser.mjs';let text=fs.readFileSync(file,'utf8').replace('assert.equal(result.first.ok,true);assert.equal(result.duplicate.ok,true);','assert.equal(result.first.ok,true,JSON.stringify(result));assert.equal(result.duplicate.ok,true,JSON.stringify(result));');fs.writeFileSync(file,text);

@@ -1,0 +1,26 @@
+import { projectRoot, outputDirectory, devOrigin, previewOrigin, chromium } from '../paths.mjs';
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+import {propertiesBank} from '../../../src/activities/alevel/explaining-properties/bank.ts';
+const here=outputDirectory('explaining-properties'),run='ebp-fix-'+Date.now(),base=`${devOrigin}`,report={jobId:'EBP-FIX-01',startedAt:new Date().toISOString(),checks:[],errors:[]};
+const browser=await chromium.launch({channel:'msedge',headless:true}),context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+async function fixture(code){await page.goto(`${base}/alevel.html?run=${run}-${code}&view=practice&activity=alevel/explaining-properties`);await page.waitForFunction(()=>window.__mastersActivity);
+ await page.evaluate(async code=>{const {productionRegistry}=await import('/src/foundation/registry.ts'),{createChemistryRepository}=await import('/src/persistence/index.ts');const reg=productionRegistry.get('alevel/explaining-properties'),provider=await reg.provider(),ref=provider.resolveLink(code),id=crypto.randomUUID(),namespace={course:'alevel',profileId:'local'},target={course:'alevel',activityId:reg.id,gemId:reg.gems[0].id,level:ref.level},session={kind:'practice',namespace,id:'current-session',target,selection:'fixed-level',currentAttemptId:id,previousQuestionIds:[],paused:false},attempt={mode:'student',namespace,attemptId:id,ref,target,currentResponses:{},assistance:[],phase:'answering',timing:{attemptId:id,activeMs:0,idleLimitMs:180000,finished:false}};const saved=await createChemistryRepository(window.__mastersActivity.snapshot().databaseName).saveCurriculum({attempt,session});if(!saved.ok)throw Error(saved.error.message);},code);
+ await page.reload();await page.locator('.question-player').waitFor();await page.waitForFunction(code=>window.__mastersActivity.snapshot().attempt?.ref.questionId===code,code);}
+try{
+ for(const code of ['EBP-S8L4J2','EBP-I5B9S3']){
+  await fixture(code);
+  for(const [label,width,height] of [['desktop',1440,1000],['mobile',390,844]]){
+   await page.setViewportSize({width,height});const image=page.locator('.content-image');const box=await image.boundingBox();assert(box&&box.width<=520&&box.width>250);assert(await image.evaluate(el=>el.naturalWidth>0));assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+   if(code==='EBP-I5B9S3'){const contextText=await page.locator('.question-player > .content').textContent();assert(!/fragment|three-dimensional|giant ionic|continues/.test(contextText));assert.equal(await page.locator('[data-error-id="phrase-1"]').innerText(),'a complete Ca\u2084O\u2084 molecule');assert(!/fragment|giant ionic/i.test(await image.getAttribute('alt')));}
+   await page.screenshot({path:path.join(here,code+'-'+label+'.png'),fullPage:true});report.checks.push({id:code+'-'+label+'-neutral-context-responsive-lattice',status:'PASS',imageWidth:box.width,imageHeight:box.height});
+  }
+  if(code==='EBP-I5B9S3'){
+   await page.locator('[data-error-id="phrase-1"]').click();await page.getByLabel('Replacement / correction',{exact:true}).fill('incorrect');await page.getByRole('button',{name:'Check',exact:true}).click();await page.locator('.assessment-feedback').waitFor();await page.evaluate(()=>window.__mastersActivity.flush());const first=await page.evaluate(()=>window.__mastersActivity.snapshot().attempt);assert.equal(first.firstAssessment.marks.earned,1);assert(await page.locator('.assessment-feedback').textContent().then(text=>text.includes('part of a giant ionic lattice')));
+   await page.getByLabel('Replacement / correction',{exact:true}).fill('part of a giant ionic lattice');await page.getByRole('button',{name:'Check',exact:true}).click();await page.locator('.correction-feedback').waitFor();await page.evaluate(()=>window.__mastersActivity.flush());assert.deepEqual(await page.evaluate(()=>window.__mastersActivity.snapshot().attempt.firstAssessment),first.firstAssessment);assert.equal((await page.evaluate(()=>window.__mastersActivity.history())).length,1);
+   await page.getByRole('button',{name:'Request hint',exact:true}).click();assert(await page.locator('.question-player').textContent().then(text=>text.includes('three-dimensional')));report.checks.push({id:'subscript-selection-feedback-hint-and-frozen-retry',status:'PASS'});
+  }
+ }
+ const title=await page.evaluate(async()=>{const {productionRegistry}=await import('/src/foundation/registry.ts');return productionRegistry.get('alevel/c3l6-organic-reactions').title;});assert.equal(title,'A Class of their Own');report.checks.push({id:'original-C3L6-title',status:'PASS'});
+ assert.deepEqual(report.errors,[]);report.status='PASS';
+}catch(e){report.status='FAIL';report.failure=e.stack;await page.screenshot({path:path.join(here,'visual-failure.png'),fullPage:true}).catch(()=>{});}
+finally{report.finishedAt=new Date().toISOString();fs.writeFileSync(path.join(here,'visual-browser.json'),JSON.stringify(report,null,2)+'\n');await browser.close();console.log(JSON.stringify(report));if(report.status!=='PASS')process.exitCode=1;}

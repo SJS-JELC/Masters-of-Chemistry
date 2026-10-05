@@ -1,6 +1,0 @@
-{
-  "status": "PASS",
-  "path": "validation/component-fidelity/f1-correction/identity/coverage-results.json",
-  "expectedSha256": "8a2721d33243e559067640822eb94895edad6fddef47b6774b1c0aeb090e50ad",
-  "reason": "An old regression test unexpectedly wrote partial summary after SVG serial reproducibility failure; exact historical bytes recovered and verified against pre-run freeze. Other identical output rewrites checked separately. New test copies own all future outputs."
-}

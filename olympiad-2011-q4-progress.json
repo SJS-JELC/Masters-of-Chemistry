@@ -1,4 +1,5 @@
 ﻿{
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
     "runId":  "OLY2011-20261003",
     "status":  "complete",
     "contract":  "olympiad-2011-q4-contract.md",
@@ -22,5 +23,5 @@
                      "reason":  "Power cut: previous agent gone; saved implementation and validation retained"
                  },
     "acceptedAt":  "2026-10-03T20:04:53.3969273+01:00",
-    "acceptance":  "validation/olympiad-2011-q4/root-acceptance.json"
+    "acceptance":  "retired historical path: validation/olympiad-2011-q4/root-acceptance.json"
 }

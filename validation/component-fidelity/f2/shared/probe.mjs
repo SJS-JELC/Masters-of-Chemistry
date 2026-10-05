@@ -1,5 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';import{createRequire}from'node:module';
-const here=import.meta.dirname,require=createRequire(path.resolve(here,'../../../../../../package.json'));
-const{chromium}=require('playwright');const b=await chromium.launch({channel:'msedge',headless:true});
-const c=await b.newContext({viewport:{width:1440,height:1000}});const p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));
-await p.goto('http://127.0.0.1:5188/igcse.html?course=igcse&run=f03-f2-probe');await p.locator('.original-landing').waitFor();await p.evaluate(()=>location.hash='lower-10-3');await p.locator('#gemDetails').waitFor({state:'visible'});await p.locator('a.practice-choice[data-practice="2"]').click();await p.locator('.source-player').waitFor();await p.evaluate(()=>document.fonts.ready);console.log(JSON.stringify({snapshot:await p.evaluate(()=>window.__mastersActivity.snapshot()),errors},null,2));await p.locator('.source-player').screenshot({path:path.join(here,'probe-cal.png')});await b.close();

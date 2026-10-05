@@ -1,0 +1,48 @@
+{
+  "job_id": "VERIFICATION-RESTORATION",
+  "status": "PASS",
+  "restored": [
+    "verify-landing default broad scripts/test-s5.mjs runner",
+    "verify-landing source original-app-import/iframe/Rocket runtime guards",
+    "scripts/write-s0-scope.mjs original scope equality assertion with migrated inventory input",
+    "validate-s0 child invocation of that source-derived scope check"
+  ],
+  "reviewed": {
+    "verifyS1ThroughS4": "Original executable job lists and runtime guards remain unchanged apart from dependency/output paths.",
+    "verifyS5": "Original executable deterministic jobs and source runtime guards retained; only deleted historical independent-report/fingerprint/existence checks retired.",
+    "landingLegacyGates": "Both source-control and protected-app executable checks retained; only stdin path substitutions replaced by direct current invocations.",
+    "validateS0": "Byte/hash, duplicate source, typed current IDs, Olympiad isolation, provenance shape and frozen control/scope differences remain. Worker-handover/output existence checks alone retired."
+  },
+  "validation": {
+    "landingSyntax": "PASS",
+    "restoredRuntimeGuards": [
+      {
+        "id": "runtime-ownership",
+        "status": "PASS",
+        "sourceFiles": 236,
+        "checks": [
+          "no original-app runtime imports",
+          "no iframe wrappers or Rocket runtime; exact excluded-link rejection permitted"
+        ]
+      }
+    ],
+    "dependencyAudit": {
+      "status": "PASS",
+      "checkedFiles": 448
+    },
+    "sourceScope": "Expected FAIL: original exact frozen twelve-activity assertion versus current fourteen-activity catalogue; no assertion weakening.",
+    "knownTestS5Baseline": {
+      "tests": 156,
+      "pass": 99,
+      "fail": 57,
+      "rerun": false
+    },
+    "fullSuiteReruns": 0
+  },
+  "evidence": [
+    ".artifacts/validation-cleanup/restored-runtime-guards.log",
+    ".artifacts/validation-cleanup/restored-scope.log",
+    ".artifacts/validation-cleanup/restored-source-check.log"
+  ],
+  "completedAt": "2026-10-05T19:03:38.363Z"
+}

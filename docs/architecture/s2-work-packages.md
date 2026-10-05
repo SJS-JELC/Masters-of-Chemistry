@@ -1,5 +1,7 @@
 # Proposed S2 work packages — requires root acceptance of S1
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Three bounded workers, each requested gpt-6.1-sol/high, no child delegation. Root acceptance precedes dispatch. Both originals remain read only; no publication, source hydration, original builds or browser-store writes. The accepted S0 inventory and source hashes govern complete bank coverage, active entrypoints and pedagogical choices. Development fixture registrations never become production activities.
 
 ## Shared ownership and integration

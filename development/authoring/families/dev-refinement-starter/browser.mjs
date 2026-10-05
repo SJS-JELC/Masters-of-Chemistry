@@ -1,9 +1,9 @@
 import {chromium} from '../../../../../../node_modules/playwright/index.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';
 import {dilutionValues,proofRef} from './family.ts';
-const here=path.resolve(import.meta.dirname,'../../../../validation/component-fidelity/f1-correction/identity/authoring','dev-refinement-starter');fs.mkdirSync(here,{recursive:true});
+const here=path.resolve(import.meta.dirname,'../../../../.artifacts/authoring','dev-refinement-starter');fs.mkdirSync(here,{recursive:true});
 const run=`A20-${Date.now()}`,report={jobId:'F1-CODEC-DEV',startedAt:new Date().toISOString(),checks:[],errors:[]};
-const browserTemp=path.resolve(import.meta.dirname,'../../../../validation/component-fidelity/f1-correction/identity/.bt');fs.mkdirSync(browserTemp,{recursive:true});process.env.TEMP=browserTemp;process.env.TMP=browserTemp;process.env.TMPDIR=browserTemp;
+const browserTemp=path.resolve(import.meta.dirname,'../../../../.artifacts/browser-profiles/authoring');fs.mkdirSync(browserTemp,{recursive:true});process.env.TEMP=browserTemp;process.env.TMP=browserTemp;process.env.TMPDIR=browserTemp;
 report.browserTempRoot=browserTemp;
 const browser=await chromium.launch({channel:'msedge',headless:true,args:[`--disk-cache-dir=${path.join(browserTemp,'cache')}`]}),context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
 const snap=()=>page.evaluate(()=>window.__mastersActivity.snapshot()),flush=()=>page.evaluate(()=>window.__mastersActivity.flush());

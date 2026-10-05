@@ -1,1 +1,0 @@
-﻿import fs from 'node:fs';const file='validation/statistics-restore/scope-css.mjs';fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('.statistics-screen{min-height:100vh;background:var(--app-background)}','.statistics-screen{min-height:100vh;background:transparent}'));

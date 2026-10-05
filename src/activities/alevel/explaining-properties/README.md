@@ -29,7 +29,9 @@ Primary reference is
 (SHA-256 `df0c62e0dcb1f189546464b48abb8ac2a1a73ec5d660d135d994865ab5e52a97`).
 Retained accepted atlas records are in the workspace
 `resources/a-level-past-paper-atlas/data/aggregate.json` and copied narrowly to
-`validation/explaining-properties/atlas-source-review.json` for review.
+the former `validation/explaining-properties/atlas-source-review.json` review
+packet. That historical packet was deleted under the user-authorised cleanup;
+the accepted workspace records remain the source.
 
 | Demand | Reviewed atlas evidence | Adaptation boundary |
 | --- | --- | --- |
@@ -83,7 +85,7 @@ the new gem. Both standalone and revision use the same registration/player.
 From the project directory:
 
 ```powershell
-node validation/explaining-properties/register.mjs
+node scripts/source-generation/explaining-properties/register.mjs
 node scripts/write-catalogue-definitions.mjs
 node scripts/test-explaining-properties.mjs
 node node_modules/typescript/bin/tsc --noEmit
@@ -93,7 +95,8 @@ node scripts/release-s4.mjs igcse
 node scripts/verify-explaining-properties.mjs
 ```
 
-Browser harnesses, before snapshots, chemistry review, current checks, failures
-and superseding results live under `validation/explaining-properties/`. No
-publication is authorised. Native background/lifecycle capability must be judged
+Runnable browser harnesses live under `scripts/browser/explaining-properties/`;
+fresh generated reports belong under ignored `.artifacts/`. Historical snapshots
+and review reports were deleted; see `docs/maintenance/validation-cleanup.md`.
+No publication is authorised. Native background/lifecycle capability must be judged
 from observed browser events; command success alone never establishes it.

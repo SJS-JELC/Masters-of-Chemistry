@@ -1,23 +1,22 @@
 # Migration coverage inventory
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Run `MASTERS-REACT-20261002`; stable worker A02 / S0-INVENTORY. This inventory is a source preservation baseline, not a new chemistry audit, a migrated activity or publication approval. Both source apps were read-only. No browser storage was accessed and no original build or content generator ran.
 
 ## Reproduce and verify
 
-From the workspace root:
+From this app directory, verify current canonical catalogue output with:
 
 ```powershell
-node apps/Masters-of-Chemistry/validation/s0/inventory/collect.cjs
-node apps/Masters-of-Chemistry/validation/s0/inventory/collect.cjs check
-node apps/Masters-of-Chemistry/validation/s0/inventory/run-reference-checks.cjs
-node apps/Masters-of-Chemistry/validation/s0/inventory/test-acid-levels-ported.cjs
-node apps/Masters-of-Chemistry/validation/s0/inventory/validate-source-models.cjs
-node apps/Masters-of-Chemistry/validation/s0/inventory/build-docs.cjs
+node scripts/write-catalogue-definitions.mjs --check
 ```
+
+The original collection and document-generation recipes were retired. Frozen source-generation inputs remain in `resources/source-generation/inventory/`; they are not fresh chemistry or browser acceptance.
 
 The original reference suite intentionally retains one failure: `test_acid_levels.js` assumes every U6 registration is acid and rejects the subsequently valid titration registration. The owned port checks the exact five acid leaves plus the separately registered titration leaf/levels, then runs the unchanged 15 mastery routes and 33 historical question fixtures. Its changes are only root resolution and that outdated assertion. No original test is edited.
 
-The [machine manifest](../../validation/s0/inventory/coverage-manifest.json) contains one record per exact contract ID, supported level-to-source-ID lists, every bank array and family/template count, teacher/runtime entrypoint scripts, release inclusion, dependencies and source SHA-256/bytes. Per-activity `*-evidence.json` files retain source path/line/text for IDs, random seeds, marking, scaffolds, timing and storage. `identity-index.json` maps existing source keys to supported historical review IDs without using display order. No full generated-question snapshots are introduced.
+The [machine manifest](../../resources/source-generation/inventory/coverage-manifest.json) contains one record per exact contract ID, supported level-to-source-ID lists, every bank array and family/template count, teacher/runtime entrypoint scripts, release inclusion, dependencies and source SHA-256/bytes. Former per-activity evidence reports were retired. Current generated activity provenance remains with source modules. `resources/source-generation/inventory/identity-index.json` maps existing source keys to supported historical review IDs without using display order. No full generated-question snapshots are introduced.
 
 ## Exact scope
 
@@ -223,7 +222,7 @@ Extra hint/reveal assistance is distinct from built-in level scaffolding. Stop t
 
 Fifteen original read-only model/regression scripts pass. Among their retained output are independent acid reconstruction of 38 templates / 228 questions / 2,936 checks, 1,242 calorimetry outputs, 123 exact bond reaction/level/seed outputs and the full 91-entry A-level diagram reference bank. The separate source-model check passes 63 acid identity routes, 33 historical fixtures, all 23 C3L6 graph/formula alternatives and all 14 practical model responses/empty-response/correction gates. These are regression/invariant checks; they do not establish a fresh expert audit.
 
-`reference-validation-map.json` maps each activity to checks, retained source provenance and status. IGCSE `test_dot_cross_bank.js` still names absent `resources/past-paper-atlas/data/atlas.json`; do not run it as-is or remove the provenance check to claim PASS. Port its independent electron-count fixture and resolve the historical atlas mapping during migration. Other diagram checks do pass.
+The retired `reference-validation-map.json` historically mapped activity checks and provenance. IGCSE `test_dot_cross_bank.js` still names absent `resources/past-paper-atlas/data/atlas.json`; do not run it as-is or remove the provenance check to claim PASS. Port its independent electron-count fixture and resolve the historical atlas mapping during migration. Other diagram checks do pass.
 
 Historical C3L6 draft chemistry reports were identified by path and metadata but are offline cloud placeholders; none was hydrated. Live promoted content/answer graphs were inspected instead and validated against the readable source editor model. The historical reports remain provenance to recover only with separately authorised access if needed. All original `src` content is readable, so this limitation does not prevent exact bank preservation.
 

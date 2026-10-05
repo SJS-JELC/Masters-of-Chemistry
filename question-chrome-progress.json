@@ -1,4 +1,5 @@
 {
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
     "status":  "complete",
     "stages":  {
                    "H0":  {
@@ -8,7 +9,7 @@
                               "status":  "accepted"
                           }
                },
-    "rootAcceptance":  "validation/question-chrome/implementation/root-acceptance.json",
+    "rootAcceptance":  "retired historical path: validation/question-chrome/implementation/root-acceptance.json",
     "runId":  "QUESTION-CHROME-20261003",
     "currentStage":  "H1"
 }

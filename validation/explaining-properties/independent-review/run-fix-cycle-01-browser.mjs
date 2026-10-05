@@ -1,5 +1,0 @@
-import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';
-const here=import.meta.dirname,source=path.resolve(here,'../fix-cycle-01/visual-browser.mjs'),output=path.join(here,'fix-cycle-01');fs.mkdirSync(output,{recursive:true});
-const original=fs.readFileSync(source,'utf8'),sha256=crypto.createHash('sha256').update(original).digest('hex');
-const script=original.replace('const here=import.meta.dirname,run=',"const here=path.join(import.meta.dirname,'fix-cycle-01'),run=").replace("jobId:'EBP-FIX-01'",`jobId:'EBP-REVIEW-FIX-01',harnessProvenance:{source:'validation/explaining-properties/fix-cycle-01/visual-browser.mjs',sha256:'${sha256}',method:'Independent rerun of inspected current visual/behaviour harness; reviewer-owned context/profile/evidence.'}`);
-const target=path.join(here,'fix-cycle-01-browser.mjs');fs.writeFileSync(target,script);const r=spawnSync(process.execPath,[target],{stdio:'inherit'});if(r.error)throw r.error;process.exitCode=r.status??1;

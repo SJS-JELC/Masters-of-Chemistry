@@ -1,10 +1,12 @@
-# Final local implementation — accepted
+# Historical final local implementation — accepted
 
-Both course builds and all three independent reviews pass against frozen inputs. Root accepted the finished local app; see [final acceptance](validation/s5/root-acceptance.json). No deployment occurred.
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](docs/maintenance/validation-cleanup.md).
+
+At the original S5 gate, both course builds and three independent reviews passed against the then-frozen inputs, and root accepted the local app. These are historical results; the acceptance report was retired. No deployment occurred.
 
 ## Start here
 
-[README](README.md) gives install/dev/build/preview/check/release and authoring commands. [Final evidence map](validation/s5/foreman-report.json) maps all 15 requirements, current hashes, detailed reviews and limitations.
+[README](README.md) gives install/dev/build/preview/check/release and authoring commands. The former final evidence map covered the 15 original requirements; its report files were retired.
 
 ## Validation
 
@@ -16,13 +18,13 @@ Both course builds and all three independent reviews pass against frozen inputs.
 
 ## Bounded final corrections
 
-Answer-specific acid precision; three qualified bonding prompts; C3 hydrated-aldehyde erratum with 23 source alternatives, 22 current alternatives and separately preserved historical outcomes; visible saved-data recovery/connection Retry; reliable real-keystroke numeric/editor setup; trusted Next after blur-save with duplicate and failure guards; checked session-only completion/resume and coherent Retry/reload. [Source changes](validation/s5/integration/source-ownership.json) lists 15 scoped authored changes and 222 byte-preserved source files.
+Answer-specific acid precision; three qualified bonding prompts; C3 hydrated-aldehyde erratum with 23 source alternatives, 22 current alternatives and separately preserved historical outcomes; visible saved-data recovery/connection Retry; reliable real-keystroke numeric/editor setup; trusted Next after blur-save with duplicate and failure guards; checked session-only completion/resume and coherent Retry/reload. Source changes (retired historical evidence; former path `validation/s5/integration/source-ownership.json`) lists 15 scoped authored changes and 222 byte-preserved source files.
 
 ## Independent review
 
-- [Behaviour/timing/restore/import](validation/s5/behaviour/HANDOVER.md) and [current Next/save verification](validation/s5/behaviour/next-save-fix/HANDOVER.md) and [final session write verification](validation/s5/behaviour/session-only-save-fix/latest/HANDOVER.md)
-- [Complete chemistry/source/render sample](validation/s5/chemistry/HANDOVER.md) and [current source continuity](validation/s5/chemistry/next-save-fix/HANDOVER.md) and [final chemistry continuity](validation/s5/chemistry/session-only-save-fix/final/HANDOVER.md)
-- [Current render/accessibility/typing/performance/release/authoring](validation/s5/render-release/HANDOVER.md) and [final host/release follow-up](validation/s5/render-release/session-only-save-fix/HANDOVER.md)
+- Behaviour/timing/restore/import (retired historical evidence; former path `validation/s5/behaviour/HANDOVER.md`) and current Next/save verification (retired historical evidence; former path `validation/s5/behaviour/next-save-fix/HANDOVER.md`) and final session write verification (retired historical evidence; former path `validation/s5/behaviour/session-only-save-fix/latest/HANDOVER.md`)
+- Complete chemistry/source/render sample (retired historical evidence; former path `validation/s5/chemistry/HANDOVER.md`) and current source continuity (retired historical evidence; former path `validation/s5/chemistry/next-save-fix/HANDOVER.md`) and final chemistry continuity (retired historical evidence; former path `validation/s5/chemistry/session-only-save-fix/final/HANDOVER.md`)
+- Current render/accessibility/typing/performance/release/authoring (retired historical evidence; former path `validation/s5/render-release/HANDOVER.md`) and final host/release follow-up (retired historical evidence; former path `validation/s5/render-release/session-only-save-fix/HANDOVER.md`)
 
 ## Retained limits
 

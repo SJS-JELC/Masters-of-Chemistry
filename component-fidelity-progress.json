@@ -1,4 +1,5 @@
 {
+  "historicalEvidenceDisposition": {"status":"retired-deleted-by-user-request","date":"2026-10-05","note":"Validation reports, screenshots and acceptance records were deleted after executable dependencies were migrated. Former validation paths are historical identifiers only. Statuses, dates, hashes, failures and limits remain historical; this cleanup is not fresh acceptance or current source/browser verification.","maintenanceRecord":"docs/maintenance/validation-cleanup.md"},
     "runId":  "COMPONENT-FIDELITY-20261003",
     "status":  "complete",
     "currentStage":  "F3",
@@ -8,70 +9,70 @@
                    "F3":  "accepted"
                },
     "rootAcceptance":  {
-                           "F1":  "validation/component-fidelity/f1-correction/root-acceptance.json",
-                           "F2":  "validation/component-fidelity/f2/resume/root-acceptance.json",
-                           "F3":  "validation/component-fidelity/f3/root-acceptance.json"
+                           "F1":  "retired historical path: validation/component-fidelity/f1-correction/root-acceptance.json",
+                           "F2":  "retired historical path: validation/component-fidelity/f2/resume/root-acceptance.json",
+                           "F3":  "retired historical path: validation/component-fidelity/f3/root-acceptance.json"
                        },
-    "evidenceRoot":  "validation/component-fidelity",
+    "evidenceRoot":  "retired historical path: validation/component-fidelity",
     "jobs":  [
                  {
                      "jobId":  "F1-IDENTITY",
                      "agentId":  "F02",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f1/identity/completion.json"
+                     "manifest":  "retired historical path: validation/component-fidelity/f1/identity/completion.json"
                  },
                  {
                      "jobId":  "F1-UI-PILOT",
                      "agentId":  "F03",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f1/ui-pilot/completion.json"
+                     "manifest":  "retired historical path: validation/component-fidelity/f1/ui-pilot/completion.json"
                  },
                  {
                      "jobId":  "F1-CODEC-DEV",
                      "secondaryJobId":  "DEV-AUTHORING-CANONICAL",
                      "agentId":  "F02",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f1-correction/identity/completion.json"
+                     "manifest":  "retired historical path: validation/component-fidelity/f1-correction/identity/completion.json"
                  },
                  {
                      "jobId":  "F2-SHARED",
                      "agentId":  "F08",
                      "replaces":  "F03",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f2/shared/resume-f08/completion.json",
-                     "evidence":  "validation/component-fidelity/f2/shared/resume-f08",
+                     "manifest":  "retired historical path: validation/component-fidelity/f2/shared/resume-f08/completion.json",
+                     "evidence":  "retired historical path: validation/component-fidelity/f2/shared/resume-f08",
                      "nativeHandle":  "/root/component_fidelity_resume/shared_resume",
-                     "validation":  "validation/component-fidelity/f2/resume/shared-validation.json"
+                     "validation":  "retired historical path: validation/component-fidelity/f2/resume/shared-validation.json"
                  },
                  {
                      "jobId":  "F2-EC",
                      "agentId":  "F09",
                      "replaces":  "F04",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f2/electron/resume-f09/completion.json",
-                     "evidence":  "validation/component-fidelity/f2/electron/resume-f09",
+                     "manifest":  "retired historical path: validation/component-fidelity/f2/electron/resume-f09/completion.json",
+                     "evidence":  "retired historical path: validation/component-fidelity/f2/electron/resume-f09",
                      "nativeHandle":  "/root/component_fidelity_resume/electron_resume",
-                     "validation":  "validation/component-fidelity/f2/resume/specialist-validation.json"
+                     "validation":  "retired historical path: validation/component-fidelity/f2/resume/specialist-validation.json"
                  },
                  {
                      "jobId":  "F2-ENERGY",
                      "agentId":  "F10",
                      "replaces":  "F05",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f2/energy/resume-f10/completion.json",
-                     "evidence":  "validation/component-fidelity/f2/energy/resume-f10",
+                     "manifest":  "retired historical path: validation/component-fidelity/f2/energy/resume-f10/completion.json",
+                     "evidence":  "retired historical path: validation/component-fidelity/f2/energy/resume-f10",
                      "nativeHandle":  "/root/component_fidelity_resume/energy_resume",
-                     "validation":  "validation/component-fidelity/f2/resume/specialist-validation.json"
+                     "validation":  "retired historical path: validation/component-fidelity/f2/resume/specialist-validation.json"
                  },
                  {
                      "jobId":  "F2-TITRATION",
                      "agentId":  "F11",
                      "replaces":  "F06",
                      "status":  "foreman_validated",
-                     "manifest":  "validation/component-fidelity/f2/titration/resume-f11/completion.json",
-                     "evidence":  "validation/component-fidelity/f2/titration/resume-f11",
+                     "manifest":  "retired historical path: validation/component-fidelity/f2/titration/resume-f11/completion.json",
+                     "evidence":  "retired historical path: validation/component-fidelity/f2/titration/resume-f11",
                      "nativeHandle":  "/root/component_fidelity_resume/titration_resume",
-                     "validation":  "validation/component-fidelity/f2/resume/specialist-validation.json"
+                     "validation":  "retired historical path: validation/component-fidelity/f2/resume/specialist-validation.json"
                  },
                  {
                      "jobId":  "F3-SHARED-FINAL-FIX",
@@ -82,27 +83,27 @@
                                        "src/ui/SourceRubricReview.tsx",
                                        "src/ui/source-adapters.css"
                                    ],
-                     "evidence":  "validation/component-fidelity/f3/shared-final",
-                     "manifest":  "validation/component-fidelity/f3/shared-final/completion.json",
-                     "validation":  "validation/component-fidelity/f3/foreman/author-validation.json"
+                     "evidence":  "retired historical path: validation/component-fidelity/f3/shared-final",
+                     "manifest":  "retired historical path: validation/component-fidelity/f3/shared-final/completion.json",
+                     "validation":  "retired historical path: validation/component-fidelity/f3/foreman/author-validation.json"
                  },
                  {
                      "jobId":  "F3-INDEPENDENT",
                      "agentId":  "F12",
                      "status":  "foreman_validated",
                      "ownership":  [
-                                       "validation/component-fidelity/f3/independent"
+                                       "retired historical path: validation/component-fidelity/f3/independent"
                                    ],
-                     "evidence":  "validation/component-fidelity/f3/independent",
-                     "manifest":  "validation/component-fidelity/f3/independent/completion.json",
-                     "validation":  "validation/component-fidelity/f3/foreman/independent-validation.json"
+                     "evidence":  "retired historical path: validation/component-fidelity/f3/independent",
+                     "manifest":  "retired historical path: validation/component-fidelity/f3/independent/completion.json",
+                     "validation":  "retired historical path: validation/component-fidelity/f3/foreman/independent-validation.json"
                  }
              ],
     "evidence":  [
-                     "validation/component-fidelity/f1/foreman-report.json",
-                     "validation/component-fidelity/f1-correction/foreman-report.json",
-                     "validation/component-fidelity/f2/resume/foreman-report.json",
-                     "validation/component-fidelity/f3/foreman/foreman-report.json"
+                     "retired historical path: validation/component-fidelity/f1/foreman-report.json",
+                     "retired historical path: validation/component-fidelity/f1-correction/foreman-report.json",
+                     "retired historical path: validation/component-fidelity/f2/resume/foreman-report.json",
+                     "retired historical path: validation/component-fidelity/f3/foreman/foreman-report.json"
                  ],
     "unresolved":  [
 
@@ -111,21 +112,21 @@
     "resolved":  [
                      {
                          "id":  "AB-FUTURE-STABILITY",
-                         "evidence":  "validation/component-fidelity/f1-correction/identity/future-stability-results.json"
+                         "evidence":  "retired historical path: validation/component-fidelity/f1-correction/identity/future-stability-results.json"
                      },
                      {
                          "id":  "DEV-AUTHORING-CANONICAL",
-                         "evidence":  "validation/component-fidelity/f1-correction/identity/development-browser-results.json"
+                         "evidence":  "retired historical path: validation/component-fidelity/f1-correction/identity/development-browser-results.json"
                      },
                      {
                          "id":  "TEACHER-CANONICAL-COPY",
-                         "evidence":  "validation/component-fidelity/f1-correction/teacher-copy/review.json"
+                         "evidence":  "retired historical path: validation/component-fidelity/f1-correction/teacher-copy/review.json"
                      }
                  ],
     "resume":  {
                    "foreman":  "F07",
                    "replaces":  "F01",
-                   "evidence":  "validation/component-fidelity/f2/resume",
+                   "evidence":  "retired historical path: validation/component-fidelity/f2/resume",
                    "requested":  {
                                      "model":  "gpt-6.1-sol",
                                      "effort":  "high"

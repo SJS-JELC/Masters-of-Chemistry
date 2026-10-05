@@ -1,0 +1,691 @@
+{
+  "job_id": "TEST-MIGRATION",
+  "agent_id": "A02",
+  "status": "PASS",
+  "mapping": [
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/canonical-identity.test.mjs",
+      "new": "scripts/tests/legacy/component-fidelity/f1-correction/identity/canonical-identity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/current-persistence.test.mjs",
+      "new": "scripts/tests/legacy/component-fidelity/f1-correction/identity/current-persistence.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/development-identity.test.mjs",
+      "new": "scripts/tests/legacy/component-fidelity/f1-correction/identity/development-identity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s1/attempt/attempt.test.mjs",
+      "new": "scripts/tests/legacy/s1/attempt/attempt.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s1/persistence/persistence.test.ts",
+      "new": "scripts/tests/legacy/s1/persistence/persistence.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s1/session/session.test.mjs",
+      "new": "scripts/tests/legacy/s1/session/session.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s2/dot-cross/activity.test.mjs",
+      "new": "scripts/tests/legacy/s2/dot-cross/activity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s2/integration/complete-coverage.test.ts",
+      "new": "scripts/tests/legacy/s2/integration/complete-coverage.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s2/integration/shared-boundaries.test.ts",
+      "new": "scripts/tests/legacy/s2/integration/shared-boundaries.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s2/structure/structure.test.mjs",
+      "new": "scripts/tests/legacy/s2/structure/structure.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/c3l6/c3l6.test.ts",
+      "new": "scripts/tests/legacy/s3/c3l6/c3l6.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/electrons/electrons.test.mjs",
+      "new": "scripts/tests/legacy/s3/electrons/electrons.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/energy/energy.test.mjs",
+      "new": "scripts/tests/legacy/s3/energy/energy.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/igcse-dot-cross/activity.test.mjs",
+      "new": "scripts/tests/legacy/s3/igcse-dot-cross/activity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/igcse-dot-cross/alevel-activity.test.mjs",
+      "new": "scripts/tests/legacy/s3/igcse-dot-cross/alevel-activity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/integration/complete-registration.test.ts",
+      "new": "scripts/tests/legacy/s3/integration/complete-registration.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/integration/s2-content-regression.test.ts",
+      "new": "scripts/tests/legacy/s3/integration/s2-content-regression.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/thermochemistry/coverage.test.mjs",
+      "new": "scripts/tests/legacy/s3/thermochemistry/coverage.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/titration/activity.test.mjs",
+      "new": "scripts/tests/legacy/s3/titration/activity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s3/titration/source-chemistry.test.mjs",
+      "new": "scripts/tests/legacy/s3/titration/source-chemistry.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s4/authoring-release/family.test.mjs",
+      "new": "scripts/tests/legacy/s4/authoring-release/family.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s4/compatibility/compatibility.test.ts",
+      "new": "scripts/tests/legacy/s4/compatibility/compatibility.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s4/refinement/catalogue-boundary.test.ts",
+      "new": "scripts/tests/legacy/s4/refinement/catalogue-boundary.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s4/statistics/model.test.mjs",
+      "new": "scripts/tests/legacy/s4/statistics/model.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s4/ux/catalogue.test.mjs",
+      "new": "scripts/tests/legacy/s4/ux/catalogue.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/alevel-dot-reference.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/alevel-dot-reference.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/c3-current-source-regression.test.ts",
+      "new": "scripts/tests/legacy/s5/chemistry/c3-current-source-regression.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/c3-history-boundaries.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/c3-history-boundaries.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/electrons-source-regression.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/electrons-source-regression.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/energy-reference.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/energy-reference.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/igcse-dot-reference.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/igcse-dot-reference.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/structure-reference.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/structure-reference.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/chemistry/titration-reference.test.mjs",
+      "new": "scripts/tests/legacy/s5/chemistry/titration-reference.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/fixes/c3-k-erratum/c3-reference.test.ts",
+      "new": "scripts/tests/legacy/s5/fixes/c3-k-erratum/c3-reference.test.ts",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/fixes/dot-charge-typing/activity.test.mjs",
+      "new": "scripts/tests/legacy/s5/fixes/dot-charge-typing/activity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/fixes/dot-charge-typing/alevel-activity.test.mjs",
+      "new": "scripts/tests/legacy/s5/fixes/dot-charge-typing/alevel-activity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/s5/render-release/independent-family.test.mjs",
+      "new": "scripts/tests/legacy/s5/render-release/independent-family.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/action-state.test.mjs",
+      "new": "scripts/tests/legacy/ui-consistency/u2/independent/action-state.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/canonical-identity.test.mjs",
+      "new": "scripts/tests/legacy/ui-consistency/u2/independent/canonical-identity.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/central-attempt.test.mjs",
+      "new": "scripts/tests/legacy/ui-consistency/u2/independent/central-attempt.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/current-persistence.test.mjs",
+      "new": "scripts/tests/legacy/ui-consistency/u2/independent/current-persistence.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/numeric-working.test.mjs",
+      "new": "scripts/tests/legacy/ui-consistency/u2/independent/numeric-working.test.mjs",
+      "kind": "suite"
+    },
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/acid-pre-correction-fixtures.json",
+      "new": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/acid-pre-correction-fixtures.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/authoring-pre-correction-fixtures.json",
+      "new": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/authoring-pre-correction-fixtures.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/before/src/development/fixtures.ts",
+      "new": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/before/src/development/fixtures.ts",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/component-fidelity/f1-correction/identity/current-export.json",
+      "new": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/current-export.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s1/attempt/scenarios.ts",
+      "new": "scripts/tests/fixtures/legacy/s1/attempt/scenarios.ts",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s1/persistence/fixtures.ts",
+      "new": "scripts/tests/fixtures/legacy/s1/persistence/fixtures.ts",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s1/session/source-golden.json",
+      "new": "scripts/tests/fixtures/legacy/s1/session/source-golden.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s3/electrons/source-fingerprints.json",
+      "new": "scripts/tests/fixtures/legacy/s3/electrons/source-fingerprints.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s3/energy/source-fingerprints.json",
+      "new": "scripts/tests/fixtures/legacy/s3/energy/source-fingerprints.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s3/review-c3-name/wording-disposition.json",
+      "new": "scripts/tests/fixtures/legacy/s3/review-c3-name/wording-disposition.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s3/review-co/provenance.json",
+      "new": "scripts/tests/fixtures/legacy/s3/review-co/provenance.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s5/chemistry/electron-source-fingerprints.json",
+      "new": "scripts/tests/fixtures/legacy/s5/chemistry/electron-source-fingerprints.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s5/fixes/c3-k-erratum/native-historical-wrong-k.json",
+      "new": "scripts/tests/fixtures/legacy/s5/fixes/c3-k-erratum/native-historical-wrong-k.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/s5/fixes/c3-k-erratum/native-revalidated.json",
+      "new": "scripts/tests/fixtures/legacy/s5/fixes/c3-k-erratum/native-revalidated.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/acid-pre-correction-fixtures.json",
+      "new": "scripts/tests/fixtures/legacy/ui-consistency/u2/independent/acid-pre-correction-fixtures.json",
+      "kind": "input-fixture"
+    },
+    {
+      "old": "validation/ui-consistency/u2/independent/current-export.json",
+      "new": "scripts/tests/fixtures/legacy/ui-consistency/u2/independent/current-export.json",
+      "kind": "input-fixture"
+    }
+  ],
+  "sharedInputs": [
+    {
+      "old": "validation/s0/inventory/coverage-manifest.json",
+      "new": "resources/source-generation/inventory/coverage-manifest.json"
+    },
+    {
+      "old": "validation/s0/inventory/identity-index.json",
+      "new": "resources/source-generation/inventory/identity-index.json"
+    }
+  ],
+  "completedAt": "2026-10-05T18:47:12.391Z",
+  "validation": {
+    "matrix": [
+      {
+        "runner": "node scripts/test-s1.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 40,
+          "pass": 34,
+          "fail": 6
+        },
+        "after": {
+          "tests": 40,
+          "pass": 34,
+          "fail": 6
+        },
+        "baselineFailureOccurrences": 6,
+        "migratedFailureOccurrences": 6,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ ADD ALL enumerates registered genuine levels; no Olympiad or reserved energy grade",
+          "✖ drawing aggregate correction checks only automatic work and preserves original model judgement",
+          "✖ learning Check reports corrected automatic response repeatedly without changing first evidence or state",
+          "✖ mixed automatic and rubric corrections do not re-self-mark or require edited explanation input",
+          "✖ revealed answers can be checked for learning without creating a score or evidence",
+          "✖ valid draft/assessment/store data and bounds, identity, snapshot exclusion"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/s1.log",
+        "migratedLog": ".artifacts/tests/migration/after/s1.log"
+      },
+      {
+        "runner": "node scripts/test-s2.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 19,
+          "pass": 11,
+          "fail": 8
+        },
+        "after": {
+          "tests": 19,
+          "pass": 11,
+          "fail": 8
+        },
+        "baselineFailureOccurrences": 8,
+        "migratedFailureOccurrences": 8,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ all 18 full questions roundtrip every boundary seed, and historical saved IDs",
+          "✖ all91 exact complete records; every level route and historic code is retained",
+          "✖ dotcross91 teacher IDs and every deduplicated pupil pool equal immutable actual source",
+          "✖ excessive valence is wrong; absence of electrons earns no vacuous partial credit",
+          "✖ formula-only isomer prompts and level1/2 independent category refill match active source",
+          "✖ production enables exactly three complete S2 activities and all20 genuine target levels",
+          "✖ reference/charge/electron conservation and meaningful wrong alternatives for every record",
+          "✖ seed selections are deterministic, alternate source categories and support merged historic alias"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/s2.log",
+        "migratedLog": ".artifacts/tests/migration/after/s2.log"
+      },
+      {
+        "runner": "node scripts/test-s3.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 99,
+          "pass": 69,
+          "fail": 30
+        },
+        "after": {
+          "tests": 99,
+          "pass": 69,
+          "fail": 30
+        },
+        "baselineFailureOccurrences": 30,
+        "migratedFailureOccurrences": 30,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ 72 exact original records; five category/level routes;72 stable DC historic codes",
+          "✖ ADD ALL enumerates registered genuine levels; no Olympiad or reserved energy grade",
+          "✖ IGCSE representation domain rejects triangle/B/P; valid wrong inventories remain assessable",
+          "✖ all 18 full questions roundtrip every boundary seed, and historical saved IDs",
+          "✖ all12 exact source activities register, with41 genuine curriculum targets and separate Olympiad",
+          "✖ all14 bonding concept marks exact, blank blocked, rejected misconception and partial points preserved",
+          "✖ all15 ECB masks with exact seeded source ordering; all10 families observed; matching correct/empty/wrong boundaries",
+          "✖ all36 model/wrong/incomplete/malformed alternatives and restoration",
+          "✖ all72 references, meaningful missing electrons, malformed graph and origin/charge mistakes match original chemistry",
+          "✖ all91 exact complete records; every level route and historic code is retained",
+          "✖ complete 54 energy and 14 practical banks equal independent original data, exact source IDs/levels/hashes and full routes",
+          "✖ dotcross91 teacher IDs and every deduplicated pupil pool equal immutable actual source",
+          "✖ drawing aggregate correction checks only automatic work and preserves original model judgement",
+          "✖ every energy accepted phrase and offered choice, unknown versus known wrong, missing responses, all profile references and semantic perturbations",
+          "✖ exact full source content, fixed IDs, supported levels and historical hash codes",
+          "✖ excessive valence is wrong; absence of electrons earns no vacuous partial credit",
+          "✖ formula-only isomer prompts and level1/2 independent category refill match active source",
+          "✖ learning Check reports corrected automatic response repeatedly without changing first evidence or state",
+          "✖ mixed automatic and rubric corrections do not re-self-mark or require edited explanation input",
+          "✖ name/formula/inference/scaffolds and extension limits remain IGCSE-specific",
+          "✖ reference/charge/electron conservation and meaningful wrong alternatives for every record",
+          "✖ revealed answers can be checked for learning without creating a score or evidence",
+          "✖ seed selections are deterministic, alternate source categories and support merged historic alias",
+          "✖ source sequential selection visits all18 at each level and revision has exactly2 titration plus15 acid targets",
+          "✖ valid draft/assessment/store data and bounds, identity, snapshot exclusion"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/s3.log",
+        "migratedLog": ".artifacts/tests/migration/after/s3.log"
+      },
+      {
+        "runner": "node scripts/test-s4.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 121,
+          "pass": 82,
+          "fail": 39
+        },
+        "after": {
+          "tests": 121,
+          "pass": 82,
+          "fail": 39
+        },
+        "baselineFailureOccurrences": 39,
+        "migratedFailureOccurrences": 39,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ 72 exact original records; five category/level routes;72 stable DC historic codes",
+          "✖ ADD ALL enumerates registered genuine levels; no Olympiad or reserved energy grade",
+          "✖ C3 accepted only through substantive adapter, malformed/unsupported input retains raw",
+          "✖ C:\\Users\\JELC\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\tests\\legacy\\s4\\ux\\catalogue.test.mjs",
+          "✖ IGCSE representation domain rejects triangle/B/P; valid wrong inventories remain assessable",
+          "✖ all 18 full questions roundtrip every boundary seed, and historical saved IDs",
+          "✖ all acid V2 routes and 33 source legacy fixtures keep source seeds; generated CAL/BE decode",
+          "✖ all12 exact source activities register, with41 genuine curriculum targets and separate Olympiad",
+          "✖ all14 bonding concept marks exact, blank blocked, rejected misconception and partial points preserved",
+          "✖ all15 ECB masks with exact seeded source ordering; all10 families observed; matching correct/empty/wrong boundaries",
+          "✖ all36 model/wrong/incomplete/malformed alternatives and restoration",
+          "✖ all72 references, meaningful missing electrons, malformed graph and origin/charge mistakes match original chemistry",
+          "✖ all91 exact complete records; every level route and historic code is retained",
+          "✖ canonical metadata preserves every accepted active leaf, level and retired source identity",
+          "✖ canonical metadata preserves fixed-question level/seed on refresh, validates contradictions and source-mounted paired codes",
+          "✖ complete 54 energy and 14 practical banks equal independent original data, exact source IDs/levels/hashes and full routes",
+          "✖ dotcross91 teacher IDs and every deduplicated pupil pool equal immutable actual source",
+          "✖ drawing aggregate correction checks only automatic work and preserves original model judgement",
+          "✖ equal multi-store rows keep stable batches; genuinely conflicting projections get explicit distinct receipt identities",
+          "✖ every energy accepted phrase and offered choice, unknown versus known wrong, missing responses, all profile references and semantic perturbations",
+          "✖ every independent finite configuration conserves moles and yields correct logarithm; identity stable",
+          "✖ every inventoried fixed review ID and original activity URL restores exact identity",
+          "✖ exact full source content, fixed IDs, supported levels and historical hash codes",
+          "✖ excessive valence is wrong; absence of electrons earns no vacuous partial credit",
+          "✖ formula-only isomer prompts and level1/2 independent category refill match active source",
+          "✖ learning Check reports corrected automatic response repeatedly without changing first evidence or state",
+          "✖ mixed automatic and rubric corrections do not re-self-mark or require edited explanation input",
+          "✖ mixed source imports preserve supported leaves, aliases, flags, timing and exact raw exclusions",
+          "✖ name/formula/inference/scaffolds and extension limits remain IGCSE-specific",
+          "✖ reference/charge/electron conservation and meaningful wrong alternatives for every record",
+          "✖ revealed answers can be checked for learning without creating a score or evidence",
+          "✖ seed selections are deterministic, alternate source categories and support merged historic alias",
+          "✖ source sequential selection visits all18 at each level and revision has exactly2 titration plus15 acid targets",
+          "✖ valid draft/assessment/store data and bounds, identity, snapshot exclusion"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/s4.log",
+        "migratedLog": ".artifacts/tests/migration/after/s4.log"
+      },
+      {
+        "runner": "node scripts/test-s5.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 156,
+          "pass": 99,
+          "fail": 57
+        },
+        "after": {
+          "tests": 156,
+          "pass": 99,
+          "fail": 57
+        },
+        "baselineFailureOccurrences": 57,
+        "migratedFailureOccurrences": 57,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ 72 exact original records; five category/level routes;72 stable DC historic codes",
+          "✖ ADD ALL enumerates registered genuine levels; no Olympiad or reserved energy grade",
+          "✖ C3 accepted only through substantive adapter, malformed/unsupported input retains raw",
+          "✖ C:\\Users\\JELC\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\scripts\\tests\\legacy\\s4\\ux\\catalogue.test.mjs",
+          "✖ IGCSE representation domain rejects triangle/B/P; valid wrong inventories remain assessable",
+          "✖ all 18 full questions roundtrip every boundary seed, and historical saved IDs",
+          "✖ all acid V2 routes and 33 source legacy fixtures keep source seeds; generated CAL/BE decode",
+          "✖ all12 exact source activities register, with41 genuine curriculum targets and separate Olympiad",
+          "✖ all14 bonding concept marks exact, blank blocked, rejected misconception and partial points preserved",
+          "✖ all15 ECB masks with exact seeded source ordering; all10 families observed; matching correct/empty/wrong boundaries",
+          "✖ all36 model/wrong/incomplete/malformed alternatives and restoration",
+          "✖ all72 references, meaningful missing electrons, malformed graph and origin/charge mistakes match original chemistry",
+          "✖ all91 exact complete records; every level route and historic code is retained",
+          "✖ canonical metadata preserves every accepted active leaf, level and retired source identity",
+          "✖ canonical metadata preserves fixed-question level/seed on refresh, validates contradictions and source-mounted paired codes",
+          "✖ complete 54 energy and 14 practical banks equal independent original data, exact source IDs/levels/hashes and full routes",
+          "✖ dotcross91 teacher IDs and every deduplicated pupil pool equal immutable actual source",
+          "✖ equal multi-store rows keep stable batches; genuinely conflicting projections get explicit distinct receipt identities",
+          "✖ every energy accepted phrase and offered choice, unknown versus known wrong, missing responses, all profile references and semantic perturbations",
+          "✖ every independent finite configuration conserves moles and yields correct logarithm; identity stable",
+          "✖ every inventoried fixed review ID and original activity URL restores exact identity",
+          "✖ exact full source content, fixed IDs, supported levels and historical hash codes",
+          "✖ excessive valence is wrong; absence of electrons earns no vacuous partial credit",
+          "✖ formula-only isomer prompts and level1/2 independent category refill match active source",
+          "✖ mixed source imports preserve supported leaves, aliases, flags, timing and exact raw exclusions",
+          "✖ name/formula/inference/scaffolds and extension limits remain IGCSE-specific",
+          "✖ reference/charge/electron conservation and meaningful wrong alternatives for every record",
+          "✖ seed selections are deterministic, alternate source categories and support merged historic alias",
+          "✖ source sequential selection visits all18 at each level and revision has exactly2 titration plus15 acid targets",
+          "✖ valid draft/assessment/store data and bounds, identity, snapshot exclusion"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/s5.log",
+        "migratedLog": ".artifacts/tests/migration/after/s5.log"
+      },
+      {
+        "runner": "node scripts/test-component-identity.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 39,
+          "pass": 35,
+          "fail": 4
+        },
+        "after": {
+          "tests": 39,
+          "pass": 35,
+          "fail": 4
+        },
+        "baselineFailureOccurrences": 4,
+        "migratedFailureOccurrences": 4,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ drawing aggregate correction checks only automatic work and preserves original model judgement",
+          "✖ learning Check reports corrected automatic response repeatedly without changing first evidence or state",
+          "✖ mixed automatic and rubric corrections do not re-self-mark or require edited explanation input",
+          "✖ revealed answers can be checked for learning without creating a score or evidence"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/component-identity.log",
+        "migratedLog": ".artifacts/tests/migration/after/component-identity.log"
+      },
+      {
+        "runner": "node scripts/test-explaining-properties.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 46,
+          "pass": 45,
+          "fail": 1
+        },
+        "after": {
+          "tests": 46,
+          "pass": 45,
+          "fail": 1
+        },
+        "baselineFailureOccurrences": 1,
+        "migratedFailureOccurrences": 1,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ provider bounds, no immediate repeats, full level coverage and exact legacy alias isolation"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/explaining-properties.log",
+        "migratedLog": ".artifacts/tests/migration/after/explaining-properties.log"
+      },
+      {
+        "runner": "node scripts/test-olympiad-2011.mjs",
+        "baselineExitCode": 1,
+        "migratedExitCode": 1,
+        "before": {
+          "tests": 55,
+          "pass": 51,
+          "fail": 4
+        },
+        "after": {
+          "tests": 55,
+          "pass": 51,
+          "fail": 4
+        },
+        "baselineFailureOccurrences": 4,
+        "migratedFailureOccurrences": 4,
+        "equivalent": true,
+        "preexistingFailures": [
+          "✖ drawing aggregate correction checks only automatic work and preserves original model judgement",
+          "✖ learning Check reports corrected automatic response repeatedly without changing first evidence or state",
+          "✖ mixed automatic and rubric corrections do not re-self-mark or require edited explanation input",
+          "✖ revealed answers can be checked for learning without creating a score or evidence"
+        ],
+        "baselineLog": ".artifacts/tests/migration/baseline/olympiad-2011.log",
+        "migratedLog": ".artifacts/tests/migration/after/olympiad-2011.log"
+      }
+    ],
+    "allRunnerOutcomesEquivalent": true,
+    "assertionCallsPreserved": 1945,
+    "retainedSuites": 42,
+    "requiredFixtures": 16,
+    "retainedJsonFixturesByteIdentical": [
+      {
+        "path": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/acid-pre-correction-fixtures.json",
+        "sha256": "97bdc85d9674cb896b805b50676f59dfca15d897b96668b62abf3903acc16c59"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/authoring-pre-correction-fixtures.json",
+        "sha256": "fad54f5566c67024e489ece461caa2ff5cb995f108729cd456098066e844ac44"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/current-export.json",
+        "sha256": "bb063368ff5dc1cd947c3992e0f5746b75d2b0523091bfd33cb121f22d684c8e"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s1/session/source-golden.json",
+        "sha256": "89aa07f32138c3beb6fd3c36185f3553c1b68d9f3a9300192794364b5aa288f4"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s3/electrons/source-fingerprints.json",
+        "sha256": "172872514d23e0263ca7a76c7c531302d787ceb2a701dbd39fd53b4b1adab78f"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s3/energy/source-fingerprints.json",
+        "sha256": "f705bd7429835037f64e7601839bbde170357af9254db24af71da4e0ed8ad09f"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s3/review-c3-name/wording-disposition.json",
+        "sha256": "1796f90c9cd4c174935479da60ca3200941a2750f7c359838feffe70b8183b33"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s3/review-co/provenance.json",
+        "sha256": "20265d9242777eb9d8bc981afcc0dacf666153878bd28d7e6f05779cfd669fe6"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s5/chemistry/electron-source-fingerprints.json",
+        "sha256": "172872514d23e0263ca7a76c7c531302d787ceb2a701dbd39fd53b4b1adab78f"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s5/fixes/c3-k-erratum/native-historical-wrong-k.json",
+        "sha256": "d71c23602bdf39878be905d71a581081bf8672c6396c64c562aa254819bee985"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/s5/fixes/c3-k-erratum/native-revalidated.json",
+        "sha256": "e76722aa647e8510e19e946478c1ecb0abe87df53a4f5d7435b94df3f4b82023"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/ui-consistency/u2/independent/acid-pre-correction-fixtures.json",
+        "sha256": "97bdc85d9674cb896b805b50676f59dfca15d897b96668b62abf3903acc16c59"
+      },
+      {
+        "path": "scripts/tests/fixtures/legacy/ui-consistency/u2/independent/current-export.json",
+        "sha256": "bb063368ff5dc1cd947c3992e0f5746b75d2b0523091bfd33cb121f22d684c8e"
+      }
+    ],
+    "missingMappedOutputs": [],
+    "focusedC3": {
+      "command": "node --test scripts/tests/c3-regression.test.ts scripts/tests/legacy/s5/chemistry/c3-current-source-regression.test.ts scripts/tests/legacy/s5/fixes/c3-k-erratum/c3-reference.test.ts scripts/tests/legacy/s5/chemistry/c3-history-boundaries.test.mjs",
+      "tests": 32,
+      "pass": 32,
+      "fail": 0
+    },
+    "generator": {
+      "command": "node scripts/prepare-olympiad-regression.mjs",
+      "exitCode": 0,
+      "source": "scripts/tests/legacy/s5/chemistry/c3-current-source-regression.test.ts",
+      "output": "scripts/tests/c3-regression.test.ts"
+    },
+    "originalValidationDependencies": [],
+    "unrelatedWorkspaceInput": "../../development/alevel/validation/ph-titration-curves/answer-key.json"
+  },
+  "risks": [
+    "All eight baseline runners fail before migration; final results preserve exactly the same test totals and failure occurrences. These pre-existing application/legacy-expectation failures are outside relocation scope.",
+    "Historical stage suites intentionally retain superseded scope and source-ID assertions; no assertion was disabled or softened.",
+    "The historical reviewed-co-svg.ts source header remains byte-identical to preserve its frozen full-file hash; its validation/s3/review-co path is provenance, not an executable dependency.",
+    "The C3 port generator and all migrated suites write new reports to ignored project .artifacts/tests paths; archived JSON fixtures remain immutable."
+  ],
+  "typecheckScope": {
+    "previouslyChecked": "legacy/s1/**, legacy/s2/**, legacy/s3/**, legacy/s4/** TypeScript suites/fixtures",
+    "previouslyExcluded": [
+      "legacy/s3/integration/complete-registration.test.ts",
+      "legacy/s4/compatibility/compatibility.test.ts"
+    ],
+    "newlyRetainedOutsideHistoricalTypecheck": [
+      "legacy/s5/**",
+      "legacy/component-fidelity/**",
+      "legacy/ui-consistency/**"
+    ]
+  }
+}

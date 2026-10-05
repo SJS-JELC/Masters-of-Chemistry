@@ -1,5 +1,0 @@
-﻿scripts/tests/c3-regression.test.ts(126,302): error TS18046: 'n' is of type 'unknown'.
-src/ui/QuestionPlayer.tsx(22,32): error TS2307: Cannot find module './source-family.ts' or its corresponding type declarations.
-src/ui/SourceQuestionPlayer.tsx(39,95): error TS2339: Property 'expectedSelections' does not exist on type 'PartBase & Readonly<{ kind: "correction"; sourceText: string; markingPolicyId: string; segments?: readonly (Readonly<{ start: number; end: number; text: string; }> & Readonly<{ id: string; }>)[]; segmentSelection?: "single" | "multiple"; }>'.
-src/ui/SourceQuestionPlayer.tsx(69,250): error TS2339: Property 'label' does not exist on type 'Hint'.
-src/ui/SourceQuestionPlayer.tsx(77,302): error TS2554: Expected 3 arguments, but got 2.

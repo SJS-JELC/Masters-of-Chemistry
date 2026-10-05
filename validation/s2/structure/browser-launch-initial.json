@@ -1,9 +1,0 @@
-{
-  "status": "BLOCKED-BEFORE-ACTIVITY",
-  "browser": "Chrome headless=new, isolated owned profile, CDP noDefaults:true",
-  "endpoint": "http://127.0.0.1:9339",
-  "error": "browserType.connectOverCDP timeout 30000ms; websocket initially connected then disconnected with code1006",
-  "activityChecksRun": 0,
-  "followup": "The endpoint was unavailable after process exit. Process inspection through Get-CimInstance was denied. No source/browser activity PASS claimed.",
-  "retryPlan": "One clarified same-worker browser retry after foreman coordination; use existing proven browser launch pathway and actual headed/native slot for visibility/idle gate. Preserve this initial failure."
-}

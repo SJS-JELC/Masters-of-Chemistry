@@ -1,9 +1,0 @@
-{
-  "startedAt": "2026-10-03T08:12:29.046Z",
-  "status": "FAIL",
-  "checks": [],
-  "errors": [],
-  "browser": "Pinned root Playwright1.62.1 headless Edge; fresh isolated contexts",
-  "failure": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#testSelectionCount')\u001b[22m\n\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\landing-restoration\\design\\interaction-browser.mjs:14:259",
-  "finishedAt": "2026-10-03T08:13:23.145Z"
-}

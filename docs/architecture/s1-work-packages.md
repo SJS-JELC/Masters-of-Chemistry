@@ -1,5 +1,7 @@
 # Proposed S1 packages after root acceptance
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 These are bounded handoffs prepared using the repository `delegate-work` skill and work-package reference. They do not dispatch S1. Each implementation worker requests gpt-6.1-sol/high with a narrow context, reports only to the one foreman, writes only assigned paths, and never spawns children or writes the swarm log. Foreman assigns stable agent IDs and routes interface changes before edits.
 
 All packages read new-app AGENTS.md/project-contract.json/IMPLEMENTATION.md, this architecture baseline and `src/contracts/`. Old sources are read-only. No package changes: the foreman owns dependencies, compiler and build configuration, registration aggregation, cross-worker integration and release files. Workers retain detailed validation locally and return compact completion manifests.

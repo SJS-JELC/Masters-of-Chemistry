@@ -1,9 +1,0 @@
-{
-  "status": "PASS",
-  "initialFingerprintMatched": true,
-  "initialSha256": "fc9d2cf6b87050ee852d4cd0e0602a33656f61655c24e0d9e57e81d700133bef",
-  "changedFile": "src/editors/dot-and-cross/DotCrossEditor.tsx",
-  "baseline": "DotCrossEditor.s2-accepted.tsx.txt",
-  "diff": "shared-editor.diff",
-  "rationale": "Source-specific IGCSE dot/cross and16-element palette selected by part policy prefix; A Level palette unchanged. No chemistry/engine/layout/model changes."
-}

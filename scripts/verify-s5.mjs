@@ -1,11 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { currentInputs } from './current-inputs.mjs';
 const project = path.resolve(import.meta.dirname, '..');
-const directory = path.join(project, 'validation/s5/integration');
+const directory = path.join(project, '.artifacts/checks/s5');
 fs.mkdirSync(directory, { recursive: true });
 const jobs = [
   ['typecheck', ['node_modules/typescript/bin/tsc', '--noEmit']],
@@ -20,7 +18,7 @@ const results = [];
 for (const [id, args] of jobs) {
   const start = Date.now();
   const result = spawnSync(process.execPath, args, { cwd: project, encoding: 'utf8' });
-  const evidence = `validation/s5/integration/foreman-${id}.txt`;
+  const evidence = `.artifacts/checks/s5/foreman-${id}.txt`;
   fs.writeFileSync(path.join(project, evidence), (result.stdout || '') + '\n' + (result.stderr || ''));
   results.push({ id, command: ['node', ...args], status: result.status === 0 ? 'PASS' : 'FAIL', exitCode: result.status, elapsedMs: Date.now() - start, evidence });
 }
@@ -37,24 +35,10 @@ for (const file of source) {
   assert(!/<iframe\b|rocket-recall/i.test(guarded), `Excluded runtime: ${file}`);
 }
 results.push({ id: 'runtime-ownership', status: 'PASS', sourceFiles: source.length });
-// Independent evidence is valid only for the exact current source/build/release inputs.
-// This checks retained facts; it does not run or substitute for browser/chemistry review.
-if (!process.argv.includes('--checks-only')) {
-  const report = JSON.parse(fs.readFileSync(path.join(project, 'validation/s5/foreman-report.json'), 'utf8').replace(/^\uFEFF/, ''));
-  assert.equal(report.status, 'PASS', 'Final independent review is not complete');
-  assert.deepEqual(report.currentInputHashes, currentInputs(), 'Current source/config/build inventory differs from final independent acceptance');
-  for (const input of report.currentInputHashes) {
-    const file = path.resolve(project, input.path);
-    assert(file.startsWith(project + path.sep), `Evidence input outside project: ${input.path}`);
-    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'), input.sha256, `Independent evidence stale: ${input.path}`);
-  }
-  for (const review of report.independentReviews) {
-    assert.equal(review.status, 'PASS', `Review incomplete: ${review.id}`);
-    assert(fs.existsSync(path.join(project, review.evidence)), `Review evidence missing: ${review.id}`);
-  }
-  results.push({ id: 'independent-current-evidence', status: 'PASS', inputs: report.currentInputHashes.length, reviews: report.independentReviews.length });
-}
-const report = { status: results.every(row => row.status === 'PASS') ? 'PASS' : 'FAIL', checkedAt: new Date().toISOString(), results };
+// Historical final-review evidence was deliberately deleted by the user.
+// This command reports current deterministic checks only; it does not establish
+// independent chemistry/browser acceptance or recreate the retired frozen audit.
+const report = { status: results.every(row => row.status === 'PASS') ? 'PASS' : 'FAIL', checkedAt: new Date().toISOString(), results, scope: 'current deterministic checks; historical acceptance evidence retired' };
 fs.writeFileSync(path.join(directory, 'foreman-checks.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));
 if (report.status !== 'PASS') process.exitCode = 1;

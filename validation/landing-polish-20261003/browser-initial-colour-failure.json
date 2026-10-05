@@ -1,7 +1,0 @@
-{
-  "checks": [],
-  "errors": [],
-  "startedAt": "2026-10-03T13:31:07.201Z",
-  "status": "FAIL",
-  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   colour: 'rgb(247, 247, 255)',\n-   colour: 'rgb(242, 244, 255)',\n    font: '700 26.4px / 38.28px Comfortaa, sans-serif'\n  }\n\n    at file:///C:/Users/jelc/St%20John's%20School%20Leatherhead/Chemistry%20-%20Staff%20Resources/32.%20Masters%20of%20Chemistry/apps/Masters-of-Chemistry/validation/landing-polish-20261003/browser.mjs:48:12"
-}

@@ -1,5 +1,7 @@
 # Masters of Chemistry
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](docs/maintenance/validation-cleanup.md).
+
 One React/TypeScript platform with independent A Level and IGCSE static builds.
 It contains all 14 approved activities and 43 curriculum revision targets.
 C3L6 is a separate Olympiad challenge. Rocket Recall is excluded.
@@ -51,7 +53,6 @@ npm.cmd run test:s5
 npm.cmd run format:check
 npm.cmd run check:originals
 npm.cmd run check:s5
-node scripts/review_active_question_time.mjs
 ```
 
 `test:s5` runs the retained foundation/content/chemistry/regression tests plus the
@@ -59,16 +60,15 @@ React registration and timing ports. Historic fixtures remain available; exact
 approved scope, three prompt clarifications and the C3 K erratum have full
 regression ports alongside preserved historical fixtures.
 `check:s5` runs deterministic source/control/registry/timing/release checks and
-checks retained independent acceptance against current fingerprints. It does not
+checks current deterministic invariants. Historical acceptance artifacts were retired; It does not
 replace fresh browser or chemistry review after a substantive change.
-The timing review checks retained native boundaries plus current production
-restore/first-score/statistics evidence; it does not rerun the native wall intervals.
+Fresh native timing, browser and chemistry review remains necessary after substantive changes.
 
 The original-app and source-provenance checks require the complete repository
 checkout with the two sibling apps available **read-only**. Browser verification
 uses the repository-root pinned Playwright 1.62.1 and installed Edge/Chrome;
 the app itself has no runtime dependency on the old apps or root browser tools.
-Current browser commands and fingerprints are in [the final evidence map](validation/s5/foreman-report.json).
+Current browser recipes and evidence retirement are described in [validation cleanup](docs/maintenance/validation-cleanup.md).
 
 ## Local release inventories
 
@@ -130,9 +130,11 @@ JSON; raw input, skipped decisions and outcomes can be exported. Old browser
 stores are read only. Repeated imports deduplicate. Untimed historical records
 remain untimed, and missing old response details are not invented.
 
-The two original app folders, Git metadata, dependencies and builds remain
-unchanged. All readable source code is fingerprinted. Licensed eagle/Comfortaa
-assets are retained in `public/assets/`, with the font licence alongside them.
+This cleanup does not edit the original app folders. Current protected-source
+and source-fingerprint checks expose pre-existing drift, and some retained test
+suites already fail assertions. See [validation cleanup](docs/maintenance/validation-cleanup.md)
+for the exact check outcomes; historical acceptance does not make those checks pass.
+Licensed eagle/Comfortaa assets remain in `public/assets/`, with the font licence alongside them.
 
 Documented current-app chemistry corrections preserve original sources: acid
 precision guidance now matches each answer's format; three electron-bonding
@@ -149,15 +151,14 @@ Explicit limits:
 - Cold development dependency preparation can exceed a browser fixture's 30-second navigation budget. The retained warm-server continuations keep all substantive assertions.
 - Accounts/backend, offline downloads and deployment are outside this implementation.
 
-Final acceptance evidence, current hashes, commands and remaining dispositions
-are linked from [the final report](validation/s5/foreman-report.json) and [handoff](HANDOFF.md).
+Historical acceptance and limits are described in [handoff](HANDOFF.md); its reports were retired. See [validation cleanup](docs/maintenance/validation-cleanup.md) for retained checks and dependencies.
 ## Explaining Properties addition
 
 The current source adds 32 Level 1/2 ionic-property and bond-strength questions.
 See [activity sources and marking](src/activities/alevel/explaining-properties/README.md)
-and [author validation](validation/explaining-properties/HANDOVER.md).
+Historical author/reviewer reports were retired; current tests are retained.
 `node scripts/test-explaining-properties.mjs` runs the current 46-test regression
 selection; `node scripts/verify-explaining-properties.mjs` verifies the amended
-14-activity/43-target contract, all retained/current source hashes, both runtime
+14-activity/43-target contract, retained source-generation fingerprints, both runtime
 closures and protected originals. Earlier S0–S5 inventories/tests remain frozen
-historical evidence. No publication is included.
+historical records; their report files were retired. No publication is included.

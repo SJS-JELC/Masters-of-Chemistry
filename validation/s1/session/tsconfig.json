@@ -1,8 +1,0 @@
-{
-  "extends": "../../../tsconfig.json",
-  "include": [
-    "../../../src/domain/mastery/**/*.ts",
-    "../../../src/domain/session/**/*.ts",
-    "./type-contract-fixtures.ts"
-  ]
-}

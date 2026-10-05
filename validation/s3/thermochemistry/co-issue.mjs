@@ -1,6 +1,0 @@
-import fs from 'node:fs';
-import crypto from 'node:crypto';
-import {core} from '../../../src/chemistry/thermochemistry/bond-enthalpy-core.js';
-const r=core.reactions.find(r=>r.id==='methanol-synthesis');
-fs.writeFileSync(new URL('./source-co-diagram.svg',import.meta.url),r.svg);
-fs.writeFileSync(new URL('./co-source-issue.json',import.meta.url),JSON.stringify({status:'ESCALATE',reactionId:r.id,sourceRepresentation:'[C-]#[O+]',intendedNetCharge:0,observed:'Reused source SVG visibly shows O positive and carbon with no negative sign.',svgSHA256:crypto.createHash('sha256').update(r.svg).digest('hex'),sourceDataSHA256:'7d12bd91a5565e6bb42ef9c3b297e4b64e76889c6a86315ea686051202b49c59',sourcePath:'apps/Masters-of-IGCSE-Chemistry/src/activities/bond-enthalpy/data.js',newRuntimePath:'src/chemistry/thermochemistry/bond-enthalpy-data.js',evidence:['source-co-diagram.svg','diagram-methanol-synthesis.png','all16-diagram-contact.png','source-fingerprints.json'],generatorEvidence:'scripts/build_bond_enthalpy_generator.py:111 neutral [C-]#[O+]; lines215,324-327 conserve formal charge',disposition:'Required independent Sol chemistry/render review; no asset change or regeneration by A12.'},null,2));

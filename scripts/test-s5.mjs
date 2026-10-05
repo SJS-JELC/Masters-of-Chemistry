@@ -12,20 +12,20 @@ function find(directory) {
     } else if(/\.test\.(?:mjs|js|ts)$/.test(entry.name)) files.push(file);
   }
 }
-for(const stage of ['s1','s2','s3','s4','s5']) find(path.join(project,'validation',stage));
+for(const stage of ['s1','s2','s3','s4','s5']) find(path.join(project,'scripts/tests/legacy',stage));
 // Preserve historical evidence. Complete content/marking fixtures are ported,
 // with the exact authorised scope and three qualified-prompt expectations.
 const historical = new Set([
-  path.join(project,'validation/s2/integration/complete-coverage.test.ts'),
-  path.join(project,'validation/s3/electrons/electrons.test.mjs'),
-  path.join(project,'validation/s3/c3l6/c3l6.test.ts'),
+  path.join(project,'scripts/tests/legacy/s2/integration/complete-coverage.test.ts'),
+  path.join(project,'scripts/tests/legacy/s3/electrons/electrons.test.mjs'),
+  path.join(project,'scripts/tests/legacy/s3/c3l6/c3l6.test.ts'),
 ]);
 const selected=files.filter(file=>!historical.has(file)).sort();
 for(const required of ['s2-content-regression.test.ts','electrons-source-regression.test.mjs','c3-current-source-regression.test.ts']) assert(selected.some(file=>file.endsWith(required)),`Missing full retained regression port: ${required}`);
 selected.push(path.join(project,'scripts/test_revision_registration.mjs'),path.join(project,'scripts/test_active_question_time.mjs'));
 const groups=[
-  {cwd:path.resolve(project,'../..'),files:selected.filter(file=>file.startsWith(path.join(project,'validation/s1/')))},
-  {cwd:project,files:selected.filter(file=>!file.startsWith(path.join(project,'validation/s1/')))},
+  {cwd:path.resolve(project,'../..'),files:selected.filter(file=>file.startsWith(path.join(project,'scripts/tests/legacy/s1/')))},
+  {cwd:project,files:selected.filter(file=>!file.startsWith(path.join(project,'scripts/tests/legacy/s1/')))},
 ];
 for(const group of groups) {
   if(!group.files.length)continue;

@@ -1,5 +1,7 @@
 # S4 proposal: integration and authoring
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Proposal only. Root must accept S3 and explicitly authorise S4 before dispatch.
 Four Sol 6.1 High implementation workers, no child delegation; at most two genuine exception reviewers. A01 owns package/config, composition, shared interface changes and aggregate acceptance. Define any interfaces below before parallel writes.
 

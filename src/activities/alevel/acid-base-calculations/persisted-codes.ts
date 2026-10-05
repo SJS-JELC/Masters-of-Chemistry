@@ -1,4 +1,4 @@
-// Reproducible pure-engine extraction. See validation/s2/acid/extract-engines.mjs.
+// Reproducible pure-engine extraction. See scripts/source-generation/acid/extract-engines.mjs.
 export const acidPersistedTemplateCodes = {
   '0': 'h-to-ph',
   '1': 'ph-to-h',

@@ -1,4 +1,5 @@
-// Port of validation/s5/chemistry/c3-current-source-regression.test.ts; chemistry assertions unchanged, evidence output redirected.
+import {suiteEvidenceFile} from './legacy/test-evidence.mjs';
+// Port of scripts/tests/legacy/s5/chemistry/c3-current-source-regression.test.ts; chemistry assertions unchanged, evidence output redirected.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -12,8 +13,8 @@ import {core,moleculeEngine,blankMolecule,assertMoleculeGraph} from '../../src/c
 import type {C3L6Progress,ChallengeCommand,C3BSlot} from '../../src/contracts/olympiad.ts';
 import type {MoleculeGraph,MoleculeState} from '../../src/contracts/editors.ts';
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),original=path.resolve(project,'../Masters-of-A-Level-Chemistry/src/activities');
-const evidence=path.resolve(project,process.env.OLYMPIAD_EVIDENCE_DIR || 'validation/olympiad-2011-q4/implementation');
-if(!evidence.startsWith(project+path.sep))throw Error('Evidence output must remain inside the project');
+const evidence=process.env.OLYMPIAD_EVIDENCE_DIR ? path.resolve(project,process.env.OLYMPIAD_EVIDENCE_DIR) : path.dirname(suiteEvidenceFile(import.meta.url,'unit-tests.txt'));
+if(process.env.OLYMPIAD_EVIDENCE_DIR && !evidence.startsWith(project+path.sep))throw Error('Evidence output must remain inside the project');
 fs.mkdirSync(evidence,{recursive:true});
 const source:any={};for(const file of ['molecule-builder/core.js','c3l6-organic-reactions/content.js','c3l6-organic-reactions/assessment.js'])vm.runInNewContext(fs.readFileSync(path.join(original,file),'utf8'),source);
 const old=source.C3L6Assessment.create(source.C3L6Content,source.MoleculeCore);
@@ -32,7 +33,7 @@ test('complete authoritative banks, alternatives, assets and answer signature eq
 });
 test('bounded source-name qualification uses exact independent wording and changes no SVG glyph/geometry bytes',()=>{
  const qualification=JSON.parse(fs.readFileSync(path.join(project,'src/activities/olympiad/c3l6/qualification.json'),'utf8'));
- const reviewed=JSON.parse(fs.readFileSync(path.join(project,'validation/s3/review-c3-name/wording-disposition.json'),'utf8'));
+ const reviewed=JSON.parse(fs.readFileSync(path.join(project,'scripts/tests/fixtures/legacy/s3/review-c3-name/wording-disposition.json'),'utf8'));
  for(const key of ['issueId','reviewId','disposition','student','teacher','publicCopiedSvgMetadata'])assert.deepEqual(qualification[key],reviewed[key]);
  const originalSvg=fs.readFileSync(path.join(original,'c3l6-organic-reactions/assets/digitised/b/gyromitrin-skeletal-notes.svg'),'utf8'),qualifiedSvg=fs.readFileSync(path.join(project,'src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg'),'utf8');
  const stripMetadata=(s:string)=>s.replace(/<title>[\s\S]*?<\/title>/,'').replace(/<desc>[\s\S]*?<\/desc>/,'');

@@ -1,7 +1,0 @@
-{
-  "command": "npm.cmd run typecheck",
-  "exitCode": 0,
-  "output": "\n> masters-of-chemistry@0.0.0 typecheck\n> tsc --noEmit\n\n",
-  "status": "PASS",
-  "note": "Compiler ran after source fix; later exact-file Prettier reported provider unchanged."
-}

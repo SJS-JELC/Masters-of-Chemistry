@@ -1,5 +1,7 @@
 # S0 architecture and contract decisions
 
+> Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](../maintenance/validation-cleanup.md).
+
 Run `MASTERS-REACT-20261002`; job `S0-CONTRACTS`; owner A03. This is the interface baseline for the new project. It authorises no later stage, deployment, new curriculum or enabled prototypes. Root accepts stages; the foreman owns aggregation and integration. Requested model/effort: gpt-6.1-sol/high; effective runtime and usage are not exposed.
 
 ## Boundaries
@@ -22,7 +24,7 @@ Activities use the same player and first-assessment engine. Chemical marking is 
 
 ## Source-dependent decisions
 
-All paths and SHA-256 hashes are retained in [`source-evidence.json`](../../validation/s0/contracts/source-evidence.json), with the relevant symbol/section. These are representative architectural evidence; the inventory worker owns whole-scope coverage.
+All paths and SHA-256 hashes are retained in `source-evidence.json` (retired historical evidence; former path `../../validation/s0/contracts/source-evidence.json`), with the relevant symbol/section. These are representative architectural evidence; the inventory worker owns whole-scope coverage.
 
 * **Acid calculations:** the active path is `levels-app.js` plus `AcidBaseLevels` in `levels.js`, not the old `app.js` path or 33-template legacy core. The active provider covers 38 templates/five active gems. It accepts all required numeric answers before assessment and retains source `0/0.5/1` mapping, `dp2` absolute tolerance (0.0051), scientific input parsing and level-specific fading support. Source AB2 codes encode the fixed source template index, level and seed. Preserve those codes and historical resolver; new display order must not redefine them. `ProviderCoverage` distinguishes full fixed IDs from generated template families.
 * **Electron configurations:** active `levels-app.js`/`levels.js` uses group and representation eligibility, level 3 matching, and eight subshells through 4p. The editor preserves counts, noble-gas core, up/down/paired spins, identity and matching selections; core validation still checks Hund/Pauli, electron totals, Cr/Cu exceptions and 4s removal before 3d. The general choice/text controls can compose with the editor; a bank/generator adapter must preserve current selection diversity, not shrink to one example.
@@ -74,12 +76,12 @@ Commands at the S0 boundary:
 ```powershell
 cd apps/Masters-of-Chemistry
 npm.cmd run typecheck
-node validation/s0/contracts/validate-reference.mjs
+npm.cmd run test:s5
 ```
 
 The retained compile fixtures exercise all response/editor families, rubric freeze/review, reveal outcomes, historical missing timing, C3L6 dependency data and forbidden cross-boundary assignments. The read-only reference check verifies 38 active acid templates, exact source AB2 regeneration and C3L6 slot IDs; it hashes 25 representative sources. This is not complete migration validation, chemistry acceptance or browser acceptance. Later owners must verify their full banks/generators, rendered chemistry, course-supported levels and runtime semantics.
 
-Bounded S0 clarification adds `validation/s0/contracts/clarification-fixtures.ts`, `validate-clarification.mjs`, `clarification-source-evidence.json` and `clarification-checks.json`. Five corroborating source hashes preserve energetics valid-alternative/first-result and energy-text semantics; original 25-source evidence stays unchanged. Run `node validation/s0/contracts/validate-clarification.mjs` alongside typecheck/reference checks. All three additional negative assertions prevent reviewed feedback becoming independent assessment/evidence.
+Historical S0 clarification added compile fixtures and corroborating source reports. Its standalone validators and reports were retired. Current retained regression suites cover assessment/evidence boundaries; run `npm.cmd run test:s5` alongside typecheck.
 
 ## Open implementation checks (not scope decisions)
 

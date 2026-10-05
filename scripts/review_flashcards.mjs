@@ -9,7 +9,7 @@ import { build } from 'vite';
 const project = path.resolve(import.meta.dirname, '..');
 const require = createRequire(path.resolve(project, '../../package.json'));
 const { chromium } = require('playwright');
-const output = path.join(project, 'validation/flashcards');
+const output = path.join(project, '.artifacts/flashcards');
 fs.mkdirSync(output, { recursive: true });
 const base = process.env.FLASHCARD_URL || 'http://127.0.0.1:5181/development/authoring/index.html?component=flashcards';
 const checks = [];

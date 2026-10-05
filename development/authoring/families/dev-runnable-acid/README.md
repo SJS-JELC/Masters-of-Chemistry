@@ -13,6 +13,6 @@ node development/authoring/serve.mjs
 node development/authoring/families/dev-runnable-acid/browser.mjs
 ```
 
-The preview mounts the actual unchanged ActivityHost with this registry. Fixtures verify fixed/72seeded configurations, correct/wrong/incomplete input, code+seed restore, first evidence/timing, correction/reload, canonical3level revision and teacher no-evidence. Outputs go to validation/component-fidelity/f1-correction/identity/authoring/dev-runnable-acid.
+The preview mounts the actual unchanged ActivityHost with this registry. Fixtures verify fixed/72seeded configurations, correct/wrong/incomplete input, code+seed restore, first evidence/timing, correction/reload, canonical3level revision and teacher no-evidence. Outputs go to .artifacts/authoring/dev-runnable-acid.
 
 Edit data/provider/marking/scaffolds and regenerate provenance deliberately when authoring new chemistry. See docs/authoring/new-activity.md for genuinely new activity/gem metadata and optional editor integration.

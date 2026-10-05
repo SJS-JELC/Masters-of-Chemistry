@@ -1,4 +1,4 @@
-// Exact extracted source data. Regenerate: node validation/s3/electrons/extract-sources.mjs
+// Exact extracted source data. Regenerate: node scripts/source-generation/electrons/extract-sources.mjs
 export const data = {
   "title": "Electrons & Bonding",
   "reviewedSourceSha256": "05cce072f084afb7bee07f9519a9f8ce73476490051be6e7abe824994ad1bd7d",

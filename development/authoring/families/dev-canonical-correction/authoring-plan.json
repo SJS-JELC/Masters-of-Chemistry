@@ -64,7 +64,7 @@
     "node development/authoring/families/dev-canonical-correction/browser.mjs"
   ],
   "preview": "http://127.0.0.1:5181/development/authoring/families/dev-canonical-correction/preview.html",
-  "evidence": "validation/component-fidelity/f1-correction/identity/authoring/dev-canonical-correction",
+  "evidence": ".artifacts/authoring/dev-canonical-correction",
   "productionRegistration": false,
   "currentCanonicalInputs": {
     "src/development/identity.ts": "e6266c9c4e56cd40c2e88f6679b07c7af79f5fa47d7c8ad2a52e3645dcc5a06c",

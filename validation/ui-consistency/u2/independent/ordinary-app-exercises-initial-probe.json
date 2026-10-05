@@ -1,9 +1,0 @@
-{
-  "status": "FAIL",
-  "startedAt": "2026-10-03T22:56:20.881Z",
-  "method": "Ordinary current app, isolated Edge context. Valid deterministic question/session setup only; actual controls, central controller, IndexedDB, reload and statistics. Energy correct response supplied from checked model through DEV response API, explicitly identified.",
-  "checks": [],
-  "errors": [],
-  "failure": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'species')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:303)\n    at async <anonymous>:337:30\n    at C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation\\ui-consistency\\u2\\independent\\app-exercises.mjs:31:28",
-  "finishedAt": "2026-10-03T22:56:24.036Z"
-}

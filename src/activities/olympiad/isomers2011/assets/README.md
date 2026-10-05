@@ -14,5 +14,6 @@ The SVG is an original vector teaching reconstruction, with illustrative
 simulation parameters, rather than experimental data or copied source artwork.
 
 Restored byte-for-byte for PAGES-ASSET-01 on 5 October 2026; no spectrum
-regeneration or chemical changes. Retained repair verification is in
-`validation/pages-asset-fix/` at this app's root.
+regeneration or chemical changes. Historical repair reports under
+`validation/pages-asset-fix/` were deleted in the user-authorised cleanup;
+the asset hash and canonical spectrum provenance remain available above.

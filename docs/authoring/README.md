@@ -47,21 +47,19 @@ The isolated catalogue is at `http://127.0.0.1:5181/development/authoring/index.
 
 The first authoring proof incorrectly narrowed the source gem to levels1/2; the actual scheduler rejected revision. The retired `browser-level-scope-probe.json` recorded that failure. The correction added genuine level3 content and restored all source levels without plumbing changes. Original weighted mastery requires several correct attempts before advancing levels; the browser proof follows that scheduler rather than imposing a new progression.
 
-## Independent course releases
+## Combined app release
 
-After A01 runs the project build (including compatibility aliases), regenerate and check each manifest independently:
+After building, regenerate and check the single manifest:
 
 ```powershell
-node scripts/release-s4.mjs alevel
-node scripts/validate-s4-release.mjs alevel
-node scripts/release-s4.mjs igcse
-node scripts/validate-s4-release.mjs igcse
-# Current course-prefix checks after building:
-node scripts/browser/landing/aggregate/prefix-browser.mjs
+npm.cmd run release:app
+npm.cmd run check:release
+npm.cmd run test:build
+node scripts/browser/combined-build.mjs
 ```
 
-`release/alevel.runtime.json` and `release/igcse.runtime.json` explicitly list every approved runtime file/hash. Each inventory includes only its six course activities, provenance and appropriate Olympiad separation. Each release has its own entry/build root. Shared lazy runtime chunks may occur in both builds; metadata inventories are course-partitioned. The file closure comes from the Vite entry's real eager/dynamic imports, three explicitly licensed brand assets and the six explicitly declared course compatibility aliases. Unexpected files, missing files, stale hashes, DEV content, Rocket, source/test/maps/dependencies and missing provenance fail validation. `.vite/manifest.json` is build evidence, excluded from the runtime manifest.
+`release/app.runtime.json` lists the complete runtime closure and all fourteen activities, with course metadata and provenance. One neutral entry serves both courses. The manifest includes licensed brand assets, flat historical activity aliases and course-qualified aliases; queries, question codes and hashes survive relative redirects under nested hosting prefixes. The unqualified dot-and-cross alias defaults to A Level; an explicit IGCSE query selects its IGCSE activity. DEV content, missing/stale/unexpected files, source/test/maps/dependencies, Rocket functionality, and missing provenance still fail strict validation. `.vite/manifest.json` remains build evidence outside the runtime manifest.
 
-The204800-byte gate includes the course entry **and actual ProductionFoundation plus all eager imports**, even though the main entry dynamically awaits its host. Gzip uses Node's default `gzipSync`, summed by chunk, matching S3. The retired S4 `release-browser.mjs` independently measured every JS response loaded before interaction, checks lazy provider loading, static nested prefixes, all twelve activity aliases, index and saved-activity refresh, and390px layout. Fresh browser outputs use disposable validation output; deleted old reports are not current evidence. A19's exact tiny Rocket-link rejection clause is permitted in the compatibility decoder; Rocket functionality/assets and other references still fail the gate.
+The 204800-byte gzip gate measures the entry, actual ProductionFoundation, original landing, and all eager imports. Banks, providers, editors and data views remain lazy. The combined browser verifier checks fresh default, course persistence, direct activity launches, compatibility redirects, refresh, root/nested prefixes and all inventoried files. Historical per-course build validators and stage servers remain explicitly historical; use current preview and release commands for this build. See [the combined-build handover](../maintenance/combined-build.md).
 
 Initial S3-dist fingerprints were recorded in the now-retired `validation/s4/authoring-release/initial-*.runtime.json`. Their initial69k measurement described entry imports only, with level9 compression; it is not the complete shell measurement. The corrected S3-dist measurement is142405bytes A Level and142403bytes IGCSE, independently matched by the actual browser. Final S4 builds must regenerate manifests and evidence; earlier fingerprints are not presented as the final build.

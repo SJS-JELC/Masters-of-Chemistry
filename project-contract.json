@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
-  "contractVersion": "1.2.0",
+  "contractVersion": "1.3.0",
+  "productionBuild": "app",
   "projectId": "masters-of-chemistry-rebuild",
   "runId": "MASTERS-REACT-20261002",
   "authority": "User-approved conversation plan; subsequent explicit user instructions may revise scope through root",
@@ -209,7 +210,7 @@
     },
     {
       "id": "RELEASE-01",
-      "text": "Both static course builds checked under URL prefixes, old supported question links resolved, runtime-only releases, no deployment",
+      "text": "One combined static app build at dist/app, both courses checked under URL prefixes, old supported question links resolved, runtime-only release, no deployment",
       "check": "release-and-browser-tests"
     },
     {
@@ -261,6 +262,10 @@
     }
   ],
   "changeHistory": [
+    {
+      "version": "1.3.0",
+      "reason": "9 October 2026: user confirmed one combined React app and requested dist/app with consistent release and deployment configuration. Historical courseBuilds retain original course-scope metadata; productionBuild identifies the current single target."
+    },
     {
       "version": "1.0.0",
       "reason": "Initial user-approved scope: new folder, originals untouched, Rocket removed, C3L6 Olympiad-only, Sol workers and root-gated stages; durable control package and one Goal authorised."

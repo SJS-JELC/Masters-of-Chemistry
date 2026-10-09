@@ -14,7 +14,7 @@ Read `project-contract.json`, `IMPLEMENTATION.md` and `progress.json` before wor
 
 ## Architecture and authoring
 
-- One shared React/TypeScript platform, two course build targets; reusable question player for practice/revision; no iframe/legacy-page wrappers.
+- One shared React/TypeScript platform covering A Level and IGCSE, with one combined production build at `dist/app` (user authorised 9 October 2026); reusable question player for practice/revision; no iframe/legacy-page wrappers. The course remains a runtime selection, not a separate deployment target.
 - Keep chemistry/marking functions independent of React. Standardise incidental UI/state differences; preserve educational scaffolding, chemical validation and genuine staged-question dependencies.
 - Shared attempt engine alone records first assessments, assistance and active timing. Teacher preview produces no evidence. Retries/reveals/reloads do not create independent evidence.
 - Use explicit stable registrations for navigation, supported levels, revision, timing and release selection. Never generate identifiers from display order.

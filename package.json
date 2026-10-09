@@ -21,11 +21,11 @@
     "check:s4": "node scripts/verify-s4.mjs",
     "check:s5": "node scripts/verify-s5.mjs",
     "check:landing": "node scripts/verify-landing.mjs",
-    "release:alevel": "node scripts/release-s4.mjs alevel",
-    "release:igcse": "node scripts/release-s4.mjs igcse",
     "check:release": "node scripts/check-release.mjs",
     "format": "node scripts/format-authored.mjs --write",
-    "format:check": "node scripts/format-authored.mjs --check"
+    "format:check": "node scripts/format-authored.mjs --check",
+    "release:app": "node scripts/release-s4.mjs app",
+    "test:build": "node --test scripts/tests/combined-build.test.mjs"
   },
   "devDependencies": {
     "@types/node": "24.10.1",

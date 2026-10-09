@@ -21,5 +21,5 @@ for(const file of source){
  assert(!/<iframe\b|rocket-recall/i.test(guarded),`Excluded runtime: ${file}`);
 }
 results.push({id:'runtime-ownership',status:'PASS',sourceFiles:source.length,checks:['no original-app runtime imports','no iframe wrappers or Rocket runtime; exact excluded-link rejection permitted']});
-if(!process.argv.includes('--no-release'))results.push({id:'releases',status:'PASS',releases:['alevel','igcse'].map(validateRelease)});
+if(!process.argv.includes('--no-release'))results.push({id:'releases',status:'PASS',releases:[validateRelease()]});
 const report={status:results.every(r=>r.status==='PASS')?'PASS':'FAIL',checkedAt:new Date().toISOString(),results,scope:'Current executable checks only. Historical landing source-ownership and acceptance evidence deliberately deleted; browser and chemistry review remain separate requirements.'};fs.writeFileSync(path.join(directory,'checks.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));if(report.status!=='PASS')process.exitCode=1;

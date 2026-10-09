@@ -4,7 +4,7 @@ The machine-readable scope is `project-contract.json`; root alone owns its revis
 
 ## End state
 
-One self-contained project here with shared React/TypeScript modules and separate A Level/IGCSE static builds. Keep the checked chemistry, IDs, supported levels, mastery weighting/thresholds and meaningful learning scaffolds. Redesign navigation, controls, feedback, revision and statistics consistently using the existing brand, eagle/gems and Comfortaa. Curriculum data, source artefacts and executable browser content stay separate. Import only needed runtime content and preserve provenance.
+One self-contained project here with shared React/TypeScript modules and, following the user's 9 October 2026 instruction, one combined static build at `dist/app` with runtime A Level/IGCSE switching. Keep the checked chemistry, IDs, supported levels, mastery weighting/thresholds and meaningful learning scaffolds. Redesign navigation, controls, feedback, revision and statistics consistently using the existing brand, eagle/gems and Comfortaa. Curriculum data, source artefacts and executable browser content stay separate. Import only needed runtime content and preserve provenance.
 
 C3L6 2012 Q2 stays in the Olympiad strand with its introduction, linked structures, sequential stages, molecular editor and saved completion. No mastery labels, gems, revision selection or mastery/statistics evidence. Rocket Recall is completely absent from the new runtime and imports. The standalone molecule-builder prototype is not enabled; its checked editor/graph dependencies may serve C3L6. Other unpublished drafts are out of scope.
 

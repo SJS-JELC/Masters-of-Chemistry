@@ -29,10 +29,9 @@ jobs:
       - run: npm run typecheck
       - run: npm run build
 
-      - name: Generate and validate release inventories
+      - name: Generate and validate combined release inventory
         run: |
-          npm run release:alevel
-          npm run release:igcse
+          npm run release:app
           npm run check:release
 
       - name: Package approved runtime files
@@ -41,12 +40,12 @@ jobs:
           import fs from 'node:fs';
           import path from 'node:path';
           const manifest = JSON.parse(
-            fs.readFileSync('release/alevel.runtime.json', 'utf8')
+            fs.readFileSync('release/app.runtime.json', 'utf8')
           );
           for (const { path: file } of manifest.files) {
             const target = path.join('_site', file);
             fs.mkdirSync(path.dirname(target), { recursive: true });
-            fs.copyFileSync(path.join('dist/alevel', file), target);
+            fs.copyFileSync(path.join('dist/app', file), target);
           }
           NODE
 

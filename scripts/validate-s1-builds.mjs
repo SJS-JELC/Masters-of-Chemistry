@@ -5,6 +5,8 @@ import {gzipSync} from 'node:zlib';
 import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+// Historical stage-specific assertions are retained verbatim. They are not current release gates.
+if(JSON.parse(fs.readFileSync(path.join(project,'project-contract.json'),'utf8')).productionBuild==='app') throw Error('Historical S1 per-course build check; use npm run check:release for the current combined build.');
 const courses=['alevel','igcse'].map(course=>{
  const root=path.join(project,'dist',course),manifest=JSON.parse(fs.readFileSync(path.join(root,'.vite/manifest.json'),'utf8'));
  const javascript=Object.values(manifest).filter(row=>row.file.endsWith('.js')).map(row=>row.file);

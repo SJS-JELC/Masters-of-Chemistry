@@ -18,7 +18,7 @@ try {
     page.on('pageerror', error => report.pageErrors.push({ entry, error: error.message }));
     page.on('response', response => { if (response.status() >= 400) report.failedResponses.push({ entry, url: response.url(), status: response.status() }); });
     try {
-      await page.goto(`${report.origin}/${entry}/?course=${entry}`);
+      await page.goto(`${report.origin}/?course=${entry}`);
       await page.locator(`.original-landing.${entry}`).waitFor();
       await page.evaluate(() => document.fonts.ready);
       const initial = await page.locator('.original-landing h1').innerText();
@@ -31,19 +31,20 @@ try {
       await page.locator('#gemDetails').waitFor({ state: 'visible' });
       await page.locator('a.practice-choice[data-practice="1"]').click();
       await page.locator('.question-player').waitFor();
-      await page.getByText('Saved on this device', { exact: true }).waitFor();
+      await page.waitForFunction(() => !new URL(location.href).searchParams.has('fresh'));
+      assert.equal(await page.locator('.save-error').count(), 0);
       const url = new URL(page.url());
       assert.equal(url.searchParams.get('course'), switched);
       assert.equal(url.searchParams.get('gem'), gemId);
       assert.equal(url.searchParams.get('level'), '1');
       assert.equal(url.searchParams.has('fresh'), false);
-      const activityTitle = await page.locator('.question-header h2').innerText();
-      await page.getByRole('button', { name: 'Home', exact: true }).click();
+      const activityTitle = await page.locator('.question-subject').innerText();
+      await page.getByRole('button', { name: 'Back to course map', exact: true }).first().click();
       await page.locator(`.original-landing.${switched}`).waitFor();
       await page.reload();
       await page.locator(`.original-landing.${switched}`).waitFor();
       const keys = await page.evaluate(() => Object.keys(localStorage));
-      assert(keys.every(key => key.startsWith('masters-of-chemistry:landing:')));
+      assert(keys.every(key => key.startsWith('masters-of-chemistry-alpha-v2:landing:')));
       await page.screenshot({ path: path.join(outputDirectory('landing/aggregate'), `${entry}-prefix-switched-home.png`), fullPage: true });
       report.checks.push({ entry, status: 'PASS', initial, switched, gemId, level: 1, activityTitle,
         checks: ['static relative prefix', 'in-place other-course lazy activity', 'exact direct fixed launch', 'save/guarded Home', 'remembered course reload', 'project-only storage keys', 'licensed assets/fonts load'], keys });

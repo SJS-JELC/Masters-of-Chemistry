@@ -1,8 +1,10 @@
 # Platform architecture
 
-Both course entry pages load the same React platform. The canonical catalogue
-selects the six enabled activities for each course. Each course produces its own
-static build; deferred chunks currently share the full registry dependency graph.
+One neutral entry loads the shared React platform and produces `dist/app`.
+A Level is the fresh-browser default; the course switch selects IGCSE at runtime.
+The canonical catalogue contains fourteen authorised activities (eight A Level,
+six IGCSE), served from one complete lazy runtime graph and one release manifest.
+Historical development entry pages remain available for retained fixtures.
 
 ## Question lifecycle
 

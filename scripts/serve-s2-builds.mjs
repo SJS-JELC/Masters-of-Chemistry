@@ -3,6 +3,8 @@ import path from 'node:path';
 import http from 'node:http';
 import {fileURLToPath} from 'node:url';
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+// This retained server expects historical independent course outputs.
+if(JSON.parse(fs.readFileSync(path.join(project,'project-contract.json'),'utf8')).productionBuild==='app') throw Error('Historical per-course server; use npm run preview -- --prefix /stage-s2/ for the combined output.');
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.ttf':'font/ttf','.json':'application/json'};
 const server=http.createServer((request,response)=>{try{
  const parts=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname).split('/').filter(Boolean);

@@ -2,7 +2,8 @@
 
 > Evidence retirement (5 October 2026): historical validation reports, screenshots and acceptance records were deleted by user request after executable dependencies were migrated. Remaining `validation/` path names and past test counts describe historical records, not present files or fresh acceptance. See [validation cleanup](docs/maintenance/validation-cleanup.md).
 
-One React/TypeScript platform with independent A Level and IGCSE static builds.
+One React/TypeScript platform with one combined static build at `dist/app`.
+A Level is the fresh-browser default; IGCSE is selected with the course switch.
 It contains all 14 approved activities and 43 curriculum revision targets.
 C3L6 is a separate Olympiad challenge. Rocket Recall is excluded.
 
@@ -22,8 +23,9 @@ npm.cmd run dev
 
 Development URLs:
 
-- A Level: <http://127.0.0.1:5181/alevel.html>
-- IGCSE: <http://127.0.0.1:5181/igcse.html>
+- Combined app: <http://127.0.0.1:5181/>
+- Explicit IGCSE selection: <http://127.0.0.1:5181/?course=igcse>
+- Historical development entry URLs `alevel.html` and `igcse.html` remain available for retained fixtures.
 - DEV component/authoring catalogue: <http://127.0.0.1:5181/development/authoring/index.html>
 
 Development catalogues and test hooks are excluded from production builds.
@@ -37,18 +39,22 @@ npm.cmd run build
 npm.cmd run preview
 ```
 
-- A Level build: `dist/alevel/`, <http://127.0.0.1:5182/alevel/>
-- IGCSE build: `dist/igcse/`, <http://127.0.0.1:5182/igcse/>
+- Combined build: `dist/app/`, <http://127.0.0.1:5182/>
+- Nested preview: `npm.cmd run preview -- --port 5183 --prefix /school/chemistry/`, <http://127.0.0.1:5183/school/chemistry/>
 
-Use an HTTP server, rather than opening `index.html` as a local file. Both builds
-support nested URL prefixes and direct refresh. Each enables its six activities;
-their physical deferred chunks include the shared registry's complete dependency
-graph. Course-exclusive physical bank bundles are not claimed.
+Use an HTTP server, rather than opening `index.html` as a local file. The combined
+output supports nested URL prefixes, course switching and direct refresh. All 14
+authorised activities share one lazy runtime dependency graph. Flat historical
+activity links remain supported; `activities/dot-and-cross/index.html` defaults
+to A Level, while `?course=igcse` selects IGCSE. Course-qualified aliases under
+`alevel/activities/` and `igcse/activities/` remove that ambiguity. Query and hash
+parameters survive the redirect. The preview serves unknown paths as 404.
 
 ## Checks
 
 ```powershell
 npm.cmd run typecheck
+npm.cmd run test:build
 npm.cmd run test:s5
 npm.cmd run format:check
 npm.cmd run check:originals
@@ -68,22 +74,30 @@ The original-app and source-provenance checks require the complete repository
 checkout with the two sibling apps available **read-only**. Browser verification
 uses the repository-root pinned Playwright 1.62.1 and installed Edge/Chrome;
 the app itself has no runtime dependency on the old apps or root browser tools.
-Current browser recipes and evidence retirement are described in [validation cleanup](docs/maintenance/validation-cleanup.md).
+Current combined build verification and retained baseline failures are described in [combined build](docs/maintenance/combined-build.md). Historical browser recipes and evidence retirement are described in [validation cleanup](docs/maintenance/validation-cleanup.md).
 
 ## Local release inventories
 
 After a successful build:
 
 ```powershell
-npm.cmd run release:alevel
-npm.cmd run release:igcse
+npm.cmd run release:app
 npm.cmd run check:release
 ```
 
-These create/check `release/alevel.runtime.json` and `release/igcse.runtime.json`.
-Each lists only approved runtime files, hashes, provenance and compatibility
-aliases. The complete initial shell budget is 204,800 gzip bytes; banks, editors
+These create/check `release/app.runtime.json`, containing both course catalogues
+and only approved runtime files, hashes, provenance and compatibility aliases.
+The existing Pages workflow packages this same combined inventory. The complete initial shell budget is 204,800 gzip bytes; banks, editors
 and data views load lazily. Release commands do not deploy or change Git remotes.
+
+## Azure Static Web Apps build details
+
+For this app's own repository, use **Custom** as the build preset, `/` as App
+location, a blank API location and `dist/app` as Output location. The build
+command is `npm run build`. If connecting the complete workspace repository,
+use `apps/Masters-of-Chemistry` as App location instead. Both courses are included
+in the same output. These are configuration values; no Azure deployment has
+been performed.
 
 ## Architecture and authoring
 

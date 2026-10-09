@@ -188,13 +188,13 @@ try {
   }
   checks.push('All six prompts/answers match approved source verbatim; source SHA-256 unchanged');
 
-  for (const course of ['alevel', 'igcse']) {
+  for (const course of ['app']) {
     const assets = path.join(project, 'dist', course, 'assets');
     for (const name of fs.readdirSync(assets).filter((name) => /\.(js|css)$/.test(name))) {
       assert(!/Build your recall|stack-fixture|Layout fixture/.test(fs.readFileSync(path.join(assets, name), 'utf8')), `Prototype leaked into ${course}/${name}`);
     }
   }
-  checks.push('Developer demo and fixtures absent from both production builds; shared table authorised for Recall');
+  checks.push('Developer demo and fixtures absent from the combined production build; shared table authorised for Recall');
 
   await build({ configFile: false, root: project, publicDir: false, logLevel: 'error', build: {
     outDir: path.join(output, 'bundle'), emptyOutDir: true, minify: true,

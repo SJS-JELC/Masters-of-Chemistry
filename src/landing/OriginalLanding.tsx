@@ -8,7 +8,7 @@ import { captureTopicLayout, animateTopicLayout } from './animation';
 import { StatsIcon } from './StatsIcon';
 import { RecallIcon } from './RecallIcon';
 import { GemPaths } from './GemPaths';
-import { gemMasteryAvailability } from '../foundation/gem-mastery-availability.ts';
+import { LoadingProvider, useLoading, useLoadingContext } from '../loading/LoadingProvider.tsx';
 import eagle from '../../public/assets/landing/SJS-Eagle.svg?url';
 import './adaptation.css';
 import './alevel.css';
@@ -115,99 +115,67 @@ function MasteryBar({
   );
 }
 
-/** Original source DOM topology and visual rules, with state/event ownership in React. */
-export function OriginalLanding(props: OriginalLandingProps) {
-  const surface = useRef<HTMLDivElement>(null);
-  const transition = useRef<{ target: Course; phase: 'out' | 'in'; animation: Animation } | null>(
-    null,
-  );
-  const restoreCourseFocus = useRef(false);
-  const [turning, setTurning] = useState(false);
-  useEffect(
-    () => () => {
-      const pending = transition.current;
-      transition.current = null;
-      pending?.animation.cancel();
-    },
-    [],
-  );
-  useLayoutEffect(() => {
-    const pending = transition.current;
-    if (!pending) {
-      if (restoreCourseFocus.current) {
-        restoreCourseFocus.current = false;
-        surface.current?.querySelector<HTMLElement>('#flipCourse')?.focus({ preventScroll: true });
-      }
-      return;
-    }
-    if (pending.phase !== 'in' || pending.target !== props.course) {
-      transition.current = null;
-      pending.animation.cancel();
-      setTurning(false);
-      return;
-    }
-    pending.animation.cancel();
-    pending.animation = surface.current!.animate(
-      [
-        { opacity: 0, transform: `translateX(${pending.target === 'alevel' ? 16 : -16}px)` },
-        { opacity: 1, transform: 'translateX(0)' },
-      ],
-      { duration: 110, easing: 'cubic-bezier(.4,0,.2,1)' },
-    );
-    void pending.animation.finished
-      .then(() => {
-        if (transition.current !== pending) return;
-        transition.current = null;
-        flushSync(() => setTurning(false));
-        surface.current?.querySelector<HTMLElement>('#flipCourse')?.focus({ preventScroll: true });
-      })
-      .catch(() => {
-        /* Cancellation on navigation/unmount is expected. */
-      });
-  }, [props.course]);
-  const changeCourse = (course: Course) => {
-    if (course === props.course || transition.current) return;
-    if (
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
-      !surface.current?.animate
-    ) {
-      restoreCourseFocus.current = true;
-      props.onSelectCourse(course);
-      return;
-    }
-    const pending = {
-      target: course,
-      phase: 'out' as 'out' | 'in',
-      animation: surface.current.animate(
-        [
-          { opacity: 1, transform: 'translateX(0)' },
-          { opacity: 0, transform: `translateX(${course === 'alevel' ? -16 : 16}px)` },
-        ],
-        { duration: 110, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' },
-      ),
-    };
-    transition.current = pending;
-    setTurning(true);
-    void pending.animation.finished
-      .then(() => {
-        if (transition.current !== pending) return;
-        pending.phase = 'in';
-        props.onSelectCourse(course);
-      })
-      .catch(() => {
-        /* Cancellation on navigation/unmount is expected. */
-      });
-  };
-  // Only one live course: no hidden duplicate controls, IDs or history readers.
-  return (
+type Availability = ReturnType<
+  typeof import('../foundation/gem-mastery-availability.ts').gemMasteryAvailability
+>;
+export interface PreparedLandingDetails {
+  readonly gemId: string;
+  readonly availability: Availability;
+}
+type LandingProps = OriginalLandingProps & { readonly preparedDetails?: PreparedLandingDetails };
+let availabilityModule:
+  | Promise<typeof import('../foundation/gem-mastery-availability.ts')>
+  | undefined;
+const availabilityCache = new WeakMap<
+  OriginalLandingProps['registry'],
+  Map<string, Availability>
+>();
+async function availabilityFor(
+  course: Course,
+  gemId: string,
+  registry: OriginalLandingProps['registry'],
+): Promise<Availability> {
+  let cache = availabilityCache.get(registry);
+  if (!cache) {
+    cache = new Map();
+    availabilityCache.set(registry, cache);
+  }
+  const key = course + ':' + gemId,
+    saved = cache.get(key);
+  if (saved) return saved;
+  availabilityModule ??= import('../foundation/gem-mastery-availability.ts').catch((error) => {
+    availabilityModule = undefined;
+    throw error;
+  });
+  const module = await availabilityModule;
+  const value = module.gemMasteryAvailability(course, gemId, registry);
+  cache.set(key, value);
+  return value;
+}
+/** Ordinary map entry does not require Recall content; a linked gem menu does. */
+export async function prepareLandingDetails(
+  course: Course,
+  hash: string,
+  registry: OriginalLandingProps['registry'],
+): Promise<PreparedLandingDetails | undefined> {
+  const raw = hash.replace(/^#/, '');
+  const id = catalogues[course].display.redirects[raw] || raw;
+  if (!displayGems(course).some((gem) => gem.id === id)) return;
+  return { gemId: id, availability: await availabilityFor(course, id, registry) };
+}
+export function OriginalLanding(props: LandingProps) {
+  const coordinator = useLoadingContext();
+  const content = (
     <div className="landing-course-stage">
-      <div ref={surface} className="landing-course-surface" inert={turning} aria-busy={turning}>
-        <CourseLanding key={props.course} {...props} onSelectCourse={changeCourse} />
+      <div className="landing-course-surface">
+        <CourseLanding key={props.course} {...props} />
       </div>
     </div>
   );
+  return coordinator ? content : <LoadingProvider>{content}</LoadingProvider>;
 }
-function CourseLanding(props: OriginalLandingProps) {
+function CourseLanding(props: LandingProps) {
+  const loading = useLoading();
   const { course, registry, history: records } = props;
   const isA = course === 'alevel';
   const catalogue = catalogues[course];
@@ -222,11 +190,34 @@ function CourseLanding(props: OriginalLandingProps) {
     [registry, course],
   );
   const available = useMemo(() => new Set(registrations.keys()), [registrations]);
+  const initialGem = props.preparedDetails
+    ? gems.find((gem) => gem.id === props.preparedDetails!.gemId)
+    : undefined;
   const [year, setYear] = useState<'l6' | 'u6'>(() =>
-    readPreference<string>(course + ':year', 'l6') === 'u6' ? 'u6' : 'l6',
+    initialGem
+      ? initialGem.group.key.startsWith('u6')
+        ? 'u6'
+        : 'l6'
+      : readPreference<string>(course + ':year', 'l6') === 'u6'
+        ? 'u6'
+        : 'l6',
   );
-  const [expanded, setExpanded] = useState<Record<string, string>>({});
-  const [selected, setSelected] = useState<DisplayGem | null>(null);
+  const [expanded, setExpanded] = useState<Record<string, string>>(() =>
+    initialGem
+      ? {
+          [columnKey(initialGem.group, initialGem.topicNumber)]:
+            initialGem.group.key + '-topic-' + initialGem.topicNumber,
+        }
+      : {},
+  );
+  const [selected, setSelected] = useState<DisplayGem | null>(() =>
+    props.preparedDetails
+      ? (gems.find((gem) => gem.id === props.preparedDetails!.gemId) ?? null)
+      : null,
+  );
+  const [detailAvailability, setDetailAvailability] = useState<Availability | undefined>(
+    props.preparedDetails?.availability,
+  );
   const [selecting, setSelecting] = useState(false);
   const [selection, setSelection] = useState(() => rememberedSelection(course, available));
   const [teacher, setTeacher] = useState(
@@ -270,13 +261,13 @@ function CourseLanding(props: OriginalLandingProps) {
       (lastGem.current as HTMLElement).focus({ preventScroll: true });
     setHash(isA ? year + '-t1' : '');
   }
-  useEffect(() => {
-    function hash() {
-      const old = location.hash.slice(1),
-        id = catalogue.display.redirects[old] || old;
-      const gem = gems.find((gem) => gem.id === id);
-      if (gem) {
-        if (id !== old) setHash(id);
+  function prepareDetails(gem: DisplayGem, trigger?: Element) {
+    if (trigger) lastGem.current = trigger;
+    void loading.run(
+      'tool',
+      () => availabilityFor(course, gem.id, registry),
+      (availability) => {
+        setDetailAvailability(availability);
         if (isA) setYear(gem.group.key.startsWith('u6') ? 'u6' : 'l6');
         const topicId = gem.group.key + '-topic-' + gem.topicNumber;
         setExpanded((current) => ({
@@ -284,6 +275,18 @@ function CourseLanding(props: OriginalLandingProps) {
           [columnKey(gem.group, gem.topicNumber)]: topicId,
         }));
         setSelected(gem);
+        setHash(gem.id);
+      },
+    );
+  }
+  useEffect(() => {
+    function hash() {
+      if (loading.snapshot().pending) return;
+      const old = location.hash.slice(1),
+        id = catalogue.display.redirects[old] || old;
+      const gem = gems.find((gem) => gem.id === id);
+      if (gem) {
+        if (selected?.id !== gem.id) prepareDetails(gem);
       } else if (isA) {
         const match = /^(l6|u6)-(t1|t2)(?:-topic-(\d+))?$/.exec(id);
         if (match) {
@@ -297,7 +300,7 @@ function CourseLanding(props: OriginalLandingProps) {
     hash();
     window.addEventListener('hashchange', hash);
     return () => window.removeEventListener('hashchange', hash);
-  }, [course]);
+  }, [course, loading.pending]);
   useLayoutEffect(() => {
     if (!selected) return;
     lastGem.current = root.current?.querySelector(`[data-leaf="${selected.id}"]`) ?? null;
@@ -311,12 +314,26 @@ function CourseLanding(props: OriginalLandingProps) {
   }, [selected, isA]);
   useEffect(() => {
     function outside(event: MouseEvent) {
+      if (
+        event
+          .composedPath()
+          .some((node) => node instanceof Element && node.classList.contains('loading-error'))
+      )
+        return;
+      if (loading.snapshot().pending || loading.snapshot().error) return;
       if (!selected || isA) return;
       const target = event.target as Element;
       if (!dialog.current?.contains(target) && !target.closest('.gem,.gem-name'))
         closeDetails(false);
     }
     function escape(event: KeyboardEvent) {
+      if (
+        event
+          .composedPath()
+          .some((node) => node instanceof Element && node.classList.contains('loading-error'))
+      )
+        return;
+      if (loading.snapshot().pending || loading.snapshot().error) return;
       if (event.key === 'Escape' && selected) {
         event.preventDefault();
         closeDetails();
@@ -364,14 +381,9 @@ function CourseLanding(props: OriginalLandingProps) {
       if (available.has(gem.id)) toggleSelection([gem.id]);
       return;
     }
-    lastGem.current = event.currentTarget;
-    setSelected(gem);
-    setHash(gem.id);
+    prepareDetails(gem, event.currentTarget);
   }
   function launch(request: LandingLaunchRequest) {
-    dialog.current?.close();
-    setSelected(null);
-    setSelecting(false);
     props.onLaunch(request);
   }
   function topic(group: LandingGroup, [number, name]: LandingGroup['topics'][number]) {
@@ -526,9 +538,6 @@ function CourseLanding(props: OriginalLandingProps) {
   const detailRegistration = selected ? registrations.get(selected.id) : undefined;
   const detailState = selected ? progress.get(selected.id) : undefined;
   const detailActivity = selected ? catalogue.activities[selected.id] : undefined;
-  const detailAvailability = selected
-    ? gemMasteryAvailability(course, selected.id, props.registry)
-    : undefined;
   const choices = selected ? (
     <div
       id={isA ? 'detailStats' : 'practiceChoices'}
@@ -542,7 +551,6 @@ function CourseLanding(props: OriginalLandingProps) {
         disabled={!detailAvailability?.facts && !detailAvailability?.target}
         onClick={() => {
           if (teacher) {
-            closeDetails(false);
             if (detailRegistration) props.onOpenTeacher(selected.id);
             else props.onOpenRecall(selected.id, true);
           } else launch({ id: token(), kind: 'gem-mastery', course, gemId: selected.id });
@@ -568,7 +576,6 @@ function CourseLanding(props: OriginalLandingProps) {
           data-practice="recall"
           onClick={() => {
             const gemId = selected.id;
-            closeDetails(false);
             props.onOpenRecall(gemId, teacher);
           }}
         >
@@ -591,7 +598,6 @@ function CourseLanding(props: OriginalLandingProps) {
             onClick={(event) => {
               event.preventDefault();
               if (teacher) {
-                closeDetails(false);
                 props.onOpenTeacher(selected.id);
                 return;
               }
@@ -948,6 +954,7 @@ function CourseLanding(props: OriginalLandingProps) {
           aria-describedby={isA ? 'detailPath activityNote' : undefined}
           onCancel={(event) => {
             event.preventDefault();
+            if (loading.snapshot().pending || loading.snapshot().error) return;
             closeDetails();
           }}
           onClick={(event) => {

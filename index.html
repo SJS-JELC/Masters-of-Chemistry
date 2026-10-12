@@ -1,2 +1,46 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="icon" href="./assets/SJS-Eagle.svg" type="image/svg+xml"/><title>Masters of Chemistry</title></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/SJS-Eagle.svg" type="image/svg+xml" />
+    <title>Masters of Chemistry</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #08131c;
+        color: #fff;
+      }
+      .loading-initial {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .loading-initial img {
+        width: 112px;
+        height: 112px;
+      }
+      #loading-bootstrap {
+        position: fixed;
+        inset: 0 0 auto;
+        height: 3px;
+        background: #25b9ae;
+        opacity: 0;
+        animation: bootstrap-wait 0s 0.2s forwards;
+      }
+      @keyframes bootstrap-wait {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading-initial"><img src="./assets/SJS-Eagle.svg" alt="St John's School" /></div>
+    </div>
+    <div id="loading-bootstrap" aria-hidden="true"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

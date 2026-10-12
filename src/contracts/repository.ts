@@ -14,6 +14,8 @@ export type StorageFailure = Readonly<{
   code: 'unavailable' | 'quota' | 'conflict' | 'invalid-data';
   message: string;
   retryable: boolean;
+  /** Runtime recovery hint; this is not a persisted-data schema field. */
+  recovery?: 'reload';
 }>;
 export type RepositoryResult<T> =
   | Readonly<{ ok: true; value: T }>
@@ -103,7 +105,10 @@ export interface ChemistryRepository {
   readonly saveCurriculum: (write: CurriculumWrite) => Promise<RepositoryResult<SaveReceipt>>;
   readonly saveSession: (session: CurriculumSession) => Promise<RepositoryResult<SessionId>>;
   readonly loadOlympiad: {
- (profileId:string,activityId:'alevel/maxwells-demon'):Promise<RepositoryResult<MaxwellProgress|null>>;
+    (
+      profileId: string,
+      activityId: 'alevel/maxwells-demon',
+    ): Promise<RepositoryResult<MaxwellProgress | null>>;
     (
       profileId: string,
       activityId?: 'alevel/c3l6-organic-reactions',

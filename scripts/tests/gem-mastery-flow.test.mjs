@@ -71,3 +71,19 @@ test('existing grade mastery keeps lowest-unmastered selection and completion', 
   assert.equal(nextMasteryLevel(summaries), 2);
   assert.equal(nextMasteryLevel(summaries.map((item) => ({ ...item, mastered: true }))), null);
 });
+
+test('registered semantic rate gems roundtrip every mastery stage in their own course', () => {
+  for (const suffix of ['orders', 'graphs', 'mechanisms', 'arrhenius']) {
+    for (const stage of ['recall', 'grades', 'complete']) {
+      const flow = { course: 'alevel', gemId: `u6-t1-2-${suffix}`, token: 'rate-launch', stage };
+      const url = new URL('https://example.test/?course=alevel');
+      writeGemMasteryFlow(url, flow);
+      assert.deepEqual(readGemMasteryFlow(url, 'alevel', productionRegistry), flow);
+      assert.equal(readGemMasteryFlow(url, 'igcse', productionRegistry), undefined);
+    }
+  }
+  for (const stage of ['recall', 'grades', 'complete']) {
+    const url = new URL(`https://example.test/?masteryRun=rate-launch&masteryGem=u6-t1-2-unknown&masteryStage=${stage}`);
+    assert.equal(readGemMasteryFlow(url, 'alevel', productionRegistry), undefined);
+  }
+});

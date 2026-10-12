@@ -32,7 +32,10 @@ export function teacherCatalogue(
 ): Promise<readonly TeacherCatalogueEntry[]> {
   const existing = cache.get(activityId);
   if (existing) return existing;
-  const result = load(activityId);
+  const result = load(activityId).catch((error) => {
+    cache.delete(activityId);
+    throw error;
+  });
   cache.set(activityId, result);
   return result;
 }
@@ -42,14 +45,18 @@ async function load(id: ActivityId): Promise<readonly TeacherCatalogueEntry[]> {
       const { rateProvider, restoreRateExample } = await import(
         '../activities/alevel/rate-equations/provider.ts'
       );
-      return rateProvider.coverage.flatMap(coverage =>
-        coverage.kind === 'fixed' ? coverage.questionIds : coverage.families.map(family => family.templateId),
-      ).map(sourceId => {
-        const ref = rateProvider.resolveLink(sourceId);
-        if (!ref) throw Error('Missing rate teacher route: ' + sourceId);
-        const example = restoreRateExample(ref);
-        return entry(ref, `${example.question.title} · Level ${ref.level}`, example.gem);
-      });
+      return rateProvider.coverage
+        .flatMap((coverage) =>
+          coverage.kind === 'fixed'
+            ? coverage.questionIds
+            : coverage.families.map((family) => family.templateId),
+        )
+        .map((sourceId) => {
+          const ref = rateProvider.resolveLink(sourceId);
+          if (!ref) throw Error('Missing rate teacher route: ' + sourceId);
+          const example = restoreRateExample(ref);
+          return entry(ref, `${example.question.title} · Level ${ref.level}`, example.gem);
+        });
     }
     case 'alevel/maxwells-demon':
     case 'alevel/olympiad-2011-q4':
@@ -199,9 +206,17 @@ async function load(id: ActivityId): Promise<readonly TeacherCatalogueEntry[]> {
         import('../chemistry/formulae-equations/generator.ts'),
         import('../activities/igcse/formulae/provider.ts'),
       ]);
-      return allowedPairs.map(pair => entry(formulaeRef(formulaCode(pair.id, 1), 1),
-        pair.name + ' · ' + formulaCode(pair.id, 1) + ' · ' + (pair.level === 1 ? 'Grade 5–6' : 'Grade 7–8'),
-        pair.level === 1 ? 'Monatomic ions' : 'Polyatomic ions'));
+      return allowedPairs.map((pair) =>
+        entry(
+          formulaeRef(formulaCode(pair.id, 1), 1),
+          pair.name +
+            ' · ' +
+            formulaCode(pair.id, 1) +
+            ' · ' +
+            (pair.level === 1 ? 'Grade 5–6' : 'Grade 7–8'),
+          pair.level === 1 ? 'Monatomic ions' : 'Polyatomic ions',
+        ),
+      );
     }
     case 'igcse/equations':
       return fixed((await import('../activities/igcse/equations/provider.ts')).equationsProvider);

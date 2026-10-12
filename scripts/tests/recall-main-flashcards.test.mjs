@@ -8,7 +8,8 @@ import {
   createFlashcardSaveQueue,
 } from '../../src/recall/flashcard-checkpoint.ts';
 import { flashcardModel, flashcardAnswerValue } from '../../src/recall/flashcard-content.ts';
-import { validateSavedRecallFlashcards } from '../../src/persistence/validation.ts';
+import { validateSavedRecallFlashcards } from '../../src/persistence/recall-validation.ts';
+
 import { recallFacts } from '../../src/recall/facts.ts';
 import {
   factsForRecallScope,

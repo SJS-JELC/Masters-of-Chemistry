@@ -39,15 +39,19 @@ export function readGemMasteryFlow(
     !['recall', 'grades', 'complete'].includes(stage ?? '')
   )
     return;
+  const registeredGem = registry
+    .curriculumFor(course)
+    .flatMap((item) => item.gems)
+    .find((gem) => gem.id === gemId);
+  // Registered gems may use semantic IDs; numeric IDs also cover recall-only gems.
   if (
+    !registeredGem &&
     !(course === 'alevel' ? /^(l6|u6)-t\d+-\d+-\d+$/ : /^(fourth|lower|upper)-\d+-\d+$/).test(gemId)
   )
     return;
   if (
     stage === 'grades' &&
-    !registry
-      .curriculumFor(course)
-      .some((item) => item.gems.some((gem) => gem.id === gemId && gem.supportedLevels.length))
+    !registeredGem?.supportedLevels.length
   )
     return;
   return { token, course, gemId, stage: stage as GemMasteryStage };

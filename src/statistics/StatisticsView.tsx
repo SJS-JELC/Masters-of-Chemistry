@@ -1,12 +1,12 @@
 import { questionDisplayCode } from '../content/question-display-identity.ts';
 import { canonicalQuestionPattern } from '../content/canonical-identity.ts';
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import type { CourseDataViewProps } from '../contracts/integration.ts';
 import type { Course, Level } from '../contracts/identity.ts';
-import type { RecallEvidence } from '../contracts/recall.ts';
 import { recallFacts } from '../recall/facts.ts';
 import type { CurriculumEvidence } from '../contracts/session.ts';
-import { createChemistryRepository } from '../persistence/repository.ts';
+import { useLoading } from '../loading/LoadingProvider.tsx';
+import { prepareStatistics, refreshStatistics, type PreparedStatistics } from './prepare.ts';
 import { displayGems } from '../landing/catalogue.ts';
 import { validTiming } from '../domain/timing/active-clock.ts';
 import {
@@ -108,8 +108,18 @@ function GemRow({
     recent = row?.records.slice(-20) ?? [];
   const description = (record: CurriculumEvidence) => {
     const code =
-      (record.ref ? questionDisplayCode({course, activityId: record.ref.activityId, questionId: record.ref.questionId}) : undefined) ??
-      (record.provenance === 'legacy-import' && record.sourceQuestionId && canonicalQuestionPattern.test(record.sourceQuestionId) ? record.sourceQuestionId : undefined) ??
+      (record.ref
+        ? questionDisplayCode({
+            course,
+            activityId: record.ref.activityId,
+            questionId: record.ref.questionId,
+          })
+        : undefined) ??
+      (record.provenance === 'legacy-import' &&
+      record.sourceQuestionId &&
+      canonicalQuestionPattern.test(record.sourceQuestionId)
+        ? record.sourceQuestionId
+        : undefined) ??
       'Not recorded';
     const label =
       row?.gem.mastery.supportedLevels.find((item) => item.level === levelOf(record))?.label ??
@@ -404,58 +414,41 @@ export function StatisticsView({
   databaseName,
   registry,
   onBack,
-}: CourseDataViewProps & { readonly onBack?: () => void }) {
-  const [recallHistory, setRecallHistory] = useState<readonly RecallEvidence[]>([]);
-  const [recallError, setRecallError] = useState<string | null>(null);
-  const [history, setHistory] = useState<readonly CurriculumEvidence[]>([]),
-    [error, setError] = useState<string | null>(null),
-    [loading, setLoading] = useState(true);
+  prepared,
+}: CourseDataViewProps & { readonly onBack?: () => void; readonly prepared: PreparedStatistics }) {
+  const coordinator = useLoading();
+  const [snapshot, setSnapshot] = useState(prepared);
+  const { history, recallHistory, snapshotAt } = snapshot;
+  const error = null,
+    recallError = null;
   const [days, setDays] = useState<StatisticsOptions['days']>(0),
     [year, setYear] = useState<NonNullable<StatisticsOptions['year']>>('all'),
-    [selectedDay, setSelectedDay] = useState<number | null>(null),
-    [snapshotAt, setSnapshotAt] = useState(Date.now());
+    [selectedDay, setSelectedDay] = useState<number | null>(null);
   const [openTopics, setOpenTopics] = useState<ReadonlySet<string>>(new Set());
-  const readGeneration = useRef(0);
-  const refresh = useCallback(async () => {
-    const generation = ++readGeneration.current;
-    setLoading(true);
-    setError(null);
-    setRecallError(null);
-    if (namespace.course !== course) {
-      setError('Statistics course and profile do not match.');
-      setHistory([]);
-      setRecallHistory([]);
-      setLoading(false);
-      return;
-    }
-    const repository = createChemistryRepository(databaseName);
-    const [result, recallResult] = await Promise.all([
-      repository.curriculumHistory(namespace),
-      repository.recallHistory(namespace),
-    ]);
-    repository.close?.();
-    if (generation !== readGeneration.current) return;
-    if (result.ok) {
-      setHistory(result.value);
-      setSnapshotAt(Date.now());
-    } else {
-      setHistory([]);
-      setError('Saved statistics could not be read.');
-    }
-    if (recallResult.ok) setRecallHistory(recallResult.value);
-    else {
-      setRecallHistory([]);
-      setRecallError('Saved Recall timing could not be read.');
-    }
-    setLoading(false);
-  }, [databaseName, course, namespace.course, namespace.profileId]);
+  const refresh = useCallback(
+    () =>
+      refreshStatistics(
+        coordinator,
+        (ticket) => prepareStatistics({ course, namespace, databaseName, registry, ticket }),
+        setSnapshot,
+      ),
+    [
+      coordinator.run,
+      coordinator.snapshot,
+      course,
+      namespace.course,
+      namespace.profileId,
+      databaseName,
+      registry,
+    ],
+  );
   useEffect(() => {
-    void refresh();
-    const reread = () => void refresh();
+    const reread = () => {
+      void refresh();
+    };
     window.addEventListener('focus', reread);
     window.addEventListener('pageshow', reread);
     return () => {
-      readGeneration.current++;
       window.removeEventListener('focus', reread);
       window.removeEventListener('pageshow', reread);
     };
@@ -552,11 +545,6 @@ export function StatisticsView({
           </div>
           <p className="stats-local">Stored in this browser</p>
         </div>
-        {loading && (
-          <p className="stats-notice" role="status">
-            Loading saved statistics…
-          </p>
-        )}
         {error && (
           <div className="stats-notice" role="alert">
             {error}{' '}
@@ -565,7 +553,7 @@ export function StatisticsView({
             </button>
           </div>
         )}
-        {!loading && !error && (
+        {!error && (
           <>
             <form
               className="stats-filters"

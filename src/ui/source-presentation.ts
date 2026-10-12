@@ -161,7 +161,10 @@ const presentations = new WeakMap<Question, Promise<SourcePresentation>>();
 export function sourcePresentation(question: Question): Promise<SourcePresentation> {
   let value = presentations.get(question);
   if (!value) {
-    value = loadSourcePresentation(question);
+    value = loadSourcePresentation(question).catch((error) => {
+      presentations.delete(question);
+      throw error;
+    });
     presentations.set(question, value);
   }
   return value;

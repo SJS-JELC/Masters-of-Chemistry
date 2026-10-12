@@ -15,7 +15,7 @@ import {
   validateRecallSession,
   validateSavedRecallPreferences,
   validateSavedRecallFlashcards,
-} from '../../src/persistence/validation.ts';
+} from '../../src/persistence/recall-validation.ts';
 const at = Date.parse('2026-10-10T12:00:00Z'),
   policy = createHistoricalRecallMarkingPolicy(historicalRecallFacts);
 function legacy(f) {

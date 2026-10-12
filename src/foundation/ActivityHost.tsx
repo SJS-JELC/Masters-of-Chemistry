@@ -2,6 +2,7 @@ import { gradedActivityId } from './graded-question.ts';
 import { restoreCheckedFeedback } from '../ui/current-feedback.ts';
 import { activityDatabaseName } from '../persistence/alpha-namespace.ts';
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import type {
   Course,
   StudentAttempt,
@@ -26,7 +27,6 @@ import { productionRegistry } from './registry.ts';
 import { createAttemptController, assessmentToEvidence } from '../domain/attempt/index.ts';
 import { createActiveClock, bindBrowserAttemptTiming } from '../domain/timing/index.ts';
 import {
-  createRevisionSession,
   revisionScheduler,
   bindRevisionQuestion,
   pauseRevisionSession,
@@ -42,27 +42,27 @@ import type { SaveStatus, PlayerFeedback } from '../ui/QuestionPlayer.tsx';
 import { TeacherPicker } from '../ui/TeacherPicker.tsx';
 import type { PlatformView, QuestionRef } from '../contracts/index.ts';
 import type { CurriculumLaunchRequest } from '../contracts/landing.ts';
-import { sameRevisionSelection } from '../shell/navigation-view.ts';
 import { canContinueStoredSession } from './session-continuation.ts';
-import { targetSubtopic, teacherSubtopic } from './question-heading.ts';
-const DotCrossEditor = lazy(async () => ({
-  default: (await import('../editors/dot-and-cross/index.ts')).DotCrossEditor,
-}));
-const TitrationCurveEditor = lazy(async () => ({
-  default: (await import('../editors/titration-curve/index.ts')).TitrationCurveEditor,
-}));
-const ElectronConfigurationEditor = lazy(async () => ({
-  default: (await import('../editors/electron-configuration/index.tsx'))
-    .ElectronConfigurationEditor,
-}));
-const EnergyProfileEditor = lazy(async () => ({
-  default: (await import('../editors/energy-profile/index.tsx')).EnergyProfileEditor,
-}));
+import { targetSubtopic } from './question-heading.ts';
+import { LoadingProvider, useLoading, useLoadingContext } from '../loading/LoadingProvider.tsx';
+import { prepareQuestionTools, type PreparedQuestionTools } from './question-tools.ts';
+import type { PreparedCurriculum } from './prepare-curriculum.ts';
+import {
+  persistCurriculumResume,
+  prepareCurriculum,
+  prepareTeacher,
+  type PreparedTeacher,
+} from './prepare-curriculum.ts';
+import type { LoadingTicket } from '../loading/coordinator.ts';
+export { prepareCurriculum } from './prepare-curriculum.ts';
+export type { PreparedCurriculum, PrepareCurriculumInput } from './prepare-curriculum.ts';
 const RateResponseControl = lazy(async () => ({
-  default: (await import('../activities/alevel/rate-equations/RateResponseControl.tsx')).RateResponseControl,
+  default: (await import('../activities/alevel/rate-equations/RateResponseControl.tsx'))
+    .RateResponseControl,
 }));
 const RateGraphWorkspace = lazy(async () => ({
-  default: (await import('../activities/alevel/rate-equations/RateGraphWorkspace.tsx')).RateGraphWorkspace,
+  default: (await import('../activities/alevel/rate-equations/RateGraphWorkspace.tsx'))
+    .RateGraphWorkspace,
 }));
 interface Runtime {
   provider: QuestionProvider;
@@ -99,8 +99,16 @@ declare global {
   }
 }
 
+export type CurriculumHostProps = CurriculumHostIntegration & {
+  readonly course: Course;
+  readonly masterySessionId?: string;
+  readonly onMasteryComplete?: () => void;
+  readonly prepared?: PreparedCurriculum;
+  readonly onSelectOlympiad?: (id?: import('../contracts/index.ts').OlympiadActivityId) => void;
+};
+
 /** Real activity host: one controller, clock, repository and scheduler for both modes. */
-export function FoundationApp({
+function CurriculumHost({
   course,
   onSelectOlympiad,
   initialActivityId,
@@ -109,17 +117,17 @@ export function FoundationApp({
   onSelectView,
   reviewRef,
   initialTeacherGroup,
-  launchRequest,
+  launchRequest: incomingLaunchRequest,
   onLaunchConsumed,
   onNavigationGuard,
   masterySessionId,
   onMasteryComplete,
-}: CurriculumHostIntegration & {
-  readonly course: Course;
-  readonly masterySessionId?: string;
-  readonly onMasteryComplete?: () => void;
-  readonly onSelectOlympiad?: (id?: import('../contracts/index.ts').OlympiadActivityId) => void;
-}) {
+  prepared,
+}: CurriculumHostProps) {
+  const loadingCoordinator = useLoading();
+  // Preparation already selected and durably saved this launch before visibility.
+  const launchRequest =
+    prepared?.launchId === incomingLaunchRequest?.id ? undefined : incomingLaunchRequest;
   const query = useMemo(() => new URLSearchParams(location.search), []);
   const run =
     (import.meta.env.DEV ? query.get('run') || 'local' : 'local')
@@ -133,11 +141,7 @@ export function FoundationApp({
     location.pathname,
   );
   const namespace = useMemo(() => ({ course, profileId: 'local' }), [course]);
-  const [readVersion, setReadVersion] = useState(0);
-  const repository = useMemo(
-    () => createChemistryRepository(databaseName),
-    [databaseName, readVersion],
-  );
+  const repository = useMemo(() => createChemistryRepository(databaseName), [databaseName]);
   const reviewCode = query.get('review');
   const [preview, setPreview] = useState(
     view ? view === 'teacher' : query.get('mode') === 'teacher' || !!reviewCode,
@@ -151,18 +155,27 @@ export function FoundationApp({
         ? 'revision'
         : 'practice',
   );
-  const [attempt, setAttempt] = useState<StudentAttempt | null>(null);
-  const [, setSession] = useState<CurriculumSession | null>(null);
-  const [question, setQuestion] = useState<Question | null>(null);
-  const [history, setHistory] = useState<readonly CurriculumEvidence[]>([]);
-  const [saveStatus, setSaveStatus] = useState<SaveStatus>({ kind: 'idle' });
+  const [attempt, setAttempt] = useState<StudentAttempt | null>(prepared?.attempt ?? null);
+  const [, setSession] = useState<CurriculumSession | null>(prepared?.session ?? null);
+  const [question, setQuestion] = useState<Question | null>(prepared?.question ?? null);
+  const [questionTools, setQuestionTools] = useState<PreparedQuestionTools | null>(
+    prepared?.tools ?? null,
+  );
+  const [saveStatus, setSaveStatus] = useState<SaveStatus>(
+    prepared ? { kind: 'saved' } : { kind: 'idle' },
+  );
+  const [history, setHistory] = useState<readonly CurriculumEvidence[]>(prepared?.history ?? []);
   const [feedback, setFeedback] = useState<PlayerFeedback | undefined>();
   const [correctionFeedback, setCorrectionFeedback] = useState<CorrectionFeedback | undefined>();
-  const [loading, setLoading] = useState(true);
-  const [readError, setReadError] = useState<StorageFailure | null>(null);
-  const [paused, setPaused] = useState(false);
+  const loading = false;
+  const readError: StorageFailure | null = null;
+  const [paused, setPaused] = useState(
+    prepared?.session?.kind === 'revision'
+      ? prepared.session.status === 'paused'
+      : prepared?.session?.paused === true,
+  );
   const [nextLoading, setNextLoading] = useState(false);
-  const [setupOpen, setSetupOpen] = useState(false);
+  const [setupOpen, setSetupOpen] = useState(prepared?.setupOpen ?? false);
   const [localView, setLocalView] = useState<PlatformView>(
     view ??
       (query.get('mode') === 'teacher' || reviewCode
@@ -180,9 +193,13 @@ export function FoundationApp({
       if (view !== 'teacher') setSessionMode(view === 'revision' ? 'revision' : 'practice');
     }
   }, [view]);
-  const stateRef = useRef<StudentAttempt | null>(null),
-    sessionRef = useRef<CurriculumSession | null>(null),
+  const stateRef = useRef<StudentAttempt | null>(prepared?.attempt ?? null),
+    sessionRef = useRef<CurriculumSession | null>(prepared?.session ?? null),
     controllerRef = useRef<AttemptController | null>(null);
+  const timingDispose = useRef<(() => void) | null>(null);
+  const frozen = useRef(false);
+  const flushingDraft = useRef(false);
+  const [activationVersion, setActivationVersion] = useState(0);
   const queue = useRef<Promise<void>>(Promise.resolve());
   const pendingSessionSave = useRef<CurriculumSession | null>(null);
   const failedSave = useRef<FailedWrite | null>(null);
@@ -208,8 +225,8 @@ export function FoundationApp({
     saveFailed = useRef(false);
   const registry = registryOverride ?? productionRegistry;
   const runtimes = useRef(new Map<ActivityId, Promise<Runtime>>());
-  const activeRuntime = useRef<Runtime | null>(null),
-    questionRef = useRef<Question | null>(null);
+  const activeRuntime = useRef<Runtime | null>(prepared?.runtime ?? null),
+    questionRef = useRef<Question | null>(prepared?.question ?? null);
   const runtime = useCallback(
     (id: ActivityId) => {
       const saved = runtimes.current.get(id);
@@ -238,16 +255,6 @@ export function FoundationApp({
       return loaded;
     },
     [registry],
-  );
-  const resolve = useCallback(
-    async (value: StudentAttempt) => {
-      const loaded = await runtime(value.ref.activityId);
-      const content = loaded.provider.restore(value.ref);
-      activeRuntime.current = loaded;
-      questionRef.current = content;
-      setQuestion(content);
-    },
-    [runtime],
   );
   const registrations = useMemo(() => registry.curriculumFor(course), [registry, course]);
   const allTargets = useMemo(
@@ -388,99 +395,24 @@ export function FoundationApp({
     },
     [repository, commitSession, queueSave],
   );
-  const readSavedData = useCallback(
-    async (cancelled: () => boolean = () => false) => {
-      setLoading(true);
-      try {
-        const records = await repository.curriculumHistory(namespace);
-        if (cancelled()) return;
-        if (!records.ok) {
-          setReadError(records.error);
-          return;
-        }
-        const loaded = await repository.loadSession(
-          namespace,
-          masterySessionId ?? 'current-session',
-        );
-        if (cancelled()) return;
-        if (!loaded.ok) {
-          setReadError(loaded.error);
-          return;
-        }
-        if (loaded.value) {
-          const id =
-            loaded.value.kind === 'revision'
-              ? loaded.value.current?.attemptId
-              : loaded.value.currentAttemptId;
-          if (id) {
-            const result = await repository.loadAttempt(namespace, id);
-            if (cancelled()) return;
-            if (!result.ok) {
-              setReadError(result.error);
-              return;
-            }
-            if (!result.value) {
-              setReadError({
-                code: 'invalid-data',
-                message: 'The saved session references a missing attempt.',
-                retryable: false,
-              });
-              return;
-            }
-            if (result.value) {
-              await resolve(result.value);
-              if (cancelled()) return;
-              applyAttempt(result.value);
-              setTargetKey(`${result.value.target.gemId}:${result.value.target.level}`);
-              setSaveStatus({ kind: 'saved' });
-            }
-          }
-          applySession(loaded.value);
-          setPaused(
-            loaded.value.kind === 'revision'
-              ? loaded.value.status === 'paused'
-              : loaded.value.paused === true,
-          );
-          if (view && view !== 'teacher' && view !== loaded.value.kind) setSetupOpen(true);
-          setSessionMode(
-            view && view !== 'teacher'
-              ? view === 'revision'
-                ? 'revision'
-                : 'practice'
-              : loaded.value.kind,
-          );
-        }
-        setHistory(records.value);
-        setReadError(null);
-      } catch (error) {
-        if (!cancelled())
-          setReadError({
-            code: 'invalid-data',
-            message:
-              error instanceof Error ? error.message : 'The saved question could not be restored.',
-            retryable: false,
-          });
-      } finally {
-        if (!cancelled()) setLoading(false);
-      }
-    },
-    [repository, namespace, applySession, applyAttempt, resolve, view, masterySessionId],
-  );
-  const readSavedDataRef = useRef(readSavedData);
-  readSavedDataRef.current = readSavedData;
   useEffect(() => {
     mounted.current = true;
-    let cancelled = false;
-    void readSavedDataRef.current(() => cancelled);
     return () => {
-      cancelled = true;
       mounted.current = false;
     };
-  }, [repository, namespace, resolve]);
+  }, []);
+  useEffect(() => {
+    if (!prepared?.launchId) return;
+    consumedLaunches.current.add(prepared.launchId);
+    onLaunchConsumed?.(prepared.launchId);
+  }, [prepared?.launchId, onLaunchConsumed]);
   // An existing persisted attempt enters this effect. Identity is created only by explicit Start/Next handlers.
   useEffect(() => {
     if (
       !attempt ||
+      !questionTools ||
+      frozen.current ||
+      loadingCoordinator.pending ||
       preview ||
       paused ||
       loading ||
@@ -529,13 +461,20 @@ export function FoundationApp({
         void save(snapshot);
       },
     });
+    timingDispose.current = unbind;
     return () => {
-      unbind();
+      if (timingDispose.current === unbind) {
+        timingDispose.current = null;
+        unbind();
+      }
       controllerRef.current = null;
     };
     // Persisted identity changes, pause and preview control binding; response rerenders must not recreate controllers.
   }, [
     attempt?.attemptId,
+    questionTools,
+    loadingCoordinator.pending,
+    activationVersion,
     preview,
     paused,
     loading,
@@ -547,32 +486,12 @@ export function FoundationApp({
     applyAttempt,
     save,
   ]);
-  const adopt = useCallback(
-    async (value: StudentAttempt, nextSession: CurriculumSession) => {
-      setTransitioning(true);
-      try {
-        await resolve(value);
-        applySession(nextSession);
-        applyAttempt(value);
-        // Keep answering gated until the new identity/session have durably saved.
-        setPaused(true);
-        setFeedback(undefined);
-        await save(value);
-        if (!saveFailed.current) {
-          departing.current = false;
-          setPaused(false);
-        }
-      } finally {
-        setTransitioning(false);
-      }
-    },
-    [applySession, applyAttempt, save, resolve],
-  );
   const fresh = useCallback(
     (
       ref: StudentAttempt['ref'],
       selectedTarget: CurriculumTarget,
       attemptId: string,
+      content?: Question,
     ): StudentAttempt => ({
       mode: 'student',
       namespace,
@@ -589,122 +508,109 @@ export function FoundationApp({
           const registration = registry.get(ref.activityId);
           if (!registration || registration.strand !== 'curriculum')
             throw Error('Unsupported timing activity');
-          return registration.idleAllowance(questionRef.current!);
+          return registration.idleAllowance(content ?? questionRef.current!);
         })(),
         finished: false,
       },
     }),
     [namespace],
   );
+  const commitPrepared = (value: PreparedCurriculum) => {
+    flushSync(() => {
+      activeRuntime.current = value.runtime;
+      questionRef.current = value.question;
+      stateRef.current = value.attempt;
+      setAttempt(value.attempt);
+      setQuestion(value.question);
+      setQuestionTools(value.tools);
+      applySession(value.session);
+      setHistory(value.history);
+      setPaused(
+        value.session?.kind === 'revision'
+          ? value.session.status === 'paused'
+          : value.session?.paused === true,
+      );
+      setSetupOpen(value.setupOpen);
+      setPreview(value.view === 'teacher');
+      setLocalView(value.view);
+      if (value.view !== 'teacher')
+        setSessionMode(value.view === 'revision' ? 'revision' : 'practice');
+      if (value.teacher) {
+        setTeacherPayload(value.teacher);
+        setTeacherActivity(value.teacher.activityId);
+        setPreviewQuestion(value.teacher.question);
+        setPreviewSubtopic(value.teacher.subtopic);
+      }
+      setSaveStatus({ kind: 'saved' });
+      setFeedback(undefined);
+      setCorrectionFeedback(undefined);
+      frozen.current = false;
+      departing.current = false;
+      setActivationVersion((value) => value + 1);
+    });
+  };
   const start = async (request?: CurriculumLaunchRequest) => {
-    const chosenTarget = request?.kind === 'practice' ? request.target : target;
     const chosenMode = request?.kind ?? sessionMode;
-    const chosenSelection = request?.kind === 'practice' ? request.selection : 'fixed-level';
-    const chosenTargets = request?.kind === 'revision' ? request.targets : selected;
-    if (!chosenTarget || preview || loading || readError) return false;
-    if (!(await leaveAttempt())) return false;
-    setSetupOpen(false);
-    setSessionMode(chosenMode);
-    setLocalView(chosenMode);
-    if (
-      masterySessionId &&
-      request?.kind === 'practice' &&
-      sessionRef.current?.kind === 'practice' &&
-      sessionRef.current.id === masterySessionId &&
-      stateRef.current
-    ) {
-      const resumed = await resume();
-      return resumed || saveFailed.current;
+    if (preview || loading || readError || (!target && !request)) return false;
+    const chosen =
+      request ??
+      (chosenMode === 'revision'
+        ? {
+            id: crypto.randomUUID(),
+            kind: 'revision' as const,
+            course,
+            targets: selected,
+            gemIds: [...new Set(selected.map((item) => item.gemId))],
+          }
+        : {
+            id: crypto.randomUUID(),
+            kind: 'practice' as const,
+            target: target!,
+            selection: 'fixed-level' as const,
+            fresh: true as const,
+          });
+    if (chosen.kind === 'revision' && !chosen.targets.length) {
+      setFeedback({ message: 'Choose a topic with ADD ALL before launching revision.' });
+      return false;
     }
-    if (request?.kind === 'revision') {
-      setSelected(chosenTargets);
-      const existing = sessionRef.current;
-      if (
-        existing?.kind === 'revision' &&
-        existing.status !== 'complete' &&
-        sameRevisionSelection(
-          existing.levels.map((item) => item.target),
-          chosenTargets,
-        )
-      ) {
-        // Identical map selection continues the exact paused question and attempt.
-        const resumed = await resume();
-        return resumed || saveFailed.current;
-      }
-    }
-    const records = await loadHistory(),
-      states = summaries(records),
-      id = crypto.randomUUID(),
-      seed = crypto.getRandomValues(new Uint32Array(1))[0] || 1;
-    if (chosenMode === 'revision') {
-      if (!chosenTargets.length) {
-        setFeedback({ message: 'Choose a topic with ADD ALL before launching revision.' });
-        return false;
-      }
-      const initial = createRevisionSession({
-        namespace,
-        id: masterySessionId ?? 'current-session',
-        selected: chosenTargets,
-        settings: registrations.flatMap((a) => a.gems.map((g) => g.mastery)),
-        summaries: states,
-        now: Date.now(),
-      });
-      const next = revisionScheduler.next(initial, states, Date.now(), id);
-      if (!next.current) return false;
-      const loaded = await runtime(next.current.target.activityId);
-      const ref = loaded.provider.select({
-        ...next.current.target,
-        seed,
-        previousQuestionIds: next.previous
-          .filter((item) => item.target.activityId === next.current!.target.activityId)
-          .map((item) => item.ref.questionId),
-      });
-      questionRef.current = loaded.provider.restore(ref);
-      await adopt(
-        fresh({ ...ref, activityId: next.current.target.activityId }, next.current.target, id),
-        bindRevisionQuestion(next, { ...ref, activityId: next.current.target.activityId }),
-      );
-    } else {
-      const initial = {
-        kind: 'practice' as const,
-        namespace,
-        id: masterySessionId ?? 'current-session',
-        target: chosenTarget,
-        selection: chosenSelection,
-        currentAttemptId: null,
-        previousQuestionIds: [],
-      };
-      const registration = registry.get(chosenTarget.activityId);
-      if (!registration || registration.strand !== 'curriculum') return false;
-      const provider = await registration.provider(),
-        choice = selectPracticeQuestion({ session: initial, provider, seed, summaries: states });
-      if (!choice) {
-        if (masterySessionId && chosenSelection === 'mastery') {
-          await saveSession(initial);
-          if (!saveFailed.current) onMasteryComplete?.();
-          return !saveFailed.current;
-        }
-        setSetupOpen(true);
-        setFeedback({
-          message: 'All supported levels are already mastered. Choose a fixed level to practise.',
+    return loadingCoordinator.run(
+      'question',
+      async (ticket) => {
+        if (!(await leaveRef.current()))
+          throw Error('Your work has not saved. Retry saving before continuing.');
+        return prepareCurriculum({
+          course,
+          databaseName,
+          view: chosenMode,
+          registry,
+          repository,
+          ticket,
+          launchRequest: chosen,
+          ...(masterySessionId ? { masterySessionId } : {}),
+          ...(initialActivityId ? { initialActivityId } : {}),
         });
-        return false;
-      }
-      questionRef.current = provider.restore(choice.ref);
-      await adopt(
-        fresh({ ...choice.ref, activityId: chosenTarget.activityId }, choice.session.target, id),
-        {
-          ...choice.session,
-          currentAttemptId: id,
-        },
-      );
-    }
-    return true;
+      },
+      (value) => {
+        commitPrepared(value);
+        if (chosen.kind === 'revision') setSelected(chosen.targets);
+        if (request) {
+          consumedLaunches.current.add(request.id);
+          onLaunchConsumed?.(request.id);
+        }
+      },
+    );
   };
   const executeCommand = useCallback(
     async (value: AttemptCommand) => {
       const controller = controllerRef.current;
-      if (!controller || preview || paused) return;
+      if (
+        !controller ||
+        preview ||
+        paused ||
+        (frozen.current && !flushingDraft.current) ||
+        loadingCoordinator.pending
+      )
+        return;
       const previousPhase = controller.state().phase;
       const result = controller.dispatch(value);
       if (!result.accepted) {
@@ -755,7 +661,16 @@ export function FoundationApp({
       if (nextSession) applySession(nextSession);
       await save(next);
     },
-    [preview, paused, applyAttempt, applySession, save, loadHistory, summaries],
+    [
+      preview,
+      paused,
+      loadingCoordinator.pending,
+      applyAttempt,
+      applySession,
+      save,
+      loadHistory,
+      summaries,
+    ],
   );
   const command = useCallback(
     (value: AttemptCommand) => {
@@ -767,77 +682,160 @@ export function FoundationApp({
     [executeCommand],
   );
   const nextQuestion = async () => {
-    if (nextPending.current || paused || preview) return;
+    if (nextPending.current || paused || preview || frozen.current) return;
     nextPending.current = true;
     setNextLoading(true);
+    const id = crypto.randomUUID(),
+      seed = crypto.getRandomValues(new Uint32Array(1))[0] || 1;
     try {
-      // Blur can commit an editor draft between pointerdown and click. Keep Next
-      // clickable during that save, then await its actual result before advancing.
-      await queue.current;
-      if (!mounted.current || saveFailed.current) return;
-      const value = stateRef.current,
-        current = sessionRef.current;
-      if (
-        !value ||
-        value.phase !== 'assessed' ||
-        !current ||
-        (current.kind === 'revision' ? current.status === 'paused' : current.paused)
-      )
-        return;
-      const id = crypto.randomUUID(),
-        seed = crypto.getRandomValues(new Uint32Array(1))[0] || 1,
-        records = await loadHistory(),
-        states = summaries(records);
-      if (saveFailed.current || !mounted.current) return;
-      if (current.kind === 'revision') {
-        const next = revisionScheduler.next(current, states, Date.now(), id);
-        if (!next.current) {
-          await saveSession(next);
-          return;
-        }
-        const loaded = await runtime(next.current.target.activityId);
-        const ref = loaded.provider.select({
-          ...next.current.target,
-          seed,
-          previousQuestionIds: next.previous
-            .filter((item) => item.target.activityId === next.current!.target.activityId)
-            .map((item) => item.ref.questionId),
-        });
-        questionRef.current = loaded.provider.restore(ref);
-        await adopt(
-          fresh({ ...ref, activityId: next.current.target.activityId }, next.current.target, id),
-          bindRevisionQuestion(next, { ...ref, activityId: next.current.target.activityId }),
-        );
-      } else {
-        const registration = registry.get(current.target.activityId);
-        if (!registration || registration.strand !== 'curriculum') return;
-        const choice = selectPracticeQuestion({
-          session: current,
-          provider: await registration.provider(),
-          seed,
-          summaries: states,
-        });
-        if (choice) {
-          questionRef.current = (await registration.provider()).restore(choice.ref);
-          await adopt(
-            fresh(
-              { ...choice.ref, activityId: current.target.activityId },
-              choice.session.target,
-              id,
-            ),
-            { ...choice.session, currentAttemptId: id },
+      await loadingCoordinator.run(
+        'question',
+        async (ticket) => {
+          // Keep the outgoing attempt and DOM together while blur drafts and saves drain.
+          await Promise.all([...pendingCommands.current]);
+          await queue.current;
+          if (saveFailed.current) await retry();
+          if (saveFailed.current)
+            throw Error('Your work has not saved. Retry saving before continuing.');
+          const value = stateRef.current,
+            current = sessionRef.current;
+          if (!value || value.phase !== 'assessed' || !current)
+            throw Error('Assess the current question before continuing.');
+          const result = await repository.curriculumHistory(namespace);
+          if (!result.ok) throw Error(result.error.message);
+          const states = summaries(result.value);
+          let nextSession: CurriculumSession,
+            selectedTarget: CurriculumTarget,
+            ref: StudentAttempt['ref'];
+          let loaded: Runtime;
+          if (current.kind === 'revision') {
+            const next = revisionScheduler.next(current, states, Date.now(), id);
+            if (!next.current) {
+              const saved = await ticket.persist(() => repository.saveSession(next));
+              if (!saved.ok) throw Error(saved.error.message);
+              return { session: next, attempt: null, question: null, runtime: null, tools: null };
+            }
+            selectedTarget = next.current.target;
+            loaded = await runtime(selectedTarget.activityId);
+            ref = {
+              ...loaded.provider.select({
+                ...selectedTarget,
+                seed,
+                previousQuestionIds: next.previous
+                  .filter((item) => item.target.activityId === selectedTarget.activityId)
+                  .map((item) => item.ref.questionId),
+              }),
+              activityId: selectedTarget.activityId,
+            };
+            nextSession = bindRevisionQuestion(next, ref);
+          } else {
+            loaded = await runtime(current.target.activityId);
+            const choice = selectPracticeQuestion({
+              session: current,
+              provider: loaded.provider,
+              seed,
+              summaries: states,
+            });
+            if (!choice) {
+              const next = { ...current, currentAttemptId: null };
+              const saved = await ticket.persist(() => repository.saveSession(next));
+              if (!saved.ok) throw Error(saved.error.message);
+              return { session: next, attempt: null, question: null, runtime: null, tools: null };
+            }
+            selectedTarget = choice.session.target;
+            ref = choice.ref;
+            nextSession = { ...choice.session, currentAttemptId: id };
+          }
+          const content = loaded.provider.restore(ref);
+          const tools = await prepareQuestionTools(content, { standard: !!registryOverride });
+          const nextAttempt = fresh(ref, selectedTarget, id, content);
+          const saved = await ticket.persist(() =>
+            repository.saveCurriculum({ attempt: nextAttempt, session: nextSession }),
           );
-        } else if (masterySessionId && current.selection === 'mastery') {
-          await saveSession({ ...current, currentAttemptId: null });
-          if (!saveFailed.current) onMasteryComplete?.();
-        }
-      }
+          if (!saved.ok) throw Error(saved.error.message);
+          return {
+            session: nextSession,
+            attempt: nextAttempt,
+            question: content,
+            runtime: loaded,
+            tools,
+          };
+        },
+        (preparedNext) => {
+          flushSync(() => {
+            applySession(preparedNext.session);
+            if (preparedNext.attempt && preparedNext.question) {
+              activeRuntime.current = preparedNext.runtime;
+              questionRef.current = preparedNext.question;
+              setQuestion(preparedNext.question);
+              setQuestionTools(preparedNext.tools);
+              applyAttempt(preparedNext.attempt);
+              setFeedback(undefined);
+              setCorrectionFeedback(undefined);
+              setPaused(false);
+              setSaveStatus({ kind: 'saved' });
+              departing.current = false;
+              frozen.current = false;
+              setActivationVersion((value) => value + 1);
+            } else {
+              if (masterySessionId) onMasteryComplete?.();
+            }
+          });
+        },
+      );
     } finally {
       nextPending.current = false;
       if (mounted.current) setNextLoading(false);
     }
   };
-  const resume = async () => {
+  const resume = async (ticket?: LoadingTicket) => {
+    if (ticket) {
+      const isCurrent = () => mounted.current && !ticket.signal.aborted && ticket.isCurrent();
+      if (!isCurrent()) return false;
+      await queue.current;
+      if (!isCurrent()) return false;
+      const original = sessionRef.current;
+      if (!original) {
+        departing.current = false;
+        frozen.current = false;
+        setActivationVersion((value) => value + 1);
+        return true;
+      }
+      const retainedAttemptFailure = failedSave.current;
+      const retainedSessionFailure = failedSessionSave.current;
+      const requiredWrites = [retainedAttemptFailure, retainedSessionFailure]
+        .filter((value): value is FailedWrite => !!value)
+        .map((value) => value.write);
+      // Do not use saveSession/onSaved: its callback could publish after supersession.
+      const resumed = await persistCurriculumResume(original, repository, ticket, requiredWrites);
+      if (!isCurrent() || !resumed || sessionRef.current !== original) return false;
+      let restoredHistory: readonly CurriculumEvidence[] | undefined;
+      if (retainedAttemptFailure) {
+        const records = await repository.curriculumHistory(namespace);
+        if (!isCurrent() || sessionRef.current !== original) return false;
+        if (!records.ok) throw Error(records.error.message);
+        restoredHistory = records.value;
+      }
+      // Recovery intentionally bypasses onSaved; publish only this current cancellation.
+      if (failedSave.current === retainedAttemptFailure) failedSave.current = null;
+      if (failedSessionSave.current === retainedSessionFailure) {
+        failedSessionSave.current = null;
+        pendingSessionSave.current = null;
+      }
+      saveFailed.current = !!failedSave.current || !!failedSessionSave.current;
+      if (saveFailed.current) return false;
+      if (restoredHistory) setHistory(restoredHistory);
+      setSaveStatus({ kind: 'saved' });
+      applySession(resumed);
+      setPaused(
+        resumed.kind === 'revision' ? resumed.status === 'paused' : resumed.paused === true,
+      );
+      setSetupOpen(false);
+      departing.current = false;
+      frozen.current = false;
+      setActivationVersion((value) => value + 1);
+      return true;
+    }
     const current = sessionRef.current;
     if (!current) return false;
     const next =
@@ -852,6 +850,8 @@ export function FoundationApp({
     }
     setSetupOpen(false);
     departing.current = false;
+    frozen.current = false;
+    setActivationVersion((value) => value + 1);
     return true;
   };
   const resumeRef = useRef(resume);
@@ -871,6 +871,8 @@ export function FoundationApp({
         launchRequest: launchRequestRef.current,
         ready:
           !loading &&
+          !loadingCoordinator.pending &&
+          !frozen.current &&
           !readError &&
           !preview &&
           !navigationBusy &&
@@ -897,6 +899,7 @@ export function FoundationApp({
     currentView,
     launchRequest,
     saveStatus.kind,
+    loadingCoordinator.pending,
   ]);
   const retry = async () => {
     const commitRetryReadiness = () => {
@@ -968,13 +971,57 @@ export function FoundationApp({
     applyAttempt,
     save,
   ]);
+  const freezeAttempt = useCallback(() => {
+    if (frozen.current) return;
+    frozen.current = true;
+    departing.current = true;
+    const dispose = timingDispose.current;
+    timingDispose.current = null;
+    dispose?.();
+    // Coordinate/editor fields keep incomplete text locally until blur. Commit that
+    // draft before the provider makes the retained surface inert, without opening
+    // the host to later interactions during the asynchronous checkpoint.
+    const focused = document.activeElement;
+    if (focused instanceof HTMLElement && focused.closest('.question-player')) {
+      flushingDraft.current = true;
+      try {
+        focused.blur();
+      } finally {
+        flushingDraft.current = false;
+      }
+      const controller = controllerRef.current;
+      if (controller && stateRef.current && !preview) {
+        controller.dispatch({ kind: 'pause' });
+        const state = controller.checkpoint();
+        applyAttempt(state);
+        void save(state);
+      }
+    }
+  }, [preview, applyAttempt, save]);
+  useEffect(
+    () => loadingCoordinator.onFreeze(freezeAttempt),
+    [loadingCoordinator.onFreeze, freezeAttempt],
+  );
   const leaveAttempt = async () => {
     // Browser popstate uses this guard without selectView's navigationBusy state.
     // Suppress automatic continuation synchronously, before the pause/save yields.
-    departing.current = true;
+    freezeAttempt();
     try {
       await Promise.all([...pendingCommands.current]);
-      if (controllerRef.current && !preview && !paused) await command({ kind: 'pause' });
+      await queue.current;
+      if (saveFailed.current) await retry();
+      if (saveFailed.current) return false;
+      if (stateRef.current && !preview && !paused) {
+        const current = sessionRef.current;
+        if (current)
+          applySession(
+            current.kind === 'revision'
+              ? pauseRevisionSession(current)
+              : { ...current, paused: true },
+          );
+        setPaused(true);
+        await save(stateRef.current);
+      }
       await queue.current;
       if (saveFailed.current) departing.current = false;
       return !saveFailed.current;
@@ -986,9 +1033,13 @@ export function FoundationApp({
   const leaveRef = useRef(leaveAttempt);
   leaveRef.current = leaveAttempt;
   useEffect(() => {
-    onNavigationGuard?.(() => leaveRef.current());
+    const guard = Object.assign(() => leaveRef.current(), {
+      freeze: freezeAttempt,
+      resume: (ticket?: LoadingTicket) => resumeRef.current(ticket),
+    });
+    onNavigationGuard?.(guard);
     return () => onNavigationGuard?.(null);
-  }, [onNavigationGuard]);
+  }, [onNavigationGuard, freezeAttempt]);
   const startRef = useRef(start);
   startRef.current = start;
   useEffect(() => {
@@ -1028,47 +1079,76 @@ export function FoundationApp({
       });
   }, [launchRequest, loading, readError, preview, onLaunchConsumed]);
   const selectView = async (next: PlatformView) => {
+    if (onSelectView) {
+      onSelectView(next);
+      return;
+    }
+    if (next === 'olympiad' && onSelectOlympiad) {
+      onSelectOlympiad();
+      return;
+    }
     if (navigationBusy) return;
     setNavigationBusy(true);
     try {
-      if (!(await leaveAttempt())) {
-        setFeedback({
-          message: 'Your work has not saved. Retry saving before leaving.',
-        });
-        return;
-      }
-      setSetupOpen(
-        (next === 'practice' || next === 'revision') && sessionRef.current?.kind !== next,
+      await loadingCoordinator.run(
+        'screen',
+        async (ticket) => {
+          if (!(await leaveAttempt()))
+            throw Error('Your work has not saved. Retry saving before leaving.');
+          return prepareCurriculum({
+            course,
+            databaseName,
+            registry,
+            repository,
+            view: next,
+            ticket,
+            ...(initialActivityId ? { initialActivityId } : {}),
+            ...(initialTeacherGroup ? { initialTeacherGroup } : {}),
+            ...(masterySessionId ? { masterySessionId } : {}),
+          });
+        },
+        commitPrepared,
       );
-      setLocalView(next);
-      setPreview(next === 'teacher');
-      if (next === 'practice' || next === 'revision') setSessionMode(next);
-      if (next === 'olympiad' && !onSelectView) onSelectOlympiad?.();
-      onSelectView?.(next);
     } finally {
       setNavigationBusy(false);
     }
   };
-  const [previewQuestion, setPreviewQuestion] = useState<Question | null>(null);
-  const [previewSubtopic, setPreviewSubtopic] = useState('');
-  const teacherRequest = useRef(0);
+  const [teacherPayload, setTeacherPayload] = useState<PreparedTeacher | null>(
+    prepared?.teacher ?? null,
+  );
+  const [teacherPickerRevision, setTeacherPickerRevision] = useState(0);
+  const [previewQuestion, setPreviewQuestion] = useState<Question | null>(
+    prepared?.teacher?.question ?? null,
+  );
+  const [previewSubtopic, setPreviewSubtopic] = useState(prepared?.teacher?.subtopic ?? '');
   const [teacherActivity, setTeacherActivity] = useState<ActivityId>(
-    reviewRef
-      ? gradedActivityId(reviewRef.activityId)
-      : (initialActivityId ?? registrations[0]!.id),
+    prepared?.teacher?.activityId ??
+      (reviewRef
+        ? gradedActivityId(reviewRef.activityId)
+        : (initialActivityId ?? registrations[0]!.id)),
   );
-  const openTeacherQuestion = useCallback(
-    async (ref: QuestionRef) => {
-      const request = ++teacherRequest.current;
-      const loaded = await runtime(gradedActivityId(ref.activityId));
-      const shown = loaded.provider.restore(ref);
-      const subtopic = await teacherSubtopic(registry, shown);
-      if (request !== teacherRequest.current) return;
-      setPreviewQuestion(shown);
-      setPreviewSubtopic(subtopic);
-    },
-    [runtime, registry],
-  );
+  const changeTeacher = (selection: {
+    activityId?: ActivityId;
+    reviewRef?: QuestionRef;
+    code?: string;
+  }) =>
+    loadingCoordinator.run(
+      'question',
+      (ticket) =>
+        prepareTeacher({ course, registry, ticket, activityId: teacherActivity, ...selection }),
+      (value) => {
+        flushSync(() => {
+          setTeacherPayload(value);
+          setTeacherActivity(value.activityId);
+          setPreviewQuestion(value.question);
+          setPreviewSubtopic(value.subtopic);
+          if (selection.code !== undefined) setTeacherPickerRevision((value) => value + 1);
+          frozen.current = false;
+          departing.current = false;
+        });
+      },
+    );
+  const shownTools = preview ? teacherPayload?.tools : questionTools;
   const shownQuestion = preview ? previewQuestion : question;
   const shownAttempt =
     preview && previewQuestion
@@ -1083,6 +1163,9 @@ export function FoundationApp({
       : undefined;
   const targetLabel = (item: CurriculumTarget) =>
     `${registrations.find((a) => a.id === item.activityId)?.gems.find((g) => g.id === item.gemId)?.label} \u00b7 Level ${item.level}`;
+  const ReadyRateResponseControl = shownTools?.rate?.ResponseControl ?? RateResponseControl;
+  const ReadyRateGraphWorkspace = shownTools?.rate?.GraphWorkspace ?? RateGraphWorkspace;
+  const retainedQuestion = !!shownQuestion && !!shownAttempt;
   return (
     <CourseShell
       course={course}
@@ -1091,7 +1174,13 @@ export function FoundationApp({
       onSelectView={(next) => void selectView(next)}
       focused={focused}
       {...(shownQuestion && shownSubtopic && !setupOpen && !launchRequest
-        ? { questionHeader: { subtopic: shownSubtopic, questionId: shownQuestion.ref.questionId, activityId: shownQuestion.ref.activityId } }
+        ? {
+            questionHeader: {
+              subtopic: shownSubtopic,
+              questionId: shownQuestion.ref.questionId,
+              activityId: shownQuestion.ref.activityId,
+            },
+          }
         : {})}
       {...(preview
         ? { currentActivityId: teacherActivity }
@@ -1100,22 +1189,27 @@ export function FoundationApp({
           : {})}
       onSelectActivity={(activityId) => {
         if (productionRegistry.get(activityId)?.strand === 'olympiad') {
-          void leaveAttempt().then((saved) => {
-            if (saved)
-              onSelectOlympiad?.(activityId as import('../contracts/index.ts').OlympiadActivityId);
-          });
+          onSelectOlympiad?.(activityId as import('../contracts/index.ts').OlympiadActivityId);
           return;
         }
         if (preview) {
-          setTeacherActivity(activityId);
+          void changeTeacher({ activityId });
           return;
         }
-        void leaveAttempt().then((saved) => {
-          if (!saved) return;
-          const item = allTargets.find((t) => t.activityId === activityId);
-          if (item) setTargetKey(`${item.gemId}:${item.level}`);
-          setSetupOpen(true);
-        });
+        void loadingCoordinator.run(
+          'question',
+          async () => {
+            if (!(await leaveAttempt()))
+              throw Error('Your work has not saved. Retry saving before leaving.');
+            return allTargets.find((t) => t.activityId === activityId);
+          },
+          (item) => {
+            if (item) setTargetKey(`${item.gemId}:${item.level}`);
+            setSetupOpen(true);
+            frozen.current = false;
+            departing.current = false;
+          },
+        );
       }}
     >
       {launchRequest && launchFailed && !loading && !readError && (
@@ -1150,49 +1244,28 @@ export function FoundationApp({
           </button>
         </section>
       )}
-      {readError && (
-        <section className="save-error" role="alert" aria-label="Saved data unavailable">
-          <h2>Saved data could not be loaded</h2>
-          <p>
-            {readError.code === 'invalid-data'
-              ? 'The saved session, question or history is invalid and could not be restored.'
-              : 'Browser storage is unavailable, so your saved session and history could not be read.'}
-          </p>
-          <p>
-            Your saved records have not been cleared. Practice and revision are unavailable until
-            the saved data can be read.
-          </p>
-          <p>{readError.message}</p>
-          <button
-            type="button"
-            disabled={loading}
-            onClick={() => {
-              setLoading(true);
-              // Startup reads have finished; release their failed or obsolete connection.
-              repository.close?.();
-              setReadVersion((value) => value + 1);
-            }}
-          >
-            {loading ? 'Reading saved data...' : 'Retry reading saved data'}
-          </button>
-        </section>
-      )}
-      {loading && !readError && <p role="status">Reading saved session and history...</p>}
-      {preview ? (
+      {preview && teacherPayload ? (
         <TeacherPicker
+          key={`${teacherActivity}:${teacherPickerRevision}`}
           course={course}
           registry={registry}
           activityId={teacherActivity}
-          onActivity={setTeacherActivity}
-          onQuestion={openTeacherQuestion}
-          {...(initialTeacherGroup ? { initialGroup: initialTeacherGroup } : {})}
-          {...(reviewRef || previewQuestion
-            ? { initialRef: reviewRef ?? previewQuestion!.ref }
-            : reviewCode
-              ? { initialCode: reviewCode }
-              : {})}
+          onActivity={(activityId) => {
+            void changeTeacher({ activityId });
+          }}
+          onQuestion={(reviewRef) => {
+            void changeTeacher({ reviewRef });
+          }}
+          onLookup={(code) => {
+            void changeTeacher({ code });
+          }}
+          catalogue={teacherPayload.rows}
+          selectedKey={teacherPayload.selectedKey}
+          {...(teacherPayload.initialGroup ? { initialGroup: teacherPayload.initialGroup } : {})}
         />
       ) : (
+        !launchRequest &&
+        !loading &&
         (!attempt || setupOpen) && (
           <section aria-label="Practice setup" className="practice-setup">
             <h2>
@@ -1281,9 +1354,8 @@ export function FoundationApp({
         )
       )}
       {!preview && (readError || loading || setupOpen) ? null : !preview &&
-        (launchRequest || transitioning) ? (
-        <p role="status">Opening question...</p>
-      ) : paused && !preview ? (
+        !retainedQuestion &&
+        (launchRequest || transitioning) ? null : paused && !preview && !retainedQuestion ? (
         saveStatus.kind === 'error' ? (
           <section className="save-error" role="alert">
             <p>Work has not saved. {saveStatus.error.message}</p>
@@ -1291,66 +1363,172 @@ export function FoundationApp({
               Retry save
             </button>
           </section>
-        ) : (
-          <p role="status">Opening saved question...</p>
-        )
+        ) : null
       ) : shownQuestion && shownAttempt ? (
-        <Suspense fallback={<p role="status">Loading question tools...</p>}>
-        <QuestionPlayer
-          {...(shownQuestion.ref.activityId === 'alevel/rate-equations' ? {
-            presentation: 'standard' as const,
-            responseControl: RateResponseControl,
-            workspace: <RateGraphWorkspace key={shownAttempt.mode === 'student' ? shownAttempt.attemptId : JSON.stringify(shownQuestion.ref)}
-              questionRef={shownQuestion.ref}
-              assessed={shownAttempt.mode !== 'student' || shownAttempt.phase === 'assessed'}
-              {...(shownAttempt.mode === 'student' ? {
-                ...(shownAttempt.workspace ? { state: shownAttempt.workspace } : {}),
-                onStateChange: (workspace: import('../contracts/workspace.ts').RateGraphWorkspaceState) => void command({ kind: 'workspace', workspace }),
-              } : {})} />,
-          } : {})}
-          question={shownQuestion}
-          attempt={shownAttempt}
-          restoredFeedback={restoreCheckedFeedback(
-            shownQuestion,
-            shownAttempt,
-            activeRuntime.current?.policy,
-          )}
-          onCommand={(value) => void command(value)}
-          onNext={() => void nextQuestion()}
-          saveStatus={saveStatus}
-          onRetrySave={() => void retry()}
-          {...(feedback ? { feedback } : {})}
-          {...(correctionFeedback ? { correctionFeedback } : {})}
-          learningReviewEnabled={registrations.some(
-            (item) => item.id === shownQuestion.ref.activityId && !!item.learningReview,
-          )}
-          canNext={!paused && saveStatus.kind !== 'error' && !nextLoading}
-          renderEditor={(props) =>
-            props.part.kind === 'dot-and-cross' ? (
-              <Suspense fallback={<p role="status">Loading diagram workspace...</p>}>
-                <DotCrossEditor {...props} />
-              </Suspense>
-            ) : props.part.kind === 'titration-curve' ? (
-              <Suspense fallback={<p role="status">Loading curve workspace...</p>}>
-                <TitrationCurveEditor {...props} />
-              </Suspense>
-            ) : props.part.kind === 'electron-configuration' ? (
-              <Suspense fallback={<p role="status">Loading configuration workspace...</p>}>
-                <ElectronConfigurationEditor {...props} />
-              </Suspense>
-            ) : props.part.kind === 'energy-profile' ? (
-              <Suspense fallback={<p role="status">Loading energy profile workspace...</p>}>
-                <EnergyProfileEditor {...props} />
-              </Suspense>
-            ) : (
-              <p>Diagram workspace is unavailable for this activity.</p>
-            )
-          }
-        />
+        <Suspense fallback={null}>
+          <QuestionPlayer
+            {...(shownTools?.standard ? { presentation: 'standard' as const } : {})}
+            {...(shownQuestion.ref.activityId === 'alevel/rate-equations' && shownTools?.rate
+              ? {
+                  presentation: 'standard' as const,
+                  responseControl: ReadyRateResponseControl,
+                  workspace: (
+                    <ReadyRateGraphWorkspace
+                      key={
+                        shownAttempt.mode === 'student'
+                          ? shownAttempt.attemptId
+                          : JSON.stringify(shownQuestion.ref)
+                      }
+                      questionRef={shownQuestion.ref}
+                      assessed={
+                        shownAttempt.mode !== 'student' || shownAttempt.phase === 'assessed'
+                      }
+                      {...(shownAttempt.mode === 'student'
+                        ? {
+                            ...(shownAttempt.workspace ? { state: shownAttempt.workspace } : {}),
+                            onStateChange: (
+                              workspace: import('../contracts/workspace.ts').RateGraphWorkspaceState,
+                            ) => void command({ kind: 'workspace', workspace }),
+                          }
+                        : {})}
+                    />
+                  ),
+                }
+              : {})}
+            question={shownQuestion}
+            {...(shownTools ? { preparedTools: shownTools } : {})}
+            attempt={shownAttempt}
+            restoredFeedback={restoreCheckedFeedback(
+              shownQuestion,
+              shownAttempt,
+              activeRuntime.current?.policy,
+            )}
+            onCommand={(value) => void command(value)}
+            onNext={() => void nextQuestion()}
+            saveStatus={saveStatus}
+            onRetrySave={() => void retry()}
+            {...(feedback ? { feedback } : {})}
+            {...(correctionFeedback ? { correctionFeedback } : {})}
+            learningReviewEnabled={registrations.some(
+              (item) => item.id === shownQuestion.ref.activityId && !!item.learningReview,
+            )}
+            canNext={!paused && saveStatus.kind !== 'error' && !nextLoading}
+            renderEditor={(props) =>
+              (() => {
+                const Editor =
+                  shownTools?.editors?.[
+                    props.part.kind as keyof NonNullable<PreparedQuestionTools['editors']>
+                  ];
+                if (!Editor) throw Error('The required question workspace was not prepared.');
+                return <Editor {...props} />;
+              })()
+            }
+          />
         </Suspense>
       ) : (
         <p>Choose an activity and level, then start a question.</p>
       )}
     </CourseShell>
+  );
+}
+
+/** Existing direct authoring fixtures receive the same preparation/provider automatically. */
+function CurriculumEntry(props: CurriculumHostProps) {
+  const loading = useLoading();
+  const [entry, setEntry] = useState<{ prepared: PreparedCurriculum; key: number } | null>(null);
+  const guard = useRef<
+    ((() => Promise<boolean>) & { resume?: (ticket: LoadingTicket) => Promise<boolean> }) | null
+  >(null);
+  const registerGuard = useCallback((value: (() => Promise<boolean>) | null) => {
+    guard.current = value;
+  }, []);
+  useEffect(() => {
+    if (props.onNavigationGuard) return;
+    return loading.onCancel((ticket) => guard.current?.resume?.(ticket));
+  }, [loading.onCancel, props.onNavigationGuard]);
+  useEffect(() => {
+    if (props.prepared) return;
+    const url = new URL(location.href);
+    const run =
+      (import.meta.env.DEV ? url.searchParams.get('run') || 'local' : 'local')
+        .replace(/[^a-zA-Z0-9_-]/g, '')
+        .slice(0, 60) || 'manual';
+    const view =
+      props.view ??
+      (url.searchParams.get('mode') === 'teacher' || url.searchParams.has('review')
+        ? 'teacher'
+        : url.searchParams.get('session') === 'revision'
+          ? 'revision'
+          : 'practice');
+    const databaseName = activityDatabaseName(
+      props.course,
+      run,
+      import.meta.env.DEV,
+      !!props.registry,
+      location.pathname,
+    );
+    void loading.run(
+      'screen',
+      async (ticket) => {
+        if (guard.current && !(await guard.current()))
+          throw Error('Your work has not saved. Retry saving before continuing.');
+        return prepareCurriculum({
+          course: props.course,
+          databaseName,
+          view,
+          ticket,
+          url: url.href,
+          ...(props.registry ? { registry: props.registry } : {}),
+          ...(props.launchRequest ? { launchRequest: props.launchRequest } : {}),
+          ...(props.initialActivityId ? { initialActivityId: props.initialActivityId } : {}),
+          ...(props.reviewRef ? { reviewRef: props.reviewRef } : {}),
+          ...(props.initialTeacherGroup ? { initialTeacherGroup: props.initialTeacherGroup } : {}),
+          ...(props.masterySessionId ? { masterySessionId: props.masterySessionId } : {}),
+        });
+      },
+      (prepared, ticket) => {
+        flushSync(() => setEntry({ prepared, key: ticket.id }));
+      },
+    );
+  }, [
+    props.prepared,
+    props.course,
+    props.view,
+    props.registry,
+    props.initialActivityId,
+    props.reviewRef,
+    props.initialTeacherGroup,
+    props.masterySessionId,
+  ]);
+  if (props.prepared) return <CurriculumHost {...props} />;
+  if (entry)
+    return (
+      <CurriculumHost
+        key={entry.key}
+        {...props}
+        prepared={entry.prepared}
+        onNavigationGuard={props.onNavigationGuard ?? registerGuard}
+      />
+    );
+  return (
+    <CourseShell
+      course={props.course}
+      registry={props.registry ?? productionRegistry}
+      currentView={props.view ?? 'practice'}
+      onSelectView={() => {}}
+    >
+      {null}
+    </CourseShell>
+  );
+}
+
+export function FoundationApp(props: CurriculumHostProps) {
+  const context = useLoadingContext();
+  return context ? (
+    <CurriculumEntry {...props} />
+  ) : (
+    <LoadingProvider>
+      <CurriculumEntry {...props} />
+    </LoadingProvider>
   );
 }

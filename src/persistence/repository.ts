@@ -5,12 +5,9 @@ import type {
   RecallSession,
 } from '../contracts/recall.ts';
 import type { RecallWrite } from '../contracts/repository.ts';
-import { assessmentToRecallEvidence, applyRecallEvidence } from '../recall/scheduler.ts';
 import type { RecallPreferences, RecallFlashcardCheckpoint } from '../recall/session-contract.ts';
-import { recallScopeKey, validateRecallScope } from '../recall/session-contract.ts';
-import { recallAttemptRestoreDisposition } from '../recall/compatibility.ts';
-import { recallFacts } from '../recall/facts.ts';
 import Dexie, { type Table } from 'dexie';
+import { isModuleLoadFailure } from '../loading/module-errors.ts';
 import type {
   ChemistryRepository,
   RepositoryResult,
@@ -32,6 +29,7 @@ import {
   record,
   requireData,
   same,
+  safeJson,
   validateAttempt,
   validateEvidence,
   validateImport,
@@ -39,13 +37,9 @@ import {
   validateOlympiad,
   validateSession,
   validateWrite,
-  validateRecallAttempt,
-  validateRecallEvidence,
-  validateRecallProgress,
-  validateRecallSession,
-  validateSavedRecallPreferences,
-  validateSavedRecallFlashcards,
 } from './validation.ts';
+// Recall content and validators are loaded before any Recall transaction starts.
+const loadRecallValidation = () => import('./recall-validation.ts');
 interface Row<T> {
   course: string;
   profileId: string;
@@ -145,6 +139,13 @@ function row<T>(namespace: Namespace, id: string, value: T): Row<T> {
   return { course: namespace.course, profileId: namespace.profileId, id, value };
 }
 function failure(error: unknown): StorageFailure {
+  if (isModuleLoadFailure(error))
+    return {
+      code: 'unavailable',
+      message: 'A required part of the app could not load. Reload the app to try again.',
+      retryable: false,
+      recovery: 'reload',
+    };
   if (error instanceof EvidenceConflict)
     return { code: 'conflict', message: error.message, retryable: false };
   if (error instanceof InvalidData)
@@ -400,22 +401,30 @@ export function createRepository(
     }
     return rows.map((item) => item.value);
   }
+  function captureRecallNamespace(namespace: Namespace): Namespace {
+    nameGuard();
+    validateNamespace(namespace);
+    return { ...namespace };
+  }
   async function saveRecall(write: RecallWrite): Promise<SaveReceipt> {
     nameGuard();
-    validateRecallAttempt(write.attempt);
-    if (write.session !== undefined) {
-      validateRecallSession(write.session);
+    safeJson(write.attempt);
+    if (write.session !== undefined) safeJson(write.session);
+    const copied = structuredClone(write),
+      a = copied.attempt;
+    const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+    recall.validateRecallAttempt(a);
+    if (copied.session !== undefined) {
+      recall.validateRecallSession(copied.session);
       requireData(
-        same(write.session.namespace, write.attempt.namespace) &&
-          write.session.currentAttemptId === write.attempt.attemptId &&
-          write.session.currentFactId === write.attempt.target.factId,
+        same(copied.session.namespace, a.namespace) &&
+          copied.session.currentAttemptId === a.attemptId &&
+          copied.session.currentFactId === a.target.factId,
         'Recall session/attempt mismatch',
       );
     }
-    const copied = structuredClone(write),
-      a = copied.attempt;
-    const e = assessmentToRecallEvidence(a);
-    if (e) validateRecallEvidence(e);
+    const e = recall.assessmentToRecallEvidence(a);
+    if (e) recall.validateRecallEvidence(e);
     return database.transaction(
       'rw',
       recallAttempts,
@@ -443,7 +452,7 @@ export function createRepository(
           );
           if (old.definitionId !== a.definitionId)
             conflict(
-              recallAttemptRestoreDisposition(old, recallFacts).kind === 'resume',
+              recall.recallAttemptRestoreDisposition(old, recall.recallFacts).kind === 'resume',
               'Incompatible recall response format needs a fresh attempt ID',
             );
           conflict(
@@ -475,8 +484,8 @@ export function createRepository(
             await recallEvidence.add(row(a.namespace, e.id, e));
             status = 'inserted';
             const oldProgress = await recallProgress.get(identity(a.namespace, e.factId));
-            const progress = applyRecallEvidence(oldProgress?.value, e);
-            validateRecallProgress(progress);
+            const progress = recall.applyRecallEvidence(oldProgress?.value, e);
+            recall.validateRecallProgress(progress);
             await recallProgress.put(row(a.namespace, e.factId, progress));
           }
         }
@@ -500,14 +509,16 @@ export function createRepository(
   return {
     loadRecallPreferences: (namespace) =>
       result(async () => {
+        const copiedNamespace = captureRecallNamespace(namespace);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
         const saved = await load(
           recallPreferences,
-          namespace,
+          copiedNamespace,
           'selection',
-          validateSavedRecallPreferences,
+          recall.validateSavedRecallPreferences,
         );
         requireData(
-          !saved || same(saved.namespace, namespace),
+          !saved || same(saved.namespace, copiedNamespace),
           'Recall preference namespace mismatch',
         );
         return saved;
@@ -515,54 +526,84 @@ export function createRepository(
     saveRecallPreferences: (preferences) =>
       result(async () => {
         nameGuard();
-        validateSavedRecallPreferences(preferences);
+        safeJson(preferences);
         const copied = structuredClone(preferences);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        recall.validateSavedRecallPreferences(copied);
         await recallPreferences.put(row(copied.namespace, 'selection', copied));
         return 'saved' as const;
       }),
     loadRecallFlashcards: (namespace, scope) =>
       result(async () => {
-        nameGuard();
-        validateNamespace(namespace);
-        validateRecallScope(scope, namespace.course);
+        const copiedNamespace = captureRecallNamespace(namespace);
+        const copiedScope =
+          scope.kind === 'global'
+            ? {
+                ...scope,
+                topicIds: Array.isArray(scope.topicIds) ? [...scope.topicIds] : scope.topicIds,
+              }
+            : { ...scope };
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        recall.validateRecallScope(copiedScope, copiedNamespace.course);
         const saved = await recallFlashcards.get(
-          identity(namespace, recallScopeKey(namespace, scope)),
+          identity(copiedNamespace, recall.recallScopeKey(copiedNamespace, copiedScope)),
         );
         if (!saved) return null;
         // A changed/retired deck is preserved for explicit restart, never silently rewritten.
         const checkpoint = saved.value;
-        validateSavedRecallFlashcards(checkpoint);
-        requireData(same(checkpoint.namespace, namespace), 'Recall flashcard namespace mismatch');
+        recall.validateSavedRecallFlashcards(checkpoint);
+        requireData(
+          same(checkpoint.namespace, copiedNamespace),
+          'Recall flashcard namespace mismatch',
+        );
         return checkpoint;
       }),
     saveRecallFlashcards: (checkpoint) =>
       result(async () => {
         nameGuard();
-        validateSavedRecallFlashcards(checkpoint);
+        safeJson(checkpoint);
         const copied = structuredClone(checkpoint);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        recall.validateSavedRecallFlashcards(copied);
         await recallFlashcards.put(
-          row(copied.namespace, recallScopeKey(copied.namespace, copied.scope), copied),
+          row(copied.namespace, recall.recallScopeKey(copied.namespace, copied.scope), copied),
         );
         return 'saved' as const;
       }),
     loadRecallAttempt: (namespace, id) =>
-      result(() => load(recallAttempts, namespace, id, validateRecallAttempt)),
+      result(async () => {
+        const copiedNamespace = captureRecallNamespace(namespace);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        return load(recallAttempts, copiedNamespace, id, recall.validateRecallAttempt);
+      }),
     loadRecallSession: (namespace, id) =>
-      result(() => load(recallSessions, namespace, id, validateRecallSession)),
+      result(async () => {
+        const copiedNamespace = captureRecallNamespace(namespace);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        return load(recallSessions, copiedNamespace, id, recall.validateRecallSession);
+      }),
     recallHistory: (namespace) =>
-      result(async () =>
-        [...(await recallRows(recallEvidence, namespace, validateRecallEvidence))].sort(
-          (a, b) => a.completedAt - b.completedAt || a.id.localeCompare(b.id),
-        ),
-      ),
+      result(async () => {
+        const copiedNamespace = captureRecallNamespace(namespace);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        return [
+          ...(await recallRows(recallEvidence, copiedNamespace, recall.validateRecallEvidence)),
+        ].sort((a, b) => a.completedAt - b.completedAt || a.id.localeCompare(b.id));
+      }),
     recallProgress: (namespace) =>
-      result(() => recallRows(recallProgress, namespace, validateRecallProgress)),
+      result(async () => {
+        const copiedNamespace = captureRecallNamespace(namespace);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        return recallRows(recallProgress, copiedNamespace, recall.validateRecallProgress);
+      }),
     saveRecall: (write) => result(() => saveRecall(write)),
     saveRecallSession: (session) =>
       result(async () => {
         nameGuard();
-        validateRecallSession(session);
+        safeJson(session);
         const copied = structuredClone(session);
+        const recall: typeof import('./recall-validation.ts') = await loadRecallValidation();
+        recall.validateRecallSession(copied);
         await recallSessions.put(row(copied.namespace, copied.id, copied));
         return copied.id;
       }),

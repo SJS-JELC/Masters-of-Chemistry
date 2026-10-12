@@ -1,6 +1,13 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react';
 import type { Course, Namespace } from '../contracts/identity.ts';
-import { CURRENT_RECALL_DEFINITION_ID } from '../contracts/recall.ts';
 import type {
   AttemptCommand,
   AttemptController,
@@ -21,44 +28,52 @@ import type { Question } from '../contracts/question.ts';
 import { createChemistryRepository } from '../persistence/repository.ts';
 import { alphaDatabaseName } from '../persistence/alpha-namespace.ts';
 import { createAttemptController } from '../domain/attempt/attempt.ts';
-import { createActiveClock } from '../domain/timing/active-clock.ts';
+import { createActiveClock, browserClockSample } from '../domain/timing/active-clock.ts';
 import { bindBrowserAttemptTiming } from '../domain/timing/browser-binding.ts';
 import { QuestionPlayer, type SaveStatus, type PlayerFeedback } from '../ui/QuestionPlayer.tsx';
 import { factsFor, recallCoverage } from './facts.ts';
 import { createRecallProvider, recallRef } from './provider.ts';
 import { createRecallMarkingPolicy, createRecallLearningReviewPolicy } from './marking.ts';
-import { createRecallSession, selectRecallFact } from './scheduler.ts';
 import { RecallTestPlayer } from './RecallTestPlayer.tsx';
 import { RecallFlashcards } from './RecallFlashcards.tsx';
 import {
   createHistoricalRecallMarkingPolicy,
   historicalRecallFields,
 } from './historical-marking.ts';
-import { historicalRecallFact, recallAttemptRestoreDisposition } from './compatibility.ts';
+import { recallAttemptRestoreDisposition } from './compatibility.ts';
 import {
   factsForRecallScope,
-  topicsFor,
   rememberRecallLaunch,
   type RecallLaunchScope,
   type RecallPreferences,
   type RecallMode,
+  type RecallFlashcardCheckpoint,
 } from './session-contract.ts';
 import {
   initialRecallPreferences,
-  recallTestSessionId,
-  reconcileRecallTestSession,
   addRecallTopics,
   toggleRecallTopics,
   allRecallTopicsSelected,
   activeRecallTopics,
   recallTopicMastery,
 } from './recall-hub.ts';
+import { prepareRecall, type PreparedRecall } from './prepare.ts';
+import { useLoading } from '../loading/LoadingProvider.tsx';
+import type { LoadingTicket } from '../loading/coordinator.ts';
+import { repositoryError } from '../loading/module-errors.ts';
 import { QuestionHeaderActions } from '../shell/QuestionChrome.tsx';
 import { catalogues } from '../landing/catalogue.ts';
-import type { CSSProperties } from 'react';
 import { RecallIcon } from '../landing/RecallIcon.tsx';
 import { GemPaths } from '../landing/GemPaths.tsx';
 import './recall.css';
+export type RecallLeaveGuard = (() => Promise<boolean>) & {
+  freeze?: () => void;
+  resume?: (ticket: LoadingTicket) => Promise<boolean>;
+};
+function recallSaved(result: RepositoryResult<unknown>): boolean {
+  if (!result.ok && result.error.recovery === 'reload') throw repositoryError(result.error);
+  return result.ok;
+}
 export interface RecallViewProps {
   readonly course: Course;
   readonly onHome: () => void;
@@ -67,13 +82,12 @@ export interface RecallViewProps {
   readonly gemTitle?: string;
   readonly repository?: ChemistryRepository;
   readonly databaseName?: string;
+  readonly prepared?: PreparedRecall;
   readonly mode?: 'student' | 'teacher';
-  readonly onRegisterLeaveGuard?: (guard: (() => Promise<boolean>) | null) => void;
+  readonly onRegisterLeaveGuard?: (guard: RecallLeaveGuard | null) => void;
   readonly flowSessionId?: string;
   readonly autoStart?: boolean;
-  /** Exact compatibility lookup is teacher-only, including frozen retired definitions. */
-  readonly reviewFact?: Readonly<{factId: string; historical: boolean}>;
-  /** Called only after the completed whole-set session has durably saved. */
+  readonly reviewFact?: Readonly<{ factId: string; historical: boolean }>;
   readonly onComplete?: () => void;
 }
 export function RecallView({
@@ -84,6 +98,7 @@ export function RecallView({
   gemTitle,
   repository: provided,
   databaseName,
+  prepared,
   mode = 'student',
   onRegisterLeaveGuard,
   flowSessionId,
@@ -91,38 +106,42 @@ export function RecallView({
   reviewFact,
   onComplete,
 }: RecallViewProps) {
-  const autoStarted = useRef<string | null>(null);
-  const completion = useRef(onComplete);
-  completion.current = onComplete;
+  const loading = useLoading();
   const namespace = useMemo<Namespace>(() => ({ course, profileId }), [course, profileId]);
   const run =
     (import.meta.env.DEV ? new URL(location.href).searchParams.get('run') || 'local' : 'local')
       .replace(/[^a-zA-Z0-9_-]/g, '')
       .slice(0, 60) || 'manual';
+  const database = databaseName ?? alphaDatabaseName(course, run);
   const repository = useMemo(
-    () => provided ?? createChemistryRepository(databaseName ?? alphaDatabaseName(course, run)),
-    [provided, databaseName, course, run],
+    () => provided ?? prepared?.repository ?? createChemistryRepository(database),
+    [provided, prepared?.repository, database],
   );
   const bank = useMemo(() => factsFor(course), [course]),
     coverage = useMemo(() => recallCoverage(course), [course]);
   const provider = useMemo(() => createRecallProvider(bank, course), [bank, course]);
   const policy = useMemo(() => createRecallMarkingPolicy(bank), [bank]);
-  const [preferences, setPreferences] = useState<RecallPreferences>(() =>
-    initialRecallPreferences(namespace),
+  const [preferences, setPreferences] = useState<RecallPreferences>(
+    () => prepared?.preferences ?? initialRecallPreferences(namespace),
   );
-  const preferencesRef = useRef(preferences);
-  const preferencesDirty = useRef(false);
-  const [scope, setScope] = useState<RecallLaunchScope>(() =>
-    gemIds?.length === 1 ? { kind: 'gem', gemId: gemIds[0]! } : preferences.lastScope,
+  const preferencesRef = useRef(preferences),
+    preferencesDirty = useRef(false);
+  const [scope, setScope] = useState<RecallLaunchScope>(
+    () =>
+      prepared?.scope ??
+      (gemIds?.length === 1 ? { kind: 'gem', gemId: gemIds[0]! } : preferences.lastScope),
   );
-  const [ready, setReady] = useState(false);
-  const [flashcards, setFlashcards] = useState(false);
+  const [ready, setReady] = useState(!!prepared),
+    [flashcards, setFlashcards] = useState(false);
+  const [flashcardCheckpoint, setFlashcardCheckpoint] = useState<RecallFlashcardCheckpoint | null>(
+    null,
+  );
+  const [flashcardFresh, setFlashcardFresh] = useState(false);
   const [visibleCardId, setVisibleCardId] = useState<string | null>(null);
   const flashLeaveGuard = useRef<(() => Promise<boolean>) | null>(null);
-  const [currentFact, setCurrentFact] = useState<RecallFact | null>(null);
-  const [historical, setHistorical] = useState(false);
-  const selection = gemIds?.length ? gemIds : scope.kind === 'gem' ? [scope.gemId] : null;
-  const [progress, setProgress] = useState<readonly RecallProgress[]>([]);
+  const [currentFact, setCurrentFact] = useState<RecallFact | null>(null),
+    [historical, setHistorical] = useState(false);
+  const [progress, setProgress] = useState<readonly RecallProgress[]>(prepared?.progress ?? []);
   const [session, setSession] = useState<RecallSession | null>(null),
     sessionRef = useRef<RecallSession | null>(null);
   const [attempt, setAttempt] = useState<RecallAttempt | null>(null),
@@ -132,92 +151,31 @@ export function RecallView({
   const [feedback, setFeedback] = useState<PlayerFeedback | undefined>(),
     [correction, setCorrection] = useState<CorrectionFeedback | undefined>();
   const teacherTraversal = useRef<{ factIds: readonly string[]; index: number } | null>(null);
-  const [busy, setBusy] = useState(false),
+  const [busy] = useState(false),
     [message, setMessage] = useState('');
   const queue = useRef<Promise<unknown>>(Promise.resolve());
-  const liveRepository = useRef<ChemistryRepository | null>(null);
+  const failedWrites = useRef(
+    new Map<string, { attempt: RecallAttempt; session: RecallSession | null }>(),
+  );
+  const detachTiming = useRef<(() => void) | null>(null),
+    frozen = useRef(false),
+    alive = useRef(true);
+  const retainedPreferences = useRef<RecallPreferences | null>(null);
+  const refreshSequence = useRef(0);
+  const completion = useRef(onComplete);
+  const surface = useRef<HTMLElement>(null);
+  const needsDestinationFocus = useRef(false);
+  completion.current = onComplete;
   const selected =
-      gemIds && gemIds.length > 1
-        ? factsFor(course, gemIds)
-        : factsForRecallScope(bank, course, scope),
-    due = selected.filter(
-      (f) => (progress.find((p) => p.factId === f.id)?.dueAt ?? 0) <= Date.now(),
-    ).length;
+    gemIds && gemIds.length > 1
+      ? factsFor(course, gemIds)
+      : factsForRecallScope(bank, course, scope);
+  const due = selected.filter(
+    (f) => (progress.find((p) => p.factId === f.id)?.dueAt ?? 0) <= Date.now(),
+  ).length;
   const setCurrentSession = (value: RecallSession | null) => {
     sessionRef.current = value;
     setSession(value);
-  };
-  const refresh = useCallback(async () => {
-    const p = await repository.recallProgress(namespace);
-    if (p.ok) setProgress(p.value);
-    else setMessage(p.error.message);
-  }, [repository, namespace]);
-  useEffect(() => {
-    liveRepository.current = repository;
-    void refresh();
-    return () => {
-      liveRepository.current = null;
-      if (!provided)
-        void queue.current.finally(() => {
-          // StrictMode immediately reuses this connection; only a real departure closes it.
-          if (liveRepository.current !== repository) repository.close?.();
-        });
-    };
-  }, [refresh, repository, provided]);
-  useEffect(() => {
-    let cancelled = false;
-    setReady(false);
-    controllerRef.current = null;
-    setAttempt(null);
-    setQuestion(null);
-    setFlashcards(false);
-    setVisibleCardId(null);
-    setCurrentFact(null);
-    setCurrentSession(null);
-    teacherTraversal.current = null;
-    autoStarted.current = null;
-    void repository.loadRecallPreferences(namespace).then((result) => {
-      if (cancelled) return;
-      const value = result.ok && result.value ? result.value : initialRecallPreferences(namespace);
-      preferencesRef.current = value;
-      setPreferences(value);
-      setScope(gemIds?.length === 1 ? { kind: 'gem', gemId: gemIds[0]! } : value.lastScope);
-      if (!result.ok) setMessage(result.error.message);
-      setReady(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [repository, namespace, gemIds?.join(',')]);
-  const persistPreferences = useCallback(
-    async (value: RecallPreferences) => {
-      preferencesDirty.current = true;
-      preferencesRef.current = value;
-      setPreferences(value);
-      setSaveStatus({ kind: 'saving' });
-      const operation = queue.current
-        .catch(() => {})
-        .then(() => repository.saveRecallPreferences(value));
-      queue.current = operation;
-      const result = await operation;
-      setSaveStatus(result.ok ? { kind: 'saved' } : { kind: 'error', error: result.error });
-      if (!result.ok) setMessage(result.error.message);
-      if (result.ok && preferencesRef.current === value) {
-        preferencesDirty.current = false;
-        setMessage('');
-      }
-      return result.ok;
-    },
-    [repository],
-  );
-  const chooseTopics = (ids: readonly string[]) => {
-    const value = {
-      ...preferencesRef.current,
-      globalTopicIds: ids,
-      lastScope: { kind: 'global' as const, topicIds: ids },
-    };
-    setScope(value.lastScope);
-    void persistPreferences(value);
   };
   const save = useCallback(
     (
@@ -233,17 +191,13 @@ export function RecallView({
             retryable: false,
           },
         });
-      // Timing disposal can checkpoint the previous attempt after Next has moved the
-      // session pointer. Persist that attempt alone; never pair it with or rewind the new session.
       const sessionForAttempt =
         current?.currentAttemptId === state.attemptId &&
-        current.currentFactId === state.target.factId &&
-        current.namespace.course === state.namespace.course &&
-        current.namespace.profileId === state.namespace.profileId
+        current.currentFactId === state.target.factId
           ? current
           : null;
-      const isVisibleAttempt = () => controllerRef.current?.state().attemptId === state.attemptId;
-      if (isVisibleAttempt()) setSaveStatus({ kind: 'saving' });
+      if (alive.current && controllerRef.current?.state().attemptId === state.attemptId)
+        setSaveStatus({ kind: 'saving' });
       const operation = queue.current
         .catch(() => {})
         .then(() =>
@@ -254,20 +208,133 @@ export function RecallView({
         );
       queue.current = operation;
       void operation.then((result) => {
-        if (isVisibleAttempt())
+        if (result.ok) failedWrites.current.delete(state.attemptId);
+        else
+          failedWrites.current.set(state.attemptId, { attempt: state, session: sessionForAttempt });
+        if (!alive.current) return;
+        if (controllerRef.current?.state().attemptId === state.attemptId)
           setSaveStatus(result.ok ? { kind: 'saved' } : { kind: 'error', error: result.error });
-        if (result.ok && result.value.evidence !== 'none') void refresh();
+        if (result.ok && result.value.evidence !== 'none') {
+          const sequence = ++refreshSequence.current;
+          void repository.recallProgress(namespace).then((p) => {
+            if (alive.current && sequence === refreshSequence.current && p.ok) setProgress(p.value);
+          });
+        }
       });
       return operation;
     },
-    [repository, mode, refresh],
+    [repository, mode, namespace],
   );
+  const freeze = useCallback(() => {
+    if (!frozen.current) retainedPreferences.current = preferencesRef.current;
+    frozen.current = true;
+    const detach = detachTiming.current;
+    detachTiming.current = null;
+    detach?.();
+    controllerRef.current?.dispatch({ kind: 'pause' });
+  }, []);
+  const persistPreferences = useCallback(
+    async (value: RecallPreferences, guarded = false) => {
+      preferencesDirty.current = true;
+      preferencesRef.current = value;
+      if (alive.current) {
+        if (!frozen.current) setPreferences(value);
+        setSaveStatus({ kind: 'saving' });
+      }
+      const operation = queue.current
+        .catch(() => {})
+        .then(() => repository.saveRecallPreferences(value));
+      queue.current = operation;
+      const result = await operation;
+      if (alive.current && preferencesRef.current === value)
+        setSaveStatus(result.ok ? { kind: 'saved' } : { kind: 'error', error: result.error });
+      if (result.ok && preferencesRef.current === value) {
+        preferencesDirty.current = false;
+        if (alive.current) setMessage('');
+      } else if (!result.ok && alive.current) setMessage(result.error.message);
+      return guarded ? recallSaved(result) : result.ok;
+    },
+    [repository],
+  );
+  const pause = useCallback(async () => {
+    const ticket = loading.snapshot().ticket;
+    const controller = controllerRef.current,
+      current = sessionRef.current;
+    freeze();
+    if (flashLeaveGuard.current && !(await flashLeaveGuard.current())) return false;
+    await queue.current.catch(() => {});
+    if (ticket && !ticket.isCurrent()) return false;
+    for (const pending of [...failedWrites.current.values()])
+      if (!recallSaved(await save(pending.attempt, pending.session))) return false;
+    if (preferencesDirty.current && !(await persistPreferences(preferencesRef.current, true)))
+      return false;
+    if (ticket && !ticket.isCurrent()) return false;
+    if (mode === 'teacher' || !controller || !current) return true;
+    const paused = { ...current, status: 'paused' as const };
+    const result = await save(controller.checkpoint(), paused);
+    if (
+      result.ok &&
+      alive.current &&
+      (!ticket || ticket.isCurrent()) &&
+      controllerRef.current === controller
+    )
+      setCurrentSession(paused);
+    return recallSaved(result);
+  }, [freeze, mode, save, persistPreferences]);
+  const resume = useCallback(
+    async (ticket: LoadingTicket) => {
+      if (!ticket.isCurrent()) return false;
+      await queue.current.catch(() => {});
+      for (const pending of [...failedWrites.current.values()]) {
+        const result = await ticket.persist(() => save(pending.attempt, pending.session));
+        if (!recallSaved(result) || !ticket.isCurrent()) return false;
+      }
+      if (
+        preferencesDirty.current &&
+        !(await ticket.persist(() => persistPreferences(preferencesRef.current, true)))
+      )
+        return false;
+      // A started preference transaction may already have committed. Restore the
+      // retained chooser selection/mode through the same serialized durable gate.
+      if (retainedPreferences.current && preferencesRef.current !== retainedPreferences.current) {
+        const value = retainedPreferences.current;
+        if (!(await ticket.persist(() => persistPreferences(value, true))) || !ticket.isCurrent())
+          return false;
+        if (alive.current) setPreferences(value);
+      }
+      if (flashLeaveGuard.current && !(await ticket.persist(() => flashLeaveGuard.current!())))
+        return false;
+      const controller = controllerRef.current,
+        current = sessionRef.current;
+      if (mode !== 'teacher' && controller && current) {
+        const active = { ...current, status: 'active' as const };
+        const result = await ticket.persist(() => save(controller.checkpoint(), active));
+        if (!recallSaved(result) || !ticket.isCurrent()) return false;
+        if (alive.current) {
+          setCurrentSession(active);
+          setAttempt(controller.checkpoint());
+        }
+      }
+      return ticket.isCurrent();
+    },
+    [repository, mode, save, persistPreferences],
+  );
+  useEffect(() => loading.onFreeze(freeze), [loading.onFreeze, freeze]);
+  useEffect(
+    () => (onRegisterLeaveGuard ? undefined : loading.onCancel(resume)),
+    [loading.onCancel, resume, onRegisterLeaveGuard],
+  );
+  useEffect(() => {
+    const guard: RecallLeaveGuard = Object.assign(pause, { freeze, resume });
+    onRegisterLeaveGuard?.(guard);
+    return () => onRegisterLeaveGuard?.(null);
+  }, [onRegisterLeaveGuard, pause, freeze, resume]);
   const mount = useCallback(
     (state: RecallAttempt) => {
       const disposition = recallAttemptRestoreDisposition(state, bank);
       if (disposition.kind === 'fresh') throw Error('This answer format needs a fresh attempt.');
-      const fact = disposition.fact;
-      const frozenHistorical = disposition.kind === 'history' && state.definitionId === undefined;
+      const fact = disposition.fact,
+        frozenHistorical = disposition.kind === 'history' && state.definitionId === undefined;
       let q = createRecallProvider([fact], course).restore(state.ref);
       if (frozenHistorical) {
         const { sentenceTokens: _tokens, ...historicalQuestion } = q;
@@ -289,6 +356,7 @@ export function RecallView({
       const clock = createActiveClock({
         attemptId: state.attemptId,
         idleLimitMs: 60000,
+        now: () => ({ ...browserClockSample(), visible: false, focused: false }),
         ...(state.phase === 'answering' ? { saved: state.timing } : { completed: true }),
       });
       const controller = createAttemptController<RecallAttempt>({
@@ -300,6 +368,7 @@ export function RecallView({
           ? { learningReviewPolicy: createRecallLearningReviewPolicy([fact]) }
           : {}),
       });
+      controller.dispatch({ kind: 'pause' });
       controllerRef.current = controller;
       setAttempt(controller.state());
       setQuestion(q);
@@ -310,214 +379,174 @@ export function RecallView({
     },
     [bank, course, policy],
   );
+  const commitPrepared = useCallback(
+    (value: PreparedRecall) => {
+      needsDestinationFocus.current = true;
+      const detach = detachTiming.current;
+      detachTiming.current = null;
+      detach?.();
+      preferencesRef.current = value.preferences;
+      preferencesDirty.current = false;
+      setPreferences(value.preferences);
+      setScope(value.scope);
+      setProgress(value.progress);
+      setReady(true);
+      setMessage('');
+      controllerRef.current = null;
+      setAttempt(null);
+      setQuestion(null);
+      setCurrentFact(null);
+      setFlashcards(false);
+      setVisibleCardId(null);
+      teacherTraversal.current = null;
+      const destination = value.destination;
+      if (destination.kind === 'test') {
+        setCurrentSession(destination.session);
+        mount(destination.attempt);
+        setSaveStatus({ kind: 'saved' });
+      } else if (destination.kind === 'teacher') {
+        setCurrentFact(destination.fact);
+        setHistorical(destination.historical);
+        setQuestion(
+          createRecallProvider([destination.fact], course).restore(
+            recallRef(course, destination.fact.id),
+          ),
+        );
+        teacherTraversal.current = { factIds: destination.factIds, index: destination.index };
+      } else if (destination.kind === 'flashcards') {
+        setFlashcardCheckpoint(destination.checkpoint);
+        setFlashcardFresh(destination.fresh);
+        setFlashcards(true);
+      } else if (destination.kind === 'completed') {
+        setCurrentSession(destination.session);
+        completion.current?.();
+      }
+    },
+    [mount, course],
+  );
+  useLayoutEffect(() => {
+    if (prepared) commitPrepared(prepared);
+  }, [prepared, commitPrepared]);
   useEffect(() => {
+    alive.current = true;
+    if (!prepared)
+      void loading.run(
+        'screen',
+        (ticket) =>
+          prepareRecall({
+            course,
+            databaseName: database,
+            ticket,
+            repository,
+            profileId,
+            ...(gemIds ? { gemIds } : {}),
+            mode,
+            ...(reviewFact ? { reviewFact } : {}),
+            ...(flowSessionId ? { flowSessionId } : {}),
+            autoStart,
+          }),
+        commitPrepared,
+      );
+    return () => {
+      alive.current = false;
+      freeze();
+      if (!provided)
+        void queue.current.finally(() => {
+          if (!alive.current) repository.close?.();
+        });
+    };
+  }, [repository]);
+  useEffect(() => {
+    if (loading.pending || loading.error || !ready) return;
+    frozen.current = false;
+    retainedPreferences.current = null;
     const controller = controllerRef.current;
     if (!controller || !attempt || mode === 'teacher') return;
-    return bindBrowserAttemptTiming({
+    controller.interact(browserClockSample());
+    const detach = bindBrowserAttemptTiming({
       controller,
       onCheckpoint: (state) => {
         void save(state);
       },
     });
-  }, [attempt?.attemptId, save, mode]);
-  const next = useCallback(
-    async (current: RecallSession, freshFactId?: string) => {
-      const result = await repository.recallProgress(namespace);
-      const records = result.ok ? result.value : progress;
-      const id =
-        freshFactId && current.factIds.includes(freshFactId)
-          ? freshFactId
-          : selectRecallFact(current, records, Date.now());
-      if (!id) {
-        const completed = {
-          ...current,
-          status: 'complete' as const,
-          currentAttemptId: null,
-          currentFactId: null,
-        };
-        const saved = await repository.saveRecallSession(completed);
-        if (!saved.ok) {
-          setMessage(saved.error.message);
-          return;
-        }
-        setCurrentSession(completed);
-        controllerRef.current = null;
-        setAttempt(null);
-        setQuestion(null);
-        completion.current?.();
-        return;
+    detachTiming.current = detach;
+    return () => {
+      if (detachTiming.current === detach) {
+        detachTiming.current = null;
+        detach();
       }
-      const ref = recallRef(course, id),
-        attemptId = crypto.randomUUID();
-      const state: RecallAttempt = {
-        mode: 'student',
-        definitionId: CURRENT_RECALL_DEFINITION_ID,
-        namespace,
-        attemptId,
-        ref,
-        target: { kind: 'recall', course, activityId: ref.activityId, factId: id, level: 1 },
-        currentResponses: {},
-        assistance: [],
-        phase: 'answering',
-        timing: { attemptId, activeMs: 0, idleLimitMs: 60000, finished: false },
-      };
-      const updated = {
-        ...current,
-        currentAttemptId: attemptId,
-        currentFactId: id,
-        status: 'active' as const,
-      };
-      setCurrentSession(updated);
-      mount(state);
-      await save(state, updated);
-    },
-    [repository, namespace, progress, course, mount, save],
-  );
+    };
+  }, [loading.pending, loading.error, ready, attempt?.attemptId, save, mode]);
   useEffect(() => {
-    if (!ready || mode !== 'teacher' || !reviewFact) return;
-    const fact = reviewFact.historical ? historicalRecallFact(course, reviewFact.factId) : bank.find(f => f.id === reviewFact.factId);
-    if (!fact) { setMessage('This question is unavailable for review.'); return; }
-    teacherTraversal.current = null;
-    setCurrentFact(fact);
-    setHistorical(reviewFact.historical);
-    setQuestion(createRecallProvider([fact], course).restore(recallRef(course, fact.id)));
-  }, [ready, mode, reviewFact?.factId, reviewFact?.historical, course, bank]);
-  const start = async (kind: RecallSession['kind']) => {
-    if (!selected.length) return;
-    setBusy(true);
-    setMessage('');
-    try {
-      if (mode === 'teacher') {
-        teacherTraversal.current = { factIds: selected.map((fact) => fact.id), index: 0 };
-        setCurrentFact(selected[0]!);
-        setHistorical(false);
-        setQuestion(provider.restore(recallRef(course, selected[0]!.id)));
-        return;
+    if (loading.pending || loading.error || !ready || !needsDestinationFocus.current) return;
+    needsDestinationFocus.current = false;
+    const focus = requestAnimationFrame(() => {
+      if (loading.snapshot().pending || loading.snapshot().error || !surface.current) return;
+      const destination =
+        surface.current.querySelector<HTMLElement>('[data-answer-input]') ??
+        surface.current.querySelector<HTMLElement>('.fc-card') ??
+        surface.current.querySelector<HTMLElement>('.fc-resume h2, .recall-header h1');
+      if (destination) {
+        if (!destination.matches('input, textarea, select, button, [tabindex]'))
+          destination.tabIndex = -1;
+        destination.focus({ preventScroll: true });
       }
-      const id = flowSessionId ?? recallTestSessionId(namespace, scope, kind);
-      let stored = await repository.loadRecallSession(namespace, id);
-      // Read pre-amendment whole-bank/gem queues without overwriting their saved records.
-      if (stored.ok && !stored.value && !flowSessionId) {
-        const legacyId =
-          'recall:' +
-          kind +
-          ':' +
-          (selection === null ? 'global' : [...selection].sort().join(','));
-        const legacy = await repository.loadRecallSession(namespace, legacyId);
-        if (!legacy.ok) stored = legacy;
-        else if (
-          legacy.value &&
-          (selection !== null ||
-            (scope.kind === 'global' && scope.topicIds.length === topicsFor(course).length))
-        )
-          stored = { ok: true, value: { ...legacy.value, id } };
-      }
-      if (!stored.ok) {
-        setMessage(stored.error.message);
-        return;
-      }
-      if (flowSessionId && stored.value?.status === 'complete') {
-        setCurrentSession(stored.value);
-        completion.current?.();
-        return;
-      }
-      const reconciled = stored.value
-        ? reconcileRecallTestSession(stored.value, course, bank, selected, scope)
-        : null;
-      const restoredSession =
-        reconciled && gemIds && gemIds.length > 1
-          ? (() => {
-              const { scope: _scope, ...legacy } = reconciled;
-              return legacy;
-            })()
-          : reconciled;
-      if (restoredSession?.currentAttemptId && restoredSession.status !== 'complete') {
-        const resumed = await repository.loadRecallAttempt(
-          namespace,
-          restoredSession.currentAttemptId,
-        );
-        if (!resumed.ok) {
-          setMessage(resumed.error.message);
-          return;
-        }
-        if (!resumed.value) {
-          setMessage('The saved recall attempt is missing. Its session was preserved for review.');
-          return;
-        }
-        const current = { ...restoredSession, status: 'active' as const };
-        const disposition = recallAttemptRestoreDisposition(resumed.value, bank);
-        if (disposition.kind === 'fresh') {
-          setMessage(
-            'The saved response format has changed. Your earlier attempt is preserved; this question starts a fresh attempt.',
-          );
-          await next(
-            { ...current, currentAttemptId: null, currentFactId: null },
-            resumed.value.target.factId,
-          );
-          return;
-        }
-        const state =
-          disposition.kind === 'resume'
-            ? { ...resumed.value, definitionId: disposition.definitionId }
-            : resumed.value;
-        setCurrentSession(current);
-        mount(state);
-        await save(state, current);
-        return;
-      }
-      const current: RecallSession =
-        restoredSession && restoredSession.status !== 'complete'
-          ? { ...restoredSession, status: 'active' }
-          : {
-              ...createRecallSession(
-                namespace,
-                id,
-                kind,
-                selected.map((f) => f.id),
-                selection,
-              ),
-              mode: 'test',
-              ...(gemIds && gemIds.length > 1 ? {} : { scope }),
-            };
-      setCurrentSession(current);
-      await next(current);
-    } finally {
-      setBusy(false);
-    }
+    });
+    return () => cancelAnimationFrame(focus);
+  }, [loading.pending, loading.error, ready, question, flashcards]);
+  const inputFor = (ticket: LoadingTicket) => ({
+    course,
+    databaseName: database,
+    ticket,
+    repository,
+    profileId,
+    ...(gemIds ? { gemIds } : {}),
+    mode,
+    ...(flowSessionId ? { flowSessionId } : {}),
+    preferences: preferencesRef.current,
+    scope,
+  });
+  const launch = async (
+    launchMode: RecallMode,
+    kind: RecallSession['kind'] = 'recall-practice',
+  ) => {
+    if (!ready || frozen.current || !selected.length) return;
+    const value = rememberRecallLaunch(preferencesRef.current, launchMode, scope);
+    await loading.run(
+      'question',
+      async (ticket) => {
+        if (!(await pause())) throw Error('Your work could not be saved. Retry before continuing.');
+        if (!(await ticket.persist(() => persistPreferences(value, true))))
+          throw Error('Your recall selection could not be saved.');
+        return prepareRecall({ ...inputFor(ticket), preferences: value, launchMode, kind });
+      },
+      commitPrepared,
+    );
   };
-  const startRef = useRef(start);
-  startRef.current = start;
-  useEffect(() => {
-    if (
-      !ready ||
-      !autoStart ||
-      !flowSessionId ||
-      mode !== 'student' ||
-      autoStarted.current === flowSessionId
-    )
-      return;
-    autoStarted.current = flowSessionId;
-    void startRef.current('recall-practice');
-  }, [ready, autoStart, flowSessionId, mode]);
-  const pause = useCallback(async () => {
-    const controller = controllerRef.current,
-      current = sessionRef.current;
-    if (flashLeaveGuard.current && !(await flashLeaveGuard.current())) return false;
-    await queue.current.catch(() => {});
-    if (preferencesDirty.current && !(await persistPreferences(preferencesRef.current)))
-      return false;
-    if (mode === 'teacher' || !controller || !current) return true;
-    controller.dispatch({ kind: 'pause' });
-    const paused = { ...current, status: 'paused' as const };
-    setCurrentSession(paused);
-    const result = await save(controller.checkpoint(), paused);
-    return result.ok;
-  }, [mode, save, persistPreferences]);
-  useEffect(() => {
-    onRegisterLeaveGuard?.(pause);
-    return () => onRegisterLeaveGuard?.(null);
-  }, [onRegisterLeaveGuard, pause]);
+  const start = (kind: RecallSession['kind']) => launch('test', kind);
+  const chooseTopics = (ids: readonly string[]) => {
+    if (frozen.current) return;
+    const value = {
+      ...preferencesRef.current,
+      globalTopicIds: ids,
+      lastScope: { kind: 'global' as const, topicIds: ids },
+    };
+    void loading.run(
+      'question',
+      async (ticket) => {
+        if (!(await pause())) throw Error('Your selection could not be saved.');
+        if (!(await ticket.persist(() => persistPreferences(value, true))))
+          throw Error('Your selection could not be saved.');
+        return value;
+      },
+      (value) => {
+        setScope(value.lastScope);
+        setPreferences(value);
+      },
+    );
+  };
   const command = (command: AttemptCommand) => {
+    if (frozen.current || loading.pending || loading.error) return;
     const controller = controllerRef.current;
     if (!controller) return;
     const result = controller.dispatch(command);
@@ -528,76 +557,74 @@ export function RecallView({
     setAttempt(result.state);
     setFeedback(undefined);
     setCorrection(result.correctionFeedback);
-    if (result.state.phase === 'assessed' && sessionRef.current) {
+    if (result.state.phase === 'assessed' && sessionRef.current)
       setCurrentSession({
         ...sessionRef.current,
         submittedAttemptIds: [
           ...new Set([...sessionRef.current.submittedAttemptIds, result.state.attemptId]),
         ],
       });
-    }
     void save(result.state);
   };
   const advance = async () => {
+    if (frozen.current) return;
     if (mode === 'teacher') {
       const preview = teacherTraversal.current;
-      if (!preview || busy) return;
-      const index = preview.index + 1;
-      const factId = preview.factIds[index];
-      teacherTraversal.current = { ...preview, index };
-      setQuestion(factId ? provider.restore(recallRef(course, factId)) : null);
-      setCurrentFact(factId ? bank.find((f) => f.id === factId)! : null);
-      if (!factId) setMessage('Teacher preview complete. Choose another set to preview.');
+      if (!preview) return;
+      await loading.run(
+        'question',
+        async () => {
+          const index = preview.index + 1,
+            factId = preview.factIds[index];
+          return { index, fact: factId ? bank.find((f) => f.id === factId)! : null };
+        },
+        (value) => {
+          teacherTraversal.current = { ...preview, index: value.index };
+          setQuestion(value.fact ? provider.restore(recallRef(course, value.fact.id)) : null);
+          setCurrentFact(value.fact);
+          if (!value.fact) setMessage('Teacher preview complete. Choose another set to preview.');
+        },
+      );
       return;
     }
-    if (!attempt || attempt.phase !== 'assessed' || !sessionRef.current || busy) return;
-    setBusy(true);
-    try {
-      const stored = await save(controllerRef.current!.checkpoint());
-      if (!stored.ok) return;
-      const current = {
+    if (!attempt || attempt.phase !== 'assessed' || !sessionRef.current) return;
+    const previous = attempt,
+      current = {
         ...sessionRef.current,
-        visitedFactIds: [...new Set([...sessionRef.current.visitedFactIds, attempt.target.factId])],
+        visitedFactIds: [
+          ...new Set([...sessionRef.current.visitedFactIds, previous.target.factId]),
+        ],
         currentAttemptId: null,
         currentFactId: null,
       };
-      await next(current);
-    } finally {
-      setBusy(false);
-    }
+    await loading.run(
+      'question',
+      async (ticket) => {
+        if (!(await pause())) throw Error('Your work could not be saved. Retry before continuing.');
+        return prepareRecall({ ...inputFor(ticket), currentSession: current });
+      },
+      commitPrepared,
+    );
   };
-  const home = async () => {
-    if (await pause()) onHome();
-  };
-  const launch = async (
-    launchMode: RecallMode,
-    kind: RecallSession['kind'] = 'recall-practice',
-  ) => {
-    if (!ready || busy || !selected.length) return;
-    if (
-      !(await persistPreferences(rememberRecallLaunch(preferencesRef.current, launchMode, scope)))
-    )
-      return;
-    if (launchMode === 'flashcards') setFlashcards(true);
-    else await start(kind);
-  };
+  const home = () => onHome();
   const returnToChooser = async () => {
-    if (busy) return;
-    setBusy(true);
-    try {
-      if (!(await pause())) return;
-      // Keep the consumed auto-start token and flow session so explicit Resume
-      // returns to the same parent mastery step without immediately relaunching.
-      controllerRef.current = null;
-      setQuestion(null);
-      setAttempt(null);
-      setCurrentFact(null);
-      setFlashcards(false);
-      setVisibleCardId(null);
-      teacherTraversal.current = null;
-    } finally {
-      setBusy(false);
-    }
+    if (frozen.current) return;
+    await loading.run(
+      'question',
+      async () => {
+        if (!(await pause())) throw Error('Your work could not be saved. Retry before continuing.');
+      },
+      () => {
+        needsDestinationFocus.current = true;
+        controllerRef.current = null;
+        setQuestion(null);
+        setAttempt(null);
+        setCurrentFact(null);
+        setFlashcards(false);
+        setVisibleCardId(null);
+        teacherTraversal.current = null;
+      },
+    );
   };
   const scopeTitle =
     scope.kind === 'gem'
@@ -627,6 +654,7 @@ export function RecallView({
   const topicLabel = (topicId: string) => recallTopicMastery(namespace, bank, topicId, progress);
   return (
     <main
+      ref={surface}
       className={'recall-view recall-' + course}
       aria-label={(course === 'alevel' ? 'A Level' : 'IGCSE') + ' Recall'}
     >
@@ -643,13 +671,17 @@ export function RecallView({
           {...((flashcards ? visibleCardId : question?.ref.questionId)
             ? { questionId: (flashcards ? visibleCardId : question?.ref.questionId)! }
             : {})}
-          onBack={() => void (reviewFact ? home() : flashcards || question ? returnToChooser() : home())}
-          backLabel={!reviewFact && (flashcards || question) ? 'Back to Recall' : 'Back to course map'}
+          onBack={() =>
+            void (reviewFact ? home() : flashcards || question ? returnToChooser() : home())
+          }
+          backLabel={
+            !reviewFact && (flashcards || question) ? 'Back to Recall' : 'Back to course map'
+          }
           disabled={busy}
         />
       </header>
       {message && <p role="alert">{message}</p>}
-      {!ready && <p role="status">Loading your recall selection…</p>}
+
       {ready && !question && !flashcards && (
         <section className="recall-selection">
           {!flowSessionId && (
@@ -716,7 +748,10 @@ export function RecallView({
                 <div className="recall-content-dropdown">
                   <div className="recall-add-controls">
                     <button
-                      aria-pressed={allRecallTopicsSelected(globalTopicIds, activeTopics.map(t => t.id))}
+                      aria-pressed={allRecallTopicsSelected(
+                        globalTopicIds,
+                        activeTopics.map((t) => t.id),
+                      )}
                       onClick={() =>
                         chooseTopics(
                           toggleRecallTopics(
@@ -753,7 +788,10 @@ export function RecallView({
                             <span>{title}</span>
                             <button
                               aria-label={'Add all ' + title}
-                              aria-pressed={allRecallTopicsSelected(globalTopicIds, activeTopics.filter(t => t.batchId === batchId).map(t => t.id))}
+                              aria-pressed={allRecallTopicsSelected(
+                                globalTopicIds,
+                                activeTopics.filter((t) => t.batchId === batchId).map((t) => t.id),
+                              )}
                               onClick={() =>
                                 chooseTopics(
                                   toggleRecallTopics(
@@ -844,6 +882,8 @@ export function RecallView({
         <>
           <RecallFlashcards
             facts={selected}
+            preparedCheckpoint={flashcardCheckpoint}
+            preparedFreshDeck={flashcardFresh}
             namespace={namespace}
             scope={scope}
             repository={repository}
@@ -904,19 +944,21 @@ export function RecallView({
             )}
           </div>
           {attempt?.phase === 'assessed' &&
-            !(attempt.firstAssessment.kind === 'marked' &&
+            !(
+              attempt.firstAssessment.kind === 'marked' &&
               attempt.firstAssessment.score === 1 &&
               !attempt.firstResponse.assistance.length &&
-              saveStatus.kind === 'saved') && (
-            <p role="status">
-              {attempt.firstAssessment.kind === 'revealed' ||
-              attempt.firstResponse.assistance.length
-                ? 'Assisted recall stays due; no success recorded.'
-                : attempt.firstAssessment.kind === 'marked' && attempt.firstAssessment.score === 1
-                  ? 'Independent recall checked. Save is pending.'
-                  : 'This fact remains due now.'}
-            </p>
-          )}
+              saveStatus.kind === 'saved'
+            ) && (
+              <p role="status">
+                {attempt.firstAssessment.kind === 'revealed' ||
+                attempt.firstResponse.assistance.length
+                  ? 'Assisted recall stays due; no success recorded.'
+                  : attempt.firstAssessment.kind === 'marked' && attempt.firstAssessment.score === 1
+                    ? 'Independent recall checked. Save is pending.'
+                    : 'This fact remains due now.'}
+              </p>
+            )}
         </>
       )}
     </main>

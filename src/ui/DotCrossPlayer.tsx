@@ -29,6 +29,7 @@ export function DotCrossPlayer({
   correctionFeedback,
   canNext = true,
   renderEditor,
+  preparedTools,
 }: QuestionPlayerProps) {
   const id = useId(),
     dialog = useRef<HTMLDialogElement>(null),
@@ -38,7 +39,8 @@ export function DotCrossPlayer({
     repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
   const modelShown = attempt.mode === 'student' && isModelAnswerPanelShown(attempt);
   const [answerOpen, setAnswerOpen] = useState(modelShown);
-  const [record, setRecord] = useState<BankRecord | null>(null);
+  const [loadedRecord, setRecord] = useState<BankRecord | null>(null);
+  const record = preparedTools?.dotRecord ?? loadedRecord;
   const [referenceError, setReferenceError] = useState('');
   const student = attempt.mode === 'student';
   const assessed = student && attempt.phase === 'assessed';
@@ -69,6 +71,7 @@ export function DotCrossPlayer({
       : 'incorrect'
     : undefined;
   useEffect(() => {
+    if (preparedTools?.dotRecord) return;
     let cancelled = false;
     setRecord(null);
     setReferenceError('');
@@ -94,7 +97,7 @@ export function DotCrossPlayer({
     return () => {
       cancelled = true;
     };
-  }, [question.ref.activityId, question.ref.questionId]);
+  }, [question.ref.activityId, question.ref.questionId, preparedTools?.dotRecord]);
   useEffect(() => {
     if (modelShown) setAnswerOpen(true);
   }, [modelShown]);

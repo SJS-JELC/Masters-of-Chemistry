@@ -26,6 +26,7 @@ import { QuestionLevelPill } from './QuestionLevelPill.tsx';
 import { isModelAnswerShown, isModelAnswerPanelShown } from '../domain/attempt/model-answer.ts';
 import { chemicalQuestionTitle } from './chemical-presentation.ts';
 import { sourceFamilies } from './source-family.ts';
+import type { PreparedQuestionTools } from '../foundation/question-tools.ts';
 const DotCrossPlayer = lazy(async () => ({
   default: (await import('./DotCrossPlayer.tsx')).DotCrossPlayer,
 }));
@@ -67,6 +68,7 @@ export interface QuestionPlayerProps {
   readonly recallPresentation?: boolean;
   /** Optional authoring response surface; commands/attempt semantics stay shared. */
   readonly responseControl?: ComponentType<ResponseControlProps>;
+  readonly preparedTools?: PreparedQuestionTools;
 }
 
 function RubricPanel({
@@ -184,7 +186,12 @@ export function QuestionPlayer({
   presentation,
   recallPresentation = false,
   responseControl,
+  preparedTools,
 }: QuestionPlayerProps) {
+  const ReadySourcePlayer = preparedTools?.SourcePlayer ?? SourceQuestionPlayer;
+  const ReadyDotPlayer = preparedTools?.DotPlayer ?? DotCrossPlayer;
+  const ReadyChemicalBody = preparedTools?.ChemicalBody ?? ChemicalQuestionBody;
+  const ReadyChemicalAnswer = preparedTools?.ChemicalAnswer ?? ChemicalWorkedAnswer;
   const PlayerResponseControl = responseControl ?? ResponseControl;
   const instanceId = useId();
   const chrome = useQuestionChrome();
@@ -220,8 +227,8 @@ export function QuestionPlayer({
   );
   if (presentation !== 'standard' && sourceFamilies[question.ref.activityId])
     return (
-      <Suspense fallback={<p role="status">Loading written correction…</p>}>
-        <SourceQuestionPlayer
+      <Suspense fallback={null}>
+        <ReadySourcePlayer
           key={`${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`}
           question={question}
           attempt={attempt}
@@ -233,14 +240,19 @@ export function QuestionPlayer({
           {...(correctionFeedback ? { correctionFeedback } : {})}
           canNext={canNext}
           learningReviewEnabled={learningReviewEnabled}
+          {...(preparedTools ? { preparedTools } : {})}
           {...(renderEditor ? { renderEditor } : {})}
         />
       </Suspense>
     );
-  if (question.parts.length === 1 && question.parts[0]?.kind === 'dot-and-cross')
+  if (
+    presentation !== 'standard' &&
+    question.parts.length === 1 &&
+    question.parts[0]?.kind === 'dot-and-cross'
+  )
     return (
-      <Suspense fallback={<p role="status">Loading diagram workspace…</p>}>
-        <DotCrossPlayer
+      <Suspense fallback={null}>
+        <ReadyDotPlayer
           key={`${question.ref.activityId}:${question.ref.questionId}:${attempt.mode === 'student' ? attempt.attemptId : attempt.mode}`}
           question={question}
           attempt={attempt}
@@ -252,6 +264,7 @@ export function QuestionPlayer({
           canNext={canNext}
           {...(correctionFeedback ? { correctionFeedback } : {})}
           {...(renderEditor ? { renderEditor } : {})}
+          {...(preparedTools ? { preparedTools } : {})}
         />
       </Suspense>
     );
@@ -337,8 +350,8 @@ export function QuestionPlayer({
         ))}
       <div className="question-parts">
         {chemical && (
-          <Suspense fallback={<p role="status">Loading chemical entry…</p>}>
-            <ChemicalQuestionBody
+          <Suspense fallback={null}>
+            <ReadyChemicalBody
               key={`${question.ref.questionId}:${actions.clearRevision}`}
               question={question}
               responses={student ? attempt.currentResponses : {}}
@@ -508,8 +521,8 @@ export function QuestionPlayer({
         >
           <h3>MODEL ANSWER</h3>
           {chemical ? (
-            <Suspense fallback={<p role="status">Loading model equation…</p>}>
-              <ChemicalWorkedAnswer question={question} />
+            <Suspense fallback={null}>
+              <ReadyChemicalAnswer question={question} />
             </Suspense>
           ) : (
             <Content blocks={question.workedAnswer} />

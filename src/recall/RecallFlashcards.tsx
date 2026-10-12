@@ -2,7 +2,7 @@ import { shuffleRecallIds } from './selection.ts';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Namespace } from '../contracts/identity.ts';
 import type { RecallEntry, RecallFact } from '../contracts/recall.ts';
-import type { ChemistryRepository } from '../contracts/repository.ts';
+import type { ChemistryRepository, StorageFailure } from '../contracts/repository.ts';
 import { ChemicalNotation, ChemicalProse } from '../ui/ChemicalEntry.tsx';
 import { FlashcardTable, type Flashcard } from './FlashcardTable.tsx';
 import {
@@ -13,6 +13,8 @@ import {
   type FlashcardDeckState,
 } from './flashcard-checkpoint.ts';
 import { flashcardModel } from './flashcard-content.ts';
+import { useLoading } from '../loading/LoadingProvider.tsx';
+import { repositoryError } from '../loading/module-errors.ts';
 import {
   flashcardCheckpointCompatible,
   recallScopeKey,
@@ -24,6 +26,8 @@ export interface RecallFlashcardsProps {
   readonly namespace: Namespace;
   readonly scope: RecallLaunchScope;
   readonly repository: ChemistryRepository;
+  readonly preparedCheckpoint?: RecallFlashcardCheckpoint | null;
+  readonly preparedFreshDeck?: boolean;
   readonly onVisibleCardIdChange?: (id: string | null) => void;
   readonly onRegisterLeaveGuard?: (guard: (() => Promise<boolean>) | null) => void;
 }
@@ -90,17 +94,28 @@ function DeckSession({
   namespace,
   scope,
   repository,
+  preparedCheckpoint,
+  preparedFreshDeck,
   onRegisterLeaveGuard,
   onVisibleCardIdChange,
 }: RecallFlashcardsProps) {
+  const loading = useLoading();
   const [freshDeck] = useState(() => createFlashcardDeck(shuffleRecallIds(facts.map((f) => f.id))));
-  const [state, setState] = useState<FlashcardDeckState | null>(null);
-  const [saved, setSaved] = useState<RecallFlashcardCheckpoint | null>(null);
-  const [loaded, setLoaded] = useState(false);
-  const [stale, setStale] = useState(false);
+  const [state, setState] = useState<FlashcardDeckState | null>(
+    preparedFreshDeck ? (preparedCheckpoint ?? null) : null,
+  );
+  const [saved, setSaved] = useState<RecallFlashcardCheckpoint | null>(preparedCheckpoint ?? null);
+  const [loaded, setLoaded] = useState(preparedCheckpoint !== undefined);
+  const [stale, setStale] = useState(
+    () =>
+      !!preparedCheckpoint &&
+      (!flashcardCheckpointCompatible(preparedCheckpoint, namespace, scope, facts) ||
+        !flashcardDeckRestorable(preparedCheckpoint)),
+  );
   const [loadError, setLoadError] = useState('');
   const [saveError, setSaveError] = useState('');
-  const current = useRef<FlashcardDeckState | null>(null);
+  const saveFailure = useRef<StorageFailure | null>(null);
+  const current = useRef<FlashcardDeckState | null>(state);
   const active = useRef(true);
   const sequence = useRef(0);
   const cards = useMemo<readonly Flashcard[]>(
@@ -133,9 +148,11 @@ function DeckSession({
       createFlashcardSaveQueue(async (checkpoint: RecallFlashcardCheckpoint) => {
         const result = await repository.saveRecallFlashcards(checkpoint);
         if (!result.ok) {
+          saveFailure.current = result.error;
           if (active.current) setSaveError(result.error.message);
           return false;
         }
+        saveFailure.current = null;
         return true;
       }),
     [repository],
@@ -151,12 +168,17 @@ function DeckSession({
     });
   }
   function change(next: FlashcardDeckState) {
+    if (loading.pending || loading.error) return;
     current.current = next;
     setState(next);
     void save(next);
   }
   useEffect(() => {
     active.current = true;
+    if (preparedCheckpoint !== undefined)
+      return () => {
+        active.current = false;
+      };
     let cancelled = false;
     void repository
       .loadRecallFlashcards(namespace, scope)
@@ -187,7 +209,12 @@ function DeckSession({
     };
   }, [repository]);
   useEffect(() => {
-    onRegisterLeaveGuard?.(async () => (current.current ? save(current.current) : queue.flush()));
+    onRegisterLeaveGuard?.(async () => {
+      const ok = current.current ? await save(current.current) : await queue.flush();
+      if (!ok && saveFailure.current?.recovery === 'reload')
+        throw repositoryError(saveFailure.current);
+      return ok;
+    });
     return () => onRegisterLeaveGuard?.(null);
   }, [onRegisterLeaveGuard, queue]);
   const tableVisible = !!facts.length && loaded && (!!state || !(saved || stale));
@@ -217,7 +244,25 @@ function DeckSession({
             Resume deck
           </button>
         )}
-        <button onClick={() => change(createFlashcardDeck(shuffleRecallIds(facts.map((f) => f.id))))}>
+        <button
+          onClick={() =>
+            void loading.run(
+              'question',
+              async (ticket) => {
+                const next = createFlashcardDeck(shuffleRecallIds(facts.map((f) => f.id)));
+                if (!(await ticket.persist(() => save(next))))
+                  throw saveFailure.current
+                    ? repositoryError(saveFailure.current)
+                    : Error('Could not save this deck. Retry before continuing.');
+                return next;
+              },
+              (next) => {
+                current.current = next;
+                setState(next);
+              },
+            )
+          }
+        >
           Restart deck
         </button>
       </section>
@@ -236,6 +281,8 @@ function DeckSession({
       <FlashcardTable
         deckId={recallScopeKey(namespace, scope)}
         cards={cards}
+        inactive={loading.pending || !!loading.error}
+        isInactive={() => loading.snapshot().pending || !!loading.snapshot().error}
         state={shown}
         onStateChange={change}
         {...(onVisibleCardIdChange ? { onVisibleCardIdChange } : {})}

@@ -1,4 +1,10 @@
-﻿import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
+import { useLoading } from '../loading/LoadingProvider.tsx';
+import { repositoryError } from '../loading/module-errors.ts';
+import { createViewRepositoryLifetime } from '../foundation/view-repository-lifetime.ts';
+import type { PreparedImport } from './prepare-import.ts';
+export { prepareImport, type PreparedImport } from './prepare-import.ts';
 import type { CourseDataViewProps } from '../contracts/integration.ts';
 import type { ImportBatch } from '../contracts/repository.ts';
 import { createChemistryRepository } from '../persistence/index.ts';
@@ -9,12 +15,37 @@ import { fingerprint } from '../persistence/legacy.ts';
 import './legacy-import.css';
 
 /** User-driven current export/import. No automatic or explicit old-store reads. */
-export function LegacyImportView({ namespace, databaseName }: CourseDataViewProps) {
+export function LegacyImportView({
+  namespace,
+  databaseName,
+  prepared,
+  onNavigationGuard,
+}: CourseDataViewProps & {
+  readonly prepared: PreparedImport;
+  readonly onNavigationGuard?: (guard: (() => Promise<boolean>) | null) => void;
+}) {
+  if (
+    prepared.databaseName !== databaseName ||
+    prepared.course !== namespace.course ||
+    prepared.profileId !== namespace.profileId
+  )
+    throw Error('Import destination does not match its prepared profile.');
+  const loading = useLoading();
+  const transaction = useRef<Promise<unknown>>(Promise.resolve());
+  const lifetime = useRef(createViewRepositoryLifetime());
   const repository = useMemo(() => createChemistryRepository(databaseName), [databaseName]);
   const [input, setInput] = useState(''),
     [status, setStatus] = useState(''),
-    [ready, setReady] = useState(false),
-    [busy, setBusy] = useState(false);
+    [ready, setReady] = useState(false);
+  const busy = loading.pending || !!loading.error;
+  useEffect(() => {
+    onNavigationGuard?.(async () => {
+      await transaction.current;
+      return true;
+    });
+    return () => onNavigationGuard?.(null);
+  }, [onNavigationGuard]);
+  useEffect(() => lifetime.current.retain(repository, () => transaction.current), [repository]);
   function download(value: unknown) {
     const url = URL.createObjectURL(
       new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' }),
@@ -26,69 +57,103 @@ export function LegacyImportView({ namespace, databaseName }: CourseDataViewProp
     URL.revokeObjectURL(url);
   }
   async function exportCurrent() {
-    setBusy(true);
-    try {
-      const history = await repository.curriculumHistory(namespace);
-      if (!history.ok) throw Error(history.error.message);
-      const olympiad =
-        namespace.course === 'alevel' ? await repository.loadOlympiad(namespace.profileId) : null;
-      const isomers = namespace.course === 'alevel' ? await repository.loadOlympiad(namespace.profileId,'alevel/olympiad-2011-q4') : null;
-      if (olympiad && !olympiad.ok) throw Error(olympiad.error.message);
-      if (isomers && !isomers.ok) throw Error(isomers.error.message);
-      const curriculum = history.value,
-        progress = [...(olympiad?.ok && olympiad.value ? [olympiad.value] : []), ...(isomers?.ok && isomers.value ? [isomers.value] : [])];
-      const batch: ImportBatch = {
-        namespace,
-        source: {
-          key: CURRENT_IMPORT_KEY,
-          fingerprint: fingerprint(canonical({ curriculum, olympiad: progress })),
-        },
-        curriculum,
-        olympiad: progress,
-      };
-      download(batch);
-      setStatus('Current progress exported.');
-    } catch (error) {
-      setStatus(String(error));
-    } finally {
-      setBusy(false);
-    }
+    await loading.run(
+      'tool',
+      async (ticket) => {
+        const history = await repository.curriculumHistory(namespace);
+        if (!history.ok) throw repositoryError(history.error);
+        const olympiad =
+          namespace.course === 'alevel' ? await repository.loadOlympiad(namespace.profileId) : null;
+        const isomers =
+          namespace.course === 'alevel'
+            ? await repository.loadOlympiad(namespace.profileId, 'alevel/olympiad-2011-q4')
+            : null;
+        if (olympiad && !olympiad.ok) throw repositoryError(olympiad.error);
+        if (isomers && !isomers.ok) throw repositoryError(isomers.error);
+        if (!ticket.isCurrent()) throw new DOMException('Export superseded', 'AbortError');
+        const curriculum = history.value;
+        const progress = [
+          ...(olympiad?.ok && olympiad.value ? [olympiad.value] : []),
+          ...(isomers?.ok && isomers.value ? [isomers.value] : []),
+        ];
+        const batch: ImportBatch = {
+          namespace,
+          source: {
+            key: CURRENT_IMPORT_KEY,
+            fingerprint: fingerprint(canonical({ curriculum, olympiad: progress })),
+          },
+          curriculum,
+          olympiad: progress,
+        };
+        return batch;
+      },
+      (batch) => {
+        download(batch);
+        flushSync(() => setStatus('Current progress exported.'));
+      },
+    );
   }
   async function preview() {
-    setBusy(true);
-    setReady(false);
-    try {
-      const plan = await planLegacyImport(namespace, { [CURRENT_IMPORT_KEY]: input });
-      if (plan.rejected.length) {
-        setStatus(plan.rejected.map((r) => r.reason).join(' '));
-        return;
-      }
-      const count = plan.batches.reduce((n, b) => n + b.curriculum.length + b.olympiad.length, 0);
-      setReady(true);
-      setStatus(`${count} current records ready to import.`);
-    } catch (error) {
-      setStatus(String(error));
-    } finally {
-      setBusy(false);
-    }
+    const text = input;
+    await loading.run(
+      'tool',
+      async () => {
+        const plan = await planLegacyImport(namespace, { [CURRENT_IMPORT_KEY]: text });
+        const count = plan.batches.reduce(
+          (n, batch) => n + batch.curriculum.length + batch.olympiad.length,
+          0,
+        );
+        return {
+          ready: !plan.rejected.length,
+          status: plan.rejected.length
+            ? plan.rejected.map((row) => row.reason).join(' ')
+            : `${count} current records ready to import.`,
+        };
+      },
+      (result) =>
+        flushSync(() => {
+          setReady(result.ready);
+          setStatus(result.status);
+        }),
+    );
   }
   async function save() {
-    setBusy(true);
-    try {
-      const result = await executeLegacyImport(repository, namespace, {
-        [CURRENT_IMPORT_KEY]: input,
-      });
-      setStatus(
-        result.errors.length
-          ? result.errors.join(' ')
-          : `${result.receipts.reduce((n, r) => n + r.inserted, 0)} imported; ${result.receipts.reduce((n, r) => n + r.duplicates, 0)} already present.`,
-      );
-      setReady(false);
-    } catch (error) {
-      setStatus(String(error));
-    } finally {
-      setBusy(false);
-    }
+    const text = input;
+    await loading.run(
+      'tool',
+      async (ticket) => {
+        const operation = ticket.persist(() =>
+          executeLegacyImport(repository, namespace, { [CURRENT_IMPORT_KEY]: text }),
+        );
+        transaction.current = operation.catch(() => undefined);
+        const result = await operation;
+        if (result.errors.length)
+          throw repositoryError({
+            message: result.errors.join(' '),
+            ...(result.recovery ? { recovery: result.recovery } : {}),
+          });
+        return `${result.receipts.reduce((n, row) => n + row.inserted, 0)} imported; ${result.receipts.reduce((n, row) => n + row.duplicates, 0)} already present.`;
+      },
+      (result) =>
+        flushSync(() => {
+          setStatus(result);
+          setReady(false);
+        }),
+    );
+  }
+  async function readFile(file: File) {
+    await loading.run(
+      'tool',
+      async () => {
+        if (file.size > 10000000) throw Error('File exceeds 10 MB.');
+        return file.text();
+      },
+      (text) =>
+        flushSync(() => {
+          setInput(text);
+          setReady(false);
+        }),
+    );
   }
   return (
     <section className="legacy-import" aria-labelledby="import-heading">
@@ -118,15 +183,9 @@ export function LegacyImportView({ namespace, databaseName }: CourseDataViewProp
           type="file"
           accept=".json,application/json"
           disabled={busy}
-          onChange={async (e) => {
-            const file = e.target.files?.[0];
-            if (!file) return;
-            setReady(false);
-            if (file.size > 10000000) {
-              setStatus('File exceeds 10 MB.');
-              return;
-            }
-            setInput(await file.text());
+          onChange={(event) => {
+            const file = event.target.files?.[0];
+            if (file) void readFile(file);
           }}
         />
       </label>

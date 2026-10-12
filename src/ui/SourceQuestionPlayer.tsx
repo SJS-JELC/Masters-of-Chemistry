@@ -194,7 +194,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
     canNext = true,
     learningReviewEnabled = false,
   } = props;
-  const source = use(sourcePresentation(question)),
+  const source = props.preparedTools?.sourcePresentation ?? use(sourcePresentation(question)),
     family = source.family;
   const student = attempt.mode === 'student';
   const assessed = student && attempt.phase === 'assessed';
@@ -233,10 +233,11 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
   };
   const assist = (supportId: string, kind: 'hint' | 'reveal' | 'worked-answer') =>
     onCommand({ kind: 'assist', assistance: { kind, supportId, at: Date.now() } });
+  const ReadyElectronReference = props.preparedTools?.ElectronReference ?? ElectronReference;
   const models = () =>
     family === 'electron' ? (
-      <Suspense fallback={<p>Loading checked answer…</p>}>
-        <ElectronReference questionId={question.ref.questionId} />
+      <Suspense fallback={null}>
+        <ReadyElectronReference questionId={question.ref.questionId} />
       </Suspense>
     ) : embedded && (family === 'energy' || family === 'titration') ? (
       <>

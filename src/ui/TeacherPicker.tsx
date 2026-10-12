@@ -1,6 +1,5 @@
-import { questionLookupInput, questionDisplayCode } from '../content/question-display-identity.ts';
-import { gradedActivityId } from '../foundation/graded-question.ts';
-import { useEffect, useMemo, useState, useRef } from 'react';
+import { questionDisplayCode } from '../content/question-display-identity.ts';
+import { useMemo, useState } from 'react';
 import type {
   ActivityId,
   ActivityRegistry,
@@ -8,16 +7,17 @@ import type {
   QuestionRef,
   TeacherCatalogueEntry,
 } from '../contracts/index.ts';
-import { teacherCatalogue } from './teacher-catalogue.ts';
 
+/** Ready catalogue only; its host retains the old catalogue/question during preparation. */
 export function TeacherPicker({
   course,
   registry,
   activityId,
   onActivity,
   onQuestion,
-  initialCode,
-  initialRef,
+  onLookup,
+  catalogue,
+  selectedKey,
   initialGroup,
 }: {
   readonly course: Course;
@@ -25,173 +25,40 @@ export function TeacherPicker({
   readonly activityId: ActivityId;
   readonly onActivity: (id: ActivityId) => void;
   readonly onQuestion: (ref: QuestionRef) => void;
-  readonly initialCode?: string;
-  readonly initialRef?: QuestionRef;
+  readonly onLookup: (code: string) => void;
+  readonly catalogue: readonly TeacherCatalogueEntry[];
+  readonly selectedKey: string;
   readonly initialGroup?: string;
 }) {
-  const [rows, setRows] = useState<readonly TeacherCatalogueEntry[]>([]),
-    [search, setSearch] = useState(''),
-    [level, setLevel] = useState('all'),
-    [key, setKey] = useState(''),
-    [code, setCode] = useState(''),
-    [error, setError] = useState(''),
-    [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState(initialGroup ?? '');
+  const [level, setLevel] = useState('all');
+  const [code, setCode] = useState('');
   const registrations = registry.curriculumFor(course);
-  const pendingRef = useRef<QuestionRef | null>(null),
-    initialHandled = useRef(false);
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    setRows([]);
-    const startingGroup =
-      !initialHandled.current && !initialRef && !initialCode ? initialGroup : undefined;
-    setSearch(startingGroup ?? '');
-    setKey('');
-    setError('');
-    void (async () => {
-      // The DEV proof registry can use the same chooser without changing the production catalogue.
-      let result: readonly TeacherCatalogueEntry[];
-      const registration = registry.get(activityId);
-      if (!registration || registration.strand !== 'curriculum')
-        throw Error('Activity unavailable');
-      const provider = await registration.provider();
-      const sourceRows = await teacherCatalogue(activityId);
-      const sourceApplicable =
-        sourceRows.length > 0 &&
-        provider.coverage
-          .filter((c) => c.kind === 'fixed')
-          .every((c) =>
-            c.questionIds.every((id) => sourceRows.some((row) => row.ref.questionId === id)),
-          ) &&
-        (() => {
-          try {
-            provider.restore(sourceRows[0]!.ref);
-            return true;
-          } catch {
-            return false;
-          }
-        })();
-      if (sourceApplicable) result = sourceRows;
-      else
-        result = provider.coverage.flatMap((coverage) =>
-          coverage.kind === 'fixed'
-            ? coverage.questionIds.map((id) => {
-                const ref = provider.resolveLink(id);
-                if (!ref) throw Error('Missing fixed question route');
-                return { key: id, label: provider.restore(ref).title, ref };
-              })
-            : coverage.families.flatMap((family) =>
-                family.levels.map((level) => {
-                  const gem = registration.gems.find((g) => g.supportedLevels.includes(level));
-                  if (!gem) throw Error('Generated family has no registered level');
-                  const ref =
-                    provider.resolveLink(family.templateId) ??
-                    provider.select({
-                      activityId,
-                      gemId: gem.id,
-                      level,
-                      seed: 1,
-                      previousQuestionIds: [],
-                    });
-                  return {
-                    key: family.templateId + ':' + level,
-                    label: `${family.templateId} / Level ${level}`,
-                    ref,
-                  };
-                }),
-              ),
-        );
-      if (!cancelled) {
-        setRows(result);
-        setLoading(false);
-        if (initialRef && !initialHandled.current) {
-          initialHandled.current = true;
-          if (initialRef.activityId !== activityId) {
-            pendingRef.current = initialRef;
-            onActivity(gradedActivityId(initialRef.activityId));
-          }
-          setKey(
-            result.find(
-              (row) =>
-                row.ref.questionId === initialRef.questionId && row.ref.level === initialRef.level,
-            )?.key ?? '',
-          );
-          onQuestion(initialRef);
-          return;
-        }
-        if (initialCode && !initialHandled.current) {
-          initialHandled.current = true;
-          for (const item of registrations) {
-            const ref = (await item.provider()).resolveLink(questionLookupInput(course, item.id, initialCode));
-            if (ref) {
-              if (item.id !== activityId) {
-                pendingRef.current = ref;
-                onActivity(item.id);
-              }
-              onQuestion(ref);
-              return;
-            }
-          }
-          setError('Question code not recognised for this course.');
-        }
-        initialHandled.current = true;
-        const requested = pendingRef.current?.activityId === activityId ? pendingRef.current : null;
-        pendingRef.current = null;
-        const first = startingGroup ? result.find((row) => row.group === startingGroup) : result[0];
-        if (requested) {
-          setKey(
-            result.find(
-              (row) =>
-                row.ref.questionId === requested.questionId && row.ref.level === requested.level,
-            )?.key ?? '',
-          );
-          onQuestion(requested);
-        } else if (first) {
-          setKey(first.key);
-          onQuestion(first.ref);
-        }
-      }
-    })().catch((reason) => {
-      if (!cancelled) {
-        setLoading(false);
-        setError(String(reason));
-      }
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [activityId, registry]);
   const filtered = useMemo(() => {
     const words = search.toLowerCase().trim().split(/\s+/);
-    return rows.filter(
+    return catalogue.filter(
       (row) =>
         (!initialGroup || search !== initialGroup || row.group === initialGroup) &&
         (level === 'all' || String(row.ref.level) === level) &&
         words.every((word) =>
-          (row.label + ' ' + row.group + ' ' + row.ref.questionId + ' ' + questionDisplayCode({course, activityId: row.ref.activityId, questionId: row.ref.questionId})).toLowerCase().includes(word),
+          (
+            row.label +
+            ' ' +
+            row.group +
+            ' ' +
+            row.ref.questionId +
+            ' ' +
+            questionDisplayCode({
+              course,
+              activityId: row.ref.activityId,
+              questionId: row.ref.questionId,
+            })
+          )
+            .toLowerCase()
+            .includes(word),
         ),
     );
-  }, [rows, search, level, initialGroup]);
-  const lookup = async () => {
-    setError('');
-    for (const item of registrations) {
-      const ref = (await item.provider()).resolveLink(questionLookupInput(course, item.id, code));
-      if (ref) {
-        setSearch('');
-        if (item.id !== activityId) {
-          pendingRef.current = ref;
-          onActivity(item.id);
-        }
-        onQuestion(ref);
-        setKey(
-          rows.find((row) => row.ref.questionId === ref.questionId && row.ref.level === ref.level)
-            ?.key ?? '',
-        );
-        return;
-      }
-    }
-    setError('Question code not recognised. Enter a complete canonical question code.');
-  };
+  }, [catalogue, search, level, initialGroup, course]);
   return (
     <section className="teacher-picker" aria-label="Teacher question catalogue">
       <h2>Teacher question catalogue</h2>
@@ -205,11 +72,11 @@ export function TeacherPicker({
           <select
             aria-label="Teacher activity"
             value={activityId}
-            onChange={(e) => onActivity(e.target.value as ActivityId)}
+            onChange={(event) => onActivity(event.target.value as ActivityId)}
           >
-            {registrations.map((a) => (
-              <option key={a.id} value={a.id}>
-                {a.title}
+            {registrations.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.title}
               </option>
             ))}
           </select>
@@ -219,12 +86,12 @@ export function TeacherPicker({
           <select
             aria-label="Teacher level filter"
             value={level}
-            onChange={(e) => setLevel(e.target.value)}
+            onChange={(event) => setLevel(event.target.value)}
           >
             <option value="all">All source levels</option>
-            {[1, 2, 3].map((l) => (
-              <option key={l} value={l}>
-                Level {l}
+            {[1, 2, 3].map((value) => (
+              <option key={value} value={value}>
+                Level {value}
               </option>
             ))}
           </select>
@@ -235,27 +102,22 @@ export function TeacherPicker({
             type="search"
             aria-label="Search teacher catalogue"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(event) => setSearch(event.target.value)}
           />
         </label>
       </div>
       <p role="status" data-testid="teacher-catalogue-count">
-        {loading
-          ? 'Loading complete catalogue…'
-          : `${filtered.length} of ${rows.length} source questions or configurations`}
+        {filtered.length} of {catalogue.length} source questions or configurations
       </p>
       <label>
         Question or configuration
         <select
           aria-label="Teacher question"
-          value={filtered.some((r) => r.key === key) ? key : ''}
-          disabled={loading || !filtered.length}
-          onChange={(e) => {
-            const row = rows.find((r) => r.key === e.target.value);
-            if (row) {
-              setKey(row.key);
-              onQuestion(row.ref);
-            }
+          value={filtered.some((row) => row.key === selectedKey) ? selectedKey : ''}
+          disabled={!filtered.length}
+          onChange={(event) => {
+            const row = catalogue.find((item) => item.key === event.target.value);
+            if (row) onQuestion(row.ref);
           }}
         >
           <option value="">Select a question</option>
@@ -268,9 +130,9 @@ export function TeacherPicker({
       </label>
       <form
         className="teacher-code"
-        onSubmit={(e) => {
-          e.preventDefault();
-          void lookup();
+        onSubmit={(event) => {
+          event.preventDefault();
+          onLookup(code);
         }}
       >
         <label>
@@ -278,7 +140,7 @@ export function TeacherPicker({
           <input
             aria-label="Question code"
             value={code}
-            onChange={(e) => setCode(e.target.value)}
+            onChange={(event) => setCode(event.target.value)}
             placeholder="Canonical question code"
           />
         </label>
@@ -286,7 +148,6 @@ export function TeacherPicker({
           Open question code
         </button>
       </form>
-      {error && <p role="alert">{error}</p>}
     </section>
   );
 }

@@ -14,7 +14,7 @@ import {
   isModelAnswerPanelShown,
 } from '../../src/domain/attempt/model-answer.ts';
 import { assessmentToRecallEvidence } from '../../src/recall/scheduler.ts';
-import { validateRecallAttempt } from '../../src/persistence/validation.ts';
+import { validateRecallAttempt } from '../../src/persistence/recall-validation.ts';
 function wrongAttempt(course, id, current = true, value = 'incorrect') {
   const ref = recallRef(course, id),
     question = createRecallProvider(recallFacts, course).restore(ref);

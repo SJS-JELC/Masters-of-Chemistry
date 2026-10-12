@@ -27,8 +27,8 @@ import { createAttemptController, assessmentToEvidence } from '../../src/domain/
 import {
   validateRecallAttempt,
   validateRecallSession,
-  validateAttempt,
-} from '../../src/persistence/validation.ts';
+} from '../../src/persistence/recall-validation.ts';
+import { validateAttempt } from '../../src/persistence/validation.ts';
 import { rawModelResponses } from '../../src/recall/marking-fixtures.mjs';
 import { CURRENT_RECALL_DEFINITION_ID } from '../../src/contracts/recall.ts';
 const namespace = { course: 'igcse', profileId: 'test' };

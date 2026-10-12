@@ -468,6 +468,7 @@ export function DotCrossEditor({
   // Palette drag prevents native focus; retain source document shortcuts for body focus.
   useEffect(() => {
     const key = (event: globalThis.KeyboardEvent) => {
+      if (root.current?.closest('[inert]')) return;
       if (event.key === 'Escape' && drag.current) handlers.current.cancelDrag();
       if (
         event.defaultPrevented ||
@@ -495,8 +496,14 @@ export function DotCrossEditor({
     return () => window.removeEventListener('keydown', key);
   }, []);
   useEffect(() => {
-    const move = (e: globalThis.PointerEvent) => handlers.current.move(e),
-      up = (e: globalThis.PointerEvent) => handlers.current.up(e),
+    const move = (e: globalThis.PointerEvent) => {
+        if (root.current?.closest('[inert]')) handlers.current.cancelDrag();
+        else handlers.current.move(e);
+      },
+      up = (e: globalThis.PointerEvent) => {
+        if (root.current?.closest('[inert]')) handlers.current.cancelDrag();
+        else handlers.current.up(e);
+      },
       cancel = () => handlers.current.cancelDrag();
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', up);

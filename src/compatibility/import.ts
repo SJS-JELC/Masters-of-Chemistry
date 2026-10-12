@@ -18,6 +18,7 @@ export interface ImportExecution {
   readonly plan: LegacyImportPlan;
   readonly receipts: readonly ImportReceipt[];
   readonly errors: readonly string[];
+  readonly recovery?: 'reload';
 }
 /** Called only after the user's explicit Import action. Writes only the new repository. */
 export async function executeLegacyImport(
@@ -29,6 +30,7 @@ export async function executeLegacyImport(
     receipts: ImportReceipt[] = [],
     errors: string[] = [];
   const sources: { key: string; fingerprint: string; archived: boolean }[] = [];
+  let recovery: 'reload' | undefined;
   for (const [key, rawText] of Object.entries(snapshots)) {
     // Independent source decisions are stable when a later import includes other stores.
     const sourcePlan = await planLegacyImport(namespace, { [key]: rawText });
@@ -42,6 +44,7 @@ export async function executeLegacyImport(
     const saved = await repository.saveImportArchive(archive);
     sources.push({ ...archive.source, archived: saved.ok });
     if (!saved.ok) {
+      if (saved.error.recovery === 'reload') recovery = 'reload';
       errors.push(`${key}: source archive could not be saved: ${saved.error.message}`);
       continue;
     }
@@ -49,7 +52,10 @@ export async function executeLegacyImport(
     if (!batch) continue;
     const imported = await repository.importBatch(batch);
     if (imported.ok) receipts.push(imported.value);
-    else errors.push(`${key}: ${imported.error.message}`);
+    else {
+      if (imported.error.recovery === 'reload') recovery = 'reload';
+      errors.push(`${key}: ${imported.error.message}`);
+    }
   }
   const skipped = plan.rejected.map((r) => ({
     sourceKey: r.sourceKey,
@@ -75,9 +81,11 @@ export async function executeLegacyImport(
     ],
     skipped: skipped.map((r) => ({ sourceId: r.sourceId, reason: `${r.sourceKey}: ${r.reason}` })),
   });
-  if (!report.ok)
+  if (!report.ok) {
+    if (report.error.recovery === 'reload') recovery = 'reload';
     errors.push(
       `Outcome report could not be saved: ${report.error.message} Retry or export the exact sources and report.`,
     );
-  return { plan, receipts, errors };
+  }
+  return { plan, receipts, errors, ...(recovery ? { recovery } : {}) };
 }

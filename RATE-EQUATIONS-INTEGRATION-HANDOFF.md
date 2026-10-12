@@ -1,5 +1,13 @@
 # Rate Equations integration
 
+## Direct landing launch follow-up — 12 October 2026
+
+Fixed mastery routing for registered semantic gem IDs: the previous numeric-only URL check rejected all four rate gems. Explicit launches now suppress the practice setup form during loading and retain the selected-session retry controls. Existing numeric recall IDs, course boundaries, mastery scheduling and question identities remain intact.
+
+Validation: typecheck, combined production build and release validation passed (18 registrations; initial JavaScript gzip 204755 bytes). All 16 actual landing-click combinations passed in isolated Edge: four gems × three fixed levels plus MASTERY, with no transient setup form, same-attempt reload, immutable assessed timing, Next and persisted attempt/evidence counts. Rendered graph question inspected. Reproduce against Vite on port 5261 with `node scripts/rate-equations-launch-browser.mjs`; report/screenshots go to `.artifacts/browser/rate-equations-launch/`.
+
+The 21 rate-content/workspace/link/registration/timing tests and four focused mastery-routing tests passed using Node's `--test-isolation=none` (sandbox subprocess restriction). Full mastery-flow suite also reports two unrelated existing Recall fixture failures: `lower-6-5` expects one fact but has zero; recall ordering expects `wrong` first but returns `revealed`. Their functions were not changed. The historical protected-app check still reports 529 differences across 1320 paths, matching the integration handoff below; neither historical app was edited. No deployment.
+
 Status: **ACCEPTED_COMPLETE by root, including independent source/render review and genuine native hidden-tab timing.** App validation and generated artifact trees were removed after independent dependency review; final checks passed. No publication or commit.
 
 The combined app now contains `alevel/rate-equations` with four gems, each at Structured, Unstructured and Applications levels:

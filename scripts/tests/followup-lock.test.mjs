@@ -8,7 +8,7 @@ import {
 } from '../../src/domain/attempt/model-answer.ts';
 import { questionActionState } from '../../src/ui/action-state.ts';
 import { checkQuestionInput } from '../../src/domain/attempt/input-checks.ts';
-import { validateRecallAttempt } from '../../src/persistence/validation.ts';
+import { validateRecallAttempt } from '../../src/persistence/recall-validation.ts';
 import { recallFacts } from '../../src/recall/facts.ts';
 import { recallFields, createRecallMarkingPolicy } from '../../src/recall/marking.ts';
 import { createRecallProvider, recallRef } from '../../src/recall/provider.ts';

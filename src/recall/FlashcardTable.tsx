@@ -28,6 +28,8 @@ export interface Flashcard {
   readonly answerContent?: ReactNode;
 }
 export interface FlashcardTableProps {
+  readonly inactive?: boolean;
+  readonly isInactive?: () => boolean;
   readonly deckId: string;
   readonly cards: readonly Flashcard[];
   readonly state?: FlashcardDeckState;
@@ -112,6 +114,8 @@ export function FlashcardTable(props: FlashcardTableProps) {
 }
 
 function TableSession({
+  inactive = false,
+  isInactive,
   cards,
   state: controlledState,
   onStateChange,
@@ -122,6 +126,7 @@ function TableSession({
   const stateRef = useRef(state);
   stateRef.current = state;
   function dispatch(action: FlashcardAction) {
+    if (inactive || isInactive?.()) return;
     const next = reduceFlashcardDeck(stateRef.current, action);
     stateRef.current = next;
     if (onStateChange) onStateChange(next);
@@ -141,6 +146,22 @@ function TableSession({
   const gesture = useRef<{ id: number; x: number; y: number; dx: number } | null>(null);
   const suppressClick = useRef(false);
   const card = flight?.card ?? cards.find((c) => c.id === state.currentFactId);
+  useEffect(() => {
+    if (inactive) {
+      if (timer.current) clearTimeout(timer.current);
+      return;
+    }
+    if (!flight) return;
+    timer.current = setTimeout(() => {
+      if (!isInactive?.()) {
+        setFlight(null);
+        busy.current = false;
+      }
+    }, 340);
+    return () => {
+      if (timer.current) clearTimeout(timer.current);
+    };
+  }, [inactive, flight]);
   useLayoutEffect(() => {
     onVisibleCardIdChange?.(card?.id ?? null);
   }, [card?.id, onVisibleCardIdChange]);
@@ -179,14 +200,16 @@ function TableSession({
       );
       moving.style.setProperty('--deal-scale', String(origin.width / destination.width));
     }
-    if (!flight) reader.current?.focus({ preventScroll: true });
+    if (!flight && !inactive && !isInactive?.()) reader.current?.focus({ preventScroll: true });
   }, [position, round, flight]);
 
   function flip() {
+    if (inactive || isInactive?.()) return;
     if (busy.current || !card) return;
     dispatch({ type: 'flip' });
   }
   function sort(side: Side) {
+    if (inactive || isInactive?.()) return;
     if (!card || !flashcardAnswerSeen(stateRef.current) || busy.current) return;
     busy.current = true;
     const from = mover.current!.getBoundingClientRect();
@@ -210,6 +233,7 @@ function TableSession({
     );
     timer.current = setTimeout(
       () => {
+        if (isInactive?.()) return;
         setFlight(null);
         busy.current = false;
       },
@@ -217,17 +241,20 @@ function TableSession({
     );
   }
   function undo() {
+    if (inactive || isInactive?.()) return;
     if (busy.current || !state.undoStack.length) return;
     dispatch({ type: 'undo' });
     setMessage('Last card restored. Ready to sort.');
   }
   function start(type: 'retry-missed' | 'restart') {
+    if (inactive || isInactive?.()) return;
     if (busy.current) return;
     dispatch({ type });
     setMessage(type === 'restart' ? 'Deck restarted.' : 'New pass of missed cards.');
   }
 
   function pointerDown(event: PointerEvent<HTMLElement>) {
+    if (inactive || isInactive?.()) return;
     suppressClick.current = false;
     if (
       !canSort ||
@@ -242,6 +269,7 @@ function TableSession({
   }
 
   function pointerMove(event: PointerEvent<HTMLElement>) {
+    if (inactive || isInactive?.()) return;
     const point = gesture.current;
     if (!point || point.id !== event.pointerId) return;
     const dx = event.clientX - point.x;
@@ -258,6 +286,7 @@ function TableSession({
   }
 
   function pointerEnd(event: PointerEvent<HTMLElement>) {
+    if (inactive || isInactive?.()) return;
     const point = gesture.current;
     gesture.current = null;
     setDrag(0);

@@ -8,6 +8,7 @@ import { sourcePresentation } from './source-presentation.ts';
 import { SourceResponseControl } from './SourceResponseControl.tsx';
 import { ResponseControl } from './ResponseControl.tsx';
 import { QuestionLevelPill } from './QuestionLevelPill.tsx';
+import { isModelAnswerShown, isModelAnswerPanelShown } from '../domain/attempt/model-answer.ts';
 import { SourceFrozenAnswer, SourceRubricScheme } from './SourceRubricReview.tsx';
 import { assessmentPointLabel } from './assessment-label.ts';
 import type { CalculationBlock } from '../chemistry/thermochemistry/types.ts';
@@ -200,9 +201,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
   const reviewing =
     student && (attempt.phase === 'rubric-review' || attempt.phase === 'drawing-review');
   const assessment = assessed ? attempt.firstAssessment : undefined;
-  const shownAnswer =
-    !student ||
-    (student && attempt.assistance.some((a) => a.kind === 'reveal' || a.kind === 'worked-answer'));
+  const shownAnswer = isModelAnswerPanelShown(attempt);
   const responses = attempt.currentResponses;
   const embedded =
     question.parts.length === 1 &&
@@ -214,6 +213,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
   );
   const actions = useQuestionActions({
     attempt,
+    modelAnswerVisible: isModelAnswerShown(attempt),
     correctionFeedback,
     onCommand,
     onNext,
@@ -501,7 +501,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
       )}
       {shownAnswer && (
         <section className={`review-panel worked-answer${!student ? ' teacher-answer' : ''}`}>
-          <h3>{student ? 'Worked answer' : 'Checked answer and diagrams'}</h3>
+          <h3>MODEL ANSWER</h3>
           {models()}
         </section>
       )}

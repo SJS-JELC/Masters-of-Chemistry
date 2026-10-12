@@ -1,3 +1,5 @@
+import { formulaeAdapter } from '../activities/igcse/formulae/index.ts';
+import { equationsAdapter } from '../activities/igcse/equations/index.ts';
 import { createRegistry } from '../catalogue/registry.ts';
 import { activityDefinitions } from '../catalogue/definitions.ts';
 import { c3Dependencies } from '../activities/olympiad/c3l6/dependencies.ts';
@@ -13,12 +15,15 @@ import { propertiesAdapter } from '../activities/alevel/explaining-properties/in
 import { electronConfigurationsAdapter } from '../activities/alevel/electron-configurations/index.ts';
 import { energyEnthalpyAdapter } from '../activities/igcse/energy-enthalpy/index.ts';
 import { energeticsPracticalAdapter } from '../activities/igcse/energetics-practical/index.ts';
+import { rateAdapter } from '../activities/alevel/rate-equations/index.ts';
 const olympiadDefinition = activityDefinitions.find(
   (item) => item.id === 'alevel/c3l6-organic-reactions',
 );
 if (!olympiadDefinition) throw Error('Missing source Olympiad definition');
 export const productionRegistry = createRegistry(
   [
+    formulaeAdapter,
+    equationsAdapter,
     acidAdapter,
     structureAdapter,
     dotCrossAdapter,
@@ -31,6 +36,7 @@ export const productionRegistry = createRegistry(
     electronConfigurationsAdapter,
     energyEnthalpyAdapter,
     energeticsPracticalAdapter,
+    rateAdapter,
   ],
   [
     {
@@ -60,5 +66,6 @@ export const productionRegistry = createRegistry(
       marking: async () =>
         (await import('../activities/olympiad/isomers2011/index.ts')).isomerPolicy,
     },
+    {id:'alevel/maxwells-demon',course:'alevel',strand:'olympiad',renderer:'enthalpy-challenge',revision:false,title:activityDefinitions.find(item=>item.id==='alevel/maxwells-demon')!.title,release:'included',source:activityDefinitions.find(item=>item.id==='alevel/maxwells-demon')!.source,provider:async()=>(await import('../activities/olympiad/maxwells-demon/index.ts')).maxwellChallenge,marking:async()=>(await import('../activities/olympiad/maxwells-demon/index.ts')).maxwellPolicy},
   ],
 );

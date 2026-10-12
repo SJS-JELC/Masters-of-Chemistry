@@ -1,0 +1,810 @@
+{
+  "sources": [
+    {
+      "path": "src/chemistry/formulae-equations/ions.ts",
+      "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+      "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+    }
+  ],
+  "reviewedPairs": [
+    {
+      "id": "sodium-chloride",
+      "name": "sodium chloride",
+      "level": 1,
+      "formula": "NaCl",
+      "cationId": "sodium",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Na": 1,
+        "Cl": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "potassium-bromide",
+      "name": "potassium bromide",
+      "level": 1,
+      "formula": "KBr",
+      "cationId": "potassium",
+      "anionId": "bromide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "K": 1,
+        "Br": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "potassium-iodide",
+      "name": "potassium iodide",
+      "level": 1,
+      "formula": "KI",
+      "cationId": "potassium",
+      "anionId": "iodide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "K": 1,
+        "I": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "magnesium-oxide",
+      "name": "magnesium oxide",
+      "level": 1,
+      "formula": "MgO",
+      "cationId": "magnesium",
+      "anionId": "oxide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Mg": 1,
+        "O": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "calcium-oxide",
+      "name": "calcium oxide",
+      "level": 1,
+      "formula": "CaO",
+      "cationId": "calcium",
+      "anionId": "oxide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Ca": 1,
+        "O": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "zinc-sulfide",
+      "name": "zinc sulfide",
+      "level": 1,
+      "formula": "ZnS",
+      "cationId": "zinc",
+      "anionId": "sulfide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Zn": 1,
+        "S": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "magnesium-chloride",
+      "name": "magnesium chloride",
+      "level": 1,
+      "formula": "MgCl2",
+      "cationId": "magnesium",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Mg": 1,
+        "Cl": 2
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "calcium-chloride",
+      "name": "calcium chloride",
+      "level": 1,
+      "formula": "CaCl2",
+      "cationId": "calcium",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Ca": 1,
+        "Cl": 2
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "aluminium-chloride",
+      "name": "aluminium chloride",
+      "level": 1,
+      "formula": "AlCl3",
+      "cationId": "aluminium",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Al": 1,
+        "Cl": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "aluminium-oxide",
+      "name": "aluminium oxide",
+      "level": 1,
+      "formula": "Al2O3",
+      "cationId": "aluminium",
+      "anionId": "oxide",
+      "ionRatio": [
+        2,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Al": 2,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "sodium-oxide",
+      "name": "sodium oxide",
+      "level": 1,
+      "formula": "Na2O",
+      "cationId": "sodium",
+      "anionId": "oxide",
+      "ionRatio": [
+        2,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Na": 2,
+        "O": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "iron-ii-chloride",
+      "name": "iron(II) chloride",
+      "level": 1,
+      "formula": "FeCl2",
+      "cationId": "iron-ii",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Fe": 1,
+        "Cl": 2
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "iron-iii-chloride",
+      "name": "iron(III) chloride",
+      "level": 1,
+      "formula": "FeCl3",
+      "cationId": "iron-iii",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Fe": 1,
+        "Cl": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "iron-iii-oxide",
+      "name": "iron(III) oxide",
+      "level": 1,
+      "formula": "Fe2O3",
+      "cationId": "iron-iii",
+      "anionId": "oxide",
+      "ionRatio": [
+        2,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Fe": 2,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "copper-ii-oxide",
+      "name": "copper(II) oxide",
+      "level": 1,
+      "formula": "CuO",
+      "cationId": "copper-ii",
+      "anionId": "oxide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Cu": 1,
+        "O": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "zinc-chloride",
+      "name": "zinc chloride",
+      "level": 1,
+      "formula": "ZnCl2",
+      "cationId": "zinc",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Zn": 1,
+        "Cl": 2
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "ammonium-chloride",
+      "name": "ammonium chloride",
+      "level": 2,
+      "formula": "NH4Cl",
+      "cationId": "ammonium",
+      "anionId": "chloride",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "N": 1,
+        "H": 4,
+        "Cl": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "ammonium-sulfate",
+      "name": "ammonium sulfate",
+      "level": 2,
+      "formula": "(NH4)2SO4",
+      "cationId": "ammonium",
+      "anionId": "sulfate",
+      "ionRatio": [
+        2,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "N": 2,
+        "H": 8,
+        "S": 1,
+        "O": 4
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "ammonium-carbonate",
+      "name": "ammonium carbonate",
+      "level": 2,
+      "formula": "(NH4)2CO3",
+      "cationId": "ammonium",
+      "anionId": "carbonate",
+      "ionRatio": [
+        2,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "N": 2,
+        "H": 8,
+        "C": 1,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "sodium-hydroxide",
+      "name": "sodium hydroxide",
+      "level": 2,
+      "formula": "NaOH",
+      "cationId": "sodium",
+      "anionId": "hydroxide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Na": 1,
+        "O": 1,
+        "H": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "potassium-hydroxide",
+      "name": "potassium hydroxide",
+      "level": 2,
+      "formula": "KOH",
+      "cationId": "potassium",
+      "anionId": "hydroxide",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "K": 1,
+        "O": 1,
+        "H": 1
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "magnesium-hydroxide",
+      "name": "magnesium hydroxide",
+      "level": 2,
+      "formula": "Mg(OH)2",
+      "cationId": "magnesium",
+      "anionId": "hydroxide",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Mg": 1,
+        "O": 2,
+        "H": 2
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "calcium-hydroxide",
+      "name": "calcium hydroxide",
+      "level": 2,
+      "formula": "Ca(OH)2",
+      "cationId": "calcium",
+      "anionId": "hydroxide",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Ca": 1,
+        "O": 2,
+        "H": 2
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "aluminium-hydroxide",
+      "name": "aluminium hydroxide",
+      "level": 2,
+      "formula": "Al(OH)3",
+      "cationId": "aluminium",
+      "anionId": "hydroxide",
+      "ionRatio": [
+        1,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Al": 1,
+        "O": 3,
+        "H": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "sodium-nitrate",
+      "name": "sodium nitrate",
+      "level": 2,
+      "formula": "NaNO3",
+      "cationId": "sodium",
+      "anionId": "nitrate",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Na": 1,
+        "N": 1,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "potassium-nitrate",
+      "name": "potassium nitrate",
+      "level": 2,
+      "formula": "KNO3",
+      "cationId": "potassium",
+      "anionId": "nitrate",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "K": 1,
+        "N": 1,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "magnesium-nitrate",
+      "name": "magnesium nitrate",
+      "level": 2,
+      "formula": "Mg(NO3)2",
+      "cationId": "magnesium",
+      "anionId": "nitrate",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Mg": 1,
+        "N": 2,
+        "O": 6
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "calcium-nitrate",
+      "name": "calcium nitrate",
+      "level": 2,
+      "formula": "Ca(NO3)2",
+      "cationId": "calcium",
+      "anionId": "nitrate",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Ca": 1,
+        "N": 2,
+        "O": 6
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "copper-ii-nitrate",
+      "name": "copper(II) nitrate",
+      "level": 2,
+      "formula": "Cu(NO3)2",
+      "cationId": "copper-ii",
+      "anionId": "nitrate",
+      "ionRatio": [
+        1,
+        2
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Cu": 1,
+        "N": 2,
+        "O": 6
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "aluminium-sulfate",
+      "name": "aluminium sulfate",
+      "level": 2,
+      "formula": "Al2(SO4)3",
+      "cationId": "aluminium",
+      "anionId": "sulfate",
+      "ionRatio": [
+        2,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Al": 2,
+        "S": 3,
+        "O": 12
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "magnesium-sulfate",
+      "name": "magnesium sulfate",
+      "level": 2,
+      "formula": "MgSO4",
+      "cationId": "magnesium",
+      "anionId": "sulfate",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Mg": 1,
+        "S": 1,
+        "O": 4
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "calcium-carbonate",
+      "name": "calcium carbonate",
+      "level": 2,
+      "formula": "CaCO3",
+      "cationId": "calcium",
+      "anionId": "carbonate",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Ca": 1,
+        "C": 1,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "sodium-carbonate",
+      "name": "sodium carbonate",
+      "level": 2,
+      "formula": "Na2CO3",
+      "cationId": "sodium",
+      "anionId": "carbonate",
+      "ionRatio": [
+        2,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Na": 2,
+        "C": 1,
+        "O": 3
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "copper-ii-sulfate",
+      "name": "copper(II) sulfate",
+      "level": 2,
+      "formula": "CuSO4",
+      "cationId": "copper-ii",
+      "anionId": "sulfate",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Cu": 1,
+        "S": 1,
+        "O": 4
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "iron-ii-sulfate",
+      "name": "iron(II) sulfate",
+      "level": 2,
+      "formula": "FeSO4",
+      "cationId": "iron-ii",
+      "anionId": "sulfate",
+      "ionRatio": [
+        1,
+        1
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Fe": 1,
+        "S": 1,
+        "O": 4
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    },
+    {
+      "id": "iron-iii-sulfate",
+      "name": "iron(III) sulfate",
+      "level": 2,
+      "formula": "Fe2(SO4)3",
+      "cationId": "iron-iii",
+      "anionId": "sulfate",
+      "ionRatio": [
+        2,
+        3
+      ],
+      "netCharge": 0,
+      "composition": {
+        "Fe": 2,
+        "S": 3,
+        "O": 12
+      },
+      "review": "AUTHOR-CHEMISTRY-PASS"
+    }
+  ],
+  "ionRecallLinks": [
+    {
+      "id": "sodium",
+      "recallFactIds": [
+        "igcse-ion-sodium-formula",
+        "igcse-ion-sodium-charge"
+      ]
+    },
+    {
+      "id": "potassium",
+      "recallFactIds": [
+        "igcse-ion-potassium-formula",
+        "igcse-ion-potassium-charge"
+      ]
+    },
+    {
+      "id": "magnesium",
+      "recallFactIds": [
+        "igcse-ion-magnesium-formula",
+        "igcse-ion-magnesium-charge"
+      ]
+    },
+    {
+      "id": "calcium",
+      "recallFactIds": [
+        "igcse-ion-calcium-formula",
+        "igcse-ion-calcium-charge"
+      ]
+    },
+    {
+      "id": "aluminium",
+      "recallFactIds": [
+        "igcse-ion-aluminium-formula",
+        "igcse-ion-aluminium-charge"
+      ]
+    },
+    {
+      "id": "zinc",
+      "recallFactIds": [
+        "igcse-recall-030"
+      ]
+    },
+    {
+      "id": "iron-ii",
+      "recallFactIds": [
+        "igcse-ion-iron-ii-formula",
+        "igcse-ion-iron-ii-charge"
+      ]
+    },
+    {
+      "id": "iron-iii",
+      "recallFactIds": [
+        "igcse-ion-iron-iii-formula",
+        "igcse-ion-iron-iii-charge"
+      ]
+    },
+    {
+      "id": "copper-ii",
+      "recallFactIds": [
+        "igcse-ion-copper-ii-formula",
+        "igcse-ion-copper-ii-charge"
+      ]
+    },
+    {
+      "id": "ammonium",
+      "recallFactIds": [
+        "igcse-recall-029"
+      ]
+    },
+    {
+      "id": "chloride",
+      "recallFactIds": [
+        "igcse-ion-chloride-formula",
+        "igcse-ion-chloride-charge"
+      ]
+    },
+    {
+      "id": "bromide",
+      "recallFactIds": [
+        "igcse-ion-bromide-formula",
+        "igcse-ion-bromide-charge"
+      ]
+    },
+    {
+      "id": "iodide",
+      "recallFactIds": [
+        "igcse-ion-iodide-formula",
+        "igcse-ion-iodide-charge"
+      ]
+    },
+    {
+      "id": "oxide",
+      "recallFactIds": [
+        "igcse-ion-oxide-formula",
+        "igcse-ion-oxide-charge"
+      ]
+    },
+    {
+      "id": "sulfide",
+      "recallFactIds": [
+        "igcse-ion-sulfide-formula",
+        "igcse-ion-sulfide-charge"
+      ]
+    },
+    {
+      "id": "hydroxide",
+      "recallFactIds": [
+        "igcse-recall-032"
+      ]
+    },
+    {
+      "id": "nitrate",
+      "recallFactIds": [
+        "igcse-recall-027"
+      ]
+    },
+    {
+      "id": "sulfate",
+      "recallFactIds": [
+        "igcse-recall-033"
+      ]
+    },
+    {
+      "id": "carbonate",
+      "recallFactIds": [
+        "igcse-recall-028"
+      ]
+    }
+  ]
+}

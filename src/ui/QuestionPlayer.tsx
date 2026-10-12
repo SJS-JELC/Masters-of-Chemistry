@@ -1,7 +1,7 @@
 import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
 import { useQuestionKeyboard } from './use-question-keyboard.ts';
 import { useId, Suspense, lazy } from 'react';
-import type { ReactNode } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 import type {
   AttemptCommand,
   CorrectionFeedback,
@@ -13,6 +13,7 @@ import type { StorageFailure } from '../contracts/repository.ts';
 import type { EditorSurfaceProps } from './EditorFrame.tsx';
 import { Content } from './Content.tsx';
 import { ResponseControl } from './ResponseControl.tsx';
+import type { ResponseControlProps } from './ResponseControl.tsx';
 import { TextRangePicker } from './TextRangePicker.tsx';
 import { responseFingerprint } from './action-state.ts';
 import type { ResponseStatus } from './current-feedback.ts';
@@ -22,12 +23,20 @@ import {
   useQuestionChrome,
 } from '../shell/QuestionChrome.tsx';
 import { QuestionLevelPill } from './QuestionLevelPill.tsx';
+import { isModelAnswerShown, isModelAnswerPanelShown } from '../domain/attempt/model-answer.ts';
+import { chemicalQuestionTitle } from './chemical-presentation.ts';
 import { sourceFamilies } from './source-family.ts';
 const DotCrossPlayer = lazy(async () => ({
   default: (await import('./DotCrossPlayer.tsx')).DotCrossPlayer,
 }));
 const SourceQuestionPlayer = lazy(async () => ({
   default: (await import('./SourceQuestionPlayer.tsx')).SourceQuestionPlayer,
+}));
+const ChemicalQuestionBody = lazy(async () => ({
+  default: (await import('./ChemicalQuestionBody.tsx')).ChemicalQuestionBody,
+}));
+const ChemicalWorkedAnswer = lazy(async () => ({
+  default: (await import('./ChemicalQuestionBody.tsx')).ChemicalWorkedAnswer,
 }));
 
 export type SaveStatus =
@@ -50,6 +59,14 @@ export interface QuestionPlayerProps {
   readonly restoredFeedback?: CorrectionFeedback | undefined;
   readonly learningReviewEnabled?: boolean;
   readonly renderEditor?: (props: EditorSurfaceProps) => ReactNode;
+  /** Optional unmarked interactive workspace; responses still use the shared controls. */
+  readonly workspace?: ReactNode;
+  /** Authoring families can use standard controls under an existing DEV activity context. */
+  readonly presentation?: 'standard';
+  /** Recall hosts opt in to compact labels and automatic post-check model feedback. */
+  readonly recallPresentation?: boolean;
+  /** Optional authoring response surface; commands/attempt semantics stay shared. */
+  readonly responseControl?: ComponentType<ResponseControlProps>;
 }
 
 function RubricPanel({
@@ -163,13 +180,31 @@ export function QuestionPlayer({
   canNext = true,
   learningReviewEnabled = false,
   renderEditor,
+  workspace,
+  presentation,
+  recallPresentation = false,
+  responseControl,
 }: QuestionPlayerProps) {
+  const PlayerResponseControl = responseControl ?? ResponseControl;
   const instanceId = useId();
   const chrome = useQuestionChrome();
-  const displayTitle = questionDisplayTitle(question);
-  const repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
+  const chemical = question.chemicalPresentation;
+  const displayTitle = chemical ? chemicalQuestionTitle(chemical) : questionDisplayTitle(question);
+  const repeatedTitle =
+    recallPresentation || (!chemical && repeatsQuestionSubtopic(displayTitle, chrome));
   const actions = useQuestionActions({
     attempt,
+    modelAnswerVisible:
+      isModelAnswerShown(attempt) ||
+      (recallPresentation && attempt.mode === 'student' && attempt.phase === 'assessed'),
+    ready:
+      !recallPresentation ||
+      question.parts
+        .filter((part) => part.required)
+        .every((part) => {
+          const response = attempt.currentResponses[part.id];
+          return response?.kind === 'text' && !!response.value.trim();
+        }),
     correctionFeedback: correctionFeedback ?? restoredFeedback,
     onCommand,
     onNext,
@@ -183,7 +218,7 @@ export function QuestionPlayer({
     attempt.mode === 'student',
     actions,
   );
-  if (sourceFamilies[question.ref.activityId])
+  if (presentation !== 'standard' && sourceFamilies[question.ref.activityId])
     return (
       <Suspense fallback={<p role="status">Loading written correction…</p>}>
         <SourceQuestionPlayer
@@ -259,25 +294,29 @@ export function QuestionPlayer({
         return part?.kind === 'explanation' || part?.kind === 'drawing-self-check';
       })
       .every((point) => point.earned === point.available);
-  const showedAnswer =
-    !student ||
-    shownSupport.some((item) => item.kind === 'reveal' || item.kind === 'worked-answer');
+  const showedAnswer = isModelAnswerPanelShown(attempt);
   const sendResponse = (partId: string, response: Response) => {
     if (student && !readOnly) onCommand({ kind: 'respond', partId, response });
   };
   return (
     <article
       {...keyboard}
-      className={`question-player layout-${question.layout}${properties ? ' properties-player' : ''}`}
+      className={`question-player layout-${question.layout}${properties ? ' properties-player' : ''}${chemical ? ' chemical-question-player' : ''}${recallPresentation ? ' recall-test-player recall-shared-player' : ''}`}
       {...(repeatedTitle
         ? { 'aria-label': displayTitle }
         : { 'aria-labelledby': `${instanceId}-title` })}
     >
       <header className="question-header">
-        <QuestionLevelPill
-          course={question.ref.activityId.startsWith('igcse/') ? 'igcse' : 'alevel'}
-          level={question.ref.level}
-        />
+        {!recallPresentation &&
+          (question.ref.activityId === 'alevel/recall' ||
+          question.ref.activityId === 'igcse/recall' ? (
+            <span className="question-level-pill">KEY FACTUAL RECALL</span>
+          ) : (
+            <QuestionLevelPill
+              course={question.ref.activityId.startsWith('igcse/') ? 'igcse' : 'alevel'}
+              level={question.ref.level}
+            />
+          ))}
         {!repeatedTitle && <h2 id={`${instanceId}-title`}>{displayTitle}</h2>}
       </header>
       {!student && (
@@ -285,7 +324,8 @@ export function QuestionPlayer({
           This read-only view creates no assessment or progress evidence.
         </p>
       )}
-      <Content blocks={question.context} />
+      {!chemical && <Content blocks={question.context} />}
+      {workspace}
       {question.scaffolds
         .filter((scaffold) => scaffold.level === question.ref.level)
         .map((scaffold) => (
@@ -296,7 +336,20 @@ export function QuestionPlayer({
           </aside>
         ))}
       <div className="question-parts">
-        {question.sentenceTokens && (
+        {chemical && (
+          <Suspense fallback={<p role="status">Loading chemical entry…</p>}>
+            <ChemicalQuestionBody
+              key={`${question.ref.questionId}:${actions.clearRevision}`}
+              question={question}
+              responses={student ? attempt.currentResponses : {}}
+              student={student}
+              readOnly={readOnly}
+              status={pointStatus}
+              onResponse={sendResponse}
+            />
+          </Suspense>
+        )}
+        {!chemical && question.sentenceTokens && (
           <section
             className="question-part sentence-response"
             aria-label="Complete the explanation"
@@ -308,7 +361,7 @@ export function QuestionPlayer({
                 if (!part || part.kind !== 'text')
                   throw Error('Inline sentence must reference a text part.');
                 return student ? (
-                  <ResponseControl
+                  <PlayerResponseControl
                     key={`${part.id}:${actions.clearRevision}`}
                     part={part}
                     response={attempt.currentResponses[part.id]}
@@ -332,17 +385,24 @@ export function QuestionPlayer({
             ))}
           </section>
         )}
-        {!question.sentenceTokens &&
+        {!chemical &&
+          !question.sentenceTokens &&
           question.parts.map((part, index) => {
             return (
               <section
                 className="question-part"
                 key={part.id}
-                {...(properties
-                  ? { 'aria-label': 'Select and correct one error' }
+                {...(properties || recallPresentation
+                  ? {
+                      'aria-label': recallPresentation
+                        ? part.prompt
+                            .map((block) => (block.kind === 'text' ? block.text : ''))
+                            .join(' ') || 'Answer'
+                        : 'Select and correct one error',
+                    }
                   : { 'aria-labelledby': `${instanceId}-part-${part.id}` })}
               >
-                {!properties && (
+                {!properties && !recallPresentation && (
                   <div className="part-heading">
                     <h3 id={`${instanceId}-part-${part.id}`}>
                       {question.parts.length > 1 ? `Part ${index + 1}` : 'Your response'}
@@ -352,14 +412,28 @@ export function QuestionPlayer({
                     </span>
                   </div>
                 )}
-                <Content blocks={part.prompt} />
+                {!(
+                  recallPresentation &&
+                  part.prompt.length === 1 &&
+                  part.prompt[0]?.kind === 'text' &&
+                  /^answer$/i.test(part.prompt[0].text.trim())
+                ) && <Content blocks={part.prompt} />}
                 {!student && part.kind === 'correction' && <p>{part.sourceText}</p>}
                 {student && (
-                  <ResponseControl
+                  <PlayerResponseControl
                     key={`${part.id}:${actions.clearRevision}`}
                     part={part}
                     response={attempt.currentResponses[part.id]}
                     readOnly={readOnly}
+                    {...(recallPresentation
+                      ? {
+                          compactLabel: true,
+                          fieldLabel:
+                            part.prompt
+                              .map((block) => (block.kind === 'text' ? block.text : ''))
+                              .join(' ') || 'Answer',
+                        }
+                      : {})}
                     status={pointStatus(part.id)}
                     selectionStatus={pointStatus(part.id, 'selection')}
                     replacementStatus={pointStatus(part.id, 'replacement')}
@@ -424,13 +498,22 @@ export function QuestionPlayer({
             );
           })}
       </div>
-      {(!student || showedAnswer || (actions.state.currentCorrect && selfReviewComplete)) && (
+      {(!student ||
+        (recallPresentation && assessed) ||
+        showedAnswer ||
+        (actions.state.currentCorrect && selfReviewComplete)) && (
         <section
           className={`worked-answer${!student ? ' teacher-answer' : ''}`}
-          aria-label="Ideal answer"
+          aria-label="Model answer"
         >
-          <h3>Ideal answer</h3>
-          <Content blocks={question.workedAnswer} />
+          <h3>MODEL ANSWER</h3>
+          {chemical ? (
+            <Suspense fallback={<p role="status">Loading model equation…</p>}>
+              <ChemicalWorkedAnswer question={question} />
+            </Suspense>
+          ) : (
+            <Content blocks={question.workedAnswer} />
+          )}
         </section>
       )}
       {student &&
@@ -449,6 +532,31 @@ export function QuestionPlayer({
             ? 'All gaps correct.'
             : 'Some gaps need correction. Each gap has its checked status.'}
         </p>
+      )}
+      {student && chemical?.kind === 'equation-writing' && currentMarks && (
+        <section className="chemical-point-feedback" aria-label="Equation feedback" role="status">
+          {currentMarks.points.map((point) => (
+            <p
+              key={`${point.partId}:${point.pointId}`}
+              className={
+                point.earned === point.available
+                  ? 'chemical-result-correct'
+                  : 'chemical-result-incorrect'
+              }
+            >
+              <span aria-label={point.earned === point.available ? 'correct' : 'incorrect'}>
+                {point.earned === point.available ? '✓' : '❌'}
+              </span>{' '}
+              <strong>
+                {point.pointId === 'formulae'
+                  ? 'Formulae'
+                  : point.pointId === 'coefficients'
+                    ? 'Balancing'
+                    : 'State Symbols'}
+              </strong>
+            </p>
+          ))}
+        </section>
       )}
       {checkedFeedback && 'issues' in checkedFeedback && (
         <div className="validation-issue" role="status">
@@ -549,7 +657,18 @@ export function QuestionPlayer({
           {assessment.marks.points
             .filter((point) => point.earned < point.available && point.learningReview?.eligible)
             .map((point) => (
-              <details className="learning-review" key={`${point.partId}-${point.pointId}`}>
+              <details
+                onClick={(event) => {
+                  if (!event.currentTarget.open && (event.target as Element).closest('summary'))
+                    actions.acknowledgeModelAnswer();
+                }}
+                onToggle={(event) => {
+                  if (event.currentTarget.open && !isModelAnswerShown(attempt))
+                    actions.acknowledgeModelAnswer();
+                }}
+                className="learning-review"
+                key={`${point.partId}-${point.pointId}`}
+              >
                 <summary>Review equivalent wording</summary>
                 <p>
                   <strong>Model answer:</strong> {point.learningReview!.modelAnswer}
@@ -612,25 +731,7 @@ export function QuestionPlayer({
       )}
       {student && (
         <footer className="player-footer">
-          {!properties &&
-            !reviewing &&
-            question.hints
-              .filter((hint) => !shownSupport.some((item) => item.supportId === hint.id))
-              .map((hint) => (
-                <button
-                  type="button"
-                  key={hint.id}
-                  onClick={() =>
-                    onCommand({
-                      kind: 'assist',
-                      assistance: { kind: 'hint', supportId: hint.id, at: Date.now() },
-                    })
-                  }
-                >
-                  Request hint
-                </button>
-              ))}
-          <QuestionActions actions={actions} />
+          <QuestionActions actions={actions} variant={recallPresentation ? 'check-next' : 'full'} />
           {saveStatus.kind === 'error' && (
             <div className="save-status save-error" role="alert">
               <>

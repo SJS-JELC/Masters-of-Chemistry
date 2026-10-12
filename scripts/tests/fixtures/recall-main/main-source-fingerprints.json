@@ -1,0 +1,3044 @@
+{
+  "recordedAt": "2026-10-10T21:35:52.987Z",
+  "files": {
+    "src/activities/alevel/acid-base-calculations/data.js": {
+      "bytes": 7539,
+      "mtimeMs": 1791225525000,
+      "sha256": "b2726f6bc322c0e44362528912dac357429c977907b2f046d10c3c33eff73019"
+    },
+    "src/activities/alevel/acid-base-calculations/engine.d.ts": {
+      "bytes": 2274,
+      "mtimeMs": 1791044568499.0664,
+      "sha256": "262ff4eee99b5a6d29afbc6e957d72f5d40708d1ea2ddbed8aec1f972f06f229"
+    },
+    "src/activities/alevel/acid-base-calculations/engine.js": {
+      "bytes": 57768,
+      "mtimeMs": 1791225525000,
+      "sha256": "7bd763295c7daae010c71c79951f732bc06f883f1467f8eb56c5f40212243789"
+    },
+    "src/activities/alevel/acid-base-calculations/historical-levels.js": {
+      "bytes": 13747,
+      "mtimeMs": 1791225525000,
+      "sha256": "095f95fa79a296abffe145ddec1a14486097ed9485dc24a5945d8ee72b695f4f"
+    },
+    "src/activities/alevel/acid-base-calculations/identity.ts": {
+      "bytes": 3839,
+      "mtimeMs": 1791045686203.687,
+      "sha256": "d0534bd42aef3b131905e12cb866f9f44bcf2d3500e667d1ee2b8ecdfdfb9678"
+    },
+    "src/activities/alevel/acid-base-calculations/idle-allowances.ts": {
+      "bytes": 1244,
+      "mtimeMs": 1791225525000,
+      "sha256": "916bf098448119f2e80ee7af4c7daa151053e6a4647cee5549fa8941d326f33a"
+    },
+    "src/activities/alevel/acid-base-calculations/index.ts": {
+      "bytes": 1073,
+      "mtimeMs": 1791044568504.2683,
+      "sha256": "86c7fb3250a2c7e5edc2a47fc6ebb1b151b146aa655d08c4e7eeb055b1fda992"
+    },
+    "src/activities/alevel/acid-base-calculations/legacy-core.js": {
+      "bytes": 57391,
+      "mtimeMs": 1791225525000,
+      "sha256": "4896dd2783734c729a381995a66df71a136df3d4a87bc29e2337517c3f947bf7"
+    },
+    "src/activities/alevel/acid-base-calculations/marking.ts": {
+      "bytes": 2137,
+      "mtimeMs": 1790998926373.279,
+      "sha256": "81e671a12f18d2df65d4284c0466e6acc22a871ed9b61c022d8ca7bf5255dea5"
+    },
+    "src/activities/alevel/acid-base-calculations/persisted-codes.ts": {
+      "bytes": 1264,
+      "mtimeMs": 1791225525000,
+      "sha256": "7cbceeadb7054250d0698876997cb0627518b17712d84f56aff914325ef15be1"
+    },
+    "src/activities/alevel/acid-base-calculations/provider.ts": {
+      "bytes": 6822,
+      "mtimeMs": 1791044568181.1267,
+      "sha256": "5c814cd246f46e8a9fc52b5ed2fabf6f79dd096a16d5140e4dc8d3674a65a67f"
+    },
+    "src/activities/alevel/acid-base-calculations/sources.ts": {
+      "bytes": 1261,
+      "mtimeMs": 1790985703960.9387,
+      "sha256": "25598154f9c4a8e1207de4e83d238e8de6372af6842b8e3dd46e344da48184aa"
+    },
+    "src/activities/alevel/dot-and-cross/bank.d.ts": {
+      "bytes": 116,
+      "mtimeMs": 1790985863613.5708,
+      "sha256": "65a854e48574beeab6991d5dc8952c2d7688439dda20eba192e8715c8f67ecb7"
+    },
+    "src/activities/alevel/dot-and-cross/bank.js": {
+      "bytes": 584003,
+      "mtimeMs": 1790985865692.965,
+      "sha256": "5422e0114fb930acae1041b96179ba8c316ea6d5cf09dd350cb6491b48e3e4fd"
+    },
+    "src/activities/alevel/dot-and-cross/index.ts": {
+      "bytes": 578,
+      "mtimeMs": 1790998926447.4849,
+      "sha256": "ed038029e187baef7d106890401f7725ec40e57b71bdf3355940f00917e1bf2a"
+    },
+    "src/activities/alevel/dot-and-cross/marking.ts": {
+      "bytes": 3047,
+      "mtimeMs": 1791044568514.2964,
+      "sha256": "021fab13ff63986453f52114a885ea0a130154b6b463a72d2ae6b6f483646109"
+    },
+    "src/activities/alevel/dot-and-cross/provider.ts": {
+      "bytes": 7257,
+      "mtimeMs": 1791044568275.4531,
+      "sha256": "8fa92593ac99dc063b0b28463d30f008b97af4e1c965442bbc2964efaa1289ab"
+    },
+    "src/activities/alevel/electron-configurations/index.ts": {
+      "bytes": 733,
+      "mtimeMs": 1790998926520.143,
+      "sha256": "3fae4dec25808927e37477960975662a67d64bd256fa6ecc9e13efcdd8ed5064"
+    },
+    "src/activities/alevel/electron-configurations/marking.ts": {
+      "bytes": 1800,
+      "mtimeMs": 1790998926533.7073,
+      "sha256": "2ac0cfadfe42287df16309971364ea96dcda8629061ee05c656fe4e841ea44be"
+    },
+    "src/activities/alevel/electron-configurations/provider.ts": {
+      "bytes": 9727,
+      "mtimeMs": 1791044568241.6477,
+      "sha256": "da7ce1889761e884ec8e1f9137c5d1aea618909d044ef465a7ef567165a96e9a"
+    },
+    "src/activities/alevel/electrons-bonding/core.d.ts": {
+      "bytes": 449,
+      "mtimeMs": 1790989503633.2395,
+      "sha256": "1f9d78b215db78f317587c5cdb94afa50068aecda9df0125b62b4a5d406f81d0"
+    },
+    "src/activities/alevel/electrons-bonding/core.js": {
+      "bytes": 2720,
+      "mtimeMs": 1790991618666.707,
+      "sha256": "4652339892d5d6e35a42b439c2208e45070119026872c216d1a1f63902332575"
+    },
+    "src/activities/alevel/electrons-bonding/data.d.ts": {
+      "bytes": 536,
+      "mtimeMs": 1790989502708.149,
+      "sha256": "8a818aeb8f6aac4afd1d0502606fa618f1368fb4ac3a5fc775770afe8a084a45"
+    },
+    "src/activities/alevel/electrons-bonding/data.js": {
+      "bytes": 19493,
+      "mtimeMs": 1791225525000,
+      "sha256": "c5de10e5c59563280d32c185c815b5785c32dd0648722771c63c6df1a1c43ddf"
+    },
+    "src/activities/alevel/electrons-bonding/index.ts": {
+      "bytes": 481,
+      "mtimeMs": 1790998926598.091,
+      "sha256": "6c7e8fbb41e1e8b4979886612741b0ee222c2924b23eb1261667e92b8bf6eb10"
+    },
+    "src/activities/alevel/electrons-bonding/marking.ts": {
+      "bytes": 1488,
+      "mtimeMs": 1790998926613.9026,
+      "sha256": "572ee663798299faf48a945df922cffeb8ddf752f3bac55cb01f5059d6b4a41f"
+    },
+    "src/activities/alevel/electrons-bonding/provider.ts": {
+      "bytes": 3849,
+      "mtimeMs": 1791044568206.6309,
+      "sha256": "268a1b73b0935b03dbe93530cc929ecd2049e9a5667fb40d36c6645a9baf03bb"
+    },
+    "src/activities/alevel/explaining-properties/bank.ts": {
+      "bytes": 14827,
+      "mtimeMs": 1791152058452.7993,
+      "sha256": "3f1ba771bca1c1ee4a1e6f965d77db827ee6c7a134c6ab0e7364809a21da4abe"
+    },
+    "src/activities/alevel/explaining-properties/index.ts": {
+      "bytes": 626,
+      "mtimeMs": 1791149694292.8286,
+      "sha256": "4b074a45bb3faa90e78f66fc06e7e6dce204df9e8f52cc76e5043416d3d86d02"
+    },
+    "src/activities/alevel/explaining-properties/marking.ts": {
+      "bytes": 4303,
+      "mtimeMs": 1791149694283.8835,
+      "sha256": "e24f373f189f3240c2e5d0dd67e92317bb66ff6626b99b60aec564ca4d7b798c"
+    },
+    "src/activities/alevel/explaining-properties/provider.ts": {
+      "bytes": 5450,
+      "mtimeMs": 1791196930000,
+      "sha256": "3851c1740d8004b4f095ca6020b26bca7c0cbf7cacac8ea296450c49ff4a5972"
+    },
+    "src/activities/alevel/explaining-properties/README.md": {
+      "bytes": 6028,
+      "mtimeMs": 1791226456000,
+      "sha256": "b0092f1fd3b3a61385428d8defb1c2f4eea4a3e553e559ff851b3853183a151a"
+    },
+    "src/activities/alevel/ph-titration-curves/bank.json": {
+      "bytes": 30762,
+      "mtimeMs": 1790989436334.71,
+      "sha256": "b444f3961a8750843fbb9d0d3c7b346eaa6bee46e311dfb388f474b26b576d4e"
+    },
+    "src/activities/alevel/ph-titration-curves/bank.ts": {
+      "bytes": 29334,
+      "mtimeMs": 1790989505073.5815,
+      "sha256": "1f439e82d36aec271d61a95814eb9d001ed4cbbeaa6c5a5d9fae839e6562d88b"
+    },
+    "src/activities/alevel/ph-titration-curves/index.ts": {
+      "bytes": 524,
+      "mtimeMs": 1790998926644.8013,
+      "sha256": "45f3f14c670f8797009b86dbe5702223146e8dae3a8d16b910f05c6a6857e112"
+    },
+    "src/activities/alevel/ph-titration-curves/marking.ts": {
+      "bytes": 1345,
+      "mtimeMs": 1790998926660.0024,
+      "sha256": "6ef89fc569bf7ffac1fb2d530089b4dd631f96c2b00148ab3740044c173ff21b"
+    },
+    "src/activities/alevel/ph-titration-curves/provider.ts": {
+      "bytes": 5271,
+      "mtimeMs": 1791044568256.806,
+      "sha256": "6856c5643ee7c620ffc2e5903208dbd8fea0a44e33d43e437463553bc47f8ffd"
+    },
+    "src/activities/igcse/bond-enthalpy/index.ts": {
+      "bytes": 530,
+      "mtimeMs": 1790998926693.2126,
+      "sha256": "dd5d11df657fb8c6a339ec34dbbd3b577a67ab0ef413f490b3533fb9727ee855"
+    },
+    "src/activities/igcse/bond-enthalpy/marking.ts": {
+      "bytes": 812,
+      "mtimeMs": 1790998926703.3135,
+      "sha256": "5b1b7566b3bf213aeac5fa189e3bc530c0add2594bcfb36a2a1e289e457dda93"
+    },
+    "src/activities/igcse/bond-enthalpy/provider.ts": {
+      "bytes": 6653,
+      "mtimeMs": 1791044568387.9138,
+      "sha256": "49c56a5ee2e9fe759b68f92346c0a8876620a66ba55418b955f67f36f5b81f94"
+    },
+    "src/activities/igcse/calorimetry/index.ts": {
+      "bytes": 503,
+      "mtimeMs": 1790998926739.8948,
+      "sha256": "b15ef5ced2df574263dd3c778490ec8e20767065fc2e47b4681407bf23677c20"
+    },
+    "src/activities/igcse/calorimetry/marking.ts": {
+      "bytes": 733,
+      "mtimeMs": 1790998926754.5295,
+      "sha256": "c513197ddcc4ccc04c99095e67a395d1074df8d4f2e8e754b480810c66b616cd"
+    },
+    "src/activities/igcse/calorimetry/provider.ts": {
+      "bytes": 7630,
+      "mtimeMs": 1791044568370.9207,
+      "sha256": "f90392c1f29cd9d2dbfd64e0efa4eec1981ad7292ee8e8939283dc389df410fa"
+    },
+    "src/activities/igcse/dot-and-cross/bank.d.ts": {
+      "bytes": 87,
+      "mtimeMs": 1790989563119.2588,
+      "sha256": "e14dacfa57de6ee3eaa945c0d93d5dbaa9a77c05d852960de5716710561df7e2"
+    },
+    "src/activities/igcse/dot-and-cross/bank.js": {
+      "bytes": 382933,
+      "mtimeMs": 1790989567009.0632,
+      "sha256": "202d93cc03dbda365d9a7a027db83b581f83528e0b075a4f066bb3bea4756857"
+    },
+    "src/activities/igcse/dot-and-cross/index.ts": {
+      "bytes": 523,
+      "mtimeMs": 1790998926796.7056,
+      "sha256": "62bbaf024fd83db37c482a277e90ad851b09cc8de98657ed407ea7d78954755b"
+    },
+    "src/activities/igcse/dot-and-cross/marking.ts": {
+      "bytes": 3983,
+      "mtimeMs": 1791044568523.2327,
+      "sha256": "776514fddcfcd37c7e5af051d76099631c899514167d86644452bb9cf83e6cd6"
+    },
+    "src/activities/igcse/dot-and-cross/provider.ts": {
+      "bytes": 6871,
+      "mtimeMs": 1791044568294.9507,
+      "sha256": "684573a3e9611fde165db75057d3f6b374969e899fa9e2277c37120b685e8f0a"
+    },
+    "src/activities/igcse/dot-and-cross/types.ts": {
+      "bytes": 801,
+      "mtimeMs": 1790998926854.6482,
+      "sha256": "05a04affa1003ff0cd0168a964c6a2e88b2d35c20c23c810e1835947c55dbdc0"
+    },
+    "src/activities/igcse/energetics-practical/data.ts": {
+      "bytes": 33428,
+      "mtimeMs": 1791225525000,
+      "sha256": "af25b836502a6e468bb356bbb901aa13b4be624cac623f9d51715eb83f0ef7a9"
+    },
+    "src/activities/igcse/energetics-practical/index.ts": {
+      "bytes": 653,
+      "mtimeMs": 1790998926863.3457,
+      "sha256": "5b09be3c84f7886f0b4ef580ef7c0d4ae7bc9b91c6389b9ddf92ea616bc589ec"
+    },
+    "src/activities/igcse/energetics-practical/marking.ts": {
+      "bytes": 5721,
+      "mtimeMs": 1790998926896.1594,
+      "sha256": "2c6fee731e92c2deaca535db860c225fc50e07e315b70d0557119bd186b0ad77"
+    },
+    "src/activities/igcse/energetics-practical/provider.ts": {
+      "bytes": 6071,
+      "mtimeMs": 1791044568335.6333,
+      "sha256": "53e3ed55a1811de02ec4163c3544c3a1f7058520b2523f6cf73af828ae528ea4"
+    },
+    "src/activities/igcse/energetics-practical/source-core.d.ts": {
+      "bytes": 343,
+      "mtimeMs": 1790989505987.585,
+      "sha256": "bc74785fb057c15bb7f53a127025b408fa2c16e8a6132d285c9e18d755c6fda1"
+    },
+    "src/activities/igcse/energetics-practical/source-core.js": {
+      "bytes": 4748,
+      "mtimeMs": 1790989456885.142,
+      "sha256": "09aee66bd1b5d93ed4a6a085a5329f84be2e0dcd92c98026be6b5c04d5f18952"
+    },
+    "src/activities/igcse/energetics-practical/types.ts": {
+      "bytes": 949,
+      "mtimeMs": 1790998926937.128,
+      "sha256": "40b417daab18963cbf47b4cec1ed41dc71cd3081124f8d7acc3143e0ba75fc20"
+    },
+    "src/activities/igcse/energy-enthalpy/data.ts": {
+      "bytes": 66398,
+      "mtimeMs": 1791225525000,
+      "sha256": "a68ea329bafca72e2a678b6e5bd2cae9f4cf87e30cb33596e22abe392db02dcd"
+    },
+    "src/activities/igcse/energy-enthalpy/index.ts": {
+      "bytes": 518,
+      "mtimeMs": 1790998926944.4207,
+      "sha256": "f0348c2324fcadc7824ce4b8948b79a9cf0ba1c3a197208942490b221a81a9d3"
+    },
+    "src/activities/igcse/energy-enthalpy/marking.ts": {
+      "bytes": 2877,
+      "mtimeMs": 1790998926964.0466,
+      "sha256": "55d995e7511ed4582be7acc52e9732db0cba2f5cc1dc88d35096fc749bd23566"
+    },
+    "src/activities/igcse/energy-enthalpy/provider.ts": {
+      "bytes": 7064,
+      "mtimeMs": 1791049193249.712,
+      "sha256": "4636c1881fcc723f99bd17e967dc4b66ab66f47239cd299836abb54c9558881f"
+    },
+    "src/activities/igcse/energy-enthalpy/source-core.d.ts": {
+      "bytes": 614,
+      "mtimeMs": 1790989504224.148,
+      "sha256": "1e3388d2586a2dcd65462cd422d36703aeb1be1d50a5d3005a725898a2727fa6"
+    },
+    "src/activities/igcse/energy-enthalpy/source-core.js": {
+      "bytes": 2592,
+      "mtimeMs": 1790989456885.142,
+      "sha256": "3fac3867e0d91110e393d944f3ade51282a541605f8c835a04ce164c8cca0cfb"
+    },
+    "src/activities/igcse/energy-enthalpy/types.ts": {
+      "bytes": 962,
+      "mtimeMs": 1790998927001.8848,
+      "sha256": "3303aee6e4137c08756da11bf45ba0f0946bb4d592b17ee0845d685ae81f1628"
+    },
+    "src/activities/igcse/equations/bank.ts": {
+      "bytes": 19727,
+      "mtimeMs": 1791663434203.97,
+      "sha256": "096a83f5d997832c5b5076e5d1c93b39f5de5d3e720d15bf08e7a49667ee43ae"
+    },
+    "src/activities/igcse/equations/index.ts": {
+      "bytes": 521,
+      "mtimeMs": 1791621559794.0647,
+      "sha256": "ca752e5c79d24e9d749251ee8f707cefa0cf1c1ad7f8661b99e401fd0c02619b"
+    },
+    "src/activities/igcse/equations/marking.ts": {
+      "bytes": 5603,
+      "mtimeMs": 1791663589275.5176,
+      "sha256": "734bde7c942f2b29050c901582bc0d203fbd32cd2d930c684a8317020fc147fc"
+    },
+    "src/activities/igcse/equations/provider.ts": {
+      "bytes": 7812,
+      "mtimeMs": 1791663589256.6611,
+      "sha256": "672c8c9dae781386e777451932694f54deca2f1efc469a61e430a2877fb707aa"
+    },
+    "src/activities/igcse/formulae/index.ts": {
+      "bytes": 500,
+      "mtimeMs": 1791621559726.4304,
+      "sha256": "3f5d04d9da99ca94d81d46bab441d2e98d25212191575edca95744c4f4bc872a"
+    },
+    "src/activities/igcse/formulae/marking.ts": {
+      "bytes": 1370,
+      "mtimeMs": 1791621559739.91,
+      "sha256": "261b07a403c8a427c3753b564c58dde90aac8b395154b62c769a458de1ff4ea9"
+    },
+    "src/activities/igcse/formulae/provider.ts": {
+      "bytes": 2786,
+      "mtimeMs": 1791663589287.0825,
+      "sha256": "dc0741fd198f666753a30651f29942c454d02abfbc80a3ac726d4a77217f6a9a"
+    },
+    "src/activities/igcse/formulae/recall-facts.ts": {
+      "bytes": 2110,
+      "mtimeMs": 1791621559768.4668,
+      "sha256": "c3de614a9804fb88fa0754144d5aab6db8553e10215ae28c5a29dca6c9a0ba5f"
+    },
+    "src/activities/igcse/structure-and-bonding/data.ts": {
+      "bytes": 13796,
+      "mtimeMs": 1791225525000,
+      "sha256": "e9d67624a85a061ab9b35a140c4306bd301d1d6fb40442d20d6d623dfee2f893"
+    },
+    "src/activities/igcse/structure-and-bonding/dormant-level-one.json": {
+      "bytes": 10701,
+      "mtimeMs": 1790985799775.079,
+      "sha256": "4a212daa269499e33c8c0c54734f1ef984a7a708f6cc601d9728329446516559"
+    },
+    "src/activities/igcse/structure-and-bonding/index.ts": {
+      "bytes": 587,
+      "mtimeMs": 1790998927014.789,
+      "sha256": "85f67a839a8353ce6c47ed58e6ea0526f8835170586b79d2d77a1c4617460eca"
+    },
+    "src/activities/igcse/structure-and-bonding/marking.ts": {
+      "bytes": 1381,
+      "mtimeMs": 1790998927026.5989,
+      "sha256": "d2c42e181ac5892d1388d8b6d60a1db0d1a0027bdef36521e36650f73600559b"
+    },
+    "src/activities/igcse/structure-and-bonding/provider.ts": {
+      "bytes": 6794,
+      "mtimeMs": 1791044568351.0251,
+      "sha256": "a55b7b8e0e8ac1ecca569f02824cd1fca5b4fe79a1a848b1e6134bf9c22028f1"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-01-p1.svg": {
+      "bytes": 6887,
+      "mtimeMs": 1790688664000,
+      "sha256": "2973dc979e08e3fd01e4d474eeb37b992121b4eabd9d9050c21326b4412dbe69"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-01-r1.svg": {
+      "bytes": 7484,
+      "mtimeMs": 1790688664000,
+      "sha256": "eb47c012aa8fd3d41a41b161f8c617af2e5a0457a907c0d753ad3ea7ca85918a"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-02-p1.svg": {
+      "bytes": 8948,
+      "mtimeMs": 1790688664000,
+      "sha256": "2dddb54225856c9cb7a1adb14baafb2dce82eb02d821a61888fefd80d5107a57"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-02-r1.svg": {
+      "bytes": 6974,
+      "mtimeMs": 1790688664000,
+      "sha256": "75e7336e7853579c449b346ea7a444e2dc557527b1b7e4a51108a57eceef8bd9"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-03-p1.svg": {
+      "bytes": 4975,
+      "mtimeMs": 1790688664000,
+      "sha256": "8c036367704e0140e6a7f9bb9e5799f3acaf5d165599c855d313cbbe8b0c7c4b"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-03-r1.svg": {
+      "bytes": 4160,
+      "mtimeMs": 1790688664000,
+      "sha256": "bb71f9ecf8ceaa6a7a8fa1c8cb22dde69696ee1acc259e701e490777f5afa4b8"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p1.svg": {
+      "bytes": 3450,
+      "mtimeMs": 1790688664000,
+      "sha256": "beeecf64fc15706dcbcbbac58d9b2a798eb1256eba142266297ab9fa0e572dd0"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-04-p2.svg": {
+      "bytes": 4717,
+      "mtimeMs": 1790688664000,
+      "sha256": "7dc4f3a99de36bebf640874e4ff9c9d50525eae705be2280dfb64fee0a89630d"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-04-r1.svg": {
+      "bytes": 5447,
+      "mtimeMs": 1790688664000,
+      "sha256": "0f22cfcd448379a0c0d4305013ebe7c7f54a85f9821646fc912e9bbe56875590"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-05-p1.svg": {
+      "bytes": 9009,
+      "mtimeMs": 1790688664000,
+      "sha256": "b1d4b51daef30ee86e91095b609c2045186cc3def046392670efbdfea4be490e"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-05-r1.svg": {
+      "bytes": 5292,
+      "mtimeMs": 1790688664000,
+      "sha256": "a1cf0211e6f7444a64c3c7a74ea38e40d8052af7e1e543b146aec7a2ecf590f0"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-06-p1.svg": {
+      "bytes": 9918,
+      "mtimeMs": 1790688664000,
+      "sha256": "97a391384ca057b12dc453a4776bbc67af955dc5004d16c289de2af3746f505a"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-06-r1.svg": {
+      "bytes": 9689,
+      "mtimeMs": 1790688664000,
+      "sha256": "1e666a2f077344091ac4a1f9c5014d72b5ea27e2c208ef2ccf6152bc0cc2fbfd"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-07-p1.svg": {
+      "bytes": 7790,
+      "mtimeMs": 1790688664000,
+      "sha256": "d78adf59177bf2b343a092572d1b0da04308f9326df09d2ceda69c5df141cead"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-07-r1.svg": {
+      "bytes": 6198,
+      "mtimeMs": 1790688664000,
+      "sha256": "e763ebe4568e8bb9d3ddeb6787d05a39d30106fca735ddbb1fa9c42bde487795"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p1.svg": {
+      "bytes": 4221,
+      "mtimeMs": 1790688664000,
+      "sha256": "7bb3800bfd386d206677d73445ba780c6252d6abe03e98773b3ee029efe08035"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-08-p2.svg": {
+      "bytes": 5283,
+      "mtimeMs": 1790688664000,
+      "sha256": "500e21e4185e01295ddf51022bafe567b2a53d846c45da20df13adb97124c44c"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-08-r1.svg": {
+      "bytes": 7655,
+      "mtimeMs": 1790688664000,
+      "sha256": "fbae9f60480f584be8822b6610401698ac21d019328bfded28ad95568f24209f"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-09-p1.svg": {
+      "bytes": 6459,
+      "mtimeMs": 1790688664000,
+      "sha256": "02de8edb5018c1b2b12a57745b75d12f3707d20a093a896dd2716307b0320aa1"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-09-r1.svg": {
+      "bytes": 4857,
+      "mtimeMs": 1790688664000,
+      "sha256": "2f235a8fcac7a367778848d461e00ad9871502a3e55eb934c9b79cf0072c93f9"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-10-p1.svg": {
+      "bytes": 9730,
+      "mtimeMs": 1790688664000,
+      "sha256": "63eab07cfc467a786391911a26c9647f692971486f20e049532b56291c6ab084"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/a/a-10-r1.svg": {
+      "bytes": 7683,
+      "mtimeMs": 1790688664000,
+      "sha256": "d276b36c34a3f0eae4c36a575aef599234cd44f8771065a4a4ce4535387aaae6"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/b/alarm-pheromone-skeletal-notes.svg": {
+      "bytes": 4106,
+      "mtimeMs": 1790681317000,
+      "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/b/allantoin-skeletal-notes.svg": {
+      "bytes": 12141,
+      "mtimeMs": 1790681317000,
+      "sha256": "0aeb7005781b274afe69950e9b19f86e5f08178358b683628a7fb82ac5a4c005"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/b/gyromitra-esculenta.png": {
+      "bytes": 95053,
+      "mtimeMs": 1790687499000,
+      "sha256": "9a0ce56c35290871b144616486b3657cc34d83b584778252c7ed3e5d1d566f11"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/b/gyromitrin-skeletal-notes.svg": {
+      "bytes": 4572,
+      "mtimeMs": 1790992138742.38,
+      "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/b/honey-bee.png": {
+      "bytes": 136906,
+      "mtimeMs": 1790687499000,
+      "sha256": "becf034427521208861fd83f2579e9969d7fc0f3ecf77f0fe76ebb1819d768b7"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/b/olive-fly-pheromone-skeletal-notes.svg": {
+      "bytes": 6174,
+      "mtimeMs": 1790681317000,
+      "sha256": "f9c3ec21294f8d502df7ab0dae0599b72149dd15fe5cccd418f74865e7e502ac"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/c/network.svg": {
+      "bytes": 5580,
+      "mtimeMs": 1790774601000,
+      "sha256": "8c9c0e2259bd304ad805ec717e2184ab5c08d6b755ffe7d17129130b65d7d273"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-01.svg": {
+      "bytes": 188583,
+      "mtimeMs": 1790775754000,
+      "sha256": "b7bb526a836627f7f68437ad78398e4ca2ab74cb2759cec811c7b5ec8b525394"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-02.svg": {
+      "bytes": 188485,
+      "mtimeMs": 1790775754000,
+      "sha256": "534a9b442caf2fdd8d1e6e55041f484012439151399e91c21cba5fbb44010bc5"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-03.svg": {
+      "bytes": 188485,
+      "mtimeMs": 1790775754000,
+      "sha256": "f3a5e323025fcf1e3a0e82bf16e4c9a8597883335a3dcb4c3fdc6d3ebecc550d"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-04.svg": {
+      "bytes": 188488,
+      "mtimeMs": 1790775754000,
+      "sha256": "1ddca36d810d39fe689e895f5bf55b1832b57d9c8a91402967155ee627bffb1d"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-05.svg": {
+      "bytes": 189181,
+      "mtimeMs": 1790775754000,
+      "sha256": "62fc1bb2e20c31484a3f2fb049f203174ee820d08fbde566e5cf6d43a8b25b56"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-06.svg": {
+      "bytes": 188133,
+      "mtimeMs": 1790775754000,
+      "sha256": "2b465c7bcbab32513aa64f8b07a02b37e7f0f1e7f4671fd2f1a17722d7365e46"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-07.svg": {
+      "bytes": 188125,
+      "mtimeMs": 1790775754000,
+      "sha256": "6d8d351812fdfe504674d18a85f20049b86e6333894a8b27b863606f068ac021"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-08.svg": {
+      "bytes": 188260,
+      "mtimeMs": 1790775754000,
+      "sha256": "1f2b611435b76929c80474d8a89d6965b4f25d9f91e455f6cb3818d42bd454bb"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-09.svg": {
+      "bytes": 188769,
+      "mtimeMs": 1790775754000,
+      "sha256": "ae7d0dd057bdf1540be951eb90fb81448dccb4866303a42059cc8598654f9e63"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-10.svg": {
+      "bytes": 188583,
+      "mtimeMs": 1790775754000,
+      "sha256": "69e266cae96ebe7dfc2a68554f9337ffb9ba9430554724d95a7ce9aa18fc995b"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-11.svg": {
+      "bytes": 188126,
+      "mtimeMs": 1790775754000,
+      "sha256": "74d09a0446564de42c77c1e767d95c9a20b5c2066303a7ea34332846fdc8c325"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-12.svg": {
+      "bytes": 188130,
+      "mtimeMs": 1790775754000,
+      "sha256": "2f030d579bb744edcab6fe5c4c3f03ef6ac5635f8e9e33e714afe385906bc7df"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-13.svg": {
+      "bytes": 188129,
+      "mtimeMs": 1790775754000,
+      "sha256": "22acbf4193f74aa9c779b3075ea44d00315137a452d786b2c75a2e0ca931800a"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-14.svg": {
+      "bytes": 188040,
+      "mtimeMs": 1790775754000,
+      "sha256": "dd21e1be18b8d787fe03fa4abfeb5a03fd485152fdc49bb9cd0e98d922a1c9ab"
+    },
+    "src/activities/olympiad/c3l6/assets/digitised/intro/example-15.svg": {
+      "bytes": 188681,
+      "mtimeMs": 1790775754000,
+      "sha256": "2cc803b43746e6417eac34d9068c48149ef850064f27f12addba60204bdb37ee"
+    },
+    "src/activities/olympiad/c3l6/bank.json": {
+      "bytes": 47186,
+      "mtimeMs": 1790992138664.3162,
+      "sha256": "1b0e4d2e2449d81f30afc4dcf3f62b677a0e085446d6c22156ea946b0c40275d"
+    },
+    "src/activities/olympiad/c3l6/c3l6.css": {
+      "bytes": 12293,
+      "mtimeMs": 1791116736803.03,
+      "sha256": "0d4a37d9e87d9b2a8f2633f3a6ae8c70a95457c3d5ec2ab67b77009d70e5d620"
+    },
+    "src/activities/olympiad/c3l6/C3L6View.tsx": {
+      "bytes": 28088,
+      "mtimeMs": 1791117003409.5918,
+      "sha256": "623d581bef5c4e5eb8d08877d073327debd915567f4a2f4132cc5304f903d4ae"
+    },
+    "src/activities/olympiad/c3l6/content.ts": {
+      "bytes": 4306,
+      "mtimeMs": 1791002756386.0923,
+      "sha256": "92931b780281c9ebc6a14c0caa0a8a49045f12a3431b290db5aac0877627ef2c"
+    },
+    "src/activities/olympiad/c3l6/dependencies.ts": {
+      "bytes": 560,
+      "mtimeMs": 1790998927159.9443,
+      "sha256": "b71c1388f88af0e58714c732aa6681f6a9dede6ebb8c684277019b2fd6e4fdcf"
+    },
+    "src/activities/olympiad/c3l6/index.ts": {
+      "bytes": 247,
+      "mtimeMs": 1790998927165.9946,
+      "sha256": "9b9d16e7cedbc8587fba5be28559f6c67a362521c9b6a77584bf50ed082449f0"
+    },
+    "src/activities/olympiad/c3l6/legacy.ts": {
+      "bytes": 9571,
+      "mtimeMs": 1791002756463.2732,
+      "sha256": "2e2f7f5b8fcea59a8abc820b438a85e62d18755514ba7d918c304b875abe06af"
+    },
+    "src/activities/olympiad/c3l6/panels.json": {
+      "bytes": 4618,
+      "mtimeMs": 1790992138744.5996,
+      "sha256": "7cb2d033ef1289019e2aecc85ded633f75e7418ca5699529311f09607df226b8"
+    },
+    "src/activities/olympiad/c3l6/policy.ts": {
+      "bytes": 11644,
+      "mtimeMs": 1791002756558.5623,
+      "sha256": "d045419387bc4361acca8f8900cb7b766de39e72db7992441ee17fec2f3518cb"
+    },
+    "src/activities/olympiad/c3l6/qualification.json": {
+      "bytes": 2335,
+      "mtimeMs": 1790992132480.5671,
+      "sha256": "f0f6bab12b5312b81cfa54edf48ab5b2c449d3263282ea134927414ab1b6b1f1"
+    },
+    "src/activities/olympiad/c3l6/qualification.ts": {
+      "bytes": 221,
+      "mtimeMs": 1790998927282.1843,
+      "sha256": "40c30c1ec04b3d6bc057509c7e9c114f44a667354df46e37c6d3376fa9c96121"
+    },
+    "src/activities/olympiad/c3l6/source-bank.ts": {
+      "bytes": 2089,
+      "mtimeMs": 1791002756636.8577,
+      "sha256": "12000c49a3d1a593d7b883948f9fda58c99214fa3f0aa2ea5bd5b21157834313"
+    },
+    "src/activities/olympiad/drawing-dialog.css": {
+      "bytes": 1234,
+      "mtimeMs": 1791116736803.03,
+      "sha256": "9f64668390be11368a81d3b5f79bc0f6c79620da6b84047c43b4e3b478b0b9d2"
+    },
+    "src/activities/olympiad/DrawingDialog.tsx": {
+      "bytes": 2113,
+      "mtimeMs": 1791116926654.2925,
+      "sha256": "b00438f9f86b53cba7c9c75353c51ac7986e459cfed4292edc51e5852d31d8bc"
+    },
+    "src/activities/olympiad/isomers2011/assets/compound-3-Wisteria.svg": {
+      "bytes": 79090,
+      "mtimeMs": 1791052487327.843,
+      "sha256": "e2c70e8a6b201e389974056092b2b1c79d2f6d8b24f0085b3f3cb57d3d58bf66"
+    },
+    "src/activities/olympiad/isomers2011/assets/compound-3.svg": {
+      "bytes": 80083,
+      "mtimeMs": 1791034326000,
+      "sha256": "07d75b648f1117fadaa701ecb875e68331f2dc4a8a451cea1f9591a257ea1d7d"
+    },
+    "src/activities/olympiad/isomers2011/assets/README.md": {
+      "bytes": 1025,
+      "mtimeMs": 1791226478000,
+      "sha256": "fe620b250d6d34ffa01aa528defde13cf2cedd68fc913c3a8926936251e153bf"
+    },
+    "src/activities/olympiad/isomers2011/content.ts": {
+      "bytes": 1615,
+      "mtimeMs": 1791048957722.4233,
+      "sha256": "b5c0b01abb0e702d08ff1a49a0b018d489ed98e65ea25ab0fccbb99a3fde79e7"
+    },
+    "src/activities/olympiad/isomers2011/index.ts": {
+      "bytes": 206,
+      "mtimeMs": 1791048843364.9104,
+      "sha256": "f7459e4eb1d764bfe2070b8aea7901b79980d0c9ebd49e3d70a2e2561bcb43aa"
+    },
+    "src/activities/olympiad/isomers2011/isomers.css": {
+      "bytes": 2938,
+      "mtimeMs": 1791118772330.9727,
+      "sha256": "5004f5fa204819c615db2d0ae722a9fde0d696d9924fedb537fb449522bc27b2"
+    },
+    "src/activities/olympiad/isomers2011/IsomerView.tsx": {
+      "bytes": 6527,
+      "mtimeMs": 1791118771405.5483,
+      "sha256": "600d6f02444d11e3c0487cbb72b5f33487dd72f21d32bda07c68a139ac82f7ae"
+    },
+    "src/activities/olympiad/isomers2011/policy.ts": {
+      "bytes": 3669,
+      "mtimeMs": 1791048753634.6902,
+      "sha256": "0b06e76e43f883faa429633ea4c58fda4dfbd1a9b8055c3cfd857230e806445b"
+    },
+    "src/catalogue/authored-metadata.json": {
+      "bytes": 4083,
+      "mtimeMs": 1791623265076.4763,
+      "sha256": "5f28a6dc168ab2db1894547658871b61dbbe285b1647d47ed21262a3e2380f1b"
+    },
+    "src/catalogue/definitions.ts": {
+      "bytes": 67758,
+      "mtimeMs": 1791623268374.5354,
+      "sha256": "d823e9b505eccf68ef5a10f9d3ae919f557b47dd6c49ef1a6b82fe39840ea4e0"
+    },
+    "src/catalogue/historical-leaves.ts": {
+      "bytes": 498,
+      "mtimeMs": 1790997999251.202,
+      "sha256": "8a0b207e67ffd05abe39adfc94ba9c27f11a04cf97c4911242b4a42617cbe04c"
+    },
+    "src/catalogue/olympiad-2011-definition.ts": {
+      "bytes": 684,
+      "mtimeMs": 1791118981345.2932,
+      "sha256": "460378a5ae65dce17e3def612c92c6a0c496f21d5ddb1eccd6f929a99eb48056"
+    },
+    "src/catalogue/olympiad-topics.ts": {
+      "bytes": 650,
+      "mtimeMs": 1791119513363.0498,
+      "sha256": "4f8bcce25dd1fd2adb4bac33c63fc05c949c1f4740e8824fc0e8fa9124cb1978"
+    },
+    "src/catalogue/registry.ts": {
+      "bytes": 3380,
+      "mtimeMs": 1791048924686.2043,
+      "sha256": "ca8dab412b67cfca05a299371cd7d7a535df3503a6160f633ff45dd83e94b5ee"
+    },
+    "src/catalogue/scope.ts": {
+      "bytes": 2117,
+      "mtimeMs": 1791048925787.4575,
+      "sha256": "0e3f9cebeb63ac4e36576c08300d5368f9fb9f35da5488cfe16fb1ece79fab81"
+    },
+    "src/chemistry/dot-and-cross/core.d.ts": {
+      "bytes": 514,
+      "mtimeMs": 1790985862821.5024,
+      "sha256": "cae48bcf2bc4e2981758afb91ac7aed1ac27f7c4f4631766a4cccc9bda59e712"
+    },
+    "src/chemistry/dot-and-cross/core.js": {
+      "bytes": 46863,
+      "mtimeMs": 1791225525000,
+      "sha256": "aeeed4cd7d1099ffc81a3d374a68e7c473ff1272edfc21ce09bfc7152e0107cb"
+    },
+    "src/chemistry/dot-and-cross/engine.ts": {
+      "bytes": 9613,
+      "mtimeMs": 1791024115773.8672,
+      "sha256": "e36c76c4aadf5e8d0271b9f023ce6273118eb0ec7ca013f2f556d00570a15b36"
+    },
+    "src/chemistry/dot-and-cross/interaction.ts": {
+      "bytes": 4928,
+      "mtimeMs": 1791023126909.795,
+      "sha256": "31a64f6f756e526a6e4faba550c2d57212b8e8bf43e5ca877cad2e29f2eb2fd0"
+    },
+    "src/chemistry/dot-and-cross/layout-identity.ts": {
+      "bytes": 479,
+      "mtimeMs": 1791199079000,
+      "sha256": "cbb0ded3ce31e0f7657f0808f87ae8a3c17141f4ddb743b870ada4bc7c418291"
+    },
+    "src/chemistry/dot-and-cross/layout.d.ts": {
+      "bytes": 1418,
+      "mtimeMs": 1791023126874.3223,
+      "sha256": "0a9e9eba6475626b00b37c264cad895631ab0fa5122a0123f8806658a2a86b6c"
+    },
+    "src/chemistry/dot-and-cross/layout.js": {
+      "bytes": 14585,
+      "mtimeMs": 1791023126862.5417,
+      "sha256": "49f2780f7072428a34be1dac881d46a0fad5755a4a3fe05f8ab89b049c240c61"
+    },
+    "src/chemistry/dot-and-cross/model.ts": {
+      "bytes": 3711,
+      "mtimeMs": 1791023126888.8628,
+      "sha256": "9ef514ae62c8346c881f4389f68be60f1275916b52ddbf3a18361ecc768f25e7"
+    },
+    "src/chemistry/dot-and-cross/types.ts": {
+      "bytes": 1225,
+      "mtimeMs": 1790998927398.3406,
+      "sha256": "ecea1adad1903d29e33b0d564243c38a61d99ae269d342fb689f5bb272b1f5ee"
+    },
+    "src/chemistry/electron-configuration/core.d.ts": {
+      "bytes": 1134,
+      "mtimeMs": 1790989501810.584,
+      "sha256": "733228407ec039030d42ff22ac835465fa3c814c98c8447c030e2a5869dfc38a"
+    },
+    "src/chemistry/electron-configuration/core.js": {
+      "bytes": 6634,
+      "mtimeMs": 1790991618657.348,
+      "sha256": "2d7d2450a16c974a0da94c1b047412e4a28bd4bc7e30df156bdf76a14007b660"
+    },
+    "src/chemistry/electron-configuration/data.d.ts": {
+      "bytes": 736,
+      "mtimeMs": 1790989500884.3076,
+      "sha256": "7a4afaef78e0499fada4272baf804ab5f19e6b367b2872e88ecd03d1cec9d6b9"
+    },
+    "src/chemistry/electron-configuration/data.js": {
+      "bytes": 33413,
+      "mtimeMs": 1791225525000,
+      "sha256": "3e16ab94d2ea76f4998a34b2b1510c3d853a3ceb8a52f0492986a7a82bf90a65"
+    },
+    "src/chemistry/electron-configuration/display.ts": {
+      "bytes": 2724,
+      "mtimeMs": 1790998927417.0815,
+      "sha256": "9c1e12c04341271a94df81d315c951130127e91709ea23d95661a9863d204b8e"
+    },
+    "src/chemistry/electron-configuration/engine.ts": {
+      "bytes": 5208,
+      "mtimeMs": 1790998927442.7925,
+      "sha256": "dac8a146d436eb75fdc3c7674271d4eba561d5cfcfcc2604ea140b77abf262f8"
+    },
+    "src/chemistry/electron-configuration/identity.ts": {
+      "bytes": 4183,
+      "mtimeMs": 1790998927487.212,
+      "sha256": "380ac5a462c4d9bc81385afba8ce1f5e592e26cfaaf8822534622e9a6d6a36a0"
+    },
+    "src/chemistry/electron-configuration/periodic-data.ts": {
+      "bytes": 15935,
+      "mtimeMs": 1790991618675.3494,
+      "sha256": "8c416a0ebde7b2ac86183062609eb63ae3c201c404230719e588ed4a86137c81"
+    },
+    "src/chemistry/electron-configuration/provenance.ts": {
+      "bytes": 1567,
+      "mtimeMs": 1790991618679.178,
+      "sha256": "352418841dbad6404af0778b2b395bdb51c3b156fff64a9376f64fd94267d822"
+    },
+    "src/chemistry/energy-profile/index.ts": {
+      "bytes": 2598,
+      "mtimeMs": 1790998927513.2441,
+      "sha256": "8f409196c67112f382c1ffc55302771f749195a74e10a91d160b439d18bfe3c7"
+    },
+    "src/chemistry/energy-profile/svg.ts": {
+      "bytes": 5997,
+      "mtimeMs": 1791049884331.8103,
+      "sha256": "9a1cc32acaf3b91723c1187c3299d7b770ef35fdb78f17d8a97344220d309311"
+    },
+    "src/chemistry/formulae-equations/answer-syntax.ts": {
+      "bytes": 3015,
+      "mtimeMs": 1791663589190.3455,
+      "sha256": "6219acc1e01616d5af2ffdbcbd6926b2c92146f4c320ce78c884eff1530190ac"
+    },
+    "src/chemistry/formulae-equations/canonical-equation-ids.json": {
+      "bytes": 362,
+      "mtimeMs": 1791663640171.3894,
+      "sha256": "eb33533ae3890a9b31fb7c9568006cef2e1624a3a3bf04f2ff1400a231ee0c61"
+    },
+    "src/chemistry/formulae-equations/generator.ts": {
+      "bytes": 3799,
+      "mtimeMs": 1791663589223.5156,
+      "sha256": "258f7786abac722ba02f7af8063ea21d75206e64cf9e9f19f127e8e42157d417"
+    },
+    "src/chemistry/formulae-equations/identity-membership.json": {
+      "bytes": 4150,
+      "mtimeMs": 1791663640158.7334,
+      "sha256": "1c3ad8c1cc84e3a99e2d7da676fe5b75b594d6802650f084a9a385e8f31b6845"
+    },
+    "src/chemistry/formulae-equations/identity.ts": {
+      "bytes": 1708,
+      "mtimeMs": 1791650720296.0735,
+      "sha256": "269472c1cbdf558e0d352fbc44879e15ab849a17dee6ef942278dceeb69c5597"
+    },
+    "src/chemistry/formulae-equations/ions.ts": {
+      "bytes": 15577,
+      "mtimeMs": 1791621559865.332,
+      "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc"
+    },
+    "src/chemistry/formulae-equations/notation.ts": {
+      "bytes": 6417,
+      "mtimeMs": 1791659293113.6528,
+      "sha256": "9703437da85763fa97592052b37f012175fc96bcaa40b82b01febbbdabbc98e8"
+    },
+    "src/chemistry/formulae-equations/response-equation.ts": {
+      "bytes": 2214,
+      "mtimeMs": 1791663589205.0022,
+      "sha256": "010cc417d0d54f44b002ca195a870acb201ffefccb3c6fa5f5284c20050d93d8"
+    },
+    "src/chemistry/formulae-equations/sources.ts": {
+      "bytes": 1099,
+      "mtimeMs": 1791663640156.726,
+      "sha256": "6ac97b8b7be22ba452b965443f1c96c07e6ba7abd1615a90a49e6147402f1180"
+    },
+    "src/chemistry/molecule/core.d.ts": {
+      "bytes": 1181,
+      "mtimeMs": 1790989559058.1306,
+      "sha256": "a4b55062390b2a90d4b21af07168dde739fef955bb405d1e7dee8d35065343c7"
+    },
+    "src/chemistry/molecule/core.js": {
+      "bytes": 9816,
+      "mtimeMs": 1790992138666.8003,
+      "sha256": "37779d573386fb5903fb0ecc96696e2971e403068417ca1806d2f7db1e685642"
+    },
+    "src/chemistry/molecule/depiction.ts": {
+      "bytes": 3130,
+      "mtimeMs": 1791021454882.3816,
+      "sha256": "702a14875ddb1aabf00be918a643ce762000910deb5c52776daa3bdfa5e70c2e"
+    },
+    "src/chemistry/molecule/engine.ts": {
+      "bytes": 7220,
+      "mtimeMs": 1791020649935.3762,
+      "sha256": "3f30d9cad67331d3b3313c0f9d03a9afdf587405c42ca2abaed8c383c4814e3e"
+    },
+    "src/chemistry/molecule/interaction.ts": {
+      "bytes": 3500,
+      "mtimeMs": 1791021454865.9158,
+      "sha256": "74f882c0e0a58024976adc5678d660b1561ee1a6157906738c92fd88f1acbcc5"
+    },
+    "src/chemistry/molecule/layout.ts": {
+      "bytes": 7363,
+      "mtimeMs": 1791020651057.3374,
+      "sha256": "f940ce454b33d8110ada2b305f09fd88b9e97f8300a599bebbed36f6da0bb095"
+    },
+    "src/chemistry/thermochemistry/bond-enthalpy-core.d.ts": {
+      "bytes": 248,
+      "mtimeMs": 1790989500654.7273,
+      "sha256": "5e109fdc8a45e792d30dc8f8d004255c292af9ed004ee2882ebc5b2179e45425"
+    },
+    "src/chemistry/thermochemistry/bond-enthalpy-core.js": {
+      "bytes": 10042,
+      "mtimeMs": 1790989431823.6433,
+      "sha256": "5ed495865a30fb8adf953e878165bc34b15b0d757242f7a66b447a6a2bc512ca"
+    },
+    "src/chemistry/thermochemistry/bond-enthalpy-data.js": {
+      "bytes": 245586,
+      "mtimeMs": 1790989431821.337,
+      "sha256": "1b06803ea4abbc7ed66fd5ca30e7522ad1b5b73127648ba4563f652e162f6e5d"
+    },
+    "src/chemistry/thermochemistry/calorimetry-core.d.ts": {
+      "bytes": 315,
+      "mtimeMs": 1790989499740.3555,
+      "sha256": "73243d330bd73ad22c148a6752d8670294c95f96d63b5f444a2a6c6fd7cd2b5a"
+    },
+    "src/chemistry/thermochemistry/calorimetry-core.js": {
+      "bytes": 34067,
+      "mtimeMs": 1790989431813.99,
+      "sha256": "253e3d4c6684b222196fc4fcd44e04e243bf2d0dbb62880af5aea7ef19344529"
+    },
+    "src/chemistry/thermochemistry/calorimetry-data.js": {
+      "bytes": 7080,
+      "mtimeMs": 1790989431812.7676,
+      "sha256": "c2eed9445c5dca791a6a7a68a2e2a7895f970107da65f1bfe9d5954abfc6d7c8"
+    },
+    "src/chemistry/thermochemistry/framework.ts": {
+      "bytes": 2502,
+      "mtimeMs": 1790998927589.7788,
+      "sha256": "05b11390e8e915a403debd00a325119298c52bb8eb7410a95ac2927bb7e79b5e"
+    },
+    "src/chemistry/thermochemistry/identity.ts": {
+      "bytes": 3844,
+      "mtimeMs": 1790998927607.243,
+      "sha256": "ddfcb258af17be43812ff2b45157eb8b2acc4141299a8d371d83f70b18452601"
+    },
+    "src/chemistry/thermochemistry/marking.ts": {
+      "bytes": 1546,
+      "mtimeMs": 1790998927617.6978,
+      "sha256": "a1ddf0029f493c6aaf3bec8131d49f492e0fed6a4f02e3aa419d73e8eaa4aef3"
+    },
+    "src/chemistry/thermochemistry/presentation.ts": {
+      "bytes": 1532,
+      "mtimeMs": 1790998927629.2205,
+      "sha256": "d999a5e1c9095048d189f391c33b31b0000ff22446e0f9f2518f65fae5be7c0d"
+    },
+    "src/chemistry/thermochemistry/reviewed-co-svg.ts": {
+      "bytes": 11439,
+      "mtimeMs": 1791225898000,
+      "sha256": "27f7dd2df015598baf3d56ba7cab7866eb6aba29129c2c940bfd7aafefaef72d"
+    },
+    "src/chemistry/thermochemistry/types.ts": {
+      "bytes": 2423,
+      "mtimeMs": 1790998927639.6365,
+      "sha256": "7ea1bcfed51e6d6e5d6d006b2ae175d711b989af5a4dadf7503789686eb29d05"
+    },
+    "src/chemistry/titration-curve/core.d.ts": {
+      "bytes": 1150,
+      "mtimeMs": 1790989505089.3677,
+      "sha256": "f52349abf2630f1fc01817d8134c58d0f2f47500c2fe22425fc7eb0b9d6dca33"
+    },
+    "src/chemistry/titration-curve/core.js": {
+      "bytes": 8429,
+      "mtimeMs": 1790989436336.7822,
+      "sha256": "56c8fe2a7593df95b105e5dfcb9efcbb9c876f2590e9e7e66012465a60b84960"
+    },
+    "src/chemistry/titration-curve/engine.ts": {
+      "bytes": 3426,
+      "mtimeMs": 1790998927661.2905,
+      "sha256": "7b81856f141012fcb5b5c7738d6ebe011e0b7a4c52fd692ffacbfccb375dbe19"
+    },
+    "src/chemistry/titration-curve/model.ts": {
+      "bytes": 2136,
+      "mtimeMs": 1790998927676.938,
+      "sha256": "5f8e28295afe2fe779dd6a5d99b29fa14ce0ca086a8d091691540b32783c1ce6"
+    },
+    "src/chemistry/titration-curve/types.ts": {
+      "bytes": 1819,
+      "mtimeMs": 1790998927686.1482,
+      "sha256": "e07842cdde7b31f132dd50f97fbed05afd0db1505986116b0ed5e401c476ca4f"
+    },
+    "src/compatibility/import.ts": {
+      "bytes": 3423,
+      "mtimeMs": 1791044568963.7717,
+      "sha256": "53d81ce6fe9ca0ecede6648d6226699edc1847f15b90bd251418e711976a6bd6"
+    },
+    "src/compatibility/index.ts": {
+      "bytes": 251,
+      "mtimeMs": 1790998927757.9875,
+      "sha256": "eedf856554a839df9029e1b79f00b4ccf78e933b03214c998ae0b44a3959d5a6"
+    },
+    "src/compatibility/legacy-import.css": {
+      "bytes": 857,
+      "mtimeMs": 1791065238061.9102,
+      "sha256": "69ef2027203ddd580bf192553103c2645bc7b62c31e35cbbd8d45bd1260d6168"
+    },
+    "src/compatibility/LegacyImportView.tsx": {
+      "bytes": 5126,
+      "mtimeMs": 1791049315163.237,
+      "sha256": "73a5c9de6ae456f8e01452608a49155f1b8a356abe866159c41d8a356257099d"
+    },
+    "src/compatibility/links.ts": {
+      "bytes": 8880,
+      "mtimeMs": 1791650781138.828,
+      "sha256": "a0920d6da39a1b23a7837cabe10bcf181a89d319a09fd24c86b75ac7ad975f24"
+    },
+    "src/compatibility/routes.ts": {
+      "bytes": 841,
+      "mtimeMs": 1791044568999.7698,
+      "sha256": "06882d52f2a1524e8f5eb5d016a3e088b091608530606756d0796b39317d1afd"
+    },
+    "src/content/canonical-fixed-ids.json": {
+      "bytes": 10309,
+      "mtimeMs": 1791663373159.8171,
+      "sha256": "ebe592ff06b90051c69b067af18cf9278d263ce9a98144fee7782f9b58b8dcd4"
+    },
+    "src/content/canonical-identity.ts": {
+      "bytes": 2665,
+      "mtimeMs": 1791650720296.0735,
+      "sha256": "c46728394b94c708609a3f255d949163791483eb5514edc74d5f1f06f3507e0b"
+    },
+    "src/contracts/attempt.ts": {
+      "bytes": 7658,
+      "mtimeMs": 1791664549057.053,
+      "sha256": "f13ea7697f33b52c3be8fed67db7ff2843f441bd30e3541640b928d59eb57c91"
+    },
+    "src/contracts/editors.ts": {
+      "bytes": 5056,
+      "mtimeMs": 1791020491635.4958,
+      "sha256": "a2530f2d1812617cec383d99def7656ab222ee7e435e11c293d9df8dfc19ea1d"
+    },
+    "src/contracts/identity.ts": {
+      "bytes": 2421,
+      "mtimeMs": 1791622549277.6824,
+      "sha256": "a06e8df737ba6da4984754fd0d610ba613feff00a49a6ece1cef15ff8dfc6071"
+    },
+    "src/contracts/index.ts": {
+      "bytes": 299,
+      "mtimeMs": 1790993274569.5525,
+      "sha256": "5432fedf98453077a170ace6d0a59871ad1971d12da641cf927dce6eccc6c9aa"
+    },
+    "src/contracts/integration.ts": {
+      "bytes": 2167,
+      "mtimeMs": 1791119581874.3813,
+      "sha256": "f7e073398c336479e79fafc088cc27cb3bbc1acf0cb742cb4e52de8b5a0249bb"
+    },
+    "src/contracts/landing.ts": {
+      "bytes": 1713,
+      "mtimeMs": 1791650620522.6719,
+      "sha256": "b1c7b79b97a9611ef7e9d183583514d7d7c0f31434f5e11c2b8fe9b8f07d2cd8"
+    },
+    "src/contracts/olympiad.ts": {
+      "bytes": 5641,
+      "mtimeMs": 1791048673909.3582,
+      "sha256": "3d31ea8c45380459278d25d6d7cfc41b93a5e74a1782383f24cb409cb4b7347b"
+    },
+    "src/contracts/question.ts": {
+      "bytes": 9422,
+      "mtimeMs": 1791663334103.9397,
+      "sha256": "7d765c9825acb79ea75984768b874b8c58a7bae6bd7b3474e3512808c23b6c9e"
+    },
+    "src/contracts/recall.ts": {
+      "bytes": 2688,
+      "mtimeMs": 1791622549262.723,
+      "sha256": "1de365790942629ea5946a91e3074fb99d83ffd3b84d75eacbbcb91e09d9bad8"
+    },
+    "src/contracts/registry.ts": {
+      "bytes": 2523,
+      "mtimeMs": 1791048748149.961,
+      "sha256": "638e1cec198c7220a75401b6ff120cb062d3e0b910a8bbd2218509debce4c6a1"
+    },
+    "src/contracts/repository.ts": {
+      "bytes": 4170,
+      "mtimeMs": 1791622549332.7788,
+      "sha256": "017c6f5a57a4eb6ee57a3cc1eb84e68f0a28c7cd78ea5219da3c42afc4e456e4"
+    },
+    "src/contracts/session.ts": {
+      "bytes": 4586,
+      "mtimeMs": 1790998927942.817,
+      "sha256": "3a808ff17de4c5b8b9cc09cad0d979101112254145792f927a81e722c2fd3f72"
+    },
+    "src/development/catalogue/index.tsx": {
+      "bytes": 3600,
+      "mtimeMs": 1791118239206.8157,
+      "sha256": "36312a10aa6bf0d7789feb8be51bcce766e04eaa0ee538d67c1d21fbeaa6160d"
+    },
+    "src/development/fixtures.ts": {
+      "bytes": 13011,
+      "mtimeMs": 1791046776644.8477,
+      "sha256": "9151898f431a174d3455de4cdc04f2213b9e51c6261e42fde9199e2201494451"
+    },
+    "src/development/flashcards/data.ts": {
+      "bytes": 2152,
+      "mtimeMs": 1791119594638.4272,
+      "sha256": "0b7de726c735b20ef83c88d60ce8bea9162f7fdc983e9fcf38bc5710ad666c0e"
+    },
+    "src/development/flashcards/FlashcardDemo.tsx": {
+      "bytes": 3240,
+      "mtimeMs": 1791119593577.3782,
+      "sha256": "0386e1fa3e4848f81b54efe94829318f0f43f3ff633aa0ff994eb330144e719d"
+    },
+    "src/development/flashcards/provenance.json": {
+      "bytes": 892,
+      "mtimeMs": 1791118221143.0244,
+      "sha256": "e3da52b9ebe751a2e828888bb406fb8d965b0b6ac108fa265032efce57481369"
+    },
+    "src/development/flashcards/README.md": {
+      "bytes": 6719,
+      "mtimeMs": 1791226514000,
+      "sha256": "454053f47d4b0e5348cbc8dac7b7fe2ebbf8f172e637f9b895e47bf2582b1046"
+    },
+    "src/development/FoundationApp.tsx": {
+      "bytes": 25635,
+      "mtimeMs": 1791225543000,
+      "sha256": "e029da295494aebef8348ea95f4941f105efba2f2be9b373e0c434b3acd3382f"
+    },
+    "src/development/identity.ts": {
+      "bytes": 2503,
+      "mtimeMs": 1791045784713.742,
+      "sha256": "e6266c9c4e56cd40c2e88f6679b07c7af79f5fa47d7c8ad2a52e3645dcc5a06c"
+    },
+    "src/development/rate-equations/graph-tools.css": {
+      "bytes": 3782,
+      "mtimeMs": 1791565341000,
+      "sha256": "a2df68e3e15298161e1e9fb5eab855e63b1f6137952629f55a04fd98fa6ab597"
+    },
+    "src/development/rate-equations/graphs.ts": {
+      "bytes": 12037,
+      "mtimeMs": 1791565074000,
+      "sha256": "57965ad14cfc4d7b22657b48523c08032874c4bec306d765692ce45ad9eb963e"
+    },
+    "src/development/rate-equations/input-syntax.ts": {
+      "bytes": 5560,
+      "mtimeMs": 1791565212000,
+      "sha256": "7b981c9ef91d04c6d8c884e8e533b220b99b5f01c0f1fd1cd3363afdb5149e50"
+    },
+    "src/development/rate-equations/marking.ts": {
+      "bytes": 2600,
+      "mtimeMs": 1791565135000,
+      "sha256": "d045d424fab18a866986f612bb971918637092d1863fde1c4ad13a6f01d30e07"
+    },
+    "src/development/rate-equations/mechanisms.ts": {
+      "bytes": 6909,
+      "mtimeMs": 1791565135000,
+      "sha256": "fd3ec305554df05d8135a8203132e2e98dccc37791cac9801f6e5fbb1e5c6e9c"
+    },
+    "src/development/rate-equations/orders.ts": {
+      "bytes": 7303,
+      "mtimeMs": 1791565135000,
+      "sha256": "3cffb27894f4cfccf8e937500ba50ac372a3f5be47473159aab56dd5b1b84b99"
+    },
+    "src/development/rate-equations/preview.css": {
+      "bytes": 1176,
+      "mtimeMs": 1791563409000,
+      "sha256": "a674c891b49649979137495ae95df49eef8260236691d32a3f8a2378e9de1d5e"
+    },
+    "src/development/rate-equations/RateEquationsPreview.tsx": {
+      "bytes": 6022,
+      "mtimeMs": 1791564990000,
+      "sha256": "1d54d46e05517504cec79acdf0251f12a2a226825ddfaab231356d72b8a323db"
+    },
+    "src/development/rate-equations/RateGraphTools.tsx": {
+      "bytes": 17882,
+      "mtimeMs": 1791565485000,
+      "sha256": "8264cab70615935e8941c2f5e2252a43fab1a0bf375b14be7ae4202fe728b590"
+    },
+    "src/development/rate-equations/RateResponseControl.tsx": {
+      "bytes": 4947,
+      "mtimeMs": 1791565212000,
+      "sha256": "4b48ea6ed29ecbc27f973c2224dfb63a06a9a9713327bd0747e27ff73f8b8733"
+    },
+    "src/development/rate-equations/response-controls.css": {
+      "bytes": 1357,
+      "mtimeMs": 1791565408000,
+      "sha256": "3185f29ea4a2f1c9e440d14a0824c2278ae51951add55450524db03935a06589"
+    },
+    "src/development/rate-equations/types.ts": {
+      "bytes": 1138,
+      "mtimeMs": 1791563205000,
+      "sha256": "d4e5c11c8d6b0d6482c04572da06d5b3ac99c556f2127ff789ddf976cbb74c00"
+    },
+    "src/domain/attempt/attempt.ts": {
+      "bytes": 26576,
+      "mtimeMs": 1791664575006.914,
+      "sha256": "c9a049b90e7d0c5167e6271e9bb4d966d1c523edb736f794e22a0d7fbd0aa69b"
+    },
+    "src/domain/attempt/index.ts": {
+      "bytes": 400,
+      "mtimeMs": 1791664549059.0645,
+      "sha256": "faf3ebddc8cb8fa5fe10a7ab3e72bee9d398a0cc54caa397262f5c5ab64364f5"
+    },
+    "src/domain/attempt/input-checks.ts": {
+      "bytes": 11192,
+      "mtimeMs": 1791664127007.81,
+      "sha256": "d694ade7a47942ffbaf728ab24fd002763ebbbcc0e827af8e44e3dae6d3fd1e1"
+    },
+    "src/domain/attempt/model-answer.ts": {
+      "bytes": 2233,
+      "mtimeMs": 1791664735866.5945,
+      "sha256": "b3fd6291ad35b56989aab61e5897dbfaf331eecd3961bbce704f268b6ec2034f"
+    },
+    "src/domain/mastery/course-mastery.ts": {
+      "bytes": 5176,
+      "mtimeMs": 1790998928268.2444,
+      "sha256": "87fcf68cd06f71247e3f888fdadddae5960008ee68681750021ef7b48e99496c"
+    },
+    "src/domain/mastery/index.ts": {
+      "bytes": 147,
+      "mtimeMs": 1790998928273.502,
+      "sha256": "19c43574f8a910961ed9f9dff719b9d1c348135e0d4ac1e7460149f90bec0735"
+    },
+    "src/domain/session/index.ts": {
+      "bytes": 546,
+      "mtimeMs": 1790998928278.709,
+      "sha256": "def1022f61256e880418a4b4f3d7c6da5159f15fb442720191fb6f3ee9325b00"
+    },
+    "src/domain/session/practice.ts": {
+      "bytes": 2939,
+      "mtimeMs": 1790998928290.962,
+      "sha256": "5c5dd1a1133ecb99052e5f81210c5d50ec25392dcd202505b76393e6da0e8a15"
+    },
+    "src/domain/session/revision.ts": {
+      "bytes": 8868,
+      "mtimeMs": 1790998928329.6443,
+      "sha256": "f3501fa5421bdf8e2d56f82471451fcb8faea3e3a3caf45c122851aad2411678"
+    },
+    "src/domain/session/selection.ts": {
+      "bytes": 3339,
+      "mtimeMs": 1790998928342.9116,
+      "sha256": "7d112d36fbd04570a69806211014b538e511de2d099a82788e5be766cd636ace"
+    },
+    "src/domain/timing/active-clock.ts": {
+      "bytes": 3461,
+      "mtimeMs": 1790998928356.3035,
+      "sha256": "8f1cf68dd95f15e61ae75c9b70c36b75add9be69715247bc73bc83817a3dac5d"
+    },
+    "src/domain/timing/browser-binding.ts": {
+      "bytes": 2549,
+      "mtimeMs": 1791622549423.5186,
+      "sha256": "de72a79884a41eb6ec9290b36e6023df8db02d4c3378121abf6f623c37226da4"
+    },
+    "src/domain/timing/index.ts": {
+      "bytes": 300,
+      "mtimeMs": 1790981289860.795,
+      "sha256": "97993b671881eb15251e45addfca1af6c8b1f1cdb80e9191a4eebe6718acb77d"
+    },
+    "src/editors/dot-and-cross/Diagram.tsx": {
+      "bytes": 9242,
+      "mtimeMs": 1791023126667.4807,
+      "sha256": "18f0fbda09a6cc534d2b622a8bd38ad12a9e7513c534525188933dd9db7f5276"
+    },
+    "src/editors/dot-and-cross/DotCrossEditor.tsx": {
+      "bytes": 43400,
+      "mtimeMs": 1791199070000,
+      "sha256": "d824096b2e4b288406e2ae4be56b1d8c91533b705ac5386721dfe2c5f637a2c1"
+    },
+    "src/editors/dot-and-cross/editor.css": {
+      "bytes": 14845,
+      "mtimeMs": 1791198435000,
+      "sha256": "8c60a879fd4eb559f29ffd6a2552f0b56614adaf948c1f0c6ea089c1d5912e29"
+    },
+    "src/editors/dot-and-cross/index.ts": {
+      "bytes": 55,
+      "mtimeMs": 1790998928459.3774,
+      "sha256": "809bb349829075547b23ebb6db59724f0a6fa74751347cae6ea9a0f5896c57ac"
+    },
+    "src/editors/electron-configuration/index.tsx": {
+      "bytes": 14784,
+      "mtimeMs": 1791066229236.2224,
+      "sha256": "e03696e0f6722a58acc006d4de203ec76d73a03cedab00745cfd3a484c4160a1"
+    },
+    "src/editors/electron-configuration/PeriodicReference.tsx": {
+      "bytes": 6712,
+      "mtimeMs": 1791049059668.1443,
+      "sha256": "5c2b9aee6b23c943041375e57cc5604c35f7299de4f3804014ed327ad6460947"
+    },
+    "src/editors/electron-configuration/styles.css": {
+      "bytes": 13519,
+      "mtimeMs": 1791066522823.4302,
+      "sha256": "afcc1ba13c953b8c0fdc218a86128239266b25d0cd89aa7ead41c4e184ebfee6"
+    },
+    "src/editors/energy-profile/index.tsx": {
+      "bytes": 23148,
+      "mtimeMs": 1791049884216.8145,
+      "sha256": "6cb213df23c4505245c273dd37747bec99654c2fbf0476d1a41f86cf63650356"
+    },
+    "src/editors/energy-profile/styles.css": {
+      "bytes": 4303,
+      "mtimeMs": 1791065238115.0085,
+      "sha256": "622bfbe4285ce2499a6fdb77ce20485a0906552438693abebe12ca0b2f0337a3"
+    },
+    "src/editors/molecule/camera.ts": {
+      "bytes": 1399,
+      "mtimeMs": 1791117628949.432,
+      "sha256": "f1a36010c80f313b5b57a1adce7fe394cda12ba4a83578ee85ebe058ad74b910"
+    },
+    "src/editors/molecule/index.ts": {
+      "bytes": 137,
+      "mtimeMs": 1790998928659.496,
+      "sha256": "3f56b97c9734825ce3e59a39a8b52dd2bb58348f738a1925dae55ff62f8ae711"
+    },
+    "src/editors/molecule/molecule.css": {
+      "bytes": 7726,
+      "mtimeMs": 1791117665421.4902,
+      "sha256": "bb020e0bb23696d85959f8710617bb05817cc549fb8dfad5257e13e7faf9324e"
+    },
+    "src/editors/molecule/MoleculeEditor.tsx": {
+      "bytes": 22281,
+      "mtimeMs": 1791117840993.4639,
+      "sha256": "a25b45f7025e9e140fc426c114bd52033a20537e92bce50dce4ba5c4f9686524"
+    },
+    "src/editors/molecule/MoleculeInspector.tsx": {
+      "bytes": 6254,
+      "mtimeMs": 1791021454787.0696,
+      "sha256": "982d44c2bcfae3d9799115e66522b16bd1f0bc9b7e1417c86ee7a4a2930edfcc"
+    },
+    "src/editors/molecule/Structure.tsx": {
+      "bytes": 4025,
+      "mtimeMs": 1791021454803.0105,
+      "sha256": "19126f9fab3997413f4faf74b1be26192ba2ed554e02ea2cc5dc9b34c7b35e67"
+    },
+    "src/editors/titration-curve/index.ts": {
+      "bytes": 70,
+      "mtimeMs": 1790998928698.0056,
+      "sha256": "818b5b8c287897a5a8ecc5e14be783a59dd8cce2253f149a284d266fde879ea6"
+    },
+    "src/editors/titration-curve/titration.css": {
+      "bytes": 15563,
+      "mtimeMs": 1791065238120.1748,
+      "sha256": "3042cab4447e6bb1fdfed80862126a9f1baaf507ad15019a895609e21ac2671c"
+    },
+    "src/editors/titration-curve/TitrationCurveEditor.tsx": {
+      "bytes": 20124,
+      "mtimeMs": 1791053570380.322,
+      "sha256": "4a73a4f5a2d346f790d52381d48030e6cc1641fa2e1b43793cdd1d84a707fb9a"
+    },
+    "src/foundation/ActivityHost.tsx": {
+      "bytes": 48446,
+      "mtimeMs": 1791651551753.665,
+      "sha256": "12c28c20b155dc63ffe84a9e6805ef308c75127a9adb290caa91cfd9771da880"
+    },
+    "src/foundation/gem-mastery-availability.ts": {
+      "bytes": 936,
+      "mtimeMs": 1791651551769.444,
+      "sha256": "4df2e81ac007f99a25d31b49b94d0f9e5bffba2fcb82ed857b6bf890eff79cae"
+    },
+    "src/foundation/gem-mastery-flow.ts": {
+      "bytes": 2161,
+      "mtimeMs": 1791651551753.665,
+      "sha256": "74eae18e2999cb7d6a9cb308f1ff1ec67ad6768e3a82f3503a072edb1875c55f"
+    },
+    "src/foundation/graded-question.ts": {
+      "bytes": 386,
+      "mtimeMs": 1791621166121.7522,
+      "sha256": "581201e35f2392aeb730ae0ac2dec1bf626d658cf0cd8016416c867602d35120"
+    },
+    "src/foundation/olympiad.css": {
+      "bytes": 3510,
+      "mtimeMs": 1791119515239.7434,
+      "sha256": "0f9c72b87b02e1c2e3c512c1ac1df6335f223993c45eddc017472f7d3b910171"
+    },
+    "src/foundation/OlympiadHost.tsx": {
+      "bytes": 10364,
+      "mtimeMs": 1791116736737.9446,
+      "sha256": "c13e8b7727a15f4b0c2bfcb7bca126deff7dc7078db360effdd973817da8c4aa"
+    },
+    "src/foundation/ProductionFoundation.tsx": {
+      "bytes": 25530,
+      "mtimeMs": 1791651618045.4846,
+      "sha256": "f882a64cf6ed90cf9f29639fef27517576dceecb0dca8741a012f4c088a130e6"
+    },
+    "src/foundation/question-heading.ts": {
+      "bytes": 2002,
+      "mtimeMs": 1791621166125.802,
+      "sha256": "3c464048dc5baba1d76c6291b34b016ea72ec81985df02b83b43dedacc5dee4e"
+    },
+    "src/foundation/registry.ts": {
+      "bytes": 3118,
+      "mtimeMs": 1791623265077.48,
+      "sha256": "2aa9e3b2c62f753785520efbad6c726900ab8bf03238879a5b9149fbb05631e8"
+    },
+    "src/foundation/session-continuation.ts": {
+      "bytes": 944,
+      "mtimeMs": 1791032228124.4275,
+      "sha256": "c734cdd137015d908802dcc7a2797bd3818dd0b70f04173280d596cf2fa1e26f"
+    },
+    "src/landing/adaptation.css": {
+      "bytes": 1410,
+      "mtimeMs": 1791065238065.0562,
+      "sha256": "96918d0a13a8581837eb291060591b98cb78eab45967c15e0a8a0dd48c91b4ef"
+    },
+    "src/landing/alevel.css": {
+      "bytes": 37906,
+      "mtimeMs": 1791065238075.5747,
+      "sha256": "712226bbe1c396fa6c6776ba94ef2f9549689448f11be3b1d36a04e65ed35af5"
+    },
+    "src/landing/animation.ts": {
+      "bytes": 1624,
+      "mtimeMs": 1791015440367.3914,
+      "sha256": "23342e9ffa57fcba5b79cf07ca4e8c787fd8ba21b55e65453f7bf6581805bbb0"
+    },
+    "src/landing/catalogue-data.json": {
+      "bytes": 20313,
+      "mtimeMs": 1791623265079.4846,
+      "sha256": "f9dc12d9e79b24b16b8a838b2fdea0d95367ff8f126762263b1b5e091e7e37b7"
+    },
+    "src/landing/catalogue.ts": {
+      "bytes": 1388,
+      "mtimeMs": 1791149694440.4055,
+      "sha256": "e61a27571f5928fbdfc78a716ef757f3fe97805f8bdcc9633c099ec234ebde59"
+    },
+    "src/landing/GemPaths.tsx": {
+      "bytes": 830,
+      "mtimeMs": 1791065211328.7456,
+      "sha256": "7227f8bc67cd3e2328a7257a524c38ce63fc44f358f6eec4f1f389e32136b6a5"
+    },
+    "src/landing/igcse.css": {
+      "bytes": 64231,
+      "mtimeMs": 1791624029053.4607,
+      "sha256": "a3772cf0ed53e6246a0655ddbed545809d02565410ea5a60510525e76966cc25"
+    },
+    "src/landing/index.ts": {
+      "bytes": 53,
+      "mtimeMs": 1791014412928.4832,
+      "sha256": "224146f258f96a70310c8de734c3d925e89a83c7bd17f9e912859605913a1b50"
+    },
+    "src/landing/olympiad-completion.ts": {
+      "bytes": 2556,
+      "mtimeMs": 1791065471837.7644,
+      "sha256": "49d051795f0b8fd25758fc5180f287221b94e89c4c6a0371d63496a907fab6f3"
+    },
+    "src/landing/OlympiadLanding.tsx": {
+      "bytes": 3854,
+      "mtimeMs": 1791119514307.7893,
+      "sha256": "2dfc74476594c4dc23c9eafdbbd5c313d8b3711ed404eceb9af41447f2d6a12d"
+    },
+    "src/landing/OriginalLanding.tsx": {
+      "bytes": 43334,
+      "mtimeMs": 1791651551580.7441,
+      "sha256": "246bc3947c3e512f7fa24f9cee759b88b655ae9e9b73d9ae63633f591dbae373"
+    },
+    "src/landing/progress.ts": {
+      "bytes": 2451,
+      "mtimeMs": 1791044569030.5703,
+      "sha256": "b13059532c5295e8003bafe67010d65321ce0dab5006dbad7b1cc8d307c36ea7"
+    },
+    "src/landing/RecallIcon.tsx": {
+      "bytes": 604,
+      "mtimeMs": 1791119690712.2185,
+      "sha256": "f584b564d87c76cd0a1b9a95f9aef055621dd4c22f5269085e33be8ed1ad80a9"
+    },
+    "src/landing/standardisation.css": {
+      "bytes": 3946,
+      "mtimeMs": 1791650710650.19,
+      "sha256": "a14d0e2458b8aeb9da96362009f3343fd6ff2b0519bc20764bfa6b6e34a11d03"
+    },
+    "src/landing/StatsIcon.tsx": {
+      "bytes": 541,
+      "mtimeMs": 1791043110479.522,
+      "sha256": "e03a966125d4cefe3ad45fa373ffd123725c69c575aa330fbd79d2f2cb8d7ec7"
+    },
+    "src/main-alevel.tsx": {
+      "bytes": 828,
+      "mtimeMs": 1790998928958.5623,
+      "sha256": "b09295f136cb12449529944698319d31d124ad7eed7340c860c00fbbcb39423e"
+    },
+    "src/main-igcse.tsx": {
+      "bytes": 827,
+      "mtimeMs": 1790998928971.495,
+      "sha256": "3368a8ea3d6b0794cc13005a278441111f2d7d983cde4594387a72ef64e1b07f"
+    },
+    "src/main.tsx": {
+      "bytes": 1078,
+      "mtimeMs": 1791563307000,
+      "sha256": "5de60bba1a6be7fd6c3f7a60ca84b17b8fbc528ac0da65f3037f0b49da71e002"
+    },
+    "src/persistence/alpha-namespace.ts": {
+      "bytes": 1266,
+      "mtimeMs": 1791046581207.157,
+      "sha256": "7cec629d5a9ee1123ca3c5afe5c0312c50ef7a888f07bbb078f1282f36d6b714"
+    },
+    "src/persistence/catalogue-boundary.ts": {
+      "bytes": 2504,
+      "mtimeMs": 1790998928991.3826,
+      "sha256": "e17d30c759aadddbb7b0b6917c82c3a4fb4a48134f6d5b38b9370f245c87cab8"
+    },
+    "src/persistence/index.ts": {
+      "bytes": 219,
+      "mtimeMs": 1791044568926.2437,
+      "sha256": "a79fbc9d642913652dccafaa7407ac650be35c68f9d86ec787a5ed6faf855b8e"
+    },
+    "src/persistence/legacy/plan.ts": {
+      "bytes": 2620,
+      "mtimeMs": 1791044568940.9448,
+      "sha256": "a2344e7d8ac75f80c51193246fc5395a5e3b38f9dd92a616ae3f9827100b328d"
+    },
+    "src/persistence/legacy.ts": {
+      "bytes": 8832,
+      "mtimeMs": 1790998929044.5037,
+      "sha256": "07e284f2c384fe7bd4452a5207e3324d70eadcba0f89234af1394594598eaa67"
+    },
+    "src/persistence/repository.ts": {
+      "bytes": 22524,
+      "mtimeMs": 1791664736089.2717,
+      "sha256": "43f6b83c4c47c025581d64b4a08c6458b58c6e60b2a6e8bab1f4abe1f9626f24"
+    },
+    "src/persistence/validation.ts": {
+      "bytes": 52126,
+      "mtimeMs": 1791664736029.684,
+      "sha256": "a6c2dd435cc98367c7dc2cbd0f776a7145db28a56a26286f7c17c010474fb7c7"
+    },
+    "src/recall/approved-igcse-facts.json": {
+      "bytes": 118967,
+      "mtimeMs": 1791622066173.9758,
+      "sha256": "38226a6abfb793767fc679613e4e6095e1bd138a04ab4489653a5474e097f417"
+    },
+    "src/recall/facts.ts": {
+      "bytes": 4951,
+      "mtimeMs": 1791622549667.4265,
+      "sha256": "cc5d142c3fa418d4bd6f160e18aced926f8419a83c04c7c2ce7328e38e281787"
+    },
+    "src/recall/flashcards.css": {
+      "bytes": 9901,
+      "mtimeMs": 1791119662614.9578,
+      "sha256": "51f0b50e60be79d8ab5f4041ecc76a995a4a592bfcd6cfb0056a4eab2472dbc2"
+    },
+    "src/recall/FlashcardTable.tsx": {
+      "bytes": 13170,
+      "mtimeMs": 1791119589654.8767,
+      "sha256": "ab9c39faffd6e198575cefa8056adc5681d11d3de72dcbfee0f9a315f282af0f"
+    },
+    "src/recall/marking.ts": {
+      "bytes": 7326,
+      "mtimeMs": 1791622549685.0962,
+      "sha256": "7235e7c5ddf051274a06ed8cd670b5689f5d594909626bf130c0090657f208ca"
+    },
+    "src/recall/prepare-approved.mjs": {
+      "bytes": 9564,
+      "mtimeMs": 1791623537884.856,
+      "sha256": "23eb719c2a8a624a76c6a0b4392a750a63a1810fffe80dddd0e642727f1a685d"
+    },
+    "src/recall/prepare-typed-provenance.mjs": {
+      "bytes": 4020,
+      "mtimeMs": 1791624479655.5503,
+      "sha256": "1991c01ea006aa4118bcebe67965d56bda89f003015125fa4a7b8df95cace5cb"
+    },
+    "src/recall/provenance.json": {
+      "bytes": 8887,
+      "mtimeMs": 1791622455481.1204,
+      "sha256": "ce09540a60e165b868cebd6e042b44782fad071686d99e1cc4773c359957ab32"
+    },
+    "src/recall/provider.ts": {
+      "bytes": 2555,
+      "mtimeMs": 1791622549693.5957,
+      "sha256": "6cef066bea9f701ab3024741e662a70c64b53b16ab7c57a9c1fc0bcf0349ad56"
+    },
+    "src/recall/README.md": {
+      "bytes": 6522,
+      "mtimeMs": 1791624219243.3223,
+      "sha256": "4a71861436c6e6b6cdb36db12d0fbe9154c0c7eaa03e8b5ccaa83f78ac43da3d"
+    },
+    "src/recall/recall.css": {
+      "bytes": 1209,
+      "mtimeMs": 1791622549649.807,
+      "sha256": "1e75a8648845fba66cf5b335c5cf77a583873db676b200aae4173563cf885b40"
+    },
+    "src/recall/RecallView.tsx": {
+      "bytes": 19394,
+      "mtimeMs": 1791651551816.6707,
+      "sha256": "ba033c8e6bc6927d6ba951192e668cc8f848d9a2e6da47e02363ff148fac0328"
+    },
+    "src/recall/scheduler.ts": {
+      "bytes": 3895,
+      "mtimeMs": 1791622991812.8516,
+      "sha256": "0fc20a078a9830ac1d70285db0ee05f9975c0d8e41a7a391ecb484decf15a0c9"
+    },
+    "src/recall/starter-decks.ts": {
+      "bytes": 3546,
+      "mtimeMs": 1791119854713.5967,
+      "sha256": "2b9cf29c893d320a112ba9d560a5a3405dc9ebe002cd9212e36d4958b1ec5b34"
+    },
+    "src/recall/typed-provenance.json": {
+      "bytes": 70151,
+      "mtimeMs": 1791623541738.9553,
+      "sha256": "6a10dffc508f8eb29e41eeccb543decad1c8067ce674d2b66351143dd94ffb42"
+    },
+    "src/shell/CourseShell.tsx": {
+      "bytes": 7136,
+      "mtimeMs": 1791119586411.0044,
+      "sha256": "fbc248bcf4e2b2f77e33e840f1ffe6f3c6a3e7515016fe08c498a14e96d77910"
+    },
+    "src/shell/navigation-view.ts": {
+      "bytes": 4761,
+      "mtimeMs": 1791650630907.3433,
+      "sha256": "8364ee0ce550a1cee83a1a492d4309e0b08da49e41431683d7a16ff877e0fd31"
+    },
+    "src/shell/QuestionChrome.tsx": {
+      "bytes": 3261,
+      "mtimeMs": 1791650781142.386,
+      "sha256": "731dc6ab8c8a31c6d1da96106ff4e3c4ae62cb48acf9d07ca32f5c304b934589"
+    },
+    "src/statistics/index.ts": {
+      "bytes": 64,
+      "mtimeMs": 1790998929475.5894,
+      "sha256": "e2a26330c9457b5e18bcba66780b68f93760ccc2d6099129b45685cb7bddecf3"
+    },
+    "src/statistics/model.ts": {
+      "bytes": 9529,
+      "mtimeMs": 1791140438784.2256,
+      "sha256": "1c76bccef8e20d45f7b69dba88d0c96143262d6afebfa365fb75b5cdfa5ac2d3"
+    },
+    "src/statistics/statistics.css": {
+      "bytes": 15362,
+      "mtimeMs": 1791141261560.541,
+      "sha256": "6aa33d0ed4157b2d0785534f58de15efc461101992e52c509fc8a89153b255b9"
+    },
+    "src/statistics/StatisticsView.tsx": {
+      "bytes": 27979,
+      "mtimeMs": 1791141914479.693,
+      "sha256": "09bd0306d589cd44e0eff5ac2a75cf11fcc99b4a0862098f9d2ac942c4ae04e9"
+    },
+    "src/styles/platform-Wisteria.css": {
+      "bytes": 22865,
+      "mtimeMs": 1791659468946.9666,
+      "sha256": "bc2edbb88365a58c46a7b3dfad4638cfd92658da0bfb7a4e0aacc2d41ce7e309"
+    },
+    "src/styles/platform.css": {
+      "bytes": 23748,
+      "mtimeMs": 1791659468944.8813,
+      "sha256": "c79224a4a692c1cebda98213bb00b549dccdc37e57571dd0ec1f4b11250d9f27"
+    },
+    "src/ui/action-state.ts": {
+      "bytes": 2588,
+      "mtimeMs": 1791663435170.6187,
+      "sha256": "e4e309b8b375ae58f8dfa6327ddf4f01610684b38cf810df8b860ce10a4d0901"
+    },
+    "src/ui/assessment-label.ts": {
+      "bytes": 522,
+      "mtimeMs": 1790998929830.2341,
+      "sha256": "b00e7b626235bf8d6017c7603b982d4e341fbd5791e8fdf85e4f15353b5b1b7d"
+    },
+    "src/ui/chemical-notation.ts": {
+      "bytes": 3459,
+      "mtimeMs": 1791663369998.9258,
+      "sha256": "6dd2636c0f1b110acc651f8fe5d0cb236ae67b66b9c70c72139b9fcb77ad1e83"
+    },
+    "src/ui/chemical-presentation.ts": {
+      "bytes": 733,
+      "mtimeMs": 1791663370047.0117,
+      "sha256": "fd30b43f8c492b72395c975a881e7a18c17f25c61eee1825ade669b41a4373b2"
+    },
+    "src/ui/chemical-question.css": {
+      "bytes": 4618,
+      "mtimeMs": 1791663370038.809,
+      "sha256": "3a7faed193a648991c74f7034bf25cfbaca994b66380b8bbc3f09ba89857e0d9"
+    },
+    "src/ui/ChemicalEntry.tsx": {
+      "bytes": 4910,
+      "mtimeMs": 1791659921651.8027,
+      "sha256": "9240ea33d40ca2ab0bfe576ff01975dff64cf04a94a72cfc6373c6c11bfa638c"
+    },
+    "src/ui/ChemicalQuestionBody.tsx": {
+      "bytes": 7062,
+      "mtimeMs": 1791663369975.636,
+      "sha256": "14c77d9b93a4ed70a990808e6f26d54bf57eb722bd536c6a4d1427c2afad9586"
+    },
+    "src/ui/Content.tsx": {
+      "bytes": 2354,
+      "mtimeMs": 1791659921717.0886,
+      "sha256": "85299878be73d7952d1c15d2cf487f0ad790a52e7fa86c4c27128c053834c6a8"
+    },
+    "src/ui/CorrectionSegments.tsx": {
+      "bytes": 4872,
+      "mtimeMs": 1791192745000,
+      "sha256": "72af2e84aa55c1beaf710f83d203fc8d04ab0f9bb05dd650e890a6da0cff51a0"
+    },
+    "src/ui/current-feedback.ts": {
+      "bytes": 2032,
+      "mtimeMs": 1791193729000,
+      "sha256": "e28ee0053be593337bf49999d90616845994cc9a873c22afad18733dc991b0c9"
+    },
+    "src/ui/DiagramViewport.tsx": {
+      "bytes": 1836,
+      "mtimeMs": 1790998929577.2563,
+      "sha256": "d875ab48fe59066cc4d411f07b7d98f1044c7b8c875c39600d3c4ecdbca81609"
+    },
+    "src/ui/dot-cross-player.css": {
+      "bytes": 3477,
+      "mtimeMs": 1791659917860.5237,
+      "sha256": "815def7336bd982a2d62cd71214e7ad6382ee67918525002075bc4301c9be99f"
+    },
+    "src/ui/DotCrossPlayer.tsx": {
+      "bytes": 11296,
+      "mtimeMs": 1791664575009.9146,
+      "sha256": "b1b16433fb01241cc241d1880c206ccc9b3e5c5b5eb60eed3ee1457dbe4496a7"
+    },
+    "src/ui/EditorFrame.tsx": {
+      "bytes": 1596,
+      "mtimeMs": 1791198435000,
+      "sha256": "13f96e6d8e26889246c65d964c271d13cb220e363f3bc7f8a9c27e4795a03c81"
+    },
+    "src/ui/energetics-practical-pilot.css": {
+      "bytes": 8863,
+      "mtimeMs": 1791659917859.4353,
+      "sha256": "40319db2e5a44b90b8f57a8edf86d023b8cf8c8b63e63f8b5940cd7fda7f7434"
+    },
+    "src/ui/EnergeticsPracticalPilot.tsx": {
+      "bytes": 14096,
+      "mtimeMs": 1791664549068.9854,
+      "sha256": "5091a2b60ccfcc1c2b44dda843abd94f1d467e4f863a554760a1ed489e96e223"
+    },
+    "src/ui/EnergeticsResponseControl.tsx": {
+      "bytes": 3859,
+      "mtimeMs": 1791065297219.2317,
+      "sha256": "acf23608be862d1f07d7fea152295118f23d8786a8ae9f398b3862cb3aa35677"
+    },
+    "src/ui/fonts/OFL-PlaywriteEnglandJoined.txt": {
+      "bytes": 4393,
+      "mtimeMs": 1789334687000,
+      "sha256": "0370f5946020846b0ca65e44950d11411ea3bd3c4c0d755916470f9f96cd8cb8"
+    },
+    "src/ui/fonts/PlaywriteEnglandJoined.ttf": {
+      "bytes": 340536,
+      "mtimeMs": 1789334687000,
+      "sha256": "75263adf472a717edc4d7d10ea28016591928c98f2cd5da93b0269ef4a919fc9"
+    },
+    "src/ui/historical-acid-catalogue.d.ts": {
+      "bytes": 133,
+      "mtimeMs": 1790993990354.8533,
+      "sha256": "fb8801ada21ebd4d9fcc42564fa6399fa6fc7d1fede34e474017607ac31a531c"
+    },
+    "src/ui/historical-acid-catalogue.js": {
+      "bytes": 1228,
+      "mtimeMs": 1790993989341.2585,
+      "sha256": "c24eb411f1f691b733433fbad285acc970cde87a64d650515d2edb0ac9f80d66"
+    },
+    "src/ui/NumericWorkingControl.tsx": {
+      "bytes": 10167,
+      "mtimeMs": 1791066229123.7864,
+      "sha256": "2cc934592f16dfb59defc333c9cd2ca6b5b42cc69b47700e5acbb40644776f8d"
+    },
+    "src/ui/QuestionActions.tsx": {
+      "bytes": 3616,
+      "mtimeMs": 1791664549061.1016,
+      "sha256": "eef36d9a3d21aa33dacfc9480b42343b6f97d3748fd58a343fe4af1a30bb5c13"
+    },
+    "src/ui/QuestionLevelPill.tsx": {
+      "bytes": 604,
+      "mtimeMs": 1791030709157.2708,
+      "sha256": "43a5139da75dbb56e2ef4233e98824da6d0205514561aecddf86ca83b7e5b889"
+    },
+    "src/ui/QuestionPlayer-Wisteria.tsx": {
+      "bytes": 30372,
+      "mtimeMs": 1791664549065.8909,
+      "sha256": "e06d56d3c3ce60653190dc9f1d5cd1ff96cf39270839f177e2118e5d2101201f"
+    },
+    "src/ui/QuestionPlayer.tsx": {
+      "bytes": 28275,
+      "mtimeMs": 1791664549063.726,
+      "sha256": "0f0d7d97f918549dbd26fea81d10e327a305dc744e47a2b5da3303a3af9c26c2"
+    },
+    "src/ui/ResponseControl.tsx": {
+      "bytes": 13938,
+      "mtimeMs": 1791198435000,
+      "sha256": "e22da7f3b3e67dff39f7f1f06bf4abf74e0f1d3cb3d02c24dfd8918965f70529"
+    },
+    "src/ui/shared-actions.css": {
+      "bytes": 1014,
+      "mtimeMs": 1791067331084.5088,
+      "sha256": "7b8e1e24033f57c73aa6d02fc31b966157f42201df7175a5603830283fef32b7"
+    },
+    "src/ui/source-adapters.css": {
+      "bytes": 13155,
+      "mtimeMs": 1791659917857.4307,
+      "sha256": "f7db1269477a683c841227f7f525ada2bb892aacf850a93ec1847524b2c96936"
+    },
+    "src/ui/source-components.css": {
+      "bytes": 53315,
+      "mtimeMs": 1791065238106.3984,
+      "sha256": "f48192679c2bc84a4b396539a9fd7ec9a9f3ffe4cb33695d6b955e47783f1067"
+    },
+    "src/ui/source-family.ts": {
+      "bytes": 539,
+      "mtimeMs": 1791049733769.1658,
+      "sha256": "bf3c3c5e0dff3127108d72bd7ff4653fc69d6e0ff8c3b82dfc97dec6efd481d5"
+    },
+    "src/ui/source-presentation.ts": {
+      "bytes": 6492,
+      "mtimeMs": 1791057257072.8723,
+      "sha256": "1f432bb1c3c11d492053934cacb796eeb23dc597c37c7810abd3ad08a842cd06"
+    },
+    "src/ui/SourceQuestionPlayer.tsx": {
+      "bytes": 27877,
+      "mtimeMs": 1791664549067.9817,
+      "sha256": "700f740cc329410743f5333100b51b5cb63319115e803f5a43ab16e863833303"
+    },
+    "src/ui/SourceResponseControl.tsx": {
+      "bytes": 6712,
+      "mtimeMs": 1791066229065.4316,
+      "sha256": "f85f56b2f49290433916a188f19c4431bd3e1de33ad6e1ed20efad6d3a93fd5f"
+    },
+    "src/ui/SourceRubricReview.tsx": {
+      "bytes": 7059,
+      "mtimeMs": 1791058653457.9116,
+      "sha256": "8a405915bc4d3c6be34422db690ab76ff8177f0a56109cbeca50aacbb08ff87c"
+    },
+    "src/ui/teacher-catalogue.ts": {
+      "bytes": 8009,
+      "mtimeMs": 1791650781144.617,
+      "sha256": "522811961cdaf1221fa64a463cd269855bfa788d7a04eb725a2b471cdcdf896c"
+    },
+    "src/ui/TeacherPicker.tsx": {
+      "bytes": 9701,
+      "mtimeMs": 1791621166126.802,
+      "sha256": "b4a32bda46c360e16fc6c189c3b4cb9a3efed00dd9423d9d6f4cb4ef27f5db99"
+    },
+    "src/ui/TextRangePicker.tsx": {
+      "bytes": 2440,
+      "mtimeMs": 1790998929822.8562,
+      "sha256": "02203023fab51c80488e0bc567e3c43e324c063661ecb0e691c6b01fc6ddf68f"
+    },
+    "src/ui/use-question-keyboard.ts": {
+      "bytes": 2824,
+      "mtimeMs": 1791066228933.1475,
+      "sha256": "acfb6a4cc360307ede9edbddea7e4f3763fbf1cbc6847f7d105e503fac386152"
+    },
+    "scripts/browser/combined-build.mjs": {
+      "bytes": 7741,
+      "mtimeMs": 1791533474000,
+      "sha256": "92f55434512f3d1443dd0f2a8cf6d6a9c5c263a0caedbe04895629193a96b180"
+    },
+    "scripts/browser/component-fidelity/acid-browser.mjs": {
+      "bytes": 13259,
+      "mtimeMs": 1791225358000,
+      "sha256": "36af4a0312a99c720e8be9fd3eb3b6f604568c6a4d5bccf94afdaa5142b1d43a"
+    },
+    "scripts/browser/component-fidelity/energy-actions-browser.mjs": {
+      "bytes": 10500,
+      "mtimeMs": 1791225358000,
+      "sha256": "347965d46251ead362a50c72ac4a77813d17d6027aedf4cc7e32e6c2cf8e0116"
+    },
+    "scripts/browser/component-fidelity/numeric-browser.mjs": {
+      "bytes": 13308,
+      "mtimeMs": 1791225358000,
+      "sha256": "5b5664a77ec071959b0e2c4e040bf9457a46b78bb327347baf7b89819d479bf4"
+    },
+    "scripts/browser/component-fidelity/revision-browser.mjs": {
+      "bytes": 9890,
+      "mtimeMs": 1791225358000,
+      "sha256": "c57d31eddf2afb88a993f32bbc6aac121d860d4794703fef4e494ccd855937f9"
+    },
+    "scripts/browser/component-fidelity/rubric-browser.mjs": {
+      "bytes": 11022,
+      "mtimeMs": 1791225358000,
+      "sha256": "9742f88e2ef13d3f501d69987d81f0f24a78da8315fd5e6bf1d8fb26d7fad67e"
+    },
+    "scripts/browser/explaining-properties/browser.mjs": {
+      "bytes": 10762,
+      "mtimeMs": 1791225358000,
+      "sha256": "3d07bc471f30845ebf7a6de1e79c349f900f3e223d58c9725b0052af1b37431c"
+    },
+    "scripts/browser/explaining-properties/foreground-owned-chrome.ps1": {
+      "bytes": 1194,
+      "mtimeMs": 1791152304000,
+      "sha256": "f6e358169a7214091121549f48afecfd5763bba2c640a5b13b76e4b362dc5be0"
+    },
+    "scripts/browser/explaining-properties/native-timing.mjs": {
+      "bytes": 8271,
+      "mtimeMs": 1791225900000,
+      "sha256": "cfec74e40a8374d3b1441d2f696d2e9a4c17a6bf3476bb288f76e87a1b595283"
+    },
+    "scripts/browser/explaining-properties/prefix-browser.mjs": {
+      "bytes": 4794,
+      "mtimeMs": 1791533096000,
+      "sha256": "ce4d013e2dc2f648efbee97712ac144739073b0965d1057b334728e9b92fe299"
+    },
+    "scripts/browser/explaining-properties/timing-browser.mjs": {
+      "bytes": 9617,
+      "mtimeMs": 1791225358000,
+      "sha256": "c2577bc5e9193824f03417d4f3dea004a0890e7141e333a412e1730976cb242b"
+    },
+    "scripts/browser/explaining-properties/visual-browser.mjs": {
+      "bytes": 5206,
+      "mtimeMs": 1791225358000,
+      "sha256": "eb33a2484b010e4915a4fe4a625634fcfdccbf94943ef565914e395be655ec69"
+    },
+    "scripts/browser/fixtures/component-fidelity.json": {
+      "bytes": 354259,
+      "mtimeMs": 1791057573000,
+      "sha256": "76653a2ff028ba1be3d33c67b20c54646782497428c7920e161c984e67bdc3a7"
+    },
+    "scripts/browser/fixtures/landing/harness.html": {
+      "bytes": 216,
+      "mtimeMs": 1791225358000,
+      "sha256": "67062a5d89b6daadc8618a7373cb3f7bc1b73d020c9051317286df5b0aaafb64"
+    },
+    "scripts/browser/fixtures/landing/harness.tsx": {
+      "bytes": 2618,
+      "mtimeMs": 1791225498000,
+      "sha256": "c9af309e40ba90ffe9169fc5f0dae6696158e0f31eeea47cfc5852c0b5ea95b1"
+    },
+    "scripts/browser/landing/aggregate/prefix-browser.mjs": {
+      "bytes": 4122,
+      "mtimeMs": 1791533583000,
+      "sha256": "2ac3f17f1dbc0275402a758fc8411b131c645e63fd3ee5a7c26090224ecb78ed"
+    },
+    "scripts/browser/landing/design/compare-browser.mjs": {
+      "bytes": 10477,
+      "mtimeMs": 1791225358000,
+      "sha256": "238b64782277b34dbf059f67dd84ac9bade2adb11be7457cdcae1d583c568c78"
+    },
+    "scripts/browser/landing/design/interaction-browser.mjs": {
+      "bytes": 7423,
+      "mtimeMs": 1791225358000,
+      "sha256": "89d0bb6d076c5a4465193e6e498e4c764801bb2b4c9d3fbc8c359c6645195151"
+    },
+    "scripts/browser/landing/design/reuse-originals.mjs": {
+      "bytes": 4059,
+      "mtimeMs": 1791225732000,
+      "sha256": "49cbcb8eab258476b5eb91ffd3be040d4b5f02dc87450406a6f90c10ca4de08e"
+    },
+    "scripts/browser/landing/integration/browser.mjs": {
+      "bytes": 10456,
+      "mtimeMs": 1791225358000,
+      "sha256": "52fae6eb91383261d66c57f7f9049a66f407074245386a73398f9a44d2d9f294"
+    },
+    "scripts/browser/landing/integration/failure-browser.mjs": {
+      "bytes": 9712,
+      "mtimeMs": 1791225358000,
+      "sha256": "2c33a6e7b0ceccf542f499c08da5ebcee2ddee05d4cc6ed40a8ca35de977b448"
+    },
+    "scripts/browser/landing/integration/revision-browser.mjs": {
+      "bytes": 9149,
+      "mtimeMs": 1791225358000,
+      "sha256": "74b84c862d91a7b32320af0d27dd403616c9e08ab115dccb1d238db20acfe766"
+    },
+    "scripts/browser/landing/integration/teacher-category/browser.mjs": {
+      "bytes": 7613,
+      "mtimeMs": 1791225358000,
+      "sha256": "cf1e0cba027402809e3a6b922092512fb9e7834438d6b558384f57917d02c3f5"
+    },
+    "scripts/browser/olympiad/async-navigation.mjs": {
+      "bytes": 2495,
+      "mtimeMs": 1791225358000,
+      "sha256": "c0d4f86cbe7ecf05cee7d99ce8145a2d8a1e0d2eec260a8c6e8d5b6ad21e3a67"
+    },
+    "scripts/browser/olympiad/browser.mjs": {
+      "bytes": 15830,
+      "mtimeMs": 1791225358000,
+      "sha256": "cf3dd5e8a9ecfcc10b9e490fb99f8425fe7f6a0c41e9fce7c54aaf206fc9280e"
+    },
+    "scripts/browser/olympiad/production-smoke.mjs": {
+      "bytes": 3265,
+      "mtimeMs": 1791225358000,
+      "sha256": "d6678ab477e847232eb8dc60b9a37d1c2d8eee91dd57415e521e97675d41e09b"
+    },
+    "scripts/browser/paths.mjs": {
+      "bytes": 1036,
+      "mtimeMs": 1791225358000,
+      "sha256": "b5aa5af1a77314be6e8095ed0596c74fe68e3d892b907ae5239e90f54c207242"
+    },
+    "scripts/browser/README.md": {
+      "bytes": 3462,
+      "mtimeMs": 1791225901000,
+      "sha256": "c302155420fb11d55652425021fe339adae8525590fc46c78fa27ce8d51cf91f"
+    },
+    "scripts/browser/shared/persistence/browser-scenarios.ts": {
+      "bytes": 10866,
+      "mtimeMs": 1791225592000,
+      "sha256": "d145608b9945093742d6ae7f39b8ed38d043e29d77adee2a3c623f9766aeebb3"
+    },
+    "scripts/browser/shared/persistence/fixtures.ts": {
+      "bytes": 2821,
+      "mtimeMs": 1791225498000,
+      "sha256": "e9d67892daa18cff7017d03538082445b5f98920c5028c03e87c4a354e338b4f"
+    },
+    "scripts/browser/smoke.mjs": {
+      "bytes": 3583,
+      "mtimeMs": 1791225930000,
+      "sha256": "c27791f6355d56b9da3a7e5f9b1b4a4da86d53d201ecdaaad94facda11ecda36"
+    },
+    "scripts/build.mjs": {
+      "bytes": 2102,
+      "mtimeMs": 1791533559000,
+      "sha256": "69254b27e942fb04a84bd50ac8c3b97c885ccff75ef5dc17e792e13b57f3e465"
+    },
+    "scripts/check-formulae-equations-followup-originals.mjs": {
+      "bytes": 2818,
+      "mtimeMs": 1791662971966.0679,
+      "sha256": "98da1895bcfa6726635292887b03975e4d43c0b5eb2bd33ac22a79ea386406eb"
+    },
+    "scripts/check-formulae-equations-format-originals.mjs": {
+      "bytes": 2807,
+      "mtimeMs": 1791658940362.404,
+      "sha256": "cec36a3e7dbeaa93d5ebf8ab5c315ecf366f897a64502957b6c01379d735601f"
+    },
+    "scripts/check-recall-formulae-originals.mjs": {
+      "bytes": 2431,
+      "mtimeMs": 1791621444658.8833,
+      "sha256": "6ab143e471a57ddf092cb16a32aad268d174b11bdc678dd9fe86d4fc62c48a7f"
+    },
+    "scripts/check-recall-formulae-ux-originals.mjs": {
+      "bytes": 2790,
+      "mtimeMs": 1791650359845.5188,
+      "sha256": "cc093a00c5f7cd1522dc6f313b76fe82ebb40f83e9effe98828abb27f7a5c4c4"
+    },
+    "scripts/check-release.mjs": {
+      "bytes": 458,
+      "mtimeMs": 1791532946000,
+      "sha256": "cd5afe4bf33611c20291d219805fd6326e72999b6818c639723245193fa7fae5"
+    },
+    "scripts/check-retired-validation.mjs": {
+      "bytes": 3799,
+      "mtimeMs": 1791226371000,
+      "sha256": "b8ad3f6811eb65fcbdce5cc1a190c772f82520cefe0e193b31f90ab36a62043e"
+    },
+    "scripts/current-inputs.mjs": {
+      "bytes": 1372,
+      "mtimeMs": 1791533096000,
+      "sha256": "4683b2cd4f26ddbeda4365f0a8e7668ada550a4839f87303be7fe379db12dbf4"
+    },
+    "scripts/followup-capture-diff.mjs": {
+      "bytes": 2200,
+      "mtimeMs": 1791663430628.038,
+      "sha256": "ae2a798700aca4e685b2978f81240b14ad32060b58c34c8c3c27fb6950cef789"
+    },
+    "scripts/format-authored.mjs": {
+      "bytes": 7504,
+      "mtimeMs": 1791225395000,
+      "sha256": "a7a79c216b85535200eb7664aa6349245d8152ca62b3d39a3b225d3999fb27e1"
+    },
+    "scripts/landing-inputs.mjs": {
+      "bytes": 1600,
+      "mtimeMs": 1791225652000,
+      "sha256": "bbf6d918a6f84c0280c192decf800c56b7e895f2487d8e6729dabba678c817fb"
+    },
+    "scripts/landing-legacy-gates.mjs": {
+      "bytes": 1117,
+      "mtimeMs": 1791225515000,
+      "sha256": "ab091ac67ab16ef623f5760a64fd1912e146279c3221e7c09085b75ae2e8505b"
+    },
+    "scripts/prepare_flashcards.mjs": {
+      "bytes": 2615,
+      "mtimeMs": 1791119854562.86,
+      "sha256": "1b8a81975bd7efc5c5051b5126557ff44f79ab33820dbd7ad566d43027be1bc1"
+    },
+    "scripts/prepare_recall.mjs": {
+      "bytes": 4900,
+      "mtimeMs": 1791119853393.3667,
+      "sha256": "3f747c39e914d1192dbd66cbada29b2aa3c5333c017c6632a98cf9e907278a9c"
+    },
+    "scripts/prepare-olympiad-2011.mjs": {
+      "bytes": 1954,
+      "mtimeMs": 1791225381000,
+      "sha256": "ee2ae96f6efff4a28d4b4b06d596f9e67a0ab7471fe5116c83c410bacaa81b52"
+    },
+    "scripts/prepare-olympiad-regression.mjs": {
+      "bytes": 1408,
+      "mtimeMs": 1791225670000,
+      "sha256": "2fca28fa070a729d2cc009ea21260778493e4134cfaffa28560e4ccf34d20ec9"
+    },
+    "scripts/preview-server.mjs": {
+      "bytes": 1857,
+      "mtimeMs": 1791533092000,
+      "sha256": "c73170feec189672193ef2fca8d7e2a513a62e19c4e2e895a1aa9e4a820ef8e9"
+    },
+    "scripts/preview.mjs": {
+      "bytes": 634,
+      "mtimeMs": 1791533096000,
+      "sha256": "7db823779c3fd4bc117a37d43d9c23416d093bc5f8c8f497db8cdf741f80ccdc"
+    },
+    "scripts/protect-current.mjs": {
+      "bytes": 3189,
+      "mtimeMs": 1791225395000,
+      "sha256": "783000d66cc9207c27e39fe37f4f81c7f9e60c76a2be7faa4faf5ebbe04baadf"
+    },
+    "scripts/protect-originals.mjs": {
+      "bytes": 3610,
+      "mtimeMs": 1791225395000,
+      "sha256": "b9f1933e2c4b1ca0d57beaeef83cfbdbcbc78c87e2b534d12a87fd9acb1b1fdc"
+    },
+    "scripts/rate-equations-poc-browser.mjs": {
+      "bytes": 4486,
+      "mtimeMs": 1791564990000,
+      "sha256": "7a0dc21de50d0ed8fbced8f8c6d1976c7e5f44fd20b3fe266b76d2b30094723f"
+    },
+    "scripts/rate-equations-poc-check.mjs": {
+      "bytes": 2415,
+      "mtimeMs": 1791564990000,
+      "sha256": "aa1fcada2a8454f915c80e625c70751f6e198f368fccae2ab5ba4636328e5dc7"
+    },
+    "scripts/recall-formulae-activities-browser.mjs": {
+      "bytes": 29540,
+      "mtimeMs": 1791624494740.4417,
+      "sha256": "0a927e2987a7858e53cbc4d78f0fe4c6cad7c95d38a8a16063bf8031daca8fd0"
+    },
+    "scripts/recall-formulae-atlas-browser.mjs": {
+      "bytes": 6111,
+      "mtimeMs": 1791622964395.0408,
+      "sha256": "93ddb76e8ea9587301cb05c668866ea7bca79e8ed929383b776f1dcdb2672cbf"
+    },
+    "scripts/recall-formulae-atlas-full-verify.mjs": {
+      "bytes": 6834,
+      "mtimeMs": 1791622964394.0386,
+      "sha256": "4ebb792428affd6f98f04c0689e82a2e592d66ebcf5d0865d84a9ca80e1b4edd"
+    },
+    "scripts/recall-formulae-atlas-full.mjs": {
+      "bytes": 18174,
+      "mtimeMs": 1791622930644.3987,
+      "sha256": "20d128284fe7fe753a7716107081189db92813f76ab05acfdf8210b5674c58b5"
+    },
+    "scripts/recall-formulae-atlas-pilot.mjs": {
+      "bytes": 7936,
+      "mtimeMs": 1791621351851.3335,
+      "sha256": "a90c1caeb31326b4c9effa976288101726b8cda4bd60b86105e30073b24315e0"
+    },
+    "scripts/recall-formulae-atlas-verify.mjs": {
+      "bytes": 4813,
+      "mtimeMs": 1791621351853.3384,
+      "sha256": "b20f6255afe377d52b467feecf03ccd0fa89e3609e908bb8a28213ddd2f0099d"
+    },
+    "scripts/release-s4.mjs": {
+      "bytes": 6849,
+      "mtimeMs": 1791623361174.7505,
+      "sha256": "8f50ff1a376da143a0ad464af6df87924ae1ac21fee79c944a2a09d9f2129866"
+    },
+    "scripts/review_active_question_time.mjs": {
+      "bytes": 360,
+      "mtimeMs": 1791225410000,
+      "sha256": "cfa14d35d081caee30ddae4c369430f7f04ca584637823db61e06675fedecc4e"
+    },
+    "scripts/review_flashcards.mjs": {
+      "bytes": 13352,
+      "mtimeMs": 1791533096000,
+      "sha256": "04aafa467ed77cd1300531a01417566e6fe2bc1332f35dca1d527027d0aa2951"
+    },
+    "scripts/review_recall_hub.mjs": {
+      "bytes": 7902,
+      "mtimeMs": 1791225410000,
+      "sha256": "c2194bf1b896c546179c4eb5ab2603d7d1b79c8213c819f2ef06d3b15d52e9aa"
+    },
+    "scripts/runtime-aliases.mjs": {
+      "bytes": 2813,
+      "mtimeMs": 1791532946000,
+      "sha256": "946be681a70095206da38fed160345d3576a228e8e28132009f97a4fd3ec27b3"
+    },
+    "scripts/serve-s2-builds.mjs": {
+      "bytes": 1514,
+      "mtimeMs": 1791533096000,
+      "sha256": "ea2f3512a9387e1e7670c5c840c5786e304871376f8e2e90da0737cc989f79e3"
+    },
+    "scripts/serve-s4-builds.mjs": {
+      "bytes": 1514,
+      "mtimeMs": 1791533096000,
+      "sha256": "5b5c14d4c1ab9e6fc2bfd953192dd0762fc898fc8e45c4b9e99083cee4791f42"
+    },
+    "scripts/source-generation/acid/extract-engines.mjs": {
+      "bytes": 4139,
+      "mtimeMs": 1791225330000,
+      "sha256": "5adfdf8815f5c5a053c6e3bb212433413f3f1d158979c30f86e679a2ada0f670"
+    },
+    "scripts/source-generation/c3l6/extract-sources.mjs": {
+      "bytes": 3232,
+      "mtimeMs": 1791225330000,
+      "sha256": "e0173f520914c707b4566740ee45a752856dc2b4112a1b3dc289308bc4ba0537"
+    },
+    "scripts/source-generation/check-output.mjs": {
+      "bytes": 2286,
+      "mtimeMs": 1791225623000,
+      "sha256": "5e7593170fcd038938afe18ca01c8d649238a4119328b852e59d64141719879d"
+    },
+    "scripts/source-generation/dot-cross/extract.mjs": {
+      "bytes": 2975,
+      "mtimeMs": 1791225330000,
+      "sha256": "74c57f8466e9a0a36485c9788fd98cd3421803924b4bb9b46bf11a75d7960852"
+    },
+    "scripts/source-generation/electron-styles/extract-styles.mjs": {
+      "bytes": 3880,
+      "mtimeMs": 1791225330000,
+      "sha256": "3866fd5e2766b5e6b00681b6e46f98623ae7f28ab0578c8fb3aa61915f5b711d"
+    },
+    "scripts/source-generation/electrons/extract-sources.mjs": {
+      "bytes": 3749,
+      "mtimeMs": 1791225330000,
+      "sha256": "55dd70b8ad8cd2a27e667ef13209e561e422327071230f356b334e5be84300a9"
+    },
+    "scripts/source-generation/energy/extract.mjs": {
+      "bytes": 1799,
+      "mtimeMs": 1791225330000,
+      "sha256": "385648943358e04c7e19513c6201412d798d1672f29e5c21b5f594f85885db19"
+    },
+    "scripts/source-generation/explaining-properties/register.mjs": {
+      "bytes": 1809,
+      "mtimeMs": 1791226523000,
+      "sha256": "f1f9622377e71d52a69e0c8d40c7a78138e4024814fd355df113401c91ecf151"
+    },
+    "scripts/source-generation/igcse-dot-cross/extract.mjs": {
+      "bytes": 2048,
+      "mtimeMs": 1791225330000,
+      "sha256": "9e8ac3c10e201bbabaf37b39dd59ef706ecb3dde628fd13ce92b6b023a4a4695"
+    },
+    "scripts/source-generation/README.md": {
+      "bytes": 1988,
+      "mtimeMs": 1791225754000,
+      "sha256": "6470d563c580d833cf68b482176fff32f55f038d0dd4604dc8d2f76e35ee74c3"
+    },
+    "scripts/source-generation/review-co/create-reviewed-svg.mjs": {
+      "bytes": 5241,
+      "mtimeMs": 1791225330000,
+      "sha256": "67c7d30579e105cf876c08387954c0c21ad5052cbbde056a0182fd92ea6d7c41"
+    },
+    "scripts/source-generation/structure/extract-source.mjs": {
+      "bytes": 2972,
+      "mtimeMs": 1791225330000,
+      "sha256": "0e7b26627514f5c892bb0c21489e72f2fb16ba76c75b20b3767a0899a362a16f"
+    },
+    "scripts/source-generation/styles/extract-source-css.mjs": {
+      "bytes": 3984,
+      "mtimeMs": 1791225330000,
+      "sha256": "a1e9a840ba189cf02b17515c602a434ac6332a1ea1a43aa53ac6fc0aa41e1958"
+    },
+    "scripts/source-generation/thermochemistry/extract.mjs": {
+      "bytes": 2005,
+      "mtimeMs": 1791225330000,
+      "sha256": "7981486fb8f7cadc44de12ad783bd73f6a25c073b4e2c6ffdc55007b71a97d0e"
+    },
+    "scripts/source-generation/titration/extract.mjs": {
+      "bytes": 1414,
+      "mtimeMs": 1791225330000,
+      "sha256": "7b0b5acc3f3fe5f40e6dd0ddeaf4a5f08cbfd51b4fcdeee20d2c91f010480486"
+    },
+    "scripts/test_active_question_time.mjs": {
+      "bytes": 5004,
+      "mtimeMs": 1791664409266.368,
+      "sha256": "9b7b9a8bedbdb4c8687470343fdb76760e198c3eaccf95ca6095ca5b34335274"
+    },
+    "scripts/test_revision_registration.mjs": {
+      "bytes": 4410,
+      "mtimeMs": 1791623361173.3496,
+      "sha256": "834ca3b6ba843d662368b9f1e5ac716ceb2fb743ef22d0b2f1c27a05d69960e3"
+    },
+    "scripts/test-component-identity.mjs": {
+      "bytes": 871,
+      "mtimeMs": 1791225624000,
+      "sha256": "c5ce6cbf6ead6da71c75c83303f05b499ae8dc4008a1ccc37eb6541111307b03"
+    },
+    "scripts/test-explaining-properties.mjs": {
+      "bytes": 904,
+      "mtimeMs": 1791225624000,
+      "sha256": "a9c41b123ec908b52a007702a76984457c3d2b89e5ebab66398a107a5810a1f6"
+    },
+    "scripts/test-olympiad-2011.mjs": {
+      "bytes": 1106,
+      "mtimeMs": 1791225624000,
+      "sha256": "c7bdc21abb40ebf319683f78b046e86d22c63fac9e6890c55572bc79e50144ec"
+    },
+    "scripts/test-recall-formulae-content.mjs": {
+      "bytes": 497,
+      "mtimeMs": 1791621559918.1567,
+      "sha256": "8e749e5b0617ac2cdfe8f527594614aba198d2a53108f3af209c7325d1b18666"
+    },
+    "scripts/test-recall-formulae-recall.mjs": {
+      "bytes": 448,
+      "mtimeMs": 1791622549750.9563,
+      "sha256": "e8bcbc04e62b450ed316341289c9428bd50d8b58d5d2c7adda4c895f2c4a8328"
+    },
+    "scripts/test-s1.mjs": {
+      "bytes": 841,
+      "mtimeMs": 1791225624000,
+      "sha256": "7bb9d8cc925b6c51d4fb8cbdf7dd520b83c9d786faab0d03bc8b104e14fa2b10"
+    },
+    "scripts/test-s2.mjs": {
+      "bytes": 803,
+      "mtimeMs": 1791225624000,
+      "sha256": "ac257486fc7b4d46a1560fbd0e96863e8050720a637e238bdc30c63e55484732"
+    },
+    "scripts/test-s3.mjs": {
+      "bytes": 1726,
+      "mtimeMs": 1791225624000,
+      "sha256": "4797dd617c3a0aeb65d7233cb34e6f4ccde159e6659e22c4a5d8106d65b810c2"
+    },
+    "scripts/test-s4.mjs": {
+      "bytes": 1731,
+      "mtimeMs": 1791225624000,
+      "sha256": "fad4d7002b62e48e988deb527dd946bad1ba30ba34eadeadd4dbbf51dd93bd2f"
+    },
+    "scripts/test-s5.mjs": {
+      "bytes": 2101,
+      "mtimeMs": 1791225624000,
+      "sha256": "05f0970b0958bfae7ef9a7918955565476f21588e8727d555e0df0b111526b94"
+    },
+    "scripts/tests/c3-regression.test.ts": {
+      "bytes": 18932,
+      "mtimeMs": 1791225833000,
+      "sha256": "a2e5273978483d3e1c3b662973b8a4eebbce55dbb1233fc5eb31e51e82fe042b"
+    },
+    "scripts/tests/combined-build.test.mjs": {
+      "bytes": 3760,
+      "mtimeMs": 1791534289000,
+      "sha256": "33562b9789080d6f604d530f91d749736231defd38aef99f43e1ebc89e1b5f0a"
+    },
+    "scripts/tests/current-catalogue-boundary.test.ts": {
+      "bytes": 4716,
+      "mtimeMs": 1791149311307.0264,
+      "sha256": "7443f571ab0ba468e0a4cae657a5b1676bf86be284c17ed103765708cd597ac0"
+    },
+    "scripts/tests/explaining-properties.test.ts": {
+      "bytes": 9463,
+      "mtimeMs": 1791152061390.6687,
+      "sha256": "6ecbc952a8428cb545643eb1ab905aea0d7a02d160972c1931d6db4e801b9535"
+    },
+    "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/acid-pre-correction-fixtures.json": {
+      "bytes": 597907,
+      "mtimeMs": 1791045567000,
+      "sha256": "97bdc85d9674cb896b805b50676f59dfca15d897b96668b62abf3903acc16c59"
+    },
+    "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/authoring-pre-correction-fixtures.json": {
+      "bytes": 405207,
+      "mtimeMs": 1791045567000,
+      "sha256": "fad54f5566c67024e489ece461caa2ff5cb995f108729cd456098066e844ac44"
+    },
+    "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/before/src/development/fixtures.ts": {
+      "bytes": 12302,
+      "mtimeMs": 1791225624000,
+      "sha256": "b0baec4ed23c1580e129b8fb81090a05704686ebee007cdf21bbbd6c6e7f77d9"
+    },
+    "scripts/tests/fixtures/legacy/component-fidelity/f1-correction/identity/current-export.json": {
+      "bytes": 1678,
+      "mtimeMs": 1791046357000,
+      "sha256": "bb063368ff5dc1cd947c3992e0f5746b75d2b0523091bfd33cb121f22d684c8e"
+    },
+    "scripts/tests/fixtures/legacy/s1/attempt/scenarios.ts": {
+      "bytes": 3394,
+      "mtimeMs": 1791225624000,
+      "sha256": "94ae062f6c4da14a6460622dd8f26ced461b1466aa5dd3fc9801c65d9fbd6af3"
+    },
+    "scripts/tests/fixtures/legacy/s1/persistence/fixtures.ts": {
+      "bytes": 2839,
+      "mtimeMs": 1791225624000,
+      "sha256": "ecf451875efb68e8b29a295f81fda481321f8d895b30273684369c6cfc4a7ef2"
+    },
+    "scripts/tests/fixtures/legacy/s1/session/source-golden.json": {
+      "bytes": 889039,
+      "mtimeMs": 1790981456000,
+      "sha256": "89aa07f32138c3beb6fd3c36185f3553c1b68d9f3a9300192794364b5aa288f4"
+    },
+    "scripts/tests/fixtures/legacy/s3/electrons/source-fingerprints.json": {
+      "bytes": 3644,
+      "mtimeMs": 1790991618000,
+      "sha256": "172872514d23e0263ca7a76c7c531302d787ceb2a701dbd39fd53b4b1adab78f"
+    },
+    "scripts/tests/fixtures/legacy/s3/energy/source-fingerprints.json": {
+      "bytes": 1896,
+      "mtimeMs": 1790989456000,
+      "sha256": "f705bd7429835037f64e7601839bbde170357af9254db24af71da4e0ed8ad09f"
+    },
+    "scripts/tests/fixtures/legacy/s3/review-c3-name/wording-disposition.json": {
+      "bytes": 3541,
+      "mtimeMs": 1790991948000,
+      "sha256": "1796f90c9cd4c174935479da60ca3200941a2750f7c359838feffe70b8183b33"
+    },
+    "scripts/tests/fixtures/legacy/s3/review-co/provenance.json": {
+      "bytes": 4643,
+      "mtimeMs": 1790991365000,
+      "sha256": "20265d9242777eb9d8bc981afcc0dacf666153878bd28d7e6f05779cfd669fe6"
+    },
+    "scripts/tests/fixtures/legacy/s5/chemistry/electron-source-fingerprints.json": {
+      "bytes": 3644,
+      "mtimeMs": 1790991618000,
+      "sha256": "172872514d23e0263ca7a76c7c531302d787ceb2a701dbd39fd53b4b1adab78f"
+    },
+    "scripts/tests/fixtures/legacy/s5/fixes/c3-k-erratum/native-historical-wrong-k.json": {
+      "bytes": 26705,
+      "mtimeMs": 1791148996000,
+      "sha256": "d71c23602bdf39878be905d71a581081bf8672c6396c64c562aa254819bee985"
+    },
+    "scripts/tests/fixtures/legacy/s5/fixes/c3-k-erratum/native-revalidated.json": {
+      "bytes": 59335,
+      "mtimeMs": 1791148996000,
+      "sha256": "e76722aa647e8510e19e946478c1ecb0abe87df53a4f5d7435b94df3f4b82023"
+    },
+    "scripts/tests/fixtures/legacy/ui-consistency/u2/independent/acid-pre-correction-fixtures.json": {
+      "bytes": 597907,
+      "mtimeMs": 1791067784000,
+      "sha256": "97bdc85d9674cb896b805b50676f59dfca15d897b96668b62abf3903acc16c59"
+    },
+    "scripts/tests/fixtures/legacy/ui-consistency/u2/independent/current-export.json": {
+      "bytes": 1678,
+      "mtimeMs": 1791067784000,
+      "sha256": "bb063368ff5dc1cd947c3992e0f5746b75d2b0523091bfd33cb121f22d684c8e"
+    },
+    "scripts/tests/followup-chem.test.mjs": {
+      "bytes": 11122,
+      "mtimeMs": 1791663589346.767,
+      "sha256": "304cc770cff5ba04e541c2b25ac8f619cad45b29311f72767764d52f94ac00a4"
+    },
+    "scripts/tests/followup-lock-panel-boundary.browser.mjs": {
+      "bytes": 7206,
+      "mtimeMs": 1791664736446.032,
+      "sha256": "11b0017c03b0aed249287604d36344eb4e99a3bb43ea4e9f6c8f093fce966110"
+    },
+    "scripts/tests/followup-lock-reference.browser.mjs": {
+      "bytes": 5176,
+      "mtimeMs": 1791664736457.6797,
+      "sha256": "c550861d90f1a4756456700fecc0fb71bfa9ed455a93c1eab82dae25cb0c9f53"
+    },
+    "scripts/tests/followup-lock.browser.html": {
+      "bytes": 223,
+      "mtimeMs": 1791664128110.0425,
+      "sha256": "cf393466894f3225a4a4ab51bfc67700dcad8ed26baa9406ba4f84a86f289fa9"
+    },
+    "scripts/tests/followup-lock.browser.mjs": {
+      "bytes": 10175,
+      "mtimeMs": 1791664166887.31,
+      "sha256": "a5b76ddf33b039278a78caa6637a0efa5149c47420deea63357b1f3a82bc4dfa"
+    },
+    "scripts/tests/followup-lock.browser.tsx": {
+      "bytes": 10328,
+      "mtimeMs": 1791664736421.906,
+      "sha256": "79a854c87c1381b608294d5d5fe75016bfc48e1a1e6aeb96522510b5cb198181"
+    },
+    "scripts/tests/followup-lock.test.mjs": {
+      "bytes": 15878,
+      "mtimeMs": 1791664736404.0754,
+      "sha256": "723cbc76219ccba238a789fdb1169150b294b4f552806020e6d2651e70f48405"
+    },
+    "scripts/tests/gem-mastery-completion.browser.mjs": {
+      "bytes": 14148,
+      "mtimeMs": 1791651551911.4287,
+      "sha256": "ca6f4e9febb654c79f5ecc6f86e10a2abcd9081ebee0a269ce3a43be06cf5781"
+    },
+    "scripts/tests/gem-mastery-flow.browser.mjs": {
+      "bytes": 12726,
+      "mtimeMs": 1791651666863.367,
+      "sha256": "be70cb9347de0bbfe83cdee7cc3c2bb9a49b40f5ff8aaf70fc707cc163ca5735"
+    },
+    "scripts/tests/gem-mastery-flow.test.mjs": {
+      "bytes": 3500,
+      "mtimeMs": 1791651551848.1465,
+      "sha256": "9a1d043b9a6026fe8bc4e28a347ead65bf87413425bbb3571abc054e2d1169c1"
+    },
+    "scripts/tests/gem-mastery-production-smoke.mjs": {
+      "bytes": 6468,
+      "mtimeMs": 1791651950313.0234,
+      "sha256": "2aa6a9b95f0eed7306f5c441255eb04151393a7491bcc02c4a7a3b191a91963a"
+    },
+    "scripts/tests/gem-mastery-save.browser.html": {
+      "bytes": 326,
+      "mtimeMs": 1791651551927.5103,
+      "sha256": "ad63491975d988b1082b3b9bf4568aa1fa4872c6d91513bfef6442e4708cd0f0"
+    },
+    "scripts/tests/gem-mastery-save.browser.tsx": {
+      "bytes": 1354,
+      "mtimeMs": 1791651551943.388,
+      "sha256": "1cb026d788317da7b625b21a7199838466061109810ebcde868d21d7782676d2"
+    },
+    "scripts/tests/igcse-recall-review/desktop.png": {
+      "bytes": 289657,
+      "mtimeMs": 1791663823816.84,
+      "sha256": "45917c3e1d84f9cd88990c5b889bb3daef7e9aff98d18f9f3c36fbec97d500b6"
+    },
+    "scripts/tests/igcse-recall-review/index.html": {
+      "bytes": 261,
+      "mtimeMs": 1791663595655.9773,
+      "sha256": "c1b700c74e91f892ce8159525207134e3db3f1a3a02089f0a668efaa8106a927"
+    },
+    "scripts/tests/igcse-recall-review/mobile.png": {
+      "bytes": 203199,
+      "mtimeMs": 1791663823933.2007,
+      "sha256": "75eae9fc6cb8d7e95b1f57ba14ef3a5cfa95705887f808e85056c44e0ab71fb5"
+    },
+    "scripts/tests/igcse-recall-review/README.md": {
+      "bytes": 1955,
+      "mtimeMs": 1791663858216.436,
+      "sha256": "04b0f26bd43649bb82c783c484b12fe310ad84182113787e3158f656aaa25b77"
+    },
+    "scripts/tests/igcse-recall-review/review.css": {
+      "bytes": 1295,
+      "mtimeMs": 1791663639862.661,
+      "sha256": "46b231d913a03f49c2ed429d956af9a09d336a4c06a853b0cfe30bc93e3508de"
+    },
+    "scripts/tests/igcse-recall-review/review.tsx": {
+      "bytes": 8887,
+      "mtimeMs": 1791663798877.1577,
+      "sha256": "29c438efe26f718c363e5a774b6da8d4a155f7a3a3013e8f3e006365ea47f698"
+    },
+    "scripts/tests/igcse-recall-review/server-error.log": {
+      "bytes": 2682,
+      "mtimeMs": 1791664738514.1235,
+      "sha256": "06253523cf9814e12cfcbdbcc224828b251c33828c991614e017830bf03dac9c"
+    },
+    "scripts/tests/igcse-recall-review/server.log": {
+      "bytes": 2195,
+      "mtimeMs": 1791664889342.723,
+      "sha256": "71ea1f029d51329c9f1152af97d5e5dc8aa7a523e3462213a07cca53a1bce64d"
+    },
+    "scripts/tests/igcse-recall-review/tsconfig.json": {
+      "bytes": 80,
+      "mtimeMs": 1791663778279.3276,
+      "sha256": "b22eacf7e342d9e99426c6b59d27015e8ad28a7574f609be91dc494735b1780b"
+    },
+    "scripts/tests/igcse-recall-review/verification.json": {
+      "bytes": 509,
+      "mtimeMs": 1791663823936.434,
+      "sha256": "23deac7bf60120d8bc8e6029513f657f963121839bd1ed996f6f8ab89f68646b"
+    },
+    "scripts/tests/igcse-recall-review/verify.mjs": {
+      "bytes": 5696,
+      "mtimeMs": 1791663736279.761,
+      "sha256": "79abaffe0db7c18afbb1c173e5328367e0565853609fa7ce3e1a74702bf38899"
+    },
+    "scripts/tests/landing/invariants.test.mjs": {
+      "bytes": 5091,
+      "mtimeMs": 1791225752000,
+      "sha256": "1c32c7e9d101b0a959b7d1e6c10731bcf7e4d5c23b00a7398f1944fd18bce53e"
+    },
+    "scripts/tests/landing/launch-routing.test.ts": {
+      "bytes": 8238,
+      "mtimeMs": 1791225592000,
+      "sha256": "20a4e105ba9c785416fd6785cfb4cc2ab057f324883b2697a1f3dad5eb6ab526"
+    },
+    "scripts/tests/legacy/component-fidelity/f1-correction/identity/canonical-identity.test.mjs": {
+      "bytes": 14025,
+      "mtimeMs": 1791225623000,
+      "sha256": "64e780fc7e70e66c2a5f8f13687c40b70d9168bed8189e0270f7dc2cc295cf83"
+    },
+    "scripts/tests/legacy/component-fidelity/f1-correction/identity/current-persistence.test.mjs": {
+      "bytes": 4287,
+      "mtimeMs": 1791225623000,
+      "sha256": "d81c8486ded3854f3336e095a8e1f9670f4b5f42ae22cd9a1dc464171000fbeb"
+    },
+    "scripts/tests/legacy/component-fidelity/f1-correction/identity/development-identity.test.mjs": {
+      "bytes": 10084,
+      "mtimeMs": 1791225623000,
+      "sha256": "a81cf545a9984da7319018e17b44cd4881ee0d7d903a5ead3fe62b6e57653556"
+    },
+    "scripts/tests/legacy/s1/attempt/attempt.test.mjs": {
+      "bytes": 32249,
+      "mtimeMs": 1791225623000,
+      "sha256": "2d837949598a2f78392f8f9bab0457cdc08d3b97d82738f99cec649186ae7162"
+    },
+    "scripts/tests/legacy/s1/persistence/persistence.test.ts": {
+      "bytes": 6068,
+      "mtimeMs": 1791225623000,
+      "sha256": "13665722fd696f6a12e051c678a466bcd8d00a4f7f433064363983091a68dae4"
+    },
+    "scripts/tests/legacy/s1/session/session.test.mjs": {
+      "bytes": 12906,
+      "mtimeMs": 1791225623000,
+      "sha256": "6c1c5a80f2a951beffc834538f277ce34c0e45280a4c99a57022795a94666864"
+    },
+    "scripts/tests/legacy/s2/dot-cross/activity.test.mjs": {
+      "bytes": 7907,
+      "mtimeMs": 1791225623000,
+      "sha256": "1b76415a81887c5f24b3d309c1b98a113845e61dba3fbd76c09f515cf4a7bae2"
+    },
+    "scripts/tests/legacy/s2/integration/complete-coverage.test.ts": {
+      "bytes": 5081,
+      "mtimeMs": 1791225623000,
+      "sha256": "e22e9db62760a1be4b7384f170f898deb5b2eb9595622548a897715a681bb2b4"
+    },
+    "scripts/tests/legacy/s2/integration/shared-boundaries.test.ts": {
+      "bytes": 3855,
+      "mtimeMs": 1791225623000,
+      "sha256": "36e3f8475085449c26d825b766f7d17b01707a2125c24ba426f3fad9a00268e7"
+    },
+    "scripts/tests/legacy/s2/structure/structure.test.mjs": {
+      "bytes": 10116,
+      "mtimeMs": 1791225623000,
+      "sha256": "f3ac687ece3b957cedccdebea8b2449695b83645b6e856c7e8e91ea51a53c375"
+    },
+    "scripts/tests/legacy/s3/c3l6/c3l6.test.ts": {
+      "bytes": 13039,
+      "mtimeMs": 1791225623000,
+      "sha256": "7ea1cd95879f4a155c955bb425ade3ecb3c23c301829d7e49903ff57c8fed3bc"
+    },
+    "scripts/tests/legacy/s3/electrons/electrons.test.mjs": {
+      "bytes": 17517,
+      "mtimeMs": 1791225623000,
+      "sha256": "c5f31b489eb89c32edf078a34c2becc058d601adf27bfaad8c15580ee8967230"
+    },
+    "scripts/tests/legacy/s3/energy/energy.test.mjs": {
+      "bytes": 12053,
+      "mtimeMs": 1791225623000,
+      "sha256": "a9a84710155d8480b9c5b3e5af47298950dfc934d764298c826825053a948435"
+    },
+    "scripts/tests/legacy/s3/igcse-dot-cross/activity.test.mjs": {
+      "bytes": 8908,
+      "mtimeMs": 1791225623000,
+      "sha256": "86dccd482aef7ca969b3195ef0f1676a5a36527e196a648c06f679aac9569638"
+    },
+    "scripts/tests/legacy/s3/igcse-dot-cross/alevel-activity.test.mjs": {
+      "bytes": 7921,
+      "mtimeMs": 1791225623000,
+      "sha256": "9183d3e03350f2bcdf746f919bb39c6c2948b73357ce963b3b1f919cc35e5bca"
+    },
+    "scripts/tests/legacy/s3/integration/complete-registration.test.ts": {
+      "bytes": 2251,
+      "mtimeMs": 1791225759000,
+      "sha256": "a3421ce9d9fc0e9129b132d218e0815d5a037e40f294e5a8c9f2aa4d28977b70"
+    },
+    "scripts/tests/legacy/s3/integration/s2-content-regression.test.ts": {
+      "bytes": 5457,
+      "mtimeMs": 1791225623000,
+      "sha256": "edfe3578d2a78db193f31d9cdc984c92625e5da429a56912c600af569a1410de"
+    },
+    "scripts/tests/legacy/s3/thermochemistry/coverage.test.mjs": {
+      "bytes": 11297,
+      "mtimeMs": 1791225623000,
+      "sha256": "05e4a217854852d5223003b338cb9e05ca90e05ac3ca531e1c4a8ac41c1dc21d"
+    },
+    "scripts/tests/legacy/s3/titration/activity.test.mjs": {
+      "bytes": 5653,
+      "mtimeMs": 1791225623000,
+      "sha256": "66b90d4d3e0bb1f544463674cdf04612a62019f8516f416de7838c0d991e6fb5"
+    },
+    "scripts/tests/legacy/s3/titration/source-chemistry.test.mjs": {
+      "bytes": 4924,
+      "mtimeMs": 1791225623000,
+      "sha256": "38140a1a3634031c58522ba067209fe8840978d2d244e8f793aadb7e25f58aec"
+    },
+    "scripts/tests/legacy/s4/authoring-release/family.test.mjs": {
+      "bytes": 3630,
+      "mtimeMs": 1791225623000,
+      "sha256": "38b07d109558878fed2fcd77545f10cc825ae21e4207b65bf1bd4ad6a9cf2db2"
+    },
+    "scripts/tests/legacy/s4/compatibility/compatibility.test.ts": {
+      "bytes": 10739,
+      "mtimeMs": 1791225825000,
+      "sha256": "6e0529206a7dff205d1a2f38c3eb4f076cc2bac4ff1ad026efe69b0867aeeaf6"
+    },
+    "scripts/tests/legacy/s4/refinement/catalogue-boundary.test.ts": {
+      "bytes": 4770,
+      "mtimeMs": 1791225623000,
+      "sha256": "d82e5585804b3ce19a4230cb725b2e430597347dd6387868ebb1cc4eff29fe9f"
+    },
+    "scripts/tests/legacy/s4/statistics/model.test.mjs": {
+      "bytes": 6033,
+      "mtimeMs": 1791225623000,
+      "sha256": "ffbdb38c0edca727f510bf94de4c2f5cb590652f3f824b582ddd3c2018036f8f"
+    },
+    "scripts/tests/legacy/s4/ux/catalogue.test.mjs": {
+      "bytes": 3074,
+      "mtimeMs": 1791225623000,
+      "sha256": "198af53ddcdc920c2e0c33e5963ca8167f40d0478c27403bbfe9836d5d8d4b6b"
+    },
+    "scripts/tests/legacy/s5/chemistry/alevel-dot-reference.test.mjs": {
+      "bytes": 7921,
+      "mtimeMs": 1791225623000,
+      "sha256": "9183d3e03350f2bcdf746f919bb39c6c2948b73357ce963b3b1f919cc35e5bca"
+    },
+    "scripts/tests/legacy/s5/chemistry/c3-current-source-regression.test.ts": {
+      "bytes": 18558,
+      "mtimeMs": 1791225623000,
+      "sha256": "3824dd63d9feb8281598d6fce639a98159d14273ed97af1014ba6b63816b60f6"
+    },
+    "scripts/tests/legacy/s5/chemistry/c3-history-boundaries.test.mjs": {
+      "bytes": 3861,
+      "mtimeMs": 1791225623000,
+      "sha256": "3c6d4d6854cffd199a4955b5ee108c4672466ac91eed81346e8006de33d719e9"
+    },
+    "scripts/tests/legacy/s5/chemistry/electrons-source-regression.test.mjs": {
+      "bytes": 17747,
+      "mtimeMs": 1791225623000,
+      "sha256": "2a1b5d98c62efd1742200d6bb4e9ac8b9be0275e3b348a2b0223bf975828247b"
+    },
+    "scripts/tests/legacy/s5/chemistry/energy-reference.test.mjs": {
+      "bytes": 12053,
+      "mtimeMs": 1791225623000,
+      "sha256": "a9a84710155d8480b9c5b3e5af47298950dfc934d764298c826825053a948435"
+    },
+    "scripts/tests/legacy/s5/chemistry/igcse-dot-reference.test.mjs": {
+      "bytes": 8928,
+      "mtimeMs": 1791225623000,
+      "sha256": "50b6d15dcaa9f22ff7256d294a170c73137394d891dfcf602c5e82269284b90a"
+    },
+    "scripts/tests/legacy/s5/chemistry/structure-reference.test.mjs": {
+      "bytes": 10116,
+      "mtimeMs": 1791225623000,
+      "sha256": "f3ac687ece3b957cedccdebea8b2449695b83645b6e856c7e8e91ea51a53c375"
+    },
+    "scripts/tests/legacy/s5/chemistry/titration-reference.test.mjs": {
+      "bytes": 4924,
+      "mtimeMs": 1791225623000,
+      "sha256": "38140a1a3634031c58522ba067209fe8840978d2d244e8f793aadb7e25f58aec"
+    },
+    "scripts/tests/legacy/s5/fixes/c3-k-erratum/c3-reference.test.ts": {
+      "bytes": 18585,
+      "mtimeMs": 1791225670000,
+      "sha256": "25cc2970cc7967e2242aa1bf38244bf8afbc6e91e87e64480204a1d032c3463c"
+    },
+    "scripts/tests/legacy/s5/fixes/dot-charge-typing/activity.test.mjs": {
+      "bytes": 8938,
+      "mtimeMs": 1791225624000,
+      "sha256": "75a7e2addf06d43fa6eb95e8fb3d0634cb2d4fccabc10a4e20469a3f3ba5d99a"
+    },
+    "scripts/tests/legacy/s5/fixes/dot-charge-typing/alevel-activity.test.mjs": {
+      "bytes": 7948,
+      "mtimeMs": 1791225624000,
+      "sha256": "6e9bfedfc50d0095bc822648c5bf633a56e97a76a23447511a79a2bc22bf2ffe"
+    },
+    "scripts/tests/legacy/s5/render-release/independent-family.test.mjs": {
+      "bytes": 3835,
+      "mtimeMs": 1791225624000,
+      "sha256": "6038799cb300dac893bc113c5a8552ae6de3ab012a136eab34f3d21dfdd78d50"
+    },
+    "scripts/tests/legacy/test-evidence.d.mts": {
+      "bytes": 162,
+      "mtimeMs": 1791225759000,
+      "sha256": "90be01c3dc7779cc64e4ecc4e7d009a1ce6642d6f2dd3304a95471f12fd56da6"
+    },
+    "scripts/tests/legacy/test-evidence.mjs": {
+      "bytes": 978,
+      "mtimeMs": 1791225759000,
+      "sha256": "5140f9b1df03192df894aff61fe1afb903a443da53179d80f30c75fc1cb37b21"
+    },
+    "scripts/tests/legacy/ui-consistency/u2/independent/action-state.test.mjs": {
+      "bytes": 5711,
+      "mtimeMs": 1791225624000,
+      "sha256": "1aed6b7927c193a8fde4496e97832fd6c0aef82523f3914031c1d2ecc8c09fff"
+    },
+    "scripts/tests/legacy/ui-consistency/u2/independent/canonical-identity.test.mjs": {
+      "bytes": 14013,
+      "mtimeMs": 1791225624000,
+      "sha256": "354e4ea0d2147f9c9dc1a55ca80c3409eb7dcc8f9d20fd063a252d42af9a9d9b"
+    },
+    "scripts/tests/legacy/ui-consistency/u2/independent/central-attempt.test.mjs": {
+      "bytes": 5598,
+      "mtimeMs": 1791225624000,
+      "sha256": "df7cb7d49d5dc9b0a2dd96a636d271d1a9b92bddaffb8ed275ef260d354a6aef"
+    },
+    "scripts/tests/legacy/ui-consistency/u2/independent/current-persistence.test.mjs": {
+      "bytes": 4275,
+      "mtimeMs": 1791225624000,
+      "sha256": "ecf32e0d6b24140eab4c8a556c7b684db37f6683f644070f923d1cfa7f50be27"
+    },
+    "scripts/tests/legacy/ui-consistency/u2/independent/numeric-working.test.mjs": {
+      "bytes": 3178,
+      "mtimeMs": 1791225624000,
+      "sha256": "c80caf55c53749976489ffebf9598a0b62c6977d5fab798dd726fee9471bd614"
+    },
+    "scripts/tests/olympiad-2011.test.ts": {
+      "bytes": 7335,
+      "mtimeMs": 1791149427893.1416,
+      "sha256": "97a306cb79771f237abef7f08c084b2f7cc401a66677a7b4ff8e811ad3bf7413"
+    },
+    "scripts/tests/recall-formulae-content.test.mjs": {
+      "bytes": 12912,
+      "mtimeMs": 1791663687719.6567,
+      "sha256": "0e113b3360c1fcf2f4ad4d6d7ecd7dda062ddd2c0a1f9f79eab6749c96b729c1"
+    },
+    "scripts/tests/recall-formulae-recall.browser.html": {
+      "bytes": 299,
+      "mtimeMs": 1791622549823.6343,
+      "sha256": "44486fb3140ca1aa568d830bda3f171a3d289aff77468369f03858d8a4cc152c"
+    },
+    "scripts/tests/recall-formulae-recall.browser.mjs": {
+      "bytes": 10131,
+      "mtimeMs": 1791622549791.985,
+      "sha256": "74b652dc6ea3b9ce9491d080662a48e1c4fe65914119c9edf4f6b13e7426f01a"
+    },
+    "scripts/tests/recall-formulae-recall.browser.tsx": {
+      "bytes": 1350,
+      "mtimeMs": 1791622549797.1187,
+      "sha256": "e5cff150f6db9325f05170a2e349d2ea665fb3d83d3487b3ae1620c248b90e4a"
+    },
+    "scripts/tests/recall-formulae-recall.gem-render.mjs": {
+      "bytes": 3205,
+      "mtimeMs": 1791624703503.042,
+      "sha256": "42a92fc0457ec46f1678c421d64f440efb0045e81d04c120ce33eb0696fe7051"
+    },
+    "scripts/tests/recall-formulae-recall.native-tabs.mjs": {
+      "bytes": 5070,
+      "mtimeMs": 1791624479729.5984,
+      "sha256": "2b9252a4dbd133743b2051a6f652123c266ef150a4516abd6faa3a940029ce9e"
+    },
+    "scripts/tests/recall-formulae-recall.native-timing.mjs": {
+      "bytes": 9500,
+      "mtimeMs": 1791624479720.5525,
+      "sha256": "64ca35096e3d71be462f2d39c34eccefaffa141f51464da9d9a5ed900725ed01"
+    },
+    "scripts/tests/recall-formulae-recall.navigation-browser.mjs": {
+      "bytes": 6262,
+      "mtimeMs": 1791624700348.373,
+      "sha256": "2c0322bb5b5ae8fca9641df180fb6b6e29824c1e1bf07dde1e96aefb7a2a0081"
+    },
+    "scripts/tests/recall-formulae-recall.production-browser.mjs": {
+      "bytes": 12198,
+      "mtimeMs": 1791624479687.5176,
+      "sha256": "1a741898f747f347c6e5d2fe8b7462b5a41af1b4d10fbb730ff8c3c28cf92455"
+    },
+    "scripts/tests/recall-formulae-recall.test.mjs": {
+      "bytes": 14867,
+      "mtimeMs": 1791622973542.2007,
+      "sha256": "91fa1cac6270efc39643f43246aa1e0a8d26309c6403fb44f033b2ff67023324"
+    },
+    "scripts/tests/recall-formulae-ux-identity.browser.mjs": {
+      "bytes": 2566,
+      "mtimeMs": 1791651109955.6797,
+      "sha256": "94d26214d572c3ef7019f3f90604911e751fd943c6668a5bbc0537a67e9d9b44"
+    },
+    "scripts/tests/recall-formulae-ux-identity.test.mjs": {
+      "bytes": 11627,
+      "mtimeMs": 1791659335831.9822,
+      "sha256": "8232f46bd28df35573ff0ef31add21ce3df7dccca48ff90c6af33a8b792aaa45"
+    },
+    "scripts/validate-s0.mjs": {
+      "bytes": 5247,
+      "mtimeMs": 1791227017000,
+      "sha256": "e845047c161e817fe122ebe5b5e95c15e14de01cbdfc810dd60b922db8c211f1"
+    },
+    "scripts/validate-s1-builds.mjs": {
+      "bytes": 2495,
+      "mtimeMs": 1791533096000,
+      "sha256": "5f015cae08402075e052eaf28efeb1590b1559c89842723fdcd4cfc68bdb7e69"
+    },
+    "scripts/validate-s2-builds.mjs": {
+      "bytes": 3483,
+      "mtimeMs": 1791533096000,
+      "sha256": "2c7dfe7cbcbad19f1e1757727bcab6a35c38c5bb574684feb840e78b917a7c37"
+    },
+    "scripts/validate-s3-builds.mjs": {
+      "bytes": 3862,
+      "mtimeMs": 1791533096000,
+      "sha256": "5f6ad84d66509980e702e674790e98cf4ebb376fc2d899e827058de58f0dcddd"
+    },
+    "scripts/validate-s4-release.mjs": {
+      "bytes": 5727,
+      "mtimeMs": 1791623361175.7734,
+      "sha256": "5b73ecefa7567d57f9b3f49e35f3b3ff724c8b7785aba0a805ddb91857a92aa2"
+    },
+    "scripts/verify-explaining-properties.mjs": {
+      "bytes": 7353,
+      "mtimeMs": 1791532946000,
+      "sha256": "4d06250616ea2b1d1b7b84746cc15fce86161f7d9109c62766faeb47e5301702"
+    },
+    "scripts/verify-landing.mjs": {
+      "bytes": 3071,
+      "mtimeMs": 1791532946000,
+      "sha256": "6474d2e6968aa510010270fef1d83f74539f870cf2d61199ab75336afbb55de6"
+    },
+    "scripts/verify-s1.mjs": {
+      "bytes": 2457,
+      "mtimeMs": 1791225395000,
+      "sha256": "34651a3a58c61c76150f416d40bada066dc0790512d433586f24f51682e65635"
+    },
+    "scripts/verify-s2.mjs": {
+      "bytes": 2579,
+      "mtimeMs": 1791225395000,
+      "sha256": "14cf1b0ef53aa4b955d84b7ed4b60bfd314cf440ed211fcd7c13fcadc0122746"
+    },
+    "scripts/verify-s3.mjs": {
+      "bytes": 2543,
+      "mtimeMs": 1791225395000,
+      "sha256": "a7c806de22dd3daee2e5b0b103fe64d3b4ee7afec9c184712d8f6d400a98991f"
+    },
+    "scripts/verify-s4.mjs": {
+      "bytes": 2933,
+      "mtimeMs": 1791532946000,
+      "sha256": "a7eaad0535f0df0fdd6483af7e13120e778ba42f92ffb123323e805448f77626"
+    },
+    "scripts/verify-s5.mjs": {
+      "bytes": 2972,
+      "mtimeMs": 1791226017000,
+      "sha256": "c0f8fa38bae538a8f6a054cf5b6b401c3c3475b99f4b57558ae4b086f5b91467"
+    },
+    "scripts/write-catalogue-definitions.mjs": {
+      "bytes": 5030,
+      "mtimeMs": 1791225434000,
+      "sha256": "8c982622c139d3494d553a0d9abc71334c1b79b0cb9083e500fcaa084769e49e"
+    },
+    "scripts/write-s0-scope.mjs": {
+      "bytes": 1256,
+      "mtimeMs": 1791226928000,
+      "sha256": "cbee0c0f726fce0e4bb525e6da82513adda40eba6a0391fb33c6b79b4c7e3d5f"
+    },
+    "resources/source-generation/controls/control-start.json": {
+      "bytes": 821,
+      "mtimeMs": 1790978947000,
+      "sha256": "aa44f0b240735b7d6f3cad816d367b5d98a039916985ad40ffbc1ec6d4c00b70"
+    },
+    "resources/source-generation/controls/original-app-baseline.json": {
+      "bytes": 276378,
+      "mtimeMs": 1791225395000,
+      "sha256": "be988874727f246610b386ad02a187729c47f6c4c924005a44f4b3f0be42f29e"
+    },
+    "resources/source-generation/controls/root-contract-lock.json": {
+      "bytes": 134,
+      "mtimeMs": 1790978697000,
+      "sha256": "78653f1311f3c34106724fa08a32e0954d98cbb11ed127ce22d376e6bad9bf81"
+    },
+    "resources/recall-formulae/atlas/candidate-inventory.json": {
+      "bytes": 966990,
+      "mtimeMs": 1791621374104.5474,
+      "sha256": "8939b25887b9072c5d787a9c555147dde20dec744b1101734c5634a4d48c0d16"
+    },
+    "resources/recall-formulae/atlas/derived/atlas.json": {
+      "bytes": 10178651,
+      "mtimeMs": 1791622973930.0593,
+      "sha256": "ad70acf8741e5dfdddb6b5e52368534f3dbfefaded3c7cc24f7c5b72806f3318"
+    },
+    "resources/recall-formulae/atlas/derived/briefs.json": {
+      "bytes": 2231648,
+      "mtimeMs": 1791622973961.3413,
+      "sha256": "69bb5eb5fcfbc390ef6845c57e904a2c1e6dd8813e44ff8954b867573d16672d"
+    },
+    "resources/recall-formulae/atlas/derived/gems.json": {
+      "bytes": 126779,
+      "mtimeMs": 1791622973932.0671,
+      "sha256": "fb02f0cb7157ef516e228cd58a32b0edb9a9c75fd088eddebfca7308a2c7933d"
+    },
+    "resources/recall-formulae/atlas/derived/patterns.json": {
+      "bytes": 2157901,
+      "mtimeMs": 1791622973945.1748,
+      "sha256": "df99b1d44398d9e69aaf56d6e0eea5013b2a14e04582fbd8660fad803390051f"
+    },
+    "resources/recall-formulae/atlas/derived/records.csv": {
+      "bytes": 623463,
+      "mtimeMs": 1791622973986.267,
+      "sha256": "1b1f692ef0a375f417a48e5dbbb796e9e62256e8e58dc461c901fc7990713635"
+    },
+    "resources/recall-formulae/atlas/derived/view-data.json": {
+      "bytes": 6454094,
+      "mtimeMs": 1791622974352.2014,
+      "sha256": "e55ec1983dbb400ea552d0ac10a7719677cd947c7052364107ecc072e778dfad"
+    },
+    "resources/recall-formulae/atlas/full-overlay.json": {
+      "bytes": 9486862,
+      "mtimeMs": 1791622973871.0037,
+      "sha256": "aabc2ff8f39c447400ddcbddf3a90f154f569d57dfd82257d532e5426c11b325"
+    },
+    "resources/recall-formulae/atlas/full-rule-review.json": {
+      "bytes": 5374,
+      "mtimeMs": 1791621923205.998,
+      "sha256": "24502ec015269a8995f4645aae01f18fce203704af12ec747377179c7b63a0c3"
+    },
+    "resources/recall-formulae/atlas/gem-boundaries.json": {
+      "bytes": 2268,
+      "mtimeMs": 1791621019524.6204,
+      "sha256": "e745aa0589bf2bf2d257110d08adbb8d746e5f98699d072ca501ff13ec67ad23"
+    },
+    "resources/recall-formulae/atlas/overlay.schema.json": {
+      "bytes": 4688,
+      "mtimeMs": 1791621286343.2236,
+      "sha256": "28cc65933434042a0aff9c9204dd1914d575698222af3e9e01c550d5acd99f0a"
+    },
+    "resources/recall-formulae/atlas/pilot-decisions.json": {
+      "bytes": 7171,
+      "mtimeMs": 1791621326394.339,
+      "sha256": "469aae98fafbaa1eaa7dadf3619a7c5f8cf8813774381aa9493f40b847db580e"
+    },
+    "resources/recall-formulae/atlas/pilot-overlay.json": {
+      "bytes": 69907,
+      "mtimeMs": 1791621374106.7131,
+      "sha256": "df40e333ab9cdcf0c3ae6ff726e88c9d161ed19a44e2499f28ec3dff3bbbeb29"
+    },
+    "resources/recall-formulae/atlas/README.md": {
+      "bytes": 9119,
+      "mtimeMs": 1791622831488.635,
+      "sha256": "72bd198d0ad72a0153437858a440ce4d8f5f65a6b23357ac2f85d2de94c977ad"
+    },
+    "resources/recall-formulae/atlas/view/index.html": {
+      "bytes": 3538,
+      "mtimeMs": 1791622974353.206,
+      "sha256": "8dce8f56a89e810c2cf990678d547b119a4afc5e7beef311d95e6866f60f50c4"
+    },
+    "resources/recall-formulae/content/allowed-pair-review.json": {
+      "bytes": 16065,
+      "mtimeMs": 1791663640163.348,
+      "sha256": "06d2419de85b3cbb83617f881b2f7b9ed482cbc8ff2032fceafd3fcdbb49074d"
+    },
+    "resources/recall-formulae/content/generate-review.mjs": {
+      "bytes": 9825,
+      "mtimeMs": 1791663638291.7947,
+      "sha256": "4ccc066b49720ae56c55e46834ed50d75380b590071f2e9433f7a90e6315d6f8"
+    },
+    "resources/recall-formulae/content/README.md": {
+      "bytes": 6750,
+      "mtimeMs": 1791663640163.348,
+      "sha256": "c2b2e9e330a8b280f105557c0cfc34674b1ec547c7167ef4ac0b40b71b2079cc"
+    },
+    "resources/recall-formulae/content/review-index.html": {
+      "bytes": 10715,
+      "mtimeMs": 1791663640172.3904,
+      "sha256": "eb331653d929f3de22f37186e916c686bb137fc003c782e14819b534e8c52247"
+    },
+    "resources/recall-formulae/content/review-index.json": {
+      "bytes": 25753,
+      "mtimeMs": 1791663640160.8237,
+      "sha256": "71d8407f6df1c8365abbe80f15ff4205bd39e28dd198782edf1e4a10293047eb"
+    },
+    "project-contract.json": {
+      "bytes": 11201,
+      "sha256": "b5665f5a5a8b21d95a43f04018ba1a4039fdac743ef7c5d7752b1a90b483bd1c"
+    },
+    "AGENTS.md": {
+      "bytes": 4019,
+      "sha256": "2116fa4896d970d97ac0b1e390fff2642370f0a85e3bceea435f3dc8d75695df"
+    },
+    "IMPLEMENTATION.md": {
+      "bytes": 12512,
+      "sha256": "86c944882b3ef0f30a84e80ec2d056e3afb69ac7d5045baffc9641ba2340cd89"
+    },
+    "progress.json": {
+      "bytes": 47063,
+      "sha256": "c9baba75551c76fd6c042a2ac43a033207cfbd29a4a576fefab13242765d61ec"
+    },
+    "package.json": {
+      "bytes": 1427,
+      "sha256": "ce6109c78bff8efc60f136bc427b78fb3a86f9d9f393284037e2ffabea9439ee"
+    },
+    "package-lock.json": {
+      "bytes": 30605,
+      "sha256": "4560e1664de6af8268a6d4806ee6dd2ff3471a7bec556e3fef956e9639376bd1"
+    }
+  }
+}

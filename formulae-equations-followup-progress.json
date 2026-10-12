@@ -1,0 +1,46 @@
+{
+  "runId": "RF-FOLLOWUP-20261010",
+  "status": "ACCEPTED_COMPLETE",
+  "updatedAt": "2026-10-10T20:45:46.199Z",
+  "workersDispatched": 3,
+  "delegation": {
+    "initial": 3,
+    "maxImplementation": 3,
+    "maxExceptionReviewer": 1,
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high",
+    "effectiveRuntime": "unknown",
+    "fork": "none"
+  },
+  "s0": "validation/formulae-equations-followup/s0/S0-proposal.md",
+  "priorTimingGate": "PENDING_NATIVE_HIDDEN_NO_WAIVER",
+  "publication": false,
+  "rootAcceptance": "validation/formulae-equations-followup/s0/root-acceptance.json",
+  "workers": [
+    {
+      "id": "A11",
+      "job": "FOLLOWUP-UI",
+      "handle": "/root/recall_formulae_foreman/followup_ui",
+      "status": "ACCEPTED_S1",
+      "evidence": "validation/formulae-equations-followup/s1/ui/completion.json"
+    },
+    {
+      "id": "A12",
+      "job": "FOLLOWUP-CHEM",
+      "handle": "/root/recall_formulae_foreman/followup_chem",
+      "status": "ACCEPTED_S1",
+      "evidence": "validation/formulae-equations-followup/s1/chem/completion.json"
+    },
+    {
+      "id": "A13",
+      "job": "FOLLOWUP-LOCK",
+      "handle": "/root/recall_formulae_foreman/followup_lock",
+      "status": "ACCEPTED_S1_WITH_ROOT_PANEL_AMENDMENT",
+      "evidence": "validation/formulae-equations-followup/s1/lock/completion.json"
+    }
+  ],
+  "finalManifest": "validation/formulae-equations-followup/s2/final-manifest.json",
+  "finalAggregate": "validation/formulae-equations-followup/s2/S2-final-aggregate.md",
+  "rootFinalAcceptance": "validation/formulae-equations-followup/s2/root-acceptance.json",
+  "completedAt": "2026-10-10T20:45:46.199Z"
+}

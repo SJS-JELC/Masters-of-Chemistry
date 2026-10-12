@@ -1,0 +1,2153 @@
+{
+  "schemaVersion": 1,
+  "authority": "Current typed Recall: preserved approved starter records, latest completed IGCSE structured review, root-accepted bounded chemistry corrections, and source-reviewed authored Formulae/Equations gaps. Root correction wording is not described as teacher-approved wording.",
+  "regeneration": "node --experimental-strip-types src/recall/prepare-approved.mjs (regenerates approved facts, disposition and this manifest); alternatively node --experimental-strip-types src/recall/prepare-typed-provenance.mjs for this manifest alone.",
+  "legacyStarterProvenance": {
+    "path": "src/recall/provenance.json",
+    "sha256": "ce09540a60e165b868cebd6e042b44782fad071686d99e1cc4773c359957ab32",
+    "authority": "Six approved A-level records and six unflagged single-answer records from the teacher-reviewed IGCSE CSV. Starter scope only."
+  },
+  "counts": {
+    "alevel": 6,
+    "igcse": 144,
+    "total": 150,
+    "latestApprovedStructuredIGCSE": 116,
+    "importedStructuredIGCSE": 115,
+    "uniqueGapAdditions": 29
+  },
+  "reviewedInputs": {
+    "igcse-recall-working.json": {
+      "path": "validation/recall-formulae/s1/recall/source-audit/igcse-recall-working.json",
+      "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+      "bytes": 492764
+    },
+    "completed-review-receipt.json": {
+      "path": "validation/recall-formulae/s1/recall/source-audit/completed-review-receipt.json",
+      "sha256": "a2c89e46e9cac0696be73f242d18444526f1bf8e8e5fecb608fbe0ec9d0b1777",
+      "bytes": 49894
+    },
+    "recall-editorial-decisions.json": {
+      "path": "validation/recall-formulae/s1/recall/source-audit/recall-editorial-decisions.json",
+      "sha256": "3879e651011bfde8a3e652111d86e47e0725a19831f83ba9811897a2b320781f",
+      "bytes": 10743
+    },
+    "data.js": {
+      "path": "validation/recall-formulae/s1/recall/source-audit/data.js",
+      "sha256": "3789d0c010b05189f91aa2ada9bdb67f3501bf25a4e33a674d662bfc75defe85",
+      "bytes": 207376
+    },
+    "COMPLETED-REVIEW-STYLE.md": {
+      "path": "validation/recall-formulae/s1/recall/source-audit/COMPLETED-REVIEW-STYLE.md",
+      "sha256": "2680f05b870137c1412beb90fbe71bf071a9b23c991435897dc1145ae883eab0",
+      "bytes": 7542
+    },
+    "answer-matching-review.md": {
+      "path": "validation/recall-formulae/s1/recall/source-audit/answer-matching-review.md",
+      "sha256": "272f2f3b66495c386cf59dea0025fca4afe6717a717bade1737fa69fa23bf0a8",
+      "bytes": 3148
+    }
+  },
+  "actualAccess": "Exact escalated read-only shell reads succeeded; original Node EPERM preflight was superseded. Source bytes and historical review remain preserved.",
+  "sourceMap": {
+    "alevel:electron-shell-capacities": {
+      "gemIds": [
+        "l6-t2-1-1",
+        "l6-t2-1-2"
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+          "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e",
+          "symbolOrSection": "electron-shell-capacities"
+        }
+      ]
+    },
+    "alevel:subshell-capacities": {
+      "gemIds": [
+        "l6-t2-1-1",
+        "l6-t2-1-2"
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+          "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e",
+          "symbolOrSection": "subshell-capacities"
+        }
+      ]
+    },
+    "alevel:orbital-filling-rules": {
+      "gemIds": [
+        "l6-t2-1-1",
+        "l6-t2-1-2"
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+          "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e",
+          "symbolOrSection": "orbital-filling-rules"
+        }
+      ]
+    },
+    "alevel:ionic-lattice-solid": {
+      "gemIds": [
+        "l6-t2-1-1",
+        "l6-t2-1-3",
+        "l6-t2-1-4"
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+          "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e",
+          "symbolOrSection": "ionic-lattice-solid"
+        }
+      ]
+    },
+    "alevel:coordinate-bond": {
+      "gemIds": [
+        "l6-t2-1-1",
+        "l6-t2-1-3"
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+          "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e",
+          "symbolOrSection": "coordinate-bond"
+        }
+      ]
+    },
+    "alevel:bond-enthalpy-strength": {
+      "gemIds": [
+        "l6-t1-8-3"
+      ],
+      "sources": [
+        {
+          "path": "apps/Masters-of-A-Level-Chemistry/src/activities/flashcards/cards.js",
+          "sha256": "b60132d47f532b95a87d8adbf2a12bbff5667b0c2dd729d1f36de8c411a98b3e",
+          "symbolOrSection": "bond-enthalpy-strength"
+        }
+      ]
+    },
+    "igcse:igcse-recall-012": {
+      "gemIds": [
+        "fourth-1-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-012 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-007": {
+      "gemIds": [
+        "fourth-1-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-007 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-008": {
+      "gemIds": [
+        "fourth-1-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-008 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-009": {
+      "gemIds": [
+        "fourth-1-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-009 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-010": {
+      "gemIds": [
+        "fourth-1-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-010 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-011": {
+      "gemIds": [
+        "fourth-1-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-011 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-013": {
+      "gemIds": [
+        "fourth-1-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-013 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-014": {
+      "gemIds": [
+        "fourth-1-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-014 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-015": {
+      "gemIds": [
+        "fourth-1-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-015 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-016": {
+      "gemIds": [
+        "fourth-1-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-016 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-001": {
+      "gemIds": [
+        "fourth-2-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-001 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-002": {
+      "gemIds": [
+        "fourth-2-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-002 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-003": {
+      "gemIds": [
+        "fourth-2-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-003 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-004": {
+      "gemIds": [
+        "fourth-2-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-004 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-005": {
+      "gemIds": [
+        "fourth-2-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-005 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-006": {
+      "gemIds": [
+        "fourth-2-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-006 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-064": {
+      "gemIds": [
+        "fourth-2-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-064 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-065": {
+      "gemIds": [
+        "fourth-2-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-065 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-066": {
+      "gemIds": [
+        "fourth-2-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-066 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-067": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-067 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-068": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-068 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-069": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-069 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-070": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-070 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-071": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-071 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-072": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-072 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-073": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-073 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-074": {
+      "gemIds": [
+        "fourth-2-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-074 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-021": {
+      "gemIds": [
+        "fourth-3-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-021 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-022": {
+      "gemIds": [
+        "fourth-3-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-022 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-027": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-027 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-028": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-028 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-029": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-029 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-030": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-030 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-031": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-031 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-032": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-032 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-033": {
+      "gemIds": [
+        "fourth-3-1",
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-033 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-017": {
+      "gemIds": [
+        "fourth-3-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-017 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-018": {
+      "gemIds": [
+        "fourth-3-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-018 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-026": {
+      "gemIds": [
+        "fourth-3-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-026 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-043": {
+      "gemIds": [
+        "fourth-4-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-043 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-048": {
+      "gemIds": [
+        "fourth-4-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-048 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-052": {
+      "gemIds": [
+        "fourth-4-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-052 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-058": {
+      "gemIds": [
+        "fourth-4-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-058 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-059": {
+      "gemIds": [
+        "fourth-4-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-059 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-044": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-044 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-049": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-049 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-051": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-051 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-053": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-053 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-056": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-056 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-060": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-060 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-061": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-061 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-062": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-062 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-063": {
+      "gemIds": [
+        "fourth-4-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-063 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-047": {
+      "gemIds": [
+        "fourth-4-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-047 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-050": {
+      "gemIds": [
+        "fourth-4-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-050 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-054": {
+      "gemIds": [
+        "fourth-4-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-054 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-055": {
+      "gemIds": [
+        "fourth-4-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-055 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-057": {
+      "gemIds": [
+        "fourth-4-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-057 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-045": {
+      "gemIds": [
+        "fourth-4-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-045 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-019": {
+      "gemIds": [
+        "lower-6-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-019 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-024": {
+      "gemIds": [
+        "lower-6-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-024 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-020": {
+      "gemIds": [
+        "lower-6-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-020 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-023": {
+      "gemIds": [
+        "lower-6-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-023 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-025": {
+      "gemIds": [
+        "lower-6-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-025 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-075": {
+      "gemIds": [
+        "lower-8-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-075 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-076": {
+      "gemIds": [
+        "lower-8-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-076 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-077": {
+      "gemIds": [
+        "lower-8-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-077 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-078": {
+      "gemIds": [
+        "lower-8-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-078 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-079": {
+      "gemIds": [
+        "lower-8-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-079 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-080": {
+      "gemIds": [
+        "lower-8-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-080 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-082": {
+      "gemIds": [
+        "lower-8-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-082 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-083": {
+      "gemIds": [
+        "lower-8-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-083 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-084": {
+      "gemIds": [
+        "lower-8-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-084 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-085": {
+      "gemIds": [
+        "lower-8-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-085 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-086": {
+      "gemIds": [
+        "lower-8-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-086 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-102": {
+      "gemIds": [
+        "lower-9-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-102 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-107": {
+      "gemIds": [
+        "lower-9-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-107 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-100": {
+      "gemIds": [
+        "lower-9-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-100 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-101": {
+      "gemIds": [
+        "lower-9-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-101 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-103": {
+      "gemIds": [
+        "lower-9-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-103 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-104": {
+      "gemIds": [
+        "lower-9-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-104 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-105": {
+      "gemIds": [
+        "lower-9-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-105 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-106": {
+      "gemIds": [
+        "lower-9-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-106 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-091": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-091 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-092": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-092 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-093": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-093 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-094": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-094 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-095": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-095 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-096": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-096 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-097": {
+      "gemIds": [
+        "lower-9-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-097 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-098": {
+      "gemIds": [
+        "lower-9-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-098 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-099": {
+      "gemIds": [
+        "lower-9-5"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-099 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-034": {
+      "gemIds": [
+        "upper-11-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-034 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-035": {
+      "gemIds": [
+        "upper-11-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-035 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-036": {
+      "gemIds": [
+        "upper-11-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-036 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-037": {
+      "gemIds": [
+        "upper-11-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-037 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-038": {
+      "gemIds": [
+        "upper-11-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-038 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-039": {
+      "gemIds": [
+        "upper-11-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-039 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-040": {
+      "gemIds": [
+        "upper-11-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-040 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-041": {
+      "gemIds": [
+        "upper-11-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-041 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-042": {
+      "gemIds": [
+        "upper-11-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-042 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-089": {
+      "gemIds": [
+        "upper-13-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-089 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-090": {
+      "gemIds": [
+        "upper-13-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-090 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-110": {
+      "gemIds": [
+        "upper-14-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-110 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-111": {
+      "gemIds": [
+        "upper-14-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-111 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-112": {
+      "gemIds": [
+        "upper-14-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-112 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-113": {
+      "gemIds": [
+        "upper-14-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-113 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-115": {
+      "gemIds": [
+        "upper-14-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-115 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-114": {
+      "gemIds": [
+        "upper-14-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-114 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-116": {
+      "gemIds": [
+        "upper-14-2"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-116 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-117": {
+      "gemIds": [
+        "upper-14-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-117 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-118": {
+      "gemIds": [
+        "upper-14-3"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-118 approved"
+        }
+      ]
+    },
+    "igcse:igcse-recall-108": {
+      "gemIds": [
+        "upper-14-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-108 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-109": {
+      "gemIds": [
+        "upper-14-4"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-109 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-recall-046": {
+      "gemIds": [
+        "upper-15-1"
+      ],
+      "sources": [
+        {
+          "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+          "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+          "symbolOrSection": "igcse-recall-046 approved-with-modifications"
+        }
+      ]
+    },
+    "igcse:igcse-ion-sodium-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-sodium-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-potassium-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-potassium-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-magnesium-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-magnesium-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-calcium-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-calcium-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-aluminium-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-aluminium-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-iron-ii-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-iron-ii-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-iron-iii-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-iron-iii-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-copper-ii-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-copper-ii-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-chloride-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-chloride-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-bromide-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-bromide-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-iodide-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-iodide-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-oxide-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-oxide-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-sulfide-formula": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-ion-sulfide-charge": {
+      "gemIds": [
+        "fourth-16-1",
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+        }
+      ]
+    },
+    "igcse:igcse-state-s": {
+      "gemIds": [
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/activities/igcse/equations/bank.ts",
+          "sha256": "1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d",
+          "symbolOrSection": "Original 24 authored questions, models and mark points, RF-S1-CONTENT; author chemistry review 10 October 2026. No source PDFs/images opened."
+        }
+      ]
+    },
+    "igcse:igcse-state-l": {
+      "gemIds": [
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/activities/igcse/equations/bank.ts",
+          "sha256": "1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d",
+          "symbolOrSection": "Original 24 authored questions, models and mark points, RF-S1-CONTENT; author chemistry review 10 October 2026. No source PDFs/images opened."
+        }
+      ]
+    },
+    "igcse:igcse-state-g": {
+      "gemIds": [
+        "fourth-16-2"
+      ],
+      "sources": [
+        {
+          "path": "src/activities/igcse/equations/bank.ts",
+          "sha256": "1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d",
+          "symbolOrSection": "Original 24 authored questions, models and mark points, RF-S1-CONTENT; author chemistry review 10 October 2026. No source PDFs/images opened."
+        }
+      ]
+    }
+  },
+  "canonicalAliases": {
+    "igcse-ion-nitrate-formula": "igcse-recall-027",
+    "igcse-ion-nitrate-charge": "igcse-recall-027",
+    "igcse-ion-carbonate-formula": "igcse-recall-028",
+    "igcse-ion-carbonate-charge": "igcse-recall-028",
+    "igcse-ion-ammonium-formula": "igcse-recall-029",
+    "igcse-ion-ammonium-charge": "igcse-recall-029",
+    "igcse-ion-zinc-formula": "igcse-recall-030",
+    "igcse-ion-zinc-charge": "igcse-recall-030",
+    "igcse-ion-silver-formula": "igcse-recall-031",
+    "igcse-ion-silver-charge": "igcse-recall-031",
+    "igcse-ion-hydroxide-formula": "igcse-recall-032",
+    "igcse-ion-hydroxide-charge": "igcse-recall-032",
+    "igcse-ion-sulfate-formula": "igcse-recall-033",
+    "igcse-ion-sulfate-charge": "igcse-recall-033"
+  },
+  "aliasPolicy": "New formula and charge candidates already assessed together by existing combined facts resolve to those existing canonical IDs and one progress record. Silver aliases remain external references; silver is absent from the authored 19-ion candidate bank.",
+  "exclusions": {
+    "igcse-recall-087": "Q087 quarantined by root accepted independent chemistry review; no replacement authorised.",
+    "igcse-recall-088": "Rejected/retired in latest completed teacher review; excluded."
+  },
+  "rootErrataAuthority": {
+    "path": "validation/recall-formulae/s1/recall/root-exception-disposition.json",
+    "sha256": "0c32c1bad9624eb5f080b36a3cc0400434fa073d96dd074f420da1e55d1a11f6",
+    "disposition": {
+      "runId": "RECALL-FORMULAE-20261010",
+      "status": "ACCEPTED",
+      "at": "2026-10-10T08:46:34.441Z",
+      "review": "exception-review.md",
+      "dispositions": {
+        "101": "Accept open-chain qualification.",
+        "105": "Accept open-chain single-C=C qualification.",
+        "107": "Accept exact reviewed unsaturation erratum/model/context and bounded matching.",
+        "109": "Accept possible/common synthetic plastics qualifiers, distinct groups and bounded contradiction rejection.",
+        "113": "Accept typical classroom30C qualifier and existing numeric value.",
+        "087": "Quarantine from new typed recall, retain original immutable source/history, explicit coverage exception, no replacement.",
+        "046": "Accept exact boiling-point pressure/context qualification.",
+        "084": "Accept AgCl notation correction and case-sensitive formula aliases."
+      },
+      "conditions": [
+        "Do not label these changes teacher-approved wording.",
+        "Retain stable IDs/original sources; document runtime errata and coverage exception.",
+        "Use deterministic regression examples for accepted/rejected responses; no broad semantic claims.",
+        "Final report must mention withheld hydroxide-solubility fact."
+      ]
+    }
+  },
+  "currentStarterIdsPreserved": {
+    "alevel": [
+      "electron-shell-capacities",
+      "subshell-capacities",
+      "orbital-filling-rules",
+      "ionic-lattice-solid",
+      "coordinate-bond",
+      "bond-enthalpy-strength"
+    ],
+    "igcse": [
+      "igcse-recall-012",
+      "igcse-recall-007",
+      "igcse-recall-009",
+      "igcse-recall-010",
+      "igcse-recall-011",
+      "igcse-recall-013"
+    ]
+  },
+  "emptyCoverage": {
+    "alevel": [
+      "l6-t1-1-1",
+      "l6-t1-1-2",
+      "l6-t1-1-3",
+      "l6-t1-2-1",
+      "l6-t1-2-2",
+      "l6-t1-2-3",
+      "l6-t1-2-4",
+      "l6-t1-2-5",
+      "l6-t1-2-6",
+      "l6-t1-2-7",
+      "l6-t1-3-1",
+      "l6-t1-3-2",
+      "l6-t1-3-3",
+      "l6-t1-3-4",
+      "l6-t1-3-5",
+      "l6-t1-4-1",
+      "l6-t1-4-2",
+      "l6-t1-4-3",
+      "l6-t1-4-4",
+      "l6-t1-4-5",
+      "l6-t1-5-1",
+      "l6-t1-5-2",
+      "l6-t1-5-3",
+      "l6-t1-6-1",
+      "l6-t1-6-2",
+      "l6-t1-6-3",
+      "l6-t1-7-1",
+      "l6-t1-7-2",
+      "l6-t1-7-3",
+      "l6-t1-7-4",
+      "l6-t1-8-1",
+      "l6-t1-8-2",
+      "l6-t1-8-4",
+      "l6-t1-9-1",
+      "l6-t1-9-2",
+      "l6-t1-9-3",
+      "l6-t1-9-4",
+      "l6-t1-10-1",
+      "l6-t1-10-2",
+      "l6-t1-10-3",
+      "l6-t1-10-4",
+      "l6-t1-10-5",
+      "l6-t1-10-6",
+      "l6-t1-10-7",
+      "l6-t2-2-1",
+      "l6-t2-2-2",
+      "l6-t2-2-3",
+      "l6-t2-2-4",
+      "l6-t2-2-5",
+      "l6-t2-3-1",
+      "l6-t2-3-2",
+      "l6-t2-3-3",
+      "l6-t2-3-4",
+      "l6-t2-3-5",
+      "l6-t2-4-1",
+      "l6-t2-4-2",
+      "l6-t2-4-3",
+      "l6-t2-5-1",
+      "l6-t2-5-2",
+      "l6-t2-5-3",
+      "l6-t2-5-4",
+      "l6-t2-5-5",
+      "l6-t2-6-1",
+      "l6-t2-6-2",
+      "l6-t2-6-3",
+      "l6-t2-7-1",
+      "l6-t2-7-2",
+      "l6-t2-7-3",
+      "l6-t2-8-1",
+      "l6-t2-8-2",
+      "l6-t2-8-3",
+      "l6-t2-8-4",
+      "l6-t2-9-1",
+      "l6-t2-9-2",
+      "l6-t2-9-3",
+      "l6-t2-9-4",
+      "l6-t2-9-5",
+      "l6-t2-9-6",
+      "l6-t2-9-7",
+      "l6-t2-9-8",
+      "l6-t2-9-9",
+      "u6-t1-1-1",
+      "u6-t1-1-2",
+      "u6-t1-1-3",
+      "u6-t1-1-4",
+      "u6-t1-1-5",
+      "u6-t1-1-6",
+      "u6-t1-1-7",
+      "u6-t1-1-8",
+      "u6-t1-1-9",
+      "u6-t1-1-10",
+      "u6-t1-2-1",
+      "u6-t1-2-2",
+      "u6-t1-2-3",
+      "u6-t1-2-4",
+      "u6-t1-2-5",
+      "u6-t1-2-6",
+      "u6-t1-2-7",
+      "u6-t1-3-1",
+      "u6-t1-3-2",
+      "u6-t1-3-3",
+      "u6-t1-3-4",
+      "u6-t1-3-5",
+      "u6-t1-3-6",
+      "u6-t1-3-7",
+      "u6-t1-3-8",
+      "u6-t1-4-1",
+      "u6-t1-4-2",
+      "u6-t1-4-3",
+      "u6-t1-4-4",
+      "u6-t1-5-1",
+      "u6-t1-5-2",
+      "u6-t1-5-3",
+      "u6-t1-5-4",
+      "u6-t2-1-1",
+      "u6-t2-1-2",
+      "u6-t2-1-3",
+      "u6-t2-1-4",
+      "u6-t2-1-5",
+      "u6-t2-2-1",
+      "u6-t2-2-2",
+      "u6-t2-2-3",
+      "u6-t2-2-4",
+      "u6-t2-3-1",
+      "u6-t2-3-2",
+      "u6-t2-3-3",
+      "u6-t2-3-4",
+      "u6-t2-4-1",
+      "u6-t2-4-2",
+      "u6-t2-4-3",
+      "u6-t2-4-4",
+      "u6-t2-4-5",
+      "u6-t2-5-1",
+      "u6-t2-5-2",
+      "u6-t2-5-3",
+      "u6-t2-5-4",
+      "u6-t2-6-1",
+      "u6-t2-6-2",
+      "u6-t2-6-3",
+      "u6-t2-6-4",
+      "u6-t2-6-5",
+      "u6-t2-7-1",
+      "u6-t2-7-2",
+      "u6-t2-7-3",
+      "u6-t2-7-4",
+      "u6-t2-7-5",
+      "u6-t2-7-6",
+      "u6-t2-7-7",
+      "u6-t2-7-8"
+    ],
+    "igcse": [
+      "fourth-1-3",
+      "fourth-1-5",
+      "fourth-2-2",
+      "fourth-2-3",
+      "lower-5-1",
+      "lower-5-2",
+      "lower-5-3",
+      "lower-6-3",
+      "lower-7-1",
+      "lower-7-2",
+      "lower-7-3",
+      "lower-7-4",
+      "lower-7-5",
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "lower-10-1",
+      "lower-10-2",
+      "lower-10-3",
+      "lower-10-4",
+      "upper-11-3",
+      "upper-11-5",
+      "upper-12-1",
+      "upper-12-2",
+      "upper-12-3",
+      "upper-13-1",
+      "upper-13-2",
+      "upper-13-4",
+      "upper-15-2",
+      "upper-15-3",
+      "upper-15-4",
+      "upper-15-5"
+    ]
+  },
+  "boundaries": "Typed Recall storage and progress are separate from curriculum mastery. No Rocket runtime or progress imports. No source PDFs or images are used."
+}

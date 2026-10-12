@@ -92,3 +92,11 @@ gem registration is introduced. Publication remains outside scope.
 ## Authorised addition: Explaining Properties (4 October 2026)
 
 The approved `explaining-properties-contract.md` adds 32 questions at Levels 1 and 2 to the React app. Current scope is fourteen activities. The new explicit gem identity preserves historical Dot-and-Cross aliases. This amendment supersedes earlier no-new-activity exclusions for this addition only. The approved sequential direct-worker/reviewer delegation replaces the older roster for this addition. Preserve historical stage acceptance; retain new evidence separately. No publication.
+
+## Factual Recall main-app completion (11 October 2026)
+
+The user-authorized RECALL-MAIN-20261010 [plan](resources/recall/authority/recall-main-authorized-plan.md) has root-accepted S0–S5 and final implementation acceptance; status ACCEPTED_COMPLETE. Current bank121 IGCSE/six inherited A Level, preserved150 historical definitions/marker. Global/gem Flashcards/Test and separate ungraded Recall Stats passed substantive independent review and actual native gates. [Current handoff](RECALL-MAIN-HANDOFF.md) distinguishes retained current evidence from retired original rebuild evidence, with commands, URLs, inventory and limits. Graded mastery/awards and teacher inputs remain preserved. No deployment.
+
+## Rate equations integration — 12 October 2026
+
+User authorised promotion of the four existing rate-equations prototype gems to the combined app. Root-approved integration scope and reproduction: `docs/authoring/rate-equations.md`; final acceptance: `RATE-EQUATIONS-INTEGRATION-HANDOFF.md`. The eighteenth registration is `alevel/rate-equations`, with semantic orders/graphs/mechanisms/arrhenius gem IDs and Levels 1–3. Preserve source question identities and seeds; show four numbered catalogue slots. Use shared practice/revision, first-assessment mastery/timing and persistence, including a validated minimal unmarked graph workspace checkpoint. Preserve historical numeric IDs and evidence without redirects or atlas remapping. All production acceptance gates apply; no deployment or commits. After final acceptance remove recent temporary/validation artifacts as requested, retaining concise completion records, reproducible source/tests and original materials.

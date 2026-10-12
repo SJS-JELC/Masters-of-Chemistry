@@ -4,6 +4,7 @@ import type { CurriculumEvidence } from './session';
 
 /** A user action has a stable token, so StrictMode cannot launch it twice. */
 export type LandingLaunchRequest =
+  | Readonly<{ id: string; kind: 'gem-mastery'; course: Course; gemId: GemId }>
   | Readonly<{
       id: string;
       kind: 'practice';
@@ -22,7 +23,7 @@ export interface OriginalLandingProps {
   readonly onSelectCourse: (course: Course) => void;
   readonly onLaunch: (request: LandingLaunchRequest) => void;
   readonly onOpenStatistics: () => void;
-  readonly onOpenRecall: () => void;
+  readonly onOpenRecall: (gemId?: GemId, teacher?: boolean) => void;
   readonly onOpenOlympiad: () => void;
   readonly onOpenTeacher: (gemId?: GemId) => void;
   readonly onOpenImport: () => void;

@@ -6,3 +6,5 @@ export {
   checkQuestionInput,
   parseScientificNumber,
 } from './input-checks.ts';
+
+export { isModelAnswerShown, isModelAnswerPanelShown } from './model-answer.ts';

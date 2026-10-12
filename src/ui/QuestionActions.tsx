@@ -12,6 +12,7 @@ export function useQuestionActions({
   canNext = true,
   canCorrect = true,
   onShowAnswer,
+  modelAnswerVisible = false,
 }: {
   attempt: PlayerAttempt;
   correctionFeedback?: CorrectionFeedback | undefined;
@@ -21,9 +22,17 @@ export function useQuestionActions({
   canNext?: boolean;
   canCorrect?: boolean;
   onShowAnswer?: () => void;
+  modelAnswerVisible?: boolean;
 }) {
   const [clearRevision, setClearRevision] = useState(0);
-  const state = questionActionState(attempt, correctionFeedback, { ready, canNext, canCorrect });
+  const attemptKey = attempt.mode === 'student' ? attempt.attemptId : attempt.mode;
+  const [modelVisibleFor, setModelVisibleFor] = useState<string | null>(null);
+  const state = questionActionState(attempt, correctionFeedback, {
+    ready,
+    canNext,
+    canCorrect,
+    modelAnswerVisible: modelAnswerVisible || modelVisibleFor === attemptKey,
+  });
   const check = () => {
     if (state.checkEnabled)
       onCommand(
@@ -38,17 +47,21 @@ export function useQuestionActions({
     // Reset transient editor drafts/undo/working feedback as well as the owned response.
     setClearRevision((value) => value + 1);
   };
-  const giveUp = () => {
-    if (!state.giveUpEnabled) return;
+  const acknowledgeModelAnswer = (supportId = 'model-answer-reference') => {
+    if (attempt.mode !== 'student') return;
+    setModelVisibleFor(attemptKey);
     onCommand({
       kind: 'assist',
       assistance: {
-        kind:
-          attempt.mode === 'student' && attempt.phase === 'assessed' ? 'worked-answer' : 'reveal',
-        supportId: 'worked-answer',
+        kind: attempt.phase === 'assessed' ? 'worked-answer' : 'reveal',
+        supportId,
         at: Date.now(),
       },
     });
+  };
+  const giveUp = () => {
+    if (!state.giveUpEnabled) return;
+    acknowledgeModelAnswer('worked-answer');
     onShowAnswer?.();
   };
   const next = () => {
@@ -56,6 +69,7 @@ export function useQuestionActions({
   };
   return {
     state,
+    acknowledgeModelAnswer,
     check,
     clear,
     giveUp,
@@ -68,7 +82,13 @@ export function useQuestionActions({
 export type QuestionActionsController = ReturnType<typeof useQuestionActions>;
 
 /** The one curriculum question-end row. Specialist review controls remain in their own panels. */
-export function QuestionActions({ actions }: { actions: QuestionActionsController }) {
+export function QuestionActions({
+  actions,
+  variant = 'full',
+}: {
+  actions: QuestionActionsController;
+  variant?: 'full' | 'check-next';
+}) {
   return (
     <div className="question-actions" role="group" aria-label="Question actions">
       <button
@@ -80,22 +100,26 @@ export function QuestionActions({ actions }: { actions: QuestionActionsControlle
       >
         Check
       </button>
-      <button
-        type="button"
-        data-question-action="clear"
-        disabled={!actions.state.clearEnabled}
-        onClick={actions.clear}
-      >
-        Clear
-      </button>
-      <button
-        type="button"
-        data-question-action="give-up"
-        disabled={!actions.state.giveUpEnabled}
-        onClick={actions.giveUp}
-      >
-        Give Up
-      </button>
+      {variant === 'full' && (
+        <>
+          <button
+            type="button"
+            data-question-action="clear"
+            disabled={!actions.state.clearEnabled}
+            onClick={actions.clear}
+          >
+            Clear
+          </button>
+          <button
+            type="button"
+            data-question-action="give-up"
+            disabled={!actions.state.giveUpEnabled}
+            onClick={actions.giveUp}
+          >
+            Model answer
+          </button>
+        </>
+      )}
       <button
         type="button"
         data-question-action="next"

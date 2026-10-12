@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-10T20:23:43.935Z",
+  "status": "PASS",
+  "checks": [
+    "All 144 questions render with stable IDs and accept their model field answers through the actual UI.",
+    "Incorrect answers, list ordering, duplicate prevention, paired results, chemical case/charge and numerical ranges verified.",
+    "Notes/status survive reload; exported JSON includes IDs, trials and fingerprint; no pupil database created.",
+    "Search, reset, desktop/mobile rendering and no browser errors verified."
+  ]
+}

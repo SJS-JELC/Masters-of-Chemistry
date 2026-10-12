@@ -1,0 +1,1223 @@
+{
+  "sourceReview": "resources/user-review/igcse/recall/igcse-recall-classification-review-2026-09-14T16-03-58-528Z.json",
+  "sha256": "4a7ebd64b0c2606bdfb9daefe5e078028c4cf0cb0bd3019579aa6da6efbf60c4",
+  "summary": {
+    "total": 117,
+    "approved": 35,
+    "approvedWithModifications": 81,
+    "rejected": 1,
+    "pending": 0,
+    "complete": true
+  },
+  "activeQuestions": 116,
+  "removedIds": [
+    "igcse-recall-088"
+  ],
+  "verbatimInputChecked": 117,
+  "unresolvedContracts": [],
+  "resolvedContracts": [
+    {
+      "key": "fraction-order",
+      "ids": [
+        "igcse-recall-091"
+      ],
+      "finding": "Prompt requests largest to smallest; the ordered answer runs refinery gases to bitumen (smallest to largest). Preserved pending direction choice."
+    },
+    {
+      "key": "oxidation-fields",
+      "ids": [
+        "igcse-recall-114"
+      ],
+      "finding": "Note requests three fields. Literal answer has two semicolon-separated groups, with Heat included as a pipe alternative to sulphuric acid/H2SO4. Needs field-separator resolution."
+    },
+    {
+      "key": "solubility-hybrid",
+      "ids": [
+        "igcse-recall-082",
+        "igcse-recall-083",
+        "igcse-recall-084",
+        "igcse-recall-085",
+        "igcse-recall-087"
+      ],
+      "finding": "Notes request four-choice MCQ plus conditional exception fields, but selected types vary. Q083 contains interface instructions in the answer box; Q084/Q085 use pipes between different exceptions rather than required separate fields. Preserve text until the shared response contract is specified."
+    },
+    {
+      "key": "split-lattice",
+      "ids": [
+        "igcse-recall-025"
+      ],
+      "finding": "Note requests splitting ionic/metallic answers, while selected type remains single-field and wording still combines both. Requires explicit two-field structure or two questions."
+    },
+    {
+      "key": "new-mcq-options",
+      "ids": [
+        "igcse-recall-116"
+      ],
+      "finding": "Changed to MCQ with a correct answer but no supplied distractors. Options still need authoring."
+    },
+    {
+      "key": "labelled-water-fields",
+      "ids": [
+        "igcse-recall-046"
+      ],
+      "finding": "Answer uses Test:/Result: on separate lines instead of semicolon-separated fields; requires explicit mapping to the two-field contract."
+    }
+  ],
+  "styleFindings": [
+    {
+      "key": "test-prompt-voice",
+      "ids": [
+        "igcse-recall-043",
+        "igcse-recall-048",
+        "igcse-recall-058",
+        "igcse-recall-106"
+      ],
+      "finding": "How do I test ... and what result would I get? alternates with How do you test ... and what is the positive result?"
+    },
+    {
+      "key": "capitalisation",
+      "ids": [
+        "igcse-recall-043",
+        "igcse-recall-058",
+        "igcse-recall-049",
+        "igcse-recall-051",
+        "igcse-recall-053",
+        "igcse-recall-115"
+      ],
+      "finding": "Substance names and answer colours alternate between title case, sentence case and lower case: Carbon Dioxide / oxygen gas; Orange-red flame / red flame; Orange to Green / green to black."
+    },
+    {
+      "key": "definition-format",
+      "ids": [
+        "igcse-recall-015",
+        "igcse-recall-016",
+        "igcse-recall-017",
+        "igcse-recall-023",
+        "igcse-recall-102"
+      ],
+      "finding": "Definition prompts vary in colon use, Define a versus Define the term, final full stops and the phrase when talking about organic molecules."
+    },
+    {
+      "key": "numbers",
+      "ids": [
+        "igcse-recall-024",
+        "igcse-recall-038",
+        "igcse-recall-062",
+        "igcse-recall-064",
+        "igcse-recall-089",
+        "igcse-recall-090"
+      ],
+      "finding": "Small quantities alternate between numerals (2, 3) and words (two, three)."
+    },
+    {
+      "key": "punctuation-spacing",
+      "ids": [
+        "igcse-recall-084",
+        "igcse-recall-091",
+        "igcse-recall-104",
+        "igcse-recall-105",
+        "igcse-recall-106",
+        "igcse-recall-113"
+      ],
+      "finding": "Some prompts have no final punctuation; Q113 is phrased as a question but ends in a full stop. Answer separators have inconsistent surrounding spaces and Q084 has leading/trailing spaces."
+    },
+    {
+      "key": "sulfur-spelling",
+      "ids": [
+        "igcse-recall-033",
+        "igcse-recall-047",
+        "igcse-recall-085",
+        "igcse-recall-117"
+      ],
+      "finding": "Prompts alternate between sulphate and sulfate. Accepted alternatives also include both spellings; that allowance may be intentional."
+    },
+    {
+      "key": "oxidation-state-format",
+      "ids": [
+        "igcse-recall-044",
+        "igcse-recall-060",
+        "igcse-recall-061",
+        "igcse-recall-062"
+      ],
+      "finding": "Iron (III) / Copper (II) use a space before the oxidation state, while copper(II) does not."
+    },
+    {
+      "key": "relative-charge",
+      "ids": [
+        "igcse-recall-004",
+        "igcse-recall-005",
+        "igcse-recall-006"
+      ],
+      "finding": "Proton/electron prompts say relative charge; neutron prompt says charge."
+    },
+    {
+      "key": "test-qualifier-consistency",
+      "ids": [
+        "igcse-recall-050",
+        "igcse-recall-054",
+        "igcse-recall-057"
+      ],
+      "finding": "Bromide still says dilute/aqueous and uses (aq); chloride and iodide use the simplified wording requested by the teacher. All retained exactly; this is a consistency observation, not a request to restore qualifiers."
+    },
+    {
+      "key": "units",
+      "ids": [
+        "igcse-recall-046",
+        "igcse-recall-098",
+        "igcse-recall-111",
+        "igcse-recall-113"
+      ],
+      "finding": "Q046 uses 100oC, whereas numerical temperature items use a space and °C."
+    }
+  ],
+  "policy": "Teacher source preserved; subsequent consistency fixes explicitly authorised by user.",
+  "consistencyPass": {
+    "policy": "Sentence-case answers; case-blind prose; preserve element-symbol case; prefer sulphate and accept sulfate.",
+    "changes": [
+      {
+        "id": "igcse-recall-012",
+        "previous": {
+          "question": "What is the state symbol for something dissolved in water?",
+          "answer": "aq"
+        },
+        "question": "What is the state symbol for something dissolved in water?",
+        "answer": "aq"
+      },
+      {
+        "id": "igcse-recall-007",
+        "previous": {
+          "question": "What is the name for the change of state from a solid to a liquid?",
+          "answer": "Melting"
+        },
+        "question": "What is the name for the change of state from a solid to a liquid?",
+        "answer": "Melting"
+      },
+      {
+        "id": "igcse-recall-008",
+        "previous": {
+          "question": "What is the name for the change of state from a liquid to a gas?",
+          "answer": "evaporation | boiling | vaporisation | vaporization"
+        },
+        "question": "What is the name for the change of state from a liquid to a gas?",
+        "answer": "Evaporation | Boiling | Vaporisation | Vaporization"
+      },
+      {
+        "id": "igcse-recall-009",
+        "previous": {
+          "question": "What is the name for the change of state from a gas to a liquid?",
+          "answer": "Condensation | condensing"
+        },
+        "question": "What is the name for the change of state from a gas to a liquid?",
+        "answer": "Condensation | Condensing"
+      },
+      {
+        "id": "igcse-recall-010",
+        "previous": {
+          "question": "What is the name for the change of state from a liquid to a solid?",
+          "answer": "Freezing | solidification"
+        },
+        "question": "What is the name for the change of state from a liquid to a solid?",
+        "answer": "Freezing | Solidification"
+      },
+      {
+        "id": "igcse-recall-011",
+        "previous": {
+          "question": "What is the name for the change of state from a solid to a gas?",
+          "answer": "Sublimation"
+        },
+        "question": "What is the name for the change of state from a solid to a gas?",
+        "answer": "Sublimation"
+      },
+      {
+        "id": "igcse-recall-013",
+        "previous": {
+          "question": "For a solid dissolved in a liquid, define the term SOLVENT.",
+          "answer": "The liquid a solute dissolves in."
+        },
+        "question": "For a solid dissolved in a liquid, define the term solvent.",
+        "answer": "The liquid a solute dissolves in."
+      },
+      {
+        "id": "igcse-recall-014",
+        "previous": {
+          "question": "For a solid dissolved in a liquid, define the term SOLUTE.",
+          "answer": "The solid that dissolves in a solvent."
+        },
+        "question": "For a solid dissolved in a liquid, define the term solute.",
+        "answer": "The solid that dissolves in a solvent."
+      },
+      {
+        "id": "igcse-recall-015",
+        "previous": {
+          "question": "Define the term: SOLUTION",
+          "answer": "A solute dissolved in a solvent"
+        },
+        "question": "Define the term solution.",
+        "answer": "A solute dissolved in a solvent"
+      },
+      {
+        "id": "igcse-recall-016",
+        "previous": {
+          "question": "Define a SATURATED SOLUTION.",
+          "answer": "A solution containing the maximum amount of dissolved solute at a given temperature"
+        },
+        "question": "Define the term saturated solution.",
+        "answer": "A solution containing the maximum amount of dissolved solute at a given temperature"
+      },
+      {
+        "id": "igcse-recall-001",
+        "previous": {
+          "question": "What is the relative mass of a proton?",
+          "answer": "1"
+        },
+        "question": "What is the relative mass of a proton?",
+        "answer": "1"
+      },
+      {
+        "id": "igcse-recall-002",
+        "previous": {
+          "question": "What is the relative mass of a neutron?",
+          "answer": "1"
+        },
+        "question": "What is the relative mass of a neutron?",
+        "answer": "1"
+      },
+      {
+        "id": "igcse-recall-003",
+        "previous": {
+          "question": "What is the approximate relative mass of an electron? Give a fraction, or round to a whole number.",
+          "answer": "1/2000 | 1/1840 | 0"
+        },
+        "question": "What is the approximate relative mass of an electron? Give a fraction, or round to a whole number.",
+        "answer": "1/2000 | 1/1840 | 0"
+      },
+      {
+        "id": "igcse-recall-004",
+        "previous": {
+          "question": "What is the relative charge on a proton?",
+          "answer": "+1 | 1+ | positive one"
+        },
+        "question": "What is the relative charge on a proton?",
+        "answer": "+1 | 1+ | Positive one"
+      },
+      {
+        "id": "igcse-recall-005",
+        "previous": {
+          "question": "What is the relative charge on an electron?",
+          "answer": "-1"
+        },
+        "question": "What is the relative charge on an electron?",
+        "answer": "-1"
+      },
+      {
+        "id": "igcse-recall-006",
+        "previous": {
+          "question": "What is the charge on a neutron?",
+          "answer": "0"
+        },
+        "question": "What is the relative charge on a neutron?",
+        "answer": "0"
+      },
+      {
+        "id": "igcse-recall-064",
+        "previous": {
+          "question": "Give three observations when lithium reacts with water.",
+          "answer": "solid appears to disappear | lithium appears to disappear; fizzing | effervescence | bubbles | bubbling | fizzes; solid moves around on the water | lithium moves around on the water"
+        },
+        "question": "Give three observations when lithium reacts with water.",
+        "answer": "Solid appears to disappear | Lithium appears to disappear; Fizzing | Effervescence | Bubbles | Bubbling | Fizzes; Solid moves around on the water | Lithium moves around on the water"
+      },
+      {
+        "id": "igcse-recall-065",
+        "previous": {
+          "question": "When sodium and lithium react with water under comparable conditions, what additional observation is typical of sodium?",
+          "answer": "solid melts into a ball | sodium forms a molten ball | sodium melts into a ball | metal forms a molten ball"
+        },
+        "question": "When sodium and lithium react with water under comparable conditions, what additional observation is typical of sodium?",
+        "answer": "Solid melts into a ball | Sodium forms a molten ball | Sodium melts into a ball | Metal forms a molten ball"
+      },
+      {
+        "id": "igcse-recall-066",
+        "previous": {
+          "question": "When potassium reacts with water, what characteristic flame colour distinguishes it from sodium?",
+          "answer": "lilac flame"
+        },
+        "question": "When potassium reacts with water, what characteristic flame colour distinguishes it from sodium?",
+        "answer": "Lilac flame"
+      },
+      {
+        "id": "igcse-recall-067",
+        "previous": {
+          "question": "What state is fluorine at room temperature?",
+          "answer": "gas | gaseous"
+        },
+        "question": "What state is fluorine at room temperature?",
+        "answer": "Gas | Gaseous"
+      },
+      {
+        "id": "igcse-recall-068",
+        "previous": {
+          "question": "What colour is fluorine at room temperature?",
+          "answer": "yellow"
+        },
+        "question": "What colour is fluorine at room temperature?",
+        "answer": "Yellow"
+      },
+      {
+        "id": "igcse-recall-069",
+        "previous": {
+          "question": "What state is chlorine at room temperature?",
+          "answer": "gas | gaseous"
+        },
+        "question": "What state is chlorine at room temperature?",
+        "answer": "Gas | Gaseous"
+      },
+      {
+        "id": "igcse-recall-070",
+        "previous": {
+          "question": "What colour is chlorine at room temperature?",
+          "answer": "green"
+        },
+        "question": "What colour is chlorine at room temperature?",
+        "answer": "Green"
+      },
+      {
+        "id": "igcse-recall-071",
+        "previous": {
+          "question": "What state is bromine at room temperature?",
+          "answer": "liquid"
+        },
+        "question": "What state is bromine at room temperature?",
+        "answer": "Liquid"
+      },
+      {
+        "id": "igcse-recall-072",
+        "previous": {
+          "question": "What colour is bromine at room temperature?",
+          "answer": "red-brown | brown"
+        },
+        "question": "What colour is bromine at room temperature?",
+        "answer": "Red-brown | Brown"
+      },
+      {
+        "id": "igcse-recall-073",
+        "previous": {
+          "question": "What state is iodine at room temperature?",
+          "answer": "solid"
+        },
+        "question": "What state is iodine at room temperature?",
+        "answer": "Solid"
+      },
+      {
+        "id": "igcse-recall-074",
+        "previous": {
+          "question": "What colour is iodine at room temperature?",
+          "answer": "grey | gray | grey-black | dark grey"
+        },
+        "question": "What colour is iodine at room temperature?",
+        "answer": "Grey | Gray | Grey-black | Dark grey"
+      },
+      {
+        "id": "igcse-recall-021",
+        "previous": {
+          "question": "Define the term IONIC BOND",
+          "answer": "the electrostatic attraction between oppositely charged ions"
+        },
+        "question": "Define the term ionic bond.",
+        "answer": "The electrostatic attraction between oppositely charged ions"
+      },
+      {
+        "id": "igcse-recall-022",
+        "previous": {
+          "question": "In the usual introductory model, ionic compounds form between which two types of element?",
+          "answer": "Metal & Non-metal"
+        },
+        "question": "In the usual introductory model, ionic compounds form between which two types of element?",
+        "answer": "Metal & non-metal"
+      },
+      {
+        "id": "igcse-recall-027",
+        "previous": {
+          "question": "What is the formula and charge of a nitrate ion?",
+          "answer": "NO3 | NO₃; -1 | 1-"
+        },
+        "question": "What is the formula and charge of a nitrate ion?",
+        "answer": "NO3 | NO₃; -1 | 1-"
+      },
+      {
+        "id": "igcse-recall-028",
+        "previous": {
+          "question": "What is the formula and charge of a carbonate ion?",
+          "answer": "CO3 | CO₃; -2 | 2-"
+        },
+        "question": "What is the formula and charge of a carbonate ion?",
+        "answer": "CO3 | CO₃; -2 | 2-"
+      },
+      {
+        "id": "igcse-recall-029",
+        "previous": {
+          "question": "What is the formula and charge of an ammonium ion?",
+          "answer": "NH4 | NH₄; +1 | 1+"
+        },
+        "question": "What is the formula and charge of an ammonium ion?",
+        "answer": "NH4 | NH₄; +1 | 1+"
+      },
+      {
+        "id": "igcse-recall-030",
+        "previous": {
+          "question": "What is the formula and charge of a zinc ion?",
+          "answer": "Zn; +2 | 2+"
+        },
+        "question": "What is the formula and charge of a zinc ion?",
+        "answer": "Zn; +2 | 2+"
+      },
+      {
+        "id": "igcse-recall-031",
+        "previous": {
+          "question": "What is the formula and charge of a silver ion?",
+          "answer": "Ag; +1 | 1+"
+        },
+        "question": "What is the formula and charge of a silver ion?",
+        "answer": "Ag; +1 | 1+"
+      },
+      {
+        "id": "igcse-recall-032",
+        "previous": {
+          "question": "What is the formula and charge of a hydroxide ion?",
+          "answer": "OH; -1 | 1-"
+        },
+        "question": "What is the formula and charge of a hydroxide ion?",
+        "answer": "OH; -1 | 1-"
+      },
+      {
+        "id": "igcse-recall-033",
+        "previous": {
+          "question": "What is the formula and charge of a sulphate ion?",
+          "answer": "SO4 | SO₄; -2 | 2-"
+        },
+        "question": "What is the formula and charge of a sulphate ion?",
+        "answer": "SO4 | SO₄; -2 | 2-"
+      },
+      {
+        "id": "igcse-recall-017",
+        "previous": {
+          "question": "Define the term COVALENT BOND",
+          "answer": "the electrostatic attraction between two nuclei and a shared pair of electrons"
+        },
+        "question": "Define the term covalent bond.",
+        "answer": "The electrostatic attraction between two nuclei and a shared pair of electrons"
+      },
+      {
+        "id": "igcse-recall-018",
+        "previous": {
+          "question": "What types of atoms usually form covalent bonds?",
+          "answer": "Non-Metal & Non-Metal"
+        },
+        "question": "What types of atoms usually form covalent bonds?",
+        "answer": "Non-metal & non-metal"
+      },
+      {
+        "id": "igcse-recall-026",
+        "previous": {
+          "question": "What is the formula of ammonia?",
+          "answer": "NH3 | NH₃"
+        },
+        "question": "What is the formula of ammonia?",
+        "answer": "NH3 | NH₃"
+      },
+      {
+        "id": "igcse-recall-043",
+        "previous": {
+          "question": "How do I test for Carbon Dioxide and what result would I get?",
+          "answer": "Bubble the gas through limewater | Pass the gas through aqueous calcium hydroxide; Limewater turns cloudy | Limewater turns milky | white precipitate forms in the limewater"
+        },
+        "question": "How do you test for carbon dioxide, and what is the positive result?",
+        "answer": "Bubble the gas through limewater | Pass the gas through calcium hydroxide; Limewater turns cloudy | Limewater turns milky | White precipitate forms in the limewater"
+      },
+      {
+        "id": "igcse-recall-048",
+        "previous": {
+          "question": "How do I test for Hydrogen Gas and what result would I get?",
+          "answer": "lit splint; squeaky pop"
+        },
+        "question": "How do you test for hydrogen gas, and what is the positive result?",
+        "answer": "Lit splint; Squeaky pop"
+      },
+      {
+        "id": "igcse-recall-052",
+        "previous": {
+          "question": "How do I test for Ammonia and what result would I get?",
+          "answer": "damp red litmus paper; turns blue"
+        },
+        "question": "How do you test for ammonia, and what is the positive result?",
+        "answer": "Damp red litmus paper; Turns blue"
+      },
+      {
+        "id": "igcse-recall-058",
+        "previous": {
+          "question": "How do you test for oxygen gas, and what is the positive result?",
+          "answer": "glowing splint; relights"
+        },
+        "question": "How do you test for oxygen gas, and what is the positive result?",
+        "answer": "Glowing splint; Relights"
+      },
+      {
+        "id": "igcse-recall-059",
+        "previous": {
+          "question": "How do I test for Chlorine Gas and what result would I get?",
+          "answer": "damp blue litmus paper; turns red then bleaches white"
+        },
+        "question": "How do you test for chlorine gas, and what is the positive result?",
+        "answer": "Damp blue litmus paper; Turns red then bleaches white"
+      },
+      {
+        "id": "igcse-recall-044",
+        "previous": {
+          "question": "How do I test for Iron (III) ions and what result would I get?",
+          "answer": "Add aqueous sodium hydroxide | Add NaOH(aq) | Add sodium hydroxide solution; brown precipitate | brown ppt"
+        },
+        "question": "How do you test for iron(III) ions, and what is the positive result?",
+        "answer": "Add sodium hydroxide | Add NaOH | Add sodium hydroxide solution; Brown precipitate | Brown ppt"
+      },
+      {
+        "id": "igcse-recall-049",
+        "previous": {
+          "question": "How do I test for Calcium ions and what result would I get?",
+          "answer": "flame test; Orange-red flame | Brick-red flame"
+        },
+        "question": "How do you test for calcium ions, and what is the positive result?",
+        "answer": "Flame test; Orange-red flame | Brick-red flame"
+      },
+      {
+        "id": "igcse-recall-051",
+        "previous": {
+          "question": "How do I test for Lithium ions and what result would I get?",
+          "answer": "flame test; red flame"
+        },
+        "question": "How do you test for lithium ions, and what is the positive result?",
+        "answer": "Flame test; Red flame"
+      },
+      {
+        "id": "igcse-recall-053",
+        "previous": {
+          "question": "How do I test for Sodium ions and what result would I get?",
+          "answer": "flame test; Yellow flame"
+        },
+        "question": "How do you test for sodium ions, and what is the positive result?",
+        "answer": "Flame test; Yellow flame"
+      },
+      {
+        "id": "igcse-recall-056",
+        "previous": {
+          "question": "How do I test for Ammonium ions and what result would I get?",
+          "answer": "Add aqueous sodium hydroxide | Add NaOH(aq); warm and test the gas with damp red litmus paper; red to blue | turns blue"
+        },
+        "question": "How do you test for ammonium ions, and what is the positive result?",
+        "answer": "Add sodium hydroxide | Add NaOH; Warm and test the gas with damp red litmus paper; Red to blue | Turns blue"
+      },
+      {
+        "id": "igcse-recall-060",
+        "previous": {
+          "question": "How do I test for Iron (II) ions and what result would I get?",
+          "answer": "Add aqueous sodium hydroxide | Add NaOH(aq) | Add sodium hydroxide solution; green precipitate | green ppt"
+        },
+        "question": "How do you test for iron(II) ions, and what is the positive result?",
+        "answer": "Add sodium hydroxide | Add NaOH | Add sodium hydroxide solution; Green precipitate | Green ppt"
+      },
+      {
+        "id": "igcse-recall-061",
+        "previous": {
+          "question": "How do I test for Copper (II) ions and what result would I get?",
+          "answer": "Add aqueous sodium hydroxide | Add NaOH(aq) | Add sodium hydroxide solution; blue precipitate | blue ppt"
+        },
+        "question": "How do you test for copper(II) ions, and what is the positive result?",
+        "answer": "Add sodium hydroxide | Add NaOH | Add sodium hydroxide solution; Blue precipitate | Blue ppt"
+      },
+      {
+        "id": "igcse-recall-062",
+        "previous": {
+          "question": "Give two tests for copper(II) ions and the positive result for each.",
+          "answer": "Flame test; green flame | blue-green flame; add aqueous sodium hydroxide | add NaOH(aq); blue precipitate | blue ppt"
+        },
+        "question": "Give two tests for copper(II) ions and the positive result for each.",
+        "answer": "Flame test; Green flame | Blue-green flame; Add sodium hydroxide | Add NaOH; Blue precipitate | Blue ppt"
+      },
+      {
+        "id": "igcse-recall-063",
+        "previous": {
+          "question": "How do I test for Potassium ions and what result would I get?",
+          "answer": "flame test; Lilac flame | purple flame"
+        },
+        "question": "How do you test for potassium ions, and what is the positive result?",
+        "answer": "Flame test; Lilac flame | Purple flame"
+      },
+      {
+        "id": "igcse-recall-047",
+        "previous": {
+          "question": "How do I test for Sulphate ions and what result would I get?",
+          "answer": "Add dilute hydrochloric acid | Add dilute HCl; add aqueous barium chloride | add BaCl2(aq); white precipitate | white ppt"
+        },
+        "question": "How do you test for sulphate ions, and what is the positive result?",
+        "answer": "Add hydrochloric acid | Add HCl; Add barium chloride | Add BaCl2; White precipitate | White ppt"
+      },
+      {
+        "id": "igcse-recall-050",
+        "previous": {
+          "question": "How do I test for Bromide ions and what result would I get?",
+          "answer": "Add dilute nitric acid | Add dilute HNO3; add aqueous silver nitrate | add AgNO3(aq); cream precipitate | cream ppt"
+        },
+        "question": "How do you test for bromide ions, and what is the positive result?",
+        "answer": "Add nitric acid | Add HNO3; Add silver nitrate | Add AgNO3; Cream precipitate | Cream ppt"
+      },
+      {
+        "id": "igcse-recall-054",
+        "previous": {
+          "question": "How do I test for Iodide ions and what result would I get?",
+          "answer": "Add nitric acid | Add HNO3; add silver nitrate | add AgNO3; yellow precipitate | yellow ppt"
+        },
+        "question": "How do you test for iodide ions, and what is the positive result?",
+        "answer": "Add nitric acid | Add HNO3; Add silver nitrate | Add AgNO3; Yellow precipitate | Yellow ppt"
+      },
+      {
+        "id": "igcse-recall-055",
+        "previous": {
+          "question": "How do I test for Carbonate ions and what result would I get?",
+          "answer": "Add hydrochloric acid | Add HCl | Add nitric acid | Add HNO3; bubble gas through limewater; limewater turns cloudy | limewater turns milky | white precipitate forms in the limewater"
+        },
+        "question": "How do you test for carbonate ions, and what is the positive result?",
+        "answer": "Add hydrochloric acid | Add HCl | Add nitric acid | Add HNO3; Bubble gas through limewater; Limewater turns cloudy | Limewater turns milky | White precipitate forms in the limewater"
+      },
+      {
+        "id": "igcse-recall-057",
+        "previous": {
+          "question": "How do I test for Chloride ions and what result would I get?",
+          "answer": "Add nitric acid | Add HNO3; add silver nitrate | add AgNO3; white precipitate | white ppt"
+        },
+        "question": "How do you test for chloride ions, and what is the positive result?",
+        "answer": "Add nitric acid | Add HNO3; Add silver nitrate | Add AgNO3; White precipitate | White ppt"
+      },
+      {
+        "id": "igcse-recall-045",
+        "previous": {
+          "question": "How do I test for Water and what result would I get?",
+          "answer": "Add anhydrous copper sulfate | Add anhydrous copper sulphate; white to blue"
+        },
+        "question": "How do you test for water, and what is the positive result?",
+        "answer": "Add anhydrous copper sulphate; White to blue"
+      },
+      {
+        "id": "igcse-recall-019",
+        "previous": {
+          "question": "What type of structure do covalently bonded substances with low melting points have?",
+          "answer": "simple molecular"
+        },
+        "question": "What type of structure do covalently bonded substances with low melting points have?",
+        "answer": "Simple molecular"
+      },
+      {
+        "id": "igcse-recall-024",
+        "previous": {
+          "question": "What is the name for the weak attraction between 2 molecules?",
+          "answer": "intermolecular"
+        },
+        "question": "What is the name for the weak attraction between two molecules?",
+        "answer": "Intermolecular"
+      },
+      {
+        "id": "igcse-recall-020",
+        "previous": {
+          "question": "What type of structure do covalently bonded substances with high melting points have?",
+          "answer": "Giant lattice | Giant covalent lattice"
+        },
+        "question": "What type of structure do covalently bonded substances with high melting points have?",
+        "answer": "Giant lattice | Giant covalent lattice"
+      },
+      {
+        "id": "igcse-recall-023",
+        "previous": {
+          "question": "Define the term METALLIC BOND.",
+          "answer": "The electrostatic attraction between positive metal ions and delocalised electrons"
+        },
+        "question": "Define the term metallic bond.",
+        "answer": "The electrostatic attraction between positive metal ions and delocalised electrons"
+      },
+      {
+        "id": "igcse-recall-025",
+        "previous": {
+          "question": "What type of structure do solid ionic substances and solid metals have? Give one answer for each.",
+          "answer": "Giant lattice | giant lattice structure"
+        },
+        "question": "What type of structure do solid ionic substances and solid metals have? Give one answer for each.",
+        "answer": "Giant lattice | Giant ionic lattice; Giant lattice | Giant metallic lattice"
+      },
+      {
+        "id": "igcse-recall-075",
+        "previous": {
+          "question": "What colour is litmus in acidic conditions?",
+          "answer": "Red"
+        },
+        "question": "What colour is litmus in acidic conditions?",
+        "answer": "Red"
+      },
+      {
+        "id": "igcse-recall-076",
+        "previous": {
+          "question": "What colour is litmus in alkaline conditions?",
+          "answer": "Blue"
+        },
+        "question": "What colour is litmus in alkaline conditions?",
+        "answer": "Blue"
+      },
+      {
+        "id": "igcse-recall-077",
+        "previous": {
+          "question": "What colour is phenolphthalein in acidic conditions?",
+          "answer": "Colourless | colorless"
+        },
+        "question": "What colour is phenolphthalein in acidic conditions?",
+        "answer": "Colourless | Colorless"
+      },
+      {
+        "id": "igcse-recall-078",
+        "previous": {
+          "question": "What colour is phenolphthalein in alkaline conditions?",
+          "answer": "Pink"
+        },
+        "question": "What colour is phenolphthalein in alkaline conditions?",
+        "answer": "Pink"
+      },
+      {
+        "id": "igcse-recall-079",
+        "previous": {
+          "question": "What colour is methyl orange in acidic conditions?",
+          "answer": "Red"
+        },
+        "question": "What colour is methyl orange in acidic conditions?",
+        "answer": "Red"
+      },
+      {
+        "id": "igcse-recall-080",
+        "previous": {
+          "question": "What colour is methyl orange in alkaline conditions?",
+          "answer": "Yellow"
+        },
+        "question": "What colour is methyl orange in alkaline conditions?",
+        "answer": "Yellow"
+      },
+      {
+        "id": "igcse-recall-082",
+        "previous": {
+          "question": "What is the solubility rule for common group 1 and ammonium salts in water?",
+          "answer": "Soluble"
+        },
+        "question": "What is the solubility rule for common group 1 and ammonium salts in water?",
+        "answer": "Soluble"
+      },
+      {
+        "id": "igcse-recall-083",
+        "previous": {
+          "question": "What is the solubility rule for nitrates in water?",
+          "answer": "4 options, soluble, soluble with exceptions, insoluble, insoluble with exceptions. If exceptions added, text input rows below to add them"
+        },
+        "question": "What is the solubility rule for nitrates in water?",
+        "answer": "Soluble"
+      },
+      {
+        "id": "igcse-recall-084",
+        "previous": {
+          "question": "State the solubility rule for chlorides in water.",
+          "answer": " soluble; Silver | Lead "
+        },
+        "question": "State the solubility rule for chlorides in water.",
+        "answer": "Soluble with exceptions; Silver | Silver chloride | Agcl; Lead | Lead chloride | PbCl2"
+      },
+      {
+        "id": "igcse-recall-085",
+        "previous": {
+          "question": "State the solubility rule for sulfates in water.",
+          "answer": "soluble; Barium | Lead | Calcium"
+        },
+        "question": "State the solubility rule for sulphates in water.",
+        "answer": "Soluble with exceptions; Barium | Barium sulphate | BaSO4; Lead | Lead sulphate | PbSO4; Calcium | Calcium sulphate | CaSO4"
+      },
+      {
+        "id": "igcse-recall-086",
+        "previous": {
+          "question": "State the solubility rule for carbonates in water and name the two groups of soluble exceptions.",
+          "answer": "Most carbonates are insoluble; Group 1 carbonates are soluble; Ammonium carbonate is soluble"
+        },
+        "question": "State the solubility rule for carbonates in water and name the two groups of soluble exceptions.",
+        "answer": "Insoluble with exceptions; Group 1; Ammonium"
+      },
+      {
+        "id": "igcse-recall-087",
+        "previous": {
+          "question": "State the solubility rule for common hydroxides in water",
+          "answer": "insoluble; Group 1 | Ammonium"
+        },
+        "question": "State the solubility rule for common hydroxides in water.",
+        "answer": "Insoluble with exceptions; Group 1; Ammonium"
+      },
+      {
+        "id": "igcse-recall-102",
+        "previous": {
+          "question": "Define the term SATURATED when talking about organic molecules",
+          "answer": "A molecule containing only single C-C bonds"
+        },
+        "question": "Define the term saturated when talking about organic molecules.",
+        "answer": "A molecule containing only single C-C bonds"
+      },
+      {
+        "id": "igcse-recall-107",
+        "previous": {
+          "question": "Define the term UNSATURATED when talking about organic molecules",
+          "answer": "a molecule with at least one C=C bond"
+        },
+        "question": "Define the term unsaturated when talking about organic molecules.",
+        "answer": "A molecule with at least one C=C bond"
+      },
+      {
+        "id": "igcse-recall-100",
+        "previous": {
+          "question": "Name the first six unbranched alkanes in order of increasing carbon count.",
+          "answer": "In order: Methane; Ethane; Propane; Butane; Pentane; Hexane"
+        },
+        "question": "Name the first six unbranched alkanes in order of increasing carbon count.",
+        "answer": "In order: Methane; Ethane; Propane; Butane; Pentane; Hexane"
+      },
+      {
+        "id": "igcse-recall-101",
+        "previous": {
+          "question": "Give the general formula for alkanes.",
+          "answer": "CnH2n+2 | CₙH₂ₙ₊₂"
+        },
+        "question": "Give the general formula for alkanes.",
+        "answer": "CnH2n+2 | CₙH₂ₙ₊₂"
+      },
+      {
+        "id": "igcse-recall-103",
+        "previous": {
+          "question": "Name the products of complete combustion of a hydrocarbon.",
+          "answer": "Water | H2O | H₂O; Carbon dioxide | CO2 | CO₂"
+        },
+        "question": "Name the products of complete combustion of a hydrocarbon.",
+        "answer": "Water | H2O | H₂O; Carbon dioxide | CO2 | CO₂"
+      },
+      {
+        "id": "igcse-recall-104",
+        "previous": {
+          "question": "Name the 3 possible products of incomplete combustion of a hydrocarbon.",
+          "answer": "Water | H2O | H₂O; CO | Carbon monoxide ; Carbon | Soot | C"
+        },
+        "question": "Name the three possible products of incomplete combustion of a hydrocarbon.",
+        "answer": "Water | H2O | H₂O; CO | Carbon monoxide; Carbon | Soot | C"
+      },
+      {
+        "id": "igcse-recall-105",
+        "previous": {
+          "question": "Give the general formula for alkenes",
+          "answer": "CnH2n | CₙH₂ₙ"
+        },
+        "question": "Give the general formula for alkenes.",
+        "answer": "CnH2n | CₙH₂ₙ"
+      },
+      {
+        "id": "igcse-recall-106",
+        "previous": {
+          "question": "How do you test for an alkene, and what is the positive result?",
+          "answer": "Add bromine water ; orange to colourless"
+        },
+        "question": "How do you test for an alkene, and what is the positive result?",
+        "answer": "Add bromine water; Orange to colourless"
+      },
+      {
+        "id": "igcse-recall-091",
+        "previous": {
+          "question": "Name the crude-oil fractions from largest to smallest",
+          "answer": "In order: Refinery gases ; Gasoline ; Kerosene ; Diesel; Fuel oil; Bitumen"
+        },
+        "question": "Name the crude-oil fractions from largest to smallest.",
+        "answer": "In order: Bitumen; Fuel oil; Diesel; Kerosene; Gasoline; Refinery gases"
+      },
+      {
+        "id": "igcse-recall-092",
+        "previous": {
+          "question": "Give a use of the refinery gases fraction.",
+          "answer": "Heating homes | domestic heating | cooking | cooking fuel"
+        },
+        "question": "Give a use of the refinery gases fraction.",
+        "answer": "Heating homes | Domestic heating | Cooking | Cooking fuel"
+      },
+      {
+        "id": "igcse-recall-093",
+        "previous": {
+          "question": "Give a use of the gasoline fraction.",
+          "answer": "Petrol for cars | fuel for petrol engines"
+        },
+        "question": "Give a use of the gasoline fraction.",
+        "answer": "Petrol for cars | Fuel for petrol engines"
+      },
+      {
+        "id": "igcse-recall-094",
+        "previous": {
+          "question": "Give a use of the kerosene fraction.",
+          "answer": "Jet fuel | fuel for aircraft | aviation fuel"
+        },
+        "question": "Give a use of the kerosene fraction.",
+        "answer": "Jet fuel | Fuel for aircraft | Aviation fuel"
+      },
+      {
+        "id": "igcse-recall-095",
+        "previous": {
+          "question": "Give a use of the diesel fraction.",
+          "answer": "Fuel for diesel cars and trucks | fuel for diesel engines | fuel for lorries | fuel for diesel cars"
+        },
+        "question": "Give a use of the diesel fraction.",
+        "answer": "Fuel for diesel cars and trucks | Fuel for diesel engines | Fuel for lorries | Fuel for diesel cars"
+      },
+      {
+        "id": "igcse-recall-096",
+        "previous": {
+          "question": "Give a use of the fuel oil fraction.",
+          "answer": "Fuel for ships | marine fuel | Heating | industrial heating fuel"
+        },
+        "question": "Give a use of the fuel oil fraction.",
+        "answer": "Fuel for ships | Marine fuel | Heating | Industrial heating fuel"
+      },
+      {
+        "id": "igcse-recall-097",
+        "previous": {
+          "question": "Give a use of the bitumen fraction.",
+          "answer": "Road surfacing | binder in asphalt for roads"
+        },
+        "question": "Give a use of the bitumen fraction.",
+        "answer": "Road surfacing | Binder in asphalt for roads"
+      },
+      {
+        "id": "igcse-recall-098",
+        "previous": {
+          "question": "What temperature is required for catalytic cracking?",
+          "answer": "600–700 °C"
+        },
+        "question": "What temperature is required for catalytic cracking?",
+        "answer": "600–700 °C"
+      },
+      {
+        "id": "igcse-recall-099",
+        "previous": {
+          "question": "What catalyst is required for catalytic cracking?",
+          "answer": "Silicon dioxide | silica | SiO2 | Aluminium oxide | aluminum oxide | alumina | Al2O3"
+        },
+        "question": "What catalyst is required for catalytic cracking?",
+        "answer": "Silicon dioxide | Silica | SiO2 | Aluminium oxide | Aluminum oxide | Alumina | Al2O3"
+      },
+      {
+        "id": "igcse-recall-034",
+        "previous": {
+          "question": "Approximately what percentage by volume of dry air is nitrogen?",
+          "answer": "78%"
+        },
+        "question": "Approximately what percentage by volume of dry air is nitrogen?",
+        "answer": "78%"
+      },
+      {
+        "id": "igcse-recall-035",
+        "previous": {
+          "question": "Approximately what percentage by volume of dry air is oxygen?",
+          "answer": "21%"
+        },
+        "question": "Approximately what percentage by volume of dry air is oxygen?",
+        "answer": "21%"
+      },
+      {
+        "id": "igcse-recall-036",
+        "previous": {
+          "question": "Approximately what percentage by volume of dry air is argon?",
+          "answer": "0.9%"
+        },
+        "question": "Approximately what percentage by volume of dry air is argon?",
+        "answer": "0.9%"
+      },
+      {
+        "id": "igcse-recall-037",
+        "previous": {
+          "question": "What rounded classroom percentage by volume of dry air is carbon dioxide?",
+          "answer": "0.04%"
+        },
+        "question": "What rounded classroom percentage by volume of dry air is carbon dioxide?",
+        "answer": "0.04%"
+      },
+      {
+        "id": "igcse-recall-038",
+        "previous": {
+          "question": "Which 2 main gases dissolve in rain to cause acid rain?",
+          "answer": "Nitrogen dioxide | NO2 | NO₂; Sulphur dioxide | sulfur dioxide | SO2 | SO₂"
+        },
+        "question": "Which two main gases dissolve in rain to cause acid rain?",
+        "answer": "Nitrogen dioxide | NO2 | NO₂; Sulphur dioxide | SO2 | SO₂"
+      },
+      {
+        "id": "igcse-recall-039",
+        "previous": {
+          "question": "Are non-metal oxides generally acidic or basic?",
+          "answer": "Acidic"
+        },
+        "question": "Are non-metal oxides generally acidic or basic?",
+        "answer": "Acidic"
+      },
+      {
+        "id": "igcse-recall-040",
+        "previous": {
+          "question": "Name the acid that is formed when sulphur dioxide dissolves in rain?",
+          "answer": "Sulphurous acid | sulfurous acid"
+        },
+        "question": "Name the acid that is formed when sulphur dioxide dissolves in rain?",
+        "answer": "Sulphurous acid"
+      },
+      {
+        "id": "igcse-recall-041",
+        "previous": {
+          "question": "What colour change is seen when solid copper carbonate decomposes on heating?",
+          "answer": "green to black"
+        },
+        "question": "What colour change is seen when solid copper carbonate decomposes on heating?",
+        "answer": "Green to black"
+      },
+      {
+        "id": "igcse-recall-042",
+        "previous": {
+          "question": "What is the name for a reaction in which a substance breaks down into multiple products when heated?",
+          "answer": "Thermal decomposition"
+        },
+        "question": "What is the name for a reaction in which a substance breaks down into multiple products when heated?",
+        "answer": "Thermal decomposition"
+      },
+      {
+        "id": "igcse-recall-089",
+        "previous": {
+          "question": "What 2 things does iron need to rust?",
+          "answer": "Water | moisture | H2O | H₂O; Oxygen | O2 | O₂"
+        },
+        "question": "What two things does iron need to rust?",
+        "answer": "Water | Moisture | H2O | H₂O; Oxygen | O2 | O₂"
+      },
+      {
+        "id": "igcse-recall-090",
+        "previous": {
+          "question": "Give 3 ways of preventing iron from rusting.",
+          "answer": "Any 3: Sacrificial protection | Attach a more reactive metal; painting | paint coating; galvanising | galvanizing | coat with zinc; oiling | oil coating; greasing | grease coating"
+        },
+        "question": "Give three ways of preventing iron from rusting.",
+        "answer": "Any 3: Sacrificial protection | Attach a more reactive metal; Painting | Paint coating; Galvanising | Galvanizing | Coat with zinc; Oiling | Oil coating; Greasing | Grease coating"
+      },
+      {
+        "id": "igcse-recall-110",
+        "previous": {
+          "question": "What catalyst is used to produce ethanol from ethene and steam?",
+          "answer": "Phosphoric acid | H3PO4 | H₃PO₄"
+        },
+        "question": "What catalyst is used to produce ethanol from ethene and steam?",
+        "answer": "Phosphoric acid | H3PO4 | H₃PO₄"
+      },
+      {
+        "id": "igcse-recall-111",
+        "previous": {
+          "question": "What temperature is used to produce ethanol from ethene and steam?",
+          "answer": "300 °C | 300 degrees Celsius | about 300 °C"
+        },
+        "question": "What temperature is used to produce ethanol from ethene and steam?",
+        "answer": "300 °C | 300 degrees celsius | About 300 °C"
+      },
+      {
+        "id": "igcse-recall-112",
+        "previous": {
+          "question": "What pressure is used to produce ethanol from ethene and steam?",
+          "answer": "60–70 atm | 60-70 atmospheres"
+        },
+        "question": "What pressure is used to produce ethanol from ethene and steam?",
+        "answer": "60–70 atm | 60-70 atmospheres"
+      },
+      {
+        "id": "igcse-recall-113",
+        "previous": {
+          "question": "What temperature is used for producing ethanol by fermentation of sugars.",
+          "answer": "30 °C"
+        },
+        "question": "What temperature is used for producing ethanol by fermentation of sugars?",
+        "answer": "30 °C"
+      },
+      {
+        "id": "igcse-recall-115",
+        "previous": {
+          "question": "What colour change is seen when acidified potassium dichromate(VI) oxidises ethanol?",
+          "answer": "Orange to Green"
+        },
+        "question": "What colour change is seen when acidified potassium dichromate(VI) oxidises ethanol?",
+        "answer": "Orange to green"
+      },
+      {
+        "id": "igcse-recall-114",
+        "previous": {
+          "question": "What needs to be done to ethanol to oxidise it to ethanoic acid in the laboratory?",
+          "answer": "potassium dichromate; sulphuric acid | H2SO4 | Heat"
+        },
+        "question": "What needs to be done to ethanol to oxidise it to ethanoic acid in the laboratory?",
+        "answer": "Potassium dichromate; Sulphuric acid | H2SO4; Heat"
+      },
+      {
+        "id": "igcse-recall-116",
+        "previous": {
+          "question": "How is ethanol naturally converted to ethanoic acid?",
+          "answer": "Ethanol is oxidised by bacteria using oxygen from the air"
+        },
+        "question": "How is ethanol naturally converted to ethanoic acid?",
+        "answer": "Ethanol is oxidised by bacteria using oxygen from the air"
+      },
+      {
+        "id": "igcse-recall-117",
+        "previous": {
+          "question": "What catalyst and conditions are needed to make a carboxylic acid and an alcohol form an ester?",
+          "answer": "Concentrated sulphuric acid | Concentrated sulfuric acid; Heat | Warm"
+        },
+        "question": "What catalyst and conditions are needed to make a carboxylic acid and an alcohol form an ester?",
+        "answer": "Concentrated sulphuric acid; Heat | Warm"
+      },
+      {
+        "id": "igcse-recall-118",
+        "previous": {
+          "question": "Give two uses of esters.",
+          "answer": "Food flavourings | flavourings | flavorings; Perfumes | fragrances | scents"
+        },
+        "question": "Give two uses of esters.",
+        "answer": "Food flavourings | Flavourings | Flavorings; Perfumes | Fragrances | Scents"
+      },
+      {
+        "id": "igcse-recall-108",
+        "previous": {
+          "question": "Give 3 uses of polymers.",
+          "answer": "Any 3: Plastic bags | carrier bags; Window frames; Furniture; Rope | ropes"
+        },
+        "question": "Give three uses of polymers.",
+        "answer": "Any 3: Plastic bags | Carrier bags; Window frames; Furniture; Rope | Ropes"
+      },
+      {
+        "id": "igcse-recall-109",
+        "previous": {
+          "question": "Give 2 environmental problems with polymers.",
+          "answer": "Any 2: do not biodegrade; release toxic gases when burned; made from non-renewable crude oil"
+        },
+        "question": "Give two environmental problems with polymers.",
+        "answer": "Any 2: Do not biodegrade; Release toxic gases when burned; Made from non-renewable crude oil"
+      },
+      {
+        "id": "igcse-recall-046",
+        "previous": {
+          "question": "How could you check if water is pure?",
+          "answer": "Test: Heat | Measure boiling point\nResult: Boils at exactly 100oC"
+        },
+        "question": "How could you check if water is pure?",
+        "answer": "Heat | Measure boiling point; Boils at exactly 100 °C"
+      }
+    ]
+  }
+}

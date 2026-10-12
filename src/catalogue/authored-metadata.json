@@ -43,6 +43,251 @@
           }
         }
       ]
+    },
+    {
+      "id": "igcse/formulae",
+      "course": "igcse",
+      "strand": "curriculum",
+      "title": "Formulae",
+      "source": [
+        {
+          "path": "apps/Masters-of-Chemistry/src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original vetted19-ion/36-pair procedural bank; author chemistry review10 October2026; retained RF-S1-CONTENT evidence."
+        }
+      ],
+      "gems": [
+        {
+          "id": "fourth-16-1",
+          "topicId": "fourth-16",
+          "label": "Formulae",
+          "supportedLevels": [
+            1,
+            2
+          ],
+          "mastery": {
+            "gemId": "fourth-16-1",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 3,
+                "label": "Grade 5–6"
+              },
+              {
+                "level": 2,
+                "halfLife": 3,
+                "label": "Grade 7–8"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": [],
+            "activeProgressionVersion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "igcse/equations",
+      "course": "igcse",
+      "strand": "curriculum",
+      "title": "Equations",
+      "source": [
+        {
+          "path": "apps/Masters-of-Chemistry/src/activities/igcse/equations/bank.ts",
+          "sha256": "1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d",
+          "symbolOrSection": "Original24 authored equations with checked models/mark points; author chemistry review10 October2026; retained RF-S1-CONTENT evidence."
+        }
+      ],
+      "gems": [
+        {
+          "id": "fourth-16-2",
+          "topicId": "fourth-16",
+          "label": "Equations",
+          "supportedLevels": [
+            1,
+            2,
+            3
+          ],
+          "mastery": {
+            "gemId": "fourth-16-2",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 3,
+                "label": "Grade 5–6"
+              },
+              {
+                "level": 2,
+                "halfLife": 3,
+                "label": "Grade 7–8"
+              },
+              {
+                "level": 3,
+                "halfLife": 3,
+                "label": "Grade 9"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": [],
+            "activeProgressionVersion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "alevel/rate-equations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "title": "Rate Equations",
+      "source": [
+        {
+          "path": "resources/a-level-past-paper-atlas/run2/specification-evidence/sections.json",
+          "sha256": "b6c12f95c801adfb8725395c267ac12ba640ca16d925aa82ea9a37582804183a",
+          "symbolOrSection": "OCR Chemistry A5.1.1(a-f,i,k); complete question provenance retained in lazy rate factories."
+        }
+      ],
+      "gems": [
+        {
+          "id": "u6-t1-2-orders",
+          "topicId": "u6-t1-2",
+          "label": "Orders & Rate Calculations",
+          "supportedLevels": [
+            1,
+            2,
+            3
+          ],
+          "mastery": {
+            "gemId": "u6-t1-2-orders",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 2,
+                "label": "Level 1"
+              },
+              {
+                "level": 2,
+                "halfLife": 2,
+                "label": "Level 2"
+              },
+              {
+                "level": 3,
+                "halfLife": 2,
+                "label": "Level 3"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": []
+          }
+        },
+        {
+          "id": "u6-t1-2-graphs",
+          "topicId": "u6-t1-2",
+          "label": "Rate Graphs & Half-life",
+          "supportedLevels": [
+            1,
+            2,
+            3
+          ],
+          "mastery": {
+            "gemId": "u6-t1-2-graphs",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 2,
+                "label": "Level 1"
+              },
+              {
+                "level": 2,
+                "halfLife": 2,
+                "label": "Level 2"
+              },
+              {
+                "level": 3,
+                "halfLife": 2,
+                "label": "Level 3"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": []
+          }
+        },
+        {
+          "id": "u6-t1-2-mechanisms",
+          "topicId": "u6-t1-2",
+          "label": "Rate Equations & Mechanisms",
+          "supportedLevels": [
+            1,
+            2,
+            3
+          ],
+          "mastery": {
+            "gemId": "u6-t1-2-mechanisms",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 2,
+                "label": "Level 1"
+              },
+              {
+                "level": 2,
+                "halfLife": 2,
+                "label": "Level 2"
+              },
+              {
+                "level": 3,
+                "halfLife": 2,
+                "label": "Level 3"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": []
+          }
+        },
+        {
+          "id": "u6-t1-2-arrhenius",
+          "topicId": "u6-t1-2",
+          "label": "Arrhenius & Temperature",
+          "supportedLevels": [
+            1,
+            2,
+            3
+          ],
+          "mastery": {
+            "gemId": "u6-t1-2-arrhenius",
+            "supportedLevels": [
+              {
+                "level": 1,
+                "halfLife": 2,
+                "label": "Level 1"
+              },
+              {
+                "level": 2,
+                "halfLife": 2,
+                "label": "Level 2"
+              },
+              {
+                "level": 3,
+                "halfLife": 2,
+                "label": "Level 3"
+              }
+            ],
+            "threshold": 0.8,
+            "comparison": "strictly-greater",
+            "historicalAliases": [],
+            "legacySourceKeys": []
+          }
+        }
+      ]
     }
   ],
   "gems": []

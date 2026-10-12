@@ -1,13 +1,19 @@
-import type { AttemptController, StudentAttempt } from '../../contracts/attempt.ts';
+import type {
+  AttemptController,
+  StudentAttempt,
+  AnyStudentAttempt,
+} from '../../contracts/attempt.ts';
 import { browserClockSample } from './active-clock.ts';
 
-export interface BrowserTimingBindingOptions {
-  readonly controller: AttemptController;
+export interface BrowserTimingBindingOptions<S extends AnyStudentAttempt = StudentAttempt> {
+  readonly controller: AttemptController<S>;
   /** Host queues repository writes and displays failures; this module never saves directly. */
-  readonly onCheckpoint: (state: StudentAttempt) => void;
+  readonly onCheckpoint: (state: S) => void;
 }
 /** Bind once per mounted attempt, dispose on pause/navigation/unmount. No identity creation. */
-export function bindBrowserAttemptTiming(options: BrowserTimingBindingOptions): () => void {
+export function bindBrowserAttemptTiming<S extends AnyStudentAttempt = StudentAttempt>(
+  options: BrowserTimingBindingOptions<S>,
+): () => void {
   const { controller } = options;
   let lastSave = Date.now(),
     signature = '';

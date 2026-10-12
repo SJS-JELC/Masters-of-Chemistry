@@ -8,6 +8,7 @@ import { captureTopicLayout, animateTopicLayout } from './animation';
 import { StatsIcon } from './StatsIcon';
 import { RecallIcon } from './RecallIcon';
 import { GemPaths } from './GemPaths';
+import { gemMasteryAvailability } from '../foundation/gem-mastery-availability.ts';
 import eagle from '../../public/assets/landing/SJS-Eagle.svg?url';
 import './adaptation.css';
 import './alevel.css';
@@ -525,79 +526,99 @@ function CourseLanding(props: OriginalLandingProps) {
   const detailRegistration = selected ? registrations.get(selected.id) : undefined;
   const detailState = selected ? progress.get(selected.id) : undefined;
   const detailActivity = selected ? catalogue.activities[selected.id] : undefined;
-  const choices =
-    selected && detailRegistration && !(teacher && !isA) ? (
-      <div
-        id={isA ? 'detailStats' : 'practiceChoices'}
-        className="practice-choices"
-        aria-label="Choose practice mode"
+  const detailAvailability = selected
+    ? gemMasteryAvailability(course, selected.id, props.registry)
+    : undefined;
+  const choices = selected ? (
+    <div
+      id={isA ? 'detailStats' : 'practiceChoices'}
+      className="practice-choices"
+      aria-label="Choose practice mode"
+    >
+      <button
+        type="button"
+        className="practice-choice"
+        data-practice="mastery"
+        disabled={!detailAvailability?.facts && !detailAvailability?.target}
+        onClick={() => {
+          if (teacher) {
+            closeDetails(false);
+            if (detailRegistration) props.onOpenTeacher(selected.id);
+            else props.onOpenRecall(selected.id, true);
+          } else launch({ id: token(), kind: 'gem-mastery', course, gemId: selected.id });
+        }}
       >
-        {['mastery', ...detailRegistration.supportedLevels].map((option) => {
-          const level = option as Level,
-            label =
-              option === 'mastery'
-                ? 'MASTERY'
-                : isA
-                  ? detailRegistration.mastery.supportedLevels.find((band) => band.level === level)
-                      ?.label || 'Level ' + level
-                  : bands[level]!;
-          return (
-            <a
-              key={option}
-              href={'?course=' + course + '&gem=' + selected.id + '&practice=' + option}
-              className="practice-choice"
-              data-practice={option}
-              onClick={(event) => {
-                event.preventDefault();
-                launch(
-                  option === 'mastery'
-                    ? {
-                        id: token(),
-                        kind: 'practice',
-                        course,
-                        gemId: selected.id,
-                        selection: 'mastery',
-                      }
-                    : {
-                        id: token(),
-                        kind: 'practice',
-                        course,
-                        gemId: selected.id,
-                        selection: 'fixed-level',
-                        level,
-                      },
-                );
-              }}
-            >
-              <strong>{label}</strong>
-              <span>
-                {option === 'mastery' ? (
-                  !isA && detailActivity?.availableGrades ? (
-                    'Build mastery across ' +
-                    detailRegistration.supportedLevels.map((level) => bands[level]).join(' and ')
-                  ) : detailRegistration.supportedLevels.length === 1 ? (
-                    'Build mastery at the available level'
-                  ) : detailRegistration.supportedLevels.length === 3 ? (
-                    'Build mastery across all three levels'
-                  ) : (
-                    'Build mastery across the available levels'
-                  )
-                ) : (
-                  <MasteryBar
-                    score={
-                      detailState?.states.find((state) => state.level === level)?.score ?? null
-                    }
-                    level={level}
-                    label={label}
-                    threshold={detailRegistration.mastery.threshold}
-                  />
-                )}
-              </span>
-            </a>
-          );
-        })}
-      </div>
-    ) : null;
+        <strong>MASTERY</strong>
+        <span>
+          {teacher
+            ? 'Teacher preview · no learner evidence'
+            : detailAvailability?.facts
+              ? detailRegistration
+                ? 'Whole factual recall set, then available graded levels'
+                : 'Whole factual recall set · no graded activity yet'
+              : detailRegistration
+                ? 'Available graded levels · no linked facts yet'
+                : 'No factual recall or graded activity available yet'}
+        </span>
+      </button>
+      {!!detailAvailability?.facts && (
+        <button
+          type="button"
+          className="practice-choice"
+          data-practice="recall"
+          onClick={() => {
+            const gemId = selected.id;
+            closeDetails(false);
+            props.onOpenRecall(gemId, teacher);
+          }}
+        >
+          <strong>KEY FACTUAL RECALL</strong>
+          <span>Flashcards or test · shared recall progress</span>
+        </button>
+      )}
+      {(detailRegistration?.supportedLevels ?? []).map((option) => {
+        const level = option as Level,
+          label = isA
+            ? detailRegistration!.mastery.supportedLevels.find((band) => band.level === level)
+                ?.label || 'Level ' + level
+            : bands[level]!;
+        return (
+          <a
+            key={option}
+            href={'?course=' + course + '&gem=' + selected.id + '&practice=' + option}
+            className="practice-choice"
+            data-practice={option}
+            onClick={(event) => {
+              event.preventDefault();
+              if (teacher) {
+                closeDetails(false);
+                props.onOpenTeacher(selected.id);
+                return;
+              }
+              launch({
+                id: token(),
+                kind: 'practice',
+                course,
+                gemId: selected.id,
+                selection: 'fixed-level',
+                level,
+              });
+            }}
+          >
+            <strong>{label}</strong>
+            <span>
+              <MasteryBar
+                score={detailState?.states.find((state) => state.level === level)?.score ?? null}
+                level={level}
+                label={label}
+                threshold={detailRegistration!.mastery.threshold}
+              />
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  ) : null;
   return (
     <div
       ref={root}
@@ -705,7 +726,7 @@ function CourseLanding(props: OriginalLandingProps) {
             className="test-tile recall-tile"
             id="recallTile"
             type="button"
-            onClick={props.onOpenRecall}
+            onClick={() => props.onOpenRecall(undefined, teacher)}
           >
             <RecallIcon />
             <span>Recall</span>
@@ -1002,6 +1023,7 @@ function CourseLanding(props: OriginalLandingProps) {
                   {detailRegistration ? detailActivity?.typeLabel : 'No activity'}
                 </p>
               </div>
+              {choices}
               <div className="gem-progress" aria-live="polite" hidden={Boolean(choices)}>
                 <div>
                   <span id="masteryBand">{bands[detailState?.grade || 1]} mastery</span>
@@ -1097,9 +1119,7 @@ function CourseLanding(props: OriginalLandingProps) {
                       ? 'Choose diagram questions'
                       : 'Choose and print questions'}
                   </a>
-                ) : (
-                  choices
-                )}
+                ) : null}
                 <p
                   className="activity-unavailable"
                   id="activityUnavailable"

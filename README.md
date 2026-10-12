@@ -4,7 +4,7 @@
 
 One React/TypeScript platform with one combined static build at `dist/app`.
 A Level is the fresh-browser default; IGCSE is selected with the course switch.
-It contains all 14 approved activities and 43 curriculum revision targets.
+The current source registers18 activities and shared curriculum revision. Rate Equations is root accepted, including genuine native hidden-tab timing; see [its handoff](RATE-EQUATIONS-INTEGRATION-HANDOFF.md).
 C3L6 is a separate Olympiad challenge. Rocket Recall is excluded.
 
 ## Install and develop
@@ -43,8 +43,8 @@ npm.cmd run preview
 - Nested preview: `npm.cmd run preview -- --port 5183 --prefix /school/chemistry/`, <http://127.0.0.1:5183/school/chemistry/>
 
 Use an HTTP server, rather than opening `index.html` as a local file. The combined
-output supports nested URL prefixes, course switching and direct refresh. All 14
-authorised activities share one lazy runtime dependency graph. Flat historical
+output supports nested URL prefixes, course switching and direct refresh. All18
+registered activities share one lazy runtime dependency graph. Flat historical
 activity links remain supported; `activities/dot-and-cross/index.html` defaults
 to A Level, while `?course=igcse` selects IGCSE. Course-qualified aliases under
 `alevel/activities/` and `igcse/activities/` remove that ambiguity. Query and hash
@@ -176,3 +176,9 @@ selection; `node scripts/verify-explaining-properties.mjs` verifies the amended
 14-activity/43-target contract, retained source-generation fingerprints, both runtime
 closures and protected originals. Earlier S0–S5 inventories/tests remain frozen
 historical records; their report files were retired. No publication is included.
+
+## Current factual Recall (11 October 2026)
+
+The accepted11 October Recall build contained16 activities plus the separate Recall hub. The current source contains18 registered activities; see the [Rate Equations handoff](RATE-EQUATIONS-INTEGRATION-HANDOFF.md). Global/gem Flashcards and Test use121 IGCSE facts and six inherited A Level definitions, with visible canonical IDs and durable checkpoints. Recall has a separate ungraded timing chart; learning edits keep first automatic evidence fixed.
+
+Live local source: [main app](http://127.0.0.1:5261/), [IGCSE Recall](http://127.0.0.1:5261/?course=igcse&view=recall), [review harness](http://127.0.0.1:5261/scripts/tests/igcse-recall-review/index.html). [Recall handoff](RECALL-MAIN-HANDOFF.md) gives current commands/evidence/inventory/limits. Root acceptedS0–S5 and the completed implementation; status ACCEPTED_COMPLETE. Older evidence-retirement notices apply to the historical rebuild. Recent Maxwell/Recall/rate report retirement is complete with required source/control inputs preserved; see [the recent cleanup record](docs/maintenance/recent-verification-cleanup.md).

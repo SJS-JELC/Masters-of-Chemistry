@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "reviewer": "A03 gpt-6.1-sol/high",
+  "source_scope": "Accepted extracted JSON only; no PDF/MS/image access",
+  "candidate_review": {
+    "count": 1001,
+    "pattern_families": 350,
+    "direct_summary": 293,
+    "packet_count": 172,
+    "summary_and_mark_points_review": "All flagged summaries/pattern identities reviewed; direct formula/equation/mixed packets reviewed with context, marking notes and supplied/direct recall tags; broad mark points screened for missed assessed operations."
+  },
+  "formula_primary_patterns": [
+    "3.1-construct-ionic-formula",
+    "3.1-explain-ionic-formula-from-charges"
+  ],
+  "state_primary_patterns": [
+    "1.1-apply-state-symbols-to-chemical-equations",
+    "1.2-write-state-equation-for-state-change",
+    "1.1-complete-equation-states-and-coefficients",
+    "8.3-add-state-symbols-carbonate-acid"
+  ],
+  "equation_primary_ids": [
+    "2025-nov-1-q6bii",
+    "2025-june-1-q5bi",
+    "2025-june-2-q2b",
+    "2025-june-2r-q6ci",
+    "2024-nov-1-q9di",
+    "2024-nov-1-q11ai",
+    "2024-june-1-q7(c)(i)",
+    "2024-june-1-q8(e)(i)",
+    "2024-june-1r-q12a",
+    "2024-june-2r-q3bi",
+    "2023-nov-1-q4biii",
+    "2023-nov-2-q2aii",
+    "2023-june-1-q2bi",
+    "2023-june-1r-q9aiii",
+    "2023-june-2-q2biii",
+    "2023-jan-1r-q3di",
+    "2023-jan-1r-q7bii",
+    "2023-jan-2r-q5ci",
+    "2022-june-1r-q6d",
+    "2022-june-2-q5bi",
+    "2022-jan-1-q6e",
+    "2022-jan-1r-q5div",
+    "2021-nov-1-q7ai",
+    "2021-nov-2-q4cii",
+    "2021-june-1-q5aii",
+    "2021-june-1-q8bii",
+    "2021-jan-1-q3d",
+    "2021-jan-2-q4ai",
+    "2020-nov-1-q5bii",
+    "2020-nov-1-q10ci",
+    "2020-nov-2-q5ci",
+    "2020-jan-1-q1bi",
+    "2020-jan-1-q7biii",
+    "2020-jan-1-q10ai",
+    "2020-jan-1-q10b",
+    "2020-jan-1r-q3dii",
+    "2020-jan-1r-q11a",
+    "2020-jan-2-q6bi",
+    "2020-jan-2-q7ai",
+    "2019-june-1-q5ci",
+    "2019-june-1-q8a",
+    "2019-june-1r-q2c",
+    "2019-june-1r-q4bi",
+    "2019-june-2-q7ciii"
+  ],
+  "equation_secondary_ids": [
+    "2025-june-1-q7a",
+    "2025-june-1r-q5bi",
+    "2023-june-1-q8d",
+    "2023-june-2-q3a",
+    "2022-jan-1r-q6e",
+    "2021-june-1-q6aiii",
+    "2021-jan-1r-q6ai",
+    "2019-june-2-q6bii",
+    "2019-june-2-q6diii",
+    "2019-june-2r-q5ai",
+    "2024-june-1-q8(d)",
+    "2022-june-2r-q3cii",
+    "2021-jan-1-q10d"
+  ],
+  "formula_secondary_ids": [
+    "2022-june-1-q10bi",
+    "2020-jan-1r-q3dii"
+  ],
+  "unresolved": [
+    {
+      "id": "2022-june-2-q3di",
+      "reason": "The summary asks for lithium/chlorine equation but extracted context identifies only reactants. It does not establish that the salt product was named/supplied, so neutral translation versus product recall cannot be distinguished."
+    },
+    {
+      "id": "2021-jan-2r-q8ai",
+      "reason": "Only ammonia is identified in extracted product context; whether the remaining NaCl/H2O products are provided or must be predicted is absent. Keep original Reactions mapping."
+    },
+    {
+      "id": "2021-jan-1r-q9bii",
+      "reason": "Context says expected caesium hydroxide and hydrogen products without saying they are supplied. The source asks formulae then balancing, but evidence cannot establish whether product prediction or named translation is the primary demand."
+    },
+    {
+      "id": "2022-june-1-q10bii",
+      "reason": "Context repeats the equation task and does not identify supplied product names/formulae. A one-mark whole equation combines possible ammonia-acid product recall with balancing; no supported primary reassignment."
+    },
+    {
+      "id": "2022-june-1-q6ai",
+      "reason": "Context repeats the magnesium/hydrochloric-acid task without distinguishing named/supplied products from product prediction in the one-mark whole equation."
+    },
+    {
+      "id": "2024-june-1-q10(a)",
+      "reason": "Only the reactant half of a historical nitric-acid equation is retained; product-supplied status is missing and the source answer has an explicit concentration/oxidising-acid caveat. Preserve historical mapping and qualification."
+    },
+    {
+      "id": "2025-june-2r-q7bii",
+      "reason": "Extracted context says only an energy axis is supplied, but recall metadata labels the balanced combustion equation supplied. Independent coefficient construction versus transcription is unresolved; retain the energy primary and original secondary map."
+    }
+  ],
+  "policy": {
+    "accepted_pilot": "Carry forward exact accepted pilot entry for current record/catalogue hash; no fresh disposition.",
+    "formula": "Construct or justify neutral ionic compound formula; ion-charge recall alone and empirical/organic formula operations retain old map.",
+    "equation_primary": "Explicit coefficient/state task or extracted skeleton/all named products. The reviewed ID list uses full retained context and supplied tags, not keyword alone.",
+    "equation_secondary": "Distinct explicit coefficient/state component of subject-led product recall or mixed calculation. No mark splits.",
+    "unresolved": "Insufficient/conflicting supplied-product status retains the exact original map.",
+    "otherwise": "Retain source subject/skill; equation/formula context alone, symbolic chemical recall, ion tests, half/ionic equations, organic structures, supplied-equation calculations, equilibrium/redox reasoning and supplied labels do not create a new assessed skill."
+  }
+}

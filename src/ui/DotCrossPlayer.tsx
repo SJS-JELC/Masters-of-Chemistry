@@ -14,6 +14,7 @@ import {
 } from '../shell/QuestionChrome.tsx';
 import { QuestionLevelPill } from './QuestionLevelPill.tsx';
 import { responseFingerprint } from './action-state.ts';
+import { isModelAnswerPanelShown } from '../domain/attempt/model-answer.ts';
 import './dot-cross-player.css';
 
 /** Source workspace presentation; the shared attempt/clock/repository still own every command. */
@@ -35,7 +36,8 @@ export function DotCrossPlayer({
   const chrome = useQuestionChrome(),
     displayTitle = questionDisplayTitle(question),
     repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
-  const [answerOpen, setAnswerOpen] = useState(false);
+  const modelShown = attempt.mode === 'student' && isModelAnswerPanelShown(attempt);
+  const [answerOpen, setAnswerOpen] = useState(modelShown);
   const [record, setRecord] = useState<BankRecord | null>(null);
   const [referenceError, setReferenceError] = useState('');
   const student = attempt.mode === 'student';
@@ -70,7 +72,7 @@ export function DotCrossPlayer({
     let cancelled = false;
     setRecord(null);
     setReferenceError('');
-    setAnswerOpen(false);
+    setAnswerOpen(modelShown);
     void (async () => {
       const value =
         question.ref.activityId === 'alevel/dot-and-cross'
@@ -93,6 +95,9 @@ export function DotCrossPlayer({
       cancelled = true;
     };
   }, [question.ref.activityId, question.ref.questionId]);
+  useEffect(() => {
+    if (modelShown) setAnswerOpen(true);
+  }, [modelShown]);
   useEffect(() => {
     if (answerOpen && !dialog.current?.open) dialog.current?.showModal();
     if (!answerOpen && dialog.current?.open) dialog.current.close();
@@ -268,7 +273,7 @@ export function DotCrossPlayer({
       <div className="dot-feedback">{pane}</div>
       {!student && (
         <section className="teacher-answer worked-answer">
-          <h3>Checked answer and diagrams</h3>
+          <h3>MODEL ANSWER</h3>
           {answer}
         </section>
       )}
@@ -287,7 +292,7 @@ export function DotCrossPlayer({
         >
           Close
         </button>
-        <h3 id={id + '-answer'}>Checked answer</h3>
+        <h3 id={id + '-answer'}>MODEL ANSWER</h3>
         {answer}
       </dialog>
       {!student && (

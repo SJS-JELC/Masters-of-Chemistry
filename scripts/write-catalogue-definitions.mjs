@@ -31,9 +31,9 @@ for(const addition of authored.gems){
 const gems=definitions.flatMap(activity=>activity.gems),ids=gems.map(gem=>gem.id);
 if(ids.some(id=>typeof id!=='string'||/rocket|c3l6/i.test(id))||new Set(ids).size!==ids.length)throw Error('Invalid or duplicate canonical gem ID');
 for(const gem of gems){if(!Array.isArray(gem.supportedLevels)||!gem.supportedLevels.length||new Set(gem.supportedLevels).size!==gem.supportedLevels.length||gem.supportedLevels.some(level=>![1,2,3].includes(level))||gem.mastery?.gemId!==gem.id||JSON.stringify(gem.mastery.supportedLevels.map(setting=>setting.level).sort())!==JSON.stringify([...gem.supportedLevels].sort()))throw Error('Inconsistent canonical supported levels');}
-const content=`// Regenerate from accepted source inventory: node scripts/write-catalogue-definitions.mjs\n// Metadata is not an enabled provider; createRegistry registers only explicitly supplied adapters.\nimport type {ActivityDefinition} from './registry.ts';\nimport { olympiad2011Definition } from './olympiad-2011-definition.ts';\nexport const activityDefinitions = ${JSON.stringify(definitions,null,2).slice(0,-1)},\n  olympiad2011Definition\n] as const satisfies readonly ActivityDefinition[];\n`;
+const content=`// Regenerate from accepted source inventory: node scripts/write-catalogue-definitions.mjs\n// Metadata is not an enabled provider; createRegistry registers only explicitly supplied adapters.\nimport type {ActivityDefinition} from './registry.ts';\nimport { olympiad2011Definition } from './olympiad-2011-definition.ts';\nimport { maxwellDefinition } from './maxwells-demon-definition.ts';\nexport const activityDefinitions = ${JSON.stringify(definitions,null,2).slice(0,-1)},\n  olympiad2011Definition,\n  maxwellDefinition\n] as const satisfies readonly ActivityDefinition[];\n`;
 const target=path.join(project,'src/catalogue/definitions.ts');
 if(process.argv.includes('--check')) {
  if(fs.readFileSync(target,'utf8')!==content) throw Error('Catalogue differs from accepted source manifest');
- console.log(JSON.stringify({status:'PASS',activities:definitions.length+1,gems:definitions.reduce((n,a)=>n+a.gems.length,0)}));
-} else {fs.writeFileSync(target,content);console.log(JSON.stringify({status:'GENERATED',activities:definitions.length+1}));}
+ console.log(JSON.stringify({status:'PASS',activities:definitions.length+2,gems:definitions.reduce((n,a)=>n+a.gems.length,0)}));
+} else {fs.writeFileSync(target,content);console.log(JSON.stringify({status:'GENERATED',activities:definitions.length+2}));}

@@ -16,16 +16,19 @@ export type ALevelActivityId =
   | 'alevel/explaining-properties'
   | 'alevel/electron-configurations'
   | 'alevel/dot-and-cross'
-  | 'alevel/ph-titration-curves';
+  | 'alevel/ph-titration-curves'
+  | 'alevel/rate-equations';
 export type IGCSEActivityId =
   | 'igcse/calorimetry'
   | 'igcse/bond-enthalpy'
   | 'igcse/structure-and-bonding'
   | 'igcse/dot-and-cross'
   | 'igcse/energy-enthalpy'
-  | 'igcse/energetics-practical';
+  | 'igcse/energetics-practical'
+  | 'igcse/formulae'
+  | 'igcse/equations';
 export type CurriculumActivityId = ALevelActivityId | IGCSEActivityId;
-export type OlympiadActivityId = 'alevel/c3l6-organic-reactions' | 'alevel/olympiad-2011-q4';
+export type OlympiadActivityId = 'alevel/c3l6-organic-reactions' | 'alevel/olympiad-2011-q4' | 'alevel/maxwells-demon';
 export type ActivityId = CurriculumActivityId | OlympiadActivityId;
 export type Namespace = Readonly<{ course: Course; profileId: ProfileId }>;
 export type CurriculumTarget =
@@ -33,7 +36,7 @@ export type CurriculumTarget =
   | Readonly<{ course: 'igcse'; activityId: IGCSEActivityId; gemId: GemId; level: Level }>;
 /** Fixed questions also carry a seed (normally 0); content is restored by provider. */
 export interface QuestionRef {
-  readonly activityId: ActivityId;
+  readonly activityId: ActivityId | RecallActivityId;
   readonly questionId: QuestionId;
   readonly seed: Seed;
   readonly level: Level;
@@ -45,4 +48,18 @@ export interface SourceReference {
   readonly path: string;
   readonly sha256: string;
   readonly symbolOrSection: string;
+}
+
+/** Recall is a separate practice identity, never a graded activity registration. */
+export type RecallActivityId = 'alevel/recall' | 'igcse/recall';
+export interface RecallQuestionRef extends QuestionRef {
+  readonly activityId: RecallActivityId;
+  readonly level: 1;
+}
+export interface RecallTarget {
+  readonly kind: 'recall';
+  readonly course: Course;
+  readonly activityId: RecallActivityId;
+  readonly factId: string;
+  readonly level: 1;
 }

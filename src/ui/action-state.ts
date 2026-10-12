@@ -1,4 +1,5 @@
 import type { CorrectionFeedback, PlayerAttempt } from '../contracts/attempt.ts';
+import { isModelAnswerShown } from '../domain/attempt/model-answer.ts';
 
 /** Stable response comparison also supports attempts saved before the UI markers existed. */
 export function responseFingerprint(value: unknown): string {
@@ -24,9 +25,10 @@ export interface QuestionActionState {
 export function questionActionState(
   attempt: PlayerAttempt,
   correctionFeedback: CorrectionFeedback | undefined,
-  { ready = true, canNext = true, canCorrect = true } = {},
+  { ready = true, canNext = true, canCorrect = true, modelAnswerVisible = false } = {},
 ): QuestionActionState {
   const student = attempt.mode === 'student';
+  const modelShown = modelAnswerVisible || isModelAnswerShown(attempt);
   const reviewing =
     student && (attempt.phase === 'rubric-review' || attempt.phase === 'drawing-review');
   const assessed = student && attempt.phase === 'assessed';
@@ -51,8 +53,8 @@ export function questionActionState(
         attempt.firstAssessment.kind === 'revealed' &&
         sameFirst));
   return {
-    primary: currentCorrect || gaveUp ? 'next' : 'check',
-    checkEnabled: student && !reviewing && ready && (!assessed || canCorrect),
+    primary: modelShown || currentCorrect || gaveUp ? 'next' : 'check',
+    checkEnabled: student && !modelShown && !reviewing && ready && (!assessed || canCorrect),
     clearEnabled: student && !reviewing,
     giveUpEnabled: student && !reviewing,
     nextEnabled: assessed && canNext,

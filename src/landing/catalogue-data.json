@@ -240,13 +240,10 @@
             2,
             "Rate Equations",
             [
-              "Orders & Rate Equations",
-              "Rate Constants & Units",
-              "Concentration–Time & Rate–Concentration Graphs",
-              "First-order Half-life",
-              "Investigating Rates",
-              "Rate-determining Steps",
-              "Arrhenius Equation"
+              "Orders & Rate Calculations",
+              "Rate Graphs & Half-life",
+              "Rate Equations & Mechanisms",
+              "Arrhenius & Temperature"
             ]
           ],
           [
@@ -445,6 +442,50 @@
           1,
           2
         ]
+      },
+      "u6-t1-2-orders": {
+        "label": "Orders & Rate Calculations",
+        "href": "activities/rate-equations/index.html",
+        "note": "Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true,
+        "availableGrades": [
+          1,
+          2,
+          3
+        ]
+      },
+      "u6-t1-2-graphs": {
+        "label": "Rate Graphs & Half-life",
+        "href": "activities/rate-equations/index.html",
+        "note": "Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true,
+        "availableGrades": [
+          1,
+          2,
+          3
+        ]
+      },
+      "u6-t1-2-mechanisms": {
+        "label": "Rate Equations & Mechanisms",
+        "href": "activities/rate-equations/index.html",
+        "note": "Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true,
+        "availableGrades": [
+          1,
+          2,
+          3
+        ]
+      },
+      "u6-t1-2-arrhenius": {
+        "label": "Arrhenius & Temperature",
+        "href": "activities/rate-equations/index.html",
+        "note": "Choose Structured, Unstructured or Applications practice, or build mastery across all three levels.",
+        "mastery": true,
+        "availableGrades": [
+          1,
+          2,
+          3
+        ]
       }
     },
     "display": {
@@ -457,7 +498,11 @@
         "u6-t1-1-4": "u6-t1-1-5"
       },
       "identities": {
-        "l6-t2-1-4": "l6-t2-1-properties"
+        "l6-t2-1-4": "l6-t2-1-properties",
+        "u6-t1-2-1": "u6-t1-2-orders",
+        "u6-t1-2-2": "u6-t1-2-graphs",
+        "u6-t1-2-3": "u6-t1-2-mechanisms",
+        "u6-t1-2-4": "u6-t1-2-arrhenius"
       }
     }
   },
@@ -497,6 +542,14 @@
             [
               "Ionic Bonding",
               "Covalent Bonding"
+            ]
+          ],
+          [
+            16,
+            "Formulae & Equations",
+            [
+              "Formulae",
+              "Equations"
             ]
           ],
           [
@@ -719,6 +772,27 @@
         "type": "calculation",
         "typeLabel": "Calculation",
         "href": "activities/bond-enthalpy/index.html"
+      },
+      "fourth-16-1": {
+        "label": "Formulae",
+        "type": "short-answer",
+        "typeLabel": "Formulae",
+        "availableGrades": [
+          1,
+          2
+        ],
+        "note": "Recall ion charges and write neutral formulae. Grade 5–6 uses monatomic ions; Grade 7–8 includes polyatomic ions."
+      },
+      "fourth-16-2": {
+        "label": "Equations",
+        "type": "short-answer",
+        "typeLabel": "Equations",
+        "availableGrades": [
+          1,
+          2,
+          3
+        ],
+        "note": "Balance equations, add state symbols and translate named reactions or paragraphs. All three grade bands are freely accessible."
       }
     },
     "display": {

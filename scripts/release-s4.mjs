@@ -1,14 +1,21 @@
 /** Source-owned combined app release inventory. No build/deploy/copy side effects. */
 import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {gzipSync} from 'node:zlib';
 import {runtimeAliasDefinitions} from './runtime-aliases.mjs';
+import {maxwellDefinition} from '../src/catalogue/maxwells-demon-definition.ts';
 import { olympiad2011Definition } from '../src/catalogue/olympiad-2011-definition.ts';
 const project=path.resolve(import.meta.dirname,'..');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const coverage=JSON.parse(fs.readFileSync(path.join(project,'resources/source-generation/inventory/coverage-manifest.json'),'utf8'));
 // Keep frozen migration inventory intact; append separately authorised content.
 coverage.activities.push({id:olympiad2011Definition.id,course:'alevel',strand:'olympiad',supportedLevels:[],leafIds:[],activeBank:'Seven fixed C4H10O constitutional structures',generatorFamilies:[],finiteGeneratorConfigurations:7,sourceRoot:'resources/Olympiads/audit/organic-pilot-brief.md',sourceHashes:olympiad2011Definition.source});
+coverage.activities.push({id:maxwellDefinition.id,course:'alevel',strand:'olympiad',supportedLevels:[],leafIds:[],activeBank:'Three fixed thermochemistry parts: eleven classifications, twelve-arrow hypothetical Hess network, perfluorodecalin algebra',generatorFamilies:[],finiteGeneratorConfigurations:3,sourceRoot:'src/activities/olympiad/maxwells-demon',sourceHashes:maxwellDefinition.source});
 const authored=JSON.parse(fs.readFileSync(path.join(project,'src/catalogue/authored-metadata.json'),'utf8'));
-for(const activity of authored.activities)coverage.activities.push({id:activity.id,course:activity.course,strand:activity.strand,supportedLevels:[...new Set(activity.gems.flatMap(gem=>gem.supportedLevels))],leafIds:activity.gems.map(gem=>gem.id),activeBank:'32 approved fixed property explanations',generatorFamilies:[],finiteGeneratorConfigurations:32,sourceRoot:'src/activities/alevel/explaining-properties',sourceHashes:activity.source});
+for(const activity of authored.activities){
+ const formulae=activity.id==='igcse/formulae',equations=activity.id==='igcse/equations',rates=activity.id==='alevel/rate-equations';
+ coverage.activities.push({id:activity.id,course:activity.course,strand:activity.strand,supportedLevels:[...new Set(activity.gems.flatMap(gem=>gem.supportedLevels))],leafIds:activity.gems.map(gem=>gem.id),activeBank:formulae?'19 vetted ions /36 allowed compound pairs':equations?'24 original authored equations':rates?'12 preserved source families: nine seeded numerical level families and three fixed mechanism questions':'32 approved fixed property explanations',generatorFamilies:formulae?['neutral-ionic-formula']:rates?['orders-L1','orders-L2','orders-L3','graphs-L1','graphs-L2','graphs-L3','arrhenius-L1','arrhenius-L2','arrhenius-L3']:[],finiteGeneratorConfigurations:formulae?36:equations?24:rates?9*(2**32)+3:32,sourceRoot:'src/activities/'+activity.id,sourceHashes:activity.source});
+}
+function reviewFiles(directory,prefix=''){return fs.existsSync(directory)?fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?reviewFiles(path.join(directory,entry.name),prefix+entry.name+'/'):[prefix+entry.name]):[];}
+const reviewAssets=['recall-formulae-atlas','recall-formulae-review'].flatMap(directory=>reviewFiles(path.join(project,'public',directory),directory+'/'));
 const explicitAssets=['assets/SJS-Eagle.svg','assets/fonts/Comfortaa-Bold.ttf','assets/fonts/OFL-Comfortaa.txt','assets/landing/SJS-Eagle.svg','assets/landing/fonts/Comfortaa-Bold.ttf'];
 export function releaseInventory(){
  const root=path.join(project,'dist','app'),vite=JSON.parse(fs.readFileSync(path.join(root,'.vite/manifest.json'),'utf8'));
@@ -22,9 +29,9 @@ export function releaseInventory(){
  const landingKey=Object.keys(vite).find(k=>k.endsWith('/landing/index.ts'));if(!landingKey)throw Error('Actual original landing chunk missing');
  visit(landingKey,initialKeys,false);visit(entries[0][0],allKeys,true);
  const aliasDefinitions=runtimeAliasDefinitions(),aliases=aliasDefinitions.map(alias=>alias.route);
- const initial=[...initialKeys].map(k=>vite[k].file),runtime=new Set(['index.html',...explicitAssets,...aliases]);
+ const initial=[...initialKeys].map(k=>vite[k].file),runtime=new Set(['index.html',...explicitAssets,...reviewAssets,...aliases]);
  for(const k of allKeys){const v=vite[k];for(const f of [v.file,...v.css||[],...v.assets||[]])runtime.add(f);}
- const files=[...runtime].sort().map(f=>{const b=fs.readFileSync(path.join(root,f));return {path:f,bytes:b.length,sha256:sha(b),...(f.endsWith('.js')?{gzipBytes:gzipSync(b).length}:{}),role:f==='index.html'?'entry':aliases.includes(f)?'compatibility-alias':explicitAssets.includes(f)?'licensed-brand-asset':initial.includes(f)?'initial-javascript':'lazy-runtime'};});
+ const files=[...runtime].sort().map(f=>{const b=fs.readFileSync(path.join(root,f));return {path:f,bytes:b.length,sha256:sha(b),...(f.endsWith('.js')?{gzipBytes:gzipSync(b).length}:{}),role:f==='index.html'?'entry':aliases.includes(f)?'compatibility-alias':explicitAssets.includes(f)?'licensed-brand-asset':reviewAssets.includes(f)?'local-review-asset':initial.includes(f)?'initial-javascript':'lazy-runtime'};});
  const activities=coverage.activities.map(a=>({id:a.id,course:a.course,strand:a.strand,revision:a.strand==='curriculum',supportedLevels:a.supportedLevels,leafIds:a.leafIds,activeBank:a.activeBank,generatorFamilies:a.generatorFamilies,finiteGeneratorConfigurations:a.finiteGeneratorConfigurations,sourceRoot:a.sourceRoot,sourceHashes:a.sourceHashes}));
  const result={schemaVersion:2,productionBuild:'app',defaultCourse:'alevel',courses:['alevel','igcse'],generatedAt:new Date().toISOString(),status:'local-runtime-inventory-no-publication',buildRoot:'dist/app',entry:'index.html',shellGzipBudgetBytes:204800,gzipMethod:'node:zlib gzipSync default compression; individual files summed',initialScope:'combined entry plus actual ProductionFoundation, default original landing and their eager imports; excludes deferred providers/editors/statistics/import',entryOnlyJavascriptGzipBytes:files.filter(f=>entryOnlyKeys.map(k=>vite[k].file).includes(f.path)).reduce((n,f)=>n+f.gzipBytes,0),initialJavascript:initial,initialJavascriptGzipBytes:files.filter(f=>initial.includes(f.path)).reduce((n,f)=>n+f.gzipBytes,0),lazyJavascript:files.filter(f=>f.path.endsWith('.js')&&!initial.includes(f.path)).map(f=>f.path),activities,requiredBrandAssets:explicitAssets,provenance:{inventoryPath:'resources/source-generation/inventory/coverage-manifest.json',inventorySha256:sha(fs.readFileSync(path.join(project,'resources/source-generation/inventory/coverage-manifest.json'))),viteManifestSha256:sha(fs.readFileSync(path.join(root,'.vite/manifest.json')))},files};
  result.compatibilityAliases=aliasDefinitions;

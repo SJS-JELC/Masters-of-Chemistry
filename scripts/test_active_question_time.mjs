@@ -33,7 +33,7 @@ test('background, pause and suspension exclude gaps; untimed historical completi
   assert.equal(createActiveClock({attemptId:'historical',idleLimitMs:60000,completed:true,now:()=>sample(0)}).finish(sample(1000)),undefined);
 });
 
-test('every curriculum target rejects incomplete assessment without finishing timing; reveal freezes and creates no evidence',async()=>{
+test('every curriculum target rejects incomplete or invalid assessment without finishing timing; reveal freezes and creates no evidence',async()=>{
   let checked=0;
   for(const course of ['alevel','igcse']){
     const registrations=productionRegistry.curriculumFor(course);
@@ -43,7 +43,11 @@ test('every curriculum target rejects incomplete assessment without finishing ti
       const ref=provider.select({...target,seed:42,previousQuestionIds:[]}),question=provider.restore(ref),idleLimitMs=registration.idleAllowance(question),attemptId='timing-'+checked;
       let now=0;
       const clock=createActiveClock({attemptId,idleLimitMs,now:()=>sample(now)});
-      const state={mode:'student',namespace:{course,profileId:'timing-gate'},attemptId,target,ref,phase:'answering',currentResponses:{},assistance:[],timing:clock.checkpoint()};
+      // Untouched marked coefficient boxes intentionally mean1; use invalid0 to exercise rejection.
+      const allCoefficients=question.parts.every(part=>part.kind==='numeric'&&part.coefficientEntry);
+      const firstPart=question.parts[0];
+      const currentResponses=allCoefficients?{[firstPart.id]:{kind:'numeric',raw:'0',unit:firstPart.unit}}:{};
+      const state={mode:'student',namespace:{course,profileId:'timing-gate'},attemptId,target,ref,phase:'answering',currentResponses,assistance:[],timing:clock.checkpoint()};
       const controller=createAttemptController({question,state,policy,clock,sample:()=>sample(now)});
       now=1000;
       assert.equal(controller.dispatch({kind:'submit',at:1000000+now}).accepted,false);
@@ -59,7 +63,7 @@ test('every curriculum target rejects incomplete assessment without finishing ti
       checked++;
     }
   }
-  assert.equal(checked,43);
+  assert.equal(checked,60);
 });
 
 test('stats count measured zero and immutable durations but never fabricate historical time',()=>{

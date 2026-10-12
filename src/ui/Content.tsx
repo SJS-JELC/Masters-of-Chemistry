@@ -1,4 +1,5 @@
 import type { ContentBlock } from '../contracts/question.ts';
+import { ChemicalNotation, ChemicalProse } from './ChemicalEntry.tsx';
 import { DiagramViewport } from './DiagramViewport.tsx';
 
 function needsViewport(src: string): boolean {
@@ -19,11 +20,15 @@ export function Content({ blocks }: { readonly blocks: readonly ContentBlock[] }
       {blocks.map((block, index) => {
         switch (block.kind) {
           case 'text':
-            return <p key={index}>{block.text}</p>;
+            return (
+              <p key={index}>
+                <ChemicalProse value={block.text} />
+              </p>
+            );
           case 'formula':
             return (
               <p className="formula" key={index}>
-                {block.text}
+                <ChemicalNotation value={block.text} />
               </p>
             );
           case 'image':

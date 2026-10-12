@@ -1,0 +1,77 @@
+{
+  "runId": "RECALL-CODES-20261011",
+  "status": "ACCEPTED_COMPLETE",
+  "authority": "User approved full proposed plan and instructed implementation",
+  "createdAt": "2026-10-11T19:09:23.324Z",
+  "stages": [
+    "Audit/baseline and root mapping gate",
+    "Implementation",
+    "Independent review",
+    "Root acceptance/local release"
+  ],
+  "requirements": {
+    "selection": [
+      "All branch/global ADD ALL toggle: partial/none add eligible, all remove eligible, preserve others and persist, aria-pressed",
+      "Remove four AL year/strand bulk buttons"
+    ],
+    "layout": [
+      "Audit every live recall short answer both courses",
+      "Mastery pane centred shared --question-pane-max-width, standard padding; wide chooser unchanged",
+      "Standalone answer boxes centred; multipart groups centred labelled/unit aligned; inline gaps stay inline; prompts left aligned"
+    ],
+    "identity": [
+      "Entire combined app displayed codes regex ^[A-Z]{2,3}-[A-Z0-9]{6}$",
+      "Keep existing conforming codes; explicit permanent append-only alias mapping for others; RCI IGCSE recall, RCA AL recall, existing prefixes else QN",
+      "Internal IDs/seeds/attempts/schedules/history unchanged; no storage migration",
+      "Shared resolver course/activity/question identity; visible pills/exports canonical, diagnostics retain original IDs",
+      "Old and new lookup/review references accepted, generated seeds preserved",
+      "Audit all registered activities/recall/revision/teacher/restored/review surfaces; no invented IDs on identity-free screens"
+    ],
+    "review": [
+      "Direct subtle Mark as correct beneath eligible wrong text after Check; guidance optional not gate",
+      "048 audit Test/Result valid unrecognized wording review vs wrong/contradictory rejection",
+      "Manual review preserves original first evidence/stage, reload and undo supported"
+    ],
+    "content": [
+      "037 prompt What percentage of air is carbon dioxide? existing0.04% unit",
+      "039 selectable Acidic/Basic buttons, same IDs/marking single selection",
+      "046 remove displayed atmospheric sentence; exact model Test: Heat it until boiling / Result: Boils at exactly 100°C",
+      "046 preserve valid paired boiling and melting/freezing alternatives; pressure assumption authoring-only",
+      "Edit authoritative amendments/regenerate derived content"
+    ]
+  },
+  "delegation": {
+    "structure": "one direct worker then separate sequential reviewer",
+    "implementer": "A01 gpt-6.1-sol/high",
+    "reviewer": "A02 gpt-6.1-sol/high",
+    "initial": 1,
+    "maxActiveDelegates": 1,
+    "maxWithRoot": 2,
+    "capacity": 26,
+    "nested": false,
+    "foreman": 0,
+    "retry": "one consolidated correction pass then independent affected recheck; unresolved identity/data compatibility to root"
+  },
+  "validation": [
+    "all-code format/unique/stable and old/new lookup",
+    "all live recall desktop/mobile layout measurement and representative renders",
+    "content/model/MCQ/review tests",
+    "progress/persistence/seed preservation",
+    "types/build/protected/local release"
+  ],
+  "boundaries": [
+    "combined app only, historical siblings read-only",
+    "preserve unrelated work and existing failures",
+    "no deployment"
+  ],
+  "rootGate": "Worker returns audit/mapping proposal before product edits",
+  "amendments": [
+    {
+      "at": "2026-10-11T19:27:42.508Z",
+      "authority": "User: you can remove all old reference codes - app is not live yet so will just be clutter",
+      "supersedes": "Old-reference lookup preservation and duplicate internal-ID presentation in review exports",
+      "decision": "Only canonical display codes in UI/review/user-facing exports. Remove newly added legacy source/Recall lookup fallback. Keep necessary internal persisted identity/mapping and existing provider seed codecs; no storage deletion or migration. Standard-code lookup remains required."
+    }
+  ],
+  "acceptedAt": "2026-10-11T19:58:34.437Z"
+}

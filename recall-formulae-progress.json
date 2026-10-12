@@ -1,0 +1,111 @@
+{
+  "runId": "RECALL-FORMULAE-20261010",
+  "updatedAt": "2026-10-10T09:32:16.693Z",
+  "stage": "S2",
+  "status": "implementation-finished-final-timing-acceptance-pending",
+  "evidence": [
+    "validation/recall-formulae/s0/S0-aggregate.md",
+    "validation/recall-formulae/s0/input-preflight.json",
+    "validation/recall-formulae/s0/protected-originals.json",
+    "validation/recall-formulae/s0/run-protected-baseline.json",
+    "validation/recall-formulae/s1/S1-aggregate.md",
+    "validation/recall-formulae/s1/integration-checks.json",
+    "validation/recall-formulae/s2/integration/final-build-typecheck.json",
+    "validation/recall-formulae/s2/integration/release-checks.json"
+  ],
+  "protectedHistoricalFailure": 529,
+  "children": [
+    "/root/recall_formulae_foreman/recall_foundation",
+    "/root/recall_formulae_foreman/atlas_pilot",
+    "/root/recall_formulae_foreman/formulae_equations_content",
+    "/root/recall_formulae_foreman/recall_chemistry_exception"
+  ],
+  "delegation": {
+    "initial": 3,
+    "maximumImplementation": 4,
+    "maximumExceptionReviewers": 1,
+    "requested": "gpt-6.1-sol/high",
+    "effective": "unknown"
+  },
+  "rootAcceptances": [
+    "validation/recall-formulae/s0/root-acceptance.json",
+    "validation/recall-formulae/s1/atlas/root-pilot-acceptance.json",
+    "validation/recall-formulae/s1/recall/root-exception-disposition.json",
+    "validation/recall-formulae/s1/root-acceptance.json",
+    "validation/recall-formulae/s2/atlas/root-final-acceptance.json",
+    "validation/recall-formulae/s2/root-review.json"
+  ],
+  "jobs": [
+    {
+      "agentId": "A02",
+      "jobId": "RF-S1-RECALL",
+      "status": "FOREMAN-VALIDATED",
+      "facts": 150,
+      "tests": "6/6 focused PASS, browser pending"
+    },
+    {
+      "agentId": "A03",
+      "jobId": "RF-S1-ATLAS-PILOT",
+      "status": "ROOT-ACCEPTED",
+      "records": 12,
+      "marks": 23
+    },
+    {
+      "agentId": "A03",
+      "jobId": "RF-S2-ATLAS-FULL",
+      "status": "ROOT-ACCEPTED"
+    },
+    {
+      "agentId": "A04",
+      "jobId": "RF-S1-CONTENT",
+      "status": "FOREMAN-VALIDATED",
+      "tests": "9/9",
+      "ions": 19,
+      "pairs": 36,
+      "equations": 24,
+      "examples": 32
+    },
+    {
+      "agentId": "A05",
+      "jobId": "RF-S1-RECALL-CHEM-EXCEPTION",
+      "status": "ROOT-ACCEPTED",
+      "quarantined": "igcse-recall-087"
+    },
+    {
+      "agentId": "A02",
+      "jobId": "RF-S1-RECALL-FIX",
+      "status": "ROOT-ACCEPTED",
+      "evidence": "validation/recall-formulae/s1/recall/scheduler-fix.json"
+    },
+    {
+      "agentId": "A02",
+      "jobId": "RF-S2-RECALL-INTEGRATION",
+      "status": "ESCALATE-NATIVE-HIDDEN-ONLY",
+      "evidence": "validation/recall-formulae/s2/recall/completion.json"
+    },
+    {
+      "agentId": "A04",
+      "jobId": "RF-S2-ACTIVITY-INTEGRATION",
+      "status": "FOREMAN-VALIDATED",
+      "evidence": "validation/recall-formulae/s2/content/completion.json"
+    }
+  ],
+  "finalBuild": {
+    "status": "PASS",
+    "activityCount": 16,
+    "runtimeFileCount": 213,
+    "initialJavascriptGzipBytes": 204275,
+    "budgetMaximum": 204800
+  },
+  "preview": {
+    "url": "http://127.0.0.1:5182",
+    "pid": 30992
+  },
+  "finalAcceptance": {
+    "status": "PENDING",
+    "gate": "Real document-hidden browser timing state or explicit user local-pilot timing exception",
+    "evidence": "validation/recall-formulae/s2/recall/native-tab-observation.json",
+    "rootReview": "validation/recall-formulae/s2/root-review.json",
+    "publication": false
+  }
+}

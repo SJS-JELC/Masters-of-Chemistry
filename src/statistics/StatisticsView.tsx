@@ -1,12 +1,18 @@
+import { questionDisplayCode } from '../content/question-display-identity.ts';
+import { canonicalQuestionPattern } from '../content/canonical-identity.ts';
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import type { CourseDataViewProps } from '../contracts/integration.ts';
 import type { Course, Level } from '../contracts/identity.ts';
+import type { RecallEvidence } from '../contracts/recall.ts';
+import { recallFacts } from '../recall/facts.ts';
 import type { CurriculumEvidence } from '../contracts/session.ts';
 import { createChemistryRepository } from '../persistence/repository.ts';
 import { displayGems } from '../landing/catalogue.ts';
 import { validTiming } from '../domain/timing/active-clock.ts';
 import {
   buildStatistics,
+  buildRecallStatistics,
+  type RecallStatisticsModel,
   countEvidence,
   levelOf,
   outcomeOf,
@@ -102,8 +108,8 @@ function GemRow({
     recent = row?.records.slice(-20) ?? [];
   const description = (record: CurriculumEvidence) => {
     const code =
-      record.ref?.questionId ??
-      (record.provenance === 'legacy-import' ? record.sourceQuestionId : undefined) ??
+      (record.ref ? questionDisplayCode({course, activityId: record.ref.activityId, questionId: record.ref.questionId}) : undefined) ??
+      (record.provenance === 'legacy-import' && record.sourceQuestionId && canonicalQuestionPattern.test(record.sourceQuestionId) ? record.sourceQuestionId : undefined) ??
       'Not recorded';
     const label =
       row?.gem.mastery.supportedLevels.find((item) => item.level === levelOf(record))?.label ??
@@ -233,6 +239,164 @@ function GemRow({
   );
 }
 
+function RecallStatisticsSection({
+  model,
+  days,
+  year,
+  error,
+  onRetry,
+}: Readonly<{
+  model: RecallStatisticsModel;
+  days: StatisticsOptions['days'];
+  year: NonNullable<StatisticsOptions['year']>;
+  error: string | null;
+  onRetry: () => void;
+}>) {
+  const [selectedDay, setSelectedDay] = useState<number | null>(null);
+  const tick = Math.max(
+      60000,
+      Math.ceil(Math.max(0, ...model.bins.map((bin) => bin.counts.activeMs)) / 4 / 60000) * 60000,
+    ),
+    maximum = tick * 4;
+  const detail = (bin: RecallStatisticsModel['bins'][number]) =>
+    `${date(bin.start)}: ${time(bin.counts.activeMs)} Recall active time — ${bin.counts.correct} correct (${time(bin.counts.timeByOutcome.correct)}), ${bin.counts.wrong} wrong (${time(bin.counts.timeByOutcome.wrong)}); ${bin.counts.untimed} first checks without recorded time.`;
+  const selected = model.bins.find((bin) => bin.start === selectedDay);
+  return (
+    <section className="stats-chart-card" aria-label="Recall statistics">
+      <div className="stats-section-heading">
+        <div>
+          <p className="eyebrow">FIRST INDEPENDENT CHECKS</p>
+          <h2>Recall · ungraded</h2>
+        </div>
+        <p data-testid="recall-statistics-time" data-active-ms={model.counts.activeMs}>
+          {model.counts.timed ? time(model.counts.activeMs) : 'No time recorded'} ·{' '}
+          {model.counts.timed} of {model.counts.total} first checks timed
+        </p>
+      </div>
+      <p className="stats-outcome-text" data-testid="recall-statistics-counts">
+        {model.counts.correct} correct · {model.counts.wrong} wrong · {model.counts.untimed} without
+        recorded time
+      </p>
+      <p className="stats-explanation">
+        Recall uses its own spaced schedule. These first checks do not change graded mastery or
+        awards. Assisted answers, reveals, Flashcards and self-corrections add no time here.
+      </p>
+      {error ? (
+        <p className="stats-notice" role="alert">
+          {error} <button onClick={onRetry}>Retry</button>
+        </p>
+      ) : (
+        <>
+          <p className="stats-outcome-text">
+            {days ? (days === 1 ? 'Last 24 hours' : `Last ${days} days`) : 'All time'} · selected
+            course year · days with first independent checks
+          </p>
+          {year !== 'all' && model.unmapped.length > 0 && (
+            <p className="stats-outcome-text">
+              {model.unmapped.length} first checks have no recorded course-year mapping. Choose All
+              years to include their history.
+            </p>
+          )}
+          {!model.counts.total && (
+            <p className="stats-empty">
+              No independent Recall first checks in this selection. Complete a Recall Test, or
+              choose All time and All years.
+            </p>
+          )}
+          {model.counts.untimed > 0 && (
+            <p className="stats-outcome-text">
+              First checks without usable recorded timing remain in the counts and add no time to
+              the chart. Missing historical time is not estimated.
+            </p>
+          )}
+          <div className="stats-legend" aria-label="Recall answer outcomes">
+            <span className="correct">✓ Correct</span>
+            <span className="incorrect">× Wrong</span>
+          </div>
+          {model.bins.length > 0 && (
+            <>
+              <h3>Daily Recall time</h3>
+              <div className="stats-chart-layout">
+                <div className="stats-chart-axis" aria-hidden="true">
+                  {[4, 3, 2, 1, 0].map((value) => (
+                    <span key={value} style={{ bottom: `${value * 45 + 30}px` }}>
+                      {value ? duration(value * tick) : '0 min'}
+                    </span>
+                  ))}
+                </div>
+                <div
+                  className="stats-chart-scroll"
+                  tabIndex={0}
+                  role="region"
+                  aria-label="Daily Recall active time by correct and wrong first checks; scroll horizontally to explore recorded days"
+                >
+                  <div
+                    className="stats-chart-bars"
+                    style={style({ '--chart-columns': model.bins.length })}
+                  >
+                    {model.bins.map((bin) => (
+                      <div className="stats-chart-column" key={bin.start}>
+                        <button
+                          className="stats-chart-bar"
+                          type="button"
+                          data-active-ms={bin.counts.activeMs}
+                          aria-label={detail(bin)}
+                          title={detail(bin)}
+                          aria-pressed={selectedDay === bin.start}
+                          onClick={() => setSelectedDay(bin.start)}
+                          onFocus={() => setSelectedDay(bin.start)}
+                        >
+                          <span
+                            className="stats-chart-value"
+                            aria-hidden="true"
+                            style={{ bottom: `${(bin.counts.activeMs / maximum) * 180 + 4}px` }}
+                          >
+                            {bin.counts.activeMs ? duration(bin.counts.activeMs) : ''}
+                          </span>
+                          <span
+                            className="stats-chart-stack"
+                            aria-hidden="true"
+                            style={{ height: `${(bin.counts.activeMs / maximum) * 180}px` }}
+                          >
+                            {(['correct', 'wrong'] as const).map((outcome) => (
+                              <span
+                                key={outcome}
+                                className={outcome === 'correct' ? 'correct' : 'incorrect'}
+                                style={{
+                                  height: `${bin.counts.activeMs ? (bin.counts.timeByOutcome[outcome] / bin.counts.activeMs) * 100 : 0}%`,
+                                }}
+                              />
+                            ))}
+                          </span>
+                        </button>
+                        <span className="stats-chart-label">
+                          {new Date(bin.start).toLocaleDateString('en-GB', {
+                            day: 'numeric',
+                            month: 'short',
+                          })}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="stats-chart-detail" role="status">
+                {selected
+                  ? detail(selected)
+                  : 'Select a Recall bar for its time and first-check counts.'}
+              </p>
+            </>
+          )}
+          <p className="stats-outcome-text">
+            Each first check is counted once, even when a fact links to several topics. The chart
+            uses the original automatic result and the completion date in this device’s local time.
+          </p>
+        </>
+      )}
+    </section>
+  );
+}
+
 /** Original statistics presentation; persistence and mastery remain in shared domains. */
 export function StatisticsView({
   course,
@@ -241,6 +405,8 @@ export function StatisticsView({
   registry,
   onBack,
 }: CourseDataViewProps & { readonly onBack?: () => void }) {
+  const [recallHistory, setRecallHistory] = useState<readonly RecallEvidence[]>([]);
+  const [recallError, setRecallError] = useState<string | null>(null);
   const [history, setHistory] = useState<readonly CurriculumEvidence[]>([]),
     [error, setError] = useState<string | null>(null),
     [loading, setLoading] = useState(true);
@@ -254,14 +420,19 @@ export function StatisticsView({
     const generation = ++readGeneration.current;
     setLoading(true);
     setError(null);
+    setRecallError(null);
     if (namespace.course !== course) {
       setError('Statistics course and profile do not match.');
       setHistory([]);
+      setRecallHistory([]);
       setLoading(false);
       return;
     }
     const repository = createChemistryRepository(databaseName);
-    const result = await repository.curriculumHistory(namespace);
+    const [result, recallResult] = await Promise.all([
+      repository.curriculumHistory(namespace),
+      repository.recallHistory(namespace),
+    ]);
     repository.close?.();
     if (generation !== readGeneration.current) return;
     if (result.ok) {
@@ -270,6 +441,11 @@ export function StatisticsView({
     } else {
       setHistory([]);
       setError('Saved statistics could not be read.');
+    }
+    if (recallResult.ok) setRecallHistory(recallResult.value);
+    else {
+      setRecallHistory([]);
+      setRecallError('Saved Recall timing could not be read.');
     }
     setLoading(false);
   }, [databaseName, course, namespace.course, namespace.profileId]);
@@ -299,6 +475,16 @@ export function StatisticsView({
         now: snapshotAt,
       }),
     [namespace.course, namespace.profileId, registry, history, days, year, course, snapshotAt],
+  );
+  const recallModel = useMemo(
+    () =>
+      buildRecallStatistics(namespace, recallHistory, {
+        days,
+        year,
+        now: snapshotAt,
+        facts: recallFacts,
+      }),
+    [namespace.course, namespace.profileId, recallHistory, days, year, snapshotAt],
   );
   const tick = Math.max(
       60000,
@@ -582,6 +768,13 @@ export function StatisticsView({
                 add no time. Time follows the answer’s completion date in this device’s local time.
               </p>
             </section>
+            <RecallStatisticsSection
+              model={recallModel}
+              days={days}
+              year={year}
+              error={recallError}
+              onRetry={() => void refresh()}
+            />
             <section id="statsTopics" tabIndex={-1} aria-labelledby="statsTopicsHeading">
               <div className="stats-section-heading">
                 <div>

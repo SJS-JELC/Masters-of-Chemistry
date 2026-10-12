@@ -1,0 +1,49 @@
+{
+  "runId": "RF-UX-20261010",
+  "stage": "S2",
+  "status": "accepted-complete",
+  "updatedAt": "2026-10-10T17:28:11.736Z",
+  "evidence": [
+    "validation/recall-formulae-ux/s0/S0-proposal.md",
+    "validation/recall-formulae-ux/s0/input-inspection.json",
+    "validation/recall-formulae-ux/s0/protected-run.json",
+    "validation/recall-formulae-ux/s2/S2-final-aggregate.md",
+    "validation/recall-formulae-ux/s2/final-manifest.json",
+    "validation/recall-formulae-ux/s2/integration/final-checks.json"
+  ],
+  "delegation": {
+    "initial": 3,
+    "maxImplementation": 4,
+    "maxReviewers": 1,
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "effective": "unknown"
+  },
+  "priorHiddenAcceptance": "PENDING",
+  "rootAcceptances": [
+    "validation/recall-formulae-ux/s0/root-acceptance.json",
+    "validation/recall-formulae-ux/s2/root-acceptance.json"
+  ],
+  "jobs": [
+    {
+      "agentId": "A06",
+      "jobId": "UX-MENU-MASTERY",
+      "handle": "/root/recall_formulae_foreman/ux_mastery_navigation",
+      "status": "FOREMAN-VALIDATED"
+    },
+    {
+      "agentId": "A07",
+      "jobId": "UX-CHEMICAL-CONTROLS",
+      "handle": "/root/recall_formulae_foreman/ux_chemical_controls",
+      "status": "FOREMAN-VALIDATED"
+    },
+    {
+      "agentId": "A08",
+      "jobId": "UX-IDENTITY-MARKING",
+      "handle": "/root/recall_formulae_foreman/ux_identity_marking",
+      "status": "FOREMAN-VALIDATED",
+      "evidence": "validation/recall-formulae-ux/s1/identity/completion.json"
+    }
+  ],
+  "completionScope": "RF-UX refinement only"
+}

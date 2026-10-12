@@ -20,3 +20,7 @@
 .dot-answer-dialog .content p{font-size:.9rem;line-height:1.5}
 .dot-cross-player .teacher-answer{border:1px solid #343459;background:#101431;margin-top:20px;padding:20px;border-radius:22px}
 @media(max-width:600px){.course-shell:has(.dot-cross-player){padding-inline:12px}.dot-question-panel{padding:16px 0}.dot-question-panel .heading-row{flex-wrap:wrap}.dot-answer-dialog{width:calc(100% - 24px);padding:20px}.dot-question-panel .content p:first-child{font-size:1.1rem}}
+
+/* Shared model answer panel treatment. */
+.dot-cross-player .teacher-answer.worked-answer,.dot-answer-dialog{border:1px solid var(--positive);border-radius:12px;padding:12px 20px 20px}
+.dot-cross-player .teacher-answer.worked-answer>h3,.dot-answer-dialog>h3{margin:0 0 .8rem;color:var(--positive);font:700 .78rem/1.4 Comfortaa,sans-serif;letter-spacing:.07em}

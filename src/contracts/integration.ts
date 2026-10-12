@@ -1,4 +1,4 @@
-import type { ActivityId, Course, Namespace, QuestionRef } from './identity';
+import type { ActivityId, Course, Namespace, QuestionRef, RecallQuestionRef } from './identity';
 import type { ActivityRegistry } from './registry';
 import type { ImportBatch } from './repository';
 import type { CurriculumLaunchRequest } from './landing';
@@ -25,6 +25,7 @@ export interface TeacherCatalogueEntry {
   readonly group?: string;
 }
 export type CompatibilityResolution =
+  | Readonly<{ kind: 'recall'; ref: RecallQuestionRef; historical: boolean; source: string }>
   | Readonly<{ kind: 'curriculum'; ref: QuestionRef; source: string }>
   | Readonly<{ kind: 'olympiad'; activityId: 'alevel/c3l6-organic-reactions'; source: string }>
   | Readonly<{ kind: 'unrecognized'; raw: string; reason: string }>;

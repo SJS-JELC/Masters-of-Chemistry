@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "job_id": "RF-S1-ATLAS-PILOT",
+  "reviewer": "A03 gpt-6.1-sol/high",
+  "review_basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+  "root_acceptance_status": "PENDING",
+  "decisions": [
+    {
+      "id": "2025-nov-1-q8a",
+      "strata": [
+        "formula-polyatomic"
+      ],
+      "primary": "16.1",
+      "secondary": [
+        "3.1"
+      ],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "All three marked cells construct neutral ionic formulae from supplied charges; no bonding explanation is assessed.",
+      "review": "Mg2+ needs two NO3−; two Li+ balance SO4²−; Al3+ and PO4³− pair 1:1. Brackets only for repeated nitrate. All three marks remain one intact table record.",
+      "teaching_band": "7-8"
+    },
+    {
+      "id": "2023-jan-1-q8ai",
+      "strata": [
+        "formula-monatomic"
+      ],
+      "primary": "16.1",
+      "secondary": [
+        "3.1"
+      ],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "The three cells assess charge-balanced formula construction with all ion charges supplied.",
+      "review": "Na+/Cl− gives NaCl; Mg2+/Cl− gives MgCl2; Mg2+/N3− gives Mg3N2. Preserve historical formatting and reversed-order allowances in original fields.",
+      "teaching_band": "5-6"
+    },
+    {
+      "id": "2025-june-1-q4c",
+      "strata": [
+        "balancing-polyatomic"
+      ],
+      "primary": "16.2",
+      "secondary": [
+        "7.5"
+      ],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "Only coefficients of supplied formulae earn the mark; the record does not calculate a mole amount.",
+      "review": "3:2:1:6 conserves Ca3 P2 H12 O14. Source permits equivalent multiples/fractions. No alteration to empirical 7-8 classification.",
+      "teaching_band": "7-8"
+    },
+    {
+      "id": "2021-nov-2-q3ai",
+      "strata": [
+        "balancing-and-states"
+      ],
+      "primary": "16.2",
+      "secondary": [],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "Both marked operations are equation coefficients and states with formulae supplied; no redox reasoning is asked.",
+      "review": "2H2S(g)+SO2(g)→3S(s)+2H2O(l) conserves H4 S3 O2. Gases and liquid water follow extracted ordinary laboratory context; retain indivisible two-mark record.",
+      "teaching_band": "5-6"
+    },
+    {
+      "id": "2025-nov-1-q4cii",
+      "strata": [
+        "states",
+        "empirical-teaching-band-separation"
+      ],
+      "primary": "16.2",
+      "secondary": [],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "All required responses are state symbols beside supplied formulae; diffusion is context, not this leaf’s scored reasoning.",
+      "review": "NH3(g)+HCl(g)⇌NH4Cl(s) has conserved atoms. All three states required for one mark. Source empirical band 9 is retained even though teaching state-symbol activity is 5-6.",
+      "teaching_band": "5-6"
+    },
+    {
+      "id": "2019-june-1r-q6bv",
+      "strata": [
+        "simple-named-product-translation"
+      ],
+      "primary": "16.2",
+      "secondary": [
+        "9.3"
+      ],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "Reactant and both product names are explicitly supplied; the marked response is their formula equation, not prediction of an alkene reaction.",
+      "review": "C2H4Cl2→C2H3Cl+HCl conserves C2 H4 Cl2. Historical case/format allowances remain source data, not new activity marking rules.",
+      "teaching_band": "7-8"
+    },
+    {
+      "id": "2023-jan-2r-q5d",
+      "strata": [
+        "complex-named-product-translation"
+      ],
+      "primary": "16.2",
+      "secondary": [
+        "7.5",
+        "16.1"
+      ],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "Named products calcium hydroxide and phosphine are supplied; formula translation and balancing are the two directly marked operations.",
+      "review": "Ca3P2+6H2O→3Ca(OH)2+2PH3 conserves Ca3 P2 H12 O6. Phosphine formula PH3 is supplied; calcium hydroxide is ionic construction, supporting 16.1 secondary. Source formula dependency retained.",
+      "teaching_band": "9"
+    },
+    {
+      "id": "2025-nov-1-q10ci",
+      "strata": [
+        "supplied-equation-supporting-calculation"
+      ],
+      "primary": "7.5",
+      "secondary": [],
+      "disposition": "RETAIN_ORIGINAL",
+      "rationale": "The balanced equation is supplied; marks assess a limiting-reagent comparison, not formula/equation construction.",
+      "review": "3.20/27≈0.119 mol Al versus 0.120×2/3=0.080 mol required confirms acid limiting. A supplied ratio does not justify a new 16.2 tag.",
+      "teaching_band": null
+    },
+    {
+      "id": "2020-nov-2-q3b",
+      "strata": [
+        "mixed-indivisible-subpart"
+      ],
+      "primary": "13.1",
+      "secondary": [
+        "13.2",
+        "16.2"
+      ],
+      "disposition": "ADD_SECONDARY",
+      "rationale": "Method choice and reactivity justification remain the dominant skill; a balanced lead-forming equation is an explicit third requirement.",
+      "review": "Retain all three marks under 13.1 once, with no fabricated subparts. 2PbO+C→2Pb+CO2, PbO+CO→Pb+CO2 and PbO+C→Pb+CO each conserve atoms. Equation component warrants 16.2 secondary.",
+      "teaching_band": null
+    },
+    {
+      "id": "2023-jan-1r-q9c",
+      "strata": [
+        "hydrate-translation",
+        "complex-borderline-context"
+      ],
+      "primary": "16.2",
+      "secondary": [
+        "11.2"
+      ],
+      "disposition": "REASSIGN_PRIMARY",
+      "rationale": "Extracted context and supplied-recall tags identify all products; marked formulae and coefficients assess translating a stated hydrate decomposition, not predicting nitrate products.",
+      "review": "2Zn(NO3)2·6H2O→2ZnO+4NO2+O2+12H2O conserves Zn2 N4 H24 O24, treating six waters per hydrate formula unit. Adequate extraction includes reactant coefficient and product names; no source reopening required.",
+      "teaching_band": "9"
+    },
+    {
+      "id": "2025-june-1-q4aii",
+      "strata": [
+        "inverse-ion-charge-boundary"
+      ],
+      "primary": "3.1",
+      "secondary": [],
+      "disposition": "RETAIN_ORIGINAL",
+      "rationale": "Selecting ion charges from a supplied formula does not construct an ionic compound formula; keep ionic bonding primary.",
+      "review": "3Ca2+ and 2PO4³− give +6 and −6, but the assessed answer is the pair of ion charges, not Ca3(PO4)2. Boundary avoids tagging every ion recall item as new Formulae.",
+      "teaching_band": null
+    },
+    {
+      "id": "2022-jan-2r-q6d",
+      "strata": [
+        "half-equation-exclusion"
+      ],
+      "primary": "13.4",
+      "secondary": [],
+      "disposition": "RETAIN_ORIGINAL",
+      "rationale": "The assessed cathode half-equation is specifically excluded from the new neutral whole-equation scope, including its state-symbol component.",
+      "review": "Pb2++2e−→Pb conserves charge and lead. Preserve historical Pb(s)/Pb(l) allowances and corrupted new-fact text verbatim in original; that fact is not imported or endorsed. No 16.2 tag.",
+      "teaching_band": null
+    }
+  ]
+}

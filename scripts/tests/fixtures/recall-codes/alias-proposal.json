@@ -1,0 +1,1113 @@
+{
+  "schemaVersion": 1,
+  "authority": "Pending root audit gate",
+  "assignment": "Explicit permanent table; stable source-number aliases and six manually named A Level slots. Historical H slots are fixed by this one initial proposal; future entries append without recomputation.",
+  "rows": [
+    {
+      "course": "alevel",
+      "activityId": "alevel/recall",
+      "questionId": "electron-shell-capacities",
+      "code": "RCA-000001",
+      "live": true
+    },
+    {
+      "course": "alevel",
+      "activityId": "alevel/recall",
+      "questionId": "subshell-capacities",
+      "code": "RCA-000002",
+      "live": true
+    },
+    {
+      "course": "alevel",
+      "activityId": "alevel/recall",
+      "questionId": "orbital-filling-rules",
+      "code": "RCA-000003",
+      "live": true
+    },
+    {
+      "course": "alevel",
+      "activityId": "alevel/recall",
+      "questionId": "ionic-lattice-solid",
+      "code": "RCA-000004",
+      "live": true
+    },
+    {
+      "course": "alevel",
+      "activityId": "alevel/recall",
+      "questionId": "coordinate-bond",
+      "code": "RCA-000005",
+      "live": true
+    },
+    {
+      "course": "alevel",
+      "activityId": "alevel/recall",
+      "questionId": "bond-enthalpy-strength",
+      "code": "RCA-000006",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-001",
+      "code": "RCI-000001",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-002",
+      "code": "RCI-000002",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-003",
+      "code": "RCI-000003",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-004",
+      "code": "RCI-000004",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-005",
+      "code": "RCI-000005",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-006",
+      "code": "RCI-000006",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-007",
+      "code": "RCI-000007",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-008",
+      "code": "RCI-000008",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-009",
+      "code": "RCI-000009",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-010",
+      "code": "RCI-000010",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-011",
+      "code": "RCI-000011",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-012",
+      "code": "RCI-000012",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-013",
+      "code": "RCI-000013",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-014",
+      "code": "RCI-000014",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-015",
+      "code": "RCI-000015",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-016",
+      "code": "RCI-000016",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-017",
+      "code": "RCI-000017",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-018",
+      "code": "RCI-000018",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-019",
+      "code": "RCI-000019",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-020",
+      "code": "RCI-000020",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-021",
+      "code": "RCI-000021",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-022",
+      "code": "RCI-000022",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-023",
+      "code": "RCI-000023",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-024",
+      "code": "RCI-000024",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-025",
+      "code": "RCI-000025",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-026",
+      "code": "RCI-000026",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-027",
+      "code": "RCI-000027",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-028",
+      "code": "RCI-000028",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-029",
+      "code": "RCI-000029",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-030",
+      "code": "RCI-000030",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-031",
+      "code": "RCI-000031",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-032",
+      "code": "RCI-000032",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-033",
+      "code": "RCI-000033",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-034",
+      "code": "RCI-000034",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-035",
+      "code": "RCI-000035",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-036",
+      "code": "RCI-000036",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-037",
+      "code": "RCI-000037",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-038",
+      "code": "RCI-000038",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-039",
+      "code": "RCI-000039",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-040",
+      "code": "RCI-000040",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-041",
+      "code": "RCI-000041",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-042",
+      "code": "RCI-000042",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-043",
+      "code": "RCI-000043",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-044",
+      "code": "RCI-000044",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-045",
+      "code": "RCI-000045",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-046",
+      "code": "RCI-000046",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-047",
+      "code": "RCI-000047",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-048",
+      "code": "RCI-000048",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-049",
+      "code": "RCI-000049",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-050",
+      "code": "RCI-000050",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-051",
+      "code": "RCI-000051",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-052",
+      "code": "RCI-000052",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-053",
+      "code": "RCI-000053",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-054",
+      "code": "RCI-000054",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-055",
+      "code": "RCI-000055",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-056",
+      "code": "RCI-000056",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-057",
+      "code": "RCI-000057",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-058",
+      "code": "RCI-000058",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-059",
+      "code": "RCI-000059",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-060",
+      "code": "RCI-000060",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-061",
+      "code": "RCI-000061",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-062",
+      "code": "RCI-000062",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-063",
+      "code": "RCI-000063",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-064",
+      "code": "RCI-000064",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-065",
+      "code": "RCI-000065",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-066",
+      "code": "RCI-000066",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-067",
+      "code": "RCI-000067",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-068",
+      "code": "RCI-000068",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-069",
+      "code": "RCI-000069",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-070",
+      "code": "RCI-000070",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-071",
+      "code": "RCI-000071",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-072",
+      "code": "RCI-000072",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-073",
+      "code": "RCI-000073",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-074",
+      "code": "RCI-000074",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-075",
+      "code": "RCI-000075",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-076",
+      "code": "RCI-000076",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-077",
+      "code": "RCI-000077",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-078",
+      "code": "RCI-000078",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-079",
+      "code": "RCI-000079",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-080",
+      "code": "RCI-000080",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-082",
+      "code": "RCI-000082",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-083",
+      "code": "RCI-000083",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-084",
+      "code": "RCI-000084",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-085",
+      "code": "RCI-000085",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-086",
+      "code": "RCI-000086",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-089",
+      "code": "RCI-000089",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-090",
+      "code": "RCI-000090",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-091",
+      "code": "RCI-000091",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-092",
+      "code": "RCI-000092",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-093",
+      "code": "RCI-000093",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-094",
+      "code": "RCI-000094",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-095",
+      "code": "RCI-000095",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-096",
+      "code": "RCI-000096",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-097",
+      "code": "RCI-000097",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-098",
+      "code": "RCI-000098",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-099",
+      "code": "RCI-000099",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-100",
+      "code": "RCI-000100",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-101",
+      "code": "RCI-000101",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-102",
+      "code": "RCI-000102",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-103",
+      "code": "RCI-000103",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-104",
+      "code": "RCI-000104",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-105",
+      "code": "RCI-000105",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-106",
+      "code": "RCI-000106",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-107",
+      "code": "RCI-000107",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-108",
+      "code": "RCI-000108",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-109",
+      "code": "RCI-000109",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-110",
+      "code": "RCI-000110",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-111",
+      "code": "RCI-000111",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-112",
+      "code": "RCI-000112",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-113",
+      "code": "RCI-000113",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-114",
+      "code": "RCI-000114",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-115",
+      "code": "RCI-000115",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-116",
+      "code": "RCI-000116",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-117",
+      "code": "RCI-000117",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-118",
+      "code": "RCI-000118",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-119",
+      "code": "RCI-000119",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-120",
+      "code": "RCI-000120",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-121",
+      "code": "RCI-000121",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-122",
+      "code": "RCI-000122",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-123",
+      "code": "RCI-000123",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-124",
+      "code": "RCI-000124",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-025a",
+      "code": "RCI-00025A",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-recall-025b",
+      "code": "RCI-00025B",
+      "live": true
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-aluminium-charge",
+      "code": "RCI-H00001",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-aluminium-formula",
+      "code": "RCI-H00002",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-bromide-charge",
+      "code": "RCI-H00003",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-bromide-formula",
+      "code": "RCI-H00004",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-calcium-charge",
+      "code": "RCI-H00005",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-calcium-formula",
+      "code": "RCI-H00006",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-chloride-charge",
+      "code": "RCI-H00007",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-chloride-formula",
+      "code": "RCI-H00008",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-copper-ii-charge",
+      "code": "RCI-H00009",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-copper-ii-formula",
+      "code": "RCI-H0000A",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-iodide-charge",
+      "code": "RCI-H0000B",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-iodide-formula",
+      "code": "RCI-H0000C",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-iron-ii-charge",
+      "code": "RCI-H0000D",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-iron-ii-formula",
+      "code": "RCI-H0000E",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-iron-iii-charge",
+      "code": "RCI-H0000F",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-iron-iii-formula",
+      "code": "RCI-H0000G",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-magnesium-charge",
+      "code": "RCI-H0000H",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-magnesium-formula",
+      "code": "RCI-H0000I",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-oxide-charge",
+      "code": "RCI-H0000J",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-oxide-formula",
+      "code": "RCI-H0000K",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-potassium-charge",
+      "code": "RCI-H0000L",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-potassium-formula",
+      "code": "RCI-H0000M",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-sodium-charge",
+      "code": "RCI-H0000N",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-sodium-formula",
+      "code": "RCI-H0000O",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-sulfide-charge",
+      "code": "RCI-H0000P",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-ion-sulfide-formula",
+      "code": "RCI-H0000Q",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-state-g",
+      "code": "RCI-H0000R",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-state-l",
+      "code": "RCI-H0000S",
+      "live": false
+    },
+    {
+      "course": "igcse",
+      "activityId": "igcse/recall",
+      "questionId": "igcse-state-s",
+      "code": "RCI-H0000T",
+      "live": false
+    }
+  ]
+}

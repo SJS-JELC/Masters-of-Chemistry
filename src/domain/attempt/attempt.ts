@@ -1,3 +1,4 @@
+import { isRateGraphWorkspaceState, supportsRateGraphWorkspace, sameRateGraphWorkspace } from '../../contracts/workspace.ts';
 import type {
   ActiveClock,
   Assessment,
@@ -12,6 +13,8 @@ import type {
   RubricJudgement,
   RubricReview,
   StudentAttempt,
+  AnyStudentAttempt,
+  AttemptFamily,
   TimingResult,
 } from '../../contracts/attempt.ts';
 import type {
@@ -24,6 +27,7 @@ import type {
 import type { CurriculumEvidence } from '../../contracts/session.ts';
 import { browserClockSample, validTiming } from '../timing/active-clock.ts';
 import { checkQuestionInput } from './input-checks.ts';
+import { automaticModelAnswerShown, isModelAnswerShown } from './model-answer.ts';
 
 function freeze<T>(value: T): T {
   if (value !== null && typeof value === 'object') {
@@ -33,16 +37,23 @@ function freeze<T>(value: T): T {
   return value;
 }
 const copy = <T>(value: T): T => freeze(structuredClone(value));
-const no = (state: StudentAttempt, message: string): AttemptTransition => ({
+const no = (state: AnyStudentAttempt, message: string): AttemptTransition<AnyStudentAttempt> => ({
   accepted: false,
   state,
   message,
 });
-const yes = (state: StudentAttempt): AttemptTransition => ({ accepted: true, state: copy(state) });
+const yes = (state: AnyStudentAttempt): AttemptTransition<AnyStudentAttempt> => ({
+  accepted: true,
+  state: copy(state),
+});
 const feedback = (
-  state: StudentAttempt,
+  state: AnyStudentAttempt,
   correctionFeedback: CorrectionFeedback,
-): AttemptTransition => ({ accepted: true, state, correctionFeedback: copy(correctionFeedback) });
+): AttemptTransition<AnyStudentAttempt> => ({
+  accepted: true,
+  state,
+  correctionFeedback: copy(correctionFeedback),
+});
 const EMPTY_MARKS: RawMarks = Object.freeze({ earned: 0, available: 0, points: Object.freeze([]) });
 function marksValid(marks: RawMarks): boolean {
   return (
@@ -70,7 +81,7 @@ function scoreFor(policy: MarkingPolicy, marks: RawMarks): 0 | 0.5 | 1 {
 }
 export interface AttemptTransitionInput {
   readonly question: Question;
-  readonly state: StudentAttempt;
+  readonly state: AnyStudentAttempt;
   readonly command: AttemptCommand;
   readonly policy: MarkingPolicy;
   readonly learningReviewPolicy?: LearningReviewPolicy;
@@ -110,7 +121,12 @@ function replaceJudgement(
   };
 }
 /** Pure state transition: no clock calls, DOM, database or attempt-ID creation. */
-export function transitionAttempt(input: AttemptTransitionInput): AttemptTransition {
+export function transitionAttempt<S extends AnyStudentAttempt>(
+  input: AttemptTransitionInput & { readonly state: S },
+): AttemptTransition<AttemptFamily<S>> {
+  return transitionAnyAttempt(input) as AttemptTransition<AttemptFamily<S>>;
+}
+function transitionAnyAttempt(input: AttemptTransitionInput): AttemptTransition<AnyStudentAttempt> {
   const { question, state, command, policy } = input;
   if (
     state.ref.activityId !== question.ref.activityId ||
@@ -119,7 +135,20 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
     state.ref.level !== question.ref.level
   )
     return no(state, 'Question identity does not match the attempt.');
+  if (
+    (command.kind === 'submit' || command.kind === 'check-correction') &&
+    isModelAnswerShown(state)
+  )
+    return no(
+      state,
+      'The model answer has been shown. Move to the next question to check a fresh response.',
+    );
   switch (command.kind) {
+    case 'workspace': {
+      if (!supportsRateGraphWorkspace(state.ref) || !isRateGraphWorkspaceState(command.workspace))
+        return no(state, 'Invalid unmarked graph workspace.');
+      return yes({ ...state, workspace: command.workspace });
+    }
     case 'respond': {
       if (state.phase === 'rubric-review')
         return no(state, 'The explanation is locked during rubric review.');
@@ -161,7 +190,11 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
             item.supportId === command.assistance.supportId,
         )
       )
-        return yes(command.assistance.kind === 'hint' ? state : { ...state, currentGiveUp: true });
+        return yes(
+          command.assistance.kind === 'hint'
+            ? state
+            : { ...state, currentGiveUp: true, modelAnswerShown: true },
+        );
       const assistance = [...state.assistance, copy(command.assistance)];
       if (state.phase === 'answering' && command.assistance.kind !== 'hint') {
         const firstResponse = frozen(
@@ -182,12 +215,15 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
           firstAssessment,
           assistance,
           currentGiveUp: true,
+          modelAnswerShown: true,
         });
       }
       return yes({
         ...state,
         assistance,
-        ...(command.assistance.kind !== 'hint' ? { currentGiveUp: true as const } : {}),
+        ...(command.assistance.kind !== 'hint'
+          ? { currentGiveUp: true as const, modelAnswerShown: true as const }
+          : {}),
       });
     }
     case 'check-correction': {
@@ -231,11 +267,29 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         )
       )
         return no(state, 'The marking policy returned inconsistent automatic correction marks.');
-      return feedback(copy(checkedState), {
-        kind: 'correction-learning',
-        status: marked.marks.earned === marked.marks.available ? 'correct' : 'wrong',
-        marks: marked.marks,
-      });
+      const correct = marked.marks.available > 0 && marked.marks.earned === marked.marks.available;
+      const selfReviewComplete =
+        state.firstAssessment.kind === 'revealed' ||
+        state.firstAssessment.marks.points
+          .filter((point) => {
+            const part = question.parts.find((part) => part.id === point.partId);
+            return part?.kind === 'explanation' || part?.kind === 'drawing-self-check';
+          })
+          .every((point) => point.earned === point.available);
+      return feedback(
+        copy({
+          ...checkedState,
+          ...(automaticModelAnswerShown(question, marked.marks, state) && selfReviewComplete
+            ? { modelAnswerShown: true as const }
+            : {}),
+          ...(correct && selfReviewComplete ? { modelAnswerPanelShown: true as const } : {}),
+        }),
+        {
+          kind: 'correction-learning',
+          status: correct ? 'correct' : 'wrong',
+          marks: marked.marks,
+        },
+      );
     }
     case 'submit': {
       if (state.phase !== 'answering')
@@ -267,6 +321,8 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         return yes({
           ...base,
           phase: 'drawing-review',
+          // The mandatory self-check displays its model; its review commands remain available.
+          modelAnswerShown: true,
           firstResponse,
           automaticMarks: marked.marks,
           checks: drawingParts.map((part) => ({ partId: part.id, judgement: 'pending' })),
@@ -299,6 +355,9 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         ...base,
         phase: 'assessed',
         firstResponse,
+        ...(automaticModelAnswerShown(question, marked.marks, state)
+          ? { modelAnswerShown: true as const }
+          : {}),
         firstAssessment: {
           kind: 'marked',
           assessedAt: command.at,
@@ -392,6 +451,9 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
       return yes({
         ...base,
         phase: 'assessed',
+        ...(marks.available > 0 && marks.earned === marks.available
+          ? { modelAnswerShown: true as const }
+          : {}),
         firstAssessment: {
           kind: 'self-rubric',
           assessedAt: command.at,
@@ -421,7 +483,7 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         [part.id]: { kind: 'drawing-self-check', matches: command.matches },
       };
       if (checks.some((check) => check.judgement === 'pending'))
-        return yes({ ...state, checks, currentResponses });
+        return yes({ ...state, modelAnswerShown: true, checks, currentResponses });
       const points = [...state.automaticMarks.points];
       for (const check of checks) {
         const checkedPart = question.parts.find((part) => part.id === check.partId);
@@ -448,6 +510,10 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
         ...base,
         phase: 'assessed',
         currentResponses,
+        modelAnswerShown: true,
+        ...(marks.available > 0 && marks.earned === marks.available
+          ? { modelAnswerShown: true as const }
+          : {}),
         firstAssessment: {
           kind: 'self-drawing',
           assessedAt: command.at,
@@ -495,16 +561,18 @@ export function transitionAttempt(input: AttemptTransitionInput): AttemptTransit
   }
 }
 
-export interface AttemptControllerOptions {
+export interface AttemptControllerOptions<S extends AnyStudentAttempt = StudentAttempt> {
   readonly question: Question;
-  readonly state: StudentAttempt;
+  readonly state: S;
   readonly policy: MarkingPolicy;
   readonly learningReviewPolicy?: LearningReviewPolicy;
   readonly clock: ActiveClock;
   readonly sample?: () => ClockSample;
 }
-export function createAttemptController(options: AttemptControllerOptions): AttemptController {
-  let state = copy(options.state);
+export function createAttemptController<S extends AnyStudentAttempt = StudentAttempt>(
+  options: AttemptControllerOptions<S>,
+): AttemptController<AttemptFamily<S>> {
+  let state: AnyStudentAttempt = copy(options.state);
   if (
     state.attemptId !== options.clock.attemptId ||
     state.namespace.course !== state.target.course ||
@@ -537,7 +605,7 @@ export function createAttemptController(options: AttemptControllerOptions): Atte
     )
       throw new Error('Incompatible answering checkpoint.');
   }
-  function checkpoint(): StudentAttempt {
+  function checkpoint(): AnyStudentAttempt {
     if (state.phase === 'answering') {
       const timing = options.clock.checkpoint();
       if (!timing || timing.finished || timing.idleLimitMs !== state.timing.idleLimitMs)
@@ -557,7 +625,7 @@ export function createAttemptController(options: AttemptControllerOptions): Atte
       options.clock.interact(sample);
       return checkpoint();
     },
-    dispatch(command: AttemptCommand): AttemptTransition {
+    dispatch(command: AttemptCommand): AttemptTransition<AnyStudentAttempt> {
       const sample = now();
       if (command.kind === 'pause') options.clock.pause(sample);
       else options.clock.sample(sample);
@@ -578,13 +646,19 @@ export function createAttemptController(options: AttemptControllerOptions): Atte
         ...(timingResult ? { timingResult } : {}),
       });
       if (transition.accepted) {
+        // A meaningful unmarked edit resumes the existing clock only while answering.
+        // Graph gestures also use the normal trusted browser interaction binding.
+        if (command.kind === 'workspace' && state.phase === 'answering' &&
+          !sameRateGraphWorkspace(state.workspace, command.workspace)) {
+          options.clock.interact(sample);
+        }
         if (state.phase === 'answering' && transition.state.phase !== 'answering')
           options.clock.finish(sample);
         state = transition.state;
       }
       return transition;
     },
-  });
+  }) as AttemptController<AttemptFamily<S>>;
 }
 /** Only immutable first, unassisted student evidence contributes to mastery/statistics. */
 export function assessmentToEvidence(state: PlayerAttempt): CurriculumEvidence | null {
@@ -592,7 +666,8 @@ export function assessmentToEvidence(state: PlayerAttempt): CurriculumEvidence |
     state.mode !== 'student' ||
     state.phase !== 'assessed' ||
     state.firstAssessment.kind === 'revealed' ||
-    state.firstResponse.assistance.length
+    state.firstResponse.assistance.length ||
+    'kind' in state.target
   )
     return null;
   const common = {
@@ -607,7 +682,7 @@ export function assessmentToEvidence(state: PlayerAttempt): CurriculumEvidence |
     provenance: 'new-attempt' as const,
     independent: true as const,
     timing: state.firstResponse.timing,
-    ref: state.ref,
+    ref: state.ref as StudentAttempt['ref'],
     firstResponse: state.firstResponse,
     firstAssessment: state.firstAssessment,
   };

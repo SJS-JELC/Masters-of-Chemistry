@@ -1,6 +1,7 @@
 import type { EditorKind, EditorState, EditorStateFor } from './editors';
 import type {
   ActivityId,
+  RecallActivityId,
   GemId,
   Level,
   PartId,
@@ -90,6 +91,7 @@ export type StandardPart = PartBase &
     | Readonly<{
         kind: 'choice';
         presentation: 'single' | 'multiple' | 'dropdown';
+        stateEntry?: 'parenthesized';
         options: readonly ChoiceOption[];
         acceptedOptionSets: readonly (readonly string[])[];
       }>
@@ -104,6 +106,7 @@ export type StandardPart = PartBase &
         unit: string;
         acceptance: NumericAcceptance;
         inputMode?: 'decimal' | 'text';
+        coefficientEntry?: 'positive-rational-blank-one';
         workingFramework?: NumericWorkingFramework;
       }>
     | Readonly<{
@@ -154,7 +157,35 @@ export interface Hint {
   readonly id: string;
   readonly content: readonly ContentBlock[];
 }
+/** Derived presentation metadata only; attempt persistence still stores refs/responses. */
+export type ChemicalEquationCoefficient =
+  | Readonly<{ kind: 'response'; partId: PartId; readOnly?: true }>
+  | Readonly<{ kind: 'fixed'; value: number }>;
+export interface ChemicalEquationSpecies {
+  readonly formula: string;
+  readonly coefficient: ChemicalEquationCoefficient;
+  readonly statePartId?: PartId;
+  readonly state?: 's' | 'l' | 'g' | 'aq';
+}
+export interface ChemicalEquationRow {
+  readonly task: 'balance' | 'states';
+  readonly reactants: readonly ChemicalEquationSpecies[];
+  readonly products: readonly ChemicalEquationSpecies[];
+}
+export type ChemicalPresentation =
+  | Readonly<{ kind: 'formula'; compoundName: string }>
+  | Readonly<{ kind: 'equation-writing'; prompt: string }>
+  | Readonly<{ kind: 'equation-rows'; prompt?: string; rows: readonly ChemicalEquationRow[] }>
+  | Readonly<{
+      kind: 'equation-row';
+      task: 'balance' | 'states' | 'balance-and-states';
+      prompt?: string;
+      reactants: readonly ChemicalEquationSpecies[];
+      products: readonly ChemicalEquationSpecies[];
+    }>;
+
 export interface Question {
+  readonly chemicalPresentation?: ChemicalPresentation;
   readonly ref: QuestionRef;
   readonly title: string;
   readonly context: readonly ContentBlock[];
@@ -176,7 +207,7 @@ export type ProviderCoverage =
       families: readonly Readonly<{ templateId: string; levels: readonly Level[] }>[];
     }>;
 export interface QuestionSelection {
-  readonly activityId: ActivityId;
+  readonly activityId: ActivityId | RecallActivityId;
   readonly gemId?: GemId;
   readonly level: Level;
   readonly seed: Seed;

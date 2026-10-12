@@ -6,7 +6,7 @@ import ts from 'typescript';
 const project=path.resolve(import.meta.dirname,'..');
 const oldRoot=path.join(project,'validation');
 assert(!fs.existsSync(oldRoot),'The retired validation directory must not be recreated');
-const failures=[],historicalIdentifiers=[],externalReferences=[],templateImports=[];
+const failures=[],historicalIdentifiers=[],externalReferences=[],templateImports=[],erasedFixtureTypeImports=[];
 let checkedFiles=0;
 function exists(file){return ['', '.ts','.tsx','.js','.mjs','.json','/index.ts','/index.js'].some(suffix=>fs.existsSync(file+suffix));}
 function walk(directory){for(const entry of fs.readdirSync(directory,{withFileTypes:true})){const file=path.join(directory,entry.name);if(entry.isDirectory())walk(file);else if(/\.(?:mjs|cjs|js|ts|tsx|html)$/.test(entry.name)){
@@ -18,13 +18,16 @@ function walk(directory){for(const entry of fs.readdirSync(directory,{withFileTy
    if(/(?:^|\/)validation\//.test(value)){
     if(/^(?:\.\.\/)*(?:development|resources)\//.test(value))externalReferences.push({file:relative,value});
     else if(relative==='scripts/validate-s0.mjs'&&['validation/original-app-baseline.json','validation/root-contract-lock.json'].includes(value))historicalIdentifiers.push({file:relative,value,disposition:'Frozen control-key aliases resolve to retained resource files.'});
+    else if(relative==='scripts/tests/recall-main-content.test.mjs'&&value==='validation/recall-formulae/s1/recall/source-audit/')historicalIdentifiers.push({file:relative,value,disposition:'Immutable historical fingerprint-key filter and exact old-prefix-to-durable-resource resolver; this prefix is never used as a filesystem read target.'});
     else failures.push({file:relative,value,reason:'Executable literal refers to the retired directory'});
    }
   }
   let specifier=null;
   if((ts.isImportDeclaration(node)||ts.isExportDeclaration(node))&&node.moduleSpecifier&&ts.isStringLiteralLike(node.moduleSpecifier))specifier=node.moduleSpecifier.text;
   if(ts.isCallExpression(node)&&node.expression.kind===ts.SyntaxKind.ImportKeyword&&node.arguments[0]&&ts.isStringLiteralLike(node.arguments[0]))specifier=node.arguments[0].text;
-  if(specifier?.startsWith('.')){
+  const erasedFixtureTypeImport=ts.isImportDeclaration(node)&&node.importClause?.isTypeOnly&&relative.startsWith('scripts/tests/fixtures/maxwells-demon-history/');
+  if(erasedFixtureTypeImport)erasedFixtureTypeImports.push({file:relative,value:specifier,disposition:'Byte-identical frozen historical fixture; import type is erased by native Node strip-types. Active source type imports still resolve normally and full typecheck remains required.'});
+  if(specifier?.startsWith('.')&&!erasedFixtureTypeImport){
    if(relative.startsWith('development/authoring/templates/'))templateImports.push({file:relative,value:specifier,disposition:'Resolved relative to the generated family destination by the scaffold; instantiated families are checked normally.'});
    else if(!exists(path.resolve(path.dirname(file),specifier.replace(/\?(?:url|raw)$/, ''))))failures.push({file:relative,value:specifier,reason:'Missing relative module'});
   }
@@ -33,7 +36,7 @@ function walk(directory){for(const entry of fs.readdirSync(directory,{withFileTy
 }}}
 for(const root of ['scripts','src','development'])walk(path.join(project,root));
 for(const name of ['package.json','tsconfig.json','vite.config.ts'])assert(!/['"](?:\.\.\/)*validation\//.test(fs.readFileSync(path.join(project,name),'utf8')),`${name} refers to retired validation`);
-const report={status:failures.length?'FAIL':'PASS',checkedFiles,failures,historicalIdentifiers,externalReferences,templateImports,scope:'Executable literals and relative static/dynamic module imports, including Vite URL/raw imports. Scaffold template module paths resolve after instantiation; generated families are checked normally. JSON provenance identifiers and comments are historical data; actual browser/build/test gates supplement this audit.'};
+const report={status:failures.length?'FAIL':'PASS',checkedFiles,failures,historicalIdentifiers,externalReferences,templateImports,erasedFixtureTypeImports,scope:'Executable literals and relative static/dynamic runtime module imports, including Vite URL/raw imports. Known frozen historical import-type references are explicitly recorded as erased fixture metadata; active source type imports remain checked. Scaffold template module paths resolve after instantiation; generated families are checked normally. JSON provenance identifiers and comments are historical data; full typecheck and actual browser/build/test gates supplement this audit.'};
 const outputIndex=process.argv.indexOf('--output');
 if(outputIndex!==-1){const output=path.resolve(project,process.argv[outputIndex+1]);assert(output.startsWith(path.join(project,'.artifacts')+path.sep),'Audit output must stay under ignored app artifacts');fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify(report,null,2)+'\n');}
 console.log(JSON.stringify(report,null,2));if(failures.length)process.exitCode=1;

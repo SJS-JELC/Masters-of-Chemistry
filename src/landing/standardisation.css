@@ -36,3 +36,7 @@
 .original-landing.test-selecting .recall-tile{display:none!important}
 /* Four A-level hub tiles stay together, including narrow phone screens. */
 @media(max-width:600px){.original-landing.alevel .test-tile-row{gap:10px}.original-landing.alevel:not(.test-selecting) .test-tile{width:calc((100% - 30px)/4);max-width:82px;min-width:0;font-size:.7rem}}
+.original-landing .practice-choice[data-practice="recall"] { color: #7ef2ce; }
+.original-landing .practice-choice:disabled { opacity: .6; cursor: default; }
+.original-landing .practice-choice { font: inherit; text-align: left; }
+.original-landing .practice-choices { margin-top: 12px; }

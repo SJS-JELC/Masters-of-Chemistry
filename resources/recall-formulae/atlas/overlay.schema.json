@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IGCSE extracted atlas remap overlay",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "stage",
+    "root_acceptance",
+    "source",
+    "catalogue_sha256",
+    "decision_sha256",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "stage": {
+      "enum": [
+        "PILOT",
+        "FULL"
+      ]
+    },
+    "root_acceptance": {
+      "enum": [
+        "PENDING",
+        "ACCEPTED"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "record_count",
+        "marks"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha"
+        },
+        "record_count": {
+          "const": 2322
+        },
+        "marks": {
+          "const": 4320
+        }
+      }
+    },
+    "catalogue_sha256": {
+      "$ref": "#/$defs/sha"
+    },
+    "decision_sha256": {
+      "$ref": "#/$defs/sha"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "input_record_sha256",
+        "original",
+        "proposed",
+        "disposition",
+        "evidence_rationale",
+        "extraction_adequacy",
+        "empirical_classification",
+        "teaching_applicability",
+        "primary_marks",
+        "secondary_marks",
+        "pilot_strata",
+        "review"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "input_record_sha256": {
+          "$ref": "#/$defs/sha"
+        },
+        "original": {
+          "type": "object",
+          "description": "Complete unchanged accepted extracted record, including source links/page maps, classifications and all source marking allowances."
+        },
+        "proposed": {
+          "type": "object",
+          "required": [
+            "primary_gem",
+            "secondary_gems"
+          ],
+          "properties": {
+            "primary_gem": {
+              "type": "string"
+            },
+            "secondary_gems": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "disposition": {
+          "enum": [
+            "REASSIGN_PRIMARY",
+            "ADD_SECONDARY",
+            "RETAIN_ORIGINAL",
+            "UNRESOLVED"
+          ]
+        },
+        "evidence_rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extraction_adequacy": {
+          "type": "object",
+          "required": [
+            "status",
+            "reason"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "ADEQUATE",
+                "INSUFFICIENT"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "empirical_classification": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "teaching_applicability": {
+          "type": "object",
+          "required": [
+            "band",
+            "is_empirical_classification"
+          ],
+          "properties": {
+            "band": {
+              "enum": [
+                "5-6",
+                "7-8",
+                "9",
+                null
+              ]
+            },
+            "is_empirical_classification": {
+              "const": false
+            }
+          }
+        },
+        "primary_marks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "secondary_marks": {
+          "const": 0
+        },
+        "pilot_strata": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "reviewer",
+            "basis",
+            "status",
+            "rationale"
+          ],
+          "properties": {
+            "reviewer": {
+              "type": "string"
+            },
+            "basis": {
+              "type": "string"
+            },
+            "status": {
+              "const": "SUBSTANTIVELY_REVIEWED"
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

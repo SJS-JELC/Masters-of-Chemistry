@@ -1,3 +1,4 @@
+import { gradedActivityId } from './graded-question.ts';
 import { restoreCheckedFeedback } from '../ui/current-feedback.ts';
 import { activityDatabaseName } from '../persistence/alpha-namespace.ts';
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -57,6 +58,12 @@ const ElectronConfigurationEditor = lazy(async () => ({
 const EnergyProfileEditor = lazy(async () => ({
   default: (await import('../editors/energy-profile/index.tsx')).EnergyProfileEditor,
 }));
+const RateResponseControl = lazy(async () => ({
+  default: (await import('../activities/alevel/rate-equations/RateResponseControl.tsx')).RateResponseControl,
+}));
+const RateGraphWorkspace = lazy(async () => ({
+  default: (await import('../activities/alevel/rate-equations/RateGraphWorkspace.tsx')).RateGraphWorkspace,
+}));
 interface Runtime {
   provider: QuestionProvider;
   policy: MarkingPolicy;
@@ -105,8 +112,12 @@ export function FoundationApp({
   launchRequest,
   onLaunchConsumed,
   onNavigationGuard,
+  masterySessionId,
+  onMasteryComplete,
 }: CurriculumHostIntegration & {
   readonly course: Course;
+  readonly masterySessionId?: string;
+  readonly onMasteryComplete?: () => void;
   readonly onSelectOlympiad?: (id?: import('../contracts/index.ts').OlympiadActivityId) => void;
 }) {
   const query = useMemo(() => new URLSearchParams(location.search), []);
@@ -387,7 +398,10 @@ export function FoundationApp({
           setReadError(records.error);
           return;
         }
-        const loaded = await repository.loadSession(namespace, 'current-session');
+        const loaded = await repository.loadSession(
+          namespace,
+          masterySessionId ?? 'current-session',
+        );
         if (cancelled()) return;
         if (!loaded.ok) {
           setReadError(loaded.error);
@@ -450,7 +464,7 @@ export function FoundationApp({
         if (!cancelled()) setLoading(false);
       }
     },
-    [repository, namespace, applySession, applyAttempt, resolve, view],
+    [repository, namespace, applySession, applyAttempt, resolve, view, masterySessionId],
   );
   const readSavedDataRef = useRef(readSavedData);
   readSavedDataRef.current = readSavedData;
@@ -592,6 +606,16 @@ export function FoundationApp({
     setSetupOpen(false);
     setSessionMode(chosenMode);
     setLocalView(chosenMode);
+    if (
+      masterySessionId &&
+      request?.kind === 'practice' &&
+      sessionRef.current?.kind === 'practice' &&
+      sessionRef.current.id === masterySessionId &&
+      stateRef.current
+    ) {
+      const resumed = await resume();
+      return resumed || saveFailed.current;
+    }
     if (request?.kind === 'revision') {
       setSelected(chosenTargets);
       const existing = sessionRef.current;
@@ -619,7 +643,7 @@ export function FoundationApp({
       }
       const initial = createRevisionSession({
         namespace,
-        id: 'current-session',
+        id: masterySessionId ?? 'current-session',
         selected: chosenTargets,
         settings: registrations.flatMap((a) => a.gems.map((g) => g.mastery)),
         summaries: states,
@@ -644,7 +668,7 @@ export function FoundationApp({
       const initial = {
         kind: 'practice' as const,
         namespace,
-        id: 'current-session',
+        id: masterySessionId ?? 'current-session',
         target: chosenTarget,
         selection: chosenSelection,
         currentAttemptId: null,
@@ -655,6 +679,11 @@ export function FoundationApp({
       const provider = await registration.provider(),
         choice = selectPracticeQuestion({ session: initial, provider, seed, summaries: states });
       if (!choice) {
+        if (masterySessionId && chosenSelection === 'mastery') {
+          await saveSession(initial);
+          if (!saveFailed.current) onMasteryComplete?.();
+          return !saveFailed.current;
+        }
         setSetupOpen(true);
         setFeedback({
           message: 'All supported levels are already mastered. Choose a fixed level to practise.',
@@ -798,6 +827,9 @@ export function FoundationApp({
             ),
             { ...choice.session, currentAttemptId: id },
           );
+        } else if (masterySessionId && current.selection === 'mastery') {
+          await saveSession({ ...current, currentAttemptId: null });
+          if (!saveFailed.current) onMasteryComplete?.();
         }
       }
     } finally {
@@ -1021,12 +1053,14 @@ export function FoundationApp({
   const [previewSubtopic, setPreviewSubtopic] = useState('');
   const teacherRequest = useRef(0);
   const [teacherActivity, setTeacherActivity] = useState<ActivityId>(
-    reviewRef?.activityId ?? initialActivityId ?? registrations[0]!.id,
+    reviewRef
+      ? gradedActivityId(reviewRef.activityId)
+      : (initialActivityId ?? registrations[0]!.id),
   );
   const openTeacherQuestion = useCallback(
     async (ref: QuestionRef) => {
       const request = ++teacherRequest.current;
-      const loaded = await runtime(ref.activityId);
+      const loaded = await runtime(gradedActivityId(ref.activityId));
       const shown = loaded.provider.restore(ref);
       const subtopic = await teacherSubtopic(registry, shown);
       if (request !== teacherRequest.current) return;
@@ -1057,7 +1091,7 @@ export function FoundationApp({
       onSelectView={(next) => void selectView(next)}
       focused={focused}
       {...(shownQuestion && shownSubtopic && !setupOpen && !launchRequest
-        ? { questionHeader: { subtopic: shownSubtopic, questionId: shownQuestion.ref.questionId } }
+        ? { questionHeader: { subtopic: shownSubtopic, questionId: shownQuestion.ref.questionId, activityId: shownQuestion.ref.activityId } }
         : {})}
       {...(preview
         ? { currentActivityId: teacherActivity }
@@ -1261,7 +1295,19 @@ export function FoundationApp({
           <p role="status">Opening saved question...</p>
         )
       ) : shownQuestion && shownAttempt ? (
+        <Suspense fallback={<p role="status">Loading question tools...</p>}>
         <QuestionPlayer
+          {...(shownQuestion.ref.activityId === 'alevel/rate-equations' ? {
+            presentation: 'standard' as const,
+            responseControl: RateResponseControl,
+            workspace: <RateGraphWorkspace key={shownAttempt.mode === 'student' ? shownAttempt.attemptId : JSON.stringify(shownQuestion.ref)}
+              questionRef={shownQuestion.ref}
+              assessed={shownAttempt.mode !== 'student' || shownAttempt.phase === 'assessed'}
+              {...(shownAttempt.mode === 'student' ? {
+                ...(shownAttempt.workspace ? { state: shownAttempt.workspace } : {}),
+                onStateChange: (workspace: import('../contracts/workspace.ts').RateGraphWorkspaceState) => void command({ kind: 'workspace', workspace }),
+              } : {})} />,
+          } : {})}
           question={shownQuestion}
           attempt={shownAttempt}
           restoredFeedback={restoreCheckedFeedback(
@@ -1301,6 +1347,7 @@ export function FoundationApp({
             )
           }
         />
+        </Suspense>
       ) : (
         <p>Choose an activity and level, then start a question.</p>
       )}

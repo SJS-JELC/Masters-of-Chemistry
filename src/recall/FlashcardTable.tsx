@@ -5,26 +5,59 @@ import {
   useState,
   type CSSProperties,
   type PointerEvent,
+  type ReactNode,
 } from 'react';
 import type { ContentBlock } from '../contracts/question.ts';
 import { Content } from '../ui/Content.tsx';
 import './flashcards.css';
+import {
+  createFlashcardDeck,
+  flashcardPosition,
+  flashcardAnswerSeen,
+  flashcardPileTop,
+  reduceFlashcardDeck,
+  type FlashcardAction,
+  type FlashcardDeckState,
+} from './flashcard-checkpoint.ts';
 
 export interface Flashcard {
   readonly id: string;
   readonly prompt: readonly ContentBlock[];
   readonly answer: readonly ContentBlock[];
+  readonly promptContent?: ReactNode;
+  readonly answerContent?: ReactNode;
 }
 export interface FlashcardTableProps {
   readonly deckId: string;
   readonly cards: readonly Flashcard[];
+  readonly state?: FlashcardDeckState;
+  readonly onStateChange?: (state: FlashcardDeckState) => void;
+  /** Reports the displayed card, including the outgoing card during its flight. */
+  readonly onVisibleCardIdChange?: (id: string | null) => void;
 }
 type Side = 'again' | 'got';
-type Result = { card: Flashcard; side: Side };
-type Flight = { x: number; y: number; scale: number; side: Side };
+type Flight = {
+  x: number;
+  y: number;
+  scale: number;
+  side: Side;
+  card: Flashcard;
+  position: number;
+  showingAnswer: boolean;
+};
 const interactive = 'button, a, input, select, textarea, summary';
 
-function Stack({ count, label, side }: { count: number; label: string; side: Side | 'deck' }) {
+function Stack({
+  count,
+  label,
+  side,
+  nextCard,
+}: {
+  count: number;
+  label: string;
+  side: Side | 'deck';
+  nextCard?: Flashcard;
+}) {
   const layers = Math.min(count, 10);
   const spacing = side === 'deck' ? 4 : count > 10 ? Math.min(4, 2 + Math.log2(count / 10)) : 2;
   return (
@@ -42,10 +75,20 @@ function Stack({ count, label, side }: { count: number; label: string; side: Sid
               } as CSSProperties
             }
           >
-            {index === layers - 1 && (
-              <span className="fc-stack-symbol">
-                {side === 'got' ? '✓' : side === 'again' ? '↻' : '✦'}
+            {index === layers - 1 && nextCard ? (
+              <span
+                className="fc-next-question"
+                data-next-fact-id={nextCard.id}
+                data-preview-fact-id={nextCard.id}
+              >
+                {nextCard.promptContent ?? <Content blocks={nextCard.prompt} />}
               </span>
+            ) : (
+              index === layers - 1 && (
+                <span className="fc-stack-symbol">
+                  {side === 'got' ? '✓' : side === 'again' ? '↻' : '✦'}
+                </span>
+              )
             )}
           </span>
         ))}
@@ -68,11 +111,25 @@ export function FlashcardTable(props: FlashcardTableProps) {
   return <TableSession key={props.deckId} {...props} />;
 }
 
-function TableSession({ cards }: FlashcardTableProps) {
-  const [round, setRound] = useState(cards);
-  const [history, setHistory] = useState<Result[]>([]);
-  const [revealed, setRevealed] = useState(false);
-  const [hasSeenAnswer, setHasSeenAnswer] = useState(false);
+function TableSession({
+  cards,
+  state: controlledState,
+  onStateChange,
+  onVisibleCardIdChange,
+}: FlashcardTableProps) {
+  const [localState, setLocalState] = useState(() => createFlashcardDeck(cards.map((c) => c.id)));
+  const state = controlledState ?? localState;
+  const stateRef = useRef(state);
+  stateRef.current = state;
+  function dispatch(action: FlashcardAction) {
+    const next = reduceFlashcardDeck(stateRef.current, action);
+    stateRef.current = next;
+    if (onStateChange) onStateChange(next);
+    else setLocalState(next);
+  }
+  const round = state.roundFactIds;
+  const position = flashcardPosition(state);
+  const revealed = state.revealed;
   const [flight, setFlight] = useState<Flight | null>(null);
   const [drag, setDrag] = useState(0);
   const [message, setMessage] = useState('');
@@ -83,9 +140,21 @@ function TableSession({ cards }: FlashcardTableProps) {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const gesture = useRef<{ id: number; x: number; y: number; dx: number } | null>(null);
   const suppressClick = useRef(false);
-  const card = round[history.length];
-  const missed = history.filter((item) => item.side === 'again');
-  const correct = history.length - missed.length;
+  const card = flight?.card ?? cards.find((c) => c.id === state.currentFactId);
+  useLayoutEffect(() => {
+    onVisibleCardIdChange?.(card?.id ?? null);
+  }, [card?.id, onVisibleCardIdChange]);
+  useLayoutEffect(() => () => onVisibleCardIdChange?.(null), [onVisibleCardIdChange]);
+  const pileCard = (classification: 'got-it' | 'practise-again') =>
+    cards.find((c) => c.id === flashcardPileTop(state, classification));
+  const missed = round
+    .slice(0, position)
+    .filter((id) => state.classifications[id] === 'practise-again');
+  const correct = position - missed.length;
+  const showingAnswer = flight ? flight.showingAnswer : revealed;
+  const canSort = flashcardAnswerSeen(state);
+  const nextCard = cards.find((c) => c.id === (flight ? state.currentFactId : round[position + 1]));
+  const waitingCount = Math.max(0, round.length - position - (flight ? 0 : 1));
 
   useEffect(
     () => () => {
@@ -97,7 +166,7 @@ function TableSession({ cards }: FlashcardTableProps) {
     // Measure layout before painting so the deal starts on the actual bottom deck.
     const moving = mover.current;
     const deck = table.current?.querySelector('[data-destination="deck"]');
-    if (moving && deck) {
+    if (moving && deck && deck.getBoundingClientRect().width > 0) {
       const destination = moving.parentElement!.getBoundingClientRect();
       const origin = deck.getBoundingClientRect();
       moving.style.setProperty(
@@ -110,17 +179,15 @@ function TableSession({ cards }: FlashcardTableProps) {
       );
       moving.style.setProperty('--deal-scale', String(origin.width / destination.width));
     }
-    reader.current?.focus({ preventScroll: true });
-  }, [history.length, round]);
+    if (!flight) reader.current?.focus({ preventScroll: true });
+  }, [position, round, flight]);
 
   function flip() {
     if (busy.current || !card) return;
-    setHasSeenAnswer(true);
-    setRevealed((value) => !value);
+    dispatch({ type: 'flip' });
   }
-
   function sort(side: Side) {
-    if (!card || !hasSeenAnswer || busy.current) return;
+    if (!card || !flashcardAnswerSeen(stateRef.current) || busy.current) return;
     busy.current = true;
     const from = mover.current!.getBoundingClientRect();
     const to = table
@@ -133,43 +200,37 @@ function TableSession({ cards }: FlashcardTableProps) {
       y: to.y + to.height / 2 - (from.y + from.height / 2),
       scale: to.width / from.width,
       side,
+      card,
+      position,
+      showingAnswer: stateRef.current.revealed,
     });
+    dispatch({ type: 'classify', classification: side === 'got' ? 'got-it' : 'practise-again' });
+    setMessage(
+      `Card ${position + 1} moved to ${side === 'got' ? 'Got it' : 'Practise again'}. ${round.length - position - 1} remaining.`,
+    );
     timer.current = setTimeout(
       () => {
-        setHistory((items) => [...items, { card, side }]);
-        setRevealed(false);
-        setHasSeenAnswer(false);
         setFlight(null);
-        setMessage(
-          `Card ${history.length + 1} moved to ${side === 'got' ? 'Got it' : 'Practise again'}. ${round.length - history.length - 1} remaining.`,
-        );
         busy.current = false;
       },
       reduce ? 0 : 340,
     );
   }
-
   function undo() {
-    if (busy.current || !history.length) return;
-    setHistory((items) => items.slice(0, -1));
-    setRevealed(true);
-    setHasSeenAnswer(true);
-    setMessage('Last card restored. Answer revealed.');
+    if (busy.current || !state.undoStack.length) return;
+    dispatch({ type: 'undo' });
+    setMessage('Last card restored. Ready to sort.');
   }
-
-  function start(next: readonly Flashcard[]) {
+  function start(type: 'retry-missed' | 'restart') {
     if (busy.current) return;
-    setRound([...next]);
-    setHistory([]);
-    setRevealed(false);
-    setHasSeenAnswer(false);
-    setMessage(`New pass. ${next.length} cards.`);
+    dispatch({ type });
+    setMessage(type === 'restart' ? 'Deck restarted.' : 'New pass of missed cards.');
   }
 
   function pointerDown(event: PointerEvent<HTMLElement>) {
     suppressClick.current = false;
     if (
-      !hasSeenAnswer ||
+      !canSort ||
       busy.current ||
       !event.isPrimary ||
       event.button !== 0 ||
@@ -225,19 +286,13 @@ function TableSession({ cards }: FlashcardTableProps) {
         }
       }}
     >
-      <div className="fc-round-meta">
-        <span>
-          {history.length === round.length && round.length ? 'Pass complete' : 'Your own pace'}
-        </span>
-        <span>
-          {history.length} / {round.length} sorted
-        </span>
-      </div>
-      <div className="fc-progress" aria-hidden="true">
-        <span style={{ width: `${round.length ? (history.length / round.length) * 100 : 0}%` }} />
-      </div>
       <div className="fc-arena">
-        <Stack count={missed.length} label="Practise again" side="again" />
+        <Stack
+          count={missed.length}
+          label="Practise again"
+          side="again"
+          {...(pileCard('practise-again') ? { nextCard: pileCard('practise-again')! } : {})}
+        />
         <div className="fc-reading">
           {card ? (
             <div
@@ -254,10 +309,10 @@ function TableSession({ cards }: FlashcardTableProps) {
               }
             >
               <article
-                className={`fc-card${revealed ? ' fc-revealed' : ''}${hasSeenAnswer ? ' fc-sortable' : ''}${drag ? ' fc-dragging' : ''}`}
+                className={`fc-card${showingAnswer ? ' fc-revealed' : ''}${canSort ? ' fc-sortable' : ''}${drag ? ' fc-dragging' : ''}`}
                 ref={reader}
                 tabIndex={0}
-                aria-label={`Card ${history.length + 1}, ${revealed ? 'answer' : 'question'}`}
+                aria-label={`Card ${(flight?.position ?? position) + 1}, ${showingAnswer ? 'answer' : 'question'}`}
                 style={{ '--drag': `${drag}px`, '--tilt': `${drag / 24}deg` } as CSSProperties}
                 onPointerDown={pointerDown}
                 onPointerMove={pointerMove}
@@ -269,21 +324,15 @@ function TableSession({ cards }: FlashcardTableProps) {
                     flip();
                 }}
               >
-                <div className="fc-face fc-front" aria-hidden={revealed} inert={revealed}>
-                  <div className="fc-card-meta">
-                    <span>THE QUESTION</span>
-                    <span>{String(history.length + 1).padStart(2, '0')}</span>
-                  </div>
-                  <Content blocks={card.prompt} />
-                  <span className="fc-card-hint">Think of your answer · tap to turn</span>
+                <div className="fc-face fc-front" aria-hidden={showingAnswer} inert={showingAnswer}>
+                  {card.promptContent ?? <Content blocks={card.prompt} />}
                 </div>
-                <div className="fc-face fc-back" aria-hidden={!revealed} inert={!revealed}>
-                  <div className="fc-card-meta">
-                    <span>THE ANSWER</span>
-                    <span>{String(history.length + 1).padStart(2, '0')}</span>
-                  </div>
-                  <Content blocks={card.answer} />
-                  <span className="fc-card-hint">How did you do? Choose a pile.</span>
+                <div
+                  className="fc-face fc-back"
+                  aria-hidden={!showingAnswer}
+                  inert={!showingAnswer}
+                >
+                  {card.answerContent ?? <Content blocks={card.answer} />}
                 </div>
               </article>
             </div>
@@ -299,54 +348,65 @@ function TableSession({ cards }: FlashcardTableProps) {
                   : 'Choose a deck to start practising.'}
               </p>
               {missed.length > 0 && (
-                <button
-                  className="fc-primary"
-                  onClick={() => start(missed.map((item) => item.card))}
-                >
+                <button className="fc-primary" onClick={() => start('retry-missed')}>
                   Practise missed cards
                 </button>
               )}
-              {cards.length > 0 && <button onClick={() => start(cards)}>Restart deck</button>}
+              {cards.length > 0 && <button onClick={() => start('restart')}>Restart deck</button>}
             </article>
           )}
         </div>
-        <Stack count={correct} label="Got it" side="got" />
+        <Stack
+          count={correct}
+          label="Got it"
+          side="got"
+          {...(pileCard('got-it') ? { nextCard: pileCard('got-it')! } : {})}
+        />
         <div className="fc-controls">
           {card && (
             <div className="fc-actions">
               <button
                 className="fc-again"
-                disabled={!hasSeenAnswer || !!flight}
+                disabled={!canSort || !!flight}
                 onClick={() => sort('again')}
               >
                 <span aria-hidden="true">←</span> Practise again
               </button>
-              <button className="fc-flip" disabled={!!flight} onClick={flip}>
-                {revealed ? 'Show question' : 'Reveal answer'}
-                <span aria-hidden="true">↻</span>
+              <button
+                className="fc-flip"
+                aria-label={showingAnswer ? 'Show question' : 'Reveal answer'}
+                disabled={!!flight}
+                onClick={flip}
+              >
+                <kbd aria-hidden="true">SPACE</kbd>
+                <span className="fc-flip-label">
+                  {showingAnswer ? 'Show question' : 'Reveal answer'}
+                </span>
               </button>
               <button
                 className="fc-got"
-                disabled={!hasSeenAnswer || !!flight}
+                disabled={!canSort || !!flight}
                 onClick={() => sort('got')}
               >
                 Got it <span aria-hidden="true">→</span>
               </button>
             </div>
           )}
-          <p className="fc-instructions">
-            {card
-              ? hasSeenAnswer
-                ? 'Swipe or use ← → to sort'
-                : 'Recall first. Space or tap to reveal.'
-              : 'Every pass is a fresh start.'}
-          </p>
         </div>
-        <Stack count={round.length - history.length} label="Cards remaining" side="deck" />
+        <Stack
+          count={waitingCount}
+          label={waitingCount ? 'Waiting cards' : 'No waiting cards'}
+          side="deck"
+          {...(nextCard ? { nextCard } : {})}
+        />
       </div>
       <footer className="fc-table-footer">
-        <span>Self-marked practice</span>
-        <button disabled={!history.length || !!flight} onClick={undo}>
+        {card && (
+          <button disabled={!!flight} onClick={() => start('restart')}>
+            Restart deck
+          </button>
+        )}
+        <button disabled={!position || !!flight} onClick={undo}>
           ↶ Undo last card
         </button>
       </footer>

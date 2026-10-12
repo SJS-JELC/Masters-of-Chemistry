@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "topic": {
+    "id": "16",
+    "name": "Formulae & Equations",
+    "display_after_topic": "3",
+    "stable_identity_independent_of_order": true
+  },
+  "gems": [
+    {
+      "id": "16.1",
+      "name": "Formulae",
+      "site_leaf_id": "fourth-16-1",
+      "include": [
+        "Construct neutral ionic compound formula from named ions or supplied charges",
+        "Explain lowest ionic ratio using charge balance"
+      ],
+      "exclude": [
+        "Recall or infer ion charges alone",
+        "Empirical or molecular formula from composition",
+        "Organic structural/displayed formula",
+        "Identify ion from chemical test"
+      ],
+      "teaching_bands": [
+        "5-6",
+        "7-8"
+      ],
+      "teaching_band_note": "5-6 monatomic; 7-8 polyatomic. Never replace source empirical band."
+    },
+    {
+      "id": "16.2",
+      "name": "Equations",
+      "site_leaf_id": "fourth-16-2",
+      "include": [
+        "Balance supplied chemical formula equation",
+        "Add or interpret assessed state symbols",
+        "Translate supplied named reactants and products or paragraph to formula equation"
+      ],
+      "exclude": [
+        "Half-equations and ionic equations",
+        "Predict unspecified reaction products",
+        "Use supplied equation for moles, redox, energy or equilibrium reasoning without assessed equation construction",
+        "Organic structure/polymer equation drawings"
+      ],
+      "teaching_bands": [
+        "5-6",
+        "7-8",
+        "9"
+      ],
+      "teaching_band_note": "Activity bands are pedagogical; source empirical bands remain unchanged."
+    }
+  ],
+  "policy": {
+    "primary": "Directly assessed operation determines primary. Where mixed indivisible record chiefly assesses a subject, retain subject primary and add meaningful secondary. No mark splits.",
+    "secondary": "Retain subject context for reassigned records when chemically meaningful; add 16.2 for explicitly assessed equation component, not mere supplied equation use.",
+    "inadequate": "UNRESOLVED retains original primary/secondary. Never reopen source PDFs, mark schemes or images.",
+    "pipeline_gate": "PILOT_REVIEW_PENDING_ROOT_ACCEPTANCE; candidate inventory is not full-corpus remapping."
+  }
+}

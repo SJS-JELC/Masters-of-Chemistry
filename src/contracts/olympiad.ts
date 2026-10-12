@@ -1,3 +1,4 @@
+import type { MaxwellProgress, MaxwellCommand } from './maxwell.ts';
 import type { MoleculeState } from './editors';
 import type { ProfileId } from './identity';
 import type { ContentBlock } from './question';
@@ -31,8 +32,8 @@ export interface IsomerPolicy {
   readonly transition: (challenge: IsomerChallenge, progress: IsomerProgress, command: IsomerCommand) => Readonly<{ accepted: boolean; progress: IsomerProgress; message: string }>;
   readonly validateCompletion: (challenge: IsomerChallenge, progress: IsomerProgress) => IsomerProgress;
 }
-export type OlympiadProgress = C3L6Progress | IsomerProgress;
-export type OlympiadCommand = ChallengeCommand | IsomerCommand;
+export type OlympiadProgress = C3L6Progress | IsomerProgress | MaxwellProgress;
+export type OlympiadCommand = ChallengeCommand | IsomerCommand | MaxwellCommand;
 
 export type C3Classification = 'oxidation' | 'reduction' | 'hydrolysis';
 export type C3BSlot = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'J' | 'K' | 'L' | 'M';

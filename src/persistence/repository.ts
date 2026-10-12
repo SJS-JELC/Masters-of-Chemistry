@@ -1,3 +1,15 @@
+import type {
+  RecallAttempt,
+  RecallEvidence,
+  RecallProgress,
+  RecallSession,
+} from '../contracts/recall.ts';
+import type { RecallWrite } from '../contracts/repository.ts';
+import { assessmentToRecallEvidence, applyRecallEvidence } from '../recall/scheduler.ts';
+import type { RecallPreferences, RecallFlashcardCheckpoint } from '../recall/session-contract.ts';
+import { recallScopeKey, validateRecallScope } from '../recall/session-contract.ts';
+import { recallAttemptRestoreDisposition } from '../recall/compatibility.ts';
+import { recallFacts } from '../recall/facts.ts';
 import Dexie, { type Table } from 'dexie';
 import type {
   ChemistryRepository,
@@ -27,6 +39,12 @@ import {
   validateOlympiad,
   validateSession,
   validateWrite,
+  validateRecallAttempt,
+  validateRecallEvidence,
+  validateRecallProgress,
+  validateRecallSession,
+  validateSavedRecallPreferences,
+  validateSavedRecallFlashcards,
 } from './validation.ts';
 interface Row<T> {
   course: string;
@@ -60,6 +78,18 @@ export const DATABASE_SCHEMA = {
 export const DATABASE_SCHEMA_V2 = {
   ...DATABASE_SCHEMA,
   archives: '[course+profileId+key+fingerprint], [course+profileId]',
+};
+export const DATABASE_SCHEMA_V3 = {
+  ...DATABASE_SCHEMA_V2,
+  recallAttempts: '[course+profileId+id], [course+profileId]',
+  recallEvidence: '[course+profileId+id], [course+profileId]',
+  recallProgress: '[course+profileId+id], [course+profileId]',
+  recallSessions: '[course+profileId+id], [course+profileId]',
+};
+export const DATABASE_SCHEMA_V4 = {
+  ...DATABASE_SCHEMA_V3,
+  recallPreferences: '[course+profileId+id], [course+profileId]',
+  recallFlashcards: '[course+profileId+id], [course+profileId]',
 };
 function validateArchive(value: unknown): asserts value is LegacyImportArchive {
   const archive = record(value, 'archive'),
@@ -165,6 +195,16 @@ export function createRepository(
   const database = new Dexie(databaseName);
   database.version(1).stores(DATABASE_SCHEMA);
   database.version(2).stores(DATABASE_SCHEMA_V2);
+  database.version(3).stores(DATABASE_SCHEMA_V3);
+  database.version(4).stores(DATABASE_SCHEMA_V4);
+  const recallAttempts = database.table<Row<RecallAttempt>, Identity>('recallAttempts');
+  const recallEvidence = database.table<Row<RecallEvidence>, Identity>('recallEvidence');
+  const recallProgress = database.table<Row<RecallProgress>, Identity>('recallProgress');
+  const recallSessions = database.table<Row<RecallSession>, Identity>('recallSessions');
+  const recallPreferences = database.table<Row<RecallPreferences>, Identity>('recallPreferences');
+  const recallFlashcards = database.table<Row<RecallFlashcardCheckpoint>, Identity>(
+    'recallFlashcards',
+  );
   const attempts = database.table<Row<StudentAttempt>, Identity>('attempts');
   const evidence = database.table<Row<CurriculumEvidence>, Identity>('evidence');
   const sessions = database.table<Row<CurriculumSession>, Identity>('sessions');
@@ -215,6 +255,14 @@ export function createRepository(
       const previous = await attempts.get(identity(a.namespace, a.attemptId));
       if (previous) {
         const old = previous.value;
+        conflict(
+          old.modelAnswerShown !== true || a.modelAnswerShown === true,
+          'Displayed model-answer latch cannot be erased',
+        );
+        conflict(
+          old.modelAnswerPanelShown !== true || a.modelAnswerPanelShown === true,
+          'Displayed full model-answer panel latch cannot be erased',
+        );
         conflict(
           same(a.assistance.slice(0, old.assistance.length), old.assistance),
           'Assistance history cannot be erased',
@@ -332,7 +380,192 @@ export function createRepository(
       return receipt;
     });
   }
+  async function recallRows<T>(
+    table: Table<Row<T>, Identity>,
+    namespace: Namespace,
+    validator: (v: unknown) => void,
+  ): Promise<readonly T[]> {
+    nameGuard();
+    validateNamespace(namespace);
+    const rows = await table
+      .where('[course+profileId]')
+      .equals([namespace.course, namespace.profileId])
+      .toArray();
+    for (const item of rows) {
+      validator(item.value);
+      requireData(
+        same(record(item.value, 'recall row').namespace, namespace),
+        'Recall row namespace mismatch',
+      );
+    }
+    return rows.map((item) => item.value);
+  }
+  async function saveRecall(write: RecallWrite): Promise<SaveReceipt> {
+    nameGuard();
+    validateRecallAttempt(write.attempt);
+    if (write.session !== undefined) {
+      validateRecallSession(write.session);
+      requireData(
+        same(write.session.namespace, write.attempt.namespace) &&
+          write.session.currentAttemptId === write.attempt.attemptId &&
+          write.session.currentFactId === write.attempt.target.factId,
+        'Recall session/attempt mismatch',
+      );
+    }
+    const copied = structuredClone(write),
+      a = copied.attempt;
+    const e = assessmentToRecallEvidence(a);
+    if (e) validateRecallEvidence(e);
+    return database.transaction(
+      'rw',
+      recallAttempts,
+      recallEvidence,
+      recallProgress,
+      recallSessions,
+      async () => {
+        const previous = await recallAttempts.get(identity(a.namespace, a.attemptId));
+        if (previous) {
+          const old = previous.value;
+          conflict(
+            old.modelAnswerShown !== true || a.modelAnswerShown === true,
+            'Displayed model-answer latch cannot be erased',
+          );
+          conflict(
+            old.modelAnswerPanelShown !== true || a.modelAnswerPanelShown === true,
+            'Displayed full model-answer panel latch cannot be erased',
+          );
+          conflict(
+            same(old.ref, a.ref) &&
+              same(old.target, a.target) &&
+              (old.definitionId === a.definitionId ||
+                (old.phase === 'answering' && old.definitionId === undefined)),
+            'Recall attempt identity/definition changed',
+          );
+          if (old.definitionId !== a.definitionId)
+            conflict(
+              recallAttemptRestoreDisposition(old, recallFacts).kind === 'resume',
+              'Incompatible recall response format needs a fresh attempt ID',
+            );
+          conflict(
+            same(a.assistance.slice(0, old.assistance.length), old.assistance),
+            'Recall assistance cannot be erased',
+          );
+          if (old.phase !== 'answering')
+            conflict(
+              a.phase === 'assessed' &&
+                same(old.firstResponse, a.firstResponse) &&
+                same(old.firstAssessment, a.firstAssessment),
+              'Recall first response/assessment cannot change',
+            );
+          if (old.phase === 'answering' && a.phase === 'answering')
+            conflict(
+              a.timing.activeMs >= old.timing.activeMs,
+              'Recall active timing cannot decrease',
+            );
+        }
+        await recallAttempts.put(row(a.namespace, a.attemptId, a));
+        fault?.('after-attempt');
+        let status: SaveReceipt['evidence'] = 'none';
+        if (e) {
+          const existing = await recallEvidence.get(identity(a.namespace, e.id));
+          if (existing) {
+            conflict(same(existing.value, e), 'Recall immutable evidence changed');
+            status = 'already-present';
+          } else {
+            await recallEvidence.add(row(a.namespace, e.id, e));
+            status = 'inserted';
+            const oldProgress = await recallProgress.get(identity(a.namespace, e.factId));
+            const progress = applyRecallEvidence(oldProgress?.value, e);
+            validateRecallProgress(progress);
+            await recallProgress.put(row(a.namespace, e.factId, progress));
+          }
+        }
+        fault?.('after-evidence');
+        if (copied.session) {
+          const session = e
+            ? {
+                ...copied.session,
+                submittedAttemptIds: [
+                  ...new Set([...copied.session.submittedAttemptIds, a.attemptId]),
+                ],
+              }
+            : copied.session;
+          await recallSessions.put(row(a.namespace, session.id, session));
+          fault?.('session');
+        }
+        return { attemptId: a.attemptId, evidence: status };
+      },
+    );
+  }
   return {
+    loadRecallPreferences: (namespace) =>
+      result(async () => {
+        const saved = await load(
+          recallPreferences,
+          namespace,
+          'selection',
+          validateSavedRecallPreferences,
+        );
+        requireData(
+          !saved || same(saved.namespace, namespace),
+          'Recall preference namespace mismatch',
+        );
+        return saved;
+      }),
+    saveRecallPreferences: (preferences) =>
+      result(async () => {
+        nameGuard();
+        validateSavedRecallPreferences(preferences);
+        const copied = structuredClone(preferences);
+        await recallPreferences.put(row(copied.namespace, 'selection', copied));
+        return 'saved' as const;
+      }),
+    loadRecallFlashcards: (namespace, scope) =>
+      result(async () => {
+        nameGuard();
+        validateNamespace(namespace);
+        validateRecallScope(scope, namespace.course);
+        const saved = await recallFlashcards.get(
+          identity(namespace, recallScopeKey(namespace, scope)),
+        );
+        if (!saved) return null;
+        // A changed/retired deck is preserved for explicit restart, never silently rewritten.
+        const checkpoint = saved.value;
+        validateSavedRecallFlashcards(checkpoint);
+        requireData(same(checkpoint.namespace, namespace), 'Recall flashcard namespace mismatch');
+        return checkpoint;
+      }),
+    saveRecallFlashcards: (checkpoint) =>
+      result(async () => {
+        nameGuard();
+        validateSavedRecallFlashcards(checkpoint);
+        const copied = structuredClone(checkpoint);
+        await recallFlashcards.put(
+          row(copied.namespace, recallScopeKey(copied.namespace, copied.scope), copied),
+        );
+        return 'saved' as const;
+      }),
+    loadRecallAttempt: (namespace, id) =>
+      result(() => load(recallAttempts, namespace, id, validateRecallAttempt)),
+    loadRecallSession: (namespace, id) =>
+      result(() => load(recallSessions, namespace, id, validateRecallSession)),
+    recallHistory: (namespace) =>
+      result(async () =>
+        [...(await recallRows(recallEvidence, namespace, validateRecallEvidence))].sort(
+          (a, b) => a.completedAt - b.completedAt || a.id.localeCompare(b.id),
+        ),
+      ),
+    recallProgress: (namespace) =>
+      result(() => recallRows(recallProgress, namespace, validateRecallProgress)),
+    saveRecall: (write) => result(() => saveRecall(write)),
+    saveRecallSession: (session) =>
+      result(async () => {
+        nameGuard();
+        validateRecallSession(session);
+        const copied = structuredClone(session);
+        await recallSessions.put(row(copied.namespace, copied.id, copied));
+        return copied.id;
+      }),
     loadAttempt: (namespace, id) => result(() => load(attempts, namespace, id, validateAttempt)),
     close: () => database.close(),
     loadSession: (namespace, id) => result(() => load(sessions, namespace, id, validateSession)),
@@ -363,12 +596,7 @@ export function createRepository(
       }),
     loadOlympiad: ((profileId: string, activityId = 'alevel/c3l6-organic-reactions') =>
       result(() =>
-        load(
-          olympiad,
-          { course: 'alevel', profileId },
-          activityId,
-          validateOlympiad,
-        ),
+        load(olympiad, { course: 'alevel', profileId }, activityId, validateOlympiad),
       )) as ChemistryRepository['loadOlympiad'],
     saveOlympiad: (progress) =>
       result(async () => {

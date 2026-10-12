@@ -228,5 +228,31 @@
         "Needs further work": ""
       }
     ]
+  },
+  "typedRecall": {
+    "run": "RECALL-FORMULAE-20261010",
+    "latestSource": "development/igcse/activities/recall/data/igcse-recall-working.json",
+    "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+    "approvedActive": 116,
+    "quarantined": [
+      "igcse-recall-087"
+    ],
+    "rejected": [
+      "igcse-recall-088"
+    ],
+    "sourceAudit": "validation/recall-formulae/s1/recall/source-audit/",
+    "disposition": "validation/recall-formulae/s1/recall/latest-source-disposition.json",
+    "errata": "validation/recall-formulae/s1/recall/root-exception-disposition.json",
+    "preservedCurrent": "All twelve current IDs/prompts/model answers retained; no saved current recall history existed.",
+    "mergedAliases": {
+      "nitrate": "igcse-recall-027",
+      "carbonate": "igcse-recall-028",
+      "ammonium": "igcse-recall-029",
+      "zinc": "igcse-recall-030",
+      "silver": "igcse-recall-031",
+      "hydroxide": "igcse-recall-032",
+      "sulfate": "igcse-recall-033"
+    },
+    "gapPolicy": "Formula and charge gap records for existing combined ion facts are aliases, not duplicated progress. Remaining gap records from checked new-gem bank only."
   }
 }

@@ -1,6 +1,6 @@
 import { alphaDatabaseName } from '../persistence/alpha-namespace.ts';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { ActivityId, C3L6Progress, ChallengeCommand, IsomerCommand, OlympiadActivityId, OlympiadCommand, OlympiadProgress, PlatformView } from '../contracts/index.ts';
+import type { ActivityId, C3L6Progress, ChallengeCommand, IsomerCommand, MaxwellCommand, OlympiadActivityId, OlympiadCommand, OlympiadProgress, PlatformView } from '../contracts/index.ts';
 import { createChemistryRepository } from '../persistence/index.ts';
 import { CourseShell } from '../shell/CourseShell.tsx';
 import { productionRegistry } from './registry.ts';
@@ -11,6 +11,7 @@ import './olympiad.css';
 import { OlympiadSaveNotice } from '../activities/olympiad/DrawingDialog.tsx';
 type Runtime =
   | { id: 'alevel/c3l6-organic-reactions'; module: typeof import('../activities/olympiad/c3l6/index.ts') }
+  | { id:'alevel/maxwells-demon'; module:typeof import('../activities/olympiad/maxwells-demon/index.ts') }
   | { id: 'alevel/olympiad-2011-q4'; module: typeof import('../activities/olympiad/isomers2011/index.ts') };
 interface OlympiadHarness {
   snapshot: () => { progress: OlympiadProgress | null; saveStatus: SaveStatus; databaseName: string };
@@ -49,7 +50,7 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
         await queue.current;
         const challenges = productionRegistry.activities.filter(a => a.strand === 'olympiad');
         const loaded = await Promise.all(challenges.map(async a => {
-          const value = a.id === 'alevel/olympiad-2011-q4' ? await repository.loadOlympiad(profileId,a.id) : await repository.loadOlympiad(profileId);
+          const value = a.id === 'alevel/olympiad-2011-q4' ? await repository.loadOlympiad(profileId,a.id) : a.id==='alevel/maxwells-demon' ? await repository.loadOlympiad(profileId,a.id) : await repository.loadOlympiad(profileId);
           return {id:a.id as OlympiadActivityId,value};
         }));
         if (version !== generation.current) return;
@@ -69,6 +70,8 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
         setRuntime({id: activityId,module});
         apply(loaded.ok && loaded.value ? module.c3Policy.validateCompletion(module.c3Challenge,loaded.value) : module.blankC3Progress(profileId));
         if (!loaded.ok) { setSaveStatus({kind:'error',error:loaded.error}); setMessage(loaded.error.message); }
+      } else if(activityId==='alevel/maxwells-demon'){
+        const module=await import('../activities/olympiad/maxwells-demon/index.ts');const loaded=await repository.loadOlympiad(profileId,activityId);if(version!==generation.current)return;setRuntime({id:activityId,module});apply(loaded.ok&&loaded.value?module.maxwellPolicy.validateCompletion(module.maxwellChallenge,loaded.value):module.blankMaxwellProgress(profileId));if(!loaded.ok){setSaveStatus({kind:'error',error:loaded.error});setMessage(loaded.error.message);}
       } else {
         const module = await import('../activities/olympiad/isomers2011/index.ts');
         const loaded = await repository.loadOlympiad(profileId, activityId);
@@ -101,6 +104,7 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
       result = runtime.module.c3Policy.transition(runtime.module.c3Challenge,current as C3L6Progress,value as ChallengeCommand);
     else if (runtime.id === 'alevel/olympiad-2011-q4' && current.activityId === runtime.id && ['draw','select-box','check','restart'].includes(value.kind))
       result = runtime.module.isomerPolicy.transition(runtime.module.isomerChallenge,current,value as IsomerCommand);
+    else if(runtime.id==='alevel/maxwells-demon'&&current.activityId===runtime.id&&(value.kind.startsWith('maxwell-')||value.kind==='restart'))result=runtime.module.maxwellPolicy.transition(runtime.module.maxwellChallenge,current,value as MaxwellCommand);
     if (!result) return;
     setMessage(result.message);
     if (result.accepted) { apply(result.progress); await save(result.progress); }
@@ -121,7 +125,7 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
     {...(message ? {message} : {})} onLaunch={onSelectChallenge} onBack={() => {void leave(() => onSelectView?.('home'));}} />;
   return <CourseShell course="alevel" registry={productionRegistry} currentView="olympiad"
     {...(activityId ? {currentActivityId:activityId} : {})}
-    {...(registration ? {questionHeader:{subtopic:registration.title,questionId: activityId === 'alevel/olympiad-2011-q4' ? 'UK Olympiad 2011 Q4' : 'C3L6 2012 Q2'}} : {})}
+    {...(registration ? {questionHeader:{subtopic:registration.title}} : {})}
     onQuestionBack={() => {void leave(() => onSelectChallenge(undefined));}}
     questionBackLabel="Back to Olympiad landing"
     onSelectView={view => {void leave(() => onSelectView?.(view));}}
@@ -129,7 +133,7 @@ export function OlympiadHost({ activityId, onSelectCurriculum, onSelectChallenge
     <OlympiadSaveNotice.Provider value={saveNotice}>
     <div className="olympiad-question-frame">
       {readOnly && <p role="status">Teacher preview · reference answers · pupil progress is not saved</p>}
-      {runtime?.id === 'alevel/c3l6-organic-reactions' && progress?.activityId === runtime.id ? <runtime.module.C3L6View challenge={runtime.module.c3Challenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} {...(message ? {status:message} : {})} /> :
+      {runtime?.id === 'alevel/maxwells-demon' && progress?.activityId===runtime.id ? <runtime.module.MaxwellView progress={progress} readOnly={readOnly} onCommand={value=>{void command(value);}} {...(message?{status:message}:{})}/> : runtime?.id === 'alevel/c3l6-organic-reactions' && progress?.activityId === runtime.id ? <runtime.module.C3L6View challenge={runtime.module.c3Challenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} {...(message ? {status:message} : {})} /> :
        runtime?.id === 'alevel/olympiad-2011-q4' && progress?.activityId === runtime.id ? <runtime.module.IsomerView challenge={runtime.module.isomerChallenge} progress={progress} readOnly={readOnly} onCommand={value => {void command(value);}} /> : <p role="status">{message || 'Loading challenge content...'}</p>}
       {saveNotice}
     </div>

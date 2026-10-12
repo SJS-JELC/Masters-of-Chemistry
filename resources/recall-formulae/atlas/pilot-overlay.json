@@ -1,0 +1,2109 @@
+{
+  "schema_version": 1,
+  "run_id": "RECALL-FORMULAE-20261010",
+  "stage": "PILOT",
+  "root_acceptance": "PENDING",
+  "source": {
+    "path": "resources/igcse-past-paper-atlas/data/atlas.json",
+    "sha256": "9dec13f39318df5d0fe3b2053d391f438db47001ff7e6b6ad354925a6eb2ae4b",
+    "record_count": 2322,
+    "marks": 4320
+  },
+  "catalogue_sha256": "4e486e3cb06f5631b481a4801c801f1d5f1c55751979cd7f5a8929fefb2a0f57",
+  "decision_sha256": "609df1b8a35fa1d036875bea66cedb1612259f20e0167d8510a7707c4b6cad8a",
+  "entries": [
+    {
+      "id": "2025-nov-1-q8a",
+      "input_record_sha256": "3935ed2cc34c6accff5769b7f6eef378b49f78d27370d4bf72e448862cce9ebb",
+      "original": {
+        "id": "2025-nov-1-q8a",
+        "label": "8(a)",
+        "qp_pages": [
+          21
+        ],
+        "printed_pages": [
+          21
+        ],
+        "ms_pages": [
+          12
+        ],
+        "marks": 3,
+        "summary": "Complete three ionic-compound formulae from a charge table.",
+        "context": "A charge table supplies Li+, Mg2+, Al3+, nitrate, sulfate and phosphate ions, then compares melting points of MgO and NaCl.",
+        "command": "complete",
+        "response": "table",
+        "skill": "application",
+        "primary_gem": "3.1",
+        "secondary_gems": [],
+        "mapping_rationale": "All three cells assess charge balancing with supplied ions.",
+        "pattern": "3.1-construct-ionic-formula",
+        "mark_points": [
+          "Mg(NO3)2.",
+          "Li2SO4.",
+          "AlPO4."
+        ],
+        "marking_notes": "One mark per correct formula; all ion formulae and charges are supplied in the table.",
+        "recall": {
+          "direct": [
+            "ionic-formulae.balance-ion-charges"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "ions.lithium-magnesium-aluminium-nitrate-sulfate-phosphate"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP p21 and MS p12 checked against the source; dependent visual content inspected.",
+        "paper_id": "2025-nov-1",
+        "year": 2025,
+        "session": "nov",
+        "paper_number": 1,
+        "variant": "",
+        "original_pattern": "3.1-complete-ionic-formula-table",
+        "question_paper": "resources/past-paper-atlas/papers/2025/2025 November Paper 1.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2025/2025 November Paper 1 MS.pdf",
+        "classification": {
+          "id": "2025-nov-1-q8a",
+          "paper_id": "2025-nov-1",
+          "primary_gem": "3.1",
+          "band": "5-6",
+          "calculated_band": "5-6",
+          "grade_facility": {
+            "1": 0.2633333333333333,
+            "2": 0.3466666666666667,
+            "3": 0.43,
+            "4": 0.5333333333333333,
+            "5": 0.6166666666666667,
+            "6": 0.7,
+            "7": 0.81,
+            "8": 0.9,
+            "9": 0.96,
+            "ALL": 0.69,
+            "U": 0.13666666666666666
+          },
+          "band_scores": {
+            "5-6": 0.6583333333333333,
+            "7-8": 0.855
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.6583333333333333,
+              0.6583333333333333
+            ],
+            "7-8": [
+              0.855,
+              0.855
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-November_2025.csv",
+              "row": 56,
+              "question": "Q08a",
+              "sha256": "6f3a62272935f0b3b3440ed9cf9419c1cd0151bd2baa9e51a9007f2a2ed83159"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.1",
+        "secondary_gems": [
+          "3.1"
+        ]
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "All three marked cells construct neutral ionic formulae from supplied charges; no bonding explanation is assessed.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2025-nov-1-q8a",
+        "paper_id": "2025-nov-1",
+        "primary_gem": "3.1",
+        "band": "5-6",
+        "calculated_band": "5-6",
+        "grade_facility": {
+          "1": 0.2633333333333333,
+          "2": 0.3466666666666667,
+          "3": 0.43,
+          "4": 0.5333333333333333,
+          "5": 0.6166666666666667,
+          "6": 0.7,
+          "7": 0.81,
+          "8": 0.9,
+          "9": 0.96,
+          "ALL": 0.69,
+          "U": 0.13666666666666666
+        },
+        "band_scores": {
+          "5-6": 0.6583333333333333,
+          "7-8": 0.855
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.6583333333333333,
+            0.6583333333333333
+          ],
+          "7-8": [
+            0.855,
+            0.855
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-November_2025.csv",
+            "row": 56,
+            "question": "Q08a",
+            "sha256": "6f3a62272935f0b3b3440ed9cf9419c1cd0151bd2baa9e51a9007f2a2ed83159"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "7-8",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 3,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "formula-polyatomic"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "Mg2+ needs two NO3−; two Li+ balance SO4²−; Al3+ and PO4³− pair 1:1. Brackets only for repeated nitrate. All three marks remain one intact table record."
+      }
+    },
+    {
+      "id": "2023-jan-1-q8ai",
+      "input_record_sha256": "a76696f389d1c5a107bbfef3ce3e038c1710fd25b80d2982d8beba7e8ca9d4e8",
+      "original": {
+        "id": "2023-jan-1-q8ai",
+        "label": "8(a)(i)",
+        "qp_pages": [
+          16
+        ],
+        "printed_pages": [
+          16
+        ],
+        "ms_pages": [
+          11
+        ],
+        "marks": 3,
+        "summary": "Complete three ionic compound formulae from an ion table.",
+        "context": "Columns are Na+ and Mg2+; rows are Cl-, O2- and N3-, with Na2O, MgO and Na3N supplied.",
+        "command": "complete",
+        "response": "table",
+        "skill": "application",
+        "primary_gem": "3.1",
+        "secondary_gems": [],
+        "mapping_rationale": "Balancing ionic charges to obtain neutral formulae assesses ionic bonding.",
+        "pattern": "3.1-construct-ionic-formula",
+        "mark_points": [
+          "NaCl (one mark).",
+          "MgCl2 (one mark).",
+          "Mg3N2 (one mark)."
+        ],
+        "marking_notes": "Penalise incorrect capitalisation or superscript formula numbers once only. Reversed symbol order is accepted for Mg3N2; correctly charged ion groupings are accepted.",
+        "recall": {
+          "direct": [
+            "ionic-bonding.formula-from-ion-charges"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "stimulus-ion-charge-table"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "The Na+/Mg2+ columns and Cl-/O2-/N3- rows were visually checked on QP p.16.",
+        "paper_id": "2023-jan-1",
+        "year": 2023,
+        "session": "jan",
+        "paper_number": 1,
+        "variant": "",
+        "original_pattern": "3.1-complete-ionic-formula-table",
+        "question_paper": "resources/past-paper-atlas/papers/2023/2023 Jan Paper 1.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2023/2023 Jan Paper 1 MS.pdf",
+        "classification": {
+          "id": "2023-jan-1-q8ai",
+          "paper_id": "2023-jan-1",
+          "primary_gem": "3.1",
+          "band": "5-6",
+          "calculated_band": "5-6",
+          "grade_facility": {
+            "1": 0.3333333333333333,
+            "2": 0.42,
+            "3": 0.49,
+            "4": 0.63,
+            "5": 0.72,
+            "6": 0.83,
+            "7": 0.92,
+            "8": 0.95,
+            "9": 0.9833333333333333,
+            "ALL": 0.7833333333333333,
+            "U": 0.20333333333333334
+          },
+          "band_scores": {
+            "5-6": 0.775,
+            "7-8": 0.935
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.775,
+              0.775
+            ],
+            "7-8": [
+              0.935,
+              0.935
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-January_2023.csv",
+              "row": 51,
+              "question": "Q08ai",
+              "sha256": "e0b40855b265aab2b70fb47633021f39975b01c8ad053ccd562ccb8f7a9d5bae"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.1",
+        "secondary_gems": [
+          "3.1"
+        ]
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "The three cells assess charge-balanced formula construction with all ion charges supplied.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2023-jan-1-q8ai",
+        "paper_id": "2023-jan-1",
+        "primary_gem": "3.1",
+        "band": "5-6",
+        "calculated_band": "5-6",
+        "grade_facility": {
+          "1": 0.3333333333333333,
+          "2": 0.42,
+          "3": 0.49,
+          "4": 0.63,
+          "5": 0.72,
+          "6": 0.83,
+          "7": 0.92,
+          "8": 0.95,
+          "9": 0.9833333333333333,
+          "ALL": 0.7833333333333333,
+          "U": 0.20333333333333334
+        },
+        "band_scores": {
+          "5-6": 0.775,
+          "7-8": 0.935
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.775,
+            0.775
+          ],
+          "7-8": [
+            0.935,
+            0.935
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-January_2023.csv",
+            "row": 51,
+            "question": "Q08ai",
+            "sha256": "e0b40855b265aab2b70fb47633021f39975b01c8ad053ccd562ccb8f7a9d5bae"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "5-6",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 3,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "formula-monatomic"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "Na+/Cl− gives NaCl; Mg2+/Cl− gives MgCl2; Mg2+/N3− gives Mg3N2. Preserve historical formatting and reversed-order allowances in original fields."
+      }
+    },
+    {
+      "id": "2025-june-1-q4c",
+      "input_record_sha256": "16d5753b4326a15c4fb22f1eafbfeaf9bfff33fbdc28d71aa27a1625fade1061",
+      "original": {
+        "id": "2025-june-1-q4c",
+        "label": "4(c)",
+        "qp_pages": [
+          8
+        ],
+        "printed_pages": [
+          8
+        ],
+        "ms_pages": [
+          7
+        ],
+        "marks": 1,
+        "summary": "Balance the equation for calcium hydroxide reacting with phosphoric acid.",
+        "context": "Calcium phosphate, Ca3(PO4)2, is used for formula interpretation, mass calculations and equation balancing.",
+        "command": "balance",
+        "response": "equation",
+        "skill": "representation",
+        "primary_gem": "7.5",
+        "secondary_gems": [],
+        "mapping_rationale": "The single mark assesses balancing a reaction with all formulae supplied.",
+        "pattern": "7.5-operation-write-and-balance-reaction-equation",
+        "mark_points": [
+          "Use coefficients 3, 2, 1 and 6: 3Ca(OH)2 + 2H3PO4 → Ca3(PO4)2 + 6H2O."
+        ],
+        "marking_notes": "Multiples and fractional equivalents are accepted. Atom check: Ca 3, P 2, H 12 and O 14 on each side.",
+        "recall": {
+          "direct": [
+            "chemical-equations.balance-by-coefficients"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "chemical-equations.reactant-product-formulae"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP p8 and MS p7 checked against the source; visual content was inspected where the response depends on it.",
+        "paper_id": "2025-june-1",
+        "year": 2025,
+        "session": "june",
+        "paper_number": 1,
+        "variant": "",
+        "original_pattern": "7.5-balance-reaction-equation",
+        "question_paper": "resources/past-paper-atlas/papers/2025/2025 June Paper 1.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2025/2025 June Paper 1 MS.pdf",
+        "classification": {
+          "id": "2025-june-1-q4c",
+          "paper_id": "2025-june-1",
+          "primary_gem": "7.5",
+          "band": "7-8",
+          "calculated_band": "7-8",
+          "grade_facility": {
+            "1": 0.06,
+            "2": 0.13,
+            "3": 0.24,
+            "4": 0.32,
+            "5": 0.41,
+            "6": 0.52,
+            "7": 0.67,
+            "8": 0.82,
+            "9": 0.95,
+            "ALL": 0.67,
+            "U": 0.01
+          },
+          "band_scores": {
+            "5-6": 0.465,
+            "7-8": 0.745
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.465,
+              0.465
+            ],
+            "7-8": [
+              0.745,
+              0.745
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-June_2025.csv",
+              "row": 27,
+              "question": "Q04c",
+              "sha256": "7285a18cee41a2d4000cefa2a41cdc6c83e9025486b7f416b9af99dc9800a19e"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.2",
+        "secondary_gems": [
+          "7.5"
+        ]
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "Only coefficients of supplied formulae earn the mark; the record does not calculate a mole amount.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2025-june-1-q4c",
+        "paper_id": "2025-june-1",
+        "primary_gem": "7.5",
+        "band": "7-8",
+        "calculated_band": "7-8",
+        "grade_facility": {
+          "1": 0.06,
+          "2": 0.13,
+          "3": 0.24,
+          "4": 0.32,
+          "5": 0.41,
+          "6": 0.52,
+          "7": 0.67,
+          "8": 0.82,
+          "9": 0.95,
+          "ALL": 0.67,
+          "U": 0.01
+        },
+        "band_scores": {
+          "5-6": 0.465,
+          "7-8": 0.745
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.465,
+            0.465
+          ],
+          "7-8": [
+            0.745,
+            0.745
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-June_2025.csv",
+            "row": 27,
+            "question": "Q04c",
+            "sha256": "7285a18cee41a2d4000cefa2a41cdc6c83e9025486b7f416b9af99dc9800a19e"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "7-8",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 1,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "balancing-polyatomic"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "3:2:1:6 conserves Ca3 P2 H12 O14. Source permits equivalent multiples/fractions. No alteration to empirical 7-8 classification."
+      }
+    },
+    {
+      "id": "2021-nov-2-q3ai",
+      "input_record_sha256": "a865fb7daa8998934f509f203478267bd0e91e328065c7e6e4c96f4101f97e48",
+      "original": {
+        "id": "2021-nov-2-q3ai",
+        "label": "3(a)(i)",
+        "qp_pages": [
+          7
+        ],
+        "printed_pages": [
+          7
+        ],
+        "ms_pages": [
+          7
+        ],
+        "marks": 2,
+        "summary": "Balance the reaction of hydrogen sulfide with sulfur dioxide and add states.",
+        "context": "The skeleton supplies 2H2S + SO2 and S(s), with gaps for gas/water state symbols and coefficients before S and H2O. The apparatus is at ordinary laboratory conditions.",
+        "command": "complete",
+        "response": "equation",
+        "skill": "representation",
+        "primary_gem": "1.1",
+        "secondary_gems": [],
+        "mapping_rationale": "Completing supplied equation notation and states is assessed; no redox identification or explanation is required in this leaf.",
+        "pattern": "1.1-complete-equation-states-and-coefficients",
+        "mark_points": [
+          "Complete all missing states: H2S(g), SO2(g), H2O(l); S(s) is already supplied.",
+          "Complete coefficients 3 before S and 2 before H2O."
+        ],
+        "marking_notes": "One mark for balancing and one for a complete correct set of state symbols; multiples or fractional equivalents are accepted.",
+        "recall": {
+          "direct": [
+            "equations.gas-and-liquid-state-symbols"
+          ],
+          "prerequisite": [
+            "equations.conservation-of-atoms"
+          ],
+          "supplied": [
+            "stimulus.hydrogen-sulfide-sulfur-dioxide-equation-skeleton"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP wording and corresponding mark-scheme row checked.",
+        "paper_id": "2021-nov-2",
+        "year": 2021,
+        "session": "nov",
+        "paper_number": 2,
+        "variant": "",
+        "original_pattern": "1.1-complete-equation-states-and-coefficients",
+        "question_paper": "resources/past-paper-atlas/papers/2021/2021 November Paper 2.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2021/2021 November Paper 2 MS.pdf",
+        "classification": {
+          "id": "2021-nov-2-q3ai",
+          "paper_id": "2021-nov-2",
+          "primary_gem": "1.1",
+          "band": "5-6",
+          "calculated_band": "5-6",
+          "grade_facility": {
+            "1": 0.12,
+            "2": 0.1,
+            "3": 0.22,
+            "4": 0.415,
+            "5": 0.57,
+            "6": 0.715,
+            "7": 0.765,
+            "8": 0.785,
+            "9": 0.865,
+            "ALL": 0.665,
+            "U": null
+          },
+          "band_scores": {
+            "5-6": 0.6425,
+            "7-8": 0.775
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.6425,
+              0.6425
+            ],
+            "7-8": [
+              0.775,
+              0.775
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-November_2021.csv",
+              "row": 96,
+              "question": "Q03ai",
+              "sha256": "43930e61657b87ee359aedba3310293c5dd032911c1ff86d8f4140433c2ee2cc"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.2",
+        "secondary_gems": []
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "Both marked operations are equation coefficients and states with formulae supplied; no redox reasoning is asked.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2021-nov-2-q3ai",
+        "paper_id": "2021-nov-2",
+        "primary_gem": "1.1",
+        "band": "5-6",
+        "calculated_band": "5-6",
+        "grade_facility": {
+          "1": 0.12,
+          "2": 0.1,
+          "3": 0.22,
+          "4": 0.415,
+          "5": 0.57,
+          "6": 0.715,
+          "7": 0.765,
+          "8": 0.785,
+          "9": 0.865,
+          "ALL": 0.665,
+          "U": null
+        },
+        "band_scores": {
+          "5-6": 0.6425,
+          "7-8": 0.775
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.6425,
+            0.6425
+          ],
+          "7-8": [
+            0.775,
+            0.775
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-November_2021.csv",
+            "row": 96,
+            "question": "Q03ai",
+            "sha256": "43930e61657b87ee359aedba3310293c5dd032911c1ff86d8f4140433c2ee2cc"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "5-6",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 2,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "balancing-and-states"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "2H2S(g)+SO2(g)→3S(s)+2H2O(l) conserves H4 S3 O2. Gases and liquid water follow extracted ordinary laboratory context; retain indivisible two-mark record."
+      }
+    },
+    {
+      "id": "2025-nov-1-q4cii",
+      "input_record_sha256": "92a26e91620eaa5b7cbc0d1d8291f348b36951c1ce4898531b56fb92bb393385",
+      "original": {
+        "id": "2025-nov-1-q4cii",
+        "label": "4(c)(ii)",
+        "qp_pages": [
+          11
+        ],
+        "printed_pages": [
+          11
+        ],
+        "ms_pages": [
+          7
+        ],
+        "marks": 1,
+        "summary": "Complete state symbols in the ammonia–hydrogen-chloride equation.",
+        "context": "A chloride-ion shell diagram, paired chloride/sulfate tests and a glass-tube ammonia/hydrogen-chloride diffusion experiment are assessed.",
+        "command": "complete",
+        "response": "equation",
+        "skill": "representation",
+        "primary_gem": "1.1",
+        "secondary_gems": [],
+        "mapping_rationale": "The missing response is solely the physical state of each supplied formula.",
+        "pattern": "1.1-apply-state-symbols-to-chemical-equations",
+        "mark_points": [
+          "Complete NH3(g) + HCl(g) ⇌ NH4Cl(s)."
+        ],
+        "marking_notes": "All three state symbols are required for the one mark; ignore letter case.",
+        "recall": {
+          "direct": [
+            "chemical-equations.states-ammonium-chloride-formation"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "chemical-equations.ammonium-chloride-formulae"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [
+          {
+            "tag": "chemical-equations.states-ammonium-chloride-formation",
+            "prompt": "Write the reversible equation with state symbols for ammonia and hydrogen chloride forming solid ammonium chloride.",
+            "answer": "NH3(g) + HCl(g) ⇌ NH4Cl(s).",
+            "qualification": ""
+          }
+        ],
+        "review_status": "reviewed",
+        "review_notes": "QP p11 and MS p7 checked against the source; dependent visual content inspected.",
+        "paper_id": "2025-nov-1",
+        "year": 2025,
+        "session": "nov",
+        "paper_number": 1,
+        "variant": "",
+        "original_pattern": "1.1-complete-state-symbols-ammonium-chloride",
+        "question_paper": "resources/past-paper-atlas/papers/2025/2025 November Paper 1.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2025/2025 November Paper 1 MS.pdf",
+        "classification": {
+          "id": "2025-nov-1-q4cii",
+          "paper_id": "2025-nov-1",
+          "primary_gem": "1.1",
+          "band": "9",
+          "calculated_band": "9",
+          "grade_facility": {
+            "1": null,
+            "2": 0.01,
+            "3": 0.04,
+            "4": 0.06,
+            "5": 0.08,
+            "6": 0.12,
+            "7": 0.16,
+            "8": 0.28,
+            "9": 0.59,
+            "ALL": 0.2,
+            "U": 0.01
+          },
+          "band_scores": {
+            "5-6": 0.1,
+            "7-8": 0.22
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.1,
+              0.1
+            ],
+            "7-8": [
+              0.22,
+              0.22
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-November_2025.csv",
+              "row": 35,
+              "question": "Q04cii",
+              "sha256": "6f3a62272935f0b3b3440ed9cf9419c1cd0151bd2baa9e51a9007f2a2ed83159"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.2",
+        "secondary_gems": []
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "All required responses are state symbols beside supplied formulae; diffusion is context, not this leaf’s scored reasoning.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2025-nov-1-q4cii",
+        "paper_id": "2025-nov-1",
+        "primary_gem": "1.1",
+        "band": "9",
+        "calculated_band": "9",
+        "grade_facility": {
+          "1": null,
+          "2": 0.01,
+          "3": 0.04,
+          "4": 0.06,
+          "5": 0.08,
+          "6": 0.12,
+          "7": 0.16,
+          "8": 0.28,
+          "9": 0.59,
+          "ALL": 0.2,
+          "U": 0.01
+        },
+        "band_scores": {
+          "5-6": 0.1,
+          "7-8": 0.22
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.1,
+            0.1
+          ],
+          "7-8": [
+            0.22,
+            0.22
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-November_2025.csv",
+            "row": 35,
+            "question": "Q04cii",
+            "sha256": "6f3a62272935f0b3b3440ed9cf9419c1cd0151bd2baa9e51a9007f2a2ed83159"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "5-6",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 1,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "states",
+        "empirical-teaching-band-separation"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "NH3(g)+HCl(g)⇌NH4Cl(s) has conserved atoms. All three states required for one mark. Source empirical band 9 is retained even though teaching state-symbol activity is 5-6."
+      }
+    },
+    {
+      "id": "2019-june-1r-q6bv",
+      "input_record_sha256": "2681fcad99cdd34e4ab6aef125733de7e31e95beabe4b234fdc651f565867280",
+      "original": {
+        "id": "2019-june-1r-q6bv",
+        "label": "6(b)(v)",
+        "qp_pages": [
+          14
+        ],
+        "printed_pages": [
+          15
+        ],
+        "ms_pages": [
+          15
+        ],
+        "marks": 1,
+        "summary": "Write the equation for dichloroethane decomposing into chloroethene and hydrogen chloride.",
+        "context": "Reactant and product names are supplied.",
+        "command": "give",
+        "response": "equation",
+        "skill": "representation",
+        "primary_gem": "9.3",
+        "secondary_gems": [],
+        "mapping_rationale": "Write the equation for dichloroethane decomposing into chloroethene and hydrogen chloride is the assessed outcome, matching gem 9.3.",
+        "pattern": "9.3-write-dehydrochlorination-equation",
+        "mark_points": [
+          "C₂H₄Cl₂ → C₂H₃Cl + HCl."
+        ],
+        "marking_notes": "Ignore incorrect upper/lower case or superscript formatting in the historical mark scheme.",
+        "recall": {
+          "direct": [
+            "chloroethene.preparation-dehydrochlorination"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "reaction-products.chloroethene-hydrogen-chloride"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP wording and the corresponding MS row were checked together.",
+        "paper_id": "2019-june-1r",
+        "year": 2019,
+        "session": "june",
+        "paper_number": 1,
+        "variant": "R",
+        "original_pattern": "9.3-write-dehydrochlorination-equation",
+        "question_paper": "resources/past-paper-atlas/papers/2019/2019 June Paper 1R DRAGONFLY.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2019/2019 June Paper 1R MS.pdf",
+        "classification": {
+          "id": "2019-june-1r-q6bv",
+          "paper_id": "2019-june-1r",
+          "primary_gem": "9.3",
+          "band": "5-6",
+          "calculated_band": "5-6",
+          "grade_facility": {
+            "1": 0.15,
+            "2": 0.16,
+            "3": 0.31,
+            "4": 0.48,
+            "5": 0.56,
+            "6": 0.72,
+            "7": 0.75,
+            "8": 0.9,
+            "9": 0.97,
+            "ALL": 0.73,
+            "U": 0.02
+          },
+          "band_scores": {
+            "5-6": 0.64,
+            "7-8": 0.825
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.64,
+              0.64
+            ],
+            "7-8": [
+              0.825,
+              0.825
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-June_2019.csv",
+              "row": 114,
+              "question": "Q06bv",
+              "sha256": "10845368dbe0df71074129b0a1e24169a25c63eb319282ccf0fc966bf8262f88"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.2",
+        "secondary_gems": [
+          "9.3"
+        ]
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "Reactant and both product names are explicitly supplied; the marked response is their formula equation, not prediction of an alkene reaction.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2019-june-1r-q6bv",
+        "paper_id": "2019-june-1r",
+        "primary_gem": "9.3",
+        "band": "5-6",
+        "calculated_band": "5-6",
+        "grade_facility": {
+          "1": 0.15,
+          "2": 0.16,
+          "3": 0.31,
+          "4": 0.48,
+          "5": 0.56,
+          "6": 0.72,
+          "7": 0.75,
+          "8": 0.9,
+          "9": 0.97,
+          "ALL": 0.73,
+          "U": 0.02
+        },
+        "band_scores": {
+          "5-6": 0.64,
+          "7-8": 0.825
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.64,
+            0.64
+          ],
+          "7-8": [
+            0.825,
+            0.825
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-June_2019.csv",
+            "row": 114,
+            "question": "Q06bv",
+            "sha256": "10845368dbe0df71074129b0a1e24169a25c63eb319282ccf0fc966bf8262f88"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "7-8",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 1,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "simple-named-product-translation"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "C2H4Cl2→C2H3Cl+HCl conserves C2 H4 Cl2. Historical case/format allowances remain source data, not new activity marking rules."
+      }
+    },
+    {
+      "id": "2023-jan-2r-q5d",
+      "input_record_sha256": "5db471033e84ea1ac0842a9271e41f36332399ffc61fbdc924949379a0c8f34c",
+      "original": {
+        "id": "2023-jan-2r-q5d",
+        "label": "5(d)",
+        "qp_pages": [
+          11
+        ],
+        "printed_pages": [
+          11
+        ],
+        "ms_pages": [
+          8
+        ],
+        "marks": 2,
+        "summary": "Write the equation for calcium phosphide reacting with water.",
+        "context": "The named products are calcium hydroxide and phosphine, PH3.",
+        "command": "write",
+        "response": "equation",
+        "skill": "representation",
+        "primary_gem": "7.5",
+        "secondary_gems": [],
+        "mapping_rationale": "Write the equation for calcium phosphide reacting with water.",
+        "pattern": "7.5-operation-write-and-balance-reaction-equation",
+        "mark_points": [
+          "All formulae correct: Ca3P2 + H2O -> Ca(OH)2 + PH3.",
+          "Balanced equation: Ca3P2 + 6H2O -> 3Ca(OH)2 + 2PH3."
+        ],
+        "marking_notes": "The balancing mark depends on correct formulae; allow multiples and fractions.",
+        "recall": {
+          "direct": [],
+          "prerequisite": [],
+          "supplied": [
+            "source.named-reactants-products"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP and MS text read; answer and allocation checked against the rendered pages.",
+        "paper_id": "2023-jan-2r",
+        "year": 2023,
+        "session": "jan",
+        "paper_number": 2,
+        "variant": "R",
+        "original_pattern": "7.5-write-balanced-equation",
+        "question_paper": "resources/past-paper-atlas/papers/2023/2023 Jan Paper 2R.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2023/2023 Jan Paper 2R MS.pdf",
+        "classification": {
+          "id": "2023-jan-2r-q5d",
+          "paper_id": "2023-jan-2r",
+          "primary_gem": "7.5",
+          "band": "9",
+          "calculated_band": "9",
+          "grade_facility": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": 0.035,
+            "5": 0.035,
+            "6": 0.265,
+            "7": 0.275,
+            "8": 0.425,
+            "9": 0.865,
+            "ALL": 0.375,
+            "U": null
+          },
+          "band_scores": {
+            "5-6": 0.15,
+            "7-8": 0.35
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.15,
+              0.15
+            ],
+            "7-8": [
+              0.35,
+              0.35
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-January_2023.csv",
+              "row": 201,
+              "question": "Q05d",
+              "sha256": "e0b40855b265aab2b70fb47633021f39975b01c8ad053ccd562ccb8f7a9d5bae"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.2",
+        "secondary_gems": [
+          "7.5",
+          "16.1"
+        ]
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "Named products calcium hydroxide and phosphine are supplied; formula translation and balancing are the two directly marked operations.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2023-jan-2r-q5d",
+        "paper_id": "2023-jan-2r",
+        "primary_gem": "7.5",
+        "band": "9",
+        "calculated_band": "9",
+        "grade_facility": {
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": 0.035,
+          "5": 0.035,
+          "6": 0.265,
+          "7": 0.275,
+          "8": 0.425,
+          "9": 0.865,
+          "ALL": 0.375,
+          "U": null
+        },
+        "band_scores": {
+          "5-6": 0.15,
+          "7-8": 0.35
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.15,
+            0.15
+          ],
+          "7-8": [
+            0.35,
+            0.35
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-January_2023.csv",
+            "row": 201,
+            "question": "Q05d",
+            "sha256": "e0b40855b265aab2b70fb47633021f39975b01c8ad053ccd562ccb8f7a9d5bae"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "9",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 2,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "complex-named-product-translation"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "Ca3P2+6H2O→3Ca(OH)2+2PH3 conserves Ca3 P2 H12 O6. Phosphine formula PH3 is supplied; calcium hydroxide is ionic construction, supporting 16.1 secondary. Source formula dependency retained."
+      }
+    },
+    {
+      "id": "2025-nov-1-q10ci",
+      "input_record_sha256": "82c8bfa80639438612ba01c2716a944a58225005535cf5fd73fc015f9eec284b",
+      "original": {
+        "id": "2025-nov-1-q10ci",
+        "label": "10(c)(i)",
+        "qp_pages": [
+          28
+        ],
+        "printed_pages": [
+          28
+        ],
+        "ms_pages": [
+          14
+        ],
+        "marks": 2,
+        "summary": "Show from amounts and a balanced equation that sulfuric acid is limiting.",
+        "context": "A balanced aluminium–sulfuric-acid equation supports salt preparation, limiting-reactant reasoning, percentage yield and evaluation of a yield above 100%.",
+        "command": "show",
+        "response": "calculation",
+        "skill": "calculation",
+        "primary_gem": "7.5",
+        "secondary_gems": [],
+        "mapping_rationale": "The calculation compares the available aluminium with the 2:3 reaction ratio.",
+        "pattern": "7.5-operation-identify-limiting-or-excess-reagent",
+        "mark_points": [
+          "Calculate n(Al) = 3.20/27 = 0.119 mol.",
+          "Calculate aluminium needed = 0.120 × 2/3 = 0.080 mol and conclude aluminium is excess/acid is not excess; alternatively show 0.119 × 3/2 = 0.179 mol acid would be needed."
+        ],
+        "marking_notes": "The alternative comparison 0.080 × 27 = 2.16 g Al needed also completes the argument. Merely finding 0.080 mol earns only the first mark.",
+        "recall": {
+          "direct": [
+            "stoichiometry.identify-limiting-reactant"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "chemical-equations.aluminium-sulfuric-acid",
+            "stoichiometry.aluminium-mass-acid-amount"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP p28 and MS p14 checked against the source; dependent visual content inspected.",
+        "paper_id": "2025-nov-1",
+        "year": 2025,
+        "session": "nov",
+        "paper_number": 1,
+        "variant": "",
+        "original_pattern": "7.5-identify-limiting-reactant",
+        "question_paper": "resources/past-paper-atlas/papers/2025/2025 November Paper 1.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2025/2025 November Paper 1 MS.pdf",
+        "classification": {
+          "id": "2025-nov-1-q10ci",
+          "paper_id": "2025-nov-1",
+          "primary_gem": "7.5",
+          "band": "9",
+          "calculated_band": "9",
+          "grade_facility": {
+            "1": 0.005,
+            "2": 0.035,
+            "3": 0.03,
+            "4": 0.1,
+            "5": 0.19,
+            "6": 0.265,
+            "7": 0.41,
+            "8": 0.595,
+            "9": 0.81,
+            "ALL": 0.355,
+            "U": null
+          },
+          "band_scores": {
+            "5-6": 0.2275,
+            "7-8": 0.5025
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.2275,
+              0.2275
+            ],
+            "7-8": [
+              0.5025,
+              0.5025
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-November_2025.csv",
+              "row": 68,
+              "question": "Q10ci",
+              "sha256": "6f3a62272935f0b3b3440ed9cf9419c1cd0151bd2baa9e51a9007f2a2ed83159"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "7.5",
+        "secondary_gems": []
+      },
+      "disposition": "RETAIN_ORIGINAL",
+      "evidence_rationale": "The balanced equation is supplied; marks assess a limiting-reagent comparison, not formula/equation construction.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2025-nov-1-q10ci",
+        "paper_id": "2025-nov-1",
+        "primary_gem": "7.5",
+        "band": "9",
+        "calculated_band": "9",
+        "grade_facility": {
+          "1": 0.005,
+          "2": 0.035,
+          "3": 0.03,
+          "4": 0.1,
+          "5": 0.19,
+          "6": 0.265,
+          "7": 0.41,
+          "8": 0.595,
+          "9": 0.81,
+          "ALL": 0.355,
+          "U": null
+        },
+        "band_scores": {
+          "5-6": 0.2275,
+          "7-8": 0.5025
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.2275,
+            0.2275
+          ],
+          "7-8": [
+            0.5025,
+            0.5025
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-November_2025.csv",
+            "row": 68,
+            "question": "Q10ci",
+            "sha256": "6f3a62272935f0b3b3440ed9cf9419c1cd0151bd2baa9e51a9007f2a2ed83159"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": null,
+        "is_empirical_classification": false
+      },
+      "primary_marks": 2,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "supplied-equation-supporting-calculation"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "3.20/27≈0.119 mol Al versus 0.120×2/3=0.080 mol required confirms acid limiting. A supplied ratio does not justify a new 16.2 tag."
+      }
+    },
+    {
+      "id": "2020-nov-2-q3b",
+      "input_record_sha256": "428fe3d08e1f43a8552426f8c15f0499603f43002626a3d6a4f6d0c15849be94",
+      "original": {
+        "id": "2020-nov-2-q3b",
+        "label": "3(b)",
+        "qp_pages": [
+          9
+        ],
+        "printed_pages": [
+          9
+        ],
+        "ms_pages": [
+          6
+        ],
+        "marks": 3,
+        "summary": "Choose carbon reduction for lead(II) oxide, justify it, and write a lead-forming equation.",
+        "context": "A supplied order is aluminium > iron > lead > copper; offered methods are heating with carbon or electrolysis, and iron oxide is stated to be carbon-reduced.",
+        "command": "explain",
+        "response": "mixed",
+        "skill": "application",
+        "primary_gem": "13.1",
+        "secondary_gems": [
+          "13.2"
+        ],
+        "mapping_rationale": "Method selection depends chiefly on reactivity; the equation adds a redox representation.",
+        "pattern": "13.1-select-extraction-method-from-reactivity-relative-to-carbon",
+        "mark_points": [
+          "Choose Method 1: heat lead(II) oxide with carbon.",
+          "Explain that lead is below iron, or equivalently that carbon is more reactive than lead.",
+          "Give a balanced equation, for example 2PbO + C → 2Pb + CO2."
+        ],
+        "marking_notes": "Also accept PbO + CO → Pb + CO2 or PbO + C → Pb + CO. Reverse reactivity arguments are accepted; one mark per requirement.",
+        "recall": {
+          "direct": [
+            "equations.reduction-of-lead-oxide",
+            "extraction.carbon-reduces-less-reactive-metal-oxides"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "extraction.carbon-or-electrolysis-methods",
+            "reactivity.order-aluminium-iron-lead-copper"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [
+          {
+            "tag": "extraction.carbon-reduces-less-reactive-metal-oxides",
+            "prompt": "When can carbon be used to extract a metal from its oxide?",
+            "answer": "When the metal is less reactive than carbon, heating its oxide with carbon can reduce the oxide to the metal.",
+            "qualification": "The exact products and practical viability depend on the oxide and conditions."
+          }
+        ],
+        "review_status": "reviewed",
+        "review_notes": "Reactivity graphic checked visually on QP page 9; all three accepted equations were independently atom-balanced and matched to MS page 6.",
+        "paper_id": "2020-nov-2",
+        "year": 2020,
+        "session": "nov",
+        "paper_number": 2,
+        "variant": "",
+        "original_pattern": "13.1-select-carbon-reduction-from-reactivity",
+        "question_paper": "resources/past-paper-atlas/papers/2020/2020 Nov Paper 2.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2020/2020 Nov Paper 2 MS.pdf",
+        "classification": {
+          "id": "2020-nov-2-q3b",
+          "paper_id": "2020-nov-2",
+          "primary_gem": "13.1",
+          "band": "9",
+          "calculated_band": "9",
+          "grade_facility": {
+            "1": 0.12,
+            "2": 0.14666666666666667,
+            "3": 0.15333333333333332,
+            "4": 0.2,
+            "5": 0.24,
+            "6": 0.32666666666666666,
+            "7": 0.39666666666666667,
+            "8": 0.5466666666666666,
+            "9": 0.7433333333333333,
+            "ALL": 0.42333333333333334,
+            "U": 0.07333333333333333
+          },
+          "band_scores": {
+            "5-6": 0.2833333333333333,
+            "7-8": 0.4716666666666667
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.2833333333333333,
+              0.2833333333333333
+            ],
+            "7-8": [
+              0.4716666666666667,
+              0.4716666666666667
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-November_2020.csv",
+              "row": 157,
+              "question": "Q03b",
+              "sha256": "a284af427dae1b503be422d78fe118bacfd111791a84edd228d1824ebb8b0e5a"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "13.1",
+        "secondary_gems": [
+          "13.2",
+          "16.2"
+        ]
+      },
+      "disposition": "ADD_SECONDARY",
+      "evidence_rationale": "Method choice and reactivity justification remain the dominant skill; a balanced lead-forming equation is an explicit third requirement.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2020-nov-2-q3b",
+        "paper_id": "2020-nov-2",
+        "primary_gem": "13.1",
+        "band": "9",
+        "calculated_band": "9",
+        "grade_facility": {
+          "1": 0.12,
+          "2": 0.14666666666666667,
+          "3": 0.15333333333333332,
+          "4": 0.2,
+          "5": 0.24,
+          "6": 0.32666666666666666,
+          "7": 0.39666666666666667,
+          "8": 0.5466666666666666,
+          "9": 0.7433333333333333,
+          "ALL": 0.42333333333333334,
+          "U": 0.07333333333333333
+        },
+        "band_scores": {
+          "5-6": 0.2833333333333333,
+          "7-8": 0.4716666666666667
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.2833333333333333,
+            0.2833333333333333
+          ],
+          "7-8": [
+            0.4716666666666667,
+            0.4716666666666667
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-November_2020.csv",
+            "row": 157,
+            "question": "Q03b",
+            "sha256": "a284af427dae1b503be422d78fe118bacfd111791a84edd228d1824ebb8b0e5a"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": null,
+        "is_empirical_classification": false
+      },
+      "primary_marks": 3,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "mixed-indivisible-subpart"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "Retain all three marks under 13.1 once, with no fabricated subparts. 2PbO+C→2Pb+CO2, PbO+CO→Pb+CO2 and PbO+C→Pb+CO each conserve atoms. Equation component warrants 16.2 secondary."
+      }
+    },
+    {
+      "id": "2023-jan-1r-q9c",
+      "input_record_sha256": "2ba12c07de1f555522f1cec624591a39b230496a3924dd3864f39816bbf7d5c3",
+      "original": {
+        "id": "2023-jan-1r-q9c",
+        "label": "9(c)",
+        "qp_pages": [
+          27
+        ],
+        "printed_pages": [
+          27
+        ],
+        "ms_pages": [
+          12
+        ],
+        "marks": 2,
+        "summary": "Complete hydrated zinc nitrate decomposition equation.",
+        "context": "Reactant 2Zn(NO3)2·6H2O; products named ZnO, NO2, O2, H2O.",
+        "command": "give",
+        "response": "equation",
+        "skill": "application",
+        "primary_gem": "11.2",
+        "secondary_gems": [],
+        "mapping_rationale": "Completing and balancing a heated metal-nitrate decomposition to an oxide assesses decomposition/oxide chemistry, so Oxides (11.2) is primary.",
+        "pattern": "11.2-complete-metal-nitrate-decomposition-equation",
+        "mark_points": [
+          "All product formulae correct.",
+          "Balance: 2ZnO+4NO2+O2+12H2O."
+        ],
+        "marking_notes": "Balancing depends on correct formulae.",
+        "recall": {
+          "direct": [],
+          "prerequisite": [],
+          "supplied": [
+            "zinc-nitrate-hydrate.decomposition-products"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [],
+        "review_status": "reviewed",
+        "review_notes": "QP and MS wording checked.",
+        "paper_id": "2023-jan-1r",
+        "year": 2023,
+        "session": "jan",
+        "paper_number": 1,
+        "variant": "R",
+        "original_pattern": "11.2-complete-metal-nitrate-decomposition-equation",
+        "question_paper": "resources/past-paper-atlas/papers/2023/2023 Jan Paper 1R.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2023/2023 Jan Paper 1R MS.pdf",
+        "classification": {
+          "id": "2023-jan-1r-q9c",
+          "paper_id": "2023-jan-1r",
+          "primary_gem": "11.2",
+          "band": "9",
+          "calculated_band": "9",
+          "grade_facility": {
+            "1": 0.045,
+            "2": 0.115,
+            "3": 0.12,
+            "4": 0.195,
+            "5": 0.215,
+            "6": 0.31,
+            "7": 0.395,
+            "8": 0.48,
+            "9": 0.58,
+            "ALL": 0.375,
+            "U": null
+          },
+          "band_scores": {
+            "5-6": 0.2625,
+            "7-8": 0.4375
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.2625,
+              0.2625
+            ],
+            "7-8": [
+              0.4375,
+              0.4375
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-January_2023.csv",
+              "row": 126,
+              "question": "Q09c",
+              "sha256": "e0b40855b265aab2b70fb47633021f39975b01c8ad053ccd562ccb8f7a9d5bae"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "16.2",
+        "secondary_gems": [
+          "11.2"
+        ]
+      },
+      "disposition": "REASSIGN_PRIMARY",
+      "evidence_rationale": "Extracted context and supplied-recall tags identify all products; marked formulae and coefficients assess translating a stated hydrate decomposition, not predicting nitrate products.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2023-jan-1r-q9c",
+        "paper_id": "2023-jan-1r",
+        "primary_gem": "11.2",
+        "band": "9",
+        "calculated_band": "9",
+        "grade_facility": {
+          "1": 0.045,
+          "2": 0.115,
+          "3": 0.12,
+          "4": 0.195,
+          "5": 0.215,
+          "6": 0.31,
+          "7": 0.395,
+          "8": 0.48,
+          "9": 0.58,
+          "ALL": 0.375,
+          "U": null
+        },
+        "band_scores": {
+          "5-6": 0.2625,
+          "7-8": 0.4375
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.2625,
+            0.2625
+          ],
+          "7-8": [
+            0.4375,
+            0.4375
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-January_2023.csv",
+            "row": 126,
+            "question": "Q09c",
+            "sha256": "e0b40855b265aab2b70fb47633021f39975b01c8ad053ccd562ccb8f7a9d5bae"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": "9",
+        "is_empirical_classification": false
+      },
+      "primary_marks": 2,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "hydrate-translation",
+        "complex-borderline-context"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "2Zn(NO3)2·6H2O→2ZnO+4NO2+O2+12H2O conserves Zn2 N4 H24 O24, treating six waters per hydrate formula unit. Adequate extraction includes reactant coefficient and product names; no source reopening required."
+      }
+    },
+    {
+      "id": "2025-june-1-q4aii",
+      "input_record_sha256": "861303f68eff3ed6317b5e69f97568a94ed1f2bdc58ed5a804de51784c4d8cf0",
+      "original": {
+        "id": "2025-june-1-q4aii",
+        "label": "4(a)(ii)",
+        "qp_pages": [
+          8
+        ],
+        "printed_pages": [
+          8
+        ],
+        "ms_pages": [
+          7
+        ],
+        "marks": 1,
+        "summary": "Infer the charges of the ions in calcium phosphate from its formula.",
+        "context": "Calcium phosphate, Ca3(PO4)2, is used for formula interpretation, mass calculations and equation balancing.",
+        "command": "choose",
+        "response": "choice",
+        "skill": "interpretation",
+        "primary_gem": "3.1",
+        "secondary_gems": [],
+        "mapping_rationale": "The outcome is recognising Ca2+ and PO4^3− as the charge-balanced ions in the supplied ionic formula.",
+        "pattern": "3.1-infer-ion-charge-from-formula",
+        "mark_points": [
+          "Select Ca2+ and PO4^3−."
+        ],
+        "marking_notes": "Only option B is correct.",
+        "recall": {
+          "direct": [
+            "ions.calcium-charge",
+            "ions.phosphate-charge"
+          ],
+          "prerequisite": [],
+          "supplied": [
+            "formulae.calcium-phosphate"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [
+          {
+            "tag": "ions.calcium-and-phosphate-charges",
+            "prompt": "What are the charges on calcium and phosphate ions?",
+            "answer": "Ca2+ and PO4^3−.",
+            "qualification": ""
+          }
+        ],
+        "review_status": "reviewed",
+        "review_notes": "QP p8 and MS p7 checked against the source; visual content was inspected where the response depends on it.",
+        "paper_id": "2025-june-1",
+        "year": 2025,
+        "session": "june",
+        "paper_number": 1,
+        "variant": "",
+        "original_pattern": "3.1-infer-ion-charges-from-formula",
+        "question_paper": "resources/past-paper-atlas/papers/2025/2025 June Paper 1.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2025/2025 June Paper 1 MS.pdf",
+        "classification": {
+          "id": "2025-june-1-q4aii",
+          "paper_id": "2025-june-1",
+          "primary_gem": "3.1",
+          "band": "5-6",
+          "calculated_band": "5-6",
+          "grade_facility": {
+            "1": 0.31,
+            "2": 0.38,
+            "3": 0.47,
+            "4": 0.51,
+            "5": 0.59,
+            "6": 0.68,
+            "7": 0.77,
+            "8": 0.9,
+            "9": 0.98,
+            "ALL": 0.78,
+            "U": 0.23
+          },
+          "band_scores": {
+            "5-6": 0.635,
+            "7-8": 0.835
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.635,
+              0.635
+            ],
+            "7-8": [
+              0.835,
+              0.835
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-June_2025.csv",
+              "row": 24,
+              "question": "Q04aii",
+              "sha256": "7285a18cee41a2d4000cefa2a41cdc6c83e9025486b7f416b9af99dc9800a19e"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "3.1",
+        "secondary_gems": []
+      },
+      "disposition": "RETAIN_ORIGINAL",
+      "evidence_rationale": "Selecting ion charges from a supplied formula does not construct an ionic compound formula; keep ionic bonding primary.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2025-june-1-q4aii",
+        "paper_id": "2025-june-1",
+        "primary_gem": "3.1",
+        "band": "5-6",
+        "calculated_band": "5-6",
+        "grade_facility": {
+          "1": 0.31,
+          "2": 0.38,
+          "3": 0.47,
+          "4": 0.51,
+          "5": 0.59,
+          "6": 0.68,
+          "7": 0.77,
+          "8": 0.9,
+          "9": 0.98,
+          "ALL": 0.78,
+          "U": 0.23
+        },
+        "band_scores": {
+          "5-6": 0.635,
+          "7-8": 0.835
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.635,
+            0.635
+          ],
+          "7-8": [
+            0.835,
+            0.835
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-June_2025.csv",
+            "row": 24,
+            "question": "Q04aii",
+            "sha256": "7285a18cee41a2d4000cefa2a41cdc6c83e9025486b7f416b9af99dc9800a19e"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": null,
+        "is_empirical_classification": false
+      },
+      "primary_marks": 1,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "inverse-ion-charge-boundary"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "3Ca2+ and 2PO4³− give +6 and −6, but the assessed answer is the pair of ion charges, not Ca3(PO4)2. Boundary avoids tagging every ion recall item as new Formulae."
+      }
+    },
+    {
+      "id": "2022-jan-2r-q6d",
+      "input_record_sha256": "94a2abc0497b9c350e3001254c7f20dae64f3f404aeb5ed6eb0f7b0d5b34657e",
+      "original": {
+        "id": "2022-jan-2r-q6d",
+        "label": "6(d)",
+        "qp_pages": [
+          17
+        ],
+        "printed_pages": [
+          17
+        ],
+        "ms_pages": [
+          12
+        ],
+        "marks": 2,
+        "summary": "Write the negative-electrode half-equation for molten lead(II) bromide with state symbols.",
+        "context": "The electrolyte and negative electrode are established by the preceding apparatus.",
+        "command": "write",
+        "response": "equation",
+        "skill": "representation",
+        "primary_gem": "13.4",
+        "secondary_gems": [],
+        "mapping_rationale": "Writing the cathode reduction half-equation is core electrolysis in gem 13.4.",
+        "pattern": "13.4-write-lead-cathode-half-equation",
+        "mark_points": [
+          "Formulae and balancing: Pb2+(l) + 2e− → Pb.",
+          "State symbols: Pb2+(l) + 2e− → Pb(s)."
+        ],
+        "marking_notes": "Allow Pb(l), multiples or fractions. The state-symbol mark may follow through if lead-ion charge or balancing is wrong.",
+        "recall": {
+          "direct": [
+            "electrolysis.lead-cathode-half-equation",
+            "electrolysis.reduction-electron-gain"
+          ],
+          "prerequisite": [
+            "equations.balance-charge",
+            "state-symbols.molten-and-solid"
+          ],
+          "supplied": [
+            "electrolysis.molten-lead-bromide"
+          ]
+        },
+        "existing_fact_ids": [],
+        "new_fact_candidates": [
+          {
+            "tag": "electrolysis.lead-cathode-half-equation",
+            "prompt": "Write the cathode half-equation for lead ions in molten lead(II) bromide.",
+            "answer": "Pb2+(l) + 2e? ? Pb(l).",
+            "qualification": "The historical scheme also accepts Pb(s); under molten lead(II) bromide electrolysis conditions the deposited lead is liquid."
+          }
+        ],
+        "review_status": "reviewed",
+        "review_notes": "QP 17 state-symbol instruction and MS 12 formula/balance versus state allocation and ECF checked.",
+        "paper_id": "2022-jan-2r",
+        "year": 2022,
+        "session": "jan",
+        "paper_number": 2,
+        "variant": "R",
+        "original_pattern": "13.4-lead-cathode-half-equation",
+        "question_paper": "resources/past-paper-atlas/papers/2022/2022 January Paper 2R.pdf",
+        "mark_scheme": "resources/past-paper-atlas/papers/2022/2022 January Paper 2R MS.pdf",
+        "classification": {
+          "id": "2022-jan-2r-q6d",
+          "paper_id": "2022-jan-2r",
+          "primary_gem": "13.4",
+          "band": "9",
+          "calculated_band": "9",
+          "grade_facility": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": 0.045,
+            "5": 0.075,
+            "6": 0.125,
+            "7": 0.14,
+            "8": 0.3,
+            "9": 0.51,
+            "ALL": 0.245,
+            "U": null
+          },
+          "band_scores": {
+            "5-6": 0.1,
+            "7-8": 0.22
+          },
+          "band_score_bounds": {
+            "5-6": [
+              0.1,
+              0.1
+            ],
+            "7-8": [
+              0.22,
+              0.22
+            ]
+          },
+          "method": "direct",
+          "source_rows": [
+            {
+              "file": "Centre_group_question_averages-All_Edexcel-January_2022.csv",
+              "row": 221,
+              "question": "Q06d",
+              "sha256": "cc26523080f7f2517bd0b36d511248c49c7e3ea9034d5f94ffe58069e9ad1a0d"
+            }
+          ],
+          "review_flags": [],
+          "review_note": "",
+          "source_caveats": []
+        }
+      },
+      "proposed": {
+        "primary_gem": "13.4",
+        "secondary_gems": []
+      },
+      "disposition": "RETAIN_ORIGINAL",
+      "evidence_rationale": "The assessed cathode half-equation is specifically excluded from the new neutral whole-equation scope, including its state-symbol component.",
+      "extraction_adequacy": {
+        "status": "ADEQUATE",
+        "reason": "Summary, context, supplied/direct recall tags and mark points establish assessed operations; source reopening not needed."
+      },
+      "empirical_classification": {
+        "id": "2022-jan-2r-q6d",
+        "paper_id": "2022-jan-2r",
+        "primary_gem": "13.4",
+        "band": "9",
+        "calculated_band": "9",
+        "grade_facility": {
+          "1": null,
+          "2": null,
+          "3": null,
+          "4": 0.045,
+          "5": 0.075,
+          "6": 0.125,
+          "7": 0.14,
+          "8": 0.3,
+          "9": 0.51,
+          "ALL": 0.245,
+          "U": null
+        },
+        "band_scores": {
+          "5-6": 0.1,
+          "7-8": 0.22
+        },
+        "band_score_bounds": {
+          "5-6": [
+            0.1,
+            0.1
+          ],
+          "7-8": [
+            0.22,
+            0.22
+          ]
+        },
+        "method": "direct",
+        "source_rows": [
+          {
+            "file": "Centre_group_question_averages-All_Edexcel-January_2022.csv",
+            "row": 221,
+            "question": "Q06d",
+            "sha256": "cc26523080f7f2517bd0b36d511248c49c7e3ea9034d5f94ffe58069e9ad1a0d"
+          }
+        ],
+        "review_flags": [],
+        "review_note": "",
+        "source_caveats": []
+      },
+      "teaching_applicability": {
+        "band": null,
+        "is_empirical_classification": false
+      },
+      "primary_marks": 2,
+      "secondary_marks": 0,
+      "pilot_strata": [
+        "half-equation-exclusion"
+      ],
+      "review": {
+        "reviewer": "A03 gpt-6.1-sol/high",
+        "basis": "Existing accepted extraction only; no source PDFs, mark schemes or images opened",
+        "status": "SUBSTANTIVELY_REVIEWED",
+        "rationale": "Pb2++2e−→Pb conserves charge and lead. Preserve historical Pb(s)/Pb(l) allowances and corrupted new-fact text verbatim in original; that fact is not imported or endorsed. No 16.2 tag."
+      }
+    }
+  ]
+}

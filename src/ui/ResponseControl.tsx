@@ -21,6 +21,8 @@ export interface ResponseControlProps {
   readonly onRequestSupport?: () => void;
   readonly appearance?: 'energetics-practical' | 'source' | 'inline-gap';
   readonly fieldLabel?: string;
+  /** Hide generic response prose while retaining its accessible name. */
+  readonly compactLabel?: boolean;
   readonly multiline?: boolean;
   readonly status?: ResponseStatus | undefined;
   readonly selectionStatus?: ResponseStatus | undefined;
@@ -38,6 +40,7 @@ export function ResponseControl({
   onRequestSupport,
   appearance,
   fieldLabel,
+  compactLabel = false,
   multiline,
   status,
   selectionStatus,
@@ -146,7 +149,11 @@ export function ResponseControl({
         );
       return (
         <label className="response-label" htmlFor={id}>
-          Your answer
+          {compactLabel ? (
+            <span className="sr-only">{fieldLabel ?? 'Your answer'}</span>
+          ) : (
+            'Your answer'
+          )}
           {part.presentation === 'multiline' ? (
             <textarea
               data-answer-input="true"

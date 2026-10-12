@@ -3,6 +3,8 @@ import { record } from '../activities/igcse/energetics-practical/provider.ts';
 import type { Response } from '../contracts/question.ts';
 import { ResponseControl } from './ResponseControl.tsx';
 import { QuestionLevelPill } from './QuestionLevelPill.tsx';
+import { isModelAnswerShown, isModelAnswerPanelShown } from '../domain/attempt/model-answer.ts';
+import { useQuestionActions } from './QuestionActions.tsx';
 import './energetics-practical-pilot.css';
 
 /** Component-level port of the original final practical question-workspace.
@@ -23,9 +25,7 @@ export function EnergeticsPracticalPilot({
   const student = attempt.mode === 'student';
   const assessed = student && attempt.phase === 'assessed';
   const assessment = assessed ? attempt.firstAssessment : undefined;
-  const shownAnswer =
-    !student ||
-    attempt.assistance.some((item) => item.kind === 'reveal' || item.kind === 'worked-answer');
+  const shownAnswer = isModelAnswerPanelShown(attempt);
   const responses = student ? attempt.currentResponses : {};
   const send = (partId: string, response: Response) => {
     if (student) onCommand({ kind: 'respond', partId, response });
@@ -49,7 +49,15 @@ export function EnergeticsPracticalPilot({
     }
     return true;
   });
-  const submit = () => onCommand({ kind: 'submit', at: Date.now() });
+  const actions = useQuestionActions({
+    attempt,
+    modelAnswerVisible: isModelAnswerShown(attempt),
+    correctionFeedback,
+    onCommand,
+    onNext,
+    ready,
+    canNext,
+  });
   return (
     <article className="question-player ep-pilot" aria-label="Energetics practical question">
       <header className="question-header">
@@ -87,7 +95,7 @@ export function EnergeticsPracticalPilot({
             );
             const next = fields[fields.indexOf(event.target) + 1];
             if (next) next.focus();
-            else if (ready) assessed ? onCommand({ kind: 'check-correction' }) : submit();
+            else actions.defaultAction();
           }}
         >
           <div className="question-text">
@@ -123,7 +131,12 @@ export function EnergeticsPracticalPilot({
           {student && (
             <div className="actions">
               {!assessed && (
-                <button type="button" className="button primary" disabled={!ready} onClick={submit}>
+                <button
+                  type="button"
+                  className="button primary"
+                  disabled={!actions.state.checkEnabled}
+                  onClick={actions.check}
+                >
                   Check answer
                 </button>
               )}
@@ -131,36 +144,23 @@ export function EnergeticsPracticalPilot({
                 <button
                   type="button"
                   className="button primary"
-                  disabled={!ready}
-                  onClick={() => onCommand({ kind: 'check-correction' })}
+                  disabled={!actions.state.checkEnabled}
+                  onClick={actions.check}
                 >
                   Check correction
                 </button>
               )}
               {!shownAnswer && (
-                <button
-                  type="button"
-                  className="button secondary"
-                  onClick={() =>
-                    onCommand({
-                      kind: 'assist',
-                      assistance: {
-                        kind: assessed ? 'worked-answer' : 'reveal',
-                        supportId: 'worked-answer',
-                        at: Date.now(),
-                      },
-                    })
-                  }
-                >
-                  {assessed ? 'Show worked answer' : 'Reveal answer (assisted)'}
+                <button type="button" className="button secondary" onClick={actions.giveUp}>
+                  Model answer
                 </button>
               )}
               {assessed && (
                 <button
                   type="button"
                   className="button secondary next-button"
-                  disabled={!canNext}
-                  onClick={onNext}
+                  disabled={!actions.state.nextEnabled}
+                  onClick={actions.next}
                 >
                   Next question
                 </button>
@@ -305,7 +305,7 @@ export function EnergeticsPracticalPilot({
           )}
           {shownAnswer && (
             <section className={`review-panel worked-answer${!student ? ' teacher-answer' : ''}`}>
-              <h3>{student ? 'Worked answer' : 'Checked answer and diagrams'}</h3>
+              <h3>MODEL ANSWER</h3>
               {source.fields.map((field) => (
                 <div className="review-answer" key={field.id}>
                   <p>Model: {field.model}</p>

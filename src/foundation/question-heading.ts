@@ -1,3 +1,4 @@
+import { gradedActivityId } from './graded-question.ts';
 import type { ActivityRegistry, CurriculumTarget, Question } from '../contracts/index.ts';
 
 export function targetSubtopic(registry: ActivityRegistry, target: CurriculumTarget): string {
@@ -10,7 +11,7 @@ export function targetSubtopic(registry: ActivityRegistry, target: CurriculumTar
 
 /** Teacher identity comes from the shown provider question, never the pupil's saved target. */
 export async function teacherSubtopic(registry: ActivityRegistry, question: Question): Promise<string> {
-  const registration = registry.get(question.ref.activityId);
+  const registration = registry.get(gradedActivityId(question.ref.activityId));
   if (!registration || registration.strand !== 'curriculum') return question.title;
   if (registration.gems.length === 1) return registration.gems[0]!.label;
   if (question.ref.activityId === 'alevel/acid-base-calculations') {

@@ -1,0 +1,15 @@
+.rate-preview { max-width: 1120px; margin: 0 auto; padding: 24px; }
+.rate-preview-header { display:flex; align-items:center; gap:18px; }
+.rate-preview-header img { width:64px; height:64px; }
+.rate-preview-header h1 { margin:0; font-size:2rem; }
+.rate-preview-header p { margin:8px 0; color:var(--muted); }
+.rate-preview-notice { padding:12px 16px; background:#142d3b; border-radius:12px; }
+.rate-preview-gems { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:18px 0; }
+.rate-preview-gems button { display:flex; flex-direction:column; gap:8px; padding:16px 12px; text-align:left; }
+.rate-preview-gems button[aria-pressed=true] { background:#0f5962; color:white; }
+.rate-preview-gems small { font-size:.7rem; opacity:.8; }
+.rate-preview-controls { display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:20px; }
+.rate-preview-controls label { display:flex; gap:8px; align-items:center; }
+.rate-preview-controls input { width:110px; }
+.rate-preview .question-player { width:100%; }
+@media (max-width:700px) { .rate-preview { padding:12px; } .rate-preview-gems { grid-template-columns:1fr 1fr; } .rate-preview-header h1 {font-size:1.5rem;} }

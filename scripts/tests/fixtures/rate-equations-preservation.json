@@ -1,0 +1,575 @@
+{
+  "source": "Captured checked DEV factories before production extraction,12 October2026. Refs deliberately remain DEV source context; provider wraps production identity.",
+  "cases": [
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "seed": 0,
+      "sha256": "06c931a21370581d011f90f0fb05d3785a27c057810c02fde2147a3a4a3eba7c"
+    },
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "seed": 1,
+      "sha256": "92bb57fd17af263d52e532e066479abcf41bba4bbac73de3b2b4e058e56b44f3"
+    },
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "seed": 7,
+      "sha256": "20c78883c77ad55661c73951ac629f33312064ac2aebca205724dbd7b255d6be"
+    },
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "seed": 42,
+      "sha256": "f0fed53f741869eee9cdf9d70ab126b8e9df757868c34795d21cc4a93c2ad0d2"
+    },
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "seed": 2026,
+      "sha256": "695ef1e669aad26296dce72cede6d4c737da85b18a9c7b410e18aae8263d3af2"
+    },
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "seed": 4294967295,
+      "sha256": "b82e1d6b555759170c38e866052fed28c8f56e96dbdb4d1ff4e612c7cb217d91"
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "seed": 0,
+      "sha256": "3caa6934e2a6ad9e5498de60a942e0876646cc3e4ef04bd33429cd0cd74f6ae2"
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "seed": 1,
+      "sha256": "f1159a839556f386ad040d2718a4ee18300d64b4ca4baf6c2b55bd95e55bb73c"
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "seed": 7,
+      "sha256": "b2f13418b6c2944e5763725c92f5f6065b0f75dbda636c79ed7cdcca36fd3473"
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "seed": 42,
+      "sha256": "b63435c55c388913e84c1d9012f5fa4ed852952129e981cc1dcb26034a66f371"
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "seed": 2026,
+      "sha256": "24133fdecee9c9abdd0f81e0b857010b5873b1d5d6b8c39a45492f70d159e5bc"
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "seed": 4294967295,
+      "sha256": "d9e93e7dad1ea4c91f7e609b95db79ebe8f599c2a137f8e81427185d8c8b7cb9"
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "seed": 0,
+      "sha256": "54d53c7d8159525625fcaa5273a17cbec67942c8a76b098f189f86895a4edec9"
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "seed": 1,
+      "sha256": "65b656b9178bfa4409943a9f0752c8b1fd36ab3f85be75b0a778ff98db491792"
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "seed": 7,
+      "sha256": "4c4609fced6a2d5b8674b5b27bec8561c0ecdcd8b1006eaf8889f5f7daed2b4d"
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "seed": 42,
+      "sha256": "afc3fda382b26b930f4c05d80b723264323af79fe6a3f2d1adc25b329bd5fca6"
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "seed": 2026,
+      "sha256": "2e86eb9d7cefa25513ef245352318a9b317bbfcc2878d1688ededc31e442b8b0"
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "seed": 4294967295,
+      "sha256": "cd7921cd0523afda3279d70d9066e6652e26381b4fa1d5ab898efcc16ff771ed"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "seed": 0,
+      "sha256": "c7487a46b20427cd4a7cd36f2ee6f087aae46586466bcdba8de3adb1789aac87"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "seed": 1,
+      "sha256": "ba3c2125b5a10d35c9b19456b1bf94b0441624199d994c87f237a3c9df718e41"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "seed": 7,
+      "sha256": "cefc0993897a3bd0d05da46b1d6e5e56a10cb69d90c827609fc3bffb482017f6"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "seed": 42,
+      "sha256": "8cd0a80559b129a448956a47e74e5d4a7e69208ee0183535278b1c712b77909a"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "seed": 2026,
+      "sha256": "10ae17fb39c5cdeb49ae1f2ce5d007dd0a29d62b79cd28abf1ae46a4659e0da8"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "seed": 4294967295,
+      "sha256": "e2da2edfd0b52d66f39725470e8186c83d76c2440c796155b30eed110ad042dd"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "seed": 0,
+      "sha256": "104fd857355f9537e95bc5bacd63b482fa6071bc265133e36350b30006ceedfa"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "seed": 1,
+      "sha256": "b04979bcc54ae3650b63eae5c8f9744557aa786522bca54e46f24da0df2e9f76"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "seed": 7,
+      "sha256": "5c63ca95851583005169f9c9b60d8bfc4ec35a0b6291e8d98cd740080cf920d9"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "seed": 42,
+      "sha256": "9fa20bda4927f233da9d74aa0a6eddc2da07b405c1a08d5918754ed00e195fc1"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "seed": 2026,
+      "sha256": "87c05e07c6f7245827f1bb7cdea46d7a98d4ee120cfc1d58e41d1eecea3b3b56"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "seed": 4294967295,
+      "sha256": "b18bcf3398728ebf7f98ee0b7c149c35162dfbc0388a7e787e9258092f649102"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "seed": 0,
+      "sha256": "06a9ee1c3f739fb82c5979983a83f7579a447aced725cecb31860ff0248eeec0"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "seed": 1,
+      "sha256": "13398460007fe6d7304f675fe44bebe3144ba6777a13c66c3dbfead5d703e910"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "seed": 7,
+      "sha256": "68b8599c30880551b5438d946365389c8a3845076a42e275deaa6d57681097d5"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "seed": 42,
+      "sha256": "77d1b045a9ebde6de4be62caa48397b823807b30d6f9d700e88d0f4220654c9f"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "seed": 2026,
+      "sha256": "9938cc9d2f8250f83471747f0f7219a68129882db696da43d4fd12e750a67c54"
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "seed": 4294967295,
+      "sha256": "4536e2d6cdd3a7436e36bbb89ec19eb9c441493bedfb782c8f6e08969c8838b6"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "seed": 0,
+      "sha256": "0e3d698ebe28fbda3bc97b044ba460567ca4e37c8bcc3569ee069b61153c9e5a"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "seed": 1,
+      "sha256": "a5858a93335d8df799fd20e626ee309142309090fe08e50b94badd889b080b5e"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "seed": 7,
+      "sha256": "c6686c65be7d1a009f375db1197ae421eb24e58c2b769870206cb9835ec04908"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "seed": 42,
+      "sha256": "a3f1c21035f7ec44c0781817e31a53e66e1bc653f44d8ad1070b455dd4c9f380"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "seed": 2026,
+      "sha256": "63b7235edfd78dab60466149e6fe4267b0263f864e4b81679997b026c31881a7"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "seed": 4294967295,
+      "sha256": "6fed42d6c6c7b6e43a5d15364e1236686ff3298c71c59683b507006e4a738b76"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "seed": 0,
+      "sha256": "ccbbe6872e37c9f0a4a64146279d5f176a2144b81065985ad91ce02096e02cd3"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "seed": 1,
+      "sha256": "1e773b039dc39d9e2800dbe14f632f609cec25ae05b42429d221eceb84739e7c"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "seed": 7,
+      "sha256": "f6b72334ead73d45baf68089657689ba017bf410ce1e5fff1ad30c4f064f54ca"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "seed": 42,
+      "sha256": "c4f2db67ab495378d2437e69bc273d7c437d4d590b2e8f85554305f2589ce3db"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "seed": 2026,
+      "sha256": "108692da1a076e18f5a4a919a943746bb0f617447ba1a5672cf608ae003a2dcb"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "seed": 4294967295,
+      "sha256": "6ebffac2dc8eedb36346808b93276f7535ea930ac1567da6421abe0ebf2498e1"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "seed": 0,
+      "sha256": "259e59a69fa10dde28605b744e8d1c0d11f0112fc4773191788b5484e876bab4"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "seed": 1,
+      "sha256": "9701385cc5b0f343ca7b8150e75f40fc8886dd26301e7bff15b7c71adbaf3bc0"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "seed": 7,
+      "sha256": "60126c01ff063a0c26ca57804776db8ad310643fd6067eacdd0ad0631f34ed05"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "seed": 42,
+      "sha256": "dc82c3048a809fe5f59456494bcb3879e684d3fc192c5f952ba869438313152c"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "seed": 2026,
+      "sha256": "b2fb08de2e20e1093350c5283025078bb7e34091af6ea5298ee87bced2cdc961"
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "seed": 4294967295,
+      "sha256": "7273e2282c864610b127707f33b77b0702e01bab294ad176546bc53275a76369"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "seed": 0,
+      "sha256": "3ac5da7d22f0a2091ec227182c880147ad6f953134d7ba0697d0e5cf486343a1"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "seed": 1,
+      "sha256": "34e534677127f7b678838ed6cd65041b055ccf0a64bef8b9beb1828cab333488"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "seed": 7,
+      "sha256": "2ff3bd38bda23b4176900ab654b1268743e0eba9dafd8b76bfc4f4b933849eb0"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "seed": 42,
+      "sha256": "622ae3fc2312194981474d80bc9b49def231e970f730360f2b03f4614900be06"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "seed": 2026,
+      "sha256": "9faad22b329df35c990cc6da4045038240c899fca9fd7971d44c2dcab20afc1d"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "seed": 4294967295,
+      "sha256": "89b2eef2aef75c917c4bc70e69e1623790a8b9596d9cea709e20b9784e1daf18"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "seed": 0,
+      "sha256": "54fd66c2a308dcca6d3f64d9ec0e5766d19575a873ebb95a904b57bf43e21385"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "seed": 1,
+      "sha256": "379c0df69d27a121af8af972658205b1279809bda129c20902fd1f99e65e98ab"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "seed": 7,
+      "sha256": "95247ea962c9fd9d5fbef50c4d8806bd5e53f1bfe1ca665db6c95b4ba0156c17"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "seed": 42,
+      "sha256": "1fdd5c33e5ebf8c411fc19a0a7ab8bf094bd710e963143267273671194c62ce2"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "seed": 2026,
+      "sha256": "b68c2149efccfbc0e36c7c62efb286ec8076c0ef79ac6146244cef211b1c0206"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "seed": 4294967295,
+      "sha256": "06a1b7f1ed2e87d2bf080efafcb819da85ce09d1a6e14ee57bac12b22d2da6ad"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "seed": 0,
+      "sha256": "2ab3cada509fff95b6fe3780230be212a96b6586e050db24cc9c4b2438afa6f0"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "seed": 1,
+      "sha256": "b662f7a122eda6f7a4235bc0a0f3eab7d6aaf22ecd6635b0e22f47cb7b40766e"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "seed": 7,
+      "sha256": "ea792ee036d057384994f8f712403d758fd9e9f3d0c076a05ba64e65a4574f1f"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "seed": 42,
+      "sha256": "ce8564ff5a51b122981b09ad6575a3c0f048d3fcc489d1c04f013b7c0736604d"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "seed": 2026,
+      "sha256": "5357f715000f0ad687ea3db0ed777904896046282dd9a36667190d4a2ab96371"
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "seed": 4294967295,
+      "sha256": "7922425893c1b0853fd4b9214a6dc7317c42b4fae14ddce1abbb262734a1cd41"
+    }
+  ],
+  "startingAnswers": [
+    {
+      "questionId": "RATE-POC-orders-L1",
+      "correctResponses": {
+        "order-a": {
+          "kind": "choice",
+          "selected": [
+            "0"
+          ]
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-orders-L2",
+      "correctResponses": {
+        "order-a": {
+          "kind": "choice",
+          "selected": [
+            "1"
+          ]
+        },
+        "order-b": {
+          "kind": "choice",
+          "selected": [
+            "1"
+          ]
+        },
+        "rate-equation": {
+          "kind": "text",
+          "value": "rate = k[A][B]"
+        },
+        "k": {
+          "kind": "numeric",
+          "raw": "0.5",
+          "unit": ""
+        },
+        "k-units": {
+          "kind": "text",
+          "value": "dm³ mol⁻¹ s⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-orders-L3",
+      "correctResponses": {
+        "order-a": {
+          "kind": "choice",
+          "selected": [
+            "2"
+          ]
+        },
+        "order-b": {
+          "kind": "choice",
+          "selected": [
+            "1"
+          ]
+        },
+        "rate-equation": {
+          "kind": "text",
+          "value": "rate = k[A]²[B]"
+        },
+        "predicted-rate": {
+          "kind": "numeric",
+          "raw": "0.000036",
+          "unit": "mol dm⁻³ s⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-graphs-L1",
+      "correctResponses": {
+        "rate": {
+          "kind": "numeric",
+          "raw": "0.001372361400855966",
+          "unit": "mol dm⁻³ s⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-graphs-L2",
+      "correctResponses": {
+        "half-life-1": {
+          "kind": "numeric",
+          "raw": "50",
+          "unit": "s"
+        },
+        "half-life-2": {
+          "kind": "numeric",
+          "raw": "50",
+          "unit": "s"
+        },
+        "order": {
+          "kind": "choice",
+          "selected": [
+            "first"
+          ]
+        },
+        "k": {
+          "kind": "numeric",
+          "raw": "0.013862943611198907",
+          "unit": "s⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-graphs-L3",
+      "correctResponses": {
+        "concentration": {
+          "kind": "numeric",
+          "raw": "5.159053418896648e-8",
+          "unit": "mol dm⁻³"
+        },
+        "rate": {
+          "kind": "numeric",
+          "raw": "2.64887654197508e-10",
+          "unit": "mol dm⁻³ s⁻¹"
+        },
+        "k": {
+          "kind": "numeric",
+          "raw": "0.005134423559703298",
+          "unit": "s⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L1",
+      "correctResponses": {
+        "ea": {
+          "kind": "numeric",
+          "raw": "48.221199999999996",
+          "unit": "kJ mol⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L2",
+      "correctResponses": {
+        "scaled-gradient": {
+          "kind": "numeric",
+          "raw": "-7",
+          "unit": "K"
+        },
+        "gradient": {
+          "kind": "numeric",
+          "raw": "-7000",
+          "unit": "K"
+        },
+        "ea": {
+          "kind": "numeric",
+          "raw": "58.198",
+          "unit": "kJ mol⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-arrhenius-L3",
+      "correctResponses": {
+        "intercept": {
+          "kind": "numeric",
+          "raw": "24.2",
+          "unit": ""
+        },
+        "a": {
+          "kind": "numeric",
+          "raw": "32353886830.632385",
+          "unit": "s⁻¹"
+        },
+        "k-new": {
+          "kind": "numeric",
+          "raw": "0.7575907549209985",
+          "unit": "s⁻¹"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L1",
+      "correctResponses": {
+        "rate-equation": {
+          "kind": "text",
+          "value": "rate = k[NO₂]²"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L2",
+      "correctResponses": {
+        "missing-step": {
+          "kind": "choice",
+          "selected": [
+            "1"
+          ]
+        },
+        "rate-equation": {
+          "kind": "text",
+          "value": "rate = k[F₂][NO₂]"
+        }
+      }
+    },
+    {
+      "questionId": "RATE-POC-mechanisms-L3",
+      "correctResponses": {
+        "mechanism": {
+          "kind": "choice",
+          "selected": [
+            "2"
+          ]
+        }
+      }
+    }
+  ]
+}

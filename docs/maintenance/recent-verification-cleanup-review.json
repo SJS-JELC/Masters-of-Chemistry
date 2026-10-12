@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "jobId": "RATE-CLEANUP-INDEPENDENT",
+  "agentId": "A04",
+  "status": "PASS_PREDELETION",
+  "checkedAt": "2026-10-12T00:16:20.417Z",
+  "confidence": 0.99,
+  "scope": "Independent dependency-preserving cleanup consumer audit before authorized deletion of app/validation and app/.artifacts. No deletion or final postcleanup acceptance claimed.",
+  "receipt": {
+    "path": "docs/maintenance/recent-verification-cleanup.json",
+    "reviewedSha256": "e725d7c9d2f68a270adc217c796262a026c41fe12557f8df6a330b56eaa641f8",
+    "files": 36,
+    "bytes": 2458404,
+    "independentByteHashRecheck": "36/36 exact source-target bytes, receipt hashes and byte counts; originals untouched"
+  },
+  "checks": {
+    "runtimeSource": "395 captured/accepted source paths hash-identical since integration acceptance; no runtime bank/algorithm edit found in cleanup changes",
+    "consumerCode": "9/9 full original before-file hashes reconstructed by reversing only documented input/output paths and latest no-report tails; assertions/check algorithms unchanged",
+    "otherTooling": "30/31 generator/output rewire full original hashes reconstruct by path edits alone; remaining followup-capture-diff reconstructs exactly after also reversing explicit fresh-scoped-baseline guard",
+    "captureGuard": "Requires freshly captured disposable before tree; no old evidence fabricated and no assertion weakened",
+    "durableRunners": "2/2 relocated reviewer runners exactly match originals after helper/provider/output path updates and missing temp-directory mkdir only; actual native noDefaults runner retained under scripts with ignored-artifact output",
+    "dynamicMaxwell": "All11 required historical runtime fixture files byte-identical, complete relative runtime import/export graph retained; four import-type metadata paths erased by native Node and explicitly audited, no runtime dependency omission",
+    "dynamicRecall": "Six teacher inputs independently rehashed against frozen reviewedInputs; historical typed-provenance/contracts/authority byte copies preserved; precise old-prefix resolver preserves hashes/counts/assertions. prepare-approved writes reproducible latest-source-disposition before importing prepare-typed-provenance",
+    "atlasControls": "Byte-identical pilot acceptance/stratified sample/control baselines retained; fingerprint, source/overlay and mark-conservation verifier assertions unchanged; no generator/bank rebuild",
+    "retirementGuard": "Strict check-retired-validation.mjs still asserts validation directory absence. Preparation scanner differs exactly only in own project path and deferred directory-presence assertion; read-only current run610 files,0 failures. Known historical identifier/type/template exceptions narrowly recorded",
+    "noReport": "Latest4 protected-run scripts and atlas full verifier flags suppress only filesystem report/baseline writes; stage filtering/default output/check/failure behavior preserved; full original hashes reconstruct after reversing wrappers",
+    "inheritedFailures": "A02 before-after comparison8/8 equivalent including preserved Recall code/content failures. Foreman logs decoded UTF16: same5 failing test names before/after. No greenwashing or changed test assertions",
+    "postDeletion": "Foreman owns strict guard, typecheck, affected tests, exported release validator and protected checks after actual deletion; no browser rerun or output tree recreation by reviewer"
+  },
+  "findings": [],
+  "limitations": [
+    "Review is predeletion only; directory absence and actual deletion count/bytes must be measured afterward.",
+    "Historical protected FAIL529 and inherited stale fixture failures remain explicit, independent of no-new-drift checks."
+  ],
+  "writes": [
+    "docs/maintenance/recent-verification-cleanup-review.json"
+  ],
+  "validationArtifactWrites": false,
+  "browserRuns": false,
+  "delegates": 0
+}

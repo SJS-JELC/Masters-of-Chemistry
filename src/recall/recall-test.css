@@ -1,0 +1,309 @@
+﻿.recall-test-player .recall-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 48rem;
+  margin: 1.5rem 0;
+}
+.recall-response {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+.recall-response > label {
+  flex: 0 0 11rem;
+  font-weight: 700;
+}
+.recall-input-wrap {
+  position: relative;
+  display: inline-block;
+  flex: 1;
+  min-width: 10rem;
+  max-width: 32rem;
+}
+.recall-response input,
+.recall-response select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.8rem;
+  border: 2px solid #829ba1;
+  border-radius: 0.6rem;
+  background: #fff;
+  color: #163d43;
+  font: inherit;
+  box-sizing: border-box;
+}
+.recall-response select {
+  width: auto;
+  max-width: 100%;
+}
+.recall-response input:focus,
+.recall-response select:focus {
+  outline: 3px solid #60bccb;
+  outline-offset: 2px;
+}
+.recall-correct input,
+.recall-correct select {
+  border-color: #248345;
+  background: #f2fff5;
+}
+.recall-incorrect input,
+.recall-incorrect select {
+  border-color: #c04449;
+  background: #fff8f8;
+}
+.recall-field-status {
+  flex: 1 0 100%;
+  font-size: 0.85rem;
+  color: #943137;
+  margin-left: 11.45rem;
+}
+.recall-correct .recall-field-status {
+  color: #236d39;
+}
+.recall-formatted input {
+  font-family: monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  color: transparent;
+  caret-color: #163d43;
+}
+.recall-notation-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 2px;
+  overflow: hidden;
+  white-space: pre;
+  padding: 0.65rem 0.8rem;
+  font: 1.1rem monospace;
+  color: #163d43;
+  line-height: normal;
+  letter-spacing: 0;
+}
+.recall-glyph {
+  display: inline-block;
+  width: 1ch;
+}
+.recall-glyph-sub {
+  transform: translateY(0.22em);
+}
+.recall-glyph-sup {
+  transform: translateY(-0.28em);
+}
+.recall-glyph-hidden {
+  visibility: hidden;
+}
+.recall-unit {
+  font-weight: 700;
+}
+.recall-gap-sentence {
+  line-height: 3.5;
+  max-width: 100%;
+}
+.recall-inline {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 0.3rem;
+  width: 12rem;
+  position: relative;
+  line-height: normal;
+}
+.recall-inline .recall-input-wrap {
+  min-width: 0;
+}
+.recall-inline .recall-field-status {
+  margin-left: 0;
+  font-size: 0.75rem;
+}
+.recall-exceptions {
+  border: 1px solid #b7c9cb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  max-width: 48rem;
+}
+.recall-exception-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.recall-exception-row .recall-response {
+  flex: 1;
+}
+.recall-exception-row .recall-response > label {
+  flex-basis: 7rem;
+}
+.recall-exception-row .recall-field-status {
+  margin-left: 7.45rem;
+}
+.recall-collection-status {
+  color: #943137;
+}
+.recall-learning-review {
+  margin: 0.65rem 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid #93adaf;
+  font-size: 0.88rem;
+  max-width: 48rem;
+}
+.recall-learning-review button {
+  font-size: 0.85rem;
+  margin: 0.35rem 0.5rem 0.2rem 0;
+}
+.recall-test-player .worked-answer p {
+  white-space: pre-line;
+}
+@media (max-width: 600px) {
+  .recall-response > label {
+    flex-basis: 100%;
+  }
+  .recall-input-wrap {
+    max-width: 100%;
+  }
+  .recall-field-status,
+  .recall-exception-row .recall-field-status {
+    margin-left: 0;
+  }
+  .recall-exception-row .recall-response > label {
+    flex-basis: 100%;
+  }
+  .recall-exception-row {
+    align-items: flex-start;
+  }
+  .recall-inline {
+    width: 10rem;
+  }
+  .recall-gap-sentence {
+    line-height: 4;
+  }
+}
+/* Match shared platform input specificity in both app import orders. */
+.recall-test-player .recall-response input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-response select {
+  border: 2px solid #829ba1;
+  background: var(--surface-raised, #fff);
+  color: inherit;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.6rem;
+}
+.recall-test-player .recall-correct input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-correct select {
+  border-color: #43d98a;
+  border-style: solid;
+  background: var(--surface-raised, #f2fff5);
+}
+.recall-test-player .recall-incorrect input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-incorrect select {
+  border-color: #ff8798;
+  border-style: solid;
+  background: var(--surface-raised, #fff8f8);
+}
+.recall-test-player .recall-formatted input:not([type='radio'], [type='checkbox']) {
+  font-family: monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  color: transparent;
+  caret-color: var(--accent, #163d43);
+  line-height: normal;
+}
+.recall-test-player .recall-notation-overlay {
+  color: inherit;
+}
+.recall-test-player .recall-field-status {
+  color: #ff9baa;
+}
+.recall-test-player .recall-correct .recall-field-status {
+  color: #43d98a;
+}
+.recall-test-player .recall-collection-status {
+  color: #ff9baa;
+}
+@media print {
+  .recall-test-player .recall-formatted input:not([type='radio'], [type='checkbox']) {
+    color: transparent !important;
+  }
+  .recall-test-player .recall-notation-overlay,
+  .recall-test-player .recall-field-status {
+    color: #000;
+  }
+}
+.recall-test-player .recall-glyph-sub,
+.recall-test-player .recall-glyph-sup {
+  transform: none;
+}
+.recall-test-player .recall-glyph-sub > span {
+  display: inline-block;
+  font-size: 0.75em;
+  transform: translateY(0.25em);
+}
+.recall-test-player .recall-glyph-sup > span {
+  display: inline-block;
+  font-size: 0.75em;
+  transform: translateY(-0.4em);
+}
+
+/* The platform's universal font rule is important. Raw caret advances and every
+   overlay cell must use the same monospace face, including nested glyph spans. */
+.recall-test-player .recall-formatted input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-notation-overlay,
+.recall-test-player .recall-notation-overlay * {
+  font-family: monospace !important;
+}
+.recall-test-player .recall-formatted input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-notation-overlay {
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  font-kerning: none;
+}
+
+.recall-test-player .question-header {
+  text-align: left;
+}
+.recall-test-player .question-header h2 {
+  text-align: left;
+}
+.recall-shared-player > .question-header:empty {
+  display: none;
+}
+.recall-shared-player > .content {
+  font-size: 1.1rem;
+}
+.recall-test-player .recall-response > label.sr-only {
+  position: absolute;
+  flex: none;
+}
+.recall-test-player .recall-response:has(> label.sr-only) .recall-field-status {
+  margin-left: 0;
+}
+
+/* Recall uses the shared pane; the chooser stays wide. */
+.recall-view > .recall-test-player { max-width: var(--question-pane-max-width); width: 100%; box-sizing: border-box; margin-inline: auto; }
+.recall-test-player .recall-fields { width: min(100%, 48rem); margin: 1.5rem auto; }
+.recall-test-player .recall-fields:has(> .recall-response:only-child > label.sr-only) { width: min(100%, 32rem); }
+.recall-test-player .recall-fields > .recall-response { display: grid; grid-template-columns: 11rem minmax(0, 1fr) auto; column-gap: .45rem; }
+.recall-test-player .recall-fields > .recall-response:has(> label.sr-only) { grid-template-columns: minmax(0, 1fr) auto; }
+.recall-test-player .recall-fields > .recall-response:has(> label.sr-only):not(:has(> .recall-unit)) { grid-template-columns: minmax(0, 1fr); }
+.recall-test-player .recall-input-wrap { min-width: 0; max-width: none; width: 100%; }
+.recall-test-player .recall-fields .recall-field-status { grid-column: 2 / -1; margin-left: 0; }
+.recall-test-player .recall-fields > .recall-response:has(> label.sr-only) .recall-field-status { grid-column: 1 / -1; }
+.recall-test-player .recall-exceptions { margin-inline: auto; }
+.recall-shared-player .question-parts { width: min(100%, 48rem); margin-inline: auto; grid-template-columns: 1fr; }
+.recall-shared-player .response-label { width: min(100%, 32rem); margin-inline: auto; }
+.recall-choice-buttons { display: flex; gap: .75rem; }
+.recall-choice-buttons button { flex: 1; border: 2px solid #829ba1; }
+.recall-choice-buttons button[aria-pressed='true'] { border-color: var(--accent); background: #193348; }
+.recall-learning-review-direct { display: block; grid-column: 2 / -1; font-size: .85rem; }
+.recall-response:has(> label.sr-only) .recall-learning-review-direct { grid-column: 1 / -1; }
+.recall-answer-row { display:flex; align-items:center; gap:.5rem; min-width:0; flex:1; }
+.recall-answer-row > .recall-input-wrap { flex:1; min-width:0; }
+.recall-answer-row > .recall-mark-correct { flex:0 0 auto; width:7rem; white-space:normal; font-size:.8rem; line-height:1.3; }
+.recall-mark-correct { min-height: 30px; padding: .25rem .5rem; border: 0; background: transparent; color: var(--muted); text-decoration: underline; }
+.recall-learning-review-direct details { margin-top: .25rem; color: var(--muted); }
+@media (max-width: 600px) {
+ .recall-test-player .recall-fields > .recall-response { grid-template-columns: minmax(0, 1fr) auto; }
+ .recall-test-player .recall-fields > .recall-response > label:not(.sr-only) { grid-column: 1 / -1; }
+ .recall-test-player .recall-fields .recall-field-status, .recall-learning-review-direct { grid-column: 1 / -1; }
+}

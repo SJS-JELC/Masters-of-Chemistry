@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "status": "COMPLETE",
+  "preparedAt": "2026-10-12T00:10:23.113Z",
+  "runId": "RATE-INTEGRATION-20261012",
+  "acceptance": "Root ACCEPTED_COMPLETE; native hidden timing PASS/no exception. Concrete two-root cleanup authorised.",
+  "preservedInputCount": 36,
+  "preservedInputBytes": 2458404,
+  "preservedInputs": [
+    {
+      "from": "validation/recall-codes/implementation/alias-proposal.json",
+      "to": "scripts/tests/fixtures/recall-codes/alias-proposal.json",
+      "bytes": 26030,
+      "sha256": "f822dbfc179ac91e4282b5db2ac1b3f68bab9587d3007f5ac419c11d43edabb5",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-codes/implementation/audit.json",
+      "to": "scripts/tests/fixtures/recall-codes/audit.json",
+      "bytes": 93625,
+      "sha256": "abd72ceff36762f2111eccc141f3d645b31c1044fcbbff23b181f37531fc4464",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-main/s0/main-source-fingerprints.json",
+      "to": "scripts/tests/fixtures/recall-main/main-source-fingerprints.json",
+      "bytes": 121443,
+      "sha256": "26f6839791e4a6814b185a538908b3d3231e3c6e2ddcbcb2da3e8deb4cf714b7",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-main/s1/content/before/typed-provenance.json",
+      "to": "scripts/tests/fixtures/recall-main/typed-provenance-before.json",
+      "bytes": 70151,
+      "sha256": "6a10dffc508f8eb29e41eeccb543decad1c8067ce674d2b66351143dd94ffb42",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-main/s1/contracts/validation.json",
+      "to": "scripts/tests/fixtures/recall-main/contracts-capture.json",
+      "bytes": 4578,
+      "sha256": "a4a3158b2c87c7183a9099f2a0b721ca4036705aee62c72b4909d6a1d1ab7520",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/atlas/root-pilot-acceptance.json",
+      "to": "resources/recall-formulae/atlas/pilot-acceptance.json",
+      "bytes": 719,
+      "sha256": "dc1979019874053160954bff9c7cbd09ae0f05e9984dca6cb6aca0caaacb5975",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s2/atlas/stratified-sample.json",
+      "to": "resources/recall-formulae/atlas/stratified-sample.json",
+      "bytes": 18095,
+      "sha256": "04949f66627e0b61d4b16ccdeb7e925064c280881ff9da4bd4a2b504125f5640",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s0/run-protected-baseline.json",
+      "to": "resources/source-generation/controls/recall-formulae-run-baseline.json",
+      "bytes": 257347,
+      "sha256": "b216d25264214a635490568fdc1d769262d5eed4c7261f96f5aee914cf3c888d",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae-ux/s0/run-protected-baseline.json",
+      "to": "resources/source-generation/controls/recall-formulae-ux-run-baseline.json",
+      "bytes": 310924,
+      "sha256": "ee4c5b920c3bd5f25fdcceec80e5a22cbb81ca493c0e7460083d9327db22056c",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/formulae-equations-format/s0/run-protected-baseline.json",
+      "to": "resources/source-generation/controls/formulae-equations-format-run-baseline.json",
+      "bytes": 310924,
+      "sha256": "3940a90fd0b2aefa232530220273a189806e9f681e260192c6ef1903b4175117",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/formulae-equations-followup/s0/run-protected-baseline.json",
+      "to": "resources/source-generation/controls/formulae-equations-followup-run-baseline.json",
+      "bytes": 310924,
+      "sha256": "5b8588a5ce54b3ddc8393e7a7b2742a03be8ec2e9066d1145fe37bb1da2f8edf",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/part-c-revision/author/legacy-fixtures.mjs",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/part-c-revision/author/legacy-fixtures.mjs",
+      "bytes": 2668,
+      "sha256": "a6d2795abe91446a52e1a049cebc4e8ed7ba412eb17862e91d789f16e04b9c32",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/ui-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/ui-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "bytes": 5374,
+      "sha256": "be861f81790c3fc10bf5daaf85f6d0a95241288532d8040168ff00ece297e938",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/ui-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/ui-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "bytes": 11706,
+      "sha256": "ed7ec59291906efa683fcac73072ef9d6005c32b83057048a4777fb04a536a31",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/network-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/network-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "bytes": 7588,
+      "sha256": "8c8904a1a5da0d3ce6ea9cccdff26bbb5497e4e8e839c3ff9d2c4e8505daf297",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/network-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/network-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "bytes": 12036,
+      "sha256": "e5d7a31eaec75fd24e4389189e365d2892d102673f583d13839ae85d99e8f031",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/concise-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/concise-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "bytes": 8811,
+      "sha256": "bc51eaf9efec8498fd27cca116c8dc9b64fa8fe44d225e8ec320c8f6556aed6c",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/concise-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/concise-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "bytes": 9988,
+      "sha256": "5279d78ddd336cab9e017174acd55faa06cbac579f4cb7858ae4def48eb29960",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/part-c-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/part-c-revision/author/before/src/activities/olympiad/maxwells-demon/policy.ts",
+      "bytes": 9340,
+      "sha256": "5769a0d1448242ad0d9f589190fde6e1cf294c2b2d62999385009c312128e897",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/part-c-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/part-c-revision/author/before/src/activities/olympiad/maxwells-demon/content.ts",
+      "bytes": 6268,
+      "sha256": "84c7ea6d02801d2d2c93ce64d59c309bcd4fa7809378ad96afafb21350ab33c5",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/concise-revision/author/legacy-fixtures.mjs",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/concise-revision/author/legacy-fixtures.mjs",
+      "bytes": 1285,
+      "sha256": "da106c73d9465267563846f7f0cc9db8348662a794a14e0ef0fea8e78be70238",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/maxwells-demon/network-revision/author/legacy-fixtures.mjs",
+      "to": "scripts/tests/fixtures/maxwells-demon-history/network-revision/author/legacy-fixtures.mjs",
+      "bytes": 1784,
+      "sha256": "5b84a81bce70e609c0b15bac9788f9e7c2cdec8602d0825b74b6b73491c536c7",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/formulae-equations-followup/s0/before/src/activities/igcse/equations/bank.ts",
+      "to": "scripts/tests/fixtures/formulae-equations-followup/equations-bank-before.ts",
+      "bytes": 18416,
+      "sha256": "d6fa2d3fb358ebd8578113c78c4f6231318f1189ea2f9a30be3f903bc61012b4",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/formulae-equations-followup/s0/before/src/content/canonical-fixed-ids.json",
+      "to": "scripts/tests/fixtures/formulae-equations-followup/canonical-fixed-ids-before.json",
+      "bytes": 10218,
+      "sha256": "a106e1e43b9688604c058ad16eb48ea68a35e467f94bf4973d58de9aee27bdf2",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/formulae-equations-followup/s0/before/resources/recall-formulae/content/review-index.json",
+      "to": "scripts/tests/fixtures/formulae-equations-followup/review-index-before.json",
+      "bytes": 24487,
+      "sha256": "3cfe93f8486240e89859fc29332a47a273e285ee428f98c3f71b1696d875e690",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/formulae-equations-format/s0/before/src/activities/igcse/equations/bank.ts",
+      "to": "scripts/tests/fixtures/formulae-equations-format/equations-bank-before.ts",
+      "bytes": 14787,
+      "sha256": "1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-main/s1/contracts/historical-capture.json",
+      "to": "scripts/tests/fixtures/recall-main/historical-capture.json",
+      "bytes": 628,
+      "sha256": "2acbaf76108ebbd7aa7cc6bbfeeedfa64fb6e4656053d214bd916a5f57d89e89",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/root-exception-disposition.json",
+      "to": "resources/recall/authority/root-exception-disposition.json",
+      "bytes": 1196,
+      "sha256": "0c32c1bad9624eb5f080b36a3cc0400434fa073d96dd074f420da1e55d1a11f6",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-main/authorized-plan.md",
+      "to": "resources/recall/authority/recall-main-authorized-plan.md",
+      "bytes": 11614,
+      "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-codes/authorized-plan.json",
+      "to": "resources/recall/authority/recall-codes-authorized-plan.json",
+      "bytes": 3983,
+      "sha256": "78903c5521aaff87c5515663f72d81ff3572889ee562cca2c60a111ec91d2748",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/source-audit/igcse-recall-working.json",
+      "to": "resources/recall/source-audit/igcse-recall-working.json",
+      "bytes": 492764,
+      "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/source-audit/completed-review-receipt.json",
+      "to": "resources/recall/source-audit/completed-review-receipt.json",
+      "bytes": 49894,
+      "sha256": "a2c89e46e9cac0696be73f242d18444526f1bf8e8e5fecb608fbe0ec9d0b1777",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/source-audit/recall-editorial-decisions.json",
+      "to": "resources/recall/source-audit/recall-editorial-decisions.json",
+      "bytes": 10743,
+      "sha256": "3879e651011bfde8a3e652111d86e47e0725a19831f83ba9811897a2b320781f",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/source-audit/data.js",
+      "to": "resources/recall/source-audit/data.js",
+      "bytes": 207376,
+      "sha256": "3789d0c010b05189f91aa2ada9bdb67f3501bf25a4e33a674d662bfc75defe85",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/source-audit/COMPLETED-REVIEW-STYLE.md",
+      "to": "resources/recall/source-audit/COMPLETED-REVIEW-STYLE.md",
+      "bytes": 7542,
+      "sha256": "2680f05b870137c1412beb90fbe71bf071a9b23c991435897dc1145ae883eab0",
+      "byteIdentical": true
+    },
+    {
+      "from": "validation/recall-formulae/s1/recall/source-audit/answer-matching-review.md",
+      "to": "resources/recall/source-audit/answer-matching-review.md",
+      "bytes": 3148,
+      "sha256": "272f2f3b66495c386cf59dea0025fca4afe6717a717bade1737fa69fa23bf0a8",
+      "byteIdentical": true
+    }
+  ],
+  "generatedDeletionTargets": [
+    "validation",
+    ".artifacts"
+  ],
+  "scope": "Only necessary source/test/authority inputs retained, original temporary copies untouched pending root deletion gate. No bulky archive copy.",
+  "dependencyGate": {
+    "status": "PASS_PREPARATION",
+    "checkedFiles": 610,
+    "failures": 0,
+    "sourceCopiesReverified": 36,
+    "retiredDirectoryAbsence": "Pending actual authorised deletion; final strict guard unchanged"
+  },
+  "proposedDeletionRoots": [
+    {
+      "path": "validation",
+      "absolutePath": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation",
+      "files": 6634,
+      "bytes": 679341994,
+      "symlinks": 0
+    },
+    {
+      "path": ".artifacts",
+      "absolutePath": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.artifacts",
+      "files": 2042,
+      "bytes": 127988880,
+      "symlinks": 0
+    }
+  ],
+  "deletion": {
+    "startedAt": "2026-10-12T00:25:38.6623583Z",
+    "resumedPassTargets": [
+      {
+        "path": "validation",
+        "absolutePath": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation",
+        "files": 603,
+        "bytes": 63469644,
+        "redirectLinks": 0
+      },
+      {
+        "path": ".artifacts",
+        "absolutePath": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.artifacts",
+        "files": 2042,
+        "bytes": 127988880,
+        "redirectLinks": 0
+      }
+    ],
+    "initialApprovedInventory": [
+      {
+        "path": "validation",
+        "absolutePath": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\validation",
+        "files": 6634,
+        "bytes": 679341994,
+        "symlinks": 0
+      },
+      {
+        "path": ".artifacts",
+        "absolutePath": "C:\\Users\\jelc\\St John's School Leatherhead\\Chemistry - Staff Resources\\32. Masters of Chemistry\\apps\\Masters-of-Chemistry\\.artifacts",
+        "files": 2042,
+        "bytes": 127988880,
+        "symlinks": 0
+      }
+    ],
+    "inventoriedFiles": 8676,
+    "inventoriedBytes": 807330874,
+    "extraFinalGateWritesNotExactlyCounted": true,
+    "countLimit": "Initial approved full inventory excludes a few small final gate scripts/reports; first partial pass stopped on a task-preview log before saving live counts. Entire two roots must be absent to establish every inventoried file was removed.",
+    "stoppedTaskPids": [
+      30992,
+      45032,
+      57788,
+      46508
+    ],
+    "mainSourcePreviewRetained": "http://127.0.0.1:5261/",
+    "releaseSha256Before": "b28fb520a5587ce74159a476bfd96b358b33f3f0dd1fb55c27a552100db348a0",
+    "bulkyArchiveCreated": false,
+    "finishedAt": "2026-10-12T00:25:43.6114818Z",
+    "remainingRoots": [],
+    "releaseSha256After": "b28fb520a5587ce74159a476bfd96b358b33f3f0dd1fb55c27a552100db348a0"
+  },
+  "finalChecks": {
+    "at": "2026-10-12T00:27:23.727Z",
+    "checks": [
+      {
+        "id": "strict-retirement-dependency",
+        "status": "PASS",
+        "exitCode": 0,
+        "checkedFiles": 610,
+        "failures": 0
+      },
+      {
+        "id": "full-typecheck",
+        "status": "PASS",
+        "exitCode": 0
+      },
+      {
+        "id": "rate-content-workspace-links-registration-time",
+        "status": "PASS",
+        "exitCode": 0,
+        "tests": 21,
+        "pass": 21,
+        "fail": 0
+      },
+      {
+        "id": "maxwell-retained-history",
+        "status": "PASS",
+        "exitCode": 0,
+        "tests": 18,
+        "pass": 18,
+        "fail": 0
+      },
+      {
+        "id": "recall-codes",
+        "status": "UNCHANGED_EXISTING_FAILURES",
+        "exitCode": 1,
+        "tests": 7,
+        "pass": 5,
+        "fail": 2
+      },
+      {
+        "id": "recall-main-content",
+        "status": "UNCHANGED_EXISTING_FAILURES",
+        "exitCode": 1,
+        "tests": 9,
+        "pass": 8,
+        "fail": 1
+      },
+      {
+        "id": "other-affected-fixtures",
+        "status": "UNCHANGED_EXISTING_FAILURES",
+        "exitCode": 1,
+        "tests": 28,
+        "pass": 23,
+        "fail": 5
+      },
+      {
+        "id": "protected-check-recall-formulae-originals",
+        "status": "PASS",
+        "exitCode": 0,
+        "protectedPaths": 1320,
+        "changedCount": 0
+      },
+      {
+        "id": "protected-check-recall-formulae-ux-originals",
+        "status": "PASS",
+        "exitCode": 0,
+        "protectedPaths": 1320,
+        "changedCount": 0
+      },
+      {
+        "id": "protected-check-formulae-equations-format-originals",
+        "status": "PASS",
+        "exitCode": 0,
+        "protectedPaths": 1320,
+        "changedCount": 0
+      },
+      {
+        "id": "protected-check-formulae-equations-followup-originals",
+        "status": "PASS",
+        "exitCode": 0,
+        "protectedPaths": 1320,
+        "changedCount": 0
+      },
+      {
+        "id": "atlas-frozen-inputs",
+        "status": "PASS",
+        "exitCode": 0
+      },
+      {
+        "id": "production-release",
+        "productionBuild": "app",
+        "courses": [
+          "alevel",
+          "igcse"
+        ],
+        "status": "PASS",
+        "activityCount": 18,
+        "runtimeFileCount": 242,
+        "initialJavascriptGzipBytes": 204753,
+        "lazyJavascriptChunks": 107,
+        "manifestSha256": "b28fb520a5587ce74159a476bfd96b358b33f3f0dd1fb55c27a552100db348a0",
+        "checkedAt": "2026-10-12T00:27:23.719Z",
+        "hashUnchanged": true
+      }
+    ],
+    "retainedInputHashes": "36/36 PASS",
+    "temporaryRootsAbsent": true,
+    "productionRuntimeUnchanged": true,
+    "noNewProtectedDrift": "1320/0 PASS; historical FAIL529 remains",
+    "fullRepositoryGreenClaim": false,
+    "mainSourcePreview": "http://127.0.0.1:5261/",
+    "sourceMainRouteHttpStatus": 200,
+    "recentEvidenceHyperlinksRetired": true,
+    "remainingAuthorisedTemporaryRoots": []
+  }
+}

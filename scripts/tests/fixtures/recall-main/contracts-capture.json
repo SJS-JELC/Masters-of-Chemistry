@@ -1,0 +1,73 @@
+{
+  "jobId": "RECALL-CONTRACTS",
+  "agentId": "A02",
+  "status": "PASS",
+  "commands": [
+    {
+      "command": "node --experimental-strip-types --test scripts/tests/recall-main-contracts.test.mjs",
+      "result": {
+        "chunk_id": "9bcada",
+        "wall_time_seconds": 0.195737,
+        "exit_code": 0,
+        "original_token_count": 367,
+        "output": "✔ 150 actual immutable historical definitions retained with source fingerprint (2.9272ms)\n✔ frozen historical marker accepts every historical model and retains original point allocation (4.0103ms)\n✔ definition absence selects historical semantics, named contract selects amended semantics (0.4976ms)\n✔ same text IDs do not establish compatibility for changed meaning, order or controls (0.6635ms)\n✔ retired IDs skip queues while historical evidence remains addressable; new identities inherit no success (0.8207ms)\n✔ explicit curriculum metadata assigns bonding/molecules and transition elements to physical/inorganic (0.2447ms)\n✔ scope keys isolate profile/course/global/gem and selected facts deduplicate (0.4394ms)\n✔ gem launch preserves remembered global topics; test/mode scope resumes explicitly (0.4168ms)\n✔ checkpoint contains only refs/classifications and rejects wrong namespace/selection/evidence injection (0.7648ms)\n✔ zero-to-many exception payloads preserve raw entries, reject malformed/duplicate IDs (0.4693ms)\n✔ valid-alternative display requires explicit wrong typed post-assessment opt-in (0.2211ms)\n✔ ion count boundary is explicit; molecular and general formula entry are independent (0.2025ms)\n✔ actual shared controller post-check model preserves first response assistance, marks and timing (1.8999ms)\nℹ tests 13\nℹ suites 0\nℹ pass 13\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 141.856\n"
+      }
+    },
+    {
+      "command": "npm run typecheck",
+      "result": {
+        "chunk_id": "5370ef",
+        "wall_time_seconds": 6.3894898,
+        "exit_code": 0,
+        "original_token_count": 14,
+        "output": "\n> masters-of-chemistry@0.0.0 typecheck\n> tsc --noEmit\n\n"
+      }
+    }
+  ],
+  "requestedModel": "gpt-6.1-sol",
+  "requestedEffort": "high",
+  "effectiveModel": "unknown",
+  "effectiveEffort": "unknown",
+  "usage": "not exposed",
+  "completedAt": "2026-10-10T21:50:40.987Z",
+  "historicalCount": 150,
+  "currentBankUnchanged": {
+    "src/recall/facts.ts": {
+      "expected": "cc5d142c3fa418d4bd6f160e18aced926f8419a83c04c7c2ce7328e38e281787",
+      "actual": "cc5d142c3fa418d4bd6f160e18aced926f8419a83c04c7c2ce7328e38e281787",
+      "unchanged": true
+    },
+    "src/recall/approved-igcse-facts.json": {
+      "expected": "38226a6abfb793767fc679613e4e6095e1bd138a04ab4489653a5474e097f417",
+      "actual": "38226a6abfb793767fc679613e4e6095e1bd138a04ab4489653a5474e097f417",
+      "unchanged": true
+    },
+    "src/recall/starter-decks.ts": {
+      "expected": "2b9cf29c893d320a112ba9d560a5a3405dc9ebe002cd9212e36d4958b1ec5b34",
+      "actual": "2b9cf29c893d320a112ba9d560a5a3405dc9ebe002cd9212e36d4958b1ec5b34",
+      "unchanged": true
+    },
+    "src/activities/igcse/formulae/recall-facts.ts": {
+      "expected": "c3de614a9804fb88fa0754144d5aab6db8553e10215ae28c5a29dca6c9a0ba5f",
+      "actual": "c3de614a9804fb88fa0754144d5aab6db8553e10215ae28c5a29dca6c9a0ba5f",
+      "unchanged": true
+    }
+  },
+  "originalMarkerSha256": "7235e7c5ddf051274a06ed8cd670b5689f5d594909626bf130c0090657f208ca",
+  "historicalMarkerExactAlgorithm": true,
+  "ownedFileSha256": {
+    "src/contracts/recall.ts": "24656c0fde12e09669ab87f27182eea750a9c50392e00e2e2642be2430de3e70",
+    "src/recall/session-contract.ts": "9dea5e6135dfcd2529ff19d6f3302775243d39f9841295ae6ba248e991b2dc1d",
+    "src/recall/compatibility.ts": "c394b1865a8134d62a75bcaac59118a75ae1610e06137c40ee3c2d30abac4203",
+    "src/recall/historical-facts.json": "1ffc25ba4ddb190ad2727d3ee280e7de4184568a1181b5a6e05c395674e75783",
+    "src/recall/historical-marking.ts": "6af75c5df1dd2adc675203142b4e84e1821468bdade034bed7310c3de23f6dde",
+    "scripts/tests/recall-main-contracts.test.mjs": "865a9b6bf84b916d6b769566719fcfb855d45b58bd12c3b79d2077a5b2018305",
+    "validation/recall-main/s1/contracts/CONTRACTS.md": "13f5da79c55291b91658822fd47eba3b1b0cd25c6291f0b408ae5a8af50e9518"
+  },
+  "integrationPending": [
+    "Amended bank generation and chemistry",
+    "Foreman-owned attempt/repository compatibility and persistence wiring",
+    "S2 marker/controls/flashcards/hub",
+    "Real rendered/browser/timing and independent review gates"
+  ]
+}

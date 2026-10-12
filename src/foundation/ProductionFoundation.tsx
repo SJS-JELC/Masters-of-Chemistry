@@ -1,3 +1,5 @@
+import { questionDisplayCode } from '../content/question-display-identity.ts';
+import { gradedActivityId } from './graded-question.ts';
 import { alphaDatabaseName } from '../persistence/alpha-namespace.ts';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type {
@@ -9,9 +11,17 @@ import type {
   OlympiadActivityId,
 } from '../contracts/index.ts';
 import type { CurriculumLaunchRequest, LandingLaunchRequest } from '../contracts/landing.ts';
-import { FoundationApp as CurriculumHost } from './ActivityHost.tsx';
 import { CourseShell } from '../shell/CourseShell.tsx';
 import { productionRegistry } from './registry.ts';
+import {
+  afterGemRecall,
+  initialGemMasteryStage,
+  readGemMasteryFlow,
+  writeGemMasteryFlow,
+  gemRecallSessionId,
+  gemGradeSessionId,
+  type GemMasteryFlow,
+} from './gem-mastery-flow.ts';
 import { createChemistryRepository } from '../persistence/index.ts';
 import {
   COURSE_PREFERENCE_KEY,
@@ -22,6 +32,9 @@ import {
 } from '../shell/navigation-view.ts';
 const OriginalLanding = lazy(async () => ({
   default: (await import('../landing/index.ts')).OriginalLanding,
+}));
+const CurriculumHost = lazy(async () => ({
+  default: (await import('./ActivityHost.tsx')).FoundationApp,
 }));
 const OlympiadHost = lazy(async () => ({
   default: (await import('./OlympiadHost.tsx')).OlympiadHost,
@@ -49,7 +62,9 @@ function linkInput(url: URL): string | null {
     : null;
 }
 function activityFromURL(url: URL, course: Course): ActivityId | undefined {
-  const raw = url.searchParams.get('activity') || (url.searchParams.get('olympiad') === 'c3l6' ? 'alevel/c3l6-organic-reactions' : null);
+  const raw =
+    url.searchParams.get('activity') ||
+    (url.searchParams.get('olympiad') === 'c3l6' ? 'alevel/c3l6-organic-reactions' : null);
   const slug = url.pathname.match(/activities\/([^/]+)/)?.[1];
   return productionRegistry.activities.find(
     (item) => item.course === course && (item.id === raw || item.id === `${course}/${slug}`),
@@ -57,6 +72,21 @@ function activityFromURL(url: URL, course: Course): ActivityId | undefined {
 }
 function launchFromURL(url: URL, course: Course): CurriculumLaunchRequest | undefined {
   const source = url;
+  const flow = readGemMasteryFlow(url, course, productionRegistry);
+  if (flow?.stage === 'grades') {
+    return (
+      validateLandingLaunch(
+        {
+          id: gemGradeSessionId(flow),
+          kind: 'practice',
+          course,
+          gemId: flow.gemId,
+          selection: 'mastery',
+        },
+        productionRegistry,
+      ) ?? undefined
+    );
+  }
   if (['teacher', 'review'].includes(source.searchParams.get('mode') || '')) return;
   if (
     linkInput(url) ||
@@ -106,9 +136,31 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
   const [view, setView] = useState<PlatformView>(() =>
     routeView(initialURL, routeCourse(initialURL, rememberedCourse(), entryCourse)),
   );
+  const [recallGems, setRecallGems] = useState<readonly string[] | undefined>(() =>
+    initialURL.searchParams.has('recallGem')
+      ? initialURL.searchParams.getAll('recallGem')
+      : undefined,
+  );
+  const [recallTeacher, setRecallTeacher] = useState(
+    () =>
+      initialURL.searchParams.get('view') === 'recall' &&
+      initialURL.searchParams.get('mode') === 'teacher',
+  );
+  const [masteryFlow, setMasteryFlow] = useState(() =>
+    readGemMasteryFlow(
+      initialURL,
+      routeCourse(initialURL, rememberedCourse(), entryCourse),
+      productionRegistry,
+    ),
+  );
+  const shownRecallGems = useMemo(
+    () => (masteryFlow?.stage === 'recall' ? [masteryFlow.gemId] : recallGems),
+    [masteryFlow?.stage, masteryFlow?.gemId, recallGems],
+  );
   const [requestedActivity, setRequestedActivity] = useState<ActivityId | undefined>(() =>
     activityFromURL(initialURL, routeCourse(initialURL, rememberedCourse(), entryCourse)),
   );
+  const [recallReview, setRecallReview] = useState<Readonly<{factId:string; historical:boolean}> | undefined>();
   const [reviewRef, setReviewRef] = useState<QuestionRef | undefined>();
   const [teacherGroup, setTeacherGroup] = useState<'ionic' | 'covalent' | undefined>(() =>
     teacherGroupFromURL(initialURL, routeCourse(initialURL, rememberedCourse(), entryCourse)),
@@ -123,6 +175,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
   const navigationGuard = useRef<(() => Promise<boolean>) | null>(null);
   const currentURL = useRef(initialURL.href);
   const popBusy = useRef(false);
+  const completedStage = useRef<string | null>(null);
   const namespace = useMemo(() => ({ course, profileId: 'local' }), [course]);
   const run =
     (import.meta.env.DEV ? initialURL.searchParams.get('run') || 'local' : 'local')
@@ -188,6 +241,10 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
         'fresh',
         'practice',
         'category',
+        'recallGem',
+        'masteryRun',
+        'masteryGem',
+        'masteryStage',
       ])
         url.searchParams.delete(key);
       url.hash = '';
@@ -195,6 +252,10 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
       if (next === 'olympiad') setRequestedActivity(undefined);
       writeURL(url);
       setReviewRef(undefined);
+      setRecallReview(undefined);
+      setMasteryFlow(undefined);
+      setRecallGems(undefined);
+      setRecallTeacher(false);
       setTeacherGroup(undefined);
       setPendingLink(null);
       setLinkMessage('');
@@ -202,6 +263,18 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
       setView(next);
     },
     [course, writeURL],
+  );
+  const openRecall = useCallback(
+    (gemId?: string, teacher = false) => {
+      selectView('recall');
+      setRecallGems(gemId ? [gemId] : undefined);
+      setRecallTeacher(teacher);
+      const url = new URL(location.href);
+      if (gemId) url.searchParams.set('recallGem', gemId);
+      if (teacher) url.searchParams.set('mode', 'teacher');
+      writeURL(url, true);
+    },
+    [selectView, writeURL],
   );
   const selectCourse = useCallback(
     (next: Course) => {
@@ -215,8 +288,10 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
       history.pushState(null, '', url);
       currentURL.current = url.href;
       setCourse(next);
+      setMasteryFlow(undefined);
       setView('home');
       setReviewRef(undefined);
+      setRecallReview(undefined);
       setPendingLink(null);
       setRequestedActivity(undefined);
       setLaunchRequest(undefined);
@@ -225,22 +300,26 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
     },
     [course, run],
   );
-  const selectChallenge = useCallback((id: OlympiadActivityId | undefined) => {
-    selectView('olympiad');
-    setRequestedActivity(id);
-    const url = new URL(location.href);
-    if (id) url.searchParams.set('activity',id);
-    writeURL(url,true);
-  },[selectView,writeURL]);
+  const selectChallenge = useCallback(
+    (id: OlympiadActivityId | undefined) => {
+      selectView('olympiad');
+      setRequestedActivity(id);
+      const url = new URL(location.href);
+      if (id) url.searchParams.set('activity', id);
+      writeURL(url, true);
+    },
+    [selectView, writeURL],
+  );
   const selectActivity = useCallback(
     (id: ActivityId) => {
-      if (productionRegistry.get(id)?.strand === 'olympiad') selectChallenge(id as OlympiadActivityId);
+      if (productionRegistry.get(id)?.strand === 'olympiad')
+        selectChallenge(id as OlympiadActivityId);
       else {
         setRequestedActivity(id);
         selectView('practice');
       }
     },
-    [selectView,selectChallenge],
+    [selectView, selectChallenge],
   );
   const selectTeacher = useCallback(
     (gemId?: string) => {
@@ -276,7 +355,29 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
     [course, selectView, writeURL],
   );
   const launch = useCallback(
-    (request: LandingLaunchRequest) => {
+    async (request: LandingLaunchRequest) => {
+      if (request.kind === 'gem-mastery') {
+        if (request.course !== course) return;
+        const { gemMasteryAvailability } = await import('./gem-mastery-availability.ts');
+        const available = gemMasteryAvailability(course, request.gemId, productionRegistry);
+        const stage = initialGemMasteryStage(available.facts, !!available.target);
+        if (!stage) {
+          setLinkMessage('No factual recall or graded activity is available for this gem yet.');
+          return;
+        }
+        const flow: GemMasteryFlow = { token: request.id, course, gemId: request.gemId, stage };
+        selectView(stage === 'recall' ? 'recall' : 'practice');
+        const url = new URL(location.href);
+        writeGemMasteryFlow(url, flow);
+        if (stage === 'recall') {
+          url.searchParams.set('recallGem', flow.gemId);
+          setRecallGems([flow.gemId]);
+        }
+        writeURL(url, true);
+        setMasteryFlow(flow);
+        if (stage === 'grades') setLaunchRequest(launchFromURL(url, course));
+        return;
+      }
       const validated = validateLandingLaunch(request, productionRegistry);
       if (!validated || request.course !== course) {
         setLinkMessage('This activity or level is not available.');
@@ -298,6 +399,10 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
         'fresh',
         'practice',
         'session',
+        'masteryRun',
+        'masteryGem',
+        'masteryStage',
+        'recallGem',
       ])
         url.searchParams.delete(key);
       url.searchParams.set('view', request.kind);
@@ -311,13 +416,39 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
       }
       writeURL(url);
       setReviewRef(undefined);
+      setRecallReview(undefined);
+      setMasteryFlow(undefined);
       setPendingLink(null);
       setLinkMessage('');
       setLaunchRequest(validated);
       setView(request.kind);
     },
-    [course, writeURL],
+    [course, writeURL, selectView],
   );
+  const completeMasteryStage = useCallback(() => {
+    const current = masteryFlow;
+    if (!current || current.stage === 'complete') return current;
+    const key = current.token + ':' + current.stage;
+    if (completedStage.current === key) return;
+    completedStage.current = key;
+    const graded = productionRegistry
+      .curriculumFor(course)
+      .some((item) =>
+        item.gems.some((gem) => gem.id === current.gemId && gem.supportedLevels.length),
+      );
+    const next = {
+      ...current,
+      stage: current.stage === 'recall' ? afterGemRecall(graded) : ('complete' as const),
+    };
+    const url = new URL(location.href);
+    url.searchParams.delete('recallGem');
+    writeGemMasteryFlow(url, next);
+    writeURL(url, true);
+    setRecallGems(undefined);
+    setLaunchRequest(next.stage === 'grades' ? launchFromURL(url, course) : undefined);
+    setView('practice');
+    setMasteryFlow(next);
+  }, [course, writeURL, masteryFlow]);
   const consumeLaunch = useCallback((id: string) => {
     setLaunchRequest((request) => (request?.id === id ? undefined : request));
     const url = new URL(location.href);
@@ -349,7 +480,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
           resolveCompatibilityLink(otherCourse, normalized.href),
         ]);
         result = selectedResult;
-        if (selectedResult.kind === 'unrecognized' && otherResult.kind === 'curriculum') {
+        if (selectedResult.kind === 'unrecognized' && (otherResult.kind === 'curriculum' || otherResult.kind === 'recall')) {
           result = otherResult;
           resolvedCourse = otherCourse;
         } else if (selectedResult.kind === 'curriculum' && otherResult.kind === 'curriculum') {
@@ -361,10 +492,16 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
         setLinkMessage(
           'This code matches both courses. The selected course has been retained; use an activity link to choose the other course.',
         );
-      if (result.kind === 'curriculum') {
+      if (result.kind === 'recall') {
+        setCourse(resolvedCourse); setRecallTeacher(true); setRecallGems(undefined); setReviewRef(undefined);
+        setRecallReview({factId: result.ref.questionId, historical: result.historical}); setView('recall');
+        const url = new URL(location.href); url.searchParams.set('view', 'recall'); url.searchParams.set('mode', 'teacher');
+        url.searchParams.set('activity', result.ref.activityId); url.searchParams.set('review', questionDisplayCode({course:resolvedCourse,...result.ref})!);
+        url.searchParams.set('seed', '0'); url.searchParams.set('level', '1'); writeURL(url, true, resolvedCourse);
+      } else if (result.kind === 'curriculum') {
         setCourse(resolvedCourse);
         setReviewRef(result.ref);
-        setRequestedActivity(result.ref.activityId);
+        setRequestedActivity(gradedActivityId(result.ref.activityId));
         setView('teacher');
         const url = new URL(location.href);
         url.searchParams.set('view', 'teacher');
@@ -373,8 +510,10 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
         url.searchParams.set('seed', String(result.ref.seed));
         url.searchParams.set('activity', result.ref.activityId);
         writeURL(url, true, resolvedCourse);
-      } else if (result.kind === 'olympiad' && course === 'alevel') { setRequestedActivity(result.activityId); setView('olympiad'); }
-      else {
+      } else if (result.kind === 'olympiad' && course === 'alevel') {
+        setRequestedActivity(result.activityId);
+        setView('olympiad');
+      } else {
         setLinkMessage(
           result.kind === 'unrecognized' ? result.reason : 'This link belongs to another course.',
         );
@@ -408,8 +547,19 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
         const next = routeCourse(destination, rememberedCourse(), entryCourse);
         setCourse(next);
         setView(routeView(destination, next));
+        setRecallGems(
+          destination.searchParams.has('recallGem')
+            ? destination.searchParams.getAll('recallGem')
+            : undefined,
+        );
+        setRecallTeacher(
+          destination.searchParams.get('view') === 'recall' &&
+            destination.searchParams.get('mode') === 'teacher',
+        );
+        setMasteryFlow(readGemMasteryFlow(destination, next, productionRegistry));
         setRequestedActivity(activityFromURL(destination, next));
         setReviewRef(undefined);
+      setRecallReview(undefined);
         setTeacherGroup(teacherGroupFromURL(destination, next));
         setLaunchRequest(launchFromURL(destination, next));
         setPendingLink(linkInput(destination));
@@ -432,7 +582,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
           onSelectCourse={selectCourse}
           onLaunch={launch}
           onOpenStatistics={() => selectView('statistics')}
-          onOpenRecall={() => selectView('recall')}
+          onOpenRecall={openRecall}
           onOpenOlympiad={() => selectView('olympiad')}
           onOpenTeacher={selectTeacher}
           onOpenImport={() => selectView('import')}
@@ -445,14 +595,61 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
   if (view === 'recall')
     return (
       <Suspense fallback={<p role="status">Loading Recall...</p>}>
-        <RecallView course={course} onHome={() => selectView('home')} />
+        <RecallView
+          key={
+            course +
+            ':' +
+            (masteryFlow?.token ?? '') +
+            ':' +
+            (recallGems?.join(',') ?? 'global') +
+            ':' +
+            recallTeacher
+          }
+          course={course}
+          onHome={() => selectView('home')}
+          databaseName={databaseName}
+          {...(shownRecallGems ? { gemIds: shownRecallGems } : {})}
+          {...(masteryFlow?.stage === 'recall'
+            ? {
+                flowSessionId: gemRecallSessionId(masteryFlow),
+                autoStart: true,
+                onComplete: completeMasteryStage,
+              }
+            : {})}
+          mode={recallTeacher ? 'teacher' : 'student'}
+          {...(recallReview ? {reviewFact: recallReview} : {})}
+          onRegisterLeaveGuard={registerGuard}
+        />
       </Suspense>
+    );
+  if (masteryFlow?.stage === 'complete')
+    return (
+      <CourseShell
+        course={course}
+        registry={productionRegistry}
+        currentView="practice"
+        onSelectView={selectView}
+        onSelectActivity={selectActivity}
+      >
+        <section className="practice-setup" aria-label="Mastery run complete">
+          <h1>Mastery run complete</h1>
+          <p>
+            The available stages are complete for this run. Incorrect or revealed recall facts
+            remain due in Recall; graded awards use your independent assessments.
+          </p>
+          <button type="button" onClick={() => selectView('home')}>
+            Choose another gem
+          </button>
+        </section>
+      </CourseShell>
     );
   if (view === 'olympiad' && course === 'alevel')
     return (
       <Suspense fallback={<p role="status">Loading Olympiad challenge...</p>}>
         <OlympiadHost
-          {...(requestedActivity && productionRegistry.get(requestedActivity)?.strand === 'olympiad' ? {activityId:requestedActivity as OlympiadActivityId} : {})}
+          {...(requestedActivity && productionRegistry.get(requestedActivity)?.strand === 'olympiad'
+            ? { activityId: requestedActivity as OlympiadActivityId }
+            : {})}
           onSelectChallenge={selectChallenge}
           onSelectCurriculum={selectActivity}
           onSelectView={selectView}
@@ -494,19 +691,27 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
   return (
     <>
       {linkMessage && <p role="status">{linkMessage}</p>}
-      <CurriculumHost
-        key={course}
-        course={course}
-        view={view === 'olympiad' ? 'practice' : view}
-        onSelectView={selectView}
-        onSelectOlympiad={(id) => id ? selectChallenge(id) : selectView('olympiad')}
-        onNavigationGuard={registerGuard}
-        onLaunchConsumed={consumeLaunch}
-        {...(requestedActivity ? { initialActivityId: requestedActivity } : {})}
-        {...(reviewRef ? { reviewRef } : {})}
-        {...(teacherGroup ? { initialTeacherGroup: teacherGroup } : {})}
-        {...(launchRequest ? { launchRequest } : {})}
-      />
+      <Suspense fallback={<p role="status">Loading activity...</p>}>
+        <CurriculumHost
+          key={course + ':' + (masteryFlow?.token ?? '')}
+          course={course}
+          view={view === 'olympiad' ? 'practice' : view}
+          onSelectView={selectView}
+          onSelectOlympiad={(id) => (id ? selectChallenge(id) : selectView('olympiad'))}
+          onNavigationGuard={registerGuard}
+          onLaunchConsumed={consumeLaunch}
+          {...(requestedActivity ? { initialActivityId: requestedActivity } : {})}
+          {...(reviewRef ? { reviewRef } : {})}
+          {...(teacherGroup ? { initialTeacherGroup: teacherGroup } : {})}
+          {...(launchRequest ? { launchRequest } : {})}
+          {...(masteryFlow?.stage === 'grades'
+            ? {
+                masterySessionId: gemGradeSessionId(masteryFlow),
+                onMasteryComplete: completeMasteryStage,
+              }
+            : {})}
+        />
+      </Suspense>
     </>
   );
 }

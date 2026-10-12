@@ -13,7 +13,7 @@ import { IDLE_LIMITS } from '../src/domain/timing/active-clock.ts';
 test('every complete registered gem has genuine practice/revision targets, source tuning and reproducible providers', async () => {
   const contract = JSON.parse(fs.readFileSync(new URL('../project-contract.json', import.meta.url), 'utf8'));
   assert.deepEqual(productionRegistry.activities.map(item=>item.id).sort(), contract.activities.map(item=>item.id).sort());
-  assert.equal(productionRegistry.activities.length,14);
+  assert.equal(productionRegistry.activities.length,contract.activities.length);
   let total = 0;
   for (const course of ['alevel','igcse']) {
     const registrations = productionRegistry.curriculumFor(course);
@@ -54,14 +54,18 @@ test('every complete registered gem has genuine practice/revision targets, sourc
     const ref = provider.select({...next.current.target,seed:42,previousQuestionIds:[]});
     assert.deepEqual(bindRevisionQuestion(next,ref).current.ref,ref);
   }
-  assert.equal(total,43);
+  assert.equal(total,60);
 });
 
 test('Olympiad and excluded functionality cannot enter curriculum registrations or evidence channels', () => {
-  const olympiad = productionRegistry.get('alevel/c3l6-organic-reactions');
-  assert.equal(olympiad.strand,'olympiad');
-  assert.equal(olympiad.revision,false);
-  for(const key of ['gems','mastery','idleAllowance']) assert(!Object.hasOwn(olympiad,key));
+  const challenges=productionRegistry.activities.filter(item=>item.strand==='olympiad');
+  assert(challenges.some(item=>item.id==='alevel/maxwells-demon'));
+  for(const olympiad of challenges){
+    assert.equal(olympiad.course,'alevel');
+    assert.equal(olympiad.revision,false);
+    for(const key of ['gems','mastery','idleAllowance','timing']) assert(!Object.hasOwn(olympiad,key));
+    assert(!productionRegistry.curriculumFor('alevel').some(item=>item.id===olympiad.id));
+  }
   assert(!productionRegistry.activities.some(item=>/rocket/i.test(item.id)));
   assert.throws(()=>selectCurriculumTargets(productionRegistry.curriculumFor('alevel'),'alevel',['c3l6']));
 });

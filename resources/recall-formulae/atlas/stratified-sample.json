@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "job_id": "RF-S2-ATLAS-FULL",
+  "reviewer": "A03 gpt-6.1-sol/high",
+  "source_sha256": "9dec13f39318df5d0fe3b2053d391f438db47001ff7e6b6ad354925a6eb2ae4b",
+  "overlay_sha256": "3994f4913c0ed4f43c3899d761c5abc631f56413c9593776c4a5c860f9bfeea4",
+  "sample_size": 25,
+  "selection": "Purposive stratified sample of 18 non-pilot records plus all seven unresolved records; includes mono/polyatomic construction, charge reduction/brackets/formal compound caveat, simple/complex named translation, supplied skeletons, combined/physical-change states, mixed marks, excluded product/ionic tasks, 2019–2025, all empirical bands and separate teaching bands. Accepted pilot dispositions carried forward unchanged.",
+  "root_final_acceptance": "PENDING",
+  "entries": [
+    {
+      "id": "2024-nov-1-q6ai",
+      "stratum": "Formulae: polyatomic and formal salt",
+      "input_record_sha256": "3cf4973c72dbd56b6abce23cb969acb539d64ecc0ee118e716b6822dfe948021",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "3.1",
+      "effective_primary": "16.1",
+      "secondary": [
+        "3.1"
+      ],
+      "marks": 3,
+      "empirical_band": "5-6",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "AlCl3 (Al3+ with three Cl− ions), ZnSO4 (2:−2 1:1), (NH4)3N (three +1 ions balance −3) are formula construction. Keep source warning that ammonium nitride is a formal charge exercise, not a stable classroom salt."
+    },
+    {
+      "id": "2024-june-1-q3(a)(iii)",
+      "stratum": "Formulae: generic monatomic species",
+      "input_record_sha256": "e8f6d5b2f894f0451f1f03b3091d898ff8d73738a26f44e5487c919efc0295ca",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "3.1",
+      "effective_primary": "16.1",
+      "secondary": [
+        "3.1"
+      ],
+      "marks": 1,
+      "empirical_band": "7-8",
+      "teaching_band": "5-6",
+      "review_status": "PASS",
+      "rationale": "Two outer electrons establish a Group 2 cation; two F− give neutral ZF2. Placeholder Z and historical reversed-order allowances stay unchanged."
+    },
+    {
+      "id": "2024-june-1r-q9ai",
+      "stratum": "Formulae: mixed mono/polyatomic table",
+      "input_record_sha256": "386ad5c44ea28e2ab36779716bea2159c3da35dce47888a70498b76c564bc0e6",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "3.1",
+      "effective_primary": "16.1",
+      "secondary": [
+        "3.1"
+      ],
+      "marks": 3,
+      "empirical_band": "5-6",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "NaCl and ZnO both reduce to 1:1; (NH4)2SO4 requires 2:1 and brackets around repeated ammonium. All three cells remain one three-mark record."
+    },
+    {
+      "id": "2020-jan-1-q4ai",
+      "stratum": "Formulae: unequal charges/brackets",
+      "input_record_sha256": "a05ec393f6558d6b6ac9293880982f34a207b97890dab9e35bff54fe3a5c9c0b",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "3.1",
+      "effective_primary": "16.1",
+      "secondary": [
+        "3.1"
+      ],
+      "marks": 3,
+      "empirical_band": "5-6",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "(NH4)2S, Mg(NO3)2 and Al2(CO3)3 use respective 2:1, 1:2 and 2:3 lowest ratios; all requested polyatomic grouping stays correct."
+    },
+    {
+      "id": "2025-june-2-q2b",
+      "stratum": "Equations: simple supplied-product translation",
+      "input_record_sha256": "5c393f0fbf9f7c9d7c5bd730de6b54298b7f540fcfc6b1569d8f3dcf7dd6acd5",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "8.3",
+      "effective_primary": "16.2",
+      "secondary": [
+        "8.3"
+      ],
+      "marks": 1,
+      "empirical_band": "7-8",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "Extracted prose explicitly gives magnesium chloride and hydrogen. Mg+2HCl→MgCl2+H2 conserves atoms; product names, not unspecified reaction prediction, determine the task."
+    },
+    {
+      "id": "2024-nov-1-q9di",
+      "stratum": "Equations: fixed-product balancing",
+      "input_record_sha256": "d2f67a972d949e79f4cd627f0995599caaf455d4441fd69c177a211f89fa2f45",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "11.3",
+      "effective_primary": "16.2",
+      "secondary": [
+        "11.3"
+      ],
+      "marks": 1,
+      "empirical_band": "5-6",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "Only the oxygen coefficient is missing; incomplete-combustion products are fixed. C4H9OH+5O2→2CO2+2CO+5H2O balances C4 H10 O11. Source pattern mislabels complete combustion; keep that source ID and use actual extracted operation."
+    },
+    {
+      "id": "2024-june-1-q7(c)(i)",
+      "stratum": "Equations: complex named translation",
+      "input_record_sha256": "6b276d761ae2e2908a7b3118200d14d1ae04350141125ee06cf0276dc2905032",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "11.2",
+      "effective_primary": "16.2",
+      "secondary": [
+        "11.2"
+      ],
+      "marks": 2,
+      "empirical_band": "9",
+      "teaching_band": "9",
+      "review_status": "PASS",
+      "rationale": "Named NO2/H2O/O2/HNO3 are established. 4NO2+2H2O+O2→4HNO3 balances N4 H4 O12. Keep source formula-dependent balancing mark and empirical band."
+    },
+    {
+      "id": "2024-june-2r-q3bi",
+      "stratum": "Equations: combined states and balance",
+      "input_record_sha256": "693d122e4a52420f67959b2ec66ba8db7fce51139c9b0386339f09f93dc1e655",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "11.3",
+      "effective_primary": "16.2",
+      "secondary": [
+        "11.3"
+      ],
+      "marks": 2,
+      "empirical_band": "5-6",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "All species and their states are named. 2Mg(s)+O2(g)→2MgO(s) balances Mg2 O2 and gives the required solid/gas/solid states, retaining the two-mark whole record."
+    },
+    {
+      "id": "2023-june-1r-q9aiii",
+      "stratum": "Equations: polyatomic decomposition skeleton",
+      "input_record_sha256": "be2e79afc25e24170090f7f1a073e9278ab8256222e8f8110c97a377e1d7ec2a",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "7.5",
+      "effective_primary": "16.2",
+      "secondary": [
+        "7.5"
+      ],
+      "marks": 1,
+      "empirical_band": "7-8",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "All product formulae are supplied; only coefficients matter. 2Ca(NO3)2→2CaO+4NO2+O2 balances Ca2 N4 O12, without new product-prediction credit."
+    },
+    {
+      "id": "2019-june-1-q8a",
+      "stratum": "Equations: five-coefficient complex skeleton",
+      "input_record_sha256": "595d60d74d327b1aee9377cec1957e506866998802420ea8428a0419b78711f4",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "9.3",
+      "effective_primary": "16.2",
+      "secondary": [
+        "9.3"
+      ],
+      "marks": 1,
+      "empirical_band": "5-6",
+      "teaching_band": "7-8",
+      "review_status": "PASS",
+      "rationale": "All five formulae are supplied. Coefficients 2:4:1:2:2 conserve C4 H12 Cl4 O2; this is balancing, with alkenes retained as meaningful subject context."
+    },
+    {
+      "id": "2023-jan-1r-q9ai",
+      "stratum": "States: inherited chemistry caveat",
+      "input_record_sha256": "9ce07777273587276c51ea522f5258682ceba5189feb6300c81f8828542933dd",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "1.1",
+      "effective_primary": "16.2",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "9",
+      "teaching_band": "5-6",
+      "review_status": "PASS",
+      "rationale": "Formula equation is supplied; only four states are assessed. Keep source Zn/HNO3/H2 historical premise and explicit oxidising-acid caveat verbatim, without endorsing it as a new reaction model."
+    },
+    {
+      "id": "2020-jan-1r-q2b",
+      "stratum": "States: physical changes",
+      "input_record_sha256": "8920c4142dcc799e9bf5209ba47e9c51e26aa52bdb6791638649f77cac33da83",
+      "disposition": "REASSIGN_PRIMARY",
+      "original_primary": "1.1",
+      "effective_primary": "16.2",
+      "secondary": [],
+      "marks": 3,
+      "empirical_band": "5-6",
+      "teaching_band": "5-6",
+      "review_status": "PASS",
+      "rationale": "Water evaporation l→g, iodine sublimation s→g and ice melting s→l are independent state-symbol rows. Retain source acceptance of words as alternatives; new gem maps the assessed state notation."
+    },
+    {
+      "id": "2024-june-1-q8(d)",
+      "stratum": "Secondary: calculation followed by balance",
+      "input_record_sha256": "66b7c850288eb42919dd0965f01cbb548cd5606487747d342293d684bfec6a22",
+      "disposition": "ADD_SECONDARY",
+      "original_primary": "7.5",
+      "effective_primary": "7.5",
+      "secondary": [
+        "16.2"
+      ],
+      "marks": 3,
+      "empirical_band": "7-8",
+      "teaching_band": null,
+      "review_status": "PASS",
+      "rationale": "y=396/44=9 and z=180/18=10 are two calculation steps; oxygen balancing gives x=14. Keep primary 7.5 and all three marks once, add 16.2 only for the explicit third operation."
+    },
+    {
+      "id": "2019-june-2-q6diii",
+      "stratum": "Secondary: subject product recall plus balancing",
+      "input_record_sha256": "b8f46f2bd87bccbbcdd695159c5f39c7a101decae6077bc129152be97a8e4391",
+      "disposition": "ADD_SECONDARY",
+      "original_primary": "14.2",
+      "effective_primary": "14.2",
+      "secondary": [
+        "16.2"
+      ],
+      "marks": 2,
+      "empirical_band": "9",
+      "teaching_band": null,
+      "review_status": "PASS",
+      "rationale": "Products must be recalled from ethanoic-acid/sodium chemistry, so 14.2 stays primary. An explicit separate balancing point gives 2CH3COOH+2Na→2CH3COONa+H2; 16.2 is secondary and no marks are split."
+    },
+    {
+      "id": "2022-june-1-q10bi",
+      "stratum": "Secondary: mixed naming/formula table",
+      "input_record_sha256": "918f461f3ca31f22b244ec7f3eb5e430b0aa8f6901f6d4909455759f6975a75b",
+      "disposition": "ADD_SECONDARY",
+      "original_primary": "3.1",
+      "effective_primary": "3.1",
+      "secondary": [
+        "16.1"
+      ],
+      "marks": 2,
+      "empirical_band": "7-8",
+      "teaching_band": null,
+      "review_status": "PASS",
+      "rationale": "Naming NH4Cl as ammonium chloride is outside formula construction; forming (NH4)2CO3 is directly assessed. Retain indivisible 3.1 primary/two marks and add 16.1 secondary."
+    },
+    {
+      "id": "2024-june-2-q5(c)",
+      "stratum": "Excluded: ester product inference",
+      "input_record_sha256": "3fee92065bee40f25e3485149c5cddd6c71743478f2b130751d15c1e69a6bcaf",
+      "disposition": "RETAIN_ORIGINAL",
+      "original_primary": "14.3",
+      "effective_primary": "14.3",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "9",
+      "teaching_band": null,
+      "review_status": "PASS",
+      "rationale": "Reactants are supplied but ester product formation must be inferred; this is esterification, not translating all named products. Keep 14.3 and source-specific ester notation qualifications."
+    },
+    {
+      "id": "2022-jan-1r-q1f",
+      "stratum": "Excluded: product naming",
+      "input_record_sha256": "8acfc992d3b2aa54408c9f17509d363b194b7ce9499baeadfb9168f1dc1032bb",
+      "disposition": "RETAIN_ORIGINAL",
+      "original_primary": "8.3",
+      "effective_primary": "8.3",
+      "secondary": [],
+      "marks": 2,
+      "empirical_band": "5-6",
+      "teaching_band": null,
+      "review_status": "PASS",
+      "rationale": "Potassium chloride and water are requested as product identities from acid/alkali chemistry; neither named-product-to-symbol translation nor coefficient/state response is assessed. Keep 8.3."
+    },
+    {
+      "id": "2020-jan-2-q7bii",
+      "stratum": "Excluded: ionic equation and states",
+      "input_record_sha256": "8a0645913f0cba6e995c70a20abf790bf73669c7348102e08620badc57328080",
+      "disposition": "RETAIN_ORIGINAL",
+      "original_primary": "8.5",
+      "effective_primary": "8.5",
+      "secondary": [
+        "3.1"
+      ],
+      "marks": 2,
+      "empirical_band": "9",
+      "teaching_band": null,
+      "review_status": "PASS",
+      "rationale": "Ba2+(aq)+SO4²−(aq)→BaSO4(s) is an ionic precipitation equation, explicitly outside the new whole-equation scope. Keep 8.5 and both formula/state marks, including historical ECF."
+    },
+    {
+      "id": "2022-june-2-q3di",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "2786708b3227612b66e90b7002c3785451932edd652b92ae5f6de915a2737370",
+      "disposition": "UNRESOLVED",
+      "original_primary": "7.5",
+      "effective_primary": "7.5",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "9",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "The summary asks for lithium/chlorine equation but extracted context identifies only reactants. It does not establish that the salt product was named/supplied, so neutral translation versus product recall cannot be distinguished. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    },
+    {
+      "id": "2021-jan-2r-q8ai",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "634ed0f630c502f3303a96d3b15cfc0ddd35a003c6f04027b668dfde7630eeb8",
+      "disposition": "UNRESOLVED",
+      "original_primary": "7.5",
+      "effective_primary": "7.5",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "7-8",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "Only ammonia is identified in extracted product context; whether the remaining NaCl/H2O products are provided or must be predicted is absent. Keep original Reactions mapping. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    },
+    {
+      "id": "2021-jan-1r-q9bii",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "e8408ab658c813f87eac25a3d5fdcb42b51e5505a8b0be33678cf0f97d2faaac",
+      "disposition": "UNRESOLVED",
+      "original_primary": "2.4",
+      "effective_primary": "2.4",
+      "secondary": [],
+      "marks": 2,
+      "empirical_band": "7-8",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "Context says expected caesium hydroxide and hydrogen products without saying they are supplied. The source asks formulae then balancing, but evidence cannot establish whether product prediction or named translation is the primary demand. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    },
+    {
+      "id": "2022-june-1-q10bii",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "891c4994d7e3ff96f406fc5c12a12810d6677b4b873f6df66bcf358de7277053",
+      "disposition": "UNRESOLVED",
+      "original_primary": "8.3",
+      "effective_primary": "8.3",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "9",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "Context repeats the equation task and does not identify supplied product names/formulae. A one-mark whole equation combines possible ammonia-acid product recall with balancing; no supported primary reassignment. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    },
+    {
+      "id": "2022-june-1-q6ai",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "7a8a4747321746a6d1dfc14ec0520a2ab3c6d8c75ceec67485c484e025fc8e9b",
+      "disposition": "UNRESOLVED",
+      "original_primary": "8.3",
+      "effective_primary": "8.3",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "7-8",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "Context repeats the magnesium/hydrochloric-acid task without distinguishing named/supplied products from product prediction in the one-mark whole equation. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    },
+    {
+      "id": "2024-june-1-q10(a)",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "f7f64918bde9c493ffbfaa26135b1e127e4bb3956afffd550e6a3793aed898a7",
+      "disposition": "UNRESOLVED",
+      "original_primary": "8.3",
+      "effective_primary": "8.3",
+      "secondary": [],
+      "marks": 1,
+      "empirical_band": "9",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "Only the reactant half of a historical nitric-acid equation is retained; product-supplied status is missing and the source answer has an explicit concentration/oxidising-acid caveat. Preserve historical mapping and qualification. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    },
+    {
+      "id": "2025-june-2r-q7bii",
+      "stratum": "Unresolved extraction: exact old map retention",
+      "input_record_sha256": "392f715e1c046190d8a2a44447152336c812d0e7b6a0095103a94d9c79b0625c",
+      "disposition": "UNRESOLVED",
+      "original_primary": "10.1",
+      "effective_primary": "10.1",
+      "secondary": [],
+      "marks": 3,
+      "empirical_band": "5-6",
+      "teaching_band": null,
+      "review_status": "PASS_WITH_EXPLICIT_SOURCE_LIMIT",
+      "rationale": "Extracted context says only an energy axis is supplied, but recall metadata labels the balanced combustion equation supplied. Independent coefficient construction versus transcription is unresolved; retain the energy primary and original secondary map. Original primary/secondary arrays and all marks remain unchanged; no source reopening."
+    }
+  ]
+}

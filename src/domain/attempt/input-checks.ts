@@ -5,6 +5,10 @@ import type {
   MoleculeGraph,
 } from '../../contracts/editors.ts';
 import type { MarkingIssue, Question, Response, Responses } from '../../contracts/question.ts';
+import {
+  parseParenthesizedState,
+  parsePositiveCoefficient,
+} from '../../chemistry/formulae-equations/answer-syntax.ts';
 
 const issue = (message: string): ChemicalIssue => ({ code: 'input', message, objectIds: [] });
 const finite = (...values: readonly number[]) => values.every(Number.isFinite);
@@ -179,6 +183,8 @@ export function checkQuestionInput(
     if (part.kind === 'drawing-self-check') continue; // genuine postnumeric model confirmation
     const response = responses[part.id];
     if (!response) {
+      if (part.kind === 'numeric' && part.coefficientEntry === 'positive-rational-blank-one')
+        continue;
       if (part.required)
         issues.push({ partId: part.id, message: 'Complete every required response.' });
       continue;
@@ -187,15 +193,48 @@ export function checkQuestionInput(
       issues.push({ partId: part.id, message: 'Response type does not match this question.' });
       continue;
     }
+    if (
+      part.kind === 'numeric' &&
+      response.kind === 'numeric' &&
+      part.coefficientEntry === 'positive-rational-blank-one'
+    ) {
+      if (!parsePositiveCoefficient(response.raw, { blankIsOne: true }))
+        issues.push({
+          partId: part.id,
+          message:
+            'Enter a positive coefficient, fraction or decimal; leave a coefficient blank for 1.',
+        });
+      continue;
+    }
     if (part.required && incomplete(response))
       issues.push({ partId: part.id, message: 'Enter a complete valid response.' });
     if (response.kind === 'choice' && part.kind === 'choice') {
+      if (part.stateEntry === 'parenthesized') {
+        const state =
+          response.selected.length === 1 ? parseParenthesizedState(response.selected[0]!) : null;
+        if (!state || !part.options.some((option) => option.id === state))
+          issues.push({
+            partId: part.id,
+            message: 'Enter a complete state symbol: (s), (l), (g) or (aq).',
+          });
+        continue;
+      }
       if (
         new Set(response.selected).size !== response.selected.length ||
         response.selected.some((id) => !part.options.some((option) => option.id === id)) ||
         (part.presentation !== 'multiple' && response.selected.length > 1)
       )
-        issues.push({ partId: part.id, message: 'Choose from the displayed options.' });
+        issues.push({
+          partId: part.id,
+          message:
+            question.chemicalPresentation?.kind === 'equation-row' &&
+            [
+              ...question.chemicalPresentation.reactants,
+              ...question.chemicalPresentation.products,
+            ].some((species) => species.statePartId === part.id)
+              ? 'Enter s, l, g or aq.'
+              : 'Choose from the displayed options.',
+        });
     }
     if (response.kind === 'explanation' && part.kind === 'explanation') {
       if (

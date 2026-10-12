@@ -6,53 +6,72 @@
     "alevel",
     "igcse"
   ],
-  "generatedAt": "2026-10-09T08:13:20.931Z",
+  "generatedAt": "2026-10-11T23:25:14.593Z",
   "status": "local-runtime-inventory-no-publication",
   "buildRoot": "dist/app",
   "entry": "index.html",
   "shellGzipBudgetBytes": 204800,
   "gzipMethod": "node:zlib gzipSync default compression; individual files summed",
   "initialScope": "combined entry plus actual ProductionFoundation, default original landing and their eager imports; excludes deferred providers/editors/statistics/import",
-  "entryOnlyJavascriptGzipBytes": 70485,
+  "entryOnlyJavascriptGzipBytes": 70525,
   "initialJavascript": [
-    "assets/index-DkGWGpQD.js",
+    "assets/index-BtZg6RQy.js",
     "assets/jsx-runtime-Dk72oS4N.js",
     "assets/react-dom-X1VypBGM.js",
     "assets/preload-helper-BaNbYf_w.js",
-    "assets/ProductionFoundation-BZUqtONS.js",
-    "assets/Content-BvpHyxrO.js",
-    "assets/repository-t2k4MqMq.js",
-    "assets/canonical-identity-DIAK0BhK.js",
+    "assets/ProductionFoundation-C8445VJ1.js",
+    "assets/question-display-identity-Bs5YQDML.js",
+    "assets/identity-CWk_sA0q.js",
+    "assets/canonical-identity-DKenHxmy.js",
+    "assets/repository-DBwrtC9F.js",
+    "assets/workspace-BWmKOUkH.js",
+    "assets/recall-CUJtpmWb.js",
     "assets/policy-C8A-n6Tk.js",
     "assets/engine-BOiqT4al.js",
-    "assets/definitions-CK8fULtk.js",
+    "assets/policy-BgGZFxcW.js",
+    "assets/facts-DaD2z8NX.js",
+    "assets/ions-Cy8pDs3l.js",
+    "assets/sources-CXMJigV6.js",
+    "assets/definitions-rTW8Bxad.js",
     "assets/alpha-namespace-xEhFAEHR.js",
-    "assets/persistence-DGLXOWGm.js",
-    "assets/registry-j9sJXWEW.js",
+    "assets/persistence-BFHdyRWX.js",
+    "assets/graded-question-DIf3OFI7.js",
+    "assets/CourseShell-BeYuDK0f.js",
     "assets/identity-DG87IKCR.js",
     "assets/dependencies-IbyFZa8N.js",
-    "assets/QuestionChrome-lCTvniY-.js",
-    "assets/QuestionLevelPill-Dmtju4ni.js",
-    "assets/source-family-9gcp-uI-.js",
-    "assets/mastery-BD-Iyfuo.js",
-    "assets/course-mastery-CiMJnc9w.js",
-    "assets/landing-fp8-fh7N.js",
-    "assets/SJS-Eagle-Y-g8FGE-.js",
-    "assets/catalogue-CA3-kB_F.js",
+    "assets/QuestionChrome-BzPG2ZDG.js",
+    "assets/landing-j7MOQinT.js",
+    "assets/course-mastery-BwyISnKt.js",
+    "assets/GemPaths-oxoDvUjR.js",
+    "assets/SJS-Eagle-BAjcIssu.js",
+    "assets/gem-mastery-availability-hykC9m2H.js",
+    "assets/catalogue-T8aG4wSW.js",
     "assets/RecallIcon-D6P3QWpl.js"
   ],
-  "initialJavascriptGzipBytes": 182319,
+  "initialJavascriptGzipBytes": 204753,
   "lazyJavascript": [
-    "assets/DotCrossPlayer-CVjKlAmr.js",
+    "assets/ActivityHost-BLu4HLNq.js",
+    "assets/ChemicalQuestionBody-D_0FBTEE.js",
+    "assets/Content-CgvIMWsX.js",
+    "assets/DotCrossPlayer-DGaLt75C.js",
     "assets/DrawingDialog-DSNOo0fm.js",
-    "assets/OlympiadHost-BYveDxUo.js",
-    "assets/RecallView-ChrCyREI.js",
-    "assets/SourceQuestionPlayer-yMZx5j8o.js",
+    "assets/OlympiadHost-CAWtzwaZ.js",
+    "assets/QuestionLevelPill-BN-vKMPX.js",
+    "assets/QuestionPlayer-sFb0XWcY.js",
+    "assets/RateGraphWorkspace-9haz0-pY.js",
+    "assets/RateResponseControl-Cf5ulALn.js",
+    "assets/RecallView-Ckjj9ldU.js",
+    "assets/ResponseControl-BJYeNFIv.js",
+    "assets/SourceQuestionPlayer-RYS7GrEj.js",
+    "assets/active-clock-ru6cod4N.js",
+    "assets/answer-syntax-8FAiZrPl.js",
+    "assets/attempt-CA4rnluh.js",
+    "assets/attempt-D-C4cWMZ.js",
     "assets/bond-enthalpy-core-B3NxXqut.js",
     "assets/bond-enthalpy-core-M9vstt1Q.js",
     "assets/c3l6-BOO4LScT.js",
-    "assets/c3l6-Cn2WJRhh.js",
-    "assets/compatibility-DJsI7-01.js",
+    "assets/c3l6-C3PjHJM5.js",
+    "assets/compatibility-n_ufPUEi.js",
     "assets/core-BFWXsLAB.js",
     "assets/core-BSXqJyKP.js",
     "assets/core-COc-HSB_.js",
@@ -60,9 +79,9 @@
     "assets/data-DRsOgynP.js",
     "assets/data-PGygMTpc.js",
     "assets/display-DEyThlzt.js",
-    "assets/dot-and-cross-BxoDF4CA.js",
+    "assets/dot-and-cross-FS5V75UV.js",
     "assets/electron-configuration-B7ReRB2w.js",
-    "assets/energy-profile-19UY0FG4.js",
+    "assets/energy-profile-Bbq4UFHa.js",
     "assets/energy-profile-DCLHUIEw.js",
     "assets/energy-profile-DtXBhrbd.js",
     "assets/engine-B3HWeeUt.js",
@@ -72,52 +91,72 @@
     "assets/engine-CcL3yxLU.js",
     "assets/engine-UF5aSuX5.js",
     "assets/framework-BmviDFsE.js",
+    "assets/gem-mastery-availability-DOmgwZ_2.js",
+    "assets/generator-BgHQ0-OO.js",
+    "assets/generator-ly0O6bor.js",
     "assets/identity-BO4b6x9Y.js",
     "assets/identity-Db2xAhq5.js",
+    "assets/input-syntax-FetNlUVm.js",
+    "assets/ions-BnqsQjeS.js",
     "assets/isomers2011-agPslBId.js",
     "assets/layout-BncCbbQB.js",
-    "assets/marking-BOwh11kf.js",
-    "assets/marking-BqIkaI_8.js",
+    "assets/marking-Bmj7SExg.js",
+    "assets/marking-BxNBwmsD.js",
     "assets/marking-BxZxGm59.js",
-    "assets/marking-BzsnNPaf.js",
-    "assets/marking-C-thHBv6.js",
+    "assets/marking-C1ux7tki.js",
     "assets/marking-Chm4FhyV.js",
-    "assets/marking-Cp3_eI79.js",
-    "assets/marking-CpCZvfSp.js",
-    "assets/marking-D82mXdCJ.js",
-    "assets/marking-DJ7lQNaN.js",
-    "assets/marking-DVHEZbqY.js",
+    "assets/marking-CkWZ3EhT.js",
+    "assets/marking-D0vakTpR.js",
+    "assets/marking-D8OYbyN9.js",
+    "assets/marking-DD9O_6SA.js",
+    "assets/marking-DM9pgayx.js",
+    "assets/marking-De02t3hV.js",
+    "assets/marking-Dm6-LUK1.js",
+    "assets/marking-Dq-oTRVK.js",
     "assets/marking-KUc9hFO_.js",
-    "assets/marking-ebGPCpYI.js",
-    "assets/marking-jXYJtEDJ.js",
+    "assets/marking-VBikoxnx.js",
+    "assets/marking-dZDoUoPJ.js",
+    "assets/marking-fFR9hjLA.js",
+    "assets/mastery-BesE0FBY.js",
+    "assets/maxwells-demon-DHXtQAOD.js",
     "assets/model-BkCVAwjv.js",
+    "assets/model-answer-Cu-CdoT0.js",
     "assets/policy-CIQDzu06.js",
-    "assets/provider-AtOt2_Vg.js",
-    "assets/provider-BAATOLfs.js",
-    "assets/provider-BLVNYegf.js",
-    "assets/provider-BtJ1eZ1l.js",
-    "assets/provider-BxmPeNIa.js",
-    "assets/provider-CFceN9tv.js",
-    "assets/provider-CJ7RzW5E.js",
-    "assets/provider-CKeXQXk6.js",
-    "assets/provider-CYnIpswg.js",
-    "assets/provider-Cd2Tp0Pu.js",
-    "assets/provider-Cq5NZDMM.js",
-    "assets/provider-CxCH4IfU.js",
-    "assets/provider-D-AWmdqU.js",
-    "assets/provider-D2FCXtag.js",
-    "assets/provider-DUBGCbmO.js",
-    "assets/provider-DXHZU8lq.js",
-    "assets/provider-DdRjrcKf.js",
-    "assets/provider-DjhIIrlb.js",
-    "assets/provider-JK2P8EN8.js",
-    "assets/provider-clQqhYgI.js",
-    "assets/provider-ejE32NnQ.js",
-    "assets/provider-yZRfcDYd.js",
-    "assets/statistics-DlEi5pkX.js",
-    "assets/titration-curve-B7-yLPDL.js",
+    "assets/provider-B0kVJUIt.js",
+    "assets/provider-BEMXZVWb.js",
+    "assets/provider-BKbDKKxW.js",
+    "assets/provider-BiPIktnI.js",
+    "assets/provider-BpkBMkCA.js",
+    "assets/provider-Bq6THfbF.js",
+    "assets/provider-BsmRC3Y9.js",
+    "assets/provider-C9J-hCci.js",
+    "assets/provider-CAwigdBv.js",
+    "assets/provider-CRdu0j0J.js",
+    "assets/provider-DBa-min0.js",
+    "assets/provider-DPLetzNy.js",
+    "assets/provider-DVPCIbxM.js",
+    "assets/provider-DZUDXpM3.js",
+    "assets/provider-Dbfaer_A.js",
+    "assets/provider-DhHbgXFi.js",
+    "assets/provider-Dxynface.js",
+    "assets/provider-ErXN7LgY.js",
+    "assets/provider-LLVQMCKT.js",
+    "assets/provider-QE7lnOw8.js",
+    "assets/provider-R47zfDRj.js",
+    "assets/provider-_cUJjg7j.js",
+    "assets/provider-ijyOmR99.js",
+    "assets/provider-ndTxmHtr.js",
+    "assets/provider-pTFphjMs.js",
+    "assets/provider-rnlYYO4K.js",
+    "assets/provider-ur7KGvsV.js",
+    "assets/provider-vYi794Sr.js",
+    "assets/source-family-9gcp-uI-.js",
+    "assets/statistics-DNM8ouhM.js",
+    "assets/titration-curve-bASEzOSV.js",
     "assets/types-BQzY_9Qt.js",
-    "assets/types-CGzZHUAK.js"
+    "assets/types-CGzZHUAK.js",
+    "recall-formulae-atlas/atlas-data.js",
+    "recall-formulae-atlas/atlas-view.js"
   ],
   "activities": [
     {
@@ -42037,6 +42076,35 @@
       ]
     },
     {
+      "id": "alevel/maxwells-demon",
+      "course": "alevel",
+      "strand": "olympiad",
+      "revision": false,
+      "supportedLevels": [],
+      "leafIds": [],
+      "activeBank": "Three fixed thermochemistry parts: eleven classifications, twelve-arrow hypothetical Hess network, perfluorodecalin algebra",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": 3,
+      "sourceRoot": "src/activities/olympiad/maxwells-demon",
+      "sourceHashes": [
+        {
+          "path": "tmp/maxwell's demon/Level 2.png",
+          "sha256": "f354fd16aa6455cccb16d04933ac61cc45c7dc9d5765bd7637e3090bee0bbda5",
+          "symbolOrSection": "User-supplied thermochemistry exercises; Level 2 data explicitly hypothetical. Original Level 1 reference/classification. Source-reviewed exact Hess answers; see docs/maxwells-demon.md."
+        },
+        {
+          "path": "tmp/maxwell's demon/Hess' Hypothetical Problems.docx",
+          "sha256": "8aeeb7b6333051f43dcaa914e340da4a01c70155b421c8cd21a9811f40edb2c5",
+          "symbolOrSection": "User-supplied thermochemistry exercises; Level 2 data explicitly hypothetical. Original Level 1 reference/classification. Source-reviewed exact Hess answers; see docs/maxwells-demon.md."
+        },
+        {
+          "path": "tmp/maxwell's demon/level 3.png",
+          "sha256": "3ef9de718ca94c08163fa81e06c5a2665aef84a282866236921b07a88f130acf",
+          "symbolOrSection": "User-supplied thermochemistry exercises; Level 2 data explicitly hypothetical. Original Level 1 reference/classification. Source-reviewed exact Hess answers; see docs/maxwells-demon.md."
+        }
+      ]
+    },
+    {
       "id": "alevel/explaining-properties",
       "course": "alevel",
       "strand": "curriculum",
@@ -42059,6 +42127,95 @@
           "symbolOrSection": "32 approved specification-authored/adapted questions; see activity README and retained source review."
         }
       ]
+    },
+    {
+      "id": "igcse/formulae",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1,
+        2
+      ],
+      "leafIds": [
+        "fourth-16-1"
+      ],
+      "activeBank": "19 vetted ions /36 allowed compound pairs",
+      "generatorFamilies": [
+        "neutral-ionic-formula"
+      ],
+      "finiteGeneratorConfigurations": 36,
+      "sourceRoot": "src/activities/igcse/formulae",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-Chemistry/src/chemistry/formulae-equations/ions.ts",
+          "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+          "symbolOrSection": "Original vetted19-ion/36-pair procedural bank; author chemistry review10 October2026; retained RF-S1-CONTENT evidence."
+        }
+      ]
+    },
+    {
+      "id": "igcse/equations",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ],
+      "leafIds": [
+        "fourth-16-2"
+      ],
+      "activeBank": "24 original authored equations",
+      "generatorFamilies": [],
+      "finiteGeneratorConfigurations": 24,
+      "sourceRoot": "src/activities/igcse/equations",
+      "sourceHashes": [
+        {
+          "path": "apps/Masters-of-Chemistry/src/activities/igcse/equations/bank.ts",
+          "sha256": "1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d",
+          "symbolOrSection": "Original24 authored equations with checked models/mark points; author chemistry review10 October2026; retained RF-S1-CONTENT evidence."
+        }
+      ]
+    },
+    {
+      "id": "alevel/rate-equations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ],
+      "leafIds": [
+        "u6-t1-2-orders",
+        "u6-t1-2-graphs",
+        "u6-t1-2-mechanisms",
+        "u6-t1-2-arrhenius"
+      ],
+      "activeBank": "12 preserved source families: nine seeded numerical level families and three fixed mechanism questions",
+      "generatorFamilies": [
+        "orders-L1",
+        "orders-L2",
+        "orders-L3",
+        "graphs-L1",
+        "graphs-L2",
+        "graphs-L3",
+        "arrhenius-L1",
+        "arrhenius-L2",
+        "arrhenius-L3"
+      ],
+      "finiteGeneratorConfigurations": 38654705667,
+      "sourceRoot": "src/activities/alevel/rate-equations",
+      "sourceHashes": [
+        {
+          "path": "resources/a-level-past-paper-atlas/run2/specification-evidence/sections.json",
+          "sha256": "b6c12f95c801adfb8725395c267ac12ba640ca16d925aa82ea9a37582804183a",
+          "symbolOrSection": "OCR Chemistry A5.1.1(a-f,i,k); complete question provenance retained in lazy rate factories."
+        }
+      ]
     }
   ],
   "requiredBrandAssets": [
@@ -42071,7 +42228,7 @@
   "provenance": {
     "inventoryPath": "resources/source-generation/inventory/coverage-manifest.json",
     "inventorySha256": "d9953125b9fd087cc74079ff8feb2a80d2fe24d7f4c2014840687df0995fc438",
-    "viteManifestSha256": "eacb6ef7f323e84149d5da1217005c4c06ddf84c5fc427f421b614ed327c59f0"
+    "viteManifestSha256": "91d418ad0143c1ca58a6bff5a44edf672165dd1de6c170aa0ddbb86d224278fb"
   },
   "files": [
     {
@@ -42177,29 +42334,62 @@
       "role": "compatibility-alias"
     },
     {
+      "path": "assets/ActivityHost-BLu4HLNq.js",
+      "bytes": 42753,
+      "sha256": "af38e4d7b4facb9341779347e3116c685f02f335d8f5da53795576e35362ece2",
+      "gzipBytes": 13448,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/ChemicalQuestionBody-D_0FBTEE.js",
+      "bytes": 3950,
+      "sha256": "6e3f4ad5cc0afa8ba3d0009986b40686ee31bb21cc7a486413a4d7c7657d2c92",
+      "gzipBytes": 1359,
+      "role": "lazy-runtime"
+    },
+    {
       "path": "assets/Comfortaa-Bold-DaLuDTPp.ttf",
       "bytes": 140172,
       "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/Content-BvpHyxrO.js",
-      "bytes": 2206,
-      "sha256": "adacbe71cce25e4035d928b73f814471b9e02bb5c179a02b9324ea8c26bcf1d5",
-      "gzipBytes": 958,
-      "role": "initial-javascript"
-    },
-    {
-      "path": "assets/DotCrossPlayer-B_7OvE6F.css",
-      "bytes": 2961,
-      "sha256": "d0655e9768e14e87b059a04c12b65ddeddd163db01488af4b4044ddb580a1c15",
+      "path": "assets/Content-CgvIMWsX.js",
+      "bytes": 5844,
+      "sha256": "346675c0c470ae4f6710c157886463c93cb5d6a08220cd35e81aa17e4754a9d5",
+      "gzipBytes": 2367,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/DotCrossPlayer-CVjKlAmr.js",
-      "bytes": 6980,
-      "sha256": "c229389fca90e89fa6b5331a8146a7320987b597612c97494b799f146ee81766",
-      "gzipBytes": 2664,
+      "path": "assets/Content-u2vwSvCC.css",
+      "bytes": 3692,
+      "sha256": "8499765f9fcf841c31ca992fe4832709953bef61a3c814e6274a08b7fd357490",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/CourseShell-BeYuDK0f.js",
+      "bytes": 21321,
+      "sha256": "13fd7f0111efab404cf3e9a9103a5503601e2de66445c75db0f7168343acdac5",
+      "gzipBytes": 6634,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/CourseShell-Om3T28PB.css",
+      "bytes": 22659,
+      "sha256": "43273f7fbe6d7d020879f845e2526f82042acbd995156406fff7fd7f21f5f45b",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/DotCrossPlayer-BPFjoh1q.css",
+      "bytes": 3277,
+      "sha256": "8ae70724491385328a785eca1d101b3f82b231d0a9407d7e9837dea909035ea5",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/DotCrossPlayer-DGaLt75C.js",
+      "bytes": 7143,
+      "sha256": "c5621a25261624615e9d7a493fc0804453db47d960b039226443ff2969590ffa",
+      "gzipBytes": 2725,
       "role": "lazy-runtime"
     },
     {
@@ -42216,10 +42406,17 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/OlympiadHost-BYveDxUo.js",
-      "bytes": 9698,
-      "sha256": "335d24de32118da32d35ef94bf1283b8f4526adc215d1d7142642a6be2675f6b",
-      "gzipBytes": 3674,
+      "path": "assets/GemPaths-oxoDvUjR.js",
+      "bytes": 707,
+      "sha256": "7a4066c2fea7a4a96b79b96d68353b55d7cf99ce96caf561c749b1a7094ed269",
+      "gzipBytes": 360,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/OlympiadHost-CAWtzwaZ.js",
+      "bytes": 10838,
+      "sha256": "7bfa059b07d41af4e30ff4f09bdcafa5c014ba9ab7478061558c53e57400c462",
+      "gzipBytes": 3936,
       "role": "lazy-runtime"
     },
     {
@@ -42229,18 +42426,25 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/ProductionFoundation-BZUqtONS.js",
-      "bytes": 80701,
-      "sha256": "8601e6e9e04eb667a6969489a44fc57d2d6374abcd9e249ac66ab09e5b1aedf1",
-      "gzipBytes": 23588,
+      "path": "assets/ProductionFoundation-C8445VJ1.js",
+      "bytes": 16440,
+      "sha256": "ed1b82c558a575545d5c57a7651d1e6186994e73113588d49584cf339201b128",
+      "gzipBytes": 5546,
       "role": "initial-javascript"
     },
     {
-      "path": "assets/QuestionChrome-lCTvniY-.js",
-      "bytes": 1641,
-      "sha256": "30ae3b5f3d8b8e57cddc1a9ad57460233fa91e3f31957035c3ae94d943df1b85",
-      "gzipBytes": 818,
+      "path": "assets/QuestionChrome-BzPG2ZDG.js",
+      "bytes": 2077,
+      "sha256": "264e0a7c9b0d824512f019acc257dcf07ca37347ad3002c759cb75910882a64c",
+      "gzipBytes": 984,
       "role": "initial-javascript"
+    },
+    {
+      "path": "assets/QuestionLevelPill-BN-vKMPX.js",
+      "bytes": 4317,
+      "sha256": "3bc433c3f577d602a194a50949467ac4a73d43260429fea032543a96280cd3d0",
+      "gzipBytes": 1923,
+      "role": "lazy-runtime"
     },
     {
       "path": "assets/QuestionLevelPill-CwT3oe4y.css",
@@ -42249,11 +42453,37 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/QuestionLevelPill-Dmtju4ni.js",
-      "bytes": 21696,
-      "sha256": "6b65fe77efcae8f822eb08afe7ed8d0d7c66d610f628dd89ebba2db5ae309839",
-      "gzipBytes": 6441,
-      "role": "initial-javascript"
+      "path": "assets/QuestionPlayer-sFb0XWcY.js",
+      "bytes": 17469,
+      "sha256": "62101aa3cbfe98691c25487d51b2fc8732b8d9a50abfd0fe59a21312786f0669",
+      "gzipBytes": 5500,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/RateGraphWorkspace-9haz0-pY.js",
+      "bytes": 11418,
+      "sha256": "44d6346c1cab201864dc0c3b2302501d69063e222e6d88a696a96d1c69d7b759",
+      "gzipBytes": 4613,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/RateGraphWorkspace-B9-KUsIZ.css",
+      "bytes": 3334,
+      "sha256": "982bf796d93a6018cdbfcf4be4843cc70ead1f1f2e6706c88ad049b9c5b64910",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/RateResponseControl-C0URXkx-.css",
+      "bytes": 1194,
+      "sha256": "a838abc18d1ae4bc645af2d0a2990c626853c9b920f22d5e99e3314320323c6c",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/RateResponseControl-Cf5ulALn.js",
+      "bytes": 3036,
+      "sha256": "a5eea66850bb84e681ab6617929e16d54232c13b0e42d77b4c3a2d67afd27c85",
+      "gzipBytes": 1400,
+      "role": "lazy-runtime"
     },
     {
       "path": "assets/RecallIcon-D6P3QWpl.js",
@@ -42263,23 +42493,30 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/RecallView-ChrCyREI.js",
-      "bytes": 10533,
-      "sha256": "eef4ff4a48b3cb788c591c12e018aca70ab279580942a7d54ef07a64ed26fd4a",
-      "gzipBytes": 3713,
+      "path": "assets/RecallView-Ckjj9ldU.js",
+      "bytes": 41106,
+      "sha256": "98c0627cd899d5cf83f157690d64eb82c84cc93ee41790b85713ee1d68757f85",
+      "gzipBytes": 13715,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/RecallView-DxjDm2VF.css",
-      "bytes": 7797,
-      "sha256": "8259288ac1add608c754327937d578d6cc0e3791ce44a54627a8151e14b7b009",
+      "path": "assets/RecallView-cnYs3Oct.css",
+      "bytes": 22223,
+      "sha256": "42c0bbbfbb9ead3ee0b2c6b32fb359d0f3216d7889c4fc529091f1467869d2b1",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/SJS-Eagle-Y-g8FGE-.js",
-      "bytes": 770,
-      "sha256": "ddb4d2a942c9dd8a2f8e11254be50db28adccad9b6660b63d0fc657b11f53f29",
-      "gzipBytes": 413,
+      "path": "assets/ResponseControl-BJYeNFIv.js",
+      "bytes": 17897,
+      "sha256": "5fdbd3fed414ce09f317380cdf2119e7d6fbab955f3abf11e46ce42e292c0c1b",
+      "gzipBytes": 5029,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/SJS-Eagle-BAjcIssu.js",
+      "bytes": 76,
+      "sha256": "60b865e4179bbb2e64ee182a72ae31692625db897087f95edb7a7e79f29c008e",
+      "gzipBytes": 94,
       "role": "initial-javascript"
     },
     {
@@ -42295,16 +42532,16 @@
       "role": "licensed-brand-asset"
     },
     {
-      "path": "assets/SourceQuestionPlayer-B7atD5Of.css",
-      "bytes": 61274,
-      "sha256": "e6e9c5e63b850d999f0b30907ae00ee84aa4f5e49cd5c3816fc5bda990439ba1",
+      "path": "assets/SourceQuestionPlayer-PViEi1mR.css",
+      "bytes": 61794,
+      "sha256": "33dca0669708fdfdbd99342c31eaf9939af9ae09916ddea10e3d17f0cba67edf",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/SourceQuestionPlayer-yMZx5j8o.js",
-      "bytes": 27635,
-      "sha256": "11763fabdc51d4cbd4398fd3ec4bc6233697936c68caaee8e24fd274e9a53998",
-      "gzipBytes": 8818,
+      "path": "assets/SourceQuestionPlayer-RYS7GrEj.js",
+      "bytes": 27696,
+      "sha256": "5a7876399b54582b72ad979c5c67a6e66c6d701d6f5bb4759b1ec466db36c9dd",
+      "gzipBytes": 8867,
       "role": "lazy-runtime"
     },
     {
@@ -42434,6 +42671,13 @@
       "role": "lazy-runtime"
     },
     {
+      "path": "assets/active-clock-ru6cod4N.js",
+      "bytes": 1433,
+      "sha256": "bff8541922184db1719d1303c9939bf7eaa9e9edddf77e2c91e4a1c896997785",
+      "gzipBytes": 680,
+      "role": "lazy-runtime"
+    },
+    {
       "path": "assets/alarm-pheromone-skeletal-notes-D6ZMRLoM.svg",
       "bytes": 4106,
       "sha256": "fde2ea819a1367da0201e24ff450fb9fed663929ca2d6214953bb57dea97420b",
@@ -42451,6 +42695,27 @@
       "sha256": "e1a5f807341367aa657cabd85fd08167d143cec4c12d31b8bdf0978c36a0f4a0",
       "gzipBytes": 348,
       "role": "initial-javascript"
+    },
+    {
+      "path": "assets/answer-syntax-8FAiZrPl.js",
+      "bytes": 1311,
+      "sha256": "1a548ac8a87737a330c58c10a623bc85a6a8f4e23c1bea0badea064981fa2b24",
+      "gzipBytes": 635,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/attempt-CA4rnluh.js",
+      "bytes": 30,
+      "sha256": "b89204a941348ec054ea965f941a0d8ff3458c3986f7e1e314216fe360a26bb5",
+      "gzipBytes": 50,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/attempt-D-C4cWMZ.js",
+      "bytes": 19356,
+      "sha256": "3120b23ad2d51085dd301816fb592192a98c5da26253bc255494fb952191eb4b",
+      "gzipBytes": 6016,
+      "role": "lazy-runtime"
     },
     {
       "path": "assets/bond-enthalpy-core-B3NxXqut.js",
@@ -42474,10 +42739,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/c3l6-Cn2WJRhh.js",
-      "bytes": 36467,
-      "sha256": "1685a0826ce33707e0669e0791c065e85cf4eeebedc79a6665e22dd28d34784a",
-      "gzipBytes": 11154,
+      "path": "assets/c3l6-C3PjHJM5.js",
+      "bytes": 36462,
+      "sha256": "3497667c834ecce7d2967c94685f1a377fec5071651d5f83536b1fba1a28a8bb",
+      "gzipBytes": 11152,
       "role": "lazy-runtime"
     },
     {
@@ -42487,30 +42752,30 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/canonical-identity-DIAK0BhK.js",
-      "bytes": 6864,
-      "sha256": "938d7a1e95dbf91f6995fba52fdcff375cbad5ced80c382f80c48e975194a504",
-      "gzipBytes": 2720,
+      "path": "assets/canonical-identity-DKenHxmy.js",
+      "bytes": 9382,
+      "sha256": "e15b46e2c622d6ebb1b3a807338b9389df2253f518da20943fc7747e8a9a272f",
+      "gzipBytes": 3310,
       "role": "initial-javascript"
     },
     {
-      "path": "assets/catalogue-CA3-kB_F.js",
-      "bytes": 10687,
-      "sha256": "ed6d0ab5f8d3da25fa0b869d18540ee13395376b3f8deef6039e6527529e2ca3",
-      "gzipBytes": 3584,
+      "path": "assets/catalogue-T8aG4wSW.js",
+      "bytes": 323,
+      "sha256": "ce2b07c4357afbe85dfa7e64d5c3f6c90ca8d2fa92749732e6ed181581e40def",
+      "gzipBytes": 248,
       "role": "initial-javascript"
-    },
-    {
-      "path": "assets/compatibility-DJsI7-01.js",
-      "bytes": 13029,
-      "sha256": "b37406aa40ad775b5c7c4b66f7d0ddbdc33d55dd71ad30c5549e66f1968188c9",
-      "gzipBytes": 4748,
-      "role": "lazy-runtime"
     },
     {
       "path": "assets/compatibility-DNtqPy_4.css",
       "bytes": 852,
       "sha256": "4a619e5c2d6ff6d4d004602240abe4dafd2b583843598346e852bdf6e3ca1946",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/compatibility-n_ufPUEi.js",
+      "bytes": 14311,
+      "sha256": "00a1afa3c324a8118004bcb9c98e10521b8bfbde4d659a2949ff0d61306bb73b",
+      "gzipBytes": 5114,
       "role": "lazy-runtime"
     },
     {
@@ -42548,10 +42813,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/course-mastery-CiMJnc9w.js",
+      "path": "assets/course-mastery-BwyISnKt.js",
       "bytes": 2422,
-      "sha256": "db3f792adca5be930091979394792107ce0a91a43d53c2f2c5ddc41511ca484b",
-      "gzipBytes": 1074,
+      "sha256": "89d00ce2111cb4a720ed29b120811ce6a63b9b57ed8b10031ff47b4841fb9f2b",
+      "gzipBytes": 1072,
       "role": "initial-javascript"
     },
     {
@@ -42569,10 +42834,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/definitions-CK8fULtk.js",
-      "bytes": 49687,
-      "sha256": "4f229ffc6f8b6ba9b5fce6fc98a4ed0f6859ea91bcce07eb46a700689aa4927e",
-      "gzipBytes": 8225,
+      "path": "assets/definitions-rTW8Bxad.js",
+      "bytes": 53983,
+      "sha256": "9f05b129f1d674f52180f193203120ee0ac49ceb31ead7c36d1b90892baf0ac1",
+      "gzipBytes": 9167,
       "role": "initial-javascript"
     },
     {
@@ -42596,9 +42861,9 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/dot-and-cross-BxoDF4CA.js",
+      "path": "assets/dot-and-cross-FS5V75UV.js",
       "bytes": 29666,
-      "sha256": "81dff48e0fb3acf06823678e14b7d70cff9e2a047936fee0bb759730a8d9ad05",
+      "sha256": "57bd470564713c717ef6bf4eea137532ce11756107ef855830e7e1fbb06e0f23",
       "gzipBytes": 9597,
       "role": "lazy-runtime"
     },
@@ -42616,10 +42881,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/energy-profile-19UY0FG4.js",
+      "path": "assets/energy-profile-Bbq4UFHa.js",
       "bytes": 11274,
-      "sha256": "213edd6ded4cb07ee81998b94218fbad1b0339c2f742310c628080f4e557b4e6",
-      "gzipBytes": 4245,
+      "sha256": "462d9aca4f1f42d03f78ea8c6b828e754ded4f312259ba036a458c6a0445981f",
+      "gzipBytes": 4244,
       "role": "lazy-runtime"
     },
     {
@@ -42782,6 +43047,13 @@
       "role": "lazy-runtime"
     },
     {
+      "path": "assets/facts-DaD2z8NX.js",
+      "bytes": 152428,
+      "sha256": "59c8a41437f93fbbbd577fbf185bfdfaec43b2bf5ce6890b442e61550d2f0704",
+      "gzipBytes": 19114,
+      "role": "initial-javascript"
+    },
+    {
       "path": "assets/fonts/Comfortaa-Bold.ttf",
       "bytes": 140172,
       "sha256": "1960ed76ee4fe61de32b5779d104072d5d10431bf7fa45bc982d0cf71004843d",
@@ -42801,6 +43073,41 @@
       "role": "lazy-runtime"
     },
     {
+      "path": "assets/gem-mastery-availability-DOmgwZ_2.js",
+      "bytes": 95,
+      "sha256": "43788b49cd0f70de3f61cae1d2e657e761ec6194f923b4ad4ed1f89e1f9e7341",
+      "gzipBytes": 97,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/gem-mastery-availability-hykC9m2H.js",
+      "bytes": 330,
+      "sha256": "682ff9dccd09039a52b02b4a19d1e422e1d2e700a23939e862ba85e6e7c9403d",
+      "gzipBytes": 256,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/generator-BgHQ0-OO.js",
+      "bytes": 182,
+      "sha256": "cca8f36718453af9e4e9c11ab812a524dfcd3851c3a3d0e07e9dacd5599b3ab5",
+      "gzipBytes": 146,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/generator-ly0O6bor.js",
+      "bytes": 4605,
+      "sha256": "9ca92075d347dd4e081bbcc6e3c4a34fa7b699e2d9b996f429cad8ea54873cf2",
+      "gzipBytes": 2360,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/graded-question-DIf3OFI7.js",
+      "bytes": 149,
+      "sha256": "011b295868088ec9a3b6aad4b68dfa8ecbce2e3472dfb337d56ec0e6dc7aa7e0",
+      "gzipBytes": 134,
+      "role": "initial-javascript"
+    },
+    {
       "path": "assets/gyromitrin-skeletal-notes-CFsrs0lm.svg",
       "bytes": 4572,
       "sha256": "45c6548dda03ae216d053f441146056bde01e1d91a034d77797c1eac12005d01",
@@ -42812,6 +43119,13 @@
       "sha256": "c38df090473f46a02274a4c75e7cc9a43c841a3e0cea832d3c006ae2bad11c24",
       "gzipBytes": 1095,
       "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/identity-CWk_sA0q.js",
+      "bytes": 4381,
+      "sha256": "bff561cfd15177d960242c01b74998176e15777939e49f2416e4b1f4eab4a92f",
+      "gzipBytes": 896,
+      "role": "initial-javascript"
     },
     {
       "path": "assets/identity-DG87IKCR.js",
@@ -42828,10 +43142,31 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/index-DkGWGpQD.js",
-      "bytes": 208597,
-      "sha256": "6734ea56ea2d17bed3ae41068e83e32475d932dcc306d4adb99ba481f6f78746",
-      "gzipBytes": 65016,
+      "path": "assets/index-BtZg6RQy.js",
+      "bytes": 208672,
+      "sha256": "645aabbe49af0ac0eaa65813589c0a2052b6a013dc665270c7c5889a0ed6aced",
+      "gzipBytes": 65056,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/input-syntax-FetNlUVm.js",
+      "bytes": 2460,
+      "sha256": "04939682d3285a5373107dcbff83c49ba3b530808a8e0ce31c106b2781ec97f7",
+      "gzipBytes": 1174,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/ions-BnqsQjeS.js",
+      "bytes": 80,
+      "sha256": "d616ab5212c35f07e41cf22b601e55731db574fcfadc97d2e4eaae52cceb5e91",
+      "gzipBytes": 93,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/ions-Cy8pDs3l.js",
+      "bytes": 11939,
+      "sha256": "c7f5ed1e2329b4c69ddc56f306b9de2c3d84c07af6ffb3221d8b472ed1710328",
+      "gzipBytes": 1288,
       "role": "initial-javascript"
     },
     {
@@ -42855,16 +43190,16 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/landing-B2P1thQ2.css",
-      "bytes": 94923,
-      "sha256": "e125c59c8a25dd2a2dd77bbb10226344f7ed089b3f162001200a2c07228f6c61",
+      "path": "assets/landing-KFBKko2k.css",
+      "bytes": 95199,
+      "sha256": "51014da25d6b8ca47d067dd137d884aa301b30a5ba58822c30fb44bbabdafd4d",
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/landing-fp8-fh7N.js",
-      "bytes": 24137,
-      "sha256": "eec86624585e51cf6cc7fd97090c3a9cbd784b0bd606b3c9fcd8f6b955574f83",
-      "gzipBytes": 7889,
+      "path": "assets/landing-j7MOQinT.js",
+      "bytes": 24807,
+      "sha256": "35ab5b31c4e96bf737ed2b50bcbcecf97a4237b5d8f58a904a4f76e9ca2c510e",
+      "gzipBytes": 8086,
       "role": "initial-javascript"
     },
     {
@@ -42887,17 +43222,17 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-BOwh11kf.js",
-      "bytes": 1388,
-      "sha256": "3ce5935acd0210313650ad7c96d11ab1cd968712d112e6c8bbaa1183597f08c7",
-      "gzipBytes": 726,
+      "path": "assets/marking-Bmj7SExg.js",
+      "bytes": 69,
+      "sha256": "678f0b98b9af9790db12ce54e8ce45d6af8cb1f32e388fa66e6d5780ac28bb69",
+      "gzipBytes": 79,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-BqIkaI_8.js",
-      "bytes": 5388,
-      "sha256": "d8df2e220ac3fb262a58bc08ac7fc6820eb0016533687633402f63253eaf1bce",
-      "gzipBytes": 2262,
+      "path": "assets/marking-BxNBwmsD.js",
+      "bytes": 1911,
+      "sha256": "b607f7ecbb53eefb0cc7e4d1db3db60aa22b70ded4307eb3c825825c63415dcd",
+      "gzipBytes": 939,
       "role": "lazy-runtime"
     },
     {
@@ -42908,17 +43243,10 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-BzsnNPaf.js",
-      "bytes": 2062,
-      "sha256": "520f7d7cf6e79ec5ae1f4154168d9fa52e601dc46f3973080abb8ae08515420b",
-      "gzipBytes": 1021,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/marking-C-thHBv6.js",
-      "bytes": 1233,
-      "sha256": "15d0631a90aa906f6823dbb3268b332fa1fffe5809914dfedf919eb00accb911",
-      "gzipBytes": 635,
+      "path": "assets/marking-C1ux7tki.js",
+      "bytes": 1388,
+      "sha256": "7346c1b81ad5ebc5a804e5597303344414d62a5f96413edf6e4f6ffd702c4043",
+      "gzipBytes": 726,
       "role": "lazy-runtime"
     },
     {
@@ -42929,38 +43257,59 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-Cp3_eI79.js",
-      "bytes": 1907,
-      "sha256": "1b27d5fcc2156e2aa4e768d558fe44dcd92dd88a2b4de0e919cfba3523db46cd",
-      "gzipBytes": 981,
+      "path": "assets/marking-CkWZ3EhT.js",
+      "bytes": 5388,
+      "sha256": "9e922ffd9adf6f1a4c53896f5c96a17d7a63de6dfe5b06defeb765c058ab68b6",
+      "gzipBytes": 2260,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-CpCZvfSp.js",
-      "bytes": 395,
-      "sha256": "428b601109302f556277ee5ab7b5f928e83c7de851f9b4ba64bc039831167d3b",
-      "gzipBytes": 276,
+      "path": "assets/marking-D0vakTpR.js",
+      "bytes": 3151,
+      "sha256": "44477ea1c6459ab7fed025f15566df7c95f88d0676b71d4d2d18e97d5356172e",
+      "gzipBytes": 1551,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-D82mXdCJ.js",
-      "bytes": 1379,
-      "sha256": "0d92d4227b53afbc57b66e3b56129a0c58d820fab1bfbe470b66f2ca3b9f368f",
-      "gzipBytes": 729,
+      "path": "assets/marking-D8OYbyN9.js",
+      "bytes": 1233,
+      "sha256": "5c6e2054a1ad4430560b400fb920fc2f2ee691e1415f5d9b5186b823309798af",
+      "gzipBytes": 636,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-DJ7lQNaN.js",
-      "bytes": 1911,
-      "sha256": "4eaf0d147824e927e65b5899cc4cbf6cba123848e5c7ad1646a860c81ccd6c06",
-      "gzipBytes": 943,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/marking-DVHEZbqY.js",
+      "path": "assets/marking-DD9O_6SA.js",
       "bytes": 473,
-      "sha256": "de1a95b1c51592bfefbb80b694bfd371840fe9e4d116cbfc871558d31de24a77",
-      "gzipBytes": 303,
+      "sha256": "b94c3aef48d7d0e5b9ec787c385d6eebc7694b033ee2ef4b68ff0c3c12c1f57c",
+      "gzipBytes": 304,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-DM9pgayx.js",
+      "bytes": 1530,
+      "sha256": "af8145fd18a5b62582550c4f1431fd98333c2c5aa144c9c7da5ab5646e32fb8c",
+      "gzipBytes": 798,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-De02t3hV.js",
+      "bytes": 395,
+      "sha256": "b89e7a44e17ff3e79876db9a8038f5389f56e0886281c9242dcc8610dbf74560",
+      "gzipBytes": 275,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-Dm6-LUK1.js",
+      "bytes": 2062,
+      "sha256": "133fe3489722767504d92845d46a4035b17acdde7133b9fde22f5ee818fb55fb",
+      "gzipBytes": 1023,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-Dq-oTRVK.js",
+      "bytes": 1379,
+      "sha256": "d2ff3ad70663b361370886e233e2f60663389361db71b75b538b2696e1404deb",
+      "gzipBytes": 727,
       "role": "lazy-runtime"
     },
     {
@@ -42971,31 +43320,58 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-ebGPCpYI.js",
-      "bytes": 69,
-      "sha256": "f2354cfb24d5bbcd2d0b39ff13c977437921595cf76866e2557e57ca463360a5",
-      "gzipBytes": 79,
+      "path": "assets/marking-VBikoxnx.js",
+      "bytes": 740,
+      "sha256": "4f43bfbbfecd575ba3724ba4fd512f27b3db068691b2407a4b438f1c12522eee",
+      "gzipBytes": 432,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/marking-jXYJtEDJ.js",
-      "bytes": 740,
-      "sha256": "b0e7694d9e8b0a0b67b6a833f4ec482748e1127e66b9d6ecafe1150b6a39158f",
+      "path": "assets/marking-dZDoUoPJ.js",
+      "bytes": 1907,
+      "sha256": "6f5e3f31d67454465617715baee8e207bf335c2475a3c5728a0f712add3498a5",
+      "gzipBytes": 978,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/marking-fFR9hjLA.js",
+      "bytes": 714,
+      "sha256": "4d7cc50ffb7674feb28cfbe34350a47cd44e12fae0ae33c192e11173553be327",
       "gzipBytes": 430,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/mastery-BD-Iyfuo.js",
-      "bytes": 1470,
-      "sha256": "1e60acf036a40f59638476f77ec488999974f109ebfc600787cc8452b45fe75d",
-      "gzipBytes": 710,
-      "role": "initial-javascript"
+      "path": "assets/mastery-BesE0FBY.js",
+      "bytes": 37,
+      "sha256": "a5d18b98eb560639775672b19006385cd9bac3d33fefedcd7707253043340142",
+      "gzipBytes": 57,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/maxwells-demon-BxETkm1_.css",
+      "bytes": 7546,
+      "sha256": "68bf7758149ef557afb6cb48be123e35c604a25b18463c0f73c544cefbec0059",
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/maxwells-demon-DHXtQAOD.js",
+      "bytes": 11130,
+      "sha256": "a4e9c1534521fd87d49fd9af09db3c0f377e32680018c7b62fb185dccc18d7a8",
+      "gzipBytes": 3885,
+      "role": "lazy-runtime"
     },
     {
       "path": "assets/model-BkCVAwjv.js",
       "bytes": 2351,
       "sha256": "0e3ff235220548a4e3a8fabb75cc27cb3fb02393ef11b3c3be9de3f1458b6f0b",
       "gzipBytes": 1165,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/model-answer-Cu-CdoT0.js",
+      "bytes": 1174,
+      "sha256": "4ba13c50f2ff6bddb8173c4c3191c859b653770282a2f886d134e4f49634e90d",
+      "gzipBytes": 486,
       "role": "lazy-runtime"
     },
     {
@@ -43011,10 +43387,17 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/persistence-DGLXOWGm.js",
+      "path": "assets/persistence-BFHdyRWX.js",
       "bytes": 33,
-      "sha256": "4198a3664683199a02dc894f21750e1e909a90b3564448a673e3f95d1f539727",
+      "sha256": "c718818e832344b301159eed812e10c90e644815b853f0d04e92f119139dca70",
       "gzipBytes": 53,
+      "role": "initial-javascript"
+    },
+    {
+      "path": "assets/policy-BgGZFxcW.js",
+      "bytes": 10686,
+      "sha256": "6aec44811cb1d7f33a5115f9c5ebdaf3ffac050d39b8e95546f48a024dadff1f",
+      "gzipBytes": 3791,
       "role": "initial-javascript"
     },
     {
@@ -43039,158 +43422,207 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/provider-AtOt2_Vg.js",
-      "bytes": 180,
-      "sha256": "dde8eea95202bf70cbb361d87e6037294c33c7b74691b3e426b0762de94e0d67",
-      "gzipBytes": 143,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-BAATOLfs.js",
-      "bytes": 53268,
-      "sha256": "887b3980f4321a593ae079d9008c733780b641479325bf4905fcc8593b441521",
-      "gzipBytes": 11118,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-BLVNYegf.js",
-      "bytes": 29053,
-      "sha256": "4760c8f37d624011ffe711c8bde724e505a87202503129406c082d0d02993655",
-      "gzipBytes": 8915,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-BtJ1eZ1l.js",
-      "bytes": 13988,
-      "sha256": "27a0e3b79dc6e5f7149f7448ad25551ee89d33b01f5d8f96838ca178dcd5e100",
-      "gzipBytes": 4954,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-BxmPeNIa.js",
-      "bytes": 199,
-      "sha256": "1d9b7aebdcc76519f47dea97852fd51b3bef1e70bfdb9baf4c651a1529e3d40a",
-      "gzipBytes": 163,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-CFceN9tv.js",
-      "bytes": 4490,
-      "sha256": "2e2dc7617bda61b193dde7c24eccf810c2fc64a87a02fb66511dc99bf28c1dc9",
-      "gzipBytes": 2104,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-CJ7RzW5E.js",
-      "bytes": 93,
-      "sha256": "c4979f1a0c3f7c8836d6deda4b66da2b4d14a57e96afe3c04bdc6dc00ed05bf6",
-      "gzipBytes": 98,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-CKeXQXk6.js",
-      "bytes": 272074,
-      "sha256": "4d651c783630d779a1849ee7894299a3cc2e9d8ee430c621842b02adcbb0f113",
-      "gzipBytes": 20651,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-CYnIpswg.js",
-      "bytes": 28347,
-      "sha256": "ea65852dd226cdc61743b3d337ea5eccaf8d9668d554c5807a9f7d3c892f3bee",
-      "gzipBytes": 3803,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-Cd2Tp0Pu.js",
-      "bytes": 6805,
-      "sha256": "25c9f25da1dea9aafd2547a0323d19dbb01c08eb3e7d1491850fdfad32a12f83",
-      "gzipBytes": 2809,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-Cq5NZDMM.js",
+      "path": "assets/provider-B0kVJUIt.js",
       "bytes": 91,
-      "sha256": "1eb174fe2b01681005301d5c193111febdee2a0be278427845ee65f65ecd17dd",
+      "sha256": "c905bc715deca59875f741d056edc712f59d2e0be7469f0c5bc1e7ea0da61740",
       "gzipBytes": 98,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/provider-CxCH4IfU.js",
-      "bytes": 90,
-      "sha256": "cd25baf18e717013817e0c22fb028df01a24f5e8f64ccbeadb68c147018135d8",
-      "gzipBytes": 94,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-D-AWmdqU.js",
-      "bytes": 189,
-      "sha256": "1e7606dfafa1c823a672d07c1f96ef81e082fafb1b91bdf51dc4f89acb6d7409",
-      "gzipBytes": 138,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-D2FCXtag.js",
-      "bytes": 14042,
-      "sha256": "27a66701a3c7fa71128ba7b23c76fc80a03375a11836a682577d0e187b41136a",
-      "gzipBytes": 5116,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-DUBGCbmO.js",
-      "bytes": 233,
-      "sha256": "7d95a85c277f4b98fd8d4a8a5b8db0f7ea8d5c9539571f53e95277cb71e720ab",
-      "gzipBytes": 185,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-DXHZU8lq.js",
-      "bytes": 15535,
-      "sha256": "d45662b227354a9c802b76a621959408c0596679dda0e9290e3941e16e5edf57",
-      "gzipBytes": 4123,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-DdRjrcKf.js",
-      "bytes": 75,
-      "sha256": "b627f41940bf97a5896e41b4c9e58eeab54d89af190a9f354679013d37ec090e",
-      "gzipBytes": 85,
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/provider-DjhIIrlb.js",
+      "path": "assets/provider-BEMXZVWb.js",
       "bytes": 107,
-      "sha256": "53f2dfbf7d54e34a653136376f1f785c4f437f7d53a36062aed75977548ffd5d",
+      "sha256": "455c034edac29b8667314cf94e49a970d631efdc2935043bbaeeadfbd384794e",
       "gzipBytes": 107,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/provider-JK2P8EN8.js",
-      "bytes": 189583,
-      "sha256": "87f21d3446845b656c3f945182f2f10c8ca6e91d85b35180d3d62f26eb147a04",
-      "gzipBytes": 14435,
+      "path": "assets/provider-BKbDKKxW.js",
+      "bytes": 157,
+      "sha256": "67dba7279cf148e149b851aaf337d008358149b170ccce0b549d6cee2666acfb",
+      "gzipBytes": 127,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/provider-clQqhYgI.js",
+      "path": "assets/provider-BiPIktnI.js",
+      "bytes": 74,
+      "sha256": "13e0b4b63c5b96cea2dc369e706d5a262383dd9cefc9f2a4662220e56a5078e0",
+      "gzipBytes": 83,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-BpkBMkCA.js",
+      "bytes": 6805,
+      "sha256": "1a3c5eaf39c543c82568aa99b75a9d2d50d18c93bfeff9f0c90d8fecb5987ee7",
+      "gzipBytes": 2808,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-Bq6THfbF.js",
+      "bytes": 15540,
+      "sha256": "2bce9d26ba0c82b0faba9044c5307b6221d8e88a90f5399396d14bff40f931f9",
+      "gzipBytes": 4124,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-BsmRC3Y9.js",
+      "bytes": 20539,
+      "sha256": "95b28208218cae91e80aa8cc83409f0582ae8637f05d906cbfcbff1819f453df",
+      "gzipBytes": 4035,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-C9J-hCci.js",
+      "bytes": 180,
+      "sha256": "d43a0e8309ae7ee10c2ee021f469788d8854c4485f1d483d5866550ae1f32308",
+      "gzipBytes": 143,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-CAwigdBv.js",
+      "bytes": 53273,
+      "sha256": "39495e89008622c535945a9fdb3cba2723d5d689b87850e60fa047616751c27a",
+      "gzipBytes": 11119,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-CRdu0j0J.js",
+      "bytes": 95,
+      "sha256": "9a4da0adedb9d8f1f049ff3b49591473c8c13bb5abb09ec5be86d834ec8392e4",
+      "gzipBytes": 102,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DBa-min0.js",
+      "bytes": 189588,
+      "sha256": "4de6b834175cf207070c91df1bb632c518c930787d58d733378cb4cd367dd19f",
+      "gzipBytes": 14437,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DPLetzNy.js",
+      "bytes": 93,
+      "sha256": "592d0d1656b69913793046bb62425d389ac7b48c0ba2fb39865f3f6b6c020746",
+      "gzipBytes": 98,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DVPCIbxM.js",
+      "bytes": 4490,
+      "sha256": "38fe8b293163fd4a1e7ee2cae8a838f9149657552b0de5510cb86338be220c3a",
+      "gzipBytes": 2105,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-DZUDXpM3.js",
+      "bytes": 199,
+      "sha256": "29bd04470bdc8c8954617b9f02160486389510e0ce943ba1bbb2f0fd60bc34d7",
+      "gzipBytes": 164,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-Dbfaer_A.js",
       "bytes": 27624,
-      "sha256": "4b98d3153ee589937d7be56a00d45a4749dc0fa3778b6588791c62fe8d0a9644",
+      "sha256": "4813b4935bda74f4dc8da451cdf675b2d22eac1e3ceeb3557dab202456acde9d",
       "gzipBytes": 7345,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/provider-ejE32NnQ.js",
-      "bytes": 286,
-      "sha256": "534a570ed5f174493c6f6ccfdafae5f6fa4037d303bc72644587a3fd44117cc0",
-      "gzipBytes": 191,
+      "path": "assets/provider-DhHbgXFi.js",
+      "bytes": 13988,
+      "sha256": "65c76e395e063c5ee0d9247bbd37b0acb81944332140d79141c724ca468c0ed1",
+      "gzipBytes": 4953,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/provider-yZRfcDYd.js",
-      "bytes": 14226,
-      "sha256": "2f3fc470c4ec62d95ef97b4fc577d1a070e1251db10cfed7edcc15710b3f60ed",
-      "gzipBytes": 3942,
+      "path": "assets/provider-Dxynface.js",
+      "bytes": 1610,
+      "sha256": "933f619b8a755a61c3fb7c0ceec0c202b5e760eeba4470b06b8a31888c1a5edb",
+      "gzipBytes": 856,
       "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-ErXN7LgY.js",
+      "bytes": 90,
+      "sha256": "94305ce330de0d026b5a0f6bff2ea1fd454387307d0b7654f43052486da92390",
+      "gzipBytes": 94,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-LLVQMCKT.js",
+      "bytes": 14042,
+      "sha256": "3a24be8ed761f6c90181d3e95293d69cb061baa1c20a779e4cc25961bd815429",
+      "gzipBytes": 5115,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-QE7lnOw8.js",
+      "bytes": 286,
+      "sha256": "39d8974374ad6b979087fe2f2b77d1de9f8e8929588a7d9683d10f407ee12ca8",
+      "gzipBytes": 193,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-R47zfDRj.js",
+      "bytes": 272079,
+      "sha256": "263f01419df5e2ca20f4359e164990a7ff03a20be0ad46005c77a9e99886e20d",
+      "gzipBytes": 20653,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-_cUJjg7j.js",
+      "bytes": 20463,
+      "sha256": "805cdb4ed243e18acec5ac546edc42b1d88e9279b1df3b3958a1fee8c99be084",
+      "gzipBytes": 7204,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-ijyOmR99.js",
+      "bytes": 28352,
+      "sha256": "22328258d71dd25258a4d111b010af82419f89a3f56adefd16baffd37d27f478",
+      "gzipBytes": 3802,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-ndTxmHtr.js",
+      "bytes": 75,
+      "sha256": "e5cb4e64a4a2881c8b8210da4ffd8e5ac39eaf6ab9c58f0306fa9e3bfa9ba7d3",
+      "gzipBytes": 85,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-pTFphjMs.js",
+      "bytes": 233,
+      "sha256": "c161410c0d307f563333693bae788c16bb5b6a8977f98110d263f6d51d026e8e",
+      "gzipBytes": 181,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-rnlYYO4K.js",
+      "bytes": 29053,
+      "sha256": "a417bb84c38ba77fe147f48f5e01b82b10fc4e5d2730c91a92608f4976da7406",
+      "gzipBytes": 8913,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-ur7KGvsV.js",
+      "bytes": 189,
+      "sha256": "363c49bd6997cda2e6a5dea3925fca2676078d863db6570c832f2dc0cd49ebee",
+      "gzipBytes": 137,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/provider-vYi794Sr.js",
+      "bytes": 14226,
+      "sha256": "8cb7d5a514e3c7b5248a912095f97199cbd0d6da70ba0e4e17f6670fa0e6d590",
+      "gzipBytes": 3941,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/question-display-identity-Bs5YQDML.js",
+      "bytes": 18234,
+      "sha256": "100af24263318421d8eb48c51142f17ce6e682a076245f0118d72bc5fba2574b",
+      "gzipBytes": 1864,
+      "role": "initial-javascript"
     },
     {
       "path": "assets/react-dom-X1VypBGM.js",
@@ -43200,23 +43632,17 @@
       "role": "initial-javascript"
     },
     {
-      "path": "assets/registry-C7qNYFRr.css",
-      "bytes": 22430,
-      "sha256": "fd170b101865ba1399026deaea901e9a2eaf15cd5ec0e5c194ee4739834d7f38",
-      "role": "lazy-runtime"
-    },
-    {
-      "path": "assets/registry-j9sJXWEW.js",
-      "bytes": 18321,
-      "sha256": "724449a63f382fc1d3dbd86a09526dbc9517f814ceca5ab77f5f550631520544",
-      "gzipBytes": 5864,
+      "path": "assets/recall-CUJtpmWb.js",
+      "bytes": 44,
+      "sha256": "97ba0d1dc1a9a320bd897fc74e811c2fb2183e9dfb377fa0c6877eee4f3a4acc",
+      "gzipBytes": 64,
       "role": "initial-javascript"
     },
     {
-      "path": "assets/repository-t2k4MqMq.js",
-      "bytes": 130029,
-      "sha256": "28b6d69ee6cd09be6aacab2b20a5975a24c6600f55e069ce1d39a54a2cec1e6d",
-      "gzipBytes": 41458,
+      "path": "assets/repository-DBwrtC9F.js",
+      "bytes": 267261,
+      "sha256": "0456427e9acdba74170a7e9926dc0ef46cff6d223d577a3a1d20133aeeea7217",
+      "gzipBytes": 62327,
       "role": "initial-javascript"
     },
     {
@@ -43224,6 +43650,13 @@
       "bytes": 364,
       "sha256": "15c15ad2a2383ab3ed60de7b934f2eecbd53d3aaddff982dfcf6b310721db82b",
       "gzipBytes": 200,
+      "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/sources-CXMJigV6.js",
+      "bytes": 884,
+      "sha256": "bf22c3bbbe5d94ab105e0801d38480b5544b9e50204eb3c012e4fbb1066b9e57",
+      "gzipBytes": 572,
       "role": "initial-javascript"
     },
     {
@@ -43233,16 +43666,16 @@
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/statistics-DlEi5pkX.js",
-      "bytes": 18636,
-      "sha256": "88975c9a1197133173f4798d0a03baf307c5f285d5ee7bd027afee9bbb723069",
-      "gzipBytes": 6348,
+      "path": "assets/statistics-DNM8ouhM.js",
+      "bytes": 25518,
+      "sha256": "a34340b76cb83b34551a8a16f046af0b664be65050b7d4d1d09199a27d99cffd",
+      "gzipBytes": 7887,
       "role": "lazy-runtime"
     },
     {
-      "path": "assets/titration-curve-B7-yLPDL.js",
+      "path": "assets/titration-curve-bASEzOSV.js",
       "bytes": 10640,
-      "sha256": "a295e8a36c5042cf5eb2d84747b5d9c5a5fccc12c10a056075471cbd3e4523d3",
+      "sha256": "ae1646b22c5de9ba6e9f1978e19202f88a609e9c919f1357b8b84de5a298d2ee",
       "gzipBytes": 3918,
       "role": "lazy-runtime"
     },
@@ -43265,6 +43698,13 @@
       "sha256": "5f569da98a193fd6fa32e3125f6443f2088f194c3b5cfc9436844848b91424f1",
       "gzipBytes": 84,
       "role": "lazy-runtime"
+    },
+    {
+      "path": "assets/workspace-BWmKOUkH.js",
+      "bytes": 1040,
+      "sha256": "2da36a9d81f37837f620d02bc6b152fb7b533c012bdb65b633cc957f6e29a00b",
+      "gzipBytes": 529,
+      "role": "initial-javascript"
     },
     {
       "path": "igcse/activities/bond-enthalpy/index.html",
@@ -43305,8 +43745,82 @@
     {
       "path": "index.html",
       "bytes": 608,
-      "sha256": "badaf535273bee7779a2837cac611a17a8f64bbc23050804827372fc3db367b8",
+      "sha256": "990d3e57f60e255263e5d75b528ee101a0325c2e73c64c116d97ba541c03d3c7",
       "role": "entry"
+    },
+    {
+      "path": "recall-formulae-atlas/atlas-data.js",
+      "bytes": 6454232,
+      "sha256": "d121389dd9d76c484973a6c53496a6adb5bdcb7ae0747c64b5d8d8f16be32417",
+      "gzipBytes": 887361,
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/atlas-view.css",
+      "bytes": 3047,
+      "sha256": "7ecaabbc268568a775fd1819c8e45621b40ad47a0ef8a63577aa155ea38e1026",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/atlas-view.js",
+      "bytes": 5088,
+      "sha256": "6839e84a06476717afb168dd2281354b05cd930f4e072b29c3652e7be123de4e",
+      "gzipBytes": 1995,
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/exports/atlas.json",
+      "bytes": 10178651,
+      "sha256": "ad70acf8741e5dfdddb6b5e52368534f3dbfefaded3c7cc24f7c5b72806f3318",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/exports/briefs.json",
+      "bytes": 2231648,
+      "sha256": "69bb5eb5fcfbc390ef6845c57e904a2c1e6dd8813e44ff8954b867573d16672d",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/exports/gem-summaries.json",
+      "bytes": 126779,
+      "sha256": "fb02f0cb7157ef516e228cd58a32b0edb9a9c75fd088eddebfca7308a2c7933d",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/exports/records.csv",
+      "bytes": 623463,
+      "sha256": "1b1f692ef0a375f417a48e5dbbb796e9e62256e8e58dc461c901fc7990713635",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/exports/remap-overlay.json",
+      "bytes": 9486862,
+      "sha256": "aabc2ff8f39c447400ddcbddf3a90f154f569d57dfd82257d532e5426c11b325",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-atlas/index.html",
+      "bytes": 3210,
+      "sha256": "b562fd8845a8d35ff918e269282a284ae083d048ab297202a4acea15268272ee",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-review/allowed-pair-review.json",
+      "bytes": 16065,
+      "sha256": "06d2419de85b3cbb83617f881b2f7b9ed482cbc8ff2032fceafd3fcdbb49074d",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-review/index.html",
+      "bytes": 10791,
+      "sha256": "726d20dbeeabc1370e9d4a8ec64c3d5db390ac2b7d92f493dabf3d3e513a6fdc",
+      "role": "local-review-asset"
+    },
+    {
+      "path": "recall-formulae-review/review-index.json",
+      "bytes": 25753,
+      "sha256": "71d8407f6df1c8365abbe80f15ff4205bd39e28dd198782edf1e4a10293047eb",
+      "role": "local-review-asset"
     }
   ],
   "compatibilityAliases": [
@@ -43507,7 +44021,9 @@
         "alevel/ph-titration-curves",
         "alevel/c3l6-organic-reactions",
         "alevel/olympiad-2011-q4",
-        "alevel/explaining-properties"
+        "alevel/maxwells-demon",
+        "alevel/explaining-properties",
+        "alevel/rate-equations"
       ]
     },
     {
@@ -43518,7 +44034,9 @@
         "igcse/structure-and-bonding",
         "igcse/dot-and-cross",
         "igcse/energy-enthalpy",
-        "igcse/energetics-practical"
+        "igcse/energetics-practical",
+        "igcse/formulae",
+        "igcse/equations"
       ]
     }
   ],
@@ -43697,6 +44215,14 @@
       "supportedLevels": []
     },
     {
+      "id": "alevel/maxwells-demon",
+      "course": "alevel",
+      "strand": "olympiad",
+      "revision": false,
+      "leafIds": [],
+      "supportedLevels": []
+    },
+    {
       "id": "alevel/explaining-properties",
       "course": "alevel",
       "strand": "curriculum",
@@ -43708,6 +44234,50 @@
         1,
         2
       ]
+    },
+    {
+      "id": "igcse/formulae",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "fourth-16-1"
+      ],
+      "supportedLevels": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "igcse/equations",
+      "course": "igcse",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "fourth-16-2"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "alevel/rate-equations",
+      "course": "alevel",
+      "strand": "curriculum",
+      "revision": true,
+      "leafIds": [
+        "u6-t1-2-orders",
+        "u6-t1-2-graphs",
+        "u6-t1-2-mechanisms",
+        "u6-t1-2-arrhenius"
+      ],
+      "supportedLevels": [
+        1,
+        2,
+        3
+      ]
     }
   ],
   "hubViews": [
@@ -43718,14 +44288,14 @@
         "igcse"
       ],
       "title": "Recall",
-      "kind": "standalone-self-marked",
-      "starterCardsPerCourse": 6,
+      "kind": "typed-spaced-recall",
       "mastery": false,
-      "timingEvidence": false,
+      "timingEvidence": true,
       "curriculumRevision": false,
-      "scope": "recall-contract.md",
-      "sourceProvenance": "src/recall/provenance.json",
-      "provenanceSha256": "2e2e3710cfd744d696ab02080d30b8fa6a865cbe4898af73f3c40a7b6c887273"
+      "scope": "recall-formulae-contract.md",
+      "sourceProvenance": "src/recall/typed-provenance.json",
+      "recallRevision": true,
+      "provenanceSha256": "23d233d0ed5a1af91468593a81ed340592d114760aadfcfa424a862b5d77ccee"
     }
   ]
 }

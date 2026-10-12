@@ -102,6 +102,32 @@
       "course": "alevel",
       "source": "explaining-properties",
       "strand": "curriculum"
+    },
+    {
+      "id": "igcse/formulae",
+      "course": "igcse",
+      "source": "formulae",
+      "strand": "curriculum"
+    },
+    {
+      "id": "igcse/equations",
+      "course": "igcse",
+      "source": "equations",
+      "strand": "curriculum"
+    },
+    {
+      "id": "alevel/maxwells-demon",
+      "course": "alevel",
+      "source": "maxwells-demon",
+      "strand": "olympiad",
+      "mastery": false,
+      "curriculumRevision": false
+    },
+    {
+      "id": "alevel/rate-equations",
+      "course": "alevel",
+      "source": "rate-equations",
+      "strand": "curriculum"
     }
   ],
   "excluded": [
@@ -150,12 +176,12 @@
     },
     {
       "id": "SCOPE-02",
-      "text": "Exact fourteen included activity registrations: twelve original plus user-authorised Olympiad 2011 Q4 and Explaining Properties; no Rocket Recall runtime",
+      "text": "Exact eighteen included activity registrations: seventeen previously authorised activities plus Rate Equations with four explicit semantic gems and all three supported levels; shared typed/spaced Recall remains separate from graded registrations; no Rocket Recall runtime",
       "check": "registry-and-release-inventory"
     },
     {
       "id": "SCOPE-03",
-      "text": "C3L6 and Olympiad 2011 Q4 solely under Olympiad; no mastery/revision/gem evidence",
+      "text": "C3L6, Olympiad 2011 Q4 and Maxwell’s Demon solely under Olympiad; no mastery/revision/gem evidence",
       "check": "olympiad-isolation-tests-and-browser"
     },
     {
@@ -283,13 +309,13 @@
         "igcse"
       ],
       "title": "Recall",
-      "kind": "standalone-self-marked",
-      "starterCardsPerCourse": 6,
+      "kind": "typed-spaced-recall",
       "mastery": false,
-      "timingEvidence": false,
+      "timingEvidence": true,
       "curriculumRevision": false,
-      "scope": "recall-contract.md",
-      "sourceProvenance": "src/recall/provenance.json"
+      "scope": "recall-formulae-contract.md",
+      "sourceProvenance": "src/recall/typed-provenance.json",
+      "recallRevision": true
     }
   ],
   "scopeAmendments": [
@@ -298,6 +324,53 @@
       "authority": "User-approved 32-question two-level plan and explicit implementation instruction",
       "contract": "explaining-properties-contract.md",
       "delegation": "One direct gpt-6.1-sol/high implementer then a separate sequential gpt-6.1-sol/high reviewer; maximum one active delegate; root final acceptance; no nested delegation."
+    },
+    {
+      "id": "RECALL-FORMULAE-20261010",
+      "authority": "User-approved staged plan and explicit implementation instruction; current combined app architecture retained",
+      "contract": "recall-formulae-contract.md",
+      "delegation": "One Sol 6.1 High foreman, all workers/reviewer Sol 6.1 High; four implementation workers and one exception reviewer maximum; root stage/final acceptance.",
+      "status": "implementation-authorised",
+      "supersedes": "Earlier self-marked recall/no-persistence restriction; authorises typed spaced recall, dedicated recall evidence and recall revision. Existing graded mastery mathematics unchanged."
+    },
+    {
+      "id": "RF-UX-20261010",
+      "authority": "Collected user changes followed by DONE implementation instruction",
+      "contract": "recall-formulae-ux-contract.md",
+      "delegation": "One Sol6.1/high foreman, initial3/max4 workers plus1 exception reviewer; root gates/final acceptance."
+    },
+    {
+      "id": "RF-FORMAT-20261010",
+      "authority": "User-approved plan with typed state boxes followed by Implement the plan",
+      "contract": "formulae-equations-format-contract.md",
+      "delegation": "One Sol6.1/high foreman, two implementation workers, maximum one genuine exception reviewer; root stage and final acceptance."
+    },
+    {
+      "id": "RF-FOLLOWUP-20261010",
+      "authority": "Collected batch followed by DONE",
+      "contract": "formulae-equations-followup-contract.md",
+      "delegation": "One Sol6.1/high foreman with three bounded implementation workers and maximum one genuine exception reviewer; root gates/final acceptance."
+    },
+    {
+      "id": "RECALL-MAIN-20261010",
+      "authority": "User-authorized plan; root acceptedS0-S4 and authorized final docs/inventory",
+      "contract": "validation/recall-main/authorized-plan.md",
+      "delegation": "One Sol6.1/high foreman; initial1 contract worker; max3 implementation; final exactly2 independent reviewers; max7total; narrow forks/no child delegation; root stage gates.",
+      "scope": "Global/gem Flashcards/Test;121IGCSE+6inheritedAL;150 frozen historical definitions; separate ungraded Recall Stats; existing profileId/defaultlocal; no deployment."
+    },
+    {
+      "id": "MAXWELL-20261011",
+      "authority": "User requested new three-level thermodynamics Olympiad activity and explicitly chose content plus React implementation",
+      "contract": "maxwells-demon-contract.md",
+      "delegation": "One gpt-6.1-sol/high foreman, one implementation worker and one separate reviewer with same settings; maximum four including root; root final acceptance.",
+      "scope": "Eight concise standard-enthalpy definitions; eleven classifications including carbon atomisation and sodium chloride formation, twelve-arrow hypothetical Hess network with seven supplied data rows, and fluorocarbon algebra with a ten-row standard-symbol table, inline coefficients a–i and C–F result j:33 assessed tasks. Aggregate assessment in Parts(a/c), map-border feedback in Part(b), checked-all-correct Next, authenticated historical progress migration including C–C coefficient j→i and C–F estimate z→j, no runtime worked answers or curriculum evidence and no deployment."
+    },
+    {
+      "id": "RATE-INTEGRATION-20261012",
+      "authority": "User explicitly requested integration of new rate equations activities into main app, 12 October 2026",
+      "contract": "docs/authoring/rate-equations.md",
+      "scope": "Production activity alevel/rate-equations with semantic gems u6-t1-2-orders, u6-t1-2-graphs, u6-t1-2-mechanisms and u6-t1-2-arrhenius, each Levels1–3, displayed in four numbered slots. Preserve twelve POC source question IDs and deterministic seeds with closed identity membership and display-only RE aliases. Integrate main navigation, practice/revision, persisted answers/unmarked graph checkpoints, shared first-assessment mastery/timing and stats, and local combined release. No unversioned numeric historical redirects, import remapping, atlas migration, new banks, deployment or commits. Supersedes DEV-only restrictions solely for these prototypes.",
+      "delegation": "One gpt-6.1-sol/high foreman, up to two implementation workers and sequential independent reviewer; root stage gates/final acceptance; no nested worker delegation."
     }
   ]
 }

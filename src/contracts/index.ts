@@ -7,3 +7,7 @@ export type * from './olympiad';
 export type * from './registry';
 export type * from './repository';
 export type * from './integration';
+
+export * from './maxwell.ts';
+
+export type * from './workspace.ts';

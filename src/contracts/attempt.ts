@@ -1,11 +1,15 @@
+import type { UnmarkedWorkspaceState } from './workspace.ts';
 import type {
   AttemptId,
   CurriculumQuestionRef,
   CurriculumTarget,
   Namespace,
   QuestionRef,
+  RecallQuestionRef,
+  RecallTarget,
 } from './identity';
 import type { MarkingIssue, Question, RawMarks, Response, Responses, TextRange } from './question';
+import type { RecallDefinitionReference } from './recall';
 
 export type IdleLimitMs = 60000 | 180000 | 300000 | 600000;
 export interface TimingResult {
@@ -118,19 +122,25 @@ export interface LearningReviewPolicy {
     decisions: readonly ValidAlternativeDecision[],
   ) => PostAssessmentReview;
 }
-interface StudentAttemptBase {
+interface StudentAttemptBase<R extends QuestionRef, T> {
   readonly mode: 'student';
   readonly namespace: Namespace;
   readonly attemptId: AttemptId;
-  readonly ref: CurriculumQuestionRef;
-  readonly target: CurriculumTarget;
+  readonly ref: R;
+  readonly target: T;
   readonly currentResponses: Responses;
   readonly assistance: readonly Assistance[];
+  /** Editable unmarked measuring aid; never contributes to immutable first evidence. */
+  readonly workspace?: UnmarkedWorkspaceState;
   /** Current action presentation only; immutable first evidence never includes these flags. */
   readonly currentResponseChanged?: true;
   readonly currentGiveUp?: true;
+  /** Durable presentation latch; never part of immutable first assessment evidence. */
+  readonly modelAnswerShown?: true;
+  /** Correct-correction full panel remains visible after reload without altering first evidence. */
+  readonly modelAnswerPanelShown?: true;
 }
-export type StudentAttempt = StudentAttemptBase &
+export type StudentAttemptFor<R extends QuestionRef, T> = StudentAttemptBase<R, T> &
   (
     | Readonly<{
         phase: 'answering';
@@ -165,14 +175,22 @@ export type StudentAttempt = StudentAttemptBase &
         timing?: never;
       }>
   );
+export type StudentAttempt = StudentAttemptFor<CurriculumQuestionRef, CurriculumTarget>;
+export type RecallStudentAttempt = StudentAttemptFor<RecallQuestionRef, RecallTarget> &
+  RecallDefinitionReference;
+export type AnyStudentAttempt = StudentAttempt | RecallStudentAttempt;
+export type AttemptFamily<S extends AnyStudentAttempt> = S extends RecallStudentAttempt
+  ? RecallStudentAttempt
+  : StudentAttempt;
 /** Teacher and review render the same player but cannot produce a persistence bundle. */
 export interface PreviewAttempt {
   readonly mode: 'teacher' | 'review';
   readonly ref: QuestionRef;
   readonly currentResponses: Responses;
 }
-export type PlayerAttempt = StudentAttempt | PreviewAttempt;
+export type PlayerAttempt = AnyStudentAttempt | PreviewAttempt;
 export type AttemptCommand =
+  | Readonly<{ kind: 'workspace'; workspace: UnmarkedWorkspaceState }>
   | Readonly<{ kind: 'respond'; partId: string; response: Response }>
   | Readonly<{ kind: 'clear' }>
   | Readonly<{ kind: 'assist'; assistance: Assistance }>
@@ -183,14 +201,14 @@ export type AttemptCommand =
   | Readonly<{ kind: 'confirm-drawing'; partId: string; matches: boolean; at: number }>
   | Readonly<{ kind: 'review-valid-alternative'; decision: ValidAlternativeDecision }>
   | Readonly<{ kind: 'pause' }>;
-export type AttemptTransition =
-  | Readonly<{ accepted: true; state: StudentAttempt; correctionFeedback?: CorrectionFeedback }>
-  | Readonly<{ accepted: false; state: StudentAttempt; message: string }>;
+export type AttemptTransition<S extends AnyStudentAttempt = StudentAttempt> =
+  | Readonly<{ accepted: true; state: S; correctionFeedback?: CorrectionFeedback }>
+  | Readonly<{ accepted: false; state: S; message: string }>;
 /** The reducer is pure; clock/policy are explicit inputs in implementation. */
-export interface AttemptController {
-  readonly dispatch: (command: AttemptCommand) => AttemptTransition;
-  readonly state: () => StudentAttempt;
-  readonly sample: (sample: ClockSample) => StudentAttempt;
-  readonly interact: (sample: ClockSample) => StudentAttempt;
-  readonly checkpoint: () => StudentAttempt;
+export interface AttemptController<S extends AnyStudentAttempt = StudentAttempt> {
+  readonly dispatch: (command: AttemptCommand) => AttemptTransition<S>;
+  readonly state: () => S;
+  readonly sample: (sample: ClockSample) => S;
+  readonly interact: (sample: ClockSample) => S;
+  readonly checkpoint: () => S;
 }

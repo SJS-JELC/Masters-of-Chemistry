@@ -1,0 +1,573 @@
+{
+  "runId": "RECALL-FORMULAE-20261010",
+  "jobId": "RF-S1-CONTENT",
+  "schemaVersion": 1,
+  "bandLabels": {
+    "1": "Grade 5–6",
+    "2": "Grade 7–8",
+    "3": "Grade 9"
+  },
+  "sources": [
+    {
+      "path": "src/chemistry/formulae-equations/ions.ts",
+      "sha256": "d75983b861163a8f92dd8c50d9a30e1f5c70ba696bf4abc026aac29431a8f3cc",
+      "symbolOrSection": "Original 19-ion bank and 36 individually vetted compounds, RF-S1-CONTENT; author chemistry review 10 October 2026. No examination wording copied."
+    },
+    {
+      "path": "src/activities/igcse/equations/bank.ts",
+      "sha256": "d6fa2d3fb358ebd8578113c78c4f6231318f1189ea2f9a30be3f903bc61012b4",
+      "symbolOrSection": "Original 24 authored records preserved plus four state-explicit replacements P–S, RF-FORMAT-20261010 CONTENT-02; chemistry review 10 October 2026. Historical original bank: validation/formulae-equations-format/s0/before/src/activities/igcse/equations/bank.ts, SHA256 1cace012dd0025116f121d4587584839ecdce7c9f6d6982bb1a7d1a8e024c88d. No source PDFs/images opened."
+    }
+  ],
+  "entries": [
+    {
+      "id": "FO-000001",
+      "legacyId": "RF1:sodium-chloride:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Asodium-chloride%3A123&level=1&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "sodium chloride",
+      "level": 1,
+      "seed": 123,
+      "answer": "NaCl",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-000001&level=1&seed=123",
+      "coverage": [
+        "equal charge",
+        "ratio already reduced",
+        "no brackets"
+      ]
+    },
+    {
+      "id": "FO-000004",
+      "legacyId": "RF1:magnesium-oxide:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Amagnesium-oxide%3A123&level=1&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "magnesium oxide",
+      "level": 1,
+      "seed": 123,
+      "answer": "MgO",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-000004&level=1&seed=123",
+      "coverage": [
+        "equal charge",
+        "charge-ratio simplification",
+        "no brackets"
+      ]
+    },
+    {
+      "id": "FO-000007",
+      "legacyId": "RF1:magnesium-chloride:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Amagnesium-chloride%3A123&level=1&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "magnesium chloride",
+      "level": 1,
+      "seed": 123,
+      "answer": "MgCl2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-000007&level=1&seed=123",
+      "coverage": [
+        "unequal charge",
+        "ratio already reduced",
+        "no brackets"
+      ]
+    },
+    {
+      "id": "FO-00000A",
+      "legacyId": "RF1:aluminium-oxide:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Aaluminium-oxide%3A123&level=1&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "aluminium oxide",
+      "level": 1,
+      "seed": 123,
+      "answer": "Al2O3",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-00000A&level=1&seed=123",
+      "coverage": [
+        "unequal charge",
+        "charge-ratio simplification",
+        "no brackets"
+      ]
+    },
+    {
+      "id": "FO-00000H",
+      "legacyId": "RF1:ammonium-chloride:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Aammonium-chloride%3A123&level=2&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "ammonium chloride",
+      "level": 2,
+      "seed": 123,
+      "answer": "NH4Cl",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-00000H&level=2&seed=123",
+      "coverage": [
+        "equal charge",
+        "ratio already reduced",
+        "no brackets"
+      ]
+    },
+    {
+      "id": "FO-00000W",
+      "legacyId": "RF1:calcium-carbonate:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Acalcium-carbonate%3A123&level=2&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "calcium carbonate",
+      "level": 2,
+      "seed": 123,
+      "answer": "CaCO3",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-00000W&level=2&seed=123",
+      "coverage": [
+        "equal charge",
+        "charge-ratio simplification",
+        "no brackets"
+      ]
+    },
+    {
+      "id": "FO-00000M",
+      "legacyId": "RF1:magnesium-hydroxide:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Amagnesium-hydroxide%3A123&level=2&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "magnesium hydroxide",
+      "level": 2,
+      "seed": 123,
+      "answer": "Mg(OH)2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-00000M&level=2&seed=123",
+      "coverage": [
+        "unequal charge",
+        "ratio already reduced",
+        "repeated polyatomic brackets"
+      ]
+    },
+    {
+      "id": "FO-00000U",
+      "legacyId": "RF1:aluminium-sulfate:123",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=RF1%3Aaluminium-sulfate%3A123&level=2&seed=123",
+      "activityId": "igcse/formulae",
+      "name": "aluminium sulfate",
+      "level": 2,
+      "seed": 123,
+      "answer": "Al2(SO4)3",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fformulae&review=FO-00000U&level=2&seed=123",
+      "coverage": [
+        "unequal charge",
+        "charge-ratio simplification",
+        "repeated polyatomic brackets"
+      ]
+    },
+    {
+      "id": "EQ-000001",
+      "legacyId": "EQ-simple-balance-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-balance-01&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-balance",
+      "level": 1,
+      "seed": 0,
+      "answer": "2H2 + O2 -> 2H2O",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000001&level=1&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-000002",
+      "legacyId": "EQ-simple-balance-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-balance-02&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-balance",
+      "level": 1,
+      "seed": 0,
+      "answer": "2Mg + O2 -> 2MgO",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000002&level=1&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-000003",
+      "legacyId": "EQ-simple-balance-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-balance-03&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-balance",
+      "level": 1,
+      "seed": 0,
+      "answer": "2Na + Cl2 -> 2NaCl",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000003&level=1&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-000004",
+      "legacyId": "EQ-simple-balance-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-balance-04&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-balance",
+      "level": 1,
+      "seed": 0,
+      "answer": "Zn + 2HCl -> ZnCl2 + H2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000004&level=1&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-000005",
+      "legacyId": "EQ-states-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-states-01&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "states",
+      "level": 1,
+      "seed": 0,
+      "answer": "NaOH(aq) + HCl(aq) -> NaCl(aq) + H2O(l)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000005&level=1&seed=0",
+      "markPoints": [
+        "Match each state symbol to the explicitly supplied physical context."
+      ]
+    },
+    {
+      "id": "EQ-000006",
+      "legacyId": "EQ-states-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-states-02&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "states",
+      "level": 1,
+      "seed": 0,
+      "answer": "CaCO3(s) + 2HCl(aq) -> CaCl2(aq) + H2O(l) + CO2(g)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000006&level=1&seed=0",
+      "markPoints": [
+        "Match each state symbol to the explicitly supplied physical context."
+      ]
+    },
+    {
+      "id": "EQ-000007",
+      "legacyId": "EQ-states-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-states-03&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "states",
+      "level": 1,
+      "seed": 0,
+      "answer": "MgO(s) + H2SO4(aq) -> MgSO4(aq) + H2O(l)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000007&level=1&seed=0",
+      "markPoints": [
+        "Match each state symbol to the explicitly supplied physical context."
+      ]
+    },
+    {
+      "id": "EQ-000008",
+      "legacyId": "EQ-states-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-states-04&level=1&seed=0",
+      "activityId": "igcse/equations",
+      "name": "states",
+      "level": 1,
+      "seed": 0,
+      "answer": "2Al(s) + 6HCl(aq) -> 2AlCl3(aq) + 3H2(g)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000008&level=1&seed=0",
+      "markPoints": [
+        "Match each state symbol to the explicitly supplied physical context.",
+        "Balance using the lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-000009",
+      "legacyId": "EQ-complex-balance-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-balance-01&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-balance",
+      "level": 2,
+      "seed": 0,
+      "answer": "CH4 + 2O2 -> CO2 + 2H2O",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-000009&level=2&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-00000A",
+      "legacyId": "EQ-complex-balance-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-balance-02&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-balance",
+      "level": 2,
+      "seed": 0,
+      "answer": "2C2H6 + 7O2 -> 4CO2 + 6H2O",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000A&level=2&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-00000B",
+      "legacyId": "EQ-complex-balance-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-balance-03&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-balance",
+      "level": 2,
+      "seed": 0,
+      "answer": "Fe2O3 + 3CO -> 2Fe + 3CO2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000B&level=2&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-00000C",
+      "legacyId": "EQ-complex-balance-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-balance-04&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-balance",
+      "level": 2,
+      "seed": 0,
+      "answer": "4Al + 3O2 -> 2Al2O3",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000C&level=2&seed=0",
+      "markPoints": [
+        "Every coefficient is the lowest positive whole number that conserves atoms; formulae stay fixed."
+      ]
+    },
+    {
+      "id": "EQ-00000D",
+      "legacyId": "EQ-simple-words-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-words-01&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-words",
+      "level": 2,
+      "seed": 0,
+      "answer": "Mg + 2HCl -> MgCl2 + H2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000D&level=2&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000E",
+      "legacyId": "EQ-simple-words-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-words-02&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-words",
+      "level": 2,
+      "seed": 0,
+      "answer": "Ca + 2H2O -> Ca(OH)2 + H2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000E&level=2&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000F",
+      "legacyId": "EQ-simple-words-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-words-03&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-words",
+      "level": 2,
+      "seed": 0,
+      "answer": "CuO + H2SO4 -> CuSO4 + H2O",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000F&level=2&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000G",
+      "legacyId": "EQ-simple-words-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-simple-words-04&level=2&seed=0",
+      "activityId": "igcse/equations",
+      "name": "simple-words",
+      "level": 2,
+      "seed": 0,
+      "answer": "Na2CO3 + 2HCl -> 2NaCl + H2O + CO2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000G&level=2&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000H",
+      "legacyId": "EQ-complex-words-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-01&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "C2H5OH + 3O2 -> 2CO2 + 3H2O",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000H&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000I",
+      "legacyId": "EQ-complex-words-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-02&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "Fe2O3 + 3CO -> 2Fe + 3CO2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000I&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000J",
+      "legacyId": "EQ-complex-words-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-03&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "2Al + 3H2SO4 -> Al2(SO4)3 + 3H2",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000J&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000K",
+      "legacyId": "EQ-complex-words-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-04&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "(NH4)2SO4 + 2NaOH -> Na2SO4 + 2NH3 + 2H2O",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000K&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients."
+      ]
+    },
+    {
+      "id": "EQ-00000L",
+      "legacyId": "EQ-paragraph-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-paragraph-01&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "paragraph",
+      "level": 3,
+      "seed": 0,
+      "answer": "Pb(NO3)2(aq) + 2KI(aq) -> PbI2(s) + 2KNO3(aq)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000L&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the paragraph."
+      ]
+    },
+    {
+      "id": "EQ-00000M",
+      "legacyId": "EQ-paragraph-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-paragraph-02&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "paragraph",
+      "level": 3,
+      "seed": 0,
+      "answer": "2Cu(NO3)2(s) -> 2CuO(s) + 4NO2(g) + O2(g)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000M&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the paragraph."
+      ]
+    },
+    {
+      "id": "EQ-00000N",
+      "legacyId": "EQ-paragraph-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-paragraph-03&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "paragraph",
+      "level": 3,
+      "seed": 0,
+      "answer": "2NaHCO3(s) -> Na2CO3(s) + H2O(g) + CO2(g)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000N&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the paragraph."
+      ]
+    },
+    {
+      "id": "EQ-00000O",
+      "legacyId": "EQ-paragraph-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-paragraph-04&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "paragraph",
+      "level": 3,
+      "seed": 0,
+      "answer": "C3H8(g) + 5O2(g) -> 3CO2(g) + 4H2O(g)",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000O&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the paragraph."
+      ]
+    },
+    {
+      "id": "EQ-00000P",
+      "legacyId": "EQ-complex-words-states-01",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-states-01&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "C2H5OH(l) + 3O2(g) -> 2CO2(g) + 3H2O(g)",
+      "prompt": "Liquid ethanol (C2H5OH) burns completely in oxygen gas. The products leave the flame as carbon dioxide gas and water vapour. Write the balanced symbol equation, including state symbols.",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000P&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the explicit physical context."
+      ]
+    },
+    {
+      "id": "EQ-00000Q",
+      "legacyId": "EQ-complex-words-states-02",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-states-02&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "Fe2O3(s) + 3CO(g) -> 2Fe(s) + 3CO2(g)",
+      "prompt": "Solid iron(III) oxide reacts with carbon monoxide gas to form solid iron and carbon dioxide gas. Write the balanced symbol equation, including state symbols.",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000Q&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the explicit physical context."
+      ]
+    },
+    {
+      "id": "EQ-00000R",
+      "legacyId": "EQ-complex-words-states-03",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-states-03&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "2Al(s) + 3H2SO4(aq) -> Al2(SO4)3(aq) + 3H2(g)",
+      "prompt": "Solid aluminium reacts with dilute sulfuric acid solution to form dissolved aluminium sulfate and hydrogen gas. Write the balanced symbol equation, including state symbols.",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000R&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the explicit physical context."
+      ]
+    },
+    {
+      "id": "EQ-00000S",
+      "legacyId": "EQ-complex-words-states-04",
+      "legacyReviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-complex-words-states-04&level=3&seed=0",
+      "activityId": "igcse/equations",
+      "name": "complex-words",
+      "level": 3,
+      "seed": 0,
+      "answer": "(NH4)2SO4(aq) + 2NaOH(aq) -> Na2SO4(aq) + 2NH3(g) + 2H2O(l)",
+      "prompt": "Ammonium sulfate solution is warmed with sodium hydroxide solution. Dissolved sodium sulfate, ammonia gas and liquid water form. Write the balanced symbol equation, including state symbols.",
+      "reviewLink": "/?course=igcse&view=teacher&activity=igcse%2Fequations&review=EQ-00000S&level=3&seed=0",
+      "markPoints": [
+        "Correct formula for each named substance.",
+        "Correct reactant/product sides and lowest positive whole-number coefficients.",
+        "Correct states from the explicit physical context."
+      ]
+    }
+  ]
+}

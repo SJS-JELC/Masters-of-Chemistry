@@ -1,3 +1,4 @@
+import type { MaxwellChallenge, MaxwellPolicy } from './maxwell.ts';
 import type { IdleLimitMs, LearningReviewPolicy } from './attempt';
 import type {
   ALevelActivityId,
@@ -64,7 +65,7 @@ export type OlympiadRegistration = RegistrationBase &
     gems?: never;
     mastery?: never;
     idleAllowance?: never;
-  }>);
+  }> | Readonly<{ id:'alevel/maxwells-demon'; course:'alevel'; strand:'olympiad'; renderer:'enthalpy-challenge'; provider:()=>Promise<MaxwellChallenge>; marking:()=>Promise<MaxwellPolicy>; revision:false; gems?:never; mastery?:never; idleAllowance?:never; }>);
 export type ActivityRegistration = CurriculumRegistration | OlympiadRegistration;
 /** Explicit source-owned array, checked for duplicates/exact scope by integration. */
 export interface ActivityRegistry {

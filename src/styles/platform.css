@@ -110,3 +110,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
 .correction-sentence button[data-response-status="incorrect"] { background: #402333; }
 .correction-sentence button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
 .field-result,.response-result { font-size: .88rem; margin-block: .6rem; }
+
+/* Shared checked answer heading: same green as the panel border. */
+.worked-answer>h3,.dot-answer-dialog>h3{margin:0 0 .8rem;color:var(--positive);font-size:.78rem;font-weight:700;letter-spacing:.07em;line-height:1.4}
+.worked-answer{padding-top:12px}
+.dot-answer-dialog{border-color:var(--positive)}

@@ -1,3 +1,4 @@
+import { questionLookupInput, recallLookupIdentity } from '../content/question-display-identity.ts';
 import type { Course, QuestionRef } from '../contracts/identity.ts';
 import type { CompatibilityResolution } from '../contracts/integration.ts';
 import type { QuestionProvider } from '../contracts/question.ts';
@@ -5,6 +6,8 @@ import type { QuestionProvider } from '../contracts/question.ts';
 // Only migrated, source-owned pure providers. No original page scripts execute.
 const providers = {
   alevel: {
+    'rate-equations': async () =>
+      (await import('../activities/alevel/rate-equations/provider.ts')).rateProvider,
     'explaining-properties': async () =>
       (await import('../activities/alevel/explaining-properties/provider.ts')).propertiesProvider,
     'acid-base-calculations': async () =>
@@ -20,6 +23,10 @@ const providers = {
       (await import('../activities/alevel/ph-titration-curves/provider.ts')).titrationProvider,
   },
   igcse: {
+    formulae: async () =>
+      (await import('../activities/igcse/formulae/provider.ts')).formulaeProvider,
+    equations: async () =>
+      (await import('../activities/igcse/equations/provider.ts')).equationsProvider,
     calorimetry: async () =>
       (await import('../activities/igcse/calorimetry/provider.ts')).calorimetryProvider,
     'bond-enthalpy': async () =>
@@ -100,7 +107,7 @@ export async function resolveCompatibilityLink(
     // Multiple current code parameters must resolve to the same canonical reference.
     if (values.length > 1) {
       const decoded = await Promise.all(values.map((v) => resolveCompatibilityLink(course, v)));
-      const refs = decoded.map((r) => (r.kind === 'curriculum' ? r.ref : null));
+      const refs = decoded.map((r) => (r.kind === 'curriculum' || r.kind === 'recall' ? r.ref : null));
       if (refs.some((r) => !r) || refs.some((r) => JSON.stringify(r) !== JSON.stringify(refs[0])))
         return unrecognized(raw, 'Conflicting question parameters.');
     }
@@ -131,6 +138,12 @@ export async function resolveCompatibilityLink(
       activity = declaredActivity;
     }
   }
+  const recall = recallLookupIdentity(course, code);
+  if (recall && (!activity || activity === 'recall')) {
+    if ((requestedSeed !== undefined && requestedSeed !== 0) || (requestedLevel !== undefined && requestedLevel !== 1))
+      return unrecognized(raw, 'Recall question seed or level does not match.');
+    return {kind: 'recall', ref: {activityId: (course + '/recall') as 'alevel/recall' | 'igcse/recall', questionId: recall.questionId, seed: 0, level: 1}, historical: !recall.live, source: raw};
+  }
   const table: Record<string, () => Promise<QuestionProvider>> = providers[course];
   if (activity && !table[activity])
     return unrecognized(raw, 'This activity is not included in this course.');
@@ -138,10 +151,10 @@ export async function resolveCompatibilityLink(
   for (const [slug, load] of Object.entries(table)) {
     if (activity && slug !== activity) continue;
     const provider = await load();
-    let ref = provider.resolveLink?.(code) ?? null;
+    let ref = provider.resolveLink?.(questionLookupInput(course, course + '/' + slug, code)) ?? null;
     if (ref) {
       try {
-        const encoded = /^(?:AB|CAL|BE|ECB)-/i.test(code);
+        const encoded = /^(?:(?:AB|CAL|BE|ECB)-|RF1:)/i.test(code) || slug === 'equations';
         if (
           encoded &&
           ((requestedSeed !== undefined && requestedSeed !== ref.seed) ||

@@ -10,4 +10,5 @@ export const olympiadTopics = {
   'alevel/olympiad-2011-q4': [
     'Isomerism', 'Intermolecular Forces', 'Infrared Spectroscopy', 'NMR Spectroscopy',
   ],
+  'alevel/maxwells-demon':['Enthalpy Changes','Hess’ Law','Bond Enthalpies'],
 } as const satisfies Record<OlympiadActivityId, readonly string[]>;

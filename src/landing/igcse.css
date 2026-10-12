@@ -759,7 +759,7 @@
 .original-landing.igcse.test-selecting .year-card-heading{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
 .original-landing.igcse.test-selecting .year-card-heading h2{margin:0}
 .original-landing.igcse .test-year-all:disabled{opacity:.4;cursor:default}
-.original-landing.igcse[data-learning-mode="teacher"] .test-tile-row,.original-landing.igcse[data-learning-mode="teacher"] #testMode,.original-landing.igcse[data-learning-mode="teacher"] #testSelection,.original-landing.igcse[data-learning-mode="teacher"] .test-navigation{display:none!important}
+.original-landing.igcse[data-learning-mode="teacher"] .test-tile-row > :not(.recall-tile),.original-landing.igcse[data-learning-mode="teacher"] #testMode,.original-landing.igcse[data-learning-mode="teacher"] #testSelection,.original-landing.igcse[data-learning-mode="teacher"] .test-navigation{display:none!important}
 .original-landing.igcse #testQuestionId{font-size:.7rem;color:#ff5ecb;overflow-wrap:anywhere;border:1px solid rgba(255,94,203,.34);border-radius:999px;padding:4px 9px;background:rgba(85,246,255,.055)}
 .original-landing.igcse #testQuestionId:empty{display:none}
 .original-landing.igcse #testCurrentBars>div>span:first-child{display:none}

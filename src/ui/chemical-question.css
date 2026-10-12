@@ -1,0 +1,220 @@
+.chemical-question-player .question-header {
+  text-align: center;
+}
+.chemical-question-player .question-header h2 {
+  margin: 1rem 0 0.4rem;
+}
+.chemical-question-player .question-parts {
+  display: block;
+  max-width: none;
+}
+.chemical-question-body {
+  padding: 0.75rem 0 1.5rem;
+}
+.chemical-paragraph {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+}
+.chemical-entry {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  margin: 0.75rem auto;
+  color: inherit;
+}
+.chemical-entry input,
+.chemical-entry-notation {
+  font: inherit;
+  font-size: inherit;
+  letter-spacing: normal;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+.chemical-entry input[data-chemical-entry] {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  caret-color: #eef0ff;
+  border: 2px solid #809aa4;
+  border-radius: 0.55rem;
+}
+.chemical-entry input:focus {
+  outline: 3px solid #a9ded8;
+  outline-offset: 2px;
+}
+.chemical-entry-viewport {
+  position: absolute;
+  inset: 2px;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  background: var(--surface, white);
+}
+.chemical-entry-notation {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  padding: 0.65rem 1rem;
+  white-space: pre;
+}
+.chemical-entry input,
+.chemical-entry .chemical-entry-notation {
+  text-align: center;
+}
+/* Scaling the glyph without changing its advance preserves the native input's caret geometry. */
+.chemical-entry-notation sub,
+.chemical-entry-notation sup {
+  display: inline-block;
+  font: inherit;
+  position: relative;
+  top: 0.22em;
+  vertical-align: baseline;
+  transform: scale(0.78);
+  transform-origin: center bottom;
+}
+.chemical-entry[data-response-status='correct'] input,
+.chemical-coefficient[data-response-status='correct'] {
+  border-color: #268b62;
+}
+.chemical-entry[data-response-status='incorrect'] input,
+.chemical-coefficient[data-response-status='incorrect'] {
+  border-color: #ba4f51;
+}
+.chemical-equation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  font-size: inherit;
+  line-height: 2;
+}
+.chemical-equation-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+.chemical-species {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.18rem;
+  white-space: nowrap;
+}
+.chemical-plus {
+  margin: 0 0.3rem;
+}
+.chemical-coefficient {
+  width: 4rem !important;
+  min-width: 0;
+  padding: 0.25rem 0.2rem !important;
+  margin: 0;
+  font: inherit;
+  text-align: center;
+  border: 2px solid #809aa4;
+  border-radius: 0.4rem;
+}
+.chemical-state-entry {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-inline: 0.2rem;
+}
+.chemical-state {
+  width: 4.5rem !important;
+  min-width: 0;
+  padding: 0.25rem 0.2rem !important;
+  margin: 0;
+  font: inherit;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #809aa4;
+  border-radius: 0.4rem;
+}
+.chemical-state:focus,
+.chemical-coefficient:focus {
+  outline: 3px solid #a9ded8;
+  outline-offset: 2px;
+}
+.chemical-state[data-response-status='correct'] {
+  border-color: #268b62;
+}
+.chemical-state[data-response-status='incorrect'] {
+  border-color: #ba4f51;
+}
+.chemical-entry-help {
+  text-align: center;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.9rem;
+}
+.chemical-entry-notation sup {
+  top: -0.3em;
+  transform-origin: center top;
+}
+.chemical-species {
+  gap: 0.35rem;
+}
+.chemical-result-correct {
+  color: var(--positive, #54c991);
+}
+.chemical-result-incorrect {
+  color: var(--error, #ec7070);
+}
+.chemical-species-formula sub {
+  font-size: 0.75em;
+}
+@media (max-width: 480px) {
+  .chemical-equation {
+    gap: 0.45rem;
+  }
+  .chemical-coefficient {
+    width: 3.7rem !important;
+  }
+}
+@media (forced-colors: active) {
+  .chemical-entry-viewport {
+    background: Canvas;
+    color: CanvasText;
+  }
+  .chemical-entry input {
+    caret-color: CanvasText;
+  }
+}
+@media print {
+  .chemical-entry-viewport {
+    background: white;
+    color: black;
+  }
+  .chemical-entry input[data-chemical-entry] {
+    background: transparent !important;
+    color: transparent !important;
+  }
+}
+
+.chemical-worked-answer {
+  text-align: center;
+}
+.chemical-worked-answer th,
+.chemical-worked-answer td {
+  text-align: center;
+}
+.chemical-equation-row + .chemical-equation-row {
+  margin-top: 2rem;
+}
+.chemical-equation-row h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.chemical-coefficient-mirror {
+  min-width: 1ch;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}

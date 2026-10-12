@@ -1,3 +1,5 @@
+import { questionLookupInput, questionDisplayCode } from '../content/question-display-identity.ts';
+import { gradedActivityId } from '../foundation/graded-question.ts';
 import { useEffect, useMemo, useState, useRef } from 'react';
 import type {
   ActivityId,
@@ -106,7 +108,7 @@ export function TeacherPicker({
           initialHandled.current = true;
           if (initialRef.activityId !== activityId) {
             pendingRef.current = initialRef;
-            onActivity(initialRef.activityId);
+            onActivity(gradedActivityId(initialRef.activityId));
           }
           setKey(
             result.find(
@@ -120,7 +122,7 @@ export function TeacherPicker({
         if (initialCode && !initialHandled.current) {
           initialHandled.current = true;
           for (const item of registrations) {
-            const ref = (await item.provider()).resolveLink(initialCode);
+            const ref = (await item.provider()).resolveLink(questionLookupInput(course, item.id, initialCode));
             if (ref) {
               if (item.id !== activityId) {
                 pendingRef.current = ref;
@@ -166,14 +168,14 @@ export function TeacherPicker({
         (!initialGroup || search !== initialGroup || row.group === initialGroup) &&
         (level === 'all' || String(row.ref.level) === level) &&
         words.every((word) =>
-          (row.label + ' ' + row.group + ' ' + row.ref.questionId).toLowerCase().includes(word),
+          (row.label + ' ' + row.group + ' ' + row.ref.questionId + ' ' + questionDisplayCode({course, activityId: row.ref.activityId, questionId: row.ref.questionId})).toLowerCase().includes(word),
         ),
     );
   }, [rows, search, level, initialGroup]);
   const lookup = async () => {
     setError('');
     for (const item of registrations) {
-      const ref = (await item.provider()).resolveLink(code);
+      const ref = (await item.provider()).resolveLink(questionLookupInput(course, item.id, code));
       if (ref) {
         setSearch('');
         if (item.id !== activityId) {

@@ -32,7 +32,7 @@ export function routeView(url: URL, course: Course): PlatformView {
     return value as PlatformView;
   if (
     course === 'alevel' &&
-    (query.get('olympiad') === 'c3l6' || ['alevel/c3l6-organic-reactions','alevel/olympiad-2011-q4'].includes(query.get('activity') || ''))
+    (query.get('olympiad') === 'c3l6' || ['alevel/c3l6-organic-reactions','alevel/olympiad-2011-q4','alevel/maxwells-demon'].includes(query.get('activity') || ''))
   )
     return 'olympiad';
   if (
@@ -78,6 +78,7 @@ export function validateLandingLaunch(
       ? { id: request.id, kind: 'practice', target, selection: request.selection, fresh: true }
       : null;
   }
+  if (request.kind !== 'revision') return null;
   const gemIds = [...new Set(request.gemIds)].sort();
   if (!gemIds.length || gemIds.some((id) => !targetsFor(id).length)) return null;
   return {

@@ -1,0 +1,6842 @@
+[
+  {
+    "id": "igcse-recall-012",
+    "course": "igcse",
+    "prompt": "What is the state symbol for something dissolved in water?",
+    "answer": "(aq)",
+    "gemIds": [
+      "fourth-1-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-012 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "(aq)",
+      "aq"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-007",
+    "course": "igcse",
+    "prompt": "What is the name for the change of state from a solid to a liquid?",
+    "answer": "melting",
+    "gemIds": [
+      "fourth-1-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-007 approved"
+      }
+    ],
+    "accepted": [
+      "melting"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-008",
+    "course": "igcse",
+    "prompt": "What is the name for the change of state from a liquid to a gas?",
+    "answer": "Evaporation",
+    "gemIds": [
+      "fourth-1-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-008 approved"
+      }
+    ],
+    "accepted": [
+      "Evaporation",
+      "Boiling",
+      "Vaporisation",
+      "Vaporization"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-009",
+    "course": "igcse",
+    "prompt": "What is the name for the change of state from a gas to a liquid?",
+    "answer": "condensation",
+    "gemIds": [
+      "fourth-1-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-009 approved"
+      }
+    ],
+    "accepted": [
+      "condensation",
+      "condensing"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-010",
+    "course": "igcse",
+    "prompt": "What is the name for the change of state from a liquid to a solid?",
+    "answer": "freezing",
+    "gemIds": [
+      "fourth-1-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-010 approved"
+      }
+    ],
+    "accepted": [
+      "freezing"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-011",
+    "course": "igcse",
+    "prompt": "What is the name for the change of state from a solid to a gas?",
+    "answer": "Sublimation",
+    "gemIds": [
+      "fourth-1-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-011 approved"
+      }
+    ],
+    "accepted": [
+      "Sublimation"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-013",
+    "course": "igcse",
+    "prompt": "What is the name for the liquid in which a solute dissolves?",
+    "answer": "solvent",
+    "gemIds": [
+      "fourth-1-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-013 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "solvent"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-014",
+    "course": "igcse",
+    "prompt": "What is the name for the solid that dissolves in a liquid?",
+    "answer": "Solute",
+    "gemIds": [
+      "fourth-1-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-014 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 014"
+      }
+    ],
+    "accepted": [
+      "solute"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "responseFormat": "name-solute"
+  },
+  {
+    "id": "igcse-recall-015",
+    "course": "igcse",
+    "prompt": "What is the name for a solute dissolved in a solvent?",
+    "answer": "Solution",
+    "gemIds": [
+      "fourth-1-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-015 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 015"
+      }
+    ],
+    "accepted": [
+      "solution"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "responseFormat": "name-solution"
+  },
+  {
+    "id": "igcse-recall-016",
+    "course": "igcse",
+    "prompt": "Complete the definition of a saturated solution.",
+    "answer": "Amount of solute: maximum\nTemperature: a given temperature",
+    "gemIds": [
+      "fourth-1-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-016 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 016"
+      }
+    ],
+    "accepted": [
+      "A solution containing the maximum amount of dissolved solute at a given temperature"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "fields": [
+      {
+        "id": "amount",
+        "label": "Amount of solute",
+        "answer": "maximum",
+        "accepted": [
+          "maximum",
+          "the maximum",
+          "maximum possible"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "temperature",
+        "label": "Temperature",
+        "answer": "a given temperature",
+        "accepted": [
+          "a given temperature",
+          "given temperature",
+          "a particular temperature",
+          "a fixed temperature",
+          "a specific temperature"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "sentenceTokens": [
+      "A solution with the ",
+      {
+        "fieldId": "amount"
+      },
+      " amount of solute dissolved in it at ",
+      {
+        "fieldId": "temperature"
+      },
+      "."
+    ],
+    "responseFormat": "saturated-sentence-gaps",
+    "answerGroups": [
+      {
+        "id": "amount",
+        "label": "Amount of solute",
+        "answer": "maximum",
+        "accepted": [
+          "maximum",
+          "the maximum",
+          "maximum possible"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "temperature",
+        "label": "Temperature",
+        "answer": "a given temperature",
+        "accepted": [
+          "a given temperature",
+          "given temperature",
+          "a particular temperature",
+          "a fixed temperature",
+          "a specific temperature"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ]
+  },
+  {
+    "id": "igcse-recall-001",
+    "course": "igcse",
+    "prompt": "What is the relative mass of a proton?",
+    "answer": "1",
+    "gemIds": [
+      "fourth-2-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-001 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 001"
+      }
+    ],
+    "accepted": [
+      "1"
+    ],
+    "entry": {
+      "kind": "numeric",
+      "unit": ""
+    },
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "igcse-recall-002",
+    "course": "igcse",
+    "prompt": "What is the relative mass of a neutron?",
+    "answer": "1",
+    "gemIds": [
+      "fourth-2-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-002 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 002"
+      }
+    ],
+    "accepted": [
+      "1"
+    ],
+    "entry": {
+      "kind": "numeric",
+      "unit": ""
+    },
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "igcse-recall-003",
+    "course": "igcse",
+    "prompt": "What is the approximate relative mass of an electron? Give a fraction, or round to a whole number.",
+    "answer": "1/2000",
+    "gemIds": [
+      "fourth-2-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-003 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "1/2000",
+      "1/1840",
+      "0"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        0.0005,
+        0.0005434782608695652,
+        0
+      ]
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": ""
+    }
+  },
+  {
+    "id": "igcse-recall-004",
+    "course": "igcse",
+    "prompt": "What is the relative charge on a proton? Include its sign.",
+    "answer": "+1",
+    "gemIds": [
+      "fourth-2-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-004 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 004"
+      }
+    ],
+    "accepted": [
+      "+1",
+      "1+"
+    ],
+    "matching": {
+      "kind": "text"
+    },
+    "entry": {
+      "kind": "signed-charge",
+      "requireSign": true
+    },
+    "responseFormat": "explicit-signed-proton-charge"
+  },
+  {
+    "id": "igcse-recall-005",
+    "course": "igcse",
+    "prompt": "What is the relative charge on an electron?",
+    "answer": "-1",
+    "gemIds": [
+      "fourth-2-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-005 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "-1"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        -1
+      ]
+    },
+    "entry": {
+      "kind": "signed-charge",
+      "requireSign": true
+    }
+  },
+  {
+    "id": "igcse-recall-006",
+    "course": "igcse",
+    "prompt": "What is the relative charge on a neutron?",
+    "answer": "0",
+    "gemIds": [
+      "fourth-2-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-006 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "0"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        0
+      ]
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": ""
+    }
+  },
+  {
+    "id": "igcse-recall-064",
+    "course": "igcse",
+    "prompt": "Give three observations when lithium reacts with water.",
+    "answer": "Observation 1: Fizzing\nObservation 2: Moves around on the water surface\nObservation 3: Shrinks and disappears",
+    "gemIds": [
+      "fourth-2-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-064 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 064"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Observation 1",
+        "answer": "Fizzing",
+        "accepted": [
+          "Fizzing",
+          "Bubbles",
+          "Bubbling",
+          "Fizzes",
+          "Effervescence",
+          "Bubbles form",
+          "Gas bubbles form"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Observation 2",
+        "answer": "Moves around on the water surface",
+        "accepted": [
+          "Moves around on the water surface",
+          "Moving on the water surface",
+          "Moves on the surface",
+          "Moves around on water",
+          "Moves around on the water",
+          "Solid moves around on the water",
+          "Lithium moves around on the water",
+          "Moving on water surface"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Observation 3",
+        "answer": "Shrinks and disappears",
+        "accepted": [
+          "Shrinks and disappears",
+          "Shrinking",
+          "Shrinks",
+          "Disappears",
+          "Disappearing",
+          "Solid disappears",
+          "Solid appears to disappear",
+          "Lithium appears to disappear",
+          "Gets smaller",
+          "Shrinks/disappears"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Observation 1",
+        "answer": "Fizzing",
+        "accepted": [
+          "Fizzing",
+          "Bubbles",
+          "Bubbling",
+          "Fizzes",
+          "Effervescence",
+          "Bubbles form",
+          "Gas bubbles form"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Observation 2",
+        "answer": "Moves around on the water surface",
+        "accepted": [
+          "Moves around on the water surface",
+          "Moving on the water surface",
+          "Moves on the surface",
+          "Moves around on water",
+          "Moves around on the water",
+          "Solid moves around on the water",
+          "Lithium moves around on the water",
+          "Moving on water surface"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Observation 3",
+        "answer": "Shrinks and disappears",
+        "accepted": [
+          "Shrinks and disappears",
+          "Shrinking",
+          "Shrinks",
+          "Disappears",
+          "Disappearing",
+          "Solid disappears",
+          "Solid appears to disappear",
+          "Lithium appears to disappear",
+          "Gets smaller",
+          "Shrinks/disappears"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-065",
+    "course": "igcse",
+    "prompt": "When sodium and lithium react with water under comparable conditions, what additional observation is typical of sodium?",
+    "answer": "Solid melts into a ball",
+    "gemIds": [
+      "fourth-2-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-065 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 065"
+      }
+    ],
+    "accepted": [
+      "Solid melts into a ball",
+      "Sodium forms a molten ball",
+      "Sodium melts into a ball",
+      "Metal forms a molten ball",
+      "Solid melts to form a ball",
+      "Solid melts to form ball",
+      "Melts to form a ball",
+      "Melts into a ball",
+      "Forms a molten ball"
+    ],
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "melts",
+          "molten"
+        ]
+      ],
+      "reject": [
+        "not",
+        "no",
+        "never",
+        "does not",
+        "solid ball"
+      ],
+      "patterns": [
+        "^(?:(?:the )?(?:solid|sodium|metal) )?(?:melts (?:into (?:a )?ball|to form (?:a )?ball)|forms (?:a )?molten ball)$"
+      ]
+    },
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-066",
+    "course": "igcse",
+    "prompt": "When potassium reacts with water, what characteristic flame colour distinguishes it from sodium?",
+    "answer": "Lilac flame",
+    "gemIds": [
+      "fourth-2-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-066 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 066"
+      }
+    ],
+    "accepted": [
+      "Lilac",
+      "Purple",
+      "Purple flame",
+      "Lilac flame"
+    ],
+    "matching": {
+      "kind": "text"
+    },
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-067",
+    "course": "igcse",
+    "prompt": "What state is fluorine at room temperature?",
+    "answer": "Gas",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-067 approved"
+      }
+    ],
+    "accepted": [
+      "Gas",
+      "Gaseous"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-068",
+    "course": "igcse",
+    "prompt": "What colour is fluorine at room temperature?",
+    "answer": "Yellow",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-068 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Yellow"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-069",
+    "course": "igcse",
+    "prompt": "What state is chlorine at room temperature?",
+    "answer": "Gas",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-069 approved"
+      }
+    ],
+    "accepted": [
+      "Gas",
+      "Gaseous"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-070",
+    "course": "igcse",
+    "prompt": "What colour is chlorine at room temperature?",
+    "answer": "Green",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-070 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Green"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-071",
+    "course": "igcse",
+    "prompt": "What state is bromine at room temperature?",
+    "answer": "Liquid",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-071 approved"
+      }
+    ],
+    "accepted": [
+      "Liquid"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-072",
+    "course": "igcse",
+    "prompt": "What colour is bromine at room temperature?",
+    "answer": "Red-brown",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-072 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Red-brown",
+      "Brown"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-073",
+    "course": "igcse",
+    "prompt": "What state is iodine at room temperature?",
+    "answer": "Solid",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-073 approved"
+      }
+    ],
+    "accepted": [
+      "Solid"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-074",
+    "course": "igcse",
+    "prompt": "What colour is iodine at room temperature?",
+    "answer": "Grey",
+    "gemIds": [
+      "fourth-2-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-074 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Grey",
+      "Gray",
+      "Grey-black",
+      "Dark grey"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-021",
+    "course": "igcse",
+    "prompt": "Define the term ionic bond.",
+    "answer": "The electrostatic attraction between oppositely charged ions",
+    "gemIds": [
+      "fourth-3-1",
+      "lower-6-3",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-021 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 021"
+      }
+    ],
+    "accepted": [
+      "The electrostatic attraction between oppositely charged ions"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "electrostatic attraction",
+          "electrostatic force",
+          "electrostatic forces"
+        ],
+        [
+          "oppositely charged ions",
+          "positive ions and negative ions",
+          "negative ions and positive ions",
+          "positive ion and a negative ion",
+          "negative ion and a positive ion",
+          "positive ion and negative ion",
+          "negative ion and positive ion",
+          "cations and anions",
+          "anions and cations"
+        ]
+      ],
+      "reject": [
+        "repulsion",
+        "repel",
+        "neutrons",
+        "protons and electrons",
+        "same charge",
+        "same charges",
+        "same charged",
+        "not",
+        "no",
+        "never",
+        "only nuclei",
+        "only electrons",
+        "nuclei",
+        "shared",
+        "delocalised",
+        "delocalized",
+        "electrons"
+      ],
+      "patterns": [
+        "^(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction) between (?:(?:two |2 )?oppositely charged ions|(?:a |the )?positive ion and (?:a |the )?negative ion|(?:a |the )?negative ion and (?:a |the )?positive ion|positive ions and negative ions|negative ions and positive ions|cations and anions|anions and cations)$",
+        "^(?:(?:two |2 )?oppositely charged ions|positive ions and negative ions|negative ions and positive ions|cations and anions|anions and cations) (?:have |experience |are held together by )(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction)$"
+      ]
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-022",
+    "course": "igcse",
+    "prompt": "What types of elements do ionic bonds usually form between?",
+    "answer": "a metal and a non-metal",
+    "gemIds": [
+      "fourth-3-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-022 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 022"
+      }
+    ],
+    "accepted": [
+      "a metal and a non-metal"
+    ],
+    "entry": {
+      "kind": "choice",
+      "options": [
+        {
+          "id": "two-metals",
+          "label": "2 metals"
+        },
+        {
+          "id": "two-non-metals",
+          "label": "2 non-metals"
+        },
+        {
+          "id": "metal-non-metal",
+          "label": "a metal and a non-metal"
+        }
+      ]
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "responseFormat": "element-types-choice"
+  },
+  {
+    "id": "igcse-recall-027",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of a nitrate ion?",
+    "answer": "NO₃⁻",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-3",
+      "lower-8-3",
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-027 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 027"
+      }
+    ],
+    "accepted": [
+      "NO3^-",
+      "NO3-",
+      "NO₃⁻",
+      "NO3 -1",
+      "NO3^1-",
+      "NO31-",
+      "NO₃¹⁻"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 1
+    }
+  },
+  {
+    "id": "igcse-recall-028",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of a carbonate ion?",
+    "answer": "CO₃²⁻",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-3",
+      "lower-8-3",
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-028 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 028"
+      }
+    ],
+    "accepted": [
+      "CO3^2-",
+      "CO32-",
+      "CO₃²⁻",
+      "CO3 -2"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 1
+    }
+  },
+  {
+    "id": "igcse-recall-029",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of an ammonium ion?",
+    "answer": "NH₄⁺",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-2",
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-029 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 029"
+      }
+    ],
+    "accepted": [
+      "NH4^+",
+      "NH4+",
+      "NH₄⁺",
+      "NH4 +1",
+      "NH4^1+",
+      "NH41+",
+      "NH₄¹⁺"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 1
+    }
+  },
+  {
+    "id": "igcse-recall-030",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of a zinc ion?",
+    "answer": "Zn²⁺",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-030 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 030"
+      }
+    ],
+    "accepted": [
+      "Zn^2+",
+      "Zn2+",
+      "Zn²⁺",
+      "Zn +2"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 0
+    }
+  },
+  {
+    "id": "igcse-recall-031",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of a silver ion?",
+    "answer": "Ag⁺",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-3",
+      "lower-8-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-031 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 031"
+      }
+    ],
+    "accepted": [
+      "Ag^+",
+      "Ag+",
+      "Ag⁺",
+      "Ag +1",
+      "Ag^1+",
+      "Ag1+",
+      "Ag¹⁺"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 0
+    }
+  },
+  {
+    "id": "igcse-recall-032",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of a hydroxide ion?",
+    "answer": "OH⁻",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-2",
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-032 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 032"
+      }
+    ],
+    "accepted": [
+      "OH^-",
+      "OH-",
+      "OH⁻",
+      "OH -1",
+      "OH^1-",
+      "OH1-",
+      "OH¹⁻"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 0
+    }
+  },
+  {
+    "id": "igcse-recall-033",
+    "course": "igcse",
+    "prompt": "What is the formula and charge of a sulphate ion?",
+    "answer": "SO₄²⁻",
+    "gemIds": [
+      "fourth-3-1",
+      "fourth-4-3",
+      "lower-8-3",
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-033 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 033"
+      }
+    ],
+    "accepted": [
+      "SO4^2-",
+      "SO42-",
+      "SO₄²⁻",
+      "SO4 -2"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "ion",
+      "atomCountDigits": 1
+    }
+  },
+  {
+    "id": "igcse-recall-017",
+    "course": "igcse",
+    "prompt": "Define the term covalent bond.",
+    "answer": "The electrostatic attraction between two nuclei and a shared pair of electrons",
+    "gemIds": [
+      "fourth-3-2",
+      "lower-6-1",
+      "lower-6-2",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-017 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 017"
+      }
+    ],
+    "accepted": [
+      "The electrostatic attraction between two nuclei and a shared pair of electrons"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "electrostatic attraction",
+          "electrostatic force",
+          "electrostatic forces"
+        ],
+        [
+          "two nuclei",
+          "2 nuclei",
+          "two positive nuclei",
+          "2 positive nuclei",
+          "nuclei of two atoms",
+          "nuclei of 2 atoms"
+        ],
+        [
+          "shared pair",
+          "pair of shared",
+          "two shared electrons",
+          "2 shared electrons"
+        ]
+      ],
+      "reject": [
+        "repulsion",
+        "repel",
+        "neutrons",
+        "protons and electrons",
+        "same charge",
+        "same charges",
+        "same charged",
+        "not",
+        "no",
+        "never",
+        "only nuclei",
+        "only electrons",
+        "delocalised",
+        "delocalized",
+        "ions"
+      ],
+      "patterns": [
+        "^(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction) between (?:(?:two|2)(?: positive| positively charged)? nuclei|(?:the )?nuclei of (?:two|2) atoms) and (?:(?:a |the )?shared pair of (?:negative |negatively charged )?electrons|(?:a |the )?pair of shared (?:negative |negatively charged )?electrons|(?:two|2) shared electrons)$",
+        "^(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction) between (?:(?:a |the )?shared pair of (?:negative |negatively charged )?electrons|(?:a |the )?pair of shared (?:negative |negatively charged )?electrons|(?:two|2) shared electrons) and (?:(?:two|2)(?: positive| positively charged)? nuclei|(?:the )?nuclei of (?:two|2) atoms)$",
+        "^(?:(?:two|2)(?: positive| positively charged)? nuclei|(?:the )?nuclei of (?:two|2) atoms) and (?:(?:a |the )?shared pair of (?:negative |negatively charged )?electrons|(?:a |the )?pair of shared (?:negative |negatively charged )?electrons|(?:two|2) shared electrons) (?:have |experience |are held together by )(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction)$",
+        "^(?:(?:a |the )?shared pair of (?:negative |negatively charged )?electrons|(?:a |the )?pair of shared (?:negative |negatively charged )?electrons|(?:two|2) shared electrons) and (?:(?:two|2)(?: positive| positively charged)? nuclei|(?:the )?nuclei of (?:two|2) atoms) (?:have |experience |are held together by )(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction)$"
+      ]
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-018",
+    "course": "igcse",
+    "prompt": "What types of elements do covalent bonds usually form between?",
+    "answer": "2 non-metals",
+    "gemIds": [
+      "fourth-3-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-018 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 018"
+      }
+    ],
+    "accepted": [
+      "2 non-metals"
+    ],
+    "entry": {
+      "kind": "choice",
+      "options": [
+        {
+          "id": "two-metals",
+          "label": "2 metals"
+        },
+        {
+          "id": "two-non-metals",
+          "label": "2 non-metals"
+        },
+        {
+          "id": "metal-non-metal",
+          "label": "a metal and a non-metal"
+        }
+      ]
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "responseFormat": "element-types-choice"
+  },
+  {
+    "id": "igcse-recall-026",
+    "course": "igcse",
+    "prompt": "What is the formula of ammonia?",
+    "answer": "NH3",
+    "gemIds": [
+      "fourth-3-2",
+      "fourth-16-1",
+      "fourth-16-2",
+      "fourth-4-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-026 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 026"
+      }
+    ],
+    "accepted": [
+      "NH3",
+      "NH₃"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "molecular"
+    }
+  },
+  {
+    "id": "igcse-recall-043",
+    "course": "igcse",
+    "prompt": "How do you test for carbon dioxide, and what is the positive result?",
+    "answer": "Test: Bubble the gas through limewater\nResult: Limewater turns cloudy",
+    "gemIds": [
+      "fourth-4-1",
+      "fourth-4-3",
+      "lower-8-3",
+      "upper-11-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-043 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 043"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Bubble the gas through limewater",
+        "accepted": [
+          "Bubble the gas through limewater",
+          "Bubble through limewater",
+          "Bubble carbon dioxide through limewater",
+          "Pass the gas through limewater",
+          "Pass through limewater",
+          "Pass the gas through calcium hydroxide solution",
+          "Bubble through calcium hydroxide solution"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        },
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "bubble",
+              "pass"
+            ],
+            [
+              "limewater",
+              "calcium hydroxide solution"
+            ]
+          ],
+          "reject": [
+            "not",
+            "no",
+            "never",
+            "acid",
+            "litmus"
+          ],
+          "patterns": [
+            "^(?:bubble|pass) (?:(?:the |a )?gas |(?:the )?carbon dioxide |it )?through (?:the |some )?(?:limewater|calcium hydroxide solution)$"
+          ]
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Limewater turns cloudy",
+        "accepted": [
+          "Limewater turns cloudy",
+          "Goes cloudy",
+          "Turns cloudy",
+          "Goes milky",
+          "Turns milky",
+          "Limewater goes cloudy",
+          "Limewater goes milky",
+          "White precipitate forms in the limewater"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Bubble the gas through limewater",
+        "accepted": [
+          "Bubble the gas through limewater",
+          "Bubble through limewater",
+          "Bubble carbon dioxide through limewater",
+          "Pass the gas through limewater",
+          "Pass through limewater",
+          "Pass the gas through calcium hydroxide solution",
+          "Bubble through calcium hydroxide solution"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        },
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "bubble",
+              "pass"
+            ],
+            [
+              "limewater",
+              "calcium hydroxide solution"
+            ]
+          ],
+          "reject": [
+            "not",
+            "no",
+            "never",
+            "acid",
+            "litmus"
+          ],
+          "patterns": [
+            "^(?:bubble|pass) (?:(?:the |a )?gas |(?:the )?carbon dioxide |it )?through (?:the |some )?(?:limewater|calcium hydroxide solution)$"
+          ]
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Limewater turns cloudy",
+        "accepted": [
+          "Limewater turns cloudy",
+          "Goes cloudy",
+          "Turns cloudy",
+          "Goes milky",
+          "Turns milky",
+          "Limewater goes cloudy",
+          "Limewater goes milky",
+          "White precipitate forms in the limewater"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-048",
+    "course": "igcse",
+    "prompt": "How do you test for hydrogen gas, and what is the positive result?",
+    "answer": "Test: Hold a lit splint at the mouth of the test tube\nResult: Squeaky pop",
+    "gemIds": [
+      "fourth-4-1",
+      "lower-8-3",
+      "upper-11-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-048 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 048"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Hold a lit splint at the mouth of the test tube",
+        "accepted": [
+          "Hold a lit splint at the mouth of the test tube",
+          "Lit splint",
+          "Lighted splint",
+          "Burning splint",
+          "Use a lit splint",
+          "Use a lighted splint",
+          "Bring a lit splint to the gas",
+          "Put a lit splint at the mouth of the test tube",
+          "Hold a lighted splint at the mouth of the test tube"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        },
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "lit splint",
+              "lighted splint",
+              "burning splint"
+            ]
+          ],
+          "reject": [
+            "glowing",
+            "unlit",
+            "not",
+            "no",
+            "never",
+            "damp"
+          ],
+          "patterns": [
+            "^(?:(?:use|hold|bring|put|place|insert) (?:a |the )?)?(?:lit|lighted|burning) splint(?: (?:at|to|into) (?:(?:the |a )?mouth of (?:the |a )?test tube|(?:the |a )?gas|(?:the |a )?test tube))?$"
+          ]
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Squeaky pop",
+        "accepted": [
+          "Squeaky pop",
+          "A squeaky pop",
+          "Pops with a squeaky pop",
+          "A pop",
+          "Pop",
+          "Popping sound"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Hold a lit splint at the mouth of the test tube",
+        "accepted": [
+          "Hold a lit splint at the mouth of the test tube",
+          "Lit splint",
+          "Lighted splint",
+          "Burning splint",
+          "Use a lit splint",
+          "Use a lighted splint",
+          "Bring a lit splint to the gas",
+          "Put a lit splint at the mouth of the test tube",
+          "Hold a lighted splint at the mouth of the test tube"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        },
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "lit splint",
+              "lighted splint",
+              "burning splint"
+            ]
+          ],
+          "reject": [
+            "glowing",
+            "unlit",
+            "not",
+            "no",
+            "never",
+            "damp"
+          ],
+          "patterns": [
+            "^(?:(?:use|hold|bring|put|place|insert) (?:a |the )?)?(?:lit|lighted|burning) splint(?: (?:at|to|into) (?:(?:the |a )?mouth of (?:the |a )?test tube|(?:the |a )?gas|(?:the |a )?test tube))?$"
+          ]
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Squeaky pop",
+        "accepted": [
+          "Squeaky pop",
+          "A squeaky pop",
+          "Pops with a squeaky pop",
+          "A pop",
+          "Pop",
+          "Popping sound"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-052",
+    "course": "igcse",
+    "prompt": "How do you test for ammonia, and what is the positive result?",
+    "answer": "Test: Damp red litmus paper\nResult: Turns blue",
+    "gemIds": [
+      "fourth-4-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-052 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Damp red litmus paper",
+        "accepted": [
+          "Damp red litmus paper"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Damp red litmus paper"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Turns blue",
+        "accepted": [
+          "Turns blue"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Turns blue"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Damp red litmus paper",
+        "accepted": [
+          "Damp red litmus paper"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Damp red litmus paper"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Turns blue",
+        "accepted": [
+          "Turns blue"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Turns blue"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-058",
+    "course": "igcse",
+    "prompt": "How do you test for oxygen gas, and what is the positive result?",
+    "answer": "Test: Glowing splint\nResult: Relights",
+    "gemIds": [
+      "fourth-4-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-058 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Glowing splint",
+        "accepted": [
+          "Glowing splint"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Glowing splint"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Relights",
+        "accepted": [
+          "Relights"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Relights"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Glowing splint",
+        "accepted": [
+          "Glowing splint"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Glowing splint"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Relights",
+        "accepted": [
+          "Relights"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Relights"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-059",
+    "course": "igcse",
+    "prompt": "How do you test for chlorine gas, and what is the positive result?",
+    "answer": "Test: Damp blue litmus paper\nResult: Turns red then bleaches white",
+    "gemIds": [
+      "fourth-4-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-059 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 059"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Damp blue litmus paper",
+        "accepted": [
+          "Damp blue litmus paper"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Damp blue litmus paper"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Turns red then bleaches white",
+        "accepted": [
+          "Turns red then bleaches white",
+          "Bleaches white",
+          "Turns white",
+          "Bleached white",
+          "Litmus bleaches white"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Damp blue litmus paper",
+        "accepted": [
+          "Damp blue litmus paper"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Damp blue litmus paper"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Turns red then bleaches white",
+        "accepted": [
+          "Turns red then bleaches white",
+          "Bleaches white",
+          "Turns white",
+          "Bleached white",
+          "Litmus bleaches white"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-044",
+    "course": "igcse",
+    "prompt": "How do you test for iron(III) ions, and what is the positive result?",
+    "answer": "Test: Add sodium hydroxide\nResult: Brown precipitate",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-044 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH",
+          "Add sodium hydroxide solution"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Add sodium hydroxide",
+              "Add NaOH",
+              "Add sodium hydroxide solution"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Brown precipitate",
+        "accepted": [
+          "Brown precipitate",
+          "Brown ppt"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Brown precipitate",
+              "Brown ppt"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH",
+          "Add sodium hydroxide solution"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Add sodium hydroxide",
+              "Add NaOH",
+              "Add sodium hydroxide solution"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Brown precipitate",
+        "accepted": [
+          "Brown precipitate",
+          "Brown ppt"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Brown precipitate",
+              "Brown ppt"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-049",
+    "course": "igcse",
+    "prompt": "How do you test for calcium ions, and what is the positive result?",
+    "answer": "Test: Flame test\nResult: Orange-red flame",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-049 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 049"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Flame test"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Orange-red flame",
+        "accepted": [
+          "Orange-red flame",
+          "Orange red flame",
+          "Brick red flame",
+          "Brick-red flame",
+          "Orange red",
+          "Brick red"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Flame test"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Orange-red flame",
+        "accepted": [
+          "Orange-red flame",
+          "Orange red flame",
+          "Brick red flame",
+          "Brick-red flame",
+          "Orange red",
+          "Brick red"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-051",
+    "course": "igcse",
+    "prompt": "How do you test for lithium ions, and what is the positive result?",
+    "answer": "Test: Flame test\nResult: Red flame",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-051 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Red flame",
+        "accepted": [
+          "Red flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Red flame",
+        "accepted": [
+          "Red flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-053",
+    "course": "igcse",
+    "prompt": "How do you test for sodium ions, and what is the positive result?",
+    "answer": "Test: Flame test\nResult: Yellow flame",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-053 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Yellow flame",
+        "accepted": [
+          "Yellow flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Yellow flame",
+        "accepted": [
+          "Yellow flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-056",
+    "course": "igcse",
+    "prompt": "How do you test for ammonium ions, and what is the positive result?",
+    "answer": "Test (Part I): Add sodium hydroxide\nTest (Part II): Warm and test the gas with damp red litmus paper\nResult: Red to blue",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-056 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Warm and test the gas with damp red litmus paper",
+        "accepted": [
+          "Warm and test the gas with damp red litmus paper"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Red to blue",
+        "accepted": [
+          "Red to blue",
+          "Turns blue"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Warm and test the gas with damp red litmus paper",
+        "accepted": [
+          "Warm and test the gas with damp red litmus paper"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Red to blue",
+        "accepted": [
+          "Red to blue",
+          "Turns blue"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-060",
+    "course": "igcse",
+    "prompt": "How do you test for iron(II) ions, and what is the positive result?",
+    "answer": "Test: Add sodium hydroxide\nResult: Green precipitate",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-060 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH",
+          "Add sodium hydroxide solution"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Green precipitate",
+        "accepted": [
+          "Green precipitate",
+          "Green ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH",
+          "Add sodium hydroxide solution"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Green precipitate",
+        "accepted": [
+          "Green precipitate",
+          "Green ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-062",
+    "course": "igcse",
+    "prompt": "Give two tests for copper(II) ions and the positive result for each.",
+    "answer": "Test 1: Flame test\nResult 1: Green flame\nTest 2: Add sodium hydroxide\nResult 2: Blue precipitate",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-062 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 062"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test 1",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result 1",
+        "answer": "Green flame",
+        "accepted": [
+          "Green flame",
+          "Blue-green flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Test 2",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Result 2",
+        "answer": "Blue precipitate",
+        "accepted": [
+          "Blue precipitate",
+          "Blue ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test 1",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result 1",
+        "answer": "Green flame",
+        "accepted": [
+          "Green flame",
+          "Blue-green flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Test 2",
+        "answer": "Add sodium hydroxide",
+        "accepted": [
+          "Add sodium hydroxide",
+          "Add NaOH"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Result 2",
+        "answer": "Blue precipitate",
+        "accepted": [
+          "Blue precipitate",
+          "Blue ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "pairs",
+    "responsePairs": [
+      {
+        "id": "test-result-1",
+        "fieldIds": [
+          "part-1",
+          "part-2"
+        ]
+      },
+      {
+        "id": "test-result-2",
+        "fieldIds": [
+          "part-3",
+          "part-4"
+        ]
+      }
+    ],
+    "answerPairs": [
+      {
+        "id": "flame",
+        "fields": [
+          {
+            "id": "part-1",
+            "label": "Test 1",
+            "answer": "Flame test",
+            "accepted": [
+              "Flame test"
+            ],
+            "entry": {
+              "kind": "text"
+            }
+          },
+          {
+            "id": "part-2",
+            "label": "Result 1",
+            "answer": "Green flame",
+            "accepted": [
+              "Green flame",
+              "Blue-green flame"
+            ],
+            "entry": {
+              "kind": "text"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hydroxide",
+        "fields": [
+          {
+            "id": "part-3",
+            "label": "Test 2",
+            "answer": "Add sodium hydroxide",
+            "accepted": [
+              "Add sodium hydroxide",
+              "Add NaOH"
+            ],
+            "entry": {
+              "kind": "text"
+            }
+          },
+          {
+            "id": "part-4",
+            "label": "Result 2",
+            "answer": "Blue precipitate",
+            "accepted": [
+              "Blue precipitate",
+              "Blue ppt"
+            ],
+            "entry": {
+              "kind": "text"
+            }
+          }
+        ]
+      }
+    ],
+    "pairCoverage": "all",
+    "responseFormat": "two-copper-test-result-tuples"
+  },
+  {
+    "id": "igcse-recall-063",
+    "course": "igcse",
+    "prompt": "How do you test for potassium ions, and what is the positive result?",
+    "answer": "Test: Flame test\nResult: Lilac flame",
+    "gemIds": [
+      "fourth-4-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-063 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Lilac flame",
+        "accepted": [
+          "Lilac flame",
+          "Purple flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Flame test",
+        "accepted": [
+          "Flame test"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Lilac flame",
+        "accepted": [
+          "Lilac flame",
+          "Purple flame"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-047",
+    "course": "igcse",
+    "prompt": "How do you test for sulphate ions, and what is the positive result?",
+    "answer": "Test (Part I): Add hydrochloric acid\nTest (Part II): Add barium chloride\nResult: White precipitate",
+    "gemIds": [
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-047 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add hydrochloric acid",
+        "accepted": [
+          "Add hydrochloric acid",
+          "Add HCl"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add barium chloride",
+        "accepted": [
+          "Add barium chloride",
+          "Add BaCl2"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "White precipitate",
+        "accepted": [
+          "White precipitate",
+          "White ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add hydrochloric acid",
+        "accepted": [
+          "Add hydrochloric acid",
+          "Add HCl"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add barium chloride",
+        "accepted": [
+          "Add barium chloride",
+          "Add BaCl2"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "White precipitate",
+        "accepted": [
+          "White precipitate",
+          "White ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-050",
+    "course": "igcse",
+    "prompt": "How do you test for bromide ions, and what is the positive result?",
+    "answer": "Test (Part I): Add nitric acid\nTest (Part II): Add silver nitrate\nResult: Cream precipitate",
+    "gemIds": [
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-050 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add nitric acid",
+        "accepted": [
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add silver nitrate",
+        "accepted": [
+          "Add silver nitrate",
+          "Add AgNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Cream precipitate",
+        "accepted": [
+          "Cream precipitate",
+          "Cream ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add nitric acid",
+        "accepted": [
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add silver nitrate",
+        "accepted": [
+          "Add silver nitrate",
+          "Add AgNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Cream precipitate",
+        "accepted": [
+          "Cream precipitate",
+          "Cream ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-054",
+    "course": "igcse",
+    "prompt": "How do you test for iodide ions, and what is the positive result?",
+    "answer": "Test (Part I): Add nitric acid\nTest (Part II): Add silver nitrate\nResult: Yellow precipitate",
+    "gemIds": [
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-054 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add nitric acid",
+        "accepted": [
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add silver nitrate",
+        "accepted": [
+          "Add silver nitrate",
+          "Add AgNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Yellow precipitate",
+        "accepted": [
+          "Yellow precipitate",
+          "Yellow ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add nitric acid",
+        "accepted": [
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add silver nitrate",
+        "accepted": [
+          "Add silver nitrate",
+          "Add AgNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Yellow precipitate",
+        "accepted": [
+          "Yellow precipitate",
+          "Yellow ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-055",
+    "course": "igcse",
+    "prompt": "How do you test for carbonate ions, and what is the positive result?",
+    "answer": "Test (Part I): Add hydrochloric acid\nTest (Part II): Bubble gas through limewater\nResult: Limewater turns cloudy",
+    "gemIds": [
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-055 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add hydrochloric acid",
+        "accepted": [
+          "Add hydrochloric acid",
+          "Add HCl",
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Bubble gas through limewater",
+        "accepted": [
+          "Bubble gas through limewater"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Limewater turns cloudy",
+        "accepted": [
+          "Limewater turns cloudy",
+          "Limewater turns milky",
+          "White precipitate forms in the limewater"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add hydrochloric acid",
+        "accepted": [
+          "Add hydrochloric acid",
+          "Add HCl",
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Bubble gas through limewater",
+        "accepted": [
+          "Bubble gas through limewater"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "Limewater turns cloudy",
+        "accepted": [
+          "Limewater turns cloudy",
+          "Limewater turns milky",
+          "White precipitate forms in the limewater"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-057",
+    "course": "igcse",
+    "prompt": "How do you test for chloride ions, and what is the positive result?",
+    "answer": "Test (Part I): Add nitric acid\nTest (Part II): Add silver nitrate\nResult: White precipitate",
+    "gemIds": [
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-057 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add nitric acid",
+        "accepted": [
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add silver nitrate",
+        "accepted": [
+          "Add silver nitrate",
+          "Add AgNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "White precipitate",
+        "accepted": [
+          "White precipitate",
+          "White ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test (Part I)",
+        "answer": "Add nitric acid",
+        "accepted": [
+          "Add nitric acid",
+          "Add HNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Test (Part II)",
+        "answer": "Add silver nitrate",
+        "accepted": [
+          "Add silver nitrate",
+          "Add AgNO3"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Result",
+        "answer": "White precipitate",
+        "accepted": [
+          "White precipitate",
+          "White ppt"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-045",
+    "course": "igcse",
+    "prompt": "How do you test for water, and what is the positive result?",
+    "answer": "Test: Add anhydrous copper sulphate\nResult: White to blue",
+    "gemIds": [
+      "fourth-4-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-045 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add anhydrous copper sulphate",
+        "accepted": [
+          "Add anhydrous copper sulphate",
+          "Add anhydrous copper sulfate"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Add anhydrous copper sulphate",
+              "Add anhydrous copper sulfate"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "White to blue",
+        "accepted": [
+          "White to blue"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "White to blue"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add anhydrous copper sulphate",
+        "accepted": [
+          "Add anhydrous copper sulphate",
+          "Add anhydrous copper sulfate"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "Add anhydrous copper sulphate",
+              "Add anhydrous copper sulfate"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "White to blue",
+        "accepted": [
+          "White to blue"
+        ],
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "White to blue"
+            ]
+          ]
+        },
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-019",
+    "course": "igcse",
+    "prompt": "What type of structure do covalently bonded substances with low melting points have?",
+    "answer": "Simple molecular",
+    "gemIds": [
+      "lower-6-1",
+      "fourth-3-2",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-019 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 019"
+      }
+    ],
+    "accepted": [
+      "Simple molecular"
+    ],
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "Simple molecular"
+        ]
+      ]
+    },
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-024",
+    "course": "igcse",
+    "prompt": "What is the name for the weak attraction between two molecules?",
+    "answer": "Intermolecular",
+    "gemIds": [
+      "lower-6-1",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-024 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 024"
+      }
+    ],
+    "accepted": [
+      "Intermolecular",
+      "Intermolecular forces",
+      "Intermolecular attraction",
+      "Intermolecular forces of attraction"
+    ],
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "Intermolecular"
+        ]
+      ]
+    },
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-020",
+    "course": "igcse",
+    "prompt": "What type of structure do covalently bonded substances with high melting points have?",
+    "answer": "Giant lattice",
+    "gemIds": [
+      "lower-6-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-020 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Giant lattice",
+      "Giant covalent lattice"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-023",
+    "course": "igcse",
+    "prompt": "Define the term metallic bond.",
+    "answer": "The electrostatic attraction between positive metal ions and delocalised electrons",
+    "gemIds": [
+      "lower-6-4",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-023 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 023"
+      }
+    ],
+    "accepted": [
+      "The electrostatic attraction between positive metal ions and delocalised electrons"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "electrostatic attraction",
+          "electrostatic force",
+          "electrostatic forces"
+        ],
+        [
+          "positive metal ions",
+          "positively charged metal ions",
+          "metal cations"
+        ],
+        [
+          "delocalised electrons",
+          "delocalized electrons",
+          "delocalised negative electrons",
+          "delocalized negative electrons",
+          "delocalised negatively charged electrons",
+          "delocalized negatively charged electrons"
+        ]
+      ],
+      "reject": [
+        "repulsion",
+        "repel",
+        "neutrons",
+        "protons and electrons",
+        "same charge",
+        "same charges",
+        "same charged",
+        "not",
+        "no",
+        "never",
+        "only nuclei",
+        "only electrons",
+        "shared pair",
+        "negative metal ions",
+        "negative ions",
+        "nuclei"
+      ],
+      "patterns": [
+        "^(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction) between (?:positive metal ions|positively charged metal ions|metal cations) and (?:(?:a |the )?sea of delocali[sz]ed electrons|delocali[sz]ed (?:negative |negatively charged )?electrons)$",
+        "^(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction) between (?:(?:a |the )?sea of delocali[sz]ed electrons|delocali[sz]ed (?:negative |negatively charged )?electrons) and (?:positive metal ions|positively charged metal ions|metal cations)$",
+        "^(?:positive metal ions|positively charged metal ions|metal cations) and (?:(?:a |the )?sea of delocali[sz]ed electrons|delocali[sz]ed (?:negative |negatively charged )?electrons) (?:have |experience |are held together by )(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction)$",
+        "^(?:(?:a |the )?sea of delocali[sz]ed electrons|delocali[sz]ed (?:negative |negatively charged )?electrons) and (?:positive metal ions|positively charged metal ions|metal cations) (?:have |experience |are held together by )(?:a |the )?(?:electrostatic attraction|electrostatic force of attraction|electrostatic forces of attraction|electrostatic forces|electrostatic force|strong electrostatic attraction)$"
+      ]
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-025a",
+    "course": "igcse",
+    "prompt": "What type of structure do solid ionic substances have?",
+    "answer": "Giant ionic lattice",
+    "accepted": [
+      "Giant lattice",
+      "Giant ionic lattice structure",
+      "Giant ionic structure"
+    ],
+    "gemIds": [
+      "lower-6-3",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-025 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): 025 split: 025a"
+      }
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    },
+    "responseFormat": "025a-single-structure"
+  },
+  {
+    "id": "igcse-recall-025b",
+    "course": "igcse",
+    "prompt": "What type of structure do solid metals have?",
+    "answer": "Giant metallic lattice",
+    "accepted": [
+      "Giant lattice",
+      "Giant metallic lattice structure",
+      "Giant metallic structure"
+    ],
+    "gemIds": [
+      "lower-6-4",
+      "lower-6-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-025 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): 025 split: 025b"
+      }
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    },
+    "responseFormat": "025b-single-structure"
+  },
+  {
+    "id": "igcse-recall-075",
+    "course": "igcse",
+    "prompt": "What colour is litmus in acidic conditions?",
+    "answer": "Red",
+    "gemIds": [
+      "lower-8-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-075 approved"
+      }
+    ],
+    "accepted": [
+      "Red"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-076",
+    "course": "igcse",
+    "prompt": "What colour is litmus in alkaline conditions?",
+    "answer": "Blue",
+    "gemIds": [
+      "lower-8-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-076 approved"
+      }
+    ],
+    "accepted": [
+      "Blue"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-077",
+    "course": "igcse",
+    "prompt": "What colour is phenolphthalein in acidic conditions?",
+    "answer": "Colourless",
+    "gemIds": [
+      "lower-8-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-077 approved"
+      }
+    ],
+    "accepted": [
+      "Colourless",
+      "Colorless"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-078",
+    "course": "igcse",
+    "prompt": "What colour is phenolphthalein in alkaline conditions?",
+    "answer": "Pink",
+    "gemIds": [
+      "lower-8-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-078 approved"
+      }
+    ],
+    "accepted": [
+      "Pink"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-079",
+    "course": "igcse",
+    "prompt": "What colour is methyl orange in acidic conditions?",
+    "answer": "Red",
+    "gemIds": [
+      "lower-8-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-079 approved"
+      }
+    ],
+    "accepted": [
+      "Red"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-080",
+    "course": "igcse",
+    "prompt": "What colour is methyl orange in alkaline conditions?",
+    "answer": "Yellow",
+    "gemIds": [
+      "lower-8-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-080 approved"
+      }
+    ],
+    "accepted": [
+      "Yellow"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-082",
+    "course": "igcse",
+    "prompt": "What is the solubility rule for common group 1 and ammonium salts in water?",
+    "answer": "Rule: Soluble\nExceptions: None in this classroom rule",
+    "gemIds": [
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-082 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 082"
+      }
+    ],
+    "fields": [
+      {
+        "id": "rule",
+        "label": "Solubility",
+        "answer": "Soluble",
+        "accepted": [
+          "Soluble"
+        ],
+        "entry": {
+          "kind": "choice",
+          "options": [
+            {
+              "id": "soluble",
+              "label": "Soluble"
+            },
+            {
+              "id": "insoluble",
+              "label": "Insoluble"
+            }
+          ]
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "exceptionCollection": {
+      "id": "exceptions",
+      "label": "State any exceptions",
+      "responsePrefix": "exception-",
+      "entry": {
+        "kind": "text"
+      },
+      "groups": []
+    },
+    "responseFormat": "solubility-choice-dynamic-exceptions"
+  },
+  {
+    "id": "igcse-recall-083",
+    "course": "igcse",
+    "prompt": "What is the solubility rule for nitrates in water?",
+    "answer": "Rule: Soluble\nExceptions: None in this classroom rule",
+    "gemIds": [
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-083 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 083"
+      }
+    ],
+    "fields": [
+      {
+        "id": "rule",
+        "label": "Solubility",
+        "answer": "Soluble",
+        "accepted": [
+          "Soluble"
+        ],
+        "entry": {
+          "kind": "choice",
+          "options": [
+            {
+              "id": "soluble",
+              "label": "Soluble"
+            },
+            {
+              "id": "insoluble",
+              "label": "Insoluble"
+            }
+          ]
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "exceptionCollection": {
+      "id": "exceptions",
+      "label": "State any exceptions",
+      "responsePrefix": "exception-",
+      "entry": {
+        "kind": "text"
+      },
+      "groups": []
+    },
+    "responseFormat": "solubility-choice-dynamic-exceptions"
+  },
+  {
+    "id": "igcse-recall-084",
+    "course": "igcse",
+    "prompt": "State the solubility rule for chlorides in water.",
+    "answer": "Rule: Soluble\nExceptions: Silver; Lead",
+    "gemIds": [
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-084 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 084"
+      }
+    ],
+    "fields": [
+      {
+        "id": "rule",
+        "label": "Solubility",
+        "answer": "Soluble",
+        "accepted": [
+          "Soluble"
+        ],
+        "entry": {
+          "kind": "choice",
+          "options": [
+            {
+              "id": "soluble",
+              "label": "Soluble"
+            },
+            {
+              "id": "insoluble",
+              "label": "Insoluble"
+            }
+          ]
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "exceptionCollection": {
+      "id": "exceptions",
+      "label": "State any exceptions",
+      "responsePrefix": "exception-",
+      "entry": {
+        "kind": "text"
+      },
+      "groups": [
+        {
+          "id": "part-2",
+          "label": "Exception 1",
+          "answer": "Silver",
+          "accepted": [
+            "Silver",
+            "Silver chloride",
+            "AgCl",
+            "Silver ions",
+            "Silver ion"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "part-3",
+          "label": "Exception 2",
+          "answer": "Lead",
+          "accepted": [
+            "Lead",
+            "Lead chloride",
+            "PbCl2",
+            "Lead ions",
+            "Lead ion"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        }
+      ]
+    },
+    "responseFormat": "solubility-choice-dynamic-exceptions"
+  },
+  {
+    "id": "igcse-recall-085",
+    "course": "igcse",
+    "prompt": "State the solubility rule for sulphates in water.",
+    "answer": "Rule: Soluble\nExceptions: Barium; Lead; Calcium\nCalcium sulphate is sparingly soluble; barium and lead sulphates are insoluble in this classroom rule.",
+    "gemIds": [
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-085 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 085"
+      }
+    ],
+    "fields": [
+      {
+        "id": "rule",
+        "label": "Solubility",
+        "answer": "Soluble",
+        "accepted": [
+          "Soluble"
+        ],
+        "entry": {
+          "kind": "choice",
+          "options": [
+            {
+              "id": "soluble",
+              "label": "Soluble"
+            },
+            {
+              "id": "insoluble",
+              "label": "Insoluble"
+            }
+          ]
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "context": [
+      "Use the classroom solubility rules."
+    ],
+    "exceptionCollection": {
+      "id": "exceptions",
+      "label": "State any exceptions",
+      "responsePrefix": "exception-",
+      "entry": {
+        "kind": "text"
+      },
+      "groups": [
+        {
+          "id": "part-2",
+          "label": "Exception 1",
+          "answer": "Barium",
+          "accepted": [
+            "Barium",
+            "Barium sulphate",
+            "BaSO4",
+            "Barium sulfate",
+            "Barium ions",
+            "Barium ion"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "part-3",
+          "label": "Exception 2",
+          "answer": "Lead",
+          "accepted": [
+            "Lead",
+            "Lead sulphate",
+            "PbSO4",
+            "Lead sulfate",
+            "Lead ions",
+            "Lead ion"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "part-4",
+          "label": "Exception 3",
+          "answer": "Calcium",
+          "accepted": [
+            "Calcium",
+            "Calcium sulphate",
+            "CaSO4",
+            "Calcium sulfate",
+            "Calcium ions",
+            "Calcium ion"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        }
+      ]
+    },
+    "responseFormat": "solubility-choice-dynamic-exceptions"
+  },
+  {
+    "id": "igcse-recall-086",
+    "course": "igcse",
+    "prompt": "State the solubility rule for carbonates in water.",
+    "answer": "Rule: Insoluble\nExceptions: Group 1; Ammonium",
+    "gemIds": [
+      "lower-8-4",
+      "lower-8-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-086 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 086"
+      }
+    ],
+    "fields": [
+      {
+        "id": "rule",
+        "label": "Solubility",
+        "answer": "Insoluble",
+        "accepted": [
+          "Insoluble"
+        ],
+        "entry": {
+          "kind": "choice",
+          "options": [
+            {
+              "id": "soluble",
+              "label": "Soluble"
+            },
+            {
+              "id": "insoluble",
+              "label": "Insoluble"
+            }
+          ]
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "exceptionCollection": {
+      "id": "exceptions",
+      "label": "State any exceptions",
+      "responsePrefix": "exception-",
+      "entry": {
+        "kind": "text"
+      },
+      "groups": [
+        {
+          "id": "part-2",
+          "label": "Exception 1",
+          "answer": "Group 1",
+          "accepted": [
+            "Group 1",
+            "Group 1 ions",
+            "Group 1 ion",
+            "Group 1 ions",
+            "Group 1 metal ions",
+            "Alkali metal ions",
+            "Sodium",
+            "Sodium ions",
+            "Potassium",
+            "Potassium ions",
+            "Sodium carbonate",
+            "Potassium carbonate",
+            "Na2CO3",
+            "K2CO3"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "part-3",
+          "label": "Exception 2",
+          "answer": "Ammonium",
+          "accepted": [
+            "Ammonium",
+            "Ammonium ions",
+            "Ammonium ion",
+            "Ammonium carbonate",
+            "(NH4)2CO3",
+            "NH4+",
+            "NH₄⁺"
+          ],
+          "entry": {
+            "kind": "text"
+          },
+          "alternative": {
+            "kind": "none"
+          }
+        }
+      ]
+    },
+    "responseFormat": "solubility-choice-dynamic-exceptions"
+  },
+  {
+    "id": "igcse-recall-102",
+    "course": "igcse",
+    "prompt": "Define the term saturated when talking about organic molecules.",
+    "answer": "Contains only single C-C bonds",
+    "gemIds": [
+      "lower-9-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-102 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 102"
+      }
+    ],
+    "accepted": [
+      "A molecule containing only single C-C bonds",
+      "Contains only single C-C bonds",
+      "Only single C-C bonds",
+      "Contains only single carbon-carbon bonds",
+      "Only single carbon-carbon bonds",
+      "A molecule containing only single carbon-carbon bonds",
+      "Has only single C-C bonds"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    },
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "only single c-c bonds",
+          "only single carbon-carbon bonds"
+        ]
+      ],
+      "reject": [
+        "double bond",
+        "double bonds",
+        "triple bond",
+        "triple bonds",
+        "c=c",
+        "not",
+        "no",
+        "never"
+      ]
+    }
+  },
+  {
+    "id": "igcse-recall-107",
+    "course": "igcse",
+    "prompt": "Define the term unsaturated when talking about organic molecules.",
+    "answer": "Contains one or more C=C double bonds. Carbon–carbon triple bonds also give unsaturation; the IGCSE examples here are alkenes.",
+    "gemIds": [
+      "lower-9-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-107 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 107"
+      }
+    ],
+    "accepted": [
+      "A molecule with at least one C=C bond",
+      "A molecule containing a carbon-carbon double bond",
+      "A molecule containing at least one carbon-carbon double or triple bond",
+      "A molecule containing at least one carbon-carbon triple bond",
+      "C=C",
+      "C≡C",
+      "Contains one or more C=C double bonds",
+      "Contains at least one C=C double bond",
+      "Contains a C=C double bond",
+      "Contains one or more carbon-carbon double bonds",
+      "Contains at least one carbon-carbon double bond",
+      "Contains at least one carbon-carbon triple bond",
+      "Contains carbon-carbon double or triple bonds"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    },
+    "matching": {
+      "kind": "concepts",
+      "all": [
+        [
+          "c=c",
+          "c≡c",
+          "carbon-carbon double",
+          "carbon-carbon triple"
+        ]
+      ],
+      "reject": [
+        "only single",
+        "saturated",
+        "not",
+        "no",
+        "never"
+      ]
+    }
+  },
+  {
+    "id": "igcse-recall-100",
+    "course": "igcse",
+    "prompt": "Name the first six unbranched alkanes in order of increasing carbon count.",
+    "answer": "Answer 1: Methane\nAnswer 2: Ethane\nAnswer 3: Propane\nAnswer 4: Butane\nAnswer 5: Pentane\nAnswer 6: Hexane",
+    "gemIds": [
+      "lower-9-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-100 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 100"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Methane",
+        "accepted": [
+          "Methane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Ethane",
+        "accepted": [
+          "Ethane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Answer 3",
+        "answer": "Propane",
+        "accepted": [
+          "Propane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Answer 4",
+        "answer": "Butane",
+        "accepted": [
+          "Butane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-5",
+        "label": "Answer 5",
+        "answer": "Pentane",
+        "accepted": [
+          "Pentane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-6",
+        "label": "Answer 6",
+        "answer": "Hexane",
+        "accepted": [
+          "Hexane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Methane",
+        "accepted": [
+          "Methane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Ethane",
+        "accepted": [
+          "Ethane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Answer 3",
+        "answer": "Propane",
+        "accepted": [
+          "Propane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Answer 4",
+        "answer": "Butane",
+        "accepted": [
+          "Butane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-5",
+        "label": "Answer 5",
+        "answer": "Pentane",
+        "accepted": [
+          "Pentane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-6",
+        "label": "Answer 6",
+        "answer": "Hexane",
+        "accepted": [
+          "Hexane"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "responseFormat": "six-alkanes-increasing-carbon-count"
+  },
+  {
+    "id": "igcse-recall-101",
+    "course": "igcse",
+    "prompt": "Give the general formula for alkanes.",
+    "answer": "CnH2n+2",
+    "gemIds": [
+      "lower-9-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-101 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 101"
+      }
+    ],
+    "accepted": [
+      "CnH2n+2",
+      "CₙH₂ₙ₊₂"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "entry": {
+      "kind": "general-formula"
+    }
+  },
+  {
+    "id": "igcse-recall-103",
+    "course": "igcse",
+    "prompt": "Name the products of complete combustion of a hydrocarbon.",
+    "answer": "Answer 1: Water\nAnswer 2: Carbon dioxide",
+    "gemIds": [
+      "lower-9-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-103 approved"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Water",
+        "accepted": [
+          "Water",
+          "H2O",
+          "H₂O"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Carbon dioxide",
+        "accepted": [
+          "Carbon dioxide",
+          "CO2",
+          "CO₂"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Water",
+        "accepted": [
+          "Water",
+          "H2O",
+          "H₂O"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Carbon dioxide",
+        "accepted": [
+          "Carbon dioxide",
+          "CO2",
+          "CO₂"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-104",
+    "course": "igcse",
+    "prompt": "Name the three possible products of incomplete combustion of a hydrocarbon.",
+    "answer": "Product 1: Water\nProduct 2: Carbon monoxide\nProduct 3: Carbon",
+    "gemIds": [
+      "lower-9-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-104 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 104"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Product 1",
+        "answer": "Water",
+        "accepted": [
+          "Water",
+          "H2O",
+          "H₂O"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Product 2",
+        "answer": "Carbon monoxide",
+        "accepted": [
+          "CO",
+          "Carbon monoxide"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Product 3",
+        "answer": "Carbon",
+        "accepted": [
+          "Carbon",
+          "Soot",
+          "C"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Product 1",
+        "answer": "Water",
+        "accepted": [
+          "Water",
+          "H2O",
+          "H₂O"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Product 2",
+        "answer": "Carbon monoxide",
+        "accepted": [
+          "CO",
+          "Carbon monoxide"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Product 3",
+        "answer": "Carbon",
+        "accepted": [
+          "Carbon",
+          "Soot",
+          "C"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-105",
+    "course": "igcse",
+    "prompt": "Give the general formula for open-chain alkenes with one carbon–carbon double bond.",
+    "answer": "CnH2n",
+    "gemIds": [
+      "lower-9-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-105 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 105"
+      }
+    ],
+    "accepted": [
+      "CnH2n",
+      "CₙH₂ₙ"
+    ],
+    "matching": {
+      "kind": "chemical"
+    },
+    "context": [
+      "For open-chain alkenes containing one carbon–carbon double bond."
+    ],
+    "entry": {
+      "kind": "general-formula"
+    }
+  },
+  {
+    "id": "igcse-recall-106",
+    "course": "igcse",
+    "prompt": "How do you test for an alkene, and what is the positive result?",
+    "answer": "Test: Add bromine water\nResult: Orange to colourless",
+    "gemIds": [
+      "lower-9-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-106 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 106"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add bromine water",
+        "accepted": [
+          "Add bromine water"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Orange to colourless",
+        "accepted": [
+          "Orange to colourless",
+          "Changes from orange to colourless",
+          "Bromine water changes from orange to colourless",
+          "Bromine water turns from orange to colourless",
+          "It goes from orange to colourless",
+          "Orange to colorless",
+          "The colour changes from orange to colourless"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        },
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "orange to colourless",
+              "orange to colorless"
+            ]
+          ],
+          "reject": [
+            "not",
+            "no",
+            "never",
+            "green",
+            "blue",
+            "red",
+            "colourless to orange",
+            "colorless to orange"
+          ],
+          "patterns": [
+            "^(?:(?:the )?(?:bromine water|solution|colour|color|it) )?(?:(?:changes|turns|goes)(?: colour)? (?:from )?)?orange to colou?rless$",
+            "^the colou?r changes from orange to colou?rless$"
+          ]
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Add bromine water",
+        "accepted": [
+          "Add bromine water"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Orange to colourless",
+        "accepted": [
+          "Orange to colourless",
+          "Changes from orange to colourless",
+          "Bromine water changes from orange to colourless",
+          "Bromine water turns from orange to colourless",
+          "It goes from orange to colourless",
+          "Orange to colorless",
+          "The colour changes from orange to colourless"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        },
+        "matching": {
+          "kind": "concepts",
+          "all": [
+            [
+              "orange to colourless",
+              "orange to colorless"
+            ]
+          ],
+          "reject": [
+            "not",
+            "no",
+            "never",
+            "green",
+            "blue",
+            "red",
+            "colourless to orange",
+            "colorless to orange"
+          ],
+          "patterns": [
+            "^(?:(?:the )?(?:bromine water|solution|colour|color|it) )?(?:(?:changes|turns|goes)(?: colour)? (?:from )?)?orange to colou?rless$",
+            "^the colou?r changes from orange to colou?rless$"
+          ]
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-091",
+    "course": "igcse",
+    "prompt": "Name the crude-oil fractions in order from smallest to largest hydrocarbon molecules.",
+    "answer": "Fraction 1: Refinery gases\nFraction 2: Gasoline\nFraction 3: Kerosene\nFraction 4: Diesel\nFraction 5: Fuel oil\nFraction 6: Bitumen",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-091 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 091"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Fraction 1",
+        "answer": "Refinery gases",
+        "accepted": [
+          "Refinery gases"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Fraction 2",
+        "answer": "Gasoline",
+        "accepted": [
+          "Gasoline"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Fraction 3",
+        "answer": "Kerosene",
+        "accepted": [
+          "Kerosene"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Fraction 4",
+        "answer": "Diesel",
+        "accepted": [
+          "Diesel"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-5",
+        "label": "Fraction 5",
+        "answer": "Fuel oil",
+        "accepted": [
+          "Fuel oil"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-6",
+        "label": "Fraction 6",
+        "answer": "Bitumen",
+        "accepted": [
+          "Bitumen"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Fraction 1",
+        "answer": "Refinery gases",
+        "accepted": [
+          "Refinery gases"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Fraction 2",
+        "answer": "Gasoline",
+        "accepted": [
+          "Gasoline"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Fraction 3",
+        "answer": "Kerosene",
+        "accepted": [
+          "Kerosene"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Fraction 4",
+        "answer": "Diesel",
+        "accepted": [
+          "Diesel"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-5",
+        "label": "Fraction 5",
+        "answer": "Fuel oil",
+        "accepted": [
+          "Fuel oil"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-6",
+        "label": "Fraction 6",
+        "answer": "Bitumen",
+        "accepted": [
+          "Bitumen"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled",
+    "responseFormat": "six-fractions-smallest-first"
+  },
+  {
+    "id": "igcse-recall-092",
+    "course": "igcse",
+    "prompt": "Give a use of the refinery gases fraction.",
+    "answer": "Heating homes",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-092 approved"
+      }
+    ],
+    "accepted": [
+      "Heating homes",
+      "Domestic heating",
+      "Cooking",
+      "Cooking fuel"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-093",
+    "course": "igcse",
+    "prompt": "Give a use of the gasoline fraction.",
+    "answer": "Petrol for cars",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-093 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 093"
+      }
+    ],
+    "accepted": [
+      "Petrol for cars",
+      "Fuel for petrol engines",
+      "Fuel for cars",
+      "Fuel in cars",
+      "Car fuel",
+      "Fuel for motor cars"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    }
+  },
+  {
+    "id": "igcse-recall-094",
+    "course": "igcse",
+    "prompt": "Give a use of the kerosene fraction.",
+    "answer": "Jet fuel",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-094 approved"
+      }
+    ],
+    "accepted": [
+      "Jet fuel",
+      "Fuel for aircraft",
+      "Aviation fuel"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-095",
+    "course": "igcse",
+    "prompt": "Give a use of the diesel fraction.",
+    "answer": "Fuel for diesel cars and trucks",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-095 approved"
+      }
+    ],
+    "accepted": [
+      "Fuel for diesel cars and trucks",
+      "Fuel for diesel engines",
+      "Fuel for lorries",
+      "Fuel for diesel cars"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-096",
+    "course": "igcse",
+    "prompt": "Give a use of the fuel oil fraction.",
+    "answer": "Fuel for ships",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-096 approved"
+      }
+    ],
+    "accepted": [
+      "Fuel for ships",
+      "Marine fuel",
+      "Heating",
+      "Industrial heating fuel"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-097",
+    "course": "igcse",
+    "prompt": "Give a use of the bitumen fraction.",
+    "answer": "Road surfacing",
+    "gemIds": [
+      "lower-9-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-097 approved"
+      }
+    ],
+    "accepted": [
+      "Road surfacing",
+      "Binder in asphalt for roads"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-098",
+    "course": "igcse",
+    "prompt": "What temperature is required for catalytic cracking?",
+    "answer": "600–700 °C",
+    "gemIds": [
+      "lower-9-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-098 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "600–700 °C"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [],
+      "minimum": 600,
+      "maximum": 700,
+      "unit": "°C"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "°C"
+    }
+  },
+  {
+    "id": "igcse-recall-099",
+    "course": "igcse",
+    "prompt": "What catalyst is required for catalytic cracking?",
+    "answer": "Silicon dioxide",
+    "gemIds": [
+      "lower-9-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-099 approved"
+      }
+    ],
+    "accepted": [
+      "Silicon dioxide",
+      "Silica",
+      "SiO2",
+      "Aluminium oxide",
+      "Aluminum oxide",
+      "Alumina",
+      "Al2O3"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-034",
+    "course": "igcse",
+    "prompt": "Approximately what percentage by volume of dry air is nitrogen?",
+    "answer": "78%",
+    "gemIds": [
+      "upper-11-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-034 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "78%"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        78
+      ],
+      "unit": "%"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "igcse-recall-035",
+    "course": "igcse",
+    "prompt": "Approximately what percentage by volume of dry air is oxygen?",
+    "answer": "21%",
+    "gemIds": [
+      "upper-11-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-035 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "21%"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        21
+      ],
+      "unit": "%"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "igcse-recall-036",
+    "course": "igcse",
+    "prompt": "Approximately what percentage by volume of dry air is argon?",
+    "answer": "0.9%",
+    "gemIds": [
+      "upper-11-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-036 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "0.9%"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        0.9
+      ],
+      "unit": "%"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "igcse-recall-037",
+    "course": "igcse",
+    "prompt": "What percentage of air is carbon dioxide?",
+    "answer": "0.04%",
+    "gemIds": [
+      "upper-11-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-037 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 037"
+      },
+      {
+        "path": "validation/recall-codes/authorized-plan.json",
+        "sha256": "78903c5521aaff87c5515663f72d81ff3572889ee562cca2c60a111ec91d2748",
+        "symbolOrSection": "11 October 2026 approved content/presentation follow-up igcse-recall-037"
+      }
+    ],
+    "accepted": [
+      "0.04%"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        0.04
+      ],
+      "unit": "%"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "%"
+    }
+  },
+  {
+    "id": "igcse-recall-038",
+    "course": "igcse",
+    "prompt": "Which two main gases dissolve in rain to cause acid rain?",
+    "answer": "Answer 1: Nitrogen dioxide\nAnswer 2: Sulphur dioxide",
+    "gemIds": [
+      "upper-11-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-038 approved"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Nitrogen dioxide",
+        "accepted": [
+          "Nitrogen dioxide",
+          "NO2",
+          "NO₂"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Sulphur dioxide",
+        "accepted": [
+          "Sulphur dioxide",
+          "SO2",
+          "SO₂",
+          "sulfur dioxide"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Nitrogen dioxide",
+        "accepted": [
+          "Nitrogen dioxide",
+          "NO2",
+          "NO₂"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Sulphur dioxide",
+        "accepted": [
+          "Sulphur dioxide",
+          "SO2",
+          "SO₂",
+          "sulfur dioxide"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-039",
+    "course": "igcse",
+    "prompt": "Are non-metal oxides generally acidic or basic?",
+    "answer": "Acidic",
+    "gemIds": [
+      "upper-11-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-039 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 039"
+      },
+      {
+        "path": "validation/recall-codes/authorized-plan.json",
+        "sha256": "78903c5521aaff87c5515663f72d81ff3572889ee562cca2c60a111ec91d2748",
+        "symbolOrSection": "11 October 2026 approved content/presentation follow-up igcse-recall-039"
+      }
+    ],
+    "accepted": [
+      "Acidic",
+      "Acidic"
+    ],
+    "entry": {
+      "kind": "choice",
+      "options": [
+        {
+          "id": "acidic",
+          "label": "Acidic"
+        },
+        {
+          "id": "basic",
+          "label": "Basic"
+        }
+      ],
+      "presentation": "buttons"
+    },
+    "responseFormat": "oxide-acidity-choice"
+  },
+  {
+    "id": "igcse-recall-040",
+    "course": "igcse",
+    "prompt": "Name the acid that is formed when sulphur dioxide dissolves in rain?",
+    "answer": "Sulphurous acid",
+    "gemIds": [
+      "upper-11-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-040 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Sulphurous acid",
+      "sulfurous acid"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-041",
+    "course": "igcse",
+    "prompt": "What colour change is seen when solid copper carbonate decomposes on heating?",
+    "answer": "Green to black",
+    "gemIds": [
+      "upper-11-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-041 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Green to black"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-042",
+    "course": "igcse",
+    "prompt": "What is the name for a reaction in which a substance breaks down into multiple products when heated?",
+    "answer": "Thermal decomposition",
+    "gemIds": [
+      "upper-11-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-042 approved"
+      }
+    ],
+    "accepted": [
+      "Thermal decomposition"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-089",
+    "course": "igcse",
+    "prompt": "What two things does iron need to rust?",
+    "answer": "Requirement 1: Water\nRequirement 2: Oxygen",
+    "gemIds": [
+      "upper-13-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-089 approved"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Requirement 1",
+        "answer": "Water",
+        "accepted": [
+          "Water",
+          "Moisture",
+          "H2O",
+          "H₂O"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Requirement 2",
+        "answer": "Oxygen",
+        "accepted": [
+          "Oxygen",
+          "O2",
+          "O₂"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Requirement 1",
+        "answer": "Water",
+        "accepted": [
+          "Water",
+          "Moisture",
+          "H2O",
+          "H₂O"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Requirement 2",
+        "answer": "Oxygen",
+        "accepted": [
+          "Oxygen",
+          "O2",
+          "O₂"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-090",
+    "course": "igcse",
+    "prompt": "Give three ways of preventing iron from rusting.",
+    "answer": "Sacrificial protection: Sacrificial protection\nPainting: Painting\nGalvanising: Galvanising",
+    "gemIds": [
+      "upper-13-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-090 approved"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Sacrificial protection",
+        "accepted": [
+          "Sacrificial protection",
+          "Attach a more reactive metal"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Painting",
+        "accepted": [
+          "Painting",
+          "Paint coating"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Answer 3",
+        "answer": "Galvanising",
+        "accepted": [
+          "Galvanising",
+          "Galvanizing",
+          "Coat with zinc"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Sacrificial protection",
+        "answer": "Sacrificial protection",
+        "accepted": [
+          "Sacrificial protection",
+          "Attach a more reactive metal"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Painting",
+        "answer": "Painting",
+        "accepted": [
+          "Painting",
+          "Paint coating"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Galvanising",
+        "answer": "Galvanising",
+        "accepted": [
+          "Galvanising",
+          "Galvanizing",
+          "Coat with zinc"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Oiling",
+        "answer": "Oiling",
+        "accepted": [
+          "Oiling",
+          "Oil coating"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-5",
+        "label": "Greasing",
+        "answer": "Greasing",
+        "accepted": [
+          "Greasing",
+          "Grease coating"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-110",
+    "course": "igcse",
+    "prompt": "What catalyst is used to produce ethanol from ethene and steam?",
+    "answer": "Phosphoric acid",
+    "gemIds": [
+      "upper-14-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-110 approved"
+      }
+    ],
+    "accepted": [
+      "Phosphoric acid",
+      "H3PO4",
+      "H₃PO₄"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-111",
+    "course": "igcse",
+    "prompt": "What temperature is used to produce ethanol from ethene and steam?",
+    "answer": "300 °C",
+    "gemIds": [
+      "upper-14-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-111 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 111"
+      }
+    ],
+    "accepted": [
+      "300 °C",
+      "300 degrees celsius",
+      "About 300 °C"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        300
+      ],
+      "unit": "°C"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "°C"
+    },
+    "responseFormat": "number-external-unit"
+  },
+  {
+    "id": "igcse-recall-112",
+    "course": "igcse",
+    "prompt": "What pressure is used to produce ethanol from ethene and steam?",
+    "answer": "60–70 atm",
+    "gemIds": [
+      "upper-14-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-112 approved"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 112"
+      }
+    ],
+    "accepted": [
+      "60–70 atm",
+      "60-70 atmospheres"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [],
+      "minimum": 60,
+      "maximum": 70,
+      "unit": "atm"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "atm"
+    },
+    "responseFormat": "number-external-unit"
+  },
+  {
+    "id": "igcse-recall-113",
+    "course": "igcse",
+    "prompt": "Give a typical classroom temperature for producing ethanol by fermentation of sugars using yeast.",
+    "answer": "About 30 °C",
+    "gemIds": [
+      "upper-14-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-113 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 113"
+      }
+    ],
+    "accepted": [
+      "30 °C"
+    ],
+    "matching": {
+      "kind": "numeric",
+      "values": [
+        30
+      ],
+      "unit": "°C"
+    },
+    "entry": {
+      "kind": "numeric",
+      "unit": "°C"
+    },
+    "responseFormat": "number-external-unit"
+  },
+  {
+    "id": "igcse-recall-115",
+    "course": "igcse",
+    "prompt": "What colour change is seen when acidified potassium dichromate(VI) oxidises ethanol?",
+    "answer": "Orange to green",
+    "gemIds": [
+      "upper-14-1"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-115 approved-with-modifications"
+      }
+    ],
+    "accepted": [
+      "Orange to green"
+    ],
+    "entry": {
+      "kind": "text"
+    }
+  },
+  {
+    "id": "igcse-recall-114",
+    "course": "igcse",
+    "prompt": "What needs to be done to ethanol to oxidise it to ethanoic acid in the laboratory?",
+    "answer": "Reagent 1: Potassium dichromate\nReagent 2: Sulphuric acid\nConditions: Heat",
+    "gemIds": [
+      "upper-14-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-114 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 114"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Reagent 1",
+        "answer": "Potassium dichromate",
+        "accepted": [
+          "Potassium dichromate",
+          "Potassium dichromate(VI)",
+          "K2Cr2O7",
+          "K₂Cr₂O₇"
+        ],
+        "entry": {
+          "kind": "chemical-formula",
+          "notation": "molecular"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Reagent 2",
+        "answer": "Sulphuric acid",
+        "accepted": [
+          "Sulphuric acid",
+          "H2SO4",
+          "sulfuric acid"
+        ],
+        "entry": {
+          "kind": "chemical-formula",
+          "notation": "molecular"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Conditions",
+        "answer": "Heat",
+        "accepted": [
+          "Heat"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Reagent 1",
+        "answer": "Potassium dichromate",
+        "accepted": [
+          "Potassium dichromate",
+          "Potassium dichromate(VI)",
+          "K2Cr2O7",
+          "K₂Cr₂O₇"
+        ],
+        "entry": {
+          "kind": "chemical-formula",
+          "notation": "molecular"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Reagent 2",
+        "answer": "Sulphuric acid",
+        "accepted": [
+          "Sulphuric acid",
+          "H2SO4",
+          "sulfuric acid"
+        ],
+        "entry": {
+          "kind": "chemical-formula",
+          "notation": "molecular"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Conditions",
+        "answer": "Heat",
+        "accepted": [
+          "Heat"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-116",
+    "course": "igcse",
+    "prompt": "What naturally converts ethanol into ethanoic acid?",
+    "answer": "Microbes in the air",
+    "gemIds": [
+      "upper-14-2"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-116 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 116"
+      }
+    ],
+    "accepted": [
+      "Microbes in air",
+      "Microbes in the air",
+      "Bacteria",
+      "Bacteria in the air",
+      "Bacteria in air",
+      "Microorganisms",
+      "Micro-organisms",
+      "Microorganisms in the air",
+      "Micro-organisms in air",
+      "Microorganisms in air",
+      "Ethanol is oxidised by bacteria using oxygen from the air"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "alternative": {
+      "kind": "valid-alternative",
+      "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+    },
+    "responseFormat": "name-natural-ethanol-oxidiser"
+  },
+  {
+    "id": "igcse-recall-117",
+    "course": "igcse",
+    "prompt": "What catalyst and conditions are needed to make a carboxylic acid and an alcohol form an ester?",
+    "answer": "Catalyst: Concentrated sulphuric acid\nConditions: Heat",
+    "gemIds": [
+      "upper-14-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-117 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 117"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Catalyst",
+        "answer": "Concentrated sulphuric acid",
+        "accepted": [
+          "Concentrated sulphuric acid",
+          "Concentrated sulfuric acid",
+          "H2SO4",
+          "H₂SO₄",
+          "Concentrated H2SO4",
+          "Concentrated H₂SO₄"
+        ],
+        "entry": {
+          "kind": "chemical-formula",
+          "notation": "molecular"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Conditions",
+        "answer": "Heat",
+        "accepted": [
+          "Heat",
+          "Warm"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Catalyst",
+        "answer": "Concentrated sulphuric acid",
+        "accepted": [
+          "Concentrated sulphuric acid",
+          "Concentrated sulfuric acid",
+          "H2SO4",
+          "H₂SO₄",
+          "Concentrated H2SO4",
+          "Concentrated H₂SO₄"
+        ],
+        "entry": {
+          "kind": "chemical-formula",
+          "notation": "molecular"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Conditions",
+        "answer": "Heat",
+        "accepted": [
+          "Heat",
+          "Warm"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "labelled"
+  },
+  {
+    "id": "igcse-recall-118",
+    "course": "igcse",
+    "prompt": "Give two uses of esters.",
+    "answer": "Use 1: Food flavourings\nUse 2: Perfumes",
+    "gemIds": [
+      "upper-14-3"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-118 approved"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Use 1",
+        "answer": "Food flavourings",
+        "accepted": [
+          "Food flavourings",
+          "Flavourings",
+          "Flavorings"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Use 2",
+        "answer": "Perfumes",
+        "accepted": [
+          "Perfumes",
+          "Fragrances",
+          "Scents"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Use 1",
+        "answer": "Food flavourings",
+        "accepted": [
+          "Food flavourings",
+          "Flavourings",
+          "Flavorings"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Use 2",
+        "answer": "Perfumes",
+        "accepted": [
+          "Perfumes",
+          "Fragrances",
+          "Scents"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-108",
+    "course": "igcse",
+    "prompt": "Give three uses of polymers.",
+    "answer": "Bags: Plastic bags\nFrames: Window frames\nFurniture: Furniture",
+    "gemIds": [
+      "upper-14-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-108 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Plastic bags",
+        "accepted": [
+          "Plastic bags",
+          "Carrier bags"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Window frames",
+        "accepted": [
+          "Window frames"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Answer 3",
+        "answer": "Furniture",
+        "accepted": [
+          "Furniture"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Bags",
+        "answer": "Plastic bags",
+        "accepted": [
+          "Plastic bags",
+          "Carrier bags"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Frames",
+        "answer": "Window frames",
+        "accepted": [
+          "Window frames"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Furniture",
+        "answer": "Furniture",
+        "accepted": [
+          "Furniture"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-4",
+        "label": "Rope",
+        "answer": "Rope",
+        "accepted": [
+          "Rope",
+          "Ropes"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any"
+  },
+  {
+    "id": "igcse-recall-109",
+    "course": "igcse",
+    "prompt": "Give two possible environmental problems associated with common synthetic plastics.",
+    "answer": "Any two: many do not biodegrade; burning some can release toxic gases; many are made from non-renewable crude oil.",
+    "gemIds": [
+      "upper-14-4"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-109 approved-with-modifications"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Answer 1",
+        "answer": "Do not biodegrade",
+        "accepted": [
+          "Do not biodegrade",
+          "Many do not biodegrade",
+          "Many plastics do not biodegrade"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Answer 2",
+        "answer": "Release toxic gases when burned",
+        "accepted": [
+          "Release toxic gases when burned",
+          "Burning some can release toxic gases",
+          "Some release toxic gases when burned"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "answerGroups": [
+      {
+        "id": "part-1",
+        "label": "Persistence",
+        "answer": "Do not biodegrade",
+        "accepted": [
+          "Do not biodegrade",
+          "Many do not biodegrade",
+          "Many plastics do not biodegrade"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Combustion",
+        "answer": "Release toxic gases when burned",
+        "accepted": [
+          "Release toxic gases when burned",
+          "Burning some can release toxic gases",
+          "Some release toxic gases when burned"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      },
+      {
+        "id": "part-3",
+        "label": "Resources",
+        "answer": "Made from non-renewable crude oil",
+        "accepted": [
+          "Made from non-renewable crude oil",
+          "Many are made from non-renewable crude oil",
+          "Many plastics are made from non-renewable crude oil"
+        ],
+        "entry": {
+          "kind": "text"
+        }
+      }
+    ],
+    "fieldOrder": "any",
+    "context": [
+      "Consider common synthetic plastics; properties vary between polymers."
+    ]
+  },
+  {
+    "id": "igcse-recall-046",
+    "course": "igcse",
+    "prompt": "How could you check if water is pure?",
+    "answer": "Test: Heat it until boiling\nResult: Boils at exactly 100°C",
+    "gemIds": [
+      "upper-15-1",
+      "fourth-1-2",
+      "upper-11-5"
+    ],
+    "sources": [
+      {
+        "path": "development/igcse/activities/recall/data/igcse-recall-working.json",
+        "sha256": "900f598cebb2d507720c1d526ba61aab953b4c98b78c257d481d8de15b742022",
+        "symbolOrSection": "igcse-recall-046 approved-with-modifications"
+      },
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): Authorized amendment 046"
+      },
+      {
+        "path": "validation/recall-codes/authorized-plan.json",
+        "sha256": "78903c5521aaff87c5515663f72d81ff3572889ee562cca2c60a111ec91d2748",
+        "symbolOrSection": "11 October 2026 approved content/presentation follow-up igcse-recall-046"
+      }
+    ],
+    "fields": [
+      {
+        "id": "part-1",
+        "label": "Test",
+        "answer": "Heat it until boiling",
+        "accepted": [
+          "Heat it until boiling",
+          "Measure the boiling point",
+          "Measure boiling point",
+          "Heat",
+          "Heat and measure the boiling point",
+          "Measure the boiling temperature"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      },
+      {
+        "id": "part-2",
+        "label": "Result",
+        "answer": "Boils at exactly 100°C",
+        "accepted": [
+          "Boils at exactly 100°C",
+          "A sharp boiling point of 100 °C",
+          "Boils at 100 °C",
+          "Boils at 100 degrees Celsius",
+          "Boils at 100C",
+          "100 °C",
+          "100C",
+          "100",
+          "Boils at exactly 100 °C",
+          "A sharp boiling point of 100 °C at standard atmospheric pressure"
+        ],
+        "entry": {
+          "kind": "text"
+        },
+        "alternative": {
+          "kind": "valid-alternative",
+          "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+        }
+      }
+    ],
+    "fieldOrder": "pairs",
+    "responsePairs": [
+      {
+        "id": "water-method-result",
+        "fieldIds": [
+          "part-1",
+          "part-2"
+        ]
+      }
+    ],
+    "answerPairs": [
+      {
+        "id": "boiling",
+        "fields": [
+          {
+            "id": "part-1",
+            "label": "Test",
+            "answer": "Heat it until boiling",
+            "accepted": [
+              "Heat it until boiling",
+              "Measure the boiling point",
+              "Measure boiling point",
+              "Heat",
+              "Heat and measure the boiling point",
+              "Measure the boiling temperature"
+            ],
+            "entry": {
+              "kind": "text"
+            },
+            "alternative": {
+              "kind": "valid-alternative",
+              "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+            }
+          },
+          {
+            "id": "part-2",
+            "label": "Result",
+            "answer": "Boils at exactly 100°C",
+            "accepted": [
+              "Boils at exactly 100°C",
+              "A sharp boiling point of 100 °C",
+              "Boils at 100 °C",
+              "Boils at 100 degrees Celsius",
+              "Boils at 100C",
+              "100 °C",
+              "100C",
+              "100",
+              "Boils at exactly 100 °C",
+              "A sharp boiling point of 100 °C at standard atmospheric pressure"
+            ],
+            "entry": {
+              "kind": "text"
+            },
+            "alternative": {
+              "kind": "valid-alternative",
+              "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+            }
+          }
+        ]
+      },
+      {
+        "id": "melting-freezing",
+        "fields": [
+          {
+            "id": "part-1",
+            "label": "Test",
+            "answer": "Measure the melting or freezing point",
+            "accepted": [
+              "Measure the melting or freezing point",
+              "Measure melting point",
+              "Measure the melting point",
+              "Measure freezing point",
+              "Measure the freezing point",
+              "Freeze the water and measure its temperature",
+              "Measure melting or freezing point"
+            ],
+            "entry": {
+              "kind": "text"
+            },
+            "alternative": {
+              "kind": "valid-alternative",
+              "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+            }
+          },
+          {
+            "id": "part-2",
+            "label": "Result",
+            "answer": "Melts or freezes sharply at 0 °C",
+            "accepted": [
+              "Melts or freezes sharply at 0 °C",
+              "Melts at 0 °C",
+              "Freezes at 0 °C",
+              "Melts at 0 degrees Celsius",
+              "Freezes at 0 degrees Celsius",
+              "Melting point is 0 °C",
+              "Freezing point is 0 °C",
+              "0 °C",
+              "0C",
+              "0",
+              "Freezes at 0C",
+              "Melts at 0C"
+            ],
+            "entry": {
+              "kind": "text"
+            },
+            "alternative": {
+              "kind": "valid-alternative",
+              "guidance": "Use only for a chemically equivalent ordinary-text answer not recognized automatically. Contradictions, wrong participants, duplicate claims and mismatched pairs are excluded."
+            }
+          }
+        ]
+      }
+    ],
+    "pairCoverage": "one",
+    "modelAnswerPairId": "boiling",
+    "responseFormat": "one-water-purity-tuple"
+  },
+  {
+    "id": "igcse-recall-119",
+    "course": "igcse",
+    "prompt": "What is the formula of sulphuric acid?",
+    "answer": "H2SO4",
+    "accepted": [
+      "H₂SO₄"
+    ],
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "molecular"
+    },
+    "matching": {
+      "kind": "chemical"
+    },
+    "gemIds": [
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "upper-14-1",
+      "upper-14-2",
+      "upper-14-3"
+    ],
+    "sources": [
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): New authorized acid name/formula pair 119"
+      }
+    ]
+  },
+  {
+    "id": "igcse-recall-120",
+    "course": "igcse",
+    "prompt": "What is the name of the acid with formula H2SO4?",
+    "answer": "Sulphuric acid",
+    "accepted": [
+      "Sulfuric acid"
+    ],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "gemIds": [
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "upper-14-1",
+      "upper-14-2",
+      "upper-14-3"
+    ],
+    "sources": [
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): New authorized acid name/formula pair 120"
+      }
+    ]
+  },
+  {
+    "id": "igcse-recall-121",
+    "course": "igcse",
+    "prompt": "What is the formula of nitric acid?",
+    "answer": "HNO3",
+    "accepted": [
+      "HNO₃"
+    ],
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "molecular"
+    },
+    "matching": {
+      "kind": "chemical"
+    },
+    "gemIds": [
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): New authorized acid name/formula pair 121"
+      }
+    ]
+  },
+  {
+    "id": "igcse-recall-122",
+    "course": "igcse",
+    "prompt": "What is the name of the acid with formula HNO3?",
+    "answer": "Nitric acid",
+    "accepted": [],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "gemIds": [
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): New authorized acid name/formula pair 122"
+      }
+    ]
+  },
+  {
+    "id": "igcse-recall-123",
+    "course": "igcse",
+    "prompt": "What is the formula of hydrochloric acid?",
+    "answer": "HCl",
+    "accepted": [
+      "HCl(aq)",
+      "HCl (aq)"
+    ],
+    "entry": {
+      "kind": "chemical-formula",
+      "notation": "molecular"
+    },
+    "matching": {
+      "kind": "chemical"
+    },
+    "gemIds": [
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): New authorized acid name/formula pair 123"
+      }
+    ],
+    "context": [
+      "The question concerns an aqueous acid solution, rather than a gas."
+    ]
+  },
+  {
+    "id": "igcse-recall-124",
+    "course": "igcse",
+    "prompt": "What is the name of the acid with formula HCl(aq)?",
+    "answer": "Hydrochloric acid",
+    "accepted": [],
+    "entry": {
+      "kind": "text"
+    },
+    "matching": {
+      "kind": "text"
+    },
+    "gemIds": [
+      "lower-8-1",
+      "lower-8-3",
+      "lower-8-5",
+      "fourth-4-3"
+    ],
+    "sources": [
+      {
+        "path": "validation/recall-main/authorized-plan.md",
+        "sha256": "d977979532122527e7605948c4abc9f70513fe17e67b62c36d97cd251aac479f",
+        "symbolOrSection": "Complete IGCSE amendments (AMEND-01–24): New authorized acid name/formula pair 124"
+      }
+    ],
+    "context": [
+      "The question concerns an aqueous acid solution, rather than a gas."
+    ]
+  }
+]

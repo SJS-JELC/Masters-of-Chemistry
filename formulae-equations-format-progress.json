@@ -1,0 +1,45 @@
+{
+  "runId": "RF-FORMAT-20261010",
+  "stage": "S2",
+  "status": "ACCEPTED_COMPLETE",
+  "updatedAt": "2026-10-10T19:33:20.911Z",
+  "delegation": {
+    "initial": 2,
+    "maxImplementation": 2,
+    "maxReviewers": 1,
+    "totalIncludingRoot": 5,
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "effective": "unknown"
+  },
+  "priorHiddenAcceptance": "PENDING",
+  "evidence": [
+    "validation/formulae-equations-format/s0/S0-proposal.md",
+    "validation/formulae-equations-format/s0/input-inspection.json",
+    "validation/formulae-equations-format/s0/protected-run.json",
+    "validation/formulae-equations-format/s2/S2-final-aggregate.md",
+    "validation/formulae-equations-format/s2/final-manifest.json",
+    "validation/formulae-equations-format/s2/integration/final-checks.json",
+    "validation/formulae-equations-format/s2/root-fix-aggregate.md"
+  ],
+  "jobs": [
+    {
+      "agentId": "A09",
+      "jobId": "FORMAT-01",
+      "handle": "/root/recall_formulae_foreman/format_ui",
+      "status": "FOREMAN-VALIDATED"
+    },
+    {
+      "agentId": "A10",
+      "jobId": "CONTENT-02",
+      "handle": "/root/recall_formulae_foreman/format_content",
+      "status": "FOREMAN-VALIDATED",
+      "evidence": "validation/formulae-equations-format/s1/content/completion.json"
+    }
+  ],
+  "rootAcceptances": [
+    "validation/formulae-equations-format/s0/root-acceptance.json",
+    "validation/formulae-equations-format/s2/root-acceptance.json"
+  ],
+  "completionScope": "RF-FORMAT presentation scope only"
+}

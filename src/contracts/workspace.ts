@@ -4,6 +4,7 @@ export interface RateGraphReading {
   readonly y: number;
 }
 export interface RateGraphWorkspaceState {
+  readonly tangentAdded?: boolean;
   readonly kind: 'rate-graph-tools';
   readonly marker: number;
   readonly extended: boolean;
@@ -19,7 +20,8 @@ const plain = (v: unknown): v is Record<string, unknown> =>
   !!v && typeof v === 'object' && !Array.isArray(v) &&
   (Object.getPrototypeOf(v) === Object.prototype || Object.getPrototypeOf(v) === null);
 export function isRateGraphWorkspaceState(value: unknown): value is RateGraphWorkspaceState {
-  if (!plain(value) || !exact(value, ['kind', 'marker', 'extended', 'readings']) ||
+  if (!plain(value) || !exact(value, ['kind', 'marker', 'extended', 'readings', ...(Object.hasOwn(value, 'tangentAdded') ? ['tangentAdded'] : [])]) ||
+    (Object.hasOwn(value, 'tangentAdded') && typeof value.tangentAdded !== 'boolean') ||
     value.kind !== 'rate-graph-tools' || !bounded(value.marker) || value.marker < 0 ||
     typeof value.extended !== 'boolean' || !Array.isArray(value.readings) || value.readings.length !== 2 ||
     !Object.hasOwn(value.readings, 0) || !Object.hasOwn(value.readings, 1) || Object.keys(value.readings).length !== 2) return false;
@@ -31,6 +33,6 @@ export function supportsRateGraphWorkspace(ref: { readonly activityId: string; r
     (ref.questionId === `RATE-POC-graphs-L${ref.level}` || ref.questionId === `RATE-POC-arrhenius-L${ref.level}`);
 }
 export function sameRateGraphWorkspace(a: RateGraphWorkspaceState | undefined, b: RateGraphWorkspaceState): boolean {
-  return !!a && a.marker === b.marker && a.extended === b.extended && a.readings.every((r, i) =>
+  return !!a && !!a.tangentAdded === !!b.tangentAdded && a.marker === b.marker && a.extended === b.extended && a.readings.every((r, i) =>
     r === null ? b.readings[i] === null : b.readings[i]?.x === r.x && b.readings[i]?.y === r.y);
 }

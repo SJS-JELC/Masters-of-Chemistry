@@ -1,9 +1,14 @@
 import { useId, useState } from 'react';
+import { ScientificNumberInput } from './ScientificNumberInput.tsx';
+import { parseScientificNumber } from '../domain/attempt/input-checks.ts';
 import type { NumericWorkingToken, QuestionPart, ResponseFor } from '../contracts/question.ts';
 
 type NumericPart = Extract<QuestionPart, { kind: 'numeric' }>;
 /** Matches original thermochemistry working-field parsing, independently of final marking. */
 export function workingNumber(raw: string): number {
+  const scientific = parseScientificNumber(raw);
+  if (Number.isFinite(scientific)) return scientific;
+  if (/[×*]|x\s*10|\d[eE][+−\-\d]/i.test(raw)) return NaN;
   const match = raw
     .replace(/,/g, '')
     .replace(/\u2212/g, '-')
@@ -18,11 +23,13 @@ export function NumericWorkingControl({
   onResponse,
   onRequestSupport,
   source,
+  status,
 }: {
   readonly part: NumericPart;
   readonly response: ResponseFor<'numeric'> | undefined;
   readonly readOnly: boolean;
   readonly assisted: boolean;
+  readonly status?: 'correct' | 'incorrect' | undefined;
   readonly onResponse: (response: ResponseFor<'numeric'>) => void;
   readonly onRequestSupport?: () => void;
   readonly source?: {
@@ -76,8 +83,10 @@ export function NumericWorkingControl({
           <span className="visually-hidden">
             {token.finalResponse ? 'Final answer' : `Working number ${token.id}`}
           </span>
-          <input
+          <ScientificNumberInput
             data-answer-input="true"
+            data-response-status={token.finalResponse ? status : undefined}
+            aria-invalid={token.finalResponse && status === 'incorrect' ? true : undefined}
             className={
               source
                 ? `${token.finalResponse ? 'response-input' : 'working-input'}${checked ? (!(token.finalResponse ? raw : (values[token.id] ?? '')).trim() ? ' unanswered' : Math.abs(workingNumber(token.finalResponse ? raw : (values[token.id] ?? '')) - token.expected) <= token.tolerance ? ' correct' : ' incorrect') : ''}`
@@ -130,11 +139,12 @@ export function NumericWorkingControl({
   };
   if (source) {
     const input = (
-      <input
+      <ScientificNumberInput
         data-answer-input="true"
         id={id}
         className={`response-input${source.result ? ` pupil-${source.result}` : ''}`}
         aria-invalid={source.result === 'incorrect' ? true : undefined}
+        data-response-status={source.result}
         aria-label={source.label}
         inputMode={part.inputMode ?? 'decimal'}
         autoComplete="off"
@@ -234,9 +244,11 @@ export function NumericWorkingControl({
       {(!framework || !opened || !finalInFramework) && (
         <label className="response-label" htmlFor={id}>
           Your answer {part.unit && <span className="unit">({part.unit})</span>}
-          <input
+          <ScientificNumberInput
             data-answer-input="true"
             id={id}
+            data-response-status={status}
+            aria-invalid={status === 'incorrect' ? true : undefined}
             inputMode={part.inputMode ?? 'decimal'}
             readOnly={readOnly}
             value={raw}

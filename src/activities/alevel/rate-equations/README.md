@@ -1,6 +1,6 @@
 # Rate Equations
 
-One curriculum activity, `alevel/rate-equations`, with four semantic gems at Levels 1, 2 and 3. Production practice/revision and the DEV preview import the same checked factories, marking and response controls. Twelve POC source question IDs remain authoritative; `RE-xxxxxx` codes are permanent display aliases only.
+One curriculum activity, `alevel/rate-equations`, with four semantic gems at Levels 1, 2 and 3. Production practice/revision and the DEV preview import the same checked factories, marking and response controls. Twelve POC source question IDs remain authoritative. Generated questions display seven-character `RE-XXXXXXX` codes encoding the template/level and exact uint32 seed. Six-character aliases remain valid legacy links; fixed mechanisms retain their existing codes. See `docs/authoring/rate-equations.md` for the permanent codec and compatibility contract.
 
 ## Content and curriculum
 

@@ -20,5 +20,6 @@ export function restoreRateGraphWorkspace(graph: RateGraph, saved?: RateGraphWor
     return { x, y: rateGraphValueAt(graph, x) };
   };
   return { kind: 'rate-graph-tools', marker: clamp(saved.marker, low, high), extended,
+    ...(saved.tangentAdded !== undefined ? { tangentAdded: saved.tangentAdded } : {}),
     readings: [reading(saved.readings[0]), reading(saved.readings[1])] };
 }

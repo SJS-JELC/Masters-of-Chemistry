@@ -13,9 +13,34 @@ authorized main-app integration on12 October2026. Publication remains separate.
 
 Source: `src/activities/alevel/rate-equations/`. The12 accepted prototype
 question identities remain `RATE-POC-{family}-L{level}` internally; permanent
-display aliases use `RE-000001` through `RE-00000C`. Numerical families restore
+legacy display aliases use `RE-000001` through `RE-00000C`. Numerical families restore
 from the source ID and uint32 seed; the three checked mechanisms use seed0.
 These are the existing examples and numerical variants, not a full5.1.1 bank.
+
+### Teacher-reproducible generated codes
+
+Generated questions now display `RE-XXXXXXX` (seven base-36 characters).
+`identity.ts` encodes `seed * 16 + permanentSlot`, preserving the full uint32
+seed. Slots 1–6 and 10–12 identify the existing numerical template/level pairs;
+other slots are reserved and rejected. Never renumber or reuse assigned slots.
+Seven characters are necessary to preserve all existing seeds. The three fixed
+mechanisms retain `RE-000007`–`RE-000009` and seed 0.
+
+Pupil headers, teacher views and statistics use the actual reference seed.
+Teacher lookup accepts a generated code alone and restores its exact reference,
+including numerical data, graph and answer. Conflicting explicit URL seeds or
+levels are rejected. Old six-character aliases and source-ID links remain valid:
+they default to seed 0 or use their explicit URL seed. Saved references, attempts,
+scores and timing are not migrated or rewritten.
+
+For future generators, a displayed code must reproduce the exact variant, not
+merely select its template. Store permanent slots/configurations and the actual
+seed, preserve previous code meanings, and test boundary seeds, malformed codes,
+all templates/levels and teacher lookup round trips. Keep generation deterministic;
+substantive content replacements require new identities. Do not silently change
+historical variants or shorten codes by discarding seed information.
+
+Focused check: `node --test --test-isolation=none scripts/tests/rate-equations-links.test.mjs`.
 Practical-method questions and scattered-data best-fit editing remain deferred.
 
 Practice and revision use the same QuestionPlayer, attempt controller, active

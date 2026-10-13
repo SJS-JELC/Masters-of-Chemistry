@@ -1178,6 +1178,7 @@ function CurriculumHost({
             questionHeader: {
               subtopic: shownSubtopic,
               questionId: shownQuestion.ref.questionId,
+              seed: shownQuestion.ref.seed,
               activityId: shownQuestion.ref.activityId,
             },
           }

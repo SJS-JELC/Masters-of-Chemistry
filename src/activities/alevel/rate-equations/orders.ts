@@ -22,6 +22,7 @@ const typed = (id: string, prompt: string, accepted: string): QuestionPart => ({
   ...base(id, prompt), kind: 'text', accepted: [accepted], normalization: 'exact', presentation: 'single-line',
 });
 const shown = (value: number) => Number(value.toPrecision(8)).toString();
+const exponent = (value: number) => String(value).replace(/[0-9]/g, digit => '⁰¹²³⁴⁵⁶⁷⁸⁹'[Number(digit)]!);
 const power = (species: string, order: number) => order === 0 ? '' : `[${species}]${order === 1 ? '' : '²'}`;
 const equation = (m: number, n: number) => `rate = k${power('A', m)}${power('B', n)}`;
 const unitFor = (order: number) => [ 'mol dm⁻³ s⁻¹', 's⁻¹', 'dm³ mol⁻¹ s⁻¹', 'dm⁶ mol⁻² s⁻¹', 'dm⁹ mol⁻³ s⁻¹' ][order]!;
@@ -53,16 +54,16 @@ export const makeOrders: RateFactory = (level, seed) => {
       : `Comparing experiments 1 and 3: [A] triples and [B] doubles; rate changes by ${3 ** m * 2 ** n}. Divide that factor by the known A factor ${3 ** m}, leaving a factor of ${2 ** n} caused by doubling [B]. The order with respect to B is ${n}.`));
     workedAnswer.push(formula(equation(m, n)));
     if (level === 2) {
-      parts.push(numeric('k', 'Calculate the numerical value of k. Write its units in the next part.', k));
+      parts.push(numeric('k', 'Calculate the numerical value of k.', k));
       parts.push(typed('k-units', 'Write the units of k.', unitFor(m + n)));
       correctResponses.k = { kind: 'numeric', raw: shown(k), unit: '' };
       correctResponses['k-units'] = { kind: 'text', value: unitFor(m + n) };
-      workedAnswer.push(text(`k = rate / ([A]^${m} × [B]^${n}) = ${shown(rate)} / (${shown(a)}^${m} × ${shown(b)}^${n}) = ${shown(k)} ${unitFor(m + n)}. Overall order is ${m + n}; divide mol dm⁻³ s⁻¹ by (mol dm⁻³)^${m + n}.`));
+      workedAnswer.push(text(`k = rate / ([A]${exponent(m)} × [B]${exponent(n)})\n   = ${shown(rate)} / (${shown(a)}${exponent(m)} × ${shown(b)}${exponent(n)})\n   = ${shown(k)} ${unitFor(m + n)}.`));
     } else {
       const predictedRate = rate * 3 ** m * 0.5 ** n;
       parts.push(numeric('predicted-rate', `Predict the initial rate when [A] = ${shown(3 * a)} mol dm⁻³ and [B] = ${shown(b / 2)} mol dm⁻³ at the same temperature.`, predictedRate, 'mol dm⁻³ s⁻¹'));
       correctResponses['predicted-rate'] = { kind: 'numeric', raw: shown(predictedRate), unit: 'mol dm⁻³ s⁻¹' };
-      workedAnswer.push(text(`Relative to experiment 1, [A] is multiplied by 3 and [B] by 1/2. New rate = ${shown(rate)} × 3^${m} × (1/2)^${n} = ${shown(predictedRate)} mol dm⁻³ s⁻¹.`));
+      workedAnswer.push(text(`Relative to experiment 1, [A] is multiplied by 3 and [B] by 1/2. New rate = ${shown(rate)} × 3${exponent(m)} × (1/2)${exponent(n)} = ${shown(predictedRate)} mol dm⁻³ s⁻¹.`));
     }
   }
   return {
@@ -70,11 +71,11 @@ export const makeOrders: RateFactory = (level, seed) => {
     question: {
       ref: { activityId: 'alevel/acid-base-calculations', questionId: `RATE-POC-orders-L${level}`, seed, level },
       title: level === 1 ? 'Deduce an order from initial rates' : level === 2 ? 'Orders, rate equation and rate constant' : 'Simultaneous changes and a rate prediction',
-      context: [text('Initial rates are measured for a reaction involving reactants A and B at the same temperature. All conditions other than the listed initial concentrations are identical.'),
+      context: [text('Initial rates for a reaction between A and B are measured at constant temperature; only the listed concentrations vary.'),
         { kind: 'table', headers: level === 1 ? ['Experiment', '[A] / mol dm⁻³', 'Initial rate / mol dm⁻³ s⁻¹'] : ['Experiment', '[A] / mol dm⁻³', '[B] / mol dm⁻³', 'Initial rate / mol dm⁻³ s⁻¹'], rows },
         ...(level === 1 ? [text('[B] is held at the same concentration in both experiments.')] : [])],
       layout: 'multipart', submission: 'all-required-parts', parts,
-      scaffolds: level === 1 ? [{ id: 'rate-factor', level: 1, content: [text('For a doubling of concentration, rate factors 1, 2 and 4 correspond to orders 0, 1 and 2.')], purpose: 'Compare rate and concentration factors.' }] : [],
+      scaffolds: [],
       hints: [], workedAnswer, sources,
     },
     correctResponses,

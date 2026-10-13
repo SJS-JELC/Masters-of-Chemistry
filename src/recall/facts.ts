@@ -6,6 +6,8 @@ import provenance from './provenance.json' with { type: 'json' };
 import { starterDecks } from './starter-decks.ts';
 import { existingRecallGemLinks } from '../activities/igcse/formulae/recall-facts.ts';
 import catalogueData from '../landing/catalogue-data.json' with { type: 'json' };
+import type { LandingCatalogue } from '../landing/catalogue.ts';
+const catalogues = catalogueData as unknown as Record<Course, LandingCatalogue>;
 const catalogue = catalogueData as unknown as Record<
   Course,
   { groups: readonly { key: string; topics: readonly [number, string, readonly string[]][] }[] }
@@ -101,7 +103,24 @@ const igcse = (approvedIGCSE as readonly RecallFact[]).map((f) => ({
     ]),
   ],
 }));
-export const recallFacts: readonly RecallFact[] = [...alevel, ...igcse];
+const rateHalfLifeFact: RecallFact = {
+  id: 'first-order-half-life-rate-constant',
+  course: 'alevel',
+  prompt: 'For a first-order reaction, give the relationship between the rate constant k and the half-life t½.',
+  answer: 'k = ln 2 / t½',
+  accepted: ['k = ln(2) / t½', 'k = 0.693 / t½',
+    'k = ln 2 / t1/2', 'k = ln(2) / t1/2', 'k = 0.693 / t1/2',
+    'k = ln 2 / t(1/2)', 'k = ln(2) / t(1/2)', 'k = 0.693 / t(1/2)',
+    'k = ln 2 / half-life', 'k = ln(2) / half-life', 'k = 0.693 / half-life'],
+  matching: { kind: 'chemical' },
+  gemIds: ['u6-t1-2-graphs'],
+  sources: [{
+    path: 'resources/a-level-past-paper-atlas/run2/specification-evidence/sections.json',
+    sha256: 'b6c12f95c801adfb8725395c267ac12ba640ca16d925aa82ea9a37582804183a',
+    symbolOrSection: 'OCR Chemistry A 5.1.1(f): first-order k = ln 2 / t½; user-authorised recall addition, 13 October 2026.',
+  }],
+};
+export const recallFacts: readonly RecallFact[] = [...alevel, rateHalfLifeFact, ...igcse];
 export function factsFor(
   course: Course,
   gemIds: readonly string[] | null = null,
@@ -117,9 +136,9 @@ export function recallCoverage(
   const result = catalogue[course].groups.flatMap((group) =>
     group.topics.flatMap((topic) =>
       topic[2].map((label, i) => ({
-        gemId: group.key + '-' + topic[0] + '-' + (i + 1),
+        gemId: catalogues[course].display.identities?.[group.key + '-' + topic[0] + '-' + (i + 1)] ?? group.key + '-' + topic[0] + '-' + (i + 1),
         label,
-        factIds: factsFor(course, [group.key + '-' + topic[0] + '-' + (i + 1)]).map((f) => f.id),
+        factIds: factsFor(course, [catalogues[course].display.identities?.[group.key + '-' + topic[0] + '-' + (i + 1)] ?? group.key + '-' + topic[0] + '-' + (i + 1)]).map((f) => f.id),
       })),
     ),
   );

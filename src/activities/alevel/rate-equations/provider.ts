@@ -4,7 +4,7 @@ import { questionLookupInput } from '../../../content/question-display-identity.
 import { makeOrders } from './orders.ts';
 import { makeGraphs, makeArrhenius } from './graphs.ts';
 import { makeMechanisms } from './mechanisms.ts';
-import { rateActivityId, rateGemIds, rateQuestionSources, rateSeedCheck, rateSource } from './identity.ts';
+import { decodeRateQuestionCode, rateActivityId, rateGemIds, rateQuestionSources, rateSeedCheck, rateSource } from './identity.ts';
 import type { RateExample, RateFactory, RateGem } from './types.ts';
 
 const factories: Readonly<Record<RateGem, RateFactory>> = {
@@ -38,6 +38,8 @@ export const rateProvider: QuestionProvider = {
     return { activityId: rateActivityId, questionId: source.questionId, seed: gem === 'mechanisms' ? 0 : selection.seed, level: source.level };
   },
   resolveLink(code) {
+    const encoded = decodeRateQuestionCode(code);
+    if (encoded) return encoded;
     const source = rateSource(questionLookupInput('alevel', rateActivityId, code));
     return source ? { activityId: rateActivityId, questionId: source.questionId, seed: 0, level: source.level } : null;
   },

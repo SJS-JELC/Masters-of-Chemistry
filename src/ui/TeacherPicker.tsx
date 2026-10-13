@@ -52,6 +52,7 @@ export function TeacherPicker({
               course,
               activityId: row.ref.activityId,
               questionId: row.ref.questionId,
+              seed: row.ref.seed,
             })
           )
             .toLowerCase()

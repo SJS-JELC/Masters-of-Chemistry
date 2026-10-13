@@ -1,5 +1,6 @@
 import type { ContentBlock } from '../../contracts/question.ts';
 import type { CalculationBlock } from './types.ts';
+import { parseScientificNumber } from '../../domain/attempt/input-checks.ts';
 export const text = (text: string): ContentBlock => ({ kind: 'text', text });
 export function svgImage(svg: string, alt: string): ContentBlock {
   // Original thermometer SVG is inline HTML, so its namespace was implicit. An img needs XML's explicit SVG namespace.
@@ -29,6 +30,5 @@ export function numericalTolerance(expected: number) {
   return expected === 0 ? 1e-9 : 0.500001 * 10 ** (Math.floor(Math.log10(Math.abs(expected))) - 2);
 }
 export function parseNumeric(raw: string) {
-  const text = raw.trim().replaceAll('−', '-');
-  return /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(text) ? Number(text) : NaN;
+  return parseScientificNumber(raw);
 }

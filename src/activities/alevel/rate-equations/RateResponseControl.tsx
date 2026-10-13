@@ -1,6 +1,7 @@
 import { useId, useLayoutEffect, useRef } from 'react';
 import type { KeyboardEvent } from 'react';
 import { ResponseControl } from '../../../ui/ResponseControl.tsx';
+import { ScientificNumberInput } from '../../../ui/ScientificNumberInput.tsx';
 import type { ResponseControlProps } from '../../../ui/ResponseControl.tsx';
 import { Content } from '../../../ui/Content.tsx';
 import { formatRateInput } from './input-syntax.ts';
@@ -28,16 +29,13 @@ function TypedRateAnswer({ part, response, readOnly, onResponse, status }: Respo
     onResponse({ kind: 'text', value: next.value });
   };
   return <label className="response-label rate-typed-answer" htmlFor={id}>
-    {mode === 'units' ? 'Units of k' : 'Rate equation'}
     <input ref={input} id={id} data-answer-input="true" data-rate-input={mode} type="text" value={value}
-      aria-describedby={`${id}-help`} aria-invalid={status === 'incorrect' ? true : undefined} data-response-status={status}
+      aria-label={part.prompt.map(block => block.kind === 'text' ? block.text : '').join(' ')}
+      aria-invalid={status === 'incorrect' ? true : undefined} data-response-status={status}
       readOnly={readOnly} autoComplete="off" autoCapitalize="off" spellCheck={false}
       onCompositionStart={() => { composing.current = true; selection.current = null; }}
       onCompositionEnd={event => { composing.current = false; update(event.currentTarget, true); }}
       onChange={event => update(event.currentTarget, !composing.current)} />
-    <span className="support-note" id={`${id}-help`}>{mode === 'units'
-      ? 'Type unit factors such as dm3 mol-1 s-1. Powers format automatically.'
-      : 'Type rate = k and bracketed concentrations. Formula digits and powers format automatically.'}</span>
   </label>;
 }
 
@@ -48,6 +46,18 @@ export function RateResponseControl(props: ResponseControlProps) {
   const { part, response, readOnly, onResponse } = props;
   if (part.kind === 'text' && (part.id === 'rate-equation' || part.id === 'k-units'))
     return <TypedRateAnswer {...props} mode={part.id === 'k-units' ? 'units' : 'rate-law'} />;
+  if (part.kind === 'numeric' && !part.workingFramework) {
+    const label = part.prompt.map(block => block.kind === 'text' ? block.text : '').join(' ');
+    return <label className="response-label rate-numeric-answer" htmlFor={id}>
+      <ScientificNumberInput id={id} data-answer-input="true" aria-label={`${label}${part.unit ? ` (${part.unit})` : ''}`}
+        aria-invalid={props.status === 'incorrect' ? true : undefined} data-response-status={props.status}
+        inputMode={part.inputMode ?? 'decimal'} readOnly={readOnly}
+        value={response?.kind === 'numeric' ? response.raw : ''}
+        onChange={event => onResponse({ kind: 'numeric', raw: event.target.value, unit: part.unit,
+          ...(response?.kind === 'numeric' && response.working ? { working: response.working } : {}) })} />
+      {part.unit && <span className="unit">{part.unit}</span>}
+    </label>;
+  }
   if (part.kind !== 'choice') return <ResponseControl {...props} />;
   const selected = response?.kind === 'choice' ? response.selected : [];
   const multiple = part.presentation === 'multiple';
@@ -71,7 +81,7 @@ export function RateResponseControl(props: ResponseControlProps) {
   };
   const tabIndex = Math.max(0, part.options.findIndex(option => selected.includes(option.id)));
   return <fieldset className="rate-choice-field" disabled={readOnly}>
-    <legend id={id}>{multiple ? 'Choose all that apply' : 'Choose one answer'}</legend>
+    <legend id={id} className={multiple ? undefined : 'sr-only'}>{part.prompt.map(block => block.kind === 'text' ? block.text : '').join(' ')}{multiple ? ' Choose all that apply.' : ''}</legend>
     <div className="rate-choice-buttons" role={multiple ? 'group' : 'radiogroup'} aria-labelledby={id}>
       {part.options.map((option, index) => <button type="button" key={option.id}
         ref={node => { buttons.current[index] = node; }}

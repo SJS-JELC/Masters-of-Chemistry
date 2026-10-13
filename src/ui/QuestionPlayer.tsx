@@ -197,6 +197,7 @@ export function QuestionPlayer({
   const chrome = useQuestionChrome();
   const chemical = question.chemicalPresentation;
   const displayTitle = chemical ? chemicalQuestionTitle(chemical) : questionDisplayTitle(question);
+  const hideArrheniusHeader = question.ref.activityId === 'alevel/rate-equations' && question.ref.questionId.startsWith('RATE-POC-arrhenius-');
   const repeatedTitle =
     recallPresentation || (!chemical && repeatsQuestionSubtopic(displayTitle, chrome));
   const actions = useQuestionActions({
@@ -314,8 +315,9 @@ export function QuestionPlayer({
   return (
     <article
       {...keyboard}
-      className={`question-player layout-${question.layout}${properties ? ' properties-player' : ''}${chemical ? ' chemical-question-player' : ''}${recallPresentation ? ' recall-test-player recall-shared-player' : ''}`}
-      {...(repeatedTitle
+      data-question-family={question.ref.activityId === 'alevel/rate-equations' && question.ref.questionId.startsWith('RATE-POC-mechanisms-') ? 'rate-mechanisms' : undefined}
+      className={`question-player layout-${question.layout}${question.ref.activityId === 'alevel/rate-equations' ? ' rate-question-player' : ''}${properties ? ' properties-player' : ''}${chemical ? ' chemical-question-player' : ''}${recallPresentation ? ' recall-test-player recall-shared-player' : ''}`}
+      {...(repeatedTitle || hideArrheniusHeader
         ? { 'aria-label': displayTitle }
         : { 'aria-labelledby': `${instanceId}-title` })}
     >
@@ -330,7 +332,7 @@ export function QuestionPlayer({
               level={question.ref.level}
             />
           ))}
-        {!repeatedTitle && <h2 id={`${instanceId}-title`}>{displayTitle}</h2>}
+        {!repeatedTitle && !hideArrheniusHeader && <h2 id={`${instanceId}-title`}>{displayTitle}</h2>}
       </header>
       {!student && (
         <p className="mode-notice" role="status">
@@ -401,13 +403,14 @@ export function QuestionPlayer({
         {!chemical &&
           !question.sentenceTokens &&
           question.parts.map((part, index) => {
+            const compactRateAnswer = question.ref.activityId === 'alevel/rate-equations';
             return (
               <section
                 className="question-part"
                 key={part.id}
-                {...(properties || recallPresentation
+                {...(properties || recallPresentation || compactRateAnswer
                   ? {
-                      'aria-label': recallPresentation
+                      'aria-label': recallPresentation || compactRateAnswer
                         ? part.prompt
                             .map((block) => (block.kind === 'text' ? block.text : ''))
                             .join(' ') || 'Answer'
@@ -415,7 +418,7 @@ export function QuestionPlayer({
                     }
                   : { 'aria-labelledby': `${instanceId}-part-${part.id}` })}
               >
-                {!properties && !recallPresentation && (
+                {!properties && !recallPresentation && !compactRateAnswer && (
                   <div className="part-heading">
                     <h3 id={`${instanceId}-part-${part.id}`}>
                       {question.parts.length > 1 ? `Part ${index + 1}` : 'Your response'}
@@ -430,7 +433,12 @@ export function QuestionPlayer({
                   part.prompt.length === 1 &&
                   part.prompt[0]?.kind === 'text' &&
                   /^answer$/i.test(part.prompt[0].text.trim())
-                ) && <Content blocks={part.prompt} />}
+                ) && (compactRateAnswer && question.parts.length > 1 ? (
+                  <div className="rate-part-prompt">
+                    <span className="rate-part-label">{String.fromCharCode(97 + index)}</span>
+                    <Content blocks={part.prompt} />
+                  </div>
+                ) : <Content blocks={part.prompt} />)}
                 {!student && part.kind === 'correction' && <p>{part.sourceText}</p>}
                 {student && (
                   <PlayerResponseControl

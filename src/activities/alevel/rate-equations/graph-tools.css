@@ -1,38 +1,47 @@
-.rate-graph-tools { margin-block: 1rem; padding: 1rem; border: 1px solid #c6d8de; border-radius: 1rem; background: #f9fcfd; color: #173740; }
+.rate-graph-tools { --graph-ink: #eef0ff; margin-block: 1rem; padding: 1rem; border: 0; border-radius: 1rem; background: var(--surface); color: var(--graph-ink); }
 .rate-graph-help { margin-top: 0; font-size: .9rem; line-height: 1.6; }
-.rate-graph-svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-x; background: white; border-radius: .7rem; }
+.arrhenius-data-book { margin-block: 1rem; padding: .5rem 1.25rem 1rem; border: 1px solid #cbd5dc; border-radius: .6rem; background: #fff; color: #111; color-scheme: light; }
+.arrhenius-data-book h3 { margin: 0 0 .2rem; font-size: .75rem; color: #767676; text-transform: uppercase; }
+.arrhenius-data-book h3 + p { margin-top: .2rem; }
+.arrhenius-data-book p { margin: .5rem 0; line-height: 1.8; }
+.arrhenius-data-equation { display: inline-block; white-space: nowrap; }
+.rate-graph-svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-x; background: var(--surface); border-radius: .7rem; }
 .rate-graph-plot-scroll { max-width: 100%; overflow-x: auto; border-radius: .7rem; }
-.rate-graph-plot-scroll:focus-visible { outline: 3px solid #087e7a; outline-offset: 3px; }
-.rate-graph-grid line { stroke: #dee8ec; stroke-width: 1; }
-.rate-graph-grid text { fill: #37515b; font-size: 12px; font-family: sans-serif; }
-.rate-graph-axis { fill: none; stroke: #173740; stroke-width: 1.6; }
-.rate-graph-axis-label { fill: #173740; font-size: 14px; font-weight: 700; font-family: sans-serif; }
-.rate-graph-curve { fill: none; stroke: #295da5; stroke-width: 3; }
-.rate-graph-tangent { stroke: #087e7a; stroke-width: 2; }
+.rate-graph-with-toggle { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.rate-tangent-toggle { min-width: 10rem; justify-self: end; }
+.rate-graph-toggle-buttons { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .7rem; }
+.rate-graph-toggle-buttons button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.rate-graph-plot-scroll:focus-visible { outline: 3px solid var(--positive); outline-offset: 3px; }
+.rate-graph-grid line { stroke: var(--border); stroke-width: 1; }
+.rate-graph-grid text { fill: var(--muted); font-size: 12px; font-family: sans-serif; }
+.rate-graph-axis { fill: none; stroke: var(--graph-ink); stroke-width: 1.6; }
+.rate-graph-axis-label { fill: var(--graph-ink); font-size: 14px; font-weight: 700; font-family: sans-serif; }
+.rate-graph-curve { fill: none; stroke: var(--accent); stroke-width: 3; }
+.rate-graph-tangent { stroke: var(--positive); stroke-width: 2; }
 .rate-graph-tangent-hit { stroke: transparent; stroke-width: 18; cursor: ew-resize; touch-action: none; }
-.rate-graph-label rect { fill: white; fill-opacity: .96; stroke: #bd6613; stroke-width: 1.2; }
-.rate-graph-label text { fill: #713a0a; font-family: sans-serif; font-size: 18px; font-variant-numeric: tabular-nums; }
-.rate-graph-coordinate-box rect { fill: #f0fbfa; stroke: #087e7a; }
-.rate-graph-coordinate-box text { fill: #075d59; }
-.rate-graph-label-guide { stroke: #bd6613; stroke-width: 1; pointer-events: none; }
+.rate-graph-label rect { fill: var(--surface-raised); fill-opacity: .96; stroke: var(--yellow); stroke-width: 1.2; }
+.rate-graph-label text { fill: var(--yellow); font-family: sans-serif; font-size: 18px; font-variant-numeric: tabular-nums; }
+.rate-graph-coordinate-box rect { fill: var(--surface-raised); stroke: var(--positive); }
+.rate-graph-coordinate-box text { fill: var(--positive); }
+.rate-graph-label-guide { stroke: var(--yellow); stroke-width: 1; pointer-events: none; }
 .rate-graph-triangle { pointer-events: none; }
-.rate-graph-marker-guide { fill: none; stroke: #087e7a; stroke-dasharray: 4 4; }
-.rate-graph-triangle { fill: #fff5e6; fill-opacity: .45; stroke: #bd6613; stroke-width: 2; }
-.rate-graph-handle { fill: #bd6613; stroke: white; stroke-width: 2; cursor: ew-resize; touch-action: none; }
-.rate-graph-handle-marker { fill: #087e7a; }
-.rate-graph-handle:focus { outline: none; stroke: #132934; stroke-width: 4; }
-.rate-graph-pin { stroke: #8058a4; fill: none; stroke-dasharray: 3 4; }
-.rate-graph-pin circle { fill: #8058a4; stroke: white; stroke-dasharray: none; }
-.rate-graph-pin text { fill: #684387; stroke: none; font-size: 14px; font-family: sans-serif; font-weight: 700; }
+.rate-graph-marker-guide { fill: none; stroke: var(--positive); stroke-dasharray: 4 4; }
+.rate-graph-triangle { fill: var(--yellow); fill-opacity: .08; stroke: var(--yellow); stroke-width: 2; }
+.rate-graph-handle { fill: var(--yellow); stroke: var(--graph-ink); stroke-width: 2; cursor: ew-resize; touch-action: none; }
+.rate-graph-handle-marker { fill: var(--positive); }
+.rate-graph-handle:focus { outline: none; stroke: var(--yellow); stroke-width: 4; }
+.rate-graph-pin { stroke: var(--accent); fill: none; stroke-dasharray: 3 4; }
+.rate-graph-pin circle { fill: var(--accent); stroke: var(--graph-ink); stroke-dasharray: none; }
+.rate-graph-pin text { fill: var(--accent); stroke: none; font-size: 14px; font-family: sans-serif; font-weight: 700; }
 .rate-graph-readings { font-variant-numeric: tabular-nums; line-height: 1.5; overflow-wrap: anywhere; }
 .rate-graph-readings p { margin-block: .5rem; }
 .rate-graph-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; margin-block: 1rem; }
 .rate-graph-field { display: flex; flex-direction: column; gap: .4rem; font-size: .85rem; }
-.rate-graph-field input { box-sizing: border-box; width: 100%; min-width: 0; padding: .55rem; border: 1px solid #97b3be; border-radius: .4rem; background: white; color: #173740; font: inherit; }
+.rate-graph-field input { box-sizing: border-box; width: 100%; min-width: 0; padding: .55rem; border: 1px solid var(--border); border-radius: .4rem; background: var(--surface); color: var(--graph-ink); font: inherit; }
 .rate-graph-toggle { display: flex; align-items: center; gap: .5rem; font-size: .9rem; }
-.rate-graph-assessed { padding: .6rem; border-left: 3px solid #087e7a; background: #eaf6f4; }
-.rate-graph-pin-controls { padding-top: .6rem; border-top: 1px solid #c6d8de; font-size: .9rem; }
+.rate-graph-assessed { padding: .6rem; border-left: 3px solid var(--positive); background: var(--surface-raised); }
+.rate-graph-pin-controls { padding-top: .6rem; border-top: 1px solid var(--border); font-size: .9rem; }
 .rate-graph-pin-controls > div { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; margin-block: .5rem; }
-.rate-graph-pin-controls button { padding: .5rem .75rem; cursor: pointer; border: 1px solid #8058a4; border-radius: .4rem; background: white; color: #684387; font: inherit; }
-@media(max-width: 600px) { .rate-graph-tools { padding: .65rem; min-width: 0; } .rate-graph-svg { min-width: 560px; } .rate-graph-grid text { font-size: 16px; } .rate-graph-controls { grid-template-columns: 1fr 1fr; } .rate-graph-axis-label { font-size: 18px; } }
-@media print { .rate-graph-controls, .rate-graph-pin-controls button, .rate-graph-help { display: none; } .rate-graph-tools { break-inside: avoid; } }
+.rate-graph-pin-controls button { padding: .5rem .75rem; cursor: pointer; border: 1px solid var(--accent); border-radius: .4rem; background: var(--surface); color: var(--accent); font: inherit; }
+@media(max-width: 600px) { .rate-graph-tools { --graph-ink: #eef0ff; padding: .65rem; min-width: 0; } .rate-graph-svg { min-width: 560px; } .rate-graph-grid text { font-size: 16px; } .rate-graph-controls { grid-template-columns: 1fr 1fr; } .rate-graph-axis-label { font-size: 18px; } }
+@media print { .rate-graph-controls, .rate-graph-pin-controls button, .rate-graph-help { display: none; } .rate-graph-tools { --graph-ink: #eef0ff; break-inside: avoid; } }

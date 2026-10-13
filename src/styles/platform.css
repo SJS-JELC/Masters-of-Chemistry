@@ -115,3 +115,14 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
 .worked-answer>h3,.dot-answer-dialog>h3{margin:0 0 .8rem;color:var(--positive);font-size:.78rem;font-weight:700;letter-spacing:.07em;line-height:1.4}
 .worked-answer{padding-top:12px}
 .dot-answer-dialog{border-color:var(--positive)}
+
+/* Checked answer feedback in the shared practice/mastery player. */
+:is(.question-player, .source-player) :is(input, textarea)[data-answer-input][data-response-status="incorrect"],
+:is(.question-player, .source-player) :is(input, textarea)[aria-invalid="true"] {
+  border: 2px solid #ff5f72;
+  box-shadow: inset 0 0 0 1px #ff5f72;
+}
+:is(.question-player, .source-player) :is(input, textarea)[data-answer-input][data-response-status="correct"] {
+  border: 2px solid var(--positive);
+  box-shadow: inset 0 0 0 1px var(--positive);
+}

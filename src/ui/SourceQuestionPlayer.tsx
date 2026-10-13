@@ -612,7 +612,7 @@ export function SourceQuestionPlayer(props: QuestionPlayerProps) {
           {family === 'acid' && (
             <p className="rounding-note">
               Give pH and pKa to 2 decimal places. Give other numerical answers to 3 significant
-              figures unless exact. You can enter standard form as 1.23e-4.
+              figures unless exact.
             </p>
           )}
           {family === 'calorimetry' && (

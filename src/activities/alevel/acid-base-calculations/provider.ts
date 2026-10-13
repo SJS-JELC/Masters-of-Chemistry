@@ -91,7 +91,7 @@ export function acidQuestion(item: AcidQuestion): Question {
       text(item.intro),
       ...rows,
       text(
-        'Use the rounding instructions shown with each response. You can enter standard form as 1.23e-4.',
+        'Use the rounding instructions shown with each response.',
       ),
     ],
     layout: item.responses.length > 1 ? 'multipart' : 'compact',

@@ -113,6 +113,7 @@ function GemRow({
             course,
             activityId: record.ref.activityId,
             questionId: record.ref.questionId,
+            seed: record.ref.seed,
           })
         : undefined) ??
       (record.provenance === 'legacy-import' &&

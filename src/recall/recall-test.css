@@ -307,3 +307,21 @@
  .recall-test-player .recall-fields > .recall-response > label:not(.sr-only) { grid-column: 1 / -1; }
  .recall-test-player .recall-fields .recall-field-status, .recall-learning-review-direct { grid-column: 1 / -1; }
 }
+
+/* Recall answers use the input itself, without an extra surrounding card. */
+.recall-test-player .question-parts > .question-part {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+}
+.recall-test-player input[data-answer-input]:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-response input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-notation-overlay {
+  text-align: center;
+  font-size: 1.35rem;
+}
+.recall-test-player input[data-answer-input]:focus,
+.recall-test-player .recall-response input:focus {
+  outline: none;
+}

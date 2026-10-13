@@ -159,6 +159,8 @@ export function ResponseControl({
               data-answer-input="true"
               id={id}
               aria-label="Your answer"
+              data-response-status={status}
+              aria-invalid={status === 'incorrect' ? true : undefined}
               rows={7}
               readOnly={readOnly}
               value={value}
@@ -169,6 +171,8 @@ export function ResponseControl({
               data-answer-input="true"
               id={id}
               readOnly={readOnly}
+              data-response-status={status}
+              aria-invalid={status === 'incorrect' ? true : undefined}
               value={value}
               onChange={(event) => onResponse({ kind: 'text', value: event.target.value })}
             />
@@ -180,6 +184,7 @@ export function ResponseControl({
       return (
         <NumericWorkingControl
           part={part}
+          status={status}
           response={response?.kind === 'numeric' ? response : undefined}
           readOnly={readOnly}
           assisted={workingAssisted}

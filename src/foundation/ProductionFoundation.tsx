@@ -410,6 +410,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
   function navigate(
     next: Destination | ((ticket: LoadingTicket) => Promise<Destination>),
     historyMode: 'push' | 'replace' | 'pop' = 'push',
+    focusDestination = true,
   ) {
     return loading.run(
       'screen',
@@ -442,7 +443,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
             document.querySelector<HTMLElement>(
               '#loading-surface h1,#loading-surface h2,#loading-surface .question-player',
             );
-          if (heading) {
+          if (heading && focusDestination) {
             heading.tabIndex = -1;
             heading.focus({ preventScroll: true });
           }
@@ -454,7 +455,7 @@ export function FoundationApp({ course: entryCourse }: { readonly course: Course
   useEffect(() => {
     if (booted.current) return;
     booted.current = true;
-    void navigate(initial, 'replace');
+    void navigate(initial, 'replace', false);
   }, []);
   useEffect(() => {
     const pop = () => {

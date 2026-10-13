@@ -2,6 +2,7 @@ import { questionLookupInput, recallLookupIdentity } from '../content/question-d
 import type { Course, QuestionRef } from '../contracts/identity.ts';
 import type { CompatibilityResolution } from '../contracts/integration.ts';
 import type { QuestionProvider } from '../contracts/question.ts';
+import { seededRateCodePattern } from '../activities/alevel/rate-equations/identity.ts';
 
 // Only migrated, source-owned pure providers. No original page scripts execute.
 const providers = {
@@ -154,7 +155,7 @@ export async function resolveCompatibilityLink(
     let ref = provider.resolveLink?.(questionLookupInput(course, course + '/' + slug, code)) ?? null;
     if (ref) {
       try {
-        const encoded = /^(?:(?:AB|CAL|BE|ECB)-|RF1:)/i.test(code) || slug === 'equations';
+        const encoded = /^(?:(?:AB|CAL|BE|ECB)-|RF1:)/i.test(code) || seededRateCodePattern.test(code) || slug === 'equations';
         if (
           encoded &&
           ((requestedSeed !== undefined && requestedSeed !== ref.seed) ||

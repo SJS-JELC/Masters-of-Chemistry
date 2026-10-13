@@ -2,6 +2,8 @@ import { isPrimaryRecallGem } from './selection.ts';
 import type { Course, Namespace } from '../contracts/identity.ts';
 import type { RecallFact, RecallSession } from '../contracts/recall.ts';
 import catalogue from '../landing/catalogue-data.json' with { type: 'json' };
+import type { LandingCatalogue } from '../landing/catalogue.ts';
+const catalogues = catalogue as unknown as Record<Course, LandingCatalogue>;
 
 export type RecallMode = 'test' | 'flashcards';
 export type RecallLaunchScope =
@@ -57,8 +59,12 @@ export const recallTopics: readonly RecallTopic[] = (['alevel', 'igcse'] as cons
           year: assignment.year,
           ...(strand ? { strand } : {}),
           batchId: assignment.year + (strand ? '-' + strand : ''),
-          gemIds: (topic[2] as readonly string[]).map(
-            (_, i) => group.key + '-' + n + '-' + (i + 1),
+          gemIds: (topic[2] as readonly string[]).flatMap(
+            (_, i) => {
+              const legacy = group.key + '-' + n + '-' + (i + 1);
+              const current = catalogues[course].display.identities?.[legacy];
+              return current && current !== legacy ? [legacy, current] : [legacy];
+            },
           ),
         };
       });

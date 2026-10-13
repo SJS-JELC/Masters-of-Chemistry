@@ -6,6 +6,7 @@ import type { Question } from '../contracts/question.ts';
 
 export interface QuestionHeader {
   readonly subtopic: string;
+  readonly seed?: number;
   readonly questionId?: string;
   readonly activityId?: string;
 }
@@ -76,6 +77,7 @@ export function QuestionChrome({
         {...(metadata.questionId ? { questionId: metadata.questionId } : {})}
         course={course}
         {...(metadata.activityId ? { activityId: metadata.activityId } : {})}
+        {...(metadata.seed !== undefined ? { seed: metadata.seed } : {})}
         {...(onBack ? { onBack } : {})}
         backLabel={backLabel}
       />
@@ -86,6 +88,7 @@ export function QuestionChrome({
 /** Standard question ID and arrow-only navigation, shared by question and recall hosts. */
 export function QuestionHeaderActions({
   questionId,
+  seed,
   course,
   activityId,
   onBack,
@@ -93,13 +96,14 @@ export function QuestionHeaderActions({
   disabled = false,
 }: {
   readonly questionId?: string;
+  readonly seed?: number;
   readonly course?: Course;
   readonly activityId?: string;
   readonly onBack?: () => void;
   readonly backLabel?: string;
   readonly disabled?: boolean;
 }) {
-  const code = questionId ? (course && activityId ? questionDisplayCode({ course, activityId, questionId }) : canonicalQuestionPattern.test(questionId) ? questionId : undefined) : undefined;
+  const code = questionId ? (course && activityId ? questionDisplayCode({ course, activityId, questionId, ...(seed !== undefined ? { seed } : {}) }) : canonicalQuestionPattern.test(questionId) ? questionId : undefined) : undefined;
   return (
     <div className="question-header-actions">
       {code && (

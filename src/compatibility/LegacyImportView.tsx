@@ -62,6 +62,8 @@ export function LegacyImportView({
       async (ticket) => {
         const history = await repository.curriculumHistory(namespace);
         if (!history.ok) throw repositoryError(history.error);
+        const study = await repository.flashcardStudyTimeHistory(namespace);
+        if (!study.ok) throw repositoryError(study.error);
         const olympiad =
           namespace.course === 'alevel' ? await repository.loadOlympiad(namespace.profileId) : null;
         const isomers =
@@ -80,10 +82,11 @@ export function LegacyImportView({
           namespace,
           source: {
             key: CURRENT_IMPORT_KEY,
-            fingerprint: fingerprint(canonical({ curriculum, olympiad: progress })),
+            fingerprint: fingerprint(canonical({ curriculum, olympiad: progress, flashcardStudyTime: study.value })),
           },
           curriculum,
           olympiad: progress,
+          flashcardStudyTime: study.value,
         };
         return batch;
       },
@@ -100,7 +103,7 @@ export function LegacyImportView({
       async () => {
         const plan = await planLegacyImport(namespace, { [CURRENT_IMPORT_KEY]: text });
         const count = plan.batches.reduce(
-          (n, batch) => n + batch.curriculum.length + batch.olympiad.length,
+          (n, batch) => n + batch.curriculum.length + batch.olympiad.length + (batch.flashcardStudyTime?.length ?? 0),
           0,
         );
         return {

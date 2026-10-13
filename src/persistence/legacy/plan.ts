@@ -3,6 +3,7 @@ import type { LegacyImportPlan, LegacyRejectedRecord } from '../../contracts/int
 import type { ImportBatch } from '../../contracts/repository.ts';
 import { fingerprint } from '../legacy.ts';
 import { validateNamespace, validateImport, same } from '../validation.ts';
+import { validateImportedFlashcardStudyTime } from '../flashcard-time-validation.ts';
 import { ALPHA_NAMESPACE } from '../alpha-namespace.ts';
 import { resolveCompatibilityLink } from '../../compatibility/links.ts';
 export const CURRENT_IMPORT_KEY = `${ALPHA_NAMESPACE}-export`;
@@ -25,6 +26,7 @@ export async function planLegacyImport(
         throw Error('Export exceeds 10 MB.');
       const batch = JSON.parse(rawText) as ImportBatch;
       validateImport(batch);
+      validateImportedFlashcardStudyTime(batch);
       if (!same(batch.namespace, namespace))
         throw Error('Export belongs to a different course or profile.');
       for (const item of batch.curriculum) {

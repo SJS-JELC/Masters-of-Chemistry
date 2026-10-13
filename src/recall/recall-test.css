@@ -189,6 +189,7 @@
 }
 /* Match shared platform input specificity in both app import orders. */
 .recall-test-player .recall-response input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-response textarea,
 .recall-test-player .recall-response select {
   border: 2px solid #829ba1;
   background: var(--surface-raised, #fff);
@@ -197,12 +198,14 @@
   border-radius: 0.6rem;
 }
 .recall-test-player .recall-correct input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-correct textarea,
 .recall-test-player .recall-correct select {
   border-color: #43d98a;
   border-style: solid;
   background: var(--surface-raised, #f2fff5);
 }
 .recall-test-player .recall-incorrect input:not([type='radio'], [type='checkbox']),
+.recall-test-player .recall-incorrect textarea,
 .recall-test-player .recall-incorrect select {
   border-color: #ff8798;
   border-style: solid;
@@ -290,7 +293,7 @@
 /* Recall uses the shared pane; the chooser stays wide. */
 .recall-view > .recall-test-player { max-width: var(--question-pane-max-width); width: 100%; box-sizing: border-box; margin-inline: auto; }
 .recall-test-player .recall-fields { width: min(100%, 48rem); margin: 1.5rem auto; }
-.recall-test-player .recall-fields:has(> .recall-response:only-child > label.sr-only) { width: min(100%, 32rem); }
+.recall-test-player .recall-fields:has(> .recall-response:only-child:not(.recall-long-answer) > label.sr-only) { width: min(100%, 32rem); }
 .recall-test-player .recall-fields > .recall-response { display: grid; grid-template-columns: 11rem minmax(0, 1fr) auto; column-gap: .45rem; }
 .recall-test-player .recall-fields > .recall-response:has(> label.sr-only) { grid-template-columns: minmax(0, 1fr) auto; }
 .recall-test-player .recall-fields > .recall-response:has(> label.sr-only):not(:has(> .recall-unit)) { grid-template-columns: minmax(0, 1fr); }
@@ -324,20 +327,23 @@
   background: transparent;
 }
 .recall-test-player input[data-answer-input]:not([type='radio'], [type='checkbox']),
+.recall-test-player textarea[data-answer-input],
 .recall-test-player .recall-response input:not([type='radio'], [type='checkbox']),
 .recall-test-player .recall-notation-overlay {
   text-align: center;
   font-size: 1.35rem;
 }
 .recall-test-player input[data-answer-input]:focus,
+.recall-test-player textarea[data-answer-input]:focus,
 .recall-test-player .recall-response input:focus {
   outline: none;
 }
 .recall-test-player .recall-fields:has(> .recall-long-answer) { width: min(100%, 48rem); }
 .recall-test-player .recall-long-answer textarea {
-  font-size: 1.05rem;
-  line-height: 1.55;
-  text-align: left;
-  resize: vertical;
-  min-height: 5rem;
+  line-height: 1.6;
+  resize: none;
+  min-height: 0;
+  height: calc(3.2em + 1.3rem + 4px);
+  overflow-y: auto;
+  display: block;
 }

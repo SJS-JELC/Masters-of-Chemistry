@@ -7,6 +7,7 @@ import type {
 import { canonicalRecallScope } from './session-contract.ts';
 export type FlashcardDeckState = Pick<
   RecallFlashcardCheckpoint,
+  | 'studyRunId'
   | 'factIds'
   | 'round'
   | 'roundFactIds'
@@ -25,6 +26,7 @@ export type FlashcardAction =
 export function createFlashcardDeck(ids: readonly string[]): FlashcardDeckState {
   const factIds = [...new Set(ids)];
   return {
+    studyRunId: crypto.randomUUID(),
     factIds,
     round: 1,
     roundFactIds: factIds,

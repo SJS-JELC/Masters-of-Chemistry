@@ -346,6 +346,9 @@
 .statistics .incorrect {
   --outcome: #f698ae;
 }
+.statistics .flashcards {
+  --outcome: #aab4c8;
+}
 .statistics .stats-legend span {
   color: var(--outcome);
 }

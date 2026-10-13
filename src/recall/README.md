@@ -26,6 +26,21 @@ Q087 remains quarantined and088 remains removed.061 is retired.025 becomes separ
 
 ## Response and chemistry contracts
 
+Flashcards record active study time separately from assessed Recall evidence.
+Student decks use the shared active clock with a 60-second idle allowance; hidden,
+unfocused, suspended, loading, chooser and completed-summary time is excluded.
+Teacher preview creates no study-time evidence. Reveals, sorting and subsequent
+rounds can accrue actual study time without changing mastery or answer accuracy.
+
+The dedicated `flashcardStudyTime` store contains cumulative per-visit/day totals.
+Retries and out-of-order writes merge by maximum duration; each reopened or
+reloaded deck uses a fresh visit. Checkpoints are saved every ten seconds and on
+pause/leave/pagehide; an abrupt browser crash can lose the latest unsaved interval.
+Time is attributed to the local calendar day when studied, including midnight
+splits. Existing untimed decks stay untimed. Statistics include a neutral
+**Flashcards** segment and daily breakdown; current progress export/import carries
+these records independently of scored evidence.
+
 Ordinary fields are single-line raw text. Choices store stable option IDs while models show human labels. Numeric entries store digits/decimal/fraction notation with units external; proton charge004 requires a sign. Formula entry has field-specific molecular/ion/general-formula metadata: NH3 and K2Cr2O7/H2SO4 have subscript atom counts; Zn2+/Ag+ have superscript charges; polyatomic ions distinguish body counts from charge digits. Entry controls must preserve incorrect raw values and must permit accepted names in formula/name reagent fields114/117.
 
 016 has inline sentence gaps.091 and100 each have six labelled ascending fields for compact vertical rendering.062 has two distinct Test/Result tuples in either order.046 accepts one coherent boiling100°C or melting/freezing0°C tuple. Its displayed model is exactly `Test: Heat it until boiling` / `Result: Boils at exactly 100°C`; standard pressure is an authoring-only assumption, and paired melting/freezing alternatives remain accepted.082–086 have one Soluble/Insoluble choice and a hidden exception collection, whose raw value is a JSON array of `{id,value}` entries. The editor starts at `[]` with zero boxes; a fixture needing exceptions must explicitly construct its entries. Distinct groups may be answered by ion names or correct full compounds. Duplicate synonyms cannot count twice.

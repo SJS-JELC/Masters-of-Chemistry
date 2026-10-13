@@ -71,7 +71,7 @@ export function RecallResponseControl({
               aria-describedby={status ? id + '-status' : undefined}
               value={value}
               readOnly={readOnly}
-              rows={Math.min(6, Math.max(2, Math.ceil(field.answer.length / 55)))}
+              rows={2}
               autoComplete="off"
               autoCapitalize="off"
               spellCheck={false}

@@ -35,7 +35,8 @@ import { factsFor, recallCoverage } from './facts.ts';
 import { createRecallProvider, recallRef } from './provider.ts';
 import { createRecallMarkingPolicy, createRecallLearningReviewPolicy } from './marking.ts';
 import { RecallTestPlayer } from './RecallTestPlayer.tsx';
-import { RecallFlashcards } from './RecallFlashcards.tsx';
+import { RecallFlashcards, type FlashcardLeaveGuard } from './RecallFlashcards.tsx';
+import { createViewRepositoryLifetime } from '../foundation/view-repository-lifetime.ts';
 import {
   createHistoricalRecallMarkingPolicy,
   historicalRecallFields,
@@ -138,7 +139,9 @@ export function RecallView({
   );
   const [flashcardFresh, setFlashcardFresh] = useState(false);
   const [visibleCardId, setVisibleCardId] = useState<string | null>(null);
-  const flashLeaveGuard = useRef<(() => Promise<boolean>) | null>(null);
+  const flashLeaveGuard = useRef<FlashcardLeaveGuard | null>(null);
+  const flashDrain = useRef<(() => Promise<unknown>) | null>(null);
+  const repositoryLifetime = useRef(createViewRepositoryLifetime());
   const [currentFact, setCurrentFact] = useState<RecallFact | null>(null),
     [historical, setHistorical] = useState(false);
   const [progress, setProgress] = useState<readonly RecallProgress[]>(prepared?.progress ?? []);
@@ -232,6 +235,7 @@ export function RecallView({
     detachTiming.current = null;
     detach?.();
     controllerRef.current?.dispatch({ kind: 'pause' });
+    flashLeaveGuard.current?.freeze();
   }, []);
   const persistPreferences = useCallback(
     async (value: RecallPreferences, guarded = false) => {
@@ -429,6 +433,12 @@ export function RecallView({
   }, [prepared, commitPrepared]);
   useEffect(() => {
     alive.current = true;
+    let retiringFlashDrain: (() => Promise<unknown>) | null = null;
+    const release = provided
+      ? undefined
+      : repositoryLifetime.current.retain(repository, async () => {
+          await Promise.allSettled([queue.current, retiringFlashDrain?.() ?? Promise.resolve()]);
+        });
     if (!prepared)
       void loading.run(
         'screen',
@@ -450,10 +460,8 @@ export function RecallView({
     return () => {
       alive.current = false;
       freeze();
-      if (!provided)
-        void queue.current.finally(() => {
-          if (!alive.current) repository.close?.();
-        });
+      retiringFlashDrain = flashDrain.current;
+      release?.();
     };
   }, [repository]);
   useEffect(() => {
@@ -887,9 +895,13 @@ export function RecallView({
             namespace={namespace}
             scope={scope}
             repository={repository}
+            mode={mode}
             onVisibleCardIdChange={setVisibleCardId}
-            onRegisterLeaveGuard={(guard: (() => Promise<boolean>) | null) => {
+            onRegisterLeaveGuard={(guard: FlashcardLeaveGuard | null) => {
               flashLeaveGuard.current = guard;
+            }}
+            onRegisterDrain={(drain) => {
+              flashDrain.current = drain;
             }}
           />
         </>

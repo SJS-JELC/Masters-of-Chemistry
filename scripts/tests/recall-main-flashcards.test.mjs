@@ -60,7 +60,9 @@ test('undo restores classifications and revealed side across completed and retry
   assert.equal(state.classifications.a, 'practise-again');
   state = action(action(state, 'classify', 'got-it'), 'retry-missed');
   assert.equal(state.currentFactId, null);
-  assert.deepEqual(action(state, 'restart'), createFlashcardDeck(['a', 'b']));
+  const restarted = action(state, 'restart');
+  assert.notEqual(restarted.studyRunId, state.studyRunId);
+  assert.deepEqual(restarted, { ...createFlashcardDeck(['a', 'b']), studyRunId: restarted.studyRunId });
 });
 test('live course scope checkpoint validates, changed decks and namespaces require restart', () => {
   assert.equal(recallFacts.length, 127);

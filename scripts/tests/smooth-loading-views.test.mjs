@@ -58,6 +58,8 @@ test('all view preparation paths retain module-reload recovery through repositor
   const repository = {
     curriculumHistory: async () => denied,
     recallHistory: async () => denied,
+    recallProgress: async () => denied,
+    flashcardStudyTimeHistory: async () => denied,
     loadOlympiad: async () => denied,
   };
   const operations = [
@@ -187,6 +189,8 @@ for (const course of ['alevel', 'igcse'])
     const repository = {
       curriculumHistory: () => curriculum.promise,
       recallHistory: () => recall.promise,
+      recallProgress: async () => ok([]),
+      flashcardStudyTimeHistory: async () => ok([]),
     };
     const running = c.run(
       'screen',
@@ -259,6 +263,8 @@ test('Stats storage failure preserves the old snapshot and retry rereads both ch
       return ok([]);
     },
     recallHistory: async () => (deny ? failed : ok([])),
+    recallProgress: async () => ok([]),
+    flashcardStudyTimeHistory: async () => ok([]),
   };
   assert.equal(
     await refreshStatistics(
@@ -288,7 +294,8 @@ test('a superseded Stats read cannot publish after a later screen', async () => 
       prepareStatistics({
         ...base('alevel'),
         ticket,
-        repository: { curriculumHistory: async () => ok([]), recallHistory: () => recall.promise },
+        repository: { curriculumHistory: async () => ok([]), recallHistory: () => recall.promise,
+          recallProgress: async () => ok([]), flashcardStudyTimeHistory: async () => ok([]) },
       }),
     () => events.push('stale-chart'),
   );

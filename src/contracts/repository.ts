@@ -1,4 +1,5 @@
 import type { MaxwellProgress } from './maxwell.ts';
+import type { FlashcardStudyTime } from './flashcard-time.ts';
 import type { AttemptId, Namespace, SessionId } from './identity';
 import type { RecallAttempt, RecallEvidence, RecallProgress, RecallSession } from './recall';
 import type {
@@ -52,6 +53,8 @@ export interface ImportBatch {
   readonly source: ImportSource;
   readonly curriculum: readonly CurriculumEvidence[];
   readonly olympiad: readonly OlympiadProgress[];
+  /** Optional in older current exports; never inferred from saved decks. */
+  readonly flashcardStudyTime?: readonly FlashcardStudyTime[];
 }
 export interface ImportReceipt {
   readonly source: ImportSource;
@@ -60,6 +63,12 @@ export interface ImportReceipt {
   readonly skipped: readonly Readonly<{ sourceId: string; reason: string }>[];
 }
 export interface ChemistryRepository {
+  readonly saveFlashcardStudyTime: (
+    record: FlashcardStudyTime,
+  ) => Promise<RepositoryResult<'saved'>>;
+  readonly flashcardStudyTimeHistory: (
+    namespace: Namespace,
+  ) => Promise<RepositoryResult<readonly FlashcardStudyTime[]>>;
   readonly loadRecallPreferences: (
     namespace: Namespace,
   ) => Promise<RepositoryResult<RecallPreferences | null>>;

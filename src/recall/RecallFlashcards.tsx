@@ -15,6 +15,7 @@ import {
 import { flashcardModel } from './flashcard-content.ts';
 import { useLoading } from '../loading/LoadingProvider.tsx';
 import { repositoryError } from '../loading/module-errors.ts';
+import { bindFlashcardTiming, createFlashcardTiming } from './flashcard-timing.ts';
 import {
   flashcardCheckpointCompatible,
   recallScopeKey,
@@ -28,9 +29,12 @@ export interface RecallFlashcardsProps {
   readonly repository: ChemistryRepository;
   readonly preparedCheckpoint?: RecallFlashcardCheckpoint | null;
   readonly preparedFreshDeck?: boolean;
+  readonly mode?: 'student' | 'teacher';
   readonly onVisibleCardIdChange?: (id: string | null) => void;
-  readonly onRegisterLeaveGuard?: (guard: (() => Promise<boolean>) | null) => void;
+  readonly onRegisterLeaveGuard?: (guard: FlashcardLeaveGuard | null) => void;
+  readonly onRegisterDrain?: (drain: () => Promise<unknown>) => void;
 }
+export type FlashcardLeaveGuard = (() => Promise<boolean>) & { freeze: () => void };
 function ModelValue({ value, entry }: { value: string; entry?: RecallEntry }) {
   if (entry?.kind === 'general-formula')
     return (
@@ -96,7 +100,9 @@ function DeckSession({
   repository,
   preparedCheckpoint,
   preparedFreshDeck,
+  mode = 'student',
   onRegisterLeaveGuard,
+  onRegisterDrain,
   onVisibleCardIdChange,
 }: RecallFlashcardsProps) {
   const loading = useLoading();
@@ -114,10 +120,31 @@ function DeckSession({
   );
   const [loadError, setLoadError] = useState('');
   const [saveError, setSaveError] = useState('');
+  const [timeError, setTimeError] = useState('');
+  const surface = useRef<HTMLDivElement>(null);
+  const fallbackRunId = useRef(crypto.randomUUID());
+  function withRun(deck: FlashcardDeckState): FlashcardDeckState {
+    return deck.studyRunId ? deck : { ...deck, studyRunId: fallbackRunId.current };
+  }
   const saveFailure = useRef<StorageFailure | null>(null);
   const current = useRef<FlashcardDeckState | null>(state);
   const active = useRef(true);
   const sequence = useRef(0);
+  const [timing] = useState(() =>
+    createFlashcardTiming({
+      namespace,
+      scopeKey: recallScopeKey(namespace, scope),
+      load: async () => {
+        if (!(await save(current.current ?? freshDeck)))
+          return { ok: false as const, error: saveFailure.current! };
+        return repository.flashcardStudyTimeHistory(namespace);
+      },
+      save: (record) => repository.saveFlashcardStudyTime(record),
+      onFailure: (failure) => {
+        if (active.current) setTimeError(failure?.message ?? '');
+      },
+    }),
+  );
   const cards = useMemo<readonly Flashcard[]>(
     () =>
       facts.map((fact) => ({
@@ -159,7 +186,7 @@ function DeckSession({
   );
   function save(next: FlashcardDeckState): Promise<boolean> {
     const id = ++sequence.current;
-    return queue.enqueue(checkpointForDeck(next, namespace, scope)).then((ok) => {
+    return queue.enqueue(checkpointForDeck(withRun(next), namespace, scope)).then((ok) => {
       if (active.current && id === sequence.current) {
         if (ok) setSaveError('');
         else setSaveError((error) => error || 'Could not save this deck. Retry before leaving.');
@@ -169,7 +196,11 @@ function DeckSession({
   }
   function change(next: FlashcardDeckState) {
     if (loading.pending || loading.error) return;
+    next = withRun(next);
     current.current = next;
+    timing.setCard(next.studyRunId!, next.currentFactId);
+    timing.setEligible(mode === 'student' && !!next.currentFactId);
+    void timing.persist();
     setState(next);
     void save(next);
   }
@@ -209,15 +240,69 @@ function DeckSession({
     };
   }, [repository]);
   useEffect(() => {
-    onRegisterLeaveGuard?.(async () => {
-      const ok = current.current ? await save(current.current) : await queue.flush();
-      if (!ok && saveFailure.current?.recovery === 'reload')
-        throw repositoryError(saveFailure.current);
-      return ok;
-    });
+    const freeze = () => {
+      timing.freeze();
+      void timing.persist();
+    };
+    const guard: FlashcardLeaveGuard = Object.assign(
+      async () => {
+        freeze();
+        const [ok, timeOk] = await Promise.all([
+          current.current ? save(current.current) : queue.flush(),
+          timing.flush(),
+        ]);
+        if (!ok && saveFailure.current?.recovery === 'reload')
+          throw repositoryError(saveFailure.current);
+        if (!timeOk && timing.failure()?.recovery === 'reload')
+          throw repositoryError(timing.failure()!);
+        return ok && timeOk;
+      },
+      { freeze },
+    );
+    onRegisterLeaveGuard?.(guard);
+    // Keep this captured drain available to the parent after guard deregistration.
+    onRegisterDrain?.(() => Promise.all([queue.flush(), timing.flush()]));
     return () => onRegisterLeaveGuard?.(null);
-  }, [onRegisterLeaveGuard, queue]);
+  }, [onRegisterLeaveGuard, onRegisterDrain, queue, timing]);
   const tableVisible = !!facts.length && loaded && (!!state || !(saved || stale));
+  const studyEligible = tableVisible && !!(state ?? freshDeck).currentFactId && mode === 'student';
+  const studyEligibleRef = useRef(studyEligible);
+  studyEligibleRef.current = studyEligible;
+  useEffect(
+    () =>
+      loading.onCancelComplete(() => {
+        timing.resume();
+        const status = loading.snapshot();
+        timing.setEligible(studyEligibleRef.current && !status.pending && !status.error);
+      }),
+    [timing, loading.onCancelComplete, loading.snapshot],
+  );
+  useEffect(() => {
+    const sync = () => {
+      const status = loading.snapshot();
+      timing.setEligible(studyEligibleRef.current && !status.pending && !status.error);
+      if (status.pending || status.error) void timing.persist();
+    };
+    sync();
+    return loading.subscribe(sync);
+  }, [timing, loading.subscribe, loading.snapshot, studyEligible]);
+  useEffect(() => {
+    if (!tableVisible || mode !== 'student') return;
+    return bindFlashcardTiming({
+      controller: timing,
+      isEligible: () => {
+        const status = loading.snapshot();
+        return studyEligibleRef.current && !status.pending && !status.error;
+      },
+    });
+  }, [tableVisible, timing, loading.snapshot, mode]);
+  useLayoutEffect(() => {
+    const deck = state ?? freshDeck;
+    timing.setCard(
+      deck.studyRunId ?? fallbackRunId.current,
+      tableVisible ? deck.currentFactId : null,
+    );
+  }, [timing, tableVisible, state, freshDeck]);
   useLayoutEffect(() => {
     if (!tableVisible) onVisibleCardIdChange?.(null);
   }, [tableVisible, onVisibleCardIdChange]);
@@ -237,8 +322,12 @@ function DeckSession({
         {!stale && saved && (
           <button
             onClick={() => {
-              current.current = saved;
-              setState(saved);
+              current.current = withRun(saved);
+              timing.setCard(current.current.studyRunId!, saved.currentFactId);
+              void save(current.current);
+              timing.resume();
+              timing.setEligible(mode === 'student' && !!saved.currentFactId);
+              setState(current.current);
             }}
           >
             Resume deck
@@ -258,6 +347,7 @@ function DeckSession({
               },
               (next) => {
                 current.current = next;
+                timing.resume();
                 setState(next);
               },
             )
@@ -269,12 +359,19 @@ function DeckSession({
     );
   const shown = state ?? freshDeck;
   return (
-    <div className="recall-flashcards">
-      {saveError && (
+    <div className="recall-flashcards" ref={surface}>
+      {(saveError || timeError) && (
         <div className="fc-save-status" role="alert">
           <>
-            <span>{saveError}</span>
-            <button onClick={() => void save(current.current ?? shown)}>Retry save</button>
+            <span>{saveError || timeError}</span>
+            <button
+              onClick={() => {
+                void save(current.current ?? shown);
+                void timing.persist();
+              }}
+            >
+              Retry save
+            </button>
           </>
         </div>
       )}

@@ -1,6 +1,7 @@
 import type { CourseDataViewProps } from '../contracts/integration.ts';
 import type { CurriculumEvidence } from '../contracts/session.ts';
 import type { RecallEvidence, RecallProgress } from '../contracts/recall.ts';
+import type { FlashcardStudyTime } from '../contracts/flashcard-time.ts';
 import type { ChemistryRepository } from '../contracts/repository.ts';
 import type { LoadingCoordinator, LoadingTicket } from '../loading/coordinator.ts';
 import { createChemistryRepository } from '../persistence/repository.ts';
@@ -13,10 +14,11 @@ export interface PreparedStatistics {
   readonly history: readonly CurriculumEvidence[];
   readonly recallHistory: readonly RecallEvidence[];
   readonly recallProgress: readonly RecallProgress[];
+  readonly flashcardStudyTime: readonly FlashcardStudyTime[];
   readonly snapshotAt: number;
 }
 
-/** Load both channels before showing a chart. Never estimate missing historical time. */
+/** Load assessed evidence and separate study time before showing a chart. */
 export async function prepareStatistics({
   course,
   namespace,
@@ -30,10 +32,11 @@ export async function prepareStatistics({
   if (namespace.course !== course) throw Error('Statistics course and profile do not match.');
   const repository = suppliedRepository ?? createChemistryRepository(databaseName);
   try {
-    const [curriculum, recall, progress] = await Promise.all([
+    const [curriculum, recall, progress, flashcards] = await Promise.all([
       repository.curriculumHistory(namespace),
       repository.recallHistory(namespace),
       repository.recallProgress(namespace),
+      repository.flashcardStudyTimeHistory(namespace),
     ]);
     if (!ticket.isCurrent()) throw new DOMException('Statistics read superseded', 'AbortError');
     if (!curriculum.ok)
@@ -47,6 +50,10 @@ export async function prepareStatistics({
         message: `Saved Recall timing could not be read. ${recall.error.message}`,
       });
     if (!progress.ok) throw repositoryError(progress.error);
+    if (!flashcards.ok) throw repositoryError({
+      ...flashcards.error,
+      message: `Saved Flashcards study time could not be read. ${flashcards.error.message}`,
+    });
     return {
       course,
       profileId: namespace.profileId,
@@ -54,6 +61,7 @@ export async function prepareStatistics({
       history: curriculum.value,
       recallHistory: recall.value,
       recallProgress: progress.value,
+      flashcardStudyTime: flashcards.value,
       snapshotAt: Date.now(),
     };
   } finally {

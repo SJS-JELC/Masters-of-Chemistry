@@ -59,13 +59,11 @@ export const recallTopics: readonly RecallTopic[] = (['alevel', 'igcse'] as cons
           year: assignment.year,
           ...(strand ? { strand } : {}),
           batchId: assignment.year + (strand ? '-' + strand : ''),
-          gemIds: (topic[2] as readonly string[]).flatMap(
-            (_, i) => {
-              const legacy = group.key + '-' + n + '-' + (i + 1);
-              const current = catalogues[course].display.identities?.[legacy];
-              return current && current !== legacy ? [legacy, current] : [legacy];
-            },
-          ),
+          gemIds: (topic[2] as readonly string[]).flatMap((_, i) => {
+            const legacy = group.key + '-' + n + '-' + (i + 1);
+            const current = catalogues[course].display.identities?.[legacy];
+            return current && current !== legacy ? [legacy, current] : [legacy];
+          }),
         };
       });
     }),
@@ -97,10 +95,7 @@ export function factsForRecallScope(
   const seen = new Set<string>();
   return facts.filter(
     (f) =>
-      f.course === course &&
-      isPrimaryRecallGem(f, gems) &&
-      !seen.has(f.id) &&
-      !!seen.add(f.id),
+      f.course === course && isPrimaryRecallGem(f, gems) && !seen.has(f.id) && !!seen.add(f.id),
   );
 }
 export function canonicalRecallScope(scope: RecallLaunchScope): RecallLaunchScope {
@@ -157,6 +152,7 @@ export function sessionRecallScope(session: RecallSession): RecallLaunchScope {
 export type RecallFlashcardClassification = 'got-it' | 'practise-again';
 /** Only references and learner deck state: no answer snapshots, marks or assessment evidence. */
 export interface RecallFlashcardCheckpoint {
+  readonly studyRunId?: string;
   readonly namespace: Namespace;
   readonly scope: RecallLaunchScope;
   readonly factIds: readonly string[];
@@ -203,9 +199,16 @@ export function validateFlashcardCheckpoint(
     'revealed',
     'answerSeen',
     'undoStack',
+    'studyRunId',
   ];
   if (Object.keys(checkpoint).some((k) => !allowed.includes(k)))
     throw Error('Unsupported flashcard checkpoint field.');
+  if (
+    checkpoint.studyRunId !== undefined &&
+    (typeof checkpoint.studyRunId !== 'string' ||
+      !/^[a-zA-Z0-9-]{1,100}$/.test(checkpoint.studyRunId))
+  )
+    throw Error('Invalid flashcard study run.');
   validateRecallScope(checkpoint.scope, checkpoint.namespace.course);
   const expected = factsForRecallScope(facts, checkpoint.namespace.course, checkpoint.scope).map(
     (f) => f.id,

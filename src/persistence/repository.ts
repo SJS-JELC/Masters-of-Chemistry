@@ -7,6 +7,8 @@ import type {
 import type { RecallWrite } from '../contracts/repository.ts';
 import type { RecallPreferences, RecallFlashcardCheckpoint } from '../recall/session-contract.ts';
 import Dexie, { type Table } from 'dexie';
+import type { FlashcardStudyTime } from '../contracts/flashcard-time.ts';
+import { validateFlashcardStudyTime, validateImportedFlashcardStudyTime } from './flashcard-time-validation.ts';
 import { isModuleLoadFailure } from '../loading/module-errors.ts';
 import type {
   ChemistryRepository,
@@ -84,6 +86,10 @@ export const DATABASE_SCHEMA_V4 = {
   ...DATABASE_SCHEMA_V3,
   recallPreferences: '[course+profileId+id], [course+profileId]',
   recallFlashcards: '[course+profileId+id], [course+profileId]',
+};
+export const DATABASE_SCHEMA_V5 = {
+  ...DATABASE_SCHEMA_V4,
+  flashcardStudyTime: '[course+profileId+id], [course+profileId]',
 };
 function validateArchive(value: unknown): asserts value is LegacyImportArchive {
   const archive = record(value, 'archive'),
@@ -198,6 +204,8 @@ export function createRepository(
   database.version(2).stores(DATABASE_SCHEMA_V2);
   database.version(3).stores(DATABASE_SCHEMA_V3);
   database.version(4).stores(DATABASE_SCHEMA_V4);
+  database.version(5).stores(DATABASE_SCHEMA_V5);
+  const flashcardStudyTime = database.table<Row<FlashcardStudyTime>, Identity>('flashcardStudyTime');
   const recallAttempts = database.table<Row<RecallAttempt>, Identity>('recallAttempts');
   const recallEvidence = database.table<Row<RecallEvidence>, Identity>('recallEvidence');
   const recallProgress = database.table<Row<RecallProgress>, Identity>('recallProgress');
@@ -329,8 +337,9 @@ export function createRepository(
   async function importBatch(batch: ImportBatch): Promise<ImportReceipt> {
     nameGuard();
     validateImport(batch);
+    validateImportedFlashcardStudyTime(batch);
     const copied = structuredClone(batch);
-    return database.transaction('rw', evidence, olympiad, receipts, async () => {
+    return database.transaction('rw', [evidence, olympiad, receipts, flashcardStudyTime], async () => {
       const key: [string, string, string, string] = [
         copied.namespace.course,
         copied.namespace.profileId,
@@ -346,7 +355,7 @@ export function createRepository(
         return {
           ...previous.value,
           inserted: 0,
-          duplicates: copied.curriculum.length + copied.olympiad.length,
+          duplicates: copied.curriculum.length + copied.olympiad.length + (copied.flashcardStudyTime?.length ?? 0),
         };
       }
       let inserted = 0,
@@ -368,6 +377,11 @@ export function createRepository(
         }
         fault?.('after-import-row');
       }
+      for (const item of copied.flashcardStudyTime ?? []) {
+        if (await putFlashcardStudyTime(item)) inserted++;
+        else duplicates++;
+        fault?.('after-import-row');
+      }
       const receipt: ImportReceipt = { source: copied.source, inserted, duplicates, skipped: [] };
       fault?.('before-receipt');
       await receipts.add({
@@ -380,6 +394,24 @@ export function createRepository(
       });
       return receipt;
     });
+  }
+  /** Called inside a read/write transaction: independent visits never share a key. */
+  async function putFlashcardStudyTime(value: FlashcardStudyTime): Promise<boolean> {
+    const key = identity(value.namespace, value.id);
+    const previous = await flashcardStudyTime.get(key);
+    if (previous) {
+      validateFlashcardStudyTime(previous.value);
+      const old = previous.value;
+      conflict(same(old.namespace, value.namespace) && old.id === value.id && old.sessionId === value.sessionId && old.scopeKey === value.scopeKey && old.dayStart === value.dayStart, 'Flashcard study identity changed');
+      await flashcardStudyTime.put(row(value.namespace, value.id, {
+        ...old,
+        activeMs: Math.max(old.activeMs, value.activeMs),
+        updatedAt: Math.max(old.updatedAt, value.updatedAt),
+      }));
+      return false;
+    }
+    await flashcardStudyTime.add(row(value.namespace, value.id, value));
+    return true;
   }
   async function recallRows<T>(
     table: Table<Row<T>, Identity>,
@@ -507,6 +539,20 @@ export function createRepository(
     );
   }
   return {
+    saveFlashcardStudyTime: (value) => result(async () => {
+      nameGuard();
+      validateFlashcardStudyTime(value);
+      const copied = structuredClone(value);
+      await database.transaction('rw', flashcardStudyTime, async () => {
+        await putFlashcardStudyTime(copied);
+      });
+      return 'saved' as const;
+    }),
+    flashcardStudyTimeHistory: (namespace) => result(async () => {
+      const captured = captureRecallNamespace(namespace);
+      const values = await recallRows(flashcardStudyTime, captured, validateFlashcardStudyTime);
+      return [...values].sort((a, b) => a.dayStart - b.dayStart || a.id.localeCompare(b.id));
+    }),
     loadRecallPreferences: (namespace) =>
       result(async () => {
         const copiedNamespace = captureRecallNamespace(namespace);

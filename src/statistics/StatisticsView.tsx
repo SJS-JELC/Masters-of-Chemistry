@@ -20,11 +20,12 @@ import {
   type StatisticsOptions,
 } from './model.ts';
 import './statistics.css';
-import { practiceTimeBins } from './practice-time.ts';
+import { flashcardTimeInPeriod, practiceTimeBins } from './practice-time.ts';
 import { RecallGemPane, recallFactMastery } from './RecallGemPane.tsx';
 import { factsForRecallScope, topicsFor } from '../recall/session-contract.ts';
 
 const outcomes = ['correct', 'partial', 'incorrect'] as const;
+const timeSegments = [...outcomes, 'flashcards'] as const;
 const labels = { correct: 'Correct', partial: 'Partly correct', incorrect: 'Incorrect' };
 const symbols = { correct: '✓', partial: '◐', incorrect: '×' };
 const attemptWord = (count: number) => (count === 1 ? 'attempt' : 'attempts');
@@ -61,7 +62,7 @@ function TopicMasterySummary({ topic }: { readonly topic: StatisticsTopic }) {
     </div>
   );
 }
-function Legend() {
+function Legend({ studyTime = false }: { readonly studyTime?: boolean }) {
   return (
     <div className="stats-legend" aria-label="Answer outcomes">
       {outcomes.map((outcome) => (
@@ -69,6 +70,7 @@ function Legend() {
           {symbols[outcome]} {labels[outcome]}
         </span>
       ))}
+      {studyTime && <span className="flashcards">Flashcards</span>}
     </div>
   );
 }
@@ -262,7 +264,7 @@ export function StatisticsView({
 }: CourseDataViewProps & { readonly onBack?: () => void; readonly prepared: PreparedStatistics }) {
   const coordinator = useLoading();
   const [snapshot, setSnapshot] = useState(prepared);
-  const { history, recallHistory, snapshotAt } = snapshot;
+  const { history, recallHistory, flashcardStudyTime, snapshotAt } = snapshot;
   const error = null;
   const [days, setDays] = useState<StatisticsOptions['days']>(0),
     [year, setYear] = useState<NonNullable<StatisticsOptions['year']>>('all'),
@@ -322,7 +324,9 @@ export function StatisticsView({
       }),
     [namespace.course, namespace.profileId, recallHistory, days, year, snapshotAt],
   );
-  const practiceBins = useMemo(() => practiceTimeBins(model, recallModel), [model, recallModel]);
+  const flashcards = useMemo(() => flashcardTimeInPeriod(namespace, flashcardStudyTime, { days, now: snapshotAt }), [namespace.course, namespace.profileId, flashcardStudyTime, days, snapshotAt]);
+  const flashcardActiveMs = flashcards.reduce((sum, record) => sum + record.activeMs, 0);
+  const practiceBins = useMemo(() => practiceTimeBins(model, recallModel, flashcards), [model, recallModel, flashcards]);
   const tick = Math.max(
       60000,
       Math.ceil(Math.max(0, ...practiceBins.map((bin) => bin.counts.activeMs)) / 4 / 60000) * 60000,
@@ -395,10 +399,10 @@ export function StatisticsView({
               />
               <Metric
                 title="Practice Time"
-                value={model.counts.timed + recallModel.counts.timed ? duration(model.counts.activeMs + recallModel.counts.activeMs) : '—'}
-                note="Curriculum and factual recall"
+                value={model.counts.timed + recallModel.counts.timed + flashcards.length ? duration(model.counts.activeMs + recallModel.counts.activeMs + flashcardActiveMs) : '—'}
+                note="Curriculum, factual recall and Flashcards"
                 testId="statistics-time"
-                activeMs={model.counts.activeMs + recallModel.counts.activeMs}
+                activeMs={model.counts.activeMs + recallModel.counts.activeMs + flashcardActiveMs}
               />
             </section>
             <RecallGemPane namespace={namespace} progress={snapshot.recallProgress ?? []} history={recallModel.records} year={year} now={snapshotAt} />
@@ -454,8 +458,8 @@ export function StatisticsView({
             </section>
             <section className="stats-chart-card" aria-labelledby="statsChartHeading">
               <div className="stats-section-heading"><h2 id="statsChartHeading" className="eyebrow">PRACTICE OVER TIME</h2></div>
-              <Legend />
-              {!model.counts.timed && !recallModel.counts.timed && (
+              <Legend studyTime />
+              {!model.counts.timed && !recallModel.counts.timed && !flashcards.length && (
                 <p className="stats-outcome-text">
                   No recorded timing data in this period. Attempts without timing data are not
                   included in the bars.
@@ -473,7 +477,7 @@ export function StatisticsView({
                   className="stats-chart-scroll"
                   tabIndex={0}
                   role="region"
-                  aria-label="Daily active practice time by answer outcome; scroll horizontally to explore all days"
+                  aria-label="Daily active practice and Flashcards time; scroll horizontally to explore all days"
                 >
                   <div
                     className={`stats-chart-bars${days === 30 ? ' stats-chart-month' : ''}`}
@@ -506,7 +510,7 @@ export function StatisticsView({
                             aria-hidden="true"
                             style={{ height: `${(bin.counts.activeMs / maximum) * 180}px` }}
                           >
-                            {outcomes.map((outcome) => (
+                            {timeSegments.map((outcome) => (
                               <span
                                 key={outcome}
                                 className={outcome}
@@ -534,8 +538,10 @@ export function StatisticsView({
                 {selected ? dayDetail(selected) : 'Select a bar for the full breakdown.'}
               </p>
               <p className="stats-outcome-text">
-                Each bar shows recorded active time, coloured by answer outcome. Untimed attempts
-                add no time. Time follows the answer’s completion date in this device’s local time.
+                Each bar shows recorded practice time. Flashcards count up to 15 seconds per card and do not
+                affect mastery or answer accuracy. Flashcard time covers all selected years and
+                follows its study day; assessed time follows the answer’s completion date in this
+                device’s local time. Untimed attempts add no time.
               </p>
             </section>
 

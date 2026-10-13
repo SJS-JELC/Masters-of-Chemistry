@@ -14,7 +14,6 @@ import {
 } from '../shell/QuestionChrome.tsx';
 import { QuestionLevelPill } from './QuestionLevelPill.tsx';
 import { responseFingerprint } from './action-state.ts';
-import { isModelAnswerPanelShown } from '../domain/attempt/model-answer.ts';
 import './dot-cross-player.css';
 
 /** Source workspace presentation; the shared attempt/clock/repository still own every command. */
@@ -37,7 +36,10 @@ export function DotCrossPlayer({
   const chrome = useQuestionChrome(),
     displayTitle = questionDisplayTitle(question),
     repeatedTitle = repeatsQuestionSubtopic(displayTitle, chrome);
-  const modelShown = attempt.mode === 'student' && isModelAnswerPanelShown(attempt);
+  const modelShown = attempt.mode === 'student' && attempt.assistance.some(
+    item => (item.kind === 'reveal' || item.kind === 'worked-answer') &&
+      item.supportId !== 'model-answer-reference',
+  );
   const [answerOpen, setAnswerOpen] = useState(modelShown);
   const [loadedRecord, setRecord] = useState<BankRecord | null>(null);
   const record = preparedTools?.dotRecord ?? loadedRecord;
@@ -236,6 +238,7 @@ export function DotCrossPlayer({
     <article
       {...keyboard}
       className="question-player dot-cross-player layout-workspace"
+      data-drawing-status={checkedStatus}
       {...(repeatedTitle ? { 'aria-label': displayTitle } : { 'aria-labelledby': id + '-title' })}
     >
       <section className="dot-question-panel" aria-label="Question">
@@ -258,7 +261,7 @@ export function DotCrossPlayer({
             aria-live="polite"
             aria-atomic="true"
           >
-            {checkedStatus === 'correct' ? 'Correct' : checkedStatus ? 'Incorrect' : ''}
+            {checkedStatus === 'correct' ? '✓ Correct' : checkedStatus ? '✗ Incorrect — check your drawing' : ''}
           </span>
           <QuestionActions actions={actions} />
         </div>

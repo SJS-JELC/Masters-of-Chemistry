@@ -1,3 +1,4 @@
+import { rateSource } from '../activities/alevel/rate-equations/identity.ts';
 import { formulaIdentity, equationIdentity } from '../chemistry/formulae-equations/identity.ts';
 import fixedIds from './canonical-fixed-ids.json' with { type: 'json' };
 
@@ -17,9 +18,9 @@ export const questionPrefixes: Readonly<Record<string, readonly string[]>> = {
   'igcse/energetics-practical': ['EP'],
 };
 export function isCanonicalQuestionId(activityId: string, id: unknown): id is string {
-  // Exactly the twelve retained source IDs; keep the provider's metadata lazy.
+  // Closed rate source catalogue; no generator or UI import into the shell.
   if (activityId === 'alevel/rate-equations')
-    return typeof id === 'string' && /^RATE-POC-(orders|graphs|mechanisms|arrhenius)-L[123]$/.test(id);
+    return typeof id === 'string' && !!rateSource(id);
   if (activityId === 'igcse/formulae') {
     if (typeof id !== 'string') return false;
     try { formulaIdentity(id); return true; } catch { return false; }
@@ -34,8 +35,16 @@ export function isCanonicalQuestionId(activityId: string, id: unknown): id is st
     !!questionPrefixes[activityId]?.includes(id.split('-')[0]!)
   );
 }
+/** Retired unpublished templates may remain in repeat-avoidance history, never in new refs. */
+export function isRetiredQuestionId(activityId: string, id: unknown): boolean {
+  return activityId === 'alevel/rate-equations' &&
+    (id === 'RATE-NEW-orders-comparison-L1' || id === 'RATE-NEW-orders-comparison-L2');
+}
+export function isPreviousQuestionId(activityId: string, id: unknown): id is string {
+  return isCanonicalQuestionId(activityId, id) || isRetiredQuestionId(activityId, id);
+}
 export function validatePreviousQuestionIds(activityId: string, ids: readonly string[]): void {
-  if (!Array.isArray(ids) || ids.some((id) => !isCanonicalQuestionId(activityId, id)))
+  if (!Array.isArray(ids) || ids.some((id) => !isPreviousQuestionId(activityId, id)))
     throw Error('Previous question IDs must use this activity’s canonical prefix and format.');
 }
 type FixedPrefix = keyof typeof fixedIds;

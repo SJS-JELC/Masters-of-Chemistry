@@ -2,6 +2,7 @@ import { useId, useLayoutEffect, useRef } from 'react';
 import type { KeyboardEvent } from 'react';
 import { ResponseControl } from '../../../ui/ResponseControl.tsx';
 import { ScientificNumberInput } from '../../../ui/ScientificNumberInput.tsx';
+import { ChemicalEntry } from '../../../ui/ChemicalEntry.tsx';
 import type { ResponseControlProps } from '../../../ui/ResponseControl.tsx';
 import { Content } from '../../../ui/Content.tsx';
 import { formatRateInput } from './input-syntax.ts';
@@ -44,6 +45,10 @@ export function RateResponseControl(props: ResponseControlProps) {
   const id = useId();
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const { part, response, readOnly, onResponse } = props;
+  if (part.kind === 'text' && (part.id === 'mechanism-step-1' || part.id === 'mechanism-step-2'))
+    return <ChemicalEntry value={response?.kind === 'text' ? response.value : ''} mode="equation"
+      label={part.prompt.map(block => block.kind === 'text' ? block.text : '').join(' ')}
+      readOnly={readOnly} status={props.status} onChange={value => onResponse({ kind: 'text', value })} />;
   if (part.kind === 'text' && (part.id === 'rate-equation' || part.id === 'k-units'))
     return <TypedRateAnswer {...props} mode={part.id === 'k-units' ? 'units' : 'rate-law'} />;
   if (part.kind === 'numeric' && !part.workingFramework) {

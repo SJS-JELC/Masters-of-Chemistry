@@ -1,4 +1,12 @@
 .rate-graph-tools { --graph-ink: #eef0ff; margin-block: 1rem; padding: 1rem; border: 0; border-radius: 1rem; background: var(--surface); color: var(--graph-ink); }
+.rate-static-plots { --graph-ink: #eef0ff; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; margin-block: 1rem; }
+.rate-static-plot { min-width: 0; margin: 0; padding: .8rem; background: var(--surface); border: 0; border-radius: .7rem; }
+.rate-static-plot figcaption { color: var(--graph-ink); font-size: .95rem; margin-bottom: .5rem; }
+.rate-static-svg { display: block; width: 100%; height: auto; }
+.rate-static-svg .rate-graph-grid text { font-size: 18px; }
+.rate-static-svg .rate-graph-axis-label { font-size: 20px; }
+.rate-static-svg .rate-graph-grid line { stroke-width: .8; }
+.rate-static-accessible-data { display: block; position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .rate-graph-help { margin-top: 0; font-size: .9rem; line-height: 1.6; }
 .arrhenius-data-book { margin-block: 1rem; padding: .5rem 1.25rem 1rem; border: 1px solid #cbd5dc; border-radius: .6rem; background: #fff; color: #111; color-scheme: light; }
 .arrhenius-data-book h3 { margin: 0 0 .2rem; font-size: .75rem; color: #767676; text-transform: uppercase; }
@@ -44,4 +52,5 @@
 .rate-graph-pin-controls > div { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; margin-block: .5rem; }
 .rate-graph-pin-controls button { padding: .5rem .75rem; cursor: pointer; border: 1px solid var(--accent); border-radius: .4rem; background: var(--surface); color: var(--accent); font: inherit; }
 @media(max-width: 600px) { .rate-graph-tools { --graph-ink: #eef0ff; padding: .65rem; min-width: 0; } .rate-graph-svg { min-width: 560px; } .rate-graph-grid text { font-size: 16px; } .rate-graph-controls { grid-template-columns: 1fr 1fr; } .rate-graph-axis-label { font-size: 18px; } }
+@media(max-width: 600px) { .rate-static-svg { min-width: 560px; } .rate-static-svg .rate-graph-grid text { font-size: 18px; } .rate-static-svg .rate-graph-axis-label { font-size: 20px; } }
 @media print { .rate-graph-controls, .rate-graph-pin-controls button, .rate-graph-help { display: none; } .rate-graph-tools { --graph-ink: #eef0ff; break-inside: avoid; } }

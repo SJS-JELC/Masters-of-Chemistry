@@ -1,6 +1,6 @@
 import type { CourseDataViewProps } from '../contracts/integration.ts';
 import type { CurriculumEvidence } from '../contracts/session.ts';
-import type { RecallEvidence } from '../contracts/recall.ts';
+import type { RecallEvidence, RecallProgress } from '../contracts/recall.ts';
 import type { ChemistryRepository } from '../contracts/repository.ts';
 import type { LoadingCoordinator, LoadingTicket } from '../loading/coordinator.ts';
 import { createChemistryRepository } from '../persistence/repository.ts';
@@ -12,6 +12,7 @@ export interface PreparedStatistics {
   readonly databaseName: string;
   readonly history: readonly CurriculumEvidence[];
   readonly recallHistory: readonly RecallEvidence[];
+  readonly recallProgress: readonly RecallProgress[];
   readonly snapshotAt: number;
 }
 
@@ -29,9 +30,10 @@ export async function prepareStatistics({
   if (namespace.course !== course) throw Error('Statistics course and profile do not match.');
   const repository = suppliedRepository ?? createChemistryRepository(databaseName);
   try {
-    const [curriculum, recall] = await Promise.all([
+    const [curriculum, recall, progress] = await Promise.all([
       repository.curriculumHistory(namespace),
       repository.recallHistory(namespace),
+      repository.recallProgress(namespace),
     ]);
     if (!ticket.isCurrent()) throw new DOMException('Statistics read superseded', 'AbortError');
     if (!curriculum.ok)
@@ -44,12 +46,14 @@ export async function prepareStatistics({
         ...recall.error,
         message: `Saved Recall timing could not be read. ${recall.error.message}`,
       });
+    if (!progress.ok) throw repositoryError(progress.error);
     return {
       course,
       profileId: namespace.profileId,
       databaseName,
       history: curriculum.value,
       recallHistory: recall.value,
+      recallProgress: progress.value,
       snapshotAt: Date.now(),
     };
   } finally {

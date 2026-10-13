@@ -65,12 +65,16 @@ export function useQuestionKeyboard(
       target.closest('dialog,[data-question-keyboard="ignore"]')
     )
       return;
+    if (actions.state.primary === 'next') {
+      event.preventDefault();
+      actions.defaultAction();
+      return;
+    }
     const fields = enabledFields(event.currentTarget);
     const index = fields.indexOf(target);
     if (index < 0) return;
     event.preventDefault();
-    if (actions.state.primary === 'next') actions.defaultAction();
-    else if (fields[index + 1]) fields[index + 1]!.focus();
+    if (fields[index + 1]) fields[index + 1]!.focus();
     else actions.defaultAction();
   };
   return { ref, onKeyDown };

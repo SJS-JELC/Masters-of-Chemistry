@@ -28,6 +28,7 @@ import {
 } from '../domain/session/index.ts';
 import { sameRevisionSelection } from '../shell/navigation-view.ts';
 import { productionRegistry } from './registry.ts';
+import { isRetiredQuestionId } from '../content/canonical-identity.ts';
 import { prepareQuestionTools, type PreparedQuestionTools } from './question-tools.ts';
 import { teacherCatalogue } from '../ui/teacher-catalogue.ts';
 import { teacherSubtopic } from './question-heading.ts';
@@ -283,6 +284,12 @@ export async function prepareCurriculum(
     if (attemptId) {
       attempt = check(await repository.loadAttempt(namespace, attemptId));
       if (!attempt) throw Error('The saved session references a missing attempt.');
+      // Keep historical evidence/drafts on disk, but never reopen a removed test question.
+      // A new launch replaces this session normally; otherwise return to question setup.
+      if (isRetiredQuestionId(attempt.ref.activityId, attempt.ref.questionId)) {
+        attempt = null;
+        session = null;
+      }
     }
     const request = input.launchRequest;
     const samePractice =

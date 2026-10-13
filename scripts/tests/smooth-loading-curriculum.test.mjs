@@ -6,7 +6,7 @@ import {
 } from '../../src/foundation/prepare-curriculum.ts';
 import { createLoadingCoordinator } from '../../src/loading/coordinator.ts';
 import { productionRegistry } from '../../src/foundation/registry.ts';
-import { validateWrite } from '../../src/persistence/validation.ts';
+import { validateWrite, validateAttempt } from '../../src/persistence/validation.ts';
 
 const deferred = () => {
   let resolve, reject;
@@ -17,6 +17,29 @@ const deferred = () => {
   return { promise, resolve, reject };
 };
 let sequence = 0;
+test('retired current question returns to setup or a fresh launch without clearing history', async () => {
+  const f = fixture();
+  await f.coordinator.run('screen', ticket => prepareCurriculum({ ...f.input, ticket }), () => {});
+  const saved = structuredClone(f.writes[0]);
+  saved.attempt.ref = { ...saved.attempt.ref, questionId: 'RATE-NEW-orders-comparison-L1', level: 1 };
+  saved.attempt.target = { ...saved.attempt.target, gemId: 'u6-t1-2-orders', level: 1 };
+  saved.session.target = saved.attempt.target;
+  assert.doesNotThrow(() => validateAttempt(saved.attempt));
+  const before = structuredClone(saved);
+  const repository = { ...f.input.repository,
+    loadSession: async () => ({ ok: true, value: saved.session }),
+    loadAttempt: async () => ({ ok: true, value: saved.attempt }),
+  };
+  let result;
+  const { launchRequest, ...resume } = f.input;
+  await f.coordinator.run('screen', ticket => prepareCurriculum({ ...resume, repository, ticket }), value => { result = value; });
+  assert.equal(result.setupOpen, true);
+  assert.equal(result.attempt, null);
+  assert.deepEqual(saved, before);
+  await f.coordinator.run('screen', ticket => prepareCurriculum({ ...f.input, repository, ticket }), value => { result = value; });
+  assert.notEqual(result.attempt.ref.questionId, saved.attempt.ref.questionId);
+  assert.notEqual(result.attempt.attemptId, saved.attempt.attemptId);
+});
 function fixture(overrides = {}) {
   const writes = [];
   const repository = {

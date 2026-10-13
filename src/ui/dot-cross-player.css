@@ -24,3 +24,14 @@
 /* Shared model answer panel treatment. */
 .dot-cross-player .teacher-answer.worked-answer,.dot-answer-dialog{border:1px solid var(--positive);border-radius:12px;padding:12px 20px 20px}
 .dot-cross-player .teacher-answer.worked-answer>h3,.dot-answer-dialog>h3{margin:0 0 .8rem;color:var(--positive);font:700 .78rem/1.4 Comfortaa,sans-serif;letter-spacing:.07em}
+
+.dot-cross-player[data-drawing-status='correct'] .canvas-wrap {
+  outline: 3px solid #54f5b5;
+  outline-offset: 2px;
+  box-shadow: 0 0 14px #54f5b533;
+}
+.dot-cross-player[data-drawing-status='incorrect'] .canvas-wrap {
+  outline: 3px solid #ff8585;
+  outline-offset: 2px;
+}
+.dot-cross-player .dot-check-status { font-size: 1rem; font-weight: 700; }

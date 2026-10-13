@@ -8,7 +8,7 @@ import { makeGraphs, makeArrhenius, concentrationAt, gradientAt, curveTimeAt, GA
 import { makeMechanisms } from '../../src/activities/alevel/rate-equations/mechanisms.ts';
 import { rateMarking } from '../../src/activities/alevel/rate-equations/marking.ts';
 import { rateProvider, restoreRateExample } from '../../src/activities/alevel/rate-equations/provider.ts';
-import { rateActivityId, rateGemIds, rateQuestionSources } from '../../src/activities/alevel/rate-equations/identity.ts';
+import { rateActivityId, rateGemIds, rateQuestionSources, allRateQuestionSources } from '../../src/activities/alevel/rate-equations/identity.ts';
 import { parseRateLaw, parseRateUnits, equivalentRateLaw, equivalentRateUnits, formatRateInput } from '../../src/activities/alevel/rate-equations/input-syntax.ts';
 import { isCanonicalQuestionId, validatePreviousQuestionIds } from '../../src/content/canonical-identity.ts';
 import { questionDisplayCode, questionLookupInput } from '../../src/content/question-display-identity.ts';
@@ -136,9 +136,9 @@ test('bounded semantic parser accepts supported equivalent powers and rejects ch
   assert.equal(formatRateInput('dm3 mol-1 s-1', 'units').value, 'dm³ mol⁻¹ s⁻¹');
 });
 
-test('provider refs select and restore every semantic gem/level without numeric history remapping', () => {
+test('historical provider refs restore every semantic gem/level without numeric history remapping', () => {
   for (const source of rateQuestionSources) for (const seed of seeds) {
-    const ref = rateProvider.select({ activityId: rateActivityId, gemId: rateGemIds[source.gem], level: source.level, seed, previousQuestionIds: [] });
+    const ref = { activityId: rateActivityId, questionId: source.questionId, level: source.level, seed: source.gem === 'mechanisms' ? 0 : seed };
     assert.equal(ref.questionId, source.questionId);
     assert.equal(ref.level, source.level);
     assert.equal(ref.seed, source.gem === 'mechanisms' ? 0 : seed);
@@ -174,7 +174,7 @@ test('provider refs select and restore every semantic gem/level without numeric 
     assert.equal(isCanonicalQuestionId(rateActivityId, id), false);
   assert.equal(rateProvider.resolveLink('u6-t1-2-1'), null);
   assert.equal(rateProvider.resolveLink('RATE-POC-orders-L4'), null);
-  assert.equal(rateProvider.coverage.flatMap(c => c.kind === 'fixed' ? c.questionIds : c.families.map(f => f.templateId)).length, 12);
+  assert.equal(rateProvider.coverage.flatMap(c => c.kind === 'fixed' ? c.questionIds : c.families.map(f => f.templateId)).length, allRateQuestionSources.length);
 });
 
 test('new activity registers four three-level gems with no old aliases and standard mastery mapping', async () => {
@@ -205,13 +205,13 @@ test('new activity registers four three-level gems with no old aliases and stand
     assert.deepEqual(catalogue.alevel.activities[gem.id].availableGrades, [1, 2, 3]);
   }
   const teacherRows = await teacherCatalogue(rateActivityId);
-  assert.equal(teacherRows.length, 12);
-  assert.equal(new Set(teacherRows.map(row => row.ref.questionId)).size, 12);
+  assert.equal(teacherRows.length, allRateQuestionSources.length);
+  assert.equal(new Set(teacherRows.map(row => row.ref.questionId)).size, allRateQuestionSources.length);
   for (const row of teacherRows) {
-    const source = rateQuestionSources.find(source => source.questionId === row.ref.questionId);
+    const source = allRateQuestionSources.find(source => source.questionId === row.ref.questionId);
     assert(source);
     assert.equal(row.ref.level, source.level);
     assert.equal(row.ref.seed, 0);
-    assert.match(questionDisplayCode({ course: 'alevel', ...row.ref }), /^RE-[A-Z0-9]{6}$/);
+    assert.match(questionDisplayCode({ course: 'alevel', ...row.ref }), /^RE-[A-Z0-9]{6,8}$/);
   }
 });

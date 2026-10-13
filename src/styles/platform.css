@@ -81,7 +81,7 @@
 
 /* One viewport theme. Card/editor surfaces remain local; immutable image assets stay untouched. */
 body{min-height:100vh;isolation:isolate;background:var(--app-background);background-attachment:fixed}
-body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.45;background-image:radial-gradient(circle,#fff 1px,transparent 1.5px),radial-gradient(circle,#55f6ff 1px,transparent 1.5px);background-position:0 0,31px 37px;background-size:74px 74px,101px 101px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2296%22%20height%3D%2255.425626%22%20viewBox%3D%220%200%2096%2055.425626%22%3E%3Ctitle%3EGraphene%20honeycomb%3C%2Ftitle%3E%3Cdesc%3ERegular%20hexagons%20with%20carbon%20atoms%20at%20the%20vertices.%3C%2Fdesc%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2391b8ce%22%20stroke-width%3D%220.8%22%20stroke-opacity%3D%220.55%22%3E%3Cpath%20d%3D%22M-16%2027.7128L16%2027.7128%22%2F%3E%3Cpath%20d%3D%22M16%20-27.7128L32%200%22%2F%3E%3Cpath%20d%3D%22M16%2027.7128L32%200%22%2F%3E%3Cpath%20d%3D%22M16%2027.7128L32%2055.4256%22%2F%3E%3Cpath%20d%3D%22M32%200L64%200%22%2F%3E%3Cpath%20d%3D%22M64%200L80%20-27.7128%22%2F%3E%3Cpath%20d%3D%22M64%200L80%2027.7128%22%2F%3E%3Cpath%20d%3D%22M64%2055.4256L80%2027.7128%22%2F%3E%3Cpath%20d%3D%22M80%2027.7128L112%2027.7128%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23b5d8e8%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2227.7128%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%220%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2255.4256%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%220%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2255.4256%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%2227.7128%22%20r%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:center top;background-size:96px 55.425626px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
 /* !important also covers SVG presentation attributes, lazy source CSS and native form defaults. */
 :root *,:root *::before,:root *::after{font-family:var(--ui-font-family)!important}
 /* Only spin-arrow glyphs need a symbol fallback if Comfortaa lacks that code point. */
@@ -126,3 +126,4 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
   border: 2px solid var(--positive);
   box-shadow: inset 0 0 0 1px var(--positive);
 }
+

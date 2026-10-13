@@ -25,14 +25,17 @@ export function chemicalNotationRuns(
   const charge = new Set<number>();
   // Unicode charges are unambiguous, as are caret charges and monatomic ion suffixes.
   for (const match of text.matchAll(
-    /[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+|\^\d*[+−-]|\b[A-Z][a-z]?(\d*[+−-])(?=\s|$|[),])/g,
+    /[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+|\^\d*[+−-]|\b[A-Z][a-z]?(\d*[+−-])(?=\s|$|[),+→])/g,
   )) {
     const suffix = match[1] ?? match[0];
     const start = match.index! + match[0].length - suffix.length;
     for (let i = start; i < start + suffix.length; i++) charge.add(i);
   }
   // A terminal +/- on a polyatomic formula is a unit charge (NH4+, OH-).
-  for (const match of text.matchAll(/(?:[A-Z][a-z]?\d*|\([^)]*\)\d*)+([+−-])(?=\s|$|[),])/g))
+  for (const match of text.matchAll(/(?:[A-Z][a-z]?\d*|\([^)]*\)\d*)+([+−-])(?=\s|$|[),+→])/g))
+    charge.add(match.index! + match[0].length - 1);
+  // Bracketed complex ions retain formula counts below and terminal charge above.
+  for (const match of text.matchAll(/\[(?:[A-Z][a-z]?\d*)+\]([+−-])(?=\s|$|[),+→])/g))
     charge.add(match.index! + match[0].length - 1);
   const runs: { text: string; subscript: boolean; superscript?: boolean }[] = [];
   let numericSuffix = false;

@@ -22,10 +22,21 @@ export interface ArrheniusGraph {
   readonly scaledX: boolean;
 }
 export type RateGraph = CurveGraph | ArrheniusGraph;
+/** Static evidence panels regenerate from the ref; they create no assessed drawing state. */
+export interface StaticRatePlot {
+  readonly id: string;
+  readonly title: string;
+  readonly xLabel: string;
+  readonly yLabel: string;
+  readonly points: readonly Readonly<{ x: number; y: number }>[];
+  readonly maxX: number;
+  readonly maxY: number;
+}
 export interface RateExample {
   readonly gem: RateGem;
   readonly question: Question;
   readonly graph?: RateGraph;
+  readonly staticPlots?: readonly StaticRatePlot[];
   readonly correctResponses: Responses;
   readonly validation: Readonly<Record<string, unknown>>;
 }

@@ -1,6 +1,10 @@
 .rate-choice-field { border: 0; margin: 0; padding: 0; min-width: 0; }
 .rate-question-player[data-question-family="rate-mechanisms"] > .content > .formula { text-align: center; }
 .rate-question-player .question-parts { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+/* Kinetic data retain complete numerical values; narrow screens scroll the table. */
+.rate-question-player > .content .table-scroll { max-width: 100%; overflow-x: auto; }
+.rate-question-player > .content table { min-width: max-content; }
+.rate-question-player > .content td { white-space: nowrap; overflow-wrap: normal; word-break: normal; }
 .rate-question-player .question-parts > .question-part { border: 0; border-radius: 0; padding: 0; background: transparent; }
 .rate-part-prompt { display: flex; align-items: baseline; gap: 9px; margin-bottom: .75rem; }
 .rate-part-prompt .content { min-width: 0; }

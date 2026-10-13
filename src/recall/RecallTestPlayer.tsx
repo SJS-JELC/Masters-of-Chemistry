@@ -72,7 +72,7 @@ function IGCSERecallTestPlayer({
     return r?.kind === 'text' ? r.value : '';
   };
   const send = (id: string, text: string) => {
-    if (student)
+    if (student && !assessed)
       onCommand({ kind: 'respond', partId: id, response: { kind: 'text', value: text } });
   };
   useEffect(() => {
@@ -113,7 +113,7 @@ function IGCSERecallTestPlayer({
     student,
     actions,
   );
-  const readOnly = !student;
+  const readOnly = !student || assessed;
   const result =
     assessed && attempt.firstAssessment.kind === 'marked'
       ? markRecallFactFields(fact, attempt.firstResponse.responses)
@@ -149,7 +149,8 @@ function IGCSERecallTestPlayer({
         ) : undefined}
         learningReview={unchanged && outcome?.alternativeEligible ? (
           <span className="recall-learning-review-direct">
-            <details><summary>Equivalent wording guidance</summary>
+            <details><summary>Spelling and equivalent wording guidance</summary>
+              <p>Mark as correct only if a spelling error or alternative wording preserves the model answer’s chemical meaning.</p>
               <p>{f.alternative?.kind === 'valid-alternative' ? f.alternative.guidance : ''}</p>
               <p>Learning review leaves your first automatic result and recall stage unchanged.</p>
             </details>
@@ -199,7 +200,6 @@ function IGCSERecallTestPlayer({
       )}
       {student && collection && (
         <section className="recall-exceptions" aria-label={collection.label}>
-          <h3>{collection.label}</h3>
           {entries.map((e, i) => {
             const frozenRaw =
               assessed && collection ? attempt.firstResponse.responses[collection.id] : undefined;
@@ -235,7 +235,7 @@ function IGCSERecallTestPlayer({
               </div>
             );
           })}
-          <button type="button" disabled={readOnly} onClick={addException}>
+          <button className="recall-add-exception" type="button" disabled={readOnly} onClick={addException}>
             Add exception
           </button>
           {malformed && (

@@ -13,7 +13,7 @@ import {
   type NumericTask,
   enthalpyLabels,
 } from './content.ts';
-import { toggleCategory, acceptsNumericEdit, acceptsNumericDeletion } from './policy.ts';
+import { toggleCategory, acceptsNumericEdit, acceptsNumericDeletion, maxwellPartUnlocked, availableMaxwellPart } from './policy.ts';
 import './maxwell.css';
 const networkPositions: Record<string, [number, number]> = {
   A: [80, 80],
@@ -154,7 +154,7 @@ export function MaxwellView({
 }) {
   const [teacherLevel, setTeacherLevel] = useState<Level>(1),
     [teacherIntroduction, setTeacherIntroduction] = useState(true),
-    level = readOnly ? teacherLevel : progress.level,
+    level = readOnly ? teacherLevel : Math.min(progress.level, availableMaxwellPart(progress)) as Level,
     introduction = readOnly ? teacherIntroduction : (progress.introduction ?? false),
     restartDialog = useRef<HTMLDialogElement>(null),
     partHeading = useRef<HTMLHeadingElement>(null),
@@ -224,6 +224,7 @@ export function MaxwellView({
             key={l}
             type="button"
             aria-pressed={!introduction && level === l}
+            disabled={!readOnly && !maxwellPartUnlocked(progress, l)}
             onClick={() => navigate(l)}
           >
             Part ({['a', 'b', 'c'][l - 1]})
@@ -311,14 +312,7 @@ export function MaxwellView({
                       </h3>
                       <div className="maxwell-options">
                         {categories.map((c) => {
-                          const label =
-                            c.id === 'bond' && t.id === 'l1-bond'
-                              ? {
-                                  sub: 'diss',
-                                  standard: true,
-                                  name: 'Standard F–F bond dissociation enthalpy (exact diatomic example)',
-                                }
-                              : enthalpyLabels[c.id];
+                          const label = enthalpyLabels[c.id];
                           return (
                             <button
                               type="button"

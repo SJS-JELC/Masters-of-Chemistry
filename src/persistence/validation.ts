@@ -1,6 +1,6 @@
 import { isRateGraphWorkspaceState, supportsRateGraphWorkspace } from '../contracts/workspace.ts';
 import { assertMaxwellProgress } from '../activities/olympiad/maxwells-demon/policy.ts';
-import { isCanonicalQuestionId } from '../content/canonical-identity.ts';
+import { isCanonicalQuestionId, isPreviousQuestionId, isRetiredQuestionId } from '../content/canonical-identity.ts';
 import { curriculumActivityIds, leafBoundary } from './catalogue-boundary.ts';
 import type { CurriculumWrite, ImportBatch } from '../contracts/repository.ts';
 import type { Namespace } from '../contracts/identity.ts';
@@ -109,7 +109,9 @@ function ref(v: unknown, course: unknown): JsonObject {
   keys(r, ['activityId', 'questionId', 'seed', 'level']);
   activity(r.activityId, course);
   requireData(
-    isCanonicalQuestionId(String(r.activityId), r.questionId) &&
+    (isCanonicalQuestionId(String(r.activityId), r.questionId) ||
+      (isRetiredQuestionId(String(r.activityId), r.questionId) &&
+        r.level === (String(r.questionId).endsWith('L1') ? 1 : 2))) &&
       Number.isSafeInteger(r.seed) &&
       Number(r.seed) >= 0 &&
       Number(r.seed) <= 0xffffffff &&
@@ -977,7 +979,7 @@ export function validateSession(value: unknown): void {
     );
     array(s.previousQuestionIds, 'previous questions').forEach((v) =>
       requireData(
-        isCanonicalQuestionId(String(record(s.target, 'practice target').activityId), v),
+        isPreviousQuestionId(String(record(s.target, 'practice target').activityId), v),
         'Invalid canonical previous question ID',
       ),
     );

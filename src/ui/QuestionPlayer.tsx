@@ -1,3 +1,4 @@
+import { rateSource } from '../activities/alevel/rate-equations/identity.ts';
 import { QuestionActions, useQuestionActions } from './QuestionActions.tsx';
 import { useQuestionKeyboard } from './use-question-keyboard.ts';
 import { useId, Suspense, lazy } from 'react';
@@ -197,7 +198,7 @@ export function QuestionPlayer({
   const chrome = useQuestionChrome();
   const chemical = question.chemicalPresentation;
   const displayTitle = chemical ? chemicalQuestionTitle(chemical) : questionDisplayTitle(question);
-  const hideArrheniusHeader = question.ref.activityId === 'alevel/rate-equations' && question.ref.questionId.startsWith('RATE-POC-arrhenius-');
+  const hideArrheniusHeader = question.ref.activityId === 'alevel/rate-equations' && rateSource(question.ref.questionId)?.gem === 'arrhenius';
   const repeatedTitle =
     recallPresentation || (!chemical && repeatsQuestionSubtopic(displayTitle, chrome));
   const actions = useQuestionActions({
@@ -273,7 +274,7 @@ export function QuestionPlayer({
   const reviewing =
     student && (attempt.phase === 'rubric-review' || attempt.phase === 'drawing-review');
   const assessed = student && attempt.phase === 'assessed';
-  const readOnly = !student || reviewing;
+  const readOnly = !student || reviewing || (recallPresentation && assessed);
   const assessment = assessed ? attempt.firstAssessment : undefined;
   const properties = question.ref.activityId === 'alevel/explaining-properties';
   const checkedFeedback = correctionFeedback ?? restoredFeedback;
@@ -315,7 +316,7 @@ export function QuestionPlayer({
   return (
     <article
       {...keyboard}
-      data-question-family={question.ref.activityId === 'alevel/rate-equations' && question.ref.questionId.startsWith('RATE-POC-mechanisms-') ? 'rate-mechanisms' : undefined}
+      data-question-family={question.ref.activityId === 'alevel/rate-equations' && rateSource(question.ref.questionId)?.gem === 'mechanisms' ? 'rate-mechanisms' : undefined}
       className={`question-player layout-${question.layout}${question.ref.activityId === 'alevel/rate-equations' ? ' rate-question-player' : ''}${properties ? ' properties-player' : ''}${chemical ? ' chemical-question-player' : ''}${recallPresentation ? ' recall-test-player recall-shared-player' : ''}`}
       {...(repeatedTitle || hideArrheniusHeader
         ? { 'aria-label': displayTitle }

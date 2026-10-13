@@ -50,6 +50,19 @@ function check(p: MaxwellProgress, level: Level) {
     ),
   };
 }
+/** A part unlocks only after every earlier part has been checked fully correct. */
+export function maxwellPartUnlocked(p: MaxwellProgress, level: Level): boolean {
+  return ([1, 2, 3] as const).filter((previous) => previous < level).every((previous) => {
+    const saved = p.checks[previous];
+    const current = check(p, previous);
+    return saved?.fingerprint === current.fingerprint &&
+      current.correct.length === levelIds(previous).length &&
+      current.correct.every((id) => saved.correct.includes(id));
+  });
+}
+export function availableMaxwellPart(p: MaxwellProgress): Level {
+  return !maxwellPartUnlocked(p, 2) ? 1 : !maxwellPartUnlocked(p, 3) ? 2 : 3;
+}
 export const maxwellPolicy: MaxwellPolicy = {
   validateCompletion(_challenge, p) {
     return migrateMaxwellProgress(p);
@@ -61,27 +74,35 @@ export const maxwellPolicy: MaxwellPolicy = {
         progress: blankMaxwellProgress(p.profileId),
         message: 'Challenge restarted.',
       };
-    if (c.kind === 'maxwell-level' && [1, 2, 3].includes(c.level))
+    if (c.kind === 'maxwell-level' && [1, 2, 3].includes(c.level)) {
+      if (!maxwellPartUnlocked(p, c.level))
+        return { accepted: false, progress: p, message: 'Complete and check all earlier parts first.' };
       return {
         accepted: true,
         progress: { ...p, level: c.level, introduction: false },
         message: '',
       };
+    }
     if (c.kind === 'maxwell-introduction')
       return { accepted: true, progress: { ...p, introduction: true }, message: '' };
     if (c.kind === 'maxwell-answer') {
       const level = ([1, 2, 3] as const).find((l) => levelIds(l).includes(c.id));
       if (!level || c.value.length > 100)
         return { accepted: false, progress: p, message: 'Unknown response.' };
+      if (!maxwellPartUnlocked(p, level))
+        return { accepted: false, progress: p, message: 'Complete and check all earlier parts first.' };
       const checks = { ...p.checks };
       delete checks[level];
+      const next = { ...p, responses: { ...p.responses, [c.id]: c.value }, checks };
       return {
         accepted: true,
-        progress: { ...p, responses: { ...p.responses, [c.id]: c.value }, checks },
+        progress: { ...next, level: Math.min(next.level, availableMaxwellPart(next)) as Level },
         message: '',
       };
     }
     if (c.kind === 'maxwell-check') {
+      if (!maxwellPartUnlocked(p, p.level))
+        return { accepted: false, progress: p, message: 'Complete and check all earlier parts first.' };
       const current = check(p, p.level);
       return {
         accepted: true,
@@ -260,7 +281,8 @@ export function migrateMaxwellProgress(value: unknown): MaxwellProgress {
   if (legacy) delete checks[2];
   if (checks[1]) checks[1] = check(p, 1);
   if (checks[3]) checks[3] = check(p, 3);
-  return { ...p, checks };
+  const migrated = { ...p, checks };
+  return { ...migrated, level: Math.min(p.level, availableMaxwellPart(migrated)) as Level };
 }
 /** Empty toggle state is not an explicit general-reaction choice. */
 export function toggleCategory(value: string | undefined, id: string): string {

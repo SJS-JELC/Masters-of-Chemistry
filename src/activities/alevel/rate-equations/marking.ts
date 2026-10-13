@@ -1,6 +1,8 @@
 import type { MarkingPolicy, NumericAcceptance } from '../../../contracts/question.ts';
 import { checkQuestionInput, parseScientificNumber } from '../../../domain/attempt/index.ts';
+import { rateSource } from './identity.ts';
 import { equivalentRateLaw, equivalentRateUnits } from './input-syntax.ts';
+import { markTypedMechanismSteps } from './new-mechanisms.ts';
 
 function numericAccepted(value: number, rule: NumericAcceptance): boolean {
   if (!Number.isFinite(value)) return false;
@@ -14,16 +16,16 @@ export const rateMarking: MarkingPolicy = {
   mark(question, responses) {
     const issues = checkQuestionInput(question, responses);
     if (issues.length) return { accepted: false, issues };
+    const mechanismPoints = markTypedMechanismSteps(question, responses);
     const points = question.parts.map(part => {
       const response = responses[part.id];
       let correct = false;
       if (part.kind === 'numeric' && response?.kind === 'numeric') correct = response.unit === part.unit && numericAccepted(parseScientificNumber(response.raw), part.acceptance);
       if (part.kind === 'choice' && response?.kind === 'choice') correct = part.acceptedOptionSets.some(set => set.length === response.selected.length && set.every(id => response.selected.includes(id)));
       if (part.kind === 'text' && response?.kind === 'text') {
-        const species = question.ref.questionId.startsWith('RATE-POC-orders-') ? ['A', 'B']
-          : question.ref.questionId === 'RATE-POC-mechanisms-L1' ? ['NO2', 'CO']
-          : question.ref.questionId === 'RATE-POC-mechanisms-L2' ? ['F2', 'NO2'] : [];
-        correct = part.accepted.some(answer => part.id === 'rate-equation'
+        const species = rateSource(question.ref.questionId)?.species ?? [];
+        // Direct legacy factory fixtures retain their original activity metadata.
+        correct = mechanismPoints && part.id in mechanismPoints ? mechanismPoints[part.id] === true : part.accepted.some(answer => part.id === 'rate-equation'
           ? species.length > 0 && equivalentRateLaw(response.value, answer, species)
           : part.id === 'k-units' ? equivalentRateUnits(response.value, answer) : answer === response.value.trim());
       }

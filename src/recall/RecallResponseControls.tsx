@@ -33,6 +33,8 @@ export function RecallResponseControl({
     input = useRef<HTMLInputElement>(null),
     overlay = useRef<HTMLSpanElement>(null);
   const formatted = entry.kind === 'chemical-formula' || entry.kind === 'general-formula';
+  const longAnswer = !inline && entry.kind === 'text' && field.answer.length >= 45;
+  const solubilityRule = field.id === 'rule' && field.label === 'Solubility' && entry.kind === 'choice';
   const correct = reviewedCorrect || outcome?.correct;
   const state = outcome ? (correct ? 'correct' : 'incorrect') : undefined;
   const status = reviewedCorrect ? 'Marked as correct for learning.' : outcome?.message;
@@ -42,42 +44,40 @@ export function RecallResponseControl({
   useLayoutEffect(syncScroll, [value]);
   return (
     <span
-      className={`recall-response${inline ? ' recall-inline' : ''}${state ? ' recall-' + state : ''}`}
+      className={`recall-response${inline ? ' recall-inline' : ''}${longAnswer ? ' recall-long-answer' : ''}${state ? ' recall-' + state : ''}`}
     >
       {!inline && (
         <label
           htmlFor={id}
-          className={/^answer$/i.test(field.label.trim()) ? 'sr-only' : undefined}
+          className={solubilityRule || /^answer$/i.test(field.label.trim()) ? 'sr-only' : undefined}
         >
           {field.label}
         </label>
       )}
-      {entry.kind === 'choice' && entry.presentation === 'buttons' ? (
+      {entry.kind === 'choice' ? (
         <span className="recall-choice-buttons" role="group" aria-label={field.label}>
           {entry.options.map(o => <button key={o.id} type="button" aria-pressed={value === o.id} disabled={readOnly}
-            onClick={() => onChange(o.id)}>{o.label}</button>)}
+            onClick={() => onChange(o.id)}>{solubilityRule ? `All ${o.label.toLowerCase()}` : o.label}</button>)}
         </span>
-      ) : entry.kind === 'choice' ? (
-        <select
-          id={id}
-          aria-label={field.label}
-          aria-invalid={state === 'incorrect' ? true : undefined}
-          aria-describedby={status ? id + '-status' : undefined}
-          disabled={readOnly}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-        >
-          <option value="">Choose an answer</option>
-          {entry.options.map((o) => (
-            <option key={o.id} value={o.id}>
-              {o.label}
-            </option>
-          ))}
-        </select>
       ) : (
         <span className="recall-answer-row">
         <span className={`recall-input-wrap${formatted ? ' recall-formatted' : ''}`}>
-          <input
+          {longAnswer ? (
+            <textarea
+              id={id}
+              data-answer-input
+              aria-label={field.label}
+              aria-invalid={state === 'incorrect' ? true : undefined}
+              aria-describedby={status ? id + '-status' : undefined}
+              value={value}
+              readOnly={readOnly}
+              rows={Math.min(6, Math.max(2, Math.ceil(field.answer.length / 55)))}
+              autoComplete="off"
+              autoCapitalize="off"
+              spellCheck={false}
+              onChange={(e) => onChange(e.target.value)}
+            />
+          ) : <input
             ref={input}
             id={id}
             data-answer-input
@@ -113,7 +113,7 @@ export function RecallResponseControl({
             }}
             onScroll={syncScroll}
             onSelect={syncScroll}
-          />
+          />}
           {formatted && (
             <span ref={overlay} className="recall-notation-overlay" aria-hidden="true">
               {recallNotationTokens(value, entry).map((t, i) => (

@@ -1,4 +1,58 @@
 ﻿{
+    "rateEquationsNewTypes": {
+        "runId": "RE-NEW-TYPES-20261013-115008",
+        "status": "FOREMAN_ACCEPTED_PENDING_ROOT",
+        "updatedAt": "2026-10-13T11:15:02.951Z",
+        "handoff": ".artifacts/re-new-types/HANDOFF.md",
+        "aggregate": ".artifacts/re-new-types/aggregate.json",
+        "newConfigurations": 17,
+        "newNumericalTemplates": 10,
+        "newNumericalVariants": 1000,
+        "fixedConceptualPools": {
+            "units": 5,
+            "excess": 2,
+            "graphShapes": 4
+        },
+        "typedMechanisms": 4,
+        "reviewedMechanismPairs": 10,
+        "existingNumericalVariantsPreserved": 900,
+        "currentBeforeRunOutputHashesPreserved": 1863,
+        "typecheck": "PASS",
+        "isolatedProductionBundle": "PASS374modules",
+        "focusedTests": {
+            "total": 83,
+            "currentPass": 82,
+            "unchangedHistoricalSnapshotFailure": 1,
+            "affectedCatalogueChecksRetested": 2
+        },
+        "browser": {
+            "aggregate": 20,
+            "ordersWorker": 10,
+            "graphsWorker": 12,
+            "mechanismsWorker": 7,
+            "mobileTableFix": 3
+        },
+        "protection": "PASS1320currentbytehashes;529historicdriftretained",
+        "deferred": "Broad pupil/revision/native timing reruns explicitly user-deferred; OS/hardware IME not established",
+        "deployment": false
+    },
+    "rateEquationsExpansion": {
+        "runId": "RE-EXPANSION-20261013-102242",
+        "status": "IMPLEMENTED_LOCAL_REVIEW_PENDING_ROOT_ACCEPTANCE",
+        "handoff": ".artifacts/re-expansion/HANDOFF.md",
+        "aggregate": ".artifacts/re-expansion/aggregate.json",
+        "numericalVariants": 900,
+        "newFixedMechanisms": 6,
+        "oldOutputsPreserved": 1236,
+        "focusedChecksPassed": 42,
+        "focusedChecksFailedPreexisting": 1,
+        "teacherRendersInspected": 15,
+        "typecheck": "PASS",
+        "protectedOriginals": "1320 files;529 existing drift paths;no additional drift paths",
+        "extensiveBrowserTiming": "explicitly deferred by user",
+        "deployment": false,
+        "updatedAt": "2026-10-13T09:44:18.694Z"
+    },
     "historicalEvidenceDisposition":  {
                                           "status":  "retired-deleted-by-user-request",
                                           "date":  "2026-10-05",

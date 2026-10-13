@@ -1,3 +1,4 @@
+import { rateSource } from '../activities/alevel/rate-equations/identity.ts';
 /** Unmarked measuring state in graph units; no rendered/question snapshots. */
 export interface RateGraphReading {
   readonly x: number;
@@ -29,8 +30,9 @@ export function isRateGraphWorkspaceState(value: unknown): value is RateGraphWor
 }
 /** Closed graph-family ownership without importing any content or UI into the shell. */
 export function supportsRateGraphWorkspace(ref: { readonly activityId: string; readonly questionId: string; readonly level: number }): boolean {
-  return ref.activityId === 'alevel/rate-equations' && [1, 2, 3].includes(ref.level) &&
-    (ref.questionId === `RATE-POC-graphs-L${ref.level}` || ref.questionId === `RATE-POC-arrhenius-L${ref.level}`);
+  const source = rateSource(ref.questionId);
+  return ref.activityId === 'alevel/rate-equations' && source?.level === ref.level &&
+    (source.gem === 'graphs' || source.gem === 'arrhenius');
 }
 export function sameRateGraphWorkspace(a: RateGraphWorkspaceState | undefined, b: RateGraphWorkspaceState): boolean {
   return !!a && !!a.tangentAdded === !!b.tangentAdded && a.marker === b.marker && a.extended === b.extended && a.readings.every((r, i) =>

@@ -12,15 +12,17 @@ import { validTiming } from '../domain/timing/active-clock.ts';
 import {
   buildStatistics,
   buildRecallStatistics,
-  type RecallStatisticsModel,
   countEvidence,
   levelOf,
   outcomeOf,
-  type Counts,
+  type StatisticsTopic,
   type StatisticsDisplayGem,
   type StatisticsOptions,
 } from './model.ts';
 import './statistics.css';
+import { practiceTimeBins } from './practice-time.ts';
+import { RecallGemPane, recallFactMastery } from './RecallGemPane.tsx';
+import { factsForRecallScope, topicsFor } from '../recall/session-contract.ts';
 
 const outcomes = ['correct', 'partial', 'incorrect'] as const;
 const labels = { correct: 'Correct', partial: 'Partly correct', incorrect: 'Incorrect' };
@@ -40,22 +42,21 @@ export function duration(ms: number | null): string {
 const time = (ms: number) => (ms === 0 ? '0 s' : duration(ms));
 const levelLabel = (course: Course, level: Level) =>
   course === 'alevel' ? `Level ${level}` : { 1: 'Grade 5–6', 2: 'Grade 7–8', 3: 'Grade 9' }[level];
-function OutcomeSummary({ counts }: { readonly counts: Counts }) {
+function TopicMasterySummary({ topic }: { readonly topic: StatisticsTopic }) {
+  const levels = topic.gems.flatMap(gem => gem.row?.levels ?? []);
+  const percentage = levels.length
+    ? levels.reduce((sum, level) => sum + (level.score ?? 0), 0) / levels.length * 100
+    : 0;
   return (
     <div className="stats-topic-results">
-      <div className="stats-stack" aria-hidden="true">
-        {outcomes.map((outcome) => (
-          <span
-            key={outcome}
-            className={outcome}
-            style={{ width: `${counts.total ? (counts[outcome] / counts.total) * 100 : 0}%` }}
-          />
-        ))}
+      <div className="stats-stack" role="meter"
+        aria-label={`${topic.name} overall mastery`}
+        aria-valuemin={0} aria-valuemax={100} aria-valuenow={percentage}
+        aria-valuetext={`${percentage.toFixed(1)}% overall mastery`}>
+        <span style={{ width: `${percentage}%`, background: 'var(--positive, #54f5b5)' }} />
       </div>
       <p className="stats-outcome-text">
-        {counts.total
-          ? `${counts.correct} correct · ${counts.partial} partly correct · ${counts.incorrect} incorrect`
-          : 'No recorded responses in this period'}
+        {percentage.toFixed(1)}% overall mastery
       </p>
     </div>
   );
@@ -250,164 +251,6 @@ function GemRow({
   );
 }
 
-function RecallStatisticsSection({
-  model,
-  days,
-  year,
-  error,
-  onRetry,
-}: Readonly<{
-  model: RecallStatisticsModel;
-  days: StatisticsOptions['days'];
-  year: NonNullable<StatisticsOptions['year']>;
-  error: string | null;
-  onRetry: () => void;
-}>) {
-  const [selectedDay, setSelectedDay] = useState<number | null>(null);
-  const tick = Math.max(
-      60000,
-      Math.ceil(Math.max(0, ...model.bins.map((bin) => bin.counts.activeMs)) / 4 / 60000) * 60000,
-    ),
-    maximum = tick * 4;
-  const detail = (bin: RecallStatisticsModel['bins'][number]) =>
-    `${date(bin.start)}: ${time(bin.counts.activeMs)} Recall active time — ${bin.counts.correct} correct (${time(bin.counts.timeByOutcome.correct)}), ${bin.counts.wrong} wrong (${time(bin.counts.timeByOutcome.wrong)}); ${bin.counts.untimed} first checks without recorded time.`;
-  const selected = model.bins.find((bin) => bin.start === selectedDay);
-  return (
-    <section className="stats-chart-card" aria-label="Recall statistics">
-      <div className="stats-section-heading">
-        <div>
-          <p className="eyebrow">FIRST INDEPENDENT CHECKS</p>
-          <h2>Recall · ungraded</h2>
-        </div>
-        <p data-testid="recall-statistics-time" data-active-ms={model.counts.activeMs}>
-          {model.counts.timed ? time(model.counts.activeMs) : 'No time recorded'} ·{' '}
-          {model.counts.timed} of {model.counts.total} first checks timed
-        </p>
-      </div>
-      <p className="stats-outcome-text" data-testid="recall-statistics-counts">
-        {model.counts.correct} correct · {model.counts.wrong} wrong · {model.counts.untimed} without
-        recorded time
-      </p>
-      <p className="stats-explanation">
-        Recall uses its own spaced schedule. These first checks do not change graded mastery or
-        awards. Assisted answers, reveals, Flashcards and self-corrections add no time here.
-      </p>
-      {error ? (
-        <p className="stats-notice" role="alert">
-          {error} <button onClick={onRetry}>Retry</button>
-        </p>
-      ) : (
-        <>
-          <p className="stats-outcome-text">
-            {days ? (days === 1 ? 'Last 24 hours' : `Last ${days} days`) : 'All time'} · selected
-            course year · days with first independent checks
-          </p>
-          {year !== 'all' && model.unmapped.length > 0 && (
-            <p className="stats-outcome-text">
-              {model.unmapped.length} first checks have no recorded course-year mapping. Choose All
-              years to include their history.
-            </p>
-          )}
-          {!model.counts.total && (
-            <p className="stats-empty">
-              No independent Recall first checks in this selection. Complete a Recall Test, or
-              choose All time and All years.
-            </p>
-          )}
-          {model.counts.untimed > 0 && (
-            <p className="stats-outcome-text">
-              First checks without usable recorded timing remain in the counts and add no time to
-              the chart. Missing historical time is not estimated.
-            </p>
-          )}
-          <div className="stats-legend" aria-label="Recall answer outcomes">
-            <span className="correct">✓ Correct</span>
-            <span className="incorrect">× Wrong</span>
-          </div>
-          {model.bins.length > 0 && (
-            <>
-              <h3>Daily Recall time</h3>
-              <div className="stats-chart-layout">
-                <div className="stats-chart-axis" aria-hidden="true">
-                  {[4, 3, 2, 1, 0].map((value) => (
-                    <span key={value} style={{ bottom: `${value * 45 + 30}px` }}>
-                      {value ? duration(value * tick) : '0 min'}
-                    </span>
-                  ))}
-                </div>
-                <div
-                  className="stats-chart-scroll"
-                  tabIndex={0}
-                  role="region"
-                  aria-label="Daily Recall active time by correct and wrong first checks; scroll horizontally to explore recorded days"
-                >
-                  <div
-                    className="stats-chart-bars"
-                    style={style({ '--chart-columns': model.bins.length })}
-                  >
-                    {model.bins.map((bin) => (
-                      <div className="stats-chart-column" key={bin.start}>
-                        <button
-                          className="stats-chart-bar"
-                          type="button"
-                          data-active-ms={bin.counts.activeMs}
-                          aria-label={detail(bin)}
-                          title={detail(bin)}
-                          aria-pressed={selectedDay === bin.start}
-                          onClick={() => setSelectedDay(bin.start)}
-                          onFocus={() => setSelectedDay(bin.start)}
-                        >
-                          <span
-                            className="stats-chart-value"
-                            aria-hidden="true"
-                            style={{ bottom: `${(bin.counts.activeMs / maximum) * 180 + 4}px` }}
-                          >
-                            {bin.counts.activeMs ? duration(bin.counts.activeMs) : ''}
-                          </span>
-                          <span
-                            className="stats-chart-stack"
-                            aria-hidden="true"
-                            style={{ height: `${(bin.counts.activeMs / maximum) * 180}px` }}
-                          >
-                            {(['correct', 'wrong'] as const).map((outcome) => (
-                              <span
-                                key={outcome}
-                                className={outcome === 'correct' ? 'correct' : 'incorrect'}
-                                style={{
-                                  height: `${bin.counts.activeMs ? (bin.counts.timeByOutcome[outcome] / bin.counts.activeMs) * 100 : 0}%`,
-                                }}
-                              />
-                            ))}
-                          </span>
-                        </button>
-                        <span className="stats-chart-label">
-                          {new Date(bin.start).toLocaleDateString('en-GB', {
-                            day: 'numeric',
-                            month: 'short',
-                          })}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="stats-chart-detail" role="status">
-                {selected
-                  ? detail(selected)
-                  : 'Select a Recall bar for its time and first-check counts.'}
-              </p>
-            </>
-          )}
-          <p className="stats-outcome-text">
-            Each first check is counted once, even when a fact links to several topics. The chart
-            uses the original automatic result and the completion date in this device’s local time.
-          </p>
-        </>
-      )}
-    </section>
-  );
-}
-
 /** Original statistics presentation; persistence and mastery remain in shared domains. */
 export function StatisticsView({
   course,
@@ -420,8 +263,7 @@ export function StatisticsView({
   const coordinator = useLoading();
   const [snapshot, setSnapshot] = useState(prepared);
   const { history, recallHistory, snapshotAt } = snapshot;
-  const error = null,
-    recallError = null;
+  const error = null;
   const [days, setDays] = useState<StatisticsOptions['days']>(0),
     [year, setYear] = useState<NonNullable<StatisticsOptions['year']>>('all'),
     [selectedDay, setSelectedDay] = useState<number | null>(null);
@@ -480,27 +322,15 @@ export function StatisticsView({
       }),
     [namespace.course, namespace.profileId, recallHistory, days, year, snapshotAt],
   );
+  const practiceBins = useMemo(() => practiceTimeBins(model, recallModel), [model, recallModel]);
   const tick = Math.max(
       60000,
-      Math.ceil(Math.max(0, ...model.bins.map((bin) => bin.counts.activeMs)) / 4 / 60000) * 60000,
+      Math.ceil(Math.max(0, ...practiceBins.map((bin) => bin.counts.activeMs)) / 4 / 60000) * 60000,
     ),
     maximum = tick * 4;
-  const dayDetail = (bin: (typeof model.bins)[number]) =>
-    `${date(bin.start)}: ${time(bin.counts.activeMs)} recorded active time — ${time(bin.counts.timeByOutcome.correct)} correct, ${time(bin.counts.timeByOutcome.partial)} partly correct, ${time(bin.counts.timeByOutcome.incorrect)} incorrect. ${bin.counts.total - bin.counts.timed} ${attemptWord(bin.counts.total - bin.counts.timed)} without recorded time.`;
-  const selected = model.bins.find((bin) => bin.start === selectedDay);
-  const period =
-    days === 1
-      ? 'In the last 24 hours'
-      : days
-        ? `In the last ${days} days`
-        : 'Across all current practice';
-  const earlier = new Map<string, CurriculumEvidence[]>();
-  for (const record of model.historical) {
-    const key = `${record.gemId}:${levelOf(record)}:${(record.provenance === 'legacy-import' ? record.progressionVersion : undefined) ?? 1}`;
-    const group = earlier.get(key) ?? [];
-    group.push(record);
-    earlier.set(key, group);
-  }
+  const dayDetail = (bin: (typeof practiceBins)[number]) =>
+    `${date(bin.start)}: ${time(bin.counts.activeMs)} total${bin.topics.length ? ' · ' + bin.topics.map(([topic, ms]) => `${topic}: ${time(ms)}`).join(' · ') : ''}`;
+  const selected = practiceBins.find((bin) => bin.start === selectedDay);
   return (
     <div className="statistics-screen">
       <a className="skip-link" href="#statsTopics">
@@ -539,13 +369,6 @@ export function StatisticsView({
             <span aria-hidden="true">←</span>
           </button>
         </header>
-        <div className="stats-intro">
-          <div>
-            <h2>See your progress.</h2>
-            <p>Explore your recorded results, one topic and gem at a time.</p>
-          </div>
-          <p className="stats-local">Stored in this browser</p>
-        </div>
         {error && (
           <div className="stats-notice" role="alert">
             {error}{' '}
@@ -556,125 +379,83 @@ export function StatisticsView({
         )}
         {!error && (
           <>
-            <form
-              className="stats-filters"
-              aria-label="Filter response statistics"
-              onSubmit={(event) => event.preventDefault()}
-            >
-              <label>
-                Course
-                <select
-                  aria-label="Course year"
-                  value={year}
-                  onChange={(event) => {
-                    setYear(event.target.value as typeof year);
-                    setSelectedDay(null);
-                  }}
-                >
-                  <option value="all">
-                    {course === 'alevel' ? 'All years' : 'All year groups'}
-                  </option>
-                  {(course === 'alevel'
-                    ? [
-                        ['l6', 'Lower Sixth'],
-                        ['u6', 'Upper Sixth'],
-                      ]
-                    : [
-                        ['fourth', 'Fourth Form'],
-                        ['lower', 'Lower Fifth'],
-                        ['upper', 'Upper Fifth'],
-                      ]
-                  ).map(([value, label]) => (
-                    <option key={value} value={value}>
-                      {label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <fieldset className="stats-period">
-                <legend>Responses from</legend>
-                <div>
-                  {(
-                    [
-                      [0, 'All time'],
-                      [1, 'Day'],
-                      [7, 'Week'],
-                      [30, 'Month'],
-                    ] as const
-                  ).map(([value, label]) => (
-                    <button
-                      type="button"
-                      key={value}
-                      aria-pressed={days === value}
-                      onClick={() => {
-                        setDays(value);
-                        setSelectedDay(null);
-                      }}
-                    >
-                      {label}
-                    </button>
-                  ))}
-                </div>
-              </fieldset>
-            </form>
+
             <section className="stats-overview" aria-label="Your overview">
               <Metric
-                title="Recorded attempts"
-                value={model.counts.total}
-                note={period}
-                testId="statistics-total"
+                title="Facts mastered"
+                value={factsForRecallScope(recallFacts, course, {
+                  kind: 'global', topicIds: topicsFor(course).map(topic => topic.id),
+                }).filter(fact => recallFactMastery(recallModel.records, fact.id).grade === 3).length}
+                note="Purple factual recall gems"
               />
               <Metric
-                title="Fully correct"
-                value={
-                  model.counts.total
-                    ? `${Math.round((model.counts.correct / model.counts.total) * 100)}%`
-                    : '—'
-                }
-                note={`${model.counts.correct} of ${model.counts.total} recorded ${attemptWord(model.counts.total)}`}
-              />
-              <Metric
-                title="Gems practised"
-                value={model.practised}
-                note={`Of ${model.availableGems} supported gems · selected period`}
-              />
-              <Metric
-                title="Levels mastered"
+                title="Levels Mastered"
                 value={`${model.mastered} / ${model.availableLevels}`}
                 note="Current mastery · all current-progression attempts"
               />
               <Metric
-                title="Active practice time"
-                value={model.counts.timed ? duration(model.counts.activeMs) : '—'}
-                note={`${model.counts.timed} of ${model.counts.total} ${attemptWord(model.counts.total)} timed · selected period`}
+                title="Practice Time"
+                value={model.counts.timed + recallModel.counts.timed ? duration(model.counts.activeMs + recallModel.counts.activeMs) : '—'}
+                note="Curriculum and factual recall"
                 testId="statistics-time"
-                activeMs={model.counts.activeMs}
+                activeMs={model.counts.activeMs + recallModel.counts.activeMs}
               />
             </section>
-            <p className="stats-explanation">
-              Response accuracy counts fully correct recorded attempts. Current mastery uses all
-              current-progression attempts, weighted towards recent results; the white marker shows
-              the mastery threshold.
-            </p>
-            <section className="stats-chart-card" aria-labelledby="statsChartHeading">
+            <RecallGemPane namespace={namespace} progress={snapshot.recallProgress ?? []} history={recallModel.records} year={year} now={snapshotAt} />
+            <section className="stats-chart-card" id="statsTopics" tabIndex={-1} aria-labelledby="statsTopicsHeading">
               <div className="stats-section-heading">
                 <div>
-                  <p className="eyebrow">YOUR PRACTICE OVER TIME</p>
-                  <h2 id="statsChartHeading">Daily practice time</h2>
+                  <h2 id="statsTopicsHeading" className="eyebrow">TOPIC BREAKDOWN</h2>
                 </div>
-                <p>
-                  {model.counts.timed ? duration(model.counts.activeMs) : 'No time recorded'} ·{' '}
-                  {model.counts.timed} of {model.counts.total} {attemptWord(model.counts.total)}{' '}
-                  timed
-                </p>
+                <p>Open a topic to explore its gems ↓</p>
               </div>
-              <p className="stats-outcome-text">
-                {days
-                  ? `${days === 1 ? 'Last 24 hours' : `Last ${days} days`} · daily totals (edge days may be partial)`
-                  : 'All time · daily totals'}
-              </p>
               <Legend />
-              {!model.counts.timed && (
+              {!model.counts.total && (
+                <p className="stats-empty">
+                  {days
+                    ? 'No recorded responses in this period. Try All time or practise a supported gem.'
+                    : 'Your stats start with your first recorded attempt. Practise a supported gem, then return here to see your progress.'}
+                </p>
+              )}
+              {model.topics.map((topic) => (
+                <details
+                  key={topic.id}
+                  className="stats-topic"
+                  data-topic={topic.id}
+                  open={openTopics.has(topic.id)}
+                  onToggle={(event) => {
+                    const open = event.currentTarget.open;
+                    setOpenTopics((previous) => {
+                      if (previous.has(topic.id) === open) return previous;
+                      const next = new Set(previous);
+                      if (open) next.add(topic.id);
+                      else next.delete(topic.id);
+                      return next;
+                    });
+                  }}
+                >
+                  <summary>
+                    <div>
+                      <span className="stats-topic-meta">{topic.group}</span>
+                      <strong className="stats-topic-name">{topic.name}</strong>
+                      <span className="stats-topic-meta">
+                        {topic.counts.total} {attemptWord(topic.counts.total)}
+                      </span>
+                    </div>
+                    <TopicMasterySummary topic={topic} />
+                  </summary>
+                  <div className="stats-gems">
+                    {topic.gems.map((gem) => (
+                      <GemRow key={gem.id} gem={gem} course={course} limited={!!days} />
+                    ))}
+                  </div>
+                </details>
+              ))}
+            </section>
+            <section className="stats-chart-card" aria-labelledby="statsChartHeading">
+              <div className="stats-section-heading"><h2 id="statsChartHeading" className="eyebrow">PRACTICE OVER TIME</h2></div>
+              <Legend />
+              {!model.counts.timed && !recallModel.counts.timed && (
                 <p className="stats-outcome-text">
                   No recorded timing data in this period. Attempts without timing data are not
                   included in the bars.
@@ -696,9 +477,9 @@ export function StatisticsView({
                 >
                   <div
                     className={`stats-chart-bars${days === 30 ? ' stats-chart-month' : ''}`}
-                    style={style({ '--chart-columns': model.bins.length })}
+                    style={style({ '--chart-columns': practiceBins.length })}
                   >
-                    {model.bins.map((bin) => (
+                    {practiceBins.map((bin) => (
                       <div className="stats-chart-column" key={bin.start}>
                         <button
                           type="button"
@@ -757,98 +538,8 @@ export function StatisticsView({
                 add no time. Time follows the answer’s completion date in this device’s local time.
               </p>
             </section>
-            <RecallStatisticsSection
-              model={recallModel}
-              days={days}
-              year={year}
-              error={recallError}
-              onRetry={() => void refresh()}
-            />
-            <section id="statsTopics" tabIndex={-1} aria-labelledby="statsTopicsHeading">
-              <div className="stats-section-heading">
-                <div>
-                  <p className="eyebrow">FROM TOPIC TO GEM</p>
-                  <h2 id="statsTopicsHeading">Your topic breakdown</h2>
-                </div>
-                <p>Open a topic to explore its gems ↓</p>
-              </div>
-              <Legend />
-              {!model.counts.total && (
-                <p className="stats-empty">
-                  {days
-                    ? 'No recorded responses in this period. Try All time or practise a supported gem.'
-                    : 'Your stats start with your first recorded attempt. Practise a supported gem, then return here to see your progress.'}
-                </p>
-              )}
-              {model.topics.map((topic) => (
-                <details
-                  key={topic.id}
-                  className="stats-topic"
-                  data-topic={topic.id}
-                  open={openTopics.has(topic.id)}
-                  onToggle={(event) => {
-                    const open = event.currentTarget.open;
-                    setOpenTopics((previous) => {
-                      if (previous.has(topic.id) === open) return previous;
-                      const next = new Set(previous);
-                      if (open) next.add(topic.id);
-                      else next.delete(topic.id);
-                      return next;
-                    });
-                  }}
-                >
-                  <summary>
-                    <div>
-                      <span className="stats-topic-meta">{topic.group}</span>
-                      <strong className="stats-topic-name">{topic.name}</strong>
-                      <span className="stats-topic-meta">
-                        {topic.counts.total} {attemptWord(topic.counts.total)}
-                      </span>
-                    </div>
-                    <OutcomeSummary counts={topic.counts} />
-                  </summary>
-                  <div className="stats-gems">
-                    {topic.gems.map((gem) => (
-                      <GemRow key={gem.id} gem={gem} course={course} limited={!!days} />
-                    ))}
-                  </div>
-                </details>
-              ))}
-            </section>
-            <details className="stats-history">
-              <summary>
-                Earlier practice history ({model.historical.length}{' '}
-                {attemptWord(model.historical.length)})
-              </summary>
-              <p>
-                Previous progression versions and retired levels. These results are excluded from
-                the overview and current mastery. Course and date filters also apply here.
-              </p>
-              {[...earlier.values()].map((records) => {
-                const first = records[0]!;
-                const gem =
-                  displayGems(course).find((item) => item.id === first.gemId) ??
-                  model.rows.find((row) => row.gem.mastery.historicalAliases.includes(first.gemId));
-                const name = gem && ('name' in gem ? gem.name : gem.gem.label);
-                return (
-                  <div
-                    className="stats-history-row"
-                    key={`${first.gemId}:${levelOf(first)}:${(first.provenance === 'legacy-import' ? first.progressionVersion : undefined) ?? 1}`}
-                  >
-                    <strong>
-                      {name ?? 'Earlier gem'} · {levelLabel(course, levelOf(first))} · earlier
-                      progression
-                    </strong>
-                    <OutcomeSummary counts={countEvidence(records)} />
-                  </div>
-                );
-              })}
-              {!earlier.size && <p>No earlier practice history in this selection.</p>}
-            </details>
-            <footer className="stats-footer">
-              Includes recorded standalone practice and revision. Olympiad challenges are excluded.
-              Full written answers are not shown in this history.
-            </footer>
+
+
           </>
         )}
       </main>

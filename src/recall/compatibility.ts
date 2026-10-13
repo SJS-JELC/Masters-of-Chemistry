@@ -170,11 +170,10 @@ export function recallAlternativeEligible(
   raw: string,
   phase: 'answering' | 'assessed',
   automaticCorrect: boolean,
-  classification: 'rejected' | 'unrecognized' = 'unrecognized',
+  _classification: 'rejected' | 'unrecognized' = 'unrecognized',
 ): boolean {
   return (
     phase === 'assessed' &&
-    classification === 'unrecognized' &&
     !automaticCorrect &&
     !!raw.trim() &&
     recallEntryForField(field).kind === 'text' &&

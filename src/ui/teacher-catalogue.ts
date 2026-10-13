@@ -1,3 +1,5 @@
+import { questionDisplayCode } from '../content/question-display-identity.ts';
+import { rateSource } from '../activities/alevel/rate-equations/identity.ts';
 import type {
   ActivityId,
   QuestionRef,
@@ -55,7 +57,10 @@ async function load(id: ActivityId): Promise<readonly TeacherCatalogueEntry[]> {
           const ref = rateProvider.resolveLink(sourceId);
           if (!ref) throw Error('Missing rate teacher route: ' + sourceId);
           const example = restoreRateExample(ref);
-          return entry(ref, `${example.question.title} · Level ${ref.level}`, example.gem);
+          const source = rateSource(ref.questionId);
+          const context = source?.mechanismContext === 'iron-iodide' ? 'Iron(III) and iodide · '
+            : source?.mechanismContext === 'thiosulfate' ? 'Acidified thiosulfate · ' : '';
+          return entry(ref, `${context}${example.question.title} · Level ${ref.level} · ${questionDisplayCode({ course: 'alevel', ...ref })}`, example.gem);
         });
     }
     case 'alevel/maxwells-demon':
